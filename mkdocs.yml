@@ -247,7 +247,9 @@ nav:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/sales-management/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/sales-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md
-          - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
+          - Setup: 
+            - Overview: user-guide/etendo-classic/basic-features/sales-management/setup/setup.md 
+            - Commission: user-guide/etendo-classic/basic-features/sales-management/setup/commission.md
         - Project and Service Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/project-and-service-management/transactions.md
@@ -262,7 +264,26 @@ nav:
           - Accounting:
             - Transactions: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md
             - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md
-            - Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md
+            - Setup: 
+              - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
+              - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
+              - Period Control Log: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/period-control-log.md
+              - Account Tree: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md
+              - General Ledger Configuration: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md
+              - Fiscal Calendar: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar.md
+              - Account Combination: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination.md
+              - Accounting Process: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-process.md
+              - GL Item: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md
+              - GL Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category.md
+              - Document Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type.md
+              - Document Sequence: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md
+              - Tax Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category.md
+              - Business Partner Tax Category: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category.md
+              - Tax Rate: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md
+              - Cost Center: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center.md
+              - ABC Activity: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity.md
+              - Accounting Templates: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates.md
+              - Balance Sheet and P/L Structure Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup.md
           - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
@@ -449,7 +470,7 @@ nav:
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
         - How to Create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
         - How to Create a Report: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md
-#        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
+        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
         - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
@@ -484,6 +505,7 @@ nav:
         - How to Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
         - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-business-event-handler.md
+        - How to Implement a New Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-discount-and-promotion-type.md
         - How to Implement Create New in Selector: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selector.md
         - How to Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-ficextension-hook.md
         - How to Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/how-to-implement-jsondataserviceextraactions-hook.md

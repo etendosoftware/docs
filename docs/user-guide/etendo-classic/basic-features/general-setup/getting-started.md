@@ -118,9 +118,9 @@ This setup would fit in the case of a Client which has **one or more independent
 
 There is a close relationship between the general setup which allows the creation and configuration of an enterprise, and the accounting configuration area because to set a Legal with Accounting Organization as ready, it requires below accounting items to be properly created and configured first:
 
-1. a [Fiscal Calendar](../financial-management/accounting/setup.md#fiscal-calendar)
+1. a [Fiscal Calendar](../financial-management/accounting/setup/fiscal-calendar.md)
 
-2. and an organization's [General Ledger configuration](../financial-management/accounting/setup.md#general-ledger-configuration) which includes a dimension that is the [Account Tree](../financial-management/accounting/setup.md#account-tree) or Chart of Accounts.
+2. and an organization's [General Ledger configuration](../financial-management/accounting/setup/general-ledger-configuration.md) which includes a dimension that is the [Account Tree](../financial-management/accounting/setup/account-tree.md) or Chart of Accounts.
 
 !!! info
     The Fiscal Calendar, once manually created, can be available to all the organizations within the client if it is created for the (\* (asterisk)) organization.

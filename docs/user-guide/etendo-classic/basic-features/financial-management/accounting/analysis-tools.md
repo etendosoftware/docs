@@ -73,7 +73,7 @@ The Balance Sheet report is a quantitative summary of an organization's financia
 
 Profit and Loss report shows earnings, expenses and the net profit of an organization.
 
-These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup.md#balance-sheet-and-pl-structure-setup) window.
+These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup/balance-sheet-and-pl-structure-setup.md) window.
 
 ### Header
 

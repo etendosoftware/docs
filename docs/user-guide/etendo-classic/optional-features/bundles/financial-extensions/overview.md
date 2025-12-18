@@ -41,8 +41,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
-
+    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
 
 ### Adjust Invoice Tax

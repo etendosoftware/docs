@@ -443,7 +443,7 @@ tags:
 
     ---
 
-    With **Etendo**, managing [sales commissions](../user-guide/etendo-classic/basic-features/sales-management/setup.md#commission) is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using different criteria and filters such as quantities sold or amounts invoiced: 
+    With **Etendo**, managing [sales commissions](../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#commission) is streamlined and flexible. Commissions can be calculated based on sales orders or invoices, using different criteria and filters such as quantities sold or amounts invoiced: 
 
     ![Commission Criteria](../assets/whats-new/etendo-news/commission-criteria.png)
 
