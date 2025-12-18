@@ -5,7 +5,6 @@ tags:
     - Promotion
     - Type
     - How to
-
 status: beta
 ---
 
@@ -24,7 +23,7 @@ It is possible to define types that take care of a single line, such as **X per 
 
 ## Implementation
 
-The implementation of a Discount and Promotion Type is done within a module. This how to assumes there is already a [module](how-to-create-a-module.md) created.
+The implementation of a *Discount and Promotion Type* is done within a module. This how to assumes there is already a [module](how-to-create-a-module.md) created.
 
 ### Type Specification
 
@@ -34,9 +33,9 @@ For example, if the rule can be applied to product A (which price is 10€), X i
 
 ### Infrastructure
 
-The first thing to do is to extend the table that defines Discounts and Promotions (M_Offer) in case the columns it has do not support the requirements for our Discount type. In this case we need X and Y columns.
+The first thing to do is to extend the table that defines Discounts and Promotions (`M_Offer`) in case the columns it has do not support the requirements for our Discount type. In this case we need X and Y columns.
 
-```
+``` SQL
 ALTER TABLE M_Offer ADD COLUMN em_obdisc_X numeric;
 ALTER TABLE M_Offer ADD COLUMN em_obdisc_Y numeric;
 ```
@@ -44,13 +43,13 @@ ALTER TABLE M_Offer ADD COLUMN em_obdisc_Y numeric;
 !!!note
     In this case, our module's DBPrefix is `OBDISC`.
 
-Now columns in Application Dictionary for M_Offer table should be created: go to **Tables and Columns** window, look for `M_Offer` table and click on **Create Columns from DB button**.
+Now columns in *Application Dictionary* for `M_Offer` table should be created: go to **Tables and Columns** window, look for `M_Offer` table and click on **Create Columns from DB button**.
 
 After that, their corresponding fields in Discounts and Promotions window: go to **Windows, Tabs and Fields** window, look for **Discounts and Promotions** window, **Discounts and Promotions** tab and click on **Create Fields** button.
 
 ### Discount and Promotion Type definition
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-discount-and-promotion-type/Discount-Promotion-Type.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-discount-and-promotion-type/discount-promotion-type.png)
 
 To make available the new Type, you just need to register it in **Discounts and Promotions Types** window. Create a new record there, select the module you are working in, and add a descriptive name.
 
@@ -58,13 +57,13 @@ The **PL/SQL Implementor** field indicates which is the PL function that impleme
 
 Once it is created, this Type will be available from **Discounts and Promotions** window when defining new rules.
 
-Note it is a good practice, in order to keep this window available, to show the fields created in the section above just in case this type is selected. This can be accomplished by adding them a Display Logic which should look similar to `@M_Offer_Type_ID@='E08EE3C23EBA49358A881EF06C139D63'` where `'E08EE3C23EBA49358A881EF06C139D63'` is the UUID of the record that has just been created in Discounts and Promotions Types.
+Note it is a good practice, in order to keep this window available, to show the fields created in the section above just in case this type is selected. This can be accomplished by adding them a Display Logic which should look similar to `@M_Offer_Type_ID@='E08EE3C23EBA49358A881EF06C139D63'` where `'E08EE3C23EBA49358A881EF06C139D63'` is the UUID of the record that has just been created in **Discounts and Promotions Types**.
 
 ### PL/SQL Implementation
 
 The code implementing the type is:
 
-```
+``` SQL
 CREATE OR REPLACE FUNCTION obdisc_xy_same_product(p_type character varying, p_rule_id character varying, p_line_id character varying, p_priceprecision numeric, p_stdprecision numeric, p_user_id character varying, p_taxincluded character varying)
   RETURNS character varying AS
 $BODY$ DECLARE 
@@ -145,11 +144,11 @@ END ; $BODY$
   LANGUAGE plpgsql VOLATILE
 ```
 
-#### Code Explanation
+**Code Explanation**
 
 The following sections explain this code. Numbers in the title refer to numbers in comments above.
 
-##### Parameters
+#### Parameters
 
 Any function implementing a Discount and Promotion Type, must receive the following parameters:
 
@@ -161,21 +160,21 @@ Any function implementing a Discount and Promotion Type, must receive the follow
 - `p_user_id`: ID of the user that has invoked the process, used when creating the actual discount for audit purposes.
 - `p_taxincluded`: Possible values are Y or N. Indicates whether the [Price List](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list) that is applied to current document includes (Y) or not (N) taxes.
 
-##### 1. Get rule configuration
+#### 1. Get rule configuration
 
 The Discount and Promotion that is currently checked usually has some instance configuration. In our case values for X and Y, and whether other Promotions and Discounts can be chained to this same line after applying this one.
 
-##### 2. Get line information
+#### 2. Get line information
 
 Line information must be retrieved. Note that the same function is invoked for Orders and Invoices, determined by p_type, so both cases must be taken into account.
 
-##### 3. Decide whether the rule can be applied
+#### 3. Decide whether the rule can be applied
 
 This code is executed for all Promotions and Discounts that are candidates to be applied to each line (see [next section](#when-this-code-is-executed)). Depending on the rules the type defines, it is possible this candidate rule to be rejected.
 
 In this case, if the quantity in the line is lower than the value for X, the rule is rejected. Note that as the rule is not applied Y is returned, this means other Discounts can always be applied.
 
-##### 4. Calculate the discount
+#### 4. Calculate the discount
 
 At this point we know the Discount must be applied to this line. It is time to actually implement the amounts to be discounted.
 
@@ -183,18 +182,17 @@ Here it is important to take into account differences between Price Lists that i
 
 Finally, when everything is calculated the Discount is inserted by invoking `M_Promotion_Add` function. It will create a new record in `C_OrderLine_Offer` or `C_InvoiceLine_Offer` table.
 
-##### 5. Return
+#### 5. Return
 
 These functions are expected to return a boolean value (Y or N). If Y is returned, the algorithm will continue looking for additional Discounts and Promotions to be applied to this line; whereas in case of N, the algorithm will stop after applying this one.
 
-#### When this code is executed
+### When this code is executed
 
-The code that checks Discounts and Promotions (`M_Promotion_Calculate`) is executed when Order and Invoices are completed or when Calculate Promotions button is clicked on any of these windows.
+The code that checks Discounts and Promotions (`M_Promotion_Calculate`) is executed when *Order and Invoices* are **completed** or when *Calculate Promotions* **button is clicked** on any of these windows.
 
 This code resets prices by removing all possible Discounts and Promotions previously applied and looks for Discount and Promotions candidates to be applied to each line of the document.
 
 A Discount candidate is a discount that can be applied to the line based on the general filters this discount defines. Finally, the PL/SQL that implements the type is in charge to decide whether the discount is applied or not. For example, if X is 4 and the rule can be applied to A, any line with product A will have this rule as candidate, but only the ones with a quantity equals or greater than 4 should be applied with the discount.
 
 ---
-
 This work is a derivative of [How to Implement a New Discount and Promotion Type](https://wiki.openbravo.com/wiki/How_to_implement_a_new_Discount_and_Promotion_Type){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
