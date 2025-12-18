@@ -10,7 +10,7 @@ tags:
 
 The **General Ledger Configuration** in Etendo defines how an organization’s financial transactions are recorded and structured. Each organization must be linked to at least one general ledger, although multiple ledgers can be assigned if needed, for example, when using different currencies or inheriting a ledger from a parent organization.
 
-Before setting up a general ledger, it is recommended to first create the [Account Tree](../basic-features/financial-management/accounting/setup.md#account-tree) that will be used for posting transactions. Once this is in place, a new general ledger configuration can be created and linked to the organization.
+Before setting up a general ledger, it is recommended to first create the [Account Tree](../basic-features/financial-management/accounting/setup/account-tree.md) that will be used for posting transactions. Once this is in place, a new general ledger configuration can be created and linked to the organization.
 
 ## General Ledger Configuration
 
@@ -31,9 +31,9 @@ From the **General Ledger Configuration** window, the configuration process invo
 
 Once done the newly created general ledger needs to be linked in the General Ledgers field from the [Organization](../basic-features/general-setup/enterprise-model/organization.md) window. 
 
-From the [General Ledger Configuration](../basic-features/financial-management/accounting/setup.md#general-ledger-configuration) window, the remaining steps to take to properly configure the general ledger are:
+From the [General Ledger Configuration](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md) window, the remaining steps to take to properly configure the general ledger are:
 
-- Setting up [Dimensions](../basic-features/financial-management/accounting/setup.md#dimension) from the Dimension tab to add below listed mandatory dimensions:
+- Setting up [Dimensions](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab) from the Dimension tab to add below listed mandatory dimensions:
 
     -   Create a new record and enter **Organization** in the field **Name**.
     -   Select **Organization** in the field **Type**.
@@ -52,12 +52,12 @@ From the [General Ledger Configuration](../basic-features/financial-management/a
     - Select **Project** in the field **Type**.
 
     !!!info
-        To review the tables which are going to generate accounting, visit the [Active Tables](../basic-features/financial-management/accounting/setup.md#active-tables) tab. It is possible to enable accounting for the ones not active for accounting.
+        To review the tables which are going to generate accounting, visit the [Active Tables](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md#active-tables-tab) tab. It is possible to enable accounting for the ones not active for accounting.
 
 
-- Configuring the mandatory [General Accounts](../basic-features/financial-management/accounting/setup.md#general-accounts) from the General Accounts tab as well as the accounts to use in case of Suspense Balancing or Suspense Error among others. Those accounts need to be previously created as described in the [Account Tree](../basic-features/financial-management/accounting/setup.md#account-tree) section.
+- Configuring the mandatory [General Accounts](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md#general-accounts) from the General Accounts tab as well as the accounts to use in case of Suspense Balancing or Suspense Error among others. Those accounts need to be previously created as described in the [Account Tree](../basic-features/financial-management/accounting/setup/account-tree.md) section.
 
-- Establishing the [Default Accounts](../basic-features/financial-management/accounting/setup.md#defaults) from the Default tab which needs to be copied to other accounting configuration tab such as:
+- Establishing the [Default Accounts](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) from the Default tab which needs to be copied to other accounting configuration tab such as:
 
     -   the Product Accounting tab
     -   the Financial Account Accounting Configuration tab
@@ -65,7 +65,7 @@ From the [General Ledger Configuration](../basic-features/financial-management/a
     -   etc.
 
 !!! info
-    For more information visit [General Ledger Configuration](../basic-features/financial-management/accounting/setup.md#general-ledger-configuration).
+    For more information visit [General Ledger Configuration](../basic-features/financial-management/accounting/setup/general-ledger-configuration.md).
 
 ---
 

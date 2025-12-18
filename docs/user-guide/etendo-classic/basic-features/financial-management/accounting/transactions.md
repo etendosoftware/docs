@@ -52,7 +52,7 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](../../financial-management/accounting/setup.md#financial-type).
+    For more information, visit [Financial Type](../../financial-management/accounting/setup/financial-type.md).
 
 
 ### Header
