@@ -1,61 +1,44 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+---
+title: How To Create a New Attachment Method
+tags: 
+    - Etendo Customization
+    - Java Extension Points
+    - Modular Customization
+    - Attachment Management 
 
-######  Toolbox
+status: beta
+---
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
+#  How to Create a new Attachment Method
 
-######  Search
+!!! example "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
-######  Participate
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+##  Overview
 
-  
-
-#  How to Create new attachment method
-
-##  Introduction
-
-Note that this how to is developers focused. It describes how to implement a
-new attachment method that integrates any CMS or ECM with Openbravo.
+This section explains how to create a **custom attachment method** in Etendo to integrate external **CMS or ECM** systems. It describes how to register the new attachment method in the application, implement the required Java class by extending `AttachImplementation`, and define the core operations for uploading, downloading, updating, and deleting attachments. This approach allows Etendo to manage files using alternative storage or **content management solutions** beyond the default attachment mechanism.
 
 ##  Attachment Method window
 
-As system administrator the new _Attachment Method_ must be created in that
-window. The _Search Key_ is used to identify the Java class implementing the
-method.
+As **System Administrator** the new Attachment Method must be created in that window. The **Search Key** is used to identify the Java class implementing the method.
 
 ##  AttachImplementation class
 
-The class that implements the attachment method must implement the
-_AttachImplementation_ abstract class. This class defines some methods that
-must be implemented to have a fully functional attachment method.
+The **class** that implements the attachment method must implement the `AttachImplementation` abstract class. This class defines some methods that must be implemented to have a fully functional attachment method.
 
-The class must have a qualifier to identify it. The name must be the search
-key set in the Attachment Method window. It has to follow this structure:
+The class must have a qualifier to identify it. The name must be the search key set in the Attachment Method window. It has to follow this structure:
 
     
     
      @ComponentProvider.Qualifier("CMSSearchKey")
 
-.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-Don't use _Default_ qualifier as it is the one used by Core's default
-attachment method.  
----|---  
+!!!note
+        Don't use **Default** qualifier as it is the one used by Core's default attachment method.  
+
   
-Once the implementation have been developed, the following guide could be used
-to  configure an attachment method  .
+Once the implementation have been developed, the following guide could be used to configure an attachment method.
 
     
     
@@ -137,17 +120,6 @@ to  configure an attachment method  .
      
      }
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_Create_new_attachment_method  "
 
-This page has been accessed 4,709 times. This page was last modified on 18
-April 2016, at 16:12. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
 
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How To Create a new Attachment Method](http://wiki.openbravo.com/wiki/How_to_Create_new_attachment_method){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/How_To_Create_a_Trigger){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

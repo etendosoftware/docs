@@ -21,14 +21,12 @@ Etendo uses **connection pools** to reuse existing connections/prepared statemen
   * **Hibernate** default connection pool for DAL-related queries 
   * **Apache DBCP** for the connections provided by the ConnectionProviderImpl. 
 
-Etendo provides a free commercial module that implements the Tomcat JDBC Connection Pool, but it is possible for
-developers to publish a module implement their own connection pool.
+Etendo provides a free commercial module that implements the **Tomcat JDBC Connection Pool**, but it is possible for
+developers to publish a module and implement their own connection pool.
 
 ##  ExternalConnectionPool abstract class
 
-In order to implement an external connection pool, developers must subclass the `ExternalConnectionPool` abstract class. This class has three methods:
-
-    
+In order to implement an external connection pool, it is necessary to subclass the `ExternalConnectionPool` abstract class. This class has three methods:
     
     /**
        * 
@@ -40,8 +38,8 @@ In order to implement an external connection pool, developers must subclass the 
           String externalConnectionPoolClassName) throws InstantiationException,
           IllegalAccessException, ClassNotFoundException;
 
-The getInstance method is in charge of instantiating the external connection pool. The name of the class that implements the connection pool is passed as a parameter, its value is taken from the `db.externalPoolClassName` property
-of `Openbravo.properties`.
+The `getInstance` method is in charge of instantiating the external connection pool. The name of the class that implements the connection pool is passed as a parameter, its value is taken from the `db.externalPoolClassName` property
+of `Openbravo.properties`.   ???
 
     
     
@@ -62,21 +60,23 @@ This is the main method that should be overwritten by all external connection pr
        */
     public void loadInterceptors(List<PoolInterceptorProvider> interceptors)
 
-This method should be overwritten if the connection pool supports interceptors and allows custom interceptors to be instantiated using dependency injection. A list of PoolInterceptorProvider will be passed as an arguments, containing
-the full class name of the interceptors.
+This method should be overwritten if the connection pool supports interceptors and allows custom interceptors to be instantiated using dependency injection. A list of `PoolInterceptorProvider` will be passed as an arguments, containing the full class name of the interceptors.
 
 ##  Design Considerations
 
-  * Include a configuration file so that users can customize the external connection pool to meet their needs. 
-  * If the pool needs to execute some initialization code, place it in the getConnection method and make sure that is only executed the first time that method is invoked. 
-  * For all connection returned by the pool: 
-    * `SessionInfo.setDBSessionInfo`(Connection conn, String rdbms) must be executed 
-    * The sql query included in the `bbdd.sessionConfig` property must be executed using that connection. 
-  * Take into account that these two operations must be executed on the returned connection only when the connection is actually created, not every time it is returned from the pool. 
+- Include a configuration file so that users can customize the external connection pool to meet their needs. 
+
+- If the pool needs to execute some initialization code, place it in the `getConnection` method and make sure that is only executed the first time that method is invoked. 
+
+- For all connection returned by the pool: 
+    - `SessionInfo.setDBSessionInfo`(Connection conn, String rdbms) must be executed 
+    - The `sql` query included in the `bbdd.sessionConfig` property must be executed using that connection. 
+
+- Take into account that these two operations must be executed on the returned connection only when the connection is actually created, not every time it is returned from the pool. 
 
 
 
-This work is a derivative of [How to Add a Constraint](http://wiki.openbravo.com/wiki/How_to_Create_an_External_Connection_Pool){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [How to Create an External Connection Pool](http://wiki.openbravo.com/wiki/How_to_Create_an_External_Connection_Pool){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
   
 
