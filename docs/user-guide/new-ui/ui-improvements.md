@@ -68,6 +68,14 @@ There are tree main ways to upload files within a record:
 
 3. **Import from URL:** The option to attach external resources via a link is included using the **Import from URL** button (*functionality subject to configuration*).
 
+!!! note
+    When dropping the file, a confirmation modal will open where you can verify the selected file and add an optional description before uploading it.
+
+![Upload Modal With File](../../assets/user-guide/newui/Upload-Modal-With-File.png)
+
+**Import from URL**
+
+The option to attach external resources via a link is included using the "Import from URL" button.
 
 #### Preview and Quick Edit
 
@@ -94,7 +102,7 @@ To facilitate handling multiple files, global action buttons have been incorpora
 
 It is possible to attach files without needing to enter each record. From the main table/grid view:
 
-![Drop File in Grid](../../assets/user-guide/newui/drop-file-in-grid.gif)
-
-
-
+1. Select a file on your computer.
+2. Drag it over the desired record row.
+3. The row will highlight indicating it is a valid target.
+4. When dropped, the file will be automatically attached to that record.
