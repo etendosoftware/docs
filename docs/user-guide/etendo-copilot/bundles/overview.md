@@ -59,9 +59,16 @@ This is a supervisor agent that delegates and orchestrates initialization tasks 
 This supervisor has the following agents:
 
 - **Business Partner Generator**: This agent creates business partners.
-- **Product Generator**: This agent creates products.
+- **Product Generator**: This agent manages products and related entities in the system. It provides comprehensive functionality for:
+    - **Creating products**: Create new products with categories, units of measure, and price list associations.
+    - **Managing product categories**: Create new categories or search for existing ones to organize products efficiently.
+    - **Price management**: Assign prices to products across different price list versions.
+    - **Searching**: Find existing products or categories based on various criteria.
+    - **Updating**: Modify product information, categories, or pricing details.
+    - **Querying information**: Display details of products, categories, prices, and price lists.
+    - **Process automation**: Automate repetitive workflows within these product management functions.
 - **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
-- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+- **Bulk Task Creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
 
     !!! info
         For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
