@@ -224,7 +224,7 @@ Below is an example JSON Schema used in the `Bastian` agent (the Etendo wiki ind
             },
             "minItems": 1,
             "uniqueItems": true
-        },
+        }
     },
     "required": [
         "content_en",

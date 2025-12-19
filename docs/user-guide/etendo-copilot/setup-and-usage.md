@@ -82,8 +82,6 @@ Fields to note:
 - **JSON Schema for Structured Outputs**: When configured, the agent will attempt to return responses that conform to the provided schema described in the JSON Schema format. This is useful for ensuring that the agent's outputs are structured and can be easily parsed or processed by other systems.
 
 
-
-
 ### Buttons
 
 ![](../../assets/user-guide/etendo-copilot/setup/clone-agent.png)
