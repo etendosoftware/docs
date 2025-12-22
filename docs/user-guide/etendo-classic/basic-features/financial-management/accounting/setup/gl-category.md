@@ -12,26 +12,32 @@ tags:
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `G/L Category`
 
-In this window, the user can define G/L Categories to be used in the General Ledger.
+## Overview
 
-The G/L Category Tab defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. 
-
-The fields to note are:
-- G/L Category: A classification used to group lines in the general ledger.
-- Client: Client for this installation.
-- Organization: Organizational entity within client
-- Name: A non-unique identifier for a record/document often used as a search tool.
-- Description : A space to write additional related information.**
-- Active: A flag indicating whether this record is available for use or deactivated.
-- Category Type: Source of the Journal with this category
-- Document Category: A classification of document types that are shown and processed in the same window.
-- Default: A value that is shown whenever a record is created.
+In this window, the user can create and manage G/L Categories to be used in the General Ledger. The G/L Category defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. These categories **help organize and report ledger lines across journals**. 
 
 ![](../../../../../../assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png)
 
-Once the needed information is complete, the categories are defined as in the following example: 
+Fields to note:
+
+- **Client**: The client this category belongs to.
+- **Organization**: The organization that will use the category.
+- **Name**: A descriptive identifier (that does need to be unique) of a record/document that is used as a default search option along with the search key (that is unique). It is up to 60 characters in length.
+- **Description**: Additional information about the category.
+- **Active**: A flag indicating whether this record is available for use or deactivated.
+
+    !!!info
+        It is possible to deactivate categories you no longer want users to pick; existing postings remain unchanged.
+
+- **Category Type**: It indicates the source of the journal for this category. Journals can be generated from a document, entered manually or imported.
+- **Default**: When checked, this category is selected by default for new records. This option speeds up data entry when necessary.
+
+### Example
+
+After filling the fields and saving, your category will be available for use in journal entries, imports, and document processing.
 
 ![](../../../../../../assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png)
+
 
 ---
 
