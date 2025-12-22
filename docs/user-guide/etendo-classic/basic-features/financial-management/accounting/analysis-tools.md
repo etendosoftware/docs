@@ -125,7 +125,7 @@ Under the **Primary Filters** section, it is possible to specify:
 ### Overview 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    This functionality is available starting from version **3.4.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Balance Sheet and P&L Structure Advanced** report is an enhanced version of the previous [Balance Sheet and P&L Structure](#balance-sheet-and-pl-structure). Its purpose is to expand the filtering criteria, including all available accounting dimensions and the ability to compare multiple years or periods.
 
@@ -354,6 +354,8 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+### Overview
+
 This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-1.png)
@@ -454,6 +456,8 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+### Overview
+
 This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](#journal-entries-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-1.png)
@@ -538,46 +542,76 @@ Once these fields have been introduced, it will be possible to print the Report 
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Customer Statement`
 
-### Overview
-
-Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period.
-
-Transactions aggregated from various sources like:
-
-- **Sales Invoices**
-- **Payment In**
-- **Financial Transactions**
-- **Reconciliations**
+!!! info
+    This functionality is available starting from version **3.8.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 !!! warning
-    Note that *Completed* but not *posted* transactions are not taken into consideration.
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version with limited functionality.
 
-In case that a business partner is a customer as well as a vendor, the Customer Statement shows only customer related transactions and does not take into account vendor related transactions.
+### Overview
 
-The *Multicurrency* parameter of the report, in case of checked, will group records based on the currency records and display original currency amounts. If unchecked, it will not group records, and it will display ledger currency amounts.
+The **Customer Statement** is a consolidated report that displays all transactions of a business partner posted to the ledger over a specified period. This report provides a complete financial history of the business relationship, showing debits, credits, and running balances for each transaction.
 
-The Customer Statement provides the following details:
+This report can be generated for business partners configured as:
 
-- The credit/debit information including the document number of the transaction
-- The accounting date
-- The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
-- The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
-    Note that negative amounts are highlighted by using brackets ().
+- **Customer**: Displays customer-related transactions (sales invoices, payments received, etc.).
+- **Vendor**: Displays vendor-related transactions (purchase invoices, payments made, etc.).
+- **Customer/Vendor**: Displays all transactions for business partners with both roles.
 
-#### Customer Statement Report
+The report aggregates transactions from various sources including:
 
-An example of the customer statement filter is shown in the image below:
+- Sales Invoices / Purchase Invoices
+- Payment In / Payment Out
+- Financial Transactions
+- Reconciliations
 
-![](../../../../../assets/drive/1rYsGNhlgTxXIUQR4NxlDh2_4uLDvm_WA.png)
+!!! warning
+    Only *Posted* transactions are included in the report. *Completed* but not *posted* transactions are not taken into consideration.
 
-Note about some filters:
+The Customer Statement provides the following information for each transaction:
 
-- **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
-- **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
+- **Document Number**: Identification of the transaction.
+- **Accounting Date**: Date when the transaction was posted.
+- **Document Type**: Type of transaction (e.g., AR Invoice, AP Invoice, Financial Account Transaction).
+- **Debit/Credit**: Financial amounts of each transaction.
+- **Net Balance**: Accumulated balance calculated as \[Debit - Credit\] for each transaction, showing the running balance throughout the period.
+
+!!! note
+    Negative amounts are highlighted by using brackets ( ).
+
+### Header
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement-report-1.png)
+
+As shown in the image above, the following parameters can be configured:
+
+- **Report Type**: Defines the type of report to generate. Options include:
+    - **Customer**: Displays customer-related transactions.
+    - **Vendor**: Displays vendor-related transactions.
+    - **Customer/Vendor**: Displays all transactions for business partners with both roles. The report shows vendor and customer transactions separately, dividing them into distinct sections.
+- **Organization**: The organization for which the statement will be generated.
+- **General Ledger**: The general ledger associated with the selected organization.
+- **Business Partner**: The business partner (customer, vendor, or both) for which to generate the statement.
+- **Starting Date**: Starting date of the period to include in the report.
+- **Ending Date**: Ending date of the period to include in the report.
+- **Multicurrency**: 
+    - **Unchecked** (default): Does not group records by currency and displays all amounts in the General Ledger currency.
+    - **Checked**: Groups records by currency and displays original currency amounts. The report will be split by each different currency, each one with its initial and ending balance isolated from the rest.
+- **Sum Initial Balance**: 
+    - **Unchecked** (default): The report shows an Initial Balance at the beginning, then lists each transaction with its Net Balance. The Ending Balance equals the Initial Balance plus the final Net Balance.
+    - **Checked**: The Initial Balance is aggregated into each transaction's Net Balance, making the final Ending Balance equal to the last Net Balance shown.
+
+### Buttons
+
+In the toolbar, you can find the following buttons to generate the report:
+
+- **View**: Opens the report results in a new window for immediate visualization.
+- **Export to PDF**: Generates a PDF version of the report that can be printed or stored.
+- **Export to Excel**: Generates an Excel file of the report for further analysis or customization.
 
 An example of the Customer Statement output:
 
-![](../../../../../assets/drive/1knnrLJDapnNKaokRPFgInW3mIQcJBHIo.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement-report-2.png)
 
 ## Tax Report Setup
 
