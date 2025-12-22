@@ -6,6 +6,7 @@ tags:
   - Custom Tasks
   - Task Type
   - Task Status
+  - Task Priority
   - Debezium
   - Kafka
 ---
@@ -164,6 +165,22 @@ This window allows you to create reusable statuses for task types. Default value
 - **Description**: Optional description of the status.
 - **Active**: Checkbox to enable or disable this status.
 
+## Task Priority Window
+:material-menu: `Application` > `General Setup` > `Task Management` > `Task Priority`
+
+This window allows you to create reusable priorities for tasks. Priorities help organize and categorize tasks by importance level. Developers with `System Administrator` role can add custom priorities and export them in a development module. These priorities can be assigned to tasks to indicate their relative importance.
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png)
+
+**Fields to note:**
+
+- **Module**: The module where this component will be exported.
+- **Search Key**: A unique identifier for the priority.
+- **Name**: The display name that will be shown when using this priority.
+- **Description**: Optional description of the priority.
+- **Sequence Number**: Numeric value that determines the order or weight of the priority (e.g., 20).
+- **Color (Hex)**: Hexadecimal color code for visual identification of the priority in the interface (e.g., `#F57C00`).
+- **Active**: Checkbox to enable or disable this priority.
 
 ## Available User Algorithm Windows
 :material-menu: `Application` > `General Setup` > `Task Management` > `Available User Algorithm`
