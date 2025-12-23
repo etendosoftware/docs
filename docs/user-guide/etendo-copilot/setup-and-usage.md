@@ -365,6 +365,25 @@ In this window, it is possible to configure access roles for each Agent. This me
 !!!note
     In case of deleting an agent, the related agent access records are also deleted.
 
+## Agent Memory Window
+
+:material-menu: `Application` > `Service` > `Copilot` > `Agent Memory`
+
+The Agent Memory window allows you to capture and reuse rules and knowledge acquired in any Copilot agent. Every memory you register is tied to a specific agent and is automatically injected into its answers according to your organization, role, and user context.
+
+![alt text](image.png)
+
+Fields to note:
+
+- **Organization**: Defaults to the agent's organization; may be left blank for a global memory. Copilot only injects entries that belong to the current organization tree unless the value is empty.
+- **Active**: Enables or disables the memory without deleting it. Inactive rows never reach the conversation.
+- **User/Contact**: Optional user owner. Leave empty to expose it to everyone. Only the selected user sees the memory.
+- **Role**: Optional role filter. Any user working under the chosen role will receive the hint.
+- **Text Field**: The actual content Copilot will append. It is recommended to use short, action-oriented statements.
+
+!!! info
+    When multiple memories match, Copilot lists them as bullet points under “Use the following relevant previous information.”
+
 ## Process Request Window
 
 :material-menu: `Application`>`General Setup`>`Process Scheduling`>`Process Request`
