@@ -87,6 +87,9 @@ This supervisor has the following agents:
 
 - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
 
+    !!! tip
+        To improve the accuracy of data extraction, check the [How to Improve OCR Recognition](../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md) guide.
+
 
 ##### Order Expert
 

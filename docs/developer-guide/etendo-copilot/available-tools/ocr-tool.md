@@ -48,6 +48,9 @@ Using this tool consists of the following actions:
     
     - **force_structured_output_compat** (optional): When `true` (or when the selected model starts with 'gpt-5'), do not use the LLM's structured-output wrapper. Instead the tool will request structured output by embedding the schema JSON directly into the system prompt for compatibility with older agents. Default: `false`.
 
+!!! tip
+    To learn how to optimize the results of this tool, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md) guide.
+
 - Obtaining the File:
 
     - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (JPEG, JPG, PNG, WEBP, GIF, PDF).
