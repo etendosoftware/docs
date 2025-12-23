@@ -371,7 +371,7 @@ In this window, it is possible to configure access roles for each Agent. This me
 
 The Agent Memory window allows you to capture and reuse rules and knowledge acquired in any Copilot agent. Every memory you register is tied to a specific agent and is automatically injected into its answers according to your organization, role, and user context.
 
-![alt text](image.png)
+![](../../assets/user-guide/etendo-copilot/setup/agent-memory-window.png)
 
 Fields to note:
 
