@@ -16,9 +16,7 @@ A background process is a system action requested by the user, who must provide 
 
 The Process Request window allows the user to review and add background processes, which can be scheduled or unscheduled as required.
 
-
-
-# Process Request Window
+## Process Request Window
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.gif)
 
@@ -160,6 +158,24 @@ Besides, there are other background processes which can also be scheduled and th
         There is a menu process named **Process Price Different Adjustment** that manually adjusts all already invoiced Goods Receipts, if required. 
 
     You can view the changes in the [Cost Adjustments](../../warehouse-management/transactions.md#cost-adjustment) window.
+
+- ### Match Sales Order Invoice and Shipment Lines
+
+    !!! info
+        This process is available starting from **Etendo 25.4**.
+
+    This process updates the sales matching tables (Matched Sales Invoices and Matched Sales Orders) for existing sales documents.
+
+    The process searches for completed, closed, voided or reversed sales invoices and goods shipments within a configurable period (defined by the `MatchedSalesDaysBack` preference), and creates or updates match records between:
+
+    - Sales Orders and Goods Shipments
+    - Sales Orders and Sales Invoices
+    - Goods Shipments and Sales Invoices
+
+    This matching information is used for traceability and invoice status calculations. The process does not post any accounting entries.
+
+    !!! info
+        The `MatchedSalesDaysBack` preference is set by default to 90 days. To increase this period, a new record for this preference can be created and the process can be rerun.
 
 ---
 

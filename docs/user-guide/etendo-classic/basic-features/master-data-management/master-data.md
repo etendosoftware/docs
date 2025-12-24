@@ -725,7 +725,7 @@ In the same way, these values are also used when an invoice is created from anot
 
 To learn more, visit the How to manage deferred revenue and expenses article.
 
-- **Book Using Purchase Order Price**: This flag is used when posting a Goods Receipt or a Matched Invoice document to the ledger.  
+- **Book Using Purchase Order Price**: This flag is used when posting a Goods Receipt or a Matched Purchase Invoice document to the ledger.  
   Normally, the product cost is used while posting those transactions, however this checkbox allows using the product purchase price instead.  
   This feature only works for *Expense* product type not having the *Sales* checkbox selected.
 

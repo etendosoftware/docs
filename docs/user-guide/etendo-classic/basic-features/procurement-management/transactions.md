@@ -809,9 +809,9 @@ In case the user has to create orders or invoices among two or more organization
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
-## Matched Invoices
+## Matched Purchase Invoices
 
-:material-menu: `Application` > `Procurement Management` > `Transactions` > `Matched Invoices`
+:material-menu: `Application` > `Procurement Management` > `Transactions` > `Matched Purchase Invoices`
 
 This window helps the user to post the discrepancies between inventory and financial accounting of those items for which the corresponding goods receipts were posted.
 
@@ -822,11 +822,11 @@ Above mentioned discrepancies are mainly caused by differences between:
 
 In the window, there is a listing of all invoices that are matched to goods receipts. The matching of the documents is done when documents are created by using the information of the other document: for example by clicking the Generate Invoice from receipt on the goods receipt or by clicking the Create Lines from button when creating a goods receipt to select the invoice.
 
-![Matched invoices window](../../../../assets/drive/1AUhlJDfTAknIjUueLpm4QCCmZSwz1vBg.png)
+![Matched Purchase Invoices window](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.png)
 
-#### **Matched Invoice**
+#### **Matched Purchase Invoice**
 
-Matched invoice tab lists each invoice line posted linked to the corresponding goods receipt lines, which could also be posted or not.
+Matched Purchase Invoice tab lists each invoice line posted linked to the corresponding goods receipt lines, which could also be posted or not.
 
 There is a "**Post**" header button which is the one that posts the discrepancies between inventory and financial accounting if any, once the proper line has been selected.
 
@@ -841,7 +841,7 @@ In the case of "Expense" product/s do not having the "Sales" checkbox selected, 
 
 #### **Accounting**
 
-Accounting information related to the matched invoices
+Accounting information related to the matched purchase invoices
 
 ### Bulk Posting
 

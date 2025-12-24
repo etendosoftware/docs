@@ -489,7 +489,7 @@ whereClause.append(" as ol ");
 Next, add the filtering on the sum of the quantities of matched PO's. Note the use of the alias in the _where clause_ of the subselect.
 
 ``` java
-// the subselect to filter on the matched invoices, only orders with a
+// the subselect to filter on the matched purchase invoices, only orders with a
 // different order quantity are returned.
 whereClause.append(" where ol.orderedQuantity <> ");
 whereClause.append(" (select sum(quantity) from ProcurementPOInvoiceMatch ").append(" where goodsShipmentLine is not null and salesOrderLine=ol)");
