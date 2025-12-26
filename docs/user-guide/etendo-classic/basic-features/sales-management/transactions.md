@@ -262,35 +262,46 @@ While creating a new sales order in this window:
 
 Some other fields to note are:
 
-**Scheduled Delivery Date:** indicates the date that the order should be shipped to the customer. Defaulted to the current date.  
-**Warehouse:** indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.  
-**Delivery Status:** indicates in % how much quantity has been delivered.  
-**Invoice Status:** indicates in % how much quantity has been invoiced.  
-**Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
+- **Scheduled Delivery Date:** indicates the date that the order should be shipped to the customer. Defaulted to the current date.
+- **Warehouse:** indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.  
+- **Delivery Status:** indicates in % how much quantity has been delivered.
+- **Invoice Status:** indicates in % how much quantity has been invoiced.
+
+!!! warning
+    Starting from Etendo 25.4, if these fields show 0% but the quantities are actually delivered/invoiced, you must execute the [Match Sales Order Invoice and Shipment Lines](../general-setup/process-scheduling/process-request.md#match-sales-order-invoice-and-shipment-lines) process to update the status correctly.
+
+- **Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
 
 !!! info
     Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the [Stock Reservations](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#stock-reservations) section.
 
-**Payment Status:** indicates in % how much of the total of the order has been paid.
-
+- **Payment Status:** indicates in % how much of the total of the order has been paid. 
+    
 Below fields are defaulted according to the Customer and Location tabs of the Business Partner window.
 
-**Payment Method**: indicates how an order (and invoice) should be paid.
+- **Payment Method**: indicates how an order (and invoice) should be paid.
 
-**Payment Terms**: defines when a sales invoice generated from this order needs to be paid.
+- **Payment Terms**: defines when a sales invoice generated from this order needs to be paid.
 
-**Invoice Terms**: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
+- **Invoice Terms**: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
 
-**Different Invoice Terms are:**
+- **Different Invoice Terms are:**
 
-**After Delivery:** Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.  
-**After order Delivered:** The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.  
-**Customer Schedule After Delivery:** Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  
-**Do Not Invoice:** No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  
-**Immediate:** The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
-**Sales Representative**: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
-**Invoice Address**: Address that is used upon generating an invoice.
-**Delivery Location**: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
+- **After Delivery:** Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.  
+
+- **After order Delivered:** The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.  
+
+- **Customer Schedule After Delivery:** Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  
+
+- **Do Not Invoice:** No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  
+
+- **Immediate:** The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
+
+- **Sales Representative**: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
+
+- **Invoice Address**: Address that is used upon generating an invoice.
+
+- **Delivery Location**: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
 
 **There are 3 ways of entering lines into a sales order:**
 
@@ -378,7 +389,7 @@ Fields to note:
 - **Attribute Set Value:** this field is displayed if the product in the line has attributes (color, size, serial number or several of them together, etc).
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
-- **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the *warehouse*. If no warehouse rule is defined in the sales order, the rule defined in *warehouse* is applied.
 - **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
@@ -398,21 +409,21 @@ Sales Order lines can be reserved when the sales order is booked and is pending 
 Fields to be noted:
 
 - **Stock Reservation**: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:
-    -  _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
-    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
-    -  _Automatic - Only default warehouse_: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+    -  *Manual*: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
+    -  *Automatic*: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+    -  *Automatic - Only default warehouse*: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
 
         !!!info
             This last option is only available if the [Automated Warehouse Reservation](../../optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 
-- **Reservation Status**: Defines whether the line is _Fully Reserved_ or _Partially Reserved_ or _Not Reserved_.
+- **Reservation Status**: Defines whether the line is *Fully Reserved* or *Partially Reserved* or *Not Reserved*.
 
 **Manage Reservation: Pick and Execute**
 
-Using the _Manage Reservation_ button is possible to open a _Pick and Execute_ window to create and modify reservation for the Sales Order Line. The grid shows all the available stock that can be delivered and the pending to receive purchase orders.
+Using the *Manage Reservation* button is possible to open a *Pick and Execute* window to create and modify reservation for the Sales Order Line. The grid shows all the available stock that can be delivered and the pending to receive purchase orders.
 
-In the grid, it is possible to select and set the desired quantity on any available stock. There are validations to avoid setting quantities higher than the available for the specific stock or than the ordered quantity. The _Done_ button will create and process a reservation if none exists with the selected options, note that if the reservation does not exist and the _Done_ button is pressed without selecting any stock or selecting a quantity below the ordered quantity, when the reservation is processed the system will reserve the remaining quantity with the available stock. If a reservation already exists, the reserved stock will appear automatically selected and the _Done_ button will update the reservation with the changes done. It is also possible to flag a stock as allocated.
+In the grid, it is possible to select and set the desired quantity on any available stock. There are validations to avoid setting quantities higher than the available for the specific stock or than the ordered quantity. The *Done* button will create and process a reservation if none exists with the selected options, note that if the reservation does not exist and the *Done* button is pressed without selecting any stock or selecting a quantity below the ordered quantity, when the reservation is processed the system will reserve the remaining quantity with the available stock. If a reservation already exists, the reserved stock will appear automatically selected and the *Done* button will update the reservation with the changes done. It is also possible to flag a stock as allocated.
 
 !!! warning
     When the selected Product has the flag Variable Quantity set as true, it is possible to Reserve more Quantity than the Quantity ordered. But be careful, when a Shipment is generated against this Order Line and it is Completed (with the same Quantity or more than in the Order Line), the Reservation will be closed and the Reserved Quantity will be set as the same amount as the Order Quantity to prevent further inconsistency problems. So, it is possible to Reserve more Quantity than Ordered when a Product is set as Variable Quantity, but the Reservation will be set as the original Ordered Quantity when a Shipment is made.
@@ -514,7 +525,7 @@ Etendo allows the user to reactivate closed sales orders by selecting the needed
 
 ![](../../../../assets/drive/14S-_sqqQcDlJqhtFt_L9GVSZ6U-jH4Yo.png)
 
-Once the process is finished, the sales order status turns to _booked_.
+Once the process is finished, the sales order status turns to *booked*.
 
 !!! info
     Check the Technical documentation about Advanced Financial Docs Processing to extend the process.
@@ -600,6 +611,9 @@ Some other fields to note:
 - **Sales Order:** Reference to an order that is being shipped. If Goods Shipment includes products from several Sales Orders fields are left empty (still trace-ability is present at Lines level).
 - **Invoice Status:** indicates in % how much quantity has been invoiced.
   If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.
+
+    !!! warning
+        Starting from Etendo 25.4, if this field shows 0% but the quantities are actually invoiced, execute the [Match Sales Order Invoice and Shipment Lines](../general-setup/process-scheduling/process-request.md#match-sales-order-invoice-and-shipment-lines) process to update the status correctly.
 
 There are 2 ways of entering lines into the sales order:
 
@@ -706,7 +720,7 @@ The user can create a sales order and process it when ready.
 
 Once the Return document is accepted you can process it by clicking the button **Book**. Following the standard, the document changes from _Draft_ to _Booked._
 
-Only _Booked_ documents can be receipt.
+Only *booked* documents can be receipt.
 
 !!! warning
     Notice the button **Pick/Edit lines** disappears when the Return to customer document is in status _Booked._
@@ -908,7 +922,7 @@ Create Shipments from Orders allows the user to see Sales Orders pending to be s
 
 ![Create shipments from orders](../../../../assets/drive/1wtJV_ZpJ4eAlSCNqf69SOvq52h6dfAZV.png)
 
-All Sales Orders of the _Standard Order_ type and in a status _Booked_ are treated as meeting the criteria to be shipped.
+All Sales Orders of the _Standard Order_ type and in a status *booked* are treated as meeting the criteria to be shipped.
 
 Goods Shipment can be generated for one or more Sales Orders or for all the Sales Orders that are pending to be shipped. Filters are available to narrow down the shown results.
 
