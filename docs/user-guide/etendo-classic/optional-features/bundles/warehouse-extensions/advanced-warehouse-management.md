@@ -438,6 +438,51 @@ In the pop-up window, you can assign a user or enable automatic assignment. If m
 
 Finishes the receipt, generating and completing the corresponding **goods receipts**. In addition, if the receipt includes products with AUOM (pallet or box), the associated **Inventory Reference** record is automatically created.
 
+**Print Labels**
+
+This button generates barcode labels for **all lines** of the selected Inbound Receipt document.  
+Each label is created with the **full set of attributes defined during the reception**, including product data, quantities, and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+
+- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.  
+  This means that as many labels are printed as units specified in the **Operative Quantity** field.
+- For **lines with logistics units (Box or Pallet)** where multiple units are received (for example, 3 boxes), the system generates **one unique barcode label per logistics unit**, since each unit is registered as a unique referenced inventory.
+- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.  
+  In this case, the label identifies the **logistics unit and its locator**, as it may contain multiple grouped products.
+
+This button is available **only when the Inbound Receipt is completed**.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png)
+
+??? example "Print Inbound Receipt - Examples"
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png)
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png)
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png)
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png)
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png)
+
+**Print Line Label**
+
+This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.  
+Each label contains the **complete set of attributes assigned at reception time** for the selected lines.
+
+The label generation follows the same rules described above, applied **only to the selected line or lines**:
+
+- For **loose products**, one barcode label is generated **per operative quantity** defined in each selected line.
+- For **multiple logistics units**, one unique label is generated per logistics unit.
+- For **grouped logistics units**, a single label is generated identifying the logistics unit.
+
+This button is available **only when the Inbound Receipt is completed**.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png)
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png)
 
 ### Workflow
 
