@@ -567,7 +567,7 @@ Fields to note:
 
 **Process**
 
-Processes the quality inspection document, validating the inspection data and updating the inventory based on the results recorded in the lines. This button is available when the inspection document has completed lines with inspection results.
+Processes the quality inspection document, validating the inspection data and updating the inventory based on the results recorded in the lines. This button is available when the inspection document has lines.
 
 **Generate Task**
 
