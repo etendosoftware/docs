@@ -441,7 +441,7 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 **Print Labels**
 
 This button generates barcode labels for **all lines** of the selected Inbound Receipt document.  
-Each label is created with the **full set of attributes defined during the reception**, including product data, quantities, and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+Each label is created with the **full set of attributes defined during the reception**, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
 
 - For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.  
   This means that as many labels are printed as units specified in the **Operative Quantity** field.
@@ -496,6 +496,15 @@ This button is available **only when the Inbound Receipt is completed**.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-3.png)
 
+    !!!info "Two Ways to Complete the Receipt"
+        At this point, you can choose between two workflows to complete the inbound receipt:
+        
+        **Option 1: Complete from Etendo (ERP)**  
+        Continue with steps 3 and 4 below to complete the receipt directly in the **Inbound Receipt** window by pressing the **Complete Receipt** button.
+        
+        **Option 2: Complete from Etendo Mobile**  
+        Use the **Generate Reception Task** button to create a reception task visible in **Etendo Mobile**. This allows warehouse operators to perform the reception directly from their mobile devices. For more information, visit [Reception Tasks](#reception-tasks).
+
 3. When the Complete button is pressed, the system sequentially generates and completes the **Goods Receipt** and creates a record in **Referenced Inventory (RI)** for each logistics unit received (Box or Pallet), respecting the equivalencies defined in AUOM.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-2.png)
@@ -522,7 +531,7 @@ The **Inventory Quality Inspection** window enables comprehensive management and
 
 :material-menu: `Application` > `Warehouse Management` > `Transaction` > `Inventory Quality Inspection`
 
-This window allows users to create and manage quality inspection records for inventory items. Inspections can be conducted existing stock. The system tracks which products need inspection, their current status, location, and the quantities planned for review.
+This window allows users to create and manage quality inspection records for inventory items. Inspections can be conducted on existing stock. The system tracks which products need inspection, their current status, location, and the quantities planned for review.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-window.png)
 
@@ -578,15 +587,23 @@ The Inventory Quality Inspection process begins in Etendo when a user creates a 
     - The product to be inspected
     - Storage bin location
     - Book quantity (system inventory)
-    - Target status after inspection (To State)
     - Any relevant descriptions or notes
 
+    !!!info "Two Ways to Complete the Inspection"
+        At this point, you can choose between two workflows to complete the quality inspection:
+        
+        **Option 1: Complete from Etendo (ERP)**  
+        Continue with steps 3 and 4 below to perform the inspection directly in the **Inventory Quality Inspection** window.
+        
+        **Option 2: Complete from Etendo Mobile**  
+        Use the **Generate Task** button to create a quality inspection task visible in **Etendo Mobile**. This allows warehouse operators to perform the inspection directly from their mobile devices. For more information, visit [Quality Inspection Tasks](#quality-inspection-tasks).
+
 3. **Process Inspection**: 
-    - Review each product line and update the **Quantity count** field with the actual quantity verified during inspection.
+    - Review each product line and update the **To State** field with the new status for the units, then enter the **Quantity count** for the units that match that status.
     - The system will compare the Book Quantity with the Quantity count to identify discrepancies.
     - Assign the appropriate target status based on inspection results.
 
-4. **Complete the Inspection**: Click the **Process Quality Inspection** button to finalize the document. The system will:
+4. **Complete the Inspection**: Click the **Process** button to finalize the document. The system will:
     - Update the inventory status of inspected products according to the **To State** field
     - Create inventory movements reflecting the inspection results
     - Handle product relocation based on the target status:
@@ -599,9 +616,6 @@ The Inventory Quality Inspection process begins in Etendo when a user creates a 
 
 !!!warning "Movement Rules and Storage Bins"
     It is recommended to configure [Movement Rules](#movement-rules-configuration-window) for commonly used inspection statuses (e.g., *Damaged*, *Blocked*) to maintain proper warehouse organization.
-
-!!!info
-    Alternatively, you can generate a task using the **Generate Task** button, which creates a quality inspection task visible in **Etendo Mobile**. This allows warehouse operators to perform the inspection directly from their mobile devices. For more information on completing quality inspections from Etendo Mobile, visit [Quality Inspection Tasks](#quality-inspection-tasks).
 
 ## AUOM Stock Reservation
 
