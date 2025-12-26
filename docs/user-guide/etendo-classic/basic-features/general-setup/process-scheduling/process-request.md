@@ -50,13 +50,13 @@ The information to fill in to schedule a background process is:
         - Executes the process on a recurring basis.
         - **Scheduling** section fields:
             - **Start Date** and **Start Time**: Define when the first execution will occur.
-            - **Frequency**: Select how often the process should run. Options include _every n seconds_, _every n minutes_, _hourly_, _daily_, _weekly_, _monthly_, or by entering a custom _cron expression_. Depending on the selected frequency, additional fields may appear for more precise scheduling.
+            - **Frequency**: Select how often the process should run. Options include *every n seconds*, *every n minutes*, *hourly*, *daily*, *weekly*, *monthly*, or by entering a custom *cron expression*. Depending on the selected frequency, additional fields may appear for more precise scheduling.
             - **Number of Repetitions**: Set how many times the process should repeat after the initial run. For example, entering 3 will result in a total of 4 executions.
-            - **Finishes**: Specify when the process should stop running. You can set a _Finish Date_ and _Finish Time_ to determine the end of the schedule.
+            - **Finishes**: Specify when the process should stop running. You can set a *Finish Date* and *Finish Time* to determine the end of the schedule.
 
     !!! info
-        - Processes defined as **Run Immediately** and **Run Later** are one-time executions and can be either _Scheduled_ or _Rescheduled_.
-        - Processes defined as **Schedule** are recurring executions and can be either _Scheduled_ or _Unscheduled_.
+        - Processes defined as **Run Immediately** and **Run Later** are one-time executions and can be either *Scheduled* or *Rescheduled*.
+        - Processes defined as **Schedule** are recurring executions and can be either *Scheduled* or *Unscheduled*.
 
 4. Select the **Security Based on Role** checkbox to ensure that only the user who schedules a process can monitor it in the process monitor window, otherwise any user sharing the same role as the one who scheduled the process will be allowed to monitor it.
     
@@ -69,13 +69,13 @@ The information to fill in to schedule a background process is:
 Process monitor is a read-only tab that allows reviewing the status of processes executed by the current request. 
 The information shown is the same as the [Process Monitor](../process-scheduling/process-monitor.md).
 
-![](../../../../../assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/process-monitor.png)
 
 ### Processes in Group
 
 In case that the process executed by the process request is a **process group**, you will find here the information about the executions of the processes in the group for each process group execution.
 
-![](../../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/process-group.png)
 
 
 ## Key Background Processes
@@ -173,7 +173,12 @@ Besides, there are other background processes which can also be scheduled and th
     - Goods Shipments and Sales Invoices
 
     This matching information is used for traceability and invoice status calculations. The process does not post any accounting entries.
+    
+    !!! info
+        This example shows the process should be executed. Starting from **Etendo 25.4**, this matching information is automatically populated when completing goods shipments. However, if the matched tables show zero records, it is necessary to run this process to recalculate and populate the data.
 
+        ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/match-sales-order-invoice-and-shipment-lines-process.png)
+        
     !!! info
         The `MatchedSalesDaysBack` preference is set by default to 90 days. To increase this period, a new record for this preference can be created and the process can be rerun.
 

@@ -51,7 +51,7 @@ Requisition "Lines" tab collects the following demand data:
 
 - The *need by date*, that is the date when the product is required to arrive.
 - The *product*, items/products which need to be purchased.
-- The *quantity* requested, or the *operative quantity* requested if the product has an _alternative unit of measure (AUM)_ configured.
+- The *quantity* requested, or the *operative quantity* requested if the product has an *alternative unit of measure (AUM)* configured.
 - The product's *UOM*, or product's *Alternative UOM* depending on product configuration in regards to measure unit.
 - The *business partner:* This is an optional field the user can enter if the supplier entered at the requisition header needs to be changed for a particular line.
 
@@ -126,14 +126,14 @@ Any **purchase order** created from a **Requisition**:
   - Price List
   - Product/s
 
-### **Lines**
+### Lines
 
 The user can perform a set of actions regarding requisition lines. It is possible for them to either create lines or product demands or to cancel them.
 
 - **New product demands can be manually created** within a requisition by just **adding new requisition lines** before creating a purchase order.
 - **Existing product demands or requisition lines can be cancelled**, if they are not required anymore, by using the header button "**Change Status**".
 
-#### **Matched PO (Purchase order) Lines**
+#### Matched PO (Purchase order) Lines
 
 This tab allows the user to either review the purchase order line automatically linked to a requisition line or to manually link an existing purchase order line to the corresponding requisition line.
 
@@ -210,7 +210,7 @@ It is possible to take up to **three possible actions regarding a purchase order
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
 
 
-### **Lines**
+### Lines
 
 Once the purchase order header has been properly filled in and saved, each purchase order line can be created in this tab.
 
@@ -221,7 +221,7 @@ Purchase order lines can be created in three different ways:
 The purchase order fields you can fill in are described below:
 
 - **Product**. You can select an item or product from the list or use the product selector icon.
-- **Ordered quantity**, or **Operative Quantity** if the product has an _alternative unit of measure (AUM)_ configured. This is the quantity needed of the product/item.
+- **Ordered quantity**, or **Operative Quantity** if the product has an *alternative unit of measure (AUM)* configured. This is the quantity needed of the product/item.
 - Product's **UOM**, or product's **Alternative UOM** depending on product configuration in regards to unit of measure.
 - **Attribute Set Value. An attribute associated with a product as part of an attribute set.**
 - **Net Unit Price**. This one is coming from the Price List selected in the header, but it could always be changed.
@@ -240,21 +240,21 @@ The lines information of the selected orders will be inserted in the purchase or
 
 In this case, you must use the process button **"Copy Lines".**
 
-This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the _Consumption days_ configured for the supplier.
+This process button enables a new window named "Copy Lines from order" which allows you to create order lines by selecting the products already purchased from the supplier of the order by taking into account the *Consumption days* configured for the supplier.
 
 In the **Status Bar** of each line, you can find information about:
 
 - **Delivered quantity**: number of received products of the line.
 - **Invoiced quantity**: number of invoiced product of the line.
 
-#### **Explode button**
+#### Explode button
 
 Explode button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the order.
 
 !!! info
     Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
-#### **Line Tax**
+#### Line Tax
 
 For each purchase order line, Etendo automatically populates the line tax related information in this tab.
 
@@ -267,13 +267,13 @@ Line tax tab informs about each purchase order line:
 !!! info
     It is not possible to either manually create a new line or modify existing ones.
 
-#### **Basic Discounts**
+#### Basic Discounts
 
 Lists information about discounts automatically applied based on the supplier configuration and / or manually entered for the purchase order.
 
 ![Basic discounts](../../../../assets/drive/1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-.png)
 
-#### **Payment Plan**
+#### Payment Plan
 
 This shows the total amount expected to be paid upon order booking as well as the amount/s pre-paid or paid against the invoice/s for the order.
 
@@ -288,7 +288,7 @@ Finally, a payment plan of a purchase order will be **removed**:
 - if the purchase order is **reactivated**
 - or if the purchase order is **voided**
 
-#### **Payment Details**
+#### Payment Details
 
 Displays the details of the payments (pre-payments or regular payments) made for the order or for the invoice/s of the order.
 
@@ -366,7 +366,7 @@ This module adds a new field to the header of the Purchase Order window: **Bank 
 
 A Goods Receipt is a document issued to acknowledge the receipt of the items listed in it. In other words, it is a document used to register in Etendo the specifics of items physically received in the warehouse.
 
-### **Header**
+### Header
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
@@ -401,7 +401,7 @@ If a **"Completed" Goods Receipt is voided** because the goods have been returne
 - **The quantity on hand of the items/s returned is decreased** by the quantity of the goods returned. Etendo automatically creates a new "Goods Receipt" for exactly the same items but with "negative" quantities.
 
 !!! info
-    To learn more about Goods Returns, visit _Return to Vendor_ and _Return to Vendor Shipment_.
+    To learn more about Goods Returns, visit *Return to Vendor* and *Return to Vendor Shipment*.
 
 Supplier can send a "Purchase Invoice" together with the "Delivery Note" of the goods delivered, therefore:
 
@@ -412,7 +412,7 @@ This action implies a **link between the goods receipt and the purchase invoice*
 !!! info
     To learn more, visit [Purchase Invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice).
 
-### **Lines**
+### Lines
 
 Once the goods receipt header has been properly filled in and saved, each item received can be listed as a separate goods receipt line.
 
@@ -443,11 +443,11 @@ Finally:
 
 In the **Status Bar** of each line, you can find information about the **Invoiced quantity**, the number of invoiced products of the line.
 
-#### **Accounting**
+#### Accounting
 
 Accounting information related to the material receipt.
 
-A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" table is set to Active for accounting in the \[_Active Tables_\] tab of the organization's general ledger configuration.
+A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" table is set to Active for accounting in the \[*Active Tables*\] tab of the organization's general ledger configuration.
 
 A "Goods Receipt" posting looks like:
 
@@ -458,28 +458,28 @@ Posting a "Goods Receipt" requires the calculation of the cost of the contained 
 In the case of a goods receipt, that is:
 
 - the purchase price of the product/s
-- or the default _standard cost_ of the product/s in case of calculating cost by using an Standard _costing algorithm_.
+- or the default *standard cost* of the product/s in case of calculating cost by using an Standard *costing algorithm*.
 
 If there is not a related purchase order, the Costing Server process uses the newer of the following three values:
 
 - the last purchase order price of the receipt's vendor for the product.
 - the purchase price list of the product.
-- or the _default cost_ of the product.
+- or the *default cost* of the product.
 
 Moreover:
 
-- The "Legal Entity" organization needs to have a validated _Costing Rule_ configured.
-- And the _Costing Background Process_ needs to be scheduled for the _Client_, therefore it can search and allow that the _Costing Server_ process calculates the cost of the transactions.
+- The "Legal Entity" organization needs to have a validated *Costing Rule* configured.
+- And the *Costing Background Process* needs to be scheduled for the *Client*, therefore it can search and allow that the *Costing Server* process calculates the cost of the transactions.
 
 Once the costs have been calculated, the **Goods Receipt can be posted** to the ledger.
 
 In the case of a receipt containing "Expense" product/s without the "Sales" checkbox selected, it is possible to use the product's purchase price instead of the product's cost to post the goods receipt.
 
-This works if the checkbox _Book Using Purchase Order Price_ is selected for the product/s.
+This works if the checkbox *Book Using Purchase Order Price* is selected for the product/s.
 
 In this case, it is required that a "Purchase Order" is related to the posted "Goods Receipt".
 
-#### **Voiding**
+#### Voiding
 
 It is possible to totally void a goods receipt by using the header button **"Close"** and then selecting the action "**Void**".
 
@@ -499,7 +499,7 @@ Void action implies that:
   - This document is **exactly the same as the original** one being reversed **but the movement quantity is negative.**
   - Once the **new document** has been created, you can **change** both the "**Movement Date**" and the "**Accounting Date**" of the new document prior to getting it posted.
 
-#### **Landed Cost**
+#### Landed Cost
 
 Landed Cost tab allows to allocate additional costs to the goods receipt.
 
@@ -515,7 +515,7 @@ Some relevant fields to note are:
 - **Amount**: that is the landed cost amount. This amount can be an "estimation" or a "real" amount in case of selecting an invoice line.
 - **Landed Cost Distribution Algorithm**: that is the one distributed by Etendo "Distribution by Amount", which means that the landed cost amount is going to be distributed among the goods receipt lines proportionally by receipt line amount.
 
-Once all items above are filled in, including corresponding landed cost purchase invoice line, both "Goods Receipt" and Landed Cost _process matching_ are executed by clicking on the "**Complete**" process button.
+Once all items above are filled in, including corresponding landed cost purchase invoice line, both "Goods Receipt" and Landed Cost *process matching* are executed by clicking on the "**Complete**" process button.
 
 ### How to Reactivate Goods Receipts
 
@@ -596,7 +596,7 @@ Supplier invoices can be registered, booked and managed in the header section of
 
 Some other fields to note are:
 
-- **Transaction document** defaulted as "AP Invoice" or purchase invoice _document type_ which can be manually changed to either "AP Credit Memo" or "Reversed Purchase Invoice".
+- **Transaction document** defaulted as "AP Invoice" or purchase invoice *document type* which can be manually changed to either "AP Credit Memo" or "Reversed Purchase Invoice".
   - "AP Credit Memo" and "Reversed Purchase Invoice" document types can be considered credit purchase invoices, the difference between them is that:
     - "AP Credit Memo" type must contain either an "Invoiced Quantity" > 0 or "line Net Amounts" >0.  
       Above implies that invoices set as "Credit Memo" should not be related to "Orders" or "Shipments".
@@ -604,17 +604,17 @@ Some other fields to note are:
 - **Document No**. you could manually fill in the supplier's invoice number in this field, if the document sequence number associated with the transaction document "AP Invoice" is set up to allow you to do that; otherwise it will be automatically provided by the system as an "Internal" purchase invoice number.
 - **Invoice Date**: the date the invoice is registered. It is used to calculate when the payment of the invoice is due. Defaults to the current date can always be changed.
 - **Accounting Date**: the date to be used in the posting record of the Purchase Invoice to the general ledger. Defaults to the Invoice Date field can always be changed.
-- **Payment Terms**: indicates **how** an invoice should be paid. Defaulted according to the Vendor/Creditor tab of the _Business Partner_ window.
-- **Payment Method**: defines **when** a purchase invoice needs to be paid. Defaulted according to the Vendor/Creditor tab of the _Business Partner_ window.
+- **Payment Terms**: indicates **how** an invoice should be paid. Defaulted according to the Vendor/Creditor tab of the *Business Partner* window.
+- **Payment Method**: defines **when** a purchase invoice needs to be paid. Defaulted according to the Vendor/Creditor tab of the *Business Partner* window.
 - **Supplier Reference**: this is a not-mandatory field which can be used to enter the supplier invoice number.
 
 There are 3 ways of entering lines into the purchase invoice, two of them from the invoice header and the last one from the **Lines** tab:
 
-1.  Selecting products from pending to be invoiced orders or receipts using the _Create Lines From Order and Create Lines From Receipt_ buttons.
-2.  Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the _Copy Lines_ button.
-3.  Manually, line by line in the _Lines_ tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.
+1.  Selecting products from pending to be invoiced orders or receipts using the *Create Lines From Order and Create Lines From Receipt* buttons.
+2.  Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the *Copy Lines* button.
+3.  Manually, line by line in the *Lines* tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.
 
-The **Complete** button finishes the creation of the invoice document with the fulfillment of the _Payment Plan_ tab and the _Payment Monitor_ section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.
+The **Complete** button finishes the creation of the invoice document with the fulfillment of the *Payment Plan* tab and the *Payment Monitor* section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.
 
 Once completed, a purchase invoice can be:
 
@@ -624,7 +624,7 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-### **Lines**
+### Lines
 
 Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
 
@@ -632,9 +632,9 @@ Lines list each product to be purchased and its characteristics.
 
 The fields to note are:
 
-- **Financial Invoice Line** is selected when the invoice line is not a product but an account not set up as a product but as a _G/L Item_, or an asset not set up as a product.  
+- **Financial Invoice Line** is selected when the invoice line is not a product but an account not set up as a product but as a *G/L Item*, or an asset not set up as a product.  
   When selected, the product field disappears from the screen and an account field appears related to the purchase invoice line.
-- **Attribute Set Value**: field is displayed if the product in the line has _attributes_ (color, size, serial number or several of them together etc).
+- **Attribute Set Value**: field is displayed if the product in the line has *attributes* (color, size, serial number or several of them together etc).
 - **Purchase Order Line and Goods Receipt Line**: references to the purchase order and goods receipt line that is being invoiced.
 
 As already mentioned, purchase expenses can be deferred therefore they are not recognized at the purchase accounting date but within a given number of accounting periods.
@@ -647,22 +647,22 @@ When a purchase invoice line is created, it is possible to define at line level 
   For instance, if a company purchases business insurance for the duration of the year, the period number to enter would be 12 as the company would like to distribute that expense over 12 months.
 - **Starting Period**: The first open period in which the expense is going to be recognized.
 
-These fields can be defaulted if configured for the _product_.
+These fields can be defaulted if configured for the *product*.
 
-If an expense plan is configured, it implies a specific _purchase invoice accounting_.
+If an expense plan is configured, it implies a specific *purchase invoice accounting*.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product is not already exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the invoice. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
-**Match LC Cost** button is shown when the purchase order line contains either an "account" or a "product" setup as _landed cost type_.
+**Match LC Cost** button is shown when the purchase order line contains either an "account" or a "product" setup as *landed cost type*.
 
-This process button allows to **match** both the "**estimated**" landed cost booked in the _landed cost_ window, and the one being **invoiced** in the invoice line. Both need to be of the very **same landed cost type**.
+This process button allows to **match** both the "**estimated**" landed cost booked in the *landed cost* window, and the one being **invoiced** in the invoice line. Both need to be of the very **same landed cost type**.
 
 Once selected, **"Match LC Cost**" button opens the **"Match LC Cost" pick and edit window**.
 
 Only processed Landed Cost documents will be shown in this Window. It allows you to pick the corresponding landed cost, to enter an amount to match in the field "Matched Amt", and then to select the "**Process Matching**" check-box.
 
 !!! warning
-    Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the _landed cost_ window by using **Process Matching** button.
+    Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the *landed cost* window by using **Process Matching** button.
 
 #### Line Tax
 
@@ -824,7 +824,7 @@ In the window, there is a listing of all invoices that are matched to goods rece
 
 ![Matched Purchase Invoices window](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.png)
 
-#### **Matched Purchase Invoice**
+#### Matched Purchase Invoice
 
 Matched Purchase Invoice tab lists each invoice line posted linked to the corresponding goods receipt lines, which could also be posted or not.
 
@@ -832,14 +832,14 @@ There is a "**Post**" header button which is the one that posts the discrepancie
 
 The general process to post the discrepancies in accounting is detailed below:
 
-A _Matching Invoice_ document can be posted if the cost of the products included in a _Goods Receipt_ has been calculated. To obtain that:
+A *Matching Invoice* document can be posted if the cost of the products included in a *Goods Receipt* has been calculated. To obtain that:
 
-- A validated _Costing Rule_ is required in the Matched Invoice's legal entity,
-- and the background process _Costing Background Process_ must be run.
+- A validated *Costing Rule* is required in the Matched Invoice's legal entity,
+- and the background process *Costing Background Process* must be run.
 
-In the case of "Expense" product/s do not having the "Sales" checkbox selected, it is possible to use the product's purchase price instead of the product's cost whenever the checkbox _Book Using Purchase Order Price_ is selected. In this case, it is required that a "Purchase Order" is related to the "Goods Receipt".
+In the case of "Expense" product/s do not having the "Sales" checkbox selected, it is possible to use the product's purchase price instead of the product's cost whenever the checkbox *Book Using Purchase Order* Price is selected. In this case, it is required that a "Purchase Order" is related to the "Goods Receipt".
 
-#### **Accounting**
+#### Accounting
 
 Accounting information related to the matched purchase invoices
 
@@ -861,20 +861,20 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 This window allows the user to create a Return Material document in case a given product needs to be sent back either to be returned for a refund or replacement, or to be repaired.
 
-### **Header**
+### Header
 
 The user can create a purchase order and process it.
 
-Once the Return Material document is accepted by the Vendor, the user can process it by clicking the button **Book**. The document changes from _Draft_ to _Booked._
+Once the Return Material document is accepted by the Vendor, the user can process it by clicking the button **Book**. The document changes from *Draft* to *Booked*.
 
 ![Return to vendor window](../../../../assets/drive/1PKb2NIyq5HtvO_4abDPQjajObdcGFiPH.png)
 
-Only _Booked_ documents can be shipped to the vendor.
+Only *Booked* documents can be shipped to the vendor.
 
 !!! warning
-    Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status _Booked._
+    Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status *Booked*.
 
-### **Lines**
+### Lines
 
 Add products to be included in your purchase order. Each product is added by creating a line.
 
@@ -927,7 +927,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 
 From this window, the user can deliver the returned goods to the vendor.
 
-### **Header**
+### Header
 
 The user can create and edit a goods receipt.
 
@@ -937,23 +937,23 @@ The **RMA vendor ref.** field is populated automatically or not based on:
 - If you select a line/s where all of them belong to the same Return to Vendor document, it will be populated automatically.
 - If you select a line/lines but one of them belongs to a different Return to Vendor document, then it will not be populated automatically.
 
-Once the document is ready, you can process it by clicking the button **Complete**. The document changes from _Draft_ to _Completed._
+Once the document is ready, you can process it by clicking the button **Complete**. The document changes from *Draft* to *Completed*.
 
 !!! warning
-    Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status _Completed._
+    Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status *Completed*.
 
 ![Return to vendor shipment](../../../../assets/drive/1wuiYHH8xsIwjLRgp0VzWUqAtev43BzD8.png)
 
 To invoice these documents you must use the **Purchase invoice** window. All scenarios are covered:
 
-- If the vendor sends an invoice just for that specific document you need to select a _Reverse purchase invoice_ document type and then select the lines through the _Create lines_ from button.
-- If the vendor sends an invoice with the original purchase order plus the return materials order you need to select a _Purchase invoice_ document type and then select the lines through the _Create lines_ from button.
+- If the vendor sends an invoice just for that specific document you need to select a *Reverse purchase invoice* document type and then select the lines through the *Create lines* from button.
+- If the vendor sends an invoice with the original purchase order plus the return materials order you need to select a *Purchase invoice* document type and then select the lines through the *Create lines* from button.
 - If the vendor does not send an invoice for the return materials order but wants to keep it as credit where you can use it later, you have to:
-  - Create a _Reverse purchase invoice_ for these returned materials.
+  - Create a *Reverse purchase invoice* for these returned materials.
   - Leave it as credit to be used later through the **Payment out** window.
   - When you create the Purchase invoice for the original Purchase order you can consume that credit.
 
-### **Lines**
+### Lines
 
 Add products which are included in your goods receipt. Each product is shown on its own line.
 
@@ -992,7 +992,7 @@ The Lines tab is not editable, since the lines always come from return to vendor
 
 If there is not enough available stock for a product in a selected line, then it will be possible to define a Ship Quantity and select it. if there is at least one storage bin with overissue inventory status for the Return To Vendor Shipment's warehouse, in this case the new line will use it as storage bin and it will create a negative stock when the document is processed.
 
-#### **Accounting**
+#### Accounting
 
 The RTV shipment can be posted **if the table "MaterialMgmtShipmentInOut" is** active for accounting **in the corresponding general ledger configuration.**
 
@@ -1058,7 +1058,7 @@ In Summary, landed cost feature follows below detailed steps:
   - This landed cost document can be related to a single goods receipt, to several goods receipts or to specific goods receipts lines.
   - This landed cost document can record "actual" landed cost in case of selecting the corresponding invoice, therefore the landed cost process and matching is done in one step.
   - Landed cost is processed.
-    - This action creates a _landed cost adjustment_ linked to the landed cost document.  
+    - This action creates a *landed cost adjustmen* linked to the landed cost document.  
       This cost adjustment has as many adjustment lines as products included in the goods receipt(s) selected, therefore the cost of those products is adjusted as applicable.
 - **Landed Cost Post**:
   - Once a landed cost document is processed it can be posted to the ledger, therefore product(s) asset accounting is adjusted as well.
@@ -1069,7 +1069,7 @@ In Summary, landed cost feature follows below detailed steps:
 - **Landed Cost Matching Post**:
   - Once landed cost(s) are matched can be posted therefore:
     - product(s) asset accounting is adjusted once more if applicable,
-    - and landed cost posting gets landed cost invoice _accounting dimensions._
+    - and landed cost posting gets landed cost invoice *accounting dimensions*.
 
 ### Header
 
@@ -1125,10 +1125,10 @@ Once processed, a landed cost document can be:
 |                   |                                                                                                                                                           |                                |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | Account           | Debit                                                                                                                                                     | Credit                         |
-| [_Product Asset_] | "Estimated" Landed Cost Amount.<br><br>(\*)This ledger entry gets goods receipt "accounting dimensions" such as "Vendor" or "Product". See "Detail" link. |                                |
-| [_G/L Item_]      |                                                                                                                                                           | "Estimated" Landed Cost Amount |
+| [*Product Asset*] | "Estimated" Landed Cost Amount.<br><br>(\*)This ledger entry gets goods receipt "accounting dimensions" such as "Vendor" or "Product". See "Detail" link. |                                |
+| [*G/L Item*]      |                                                                                                                                                           | "Estimated" Landed Cost Amount |
 
-##### **Process Matching**
+##### Process Matching
 
 Matching between an "estimated" landed cost and an "invoiced" landed cost can be processed in:
 
@@ -1183,7 +1183,7 @@ This scenario automatically creates:
 - a landed cost adjustment that adjust the cost of each product included in the Goods Receipt(s).
 - only actions missing are to post the landed cost document (header) and to post the landed cost matching.
 
-##### **Post Matching**
+##### Post Matching
 
 A landed cost matching can be posted, after being processed. This posting will have different ledger entries depending on the scenarios listed below:
 
@@ -1194,16 +1194,16 @@ A landed cost matching can be posted, after being processed. This posting will h
 |                     |                                           |                                                                                                                                                                        |
 | ------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account             | Debit                                     | Credit                                                                                                                                                                 |
-| [_Product Expense_] | "Estimated"="Invoiced" Landed Cost Amount |                                                                                                                                                                        |
-| [_Product Expense_] |                                           | "Estimated"="Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Expense*] | "Estimated"="Invoiced" Landed Cost Amount |                                                                                                                                                                        |
+| [*Product Expense*] |                                           | "Estimated"="Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
 - In the case of an "account" landed cost type
 
 |              |                                           |                                                                                                                                                                        |
 | ------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account      | Debit                                     | Credit                                                                                                                                                                 |
-| [_G/L Item_] | "Estimated"="Invoiced" Landed Cost Amount |                                                                                                                                                                        |
-| [_G/L Item_] |                                           | "Estimated"="Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*G/L Item*] | "Estimated"="Invoiced" Landed Cost Amount |                                                                                                                                                                        |
+| [*G/L Item*] |                                           | "Estimated"="Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
 The purpose of above ledger entries is to get that landed cost expense accounting gets invoice landed cost "accounting dimensions".
 
@@ -1216,16 +1216,16 @@ This last setup ("Is matching adjusted" = No) leads to NOT creating a landed cos
 |                     |                               |                                                                                                                                                            |
 | ------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account             | Debit                         | Credit                                                                                                                                                     |
-| [_Product Expense_] | "Invoiced" Landed Cost Amount |                                                                                                                                                            |
-| [_Product Expense_] |                               | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Expense*] | "Invoiced" Landed Cost Amount |                                                                                                                                                            |
+| [*Product Expense*] |                               | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
 - In the case of an "account" landed cost type
 
 |              |                               |                                                                                                                                                            |
 | ------------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account      | Debit                         | Credit                                                                                                                                                     |
-| [_G/L Item_] | "Invoiced" Landed Cost Amount |                                                                                                                                                            |
-| [_G/L Item_] |                               | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*G/L Item*] | "Invoiced" Landed Cost Amount |                                                                                                                                                            |
+| [*G/L Item*] |                               | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
 3\. "**Estimated**" landed cost **higher** than "**invoiced**" landed cost. **"Is matching adjusted" = Yes**
 
@@ -1236,18 +1236,18 @@ This last setup ("Is matching adjusted" = Yes) leads to creating a landed cost a
 |                     |                                |                                                                                                                                                            |
 | ------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account             | Debit                          | Credit                                                                                                                                                     |
-| [_Product Expense_] | "Estimated" Landed Cost Amount |                                                                                                                                                            |
-| [_Product Expense_] |                                | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
-| [_Product Asset_]   |                                | Difference (estimated>invoiced) Landed Cost Amount                                                                                                         |
+| [*Product Expense*] | "Estimated" Landed Cost Amount |                                                                                                                                                            |
+| [*Product Expense*] |                                | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Asset*]   |                                | Difference (estimated>invoiced) Landed Cost Amount                                                                                                         |
 
 - In the case of an "account" landed cost type
 
 |                   |                                |                                                                                                                                                            |
 | ----------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account           | Debit                          | Credit                                                                                                                                                     |
-| [_G/L Item_]      | "Estimated" Landed Cost Amount |                                                                                                                                                            |
-| [_G/L Item_]      |                                | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
-| [_Product Asset_] |                                | Difference (estimated>invoiced) Landed Cost Amount                                                                                                         |
+| [*G/L Item*]      | "Estimated" Landed Cost Amount |                                                                                                                                                            |
+| [*G/L Item*]      |                                | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Asset*] |                                | Difference (estimated>invoiced) Landed Cost Amount                                                                                                         |
 
 4\. "**Estimated**" landed cost **smaller** than "**invoiced**" landed cost. **"Is matching adjusted" = Yes**
 
@@ -1258,20 +1258,20 @@ This last setup ("Is matching adjusted" = Yes) leads to creating a landed cost a
 |                     |                                                    |                                                                                                                                                            |
 | ------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account             | Debit                                              | Credit                                                                                                                                                     |
-| [_Product Asset_]   | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
-| [_Product Expense_] | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
-| [_Product Expense_] |                                                    | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Asset*]   | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
+| [*Product Expense*] | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
+| [*Product Expense*] |                                                    | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
 - In the case of an "account" landed cost type.
 
 |                   |                                                    |                                                                                                                                                            |
 | ----------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Account           | Debit                                              | Credit                                                                                                                                                     |
-| [_Product Asset_] | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
-| [_G/L Item_]      | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
-| [_G/L Item_]      |                                                    | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
+| [*Product Asset*] | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
+| [*G/L Item*]      | Difference (estimated<invoiced) Landed Cost Amount |                                                                                                                                                            |
+| [*G/L Item*]      |                                                    | "Invoiced" Landed Cost Amount<br><br>(\*)This ledger entry gets landed cost invoice "accounting dimensions" such as "Business Partner". See "Detail" link. |
 
-##### **Cancel Matching**
+##### Cancel Matching
 
 A landed cost matched can be canceled by using header process button "**Cancel Matching**". Before that landed cost matching needs to be "Unpost".
 
@@ -1281,17 +1281,17 @@ Cancel matching action implies that:
 - A new matching needs to be executed in the corresponding landed cost purchase invoice(s).
 - Correct matching amounts will then be updated in Matched Amount tab.
 
-#### **Matched Amount**
+#### Matched Amount
 
 Matched Amount tab is a read only tab that allows to review the purchase invoice lines matched against landed cost lines.
 
-#### **Accounting Cost**
+#### Accounting Cost
 
 This tab provides Landed Cost document accounting information.
 
 As any other accounting tabs, this tab shows the ledger journal entries of landed cost posting.
 
-#### **Receipt**
+#### Receipt
 
 Receipt tab allows the user to select either the receipt(s) or receipt line(s) to which landed cost types booked are going to be allocated.
 
@@ -1306,13 +1306,13 @@ Some relevant fields to note are:
 
 Note that either a good receipt or a good receipt line needs to be selected in a record.
 
-#### **Receipt Line Amount**
+#### Receipt Line Amount
 
 Receipt Line Amount is a read only tab that shows detailed information about the landed cost type line allocated to each receipt line, as well as the landed cost amount distributed to each receipt line.
 
 It is important to remark that the "Amount" distributed is calculated by taking into account "Costing" precision defined for the Currency.
 
-#### **Accounting**
+#### Accounting
 
 This tab provides Landed Cost Matching accounting information.
 
