@@ -16003,6 +16003,39 @@ In the pop-up window, you can assign a user or enable automatic assignment. If m
 </div>
 <p><strong>Complete Receipt</strong></p>
 <p>Finishes the receipt, generating and completing the corresponding <strong>goods receipts</strong>. In addition, if the receipt includes products with AUOM (pallet or box), the associated <strong>Inventory Reference</strong> record is automatically created.</p>
+<p><strong>Print Labels</strong></p>
+<p>This button generates barcode labels for <strong>all lines</strong> of the selected Inbound Receipt document.<br>
+Each label is created with the <strong>full set of attributes defined during the reception</strong>, including product data, quantities, and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.</p>
+<ul>
+<li>For <strong>loose products</strong> (without logistics units), the system generates <strong>one barcode label per operative quantity</strong> defined in the receipt line.<br>
+  This means that as many labels are printed as units specified in the <strong>Operative Quantity</strong> field.</li>
+<li>For <strong>lines with logistics units (Box or Pallet)</strong> where multiple units are received (for example, 3 boxes), the system generates <strong>one unique barcode label per logistics unit</strong>, since each unit is registered as a unique referenced inventory.</li>
+<li>When products are <strong>grouped into a single logistics unit</strong> using the <strong>Create Reference Inventory</strong> button, the system generates <strong>one single barcode label</strong> for that logistics unit.<br>
+  In this case, the label identifies the <strong>logistics unit and its locator</strong>, as it may contain multiple grouped products.</li>
+</ul>
+<p>This button is available <strong>only when the Inbound Receipt is completed</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png"></a></p>
+<details class="example">
+<summary>Print Inbound Receipt - Examples</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png"></a></p>
+</details>
+<p><strong>Print Line Label</strong></p>
+<p>This action generates <strong>barcode labels only for the selected line or lines</strong> of the Inbound Receipt.<br>
+Each label contains the <strong>complete set of attributes assigned at reception time</strong> for the selected lines.</p>
+<p>The label generation follows the same rules described above, applied <strong>only to the selected line or lines</strong>:</p>
+<ul>
+<li>For <strong>loose products</strong>, one barcode label is generated <strong>per operative quantity</strong> defined in each selected line.</li>
+<li>For <strong>multiple logistics units</strong>, one unique label is generated per logistics unit.</li>
+<li>For <strong>grouped logistics units</strong>, a single label is generated identifying the logistics unit.</li>
+</ul>
+<p>This button is available <strong>only when the Inbound Receipt is completed</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png"></a></p>
 <h3 id="workflow">Workflow</h3>
 <p><strong>Receipt Flow</strong></p>
 <ol>
