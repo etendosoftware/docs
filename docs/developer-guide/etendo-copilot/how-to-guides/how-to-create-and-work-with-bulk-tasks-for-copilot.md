@@ -10,7 +10,7 @@ tags:
 
 ## Overview
 
-This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute in background with Copilot
+This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute them in the background with Copilot.
 
 ### Concept and Use Cases
 When you need to make use of an AI agent to perform tasks with a high volume of iterations, it will be limited in the amount it can handle and its speed. Then the concept of Bulk tasks is born, which consists of storing requests in a window of the `Tasks` module. 
@@ -23,20 +23,25 @@ These requests can be executed manually or be processed in a background process 
 ## Add Copilot Tasks
 The Etendo Copilot module includes:
 
-- **Add Copilot Task Button**: This button in the `Tasks` window allows you sent a CSV/XLSX/ZIP file to create bulk tasks.
+- **Add Copilot Task Button**: This button in the `Tasks` window allows you to send a CSV/XLSX/ZIP file to create bulk tasks.
 - **Bulk Task Creator**: This agent is configured with the [Task Creator Tool](../available-tools/task-creator-tool.md) to create bulk tasks based on a zip file or a CSV/XLSX file. This agent can be added to a supervisor agent to chain with other agents.
 
 In both options, the requirements are the same:
 
 - **CSV/XLSX/ZIP file**: The file that contains the data to be processed.
-- **Question**: The description or request that will be used as the task base. For the case of the agent `Bulk Task Creator`, it will be encharge to reform the task to convert to singular tasks. But for the other options, it is necessary to provide the task base in singular form.
-- **Execution Group**: Optional group. If not set, it uses the conversation ID. Its use to identify the tasks that belong to the same group.
-- **Task Type**: Optional task type ID. If not set, it auto-creates one named "Copilot". Its use to identify the type of task.
-- **Status**: Optional status ID. Defaults to "Pending". Its use to identify the status of the task. After the task is processed, the status will be updated to `Completed`.
+- **Question**: The description or request that will be used as the task base. For the case of the agent `Bulk Task Creator`, it will be in charge of reforming the task to convert it to singular tasks. But for the other options, it is necessary to provide the task base in singular form.
+- **Execution Group**: Optional group. If not set, it uses the conversation ID. It is used to identify the tasks that belong to the same group.
+- **Task Type**: Optional task type ID. If not set, it auto-creates one named "Copilot". It is used to identify the type of task.
+- **Status**: Optional status ID. Defaults to "Pending". It is used to identify the status of the task. After the task is processed, the status will be updated to `Completed`.
 - **Agent**: The agent that will process the tasks. If the agent is not specified, will be selected the agent that used the tool. For the case of the agent `Bulk task creator`, it will be selected the supervisor agent that contains it.
+- **Groupby**: Optional parameter. A list of column names (or a comma-separated string) to group rows by their values. When specified, rows with the same values in these columns will be grouped into a single task, with the data passed as a JSON array. This is useful for processing related records together (e.g., all order lines for the same document). If not specified, each row becomes a separate task.
+- **Preview**: Optional boolean parameter. When set to `true`, the tool will return a preview of how the tasks would be created without actually creating them. This is useful for validating the task structure before creating a large number of tasks.
 
 !!! info
-    When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files. The task request will be the following format: ```BASE_TASK - [FILE_NAME/ROW DATA]```
+    When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files (unless `groupby` is used), one per file in the case of ZIP files, and one per file in the case of other files. The task request will be in the following format:
+    
+    - **Without groupby**: `BASE_TASK - [FILE_NAME/ROW DATA]`
+    - **With groupby**: `BASE_TASK - [JSON array with grouped rows]`
 
 ### Example
 For example, if you have a CSV file with the following data:
@@ -73,7 +78,7 @@ And the objective is to insert these products in Etendo. For this example we wil
 
 1. Go to the agent that contains the `Task Creator Tool`.
 2. Open a conversation with the agent.
-3. Attach in the conversation the CSV file with the products data.
+3. Attach to the conversation the CSV file with the products data.
 4. Send some request like:
 
     ``` text
@@ -92,11 +97,11 @@ And the objective is to insert these products in Etendo. For this example we wil
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
 #### Using the `Bulk Task Creator` agent
-This agent know to use the `Task Creator Tool` strategically, converting the request in singular tasks. The steps to create the bulk tasks are:
+This agent knows how to use the `Task Creator Tool` strategically, converting the request into singular tasks. The steps to create the bulk tasks are:
 
 1. Add the `Bulk Task Creator` agent to a supervisor agent. In this case, we will use the `Data Initialization Supervisor` agent that contains the `Product Generator` agent.
 2. Open a conversation with the supervisor agent.
-3. Attach in the conversation the CSV file with the products data.
+3. Attach to the conversation the CSV file with the products data.
 4. Send some request like: 
    
     ``` text
@@ -106,6 +111,62 @@ This agent know to use the `Task Creator Tool` strategically, converting the req
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-3.png)
 
 5. The supervisor agent will delegate the task to the `Bulk Task Creator` agent that will create the tasks based on the file data and then process it.
+
+### Advanced Options: Grouping Related Data
+
+When working with data that has relationships between rows (such as order lines belonging to the same order, or invoice items for the same invoice), you can use the `groupby` parameter to create one task per group instead of one task per row.
+
+#### When to Use Groupby
+
+Use the `groupby` parameter when:
+
+- **Related records should be processed together**: For example, all lines of a sales order should be processed as a single order creation task.
+- **Context from multiple rows is needed**: When the AI agent needs to see all related data at once to make better decisions.
+- **Reducing task overhead**: Instead of creating hundreds of individual tasks, you can create fewer tasks with grouped data.
+
+#### Groupby Example: Order Lines
+
+Suppose you have an Excel file with order lines data:
+
+```csv title="order_lines.csv"
+DocumentNo,Product,Quantity,Price
+ORD-001,Laptop,2,1200
+ORD-001,Mouse,2,25
+ORD-002,Keyboard,5,80
+ORD-002,Monitor,3,350
+```
+
+Without groupby, this would create **4 separate tasks** (one per row). With groupby, you can group by `DocumentNo` to create **2 tasks** (one per order).
+
+**Using the Task Creator Tool with groupby:**
+
+```text
+Create bulk tasks for the attached file.
+- Question: "Create a sales order with these lines:"
+- Group by: DocumentNo
+- The group id is 'Order Load December 2025'
+- The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'
+```
+
+This will create 2 tasks:
+
+1. **Task 1**: `Create a sales order with these lines: - [{"DocumentNo": "ORD-001", "Product": "Laptop", "Quantity": 2, "Price": 1200}, {"DocumentNo": "ORD-001", "Product": "Mouse", "Quantity": 2, "Price": 25}]`
+2. **Task 2**: `Create a sales order with these lines: - [{"DocumentNo": "ORD-002", "Product": "Keyboard", "Quantity": 5, "Price": 80}, {"DocumentNo": "ORD-002", "Product": "Monitor", "Quantity": 3, "Price": 350}]`
+
+Each task now contains a JSON array with all the lines for that specific order, allowing the agent to process the complete order in a single execution.
+
+#### Preview Mode
+
+Before creating a large number of tasks, you can use the `preview` parameter to validate the task structure:
+
+```text
+Create bulk tasks for the attached file in preview mode.
+- Question: "Create product with this data:"
+- Preview: true
+- The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'
+```
+
+The tool will return a preview showing how many tasks would be created and their structure, without actually creating them in the database.
 
 ## How to Process Copilot tasks
 The tasks can be processed in two ways:
