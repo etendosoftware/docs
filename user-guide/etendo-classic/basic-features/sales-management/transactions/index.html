@@ -16687,29 +16687,65 @@ This header lists the main terms and conditions related to the customer order th
 <p>In the majority of cases, the main and the only field needed to create a new sales transaction document is the Business Partner field. All other fields are automatically populated based on the selected Business Partner, logged in User preferences and other system default parameters.</p>
 </div>
 <p>Some other fields to note are:</p>
-<p><strong>Scheduled Delivery Date:</strong> indicates the date that the order should be shipped to the customer. Defaulted to the current date.<br>
-<strong>Warehouse:</strong> indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.<br>
-<strong>Delivery Status:</strong> indicates in % how much quantity has been delivered.<br>
-<strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.<br>
-<strong>Reservation Status:</strong> defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.</p>
+<ul>
+<li><strong>Scheduled Delivery Date:</strong> indicates the date that the order should be shipped to the customer. Defaulted to the current date.</li>
+<li><strong>Warehouse:</strong> indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.  </li>
+<li><strong>Delivery Status:</strong> indicates in % how much quantity has been delivered.</li>
+<li><strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Starting from Etendo 25.4, if these fields show 0% but the quantities are actually delivered/invoiced, you must execute the <a href="../../general-setup/process-scheduling/process-request/#match-sales-order-invoice-and-shipment-lines">Match Sales Order Invoice and Shipment Lines</a> process to update the status correctly.</p>
+</div>
+<ul>
+<li><strong>Reservation Status:</strong> defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the <a href="./#stock-reservations">Stock Reservations</a> section.</p>
 </div>
-<p><strong>Payment Status:</strong> indicates in % how much of the total of the order has been paid.</p>
+<ul>
+<li><strong>Payment Status:</strong> indicates in % how much of the total of the order has been paid. </li>
+</ul>
 <p>Below fields are defaulted according to the Customer and Location tabs of the Business Partner window.</p>
+<ul>
+<li>
 <p><strong>Payment Method</strong>: indicates how an order (and invoice) should be paid.</p>
+</li>
+<li>
 <p><strong>Payment Terms</strong>: defines when a sales invoice generated from this order needs to be paid.</p>
+</li>
+<li>
 <p><strong>Invoice Terms</strong>: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.</p>
+</li>
+<li>
 <p><strong>Different Invoice Terms are:</strong></p>
-<p><strong>After Delivery:</strong> Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.<br>
-<strong>After order Delivered:</strong> The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.<br>
-<strong>Customer Schedule After Delivery:</strong> Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).<br>
-<strong>Do Not Invoice:</strong> No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).<br>
-<strong>Immediate:</strong> The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
-<strong>Sales Representative</strong>: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
-<strong>Invoice Address</strong>: Address that is used upon generating an invoice.
-<strong>Delivery Location</strong>: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.</p>
+</li>
+<li>
+<p><strong>After Delivery:</strong> Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.  </p>
+</li>
+<li>
+<p><strong>After order Delivered:</strong> The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.  </p>
+</li>
+<li>
+<p><strong>Customer Schedule After Delivery:</strong> Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  </p>
+</li>
+<li>
+<p><strong>Do Not Invoice:</strong> No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  </p>
+</li>
+<li>
+<p><strong>Immediate:</strong> The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.</p>
+</li>
+<li>
+<p><strong>Sales Representative</strong>: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.</p>
+</li>
+<li>
+<p><strong>Invoice Address</strong>: Address that is used upon generating an invoice.</p>
+</li>
+<li>
+<p><strong>Delivery Location</strong>: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.</p>
+</li>
+</ul>
 <p><strong>There are 3 ways of entering lines into a sales order:</strong></p>
 <ul>
 <li>Copying selected products from a history of products ordered by this customer using the Copy Lines button.</li>
@@ -16949,8 +16985,14 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <li><strong>Delivery Location:</strong> Address that will be used when generating a shipment. If it is not specified, a Partner Address field will be used. Defaulted according to the Customer and Location tabs of the Business Partner window.</li>
 <li><strong>Accounting Date:</strong> Date to be used in the posting record of the Goods Shipment to the general ledger.</li>
 <li><strong>Sales Order:</strong> Reference to an order that is being shipped. If Goods Shipment includes products from several Sales Orders fields are left empty (still trace-ability is present at Lines level).</li>
-<li><strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.
-  If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.</li>
+<li>
+<p><strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.
+  If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Starting from Etendo 25.4, if this field shows 0% but the quantities are actually invoiced, execute the <a href="../../general-setup/process-scheduling/process-request/#match-sales-order-invoice-and-shipment-lines">Match Sales Order Invoice and Shipment Lines</a> process to update the status correctly.</p>
+</div>
+</li>
 </ul>
 <p>There are 2 ways of entering lines into the sales order:</p>
 <ol>
@@ -17052,7 +17094,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>The user can create a sales order and process it when ready.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1d5KfWff5kX53_F_hC_crAGPoIMUaj9sV.png" data-desc-position="bottom"><img alt="Return from customer header" src="../../../../../assets/drive/1d5KfWff5kX53_F_hC_crAGPoIMUaj9sV.png"></a></p>
 <p>Once the Return document is accepted you can process it by clicking the button <strong>Book</strong>. Following the standard, the document changes from <em>Draft</em> to <em>Booked.</em></p>
-<p>Only <em>Booked</em> documents can be receipt.</p>
+<p>Only <em>booked</em> documents can be receipt.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Notice the button <strong>Pick/Edit lines</strong> disappears when the Return to customer document is in status <em>Booked.</em></p>
@@ -17247,7 +17289,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Create Shipments from Orders</code></p>
 <p>Create Shipments from Orders allows the user to see Sales Orders pending to be shipped and automatically generate Goods Shipments based on them.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1wtJV_ZpJ4eAlSCNqf69SOvq52h6dfAZV.png" data-desc-position="bottom"><img alt="Create shipments from orders" src="../../../../../assets/drive/1wtJV_ZpJ4eAlSCNqf69SOvq52h6dfAZV.png"></a></p>
-<p>All Sales Orders of the <em>Standard Order</em> type and in a status <em>Booked</em> are treated as meeting the criteria to be shipped.</p>
+<p>All Sales Orders of the <em>Standard Order</em> type and in a status <em>booked</em> are treated as meeting the criteria to be shipped.</p>
 <p>Goods Shipment can be generated for one or more Sales Orders or for all the Sales Orders that are pending to be shipped. Filters are available to narrow down the shown results.</p>
 <p>One Goods Shipment is created for one selected Sales Order but for the whole order (for all its lines). Partial shipment is not possible through this window&nbsp; (use Goods Shipments instead).</p>
 <div class="admonition info">
