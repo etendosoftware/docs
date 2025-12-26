@@ -388,7 +388,6 @@ nav:
         - Application Menu: developer-guide/etendo-classic/concepts/application-menu.md
         - Attachments: developer-guide/etendo-classic/concepts/attachments.md
         - Authentication: developer-guide/etendo-classic/concepts/authentication.md
-#        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
         - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/cluster-development-guidelines.md
         - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
         - Code Review Process: developer-guide/etendo-classic/concepts/code-review-process.md
@@ -456,16 +455,16 @@ nav:
         - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/how-to-create-a-custom-tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
         - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
-#        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
+        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
         - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
-#        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
+        - How to Create a Multi Selector: developer-guide/etendo-classic/how-to-guides/how-to-create-a-multi-selector.md
         - How to Create a Navigable Link: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.md
         - How to Create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
-        - How to Create a new Attachment Method: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-attachment-method.md
+        - How to Create a Navigation Rule: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule.md
+        - How to Create a New REST Webservice: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-rest-webservice.md
+        - How to Create a New Attachment Method: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-attachment-method.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
-#        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
-#        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
         - How to Create a Report Using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
         - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport.md
@@ -474,7 +473,7 @@ nav:
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
         - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
         - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
-#        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
+        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/how-to-create-a-tree-selector.md
         - How to Create a Trigger: developer-guide/etendo-classic/how-to-guides/how-to-create-a-trigger.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/how-to-create-a-window.md
         - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files.md

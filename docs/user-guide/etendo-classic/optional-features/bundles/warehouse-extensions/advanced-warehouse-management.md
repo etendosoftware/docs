@@ -3,6 +3,7 @@ title: Advanced Warehouse Management
 tags:
     - Warehouse Management
     - Advanced
+    - Reception
     - Inventory
     - Stock
     - Etendo Mobile
@@ -619,12 +620,48 @@ When logging in to Etendo Mobile, the warehouse operator will be presented with 
 
 As seen above, the Advanced Warehouse Management option includes the following menus:
 
+- [Reception Tasks](#reception-tasks)
 - [Picking Tasks](#picking-tasks)
 - [Packing Tasks](#packing-tasks)
-- [Reception Tasks](#reception-tasks)
 - [Relocation Tasks](#relocation-tasks)
 - [Adjustment Tasks](#adjustment-tasks)
 - [All Tasks](#all-tasks)
+
+### Reception Tasks
+
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
+
+#### Process Start (Etendo)
+
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned to an operator, the priority is defined, and then it is reflected in the mobile application of the assigned operator.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+
+#### Access to Reception Tasks (Etendo Mobile)
+
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+
+**Reception Tasks**
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
+
+To perform a **Reception**:
+
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- If the product has an **Attribute Set** configured (such as batch number, serial number, expiration date or other custom attributes), a pop-up window will appear requesting this information. Complete the required fields and confirm to continue with the reception.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-3.png)
+
+- If needed, the **storage bin (locator)** can be modified to change the destination location of the received products.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
 
 ### Picking Tasks
 
@@ -895,37 +932,6 @@ Once completed, the task will appear in the Completed Tasks section. From there,
 - In the Pack view: which products were packed into each pack.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
-
-### Reception Tasks
-
-It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
-
-#### Process Start (Etendo)
-
-The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned to an operator, the priority is defined, and then it is reflected in the mobile application of the assigned operator.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
-
-#### Access to Reception Tasks (Etendo Mobile)
-
-When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
-
-**Reception Tasks**
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
-
-To perform a **Reception**:
-
-- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
-- Search for and select the task from the list or using the search engine.
-- When a task is selected, a screen with the task information opens.
-- Press the **Start Receipt** button.
-- **Scan** the products to stock them or **load** them manually.
-- Confirm the task with the **End Reception** button.
-- Confirm that you want to finish the task.
-- See **Success message**.
 
 ### Relocation Tasks
 

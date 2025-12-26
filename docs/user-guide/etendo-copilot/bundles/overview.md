@@ -45,7 +45,7 @@ This module includes **Bastian**, an agent equipped with the Etendo Documentatio
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.agents`
 
-The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks by interacting with Etendo Classic, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
+The **Copilot Agents** module  is a collection of agents that can be used to do basic tasks by interacting with Etendo, but the main purpose is to be used as a base (or template) to create new agents. By taking advantage of the cloning functionality in the agents and Knowledge base, they can be replicated and customized agents can be created very easily.
 
 
 #### Agents
@@ -59,9 +59,16 @@ This is a supervisor agent that delegates and orchestrates initialization tasks 
 This supervisor has the following agents:
 
 - **Business Partner Generator**: This agent creates business partners.
-- **Product Generator**: This agent creates products.
+- **Product Generator**: This agent manages products and related entities in the system. It provides comprehensive functionality for:
+    - **Creating products**: Create new products with categories, units of measure, and price list associations.
+    - **Managing product categories**: Create new categories or search for existing ones to organize products efficiently.
+    - **Price management**: Assign prices to products across different price list versions.
+    - **Searching**: Find existing products or categories based on various criteria.
+    - **Updating**: Modify product information, categories, or pricing details.
+    - **Querying information**: Display details of products, categories, prices, and price lists.
+    - **Process automation**: Automate repetitive workflows within these product management functions.
 - **Physical Inventory Generator**: This agent creates physical inventories to add stock to the products.
-- **Bulk task creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
+- **Bulk Task Creator**: This agent creates bulk tasks based on a zip file or a CSV/XLSX file. This agent allows to create tasks in bulk to load big amounts of data in the other agents. For example, it can be used to create a big amount of business partners, products from a CSV file, etc. Also this agent has the possibility to obtain information directly from Google Spreadsheets.
 
     !!! info
         For more information you can read [How to Create a Spreadsheet Tasks Agent](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
@@ -150,7 +157,7 @@ With compatibility for both mobile phones and tablets, this subapplication ensur
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 
-The **Dev Assistant** is a set of agents that helps to perform tasks related to development in Etendo Classic, like creating a new window, creating a new module, creating processes, etc.
+The **Dev Assistant** is a set of agents that helps to perform tasks related to development in Etendo, like creating a new window, creating a new module, creating processes, etc.
 
 !!!info
     For more information, visit: [Dev Assistant](../../../developer-guide/etendo-copilot/bundles/dev-assistant.md) developer guide.
