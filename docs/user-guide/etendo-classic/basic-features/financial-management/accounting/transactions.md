@@ -989,7 +989,7 @@ The Not Posted Documents window, part of the Bulk Posting module, centralizes al
     - Inventory
     - Landed Cost
     - Landed Cost Cost
-    - Matched Invoices
+    - Matched Purchase Invoices
     - Movements
     - Payment In
     - Payment Out
