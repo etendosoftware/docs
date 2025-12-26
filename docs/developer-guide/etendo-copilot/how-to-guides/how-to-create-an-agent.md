@@ -138,7 +138,7 @@ The most crucial is to determine:
 |**Remote File** | It is highly recommended when the file can change and the latest version can be accessed from the same url. For example, a file in a repository on GitHub. | File URL |
 |**HQL Query** | It is used when you want the agent to be able to read information from a table or from the result of a database query. For example, a list of Business Partners or orders. | HQL Query |
 |**Text** | When the information is static and can be written directly in the window. | The text itself |
-|**OpenAPI Flow Specification** | Use when the knowledge base file is the OpenAPI Specification of a Etendo Classic Flow. See [How to allow Copilot to interact with Etendo Classic](#how-to-allow-copilot-to-interact-with-etendo-classic) for more information. | Select the flow in the selector|
+|**OpenAPI Flow Specification** | Use when the knowledge base file is the OpenAPI Specification of a Etendo Flow. See [How to allow Copilot to interact with Etendo](#how-to-allow-copilot-to-interact-with-etendo-classic) for more information. | Select the flow in the selector|
 |**Code Index** | When the agent needs to know **Locally** stored code. | Specify the paths of the folders  |
 
 !!! info
@@ -199,7 +199,7 @@ Use cases:
 - Ensuring task extraction follows a predictable schema for integrations.
 - Producing event objects ready for ingestion by downstream systems.
 
-### Example: Multilingual Content Object (Bastian agent)
+### Example: Multilingual Content (Bastian agent)
 
 Below is an example JSON Schema used in the `Bastian` agent (the Etendo wiki indexed) to return multilingual content and suggested questions.
 
@@ -235,34 +235,33 @@ Below is an example JSON Schema used in the `Bastian` agent (the Etendo wiki ind
 ```
 
 #### Explanation of the structure:
-    - **$schema / title / description**: Metadata that documents the schema and the draft used (`draft/2020-12`).
-    - **type: object**: The response must be a JSON object.
-    - **properties**:
-        - `content_en` (string): Primary English content.
-        - `suggested_questions` (array[string]): One or more suggested question strings related to the content. `minItems: 1` enforces at least one suggestion; `uniqueItems: true` avoids duplicates.
-    - **required**: Ensures `content_en` and `suggested_questions` are always present.
-    - **additionalProperties: false**: Prevents extra fields beyond those declared; helps keep output strictly typed.
 
-    Why this schema is useful:
+- **$schema / title / description**: Metadata that documents the schema and the draft used.
+- **type: object**: The response must be a JSON object.
+- **properties**:
+    - `content_en` (string): Primary English content.
+    - `suggested_questions` (array[string]): One or more suggested question strings related to the content. `minItems: 1` enforces at least one suggestion; `uniqueItems: true` avoids duplicates.
+- **required**: Ensures `content_en` and `suggested_questions` are always present.
+- **additionalProperties: false**: Prevents extra fields beyond those declared; helps keep output strictly typed.
 
-    - Ensures the agent always returns the English text plus actionable suggested questions.
-    - Guarantees programmatic parsing without fragile text extraction.
+Why this schema is useful:
 
-    Example usage (Bastian):
+- Ensures the agent always returns the English text plus actionable suggested questions.
+- Guarantees programmatic parsing without fragile text extraction.
 
-    - Configure the `Bastian` agent's Advanced Settings `JSON Schema for Structured Outputs` with the schema above.
-    - Ask the agent a question like: `Summarize the Etendo installation steps for end users and suggest follow-up questions.`
-    - The agent will respond with a JSON object matching the schema.
+Example usage (Bastian):
 
-### Screenshots :
+- Configure the `Bastian` agent's Advanced Settings `JSON Schema for Structured Outputs` with the schema above.
+- Ask the agent a question like: `Summarize the Etendo installation steps for end users and suggest follow-up questions.`
+- The agent will respond with a JSON object matching the schema.
 
-- Screenshot 1 — JSON Schema field configured in the Agent Advanced Settings:
+JSON Schema field configured in the Agent Advanced Settings:
 
-    ![Screenshot - JSON Schema field configured](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-json-schema-field.png)
+![Screenshot - JSON Schema field configured](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-json-schema-field.png)
 
-- Screenshot 2 — Example: question asked to `Bastian` and structured JSON response received:
+Question asked to `Bastian` and structured JSON response received:
 
-    ![Screenshot - Agent question and structured response](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-bastian-response.png)
+![Screenshot - Agent question and structured response](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-bastian-response.png)
 
 ### Knowledge Base File Behavior
 
@@ -350,18 +349,18 @@ We can check the created file:
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-7.png)
 
 
-## How to allow Copilot to Interact with an API or Etendo Classic?
-The most powerful and useful feature of Etendo Copilot is the ability to interact with APIs (including Etendo Classic). Currently the paradigm of AI agents is to automate and/or reuse what is **already done**. In other words, the utility arises from the fact that AI agents can use all the business logic that is already available.
+## How to allow Copilot to Interact with an API or Etendo?
+The most powerful and useful feature of Etendo Copilot is the ability to interact with APIs (including Etendo API). Currently the paradigm of AI agents is to automate and/or reuse what is **already done**. In other words, the utility arises from the fact that AI agents can use all the business logic that is already available.
 
 ### External API
 The most usual way is based on a combination of an OpenAPI Specification and a tool that allows to make requests to that API. To do this, the following steps are needed:
 - **Add the OpenAPI Specification**: The OpenAPI Specification is a standard way to describe an API. This specification is added as a Knowledge Base File. And configure it as `[Agent] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
 - **Add the API Call Tool**: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.
 
-### Etendo Classic  
-For Etendo Classic, the process is a bit different. The main difference is that we can take advantage of the OpenAPI Specification automatically generated by the `Flows`, where we can define a set of endpoints to which we want to give access to our agent.
-To know more about how to create a flow in Etendo Classic, check the [How to Document an Endpoint with OpenAPI](../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md) guide.
-The steps to allow an agent to interact with Etendo Classic are:
+### Etendo   
+For Etendo, the process is a bit different. The main difference is that we can take advantage of the OpenAPI Specification automatically generated by the `Flows`, where we can define a set of endpoints to which we want to give access to our agent.
+To know more about how to create a flow in Etendo, check the [How to Document an Endpoint with OpenAPI](../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md) guide.
+The steps to allow an agent to interact with Etendo are:
 
 - **Add the OpenAPI Specification**: This specification is added as a Knowledge Base File of type `OpenAPI Flow Specification`. When this type is selected, a selector with the available flows is shown, to select the flow that we want to use. The behavior of this file can be `[Agent] Append the file content to the prompt`. This will allow the agent to know the endpoints and methods of the API.
 - **Add the API Call Tool**: The API Call Tool is a tool that allows to make requests to an API. This tool is added as a tool in the agent. The agent can use this tool to make requests to the API.
@@ -375,12 +374,12 @@ When the OpenAPI Specification is added as a Knowledge Base File of type `OpenAP
 
 
 ### Example of Copilot Interaction with Etendo
-For example, we will create an agent to create Products in Etendo Classic, using an already defined flow with the endpoints needed to create Products, Product Categories and Prices. 
+For example, we will create an agent to create Products in Etendo, using an already defined flow with the endpoints needed to create Products, Product Categories and Prices. 
 
 1. First, we will create a new Knowledge Base File of type `OpenAPI Flow Specification` and select the flow `Product Flow`.
 
     !!!info
-        Be sure to use the agent that has the necessary permissions to interact with the data. In this case, the agent must have the necessary permissions to create products, categories and prices in Etendo Classic.
+        Be sure to use the agent that has the necessary permissions to interact with the data. In this case, the agent must have the necessary permissions to create products, categories and prices in Etendo.
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-8.png)
 

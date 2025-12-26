@@ -9,7 +9,7 @@ tags:
 
 # Optical Character Recognition (OCR) Tool
 
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
 ## Overview
 
@@ -48,28 +48,18 @@ Using this tool consists of the following actions:
     
     - **force_structured_output_compat** (optional): When `true` (or when the selected model starts with 'gpt-5'), do not use the LLM's structured-output wrapper. Instead the tool will request structured output by embedding the schema JSON directly into the system prompt for compatibility with older agents. Default: `false`.
 
-!!! tip
-    To learn how to optimize the results of this tool, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md) guide.
+    !!! tip
+        To learn how to optimize the results of this tool, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md) guide.
 
-- Obtaining the File:
+- **Obtaining the File**: The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (`JPEG`, `JPG`, `PNG`, `WEBP`, `GIF`, `PDF`).
 
-    - The tool retrieves the file specified in the **path** parameter. It verifies the existence of the file and ensures it is in a supported format (JPEG, JPG, PNG, WEBP, GIF, PDF).
+- **PDF Conversion**: If the input file is a `PDF`, it is converted to an image format (`JPEG`) using the **pypdfium2** library. Each page of the `PDF` is rendered as a separate image.
 
-- PDF Conversion:
+- **Image Conversion**: Other image formats are processed directly or converted to `JPEG` if necessary.
 
-    - If the input file is a PDF, it is converted to an image format (JPEG) using the **pypdfium2** library. Each page of the PDF is rendered as a separate image.
+- **Image Processing**: The image is processed using a Vision AI model (OpenAI GPT or Google Gemini, depending on configuration). This model interprets the text within the image and extracts the relevant information based on the provided **question**.
 
-- Image Conversion:
-
-    - Other image formats are processed directly or converted to JPEG if necessary.
-
-- Image Processing:
-
-    - The image is processed using a Vision AI model (OpenAI GPT or Google Gemini, depending on configuration). This model interprets the text within the image and extracts the relevant information based on the provided **question**.
-
-- Returning the Result:
-
-    - The tool returns a JSON object containing the extracted information from the image or PDF.
+- **Returning the Result**: The tool returns a JSON object containing the extracted information from the image or PDF.
 
 ## Advanced Features
 
@@ -79,23 +69,23 @@ The OCR Tool includes an intelligent reference system that automatically searche
 
 **How it works:**
 
-1. When processing a document, the tool searches the agent's vector database (ChromaDB) for similar reference images
-2. Reference images contain visual markers (red boxes) highlighting the relevant data fields to extract
-3. The tool uses the reference as a template to prioritize and extract the same fields from the current document
-4. This significantly improves extraction accuracy for documents with consistent layouts (invoices, receipts, forms)
+1. When processing a document, the tool searches the agent's vector database (*ChromaDB*) for similar reference images.
+2. Reference images contain visual markers (red boxes) highlighting the relevant data fields to extract.
+3. The tool uses the reference as a template to prioritize and extract the same fields from the current document.
+4. This significantly improves extraction accuracy for documents with consistent layouts (invoices, receipts, forms).
 
 **Managing Reference Images:**
 
-- Upload reference images to the agent's database using the `/addToVectorDB` endpoint
-- Reference images should have visual markers (typically red boxes) indicating the data fields
-- Each agent maintains its own vector database of reference templates
-- The similarity threshold can be controlled or disabled using the `disable_threshold_filter` parameter
+- Upload reference images to the agent's database using the `/addToVectorDB` endpoint.
+- Reference images should have visual markers (typically red boxes) indicating the data fields.
+- Each agent maintains its own vector database of reference templates.
+- The similarity threshold can be controlled or disabled using the `disable_threshold_filter` parameter. 
 
 **When to use references:**
 
-- Processing invoices, receipts, or forms with consistent layouts
-- When you need to extract specific fields repeatedly from similar documents
-- To improve extraction accuracy by providing visual guidance
+- Processing invoices, receipts, or forms with consistent layouts.
+- When you need to extract specific fields repeatedly from similar documents.
+- To improve extraction accuracy by providing visual guidance.
 
 ### Structured Output Schemas
 
@@ -162,7 +152,7 @@ The provider is automatically detected based on the model name:
 
 ### PDF Quality Control
 
-For PDF documents, you can control the rendering quality using the `scale` parameter:
+For `PDF` documents, you can control the rendering quality using the `scale` parameter:
 
 **Scale values:**
 
@@ -190,10 +180,10 @@ For PDF documents, you can control the rendering quality using the `scale` param
 
 The tool includes several optimizations for better performance:
 
-- **In-memory processing**: Images and PDFs are converted to base64 directly in memory without disk I/O
-- **Efficient PDF rendering**: Uses pypdfium2 for fast PDF-to-image conversion
+- **In-memory processing**: Images and `PDFs` are converted to `base64` directly in memory without disk I/O
+- **Efficient PDF rendering**: Uses *pypdfium2* for fast PDF-to-image conversion
 - **Automatic cleanup**: Temporary files are automatically removed after processing
-- **Parallel page processing**: Multi-page PDFs are processed efficiently
+- **Parallel page processing**: Multi-page `PDFs` are processed efficiently
 
 ## Usage Example
 

@@ -68,6 +68,7 @@ If you want to improve the detection of the Business Partner (BP) for a specific
 Marked fields in the reference image to guide OCR extraction.
 
 ![OCR Reference Marked](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/ocr-reference-marked.png)
+
 !!! tip
     Using reference templates is especially useful for documents with non-standard layouts where the LLM might otherwise struggle to locate specific fields.
 
