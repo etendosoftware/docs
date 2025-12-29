@@ -234,6 +234,29 @@ Once the effort is successfully reactivated, the state of the document changes t
 !!! info
     Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
+### How to Void Work Efforts
+
+!!! info
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+
+This functionality is useful when the user needs to void a completed work effort.
+
+From the Work Effort window, the user can void a previously completed work effort by selecting the corresponding record and clicking the **Void** document action.
+
+The **Void** action is available when:
+
+- The Work Effort is Completed/Processed
+- The Work Effort is not previously voided
+- There are no inconsistencies that prevent the reversal
+- The Work Effort is not posted to the ledger
+
+When executing the **Void** action, the system will automatically:
+
+- Create a reversing Work Effort document
+- Copy the header and lines with negative quantities
+- Generate inverse inventory movements
+- Mark the original document as **VOIDED**
+
 ### Bulk Posting
 
 !!! info
@@ -456,7 +479,7 @@ The information of the product, its location in the warehouse and the quantity u
 ### How to Reactivate Internal Consumption
 
 !!! info
-    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate an internal consumption document.
 
