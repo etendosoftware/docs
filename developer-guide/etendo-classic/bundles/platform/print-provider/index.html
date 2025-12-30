@@ -10604,8 +10604,71 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Register Labels (Jasper)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-parameter-injection-with-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Parameter Injection with Hooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Parameter Injection with Hooks">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hook Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-a-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a Hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-custom-barcode-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Custom Barcode Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hook Context API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Data Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#printer-update" class="md-nav__link">
@@ -14773,8 +14836,71 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to Register Labels (Jasper)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-parameter-injection-with-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Parameter Injection with Hooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Parameter Injection with Hooks">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hook Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-a-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a Hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-custom-barcode-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Custom Barcode Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook-context-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hook Context API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Data Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#printer-update" class="md-nav__link">
@@ -15065,6 +15191,204 @@
 <li>SUBREPORT_DIR = template directory (for subreports)</li>
 </ul>
 </div>
+<h2 id="custom-parameter-injection-with-hooks">Custom Parameter Injection with Hooks</h2>
+<p>The Print Provider module supports a hook mechanism that allows external modules to inject custom JasperReports parameters during label generation. This capability enables advanced customization scenarios where business logic needs to add or modify report parameters before the report is rendered.</p>
+<h3 id="hook-interface">Hook Interface</h3>
+<p>Modules can implement the <code>GenerateLabelHook</code> interface to customize JasperReports parameters. The hook execution occurs during the <code>generateLabel</code> phase, before the report is filled with data.</p>
+<p><strong>Key features:</strong></p>
+<ul>
+<li><strong>Table-specific execution</strong>: Each hook declares which tables it applies to via <code>tablesToWhichItApplies()</code>.</li>
+<li><strong>Priority-based ordering</strong>: Hooks execute in priority order (lower values first), allowing control over execution sequence.</li>
+<li><strong>Full context access</strong>: Hooks receive a <code>GenerateLabelContext</code> object providing access to provider configuration, table metadata, record ID, template information, and the parameter map.</li>
+<li><strong>CDI integration</strong>: Hooks are automatically discovered and managed through CDI.</li>
+</ul>
+<h3 id="implementing-a-hook">Implementing a Hook</h3>
+<p>To create a custom hook:</p>
+<ol>
+<li><strong>Create a class</strong> that implements <code>GenerateLabelHook</code></li>
+<li><strong>Annotate</strong> with <code>@Dependent</code> for CDI discovery</li>
+<li><strong>Implement required methods</strong>:</li>
+<li><code>execute(GenerateLabelContext context)</code>: Main logic to add/modify parameters</li>
+<li><code>tablesToWhichItApplies()</code>: Return list of table IDs where this hook applies</li>
+<li><code>getPriority()</code> (optional): Return execution priority (default: 100)</li>
+</ol>
+<h3 id="example-custom-barcode-generation">Example: Custom Barcode Generation</h3>
+<p>The following example demonstrates a hook that generates custom barcode labels for business documents. This hook replaces the default database query with a custom data source containing calculated barcode information.</p>
+<div class="language-java highlight"><span class="filename">CustomDocumentLabelHook.java</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.etendoerp.examples.hooks</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.enterprise.context.Dependent</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.etendoerp.print.provider.api.GenerateLabelHook</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.etendoerp.print.provider.api.PrintProviderException</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.etendoerp.print.provider.dto.BarcodeLabelDTO</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.sf.jasperreports.engine.data.JRBeanCollectionDataSource</span><span class="p">;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm">/**</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="cm"> * Hook that adds custom parameters for document label generation.</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="cm"> * Generates barcode data and provides it as a custom data source.</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm"> */</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nd">@Dependent</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomDocumentLabelHook</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">GenerateLabelHook</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">TABLES_TO_WHICH_IT_APPLIES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="s">"YOUR_DOCUMENT_TABLE_ID"</span><span class="p">,</span><span class="w">      </span><span class="c1">// Document header table ID</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="s">"YOUR_DOCUMENT_LINE_TABLE_ID"</span><span class="w">  </span><span class="c1">// Document line table ID</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">GenerateLabelContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">PrintProviderException</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">recordId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getRecordId</span><span class="p">();</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="c1">// Retrieve the document record</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">      </span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">currentRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDocumentRecord</span><span class="p">(</span><span class="n">recordId</span><span class="p">);</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentRecord</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintProviderException</span><span class="p">(</span><span class="s">"Document not found: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">recordId</span><span class="p">);</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">      </span><span class="c1">// Resolve the lines to process</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">      </span><span class="n">List</span><span class="o">&lt;</span><span class="n">DocumentLine</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resolveDocumentLines</span><span class="p">(</span><span class="n">currentRecord</span><span class="p">);</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">      </span><span class="c1">// Generate barcode data for each line</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">      </span><span class="n">List</span><span class="o">&lt;</span><span class="n">BarcodeLabelDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">barcodeData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateBarcodeData</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="c1">// Create a JRBeanCollectionDataSource with the barcode data</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">      </span><span class="n">JRBeanCollectionDataSource</span><span class="w"> </span><span class="n">dataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JRBeanCollectionDataSource</span><span class="p">(</span><span class="n">barcodeData</span><span class="p">);</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">      </span><span class="c1">// Add the datasource as a parameter</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">      </span><span class="c1">// IMPORTANT: This replaces the SQL query in the jasper template</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">      </span><span class="n">context</span><span class="p">.</span><span class="na">addParameter</span><span class="p">(</span><span class="s">"REPORT_DATA_SOURCE"</span><span class="p">,</span><span class="w"> </span><span class="n">dataSource</span><span class="p">);</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">PrintProviderException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintProviderException</span><span class="p">(</span><span class="s">"Failed to add barcode parameters: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">BarcodeLabelDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">generateBarcodeData</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">DocumentLine</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lines</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">BarcodeLabelDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">DocumentLine</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">lines</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">      </span><span class="c1">// Build barcode based on business rules (product info, quantities, etc.)</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">barcode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildBarcodeForLine</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">barcodeWithSeparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildBarcodeWithSeparator</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BarcodeLabelDTO</span><span class="p">(</span><span class="n">barcode</span><span class="p">,</span><span class="w"> </span><span class="n">barcodeWithSeparator</span><span class="p">));</span>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getPriority</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w">  </span><span class="c1">// Medium priority</span>
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">tablesToWhichItApplies</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TABLES_TO_WHICH_IT_APPLIES</span><span class="p">;</span>
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="hook-context-api">Hook Context API</h3>
+<p>The <code>GenerateLabelContext</code> provides the following methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addParameter(String key, Object value)</code></td>
+<td>Adds or updates a JasperReports parameter</td>
+</tr>
+<tr>
+<td><code>getParameter(String key)</code></td>
+<td>Retrieves the current value of a parameter</td>
+</tr>
+<tr>
+<td><code>getParameters()</code></td>
+<td>Returns a read-only view of all parameters</td>
+</tr>
+<tr>
+<td><code>getProvider()</code></td>
+<td>Gets the provider configuration</td>
+</tr>
+<tr>
+<td><code>getTable()</code></td>
+<td>Gets the target table metadata</td>
+</tr>
+<tr>
+<td><code>getRecordId()</code></td>
+<td>Gets the record ID being printed</td>
+</tr>
+<tr>
+<td><code>getTemplateLine()</code></td>
+<td>Gets the template line reference</td>
+</tr>
+<tr>
+<td><code>getJsonParameters()</code></td>
+<td>Gets the JSON parameters from the request</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-data-sources">Custom Data Sources</h3>
+<p>Hooks can provide custom data sources by setting the <code>REPORT_DATA_SOURCE</code> parameter. When this parameter is present, the Print Provider will use it instead of the default database connection:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Create a custom data source from a collection</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">MyDataDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prepareCustomData</span><span class="p">();</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">JRBeanCollectionDataSource</span><span class="w"> </span><span class="n">dataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JRBeanCollectionDataSource</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// Set it as the data source</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">context</span><span class="p">.</span><span class="na">addParameter</span><span class="p">(</span><span class="s">"REPORT_DATA_SOURCE"</span><span class="p">,</span><span class="w"> </span><span class="n">dataSource</span><span class="p">);</span>
+</span></code></pre></div>
+<p>This is particularly useful when:</p>
+<ul>
+<li>The data needs complex transformations before rendering</li>
+<li>Data comes from multiple sources (database + external APIs)</li>
+<li>Business logic requires calculated fields not present in the database</li>
+<li>Performance optimization requires pre-aggregated data</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li>
+<p><strong>Error handling</strong>: Always wrap business logic in try-catch blocks and throw <code>PrintProviderException</code> with meaningful messages.</p>
+</li>
+<li>
+<p><strong>Null safety</strong>: Validate that required objects are present before accessing them:</p>
+</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="na">getTable</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintProviderException</span><span class="p">(</span><span class="s">"Table information is required"</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ol>
+<li>
+<p><strong>Recommended priority coordination</strong>: Use priority values to control execution order when multiple hooks apply to the same table:</p>
+</li>
+<li>
+<p>System/core hooks: 1-30</p>
+</li>
+<li>Standard business hooks: 31-70</li>
+<li>
+<p>Custom/extension hooks: 71-100</p>
+</li>
+<li>
+<p><strong>Logging</strong>: Use SLF4J logging to aid troubleshooting:</p>
+</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">MyHook</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">log</span><span class="p">.</span><span class="na">debug</span><span class="p">(</span><span class="s">"Executing hook for record: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">recordId</span><span class="p">);</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Performance</strong>: Keep hook execution lightweight. Avoid heavy database queries or external API calls that could slow down label generation.</li>
+</ol>
 <h3 id="printer-update">Printer Update</h3>
 <ul>
 <li>
