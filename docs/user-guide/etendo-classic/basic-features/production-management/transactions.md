@@ -221,7 +221,7 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 ### How to Reactivate Work Efforts
 
 !!! info
-    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **1.0.0** of the Production Extensions Bundle, from **Etendo 25.1**. To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate a work effort.
 
@@ -237,7 +237,7 @@ Once the effort is successfully reactivated, the state of the document changes t
 ### How to Void Work Efforts
 
 !!! info
-    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, from **Etendo 22.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to void a completed work effort.
 
@@ -479,7 +479,7 @@ The information of the product, its location in the warehouse and the quantity u
 ### How to Reactivate Internal Consumption
 
 !!! info
-    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, from **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate an internal consumption document.
 
