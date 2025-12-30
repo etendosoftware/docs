@@ -39,9 +39,6 @@ This module provides advanced document management capabilities for Work Efforts,
 
 :octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.actions`
 
-!!! info
-    Available from Production Extensions Bundle version 3.4.0
-
 This functionality is useful when the user needs to reactivate material management documents such as Internal Consumption.
 
 !!! info
