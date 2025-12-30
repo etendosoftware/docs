@@ -126,6 +126,11 @@ The preference **Allow Backdated Cost Transactions** is set to **Y** by default,
 
 When the preference is set to **N**, the following documents will be restricted to only use the current date: Goods Receipts, Goods Shipments, Goods Movements, Physical Inventories, Work Efforts, and Internal Consumption.
 
+!!! warning
+    If you need to create a new configuration for this preference, it must be set globally only, without distinguishing any specific visibility level (Organization, User, Role, etc.), as it could affect the correct operation of the validation.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/material-mgmt-rules-preference.png)
+
 ## Uninstall bundle
 
 To uninstall the bundle and prevent future problems with orphan records, a sequence of steps must be followed:
