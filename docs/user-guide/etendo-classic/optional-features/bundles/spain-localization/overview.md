@@ -27,6 +27,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [Configuración de Impuestos para Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
 - [TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
 - [Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md)
+- [Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -442,6 +443,17 @@ Este módulo automatiza el proceso de emisión y envío de facturas electrónica
 
 !!! info
     Para más información, visite la [Guía de usuario Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md).
+
+ ---
+
+## Antifraude
+
+:octicons-package-16: Javapackage: `com.etendoerp.antifraud`
+
+Este módulo permite cumplir con la Ley Antifraude de España en Etendo, reforzando la integridad y trazabilidad del proceso de facturación. Incluye gestión de certificados digitales, firma de PDFs, copias de seguridad cifradas y restricciones para evitar modificaciones o eliminaciones que puedan comprometer la inalterabilidad de la información. 
+
+!!! info
+    Para más información, visite la [Guía de usuario Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md).
 
  ---
 
