@@ -5,6 +5,7 @@ tags:
     - Production Management
     - Extensions Bundle
     - Advanced Work Effort
+    - Material Management Actions
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.production.extensions`
@@ -30,6 +31,16 @@ This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
     For more information, visit the [Advanced Work Effort user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts).
+
+### Material Management Actions
+
+:octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.actions`
+
+This functionality is useful when the user needs to reactivate material management documents such as Internal Consumption.
+
+!!! info
+    - Available from **Production Extensions Bundle** version **3.4.0**
+    - For more information, visit the [Material Management Actions user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-internal-consumption).
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
