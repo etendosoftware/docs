@@ -231,8 +231,8 @@ Once the effort is successfully reactivated, the state of the document changes t
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/production-management/transactions/work-effort-11.png)
 
-!!! info
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
+!!! note
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ### How to Void Work Efforts
 
