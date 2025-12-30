@@ -42,7 +42,8 @@ This module provides advanced document management capabilities for Work Efforts,
 This functionality is useful when the user needs to reactivate material management documents such as Internal Consumption.
 
 !!! info
-    For more information, visit [How to Reactivate Internal Consumption](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-internal-consumption).
+    - Available from **Production Extensions Bundle** version **3.4.0**
+    - For more information, visit the [Material Management Actions user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-internal-consumption).
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
