@@ -27,10 +27,13 @@ This bundle includes enhancements for the Production Management functionalities 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqq7-LAoK-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 
-This functionality is useful when the user needs to reactivate a work effort.
+This module provides advanced document management capabilities for Work Efforts, including the ability to reactivate and void work effort documents.
 
 !!! info
-    For more information, visit the [Advanced Work Effort user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts).
+    For more information, visit the Advanced Work Effort user guide:
+    
+    - [How to Reactivate Work Efforts](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts)
+    - [How to Void Work Efforts](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-void-work-efforts)
 
 ### Material Management Actions
 

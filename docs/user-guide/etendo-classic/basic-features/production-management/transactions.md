@@ -221,7 +221,7 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 ### How to Reactivate Work Efforts
 
 !!! info
-    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **1.0.0** of the Production Extensions Bundle, from **Etendo 25.1**. To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate a work effort.
 
@@ -231,8 +231,31 @@ Once the effort is successfully reactivated, the state of the document changes t
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/production-management/transactions/work-effort-11.png)
 
+!!! note
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
+
+### How to Void Work Efforts
+
 !!! info
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, from **Etendo 22.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+
+This functionality is useful when the user needs to void a completed work effort.
+
+From the Work Effort window, the user can void a previously completed work effort by selecting the corresponding record and clicking the **Void** document action.
+
+The **Void** action is available when:
+
+- The Work Effort is Completed/Processed
+- The Work Effort is not previously voided
+- There are no inconsistencies that prevent the reversal
+- The Work Effort is not posted to the ledger
+
+When executing the **Void** action, the system will automatically:
+
+- Create a reversing Work Effort document
+- Copy the header and lines with negative quantities
+- Generate inverse inventory movements
+- Mark the original document as **VOIDED**
 
 ### Bulk Posting
 
@@ -456,7 +479,7 @@ The information of the product, its location in the warehouse and the quantity u
 ### How to Reactivate Internal Consumption
 
 !!! info
-    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, compatible with **Etendo 25.1**. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
+    This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, from **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate an internal consumption document.
 
@@ -473,7 +496,7 @@ Once the document is successfully reactivated:
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk posting** button.
 
