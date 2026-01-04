@@ -6,6 +6,10 @@ tags:
  - Banking
  - Accounting Enhancements
  - Automated Processes
+ - Bank Integration
+ - Salt Edge
+ - Open Banking
+ - Financial Account
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
@@ -136,6 +140,174 @@ This functionality allows the user to automatically process and protest remittan
 
 !!! info
     For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
+# Bank Integration Overview
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+## Introduction
+
+The Bank Integration module enables **automatic synchronization** between Etendo ERP financial accounts and bank accounts through **Salt Edge**, a leading Open Banking platform. This integration eliminates the need for manual bank statement imports and provides real-time access to bank transactions.
+
+## What is Salt Edge?
+
+**Salt Edge** is an Open Banking and PSD2-compliant platform that provides secure access to bank account information from thousands of financial institutions worldwide. It acts as a regulated intermediary that:
+
+- Connects to banks using official APIs
+- Handles authentication and security compliance
+- Provides a unified interface for accessing bank data
+- Supports multiple countries and banking standards
+
+!!!info
+    For more information about Salt Edge, visit [Salt Edge Official Website](https://www.saltedge.com/){target="_blank"}.
+
+## Architecture
+
+The integration uses a **three-tier architecture**:
+
+1. **Etendo ERP**: User interface and business logic
+2. **Etendo Middleware**: Centralized integration layer (managed by Futit Services)
+3. **Salt Edge Platform**: Open Banking connectivity to banks
+
+```
+┌─────────────────┐
+│   Etendo ERP    │
+│  (User Layer)   │
+└────────┬────────┘
+         │
+         │ API Calls
+         ▼
+┌─────────────────┐
+│    Middleware   │
+│ (Security Layer)│
+└────────┬────────┘
+         │
+         │ Salt Edge API
+         ▼
+┌─────────────────┐
+│   Salt Edge     │
+│   (Open Banking)│
+└────────┬────────┘
+         │
+         │ Bank APIs
+         ▼
+┌─────────────────┐
+│  Banks / ASPSPs │
+└─────────────────┘
+```
+
+### Benefits of this Architecture
+
+- **Separation of Concerns**: Etendo focuses on ERP functionality while middleware handles integration complexity
+- **Security**: Sensitive credentials and certificates are managed at the middleware level
+- **Scalability**: Multiple Etendo instances can share the same middleware
+- **Maintainability**: Banking API changes are handled centrally without affecting Etendo instances
+- **Compliance**: PSD2 and Open Banking requirements are met at the middleware level
+
+## Key Features
+
+### Automatic Transaction Import
+
+- Download transactions directly from bank accounts
+- Configurable date ranges for historical imports
+- Automatic duplicate detection and prevention
+- Support for multiple bank accounts per financial account
+
+### Bank Connection Management
+
+- Secure authentication through Salt Edge widget
+- Support for thousands of banks worldwide
+- Connection status monitoring
+- Easy reconnection when authorization expires
+
+### Bank Statement Generation
+
+- Automatic creation of bank statements
+- Bank statement lines generated for each transaction
+- Integration with Etendo's reconciliation features
+- Complete audit trail of all imports
+
+### Scheduled Processing
+
+- Background process for automatic synchronization
+- Configurable frequency (hourly, daily, etc.)
+- Batch processing for multiple accounts
+- Detailed logging and error handling
+
+## User Workflow
+
+1. **Setup**:
+   - Administrator obtains Salt Edge API Key from Futit Services
+   - User configures API Key in their profile
+   - Financial accounts are configured with date ranges
+
+2. **Connection**:
+   - User clicks "Connect Bank Account"
+   - Salt Edge widget opens for bank selection
+   - User authenticates with their bank
+   - Connection is established and stored
+
+3. **Synchronization**:
+   - User clicks "Get Accounts" to sync account metadata
+   - User clicks "Get Transactions" to import transactions (or scheduled process runs automatically)
+   - Transactions are imported and bank statements are created
+
+4. **Ongoing Use**:
+   - Scheduled process runs automatically
+   - User reconciles imported transactions
+   - Connections are renewed when they expire
+
+## Security & Privacy
+
+- **No Credential Storage**: Bank credentials are never stored in Etendo or middleware
+- **Bank-Direct Authentication**: Users authenticate directly with their bank
+- **API Key Security**: Each user has their own API key for middleware access
+- **Encrypted Communication**: All data transmission is encrypted
+- **Audit Logging**: All operations are logged for compliance
+
+## PSD2 Compliance
+
+While the module uses Salt Edge (which is PSD2-compliant), the functional design remains compatible with Open Banking standards:
+
+- **Account Information Services (AIS)**: Read access to account data
+- **Consent Management**: User authorization for data access
+- **Strong Customer Authentication (SCA)**: Bank-level authentication
+- **Connection Lifecycle**: Consent expiration and renewal
+
+## Supported Operations
+
+### Consent Management
+- Create bank connections (consents)
+- Monitor connection status
+- Reconnect when authorization expires
+
+### Account Information
+- Retrieve linked bank accounts
+- Update account identifiers
+- Sync account metadata
+
+### Transaction Retrieval
+- Import transactions within date range
+- Filter duplicates automatically
+- Create bank statements and lines
+
+## Prerequisites
+
+To use this module, you need:
+
+1. **Financial Extensions Bundle** installed in Etendo
+2. **Salt Edge API Key** provided by Futit Services
+3. **Financial Accounts** created in Etendo
+4. **User permissions** to access Financial Management
+
+!!!info
+    For detailed setup and usage instructions, visit [Bank Integration User Guide](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration.md).
+
+## Related Documentation
+
+- [Financial Account Configuration](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account){target="_blank"}
+- [Bank Statement Processing](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#bank-statement){target="_blank"}
+- [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 ### Banking Pool
 
