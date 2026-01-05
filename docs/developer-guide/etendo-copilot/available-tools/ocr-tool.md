@@ -157,10 +157,13 @@ The OCR Tool supports multiple AI providers with flexible configuration options:
 
 **Configuration methods (in priority order):**
 
-1. **Environment variable**: Set `COPILOT_OCRTOOL_MODEL` to configure the model globally for all agents
-   ```bash
-   export COPILOT_OCRTOOL_MODEL="gpt-4o"
-   ```
+1. **Environment variable**: Set `copilot.ocrtool.model` to configure the model globally for all agents. This variable acts as a global override; if it is defined, the tool will use this model for all OCR requests, bypassing any per-agent configuration.
+   
+    To configure it, add the variable to your `gradle.properties` file specifying only the **model name**:
+    ```properties
+    copilot.ocrtool.model="gpt-4o"
+    ```
+    The tool automatically infers the provider based on how the model name starts (e.g., models starting with `gemini` will use the Gemini provider, otherwise OpenAI is used).
 
 2. **Per-agent configuration**: Configure the model in the **Skills and Tools** tab of the Agent window using the **Model** field. The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-4o`, `google/gemini-1.5-pro`). This allows different agents to use different models for the same tool.
 
@@ -169,8 +172,8 @@ The OCR Tool supports multiple AI providers with flexible configuration options:
 **Provider detection:**
 
 The provider is automatically detected based on the model name:
-- Models starting with `gpt-` use OpenAI provider
 - Models starting with `gemini` use Gemini provider
+- Otherwise, the OpenAI provider is used by default
 
 ### PDF Quality Control
 
@@ -409,10 +412,9 @@ Suppose you have uploaded a reference invoice image to your agent's vector datab
 You can configure a specific model for OCR processing in multiple ways:
 
 **Option 1: Using environment variables (global configuration)**
-
+Open the `gradle.properties` file and set the following variable to specify the model for all agents:
 ```bash
-# Use GPT-4o for better accuracy
-export COPILOT_OCRTOOL_MODEL="gpt-4o"
+copilot.ocrtool.model="provider/selected_model"
 ```
 
 **Option 2: Using the Agent window (per-agent configuration)**

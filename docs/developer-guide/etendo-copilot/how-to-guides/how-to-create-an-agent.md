@@ -99,6 +99,7 @@ After saving the agent, the system will automatically grant access to it. Open t
 Currently, Copilot supports the following providers:
 
 - **OpenAI**: This provider is the default one and is the most used. It is the most versatile and has the best performance in most cases.
+- **Google Gemini**: This provider is specialized in general tasks like OpenAI, but with better performance in some cases.
 - **Anthropic**: This provider is specialized in code generation. It is the best option for code-related tasks.
 - **Deepseek**: This provider is for general tasks like OpenAI, but cheaper.
 - **Ollama (Self-hosted models)**: This provider is for users that have their own models running in their own infrastructure. The support for this provider is in experimental phase. For more information visit the [How to Use and Run Self Hosted Models with Ollama](how-to-use-run-self-hosted-models-with-ollama.md) guide.
