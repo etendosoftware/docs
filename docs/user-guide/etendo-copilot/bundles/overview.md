@@ -87,6 +87,12 @@ This supervisor has the following agents:
 
 - **Purchase Invoice Expert**: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.
 
+    When this agent processes an invoice, it performs a validation of the total amount. To provide feedback to the user, a **Copilot** section is added to the **Purchase Invoice** window with a field called **Copilot Feedback**. The agent updates this field with the result of the validation:
+    ![Copilot Feedback](../../../assets/user-guide/etendo-copilot/bundles/overview/copilot-feedback.png)
+    
+    - **Ok**: The invoice total matches the extracted data and is ready for processing.
+    - **Requires manual review**: There is a mismatch or an issue that requires a human user to verify the invoice details.
+
     !!! tip
         To improve the accuracy of data extraction, check the [How to Improve OCR Recognition](../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md) guide.
 
@@ -113,7 +119,7 @@ This agent reads a zip file and returns the paths of the files inside the zip. I
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-The **Etendo Copilot Toolpack** is a collection of tools that help to **developers** to add functionalities to agents, such request to an API, send an email, read a file, write a file, and more.
+The **Etendo Copilot Toolpack** is a collection of tools that help **developers** add functionalities to agents, such request to an API, send an email, read a file, write a file, and more.
 
 !!! info 
     For more information, visit the [Toolpack - Developer Guide](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack), where you will find a detailed list of the available tools, instructions on how to use them, and a guide for developing new tools.

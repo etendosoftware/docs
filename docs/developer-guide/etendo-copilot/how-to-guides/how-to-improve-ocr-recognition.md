@@ -25,9 +25,9 @@ By default, the tool uses a model configured in the environment variables. Howev
 
 In the **Agent** window, under the **Skills and Tools** tab, you can specify a **Model** for the OCR tool. This field allows you to override the default model for that specific tool in that agent.
 
-![Skills and Tools Tab](../../../assets/user-guide/etendo-copilot/setup/skills-and-tools-tab.png)
+![OCR Skills and Tools Model](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/ocr-skills-and-tools-model.png)
 
-- **Format**: The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-4o`).
+- **Format**: The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-5-mini`).
 - **Recommendation**: Use models with strong vision capabilities. New models with improved recognition accuracy and faster processing speeds are released frequently, so it is advisable to stay updated with the latest available versions.
 
 !!! info

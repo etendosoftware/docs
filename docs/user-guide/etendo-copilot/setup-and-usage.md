@@ -90,7 +90,7 @@ Fields to note:
 
 - **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
-- **Check hosts**: This button check the configuration of Etendo and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+- **Check hosts**: This button checks the configuration of Etendo and Copilot, to ensure that the communication between them is correct. In case of any error, a message will be shown.
 
 - **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a agent is cloned in, the name `Copy of` is added. 
 
@@ -130,7 +130,7 @@ In this tab, you can define the tools to be used by the agent.
 
 Fields to note:
 
-- **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
+- **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at a time.
 - **Description**: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.
 - **Model**: This field appears only when the selected tool has the **Use Model** checkbox enabled in the [Skill/Tool window](#skilltool-window). It allows you to configure a specific LLM model for this tool in this agent. The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-4`, `anthropic/claude-3-5-sonnet`). If left empty, a default model will be selected depending on the tool's implementation.
 - **Module**: Module in which this tool configuration will be exported. This field is only available with the `System Administrator` role.
@@ -291,7 +291,7 @@ Fields to note:
 
         Fields to note:
 
-        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping endpoints common to a specific functionality.
     
     === "Remote File"
         
@@ -445,7 +445,7 @@ In this window, the user can find and add AI models to be used by the agents, Av
 
 !!!info 
     - Automatically, the window will be populated with the Etendo default distributed models, after the first agent synchronization.
-    - Also diffrent models and providers must be entered manually.
+    - Also different models and providers must be entered manually.
 
 ![](../../assets/user-guide/etendo-copilot/setup/ai-models-window.png)
 

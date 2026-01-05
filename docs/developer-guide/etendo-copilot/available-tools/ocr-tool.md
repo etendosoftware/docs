@@ -46,7 +46,8 @@ Using this tool consists of the following actions:
     
     - **disable_threshold_filter** (optional): When `true`, ignore the configured similarity threshold and return the most similar reference found in the agent database (disables threshold filtering). Default: `false`.
     
-    - **force_structured_output_compat** (optional): When `true` (or when the selected model starts with 'gpt-5'), do not use the LLM's structured-output wrapper. Instead the tool will request structured output by embedding the schema JSON directly into the system prompt for compatibility with older agents. Default: `false`.
+    - **force_structured_output_compat** (optional): Modifies the communication method for structured output requests. When `true` (or automatically for models starting with 'gpt-5'), it changes how the structured input is sent to the LLM by bypassing the native structured-output wrapper and embedding the schema JSON directly into the system prompt. This ensures compatibility with older agents, specific model requirements, or for resolving compatibility issues. Use only when necessary. Default: `false` (uses native structured output system).
+
 
     !!! tip
         To learn how to optimize the results of this tool, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md) guide.
@@ -76,16 +77,37 @@ The OCR Tool includes an intelligent reference system that automatically searche
 
 **Managing Reference Images:**
 
-- Upload reference images to the agent's database using the `/addToVectorDB` endpoint.
-- Reference images should have visual markers (typically red boxes) indicating the data fields.
-- Each agent maintains its own vector database of reference templates.
-- The similarity threshold can be controlled or disabled using the `disable_threshold_filter` parameter. 
+- Upload reference images to the agent's knowledge base as you would normally do with any other document. 
+- Reference images should have visual markers (typically red boxes) indicating the data fields
+- Each agent maintains its own vector database of reference templates
+- The similarity threshold can be controlled or disabled using the `disable_threshold_filter` parameter
 
 **When to use references:**
 
 - Processing invoices, receipts, or forms with consistent layouts.
 - When you need to extract specific fields repeatedly from similar documents.
 - To improve extraction accuracy by providing visual guidance.
+
+**Regulating Similarity Threshold:**
+
+The similarity threshold determines how closely a document must match a reference template to be used. This is controlled via environment variables:
+
+- **Environment Variable**: `COPILOT_REFERENCE_SIMILARITY_THRESHOLD`
+- **Metric**: Uses L2 distance (lower values are stricter, higher values are more flexible).
+- **Recommended Range**: `0.15` to `0.30`.
+
+**Default Behavior (Out of the box):**
+
+By default, the tool is configured to be **highly permissive**:
+
+- If the `COPILOT_REFERENCE_SIMILARITY_THRESHOLD` environment variable is **not set**, the tool does not apply any distance filtering.
+- It will automatically search for the most similar reference in the database and **always use the best match found**, regardless of how different it might be from the original document.
+- This ensures that if you have only one reference template, the tool will always try to use it.
+
+**How to specify or disable the threshold:**
+
+- **To specify a threshold**: Set the `COPILOT_REFERENCE_SIMILARITY_THRESHOLD` environment variable to a float value (e.g., `0.20`). This will prevent the tool from using references that are too different.
+- **To disable threshold filtering**: If you have a threshold configured but want to ignore it for a specific request, set the `disable_threshold_filter` parameter to `true` in the tool input. This will force the tool to use the most similar reference found, even if it's not a close match. This can be done by instructing the agent to disable the threshold in its prompt. The agent will then pass the parameter to the tool.
 
 ### Structured Output Schemas
 
@@ -113,7 +135,7 @@ The tool will return data following the exact structure defined in the schema, e
 
 **Compatibility mode:**
 
-For older models or agents that don't support native structured output, use the `force_structured_output_compat` parameter. This embeds the schema JSON directly into the system prompt:
+For older models or agents that don't support native structured output, use the `force_structured_output_compat` parameter. This changes how the structured input is sent to the LLM by embedding the schema JSON directly into the system prompt:
 
 ```json
 {
