@@ -30,6 +30,12 @@ The Optical Character Recognition (OCR) Tool is an advanced tool that extracts s
 
 This tool automates the process of **text extraction from image-based files or PDFs**. This can be particularly useful for tasks such as document digitization, data extraction, and content analysis. 
 
+The advanced features of the OCR Tool allow it to leverage reference templates and structured output schemas, enhancing the accuracy and consistency of the extracted data. 
+
+When the tool is invoked, it processes the provided image or PDF file, searches for similar reference templates if available, and extracts the relevant information based on the specified question or instructions.
+
+**Threshold Filtering**: The tool can filter reference templates based on a configurable similarity threshold (configured in the `gradle.properties` file), like a minimum match score. This ensures that only closely matching references are used for extraction, improving accuracy. This threshold can be disabled if needed, allowing the tool to always use the best match found regardless of similarity level.
+
 Using this tool consists of the following actions:
 
 - **Receiving Parameters**:
@@ -44,10 +50,9 @@ Using this tool consists of the following actions:
     
     - **scale** (optional): PDF render scale factor (e.g., 2.0 = ~200 DPI, 3.0 = ~300 DPI). Higher values yield better quality but larger size and slower processing. Default: 2.0.
     
-    - **disable_threshold_filter** (optional): When `true`, ignore the configured similarity threshold and return the most similar reference found in the agent database (disables threshold filtering). Default: `false`.
+    - **disable_threshold_filter** (optional): Default: `false`. When `true`, ignore the configured similarity threshold and return the most similar reference found in the agent database (disables threshold filtering). In other words, the tool will always use the best match found, regardless of how different it might be from the original document.
     
-    - **force_structured_output_compat** (optional): Modifies the communication method for structured output requests. When `true` (or automatically for models starting with 'gpt-5'), it changes how the structured input is sent to the LLM by bypassing the native structured-output wrapper and embedding the schema JSON directly into the system prompt. This ensures compatibility with older agents, specific model requirements, or for resolving compatibility issues. Use only when necessary. Default: `false` (uses native structured output system).
-
+    - **force_structured_output_compat** (optional): Default: `false`. Modifies the communication method for structured output requests. By default it's false (uses native structured output system). When `true` (or automatically for models starting with 'gpt-5'), it changes how the structured input is sent to the LLM by bypassing the native structured-output wrapper and embedding the schema JSON directly into the system prompt. This ensures compatibility with older agents, specific model requirements, or for resolving compatibility issues. Use only when necessary. 
 
     !!! tip
         To learn how to optimize the results of this tool, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md) guide.
@@ -90,9 +95,9 @@ The OCR Tool includes an intelligent reference system that automatically searche
 
 **Regulating Similarity Threshold:**
 
-The similarity threshold determines how closely a document must match a reference template to be used. This is controlled via environment variables:
+The similarity threshold determines how closely a document must match a reference template to be used. This is controlled via a property in the `gradle.properties` file:
 
-- **Environment Variable**: `COPILOT_REFERENCE_SIMILARITY_THRESHOLD`
+- **Property**: `copilot.reference.similarity.threshold`
 - **Metric**: Uses L2 distance (lower values are stricter, higher values are more flexible).
 - **Recommended Range**: `0.15` to `0.30`.
 
@@ -100,13 +105,13 @@ The similarity threshold determines how closely a document must match a referenc
 
 By default, the tool is configured to be **highly permissive**:
 
-- If the `COPILOT_REFERENCE_SIMILARITY_THRESHOLD` environment variable is **not set**, the tool does not apply any distance filtering.
+- If the `copilot.reference.similarity.threshold` property is **not set**, the tool does not apply any distance filtering.
 - It will automatically search for the most similar reference in the database and **always use the best match found**, regardless of how different it might be from the original document.
 - This ensures that if you have only one reference template, the tool will always try to use it.
 
 **How to specify or disable the threshold:**
 
-- **To specify a threshold**: Set the `COPILOT_REFERENCE_SIMILARITY_THRESHOLD` environment variable to a float value (e.g., `0.20`). This will prevent the tool from using references that are too different.
+- **To specify a threshold**: Set the `copilot.reference.similarity.threshold` property in the `gradle.properties` file to a float value (e.g., `0.20`). This will prevent the tool from using references that are too different.
 - **To disable threshold filtering**: If you have a threshold configured but want to ignore it for a specific request, set the `disable_threshold_filter` parameter to `true` in the tool input. This will force the tool to use the most similar reference found, even if it's not a close match. This can be done by instructing the agent to disable the threshold in its prompt. The agent will then pass the parameter to the tool.
 
 ### Structured Output Schemas
@@ -157,9 +162,9 @@ The OCR Tool supports multiple AI providers with flexible configuration options:
 
 **Configuration methods (in priority order):**
 
-1. **Environment variable**: Set `copilot.ocrtool.model` to configure the model globally for all agents. This variable acts as a global override; if it is defined, the tool will use this model for all OCR requests, bypassing any per-agent configuration.
+1. **Global configuration (gradle.properties)**: Set `copilot.ocrtool.model` to configure the model globally for all agents. This property acts as a global override; if it is defined, the tool will use this model for all OCR requests, bypassing any per-agent configuration.
    
-    To configure it, add the variable to your `gradle.properties` file specifying only the **model name**:
+    To configure it, add the property to your `gradle.properties` file specifying the **model name**:
     ```properties
     copilot.ocrtool.model="gpt-4o"
     ```
@@ -205,7 +210,7 @@ For `PDF` documents, you can control the rendering quality using the `scale` par
 
 The tool includes several optimizations for better performance:
 
-- **In-memory processing**: Images and `PDFs` are converted to `base64` directly in memory without disk I/O
+- **In-memory processing**: Images and `PDFs` are converted to `Base64` directly in memory without disk I/O
 - **Efficient PDF rendering**: Uses *pypdfium2* for fast PDF-to-image conversion
 - **Automatic cleanup**: Temporary files are automatically removed after processing
 - **Parallel page processing**: Multi-page `PDFs` are processed efficiently
@@ -411,10 +416,10 @@ Suppose you have uploaded a reference invoice image to your agent's vector datab
 
 You can configure a specific model for OCR processing in multiple ways:
 
-**Option 1: Using environment variables (global configuration)**
-Open the `gradle.properties` file and set the following variable to specify the model for all agents:
+**Option 1: Using the `gradle.properties` file (global configuration)**
+Open the `gradle.properties` file and set the following property to specify the model for all agents:
 ```bash
-copilot.ocrtool.model="provider/selected_model"
+copilot.ocrtool.model="gpt-4o"
 ```
 
 **Option 2: Using the Agent window (per-agent configuration)**

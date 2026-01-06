@@ -21,7 +21,7 @@ The tool follows these steps:
 3. **LLM Call**: It calls an LLM model using a prompt (the `question` parameter of the OCR tool), which specifies exactly what the model should recognize and extract.
 
 ## Using a specific model
-By default, the tool uses a model configured in the environment variables. However, it is highly recommended to configure a specific model for the agent that will use the tool to ensure the best performance for visual tasks.
+By default, the tool uses a model configured in the `gradle.properties` file. However, it is highly recommended to configure a specific model for the agent that will use the tool to ensure the best performance for visual tasks.
 
 In the **Agent** window, under the **Skills and Tools** tab, you can specify a **Model** for the OCR tool. This field allows you to override the default model for that specific tool in that agent.
 
