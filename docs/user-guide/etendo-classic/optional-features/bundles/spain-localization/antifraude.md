@@ -9,15 +9,17 @@ tags:
 :octicons-package-16: Javapackage: `com.etendoerp.antifraud`
 
 ## Introducción
-Esta sección describe el módulo Etendo Antifraude, incluido en el bundle de Localización Española.
+Esta sección describe el módulo **Etendo Antifraude**, incluido en el bundle de Localización Española.
 
 !!! info 
-    Para poder incluir esta funcionalidad, es necesario instalar el bundle de Localización Española, a partir de versiones 1.34.0 desde Etendo 24.4 y 3.5.0 desde Etendo 25.1. Para hacer esto, siga las instrucciones de Marketplace: [Localización Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). Para más información acerca de versiones disponibles, compatibilidad con core y nuevas funcionalidades, visite [Localización Española - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/).
+    - Para poder incluir esta funcionalidad, es necesario instalar el bundle de **Localización Española**, a partir de versiones **1.34.0** desde Etendo 24.4 y **3.5.0** desde Etendo 25.1
+    - Para hacer esto, siga las instrucciones de Marketplace: [Localización Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5).
+    - Para más información acerca de versiones disponibles, compatibilidad con core y nuevas funcionalidades, visite [Localización Española - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes/).
 
 !!! warning
     El módulo incluye múltiples restricciones en el flujo de facturación, requeridas por ley en Etendo. Tenga en cuenta esto al utilizar el mismo, y planifique sus procesos siguiendo los nuevos flujos.
 
-El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf){target="_blank"}, vigente desde el 9 de julio de 2021, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840){target="_blank"}, vigente desde el 5 de diciembre de 2023, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
+El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf){target="_blank"}, vigente desde el *9 de julio de 2021*, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840){target="_blank"}, vigente desde el *5 de diciembre de 2023*, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
 
 ## Funcionalidades
 
@@ -29,7 +31,7 @@ Se ha añadido a la ventana `Organización` el proceso **Añadir Certificado Dig
 Este proceso se encarga de cargar para la organización seleccionada un certificado digital, el cual será utilizado luego en procesos que lo requieran, como por ejemplo la firma digital de documentos, el envío de facturas a VERI*FACTU, entre otros.
 
 !!! info
-    Para obtener un certificado digital se debe solicitar el mismo a través de la [FNMT (Fábrica Nacional de Moneda y Timbre)](https://www.cert.fnmt.es/). El solicitante del certificado varía según la forma jurídica de quien emite las facturas:
+    Para obtener un certificado digital se debe solicitar el mismo a través de la [FNMT (Fábrica Nacional de Moneda y Timbre)](https://www.cert.fnmt.es/){target="_blank"}. El solicitante del certificado varía según la forma jurídica de quien emite las facturas:
 
     1. **Autónomos (Personas Físicas)**: lo solicita el propio trabajador por cuenta propia. Se utiliza el Certificado de Persona Física. Es personal e intransferible. El autónomo debe realizar la solicitud y acreditar su identidad (ya sea presencialmente con su DNI o mediante vídeo identificación).
     2. **Sociedades (S.L., S.A., etc.)**: en el caso de empresas, el certificado no se emite a nombre de la "empresa" como ente abstracto, sino vinculado a una persona física responsable:
@@ -37,7 +39,7 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
         - Apoderado o Representante Legal: Si no se es administrador único, se debe solicitar un Certificado de Representante de Persona Jurídica. La persona que lo solicite debe acreditar mediante poderes notariales o certificado del Registro Mercantil que tiene autoridad para actuar en nombre de la sociedad.
     3. **Entidades sin Personalidad Jurídica**: lo solicita el representante legal de la entidad (por ejemplo, el presidente de una comunidad de propietarios o el representante de una unión temporal de empresas). Se requiere el Certificado de Representante de Entidad sin Personalidad Jurídica.
     
-    Siga la siguiente [Guía de la AEAT](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html) para solicitar un certificado electrónico de la FNMT
+    Siga la siguiente [Guía de la AEAT](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html){target="_blank"} para solicitar un certificado electrónico de la FNMT
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado.png)
 
@@ -50,7 +52,7 @@ Al finalizar, se mostrará en la solapa **Certificado Digital** la información 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png)
 
 !!! info
-    Tenga en cuenta que solo se puede disponer de un certificado a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.
+    Tenga en cuenta que solo se puede disponer de un certificad por *Organizacion Legal* a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.
 
 ### Proceso de generación de backups
 Se ha creado un proceso de generación de backups anuales, en respuesta al siguiente requerimiento:
@@ -262,3 +264,7 @@ Si se intenta utilizar el proceso ‘Borrar Entidad’ para eliminar una entidad
 En el caso del proceso `Reinicializar Cuentas`, el sistema no permite seleccionar la opción `Borrar asientos existentes/actuales`, marcando este campo como de solo lectura
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/reinicializar-cuenta.png)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
