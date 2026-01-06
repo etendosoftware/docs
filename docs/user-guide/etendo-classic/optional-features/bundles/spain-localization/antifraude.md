@@ -17,7 +17,7 @@ Esta sección describe el módulo Etendo Antifraude, incluido en el bundle de Lo
 !!! warning
     El módulo incluye múltiples restricciones en el flujo de facturación, requeridas por ley en Etendo. Tenga en cuenta esto al utilizar el mismo, y planifique sus procesos siguiendo los nuevos flujos.
 
-El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf), vigente desde el 9 de julio de 2021, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840), vigente desde el 5 de diciembre de 2023, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
+El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf){target="_blank"}, vigente desde el 9 de julio de 2021, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840){target="_blank"}, vigente desde el 5 de diciembre de 2023, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
 
 ## Funcionalidades
 
@@ -82,7 +82,7 @@ Este proceso consiste en los siguientes pasos:
 2. Inicializar un contador de backups completados exitosamente
 3. Intentar guardar un backup local del ERP en una carpeta designada por el usuario, o `/backups-annual` si no se designó ninguna
 4. Los backups serán encriptados. Es decir, se necesitará una contraseña para poder utilizarlos
-5. Esta contraseña se pondrá en un archivo de configuración de backups, en la variable `ANNUAL_BACKUP_PASSWORD`
+5. Esta contraseña se debe agregar en el archivo de configuración de backups `yearly-backup.conf` creado con el script de configuración, en la variable `ANNUAL_BACKUP_PASSWORD`
 6. Si el backup se realizó con éxito, incrementar en 1 el contador de backups exitosos
 7. Realizar rotación de los backups locales (si hay más backups anuales que los definidos en la variable de rotación configurada se borra el más antiguo de ellos)
 8. Sincronizar copias de backups utilizando los plugins disponibles (S3, label, samba, o sftp). También se da la opción de que el partner/proveedor desarrolle su propio método de sincronización y lo utilice
@@ -108,16 +108,6 @@ El comando desencriptará el backup y el mismo luego se puede descomprimir y uti
 
 !!! info
     El usuario será el encargado de asegurar que tiene al menos 3 copias de cada backup anual. Para esto debe configurar los servidores donde se sincronizará y los métodos para hacerlo
-
-#### Apertura de copias de seguridad previas
-
-Si se requiere abrir copias de seguridad de versiones anteriores del software, esto se puede realizar sin problemas, ya que los backups almacenan la información tanto de la base de datos como del entorno. Para poder ver información de anteriores versiones, solo se debería hacer lo siguiente:
-
-- Desencriptar el backup anual
-- Descomprimir el archivo resultante. Esto generará tres nuevos archivos: sources.tar.gz, db.dump.tar.gz y webapp.tar.gz
-- Continuar con el proceso estándar para recuperar backups de Etendo
-
-En este momento el entorno se encontraría listo para levantar y utilizar.
 
 ### Firmas Digitales de Documentos
 
@@ -166,6 +156,12 @@ Al crear una factura, se sigue asignando un número de documento al momento de g
 Cada 6 horas, se lanza la ejecución de un proceso de background, el cual revisa para todos los registros de auditoría generados en el trimestre que no haya cambios respecto al estado que tenían cuando se crearon.
 
 Para revisar esto, el proceso genera el código hash de cada registro de la auditoría y lo compara con el código hash generado automáticamente cuando se creó el registro. Si estos códigos difieren, entonces el sistema detecta que ha ocurrido una discrepancia en la auditoría, y se registra esto en la nueva ventana :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Discrepancias de Auditoría`.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/discrepancias-auditoria.png)
+
+Desde esta ventana se puede navegar al registro de auditoría para el que se detectaron cambios, y se muestra también la fecha en la que se detectó la discrepancia
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/registro-discrepancia.png)
 
 !!! warning
     Debido al uso de funciones de base de datos presentes solo en versiones más recientes, esta funcionalidad sólo está disponible en versiones del módulo de Antifraude compatibles con Core 25. En versiones compatibles con Core 24 no está disponible. Se recomienda actualizarse a Core 25Qx para garantizar la inalterabilidad y trazabilidad de los registros de auditoría
@@ -263,6 +259,6 @@ Si se intenta utilizar el proceso ‘Borrar Entidad’ para eliminar una entidad
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/borrar-cuenta.png)
 
-En el caso del proceso ‘Reinicializar Cuentas’, el sistema no permite seleccionar la opción ‘Borrar asientos existentes/actuales’, marcando este campo como de solo lectura
+En el caso del proceso `Reinicializar Cuentas`, el sistema no permite seleccionar la opción `Borrar asientos existentes/actuales`, marcando este campo como de solo lectura
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/reinicializar-cuenta.png)
