@@ -17,10 +17,7 @@ Esta sección describe el módulo Etendo Antifraude, incluido en el bundle de Lo
 !!! warning
     El módulo incluye múltiples restricciones en el flujo de facturación, requeridas por ley en Etendo. Tenga en cuenta esto al utilizar el mismo, y planifique sus procesos siguiendo los nuevos flujos.
 
-El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf), vigente desde el de 9 de julio de 2021, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840), vigente desde el 5 de diciembre de 2023, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
-
-## Descripción del Módulo
-El módulo de Antifraude añade las siguientes nuevas funcionalidades y restricciones para asegurar que se cumple con la ley homónima:
+El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf), vigente desde el 9 de julio de 2021, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840), vigente desde el 5 de diciembre de 2023, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
 
 ## Funcionalidades
 
@@ -104,7 +101,7 @@ Si ocurrió algún error durante la generación de backups, y no se llegaron a c
 Para acceder al contenido del backup, primero se debe desencriptar, mediante el siguiente comando:
 
 ```bash title="Terminal"
-    sudo openssl enc -d -des3 -a -salt -pbkdf2 -in [nombre del backup encriptado] -out [nombre que se quiera dar al backup desencriptado + extensión de compresión utilizada] -k [contraseña de desencriptación]
+sudo openssl enc -d -des3 -a -salt -pbkdf2 -in [nombre del backup encriptado] -out [nombre que se quiera dar al backup desencriptado + extensión de compresión utilizada] -k [contraseña de desencriptación]
 ```
 
 El comando desencriptará el backup y el mismo luego se puede descomprimir y utilizar normalmente.
@@ -183,7 +180,7 @@ Se ha implementado una validación al realizar pagos/cobros. La misma bloquea pa
 
 Aplica si al menos una de las partes tiene residencia fiscal en España (organización del documento o la del socio de negocio). Si ambas organizaciones son fuera de España, no interviene. Si no puede determinar el país, actúa de forma conservadora y aplica la validación.
 
-Esta restricción se activa sólo si el método de pago está marcado como “En Efectivo”. Este es un nuevo campo introducido en la ventana `Método de Pago`.
+Esta restricción se activa sólo si el método de pago está marcado como `En Efectivo`. Este es un nuevo campo introducido en la ventana `Método de Pago`.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/es-efectivo.png)
 
@@ -255,7 +252,7 @@ Si el usuario intenta reactivar, modificar, descontabilizar, etc. el documento, 
 
 Se han restringido estos procesos, a raiz de uno de los requerimientos necesarios para garantizar el cumplimiento de la ley antifraude, el cual especifica que el sistema no debe proveer herramientas de borrado masivo de datos.
 
-De acuerdo con la Ley 11/2021, reformada por la Ley General Tributaria (art. 29.2.j)): 
+De acuerdo con la Ley 11/2021, reformada por la Ley General Tributaria (art. 29.2.j): 
 
 > los sistemas y programas informáticos que soportan procesos contables, de facturación o de gestión deben garantizar la integridad, conservación, accesibilidad, legibilidad, trazabilidad e inalterabilidad de los registros, sin interpolaciones, omisiones o alteraciones de las que no quede debida anotación en los sistemas mismos. 
 
