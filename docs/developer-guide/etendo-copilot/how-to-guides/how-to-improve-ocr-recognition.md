@@ -49,6 +49,49 @@ When the input file is a PDF, the OCR tool must render it into an image before p
 
 Higher scale values yield better quality and more accurate extraction, but they also result in larger image sizes and slower processing times.
 
+## Using Structured Output
+The OCRTool supports **Structured Output**, which allows you to define a specific JSON schema that the model must follow when extracting information. This ensures that the output is always consistent and easy to process by other tools or systems.
+
+To use structured output, you must:
+
+1. **Define the Schema**: Create a Python file in the `tools/schemas/` directory located at the root of your Copilot module (e.g., `modules/my_module/tools/schemas/mail.py`). The file name will be the schema name (e.g., `mail.py`).
+2. **Implement the Pydantic Model**: Inside the file, define a class that inherits from `pydantic.BaseModel`. The class name must follow the pattern `<SchemaName>Schema` (e.g., `class MailSchema(BaseModel):`).
+3. **Invoke the Tool**: Specify the schema name in the `structured_output` parameter when calling the OCRTool.
+
+### Example: Creating a "Mail" Schema
+
+Suppose you want to extract information from scanned emails or letters. You can create a schema named `Mail`:
+
+**File**: `tools/schemas/mail.py`
+
+```python
+from typing import List, Optional
+from pydantic import BaseModel, Field
+
+# Internal model for nested data
+class MailAttachment(BaseModel):
+    filename: str = Field(description="Name of the attachment file")
+    size: Optional[int] = Field(description="Size of the file in bytes")
+
+# Main schema class - Must end with 'Schema'
+class MailSchema(BaseModel):
+    """Schema for extracting email/mail information."""
+    sender: str = Field(description="The person or entity who sent the mail")
+    recipient: str = Field(description="The person or entity who received the mail")
+    subject: Optional[str] = Field(description="The subject line of the mail")
+    body: str = Field(description="The main content or body of the mail")
+    date: Optional[str] = Field(description="The date when the mail was sent")
+    attachments: List[MailAttachment] = Field(default_factory=list, description="List of attachments mentioned")
+```
+
+Once defined, you can instruct the agent to use this schema:
+
+- **Agent Prompt**: *"When you extract information from an email image, use the OCRTool with the 'Mail' structured output."*
+
+The tool dynamically loads the schema from the file. It converts the `structured_output` value (e.g., `Mail`) to lowercase to find the file (`mail.py`) and then looks for the class `MailSchema`.
+
+The resulting extraction will follow the exact structure of your `MailSchema`, making it highly reliable for automated workflows.
+
 ## Adding reference data
 The OCR tool includes an intelligent reference system that automatically searches for similar document templates in the agent's knowledge base. When a similar reference is found, it guides the extraction process by indicating which data fields to extract using visual markers.
 

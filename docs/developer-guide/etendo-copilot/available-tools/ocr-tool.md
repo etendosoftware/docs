@@ -18,7 +18,7 @@ The Optical Character Recognition (OCR) Tool is an advanced tool that extracts s
 **Key Features:**
 
 - **Automatic Reference Matching**: Searches for similar reference templates in the agent's vector database to guide extraction with visual markers
-- **Structured Output Schemas**: Supports predefined schemas (Invoice, Receipt, etc.) and extensible custom schemas
+- **Structured Output Schemas**: Supports predefined schemas (testdocument, etc.) and extensible custom schemas
 - **Multi-format Support**: JPEG, PNG, WebP, GIF, and multi-page PDF files
 - **Multi-provider Support**: Compatible with OpenAI (GPT-4o, GPT-5-mini) and Gemini models
 - **Advanced Configuration**: Per-agent model configuration, PDF quality control, and threshold filtering
@@ -46,7 +46,7 @@ Using this tool consists of the following actions:
     
     - **question** (required): A contextual question or instructions specifying the information to be extracted from the image. Be precise about the data fields needed (e.g., 'Extract invoice number, date, total amount, and vendor name'). Clear instructions improve extraction accuracy.
     
-    - **structured_output** (optional): Specify a schema name to use structured output format (e.g., 'Invoice', 'Receipt'). Available schemas are loaded from `tools/schemas/` directory. When specified, the response will follow the predefined schema structure. Leave empty for unstructured JSON extraction.
+    - **structured_output** (optional): Specify a schema name to use structured output format (e.g., 'testdocument'). Available schemas are loaded from `tools/schemas/` directory. When specified, the response will follow the predefined schema structure. Leave empty for unstructured JSON extraction.
     
     - **scale** (optional): PDF render scale factor (e.g., 2.0 = ~200 DPI, 3.0 = ~300 DPI). Higher values yield better quality but larger size and slower processing. Default: 2.0.
     
@@ -120,19 +120,21 @@ The tool supports predefined schemas that enforce a specific output structure. T
 
 **Available schemas:**
 
-Schemas are stored in the `tools/schemas/` directory and can be extended with custom schemas. Common schemas include:
+Schemas are stored in the `tools/schemas/` directory and can be extended with custom schemas. In Copilot Extensions are included an example schema:
 
-- **Invoice**: Standard invoice fields (number, date, amounts, line items, etc.)
-- **Receipt**: Receipt-specific fields
+- **testdocument**: Comprehensive test document schema with various field types (dates, amounts, line items, address, etc.)
 - Custom schemas can be added by creating new schema files in the schemas directory
+
+!!! tip
+    To learn how to create and use custom structured output schemas, check the [How to Improve OCR Recognition](../how-to-guides/how-to-improve-ocr-recognition.md#using-structured-output) guide.
 
 **Usage:**
 
 ```json
 {
-    "path": "/home/user/invoice.pdf",
-    "question": "Extract the invoice information",
-    "structured_output": "Invoice"
+    "path": "/home/user/document.pdf",
+    "question": "Extract the information from this document",
+    "structured_output": "testdocument"
 }
 ```
 
@@ -144,9 +146,9 @@ For older models or agents that don't support native structured output, use the 
 
 ```json
 {
-    "path": "/home/user/invoice.pdf",
-    "question": "Extract the invoice information",
-    "structured_output": "Invoice",
+    "path": "/home/user/document.pdf",
+    "question": "Extract the information from this document",
+    "structured_output": "testdocument",
     "force_structured_output_compat": true
 }
 ```
@@ -364,7 +366,7 @@ The following is an example image of an invoice:
 
 ### Advanced Usage: Structured Output with Reference
 
-Suppose you have uploaded a reference invoice image to your agent's vector database, and now you want to extract invoice data with a predefined schema:
+Suppose you have uploaded a reference document image to your agent's vector database, and now you want to extract data with a predefined schema:
 
 - Use the tool with structured output:
 
@@ -372,43 +374,46 @@ Suppose you have uploaded a reference invoice image to your agent's vector datab
 
         ```json
         {
-            "path": "/home/user/new_invoice.pdf",
-            "question": "Extract the invoice information following the reference template",
-            "structured_output": "Invoice",
+            "path": "/home/user/document.pdf",
+            "question": "Extract the document information following the reference template",
+            "structured_output": "testdocument",
             "scale": 3.0,
             "disable_threshold_filter": false
         }
         ```
 
     - The tool will:
-        1. Search for a similar reference invoice in the vector database
+        1. Search for a similar reference document in the vector database
         2. Use the reference's visual markers to guide extraction
         3. Render the PDF at 300 DPI for better quality
-        4. Return data following the Invoice schema structure
+        4. Return data following the `testdocument` schema structure
 
     - Output:
 
         ```json
         {
-            "invoice_number": "INV-2024-001",
-            "date": "2024-12-16",
-            "currency": "EUR",
-            "vendor": {
-                "name": "Example Corp",
-                "tax_id": "B-12345678",
-                "address": "Main Street 123"
+            "document_id": "DOC-12345",
+            "document_number": "TX-2024-001",
+            "title": "Shipping Manifest",
+            "status": "pending",
+            "priority": "high",
+            "creation_date": "2024-12-16",
+            "owner": {
+                "name": "Jane Smith",
+                "email": "jane@example.com"
             },
-            "items": [
+            "line_items": [
                 {
+                    "line_number": 1,
+                    "item_code": "PROD-A",
                     "description": "Product A",
                     "quantity": 10,
                     "unit_price": 50.00,
-                    "total": 500.00
+                    "line_total": 500.00
                 }
             ],
-            "subtotal": 500.00,
-            "tax_amount": 90.00,
-            "total": 590.00
+            "is_active": true,
+            "version": 1
         }
         ```
 
