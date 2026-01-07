@@ -5797,6 +5797,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#agent-memory-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Memory Window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process-request-window" class="md-nav__link">
     <span class="md-ellipsis">
       Process Request Window
@@ -13049,6 +13058,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Improve OCR Recognition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
         
   
@@ -14999,6 +15031,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#agent-memory-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Memory Window
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process-request-window" class="md-nav__link">
     <span class="md-ellipsis">
       Process Request Window
@@ -15197,7 +15238,12 @@
 <li><strong>Model</strong>: Drop-down list of available models, from the <a href="#ai-models-window">AI Models</a> window. If left empty when running the <code>Sync Agent</code> button, the default model is used.</li>
 <li><strong>Code Execution</strong>: This check enables the experimental feature of code execution in <strong>Multi-model</strong> type agents.</li>
 <li><strong>Search Result Qty.</strong>: This option allows you to set the number of search results in the knowledge base on which the agent will base its response. The default value is 4, but it can be changed to any value. This value is useful when the agent has a large knowledge base, and you want to increase/decrease the number of results returned by the agent.</li>
-<li><strong>Temperature</strong>: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.</li>
+<li>
+<p><strong>Temperature</strong>: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.</p>
+</li>
+<li>
+<p><strong>JSON Schema for Structured Outputs</strong>: When configured, the agent will attempt to return responses that conform to the provided schema described in the JSON Schema format. This is useful for ensuring that the agent's outputs are structured and can be easily parsed or processed by other systems.</p>
+</li>
 </ul>
 <h3 id="buttons">Buttons</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/clone-agent.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/clone-agent.png"></a></p>
@@ -15209,7 +15255,7 @@
 <p><strong>Refresh Preview</strong>: Show only when agent type is <strong>Langraph</strong>, allowing the user to refresh the Graph Preview when changes to the team members are introduced.</p>
 </li>
 <li>
-<p><strong>Check hosts</strong>: This button check the configuration of Etendo and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.</p>
+<p><strong>Check hosts</strong>: This button checks the configuration of Etendo and Copilot, to ensure that the communication between them is correct. In case of any error, a message will be shown.</p>
 </li>
 <li>
 <p><strong>Clone</strong>: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a agent is cloned in, the name <code>Copy of</code> is added. </p>
@@ -15242,6 +15288,7 @@
 <p><strong>Active</strong>: checkbox to activate the knowledge base file.</p>
 </li>
 <li><strong>Type</strong>: read-only field showing the type of file selected in the <a href="#knowledge-base-file-window">Knowledge Base File window</a>.</li>
+<li><strong>Module</strong>: Module in which this knowledge base file configuration will be exported. This field is only available with the <code>System Administrator</code> role.</li>
 <li><strong>Alias</strong> In case you select behaviour, <code>[Agent] Append the file content to the prompt</code>, by default it adds the file content dynamically to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. </alias></li>
 </ul>
 <h3 id="skills-and-tools-tab">Skills and Tools Tab</h3>
@@ -15249,8 +15296,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/skills-and-tools-tab.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/skills-and-tools-tab.png"></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>Skill/Tool</strong>: The user can select any of the options available in this field, as many as necessary but one at the time.</li>
+<li><strong>Skill/Tool</strong>: The user can select any of the options available in this field, as many as necessary but one at a time.</li>
 <li><strong>Description</strong>: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.</li>
+<li><strong>Model</strong>: This field appears only when the selected tool has the <strong>Use Model</strong> checkbox enabled in the <a href="#skilltool-window">Skill/Tool window</a>. It allows you to configure a specific LLM model for this tool in this agent. The model must be specified using the format <code>provider/modelname</code> (e.g., <code>openai/gpt-4</code>, <code>anthropic/claude-3-5-sonnet</code>). If left empty, a default model will be selected depending on the tool's implementation.</li>
+<li><strong>Module</strong>: Module in which this tool configuration will be exported. This field is only available with the <code>System Administrator</code> role.</li>
 <li><strong>Active</strong>: checkbox to activate the tool.</li>
 </ul>
 <div class="admonition info">
@@ -15296,6 +15345,16 @@
 <h2 id="knowledge-base-file-window">Knowledge Base File Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code>&gt;<code>Service</code>&gt;<code>Copilot</code>&gt;<code>Knowledge Base File</code></p>
 <p>In the Knowledge Base File window, you can define the files with which the agents can interact.</p>
+<div class="admonition info">
+<p class="admonition-title">Image Indexing</p>
+<p>When files are indexed in an agent's knowledge base, <strong>image files are handled differently</strong> from text documents:</p>
+<ul>
+<li><strong>Text documents</strong> (PDF, TXT, MD, etc.) are indexed in the main vector database for semantic search using the Knowledge Base Search tool</li>
+<li><strong>Image files</strong> (PNG, JPG, JPEG, etc.) are indexed in a <strong>separate image database</strong> specifically designed for visual similarity search</li>
+<li>This image database is currently used by the <a href="../../../developer-guide/etendo-copilot/available-tools/ocr-tool/">OCR Tool</a> to find reference templates with visual markers that guide data extraction</li>
+<li>Each agent maintains its own image database, separate from its text knowledge base</li>
+</ul>
+</div>
 <h3 id="header_1">Header</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-window.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-window.png"></a></p>
 <p>Fields to note:</p>
@@ -15394,7 +15453,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/openapi-flow-file.png" data-desc-position="bottom"><img alt="openapi-flow-file.png" src="../../../assets/user-guide/etendo-copilot/setup/openapi-flow-file.png"></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>OpenAPI Flow</strong>  Only show if the <strong>OpenAPI Flow Specification</strong> is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.</li>
+<li><strong>OpenAPI Flow</strong>  Only show if the <strong>OpenAPI Flow Specification</strong> is chosen in the Type field.  OpenAPI Flow selector, grouping endpoints common to a specific functionality.</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -15437,6 +15496,10 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code>&gt;<code>Service</code>&gt;<code>Copilot</code>&gt;<code>Skill/Tool</code></p>
 <p>In this window , the user can find <a href="../../../developer-guide/etendo-copilot/available-tools/overview/">available tools</a>, distributed in the Copilot bundle, to be used in Copilot agents.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Use Model</strong>: Checkbox that indicates whether this tool requires an LLM model to function. When checked, a <strong>Model</strong> field will appear in the Skills and Tools tab of the Agent window, allowing you to configure a specific model for this tool in that agent.</li>
+</ul>
 <p>Some tools require to communicate with Etendo through WebHooks. Their configuration can be found in the Webhooks tab.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -15453,6 +15516,22 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case of deleting an agent, the related agent access records are also deleted.</p>
+</div>
+<h2 id="agent-memory-window">Agent Memory Window</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Agent Memory</code></p>
+<p>The Agent Memory window allows you to capture and reuse rules and knowledge acquired in any Copilot agent. Every memory you register is tied to a specific agent and is automatically injected into its answers according to your organization, role, and user context.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/agent-memory-window.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/agent-memory-window.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Organization</strong>: Defaults to the agent's organization; may be left blank for a global memory. Copilot only injects entries that belong to the current organization tree unless the value is empty.</li>
+<li><strong>Active</strong>: Enables or disables the memory without deleting it. Inactive rows never reach the conversation.</li>
+<li><strong>User/Contact</strong>: Optional user owner. Leave empty to expose it to everyone. Only the selected user sees the memory.</li>
+<li><strong>Role</strong>: Optional role filter. Any user working under the chosen role will receive the hint.</li>
+<li><strong>Text Field</strong>: The actual content Copilot will append. It is recommended to use short, action-oriented statements.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When multiple memories match, Copilot lists them as bullet points under “Use the following relevant previous information.”</p>
 </div>
 <h2 id="process-request-window">Process Request Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code>&gt;<code>General Setup</code>&gt;<code>Process Scheduling</code>&gt;<code>Process Request</code></p>
@@ -15503,7 +15582,7 @@
 <p class="admonition-title">Info</p>
 <ul>
 <li>Automatically, the window will be populated with the Etendo default distributed models, after the first agent synchronization.</li>
-<li>Also diffrent models and providers must be entered manually.</li>
+<li>Also different models and providers must be entered manually.</li>
 </ul>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/ai-models-window.png" data-desc-position="bottom"><img alt="" src="../../../assets/user-guide/etendo-copilot/setup/ai-models-window.png"></a></p>

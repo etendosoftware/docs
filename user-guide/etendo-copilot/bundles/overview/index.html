@@ -13011,6 +13011,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Improve OCR Recognition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp/" class="md-nav__link">
         
   
@@ -15116,6 +15139,16 @@ This supervisor has the following agents:</p>
 </li>
 <li>
 <p><strong>Purchase Invoice Expert</strong>: Agent expert in managing purchase invoices for Etendo. It manages the entire invoice creation process, extracts and validates the invoice header and lines. Finally, it invokes APIs to insert data and provides final validation.</p>
+<p>When this agent processes an invoice, it performs a validation of the total amount. To provide feedback to the user, a <strong>Copilot</strong> section is added to the <strong>Purchase Invoice</strong> window with a field called <strong>Copilot Feedback</strong>. The agent updates this field with the result of the validation:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/user-guide/etendo-copilot/bundles/overview/copilot-feedback.png" data-desc-position="bottom"><img alt="Copilot Feedback" src="../../../../assets/user-guide/etendo-copilot/bundles/overview/copilot-feedback.png"></a></p>
+<ul>
+<li><strong>Ok</strong>: The invoice total matches the extracted data and is ready for processing.</li>
+<li><strong>Requires manual review</strong>: There is a mismatch or an issue that requires a human user to verify the invoice details.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To improve the accuracy of data extraction, check the <a href="../../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/">How to Improve OCR Recognition</a> guide.</p>
+</div>
 </li>
 </ul>
 <h5 id="order-expert">Order Expert</h5>
@@ -15134,7 +15167,7 @@ This supervisor has the following agents:</p>
 </div>
 <h3 id="etendo-copilot-toolpack">Etendo Copilot Toolpack</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
-<p>The <strong>Etendo Copilot Toolpack</strong> is a collection of tools that help to <strong>developers</strong> to add functionalities to agents, such request to an API, send an email, read a file, write a file, and more.</p>
+<p>The <strong>Etendo Copilot Toolpack</strong> is a collection of tools that help <strong>developers</strong> add functionalities to agents, such request to an API, send an email, read a file, write a file, and more.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information, visit the <a href="../../../../developer-guide/etendo-copilot/bundles/overview/#etendo-copilot-toolpack">Toolpack - Developer Guide</a>, where you will find a detailed list of the available tools, instructions on how to use them, and a guide for developing new tools.</p>

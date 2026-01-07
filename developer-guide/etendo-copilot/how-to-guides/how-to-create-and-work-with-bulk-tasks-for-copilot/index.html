@@ -12735,6 +12735,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#advanced-options-grouping-related-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Options: Grouping Related Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options: Grouping Related Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-groupby" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Groupby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupby-example-order-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groupby Example: Order Lines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12908,6 +12950,29 @@
   
   <span class="md-ellipsis">
     How to Export Tools and Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-improve-ocr-recognition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Improve OCR Recognition
     
   </span>
   
@@ -14797,6 +14862,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#advanced-options-grouping-related-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Options: Grouping Related Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options: Grouping Related Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-groupby" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Groupby
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groupby-example-order-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groupby Example: Order Lines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preview Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14875,7 +14982,7 @@
 
 <h1 id="how-to-create-and-work-with-bulk-tasks-for-copilot">How to create and work with bulk tasks for Copilot</h1>
 <h2 id="overview">Overview</h2>
-<p>This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute in background with Copilot</p>
+<p>This article explains how to create and work with bulk tasks for Copilot. This is useful when you want to create multiple tasks at once and execute them in the background with Copilot.</p>
 <h3 id="concept-and-use-cases">Concept and Use Cases</h3>
 <p>When you need to make use of an AI agent to perform tasks with a high volume of iterations, it will be limited in the amount it can handle and its speed. Then the concept of Bulk tasks is born, which consists of storing requests in a window of the <code>Tasks</code> module. </p>
 <div class="admonition warning">
@@ -14886,21 +14993,27 @@
 <h2 id="add-copilot-tasks">Add Copilot Tasks</h2>
 <p>The Etendo Copilot module includes:</p>
 <ul>
-<li><strong>Add Copilot Task Button</strong>: This button in the <code>Tasks</code> window allows you sent a CSV/XLSX/ZIP file to create bulk tasks.</li>
+<li><strong>Add Copilot Task Button</strong>: This button in the <code>Tasks</code> window allows you to send a CSV/XLSX/ZIP file to create bulk tasks.</li>
 <li><strong>Bulk Task Creator</strong>: This agent is configured with the <a href="../../available-tools/task-creator-tool/">Task Creator Tool</a> to create bulk tasks based on a zip file or a CSV/XLSX file. This agent can be added to a supervisor agent to chain with other agents.</li>
 </ul>
 <p>In both options, the requirements are the same:</p>
 <ul>
 <li><strong>CSV/XLSX/ZIP file</strong>: The file that contains the data to be processed.</li>
-<li><strong>Question</strong>: The description or request that will be used as the task base. For the case of the agent <code>Bulk Task Creator</code>, it will be encharge to reform the task to convert to singular tasks. But for the other options, it is necessary to provide the task base in singular form.</li>
-<li><strong>Execution Group</strong>: Optional group. If not set, it uses the conversation ID. Its use to identify the tasks that belong to the same group.</li>
-<li><strong>Task Type</strong>: Optional task type ID. If not set, it auto-creates one named "Copilot". Its use to identify the type of task.</li>
-<li><strong>Status</strong>: Optional status ID. Defaults to "Pending". Its use to identify the status of the task. After the task is processed, the status will be updated to <code>Completed</code>.</li>
+<li><strong>Question</strong>: The description or request that will be used as the task base. For the case of the agent <code>Bulk Task Creator</code>, it will be in charge of reforming the task to convert it to singular tasks. But for the other options, it is necessary to provide the task base in singular form.</li>
+<li><strong>Execution Group</strong>: Optional group. If not set, it uses the conversation ID. It is used to identify the tasks that belong to the same group.</li>
+<li><strong>Task Type</strong>: Optional task type ID. If not set, it auto-creates one named "Copilot". It is used to identify the type of task.</li>
+<li><strong>Status</strong>: Optional status ID. Defaults to "Pending". It is used to identify the status of the task. After the task is processed, the status will be updated to <code>Completed</code>.</li>
 <li><strong>Agent</strong>: The agent that will process the tasks. If the agent is not specified, will be selected the agent that used the tool. For the case of the agent <code>Bulk task creator</code>, it will be selected the supervisor agent that contains it.</li>
+<li><strong>Groupby</strong>: Optional parameter. A list of column names (or a comma-separated string) to group rows by their values. When specified, rows with the same values in these columns will be grouped into a single task, with the data passed as a JSON array. This is useful for processing related records together (e.g., all order lines for the same document). If not specified, each row becomes a separate task.</li>
+<li><strong>Preview</strong>: Optional boolean parameter. When set to <code>true</code>, the tool will return a preview of how the tasks would be created without actually creating them. This is useful for validating the task structure before creating a large number of tasks.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files, one per file in the case of ZIP files, and one per file in the case of other files. The task request will be the following format: <code>BASE_TASK - [FILE_NAME/ROW DATA]</code></p>
+<p>When the tasks are created, the tasks will be created one per row in the case of CSV/XLSX files (unless <code>groupby</code> is used), one per file in the case of ZIP files, and one per file in the case of other files. The task request will be in the following format:</p>
+<ul>
+<li><strong>Without groupby</strong>: <code>BASE_TASK - [FILE_NAME/ROW DATA]</code></li>
+<li><strong>With groupby</strong>: <code>BASE_TASK - [JSON array with grouped rows]</code></li>
+</ul>
 </div>
 <h3 id="example">Example</h3>
 <p>For example, if you have a CSV file with the following data:</p>
@@ -14937,7 +15050,7 @@
 <ol>
 <li>Go to the agent that contains the <code>Task Creator Tool</code>.</li>
 <li>Open a conversation with the agent.</li>
-<li>Attach in the conversation the CSV file with the products data.</li>
+<li>Attach to the conversation the CSV file with the products data.</li>
 <li>
 <p>Send some request like:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Create bulk tasks for the attached file.
@@ -14957,11 +15070,11 @@
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png"></a></p>
 <h4 id="using-the-bulk-task-creator-agent">Using the <code>Bulk Task Creator</code> agent</h4>
-<p>This agent know to use the <code>Task Creator Tool</code> strategically, converting the request in singular tasks. The steps to create the bulk tasks are:</p>
+<p>This agent knows how to use the <code>Task Creator Tool</code> strategically, converting the request into singular tasks. The steps to create the bulk tasks are:</p>
 <ol>
 <li>Add the <code>Bulk Task Creator</code> agent to a supervisor agent. In this case, we will use the <code>Data Initialization Supervisor</code> agent that contains the <code>Product Generator</code> agent.</li>
 <li>Open a conversation with the supervisor agent.</li>
-<li>Attach in the conversation the CSV file with the products data.</li>
+<li>Attach to the conversation the CSV file with the products data.</li>
 <li>
 <p>Send some request like: </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Create the products in the attached file.
@@ -14972,6 +15085,45 @@
 <p>The supervisor agent will delegate the task to the <code>Bulk Task Creator</code> agent that will create the tasks based on the file data and then process it.</p>
 </li>
 </ol>
+<h3 id="advanced-options-grouping-related-data">Advanced Options: Grouping Related Data</h3>
+<p>When working with data that has relationships between rows (such as order lines belonging to the same order, or invoice items for the same invoice), you can use the <code>groupby</code> parameter to create one task per group instead of one task per row.</p>
+<h4 id="when-to-use-groupby">When to Use Groupby</h4>
+<p>Use the <code>groupby</code> parameter when:</p>
+<ul>
+<li><strong>Related records should be processed together</strong>: For example, all lines of a sales order should be processed as a single order creation task.</li>
+<li><strong>Context from multiple rows is needed</strong>: When the AI agent needs to see all related data at once to make better decisions.</li>
+<li><strong>Reducing task overhead</strong>: Instead of creating hundreds of individual tasks, you can create fewer tasks with grouped data.</li>
+</ul>
+<h4 id="groupby-example-order-lines">Groupby Example: Order Lines</h4>
+<p>Suppose you have an Excel file with order lines data:</p>
+<div class="language-text highlight"><span class="filename">order_lines.csv</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DocumentNo,Product,Quantity,Price
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ORD-001,Laptop,2,1200
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ORD-001,Mouse,2,25
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ORD-002,Keyboard,5,80
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ORD-002,Monitor,3,350
+</span></code></pre></div>
+<p>Without groupby, this would create <strong>4 separate tasks</strong> (one per row). With groupby, you can group by <code>DocumentNo</code> to create <strong>2 tasks</strong> (one per order).</p>
+<p><strong>Using the Task Creator Tool with groupby:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Create bulk tasks for the attached file.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>- Question: "Create a sales order with these lines:"
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>- Group by: DocumentNo
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>- The group id is 'Order Load December 2025'
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>- The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'
+</span></code></pre></div>
+<p>This will create 2 tasks:</p>
+<ol>
+<li><strong>Task 1</strong>: <code>Create a sales order with these lines: - [{"DocumentNo": "ORD-001", "Product": "Laptop", "Quantity": 2, "Price": 1200}, {"DocumentNo": "ORD-001", "Product": "Mouse", "Quantity": 2, "Price": 25}]</code></li>
+<li><strong>Task 2</strong>: <code>Create a sales order with these lines: - [{"DocumentNo": "ORD-002", "Product": "Keyboard", "Quantity": 5, "Price": 80}, {"DocumentNo": "ORD-002", "Product": "Monitor", "Quantity": 3, "Price": 350}]</code></li>
+</ol>
+<p>Each task now contains a JSON array with all the lines for that specific order, allowing the agent to process the complete order in a single execution.</p>
+<h4 id="preview-mode">Preview Mode</h4>
+<p>Before creating a large number of tasks, you can use the <code>preview</code> parameter to validate the task structure:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Create bulk tasks for the attached file in preview mode.
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>- Question: "Create product with this data:"
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>- Preview: true
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>- The agent ID is 'A9E0861E88B1460A98CAF55DCB2BEE82'
+</span></code></pre></div>
+<p>The tool will return a preview showing how many tasks would be created and their structure, without actually creating them in the database.</p>
 <h2 id="how-to-process-copilot-tasks">How to Process Copilot tasks</h2>
 <p>The tasks can be processed in two ways:</p>
 <ul>

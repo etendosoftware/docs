@@ -12231,6 +12231,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Basic Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-grouping-by-column-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Grouping by Column Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -12854,6 +12878,29 @@
   
   <span class="md-ellipsis">
     How to Export Tools and Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/how-to-improve-ocr-recognition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Improve OCR Recognition
     
   </span>
   
@@ -14716,6 +14763,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Basic Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-grouping-by-column-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Grouping by Column Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -14787,7 +14858,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To know when is the best time to use this tool or how there are executed this tasks, check the <a href="../../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/">How to create bulk tasks for Copilot</a> guide.</p>
+<p>To know when is the best time to use this tool or how these tasks are executed, check the <a href="../../how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/">How to create bulk tasks for Copilot</a> guide.</p>
 </div>
 <p>This tool provides the agent with:</p>
 <ul>
@@ -14815,9 +14886,11 @@
 <li><code>question</code>: Description or request that will be used as the task base. It is recommended that this be a singularized question. For example: "Process the product".</li>
 <li><code>file_path</code>: Path to the input file (ZIP, CSV, XLS, or XLSX).</li>
 <li><code>group_id</code>: Optional group ID. If not set, it uses the conversation ID.</li>
+<li><code>groupby</code>: Optional list of column names to group rows by when processing CSV/XLS/XLSX files. If provided, rows that share the same values for these columns will be grouped together and sent as a single task. The task item will be a JSON array string containing all rows in the group. This is useful when multiple rows belong to the same entity (e.g., all order lines for the same order document number). Accepts a list or comma-separated string.</li>
 <li><code>task_type_id</code>: Optional task type ID. If not provided, it uses the default "Copilot" task type (ID: <code>A83E397389DB42559B2D7719A442168F</code>).</li>
 <li><code>status_id</code>: Optional status ID. If not provided, it uses the default "Pending" status (ID: <code>D0FCC72902F84486A890B70C1EB10C9C</code>).</li>
 <li><code>agent_id</code>: Optional ID of the agent to process the task. If not provided, it uses the current main agent's ID.</li>
+<li><code>preview</code>: Optional boolean. If true, returns the column names (or file contents for ZIP) instead of creating tasks.</li>
 </ul>
 </li>
 <li>
@@ -14854,6 +14927,7 @@
 </li>
 </ul>
 <h2 id="usage-example">Usage Example</h2>
+<h3 id="example-1-basic-usage">Example 1: Basic Usage</h3>
 <p>You have a <code>.csv</code> file with a list of customer feedback. Each row should become a separate task under the same group. You would input:</p>
 <ul>
 <li><code>question</code>: Review feedback</li>
@@ -14864,7 +14938,60 @@
 <li><code>agent_id</code>: (optional)</li>
 </ul>
 <p>The Task Creator Tool will process each row and generate a task with the base question + the row's data. If a parameter is not set, the tool uses its default value.</p>
-<p>This helps you automate large-scale task generation in just one step, saving time and avoiding manual entry.</p>
+<h3 id="example-2-grouping-by-column-values">Example 2: Grouping by Column Values</h3>
+<p>You have a <code>.xlsx</code> file with order lines where multiple rows belong to the same order document. Instead of creating one task per line, you want to create one task per order containing all its lines.</p>
+<p><strong>Sample Excel file:</strong></p>
+<table>
+<thead>
+<tr>
+<th>DocumentNo</th>
+<th>Product</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORD-001</td>
+<td>Product A</td>
+<td>10</td>
+<td>100</td>
+</tr>
+<tr>
+<td>ORD-001</td>
+<td>Product B</td>
+<td>5</td>
+<td>50</td>
+</tr>
+<tr>
+<td>ORD-002</td>
+<td>Product C</td>
+<td>20</td>
+<td>200</td>
+</tr>
+<tr>
+<td>ORD-002</td>
+<td>Product D</td>
+<td>15</td>
+<td>150</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Input parameters:</strong></p>
+<ul>
+<li><code>question</code>: Process order</li>
+<li><code>file_path</code>: /path/to/orders.xlsx</li>
+<li><code>group_id</code>: 123456789</li>
+<li><code>groupby</code>: ["DocumentNo"]</li>
+<li><code>agent_id</code>: (optional)</li>
+</ul>
+<p><strong>Result:</strong></p>
+<p>The tool will create <strong>2 tasks</strong> (one per order):</p>
+<ol>
+<li><strong>Task 1</strong> with item data as a JSON array containing both lines for ORD-001</li>
+<li><strong>Task 2</strong> with item data as a JSON array containing both lines for ORD-002</li>
+</ol>
+<p>This helps you automate large-scale task generation in just one step, saving time and avoiding manual entry, while maintaining the logical grouping of related data.</p>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
 
