@@ -29,7 +29,7 @@ El módulo permite:
 - Generar automáticamente los archivos XML de registro de facturación al emitir una factura, conforme a la estructura exigida por la AEAT.
 - Enviar estos archivos en tiempo real a la Agencia Tributaria.
 - Recibir las respuestas electrónicas de la AEAT con el resultado del procesamiento.
-- Incluir en las facturas los códigos QR y la marca "VERI*FACTU" exigidos por la normativa.
+- Incluir en las facturas los códigos QR y la marca **VERI*FACTU** exigidos por la normativa.
 - Consultar un historial detallado de todos los registros enviados, incluyendo sus estados de validación por parte de la AEAT.
 
 La implementación cubre:
@@ -54,20 +54,18 @@ La implementación cubre:
 
 - Se añaden campos y pestañas específicas de Verifactu en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
 
+!!! warning
+    Al utilizar este módulo, se restringirán las siguientes funcionalidades:
 
-### Nuevas restricciones del sistema (Verifactu y Ley Antifraude)
-
-Al utilizar este módulo, se restringirán las siguientes funcionalidades:
-
-- Reactivación de facturas.
-- Anulación de facturas.
-- Eliminación de facturas, pedidos o albaranes (incluso en estado borrador).
-- Modificación del Rango de un impuesto ya creado.
-- Configuración simultánea para un mismo emisor de:
-  - Verifactu + SII
-  - Verifactu + TBAI  
-  > Nota: la combinación SII + TBAI sí está permitida.
-- Eliminación de registros de facturación Verifactu y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las llamadas/respuestas XML durante el plazo legal correspondiente).
+    - Reactivación de facturas.
+    - Anulación de facturas.
+    - Eliminación de facturas, pedidos o albaranes (incluso en estado borrador).
+    - Modificación del Rango de un impuesto ya creado.
+    - Configuración simultánea para un mismo emisor de:
+      - Verifactu + SII
+      - Verifactu + TBAI  
+      > Nota: la combinación SII + TBAI sí está permitida.
+    - Eliminación de registros de facturación Verifactu y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las llamadas/respuestas XML durante el plazo legal correspondiente).
 
 ## Configuración
 
@@ -88,7 +86,7 @@ Para poder emitir facturas electrónicas a través del sistema VeriFactu, es ind
 2. **Seleccionar la Organización Legal**: Elige la organización legal que será responsable de emitir las facturas electrónicas.
 3. **Añadir el Certificado Digital**: Haz clic en el botón **Añadir Certificado Digital**.
 4. **Subir el Certificado**: En el proceso, podrás cargar tu certificado digital ingresando la clave correspondiente.
-5. **Guardar la configuración**: Al presionar el botón **"Hecho"**, el sistema guardará la información del certificado digital en la solapa **Certificado Digital**.
+5. **Guardar la configuración**: Al presionar el botón **Hecho**, el sistema guardará la información del certificado digital en la solapa **Certificado Digital**.
 
 Una vez completados estos pasos, el certificado digital estará correctamente configurado y listo para su uso en la emisión de facturas electrónicas.
 
@@ -163,7 +161,7 @@ En la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Contabili
 
   ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa_exencion.png)
 
-> Nota: Si se utilizan recargos de equivalencia, basta con completar el campo en el impuesto principal. Por ejemplo, para el impuesto “Entregas IVA+RE 21+5.2%”, que incluye los subimpuestos “Entregas IVA+RE 21+5.2% (+21%)” y “Entregas IVA+RE 21+5.2% (+5.2%)”, solo es necesario rellenar el campo en el impuesto “Entregas IVA+RE 21+5.2% (+21%)”.
+> Nota: Si se utilizan recargos de equivalencia, basta con completar el campo en el impuesto principal. Por ejemplo, para el impuesto Entregas IVA+RE 21+5.2%, que incluye los subimpuestos Entregas IVA+RE 21+5.2% (+21%) y Entregas IVA+RE 21+5.2% (+5.2%), solo es necesario rellenar el campo en el impuesto Entregas IVA+RE 21+5.2% (+21%).
 
 
 ### Ajustes para Facturas Rectificativas por Sustitución o F3 (emitida en sustitución de facturas simplificadas)
@@ -303,7 +301,7 @@ Al completar la factura:
 ---
 ### Creación automática de facturas de venta
 
-Es posible enviar a **Verifactu** facturas que se generan desde procesos automáticos (por ejemplo, procesos que **crean facturas directamente en estado “Completado”**). Para que esto funcione correctamente, es necesario **configurar previamente el Tipo de Documento**.
+Es posible enviar a **Verifactu** facturas que se generan desde procesos automáticos (por ejemplo, procesos que **crean facturas directamente en estado Completado**). Para que esto funcione correctamente, es necesario **configurar previamente el Tipo de Documento**.
 
 #### Configuración requerida en Tipo de Documento
 
@@ -352,7 +350,7 @@ Por tanto, los **clientes finales deben operar únicamente en entorno productivo
 En caso de necesitar realizar simulaciones en entorno productivo (por ejemplo, pruebas de funcionamiento o demostraciones), la Agencia Tributaria permite una operativa específica:
 
 - Utilizar **series diferenciadas** (como `PRU-XXXXX`) para identificar las facturas de prueba.
-- Añadir textos visibles que indiquen su carácter no real, como "DEMO" o "PRUEBA".
+- Añadir textos visibles que indiquen su carácter no real, como **DEMO** o **PRUEBA**.
 - Generar de forma obligatoria el **registro de alta y su correspondiente registro de anulación**, enviados ambos a la AEAT.
 
 Etendo implementa esta lógica de forma segura exclusivamente en entornos de desarrollo, permitiendo que las facturas se creen y anulen automáticamente como parte del flujo de testeo. **Este comportamiento no se encuentra disponible en entorno productivo**, donde las anulaciones deben gestionarse conforme al procedimiento fiscal establecido.
@@ -459,7 +457,7 @@ Se pueden generar **facturas rectificativas** a partir de un **Pedido de Venta**
 Para hacerlo:
 
 1. **Seleccionar un tipo de documento rectificativo**  
-   En el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **"Es Rectificativo"**).
+   En el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **Es Rectificativo**).
 
 2. **Completar la sección Verifactu en el documento**  
    Completar los campos de la sección **Verifactu** del **documento** indicando el **tipo de rectificación** que se usará.
