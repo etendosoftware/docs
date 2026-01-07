@@ -79,6 +79,8 @@ Fields to note:
 - **Search Result Qty.**: This option allows you to set the number of search results in the knowledge base on which the agent will base its response. The default value is 4, but it can be changed to any value. This value is useful when the agent has a large knowledge base, and you want to increase/decrease the number of results returned by the agent.
 - **Temperature**: This controls randomness, lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.
 
+- **JSON Schema for Structured Outputs**: When configured, the agent will attempt to return responses that conform to the provided schema described in the JSON Schema format. This is useful for ensuring that the agent's outputs are structured and can be easily parsed or processed by other systems.
+
 
 ### Buttons
 
@@ -88,7 +90,7 @@ Fields to note:
 
 - **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
-- **Check hosts**: This button check the configuration of Etendo and Copilot, to ensure that de comunication between them is correct. In case of any error, a message will be shown.
+- **Check hosts**: This button checks the configuration of Etendo and Copilot, to ensure that the communication between them is correct. In case of any error, a message will be shown.
 
 - **Clone**: The navbar clone button allows the cloning of agents, making a copy of both all header fields and related records in the tabs. When a agent is cloned in, the name `Copy of` is added. 
 
@@ -117,6 +119,7 @@ Fields to note:
 
 - **Active**: checkbox to activate the knowledge base file.
 - **Type**: read-only field showing the type of file selected in the [Knowledge Base File window](#knowledge-base-file-window).
+- **Module**: Module in which this knowledge base file configuration will be exported. This field is only available with the `System Administrator` role.
 - **Alias** In case you select behaviour, `[Agent] Append the file content to the prompt`, by default it adds the file content dynamically to the end of the prompt, the alias can be used to replace the file content inside the prompt, using the wildcard @<alias>@, with the alias you define in this field. 
 
 ### Skills and Tools Tab
@@ -127,8 +130,10 @@ In this tab, you can define the tools to be used by the agent.
 
 Fields to note:
 
-- **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at the time.
+- **Skill/Tool**: The user can select any of the options available in this field, as many as necessary but one at a time.
 - **Description**: Read-only field. It shows the description of the tool, used by the agent to choose the appropriate tool for each case.
+- **Model**: This field appears only when the selected tool has the **Use Model** checkbox enabled in the [Skill/Tool window](#skilltool-window). It allows you to configure a specific LLM model for this tool in this agent. The model must be specified using the format `provider/modelname` (e.g., `openai/gpt-4`, `anthropic/claude-3-5-sonnet`). If left empty, a default model will be selected depending on the tool's implementation.
+- **Module**: Module in which this tool configuration will be exported. This field is only available with the `System Administrator` role.
 - **Active**: checkbox to activate the tool.
 
 !!!info
@@ -175,6 +180,14 @@ Fields to note:
 :material-menu: `Application`>`Service`>`Copilot`>`Knowledge Base File`
 
 In the Knowledge Base File window, you can define the files with which the agents can interact.
+
+!!!info "Image Indexing"
+    When files are indexed in an agent's knowledge base, **image files are handled differently** from text documents:
+    
+    - **Text documents** (PDF, TXT, MD, etc.) are indexed in the main vector database for semantic search using the Knowledge Base Search tool
+    - **Image files** (PNG, JPG, JPEG, etc.) are indexed in a **separate image database** specifically designed for visual similarity search
+    - This image database is currently used by the [OCR Tool](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md) to find reference templates with visual markers that guide data extraction
+    - Each agent maintains its own image database, separate from its text knowledge base
 
 ### Header
 
@@ -278,7 +291,7 @@ Fields to note:
 
         Fields to note:
 
-        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping enpoints common to a specific functionality.
+        - **OpenAPI Flow**  Only show if the **OpenAPI Flow Specification** is chosen in the Type field.  OpenAPI Flow selector, grouping endpoints common to a specific functionality.
     
     === "Remote File"
         
@@ -328,6 +341,10 @@ In this window , the user can find [available tools](../../developer-guide/etend
 
 ![](../../assets/user-guide/etendo-copilot/setup/skill-tool-window.png)
 
+Fields to note:
+
+- **Use Model**: Checkbox that indicates whether this tool requires an LLM model to function. When checked, a **Model** field will appear in the Skills and Tools tab of the Agent window, allowing you to configure a specific model for this tool in that agent.
+
 Some tools require to communicate with Etendo through WebHooks. Their configuration can be found in the Webhooks tab.
 
 !!!info
@@ -347,6 +364,25 @@ In this window, it is possible to configure access roles for each Agent. This me
 
 !!!note
     In case of deleting an agent, the related agent access records are also deleted.
+
+## Agent Memory Window
+
+:material-menu: `Application` > `Service` > `Copilot` > `Agent Memory`
+
+The Agent Memory window allows you to capture and reuse rules and knowledge acquired in any Copilot agent. Every memory you register is tied to a specific agent and is automatically injected into its answers according to your organization, role, and user context.
+
+![](../../assets/user-guide/etendo-copilot/setup/agent-memory-window.png)
+
+Fields to note:
+
+- **Organization**: Defaults to the agent's organization; may be left blank for a global memory. Copilot only injects entries that belong to the current organization tree unless the value is empty.
+- **Active**: Enables or disables the memory without deleting it. Inactive rows never reach the conversation.
+- **User/Contact**: Optional user owner. Leave empty to expose it to everyone. Only the selected user sees the memory.
+- **Role**: Optional role filter. Any user working under the chosen role will receive the hint.
+- **Text Field**: The actual content Copilot will append. It is recommended to use short, action-oriented statements.
+
+!!! info
+    When multiple memories match, Copilot lists them as bullet points under “Use the following relevant previous information.”
 
 ## Process Request Window
 
@@ -409,7 +445,7 @@ In this window, the user can find and add AI models to be used by the agents, Av
 
 !!!info 
     - Automatically, the window will be populated with the Etendo default distributed models, after the first agent synchronization.
-    - Also diffrent models and providers must be entered manually.
+    - Also different models and providers must be entered manually.
 
 ![](../../assets/user-guide/etendo-copilot/setup/ai-models-window.png)
 

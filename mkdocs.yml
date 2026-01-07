@@ -620,6 +620,7 @@ nav:
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Explore ERP Data with MCP: developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp.md
         - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
         - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
