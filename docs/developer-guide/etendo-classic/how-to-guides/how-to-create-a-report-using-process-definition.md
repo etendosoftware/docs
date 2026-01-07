@@ -21,8 +21,7 @@ This section explains how to add a new Report using a Process Definition and cre
 
 This section is supported by an example module which includes the simple report described in the examples of this document. The report is named **Product Simple Report** and prints in `PDF` a list of Products that can be filtered by Product Category.
 
-The code of the example module can be downloaded from this mercurial repository:
-https://code.openbravo.com/erp/mods/org.openbravo.platform.features
+The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}.
 
 ## Report Definition in Application Dictionary
 
@@ -310,7 +309,15 @@ The result is shown in a new form with all the parameters and the corresponding 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/12.png)
 
-Once the report is generated, a file download is requested in the browser. The form is kept enabled so it is possible to rerun the report with different parameters.
+Once the report is executed, the result is displayed according to the selected action:
+
+- **View** opens the report in a new window.
+- **Export to PDF** downloads the report as a PDF file.
+- **Export to Excel** downloads the report as an Excel file.
+
+The form remains enabled, allowing the report to be executed again with different parameters.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/13.png)
 
 ---
 
