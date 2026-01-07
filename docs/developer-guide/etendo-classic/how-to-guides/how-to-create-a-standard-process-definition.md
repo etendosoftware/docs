@@ -514,7 +514,7 @@ A standard process can be defined as multi record process to be able to execute 
 
 The **File reference** enhances the Etendo Classic capabilities by enabling file uploads directly within process definitions. 
 
-This functionality, which can be used in processes as well as in windows, introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing which is then used by the system as specified in the process definition.
+This functionality can be used in **process definitions**, introducing an **intuitive file upload element** in the process form. Users can upload a **single file** for processing, which is then handled by the process logic as specified in the process definition.
 
 !!!info
     The maximum file size users are allowed to upload are limited by default to 10MB. This is set in the preference `Maximum file upload size (MB)`. This file size check is performed both on the client's and on the server's side. 
@@ -523,18 +523,21 @@ This functionality, which can be used in processes as well as in windows, introd
 
 #### Example in Process Definition
 
-The proposed solution involves incorporating a **File Upload** Reference as a process parameter in process definitions.
+To enable file uploads in a process definition, an **Upload File** Reference can be defined as a process parameter.
 
-This reference has a User Interface Definition which calls the process, this can be seen in the **Process Definition tab**:
+The **Upload File** reference is implemented in the core with a User Interface Definition that renders the file input and submits the request as a multipart form:
 
-`com.etendoerp.upload.file.definition.ProcessFileUploadUIDefinition`
+`org.openbravo.client.kernel.reference.ProcessFileUploadUIDefinition`
+
+The uploaded file is then available in the process execution through the **Process Definition handler** (a Java class extending `BaseProcessActionHandler`).
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/upload-file-2.png)
 
-This definition calls a process `OBProcessFileUpload` that executes a JavaScript that has all the definitions, rules and configurations to make the reference work, and allows to select a file for later upload.
+The User Interface Definition is responsible for rendering the file input and submitting the request as multipart data. 
+The uploaded file is handled by the Java class defined as the Process Definition handler.
 
 !!!info
-    Any file can be selected since this module was thought as a base so that programmers can use it for their needs. 
+    Any file can be selected since this functionality was designed as a base so that programmers can use it for their needs. 
 
 This is an example of a `Process Definition` created, it is defined as follows:
 
@@ -544,64 +547,47 @@ After creating the `Process Definition`, a **Menu** is created to visualize the 
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/upload-file-0.png)
 
-###  Downloading files
+###  Process Action Handler Example
 
-Process definition has the ability to generate and download a file.
+The following example shows how to access the uploaded file in the process action handler.
 
-In this case of Process Definition, extend from `FileExportActionHandler` and implement the **generateFileToDownload** and **getDownloadFileName** methods.
+!!!info
+    The string `Example File` corresponds to the **DB Column Name** of the **Upload File** parameter defined in the Process Definition.
 
 ```java
-/**
- * Action handler example to export a file from a process definition
- */
-public class ExportFileExample extends FileExportActionHandler {
-  private static final String FILE_PREFIX = "Test";
-  private static final String FILE_EXTENSION = ".txt";
- 
+import java.io.InputStream;
+import java.util.Map;
+
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.application.process.BaseProcessActionHandler;
+
+public class UploadFileExampleActionHandler extends BaseProcessActionHandler {
+
   @Override
-  protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
-      throws IOException, JSONException {
-    String tmpFileName = UUID.randomUUID().toString() + FILE_EXTENSION;
-    File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
-    try (FileWriter outputfile = new FileWriter(file)) {
-      outputfile.write("Hello World!");
+  protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+    // IMPORTANT:
+    // For multipart requests, the uploaded file is included directly in 'parameters'
+    // under the parameter name (DB Column Name) defined in the Process Definition.
+
+    @SuppressWarnings("unchecked")
+    Map<String, Object> fileInfo = (Map<String, Object>) parameters.get("Example File");
+
+    if (fileInfo != null) {
+      InputStream input = (InputStream) fileInfo.get("content");
+      String fileName = (String) fileInfo.get("fileName");
+      long size = (long) fileInfo.get("size");
+
+      // TODO: process input stream (store, parse, import, etc.)
     }
-    return file.toPath();
-  }
- 
-  @Override
-  protected String getDownloadFileName(Map<String, Object> parameters, JSONObject data) {
-    return FILE_PREFIX + FILE_EXTENSION;
+
+    return new JSONObject();
   }
 }
 ```
 
 !!!info
-    If the process definition is launched from a button in a standard window with a header and lines and it is not configured as multi-record, the generated file will be attached to the header by default.
-
-This behavior can be modified overriding the method uploadAttachment.
-
-```java
-@Override
-protected void uploadAttachment(Path originalFile, Map<String, Object> parameters,
-    JSONObject data) throws IOException, JSONException {
-}
-```
-
-!!!info
-    As an example:
-
-    ```java
-    protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
-        throws IOException, JSONException {
-      String tmpFileName = UUID.randomUUID().toString() + ".txt";
-      File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
-      try (FileWriter outputfile = new FileWriter(file)) {
-        outputfile.write("Hello World!");
-      }
-      return file.toPath();
-    }
-    ```
+    Uploaded files are not persisted automatically. The file is available only during the
+    execution of the process and must be explicitly stored if persistence is required.
 
 ##  Limitations
 
