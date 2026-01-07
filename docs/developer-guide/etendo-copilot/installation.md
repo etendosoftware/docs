@@ -103,7 +103,7 @@ The latest Copilot updates are always developed for the most recent available Et
     
     This command asks for characteristics of your Etendo instance. And based on your answers, it will print the values.
     
-    **Copy** the printed values and paste them into your `gradle.properties` file, replacing the existing values for `ETENDO_HOST`, `ETENDO_HOST_DOCKER`, `COPILOT_HOST`, and `COPILOT_PORT`.
+    **Copy** the printed values and **paste** them into your `gradle.properties` file.
 
 3. The `gradle.properties` file should now look like this:
 
