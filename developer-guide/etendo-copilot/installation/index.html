@@ -11487,18 +11487,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration-variables" class="md-nav__link">
+  <a href="#copilot-in-etendo-25-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration Variables
+      Copilot in Etendo 25 (recommended)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-copilot-service-and-install" class="md-nav__link">
+  <a href="#copilot-in-etendo-24" class="md-nav__link">
     <span class="md-ellipsis">
-      Run Copilot Service and Install
+      Copilot in Etendo 24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Variables
     </span>
   </a>
   
@@ -14771,18 +14780,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration-variables" class="md-nav__link">
+  <a href="#copilot-in-etendo-25-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration Variables
+      Copilot in Etendo 25 (recommended)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-copilot-service-and-install" class="md-nav__link">
+  <a href="#copilot-in-etendo-24" class="md-nav__link">
     <span class="md-ellipsis">
-      Run Copilot Service and Install
+      Copilot in Etendo 24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Variables
     </span>
   </a>
   
@@ -14909,13 +14927,106 @@
 <p>Etendo Copilot is distributed within the <a href="../bundles/overview/">Copilot Extensions</a> bundle, which in addition to including the <strong>Copilot Infrastructure</strong>, includes <strong>default agents</strong> and <strong>tools</strong> that can be used directly or compose their use in new agents.  </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md">Copilot Extensions - Release notes</a>.</p>
+<p>To be able to include this functionality, the <strong>Copilot Extensions</strong> bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md">Copilot Extensions - Release notes</a>.</p>
 </div>
 <h2 id="running-etendo-copilot">Running Etendo Copilot</h2>
-<p>The simplest configuration we are going to follow as an example is to mount Copilot Dockerized and Tomcat running as a local service. Other configurations are detailed in the section, <a href="#advanced-configurations">Advanced Configurations</a>.</p>
-<p>In addition, there are other <strong>optional</strong> variables to configure certain aspects of the copilot. If not specified, default values are used.</p>
+<p>The simplest configuration we are going to follow as an example is to mount <strong>Copilot</strong> Dockerized and <strong>Tomcat</strong> running as a local service. Other configurations are detailed in the section, <a href="#advanced-configurations">Advanced Configurations</a>.</p>
+<h3 id="copilot-in-etendo-25-recommended">Copilot in Etendo 25 (recommended)</h3>
+<p>The latest Copilot updates are always developed for the most recent available Etendo version. We recommend keeping your environment up to date.</p>
+<ol>
+<li>
+<p>Run the <a href="../../../getting-started/interactive-installation/">interactive setup</a>: this command will guide you through configuring Copilot. There are two main options:</p>
+<ul>
+<li><strong>Copilot</strong> the simple version used by most users.</li>
+<li><strong>Copilot (Advanced)</strong> provides more customization and includes all available configuration variables.</li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>setup<span class="w"> </span>-Pinteractive<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--console<span class="o">=</span>plain
+</span></code></pre></div>
+<p>Once in the menu, select <strong>Copilot</strong>, and follow the step-by-step prompts, and the setup will complete with all required variables.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/interactive-setup.png" data-desc-position="bottom"><img alt="alt text" src="../../../assets/developer-guide/etendo-copilot/getting-started/interactive-setup.png"></a></p>
+</li>
+<li>
+<p>The <code>gradle.properties</code> file should now look like this:</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">COPILOT_HOST</span><span class="o">=</span><span class="n">copilot</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5005</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Then, the copilot container needs to be created/recreated:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>resources.up
+</span></code></pre></div>
+</li>
+<li>
+<p>Then recompile the environment, to ensure that the changes are applied and installed correctly:</p>
+<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
+</span></code></pre></div>
+5.  Start the <strong>Tomcat</strong> service and ¡Try Copilot in Etendo!<p></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To configure a new agent or to use a predefined one, follow the <a href="../../../user-guide/etendo-copilot/setup-and-usage/" target="_blank">Copilot Setup and Usage</a> guide.</p>
+</div>
+</li>
+</ol>
+<h3 id="copilot-in-etendo-24">Copilot in Etendo 24</h3>
+<ol>
+<li>
+<p>Add to <code>gradle.properties</code> the variable <code>docker_com.etendoerp.copilot=true</code> to enable the Copilot Docker container and at least one <code>API_KEY</code>, depending on the model provider you use.</p>
+<p>Remember that due to API level access limitations, paid versions are required. These variables are required to run the Copilot container and access the models used.</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">GOOGLE_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using Gemini</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>The <code>gradle.properties</code> variables <code>ETENDO_HOST</code>,<code>ETENDO_HOST_DOCKER</code>, <code>COPILOT_HOST</code>, and <code>COPILOT_PORT</code> are used to configure the connection between <strong>Copilot</strong> service and <strong>Etendo</strong>.</p>
+<p>Etendo Copilot provides a <strong>Gradle task</strong> to automatically retrieve these variables based on your Etendo instance configuration. To do this, execute the following command in the terminal:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>copilot.variables.setup<span class="w">  </span>--console<span class="o">=</span>plain
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-setup-variables.png" data-desc-position="bottom"><img alt="copilot.setup.variables" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-setup-variables.png"></a></p>
+<p>This command asks for characteristics of your Etendo instance. And based on your answers, it will print the values.</p>
+<p><strong>Copy</strong> the printed values and paste them into your <code>gradle.properties</code> file, replacing the existing values for <code>ETENDO_HOST</code>, <code>ETENDO_HOST_DOCKER</code>, <code>COPILOT_HOST</code>, and <code>COPILOT_PORT</code>.</p>
+</li>
+<li>
+<p>The <code>gradle.properties</code> file should now look like this:</p>
+<p></p><div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">COPILOT_HOST</span><span class="o">=</span><span class="n">copilot</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5005</span>
+</span></code></pre></div>
+4. Once the <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a> dependency was added and the variables configured, in the terminal execute the following command to apply the changes:<p></p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>setup
+</span></code></pre></div>
+</li>
+<li>
+<p>Then, the copilot container needs to be created/recreated:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>resources.up
+</span></code></pre></div>
+</li>
+<li>
+<p>Then recompile the environment, to ensure that the changes are applied and installed correctly:
+    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p>Start the <strong>Tomcat</strong> service and ¡Try Copilot in Etendo!</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To configure a new agent or to use a predefined one, follow the <a href="../../../user-guide/etendo-copilot/setup-and-usage/" target="_blank">Copilot Setup and Usage</a> guide.</p>
+</div>
+</li>
+</ol>
 <h3 id="configuration-variables">Configuration Variables</h3>
-<p>All possible configuration variables are listed below, however, the step-by-step instructions explain how to configure them.</p>
+<p>All available configuration variables are listed below and can be configured manually.</p>
 <table>
 <thead>
 <tr>
@@ -14936,19 +15047,25 @@
 <td><code>OPENAI_API_KEY</code></td>
 <td><code>none</code></td>
 <td>✅ If using OpenAI</td>
-<td>API key for <a href="https://platform.openai.com/account/api-keys">OpenAI</a>. Contact Etendo or use your own.</td>
+<td>API key for <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI</a>. Contact Etendo or use your own.</td>
+</tr>
+<tr>
+<td><code>GOOGLE_API_KEY</code></td>
+<td><code>none</code></td>
+<td>✅ If using Gemini</td>
+<td>API key for <a href="https://aistudio.google.com/app/api-keys" target="_blank">Gemini</a>. Only needed if using Gemini models.</td>
 </tr>
 <tr>
 <td><code>ANTHROPIC_API_KEY</code></td>
 <td><code>none</code></td>
 <td>✅ If using Anthropic</td>
-<td>API key for <a href="https://docs.anthropic.com/en/api/getting-started">Anthropic</a>. Only needed if using Anthropic models.</td>
+<td>API key for <a href="https://docs.anthropic.com/en/api/getting-started" target="_blank">Anthropic</a>. Only needed if using Anthropic models.</td>
 </tr>
 <tr>
 <td><code>DEEPSEEK_API_KEY</code></td>
 <td><code>none</code></td>
 <td>✅ If using DeepSeek</td>
-<td>API key for <a href="https://deepseek.ai/">DeepSeek</a>. Only needed if using DeepSeek models.</td>
+<td>API key for <a href="https://deepseek.ai/" target="_blank">DeepSeek</a>. Only needed if using DeepSeek models.</td>
 </tr>
 <tr>
 <td><code>ETENDO_HOST</code></td>
@@ -15030,79 +15147,21 @@
 </tr>
 </tbody>
 </table>
-<ol>
-<li>
-<p>Add to <code>gradle.properties</code> the variable <code>docker_com.etendoerp.copilot=true</code> to enable the Copilot Docker container and at least one <code>API_KEY</code>, depending on the model provider you use.</p>
-<p>Remember that due to API level access limitations, paid versions are required. These variables are required to run the Copilot container and access the models used.</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>The <code>gradle.properties</code> variables <code>ETENDO_HOST</code>,<code>ETENDO_HOST_DOCKER</code>, <code>COPILOT_HOST</code>, and <code>COPILOT_PORT</code> are used to configure the connection between <strong>Copilot</strong> service and <strong>Etendo</strong>.</p>
-<p>Etendo Copilot provides a <strong>Gradle task</strong> to automatically set these variables based on your Etendo instance configuration. To do this, execute the following command in the terminal:</p>
-<p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>copilot.variables.setup<span class="w">  </span>--console<span class="o">=</span>plain
-</span></code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-setup-variables.png" data-desc-position="bottom"><img alt="copilot.setup.variables" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-setup-variables.png"></a><p></p>
-<p>This command asks for characteristics of your Etendo instance. And based on your answers, it will print the values.</p>
-<p>Copy the printed values and paste them into your <code>gradle.properties</code> file, replacing the existing values for <code>ETENDO_HOST</code>, <code>ETENDO_HOST_DOCKER</code>, <code>COPILOT_HOST</code>, and <code>COPILOT_PORT</code>.</p>
-</li>
-<li>
-<p>The <code>gradle.properties</code> file should now look like this:</p>
-<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">COPILOT_HOST</span><span class="o">=</span><span class="n">copilot</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5005</span>
-</span></code></pre></div>
-</li>
-</ol>
-<h3 id="run-copilot-service-and-install">Run Copilot Service and Install</h3>
-<p>Once the <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a> dependency was added and the variables configurated, in the terminal execute the following command to apply the changes:</p>
-<ol>
-<li>
-<p>Apply the configuration variables
-    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>setup
-</span></code></pre></div><p></p>
-</li>
-<li>
-<p>Then, the copilot container needs to be created/recreated:
-    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>resources.up
-</span></code></pre></div><p></p>
-</li>
-<li>
-<p>Then recompile the environment, to ensure that the changes are applied and deployed correctly:
-    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
-</span></code></pre></div><p></p>
-</li>
-<li>
-<p>Start the <strong>Tomcat</strong> service and ¡Try Copilot in Etendo!</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To configure a new agent or to use a predefined one, follow the <a href="../../../user-guide/etendo-copilot/setup-and-usage/" target="_blank">Copilot Setup and Usage</a> guide.</p>
-</div>
-</li>
-</ol>
 <h3 id="copilot-service-container-management">Copilot Service Container Management</h3>
 <ul>
 <li>
 <p>To start the copilot Docker image, execute:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>resources.up
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
 </li>
 <li>
 <p>To stop the Copilot container you can run: 
-    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>resources.stop
+    </p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>resources.stop
 </span></code></pre></div><p></p>
 </li>
 <li>
 <p>Every time a new tool is added or the environment variables change, it's necessary to delete and create the Copilot container again. Execute the following command to delete the container: </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>resources.down
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew<span class="w"> </span>resources.down
 </span></code></pre></div>
 </li>
 </ul>
@@ -15113,7 +15172,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In Copilot Extensions bundle versions lower than <a href="../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">3.3.0</a>, if you suffer from errors related to missing <code>poetry</code>dependency, you can use the legacy Docker image, with the tag <code>poetry</code>. To do that, you need to add the following variable in the <code>gradle.properties</code> file:</p>
-<p></p><div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">COPILOT_IMAGE_TAG</span><span class="o">=</span><span class="n">poetry</span>
+<p></p><div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">COPILOT_IMAGE_TAG</span><span class="o">=</span><span class="n">poetry</span>
 </span></code></pre></div>
 This will use the legacy docker image with <code>poetry</code> dependency installed, instead of the new one with <code>uv</code> as the package manager installed.<p></p>
 </div>
@@ -15127,27 +15186,27 @@ This will use the legacy docker image with <code>poetry</code> dependency instal
 <p>We recommend using <strong>PyCharm</strong> to run copilot locally. Download and install here <a href="https://www.jetbrains.com/pycharm/download/" target="_blank">PyCharm Community Edition</a></p>
 <ol>
 <li>
-<p>Open PyCharm, search for the copilot module and open it.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_1.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_1.png"></a></p>
+<p>Open PyCharm, search for the copilot module and open it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-1.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-1.png"></a></p>
 </li>
 <li>
 <p>Open the <code>Run.py</code> file, then add a new interpreter.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_2.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_2.png"></a>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_3.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-2.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-2.png"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-3.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-3.png"></a></p>
 </li>
 <li>
 <p>Add a new configuration file and select Python</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_4.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_4.png"></a>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_5.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-4.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-4.png"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-5.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-5.png"></a></p>
 </li>
 <li>
 <p>Select the interpreter created before. In the script field, select the <code>run.py</code> file, and in the .env field, select the <code>gradle.properties</code> file.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_6.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/Copilot_Local_6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-6.png" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-copilot/getting-started/copilot-local-6.png"></a></p>
 </li>
 <li>
 <p>Once done, open the PyCharm terminal and execute the following commands:</p>
-<div class="language-bash highlight"><span class="filename">terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>uv<span class="w"> </span>sync
+<div class="language-bash highlight"><span class="filename">terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>uv<span class="w"> </span>sync
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
