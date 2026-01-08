@@ -12,7 +12,7 @@ status: beta
 # Etendo Architecture
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
     
 ## Overview
 
@@ -294,7 +294,7 @@ The code above shows how to register javascript and css resources. Also an examp
 
 Etendo can find all the `ComponentProviders` because Weld will analyze the classpath and collect all classes which have a `@ComponentProvider` annotation. See the Weld section on classpath analyzing above.
 
-##  Implementing Server Side Actions callable from the client
+## Implementing Server Side Actions callable from the client
 
 Etendo provides a convenient solution for executing actions on the server from the client. This is the so-called `ActionHandler` concept. The `ActionHandler` concept has a server and client-side part to it.
 

@@ -1,7 +1,5 @@
 ---
-search:
-  exclude: true
-
+title: Datasources
 tags: 
   - datasources
   - API

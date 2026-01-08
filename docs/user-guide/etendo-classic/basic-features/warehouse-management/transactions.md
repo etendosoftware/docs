@@ -787,7 +787,7 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 |                                                                                                 |                                                  |                                                |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Account                                                                                         | Debit                                            | Credit                                         |
-| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount of "Movement From" transaction |                                                |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) | Adjustment amount of "Movement From" transaction |                                                |
 | [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
 
 **"Movement To"** transaction adjustment:
@@ -796,7 +796,7 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Account                                                                                         | Debit                                          | Credit                                         |
 | [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
-| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) |                                                | Adjustment amount of "Movement To" transaction |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) |                                                | Adjustment amount of "Movement To" transaction |
 
 ### **Negative Stock Correction**
 
@@ -834,7 +834,7 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 |                                                                                                 |                   |                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Account                                                                                         | Debit             | Credit            |
-| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount |                   |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) | Adjustment amount |                   |
 | [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                   | Adjustment amount |
 
 ### **Price Difference Correction**

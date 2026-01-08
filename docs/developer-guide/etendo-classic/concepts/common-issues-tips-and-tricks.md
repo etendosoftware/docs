@@ -13,7 +13,7 @@ status: beta
 #  Common Issues Tips and Tricks
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
   
 ##  Overview
 
