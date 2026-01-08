@@ -8780,6 +8780,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#message-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sub-report-runtime-compilation" class="md-nav__link">
     <span class="md-ellipsis">
       Sub-Report Runtime Compilation
@@ -8794,6 +8803,39 @@
       Report Definition
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-hyperlinks-to-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Hyperlinks to a Report
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Hyperlinks to a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-navigating-to-a-specific-record-eg-an-invoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Navigating to a specific record (e.g., an invoice)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-opening-another-report-from-a-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Opening another report from a link
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -14800,6 +14842,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#message-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sub-report-runtime-compilation" class="md-nav__link">
     <span class="md-ellipsis">
       Sub-Report Runtime Compilation
@@ -14814,6 +14865,39 @@
       Report Definition
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-hyperlinks-to-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Hyperlinks to a Report
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Hyperlinks to a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-navigating-to-a-specific-record-eg-an-invoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Navigating to a specific record (e.g., an invoice)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-opening-another-report-from-a-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Opening another report from a link
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -14883,15 +14967,19 @@
 <p>This section explains how to add a new Report using a Process Definition and create a menu entry to invoke it.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For background information, visit <a href="../how-to-create-a-standard-process-definition/">How to Create a Standard Process Definition</a> and <a href="../how-to-create-a-report/">How to Create a Report</a>.</p>
+<p>For background information, visit:</p>
+<ul>
+<li><a href="../how-to-create-a-standard-process-definition/">How to Create a Standard Process Definition</a></li>
+<li><a href="../how-to-create-a-report/">How to Create a Report</a>.</li>
+</ul>
 </div>
 <h2 id="example-module">Example Module</h2>
-<p>This section is supported by an example module which includes the simple report described in the examples of this document. The report is named <strong>Product Simple Report</strong> and prints in <code>PDF</code> a list of Products that can be filtered by Product Category.</p>
-<p>The code of the example module can be downloaded from this mercurial repository:
-https://code.openbravo.com/erp/mods/org.openbravo.platform.features</p>
+<p>This section is supported by an example module which includes the simple report described in this document. The report is named <strong>Product Simple Report</strong> and prints in <code>PDF</code> a list of products that can be filtered by <em>Product Category</em>.</p>
+<p>The code of the example module can be downloaded from the repository <a href="https://github.com/etendosoftware/com.etendoerp.client.application.examples" target="_blank">com.etendoerp.client.application.examples</a>.</p>
 <h2 id="report-definition-in-application-dictionary">Report Definition in Application Dictionary</h2>
 <h3 id="process-definition">Process Definition</h3>
-<p>Create a new record in <strong>Process Definition</strong> window. Fields to consider:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Process Definition</code> </p>
+<p>As a <code>System Administrator</code> role, create a new record in <strong>Process Definition</strong> window. Fields to consider:</p>
 <ul>
 <li>
 <p><strong>UI Pattern</strong>: Set <code>Report (Using JR Templates)</code> . This value will display the Report Definition tab.</p>
@@ -14900,134 +14988,120 @@ https://code.openbravo.com/erp/mods/org.openbravo.platform.features</p>
 <p><strong>Action Handler</strong>: If none is set when the UI Pattern is selected, the <code>org.openbravo.client.application.report.BaseReportActionHandler</code> is set.</p>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-1.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/1.png"></a></p>
 <p>The <code>BaseReportActionHandler</code> is the default action handler to use in reports. In case you desire to make some Java validations or include some extra parameters that are not defined in the Process Definition parameters tab it is possible to use a custom Action Handler that extends the <code>BaseReportActionHandler</code>.</p>
 <h3 id="parameter-definition">Parameter Definition</h3>
 <p>In the <strong>Parameter</strong> tab are added all the parameters that are needed to filter the results of the report. Their values are handled by the <code>BaseReportActionHandler</code> and sent to Jasper Reports as parameters. These parameters need to be defined in the JR template with the same name as the column name.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-3.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-3.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-4.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-4.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-5.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-6.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/3.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/3.png"></a></p>
 <p>When the filter parameter is a Selector reference the value is sent as a <strong>JSONOBject</strong> that includes 2 keys:</p>
 <ul>
-<li><strong>value</strong> with the id of the selected BaseOBObject to be used in the SQL query</li>
+<li><strong>value</strong> with the id of the selected <code>BaseOBObject</code> to be used in the SQL query</li>
 <li><strong>identifier</strong> with the readable identifier that can be used to print in the report the filter values.</li>
 </ul>
 <p>In case of Multiple Selectors the <strong>JSONObject</strong> includes 4 keys:</p>
 <ul>
-<li><strong>values</strong> with a JSONArray including all the selected ids.</li>
-<li><strong>identifiers</strong> with a JSONArray including all the identifiers.</li>
-<li><strong>strValues</strong> with a comma separated String with all the selected ids that can be used in a SQL <em>IN</em> clause.</li>
+<li><strong>values</strong> with a <code>JSONArray</code> including all the selected ids.</li>
+<li><strong>identifiers</strong> with a <code>JSONArray</code> including all the identifiers.</li>
+<li><strong>strValues</strong> with a comma separated String with all the selected ids that can be used in a SQL <code>IN</code> clause.</li>
 <li><strong>strIdentifiers</strong> with a comma separated String with all the selected identifiers.</li>
 </ul>
-<p>In the Jasper Template, the parameter has to be defined using the class <em>org.codehaus.jettison.json.JSONObject</em> . In the example, it is set a <em>Product Category</em> multiple selector. As this parameter is optional, the filter is included in the query using an auxiliary parameter ( <em>AUX_Product_category</em> ).
+<p>In the Jasper Template, the parameter has to be defined using the class <code>org.codehaus.jettison.json.JSONObject</code> . In the example, it is set a <code>Product Category</code> multiple selector. As this parameter is optional, the filter is included in the query using an auxiliary parameter (<code>AUX_Product_category</code>).
 The auxiliary parameter has a default expression that returns <strong>" 1 = 1 "</strong> when there is no category selected and the corresponding where clause when some categories are selected:</p>
-<div class="language-text highlight"><pre><span></span><code>("".equals($P{M_Product_Category_ID}.getString("strValues")))&nbsp;? " 1 = 1 "&nbsp;: " pc.m_product_category_id IN ("+$P{M_Product_Category_ID}.getString("strValues")+")"
-</code></pre></div>
-<p>This parameter is then included in the query using the "$P!{}" notation to replace it with the parameter value instead of using SQL Parameters.</p>
-<div class="language-text highlight"><pre><span></span><code>FROM m_product p
-  JOIN m_product_category pc ON p.m_product_category_id = pc.m_product_category_id
-WHERE $P!{AUX_Product_category}
-  AND p.ad_client_id = $P{Current_Client_ID}
-</code></pre></div>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">$P</span><span class="p">{</span><span class="n">M_Product_Category_ID</span><span class="p">}.</span><span class="na">getString</span><span class="p">(</span><span class="s">"strValues"</span><span class="p">)))</span><span class="w">&nbsp;</span><span class="o">?</span><span class="w"> </span><span class="s">" 1 = 1 "</span><span class="w">&nbsp;</span><span class="p">:</span><span class="w"> </span><span class="s">" pc.m_product_category_id IN ("</span><span class="o">+</span><span class="n">$P</span><span class="p">{</span><span class="n">M_Product_Category_ID</span><span class="p">}.</span><span class="na">getString</span><span class="p">(</span><span class="s">"strValues"</span><span class="p">)</span><span class="o">+</span><span class="s">")"</span>
+</span></code></pre></div>
+<p>This parameter is then included in the query using the <code>$P!{}</code> notation to replace it with the parameter value instead of using SQL Parameters.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="n">m_product</span><span class="w"> </span><span class="n">p</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">m_product_category</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">m_product_category_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="p">.</span><span class="n">m_product_category_id</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="err">$</span><span class="n">P</span><span class="o">!</span><span class="err">{</span><span class="n">AUX_Product_category</span><span class="err">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">ad_client_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">$</span><span class="n">P</span><span class="err">{</span><span class="n">Current_Client_ID</span><span class="err">}</span>
+</span></code></pre></div>
 <p>The identifiers can be shown in a Text field with the following Expression:</p>
-<div class="language-text highlight"><pre><span></span><code>$P{M_Product_Category_ID}.getString("strIdentifiers")
-</code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-7.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-7.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-8.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-8.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-9.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-9.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-10.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-10.png"></a></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">$P</span><span class="p">{</span><span class="n">M_Product_Category_ID</span><span class="p">}.</span><span class="na">getString</span><span class="p">(</span><span class="s">"strIdentifiers"</span><span class="p">)</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/4.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/5.png"></a></p>
 <p>The <code>BaseReportActionHandler</code> and the <code>ReportingUtils</code> class used to generate the report includes some additional parameters that can be used in the template:</p>
-<p><strong>SUBREPORT_DIR</strong></p>
-<div class="language-text highlight"><pre><span></span><code>The path where the main template is located. Useful to set the paths of the subreports.
-</code></pre></div>
-<p><strong>jasper_process</strong></p>
-<div class="language-text highlight"><pre><span></span><code>A _org.openbravo.client.application.Process_ object with the Process Definition of the report.
-</code></pre></div>
-<p><strong>jasper_hbSession</strong></p>
-<div class="language-text highlight"><pre><span></span><code>A _org.hibernate.Session_ object with the current hibernate session.
-</code></pre></div>
-<p><strong>jasper_obContext</strong></p>
-<div class="language-text highlight"><pre><span></span><code>A _org.openbravo.dal.core.OBContext_ with the OBContext that has launched the report.
-</code></pre></div>
-<p><strong>AMOUNTFORMAT</strong></p>
-<div class="language-text highlight"><pre><span></span><code>A _java.text.DecimalFormat_ object with the format to be used on Amounts.
-</code></pre></div>
-<p><strong>QUANTITYFORMAT</strong></p>
-<div class="language-text highlight"><pre><span></span><code>A _java.text.DecimalFormat_ object with the format to be used on Quantities.
-</code></pre></div>
-<p><strong>REPORT_FORMAT_FACTORY</strong></p>
-<div class="language-text highlight"><pre><span></span><code>JR Base parameter with the date format.
-</code></pre></div>
-<p><strong>Current_Client_ID</strong></p>
-<div class="language-text highlight"><pre><span></span><code>String with the current _AD_Client_ID_. Useful to filter the SQL of the report.
-</code></pre></div>
-<p><strong>Readable_Organizations</strong></p>
-<div class="language-text highlight"><pre><span></span><code>Comma separated String with the readable organizations of the User/Role executing the report. Useful to filter the `SQL` of the report.
-</code></pre></div>
+<ul>
+<li><strong>SUBREPORT_DIR</strong>: The path where the main template is located. Useful to set the paths of the subreports.</li>
+<li><strong>jasper_process</strong>: A <code>org.openbravo.client.application.Process</code> object with the Process Definition of the report.</li>
+<li><strong>jasper_hbSession</strong>: A <code>org.hibernate.Session</code> object with the current hibernate session.</li>
+<li><strong>jasper_obContext</strong>: A <code>org.openbravo.dal.core.OBContext</code> with the OBContext that has launched the report.</li>
+<li><strong>AMOUNTFORMAT</strong>: A <code>java.text.DecimalFormat</code> object with the format to be used on Amounts.</li>
+<li><strong>QUANTITYFORMAT</strong>: A <code>java.text.DecimalFormat</code> object with the format to be used on Quantities.</li>
+<li><strong>REPORT_FORMAT_FACTORY</strong>: JR Base parameter with the date format.</li>
+<li><strong>Current_Client_ID</strong>: <code>String</code> with the current <code>AD_Client_ID</code>. Useful to filter the SQL of the report.</li>
+<li><strong>Readable_Organizations</strong>: Comma separated <code>String</code> with the readable organizations of the User/Role executing the report. Useful to filter the <code>SQL</code> of the report.</li>
+</ul>
 <p>Depending on the report output some additional parameters are set:</p>
+<ul>
+<li>
 <p><strong>PDF</strong> output:</p>
-<p><strong>IS_IGNORE_PAGINATION</strong></p>
-<div class="language-text highlight"><pre><span></span><code>with **false** value to ensure that the report breaks in different pages.
-</code></pre></div>
+<ul>
+<li><strong>IS_IGNORE_PAGINATION</strong>: with <strong>false</strong> value to ensure that the report breaks in different pages.</li>
+</ul>
+</li>
+<li>
 <p><strong>XLS</strong> output:</p>
-<p><strong>IS_IGNORE_PAGINATION</strong></p>
-<div class="language-text highlight"><pre><span></span><code>with **true** value to ensure that the report does not break in different pages and all the results are shown in the same sheet.
-</code></pre></div>
-<p>In case it is desired to add more parameters that cannot be defined as <strong>Parameters</strong> of the <strong>Process Definition</strong>, it is possible to use a custom <strong>Handler</strong> that extends the <code>BaseReportActionHandler</code> and overwrites the <code>addAdditionalParameters</code> method.</p>
-<p>It is possible to check all the parameters and values sent to the Jasper Report engine by enabling the <strong>DEBUG log level</strong> on the <code>org.openbravo.client.application.report.ReportingUtils</code> class by modifying
-the <code>log4j2-web.xml</code> and for older versions, <code>log4j.lcf</code> file:</p>
-<div class="language-text highlight"><pre><span></span><code>DEBUG org.openbravo.client.application.report.ReportingUtils - list of parameters available in the jasper report
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: SUBREPORT_DIR value: /home/gorkaion/src/openbravo/pi-reporting-merge/WebContent/web/org.openbravo.platform.features/jasper/
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Current_Client_ID value: 23C59575B9CF467C9620760EB255B389
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_FORMAT_FACTORY value: org.openbravo.erpCommon.utility.JRFormatFactory@14ffa3fc
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_VIRTUALIZER value: net.sf.jasperreports.engine.fill.JRSwapFileVirtualizer@1b670029
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_process value: OBUIAPP_Process(70889433974B409BAC4F9D7BFB211248) (name: Product Simple Report)
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: M_Product_Category_ID value: {"values":["291B401A38354A2C8247DFF0DFBDF4AE","5525FCABFE9545018EE221E8802AA283"],"identifiers":["Bio","Fruit juice"],"strValues":"'291B401A38354A2C8247DFF0DFBDF4AE', '5525FCABFE9545018EE221E8802AA283'","strIdentifiers":"Bio, Fruit juice"}
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: AMOUNTFORMAT value: java.text.DecimalFormat@674dc
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: QUANTITYFORMAT value: java.text.DecimalFormat@674dc
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Readable_Organizations value: 'E443A31992CB4635AFCAEABE7183CE85','0','DC206C91AA6A4897B44DA897936E0EC3','7BABA5FF80494CAFA54DEBD22EC46F01','BAE22373FEBE4CCCA24517E23F0C8A48','19404EAD144C49A0AF37D54377CF452D','B843C30461EA4501935CB1D125C9C25A','2E60544D37534C0B89E765FE29BC0B43'
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_obContext value: org.openbravo.dal.core.OBContext@73b91cd
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_hbSession value: SessionImpl(PersistenceContext[entityKeys=...
-DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: IS_IGNORE_PAGINATION value: false
-</code></pre></div>
+<ul>
+<li><strong>IS_IGNORE_PAGINATION</strong>: with <strong>true</strong> value to ensure that the report does not break in different pages and all the results are shown in the same sheet.</li>
+</ul>
+</li>
+<li>
+<p>In case it is desired to add more parameters that cannot be defined as <strong>Parameters</strong> of the <strong>Process Definition</strong>, it is possible to use a custom <strong>Handler</strong> that extends the <code>BaseReportActionHandler</code> and overwrites the <code>addAdditionalParameters</code> method.
+    It is possible to check all the parameters and values sent to the Jasper Report engine by enabling the <strong>DEBUG log level</strong> on the <code>org.openbravo.client.application.report.ReportingUtils</code> class by modifying the <code>log4j2-web.xml</code> and for older versions, <code>log4j.lcf</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - list of parameters available in the jasper report
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: SUBREPORT_DIR value: /home/gorkaion/src/openbravo/pi-reporting-merge/WebContent/web/org.openbravo.platform.features/jasper/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Current_Client_ID value: 23C59575B9CF467C9620760EB255B389
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_FORMAT_FACTORY value: org.openbravo.erpCommon.utility.JRFormatFactory@14ffa3fc
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: REPORT_VIRTUALIZER value: net.sf.jasperreports.engine.fill.JRSwapFileVirtualizer@1b670029
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_process value: OBUIAPP_Process(70889433974B409BAC4F9D7BFB211248) (name: Product Simple Report)
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: M_Product_Category_ID value: {"values":["291B401A38354A2C8247DFF0DFBDF4AE","5525FCABFE9545018EE221E8802AA283"],"identifiers":["Bio","Fruit juice"],"strValues":"'291B401A38354A2C8247DFF0DFBDF4AE', '5525FCABFE9545018EE221E8802AA283'","strIdentifiers":"Bio, Fruit juice"}
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: AMOUNTFORMAT value: java.text.DecimalFormat@674dc
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: QUANTITYFORMAT value: java.text.DecimalFormat@674dc
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Readable_Organizations value: 'E443A31992CB4635AFCAEABE7183CE85','0','DC206C91AA6A4897B44DA897936E0EC3','7BABA5FF80494CAFA54DEBD22EC46F01','BAE22373FEBE4CCCA24517E23F0C8A48','19404EAD144C49A0AF37D54377CF452D','B843C30461EA4501935CB1D125C9C25A','2E60544D37534C0B89E765FE29BC0B43'
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_obContext value: org.openbravo.dal.core.OBContext@73b91cd
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: jasper_hbSession value: SessionImpl(PersistenceContext[entityKeys=...
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: IS_IGNORE_PAGINATION value: false
+</span></code></pre></div>
+</li>
+</ul>
 <h3 id="button-list-parameters">Button List Parameters</h3>
 <p>When a button list parameter is added, the buttons are added together with the predefined buttons of this type of process (<strong>View</strong>, <strong>Export To PDF</strong>, <strong>Export To Excel</strong>). This behavior allows adding additional logic to the standard behavior of these processes, since it is possible to extend the base behavior from the java implementation of the process.</p>
 <p>Below is an example of a button list that adds two buttons (Button 1, Button 2) to this type of process:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-18.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-18.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-19.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-19.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/6.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/7.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/7.png"></a></p>
 <p>In order to add execution logic to these buttons, the <code>handleCustomAction</code> method must be redefined within the java class of the process:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nd">@Override</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleCustomAction</span><span class="p">(</span><span class="n">JSONObject</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonContent</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">JSONException</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s">"B1"</span><span class="p">:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">()</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"severity"</span><span class="p">,</span><span class="w"> </span><span class="s">"success"</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"text"</span><span class="p">,</span><span class="w"> </span><span class="s">"Button B1 has been pressed."</span><span class="p">));</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s">"B2"</span><span class="p">:</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">()</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"severity"</span><span class="p">,</span><span class="w"> </span><span class="s">"success"</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"text"</span><span class="p">,</span><span class="w"> </span><span class="s">"Button B2 has been pressed."</span><span class="p">));</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="k">default</span><span class="p">:</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">handleCustomAction</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">jsonContent</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="p">}</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handleCustomAction</span><span class="p">(</span><span class="n">JSONObject</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonContent</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">JSONException</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s">"B1"</span><span class="p">:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"severity"</span><span class="p">,</span><span class="w"> </span><span class="s">"success"</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"text"</span><span class="p">,</span><span class="w"> </span><span class="s">"Button B1 has been pressed."</span><span class="p">));</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="s">"B2"</span><span class="p">:</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">()</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"severity"</span><span class="p">,</span><span class="w"> </span><span class="s">"success"</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"text"</span><span class="p">,</span><span class="w"> </span><span class="s">"Button B2 has been pressed."</span><span class="p">));</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="k">default</span><span class="p">:</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">handleCustomAction</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">jsonContent</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="p">}</span>
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The action parameter will have the information corresponding to the search key of the button pressed, the identifiers are mandatory and are defined together with the button in the reference tab of the list within the reference.</p>
 </div>
 <p>Once the configuration is done, it is necessary to compile.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <p>Then, when you enter the process, you will see your custom buttons next to the predefined report buttons.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-20.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-20.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/8.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/8.png"></a></p>
 <p>Then, when you press the buttons, your custom logic is executed.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-21.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-21.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/9.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/9.png"></a></p>
 <h3 id="report-datasource-definition">Report Datasource Definition</h3>
 <p>There are two ways of defining the data to be displayed by the report:</p>
 <ol>
@@ -15036,25 +15110,40 @@ DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: I
 </ol>
 <p>In case of the second approach, we need to use a custom <strong>Handler</strong> that extends the <code>BaseReportActionHandler</code> and overwrites the <code>getReportData</code> method. This method receives a parameter map as an argument that contains:</p>
 <ul>
-<li>The parameters of the HTTP request.</li>
+<li>The parameters of the <code>HTTP request</code>.</li>
 <li>The parameters available inside the Jasper Report. They are available through another map that can be accessed by using the <em>JASPER_REPORT_PARAMETERS</em> key.</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>protected JRDataSource getReportData(Map&lt;String, Object&gt; parameters) {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>// Retrieve the report id (HTTP request parameter)
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>String reportId = (String) parameters.get("reportId");
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>// retrieve the map of JR Parameters
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Map&lt;String, Object&gt; jrParameters = (Map&lt;String, Object&gt;) parameters
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>.get(JASPER_REPORT_PARAMETERS);
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>// Here goes the logic to generate the JRDataSource
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>...
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">protected</span><span class="w"> </span><span class="n">JRDataSource</span><span class="w"> </span><span class="nf">getReportData</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">// Retrieve the report id (HTTP request parameter)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">String</span><span class="w"> </span><span class="n">reportId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"reportId"</span><span class="p">);</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// retrieve the map of JR Parameters</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">jrParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="n">parameters</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">JASPER_REPORT_PARAMETERS</span><span class="p">);</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// Here goes the logic to generate the JRDataSource</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">...</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>This allows generating the report data dynamically, i.e, based on some kind of logic built with the value of any of these parameters.</p>
+<h3 id="message-handling">Message Handling</h3>
+<p>It is possible to display messages (<code>success</code>, <code>warning</code>, etc.) to the user after running a report based on a Process Definition.</p>
+<p>This is useful when the report is generated successfully, but the system still needs to inform the user about potential issues in the data — for example, when some products have transactions with no calculated cost.</p>
+<p>To enable this functionality, override the <code>addAdditionalParameters</code> method in your custom Java class that extends <code>BaseReportActionHandler</code>. In this method, you can add a new entry to the <code>parameters</code> map with the key <code>"message"</code> and a value of type <code>OBError</code>. For example:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">OBError</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBError</span><span class="p">();</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">msg</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Warning"</span><span class="p">);</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">msg</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="s">"Please review the report for incomplete data."</span><span class="p">);</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">parameters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
+</span></code></pre></div>
+<p>This message will be automatically captured by the BaseReportActionHandler and shown in the UI once the report finishes.</p>
+<p>If the <strong>message</strong> parameter is not provided, the system will show a default success message:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Report successfully generated.</p>
+</div>
 <h3 id="sub-report-runtime-compilation">Sub-Report Runtime Compilation</h3>
 <p>In case our process definition report contains sub-reports, the infrastructure supports compiling the sub-reports at runtime. To do that the following conditions should be met:</p>
 <ol>
-<li>The parameter name for the sub-report in the main report follows this pattern: <code>SUBREP_name_of_the_sub_report_file</code> .</li>
-<li>The sub-reports (jrxml files) are placed in the same folder as the main report.</li>
+<li>The parameter name for the sub-report in the main report follows this pattern: <code>SUBREP_name_of_the_sub_report_file</code>.</li>
+<li>The sub-reports (<code>JRXML</code> files) are placed in the same folder as the main report.</li>
 </ol>
 <h3 id="report-definition">Report Definition</h3>
 <p>In the <strong>Report Definition</strong> tab the JR Templates of the report are defined. Each Process Definition can only have a Report definition. It is also needed to define at least one template: <code>HTML</code>, <code>PDF</code> or <code>Excel</code>.</p>
@@ -15064,13 +15153,67 @@ DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: I
 <li>If <code>HTML</code>, <code>PDF</code> and <code>Excel</code> outputs share the same template, then the <code>PDF</code> template must be set and both flags must be checked.</li>
 </ul>
 <p>The templates need to be stored in the <strong>web</strong> folder.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-14.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-14.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-15.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-15.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/10.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/10.png"></a></p>
+<h3 id="adding-hyperlinks-to-a-report">Adding Hyperlinks to a Report</h3>
+<p>You can add hyperlinks to report elements to allow navigation to another record, open a different report, or execute custom logic as needed.</p>
+<p>To do this, select the component you want to make clickable (e.g. <strong>Text Field</strong>, <strong>Image</strong>, <strong>Chart</strong>, or <strong>Subreport</strong>) and configure its hyperlink properties:</p>
+<ul>
+<li><strong>Link Target</strong>: <code>"Self"</code> — Opens the link in the same browser window.</li>
+<li><strong>Link Type</strong>: <code>"Reference"</code> — Indicates that this is a URL link.</li>
+<li><strong>Hyperlink Reference Expression</strong>: This is the expression or URL to execute when clicked.</li>
+<li><strong>Hyperlink When Expression</strong>: (Optional) A boolean expression to control when the hyperlink should be active.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/11.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/11.png"></a></p>
+<h4 id="example-1-navigating-to-a-specific-record-eg-an-invoice">Example 1: Navigating to a specific record (e.g., an invoice)</h4>
+<p>To open a specific window and record in the system (e.g., an Invoice window with a given invoice ID), use an expression like this in the <strong>Hyperlink Reference Expression</strong>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="s">"javascript:top.OB.Utilities.openDirectTab('"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">$V</span><span class="p">{</span><span class="n">OPEN_INVOICE_TAB</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"', '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">$F</span><span class="p">{</span><span class="n">C_INVOICE_ID</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"')"</span>
+</span></code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>$V{OPEN_INVOICE_TAB}</code> is the window ID of the Sales Invoice window.</li>
+<li><code>$F{InvoiceID}</code> is the field containing the ID of the invoice you want to open.</li>
+</ul>
+<p>You can also add a Hyperlink When Expression to make sure the link is only clickable when the report is being viewed in <code>HTML</code> format, or add any other conditions as needed.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">$P</span><span class="p">{</span><span class="n">OUTPUT_FORMAT</span><span class="p">}.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="s">"HTML"</span><span class="p">)</span><span class="o">?</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">TRUE</span><span class="p">:</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">FALSE</span>
+</span></code></pre></div>
+<p>Where:</p>
+<ul>
+<li><code>$P{OUTPUT_FORMAT}</code> is the output format of the report.</li>
+</ul>
+<h4 id="example-2-opening-another-report-from-a-link">Example 2: Opening another report from a link</h4>
+<p>You can also use a hyperlink to trigger the generation of another report. In this case, instead of a simple URL, the Hyperlink Reference Expression should contain a javascript: call to <code>OB.RemoteCallManager.call(...)</code>, passing all the required parameters for the report:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="s2">"javascript:top.OB.RemoteCallManager.call('your.custom.ReportActionHandler',"</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"{"</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  _buttonValue: 'HTML',"</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  _params: {"</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"    // Add here all the necessary input parameters"</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"    Param1: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$P</span><span class="p">{</span><span class="nx">Param1</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"',"</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"    Param2: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$F</span><span class="p">{</span><span class="nx">FieldFromDataSet</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"',"</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"    DateParam: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$P</span><span class="p">{</span><span class="nx">DateValue</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"'"</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  }"</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"},"</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"{"</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  processId: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$P</span><span class="p">{</span><span class="nx">processId</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"',"</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  reportId: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$P</span><span class="p">{</span><span class="nx">reportId</span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"',"</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  windowId: null"</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"},"</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"function(rpcResponse, data, rpcRequest) {"</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"  top.OB.Utilities.Action.executeJSON(data.responseActions, null, null, null);"</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">"}"</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s2">");"</span>
+</span></code></pre></div>
+<p>This <code>JavaScript</code> snippet makes a remote call to the report's process handler, passing all the parameters it needs. The report will be generated and opened as a result of this action. You can fully customize this logic to fit your navigation or integration needs.</p>
 <h2 id="result">Result</h2>
-<p>The result is shown in a new form with all the parameters and the corresponding Export button(s).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-16.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-16.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-17.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition-17.png"></a></p>
-<p>Once the report is generated, a file download is requested in the browser. The form is kept enabled so it is possible to rerun the report with different parameters.</p>
+<p>The result is shown in a new form with all the parameters and the corresponding <em>Export</em> button(s).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/12.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/12.png"></a></p>
+<p>Once the report is executed, the result is displayed according to the selected action:</p>
+<ul>
+<li><strong>View</strong> opens the report in a new window.</li>
+<li><strong>Export to PDF</strong> downloads the report as a PDF file.</li>
+<li><strong>Export to Excel</strong> downloads the report as an Excel file.</li>
+</ul>
+<p>The form remains enabled, allowing the report to be executed again with different parameters.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/13.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/13.png"></a></p>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Report_using_Process_Definition" target="_blank">How to create a Report using Process Definition</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
