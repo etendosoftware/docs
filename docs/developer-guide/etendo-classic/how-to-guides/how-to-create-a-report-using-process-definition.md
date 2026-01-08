@@ -19,9 +19,9 @@ This section explains how to add a new Report using a Process Definition and cre
 
 ## Example Module
 
-This section is supported by an example module which includes the simple report described in the examples of this document. The report is named **Product Simple Report** and prints in `PDF` a list of Products that can be filtered by Product Category.
+This section is supported by an example module which includes the simple report described in this document. The report is named **Product Simple Report** and prints in `PDF` a list of products that can be filtered by *Product Category*.
 
-The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}.
+The code of the example module can be downloaded from the repository [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}.
 
 ## Report Definition in Application Dictionary
 
@@ -49,31 +49,37 @@ In the **Parameter** tab are added all the parameters that are needed to filter 
 
 When the filter parameter is a Selector reference the value is sent as a **JSONOBject** that includes 2 keys:
 
-- **value** with the id of the selected BaseOBObject to be used in the SQL query
+- **value** with the id of the selected `BaseOBObject` to be used in the SQL query
 - **identifier** with the readable identifier that can be used to print in the report the filter values.
 
 In case of Multiple Selectors the **JSONObject** includes 4 keys:
 
-- **values** with a JSONArray including all the selected ids.
-- **identifiers** with a JSONArray including all the identifiers.
-- **strValues** with a comma separated String with all the selected ids that can be used in a SQL _IN_ clause.
+- **values** with a `JSONArray` including all the selected ids.
+- **identifiers** with a `JSONArray` including all the identifiers.
+- **strValues** with a comma separated String with all the selected ids that can be used in a SQL `IN` clause.
 - **strIdentifiers** with a comma separated String with all the selected identifiers.
 
-In the Jasper Template, the parameter has to be defined using the class _org.codehaus.jettison.json.JSONObject_ . In the example, it is set a _Product Category_ multiple selector. As this parameter is optional, the filter is included in the query using an auxiliary parameter ( _AUX_Product_category_ ).
+In the Jasper Template, the parameter has to be defined using the class `org.codehaus.jettison.json.JSONObject` . In the example, it is set a `Product Category` multiple selector. As this parameter is optional, the filter is included in the query using an auxiliary parameter (`AUX_Product_category`).
 The auxiliary parameter has a default expression that returns **" 1 = 1 "** when there is no category selected and the corresponding where clause when some categories are selected:
 
-    ("".equals($P{M_Product_Category_ID}.getString("strValues"))) ? " 1 = 1 " : " pc.m_product_category_id IN ("+$P{M_Product_Category_ID}.getString("strValues")+")"
+``` java
+("".equals($P{M_Product_Category_ID}.getString("strValues"))) ? " 1 = 1 " : " pc.m_product_category_id IN ("+$P{M_Product_Category_ID}.getString("strValues")+")"
+```
 
-This parameter is then included in the query using the "$P!{}" notation to replace it with the parameter value instead of using SQL Parameters.
+This parameter is then included in the query using the `$P!{}` notation to replace it with the parameter value instead of using SQL Parameters.
 
-    FROM m_product p
-      JOIN m_product_category pc ON p.m_product_category_id = pc.m_product_category_id
-    WHERE $P!{AUX_Product_category}
-      AND p.ad_client_id = $P{Current_Client_ID}
+```sql
+FROM m_product p
+    JOIN m_product_category pc ON p.m_product_category_id = pc.m_product_category_id
+WHERE $P!{AUX_Product_category}
+    AND p.ad_client_id = $P{Current_Client_ID}
+```
 
 The identifiers can be shown in a Text field with the following Expression:
 
-    $P{M_Product_Category_ID}.getString("strIdentifiers")
+``` java 
+$P{M_Product_Category_ID}.getString("strIdentifiers")
+```
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/4.png)
 
@@ -83,14 +89,14 @@ The identifiers can be shown in a Text field with the following Expression:
 The `BaseReportActionHandler` and the `ReportingUtils` class used to generate the report includes some additional parameters that can be used in the template:
 
 - **SUBREPORT_DIR**: The path where the main template is located. Useful to set the paths of the subreports.
-- **jasper_process**: A _org.openbravo.client.application.Process_ object with the Process Definition of the report.
-- **jasper_hbSession**: A _org.hibernate.Session_ object with the current hibernate session.
-- **jasper_obContext**: A _org.openbravo.dal.core.OBContext_ with the OBContext that has launched the report.
-- **AMOUNTFORMAT**: A _java.text.DecimalFormat_ object with the format to be used on Amounts.
-- **QUANTITYFORMAT**: A _java.text.DecimalFormat_ object with the format to be used on Quantities.
+- **jasper_process**: A `org.openbravo.client.application.Process` object with the Process Definition of the report.
+- **jasper_hbSession**: A `org.hibernate.Session` object with the current hibernate session.
+- **jasper_obContext**: A `org.openbravo.dal.core.OBContext` with the OBContext that has launched the report.
+- **AMOUNTFORMAT**: A `java.text.DecimalFormat` object with the format to be used on Amounts.
+- **QUANTITYFORMAT**: A `java.text.DecimalFormat` object with the format to be used on Quantities.
 - **REPORT_FORMAT_FACTORY**: JR Base parameter with the date format.
-- **Current_Client_ID**: String with the current _AD_Client_ID_. Useful to filter the SQL of the report.
-- **Readable_Organizations**: Comma separated String with the readable organizations of the User/Role executing the report. Useful to filter the `SQL` of the report.
+- **Current_Client_ID**: `String` with the current `AD_Client_ID`. Useful to filter the SQL of the report.
+- **Readable_Organizations**: Comma separated `String` with the readable organizations of the User/Role executing the report. Useful to filter the `SQL` of the report.
 
 Depending on the report output some additional parameters are set:
 
@@ -103,10 +109,9 @@ Depending on the report output some additional parameters are set:
     - **IS_IGNORE_PAGINATION**: with **true** value to ensure that the report does not break in different pages and all the results are shown in the same sheet.
 
 - In case it is desired to add more parameters that cannot be defined as **Parameters** of the **Process Definition**, it is possible to use a custom **Handler** that extends the `BaseReportActionHandler` and overwrites the `addAdditionalParameters` method.
-It is possible to check all the parameters and values sent to the Jasper Report engine by enabling the **DEBUG log level** on the `org.openbravo.client.application.report.ReportingUtils` class by modifying
-the `log4j2-web.xml` and for older versions, `log4j.lcf` file:
+    It is possible to check all the parameters and values sent to the Jasper Report engine by enabling the **DEBUG log level** on the `org.openbravo.client.application.report.ReportingUtils` class by modifying the `log4j2-web.xml` and for older versions, `log4j.lcf` file:
 
-    ```
+    ``` txt
     DEBUG org.openbravo.client.application.report.ReportingUtils - list of parameters available in the jasper report
     DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: SUBREPORT_DIR value: /home/gorkaion/src/openbravo/pi-reporting-merge/WebContent/web/org.openbravo.platform.features/jasper/
     DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: Current_Client_ID value: 23C59575B9CF467C9620760EB255B389
@@ -181,10 +186,10 @@ There are two ways of defining the data to be displayed by the report:
 
 In case of the second approach, we need to use a custom **Handler** that extends the `BaseReportActionHandler` and overwrites the `getReportData` method. This method receives a parameter map as an argument that contains:
 
-- The parameters of the HTTP request.
+- The parameters of the `HTTP request`.
 - The parameters available inside the Jasper Report. They are available through another map that can be accessed by using the _JASPER_REPORT_PARAMETERS_ key.
 
-```
+``` java
 protected JRDataSource getReportData(Map<String, Object> parameters) {
 // Retrieve the report id (HTTP request parameter)
 String reportId = (String) parameters.get("reportId");
@@ -200,7 +205,7 @@ This allows generating the report data dynamically, i.e, based on some kind of l
 
 ### Message Handling
 
-It is possible to display messages (success, warning, etc.) to the user after running a report based on a Process Definition.
+It is possible to display messages (`success`, `warning`, etc.) to the user after running a report based on a Process Definition.
 
 This is useful when the report is generated successfully, but the system still needs to inform the user about potential issues in the data — for example, when some products have transactions with no calculated cost.
 
@@ -215,15 +220,17 @@ parameters.put("message", msg);
 
 This message will be automatically captured by the BaseReportActionHandler and shown in the UI once the report finishes.
 
-If the "message" parameter is not provided, the system will show a default success message:
-"Report successfully generated."
+If the **message** parameter is not provided, the system will show a default success message:
+
+!!! Success
+    Report successfully generated.
 
 ### Sub-Report Runtime Compilation
 
 In case our process definition report contains sub-reports, the infrastructure supports compiling the sub-reports at runtime. To do that the following conditions should be met:
 
-1. The parameter name for the sub-report in the main report follows this pattern: `SUBREP_name_of_the_sub_report_file` .
-2. The sub-reports (jrxml files) are placed in the same folder as the main report.
+1. The parameter name for the sub-report in the main report follows this pattern: `SUBREP_name_of_the_sub_report_file`.
+2. The sub-reports (`JRXML` files) are placed in the same folder as the main report.
 
 ### Report Definition
 
@@ -260,8 +267,8 @@ To open a specific window and record in the system (e.g., an Invoice window with
 
 Where:
 
-- **$V{OPEN_INVOICE_TAB}** is the window ID of the Sales Invoice window.
-- **$F{InvoiceID}** is the field containing the ID of the invoice you want to open.
+- `$V{OPEN_INVOICE_TAB}` is the window ID of the Sales Invoice window.
+- `$F{InvoiceID}` is the field containing the ID of the invoice you want to open.
 
 You can also add a Hyperlink When Expression to make sure the link is only clickable when the report is being viewed in `HTML` format, or add any other conditions as needed.
 
@@ -271,13 +278,13 @@ $P{OUTPUT_FORMAT}.equalsIgnoreCase("HTML")? Boolean.TRUE: Boolean.FALSE
 
 Where:
 
-- **$P{OUTPUT_FORMAT}** is the output format of the report.
+- `$P{OUTPUT_FORMAT}` is the output format of the report.
 
 #### Example 2: Opening another report from a link
 
-You can also use a hyperlink to trigger the generation of another report. In this case, instead of a simple URL, the Hyperlink Reference Expression should contain a javascript: call to OB.RemoteCallManager.call(...), passing all the required parameters for the report:
+You can also use a hyperlink to trigger the generation of another report. In this case, instead of a simple URL, the Hyperlink Reference Expression should contain a javascript: call to `OB.RemoteCallManager.call(...)`, passing all the required parameters for the report:
 
-``` java
+``` javascript
 "javascript:top.OB.RemoteCallManager.call('your.custom.ReportActionHandler',"
   + "{"
   + "  _buttonValue: 'HTML',"
@@ -299,13 +306,11 @@ You can also use a hyperlink to trigger the generation of another report. In thi
   + ");"
 ```
 
-This JavaScript snippet makes a remote call to the report's process handler, passing all the parameters it needs. The report will be generated and opened as a result of this action.
-
-You can fully customize this logic to fit your navigation or integration needs.
+This `JavaScript` snippet makes a remote call to the report's process handler, passing all the parameters it needs. The report will be generated and opened as a result of this action. You can fully customize this logic to fit your navigation or integration needs.
 
 ## Result
 
-The result is shown in a new form with all the parameters and the corresponding Export button(s).
+The result is shown in a new form with all the parameters and the corresponding *Export* button(s).
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/12.png)
 
