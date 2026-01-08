@@ -1,13 +1,13 @@
 ---
 title: How to add a canvas field to a Form or Grid
 tags:
-  - How to
-  - Canvas Field
-  - Form Customization
-  - Grid Customization
-  - JavaScript Development
-  - UI Components
-  - JavaScripts Events
+    - How to
+    - Canvas Field
+    - Form Customization
+    - Grid Customization
+    - JavaScript Development
+    - UI Components
+    - JavaScripts Events
 ---
 
 # How to add a canvas field to a Form or Grid
@@ -29,8 +29,8 @@ We will illustrate how information from the record and form can be used to get d
 The implementation of canvas fields requires javascript development experience. 
 See the following concept pages for background information on javascript development:
 
-  * [Client Side Development and API](../concepts/client-side-development-and-api.md)
-  * [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md) 
+- [Client Side Development and API](../concepts/client-side-development-and-api.md)
+- [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md) 
 
 It also makes sense to study the following page: [Etendo Architecture](../concepts/etendo-architecture.md).
 
@@ -40,27 +40,26 @@ It also makes sense to study the following page: [Etendo Architecture](../concep
 
 This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}
 
 ## Main development steps for creating a new canvas field
 
 The development consists of 2 steps:
 
-  1. Implement the canvas itself, normally this is done in javascript. 
-  2. Specify the canvas javascript class in the field definition of the tab/window 
+1. Implement the canvas itself, normally this is done in javascript. 
+2. Specify the canvas javascript class in the field definition of the tab/window 
 
 ### Implementing your canvas in javascript
 
 The first step is to implement your canvas class in javascript. This is done in 2 steps:
 
-  * Create a  [javascript](../concepts/Client_Side_Development_and_API.md#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
-  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](../concepts/Etendo_Architecture.md#component-provider) 
+- Create a [javascript](../concepts/client-side-development-and-api.md#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: `web/[module.java.package]/js` 
+- Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](../concepts/etendo-architecture.md#component-provider) 
 
 The example module implements a button and a calculated field in the `example-canvas-field.js` file.
 
 The first example in the file implements a button which shows the identifier of the current record:
 
-    
 ```javascript title="example-canvas-field.js"
 isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
  
@@ -82,7 +81,7 @@ isc.OBEXAPP_SalesOrderActionButton.addProperties({
 The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. 
 It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
 
-    
+
 ```javascript title="example-canvas-field.js"
 isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
  
@@ -134,7 +133,7 @@ isc.OBEXAPP_SalesOrderCalculated.addProperties({
 
 The javascript file is registered in the example modules' [ComponentProvider](../concepts/etendo-architecture.md#component-provider) like this:
 
-    
+
 ```java title="ExampleComponentProvider.java"
 @Override
 public List<ComponentResource> getGlobalComponentResources() {
@@ -150,7 +149,7 @@ The next step is to create a new field in the tab, and set its client class fiel
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/canvas-field-to-a-form-or-grid-2.png)
 
-It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
+It is also possible to add in-line properties in the `Clientclass` field, for example, `OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}`
 
 ### The result
 
