@@ -33,7 +33,7 @@ The user can have access to all the available dependencies to add, configure the
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
 
-This module enables the use of Dockerized containers in Etendo Classic.
+This module enables the use of Dockerized containers in Etendo.
 
 !!!info
     For more information visit, [Docker Management developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/docker-management.md). 
@@ -42,7 +42,7 @@ This module enables the use of Dockerized containers in Etendo Classic.
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
-This module enables the Dockerization of Tomcat within Etendo Classic.
+This module enables the Dockerization of Tomcat within Etendo.
 
 !!!info
     For more information visit, [Dockerized Tomcat Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
@@ -93,15 +93,6 @@ This module guarantees an authentication method which allows users to securely a
 !!!info
     For more information, visit [Etendo RX user guide](../platform-extensions/etendo-rx.md).
 
-### Javax XML SOAP API
-
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
-
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
-
-!!! info
-    For more information, visit the [Javax XML SOAP API developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
 
 ### Number To Word (English)
 
@@ -112,7 +103,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application/number-to-word-converter.md) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
 ### Print Document Web Service
 
@@ -125,6 +116,17 @@ It allows downloading a PDF from some transaction documents using a web service 
 !!! info
     For more information, visit the [Print Document Web Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
+
+### Print Provider
+:octicons-package-16: Javapackage: `com.etendoerp.print.provider`
+
+Connects Etendo with external printing platforms to enable centralized, one-click document generation and printing across the system. It allows each organization to configure its own print provider, manage printer catalogs and templates, and execute direct print jobs from specific windows. The module includes a default integration with PrintNode and supports custom providers through reusable backend services and a public API, ensuring flexible, secure, and automated printing management within Etendo.
+
+!!! info
+    - For more information, visit the [Print Provider - User Guide](./print-provider.md).
+    - For more information, visit the [Print Provider - Developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md).
+
+
 ### Report Cache Management
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
@@ -132,8 +134,16 @@ It allows downloading a PDF from some transaction documents using a web service 
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-    For more information, visit [Clear Report Cache user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
+    For more information, visit [Clear Report Cache - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
+### Task
+
+:octicons-package-16: Javapackage: `com.etendoerp.task`
+
+The **Task** module in Etendo provides a flexible framework for creating, assigning, and automating tasks based on business events. This module allows organizations to define task types, user assignment algorithms, and automated actions triggered by database changes or user interactions. It is ideal for automating workflows such as order follow-ups, incident management, or customer engagement processes.
+
+!!! info
+    For more information, refer to the [Task - User Guide](./task.md) for functional usage and the [Task - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/task.md) for configuration and customization.
 
 ### Webhook Events
 
@@ -143,3 +153,6 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
 
 !!! info
     For more information, visit the [Webhook Events developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).  
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

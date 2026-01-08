@@ -37,7 +37,7 @@ module directory and packaged with the module.
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
 !!!info
-    For more information, read [How to add a Constraint](../how-to-guides/How_to_add_a_Constraint.md).
+    For more information, read [How to add a Constraint](../how-to-guides/how-to-add-a-constraint.md).
 
 ###  Messages
 
@@ -194,4 +194,4 @@ Besides, this feature allows defining a [function based index](#function-based-i
 
 ---
 
-This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [Constraints and Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 

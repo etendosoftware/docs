@@ -19,7 +19,7 @@ The **CodbarTool** is a tool that reads barcodes from image files. It accepts an
 
 ## Functionality
 
-This tool allows assistants to **read barcodes from multiple images**, which can then be applied in inventory management, product tracking, and document processing among other areas.
+This tool allows agents to **read barcodes from multiple images**, which can then be applied in inventory management, product tracking, and document processing among other areas.
 
 Using this tool consists of the following actions: 
 
@@ -56,7 +56,7 @@ Using this tool consists of the following actions:
 
 The following is an example image of a goods receipt: 
 
-![alt text](../../../assets/developer-guide/etendo-copilot/available-tools/codbar-tool-0.jpg)
+![alt text](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-1.jpg)
 
 - The tool will be used as follows: 
 
@@ -73,3 +73,6 @@ The following is an example image of a goods receipt:
         `{"message": ['ALV-4066905', '871000003252']}`
 
         ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

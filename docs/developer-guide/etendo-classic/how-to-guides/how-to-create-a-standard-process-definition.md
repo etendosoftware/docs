@@ -18,9 +18,9 @@ This section will add a new **Standard Process Definition** and create a menu en
 
 The implementation requires development experience. See the following concept pages for background information on action handlers and javascript development:
 
-  * [Action Handler](../../concepts/Etendo_Architecture.md)
-  * [Client Side Development and API](../../concepts/Client_Side_Development_and_API.md)
-  * [JavaScript Coding Conventions](../../concepts/JavaScript_Coding_Conventions.md)
+  * [Action Handler](../concepts/etendo-architecture.md)
+  * [Client Side Development and API](../concepts/client-side-development-and-api.md)
+  * [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md)
 
 
 ##  Steps to implement the Process
@@ -512,20 +512,13 @@ A standard process can be defined as multi record process to be able to execute 
 
 ###  Uploading files
 
-:octicons-package-16: Javapackage: `com.etendoerp.upload.file`
-
-This section describes the Etendo **Upload File module** included in the Platform Extensions bundle.
-
-!!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
-
 The **File reference** enhances the Etendo Classic capabilities by enabling file uploads directly within process definitions. 
 
 This functionality, which can be used in processes as well as in windows, introduces an **intuitive file upload element** in the process form. Users can upload a **single file** for processing which is then used by the system as specified in the process definition.
 
 !!!info
     The maximum file size users are allowed to upload are limited by default to 10MB. This is set in the preference `Maximum file upload size (MB)`. This file size check is performed both on the client's and on the server's side. 
-    For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference).
+    For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md).
 
 
 #### Example in Process Definition

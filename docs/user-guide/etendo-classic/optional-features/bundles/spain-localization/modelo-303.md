@@ -685,3 +685,7 @@ Este anexo incluye el listado completo de los rangos de impuestos asociados a lo
 
 -   Adquisiciones intracomunitarias Bienes Inversión 18% (+18%)
 -   Adquisiciones intracomunitarias Bienes Inversión 21% (+21%)
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -3,8 +3,8 @@ tags:
     - Copilot
     - Tools
     - Creator
-    - Assistant
-    - Developer Assistant
+    - Agents
+    - Developer Agent
     - Dev Assistant 
 ---
 
@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-This page provides an overview of the tools, functionality, and usage examples for various development assistants available in Etendo. Dev Assistant streamlines workflow management for developers by offering **specialized assistants** that simplify tasks such as creating buttons, windows, tabs and tables, Event Handlers, Jasper Reports, background processes, and more. These assistants are designed to enhance productivity and reduce complexity, making it easier for developers to efficiently build and manage different components within the Etendo platform.
+This page provides an overview of the tools, functionality, and usage examples of the various development agents available in Etendo. **Dev Assistant** streamlines workflow management for developers by offering specialized agents that simplify tasks such as creating buttons, windows, tabs and tables, event handlers, Jasper reports, background processes, and more. These agents are designed to improve productivity and reduce complexity, making it easier for developers to efficiently create and manage different components within the Etendo platform.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/58U9LThdTGo?si=kSxA3MAf22U8fdHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -22,83 +22,59 @@ This page provides an overview of the tools, functionality, and usage examples f
     To be able to include this functionality, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 !!!warning
-    Consider that the assistants are currently in their beta testing phase. 
+    Consider that the agents are currently in their beta testing phase. 
 
-Access to the information for each of the Assistants:
 
-[:material-file-document-outline: Background Process Creator](../bundles/dev-assistant.md#background-process-creator){ .md-button .md-button--primary } <br>
+## Agents
 
-[:material-file-document-outline: Button Process Creator](../bundles/dev-assistant.md#button-process-creator){ .md-button .md-button--primary } <br>
+### Dev Assistant Supervisor
+The Development Agent streamlines workflow management for developers by offering specialized wizards that simplify tasks such as creating buttons, windows, tabs and tables, event handlers, Jasper reports, background processes, and more.
 
-[:material-file-document-outline: Code Run](../bundles/dev-assistant.md#code-run){ .md-button .md-button--primary } <br>
+**Functionality**
 
-[:material-file-document-outline: Etendo Code Expert](../bundles/dev-assistant.md#etendo-code-expert){ .md-button .md-button--primary } <br>
+The Development Agent acts as a built-in assistant that automates and accelerates repetitive tasks in an application's lifecycle, allowing you to focus on business logic and user experience. Its primary function is to eliminate "plumbing" and repetitive code: it automatically generates and configures your interface elements, binds event logic, builds reports, and orchestrates background processes, all without you having to manually write dozens of files or parameters. By integrating directly into your development environment, it ensures that each component complies with your project's conventions and minimizes configuration errors, thus optimizing your productivity and code quality.
 
-[:material-file-document-outline: Event Handler Creator](../bundles/dev-assistant.md#event-handler-creator){ .md-button .md-button--primary } <br>
+**Team Members**
 
-[:material-file-document-outline: Jasper Report Creator](../bundles/dev-assistant.md#jasper-report-creator){ .md-button .md-button--primary } <br>
+#### Background Process Creator
 
-[:material-file-document-outline: Java Test Supervisor](../bundles/dev-assistant.md#java-test-supervisor){ .md-button .md-button--primary } <br>
+**Background Process Creator** is an agent specialized in the automatic creation of Background Processes in Java. The agent reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
 
-[:material-file-document-outline: Message Creator](../bundles/dev-assistant.md#message-creator){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Module Creator](../bundles/dev-assistant.md#module-creator){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Module Translation Creator](../bundles/dev-assistant.md#module-translation-creator){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Refactor Assistant](../bundles/dev-assistant.md#refactor-assistant){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Reference Creator](../bundles/dev-assistant.md#reference-creator){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Tables, Windows and Tabs Creator](../bundles/dev-assistant.md#tables-windows-and-tabs-creator){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Unique Java Test Assistant](../bundles/dev-assistant.md#unique-java-test-assistant){ .md-button .md-button--primary } <br>
-
-[:material-file-document-outline: Webhook Creator](../bundles/dev-assistant.md#webhook-creator){ .md-button .md-button--primary } <br>
-
-## Background Process Creator
-
-**Background Process Creator** is an assistant specialized in the automatic creation of Background Processes in Java. The assistant reads previously indexed code and uses examples of classes extending `DalBaseProcess` to build new Background Processes.
-
-### Tools
+**Tools**
 
 - [API Call Tool](../available-tools/openapi-tool.md)
-
 - [Read File Tool](../available-tools/read-file-tool.md)
-  
 - [Write File Tool](../available-tools/write-file-tool.md)
 
-### Functionality
+**Functionality**
 
-Background Process Creator generates Background Processes in Java using indexed examples of classes that extend `DalBaseProcess`. To configure the assistant properly, you need to provide the following parameters:
+Background Process Creator generates Background Processes in Java using indexed examples of classes that extend `DalBaseProcess`. To configure the agent properly, you need to provide the following parameters:
 
 - **Java package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
 - **Name**: The name of the Java file to be created.
 - **Search Key**: A key that will be used to locate the process in other windows when necessary.
 - **Code description**: The purpose and logic that the Background Process should fulfill.
 
-### Usage Example
+**Usage Example**
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Background Process Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Background Process Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG1.png)
 
 
-2. Open Copilot and select Background Process Creator, then ask to the assistant what you need to create.
+2. Open Copilot and select Background Process Creator, then ask to the agent what you need to create.
 
-3. Then, this is the result given by the assistant.
+3. Then, this is the result given by the agent.
 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png)
-
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
 
 
-
-## Button Process Creator
+#### Button Process Creator
 
 The **Button Process Creator** simplifies the process of creating and registering buttons and process definitions in Etendo Classic. By automating the workflow through webhooks, it removes the need for manual configuration, ensuring that your processes and buttons are set up correctly and efficiently.
 
-### Tools
+**Tools**
 
 - [ApiCallTool](../available-tools/openapi-tool.md) 
     
@@ -106,13 +82,13 @@ The **Button Process Creator** simplifies the process of creating and registerin
 
 - [WriteFileTool](../available-tools/write-file-tool.md)
 
-### Functionality
+**Functionality**
 
-The **Button Process Creation Assistant** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends `BaseProcessActionHandler`, and registers this button in the desired window, tab, and table within the Etendo system. 
+The **Button Process Creation Agent** automates the creation of a button and the registration of a process in Etendo Classic through a webhook call. Through a webhook call, the tool ensures the correct setup by validating necessary parameters like the module prefix, Java package, and process name, making sure the search key is correctly formed. It then generates a Java class for the button, which extends `BaseProcessActionHandler`, and registers this button in the desired window, tab, and table within the Etendo system. 
 
 Additionally, it defines and registers the process by creating a process definition and associating it with any required parameters, including attributes like database name, length, and reference, ensuring integration and functionality within the system. 
 
-When creating a button or registering a process, the assistant will request the following information:
+When creating a button or registering a process, the agent will request the following information:
 
 - **Java Package**: The Java package of the module where the button's class will be created (e.g., `com.etendoerp.module`).
 - **Module Prefix**: A prefix for the module (e.g., `COPDEV`).
@@ -154,26 +130,26 @@ body_params = {
 
 This call registers the process in the system and attaches the necessary parameters.
 
-### Usage Example 
+**Usage Example** 
 
 The process and the button will be automatically registered, and the user will be notified.
 
-![ButtonProcess.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess.png)
+![ButtonProcess.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/button-process-1.png)
 
 At this point, we will have the Java class of the button created along with the registered process.
 
-![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ButtonProcess2.png)
+![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/button-process-2.png)
 
 
-## Code Run
+#### Code Run
 
-**Code Run** is an assistant designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
+**Code Run** is an agent designed for executing Python commands in a controlled environment. It translates the request into Python or Bash commands to fulfill the task. 
 
-### Tools
+**Tools**
 
 - [Docker Tool](../available-tools/docker-tool.md)
 
-### Functionality
+**Functionality**
 
 Code Run enables users to execute Python scripts and commands dynamically, even if dependencies or configurations are missing. Key features include:
 
@@ -186,7 +162,7 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
 
 2. Natural Language Requests:
 
-    - Users can provide tasks in plain language (e.g., "Ping Google"), and the assistant translates them into executable Python or Bash commands.
+    - Users can provide tasks in plain language (e.g., "Ping Google"), and the agent translates them into executable Python or Bash commands.
 
 
 3. Automatic Dependency Management:
@@ -206,15 +182,15 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
     - Supports file operations and multi-step workflows combining Python and Bash.
 
 
-### Usage Example
+**Usage Example**
 
-1. Log in to the system as the **System Administrator** role and configure the assistant in the **Assistant** window. Synchronize it and grant access to the role in the **Assistant Access** window.
+1. Log in to the system as the **System Administrator** role and configure the agent in the **Agent** window. Synchronize it and grant access to the role in the **Agent Access** window.
 
-2. Open Copilot and select **Code Run**. Then, ask the assistant what you need to execute.
+2. Open Copilot and select **Code Run**. Then, ask the agent what you need to execute.
 
 3. Example interaction and result:
 
-    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/Code-Run-Example.png)
+    ![code-run-example.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/code-run-example.png)
 
     **Input:**
 
@@ -222,40 +198,40 @@ Code Run enables users to execute Python scripts and commands dynamically, even 
 
     **Execution:**
 
-    - The assistant processes the request and executes the following Python code:
+    - The agent processes the request and executes the following Python code:
 
       ```python
       def calculate_sum(start, end):
           return sum(range(start, end + 1))
 
-      # Calculate the sum of numbers between 1 and 100
+     # Calculate the sum of numbers between 1 and 100
       result = calculate_sum(1, 100)
       print(f'The sum of numbers between 1 and 100 is: {result}')
       ```
 
     **Result:**
 
-    - The assistant outputs the result of the program:
+    - The agent outputs the result of the program:
 
       ```
       The sum of numbers between 1 and 100 is: 5050
       ```
       
 
-## Etendo Code Expert 
+#### Etendo Code Expert 
 
-**Etendo Code Expert** is an assistant designed to read indexed files and provide answers related to their content. 
+**Etendo Code Expert** is an agent designed to read indexed files and provide answers related to their content. 
 
-### Functionality
+**Functionality**
 
-With this assistant it is possible to ask **code development questions** and based on Etendo code indexed, the assistant will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
+With this agent it is possible to ask **code development questions** and based on Etendo code indexed, the agent will give possible code suggestions or solutions. It can summarize, answer technical questions, suggest programming code improvements, and offer general assistance about files.
 
-This assistant is useful for avoiding the need to manually review all files. Also, multiple files can be configured if neccesary.
+This agent is useful for avoiding the need to manually review all files. Also, multiple files can be configured if necessary.
 
 
-### Usage Example 
+**Usage Example** 
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. This assistant do not include the path configured to the indexed files. To do that, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select the `EtendoJAvaSourceCode` file and, in the **File Path Tab**, specify the path where the code files you need the assistant to read are located. 
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. This agent do not include the path configured to the indexed files. To do that, go to the **Knowledge Base File** window in `Application`>`Service`>`Copilot`>`Knowledge Base File` and select the `EtendoJAvaSourceCode` file and, in the **File Path Tab**, specify the path where the code files you need the agent to read are located. 
 		
 	<figure markdown="span">
 		![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert3.png)
@@ -263,57 +239,57 @@ This assistant is useful for avoiding the need to manually review all files. Als
 	</figure>
 
 
-2.  Then, go to the **Assistant** window, configure Etendo Code Expert and synchronize it. After that, go to the **Assistant Access** window and give access to the role.  
+2.  Then, go to the **Agent** window, configure Etendo Code Expert and synchronize it. After that, go to the **Agent Access** window and give access to the role.  
 
-3. Start using the assistant. Open Copilot and select Etendo Code Expert.
+3. Start using the agent. Open Copilot and select Etendo Code Expert.
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert1.png)
 
-4. Ask the assistant for what you need to create.
+4. Ask the agent for what you need to create.
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
 
 
-## Event Handler Creator
+#### Event Handler Creator
 
-This assistant is capable of creating **Event Handlers** in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
+This agent is capable of creating **Event Handlers** in Etendo Classic. You only need to provide the Java package of the module where it should be exported and specify the action to be performed. 
 
-### Tools
+**Tools**
 
 - [Read File Tool](../available-tools/read-file-tool.md)
   
 - [Write File Tool](../available-tools/write-file-tool.md)
 
-### Functionality
+**Functionality**
 
-**Event Handler Creator** is an assistant designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the assistant requires the following parameters:
+**Event Handler Creator** is an agent designed to automatically create event handlers in Java. It uses code indexed in its knowledge base to read classes that extend `EntityPersistenceEventObserver`, providing examples to build a new event handler. To generate an event handler, the agent requires the following parameters:
   
 - **Java package**: The package where the file will be saved.
 - **File name**: The name of the file to create.
 - **Entity**: The entity to observe.
 - **Description**: A description of the functionality to be implemented by the event handler.
 
-### Usage Example
+**Usage Example**
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Event Handler Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Event Handler Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.  
 
-2. Open Copilot and select Event Handler Creator, then ask to the assistant what you need to create.
+2. Open Copilot and select Event Handler Creator, then ask to the agent what you need to create.
 
-    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH1.png)
+    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/event-handler-creator-1.png)
 
-3. Then, this is the result given by the assistant.
+3. Then, this is the result given by the agent.
 
-    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EH2.png)
+    ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/event-handler-creator-2.png)
 
 
-## Jasper Report Creator
+#### Jasper Report Creator
 
-The **Jasper Assistant** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system to use in different modules.
+The **Jasper Agent** is designed to facilitate the creation, editing, and registration of reports within the Etendo platform. Using JasperReports, it allows developers to define the structure of the report, apply styles, manage parameters, and register the reports in the system to use in different modules.
 
 !!!info
-    This assistant simplifies the process by verifying that all fields used in a report are correctly defined in the database, thus avoiding common errors such as **Field not found**. It also supports integrating logos, applying styles, and performing data grouping to ensure that the reports meet business requirements.
+    This agent simplifies the process by verifying that all fields used in a report are correctly defined in the database, thus avoiding common errors such as **Field not found**. It also supports integrating logos, applying styles, and performing data grouping to ensure that the reports meet business requirements.
 
-### Tools
+**Tools**
 
 - **JasperTool**
 
@@ -323,11 +299,11 @@ The **Jasper Assistant** is designed to facilitate the creation, editing, and re
 
 - [WriteFileTool](../available-tools/write-file-tool.md)
 
-### Functionality
+**Functionality**
 
 **Report Creation**
 
-The Jasper Assistant requests the following parameters to create a report:
+The Jasper agent requests the following parameters to create a report:
 
 - **Report storage path**: The location in the file system where the report file will be saved.
 - **Report name**: The name that will be assigned to the report.
@@ -341,7 +317,7 @@ The Jasper Assistant requests the following parameters to create a report:
 
 **Report Registration**
 
-Once the report is created, it can be registered in the system. The assistant requests the following arguments:
+Once the report is created, it can be registered in the system. The agent requests the following arguments:
 
 - **Report name**: Name that will be used to register the report in the system.
 - **Module prefix**: Prefix that identifies the module where the report will be registered.
@@ -353,23 +329,23 @@ Once the report is created, it can be registered in the system. The assistant re
 
 **Report Editing**
 
-The assistant also allows editing existing reports. Available actions include:
+The agent also allows editing existing reports. Available actions include:
 
 - **Parameter Modification**: Allows editing any already registered report parameter.
 - **SQL Query Update**: Modification of the SQL query used by the report.
 - **Change of Styles and Groupings**: Update of visual styles and data grouping configuration.
 
-### Usage Example
+**Usage Example**
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Jasper Report Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.  
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Jasper Report Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.  
 
 2. Open Copilot and select Jasper Report Creator
 
-3. Depending on the request, the Jasper Assistant will return:
+3. Depending on the request, the Jasper Agent will return:
 
 **Report Creation**
 
-![CreateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/CreateReport.png)
+![CreateReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-report.png)
 
 
 **Report Registration**
@@ -394,99 +370,22 @@ Finally, we can observe the created report and set the chosen parameter to see t
 
 **Report Editing**
 
-![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/EditReport.png)
-
-## Test Supervisor
-A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
-
-### Functionality 
-This assistant receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
-
-- The assistant will generate a report with the results and will suggest the user to generate tests for the files without them. 
-- The assistant will generate the Java and React tests. 
-
-### Team Members
-
-#### Java Test Checker
-
-This assistant receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The assistant will generate a report with the results and will suggest the user to generate tests for the files without them.
-
-!!!info
-    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-**Tools**
-
-- [Print Directory Tool](../available-tools/print-directory-tool.md)
-
-#### Java Test Executor
-
-This assistant is designed to execute tests for a Java Package, can be used to execute:
-
-- All tests.
-- Tests for a module.
-- Tests for a single Java file.
-
-This depends on the user input. The assistant will execute the tests and provide feedback to the user.
-
-!!!info
-    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-**Tools** 
-
-- [Test Run Tool](../available-tools/test-run-tool.md)
-
-#### Java Test Generator
-
-This assistant generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The assistant generates test methods for each method in the Java file. The assistant has a Knowledge Base with the Java classes of Etendo Classic.
-This assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-
-!!!info
-    This assistant is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
-
-**Tools**
-
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-- [Test Run Tool](../available-tools/test-run-tool.md)
+![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/edit-report.png)
 
 
-#### React Test Assistant
-
-The **React Test Assistant** is a specialized agent for creating and managing React component tests using **TypeScript** and **@testing-library/react-native**. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
-
-Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
-
-!!!info
-    This assistant is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
-
-### Tools
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-
-
-
-### Usage Example
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select `Test Supervisor` and synchronize it. Then, go to the **Assistant Access* window and give access to the role.
-
-2. Open Copilot and select `Java Test Supervisor`, then ask to the assistant what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
-
-3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
-
-
-
-## Message Creator
+#### Message Creator
 
 The **Message Creator** streamlines the process of creating and registering AD_Messages in Etendo Classic. By utilizing a webhook, it ensures efficient and error-free message creation while adhering to naming conventions and best practices. 
 
-### Tools
+**Tools**
 
 - [ApiCallTool](../available-tools/openapi-tool.md)
 
-### Functionality
+**Functionality**
 
-The **Message Creator** facilitates the creation of AD_Messages by interacting with Etendo Classic via a webhook. It validates the input parameters, enforces the proper format for search keys, and registers the message with the appropriate module. This assistant supports both parametric and non-parametric messages and ensures messages are immediately usable in Java code. 
+The **Message Creator** facilitates the creation of AD_Messages by interacting with Etendo Classic via a webhook. It validates the input parameters, enforces the proper format for search keys, and registers the message with the appropriate module. This agent supports both parametric and non-parametric messages and ensures messages are immediately usable in Java code. 
 
-The assistant performs the following tasks:
+The agent performs the following tasks:
 
 - **Validates Input Parameters**: Ensures required fields like module Java package, search key, message type, and message text are correctly provided.
 - **Search Key Format Enforcement**: Confirms that search keys follow the required format: `PREFIX_DescriptiveName`, where:
@@ -496,7 +395,7 @@ The assistant performs the following tasks:
 - **Message Type Validation**: Confirms the message type is either `"I"` (Informative) or `"E"` (Error).
 - **Registers the AD_Message**: Saves the message in the system, linking it to the specified module.
 
-When creating a message, the assistant will request the following information:
+When creating a message, the agent will request the following information:
 
 - **Module Java Package**: The Java package of the module where the message will be created (e.g., `com.etendoerp.module`).
 - **Search Key**: A unique identifier for the message following the `PREFIX_DescriptiveName` format.
@@ -507,12 +406,12 @@ When creating a message, the assistant will request the following information:
 
 Notes:
 
-- **Module In Development**: The module must be set to development mode to allow the assistant to create it.
+- **Module In Development**: The module must be set to development mode to allow the agent to create it.
 
 - **Java Usability**: After creation, the AD_Message can be used in Java with:  
   `OBMessageUtils.messageBD("MESSAGE_SEARCH_KEY")`.
 
-- **Parametric Messages**: If the message requires parameters, `%s` can be added to the text, and the assistant will provide a code snippet to use `String.format`.  
+- **Parametric Messages**: If the message requires parameters, `%s` can be added to the text, and the agent will provide a code snippet to use `String.format`.  
   Example:  
   **Message Text**: `"The value %s is invalid."`  
   **Java Usage**:  
@@ -520,7 +419,7 @@ Notes:
   String formattedMessage = String.format(OBMessageUtils.messageBD("PREFIX_InvalidValue"), value);
   ```
 
-### Usage Example
+**Usage Example**
 
 1. Provide the required inputs:
     - Module Java Package: `com.etendoerp.module`
@@ -528,29 +427,29 @@ Notes:
     - Message Type: `E`
     - Message Text: `"The input provided is not valid."`
 
-    ![MessageCreator_1.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_1.png)
+    ![MessageCreator_1.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/message-creator-1.png)
 
-2. The assistant validates and sends the request to the webhook.
+2. The agent validates and sends the request to the webhook.
 
 3. Upon successful creation, the system will confirm:
     - Message created with the key: `MODPREFIX_InvalidInput`.
 
-    ![MessageCreator_2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/MessageCreator_2.png)
+    ![MessageCreator_2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/message-creator-2.png)
 
 4. The message is ready for use in Java:
     ```java
     OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
     ```
 
-## Module Creator
+#### Module Creator
 
 Etendo Classic allows you to create modules that provide additional functionality that can be deployed independently. These modules can range from additional reports to content packs (translations, chart of accounts, etc.).
 
-### Tools
+**Tools**
 
 - [ApiCallTool](../available-tools/openapi-tool.md)
 
-### Functionality
+**Functionality**
 
 The Module Creator streamlines the process of building independent modules that enhance Etendo Classic with new functionalities, such as additional reports or content packs like translations or charts of accounts. By using the `CreateModuleWebHook`, the tool automates several critical steps. It begins by validating essential details like the module's Java package, name, description, version, and database prefix, ensuring everything is properly formatted and complete. After validation, it assigns the necessary database prefix, registers the module within the system, and allows for optional inclusion of dependencies. 
 
@@ -597,25 +496,25 @@ body_params = {
 !!!note
     The database prefix must always be in uppercase.
 
-### Usage Example
+**Usage Example**
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Module Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Module Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
 
-2. Open Copilot and select Module Creator, then ask to the assistant what you need to create.
+2. Open Copilot and select Module Creator, then ask to the agent what you need to create.
 
-![ModuleCreation.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation.png)
+![ModuleCreation.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator.png)
 
 If we go to the **Module** window we can find the created record.
 
-![ModuleCreation2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation2.png)
+![ModuleCreation2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-2.png)
 
 The module will also have the dependency, in this case **Core** with the prefix and data package mentioned by the user.
 
-![ModuleCreation3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation3.png)
+![ModuleCreation3.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-3.png)
 
-![ModuleCreation4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation4.png)
+![ModuleCreation4.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-4.png)
 
-![ModuleCreation5.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/ModuleCreation5.png)
+![ModuleCreation5.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-creator-5.png)
 
 Once the webhook has been called, it will automatically:
 
@@ -631,26 +530,26 @@ You can confirm that the module has been created by navigating to the `Module` w
 
 
 !!!info
-    For further customization and development, refer to the official [Etendo Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation/) for more detailed steps.
+    For further customization and development, refer to the official [Etendo Developer Guide](../../etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md) for more detailed steps.
 
 
-## Module Translation Creator
+#### Module Translation Creator
 
-### Tools
+**Tools**
 
 - [XML Translation Tool](../available-tools/xml-translation-tool.md)
 
-### Functionality
+**Functionality**
 
 The Module Translation Creator automatically translates the content of a module.
 
-Before using the assistant, the user will need to have a translation module already created with the XML files to translate.
+Before using the agent, the user will need to have a translation module already created with the XML files to translate.
 !!!note
     For more info check [How to Create and Update Translation Modules](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}.
 
-Then, provide the path to the translation module to the assistant (e.g., `/modules/com.etendoerp.mymodule.es_ES`) and it will automatically translate all the files to the desired language.
+Then, provide the path to the translation module to the agent (e.g., `/modules/com.etendoerp.mymodule.es_ES`) and it will automatically translate all the files to the desired language.
 
-### Usage Example
+**Usage Example**
 1. Create a new module in the `Module` window
     - Check the flag "Is translation module".
     - Select the module languague (e.g., `Spanish (Spain)`). 
@@ -670,12 +569,11 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 4. The previous step will generate XML files for all modules in the `attachments/lang/es_ES` folder. Locate the module you want to translate and copy the files to the translation module in the `modules/<JAVAPACKAGE.OF.THE.MODULE>/referencedata/translation/es_ES` folder.
 ![](../../../assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
 
+5. Now, to use this agent it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Module Translation Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
 
-5. Now, to use this assistant it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Module Translation Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
 
-
-6. Open Copilot and select Module Translation Creator, then ask to the assistant to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
-![alt text](../../../assets/developer-guide/etendo-copilot/ModuleTranslation_1.png)
+6. Open Copilot and select Module Translation Creator, then ask to the agent to translate the files in your module (e.g., `/modules/<JAVAPACKAGE.OF.YOUR.MODULE>`).
+![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/module-translation.png)
 
 
 7. To apply the changes, execute these commands:
@@ -685,58 +583,37 @@ Then, provide the path to the translation module to the assistant (e.g., `/modul
 ./gradlew smartbuild -Dlocal=no
 ```
 
-
-## Refactor Assistant
-
-An expert code refactoring assistant focused on improving clarity, maintainability, and originality while preserving functionality. The assistant analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
-### Functionality
-- The refactor assistant receives a file path.
-- The assistant will read the file.
-- The assistant may ask to it knowledge base for suggestions.
-- The assistant will write the file with the changes, overwriting the original file.
-- The assistant will read the file again to verify the changes.
-### Tools
-- [Read File Tool](../available-tools/read-file-tool.md)
-- [Write File Tool](../available-tools/write-file-tool.md)
-### Usage Example
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Refactor Assistant and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-2. Open Copilot and select Refactor Assistant, then ask to the assistant what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
-3. The assistant will read the file, analyze it, and suggest changes.
-4. The assistant will write the file with the changes, overwriting the original file.
-
-
-
-## Reference Creator
+#### Reference Creator
 
 The **Reference Creator** creates references in the Etendo Application Dictionary. This tool allows for example the addition of new list references to a specific module within the Etendo database via an HTTP request to a webhook.
 
 It is particularly useful in the development process, enabling system administrators or developers to define new references that can later be utilized in applications. This tool automates the creation of these references, ensuring **consistency and adherence** to quality standards in the configuration.
 
-### Tools
+**Tools**
 
 - [API Call Tool](../available-tools/openapi-tool.md)
 
-### Functionality
+**Functionality**
 
-The **Reference Creator** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the assistant the necesary input parameters. 
+The **Reference Creator** is designed to facilitate the creation of references, for example, it is possible to create list of references in the Etendo Application Dictionary by providing the agent the necesary input parameters. 
 
-### Usage Example 
+**Usage Example** 
 
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
 2. Open Copilot and select Reference Creator
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-0.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references-0.png)
 
-3. Ask the assistant which reference type you need to create
+3. Ask the agent which reference type you need to create
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references1.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references1.png)
 
 4. The Create References Tool will process these parameters, verify the access token, build the request body and call the Etendo webhook to create the reference.
 
     In the Reference window, Etendo shows all the fields with the corresponding information generated and in the List Reference tab, it is possible to see the new list reference created. 
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/create-references/create-references-2.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/create-references-2.png)
 
 
 5. Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
@@ -745,46 +622,69 @@ The **Reference Creator** is designed to facilitate the creation of references, 
     ./gradlew export.database --info
     ```
 
+#### Table and Column Agent
 
-## Tables, Windows and Tabs Creator
+The **Table and Column Agent** is an intelligent assistant that automates the creation and management of database structures within the Etendo platform. It is specifically designed to help developers efficiently handle **tables**, **columns**, and **views**, ensuring all operations follow Etendo’s internal standards and database consistency rules.  
+
+**Functionality**
+
+This agent guides developers through the process of creating or modifying database entities, automatically validating module information and applying Etendo-specific procedures such as table registration, synchronization, and element correction. It uses the Etendo OpenAPI and dedicated webhooks to guarantee that each step—such as creating a table, adding a column, or generating a view—is executed correctly and in the proper sequence.  
+
+When requested, the agent:  
+
+- Creates new tables, including all mandatory columns and metadata.  
+- Adds, modifies, or removes columns with appropriate data types.  
+- Validates and registers views within the database.  
+- Executes the **TableChecker** and **SyncTerms** processes to ensure data integrity and synchronization.  
+- Automatically manages related elements and maintains naming conventions and dependencies.  
+
+**Tools**
+
+- [API Call Tool](../available-tools/api-call-tool.md)
+
+
+**Usage Example**
+
+1. Log in as **System Administrator** and verify that the module is set to **development mode**.  
+2. Open **Copilot** and select **Table and Column Agent**.  
+3. Ask the agent to create or modify a table (for example, “Create a new table for customer reviews with columns: ID, Customer, Rating, and Comment”).  
+4. The agent will create the table, add the specified columns, execute the **TableChecker**, synchronize the terms, and finalize the configuration.  
+5. Recompile using `./gradlew smartbuild --info` and restart Tomcat to apply the changes.  
+
+This agent ensures that all database updates are performed safely, consistently, and in full compliance with Etendo’s development standards.
+
+
+#### Windows, Tabs and Fields Agent
 
 !!!warning
-    The Tables, windows and tabs assistant is currently in its beta testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
+    The windows, tabs and fields agent is currently in its **beta** testing phase. While it is designed to automate the process of creating windows, tabs, and fields, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, etc.
 
-    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the agent. This will help mitigate potential errors and ensure more accurate task completion.
 
-The **Tables, Windows and Tabs Creator** is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  as well as tables and columns in the database.
-It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
+The **Windows, Tabs and Fields Agent** is a specialized development assistant for Etendo that automates the creation and registration of **windows**, **tabs**, and **fields** in the **Application Dictionary (AD)**. It no longer manages table or column creation, focusing instead on the configuration and linkage of user interface elements within Etendo.
 
-### Tools
+**Functionality**
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+This agent streamlines the process of defining and registering interface structures by interacting directly with the Etendo OpenAPI. It validates data, retrieves existing information when needed, and ensures that all elements are correctly created and synchronized within the AD.  
 
-- **Multiples Webhooks**: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+When requested, the agent can: 
 
+- Create and register **windows**, verifying if one already exists and reusing it when appropriate.  
+- Add **tabs** to existing windows, automatically managing hierarchy and tab levels.  
+- Create **fields** associated with a tab and its underlying table.  
+- Retrieve data from existing **windows**, **tabs**, or **tables** to support editing or extension tasks.  
+- Automatically generate **descriptions** and **help comments** for all created elements, ensuring Etendo’s documentation and usability standards are followed.  
+- Synchronize terminology and update missing metadata through **Sync Terms** and **Elements Handler** processes.
 
-### Functionality
+The agent operates through a guided workflow that includes data validation, synchronization, registration of components, and element verification — ensuring consistency, accuracy, and adherence to Etendo’s best practices.
 
-!!! info
-    With this assistant, it is possible to create: 
+**Tools**
 
-    - **Tables and Columns**: both tables and columns are created based on user specification and the supported types are `string`, `number`, `tableDir`, `date`, `text` and `boolean` (each field will have default lengths unless specified).  
-    - **Windows**: only Mantein type windows are supported
-    - **Tabs**: Can be created at multiple levels, although it is important to make it clear to the assistant to add the corresponding foreign keys.
-    - **Fields**: Fields are created from columns, respecting the same name but without *"_"*.
-    - **Elements**: The elements will be created automatically, sharing the name of the columns, but replacing the *"_"* with spaces. The help and description fields will also be added automatically.
-    - **Menu**: A menu entry is automatically created, the developer must manually place it in the desired position.
+- [API Call Tool](../available-tools/api-call-tool.md)
 
- - Ask the **Tables, Windows and Tabs Creator** for a window to add in the system and the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name. In case the window belongs to the module under development, new columns, tabs and fields can be added.
+**Usage Example** 
 
-- The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
-
-- The user must confirm the steps or set up a modification about the given information.
-
-
-### Usage Example 
-
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the module in which the changes will be exported in development.
 
 2. Open Copilot, and select Tables, Windows and Tabs Creator 
     ![dev-assistant.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/dev-assistant-1.png)
@@ -806,20 +706,158 @@ It is possible to give an input with all the necessary information, or the assis
 
 6. Once the development is validated by the developer, and the necessary manual modifications are made, it is possible to export the changes in the corresponding module.
 
-```title="Terminal"
-./gradlew export.database --info
-```
+    ```title="Terminal"
+    ./gradlew export.database --info
+    ```
 
-## Unique Java Test Assistant
-This assistant is designed to generate tests for a single Java File or an Etendo Classic module. 
-### Functionality
-- This assistant receives a Java file path or a module path, but its main functionality is to generate tests for a single Java File. 
-- In the case of a given Module, the assistant will check for file without tests and generate for them.
-- The assistant expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
-- The assistant will also generate the test methods for each method in the Java.
-- This assistant has a Knowledge Base with the Java classes of Etendo Classic.
+#### Webhook Creator
 
-### Tools
+**Webhook Creator** is an agent designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
+
+**Tools**
+
+- [API Call Tool](../available-tools/openapi-tool.md)
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+**Functionality**
+
+This agent simplifies webhook creation by automatically generating the necessary Java files and registering them in the Etendo ERP system, taking examples of indexing code readeing the classes extends of `BaseWebhookService`. It is necessary give some useful information:
+
+- **Module Package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
+- **Webhook Name**: The name of the Java file to be created.
+- **Parameters**: The parameters will be added to the webhook for the use.
+
+**Usage Example**
+
+1.  To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Webhook Creator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
+
+2. Open Copilot and select Webhook Creator, then ask to the agent what you need to create.
+
+	![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-1.png)
+
+3. Then, this is the result given by the agent.
+
+    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-2.png)
+
+    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-3.png)
+
+
+### Test Supervisor
+A supervisor that allows to generate tests for a whole Etendo Module through a workflow, checking the files without tests and generating them. The supervisor will also execute the tests and provide feedback to the user.
+
+**Functionality**
+
+This agent receives an Etendo Module and will check for Java and Javascript files, determining which ones have tests and which ones do not. 
+
+- The agent will generate a report with the results and will suggest the user to generate tests for the files without them. 
+- The agent will generate the Java and React tests. 
+
+**Team Members**
+
+#### Java Test Checker
+
+    This agent receiving a Etendo Module, will check for Java files, determining which ones have tests and which ones do not. The agent will generate a report with the results and will suggest the user to generate tests for the files without them.
+
+    !!!info
+        This agent is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools**
+
+    - [Print Directory Tool](../available-tools/print-directory-tool.md)
+
+#### Java Test Executor
+
+    This agent is designed to execute tests for a Java Package, can be used to execute:
+
+    - All tests.
+    - Tests for a module.
+    - Tests for a single Java file.
+
+    This depends on the user input. The agent will execute the tests and provide feedback to the user.
+
+    !!!info
+        This agent is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools** 
+
+    - [Test Run Tool](../available-tools/test-run-tool.md)
+
+#### Java Test Generator
+
+    This agent generates tests for a single Java file. It reads the Java file and creates a test file with the same name and the suffix `Test` in the same package. The agent generates test methods for each method in the Java file. The agent has a Knowledge Base with the Java classes of Etendo Classic.
+    This agent will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+    !!!info
+        This agent is intended and designed to be used as part of a Langgraph type supervisor, it can be used individually, but does not have full functionality.
+
+    **Tools**
+
+    - [Read File Tool](../available-tools/read-file-tool.md)
+    - [Write File Tool](../available-tools/write-file-tool.md)
+    - [Test Run Tool](../available-tools/test-run-tool.md)
+
+
+#### React Test Agent
+
+    The **React Test Agent** is a specialized agent for creating and managing React component tests using `TypeScript` and `@testing-library/react-native`. Its primary focus is generating high-quality test files for React and React Native components within **Etendo sub-application** modules.
+
+    Detects React components (`.tsx` or `.jsx` files) that lack corresponding test files in the `__tests__` directory. Analyzes component structure, props, and dependencies, generates Jest and React Testing Library test files and covers key scenarios such as rendering, user interactions, state changes, and edge cases.
+
+    !!!info
+        This agent is designed to be used within the Etendo ecosystem as part of a **Test Supervisor** LangGraph agent. However, it can be used independently with limited functionality.
+
+    **Tools**
+
+    - [Read File Tool](../available-tools/read-file-tool.md)
+    - [Write File Tool](../available-tools/write-file-tool.md)
+
+
+**Usage Example**
+
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select `Test Supervisor` and synchronize it. Then, go to the **Agent Access* window and give access to the role.
+
+2. Open Copilot and select `Test Supervisor`, then ask to the agent what you need to create. A suggested input could be `Generate tests for the module com.etendoerp.examplemodule`.
+
+3. The agent will generate the tests and execute them, checking for errors and providing feedback to the user.
+
+### Refactor Agent
+
+An expert code refactoring agent focused on improving clarity, maintainability, and originality while preserving functionality. The agent analyzes code files, identifies areas for improvement, and suggests changes to variable names, documentation, and structures for better readability. It ensures imports, method names, and entity names remain unchanged to maintain functionality. Workflow includes code analysis, user confirmation, applying changes, and verifying updates. Clear explanations and a summary of changes are provided for user understanding.
+
+**Functionality**
+
+- The refactor agent receives a file path.
+- The agent will read the file.
+- The agent may ask to it knowledge base for suggestions.
+- The agent will write the file with the changes, overwriting the original file.
+- The agent will read the file again to verify the changes.
+
+**Tools**
+
+- [Read File Tool](../available-tools/read-file-tool.md)
+- [Write File Tool](../available-tools/write-file-tool.md)
+
+**Usage Example**
+
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Refactor Agent and synchronize it. Then, go to the **Agent Access** window and give access to the role.
+2. Open Copilot and select Refactor Agent, then ask to the agent what you need to refactor. For example, a suggested input could be `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
+3. The agent will read the file, analyze it, and suggest changes.
+4. The agent will write the file with the changes, overwriting the original file.
+
+### Unique Java Test Agent
+
+This agent is designed to generate tests for a single Java File or an Etendo Classic module. 
+
+**Functionality**
+
+- This agent receives a Java file path or a module path, but its main functionality is to generate tests for a single Java File. 
+- In the case of a given Module, the agent will check for file without tests and generate for them.
+- The agent expected behaviour is to read the Java file and generate a test file with the same name and the suffix `Test` in the same package. 
+- The agent will also generate the test methods for each method in the Java.
+- This agent has a Knowledge Base with the Java classes of Etendo Classic.
+
+**Tools**
 
 - [Print Directory Tool](../available-tools/print-directory-tool.md)
 - [Read File Tool](../available-tools/read-file-tool.md)
@@ -834,46 +872,35 @@ This assistant is designed to generate tests for a single Java File or an Etendo
 
     We recommend carefully reviewing the generated tests, executing them in the development environment, and making the necessary adjustments to ensure they meet the expected functional and quality requirements.
 
-### Usage Example
-1. To use this assistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Java Test Generator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-2. Open Copilot and select Unique Java Test Assistant, then ask to the assistant what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
-3. The assistant will generate the tests and execute them, checking for errors and providing feedback to the user.
+**Usage Example**
 
+1. To use this agent, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Agent** window, select Java Test Generator and synchronize it. Then, go to the **Agent Access** window and give access to the role.
+2. Open Copilot and select Unique Java Test Agent, then ask to the agent what you need to create. A suggested input could be ```Generate tests for the Java file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
+3. The agent will generate the tests and execute them, checking for errors and providing feedback to the user.
 
+### Client/Organization Initializer
 
-## Webhook Creator
+This agent helps the user initialize clients or organizations. 
 
-**Webhook Creator** is an assistant designed to facilitate the creation and registration of webhooks in Java. A webhook acts as a communicator between applications or services, allowing data to be automatically sent from one system to another in real-time when a specific event occurs.
+**Functionality**
 
-### Tools
+- Interactively gather all required information to create a new client or organization.  
+- Execute the creation of the client or organization and automatically validate successful completion.  
+- After creating a **client**:  
+    - Instruct the user to log in using the newly created client’s administrator credentials.  
+    - Prompt the user to configure this wizard’s access for the client.  
+    - Request the creation of organizations under that client.  
+- After creating an **organization**:  
+    - Instruct the user to log in with the administrator credentials to continue setting up the organization.  
+- Handle initialization failures by instructing the user to verify:  
+    - That they are using the correct role and organization.  
+    - Their current permissions (only a System Administrator can create clients; a Client Administrator can only create organizations).  
+- Automatically infer the user’s host and credentials from the session context, avoiding explicit requests for these details.    
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+**Tools**
 
-- [Read File Tool](../available-tools/read-file-tool.md)
-  
-- [Write File Tool](../available-tools/write-file-tool.md)
+- [Organization Initial Setup Tool](../available-tools/org-init-tool.md)
+- [Client Initial Setup](../available-tools/client-init-tool.md)
 
-### Functionality
-
-This assistant simplifies webhook creation by automatically generating the necessary Java files and registering them in the Etendo ERP system, taking examples of indexing code readeing the classes extends of `BaseWebhookService`. It is necessary give some useful information:
-
-- **Module Package**: The Java package where the new process will be saved. It should follow the format `java.package.of.the.module`.
-- **Webhook Name**: The name of the Java file to be created.
-- **Parameters**: The parameters will be added to the webhook for the use.
-
-### Usage Example
-
-1.  To use thisassistant, it is necessary to log in as `System Administrator` role and set the role access. For this, go to the **Assistant** window, select Webhook Creator and synchronize it. Then, go to the **Assistant Access** window and give access to the role.
-
-2. Open Copilot and select Webhook Creator, then ask to the assistant what you need to create.
-
-	![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH1.png)
-
-3. Then, this is the result given by the assistant.
-
-    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH2.png)
-
-    ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/WH3.png)
-
-
-
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -6,6 +6,9 @@ tags:
     - Stock History
     - Document Reactivation
     - Product Operations
+    - Picking
+    - Packing
+    - Material Management Rules
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 
@@ -20,6 +23,17 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
+### Advanced Warehouse Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.warehouse.management`
+
+Extends Etendo with comprehensive, flexible, and automated inventory management fully synchronized with Etendo Mobile for real-time traceability. It supports configurable inventory statuses, automatic movement rules (including virtual bins), AUOM-based reservations that respect boxes/pallets and conversions, and an Inbound Receipt flow that creates Referenced Inventory per logistics unit.  
+
+Barcode handling includes GS1-128 AIs (e.g., GTIN, lot, expiry, locator, logistics unit) and related-code search. A task engine enables auto-generation and assignment of warehouse tasks, and from mobile users can manage Picking, Packing, and Inventory Tasks—specifically Inventory Adjustment and Inventory Relocation—with scan-based validation, strict quantity control, and exact fulfillment of reservations for faster, error-resistant operations and end-to-end traceability.  
+
+!!! info
+    For more information, visit [Advanced Warehouse Management](./advanced-warehouse-management.md).
+
 ### Automated Warehouse Reservation
 
 :octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
@@ -29,14 +43,36 @@ This module adds the option Automatic - Only Default Warehouse to the Stock Rese
 !!! info
     For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
 
-### Stock History
+### Packing 
 
-:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
-This module provides updated information about the daily history stock of the products. 
+The Packing functionality in Etendo focuses on helping warehouse staff pack products in an efficient and organized way. This functionality facilitates staff to concentrate on packaging items accurately once they have been picked. 
+If both modules picking and packing are installed, the workflow begins with picking and continues with packing, ensuring a smooth and organized order fulfillment process. However, it is also possible to use the modules separately.
 
 !!! info
-    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    For more information, visit [Packing](packing.md). 
+
+### Picking 
+
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
+
+:octicons-package-16: Javapackage: `org.openbravo.warehouse.structure`
+
+In Etendo, the Picking functionality is designed to help warehouse staff manage and deliver picking lists efficiently. This module facilitates users to access and organize the items that need to be collected from storage. By streamlining the picking process, it reduces errors and improves the overall speed of order preparation. Picking is typically the first step in the order fulfillment workflow when both Picking and Packing modules are installed.
+
+!!! info
+    For more information, visit [Picking](picking.md).
+
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+
 
 ### Reactivate Warehouse Documents
 
@@ -56,14 +92,44 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
-### Product Operations
+### Stock History
 
-:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-This module allows you to observe and analyze in detail all transactions associated with the selected product. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+    For more information, visit [Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+
+### Stock Logistic Unit
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yrP1iPmCk_U?si=Riy5plMo7lVDjVWS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:octicons-package-16: Javapackage: `com.etendoerp.stock.logisticunit`
+
+The **Stock Logistic Unit** module extends Etendo’s standard warehouse management functionality by integrating Alternative Units of Measure (AUOM) with the Referenced Inventory model. It introduces new logistic unit types such as **Box** and **Pallet**, enabling traceability and efficient stock control in all warehouse operations.  
+This module also enhances stock reservation logic, prioritizing complete logistics units (Boxes or Pallets) over individual units to optimize stock allocation and maintain consistency with sales order conditions.  
+
+!!! info
+    For more information, visit the [Stock Logistic Unit user guide](./stock-logistic-unit.md).
+
+### Material Management Rules
+
+:octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.rules`
+
+!!! info
+    Available from Warehouse Extensions Bundle version 3.6.0
+
+This module allows you to configure whether the system permits material transactions with dates prior to the current date.
+
+The preference **Allow Backdated Cost Transactions** is set to **Y** by default, which means that transactions with dates earlier than the current date are allowed. 
+
+When the preference is set to **N**, the following documents will be restricted to only use the current date: [Goods Receipts](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Goods Shipments](../../../basic-features/sales-management/transactions.md#goods-shipment), [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Physical Inventories](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Work Efforts](../../../basic-features/production-management/transactions.md#work-effort), and [Internal Consumption](../../../basic-features/production-management/transactions.md#internal-consumption).
+
+!!! warning
+    If you need to create a new configuration for this preference, it must be set globally only, without distinguishing any specific visibility level (Organization, User, Role, etc.), as it could affect the correct operation of the validation.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/material-mgmt-rules-preference.png)
 
 ## Uninstall bundle
 
@@ -76,3 +142,6 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

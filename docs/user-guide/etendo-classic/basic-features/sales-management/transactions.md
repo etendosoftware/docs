@@ -35,7 +35,7 @@ The overall flow is the following:
     - **Reactivate**  
     - **Create a sales order**  
     - **Reject the quotation**
-- **Closed** - Order created: After creating the sales order the document turns into this status. No further actions are allowed.
+- **Closed - Order created**: After creating the sales order the document turns into this status. No further actions are allowed.
 
 !!! info
     One quotation, one sales order. Several sales orders cannot be created from the same quotation.
@@ -262,35 +262,46 @@ While creating a new sales order in this window:
 
 Some other fields to note are:
 
-**Scheduled Delivery Date:** indicates the date that the order should be shipped to the customer. Defaulted to the current date.  
-**Warehouse:** indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.  
-**Delivery Status:** indicates in % how much quantity has been delivered.  
-**Invoice Status:** indicates in % how much quantity has been invoiced.  
-**Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
+- **Scheduled Delivery Date:** indicates the date that the order should be shipped to the customer. Defaulted to the current date.
+- **Warehouse:** indicates from which warehouse an order must be shipped. Defaulted to the session value from the top navigation User Preferences menu.  
+- **Delivery Status:** indicates in % how much quantity has been delivered.
+- **Invoice Status:** indicates in % how much quantity has been invoiced.
+
+!!! warning
+    Starting from Etendo 25.4, if these fields show 0% but the quantities are actually delivered/invoiced, you must execute the [Match Sales Order Invoice and Shipment Lines](../general-setup/process-scheduling/process-request.md#match-sales-order-invoice-and-shipment-lines) process to update the status correctly.
+
+- **Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
 
 !!! info
     Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the [Stock Reservations](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#stock-reservations) section.
 
-**Payment Status:** indicates in % how much of the total of the order has been paid.
-
+- **Payment Status:** indicates in % how much of the total of the order has been paid. 
+    
 Below fields are defaulted according to the Customer and Location tabs of the Business Partner window.
 
-**Payment Method**: indicates how an order (and invoice) should be paid.
+- **Payment Method**: indicates how an order (and invoice) should be paid.
 
-**Payment Terms**: defines when a sales invoice generated from this order needs to be paid.
+- **Payment Terms**: defines when a sales invoice generated from this order needs to be paid.
 
-**Invoice Terms**: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
+- **Invoice Terms**: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
 
-**Different Invoice Terms are:**
+- **Different Invoice Terms are:**
 
-**After Delivery:** Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.  
-**After order Delivered:** The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.  
-**Customer Schedule After Delivery:** Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  
-**Do Not Invoice:** No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  
-**Immediate:** The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
-**Sales Representative**: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
-**Invoice Address**: Address that is used upon generating an invoice.
-**Delivery Location**: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
+- **After Delivery:** Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.  
+
+- **After order Delivered:** The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.  
+
+- **Customer Schedule After Delivery:** Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  
+
+- **Do Not Invoice:** No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  
+
+- **Immediate:** The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
+
+- **Sales Representative**: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
+
+- **Invoice Address**: Address that is used upon generating an invoice.
+
+- **Delivery Location**: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
 
 **There are 3 ways of entering lines into a sales order:**
 
@@ -378,7 +389,7 @@ Fields to note:
 - **Attribute Set Value:** this field is displayed if the product in the line has attributes (color, size, serial number or several of them together, etc).
 - **Discount:** it indicates the discount applied as a percentage of the List Price.
 - **Invoiced Quantity** and **Delivered Quantity:** these are shown on the Status Bar when the line with a product is saved and gets updated when an invoice or shipment related to this line is issued.
-- **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the _warehouse_. If no warehouse rule is defined in the sales order, the rule defined in _warehouse_ is applied.
+- **Warehouse Rule:** Definition of a Warehouse Rule to be applied when the goods shipment is automatically generated. This rule overwrites any one defined in the *warehouse*. If no warehouse rule is defined in the sales order, the rule defined in *warehouse* is applied.
 - **Cancel Discounts and Promotions:** With this checkbox, it is possible to cancel promotions previously defined in the [Discounts and Promotions](../master-data-management/pricing.md#discounts-and-promotions) window. Only these ones, not the discounts defined in the [Basic Discount](../master-data-management/business-partner-setup.md#basic-discount) window.  If this box is checked, these promotions for this line are cancelled; otherwise, they are calculated normally.
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the order. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
@@ -398,21 +409,21 @@ Sales Order lines can be reserved when the sales order is booked and is pending 
 Fields to be noted:
 
 - **Stock Reservation**: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:
-    -  _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
-    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
-    -  _Automatic - Only default warehouse_: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
+    -  *Manual*: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
+    -  *Automatic*: The reservation is automatically created and processed, reserving the available stock. This option reserves stock from any of the available warehouses belonging to the organization of the created sales order, not only from the warehouse defined in the order header.
+    -  *Automatic - Only default warehouse*: The reservation is limited only to the warehouse specified in the header of the order. This allows optimizing inventory allocation and ensuring that products are allocated according to the warehouse preferences defined in each transaction.
 
         !!!info
             This last option is only available if the [Automated Warehouse Reservation](../../optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) module is installed, part of the Warehouse Extensions Bundle. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 
-- **Reservation Status**: Defines whether the line is _Fully Reserved_ or _Partially Reserved_ or _Not Reserved_.
+- **Reservation Status**: Defines whether the line is *Fully Reserved* or *Partially Reserved* or *Not Reserved*.
 
 **Manage Reservation: Pick and Execute**
 
-Using the _Manage Reservation_ button is possible to open a _Pick and Execute_ window to create and modify reservation for the Sales Order Line. The grid shows all the available stock that can be delivered and the pending to receive purchase orders.
+Using the *Manage Reservation* button is possible to open a *Pick and Execute* window to create and modify reservation for the Sales Order Line. The grid shows all the available stock that can be delivered and the pending to receive purchase orders.
 
-In the grid, it is possible to select and set the desired quantity on any available stock. There are validations to avoid setting quantities higher than the available for the specific stock or than the ordered quantity. The _Done_ button will create and process a reservation if none exists with the selected options, note that if the reservation does not exist and the _Done_ button is pressed without selecting any stock or selecting a quantity below the ordered quantity, when the reservation is processed the system will reserve the remaining quantity with the available stock. If a reservation already exists, the reserved stock will appear automatically selected and the _Done_ button will update the reservation with the changes done. It is also possible to flag a stock as allocated.
+In the grid, it is possible to select and set the desired quantity on any available stock. There are validations to avoid setting quantities higher than the available for the specific stock or than the ordered quantity. The *Done* button will create and process a reservation if none exists with the selected options, note that if the reservation does not exist and the *Done* button is pressed without selecting any stock or selecting a quantity below the ordered quantity, when the reservation is processed the system will reserve the remaining quantity with the available stock. If a reservation already exists, the reserved stock will appear automatically selected and the *Done* button will update the reservation with the changes done. It is also possible to flag a stock as allocated.
 
 !!! warning
     When the selected Product has the flag Variable Quantity set as true, it is possible to Reserve more Quantity than the Quantity ordered. But be careful, when a Shipment is generated against this Order Line and it is Completed (with the same Quantity or more than in the Order Line), the Reservation will be closed and the Reserved Quantity will be set as the same amount as the Order Quantity to prevent further inconsistency problems. So, it is possible to Reserve more Quantity than Ordered when a Product is set as Variable Quantity, but the Reservation will be set as the original Ordered Quantity when a Shipment is made.
@@ -507,11 +518,14 @@ Set of orders replacing a canceled order.
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+!!! warning "Dependency Notice"
+    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
+
 Etendo allows the user to reactivate closed sales orders by selecting the needed one/s and clicking the Undo Close button.
 
 ![](../../../../assets/drive/14S-_sqqQcDlJqhtFt_L9GVSZ6U-jH4Yo.png)
 
-Once the process is finished, the sales order status turns to _booked_.
+Once the process is finished, the sales order status turns to *booked*.
 
 !!! info
     Check the Technical documentation about Advanced Financial Docs Processing to extend the process.
@@ -539,7 +553,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -597,6 +611,9 @@ Some other fields to note:
 - **Sales Order:** Reference to an order that is being shipped. If Goods Shipment includes products from several Sales Orders fields are left empty (still trace-ability is present at Lines level).
 - **Invoice Status:** indicates in % how much quantity has been invoiced.
   If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.
+
+    !!! warning
+        Starting from Etendo 25.4, if this field shows 0% but the quantities are actually invoiced, execute the [Match Sales Order Invoice and Shipment Lines](../general-setup/process-scheduling/process-request.md#match-sales-order-invoice-and-shipment-lines) process to update the status correctly.
 
 There are 2 ways of entering lines into the sales order:
 
@@ -686,7 +703,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
@@ -703,7 +720,7 @@ The user can create a sales order and process it when ready.
 
 Once the Return document is accepted you can process it by clicking the button **Book**. Following the standard, the document changes from _Draft_ to _Booked._
 
-Only _Booked_ documents can be receipt.
+Only *booked* documents can be receipt.
 
 !!! warning
     Notice the button **Pick/Edit lines** disappears when the Return to customer document is in status _Booked._
@@ -905,7 +922,7 @@ Create Shipments from Orders allows the user to see Sales Orders pending to be s
 
 ![Create shipments from orders](../../../../assets/drive/1wtJV_ZpJ4eAlSCNqf69SOvq52h6dfAZV.png)
 
-All Sales Orders of the _Standard Order_ type and in a status _Booked_ are treated as meeting the criteria to be shipped.
+All Sales Orders of the _Standard Order_ type and in a status *booked* are treated as meeting the criteria to be shipped.
 
 Goods Shipment can be generated for one or more Sales Orders or for all the Sales Orders that are pending to be shipped. Filters are available to narrow down the shown results.
 
@@ -972,7 +989,7 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-### **Lines**
+### Lines
 
 **Lines** lists each product to be delivered and its characteristics.
 
@@ -1005,21 +1022,33 @@ If a revenue plan is configured, that implies a specific sales invoice accountin
 
 **Explode** button is shown when selecting a line with a non-stockable BOM product and the product is not already exploded. When exploding a product, the bill of materials components that the selected product consists of are shown in the invoice. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
-#### **Line Tax**
+#### Line Tax
 
 Line tax information is automatically populated for each sales invoice line upon completion of the invoice.
 
 **Line Tax** read-only tab details tax information for each line of a sales invoice based on its Tax field which is automatically pre-filled according to the Taxes Setup.
 
-#### **Tax**
+### Tax
 
-This section summarizes tax related information for the whole sales invoice. It contains as many records as tax rates used in the invoice.
+This section summarizes tax related information for the whole sales invoice. It contains as many records as tax rates used in the invoice. 
 
-#### **Basic Discounts**
+The Tax Amount field reflects the tax value calculated automatically based on the tax rate and tax base settings.
+
+!!! info 
+
+    It is possible to add a feature that allows controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems or when invoices are submitted to **governmental entities**. It supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external, governmental, or regulatory requirements.
+    
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. 
+    
+    For more information, visit: [Adjust Invoice Tax user guide](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
+    
+    This functionality is compatible from Etendo 23.
+
+### Basic Discounts
 
 This tab lists information about the discounts automatically applied based on the customer configuration and / or manually entered for the sales invoice.
 
-#### **Payment Plan**
+### Payment Plan
 
 The payment plan tab lists the scheduled payments expected against the invoice.
 
@@ -1028,32 +1057,11 @@ The payment plan of a non paid invoice can be changed:
 - the payment "**expected date**" can be directly changed if required in this tab
 - the payment "**expected date**", the "**payment method**" and the **"outstanding amount to be paid",** among others can be changed if required by using the Editable Payment Plan advanced feature.
 
-#### **Payment Details**
+#### Payment Details
 
-This tab displays the details of the payments made against the invoice.
+This subtab displays the details of the payments made against the invoice.
 
-#### **Reversed Invoices**
-
-This tabs allows the user to select the invoices (if any) being reversed by the invoice being created. When the user voids an existing invoice, the reverse invoice is automatically created by Etendo and linked to the original invoice being reversed. In case of creating a Reverse Sales Invoice which partially voids an existing invoice/s, the user must manually select the invoice/s being reversed in this tab.
-
-#### **Exchange Rates**
-
-The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the customer's invoice to be used while posting the invoice to the ledger.
-
-Etendo allows the user to manage different currencies within an organization or business unit.
-
-Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.
-
-Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.
-
-This tab allows the user to enter:
-
-- either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency
-- or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.
-
-Additionally, Etendo has a "central" repository of exchange rates which are used in case there is not an exchange rate defined at document level.
-
-#### **Payment**
+#### Payment
 
 Payments can be received against a sales invoice by using the **Add Payment** button which opens the **Add Payment window.**
 
@@ -1160,7 +1168,29 @@ To do this, the payment method assigned to the financial account used to receive
 
     If the customer's payment is registered in the "Add Payment" window shown from this "Sales Invoice" window, Etendo allows the user to enter an exchange rate, therefore the "Actual Converted" amount to be paid in EUR can be changed if required.
 
-#### **Accounting**
+
+### Reversed Invoices
+
+This tabs allows the user to select the invoices (if any) being reversed by the invoice being created. When the user voids an existing invoice, the reverse invoice is automatically created by Etendo and linked to the original invoice being reversed. In case of creating a Reverse Sales Invoice which partially voids an existing invoice/s, the user must manually select the invoice/s being reversed in this tab.
+
+### Exchange Rates
+
+The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the customer's invoice to be used while posting the invoice to the ledger.
+
+Etendo allows the user to manage different currencies within an organization or business unit.
+
+Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.
+
+Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.
+
+This tab allows the user to enter:
+
+- either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency
+- or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.
+
+Additionally, Etendo has a "central" repository of exchange rates which are used in case there is not an exchange rate defined at document level.
+
+#### Accounting
 
 Accounting information related to the sales invoice.
 
@@ -1170,13 +1200,13 @@ Sales Invoice posting creates the following accounting entries:
 
 Posting record date: Accounting Date.
 
-|                              |                        |                     |                                               |
-| ---------------------------- | ---------------------- | ------------------- | --------------------------------------------- |
+|                          |                    |                 |                                           |
+| -------------------------| ------------------ | --------------- | ----------------------------------------- |
 | Account                  | Debit              | Credit          | Comment                                   |
-| Customer Receivable      | Total Gross Amount |                     | One per Payment Plan Line (TB verified)   |
-| Discount Product Revenue | Discount Amount    |                     | One per Invoice Line (if discount exists) |
-| Product Revenue          |                        | Line Net Amount | One per Invoice Line                      |
-| Tax Due                  |                        | Tax Amount      | One per Tax Line                         |
+| Customer Receivable      | Total Gross Amount |                 | One per Payment Plan Line (TB verified)   |
+| Discount Product Revenue | Discount Amount    |                 | One per Invoice Line (if discount exists) |
+| Product Revenue          |                    | Line Net Amount | One per Invoice Line                      |
+| Tax Due                  |                    | Tax Amount      | One per Tax Line                          |
 
 Same way, a Sales Invoice including a sales invoice line with a revenue plan configured creates the following accounting entries.
 
@@ -1214,7 +1244,7 @@ Posting record date: Accounting Date.
 | Product Revenue Return or if not defined Product Revenue | Line Net Amount |                        | One per Invoice Line                    |
 | Tax Due                                                  | Tax Amount      |                        | One per Tax Line.                       |
 
-#### **Voiding**
+#### Voiding
 
 It is possible to totally void a sales invoice by using the header button "Reactivate" and then the action "Void", this action implies:
 
@@ -1293,7 +1323,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1329,7 +1359,7 @@ These sales invoices have a negative amount that represents the discount of the 
 !!! info
     To be able to include this functionality, the Essentials Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essential Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-The Bulk Completion functionality allows the user to complete, reactivate or close multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
+The Bulk Completion functionality allows the user to complete, reactivate or void multiple records by selecting them and clicking the **Bulk Completion** button. This makes records management easier and more efficient, reducing the time spent processing individual records.
 
 !!! info
     For more information, visit [the Bulk Completion module user guide](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
@@ -1437,36 +1467,38 @@ When the process is finished, a message is shown with the total number of create
 
 :material-menu: `Application` > `Sales Management` > `Transactions` > `Commission Payment`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 In this section, the user can create commissions and create corresponding invoices.
 
-This window is not editable since "commission" records are calculated in the Commission window, however this window allows to create an invoice for the commissions previously calculated.
+This window is not editable since **commission** records are calculated in the [Commission](./setup/commission.md#commission) window, however this window allows to create an invoice for the commissions previously calculated.
 
 This window needs to be read as follows:
 
 - The **header** shows the commission document, the starting date and total net amount. In case an invoice is created then both documents are linked to each other later on.
-- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission  window the user has one entry in this tab.
+- The **amounts** tab groups the result of all lines taken into to calculate this amount. Therefore, for each line defined in the commission window the user has one entry in this tab.
 - The **Details** tab shows all the Order lines/Invoice lines taking into account to calculate the amount.
 
-### **Header**
+### Header
 
-The user can create and edit a new commission payment.
+From this window it is possible to visualize the commissions created. 
 
-![Commision payment header](../../../../assets/drive/16ukK8L3jTWiFdQ1AAOr3snAb4kTNwR0G.png)
+![Commision payment header](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-1.png)
 
-A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button "Create Invoice".
 
 - **Commission** field indicates which is the defined commission and therefore the conditions used to calculate the commission amount.
 - **Starting date** as the date used when running the process, for instance an starting date of 1st of March with a Monthly frequency implies to take orders/invoices created and booked in March.
 - **Total amount** field shows the commission amount after applying the configured conditions. Commission amount is calculated based on amounts excluding taxes.
 - **Invoice** field shows the invoice created if any.
 
-#### **Amounts**
+### Amounts
 
 The user can edit individual sales order lines that yielded a selected commission.
 
 **Amounts** tab shows the amount calculated per each line defined in the commission  window.
 
-![Commision payment amount tab](../../../../assets/drive/1RKBEy3nS7XSzgh1ST4gl4n7-DBSsXGon.png)
+![Commision payment amount tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-2.png)
 
 For example if the commission has two lines:
 
@@ -1487,11 +1519,13 @@ Fields to note:
 - **Converted Amount**: The total amount without applying the conditions of the commission line in the corresponding currency.
 - **Actual quantity**: The total quantity. When UOM is different among products this info is not relevant.
 
-#### **Details**
+### Details
 
 Create and edit the calculation and invoicing of sales commission.
 
 **Details** tab shows all the sales/invoice lines took into account to calculate the corresponding commission line.
+
+![Commision details tab](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/commission-payment-3.png)
 
 Fields to note:
 
@@ -1504,6 +1538,11 @@ Fields to note:
 - **Converted Amount**: Amount in the currency of the commission
 - **Actual Quantity**: Quantity ordered in the order/invoice line
 - **Is Cost Calculated**: This field's default value is 'YES'. It is only taken into account when the commission is calculated based on the margin. When this flag is not marked the cost of the transaction is not calculated. That means it hasn't been possible to calculate its margin. This flag must be marked in all the details in order to be able to generate the invoice of the commission.
+
+### Buttons
+
+- **Create Invoice**: A purchase invoice can be created from here in case it is required for paying the sales representative, by using the process button.
+
 
 ---
 

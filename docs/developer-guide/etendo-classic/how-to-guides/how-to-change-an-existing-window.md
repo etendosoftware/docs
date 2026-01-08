@@ -12,7 +12,7 @@ tags:
 
 ##  Overview
 
-Application elements ([windows, tabs and fields](../../../developer-guide/etendo-classic/concepts/Modularity_Concepts.md#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
+Application elements ([windows, tabs and fields](../../../developer-guide/etendo-classic/concepts/modularity-concepts.md#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
 Etendo is able to cope with these changes because its architecture is suited to iterative development. The definitions of all generated Windows, tabs and fields are stored as metadata in the Application Dictionary (AD).
 
 Changing the window of an existing application is a simple process of changing the AD definition.

@@ -25,8 +25,8 @@ After defining (or modifying) a standard window, the system must be rebuilt (`./
 The structure for standard windows consists in `Windows`, `Tabs` and `Fields`.
 
   * [**Windows**](#windows): Windows are holders for tabs. Their main purpose is to group a set of related tabs. They can be added to the application's menu.
-  * [**Tabs**](#tabs): Tabs are placed inside windows and can be ordered hierarchically. Each tab is linked to a unique [Application Dictionary Table](../concepts/data_model.md#tables-in-application-dictionary) and contains a number of fields.
-  * [**Fields**](#fields): Fields are contained within tabs. Each field is associated to a [Column](../concepts/data_model.md#columns_in_application_dictionary) in the same table than its tab.
+  * [**Tabs**](#tabs): Tabs are placed inside windows and can be ordered hierarchically. Each tab is linked to a unique [Application Dictionary Table](../concepts/data-model.md#tables-in-application-dictionary) and contains a number of fields.
+  * [**Fields**](#fields): Fields are contained within tabs. Each field is associated to a [Column](../concepts/data-model.md#columns_in_application_dictionary) in the same table than its tab.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png)
 
@@ -119,7 +119,7 @@ In `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` > `tab` tab
 
 ## Fields
 
-`Fields` are contained in tabs, each field has a `column` (from the same `table` as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the [reference](../concepts/data_model.md#references) its associated column has.
+`Fields` are contained in tabs, each field has a `column` (from the same `table` as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the [reference](../concepts/data-model.md#references) its associated column has.
 
 Some of the things to take into account when configuring a field are:
 
@@ -127,7 +127,7 @@ Some of the things to take into account when configuring a field are:
   * `Display Logic` which allows showing or hiding the field depending on other fields' values. It is a [Dynamic Expression](../concepts/dynamic_expressions.md).
     * Display logic is taken into account in `grid view` as read only logic, being only applied when a record is edited in grid view. 
   * `Central Maintenance`, how it works is explained in the document about [Elements and Synchronize Terminology](../concepts/Element_and_Synchronize_Terminology.md).
-  * [`Callout`](../concepts/data_model.md#callout), although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.
+  * [`Callout`](../concepts/data-model.md#callout), although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.
   * `Field group`, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in `Application Dictionary` > `Setup` > `Field Category` tab.
 
 ---

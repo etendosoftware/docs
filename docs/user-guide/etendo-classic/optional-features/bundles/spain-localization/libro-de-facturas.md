@@ -305,3 +305,7 @@ El libro impreso (\*.pdf) de facturas emitidas incluye la siguiente información
 En caso de error u omisión en los libros, el usuario deberá desprocesar el correspondiente libro, reabrir el periodo/periodos, añadir o modificar la/las facturas emitidas o recibidas y volver a empezar el proceso de creación y procesamiento como final del correspondiente libro, teniendo en cuenta el/los periodos de facturación debido a que la numeración de registro debe ser correlativa en función de las fechas de factura.
 
 Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado y generado como finales los libros de abril y mayo, deberá desprocesar los libros de mayo, abril y marzo; reabrir los periodos de mayo, abril y marzo; contabilizar la factura con fecha de marzo y finalmente, crear el libro de marzo para comprobar que la nueva factura se ha incluido en el libro de marzo, cerrar los periodos y crear y marcar como finales los libros de marzo, abril y mayo por ese orden.
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

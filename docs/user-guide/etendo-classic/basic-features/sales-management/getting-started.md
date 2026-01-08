@@ -59,7 +59,7 @@ Business Partners (customers) need to be configured prior any sales can automati
 
 Above configuration is one part of the overall business setup flow within the Master Data Management setup.
 
-Finally, the Quotation [document type](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type) requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.
+Finally, the Quotation [document type](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type.md) requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.
 
 !!!Note
     It is not required to perform any additional setup for the Sales Management application area if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
@@ -141,7 +141,7 @@ or for replacement.
 The following configuration options are available in this process:
 
 - [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
-- [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#condition-of-the-goods)
+- [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
 - Accounts for [Cost of Goods Sold](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) for returns and [Revenue for returns](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
 
 ### Execution
@@ -169,8 +169,8 @@ To invoice these documents can do it from several windows / processes:
 
 - With [Return from Customer](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) window where a new button Create Credit might appear or not based on the original sales order. If the order is already invoiced then it will be present, if not - it won't. Using this button it is possible to invoice the return order following the standard process, that is, depending on the invoice terms.
 - With the same [Create Credit](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) button it is also possible to create an invoice and leave it as credit to be used later.
-- Using [Generate Invoices](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#generate-invoices) process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a [Return Material Sales Invoices](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type)).
-- With the [Sales Invoice](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window by picking lines and either grouping them from standard sales orders and return orders or by creating individual [Return Material Sales Invoices](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type) only from return orders.
+- Using [Generate Invoices](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#generate-invoices) process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a [Return Material Sales Invoices](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type.md)).
+- With the [Sales Invoice](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window by picking lines and either grouping them from standard sales orders and return orders or by creating individual [Return Material Sales Invoices](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type.md) only from return orders.
 - With the [Sales Invoice](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window creating a Return Material Sales Invoice making sure that the amount of the Invoice is negative.
 
 
@@ -181,3 +181,7 @@ Sales Management has a connection with other application areas:
 - [Warehouse Management](../../../../user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md) as shipment changes stock quantity and its value.
 - [Financial Management](../../../../user-guide/etendo-classic/basic-features/financial-management/getting-started.md) in terms of managing payments.
 - [Material Requirement Planning](../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md) (MRP) because pending sales orders are one of the inputs for the production process.
+
+---
+
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

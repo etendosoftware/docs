@@ -81,3 +81,7 @@ This response indicates the configuration for the das service. The propertySourc
 ### How to config a property
 
 To modify a property, locate and edit the corresponding service configuration file. The Config Server dynamically updates to reflect the latest file content. However, client services load configurations at startup. Therefore, to apply new configurations, stop the running service using the rx command and then restart it.
+
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -1,5 +1,5 @@
 ---
-title: Developer Guide - Etendo Mobile - Getting Started
+title: Developer Guide - Getting Started - Etendo Mobile
 tags:
     - Etendo Mobile
     - React-Native
@@ -8,7 +8,7 @@ tags:
     - Infrastructure
 ---
 
-# Etendo Mobile
+# Developer Guide - Getting Started - Etendo Mobile
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 
@@ -20,9 +20,17 @@ A schematic of the infrastructure is shown here:
 
 ![etendo-mobile-infrastructure.png](../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png)
 
-On this page we will explain what are the requirements to create a subapplication and how to install all the necessary tools to develop a new subapplication.
+In this page we will first explain the step-by-step to install and configure for the first time sub-applications on a client and then what are the requirements to create a sub-application and the tools needed to develop a new sub-app.
 
-## Environment Setup
+
+## Install Distributed Sub-applications in Etendo Classic
+
+You can find the sub-applications distributed by Etendo, available for installation and their documentation in the [Available Sub-apps to Install](../../user-guide/etendo-mobile/getting-started.md#install-subapps-in-etendo-classic) section.
+
+To install these bundles you can follow the following guide [Install Modules in Etendo Classic](../etendo-classic/getting-started/installation/install-modules-in-etendo.md)
+
+
+## Development Setup
 ### Requirements
 
 - [Etendo Classic](../../developer-guide/etendo-rx/getting-started.md)
@@ -35,3 +43,7 @@ On this page we will explain what are the requirements to create a subapplicatio
 - [Java](https://www.oracle.com/ar/java/technologies/downloads/#jdk17){target="_blank"} JDK 17 
 
 Then continue with the [Create New Subappliction](../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+

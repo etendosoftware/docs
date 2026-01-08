@@ -44,7 +44,7 @@ applying the module.
     creation.
 
 !!!info
-    For detailed theoretical concepts on datasets please have a look at [Datasets](../../../developer-guide/etendo-classic/concepts/Datasets.md). 
+    For detailed theoretical concepts on datasets please have a look at [Datasets](../../../developer-guide/etendo-classic/concepts/datasets.md). 
  
 ##  Data structure to define Dataset
 

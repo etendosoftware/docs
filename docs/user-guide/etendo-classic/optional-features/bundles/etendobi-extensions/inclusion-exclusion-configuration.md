@@ -114,3 +114,6 @@ Main categories for account configuration:
 #### Configuration of sales costs accounts:
 
 ![sales_cost.png](../../../../../assets/legacy/sales_cost.png)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

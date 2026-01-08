@@ -351,7 +351,7 @@ To do this, add the dependencies in the `build.gradle` file:
 
 ```groovy title="build.gradle"
 dependencies {
-    implementation ('com.etendoerp:platform.extensions:latest.release')
+    implementation ('com.etendoerp:platform.extensions:2.10.0') // version 2.10.0 or later
 
     moduleDeps('com.etendoerp:integration.to.openbravo:1.0.0@zip')
     moduleDeps('com.etendoerp:integration.to.openbravo.sampledata:1.0.0@zip')
@@ -550,3 +550,6 @@ In the Openbravo environment, logged in as `System Administrator`, it is necessa
 
 7. Finally, in the External ID Mapping window you can see the external record IDs and the mapping to local records:
     ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/external-id-mappings.png)
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

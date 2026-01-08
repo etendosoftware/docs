@@ -82,7 +82,7 @@ There are two base reference implementations defined that you can use or extend:
 	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
 
 	!!! info
-		For more information about masking see [Sequences Masking user guide](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#sequence-masking).
+		For more information about masking see [Sequences Masking user guide](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md#sequence-masking).
 
 	- **Table:** Defines the table in which the sequence type column is located.
 	- **Column:** The column where the sequence is defined.
@@ -275,3 +275,6 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
   }
 }
 ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

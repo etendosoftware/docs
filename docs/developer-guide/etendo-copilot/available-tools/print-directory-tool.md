@@ -72,3 +72,6 @@ If you want to recursively list the files and directories in the grandparent dir
 ```
 { "message": ["/path/to/parent/dir/file1", "/path/to/parent/dir/subdir/file2", ...] }
 ```
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

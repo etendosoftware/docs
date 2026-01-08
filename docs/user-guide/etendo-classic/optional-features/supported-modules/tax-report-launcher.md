@@ -615,3 +615,8 @@ Once there, the information which Peter will have to enter as input parameters i
 - Period
 - and *.txt file name for example as an Input Parameter
 Once the above is filled-in Peter can press "Generate Electronic file" to generate the *.txt file.
+
+---
+
+This work is a derivative of [Tax Report Launcher](https://wiki.openbravo.com/wiki/Tax_Report_Launcher/Functional_Documentation){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software){target="_blank"}.
+

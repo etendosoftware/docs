@@ -220,3 +220,8 @@ Add products to be included in your MRP forecast. Each product is added by creat
 -   Planned Date: the date that is taken into account for the demand on the Manufacturing Plan and Purchasing Plan as Planned Order Date.
 -   Product: the product that is planned on a Manufacturing Plan or Purchasing Plan.
 -   Quantity: the amount of the product that is required by the planned date.
+
+---
+
+- This work is a derivative of [Material_Requirement_Planning](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} by [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, licensed under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+

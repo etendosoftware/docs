@@ -16,21 +16,21 @@ tags:
 Etendo automatically generates an accounting representation of all the transactions within the enterprise that have an economic relevance.
 
 Accounting is the system of tracking the assets, the debts, the income and the expenses of a business.
-In Etendo, most of the accounting entries are automatically created while posting [documents](../financial-management/accounting/setup.md#document-type). 
+In Etendo, most of the accounting entries are automatically created while posting [documents](../financial-management/accounting/setup/document-type.md). 
 
 - [Goods Receipts](../procurement-management/transactions.md#goods-receipts) and [Purchase Invoices](../procurement-management/transactions.md#purchase-invoice) in the [Procurement Management](../procurement-management/getting-started.md) business area
 - [Goods Shipments](../sales-management/transactions.md#goods-shipment) and [Sales Invoices](../sales-management/transactions.md#sales-invoice) in the [Sales Management](../sales-management/getting-started.md) business area.
 
-Accounting entries not directly related to [documents](../financial-management/accounting/setup.md#document-type) managed within a given application area can be created and posted in a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal). For instance a provision for stock depreciation accounting entry.
+Accounting entries not directly related to [documents](../financial-management/accounting/setup/document-type.md) managed within a given application area can be created and posted in a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal). For instance a provision for stock depreciation accounting entry.
 
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
-The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application.md#preference).
+The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application/preference.md).
 
 - To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
-- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling.md#process-request) window.
+- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling/process-request.md) window.
 
 Accounting activities such as:
 
@@ -50,11 +50,11 @@ Finally Etendo has an *integrated accounting system* that combines general accou
 In other words, Etendo allows to post transactions to the ledger which can include different dimensions:
 
 - Those dimensions can be centrally maintained in the [Client](../general-setup/client.md) therefore are available to all the organizations within that Client.
-Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup.md##glconfig).
+Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md).
 
 Those dimensions are then available just for that Organization.
 
-- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client.md) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup.md#dimension).
+- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client.md) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 This application area covers the [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](../financial-management/getting-started.md#payables-and-receivables-management) business flow.
 
@@ -70,7 +70,7 @@ Payables and Receivables Management addresses customer collections and supplier 
 
 The following setup needs to be done before performing the process:
 
-- [Payables and Receivables Document Types](../financial-management/accounting/setup.md#document-type).
+- [Payables and Receivables Document Types](../financial-management/accounting/setup/document-type.md).
 - [Payment Methods](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - [Financial Accounts](../financial-management/receivables-and-payables/transactions.md#financial-account).
 - [Business Partners](../master-data-management/master-data.md#business-partner) to use above configured Payment Methods and Financial Accounts.
@@ -201,11 +201,11 @@ This section details the basic and not that basic accounting configuration neede
 
 There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:
 
-- [Fiscal Calendar](../financial-management/accounting/setup.md#fiscal-calendar)
+- [Fiscal Calendar](../financial-management/accounting/setup/fiscal-calendar.md)
 
 A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.
 
-- [Account Tree](../financial-management/accounting/setup.md#account-tree)
+- [Account Tree](../financial-management/accounting/setup/account-tree.md)
 
 An account tree is the way Etendo captures the *Chart of Accounts* (CoA) of an Organization.
 
@@ -216,7 +216,7 @@ Accounts such as balance sheet accounts (assets, liabilities and owner's equity)
 !!!Note 
     It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
 
-- [General Ledger configuration](../financial-management/accounting/setup.md#glconfig)
+- [General Ledger configuration](../financial-management/accounting/setup/general-ledger-configuration.md)
 
 The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
 
@@ -227,7 +227,7 @@ Having said that, the accounting configuration detailed in this section is the o
 - and a Fiscal Calendar
 
 Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model.md#initial-organization-setup) and in the [Organization](../general-setup/enterprise-model.md#organization) section.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](../general-setup/enterprise-model/initial-organization-setup.md) and in the [Organization](../general-setup/enterprise-model/organization.md) section.
 
 Very briefly:
 
@@ -279,7 +279,7 @@ For instance the accounting of a purchase invoice will take:
 
 - the expense account setup for the product being purchased in the [Accounting](../master-data-management/master-data.md#accounting) tab of the *Product* window
 - the vendor liability account setup for the vendor in the [Vendor Accounting](../master-data-management/master-data.md#vendor-accounting) tab of the *Business Partner* window
-- and the tax credit account setup in the [Accounting](../financial-management/accounting/setup.md#accounting_1) tab of the *Tax Rate* window.
+- and the tax credit account setup in the [Accounting](../financial-management/accounting/setup/tax-rate.md#accounting) tab of the *Tax Rate* window.
 
 Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.
 Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.
@@ -309,7 +309,7 @@ The purpose of the trial balance is to check that debits are equal to credits. I
 
 Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. 
 
-In these situations the difference is posted in a specific suspense account. [Suspense](../financial-management/accounting/setup.md#general-accounts) accounts are configured in the General Ledger configuration.
+In these situations the difference is posted in a specific suspense account. [Suspense](../financial-management/accounting/setup/general-ledger-configuration.md#general-accounts) accounts are configured in the General Ledger configuration.
 
 ##### Adjustments required prior to the income calculation
 
@@ -369,18 +369,18 @@ During the accounting cycle there are other reports which can also be printed:
 Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
 
 - Run the [Not Posted Transaction](../financial-management/accounting/transactions.md#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
-- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](../financial-management/accounting/setup.md#active-tables).
-- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling.md#process-request) therefore an stable scene can be assured.
+- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](../financial-management/accounting/setup/general-ledger-configuration.md#active-tables-tab).
+- Unscheduled the [Accounting Server Process](../general-setup/process-scheduling/process-request.md) therefore an stable scene can be assured.
 - Check the [Financial Account/s](../financial-management/receivables-and-payables/transactions.md#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](../../how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
 
-Before running the close year process the accounting periods can be [closed](../financial-management/accounting/setup.md#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
+Before running the close year process the accounting periods can be [closed](../financial-management/accounting/setup/openclose-period-control.md) not to allow any further posting within those periods, but the *13th period*.
 The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](../financial-management/accounting/transactions.md#gl-journal) prior to closing the year.
 
 The *Close Year* process can be executed from the [End Year Close](../financial-management/accounting/transactions.md#end-year-close) window.
 
 The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
 
-There is a check-box in the [General Accounts](../financial-management/accounting/setup.md#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
+There is a check-box in the [General Accounts](../financial-management/accounting/setup/general-ledger-configuration.md#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
 That check-box is named *Reverse Permanent Account Balances*. 
 
 - If it is checked the closing of the year process includes an entry to reverse the balance sheet accounts besides the P&L closing entry.
@@ -433,3 +433,7 @@ Financial Management has a connection with other application areas, as there are
 - [Sales Management](../sales-management/getting-started.md) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
 - [Warehouse Management](../warehouse-management/getting-started.md) as Physical Inventory is posted there.
 - Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

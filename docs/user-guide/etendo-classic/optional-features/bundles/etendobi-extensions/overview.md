@@ -45,3 +45,6 @@ A background process must be set which creates CSV files that will be uploaded t
 ### Base Queries for Etendo BI 
 
 :octicons-package-16: Javapackage: `com.etendoerp.powerbi.queries`
+
+---
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

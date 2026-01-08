@@ -192,7 +192,7 @@ The fields on this tab are:
 - Document No.: populated number of the expense sheet.
 - Employee: employee that made the expense related to a project or spend time on a project. It is important to remark that employees:
     - need to be created as [Employee](../master-data-management/master-data.md#employee) in Business Partner window,
-    - need to be created as Etendo [users](../general-setup/security.md#user) in the User window,
+    - need to be created as Etendo [users](../general-setup/security/user.md) in the User window,
     - and finally, employee and user need to be related to each other.
     That relationship can be set by selecting Employee business partner record in the employee User record, as shown in the image below.
 - Report Date: date for which the expense is entered.
@@ -261,4 +261,4 @@ This process is directly integrated with the [Procurement Management](../procure
 
 ---
 
-This work is a derivative of ["Project and Service Management"](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Project and Service Management](https://wiki.openbravo.com/wiki/Project_and_Service_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

@@ -81,3 +81,6 @@ To create a Clone Hook, you only have to follow a few steps:
 ## How to extend an already existing Clone Hook?
 The Clonning action its a particular action that can be extended by creating a new Hook, for implementing a custom logic for a specific entity. This has the disadvantage that only one Hook per entity can be used, but there are mechanisms to extend this functionality. These are the preActionHooks and postActionHooks. More information can be found in the following page: [How to Create Jobs and Actions](./how-to-create-jobs-and-actions.md#how-to-extend-an-action-using-preaction-and-postaction-hooks)
 
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/Category:HowTo){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

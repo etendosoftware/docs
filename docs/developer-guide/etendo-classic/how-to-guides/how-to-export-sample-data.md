@@ -14,7 +14,7 @@ The objective of this document is to explain how the Etendo sample data is expor
 
 ## Sample Data Dataset
 
-The tables that will be exported when the `export.sample.data` task is run are included in the Client Definition dataset. You can read more about datasets in [Datasets](../concepts/Datasets.md).
+The tables that will be exported when the `export.sample.data` task is run are included in the Client Definition dataset. You can read more about datasets in [Datasets](../concepts/datasets.md).
 
 !!!note 
     The way the `export.sample.data` task currently works, the SQL Where Clause defined in the dataset tables of the Client Definition dataset will be ignored and replaced by a client filter.

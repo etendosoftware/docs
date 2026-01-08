@@ -119,13 +119,17 @@ Es muy importante indicar para cada tercero:
 
 - sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos
 - su "Clave NIF País" Residencia):
-  - 1 - NIF
-  - 2 - NOI
-  - 3 - Pasaporte
-  - 4 - Documento oficial de identificación expedido por el país
-  - 5 - Certificado de residencia fiscal
-  - 6 - Otro documento probatorio
-  - 7 - No censado
+
+| Código | Descripción | Cuándo se usa | Ejemplo práctico |
+|---------|--------------|----------------|------------------|
+| **1 - NIF** | Número de Identificación Fiscal español | Cuando el tercero **tiene NIF español** (empresa o persona física residente en España). | Cliente nacional con CIF/NIF. |
+| **2 - NOI** | Número de Operador Intracomunitario (número de IVA intracomunitario) | Cuando el tercero es una **empresa de la UE registrada como operador intracomunitario**. | Empresa francesa con VAT `FR123456789`. |
+| **3 - Pasaporte** | Documento de identidad personal extranjero | Para **personas físicas extranjeras** que no tienen NIF ni NIE, pero actúan en operaciones sujetas a IVA (casos poco comunes). | Turista extranjero con factura de venta. |
+| **4 - Documento oficial de identificación expedido por el país** | Documento fiscal o identificación nacional emitido por otro país | Cuando el tercero **no tiene NIF ni VAT**, pero posee un documento oficial de identificación de su país. | Empresa argentina con CUIT, o persona con DNI argentino. |
+| **5 - Certificado de residencia fiscal** | Documento expedido por la administración tributaria extranjera | Se usa en operaciones donde **la residencia fiscal extranjera se acredita con certificado**, por ejemplo, para aplicar convenios de doble imposición. | Empresa con certificado fiscal mexicano. |
+| **6 - Otro documento probatorio** | Cualquier otro documento válido para acreditar identidad fiscal | Casos excepcionales donde los anteriores no aplican. | Documentación de ONG u organismo sin identificación estándar. |
+| **7 - No censado** | El tercero **no figura en ningún censo fiscal** | Puede usarse en casos de prueba, errores o entidades sin identificación fiscal conocida. | Tercero genérico o error en datos. |
+
 - su número de Identificación fiscal, en el caso del NOI se debería incluir el código ISO de país (por ejemplo DE en el caso de Alemania o FR en el caso de Francia).
 - la categoría de impuestos de tercero (por ejemplo: Servicios Profesionales Normal, Servicios Profesional Reducido, Autónomo, Recargo de Equivalencia, Revendedores, Régimen Agrario...)
 - su localización (País, provincia, dirección).
@@ -1999,3 +2003,7 @@ Para poder efectuar la consulta, será obligatorio completar los campos: _Libro 
 Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana "Consultas Facturas SII"
 
 ![](../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

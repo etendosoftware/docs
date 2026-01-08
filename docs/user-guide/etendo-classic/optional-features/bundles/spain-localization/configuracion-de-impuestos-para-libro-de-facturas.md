@@ -25,3 +25,7 @@ Una vez instalado y aplicado este módulo, se puede comprobar la configuración 
 Es importante recalcar, que la configuración que se incluye en este dataset, relaciona tipos/rangos de impuesto con el tipo de documento estándar de Etendo (AP Invoice, AR Invoice, etc) a incluir en el correspondiente libro (facturas recibidas o facturas emitidas).
 
 Si se crean nuevos tipos de documento de factura de compra o venta, tendrá que incluirse de forma manual en la configuración de cada libro, relacionados con los impuestos de compra o venta correspondientes.
+
+ ---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

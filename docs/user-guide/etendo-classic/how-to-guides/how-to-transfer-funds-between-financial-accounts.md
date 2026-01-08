@@ -25,9 +25,9 @@ There are several kinds of funds transfers depending on the financial account ty
 
 ## Recomended articles
 
-Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item).
+Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md).
 
-It is highly recommended as well to understand how [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) and [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) work in Etendo.
+It is highly recommended as well to understand how [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) and [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination.md) work in Etendo.
 
 ## Execution Steps
 
@@ -45,10 +45,10 @@ Anyway, the steps to follow are:
 
 ## G/L Item creation
 
-A [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to do that is:
+A [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to do that is:
 
-- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) window.
-- Create a new record for each organization's general ledger and assign the same [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) for debit and credit.
+- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md) window.
+- Create a new record for each organization's general ledger and assign the same [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination.md) for debit and credit.
 
 For instance, the sample account combinations which could be used are:
 
@@ -75,13 +75,13 @@ This new transaction is then shown in the *Transaction tab* of the *Financial Ac
 The next step is to post the withdrawal transaction. 
 
 !!!note
-        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)   | Paid Out Amount |        |
 | [Bank A - Withdrawal account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 
@@ -123,7 +123,7 @@ The company in this example needs to:
 - and finally indicate the *Received In* amount, in this example 100,00 USD.
 
 This new transaction is then shown in the *Transaction* tab of the *Financial Account* window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md) window.
 
 
 The posting will look like:
@@ -132,7 +132,7 @@ The posting will look like:
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
 | [Bank B - Deposit Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
+| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)              |        | Received In Amount |
 
 ## Transfer of funds between cash accounts
 
@@ -152,7 +152,7 @@ Withdrawal transaction posting in Organization A will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)   | Paid Out Amount |        |
 | [Bank A - Withdrawal account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 Deposit transaction posting in Organization B will look like:
@@ -161,7 +161,7 @@ Deposit transaction posting in Organization B will look like:
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
 | [Bank B - Deposit Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
+| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)              |        | Received In Amount |
 
 ## Result
 
@@ -178,3 +178,7 @@ In the case of transfer of funds between financial accounts of different organiz
 - Bank B balance of the organization B is increased in 100,00 USD
 
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
+
+---
+
+This work is a derivative of [How To Guides](https://wiki.openbravo.com/wiki/How_To){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
