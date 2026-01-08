@@ -52,6 +52,7 @@ exclude_docs:
 extra_javascript:
   - assets/javascripts/feedback.js
   - assets/javascripts/custom-search.js
+  - assets/javascripts/chat-widget.js
   - https://cdn.jsdelivr.net/npm/@docsearch/js@3
   - https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
   - https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
@@ -59,6 +60,7 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - assets/stylesheets/custom-styles.css
+  - assets/stylesheets/chat-widget.css
   - https://cdn.jsdelivr.net/npm/@docsearch/css@3
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
