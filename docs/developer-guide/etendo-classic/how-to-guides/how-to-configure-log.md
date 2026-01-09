@@ -5,14 +5,10 @@ tags:
     - Etendo backend debugging 
     - Log rotation
     - Verbosity 
-
-status: beta
+    - Log Management 
 ---
 
 # How to Configure Log
- 
-!!! example  "IMPORTANT: THIS IS A BETA VERSION"
-    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
 ## Overview
 
@@ -32,7 +28,7 @@ Logging is configured using three main configuration files, depending on the sce
 
 By default, log output is redirected to a file. This is defined by the `<RollingFile>` tag inside the `<Appenders>` section. The defaults are:
 
-```XML
+```XML title="log4j2-web.xml"
 <RollingFile name="RollingFile" fileName="${logDir}/etendo.log"
                 filePattern="${logDir}/etendo-%d{yyyyMMdd}-%i.log.gz">
 <PatternLayout pattern="%d [%t] %-5p %c - %m%n"/>
@@ -50,21 +46,22 @@ With this configuration, the main log is written to `etendo.log` within the `${l
 
 ### Console Logging
 
-You can also see logs in the console (Standard Output) by using the `<Console>` appender. This is useful for development to avoid constantly tailing a file.
+You can also see logs in the console (Standard Output) by using the `<AppenderRef ref="Console"/>` appender. This is useful for development to avoid constantly tailing a file.
 
 ```XML
+<Loggers>
+    <Root level="info">
+        <AppenderRef ref="RollingFile"/>
+        <AppenderRef ref="Console"/>
+    </Root>
+</Loggers>
+....
 <Appenders>
     <Console name="Console" target="SYSTEM_OUT">
         <PatternLayout pattern="%d [%t] %-5p %c - %m%n"/>
     </Console>
     ...
 </Appenders>
-<Loggers>
-    <Root level="info">
-        <AppenderRef ref="Console"/>
-        <AppenderRef ref="RollingFile"/>
-    </Root>
-</Loggers>
 ```
 
 ### Log Verbosity
