@@ -1,13 +1,20 @@
 ---
-title: How to Create a Java Based Process
+title: How to Create a Java Based Process (Deprecated)
 tags: 
     - Java Process
     - Etendo Setup
     - Process Parameters 
     - Module Development
+    - Deprecated
 ---
 
+
+# How to Create a Java Based Process (Deprecated)
+
 ## Overview
+
+!!! warning
+    The recommended way to implement processes is through [Process Definitions](./how-to-create-a-standard-process-definition.md)
 
 **Java processes** are one of the mechanisms Etendo provides to implement business logic. A Java process can run in the [background process](../how-to-guides/how-to-develop-a-dal-background-process.md) or offer a user interface that allows entering parameters. This section explains how to create a Java process that includes a user interface with user-defined **parameters**. It also describes the underlying infrastructure used to support Java processes in Etendo.
 
@@ -16,7 +23,9 @@ tags:
 
 ## Example Module
 
-This section is supported by an example module which shows example of the code shown and discussed here. The code of the example module can be downloaded from this [repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
+This section is supported by an example module which shows example of the code shown and discussed here. 
+
+The code of the example module can be downloaded the repository [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
 
 !!! info
     For any specific development, create a new module. For more information visit, [How to create a module](../how-to-guides/how-to-create-a-module.md).
@@ -110,6 +119,7 @@ bundle.setResult(msg);
 ```
 
 ### Defining the user interface
+:material-menu: `Application Dictionary` > `Report and Process`
 
 The java class above shows how to implement the **backend business logic**. This section explains how to define a user interface which makes it possible to enter parameters.
 
@@ -152,7 +162,7 @@ This is done like this:
 After creating the process user interface, stop the application and type in the following command in a console (within the development project):
 
 ``` bash title="Terminal"
-./gradlew smartbuild
+./gradlew compile.complete smartbuild
 ```
 
 This will generate the process window. If IntelliJ is running, refresh the development project. Then start the application and login with the client administrator (normally the system administrator will not have access).
