@@ -8,6 +8,7 @@ tags:
     - Client-Side Validation
     - Migration 
     - JSON
+    - Upload File
 ---
 
 # How to Create a Standard Process Definition
@@ -274,15 +275,13 @@ The response should look like:
 - `showMsgInProcessView`. Shows a message in the same tab the process was invoked from. In case the process is opened from menu, this message will be seen in the window where the values for the parameters are provided; if the process is invoked from a button in a tab, the message will be shown in that tab. 
 - `openDirectTab`. Opens a new tab. `tabId`, it is possible to indicate the record to open in that tab (`recordId`). The `wait: true` property indicates next action will not be started till this one finishes. Optionally, you can also include a criteria object to automatically add a removable filter to the open tab. A criteria is an object which describes a filter in a grid. 
 
-    !!info
+    !!!info
         For more information, visit [Smartclient](https://smartclient.com/smartgwt/javadoc/com/smartgwt/client/data/AdvancedCriteria.html){target="\_blank"}.
 
 - `showMsgInView`. Shows a message in the recently opened tab. 
 - `refreshGrid`. Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the `refreshGrid` to the list of response actions to see the updated data in the grid. 
 - `refreshGridParameter`. Refreshes the **grid parameter** with name `gridName` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
-
-- The `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
-    
+- `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
     
 ```java
 @Override
@@ -358,6 +357,7 @@ OB.Utilities.Action.set('openSaikuReport', function(paramObj) {
     queries: queries
   });
   mainLayout.addMember(reportView);
+
 ```
 
 ### Placing a parameter in a particular column
@@ -511,7 +511,7 @@ To do it:
 
 A standard process can be defined as multi record process to be able to execute it for more than one record.
 
-## Uploading Files
+### Uploading Files
 
 The **File reference** enhances the Etendo capabilities by enabling file uploads directly within process definitions. 
 
@@ -521,95 +521,67 @@ This functionality can be used in **process definitions**, introducing an **intu
     - The maximum file size users are allowed to upload are limited by default to 10MB. This is set in the preference `Maximum file upload size (MB)`. This file size check is performed both on the client's and on the server's side.
     - For more information about preferences visit the [Preference section in the User Guide](../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md).
 
+#### Example Module
+
+This how to is supported by an example module that demonstrates how to use the **Upload File** reference in a Java-based process.
+
+The code of the example module can be downloaded from the repository [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}
+
 
 #### Upload File reference in Process Definitions
 
-To enable file uploads in a process definition, an **Upload File** reference can be defined
-as a process parameter.
+To enable file uploads in a process definition, an **Upload File** reference can be defined as a process parameter.
 
-The **Upload File** reference is already provided by the Etendo core and does not need to be
-created or extended by the developer.
+The **Upload File** reference is already provided by the Etendo core and does not need to be created or extended by the developer.
 
-It is implemented in the core with a User Interface Definition that renders the file input
-and submits the request as a multipart form:
-`org.openbravo.client.kernel.reference.ProcessFileUploadUIDefinition`
+It is implemented in the Etendo with a User Interface Definition that renders the file input and submits the request as a multipart form: `org.openbravo.client.kernel.reference.ProcessFileUploadUIDefinition`
 
-The uploaded file is then available during process execution through the
-**Process Definition handler** (a Java class extending `BaseProcessActionHandler`).
+The uploaded file is then available during process execution through the **Process Definition handler** (a Java class extending `BaseProcessActionHandler`).
 
 ![Upload File reference definition](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/upload-file-1.png)
 
 !!!info
-    The image above shows the **Upload File** reference as defined in the core.
-    It is included for identification purposes only and does not require any additional
-    configuration or customization.
+    The image above shows the **Upload File** reference as defined in the core. It is included for identification purposes only and does not require any additional configuration or customization.
 
-    Any file can be selected since this functionality was designed as a base so that
-    programmers can adapt it to their specific needs.
+    Any file can be selected since this functionality was designed as a base so that programmers can adapt it to their specific needs.
 
-### Example Module
-
-This how to is supported by an example module that demonstrates how to use the
-**Upload File** reference in a Java-based process.
-
-The code of the example module can be downloaded from the repository  
-[com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}
-
-### Process Definition
+#### Process Definition
 
 This example is provided as part of the **User Interface Application Examples** module.
 
-The Process Definition is already created and included in the module and is shown here
-to explain how the **Upload File** reference is configured.
+The Process Definition is already created and included in the module and is shown here to explain how the **Upload File** reference is configured.
 
 ![Process Definition with Upload File parameter](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/upload-file-2.png)
 
 In the **Process Definition** window, the following elements can be observed:
 
-- **Module**: User Interface Application Examples  
-  Indicates that this process belongs to the example module.
-- **Search Key / Name**:  
-  Identify the process in the application.
-- **Handler**:  
-  `com.etendoerp.client.application.examples.ExampleUploadFile`  
-  Java class that implements the process logic and extends `BaseProcessActionHandler`.
-- **UI Pattern**:  
-  Standard (Parameters defined in Dictionary)
-- **Data Access Level**:  
-  Configured according to the example needs.
+- **Module**: *User Interface Application Examples* indicates that this process belongs to the example module.
+- **Search Key / Name**: Identify the process in the application.
+- **Handler**: [`com.etendoerp.client.application.examples.ExampleUploadFile`](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/ExampleUploadFile.java) Java class that implements the process logic and extends `BaseProcessActionHandler`.
+- **UI Pattern**: Standard (Parameters defined in Dictionary)
+- **Data Access Level**: Configured according to the example needs.
 
 #### Upload File parameter
 
-The Process Definition includes a single parameter configured with the **Upload File**
-reference.
+The Process Definition includes a single parameter configured with the **Upload File** reference.
 
-Key aspects of this parameter:
+- **Reference**: Upload File. Renders a file input in the process execution window.
+- **DB Column Name**: This value is used to retrieve the uploaded file from the parameters map in the process action handler.
 
-- **Reference**: Upload File  
-  Renders a file input in the process execution window.
-- **DB Column Name**:  
-  This value is used to retrieve the uploaded file from the parameters map
-  in the process action handler.
+This parameter allows the user to upload a **single file**, which is available only during the execution of the process.
 
-This parameter allows the user to upload a **single file**, which is available
-only during the execution of the process.
-
-### Executing the process
+#### Executing the process
 
 To execute the example, a **Menu** entry is defined that points to the Process Definition.
 
-This allows the process to be searched and executed from the application menu using
-the name **Upload File Example**.
+This allows the process to be searched and executed from the application menu using the name **Upload File Example**.
 
-When the process is opened, a simple execution window is displayed with the
-**Upload File** parameter rendered as a file selector.
+When the process is opened, a simple execution window is displayed with the **Upload File** parameter rendered as a file selector.
 
 ![Upload File execution window](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/upload-file-3.png)
 
 !!!info
-    In this example, the process expects a `.txt` file to be uploaded.
-    The file type restriction is part of the example logic and is not enforced
-    by the Upload File reference itself.
+    In this example, the process expects a `.txt` file to be uploaded. The file type restriction is part of the example logic and is not enforced by the Upload File reference itself.
 
 During execution:
 
@@ -617,10 +589,9 @@ During execution:
 - The content of the uploaded file is read during execution.
 - The text contained in the file is shown back to the user as the process result.
 
-### Processing the uploaded file
+#### Processing the uploaded file
 
-After selecting a valid `.txt` file and executing the process, the file is processed
-by the Java action handler.
+After selecting a valid `.txt` file and executing the process, the file is processed by the Java action handler.
 
 In this example, the process:
 
@@ -630,11 +601,9 @@ In this example, the process:
 
 ![Upload File result message](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/upload-file-4.png)
 
-The message shown to the user contains the full text read from the uploaded file,
-confirming that the file was successfully received and processed.
+The message shown to the user contains the full text read from the uploaded file, confirming that the file was successfully received and processed.
 
-This example demonstrates how uploaded files can be accessed, validated, and processed
-in a Java-based Process Definition using the **Upload File** reference.
+This example demonstrates how uploaded files can be accessed, validated, and processed in a Java-based Process Definition using the **Upload File** reference.
 
 ## Limitations
 
@@ -649,7 +618,6 @@ Currently, not all references available in **Standard windows** are available in
 - TableDir 
 - Tree
 - PAttribute
-- Upload File
 
 ### UI Logic
 
