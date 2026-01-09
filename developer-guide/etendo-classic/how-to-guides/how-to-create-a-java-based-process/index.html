@@ -22,7 +22,7 @@
     
     
       
-        <title>How to Create a Java Based Process - Etendo Documentation</title>
+        <title>How to Create a Java Based Process (Deprecated) - Etendo Documentation</title>
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-create-a-java-based-process" class="md-skip">
+        <a href="#how-to-create-a-java-based-process-deprecated" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Create a Java Based Process
+              How to Create a Java Based Process (Deprecated)
             
           </span>
         </div>
@@ -8387,13 +8387,6 @@
     
   </span>
   
-    
-  
-  
-    <span class="md-status md-status--beta"></span>
-  
-
-  
 
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -8406,13 +8399,6 @@
     How to create a Java Based Process
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--beta"></span>
-  
-
   
 
       </a>
@@ -8518,6 +8504,48 @@
       Variant: Running the process from a button in another window
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Variant: Running the process from a button in another window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-add-a-column-to-the-table-used-by-the-target-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add a column to the table used by the target window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-the-column-as-a-button-linked-to-your-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure the column as a button linked to your process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-expose-the-button-in-the-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Expose the button in the window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-the-button-in-the-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use the button in the UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -14820,6 +14848,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Variant: Running the process from a button in another window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-add-a-column-to-the-table-used-by-the-target-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add a column to the table used by the target window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-the-column-as-a-button-linked-to-your-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure the column as a button linked to your process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-expose-the-button-in-the-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Expose the button in the window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-use-the-button-in-the-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use the button in the UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -14846,6 +14916,12 @@
                   
 
   <nav class="md-tags">
+    
+      
+      
+      
+        <span class="md-tag">Deprecated</span>
+      
     
       
       
@@ -14878,19 +14954,20 @@
   
 
 
-<h1 id="how-to-create-a-java-based-process">How to Create a Java Based Process</h1>
-<div class="admonition example">
-<p class="admonition-title">IMPORTANT: THIS IS A BETA VERSION</p>
-<p>This page is under active development and may contain <strong>unstable or incomplete features</strong>. Use it <strong>at your own risk</strong>.</p>
-</div>
+<h1 id="how-to-create-a-java-based-process-deprecated">How to Create a Java Based Process (Deprecated)</h1>
 <h2 id="overview">Overview</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The recommended way to implement processes is through <a href="../how-to-create-a-standard-process-definition/">Process Definitions</a></p>
+</div>
 <p><strong>Java processes</strong> are one of the mechanisms Etendo provides to implement business logic. A Java process can run in the <a href="../how-to-develop-a-dal-background-process/">background process</a> or offer a user interface that allows entering parameters. This section explains how to create a Java process that includes a user interface with user-defined <strong>parameters</strong>. It also describes the underlying infrastructure used to support Java processes in Etendo.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For a generic description of java processes visit <a href="../../concepts/processes/">Processes</a>.</p>
 </div>
 <h2 id="example-module">Example Module</h2>
-<p>This section is supported by an example module which shows example of the code shown and discussed here. The code of the example module can be downloaded from this <a href="https://github.com/etendosoftware/com.etendoerp.client.application.examples" target="_blank">repository</a>. </p>
+<p>This section is supported by an example module which shows example of the code shown and discussed here. </p>
+<p>The code of the example module can be downloaded the repository <a href="https://github.com/etendosoftware/com.etendoerp.client.application.examples" target="_blank">com.etendoerp.client.application.examples</a>. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For any specific development, create a new module. For more information visit, <a href="../how-to-create-a-module/">How to create a module</a>.</p>
@@ -14905,7 +14982,7 @@
 <h3 id="java-class-declaration">Java class declaration</h3>
 <p>First of all, take a look at the Java package in which the java class is defined, it must be included in the java package the module defines. The Java class implementing the process must implement the <code>org.openbravo.scheduling.Process</code> interface, this is done usually extending the class <code>org.openbravo.service.db.DalBaseProcess</code> that provides common code to use <strong>DAL</strong> in Processes. </p>
 <p>Extending this class there is only needed to overwrite one method:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">ProcessBundle</span><span class="w"> </span><span class="n">bundle</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="p">;</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">ProcessBundle</span><span class="w"> </span><span class="n">bundle</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="p">{...}</span>
 </span></code></pre></div>
 <p>This method receives a <code>ProcessBundle</code>, this bundle contains all the parameters for the process. When the process finishes it must add a result to this bundle, this result is an <code>OBError</code> instance that will be shown in the pop-up. </p>
 <div class="admonition info">
@@ -14914,49 +14991,50 @@
 </div>
 <p>Let's see an example (this class and its parameters are used in the process definition further down in this section):  </p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleJavaProcess</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">DalBaseProcess</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">&nbsp;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">ProcessBundle</span><span class="w"> </span><span class="n">bundle</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="c1">// retrieve the parameters from the bundle</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">bPartnerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"cBpartnerId"</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">organizationId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"adOrgId"</span><span class="p">);</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tabId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"tabId"</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"mystring"</span><span class="p">);</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="c1">// implement your process here</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="c1">// Show a result</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Read information:&lt;br/&gt;"</span><span class="p">);</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bPartnerId</span><span class="w">&nbsp;</span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="kd">final</span><span class="w"> </span><span class="n">BusinessPartner</span><span class="w"> </span><span class="n">bPartner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">BusinessPartner</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">bPartnerId</span><span class="p">);</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Business Partner: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bPartner</span><span class="p">.</span><span class="na">getIdentifier</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">organizationId</span><span class="w">&nbsp;</span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">                </span><span class="kd">final</span><span class="w"> </span><span class="n">Organization</span><span class="w"> </span><span class="n">organization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Organization</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">organizationId</span><span class="p">);</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Organization: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">organization</span><span class="p">.</span><span class="na">getIdentifier</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">            </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"MyString: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">            </span><span class="c1">// OBError is also used for successful results</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">OBError</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBError</span><span class="p">();</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Success"</span><span class="p">);</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">"Read parameters!"</span><span class="p">);</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">            </span><span class="n">bundle</span><span class="p">.</span><span class="na">setResult</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    &nbsp;</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">);</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">OBError</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBError</span><span class="p">();</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Error"</span><span class="p">);</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">            </span><span class="n">msg</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">"Error occurred"</span><span class="p">);</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">            </span><span class="n">bundle</span><span class="p">.</span><span class="na">setResult</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">ProcessBundle</span><span class="w"> </span><span class="n">bundle</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="c1">// retrieve the parameters from the bundle</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">bPartnerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"cBpartnerId"</span><span class="p">);</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">organizationId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"adOrgId"</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"mystring"</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="c1">// implement your process here</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="c1">// Show a result</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Read information:&lt;br/&gt;"</span><span class="p">);</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bPartnerId</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">BusinessPartner</span><span class="w"> </span><span class="n">bPartner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">BusinessPartner</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">bPartnerId</span><span class="p">);</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Business Partner: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bPartner</span><span class="p">.</span><span class="na">getIdentifier</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">organizationId</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">Organization</span><span class="w"> </span><span class="n">organization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">()</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">            </span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Organization</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">organizationId</span><span class="p">);</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"Organization: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">organization</span><span class="p">.</span><span class="na">getIdentifier</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">      </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">"MyString: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myString</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"&lt;br/&gt;"</span><span class="p">);</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">      </span><span class="c1">// OBError is also used for successful results</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">OBError</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBError</span><span class="p">();</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Success"</span><span class="p">);</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">"Read parameters!"</span><span class="p">);</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">      </span><span class="n">bundle</span><span class="p">.</span><span class="na">setResult</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">      </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">);</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">OBError</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBError</span><span class="p">();</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Error"</span><span class="p">);</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">      </span><span class="n">msg</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">"Error occurred"</span><span class="p">);</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="n">bundle</span><span class="p">.</span><span class="na">setResult</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
 </span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="p">}</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>In this example a parameter named <code>cBpartnerId</code> is expected. It is read by the following line:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">bPartnerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getParams</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">"cBpartnerId"</span><span class="p">);</span>
@@ -14966,10 +15044,11 @@
 <div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">bundle</span><span class="p">.</span><span class="na">setResult</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
 </span></code></pre></div>
 <h3 id="defining-the-user-interface">Defining the user interface</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application Dictionary</code> &gt; <code>Report and Process</code></p>
 <p>The java class above shows how to implement the <strong>backend business logic</strong>. This section explains how to define a user interface which makes it possible to enter parameters.</p>
 <p>To define process records, it is needed to be a <strong>System Admin</strong>.</p>
 <p>The first step is to create a process record, go to <code>Application Dictionary &gt; Report and Process</code>. Create a new process record as shown in the example below.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-1.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-1.png"></a></p>
 <p>The main aspect here is to select <strong>UI Pattern: Standard</strong>. </p>
 <p>Then create a child record in <strong>Process Class</strong> and enter the fully qualified class name of the java class created below.</p>
 <div class="admonition note">
@@ -14977,8 +15056,8 @@
 <p>Check the default flag! If this is not done then a compile error will occur in the next build step.</p>
 </div>
 <p>Now the parameters of the process need to be defined. Or more exactly their type and visualization. This is done through the Parameter child tab of the process. The example has three parameters: <strong>business partner, organization and a string</strong>. The images below visualize their settings:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-2.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-2.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-3.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-3.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-3.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -14990,27 +15069,44 @@
 <h3 id="add-the-process-form-to-the-menu">Add the process form to the menu</h3>
 <p>To make the process window available to the user it has to be added to a <strong>menu</strong>.</p>
 <p>This is done like this:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-4.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-4.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-4.png"></a></p>
 <h3 id="build-step">Build Step</h3>
 <p>After creating the process user interface, stop the application and type in the following command in a console (within the development project):</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <p>This will generate the process window. If IntelliJ is running, refresh the development project. Then start the application and login with the client administrator (normally the system administrator will not have access).</p>
 <h2 id="the-result">The result</h2>
 <p>Go to quick launch and enter the name of the new process or find it in the correct location in the menu.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-5.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-5.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-5.png"></a></p>
 <p>Enter some values and press ok. The result:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-6.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-6.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-6.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-6.png"></a></p>
 <h2 id="variant-running-the-process-from-a-button-in-another-window">Variant: Running the process from a button in another window</h2>
-<p>A process can also be run from another window (from a button). A button in an Etendo window needs a database column. To accomplish this, do the following:</p>
+<p>A process can also be executed from another window using a <strong>button</strong>. In Etendo, buttons displayed in a window are defined through an <strong>AD Column</strong> with <strong>Reference = Button</strong>, linked to a specific <strong>process</strong>.</p>
+<p>To run a process from a button in an existing window, follow these steps:</p>
+<h4 id="1-add-a-column-to-the-table-used-by-the-target-window">1. Add a column to the table used by the target window</h4>
 <ul>
-<li><strong>Add a column</strong> to the table shown in the window.</li>
-<li>Give the column the <strong>button reference</strong> and select the process.</li>
-<li>Create a <strong>window, tab and field</strong> for the column. </li>
+<li>Go to <code>Application Dictionary &gt; Table and Columns</code>.</li>
+<li>Locate the table that is shown in the window where you want the button to appear.</li>
+<li>Create a new column.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-7.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-7.png"></a></p>
-<p>This will show a button on the right in the window.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-8.png" data-desc-position="bottom"><img alt="" class="legacy-image-style" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-8.png"></a></p>
+<h4 id="2-configure-the-column-as-a-button-linked-to-your-process">2. Configure the column as a button linked to your process</h4>
+<ul>
+<li>Set the column <strong>Reference</strong> to <strong>Button</strong>.</li>
+<li>In the column configuration, select the <strong>Process</strong> that should be executed when the button is pressed.</li>
+<li>Use a meaningful name (this will be the base for the label shown later through the <strong>Application Element</strong> / <strong>Field</strong>).</li>
+</ul>
+<h4 id="3-expose-the-button-in-the-window">3. Expose the button in the window</h4>
+<ul>
+<li>Go to <code>Application Dictionary &gt; Window, Tabs and Fields</code>.</li>
+<li>Locate the target <strong>Window</strong> and <strong>Tab</strong>.</li>
+<li>Create a <strong>Field</strong> linked to the column you created.</li>
+<li>Adjust its placement as needed so it appears in the desired section of the tab.</li>
+</ul>
+<h4 id="4-use-the-button-in-the-ui">4. Use the button in the UI</h4>
+<ul>
+<li>Once the window is generated and the field is present, the user will see a button in the window (for example, a button like <strong>“Example Document Action”</strong>).</li>
+<li>Clicking the button will execute the configured process.</li>
+</ul>
 <p>When a process is run from another window then the <strong>ProcessBundle</strong> will contain extra default parameters which can be useful:</p>
 <ul>
 <li><strong>recordID</strong>: the id of the selected record.</li>
@@ -15020,8 +15116,6 @@
 <p>The difference between <strong>Standard and Manual UI Pattern</strong> is that no pop-up is automatically generated for <strong>Manual UI</strong> pattern processes, in this case the pop-up must be manually generated by the class implementing the process.</p>
 <p>As shown above, java classes for <strong>standard processes</strong> implement the manual processes that are implemented by a Java class <code>org.openbravo.scheduling.Process</code> interface. </p>
 <p>For <strong>manual processes</strong>, the java class needs to extend <code>org.openbravo.base.secureApp.HttpSecureAppServlet</code>, this is a standard servlet that generates the pop-up.</p>
-<hr>
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Java_Based_Process" target="_blank">How to Create a Java Based Process</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
