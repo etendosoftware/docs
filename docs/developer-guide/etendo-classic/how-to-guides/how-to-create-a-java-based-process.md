@@ -169,20 +169,29 @@ Enter some values and press ok. The result:
 
 ## Variant: Running the process from a button in another window
 
-A process can also be run from another window (from a button). A button in an Etendo window needs a database column. To accomplish this, do the following:
+A process can also be executed from another window using a **button**. In Etendo, buttons displayed in a window are defined through an **AD Column** with **Reference = Button**, linked to a specific **process**.
 
-- **Add a column** to the table shown in the window.
-- Give the column the **button reference** and select the process.
-- Create a **window, tab and field** for the column. 
+To run a process from a button in an existing window, follow these steps:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-7.png)
+#### 1. Add a column to the table used by the target window
+- Go to `Application Dictionary > Table and Columns`.
+- Locate the table that is shown in the window where you want the button to appear.
+- Create a new column.
 
-  
-This will show a button on the right in the window.
+#### 2. Configure the column as a button linked to your process
+- Set the column **Reference** to **Button**.
+- In the column configuration, select the **Process** that should be executed when the button is pressed.
+- Use a meaningful name (this will be the base for the label shown later through the **Application Element** / **Field**).
 
+#### 3. Expose the button in the window
+- Go to `Application Dictionary > Window, Tabs and Fields`.
+- Locate the target **Window** and **Tab**.
+- Create a **Field** linked to the column you created.
+- Adjust its placement as needed so it appears in the desired section of the tab.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process/how-to-create-a-java-based-process-8.png)
-
+#### 4. Use the button in the UI
+- Once the window is generated and the field is present, the user will see a button in the window (for example, a button like **“Example Document Action”**).
+- Clicking the button will execute the configured process.
   
 When a process is run from another window then the **ProcessBundle** will contain extra default parameters which can be useful:
 
