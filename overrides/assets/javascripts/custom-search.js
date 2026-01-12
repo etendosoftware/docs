@@ -94,8 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
             article.className = "md-search-result__article md-typeset";
             article.setAttribute("data-md-score", hit.score || "0");
 
-            // --- MEJORADO: Título ---
-            // Simplificamos la lógica usando también `_highlightResult`
             const h1 = document.createElement("h1");
             if (hit.title) {
                 const escapedQuery = escapeRegExp(query);
