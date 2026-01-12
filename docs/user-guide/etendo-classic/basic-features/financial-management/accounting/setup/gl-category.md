@@ -14,7 +14,9 @@ tags:
 
 ## Overview
 
-In this window, the user can create and manage G/L Categories to be used in the General Ledger. The G/L Category defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. These categories **help organize and report ledger lines across journals**. 
+In this window, the user can **create and manage G/L Categories to be used in the General Ledger**. The G/L Category defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. These categories **help organize and report ledger lines across journals**. 
+
+## Header
 
 ![](../../../../../../assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png)
 
@@ -32,7 +34,7 @@ Fields to note:
 - **Category Type**: It indicates the source of the journal for this category. Journals can be generated from a document, entered manually or imported.
 - **Default**: When checked, this category is selected by default for new records. This option speeds up data entry when necessary.
 
-### Example
+## Example
 
 After filling the fields and saving, your category will be available for use in journal entries, imports, and document processing.
 
