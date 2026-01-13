@@ -56,9 +56,9 @@ Jaeger is an open-source distributed tracing system originally developed by Uber
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
     !!! warning
-        Avoid install Docker via [Snap](https://snapcraft.io){target="_blank"} can be confined by this sandbox and may not have access to host directories such as `/opt/`, which can prevent Etendo Docker containers from starting correctly.
+        Avoid install Docker via [Snap](https://snapcraft.io){target="_blank"}, can be confined by this sandbox and may not have access to host directories such as `/opt/`, which can prevent Etendo Docker containers from starting correctly.
     
-Recommendation: install Etendo using the [latest ISO](../../../whats-new/release-notes/etendo-classic/iso.md)(which includes Docker) or install Docker following the official installation guide from your distribution.
+        Recommendation: install Etendo using the [latest ISO](../../../whats-new/release-notes/etendo-classic/iso.md)(which includes Docker) or install Docker following the official installation guide from your distribution.
 
 
 ## Configure Jaeger Service
