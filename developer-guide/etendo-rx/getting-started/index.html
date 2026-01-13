@@ -14958,6 +14958,11 @@
 </ul>
 </li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avoid install Docker via <a href="https://snapcraft.io" target="_blank">Snap</a> can be confined by this sandbox and may not have access to host directories such as <code>/opt/</code>, which can prevent Etendo Docker containers from starting correctly.</p>
+<p>Recommendation: install Etendo using the <a href="../../../whats-new/release-notes/etendo-classic/iso/">latest ISO</a>(which includes Docker) or install Docker following the official installation guide from your distribution.</p>
+</div>
 <h2 id="dockerized-services">Dockerized Services</h2>
 <p>In the platform bundle, you can find the Dockerized Services module, which provides the necessary architecture to distribute infrastructure. In this case, in this bundle, the module Etendo RX is also included and, to launch the Services distributed in it, a certain configuration is needed. In the <code>gradle.properties</code> file, add the following variable:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">=</span><span class="kc">true</span>

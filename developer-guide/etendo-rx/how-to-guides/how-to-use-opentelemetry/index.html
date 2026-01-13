@@ -14864,12 +14864,19 @@
 <ol>
 <li>Install Etendo Rx. For this, follow the <a href="../../getting-started/">Etendo Rx installation guide</a>.</li>
 <li>Install the <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank">Platform Extensions Bundle</a>.</li>
-<li>This project depends on the following tools:<ul>
+<li>
+<p>This project depends on the following tools:</p>
+<ul>
 <li><a href="https://docs.docker.com/get-docker/" target="_blank">Docker</a>: version <code>26.0.0</code> or higher.</li>
 <li><a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>: version <code>2.26.0</code> or higher.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avoid install Docker via <a href="https://snapcraft.io" target="_blank">Snap</a> can be confined by this sandbox and may not have access to host directories such as <code>/opt/</code>, which can prevent Etendo Docker containers from starting correctly.</p>
+</div>
 </li>
 </ol>
+<p>Recommendation: install Etendo using the <a href="../../../../whats-new/release-notes/etendo-classic/iso/">latest ISO</a>(which includes Docker) or install Docker following the official installation guide from your distribution.</p>
 <h2 id="configure-jaeger-service">Configure Jaeger Service</h2>
 <ol>
 <li>
