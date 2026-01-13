@@ -19,6 +19,11 @@ This guide provides detailed instructions on how to get started with Etendo Copi
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.
 
+    !!! warning
+        Avoid install Docker via [Snap](https://snapcraft.io){target="_blank"} can be confined by this sandbox and may not have access to host directories such as `/opt/`, which can prevent Etendo Docker containers from starting correctly.
+    
+        Recommendation: install Etendo using the [latest ISO](../../../../whats-new/release-notes/etendo-classic/iso.md)(which includes Docker) or install Docker following the official installation guide from your distribution.
+
 !!!info
     The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
 
