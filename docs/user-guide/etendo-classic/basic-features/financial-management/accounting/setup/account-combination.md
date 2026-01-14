@@ -12,10 +12,9 @@ tags:
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Account Combination`
 
-
 ## Overview
 
-An account combination represents a General Ledger account as used by a specific organization. This window lets you review which GL accounts are available to an organization and see basic details about each account combination.
+An account combination represents **a General Ledger account as used by a specific organization**. This window lets you review which GL accounts are available to an organization and see basic details about each account combination.
 
 The main purpose of this window is to **view and manage, all at once, these valid combinations of accounting dimensions** so Etendo knows exactly where and how to post financial transactions.
 
@@ -26,11 +25,11 @@ The main purpose of this window is to **view and manage, all at once, these vali
     The user cannot create account combinations directly from this window. They are generated automatically when you create accounts (or subaccounts) in an Account Tree for a General Ledger. To add or edit the underlying accounts, use the [Account Tree](account-tree.md) window.
 
 !!! warning
-    The Account Combination window allows the user to delete accounts. This action implies that they are removed from this window, but not from the Account Tree window.
+    The **Account Combination** window allows the user to delete accounts. This action implies that they are removed from this window, but not from the Account Tree window.
 
 ## Header
 
-In this window, the user is able to view all account combinations for the selected General Ledger and Organization, Filter and search combinations to find specific accounts quickly.
+In this window, the user is able to view all account combinations for the selected *General Ledger* and *Organization*, filter and search combinations to find specific accounts quickly.
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-2.png)
 
@@ -43,13 +42,14 @@ Fields to note:
 - **Fully Qualified**: This checkbox indicates that all required elements for an account combination are present.
 
 !!!note
+
     - One account in the Account Tree can produce multiple account combinations if the account is used across multiple organizations or ledgers.
     - Account combinations are required for posting: if a needed combination is missing, create or adjust the account in the Account Tree and the combination will be created automatically.
     - Use this window to verify that an organization has the correct GL accounts before posting transactions.
 
 ## Example
 
-Let's revise an example to understand this functionality better.
+Let's review an example to understand this functionality better.
 Assume a company has the following setup:
 
 - **General Ledger:** F&B International Group US/A/US Dollar  
@@ -90,7 +90,7 @@ If the **Revenue - Product** account was not properly defined for **F&B Internat
 - The user must update the **Account Tree**
 - Once corrected, Etendo automatically **creates the missing account combination**
 
-### How are Account Combinations Important
+### Why Account Combinations are Important
 
 This example shows how account combinations act as a **bridge** between:
 
@@ -103,5 +103,4 @@ By validating account combinations in advance, Etendo ensures that transactions 
 As a conclusion, the Account Combination window defines the accounting identity of a transaction. It tells Etendo which account and which analytical dimensions should be used together when posting to the general ledger, ensuring accuracy, consistency, and meaningful financial reporting.
 
 ---
-
 This work is a derivative of [Account Combination](https://wiki.openbravo.com/wiki/Account_Combination){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
