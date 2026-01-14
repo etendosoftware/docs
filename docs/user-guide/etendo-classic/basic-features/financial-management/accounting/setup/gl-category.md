@@ -14,11 +14,15 @@ tags:
 
 ## Overview
 
-In this window, the user can **create and manage G/L Categories to be used in the General Ledger**. The G/L Category defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. These categories **help organize and report ledger lines across journals**. 
+In this window, the user can **view, create and manage G/L Categories to be used in the General Ledger**. 
+
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category.png)
+
+The G/L (General Ledger) Category defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. These categories **help organize and report ledger lines across journals**. 
 
 ## Header
 
-![](../../../../../../assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category2.png)
 
 Fields to note:
 
@@ -36,9 +40,13 @@ Fields to note:
 
 ## Example
 
-After filling the fields and saving, your category will be available for use in journal entries, imports, and document processing.
+Select the create new option, fill the corresponding fields and save it. 
 
-![](../../../../../../assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category3.png)
+
+The created category is available to use in journal entries, imports, and document processing.
+
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category4.png)
 
 
 ---
