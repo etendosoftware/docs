@@ -3290,13 +3290,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#combination" class="md-nav__link">
+  <a href="#posting-a-transaction" class="md-nav__link">
     <span class="md-ellipsis">
-      Combination
+      Posting a Transaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Combinations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-account-combinations-are-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Account Combinations are Important
     </span>
   </a>
   
@@ -14664,13 +14700,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#combination" class="md-nav__link">
+  <a href="#posting-a-transaction" class="md-nav__link">
     <span class="md-ellipsis">
-      Combination
+      Posting a Transaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Combinations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-account-combinations-are-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Account Combinations are Important
     </span>
   </a>
   
@@ -14737,18 +14809,107 @@
 <h1 id="account-combination">Account Combination</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Account Combination</code></p>
 <h2 id="overview">Overview</h2>
-<p>An account combination is an Organization's General Ledger account.</p>
-<h3 id="combination">Combination</h3>
-<p>The Account Combination window allows the user to review the Organization's General Ledger accounts.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1-YOqTdD_2q6W30y3iC19xoD6NJRoMpnj.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1-YOqTdD_2q6W30y3iC19xoD6NJRoMpnj.png"></a></p>
-<p>The accounts can not be created manually in this window, but in the Account Tree window.</p>
-<p>Every time that an account (or subaccount in Etendo terms) is created in an account tree of a General Ledger, the corresponding account combination is also created in this window.</p>
-<p>The account combination window shows the data below:</p>
+<p>An account combination represents <strong>a General Ledger account as used by a specific organization</strong>. This window lets you review which GL accounts are available to an organization and see basic details about each account combination.</p>
+<p>The main purpose of this window is to <strong>view and manage, all at once, these valid combinations of accounting dimensions</strong> so Etendo knows exactly where and how to post financial transactions.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-1.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The user cannot create account combinations directly from this window. They are generated automatically when you create accounts (or subaccounts) in an Account Tree for a General Ledger. To add or edit the underlying accounts, use the <a href="../account-tree/">Account Tree</a> window.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>Account Combination</strong> window allows the user to delete accounts. This action implies that they are removed from this window, but not from the Account Tree window.</p>
+</div>
+<h2 id="header">Header</h2>
+<p>In this window, the user is able to view all account combinations for the selected <em>General Ledger</em> and <em>Organization</em>, filter and search combinations to find specific accounts quickly.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-2.png"></a></p>
+<p>Fields to note:</p>
 <ul>
-<li>the <em>General Ledger</em></li>
-<li>the <em>Organization</em></li>
-<li>and the <em>Account</em></li>
+<li><strong>General Ledger</strong>: the ledger the account belongs to.</li>
+<li><strong>Organization</strong>: the organization that will use the account.</li>
+<li><strong>Account</strong>: the account (from the Account Tree) associated with this combination.</li>
+<li><strong>Active</strong>: whether this account combination is enabled for posting.</li>
+<li><strong>Fully Qualified</strong>: This checkbox indicates that all required elements for an account combination are present.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>One account in the Account Tree can produce multiple account combinations if the account is used across multiple organizations or ledgers.</li>
+<li>Account combinations are required for posting: if a needed combination is missing, create or adjust the account in the Account Tree and the combination will be created automatically.</li>
+<li>Use this window to verify that an organization has the correct GL accounts before posting transactions.</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<p>Let's review an example to understand this functionality better.
+Assume a company has the following setup:</p>
+<ul>
+<li><strong>General Ledger:</strong> F&amp;B International Group US/A/US Dollar  </li>
+<li><strong>Organizations:</strong>  <ul>
+<li>F&amp;B International Group 1  </li>
+<li>F&amp;B International Group 2 </li>
+</ul>
+</li>
+<li><strong>Account Tree:</strong>  <ul>
+<li><strong>4100 – Revenue - Product</strong></li>
+</ul>
+</li>
+</ul>
+<p>When the <strong>Revenue - Product</strong> account is created in the Account Tree, Etendo automatically generates <strong>account combinations</strong> for each organization that uses the ledger:</p>
+<table>
+<thead>
+<tr>
+<th>General Ledger</th>
+<th>Organization</th>
+<th>Account</th>
+<th>Active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F&amp;B International Group US/A/US Dollar</td>
+<td>F&amp;B International Group 1</td>
+<td>4100 – Revenue - Product</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>F&amp;B International Group US/A/US Dollar</td>
+<td>F&amp;B International Group 2</td>
+<td>4100 – Revenue - Product</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Each row represents a <strong>different account combination</strong>, even though they reference the same account in the Account Tree.</p>
+<h3 id="posting-a-transaction">Posting a Transaction</h3>
+<p>When a sales invoice is posted for <strong>F&amp;B International Group 2</strong>, Etendo:</p>
+<ol>
+<li>Identifies the <strong>Organization</strong> of the transaction (F&amp;B International Group 2)</li>
+<li>Uses the <strong>F&amp;B International Group US/A/US Dollar</strong> General Ledger</li>
+<li>Searches for a <strong>fully qualified account combination</strong> that includes:<ul>
+<li>F&amp;B International Group US/A/US Dollar General Ledger</li>
+<li>F&amp;B International Group 2</li>
+<li>Revenue - Product account</li>
+</ul>
+</li>
+</ol>
+<p>If the corresponding account combination exists and is active, the transaction is posted successfully.</p>
+<h3 id="missing-combinations">Missing Combinations</h3>
+<p>If the <strong>Revenue - Product</strong> account was not properly defined for <strong>F&amp;B International Group 2</strong> in the Account Tree:</p>
+<ul>
+<li>The required account combination does <strong>not exist</strong></li>
+<li>The transaction <strong>cannot be posted</strong></li>
+<li>The user must update the <strong>Account Tree</strong></li>
+<li>Once corrected, Etendo automatically <strong>creates the missing account combination</strong></li>
+</ul>
+<h3 id="why-account-combinations-are-important">Why Account Combinations are Important</h3>
+<p>This example shows how account combinations act as a <strong>bridge</strong> between:</p>
+<ul>
+<li>The account structure (Account Tree)</li>
+<li>The organizational structure</li>
+<li>The posting of financial transactions</li>
+</ul>
+<p>By validating account combinations in advance, Etendo ensures that transactions are always posted to the <strong>correct account and organization</strong>, maintaining accuracy and consistency in financial reporting.</p>
+<p>As a conclusion, the Account Combination window defines the accounting identity of a transaction. It tells Etendo which account and which analytical dimensions should be used together when posting to the general ledger, ensuring accuracy, consistency, and meaningful financial reporting.</p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Account_Combination" target="_blank">Account Combination</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
