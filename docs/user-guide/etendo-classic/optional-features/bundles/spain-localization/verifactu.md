@@ -37,7 +37,7 @@ Este módulo permite a Etendo automatizar procesos clave como la generación, el
         - La combinación SII + TBAI **sí está permitida**.
     - Eliminación de registros de facturación Verifactu y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las *llamadas/respuestas XML* durante el plazo legal correspondiente).
 
-## Descripción del Módulo
+## Descripción del módulo
 
 El módulo permite:
 
@@ -55,15 +55,15 @@ La implementación cubre:
 4. **Trazabilidad** y **control** del proceso de facturación, con registro de errores, rechazos y confirmaciones.  
 5. **Generación** de códigos QR compatibles con el visor de la AEAT.
 
-## Contenido del Módulo
+## Contenido del módulo
 
 ### Ventanas nuevas
 
 - [Configuración Verifactu](#configuración-verifactu): permite configurar emisores, seleccionar el impuesto aplicable (IVA, IPSI o IGIC) y monitorear incidencias en los envíos.
 
-- [Monitor Verifactu](): permite consultar facturas en estado **Rechazada**, **Parcialmente Aceptada**, **Aceptada** e **Inválida**. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar **Refrescar Datos** para obtener los últimos registros.
+- [Monitor Verifactu](#monitor-verifactu): permite consultar el estado de las facturas enviadas, así como identificar aquellas que han quedado inválidas por no superar validaciones previas.
 
-- [Consulta Facturas Verifactu](): permite obtener un informe de las facturas enviadas, con posibilidad de filtrar por emisor, período, número de serie, fechas o tercero. Si el resultado supera los 10.000 registros, se puede aplicar paginación utilizando la clave del último registro consultado. A diferencia del Monitor Verifactu, los datos de este informe provienen directamente de la Agencia Tributaria.
+- [Consulta Facturas Verifactu](#consulta-facturas-verifactu): permite obtener un informe de las facturas enviadas a Verifactu, consultando la información directamente desde la Agencia Tributaria.
 
 ### Nuevos campos
 
@@ -76,30 +76,47 @@ Se añaden campos y pestañas específicas de Verifactu en las ventanas **Factur
 
 ### Configuración Verifactu
 
-:material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`
+En esta ventana :material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu` se define quién actuará como **emisor de las facturas** y con qué **impuesto se generarán**. En este caso, **cada organización legal que se cree será la responsable de la emisión**, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.
 
 - **Organización**: entidad legal emisora.
 - **Impuesto de Aplicación**: IVA, IPSI o IGIC.
 - **QR por Defecto**: si se marca, se utilizará una implementación predefinida. En caso contrario, deberá personalizarse el reporte siguiendo [esta especificación](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf){target="_blank"}.
 
-### Certificado Digital
+Además, existe una sección de **Monitoreo** donde los campos **Arranque del Sistema** y **Parada del Sistema** indican, respectivamente, cuándo el entorno comenzó a estar operativo y cuándo dejó de estarlo. Esta información es útil para identificar con precisión los períodos en los que **Verifactu estuvo disponible** y aquellos en los que **no lo estuvo**.
+
+Por otra parte, el campo **Detalle Incidencia**`** se completará cuando un envío presente alguna incidencia causada por factores externos al contenido de la factura, como falta de conexión a internet, errores de servidores, timeouts u otros problemas de infraestructura o comunicación.
+
+### Certificado digital
 
 Para poder emitir facturas electrónicas a través del sistema Verifactu, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. Siga los siguientes pasos para configurar correctamente su Certificado Digital:
 
 1. **Acceder a la ventana Organización**: :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
+
 2. **Seleccionar la Organización Legal**: Elige la organización legal que será responsable de emitir las facturas electrónicas.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png)
+
 3. **Añadir el Certificado Digital**: Haz clic en el botón **Añadir Certificado Digital**.
+    
 4. **Subir el Certificado**: En el proceso, podrás cargar tu certificado digital ingresando la clave correspondiente.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contraseña.png)
+
 5. **Guardar la configuración**: Al presionar el botón **Hecho**, el sistema guardará la información del certificado digital en la solapa **Certificado Digital**.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png)
+
+!!! info
+    Para más información sobre cómo obtener un certificado digital de la FNMT, [se puede seguir esta guía](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html)
+
 
 Una vez completados estos pasos, el certificado digital estará correctamente configurado y listo para su uso en la emisión de facturas electrónicas.
 
-### Rango Impuesto
+### Rango impuesto
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango Impuesto`
 
-En la ventana **Rango Impuesto**, se deben completar los siguientes campos, necesarios para clasificar los impuestos según el régimen y el tipo de operación:
+En la ventana **Rango Impuesto**, debe completarse la información requerida para cada impuesto que se utilice al emitir facturas. Estos datos son necesarios para clasificar correctamente los impuestos según el régimen aplicable y el tipo de operación.
 
-- Para impuesto de aplicación IVA: `Régimen Especial IVA`
+Se recomienda consultar con su asesor fiscal cuál es el régimen que corresponde, ya que puede variar en función de la actividad desarrollada.
+
+- Para impuesto de aplicación IVA: **Régimen Especial IVA**
 
     | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IVA |
     |---|---|
@@ -124,7 +141,7 @@ En la ventana **Rango Impuesto**, se deben completar los siguientes campos, nece
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen_iva.png)
 
 
-- Para impuesto de aplicación IGIC: `Régimen Especial IGIC`  
+- Para impuesto de aplicación IGIC: **Régimen Especial IGIC**
 
     | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IGIC |
     |---|---|
@@ -147,10 +164,24 @@ En la ventana **Rango Impuesto**, se deben completar los siguientes campos, nece
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen_igic.png)
 
-- Si no aplica impuesto: `Causa no Sujeción`
+- Para impuesto de aplicación IPSI: **Régimen Especial IPSI**
+
+    | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IPSI |
+    |---|---|
+    | 01 | Operación de régimen general. |
+    | 08 | Operaciones sujetas al IGIC / IVA (Impuesto General Indirecto Canario / Impuesto sobre el Valor Añadido). |
+    | 11 | Operaciones de arrendamiento de local de negocio. |
+    | 18 | Operaciones recogidas en el artículo 73.4 y 73.5 de la Ordenanza fiscal del IPSI (Sólo Ceuta). |
+    | 19 | Operaciones interiores exentas. |
+    | 20 | Régimen de estimación objetiva. |
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-ipsi.png_)
+
+
+- Si no aplica impuesto: **Causa no Sujeción**
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa_no_sujecion.png)
 
-- Si está exento: `Causa de Exención`
+- Si está exento: **Causa de Exención**
 
     | VALORES | DESCRIPCIÓN |
     |---|---|
@@ -168,9 +199,11 @@ En la ventana **Rango Impuesto**, se deben completar los siguientes campos, nece
     Si se utilizan recargos de equivalencia, basta con completar el campo en el impuesto principal. Por ejemplo, para el impuesto **Entregas IVA+RE 21+5.2%**, que incluye los subimpuestos **Entregas IVA+RE 21+5.2% (+21%)** y **Entregas IVA+RE 21+5.2% (+5.2%)**, solo es necesario rellenar el campo en el impuesto Entregas **IVA+RE 21+5.2% (+21%)**.
 
 
-### Ajustes para Facturas Rectificativas por Sustitución o F3 (emitida en sustitución de facturas simplificadas)
+### Ajustes para facturas rectificativas por sustitución o F3
+Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a Verifactu). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
+Por tanto, la utilización de esta funcionalidad requiere realizar determinados ajustes de configuración para garantizar que la información registrada y enviada sea correcta.
 
-#### Ajustes contables
+### Ajustes contables
 
 La emisión de una factura sustitutiva requiere ajustar los asientos contables, ya que los únicos datos contables que deben conservarse son los correspondientes a la factura que se crea para sustituir a la anterior.
 
@@ -180,7 +213,7 @@ Para ello, se ha desarrollado una plantilla contable que:
 - Copia sus apuntes contables.
 - Genera los apuntes inversos (intercambiando Debe y Haber), anulando el impacto contable original.
 
-#### Configuración de la plantilla contable
+### Configuración de la plantilla contable
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Plantillas de Contabilidad`
 
 En la ventana **Plantillas de Contabilidad**, crear un registro con los siguientes valores:
@@ -193,20 +226,234 @@ En la ventana **Plantillas de Contabilidad**, crear un registro con los siguient
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla_contabilidad.png)
 
-#### Configuracion de Esquema Contable
+!!! note
+    Si el sistema ya dispone de una plantilla de contabilidad, debe aplicar los cambios que tenía en su plantilla a la plantilla de contabilidad de Verifactu, ya que solo es posible tener configurada una única plantilla.
+
+### Configuración de esquema contable
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema Contable`
 
 En la ventana **Esquema Contable**, en la solapa **Tablas a Contabilizar**, localizar la tabla `Invoice` y vincularle la plantilla creada en el campo **Plantilla Contabilidad** (el campo puede estar oculto por lógica de aplicación).
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/esquema_contable.png)
 
-#### Cobro Cero
+### Cobro cero
 
 Cuando la **factura original** no ha sido cobrada, pero tiene un **plan de pagos** definido, al completar la **factura sustitutiva** el sistema genera automáticamente un **cobro cero** en la factura original.
 
 Este cobro se registra en la **factura original** utilizando la **cuenta contable asociada al tercero**, con el objetivo de insertar el **concepto contable** necesario y dejar la factura original sin un plan de pagos activo. De este modo, el **único plan de pagos activo** queda vinculado a la **nueva factura sustitutiva**.
 
-#### Cobros Asociados
+Para configurar este **concepto contable**, se debe acceder a la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Concepto Contable`, seleccionar la organización legal utilizada y, en la solapa **Contabilidad**, añadir un registro con el **esquema contable** y por último, completar el campo `Cuenta crédito` con la **cuenta asociada al tercero** utilizado.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
+
+
+Esta cuenta es la que figura en la ventana :material-menu: `Aplicación` > `Datos Maestros` > `Terceros`, subsolapa **Contabilidad Cliente**, en el campo `Recibos de clientes` del esquema contable utilizado.
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
+
+
+## Proceso de envío a Verifactu
+
+A continuación se detallan los pasos necesarios para que una factura se dé de alta en Verifactu.  
+
+!!! note 
+    Es importante aclarar que únicamente se envían a Verifactu las **facturas de venta**, facturas emitidas desde la ventana **Factura (Cliente)**.
+
+### Creación de factura manualmente
+
+Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`.
+
+Debe completar los siguientes campos obligatorios en la Factura:
+
+  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales_invoice_normal.png)
+
+- **Tipo de Factura**
+
+    | VALORES | DESCRIPCIÓN |
+    |---|---|
+    | F1 | Factura (art. 6, 7.2 y 7.3 del RD 1619/2012) |
+    | F2 | Factura simplificada y Facturas sin identificación del destinatario art. 6.1.d) RD 1619/2012 |
+    | F3 | Factura emitida en sustitución de facturas simplificadas facturadas y declaradas |
+    | R1 | Factura Rectificativa (Error fundado en derecho y Art. 80 Uno Dos y Seis LIVA) |
+    | R2 | Factura Rectificativa (Art. 80.3) |
+    | R3 | Factura Rectificativa (Art. 80.4) |
+    | R4 | Factura Rectificativa (Resto) |
+    | R5 | Factura Rectificativa en facturas simplificadas |
+
+- **Descripción de la Operación**: Fecha en la que se ha realizado la operación.
+- **Fecha de la Operación**: Descripción del objeto de la factura.
+
+!!! note
+    Si para un **Tipo de Documento** se emiten siempre facturas del **mismo tipo** o con la **misma descripción**, este proceso puede agilizarse rellenando una única vez estos campos en la ventana **Tipo de Documento**, correspondiente al documento utilizado por la factura.  
+
+    Así, cada vez que se cree una factura con este documento, se rellenarán automáticamente los campos `Tipo de Factura` y `Descripción de la Operación`.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+
+
+Opcionalmente, puede completar:
+
+- **Referencia Externa**: Dato adicional de contenido libre con el objetivo de que se pueda asociar opcionalmente información interna del sistema informático de facturación al registro de facturación. Este dato puede ayudar a completar la identificación o calificación de la factura y/o su registro de facturación.
+- **Factura Simplificada Art. 7.2 y 7.3**: Indicar cuando se trate de una factura simplificada emitida al amparo de lo previsto en los artículos 7.2 o 7.3 del Real Decreto 1619/2012.
+- **FacturaSinIdentifDestinatarioArt61d**: Indicar cuando se trate de una factura completa sin identificación del destinatario, de conformidad con lo dispuesto en el artículo 6.1.d del Real Decreto 1619/2012.
+
+!!! info
+    Puede consultar el **Real Decreto 1619/2012** en el [siguiente enlace](https://www.boe.es/buscar/act.php?id=BOE-A-2012-14696).
+
+### Completar factura de venta
+
+Al completar la factura:
+
+- Se genera un archivo adjunto con el **Registro de Facturación (RF)**, que será utilizado para dar de **Alta** la factura en Verifactu.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf_adjunto.png)
+
+- Una vez generado el RF, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de Verifactu) se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada 60 segundos.
+
+- El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu** refrescando los datos.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/estado_envio_alta.png)
+
+### Creación automática de facturas de venta
+
+Es posible enviar a **Verifactu** las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**). Para que esto funcione correctamente, es necesario **configurar previamente el Tipo de Documento**.
+
+### Configuración requerida en tipo de documento
+
+En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
+Los siguientes campos son **obligatorios**:
+
+- **Tipo de Factura**
+- **Descripción de Operación**
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+
+Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a Verifactu.
+
+### Comportamiento del proceso automático
+
+Una vez que un proceso ha generado la factura en estado **Completado**, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de Verifactu) **generará el registro de facturación** y, de forma inmediata, **enviará dicho registro a Verifactu.**
+
+!!! example
+
+    1. Se crea un **Pedido de Venta**.
+      ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/pedido.png)
+      
+
+    2. Mediante el proceso **Crear Facturas Desde Pedidos** (o cualquier otro proceso utilizado para la generación de facturas), se genera la **Factura**, la cual tomará los datos configurados en el **Tipo de Documento** utilizado.
+      ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
+
+
+    3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a **Verifactu**.
+      ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
+
+!!! warning  
+    Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a Verifactu.  
+    En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de Verifactu.
+
+## Proceso de anulación de factura
+
+Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema Verifactu en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
+
+Por tanto, los **clientes finales deben operar únicamente en entorno productivo**, lo que implica que **toda factura emitida será tratada como real** y su **registro será enviado automáticamente a la Agencia Tributaria**. El uso del entorno de pruebas de Verifactu **no está permitido para entornos de demostración, usuarios finales o actividades de formación**.
+
+En caso de necesitar realizar simulaciones en entorno productivo (por ejemplo, pruebas de funcionamiento o demostraciones), la Agencia Tributaria permite una operativa específica:
+
+- Utilizar **series diferenciadas** (como `PRU-XXXXX`) para identificar las facturas de prueba.
+- Añadir textos visibles que indiquen su carácter no real, como **DEMO** o **PRUEBA**.
+- Generar de forma obligatoria el **registro de alta y su correspondiente registro de anulación**, enviados ambos a la AEAT.
+
+Etendo implementa esta lógica de forma segura **exclusivamente en entornos de desarrollo**, permitiendo que las facturas se creen y anulen automáticamente como parte del flujo de testeo. **Este comportamiento no se encuentra disponible en entorno productivo**, donde las anulaciones deben gestionarse conforme al procedimiento fiscal establecido.
+
+!!! info
+    Para más información, consulta: [FAQs para desarrolladores Verifactu – Agencia Tributaria](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/FAQs-Desarrolladores.pdf), apartado 11.
+
+
+## Tratamiento de errores en facturación
+
+Esta sección describe cómo actuar ante errores durante la emisión de facturas o registros de facturación (RF), conforme al *RD 1619/2012* y al *RD 1007/2023*.
+
+
+### Subsanación (sin factura rectificativa)
+
+Debe utilizarse cuando el error afecta únicamente al `XML` (registro de facturación) y **no** al contenido de la factura original.
+
+**Ejemplos comunes:**
+
+- Hash incorrecto
+- NIF no censado
+- Error en el campo `ImporteTotal`
+
+**Acción:**
+
+1. Marcar el **check de Subsanación** en la factura.
+2. Corregir los datos que ocasionaron el rechazo o se aceptó con errores.
+3. El proceso automático genera un nuevo **Registro de Facturación** de **alta de subsanación** (`Subsanacion = "S"`) y lo enviará nuevamente.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion_aceptada.png)
+
+!!! warning
+    No debe aplicarse subsanación si el error requiere una **factura rectificativa**, conforme al Reglamento de Facturación (ROF).
+
+
+### Rectificación (con factura rectificativa)
+
+Se utiliza cuando:
+
+- El error afecta a elementos **patrimoniales**: base imponible, cuota, tipo de IVA, etc.
+- La corrección es obligatoria conforme al *RD 1619/2012 (Reglamento de Facturación - ROF)*.
+
+!!! info
+    Puede consultar ejemplos sobre cómo proceder ante rectificaciones en el siguiente enlace: [Procedimientos de facturación](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html).
+
+
+### Claves Verifactu
+
+Para crear una factura rectificativa, debe seleccionarse uno de los siguientes tipos, según corresponda:
+
+- `R1`: Factura rectificativa (error fundado en derecho y Art. 80 Uno, Dos y Seis de la LIVA)
+- `R2`: Factura rectificativa (Art. 80.3)
+- `R3`: Factura rectificativa (Art. 80.4)
+- `R4`: Factura rectificativa (otros casos)
+- `R5`: Factura rectificativa en facturas simplificadas
+
+
+### Rectificación por diferencias
+
+Se informa únicamente la **variación de importes** con respecto a la factura original.
+
+**Acción:**  
+Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
+
+1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
+2. Indicar que se trata de una **Rectificativa por Diferencias**.
+3. Enlazar la factura original en la solapa **Factura Rectificativa**.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectifica_inc_orig.png)  
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectifica_inc_rect.png)  
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/solapa_reversed_diferencia.png)
+
+!!! example
+    En este ejemplo, la factura original declaraba 20 unidades del producto, pero en realidad se debían facturar 21. Por lo tanto, la factura rectificativa incluye una línea adicional por esa unidad faltante.
+
+### Rectificación por sustitución
+
+Se reemplaza por completo la factura original.
+
+**Acción:**  
+Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
+
+1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
+2. Indicar que se trata de una **Rectificativa por Sustitución**.
+3. Enlazar la factura original en la solapa **Factura Rectificativa**.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectificativa_sust_orig.png)  
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectificativa_sust_rect.png)  
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/contabilidad_ajustada.png)
+
+!!! example
+    En este ejemplo, la factura original incluía un producto incorrecto. Se genera una factura rectificativa **por sustitución** con el producto correcto y se ajusta la contabilidad para reflejar la operación correctamente.
+
+### Cobros asociados
 
 Si la factura que se está sustituyendo ya tiene cobros asociados, al enlazarla en la solapa **Factura Rectificativa** se mostrará una advertencia informando que se deben regularizar dichos cobros.
 
@@ -255,221 +502,54 @@ WHERE p.created >= v.created
 ```
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
 
+!!! note
+    Puede consultar más información sobre cómo crear una alerta en el siguiente [enlace interno](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/alert/)
 
-## Proceso de envío a Verifactu
-
-A continuación se detallan los pasos necesarios para que una factura se dé de alta en Verifactu.  
-
-!!! info 
-    Es importante aclarar que únicamente se envían a Verifactu las **facturas de venta**, facturas emitidas desde la ventana **Factura (Cliente)**.
-
-### Creación de factura manualmente
-
-Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`.
-
-Debe completar los siguientes campos obligatorios en la Factura:
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales_invoice_normal.png)
-
-- **Tipo de Factura**
-
-    | VALORES | DESCRIPCIÓN |
-    |---|---|
-    | F1 | Factura (art. 6, 7.2 y 7.3 del RD 1619/2012) |
-    | F2 | Factura simplificada y Facturas sin identificación del destinatario art. 6.1.d) RD 1619/2012 |
-    | F3 | Factura emitida en sustitución de facturas simplificadas facturadas y declaradas |
-    | R1 | Factura Rectificativa (Error fundado en derecho y Art. 80 Uno Dos y Seis LIVA) |
-    | R2 | Factura Rectificativa (Art. 80.3) |
-    | R3 | Factura Rectificativa (Art. 80.4) |
-    | R4 | Factura Rectificativa (Resto) |
-    | R5 | Factura Rectificativa en facturas simplificadas |
-
-- **Descripción de la Operación**
-- **Fecha de la Operación**
-
-Opcionalmente, puede completar:
-
-- **Referencia Externa**: Dato adicional de contenido libre con el objetivo de que se pueda asociar opcionalmente información interna del sistema informático de facturación al registro de facturación. Este dato puede ayudar a completar la identificación o calificación de la factura y/o su registro de facturación.
-- **Factura Simplificada Art. 7.2 y 7.3** (RD 1619/2012)
-
-
-### Completar Factura de Venta
-
-Al completar la factura:
-
-- Se genera un archivo adjunto con el **Registro de Facturación (RF)**, que será utilizado para dar de **Alta** la factura en Verifactu.
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf_adjunto.png)
-
-- Una vez generado el RF, un proceso automático se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada 60 segundos.
-
-- El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu** refrescando los datos.
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/estado_envio_alta.png)
-
-### Creación automática de facturas de venta
-
-Es posible enviar a **Verifactu** facturas que se generan desde procesos automáticos (por ejemplo, procesos que **crean facturas directamente en estado Completado**). Para que esto funcione correctamente, es necesario **configurar previamente el Tipo de Documento**.
-
-#### Configuración requerida en Tipo de Documento
-
-En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
-Los siguientes campos son **obligatorios**:
-
-- **Tipo de Factura**
-- **Descripción de Operación**
-
-Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a Verifactu.
-
-#### Comportamiento del proceso automático
-
-Una vez creada la factura en estado **Completado**:
-
-1. Un proceso automático **generará el registro de facturación**.
-2. Dicho registro se **enviará automáticamente a Verifactu**.
-
-
-#### Ejemplo de flujo
-
-1. Se crea un **Pedido de Venta**.
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/pedido.png)
-  
-
-2. Mediante el proceso **Crear Facturas Desde Pedidos**, se genera la **Factura**, la cual tomará los datos configurados en el **Tipo de Documento** utilizado.
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
-
-
-3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a **Verifactu**.
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
-
-!!! warning  
-    Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a Verifactu.  
-    En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de Verifactu.
-
-## Proceso de Anulación de Factura
-
-Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema Verifactu en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
-
-Por tanto, los **clientes finales deben operar únicamente en entorno productivo**, lo que implica que **toda factura emitida será tratada como real** y su **registro será enviado automáticamente a la Agencia Tributaria**. El uso del entorno de pruebas de Verifactu **no está permitido para entornos de demostración, usuarios finales o actividades de formación**.
-
-En caso de necesitar realizar simulaciones en entorno productivo (por ejemplo, pruebas de funcionamiento o demostraciones), la Agencia Tributaria permite una operativa específica:
-
-- Utilizar **series diferenciadas** (como `PRU-XXXXX`) para identificar las facturas de prueba.
-- Añadir textos visibles que indiquen su carácter no real, como **DEMO** o **PRUEBA**.
-- Generar de forma obligatoria el **registro de alta y su correspondiente registro de anulación**, enviados ambos a la AEAT.
-
-Etendo implementa esta lógica de forma segura **exclusivamente en entornos de desarrollo**, permitiendo que las facturas se creen y anulen automáticamente como parte del flujo de testeo. **Este comportamiento no se encuentra disponible en entorno productivo**, donde las anulaciones deben gestionarse conforme al procedimiento fiscal establecido.
-
-!!! info
-    Para más información, consulta: [FAQs para desarrolladores Verifactu – Agencia Tributaria](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/FAQs-Desarrolladores.pdf), apartado 11.
-
-
-## Tratamiento de Errores en Facturación
-
-Esta sección describe cómo actuar ante errores durante la emisión de facturas o registros de facturación (RF), conforme al *RD 1619/2012* y al *RD 1007/2023*.
-
-
-### Subsanación (sin factura rectificativa)
-
-Debe utilizarse cuando el error afecta únicamente al `XML` (registro de facturación) y **no** al contenido de la factura original.
-
-**Ejemplos comunes:**
-
-- Hash incorrecto
-- NIF no censado
-- Error en el campo `ImporteTotal`
-
-**Acción:**
-
-1. Marcar el **check de Subsanación** en la factura.
-2. Corregir los datos que ocasionaron el rechazo o se aceptó con errores.
-3. El proceso automático generará un nuevo **Registro de Facturación** de **alta de subsanación** (`Subsanacion = "S"`) y lo enviará nuevamente.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion.png)
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion_aceptada.png)
-
-!!! warning
-    No debe aplicarse subsanación si el error requiere una **factura rectificativa**, conforme al Reglamento de Facturación (ROF).
-
-
-### Rectificación (con factura rectificativa)
-
-Se utiliza cuando:
-
-- El error afecta a elementos **patrimoniales**: base imponible, cuota, tipo de IVA, etc.
-- La corrección es obligatoria conforme al *RD 1619/2012 (Reglamento de Facturación - ROF)*.
-
-!!! info
-    Puede consultar ejemplos sobre cómo proceder ante rectificaciones en el siguiente enlace: [Procedimientos de facturación](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html).
-
-
-#### Claves Verifactu
-
-Para crear una factura rectificativa, debe seleccionarse uno de los siguientes tipos, según corresponda:
-
-- `R1`: Factura rectificativa (error fundado en derecho y Art. 80 Uno, Dos y Seis de la LIVA)
-- `R2`: Factura rectificativa (Art. 80.3)
-- `R3`: Factura rectificativa (Art. 80.4)
-- `R4`: Factura rectificativa (otros casos)
-- `R5`: Factura rectificativa en facturas simplificadas
-
-
-#### Rectificación por Diferencias
-
-Se informa únicamente la **variación de importes** con respecto a la factura original.
-
-**Acción:**  
-Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
-
-1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
-2. Indicar que se trata de una **Rectificativa por Diferencias**.
-3. Enlazar la factura original en la solapa **Factura Rectificativa**.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectifica_inc_orig.png)  
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectifica_inc_rect.png)  
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/solapa_reversed_diferencia.png)
-
-!!! example
-    En este ejemplo, la factura original declaraba 20 unidades del producto, pero en realidad se debían facturar 21. Por lo tanto, la factura rectificativa incluye una línea adicional por esa unidad faltante.
-
-#### Rectificación por Sustitución
-
-Se reemplaza por completo la factura original.
-
-**Acción:**  
-Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
-
-1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
-2. Indicar que se trata de una **Rectificativa por Sustitución**.
-3. Enlazar la factura original en la solapa **Factura Rectificativa**.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectificativa_sust_orig.png)  
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura_rectificativa_sust_rect.png)  
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/contabilidad_ajustada.png)
-
-!!! example
-    En este ejemplo, la factura original incluía un producto incorrecto. Se genera una factura rectificativa **por sustitución** con el producto correcto y se ajusta la contabilidad para reflejar la operación correctamente.
-
-
-#### Rectificaciones desde Pedidos de Venta o Devolución de Cliente
+### Rectificaciones desde pedidos de venta o devolución de cliente
 
 Se pueden generar **facturas rectificativas** a partir de un **Pedido de Venta** o una **Devolución de Cliente**.  
 
 Para hacerlo:
 
-1. **Seleccionar un tipo de documento rectificativo**  
+1. Seleccionar un tipo de documento rectificativo
    En el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **Es Rectificativo**).
 
-2. **Completar la sección Verifactu en el documento**  
+2. Completar la sección Verifactu en el documento  
    Completar los campos de la sección **Verifactu** del **documento** indicando el **tipo de rectificación** que se usará.
 
-3. **Indicar la factura a rectificar**  
+3. Indicar la factura a rectificar 
    En la sección **Verifactu** del pedido o la devolución, completar el campo **Factura Rectificada** con la **factura original** que se va a rectificar.
 
 Con esta configuración, al **generar la factura** desde el pedido o la devolución, el sistema emitirá automáticamente una **factura rectificativa**, utilizando la configuración definida en el **tipo de documento**.
 
+## Consulta del estado de envío de facturas
+  Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la **Agencia Tributaria.
 
-## QR Tributario
+### Monitor verifactu
+Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.
+
+  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
+
+### Consulta facturas verifactu
+Este proceso permite obtener un **informe detallado de las facturas enviadas a Verifactu**, ofreciendo múltiples opciones de filtrado para facilitar la consulta:
+
+- **Emisor**
+- **Período**
+- **Número de serie**
+- **Fechas**
+- **Tercero**
+
+Cuando el resultado de la consulta **supera los 10.000 registros**, es posible aplicar **paginación** utilizando como referencia la **última factura consultada**. Para ello, se deben informar los siguientes campos:
+
+- **Emisor**: Número de Identificación Fiscal (NIF) del obligado a expedir la factura correspondiente al **último registro consultado**.
+- **Número de Serie**: Número de serie y número de factura que identifican el **último registro de facturación consultado**.
+- **Fecha de Emisión**: Fecha de emisión del **último registro de facturación consultado**.
+
+  
+ ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/consulta-facturas.png)
+
+
+## QR tributario
 
 Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar la verificación de su emisión y registro ante la Agencia Tributaria (AEAT).
 
