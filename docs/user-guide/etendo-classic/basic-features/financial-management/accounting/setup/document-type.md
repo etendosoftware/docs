@@ -21,7 +21,8 @@ This set is bundled into two reference datasets:
 -   Standard document types for orders, invoices, etc. and settings - Core - English (USA)
 -   Document types and default algorithm for bank statement auto matching - Advanced Payables
 
-These datasets can be imported into the application during its initial setup using [Initial Client Setup](../../../general-setup/getting-started.md#initial-client-setup) or [Initial Organization Setup](../../../general-setup/enterprise-model/initial-organization-setup.md) processes. Or if the application is already up and running, these datasets or their updates can be installed using [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md) window.
+!!!info
+    These datasets can be imported into the application during its initial setup using [Initial Client Setup](../../../general-setup/getting-started.md#initial-client-setup) or [Initial Organization Setup](../../../general-setup/enterprise-model/initial-organization-setup.md) processes. Or if the application is already up and running, these datasets or their updates can be installed using [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md) window.
 
 The complete list of standard document types is the following:
 
