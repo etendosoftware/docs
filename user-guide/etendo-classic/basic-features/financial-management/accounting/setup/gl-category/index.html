@@ -3310,6 +3310,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    GL Category
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3321,6 +3334,54 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -14593,6 +14654,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -14646,21 +14742,44 @@
 
 <h1 id="gl-category">G/L Category</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>G/L Category</code></p>
-<p>In this window, the user can define G/L Categories to be used in the General Ledger.</p>
-<p>The G/L Category Tab defines optional identifiers for a document or journal. Each Category may be used on a document, import or manual journal. </p>
-<p>The fields to note are:
-- G/L Category: A classification used to group lines in the general ledger.
-- Client: Client for this installation.
-- Organization: Organizational entity within client
-- Name: A non-unique identifier for a record/document often used as a search tool.
-- Description : A space to write additional related information.**
-- Active: A flag indicating whether this record is available for use or deactivated.
-- Category Type: Source of the Journal with this category
-- Document Category: A classification of document types that are shown and processed in the same window.
-- Default: A value that is shown whenever a record is created.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png"></a></p>
-<p>Once the needed information is complete, the categories are defined as in the following example: </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png"></a></p>
+<h2 id="overview">Overview</h2>
+<p>In this window, the user can <strong>view, create, and manage G/L Categories used to classify accounting entries in the General Ledger</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category.png"></a></p>
+<p>G/L (General Ledger) Categories act as <strong>classification identifiers that are later assigned to</strong> <a href="../document-type/">Document Types</a>. Once a G/L Category is linked to a Document Type, <strong>all accounting entries generated from that document are automatically categorized during posting</strong>, ensuring consistent classification without manual intervention.</p>
+<p>These categories can be applied to journals generated from documents, manually entered journals, or imported journals, and are mainly used for <strong>reporting, analysis, and grouping ledger lines across different sources</strong>.</p>
+<p>The main purpose of the G/L Category window is to <strong>define a controlled set of accounting classifications</strong> that standardize how ledger entries are grouped and analyzed.</p>
+<p>G/L Categories are typically created when:</p>
+<ul>
+<li>A new <strong>Document Type</strong> requires a distinct accounting classification.</li>
+<li>There is a need to <strong>differentiate accounting entries</strong> in financial reports (for example, separating operational journals from adjustment or closing entries).</li>
+<li>Imported or manually created journals must be <strong>clearly identified by origin or business purpose</strong>.</li>
+</ul>
+<p>Once created, G/L Categories are assigned in the <strong>Document Type</strong> window. From that point on, every document posted using that Document Type will automatically apply the corresponding G/L Category to its accounting entries. Creating unnecessary or overly granular categories is discouraged, as categories are intended to represent <strong>stable, high-level classifications</strong> rather than transactional details.</p>
+<h2 id="header">Header</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category2.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Client</strong>: The client this category belongs to.</li>
+<li><strong>Organization</strong>: The organization that will use the category.</li>
+<li><strong>Name</strong>: A descriptive record identifier that is used as a default search option. It is up to 60 characters in length.</li>
+<li><strong>Description</strong>: Additional information about the category.</li>
+<li>
+<p><strong>Active</strong>: A flag indicating whether this record is available for use or deactivated.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is possible to deactivate categories you no longer want users to pick; existing postings remain unchanged.</p>
+</div>
+</li>
+<li>
+<p><strong>Category Type</strong>: It indicates the source of the journal for this category. Journals can be generated from a document, entered manually or imported.</p>
+</li>
+<li><strong>Default</strong>: When checked, this category is selected by default for new records that use this category. This option speeds up data entry when necessary.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Select the create new option, fill in the corresponding fields and save it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category3.png"></a></p>
+<p>The created category is available to use in journal entries, imports, and document processing.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category4.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-category/gl-category4.png"></a></p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/G/L_Category" target="_blank">G/L Category</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
