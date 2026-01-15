@@ -59,7 +59,7 @@ La implementación cubre:
 
 ### Ventanas nuevas
 
-- [Configuración Verifactu](#configuración-verifactu): permite configurar emisores, seleccionar el impuesto aplicable (IVA, IPSI o IGIC) y monitorear incidencias en los envíos.
+- [Configuración Verifactu](#configuracion-verifactu): permite configurar emisores, seleccionar el impuesto aplicable (IVA, IPSI o IGIC) y monitorear incidencias en los envíos.
 
 - [Monitor Verifactu](#monitor-verifactu): permite consultar el estado de las facturas enviadas, así como identificar aquellas que han quedado inválidas por no superar validaciones previas.
 
@@ -75,7 +75,7 @@ Se añaden campos y pestañas específicas de Verifactu en las ventanas **Factur
     Se recomienda que las siguientes configuraciones sean realizadas por un usuario con rol **administrador**, ya que requieren ajustes técnicos.
 
 ### Configuración Verifactu
-:material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Configuración Verifactu`
 
 En la ventana **Configuración Verifactu** se define quién actuará como **emisor de las facturas** y con qué **impuesto se generarán**. En este caso, **cada organización legal que se cree será la responsable de la emisión**, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.
 
@@ -86,6 +86,9 @@ En la ventana **Configuración Verifactu** se define quién actuará como **emis
 Además, existe una sección de **Monitoreo** donde los campos **Arranque del Sistema** y **Parada del Sistema** indican, respectivamente, cuándo el entorno comenzó a estar operativo y cuándo dejó de estarlo. Esta información es útil para identificar con precisión los períodos en los que **Verifactu estuvo disponible** y aquellos en los que **no lo estuvo**.
 
 Por otra parte, el campo **Detalle Incidencia** se completará cuando un envío presente alguna incidencia causada por factores externos al contenido de la factura, como falta de conexión a internet, errores de servidores, timeouts u otros problemas de infraestructura o comunicación.
+
+  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
+
 
 ### Certificado Digital
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
@@ -203,6 +206,22 @@ Se recomienda consultar con su asesor fiscal cuál es el régimen que correspond
     Si se utilizan recargos de equivalencia, basta con completar el campo en el impuesto principal. Por ejemplo, para el impuesto **Entregas IVA+RE 21+5.2%**, que incluye los subimpuestos **Entregas IVA+RE 21+5.2% (+21%)** y **Entregas IVA+RE 21+5.2% (+5.2%)**, solo es necesario rellenar el campo en el impuesto Entregas **IVA+RE 21+5.2% (+21%)**.
 
 
+### Configuración para Procesos que Generan Facturas
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
+
+Para enviar a **Verifactu** las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**), se debe **configurar previamente el Tipo de Documento**.
+
+
+En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
+Los siguientes campos son **obligatorios**:
+
+- **Tipo de Factura**
+- **Descripción de Operación**
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+
+Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a Verifactu.
+
 ### Ajustes para Facturas Rectificativas por Sustitución o F3
 Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a Verifactu). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
 Por tanto, la utilización de esta funcionalidad requiere realizar determinados ajustes de configuración para garantizar que la información registrada y enviada sea correcta.
@@ -288,7 +307,7 @@ Debe completar los siguientes campos obligatorios en la Factura:
 !!! note
     Si para un **Tipo de Documento** se emiten siempre facturas del **mismo tipo** o con la **misma descripción**, este proceso puede agilizarse rellenando una única vez estos campos en la ventana **Tipo de Documento**, correspondiente al documento utilizado por la factura.  
 
-    Así, cada vez que se cree una factura con este documento, se rellenarán automáticamente los campos `Tipo de Factura` y `Descripción de la Operación`.
+    Así, cada vez que se cree una factura con este documento, se rellenarán automáticamente los campos **Tipo de Factura** y **Descripción de la Operación**.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
 
@@ -315,24 +334,7 @@ Al completar la factura:
 
 ### Creación Automática de Facturas de Venta
 
-Es posible enviar a **Verifactu** las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**). Para que esto funcione correctamente, es necesario **configurar previamente el Tipo de Documento**.
-
-#### Configuración Requerida en Tipo de Documento
-:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
-
-En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
-Los siguientes campos son **obligatorios**:
-
-- **Tipo de Factura**
-- **Descripción de Operación**
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
-
-Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a Verifactu.
-
-#### Comportamiento del Proceso Automático
-
-Una vez que un proceso ha generado la factura en estado **Completado**, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de Verifactu) **generará el registro de facturación** y, de forma inmediata, **enviará dicho registro a Verifactu.**
+Para aquellas facturas de venta en estado **Completado** que se generen desde procesos externos al flujo manual de facturación, el sistema ejecuta automáticamente un proceso interno —habilitado por defecto tras la instalación del módulo Verifactu y sin necesidad de configuración previa— que **genera el registro de facturación** y **remite dicho registro de forma inmediata a Verifactu**, utilizando los datos configurados en el Tipo de Documento, tal como se describe en la sección [Configuración para Procesos que Generan Facturas](#configuracion-para-procesos-que-generan-facturas).  
 
 !!! example
 
@@ -382,7 +384,7 @@ Debe utilizarse cuando el error afecta únicamente al `XML` (registro de factura
 
 - Hash incorrecto
 - NIF no censado
-- Error en el campo `ImporteTotal`
+- Error en el campo **ImporteTotal**
 
 **Acción:**
 
@@ -528,11 +530,15 @@ Con esta configuración, al **generar la factura** desde el pedido o la devoluci
 Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la **Agencia Tributaria.
 
 ### Monitor Verifactu
+:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Monitor Verifactu`
+
 Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
 
 ### Consulta Facturas Verifactu
+:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Consulta Facturas Verifactu`
+
 Este proceso permite obtener un **informe detallado de las facturas enviadas a Verifactu**, ofreciendo múltiples opciones de filtrado para facilitar la consulta:
 
 - **Emisor**
