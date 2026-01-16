@@ -52,6 +52,7 @@ exclude_docs:
 extra_javascript:
   - assets/javascripts/feedback.js
   - assets/javascripts/custom-search.js
+  - assets/javascripts/chat-widget.js
   - https://cdn.jsdelivr.net/npm/@docsearch/js@3
   - https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
   - https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
@@ -59,6 +60,7 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - assets/stylesheets/custom-styles.css
+  - assets/stylesheets/chat-widget.css
   - https://cdn.jsdelivr.net/npm/@docsearch/css@3
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
@@ -620,6 +622,7 @@ nav:
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Explore ERP Data with MCP: developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp.md
         - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
         - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
