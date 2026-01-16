@@ -5,6 +5,7 @@ tags:
     - Veri*Factu
     - Verifactu
     - Facturación Electrónica
+status: new
 ---
 
 # Verifactu
@@ -18,11 +19,11 @@ tags:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bOCK7A1cFms?si=VAfNntVPqse58GnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Las funcionalidades de **Verifactu** en Etendo proporcionan una solución integral para el cumplimiento de los nuevos requisitos establecidos por la **Agencia Estatal de Administración Tributaria Española** en materia de facturación. Su objetivo es garantizar la transparencia, prevenir el fraude fiscal y asegurar la integridad y trazabilidad de las facturas emitidas por empresas y profesionales.
+Las funcionalidades de *Verifactu* en Etendo proporcionan una solución integral para el cumplimiento de los nuevos requisitos establecidos por la **Agencia Estatal de Administración Tributaria Española** en materia de facturación. Su objetivo es garantizar la transparencia, prevenir el fraude fiscal y asegurar la integridad y trazabilidad de las facturas emitidas por empresas y profesionales.
 
-**VERI\*FACTU** forma parte del marco legal derivado del **Real Decreto 1007/2023** y la **Ley Antifraude (Ley 11/2021)**, que establecen la obligatoriedad de utilizar sistemas informáticos de facturación que cumplan con criterios técnicos específicos. Permite el envío automático y en tiempo real de los registros de facturación a la Agencia Tributaria.
+*Veri\*Factu* forma parte del marco legal derivado del **Real Decreto 1007/2023** y la **Ley Antifraude (Ley 11/2021)**, que establecen la obligatoriedad de utilizar sistemas informáticos de facturación que cumplan con criterios técnicos específicos. Permite el envío automático y en tiempo real de los registros de facturación a la Agencia Tributaria.
 
-Este módulo permite a Etendo automatizar procesos clave como la generación, el registro estructurado y el envío electrónico de facturas, cumpliendo con los estándares de VERI\*FACTU. El sistema garantiza la inalterabilidad de los datos, la inclusión de códigos QR y la generación de eventos asociados, aportando total trazabilidad a cada operación registrada.
+Este módulo permite a Etendo automatizar procesos clave como la generación, el registro estructurado y el envío electrónico de facturas, cumpliendo con los estándares de *Verifactu*. El sistema garantiza la inalterabilidad de los datos, la inclusión de códigos QR y la generación de eventos asociados, aportando total trazabilidad a cada operación registrada.
 
 !!! warning
     Al utilizar este módulo, **se restringirán** las siguientes funcionalidades:
@@ -32,10 +33,10 @@ Este módulo permite a Etendo automatizar procesos clave como la generación, el
     - Eliminación de facturas, pedidos o albaranes (incluso en estado borrador).
     - Modificación del Rango de un impuesto ya creado.
     - Configuración simultánea para un mismo emisor de:
-        - Verifactu + SII.
-        - Verifactu + TBAI.
-        - La combinación SII + TBAI **sí está permitida**.
-    - Eliminación de registros de facturación Verifactu y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las *llamadas/respuestas XML* durante el plazo legal correspondiente).
+        - *Verifactu* + *SII*.
+        - *Verifactu* + *TBAI*.
+        - La combinación *SII* + *TBAI* **sí está permitida**.
+    - Eliminación de registros de facturación *Verifactu* y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las *llamadas/respuestas XML* durante el plazo legal correspondiente).
 
 ## Descripción del módulo
 
@@ -44,12 +45,12 @@ El módulo permite:
 - Generar automáticamente los archivos `XML` de registro de facturación al emitir una factura, conforme a la estructura exigida por la AEAT.
 - Enviar estos archivos en tiempo real a la Agencia Tributaria.
 - Recibir las respuestas electrónicas de la AEAT con el resultado del procesamiento.
-- Incluir en las facturas los códigos QR y la marca **Veri\*Factu** exigidos por la normativa.
+- Incluir en las facturas los códigos QR y la marca *VeriFactu* exigidos por la normativa.
 - Consultar un historial detallado de todos los registros enviados, incluyendo sus estados de validación por parte de la AEAT.
 
 La implementación cubre:
 
-1. **Cumplimiento** técnico de los requisitos de Veri\*Factu.  
+1. **Cumplimiento** técnico de los requisitos de *Verifactu*.  
 2. **Automatización** del envío de registros desde el Etendo a la AEAT.  
 3. **Integración** con la generación de facturas en Etendo.  
 4. **Trazabilidad** y **control** del proceso de facturación, con registro de errores, rechazos y confirmaciones.  
@@ -63,11 +64,11 @@ La implementación cubre:
 
 - [Monitor Verifactu](#monitor-verifactu): permite consultar el estado de las facturas enviadas, así como identificar aquellas que han quedado inválidas por no superar validaciones previas.
 
-- [Consulta Facturas Verifactu](#consulta-facturas-verifactu): permite obtener un informe de las facturas enviadas a Verifactu, consultando la información directamente desde la Agencia Tributaria.
+- [Consulta Facturas Verifactu](#consulta-facturas-verifactu): permite obtener un informe de las facturas enviadas a *Verifactu*, consultando la información directamente desde la Agencia Tributaria.
 
 ### Nuevos campos
 
-Se añaden campos y pestañas específicas de Verifactu en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
+Se añaden campos y pestañas específicas de *Verifactu* en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
 
 ## Configuración
 
@@ -209,7 +210,7 @@ Se recomienda consultar con su asesor fiscal cuál es el régimen que correspond
 ### Configuración para Procesos que Generan Facturas
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
 
-Para enviar a **Verifactu** las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**), se debe **configurar previamente el Tipo de Documento**.
+Para enviar a *Verifactu* las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**), se debe **configurar previamente el Tipo de Documento**.
 
 
 En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
@@ -220,10 +221,10 @@ Los siguientes campos son **obligatorios**:
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
 
-Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a Verifactu.
+Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a *Verifactu*.
 
 ### Ajustes para Facturas Rectificativas por Sustitución o F3
-Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a Verifactu). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
+Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a *Verifactu*). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
 Por tanto, la utilización de esta funcionalidad requiere realizar determinados ajustes de configuración para garantizar que la información registrada y enviada sea correcta.
 
 ### Ajustes Contables
@@ -250,7 +251,7 @@ En la ventana **Plantillas de Contabilidad**, crear un registro con los siguient
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla-contabilidad.png)
 
 !!! note
-    Si el sistema ya dispone de una plantilla de contabilidad, debe aplicar los cambios que tenía en su plantilla a la plantilla de contabilidad de Verifactu, ya que solo es posible tener configurada una única plantilla.
+    Si el sistema ya dispone de una plantilla de contabilidad, debe aplicar los cambios que tenía en su plantilla a la plantilla de contabilidad de *Verifactu*, ya que solo es posible tener configurada una única plantilla.
 
 ### Configuración de Esquema Contable
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema Contable`
@@ -275,10 +276,10 @@ Esta cuenta es la que figura en la ventana :material-menu: `Aplicación` > `Dato
 
 ## Proceso de Envío a Verifactu
 
-A continuación se detallan los pasos necesarios para que una factura se dé de alta en Verifactu.  
+A continuación se detallan los pasos necesarios para que una factura se dé de alta en *Verifactu*.  
 
 !!! note 
-    Es importante aclarar que únicamente se envían a Verifactu las **facturas de venta**, facturas emitidas desde la ventana **Factura (Cliente)**.
+    Es importante aclarar que únicamente se envían a *Verifactu* las **facturas de venta**, facturas emitidas desde la ventana **Factura (Cliente)**.
 
 ### Creación de Factura Manualmente
 
@@ -322,11 +323,11 @@ Opcionalmente, puede completar:
 
 Al completar la factura:
 
-- Se genera un archivo adjunto con el **Registro de Facturación (RF)**, que será utilizado para dar de **Alta** la factura en Verifactu.
+- Se genera un archivo adjunto con el **Registro de Facturación (RF)**, que será utilizado para dar de **Alta** la factura en *Verifactu*.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf-adjunto.png)
 
-- Una vez generado el RF, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de Verifactu) se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada *60 segundos*.
+- Una vez generado el RF, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de *Verifactu*) se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada *60 segundos*.
 
 - El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu** refrescando los datos.
 
@@ -334,7 +335,7 @@ Al completar la factura:
 
 ### Creación Automática de Facturas de Venta
 
-Para aquellas facturas de venta en estado **Completado** que se generen desde procesos externos al flujo manual de facturación, el sistema ejecuta automáticamente un proceso interno —habilitado por defecto tras la instalación del módulo Verifactu y sin necesidad de configuración previa— que **genera el registro de facturación** y **remite dicho registro de forma inmediata a Verifactu**, utilizando los datos configurados en el Tipo de Documento, tal como se describe en la sección [Configuración para Procesos que Generan Facturas](#configuracion-para-procesos-que-generan-facturas).  
+Para aquellas facturas de venta en estado **Completado** que se generen desde procesos externos al flujo manual de facturación, el sistema ejecuta automáticamente un proceso interno —habilitado por defecto tras la instalación del módulo *Verifactu* y sin necesidad de configuración previa— que **genera el registro de facturación** y **remite dicho registro de forma inmediata a Verifactu**, utilizando los datos configurados en el **Tipo de Documento**, tal como se describe en la sección [Configuración para Procesos que Generan Facturas](#configuracion-para-procesos-que-generan-facturas).  
 
 !!! example
 
@@ -344,18 +345,18 @@ Para aquellas facturas de venta en estado **Completado** que se generen desde pr
     2. Mediante el proceso **Crear Facturas Desde Pedidos** (o cualquier otro proceso utilizado para la generación de facturas), se genera la **Factura**, la cual tomará los datos configurados en el **Tipo de Documento** utilizado.
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
 
-    3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a **Verifactu**.
+    3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a *Verifactu*.
         ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
 
 !!! warning  
-    Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a Verifactu.  
-    En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de Verifactu.
+    Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a *Verifactu*.  
+    En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de *Verifactu*.
 
 ## Proceso de Anulación de Factura
 
-Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema Verifactu en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
+Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema *Verifactu* en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
 
-Por tanto, los **clientes finales deben operar únicamente en entorno productivo**, lo que implica que **toda factura emitida será tratada como real** y su **registro será enviado automáticamente a la Agencia Tributaria**. El uso del entorno de pruebas de Verifactu **no está permitido para entornos de demostración, usuarios finales o actividades de formación**.
+Por tanto, los **clientes finales deben operar únicamente en entorno productivo**, lo que implica que **toda factura emitida será tratada como real** y su **registro será enviado automáticamente a la Agencia Tributaria**. El uso del entorno de pruebas de *Verifactu* **no está permitido para entornos de demostración, usuarios finales o actividades de formación**.
 
 En caso de necesitar realizar simulaciones en entorno productivo (por ejemplo, pruebas de funcionamiento o demostraciones), la Agencia Tributaria permite una operativa específica:
 
@@ -519,7 +520,7 @@ Para hacerlo:
 
 1. Seleccionar un tipo de documento rectificativo, en el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **Es Rectificativo**).
 
-2. Completar la sección Verifactu en el documento. Completar los campos de la sección **Verifactu** del **documento** indicando el **tipo de rectificación** que se usará.
+2. Completar los campos de la sección **Verifactu** del **documento** indicando el **tipo de rectificación** que se usará.
 
 3. Indicar la factura a rectificar. En la sección **Verifactu** del pedido o la devolución, completar el campo **Factura Rectificada** con la **factura original** que se va a rectificar.
 
@@ -562,7 +563,7 @@ Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar
 
 ### Beneficios
 
-- **Verificación por el receptor:** permite comprobar si la factura ha sido efectivamente enviada a la AEAT a través del sistema Verifactu.
+- **Verificación por el receptor:** permite comprobar si la factura ha sido efectivamente enviada a la AEAT a través del sistema *Verifactu*.
 - **Transparencia fiscal:** incrementa la confianza del cliente y contribuye a la prevención del fraude.
 - **Integridad documental:** garantiza la inalterabilidad y trazabilidad de las facturas una vez emitidas.
 

@@ -4,7 +4,7 @@ tags:
     - Localización Española
     - Facturación Electrónica
     - Ley Antifraude
-status: beta
+status: new
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.antifraud`
