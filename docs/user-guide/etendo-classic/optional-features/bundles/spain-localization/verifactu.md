@@ -183,7 +183,7 @@ Se recomienda consultar con su asesor fiscal cuál es el régimen que correspond
     | 19 | Operaciones interiores exentas. |
     | 20 | Régimen de estimación objetiva. |
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-ipsi.png_)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-ipsi.png)
 
 
 - Si no aplica impuesto: **Causa no Sujeción**
