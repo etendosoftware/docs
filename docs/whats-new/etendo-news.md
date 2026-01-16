@@ -12,6 +12,41 @@ tags:
 
 #
 
+## December 2025
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo release: Version 25.4 Now Available!**
+    
+    ---
+
+    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=500 align="right"}
+
+    The latest version [25.4](./release-notes/etendo-classic/release-notes.md) of Etendo is here! **All supported modules** have been fully updated to ensure seamless integration and top performance.
+
+    This release delivers powerful enhancements designed to boost efficiency, automation, and control across your operations:
+
+    - **Significantly improved Goods Shipment completion performance**  
+        Completing Goods Shipments is now faster and smoother than ever, eliminating bottlenecks and accelerating daily warehouse operations.
+      
+        - Blog: [Etendo 25.4 speeds up goods shipment completion: goodbye bottlenecks](https://etendo.software/en/blog/etendo-25-4-goods-shipment-performance/)
+
+    - **Automatic Document Type selection by Business Partner**  
+      
+        Etendo now supports Business Partner–specific Document Types across all automatic processes, such as *Create Invoice from Order*. This means invoices are generated using the Document Type configured for each Business Partner, instead of relying solely on organization-level defaults — improving accuracy, compliance, and flexibility.
+
+    - **More flexible and accurate sales commission calculations**  
+        
+        Margin-based commission issues have been resolved, and commissions can now be calculated in the desired currency. This provides greater transparency, precision, and adaptability for sales incentive management.
+      
+        - Documentation: [Commission](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/commission)
+        - Blog: [Sales commissions in ERP: how Etendo turns incentives into real business results](https://etendo.software/en/blog/sales-commissions-erp-etendo/)
+
+</div>
+
+
 ## November 2025
 
 ### Financial Extensions
@@ -32,7 +67,7 @@ tags:
     ---
 
     - Documentation: [Adjust Invoice Tax](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
-    - Blog: [Was Your Invoice Rejected Over a Few Cents? Discover How Etendo Solves Rounding and Accounting Imbalance Issues](https://etendo.software/en/invoice-tax-adjustment/){target="_blank"}
+    - Blog: [Was Your Invoice Rejected Over a Few Cents? Discover How Etendo Solves Rounding and Accounting Imbalance Issues](https://etendo.software/en/blog/invoice-tax-adjustment/){target="_blank"}
 
 </div>
 
@@ -74,9 +109,6 @@ tags:
     
 </div>
 
-
-
-
 ## September 2025
 
 ### Etendo
@@ -94,7 +126,7 @@ tags:
     In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
 
     - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
-    - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/document-type-tab-etendo-25-3/){target="_blank"}
+    - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>
 
@@ -139,7 +171,7 @@ tags:
     - **Refine searches** with advanced filters like organization, accounting date, and accounting status.
     --- 
     - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#not-posted-documents)
-    - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/not-posted-documents-window-etendo/){target="_blank"}
+    - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/blog/not-posted-documents-window-etendo/){target="_blank"}
 
 </div>
 
@@ -153,7 +185,7 @@ tags:
 
     ---
     - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#trial-balance)
-    - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/trial-balance-in-etendo/){target="_blank"}
+    - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/blog/trial-balance-in-etendo/){target="_blank"}
 
 - :material-view-list: **Smarter Financial Planning with Budget (Projections)**
 
@@ -169,7 +201,7 @@ tags:
     - Export, copy, and reuse budgets to accelerate financial planning. 
     ---
     - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
-    - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/budgets-in-etendo/){target="_blank"}
+    - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/blog/budgets-in-etendo/){target="_blank"}
 
 </div>
 
@@ -225,7 +257,7 @@ tags:
     ---
 
     - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced)
-    - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
+    - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/blog/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
 
 
 </div>
@@ -253,7 +285,7 @@ tags:
 
     - Try in demo environment: [Livebuilds](../live-builds/overview.md)
     - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
-    - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
+    - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/blog/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 
 </div>
 
@@ -288,8 +320,8 @@ tags:
     ---
 
     - Documentation: [How to Configure MCP Servers on Agents](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
-    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/discover-how-mcp-is-changing-the-game/){target="_blank"}
-    - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
+    - Blog: [Tired of slow and expensive integrations? Discover how MCP is changing the game](https://etendo.software/en/blog/discover-how-mcp-is-changing-the-game/){target="_blank"}
+    - Blog: [Gmail at Your Fingertips with Etendo Copilot: Seamless Productivity](https://etendo.software/en/blog/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
 </div>
 
 ### Warehouse Extensions
@@ -325,7 +357,7 @@ tags:
     In version [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the **Invoice Supervisor** agent is added to automatically create **purchase invoices** by processing multiple PDFs or images packed in a ZIP. Thanks to OCR, it extracts supplier, invoice number, currency, items, quantities, and totals, then drafts them in Etendo for review.
 
     - Documentation: [Invoice Supervisor](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor)
-    - Blog: [How do I reduce the operational burden on my purchasing team? With Agent Invoice Supervisor!](https://etendo.software/en/how-do-i-reduce-the-operational-burden-on-my-purchasing-team-with-agent-invoice-supervisor/){target="_blank"}
+    - Blog: [How do I reduce the operational burden on my purchasing team? With Agent Invoice Supervisor!](https://etendo.software/en/blog/how-do-i-reduce-the-operational-burden-on-my-purchasing-team-with-agent-invoice-supervisor/){target="_blank"}
 
 - :material-robot: **Bulk data uploads are a thing of the past: Google Drive and Sheets integration in Copilot**
 
@@ -333,7 +365,7 @@ tags:
     In version [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the new feature is added to connect Copilot to **Google Drive** and **Google Sheets** and use agents to create **products** or **business partners** in bulk from a spreadsheet via the **Task** module. Ideal for large-scale data imports.
 
     - Documentation: [Data Initialization Supervisor](../user-guide/etendo-copilot/bundles/overview.md#data-initialization-supervisor)
-    - Blog: [Bulk Data Upload in Etendo with Google Sheets: Automate and Optimize with AI](https://etendo.software/en/bulk-data-upload-in-etendo-with-google-sheets-automate-and-optimize-with-ai/){target="_blank"}
+    - Blog: [Bulk Data Upload in Etendo with Google Sheets: Automate and Optimize with AI](https://etendo.software/en/blog/bulk-data-upload-in-etendo-with-google-sheets-automate-and-optimize-with-ai/){target="_blank"}
 
 </div>
 
@@ -352,7 +384,7 @@ tags:
     In version [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle, the **Etendo SSO Login** was added enabling **Single Sign-On** authentication, simplifying user login and enhancing security using external identity providers, such as Google, Microsoft, LinkedIn, GitHub and Facebook.
 
     - Documentation: [Etendo SSO Login](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login)
-    - Blog: [Etendo SSO: Log in without passwords and with complete security](https://etendo.software/en/etendo-sso-log-in-without-passwords-and-with-complete-security/)
+    - Blog: [Etendo SSO: Log in without passwords and with complete security](https://etendo.software/en/blog/etendo-sso-log-in-without-passwords-and-with-complete-security/)
 
 </div>
 
@@ -387,7 +419,7 @@ tags:
         
     All from your mobile device. Every action synchronizes in real time with Etendo, say goodbye to bottlenecks and ensuring consistent data across your entire operation.
 
-    - Blog: [Perfect Orders in Minutes: the Change Your Warehouse Needs is Called Etendo Mobile](https://etendo.software/en/perfect-orders-in-minutes-the-change-your-warehouse-needs-is-called-etendo-mobile/){target="_blank"}
+    - Blog: [Perfect Orders in Minutes: the Change Your Warehouse Needs is Called Etendo Mobile](https://etendo.software/en/blog/perfect-orders-in-minutes-the-change-your-warehouse-needs-is-called-etendo-mobile/){target="_blank"}
 
 </div>
 
