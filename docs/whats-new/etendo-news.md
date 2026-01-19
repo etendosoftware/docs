@@ -22,29 +22,109 @@ tags:
     
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=500 align="right"}
+    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=600 align="right"}
 
     The latest version [25.4](./release-notes/etendo-classic/release-notes.md) of Etendo is here! **All supported modules** have been fully updated to ensure seamless integration and top performance.
 
     This release delivers powerful enhancements designed to boost efficiency, automation, and control across your operations:
 
-    - **Significantly improved Goods Shipment completion performance**  
-        Completing Goods Shipments is now faster and smoother than ever, eliminating bottlenecks and accelerating daily warehouse operations.
-      
-        - Blog: [Etendo 25.4 speeds up goods shipment completion: goodbye bottlenecks](https://etendo.software/en/blog/etendo-25-4-goods-shipment-performance/)
+    **Significantly improved Goods Shipment completion performance**  
+    Completing Goods Shipments is now faster and smoother than ever, eliminating bottlenecks and accelerating daily warehouse operations.
+    
+    - Blog: [Etendo 25.4 speeds up goods shipment completion: goodbye bottlenecks](https://etendo.software/en/blog/etendo-25-4-goods-shipment-performance/)
 
-    - **Automatic Document Type selection by Business Partner**  
+    **Automatic Document Type selection by Business Partner**  
       
-        Etendo now supports Business Partner–specific Document Types across all automatic processes, such as *Create Invoice from Order*. This means invoices are generated using the Document Type configured for each Business Partner, instead of relying solely on organization-level defaults — improving accuracy, compliance, and flexibility.
+    Etendo now supports Business Partner–specific Document Types across all automatic processes, such as *Create Invoice from Order*. This means invoices are generated using the Document Type configured for each Business Partner, instead of relying solely on organization-level defaults — improving accuracy, compliance, and flexibility.
 
-    - **More flexible and accurate sales commission calculations**  
+    **More flexible and accurate sales commission calculations**  
         
-        Margin-based commission issues have been resolved, and commissions can now be calculated in the desired currency. This provides greater transparency, precision, and adaptability for sales incentive management.
+    Margin-based commission issues have been resolved, and commissions can now be calculated in the desired currency. This provides greater transparency, precision, and adaptability for sales incentive management.
       
-        - Documentation: [Commission](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/commission)
-        - Blog: [Sales commissions in ERP: how Etendo turns incentives into real business results](https://etendo.software/en/blog/sales-commissions-erp-etendo/)
+    - Documentation: [Commission](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/commission)
+    - Blog: [Sales commissions in ERP: how Etendo turns incentives into real business results](https://etendo.software/en/blog/sales-commissions-erp-etendo/)
 
 </div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Platform Extensions Update: Smarter UI, Reports & Task Management**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/new-ui-0.9.0.png){ width=600 align="right"}
+
+    Platform Extensions bundle, in version [3.13.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) compatible with **Etendo 25** brings full compatibility with **Etendo 25.4** and delivers key enhancements focused on usability, reporting flexibility, and operational efficiency — helping teams work faster and with greater control.
+
+    **New Etendo UI – Beta 0.9.0**  
+    
+    The Workspace UI continues to evolve with usability-driven improvements to *filters, grids, and navigation*, delivering a cleaner, faster, and more intuitive user experience.
+        
+    - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
+    - Blog: [Etendo New Interface: Beta Improvements for Filters and Grids](https://etendo.software/en/blog/etendo-new-interface-beta-improvements-filters-grids/)
+
+    **More powerful task management with priorities**  
+    
+    The **Task** module now includes **task priority management**, allowing teams to better organize, focus, and execute work based on business impact.
+      
+    - Documentation: [Task – Priority Management](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md)
+
+</div>
+
+### Sales Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Sales Extensions Update: Smarter Quotations and Seamless Order Creation**
+    
+    ---
+
+    The **Sales Extensions** bundle in version [3.2.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) close the compatibility from **Etendo 25.4 and later**
+
+    **Automatic Document Type selection from Quotations to Orders**  
+
+    The *Advanced Quotation* module now automatically applies the *Business Partner–specific Document Type* when creating a **Sales Order from a Quotation**.  
+    This enhancement eliminates manual adjustments, reduces errors, and ensures that every sales document follows the correct fiscal and commercial configuration defined for each customer.
+
+    - Documentation: [Sales Quotation](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-quotation)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot Extensions Update: Functional Improvements and Expanded AI Capabilities**
+    
+    
+    ![](../assets/whats-new/etendo-news/copilot-december.png){ width=600 align="right"}
+
+    ---
+
+    With version [3.11.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the **Copilot Extensions** bundle, fully compatible with **Etendo 25.4.x**, several functional improvements and capability extensions have been introduced across the Copilot, agents, and tools.
+
+    **Copilot improvements**
+
+    - **Improved tools, model support and task evaluation**  
+        Copilot now provides structured handling of the tools schemas directory, adds support for the *gemini-3-pro-preview model*, and includes an enhanced task evaluator for more accurate multi-step and automated task execution.
+    
+    **Agent improvements:**
+
+    - **Purchase Invoice Expert enhancements**  
+        The [Purchase Invoice](../user-guide/etendo-copilot/bundles/overview.md#invoice-supervisor) agent has been updated with improved prompts, practical examples, and additional validations — including **total amount validation** — to ensure higher accuracy when creating or processing purchase invoices.
+
+    - **Product Generator alignment with Headless API**  
+        The [Product Generator](../user-guide/etendo-copilot/bundles/overview.md#data-initialization-supervisor) agent now uses the **Headless API specification**, improving consistency with backend services and ensuring more predictable data creation workflows.
+
+    **Tool Pack updates:**
+
+    - **OCR Tool advanced capabilities**  
+      The [OCR Tool](../developer-guide/etendo-copilot/available-tools/ocr-tool.md) has been extended with advanced recognition features, improving text extraction, with support for automatic reference template matching, structured output schemas, and multi-provider configuration and expanding its applicability to more complex documents.
+
+</div>
+
 
 
 ## November 2025
@@ -79,7 +159,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/newui-0.8.0.png){ width=500 align="right"}
+    ![](../assets/whats-new/etendo-news/new-ui-0.8.0.png){ width=500 align="right"}
 
     In version [3.12.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the Platform Extensions bundle compatible with **Etendo 25**, new update published, a beta for the new **Workspace UI** was released in November, giving users early access to the refreshed interface: improved look & feel, more intuitive navigation, and modernized workflows. 
     
