@@ -733,10 +733,39 @@ The picking process allows the operator to pick the products required for an ord
 
 #### Process Start (Etendo)
 
-The process is started in Etendo when a [Picking List](../../../../optional-features/bundles/warehouse-extensions/picking.md#picking-list-generation) is created from the sales order, this process will create a new **task** that will be assigned to a user.
+The process is started in Etendo when a [Picking List](picking.md#picking-list-generation) is created from a Sales Order. This can be done using the **Generate Picking List** button available in the Sales Order window, which creates a new **task** that will be assigned to a user for execution in Etendo Mobile.
 
 !!!Important
     Remember the only picking lists that are shown in Etendo Mobile are those marked as **Direct Picking List to Customer** type.
+
+When a picking list is generated, the system runs automatic background processes that vary depending on the configuration. In certain situations, some of these processes can fail without the user noticing immediately.
+
+In order to provide greater visibility, the system displays a **warning message** at different stages of the process, that includes a link to the Task window. From there, the user can check the details of each process executed and review the corresponding logs, ensuring better control over the correct completion of operations.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png)
+
+The processes that must be verified are as follows:
+
+- For a **Picking tasks with active Packing task creation**:
+
+    - Create Shipment
+    - Create Picking List
+    - Process Picking List
+    - Create Packing Task
+
+- For a **Picking tasks without creating a Packing task**:
+
+    - Create Picking List
+    - Create Shipment
+    - Process Picking List
+
+Example of logs without errors:
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png)
+
+Example of logs with errors:
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png)
 
 #### Access to Picking Tasks (Etendo Mobile)
 
