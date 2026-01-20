@@ -92,7 +92,7 @@ After saving the agent, the system will automatically grant access to it. Open t
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent.png)
 
 !!! tip
-    From the most basic agent, its behavior is determined by its system prompt. Therefore, in case of an undesired operation, it is important to verify that the failure is not in an incorrect, inefficient or unclear prompt. It is possible to debug LLM calls with Langsmith. Read the [How to debug an agent prompt with Langsmith](./how-to-debug-an-agent-prompt-with-langsmith.md) article for more information.
+    From the most basic agent, its behavior is determined by its system prompt. Therefore, in case of an undesired operation, it is important to verify that the failure is not in an incorrect, inefficient or unclear prompt. It is possible to debug LLM calls with Langsmith. Read the [How to debug an agent with Langsmith](./how-to-debug-an-agent-with-langsmith.md) article for more information.
     
 
 ## Which Model Should I Choose?
