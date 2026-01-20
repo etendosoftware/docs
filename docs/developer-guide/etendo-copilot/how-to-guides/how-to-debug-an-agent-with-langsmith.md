@@ -6,15 +6,15 @@ tags:
   - Observability
 ---
 
-# How to Debug an Agent Prompt with LangSmith
+# How to Debug an Agent with LangSmith
 
 ## Introduction
-Langsmith is a powerful observability tool that allows you to track and analyze the performance of your AI applications, if based on LangChain/Langgraph. It provides a comprehensive view of your application's behavior, enabling you to identify bottlenecks, optimize performance, and improve user experience.
+LangSmith is a powerful observability tool that allows you to track and analyze the performance of your AI applications, if based on LangChain/LangGraph. It provides a comprehensive view of your application's behavior, enabling you to identify bottlenecks, optimize performance, and improve user experience.
 This tutorial guides you through setting up the observability SDK to track Copilot in LangSmith.
 
 
 ## Create an API Key
-Go to the [Langsmith Website](https://smith.langchain.com/){target=_isblank} and log in. If you don't have an account, create one.
+Go to the [LangSmith Website](https://smith.langchain.com/){target=_isblank} and log in. If you don't have an account, create one.
 
 To create an API key, navigate to the LangSmith settings page. Then, click on **Create API Key** and follow the instructions.
 
@@ -23,20 +23,18 @@ To create an API key, navigate to the LangSmith settings page. Then, click on **
 Configure your `gradle.properties` file to include the following environment variables:
 
 ```properties
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
-LANGCHAIN_API_KEY="your-langsmith-api-key"
-LANGCHAIN_PROJECT="your project name"
+LANGSMITH_TRACING=true
+LANGSMITH_API_KEY="your-langsmith-api-key"
+LANGSMITH_WORKSPACE_ID="your-workspace-id"
 ```
 
-- `LANGCHAIN_TRACING_V2`: Set to `true` to enable tracing.
-- `LANGCHAIN_ENDPOINT`: The endpoint for LangSmith.
-- `LANGCHAIN_API_KEY`: Your API key from LangSmith.
-- `LANGCHAIN_PROJECT`: The name of your project in LangSmith. The executions, called traces, and events will be stored under this name. If this project does not exist, it will be created automatically. For this article, the name will be `MyLangsmithProjectForCopilot`.
+- `LANGSMITH_TRACING`: Set to `true` to enable tracing.
+- `LANGSMITH_API_KEY`: Your API key from LangSmith.
+- `LANGSMITH_WORKSPACE_ID` (Optional): Your workspace ID in LangSmith. If not provided, the "default" workspace will be used. The executions, called traces, and events will be stored under this workspace.
 
 Ensure you restart Copilot to set environment variables in the container.
 
-``` bash title="Terminalß"
+``` bash title="Terminal"
 ./gradlew resources.up --info
 ```
 
@@ -44,9 +42,9 @@ Ensure you restart Copilot to set environment variables in the container.
 
 - Once in LangSmith, access to your organization's projects is available.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith.png)
-- In *Tracing Projects*, the name set in the `LANGCHAIN_PROJECT` variable should appear. This is the project where all traces will be stored.
+- In *Tracing Projects*, the traces will be stored under the workspace defined in the `LANGSMITH_WORKSPACE_ID` variable.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-1.png)
-- Selecting your project allows you to view the trace of queries made in Copilot and evaluate responses.
+- Selecting your workspace allows you to view the trace of queries made in Copilot and evaluate responses.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-2.png)
 
 ## Usage Example
@@ -105,32 +103,32 @@ This feature is crucial for testing various requests and modifying prompts to me
 
 ## System Prompt Debugging
 The playground allows you to debug the prompt used in the agent. This is useful to improve the behavior of the agent in case of unexpected results.
-As we have seen above, in Langsmith you can see the execution of tools and other actions performed by the agent, which are indicated by the LLM. That is, the decision or reasoning comes from the LLM and it is at these points that we can use it. 
+As we have seen above, in LangSmith you can see the tool executions and other actions performed by the agent, as determined by the LLM. Since the reasoning originates from the LLM, these are the key points where we can intervene to optimize behavior. 
 
-When loading the playground we will see:
+When loading the playground, you will see:
 
 - The system prompt.
-- And the sequence of messages, tool executions and answers up to that moment.
+- The sequence of messages, tool executions, and responses up to that point.
 
-When executing Start, what we do is to request to the LLM, its answer given that system prompt and that conversation. Where we will be able to receive an answer in text or the order to execute a tool with certain parameters.
+When executing Start, you request the LLM's answer based on the system prompt and conversation. From there, you can receive a text response or an instruction to execute a tool with specific parameters.
 
-Then, if analyzing the execution trace, we find the point where the agent “made a mistake” or “decided wrong”, we can place ourselves at that point and adjust the prompt to improve the reasoning. Additionally, we can execute this request multiple times to make sure it has decided correctly because the prompt was improved and not by chance (the LLM is not deterministic in situations not clearly defined).
+Then, if by analyzing the execution trace we find where the agent "made a mistake" or "decided incorrectly," we can go to that point and adjust the prompt to improve its reasoning. Additionally, we can execute the request multiple times to ensure the correct decision is consistent and not due to chance, as LLMs aren't deterministic in loosely defined situations.
 
 ### Example
 
-In this example we will see how to improve the prompt of an agent that is not giving the expected answer.
-In this case we will use the agent **Writer Agent**, and the prompt is:
+In this example, we will see how to improve the prompt of an agent that is not providing the expected answer.
+In this case, we will use the **Writer Agent** with the following prompt:
 
 ```text
-You task is to write notes.
+Your task is to write notes.
 The path must be ./[filename].txt
 ```
 The request is:
 ```text
-Create a note that remind me "call to my boss, tomorrow"
+Create a note that reminds me to "call my boss tomorrow"
 ```
 
-Inspecting the trace, can see the LLM decision to execute the tool **WriteFileTool** with the parameters:
+Inspecting the trace, you can see the LLM's decision to execute the **WriteFileTool** with these parameters:
 ```text
 filepath: ./reminder.txt
 content: call to my boss, tomorrow
@@ -138,11 +136,11 @@ override: false
 ```
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-18.png)
 
-So, suppose we want to change the agent name the file to use SnakeCase, and the format of the note to be more formal and structured.
-We can open the playground and see the system prompt and change it to:
+Suppose we want the agent to use snake_case for filenames and a more formal, structured format for the notes.
+We can open the playground, view the system prompt, and change it to:
 ```text
-You task is to write notes.
-the path must be ./[filename].txt
+Your task is to write notes.
+The path must be ./[filename].txt
 
 - The file name must be in snake_case.
 - The format of the note is: 
@@ -152,7 +150,7 @@ DESCRIPTION:
 ```
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-19.png)
 
-So, to see if the change was effective, we can execute the request again and see the result. For better results, we can execute the request multiple times to see if the result is consistent.
+To verify the change, we can rerun the request. For more reliable results, we can execute it multiple times to ensure the behavior is consistent.
 
 After executing the request, we can see that the file name is now in snake_case and the format of the note is more structured with the requirements we set in the prompt.
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-20.gif)
