@@ -58,7 +58,7 @@ Etendo allows the user to post transactions to the ledger only if the financial 
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
-![](../../../../../assets/drive/15B7fD-yrlWdAqXA0BmxcG_IA66xSpAoD.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/acct-transaction-details-1.png)
 
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
@@ -73,11 +73,11 @@ The Balance Sheet report is a quantitative summary of an organization's financia
 
 Profit and Loss report shows earnings, expenses and the net profit of an organization.
 
-These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup.md#balance-sheet-and-pl-structure-setup) window.
+These reports need to be configured prior to be launched in the [Balance Sheet and P&L Structure Setup](../accounting/setup/balance-sheet-and-pl-structure-setup.md) window.
 
 ### Header
 
-![](../../../../../assets/drive/1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-1.png)
 
 As shown in the image above, data to fill in is:
 
@@ -111,11 +111,11 @@ Under the **Primary Filters** section, it is possible to specify:
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
-![](../../../../../assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-report-1.png)
 
 **P&L Report Example**
  
-![](../../../../../assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/profit-and-loss-report-1.png)
 
 ## Balance Sheet and P&L Structure Advanced
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Balance Sheet and P&L Structure Advanced`
@@ -125,13 +125,13 @@ Under the **Primary Filters** section, it is possible to specify:
 ### Overview 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    This functionality is available starting from version **3.4.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Balance Sheet and P&L Structure Advanced** report is an enhanced version of the previous [Balance Sheet and P&L Structure](#balance-sheet-and-pl-structure). Its purpose is to expand the filtering criteria, including all available accounting dimensions and the ability to compare multiple years or periods.
 
 ### Header
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-2.png)
 
 Fields to note:
 
@@ -183,11 +183,11 @@ Also, in addition to the previous **Primary Filters**:
 
 In this report, the **View**, **Export to PDF**, and **Export to Excel** buttons are added to the top bar, allowing you to either view the information directly or export it in different formats as needed.
 
-![](../../../../../assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-3.png)
 
 **P&L Report Example**
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/P&L-adv-2.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-4.png)
 
 ## Trial Balance
 
@@ -307,7 +307,7 @@ These dimensions are recorded when transactions are posted to the ledger. Transa
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
@@ -343,7 +343,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
     - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreport2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-2.png)
 
 ## General Ledger Report Advanced
 
@@ -354,15 +354,17 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+### Overview
+
 This **General Ledger Advanced** report is an enhanced version of the previous [General Ledger Report](#general-ledger-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-1.png)
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
 
+- Activity
 - 1st Dimension
 - 2nd Dimension
-- Activity
 - Sales Region
 - Sales Campaign
 - Cost Center
@@ -371,7 +373,7 @@ Moreover, the Organization filter was added, a filter that combines the original
 
 The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-2.png)
 
 In the Group By menu, the following options are added:
 
@@ -384,20 +386,20 @@ In the Group By menu, the following options are added:
 
 It is possible to select the desired accounting dimension for the grouping. When generating the report, the selected dimension appears in the header, indicating the grouping criteria used.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv4.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-4.png)
 
 ### Buttons
 
 In the toolbar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv3.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related journal entry directly from the report. This allows easier and more efficient access to information. By clicking on a journal entry, the user can navigate to the Journal Entries Report window, applying all selected filters.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/generalledgerreportadv5.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-5.png)
 
 ## Journal Entries Report
 
@@ -409,7 +411,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-1.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -440,7 +442,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 - *HTML* format. An example of the HTML output:
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journalentriesreport2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-2.png)
 
 - *PDF* format by using the "Print Record" action button of the Toolbar
 - or *XML* format by using the "Export to Excel" action button of the Toolbar.
@@ -454,9 +456,11 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
+### Overview
+
 This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](#journal-entries-report). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-1.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
@@ -473,7 +477,7 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 
 The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera3.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-2.png)
 
 After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.
 
@@ -481,14 +485,14 @@ After using the available fields and checkboxes, the report filters the transact
 
 In the upper bar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera1-1.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. 
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/jera2.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-4.png)
 
 ## Create Tax Report
 
@@ -538,46 +542,76 @@ Once these fields have been introduced, it will be possible to print the Report 
 
 :material-menu: `Application` > `Financial Management` > `Accounting` > `Analysis Tools` > `Customer Statement`
 
-### Overview
-
-Customer statement is a consolidated statement of every transaction of a customer posted to the ledger over a given period.
-
-Transactions aggregated from various sources like:
-
-- **Sales Invoices**
-- **Payment In**
-- **Financial Transactions**
-- **Reconciliations**
+!!! info
+    This functionality is available starting from version **3.8.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 !!! warning
-    Note that *Completed* but not *posted* transactions are not taken into consideration.
+    If you do not have the [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, the report will remain in a legacy version with limited functionality.
 
-In case that a business partner is a customer as well as a vendor, the Customer Statement shows only customer related transactions and does not take into account vendor related transactions.
+### Overview
 
-The *Multicurrency* parameter of the report, in case of checked, will group records based on the currency records and display original currency amounts. If unchecked, it will not group records, and it will display ledger currency amounts.
+The **Customer Statement** is a consolidated report that displays all transactions of a business partner posted to the ledger over a specified period. This report provides a complete financial history of the business relationship, showing debits, credits, and running balances for each transaction.
 
-The Customer Statement provides the following details:
+This report can be generated for business partners configured as:
 
-- The credit/debit information including the document number of the transaction
-- The accounting date
-- The document type of the transaction. (i.e. AR Invoice, Financial Account Transaction, etc)
-- The net financial value of each transaction as \[Debit - Credit\], this column represents the accumulated value of the net financial value transaction by transaction, therefore an accumulated net financial value for the end of the given period is the end balance of the customer statement.  
-    Note that negative amounts are highlighted by using brackets ().
+- **Customer**: Displays customer-related transactions (sales invoices, payments received, etc.).
+- **Vendor**: Displays vendor-related transactions (purchase invoices, payments made, etc.).
+- **Customer/Vendor**: Displays all transactions for business partners with both roles.
 
-#### Customer Statement Report
+The report aggregates transactions from various sources including:
 
-An example of the customer statement filter is shown in the image below:
+- Sales Invoices / Purchase Invoices
+- Payment In / Payment Out
+- Financial Transactions
+- Reconciliations
 
-![](../../../../../assets/drive/1rYsGNhlgTxXIUQR4NxlDh2_4uLDvm_WA.png)
+!!! warning
+    Only *Posted* transactions are included in the report. *Completed* but not *posted* transactions are not taken into consideration.
 
-Note about some filters:
+The Customer Statement provides the following information for each transaction:
 
-- **Multicurrency.** If there are transactions in multiple currencies for the selected Business Partner, it is possible to use them to split the report. By default, this report converts all currency values into the currency of the General Ledger. If this flag is checked, then the report will be split by each different currency (each one with its initial and ending balance isolated from the rest).
-- **Sum Initial Balance.** By default, the report starts with an Initial Balance, then there are the transactions that have happened with the Business Partner, and for each one there is a Net Balance. The Ending Balance is the Initial Balance plus the final Net Balance. However, if this check is enabled, the Initial Balance is aggregated into each one of the Net Balances, in this case the final Balance is the same one as the last Net Balance.
+- **Document Number**: Identification of the transaction.
+- **Accounting Date**: Date when the transaction was posted.
+- **Document Type**: Type of transaction (e.g., AR Invoice, AP Invoice, Financial Account Transaction).
+- **Debit/Credit**: Financial amounts of each transaction.
+- **Net Balance**: Accumulated balance calculated as \[Debit - Credit\] for each transaction, showing the running balance throughout the period.
+
+!!! note
+    Negative amounts are highlighted by using brackets ( ).
+
+### Header
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement-report-1.png)
+
+As shown in the image above, the following parameters can be configured:
+
+- **Report Type**: Defines the type of report to generate. Options include:
+    - **Customer**: Displays customer-related transactions.
+    - **Vendor**: Displays vendor-related transactions.
+    - **Customer/Vendor**: Displays all transactions for business partners with both roles. The report shows vendor and customer transactions separately, dividing them into distinct sections.
+- **Organization**: The organization for which the statement will be generated.
+- **General Ledger**: The general ledger associated with the selected organization.
+- **Business Partner**: The business partner (customer, vendor, or both) for which to generate the statement.
+- **Starting Date**: Starting date of the period to include in the report.
+- **Ending Date**: Ending date of the period to include in the report.
+- **Multicurrency**: 
+    - **Unchecked** (default): Does not group records by currency and displays all amounts in the General Ledger currency.
+    - **Checked**: Groups records by currency and displays original currency amounts. The report will be split by each different currency, each one with its initial and ending balance isolated from the rest.
+- **Sum Initial Balance**: 
+    - **Unchecked** (default): The report shows an Initial Balance at the beginning, then lists each transaction with its Net Balance. The Ending Balance equals the Initial Balance plus the final Net Balance.
+    - **Checked**: The Initial Balance is aggregated into each transaction's Net Balance, making the final Ending Balance equal to the last Net Balance shown.
+
+### Buttons
+
+In the toolbar, you can find the following buttons to generate the report:
+
+- **View**: Opens the report results in a new window for immediate visualization.
+- **Export to PDF**: Generates a PDF version of the report that can be printed or stored.
+- **Export to Excel**: Generates an Excel file of the report for further analysis or customization.
 
 An example of the Customer Statement output:
 
-![](../../../../../assets/drive/1knnrLJDapnNKaokRPFgInW3mIQcJBHIo.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement-report-2.png)
 
 ## Tax Report Setup
 

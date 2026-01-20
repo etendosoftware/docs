@@ -114,7 +114,7 @@ Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá c
 
 ![](../../../../../assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
 
-De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
+De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2025.
 
 2. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
 
@@ -215,7 +215,8 @@ Los parámetros de entrada tienen que ver con datos que no pueden extraerse dire
 -   campos de texto para introducir los **resultados a ingresar en las autoliquidaciones de IVA del ejercicio**, si aplica.
 -   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
 -   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
--   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
+-   campo de texto para introducir las **cuotas pendientes de compensación al término del ejercicio** 
+-   campo de texto para introducir el **Resultado de la autoliquidación del último período a devolver**
 
 
 

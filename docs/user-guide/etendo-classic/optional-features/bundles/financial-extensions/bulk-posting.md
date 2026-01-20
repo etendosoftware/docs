@@ -28,7 +28,7 @@ This functionality is available in the following windows:
 - [Amortization](../../../basic-features/financial-management/assets/overview.md#bulk-posting)
 - [Goods Movements](../../../basic-features/warehouse-management/transactions.md#bulk-posting_1)
 - [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
-- [Matched Invoices](../../../basic-features/procurement-management/transactions.md#bulk-posting_2)
+- [Matched Purchase Invoices](../../../basic-features/procurement-management/transactions.md#bulk-posting_2)
 - [Cost Adjustment](../../../basic-features/warehouse-management/transactions.md#bulk-posting_3)
 - [Bill of Materials Production](../../../basic-features/warehouse-management/transactions.md#bulk-posting_2)
 - [Internal Consumption](../../../basic-features/production-management/transactions.md#bulk-posting_1)

@@ -424,7 +424,7 @@ Save the record and the document sequence for rappels is available.
 ![document_sequence_new.png](../../../../assets/legacy/document_sequence_new.png)
 
 !!! info
-    For more information, visit [Document Sequence](../financial-management/accounting/setup.md#document-sequence)
+    For more information, visit [Document Sequence](../financial-management/accounting/setup/document-sequence.md)
 
 #### Document type
 
@@ -452,7 +452,7 @@ After saving it, it is necessary to select “rappel” in the field “Document
     For each organization, it is possible to configure only one "rappel" document type.
 
 !!! info
-    For more information, visit [Document Type](../financial-management/accounting/setup.md#document-type)
+    For more information, visit [Document Type](../financial-management/accounting/setup/document-type.md)
 
 ### Rappel Configurations
 
