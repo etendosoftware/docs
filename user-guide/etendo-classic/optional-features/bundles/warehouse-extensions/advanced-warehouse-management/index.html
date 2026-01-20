@@ -16525,11 +16525,38 @@ Use the <strong>Generate Task</strong> button to create a quality inspection tas
 <p>For more information about how to use this functionality in Etendo, visit <a href="../picking/">Picking</a>.</p>
 </div>
 <h4 id="process-start-etendo_1">Process Start (Etendo)</h4>
-<p>The process is started in Etendo when a <a href="../../../../optional-features/bundles/warehouse-extensions/picking.md#picking-list-generation">Picking List</a> is created from the sales order, this process will create a new <strong>task</strong> that will be assigned to a user.</p>
+<p>The process is started in Etendo when a <a href="../picking/#picking-list-generation">Picking List</a> is created from a Sales Order. This can be done using the <strong>Generate Picking List</strong> button available in the Sales Order window, which creates a new <strong>task</strong> that will be assigned to a user for execution in Etendo Mobile.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Remember the only picking lists that are shown in Etendo Mobile are those marked as <strong>Direct Picking List to Customer</strong> type.</p>
 </div>
+<p>When a picking list is generated, the system runs automatic background processes that vary depending on the configuration. In certain situations, some of these processes can fail without the user noticing immediately.</p>
+<p>In order to provide greater visibility, the system displays a <strong>warning message</strong> at different stages of the process, that includes a link to the Task window. From there, the user can check the details of each process executed and review the corresponding logs, ensuring better control over the correct completion of operations.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png"></a></p>
+<p>The processes that must be verified are as follows:</p>
+<ul>
+<li>
+<p>For a <strong>Picking tasks with active Packing task creation</strong>:</p>
+<ul>
+<li>Create Shipment</li>
+<li>Create Picking List</li>
+<li>Process Picking List</li>
+<li>Create Packing Task</li>
+</ul>
+</li>
+<li>
+<p>For a <strong>Picking tasks without creating a Packing task</strong>:</p>
+<ul>
+<li>Create Picking List</li>
+<li>Create Shipment</li>
+<li>Process Picking List</li>
+</ul>
+</li>
+</ul>
+<p>Example of logs without errors:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png"></a></p>
+<p>Example of logs with errors:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png"></a></p>
 <h4 id="access-to-picking-tasks-etendo-mobile">Access to Picking Tasks (Etendo Mobile)</h4>
 <p>When accessing <strong>Etendo Mobile</strong> into the <strong>Picking</strong> section, all tasks and their corresponding statuses and priorities, belonging to the logged in user, will be displayed. By default, the tasks are shown in <em>Pending</em> status.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png" data-desc-position="bottom"><img align="right" alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png" width="300"></a></p>
