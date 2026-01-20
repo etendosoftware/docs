@@ -67,7 +67,7 @@ In order to generate picking lists, some configuration is needed:
 
 - **Picking List Auto Close Preference**: When using Outbound Picking List, in order to set automatically Picking List status from All Confirmed to Closed, a preference `Picking List Auto Close` with default value N is available. Users could enable this preference to automatically close picking when all lines are confirmed.
 
-- **Reservations Preference**: A preference needs to be configured in order to enable Stock Reservations feature.
+- **Reservation preference**: You must configure a preference to enable the stock reservation feature (if the *Warehouse Extensions* bundle is installed, this preference is preconfigured by default; you only need to perform this step if you install the module independently).
 
     As Client Admin, go to the [Preference window](../../../basic-features/general-setup/application/preference.md) and create a new one as shown below:
 
