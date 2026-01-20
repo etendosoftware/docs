@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
             li.className = "md-search-result__item";
 
             const a = document.createElement("a");
-            // Dynamic link building
             let finalUrl = hit.url;
             if (finalUrl) {
                 if (!finalUrl.startsWith("http")) {
@@ -95,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
             article.className = "md-search-result__article md-typeset";
             article.setAttribute("data-md-score", hit.score || "0");
 
-            // --- Title ---
             const h1 = document.createElement("h1");
             if (hit.title) {
                 const escapedQuery = escapeRegExp(query);

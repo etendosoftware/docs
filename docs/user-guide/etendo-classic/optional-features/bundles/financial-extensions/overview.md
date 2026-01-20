@@ -41,8 +41,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
-
+    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
 
 ### Adjust Invoice Tax
@@ -190,16 +189,17 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanced**, **Journal Entries Report Advanced**, **Trial Balance** and **Purchase Invoice Dimensional Report** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+The **Balance Sheet and P&L Structure Advanced**, **Customer Statement** **General Ledger Report Advanced**, **Journal Entries Report Advanced**, **Purchase Invoice Dimensional Report** and **Trial Balance** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
     For more information, visit:
     
     - [Balance Sheet and P&L Structure Advanced ](../../../basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [Customer Statement](../../../basic-features/financial-management/accounting/analysis-tools.md#customer-statement) user guide.
     - [General Ledger Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
     - [Journal Entries Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced) user guide.
-    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
     - [Purchase Invoice Dimensional Report](../../../basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report) user guide.
+    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
 
 ### Financial Report Budget
 
