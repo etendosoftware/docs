@@ -22,7 +22,7 @@ tags:
     
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=600 align="right"}
+    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=500 align="right"}
 
     The latest version [25.4](./release-notes/etendo-classic/release-notes.md) of Etendo is here! **All supported modules** have been fully updated to ensure seamless integration and top performance.
 
@@ -46,6 +46,60 @@ tags:
 
 </div>
 
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse & Logistics Extensions Update: Mobile Tasks, Quality Control and Logistic Units**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
+
+    With version [3.5.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the **Warehouse Extensions** bundle, several functional enhancements have been introduced to mobile warehouse operations, inventory quality control, barcode processing, and logistic unit management.
+
+    **New mobile warehouse task screens**  
+    
+    New mobile-friendly screens have been added to support core warehouse operations, including [Reception](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks), [Relocation](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks), [Inventory Adjustment](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#adjustment-tasks), and [Inventory Quality Inspection](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#inventory-quality-inspection) (both mobile and ERP).
+    
+    These screens include line-level quality validation, automatic inventory movement generation per inspection, support for alternative Units of Measure, and multiple usability improvements such as auto-scroll, filters, and validations.
+
+    - Blog: [Inbound Receipt in Etendo Logistics](https://etendo.software/en/blog/inbound-receipt-etendo-logistics/)
+
+    **Inventory quality inspection enhancements**  
+      
+    The possibility of performing quality inspections in all warehouses is included, using the task system, ensuring that all products in the warehouse are in optimal condition, which improves traceability and data accuracy.
+
+    - Documentation: [Inventory Quality Inspection](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#inventory-quality-inspection)
+
+    **Advanced barcode management**  
+    
+    Barcode handling has been expanded to support *custom attributes*, including batch and expiration date information, as well as the ability to dynamically define other attributes. Barcode handling has also been implemented to identify boxes and pallets. 
+    Barcode processing and validation logic has been improved to ensure faster and more reliable task execution.
+
+    **Labels and barcode printing improvements**  
+    
+    The [Print Label](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#buttons) button is now available from the *Inbound Receipt* window, with support for printing labels for boxes, pallets, and products based on the operational quantity.
+    
+    **Task prioritization and execution order**  
+    
+    Warehouse tasks now display *priority directly on task cards*, support sorting by sequence number, and store priorities in a *user-managed custom table*, providing greater flexibility and control over task execution.
+
+    **Logistic Unit management enhancements**  
+    
+    Support has been added for *referenced inventory of boxes and pallets*, including automatic *Logistic Unit creation upon Goods Receipt completion*.  
+    A redesigned *Stock by Logistic Units* tab now displays inventory grouped, improving visibility and stock control.  
+    Configuration preferences related to Logistic Units have been refactored and expanded to support these scenarios.
+
+    - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+    - Blog: [Sales and Stock Control by Packaging Formats in Etendo](https://etendo.software/en/blog/sales-stock-control-packaging-formats-etendo/)
+
+    **Performance and usability improvements**  
+    
+    Screen loading performance has been improved, automatic refresh is applied when returning from task detail screens, and naming across buttons, fields, columns, and messages has been normalized for consistency.
+
+</div>
+
 ### Platform Extensions
 
 <div class="grid cards" markdown>
@@ -54,9 +108,9 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/new-ui-0.9.0.png){ width=600 align="right"}
+    ![](../assets/whats-new/etendo-news/new-ui-0.9.0.png){ width=500 align="right"}
 
-    Platform Extensions bundle, in version [3.13.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) compatible with **Etendo 25** brings full compatibility with **Etendo 25.4** and delivers key enhancements focused on usability, reporting flexibility, and operational efficiency — helping teams work faster and with greater control.
+    Platform Extensions bundle, in version [3.13.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) compatible with **Etendo 25** brings full compatibility with **Etendo 25.4** and delivers key enhancements focused on usability, reporting flexibility, and operational efficiency — helping teams work faster and with greater control.
 
     **New Etendo UI – Beta 0.9.0**  
     
@@ -81,7 +135,7 @@ tags:
     
     ---
 
-    The **Sales Extensions** bundle in version [3.2.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) close the compatibility from **Etendo 25.4 and later**
+    The **Sales Extensions** bundle in version [3.2.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) closes the compatibility, now only compatible with **Etendo 25.4 and later**
 
     **Automatic Document Type selection from Quotations to Orders**  
 
@@ -99,11 +153,11 @@ tags:
 - :material-robot: **Copilot Extensions Update: Functional Improvements and Expanded AI Capabilities**
     
     
-    ![](../assets/whats-new/etendo-news/copilot-december.png){ width=600 align="right"}
+    ![](../assets/whats-new/etendo-news/copilot-december.png){ width=500 align="right"}
 
     ---
 
-    With version [3.11.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the **Copilot Extensions** bundle, fully compatible with **Etendo 25.4.x**, several functional improvements and capability extensions have been introduced across the Copilot, agents, and tools.
+    With version [3.11.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the **Copilot Extensions** bundle, fully compatible with **Etendo 25.4**, several functional improvements and capability extensions have been introduced across the Copilot, agents, and tools.
 
     **Copilot improvements**
 
@@ -121,11 +175,36 @@ tags:
     **Tool Pack updates:**
 
     - **OCR Tool advanced capabilities**  
-      The [OCR Tool](../developer-guide/etendo-copilot/available-tools/ocr-tool.md) has been extended with advanced recognition features, improving text extraction, with support for automatic reference template matching, structured output schemas, and multi-provider configuration and expanding its applicability to more complex documents.
+      The [OCR Tool](../developer-guide/etendo-copilot/available-tools/ocr-tool.md) has been extended with advanced recognition features, improving text extraction and expanding its applicability to more complex documents. It now supports automatic reference template matching, structured output schemas, and multi-provider configuration.
 
 </div>
 
+### Financial Extensions
 
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Financial Extensions Update: Advanced Reports and Remittance Fixes**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/purchase-invoice-dimensional-report.png){ width=500 align="right"}
+
+    With version [3.9.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the **Financial Extensions** bundle, several improvements have been introduced to advanced financial reporting and automated remittance processing.
+
+    
+    **Purchase Invoice Dimensional Report as a process definition**  
+    
+    The **Purchase Invoice Dimensional Report** has been migrated to a **Process Definition**, enabling more consistent execution, better integration with Etendo processes, and improved maintainability of advanced reporting features. The original (non-process-based) report has been hidden to avoid duplication and ensure consistent usage of the new process-based version.
+
+    - Documentation: [Purchase Invoice Dimensional Report](../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report)
+    - Blog: [The New Purchase Invoice Dimensional Report in Etendo: Faster, Modern and More Flexible](https://etendo.software/en/blog/purchase-invoices-dimensional-report-etendo/)
+
+    **Customer Statement Report migrated to process definition**
+    The **Customer Statement Report** has been migrated to a process definition, aligning it with the standard reporting execution model and improving usability and future extensibility.
+    
+    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#customer-statement)      
+
+</div>
 
 ## November 2025
 
