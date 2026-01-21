@@ -52,6 +52,7 @@ exclude_docs:
 extra_javascript:
   - assets/javascripts/feedback.js
   - assets/javascripts/custom-search.js
+  - assets/javascripts/chat-widget.js
   - https://cdn.jsdelivr.net/npm/@docsearch/js@3
   - https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
   - https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
@@ -59,6 +60,7 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - assets/stylesheets/custom-styles.css
+  - assets/stylesheets/chat-widget.css
   - https://cdn.jsdelivr.net/npm/@docsearch/css@3
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/reset-min.css
   - https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css
@@ -316,6 +318,7 @@ nav:
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Spanish Localization Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
+            - Antifraude: user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md
             - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
             - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
             - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
@@ -388,7 +391,6 @@ nav:
         - Application Menu: developer-guide/etendo-classic/concepts/application-menu.md
         - Attachments: developer-guide/etendo-classic/concepts/attachments.md
         - Authentication: developer-guide/etendo-classic/concepts/authentication.md
-#        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
         - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/cluster-development-guidelines.md
         - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
         - Code Review Process: developer-guide/etendo-classic/concepts/code-review-process.md
@@ -456,16 +458,16 @@ nav:
         - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/how-to-create-a-custom-tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/how-to-create-a-dataset.md
         - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
-#        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
+        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
         - How to Create a Module: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md
-#        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
+        - How to Create a Multi Selector: developer-guide/etendo-classic/how-to-guides/how-to-create-a-multi-selector.md
         - How to Create a Navigable Link: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.md
         - How to Create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-bar-component.md
-        - How to Create a new Attachment Method: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-attachment-method.md
+        - How to Create a Navigation Rule: developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule.md
+        - How to Create a New REST Webservice: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-rest-webservice.md
+        - How to Create a New Attachment Method: developer-guide/etendo-classic/how-to-guides/how-to-create-a-new-attachment-method.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
-#        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
-#        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
         - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
         - How to Create a Report Using Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md
         - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport.md
@@ -474,7 +476,7 @@ nav:
         - How to Create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md
         - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
         - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
-#        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
+        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/how-to-create-a-tree-selector.md
         - How to Create a Trigger: developer-guide/etendo-classic/how-to-guides/how-to-create-a-trigger.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/how-to-create-a-window.md
         - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/how-to-create-accounts-files.md
@@ -616,10 +618,11 @@ nav:
         - How to Create and Work with Bulk Tasks for Copilot: developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot.md
         - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md
         - How to Customize an Agent with Agent Memories: developer-guide/etendo-copilot/how-to-guides/how-to-customize-an-agent-with-agent-memories.md
-        - How to Debug an Agent Prompt with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith.md
+        - How to Debug an Agent with Langsmith: developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-with-langsmith.md
         - How to Execute Copilot Through the Console: developer-guide/etendo-copilot/how-to-guides/how-to-execute-copilot-through-console.md
         - How to Explore ERP Data with MCP: developer-guide/etendo-copilot/how-to-guides/how-to-explore-etendo-data-with-postgres-and-chart-mcp.md
         - How to Export Tools and Agents: developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants.md
+        - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
         - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md

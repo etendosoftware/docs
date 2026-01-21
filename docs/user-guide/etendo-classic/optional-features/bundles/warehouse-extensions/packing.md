@@ -16,41 +16,36 @@ tags:
 
 ## Overview
 
-This section describes the Etendo Packing module included in the Warehouse Extensions bundle.
+This section describes the  **Etendo Packing** module included in the *Warehouse Extensions* bundle.
 
 !!! info
     To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}.  For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
-This module streamlines and enhances the management of **packing operations** within the warehouse. Once a goods shipment has been processed, the packing process begins. Packing is carried out based on each individual goods shipment document. For every product, the warehouse worker determines the appropriate handling unit (box) in which to pack the item. Only products classified as items are eligible for packing.
+This module streamlines and enhances the management of **packing operations** within the warehouse. Once a **goods shipment** has been processed, the packing process begins. Packing is carried out based on each individual goods shipment document. For every product, the warehouse worker determines the appropriate handling unit (box) in which to pack the item. Only products classified as **items** are eligible for packing.
+
+!!! warning
+    This module includes documentation on how to perform the **Packing** process from Etendo. For more information about configuration and managing packing tasks from **Etendo Mobile**, see the module documentation: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+
 
 ## Initial Configuration
 
 In Etendo, it is possible to calculate the **weight of the packing**. To do this, some prior configurations from other windows are needed in order to calculate the weight for each box:
 
-- [**Product window**](../../../basic-features/master-data-management/master-data.md#product): Here it is possible to define the weight and the unit of measure (UoM) for the product. 
+- [**Product**](../../../basic-features/master-data-management/master-data.md#product) window: Here it is possible to define the weight and the unit of measure (UoM) for the product.
+
+    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
+    
     - Fields to Note:
         - Weight
-        - UOM Packing: It only shows units of measures that are defined as `Is weight`
+        - UOM for Weigth: It only shows units of measures that are defined as `Is weight`
 
-- [**Unit of measure window**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): This module adds a new field **Is weight**. Here it is possible to define the conversion between UoM, that is, between the UoM packing of the product and the UoM packing of the box.
+- [**Unit of Measure**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) window: This module adds a new field **Is weight**. In this window, also it is possible to define the **Conversion** between UOM, that is, between the UOM of the product and the UOM of the box.
 
-- [**Organization window**](../../../basic-features/general-setup/enterprise-model/organization.md): This module adds a new field UOM Packing. This UoM is the default one for every box. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box. 
+    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 
+- [**Organization**](../../../basic-features/general-setup/enterprise-model/organization.md) window: This module adds a new field **UOM Packing**. This UOM is the default one for every *box*. This is needed to make the conversion between the UOM Packing of the Product and the UOM Packing of the box.
 
-- Once the user is managing the packing of the products in the pop-up window which will be explained in the [Pack Button](#buttons) section, the **Calculate weight** checkbox allows calculating (or not) the weight for each of the boxes. This is configurable and the flag can be marked by default or not by using a preference. 
-
-    To do so: 
-
-    1. Go to [Preference](../../../basic-features/general-setup/application/preference.md) window.
-    2. Select the Property `Calculate Weight Packing`. 
-    3. Set the value `Y`
-
-!!!warning
-    In case there is something missing in the configuration the packing process goes ahead but a warning is shown telling the weight could not be calculated properly. 
-    
-    ![packing5](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing5.png)
-
-    If the above message is shown, the UOM must be configured in both the Organization and in each product. Even if each product has a UOM configured, when packing it will take the UOM defined in the Organization and the corresponding conversions will be made if necessary.
+    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-12.png)
 
 
 ## Packing Window
@@ -75,7 +70,7 @@ In order to provide greater visibility, the system displays a **warning message*
 
 ### Header
 
-![packing9](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing9.png)
+![packing9](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-9.png)
 
 Fields to note: 
 
@@ -89,7 +84,7 @@ Fields to note:
 !!! info
     In case the process is initiated from the Goods Shipment window, the document must have a status of **Completed**, and the **Packing Required** field must be selected. Once these conditions are met, the **Pack** button becomes available, allowing the user to proceed with packing the products.
 
-    ![packing1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing1.png)
+    ![packing1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-1.png)
 
     Whether the process is started from one the Goods Shipment or the Packing window, one record is created in the **Packing window**. So, this is a centralized window where it is possible to check all packs done and complete the packing process. 
 
@@ -98,7 +93,7 @@ Fields to note:
 
 The **Packing Box** tab from the Goods Shipment and from the Packing window is an **informative** tab which shows the newly packing boxes.
 
-![packing2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing2.png)
+![packing2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-2.png)
 
 Fields to note:
 
@@ -112,7 +107,7 @@ Fields to note:
 ### Content Subtab
 In the Packing Box tab, the **Content** tab is a child tab where the **content of the box** is shown.
 
-![packing3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing3.png)
+![packing3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-3.png)
 
 Fields to note:
 
@@ -127,7 +122,7 @@ Fields to note:
     
     This button is **only shown** in the Packing window since it allows selecting **all the available goods shipments** that need to be packed.
 
-    ![packing8](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing8.png)
+    ![packing8](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-8.png)
 
     The criteria to show which goods shipments can be selected is the following:
 
@@ -146,7 +141,7 @@ Fields to note:
 
     When pressing the Pack button:
 
-    ![packing4](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing4.png)
+    ![packing4](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-4.png)
 
     A pop-up is opened showing all the products with their quantities. 
     
@@ -163,12 +158,20 @@ Fields to note:
 
     2. If necessary, boxes can be added with the **Add Box** button.
 
-        ![packing7](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing7.png)
+        ![packing7](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-7.png)
 
         !!! info
             After adding the goods shipment, and the packing action has been performed if the user removes any of the goods shipments from being packed then, all boxes are deleted and the packing must start again. 
 
-    3. The flag **Calculate weight** allows calculating (or not) the weight for each of the boxes. This is configurable and the flag can be marked by default or not by using the previously configured preference.
+    3. The flag **Calculate weight** allows calculating (or not) the weight for each of the boxes. This is configurable and the flag can be marked by default or not by using the `Calculate Weight Packing` [preference](../../../basic-features/general-setup/application/preference.md).
+    
+        !!!warning
+
+            In case there is something missing in the configuration the packing process goes ahead but a warning is shown telling the weight could not be calculated properly. 
+            
+            ![packing5](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-5.png)
+
+            If the above message is shown, the UOM must be configured in both the Organization and in each product. Even if each product has a UOM configured, when packing it will take the UOM defined in the Organization and the corresponding conversions will be made if necessary.
 
     4. Once all the products have been validated in their corresponding boxes, the process is completed by clicking on the **Pack** button.
 
@@ -181,7 +184,7 @@ Fields to note:
     
     Once everything has been completed the Reactivate Pack button allows the user to **reactivate** the packing and **edit** whatever information is needed. This button also is present in both, the **Goods Shipment** and the **Packing** window. 
 
-    ![packing6](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing6.png)
+    ![packing6](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-6.png)
 
 
 ---

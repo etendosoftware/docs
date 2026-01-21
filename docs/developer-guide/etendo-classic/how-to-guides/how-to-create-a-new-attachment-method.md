@@ -1,5 +1,5 @@
 ---
-title: How to Create a new Attachment Method
+title: How to Create a New Attachment Method
 tags: 
     - Customization
     - Java Extension Points
@@ -7,7 +7,7 @@ tags:
 status: beta
 ---
 
-# How to Create a new Attachment Method
+# How to Create a New Attachment Method
 
 !!! example "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.

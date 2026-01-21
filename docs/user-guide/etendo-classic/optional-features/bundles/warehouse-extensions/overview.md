@@ -6,6 +6,9 @@ tags:
     - Stock History
     - Document Reactivation
     - Product Operations
+    - Picking
+    - Packing
+    - Material Management Rules
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 
@@ -110,6 +113,23 @@ This module also enhances stock reservation logic, prioritizing complete logisti
 !!! info
     For more information, visit the [Stock Logistic Unit user guide](./stock-logistic-unit.md).
 
+### Material Management Rules
+
+:octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.rules`
+
+!!! info
+    Available from Warehouse Extensions Bundle version 3.6.0
+
+This module allows you to configure whether the system permits material transactions with dates prior to the current date.
+
+The preference **Allow Backdated Cost Transactions** is set to **Y** by default, which means that transactions with dates earlier than the current date are allowed. 
+
+When the preference is set to **N**, the following documents will be restricted to only use the current date: [Goods Receipts](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Goods Shipments](../../../basic-features/sales-management/transactions.md#goods-shipment), [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Physical Inventories](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Work Efforts](../../../basic-features/production-management/transactions.md#work-effort), and [Internal Consumption](../../../basic-features/production-management/transactions.md#internal-consumption).
+
+!!! warning
+    If you need to create a new configuration for this preference, it must be set globally only, without distinguishing any specific visibility level (Organization, User, Role, etc.), as it could affect the correct operation of the validation.
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/material-mgmt-rules-preference.png)
 
 ## Uninstall bundle
 
