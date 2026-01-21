@@ -27,6 +27,7 @@ This set is bundled into two reference datasets:
 The complete list of standard document types is the following:
 
 |     |     |     |
+|-----|-----|-----|
 | **Document Type Name**  | **Document Category**  | **Business Transaction** |
 | AP CreditMemo | AP Credit Memo | [Purchase Credit Memo](../../../procurement-management/transactions.md#reactivate) |
 | AP Invoice | AP Invoice | [Purchase Invoice](../../../procurement-management/transactions.md#purchase-invoice) |
@@ -58,11 +59,13 @@ The complete list of standard document types is the following:
 | Inventory Amount Update | Inventory Amount Update | [Inventory Amount Update](../../../warehouse-management/transactions.md#inventory-amount-update) |
 
 !!! note "Important"
-    **New document types could be added to the list above**. If that is the case, an updated version of the "Reference Data" containing the new document types will be provided by Etendo in new versions. That newly created "Reference Data" will have to be applied to the corresponding Organization in the [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md).
+    **New document types could be added to the list above**. If that is the case, an updated version of the Reference Data containing the new document types will be provided by Etendo in new versions. That newly created Reference Data will have to be applied to the corresponding Organization in the [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md). It is also possible to **manually create new document types**, but this process should be done by an advanced user, as explained below.
 
-## Header
+## Advanced User Guide
 
-The Document Type window allows the user to configure how each document type is going to behave in terms of accounting and sequencing among others.
+### Header
+
+The Document Type window allows advanced users to configure how each document type is going to behave in terms of accounting and sequencing among others.
 
 ![](../../../../../../assets/drive/1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi.png)
 
@@ -80,24 +83,21 @@ Fields to note:
 
     The selection made here will determine which documents will be generated when an order is processed and which documents must be generated manually or in batches. The following outlines this process.
 
-    - SO Sub Type of Standard Order will generate just the Order document when the order is processed.
-    - The Delivery Note, Invoice and Receipt must be generated via other processes. 
-    - SO Sub Type of Warehouse Order will generate the Order and Delivery Note.
-    - The Invoice and Receipt must be generated via other processes.
-    - SO Sub Type of Credit Order will generate the Order, Delivery Note and Invoice.
-    - The Receipt must be generated via other processes.
-    - SO Sub Type of POS (Point of Sale) will generate all document.
+    - The **Standard Order** option generates just the Order document when the order is processed. The Delivery Note, Invoice and Receipt must be generated via other processes. 
+    - The **Warehouse Order** option generates the Order and Delivery Note. The Invoice and Receipt must be generated via other processes.
+    - The **On Credit Order** option generates the Order, Delivery Note and Invoice. The Receipt must be generated via other processes.
 
 -   The **Sequenced Document** flag could be disabled or enabled if it is required to either
     -   manually number a document type
     -   or automatically number a document type according to a given [document sequence](../../../financial-management/accounting/setup/document-sequence.md).
 -   The **Document Sequence** indicates the sequencing rule to use for this document type.
+
     !!!info
         This field is only displayed when the **Sequenced Document** checkbox is selected. 
 
--   The **Table** indicates the table in which a field or fields reside.
--   The **Sales Transaction** checkbox indicates if this item is a Sales Transaction.
--   The **Return** checkbox indicates if the document is of reversal type. Documents with this flag enabled use negative quantities.
+-   The **Table** indicates the table to which the document type corresponds. 
+-   The **Sales Transaction** checkbox indicates if this item is a Sales Transaction. If not checked, by default the item refers to a Purchase transaction.
+-   The **Return** checkbox indicates if the document is of reversal type. Documents with this flag enable using negative quantities.
 -   the **Credit Memo** checkbox is enabled by default for **Credit Memo** document types such as **AR Credit Memo** and **AP Credit Memo**:
     -   **Credit Memo** document types are also **reverse** or **cancelled** documents type however, those behave differently than **return** document types, for instance:
     -   they generate invoices with **positive** invoiced quantity/ies
@@ -148,29 +148,35 @@ Fields to note:
 -   The **Document Type for Aggregated Invoice** indicates the document type that will be used when an aggregated invoice is generated from this sales document.
 
 
-## Report Templates
+### Report Templates
 
-The Report Templates tab allows the user to configure a different aspect for the document types by setting up Jasper JRXML templates for each document type.
+The Report Templates tab allows the user to configure a different aspect for the document types by setting up Jasper `.jrxml` templates for each document type.
 
-It is possible to print document types such as [Goods Shipments](../../../sales-management/transactions.md#goods-shipment) or [Sales Invoices](../../../sales-management/transactions.md#sales-invoice) by using the **Print** action button, which can be found in the Toolbar.
+!!!info
+    By default, these templates are included in the datasets mentioned in the [overview](#overview).
+
+It is possible to print document types such as [Goods Shipments](../../../sales-management/transactions.md#goods-shipment) or [Sales Invoices](../../../sales-management/transactions.md#sales-invoice) by using the **Print** action button, which can be found in the corresponding toolbar.
 
 In Etendo, every document suitable to be printed is linked to a **standard** report template.
 
-If necessary, report templates can be customized and even new ones can be created and therefore linked to a given document type.
+If necessary, **report templates can be customized** and even new ones can be created and therefore linked to a given document type.
+
+!!!note
+    Even though this option is available in this functional tab, this configuration must be done by a developer.
 
 ![](../../../../../../assets/drive/1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-.png)
 
-### Email Definitions
+#### Email Definitions
 
-The Email Definitions tab supports the creation of as many email templates as required, depending on the language to be used for sending the documents by email. Documents can be sent by e-mail by using the action button **Email** which can be found in the Toolbar.
+The Email Definitions tab supports the creation of as many email templates as required, depending on the language to be used for sending the documents by email. Documents can be sent by email by using the action button **Email** which can be found in the corresponding toolbar.
 
 ![](../../../../../../assets/drive/1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh.png)
 
 As shown in the image above, it is possible to define:
 
--   a **Subject template** to be populated with "real" data every time a given document is sent by email.
+-   a **Subject template** to be populated with real data every time a given document is sent by email.
     -   For instance `New Invoice (@our\_ref@)` will turn into `New Invoice (SI/2589)` where `SI/2589` is the number of the invoice sent by email.
--   a **Body template** to be populated with "real" data every time a given document is sent by email.
+-   a **Body template** to be populated with real data every time a given document is sent by email.
     -   For instance:
         -   `Dear @cus\_nam@, Find attached the invoice @our\_ref@ corresponding to the products you received from F&B International Group.`  
             will turn into
@@ -181,14 +187,14 @@ Here is the list of possible tags:
 -   **@cus\_ref@**: The document reference of the customer
 -   **@our\_ref@**: The reference of the document
 -   **@cus\_nam@**: The name of the customer
--   **@sal\_nam@**: The name of the sales rep.
--   **@bp\_nam@**: The Business Partner name \[since 3.0MP27\] ??
--   **@doc\_date@**: The document date \[since 3.0MP27\] ??
--   **@doc\_desc@**: The document description \[since 3.0MP27\] ??
--   **@doc\_nextduedate@**: The next due date (if document has associated any payment plan) \[since 3.0MP27\] ??
--   **@doc\_lastduedate@**: The last due date (if document has associated any payment plan) \[since 3.0MP27\] ??
+-   **@sal\_nam@**: The name of the sales representative
+-   **@bp\_nam@**: The Business Partner name
+-   **@doc\_date@**: The document date 
+-   **@doc\_desc@**: The document description 
+-   **@doc\_nextduedate@**: The next due date (if document has associated any payment plan)
+-   **@doc\_lastduedate@**: The last due date (if document has associated any payment plan)
 
-## Translation
+### Translation
 
 In this tab, document types can be translated to any language required. To do this, create a new record and fill the corresponding fields, as shown below.
 
