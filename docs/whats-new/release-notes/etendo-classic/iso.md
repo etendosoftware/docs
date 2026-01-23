@@ -1,5 +1,5 @@
 ---
-title: Etendo Classic - ISO Image
+title: Etendo - ISO Image
 tags:
     - Release Notes
     - Etendo
@@ -7,7 +7,7 @@ tags:
     - ISO
 ---
 
-# Etendo Classic - ISO Image
+# Etendo  - ISO Image
 
 :material-tools: Installation Guide: [ISO Installation Guide](../../../getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
 
@@ -32,19 +32,27 @@ tags:
 
 
 ## 25.4.3
-New ISO with Etendo Classsic version 25.4.3
+New ISO with Etendo version 25.4.3
+
+- **Changes**
+
+    - Add Platform Extensions and Copilot Extensions bundles :zap:.
 
 ## 25.4.0
-New ISO with Etendo Classsic version 25.4.0
+New ISO with Etendo version 25.4.0
 
 ## 25.3.0
-New ISO with Etendo Classsic version 25.3.0
+New ISO with Etendo version 25.3.0
+
+- **Changes**
+    
+    - Add **Docker** and **Docker Compose** to the Etendo Stack.
 
 ## 25.2.0
-New ISO with Etendo Classsic version 25.2.0
+New ISO with Etendo version 25.2.0
 
 ## 25.1.2
-New ISO with Etendo Classsic version 25.1.2
+New ISO with Etendo version 25.1.2
 
 - **Changes**
 
@@ -52,46 +60,46 @@ New ISO with Etendo Classsic version 25.1.2
 
 
 ## 24.4.3
-New ISO with Etendo Classsic version 24.4.3
+New ISO with Etendo version 24.4.3
 
 - **Fixed**
     - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 ## 24.4.0
-New ISO with Etendo Classsic version 24.4.0
+New ISO with Etendo version 24.4.0
 
 ## 24.3.0
-New ISO with Etendo Classsic version 24.3.0
+New ISO with Etendo version 24.3.0
 
 ## 24.2.0
-New ISO with Etendo Classsic version 24.2.0
+New ISO with Etendo version 24.2.0
 
 ## 24.1.4
-New ISO with Etendo Classsic version 24.1.4
+New ISO with Etendo version 24.1.4
 
 - **Fixed**
     - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 ## 24.1.0
-New ISO with Etendo Classsic version 24.1.0
+New ISO with Etendo  version 24.1.0
 
 - **Changes**
     - Upgrade Tomcat version to 9.0.87
 
 ## 23.4.0
-New ISO with Etendo Classsic version 23.4.0
+New ISO with Etendo  version 23.4.0
 
 ## 23.3.0
-New ISO with Etendo Classsic version 23.3.0
+New ISO with Etendo  version 23.3.0
 
 ## 23.2.0
-New ISO with Etendo Classsic version 23.2.0
+New ISO with Etendo  version 23.2.0
 
 ## 23.1.0
-New ISO with Etendo Classsic version 23.1.0
+New ISO with Etendo  version 23.1.0
 
 ## 22.4.5
-First ISO version with Etendo Classsic version 22.4.5 :sparkles:
+First ISO version with Etendo  version 22.4.5 :sparkles:
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
