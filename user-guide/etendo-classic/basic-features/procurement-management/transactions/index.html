@@ -2363,6 +2363,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#header_4" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -15713,6 +15722,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#header_4" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -16611,12 +16629,13 @@ That is the way the user could turn to in case there is not a booked purchase or
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png" data-desc-position="bottom"><img alt="Pending goods receipts window" src="../../../../../assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png"></a></p>
 <h2 id="purchase-invoice">Purchase Invoice</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Purchase Invoice</code></p>
+<h3 id="overview_1">Overview</h3>
 <p>The Purchase Invoice window allows the user to register and manage supplier's invoices.</p>
 <p>This stage of the chain <strong>usually comes after "Goods Receipts" booking and management</strong>.</p>
 <p>A purchase invoice is an itemized statement of the goods or services provided by a vendor or supplier. It indicates the quantity and price of each product or service provided or to be provided.</p>
-<p>Suppliers could send the corresponding purchase invoice/s together with the delivery note/s attached to the goods, that implies that "Purchase Invoices" can be automatically generated from the "Goods Receipt" window, but it is possible that this is not the case, therefore a Purchase Invoice can also be created from scratch in the "Purchase Invoice" window.</p>
+<p>Suppliers could send the corresponding purchase invoice/s together with the delivery note/s attached to the goods, that implies that Purchase Invoices can be automatically generated from the <strong>Goods Receipt</strong> window, but it is possible that this is not the case, therefore a Purchase Invoice can also be created from scratch in the <strong>Purchase Invoice</strong> window.</p>
 <p>The purchase expenses can be recognized as soon as the purchase invoice is accounted, however if an expense deferred plan is configured, it is possible to defer the expense recognition as required.</p>
-<p>Supplier invoices can be registered, booked and managed in the header section of the purchase invoice window.</p>
+<p>Supplier invoices can be registered, booked and managed in the header section of the <strong>Purchase Invoice</strong> window.</p>
 <h3 id="header_4">Header</h3>
 <p><strong>Header</strong> lists the main terms and conditions related to the purchase invoice.</p>
 <div class="admonition info">
@@ -16641,11 +16660,11 @@ That is the way the user could turn to in case there is not a booked purchase or
 </ul>
 <p>There are 3 ways of entering lines into the purchase invoice, two of them from the invoice header and the last one from the <strong>Lines</strong> tab:</p>
 <ol>
-<li>Selecting products from pending to be invoiced orders or receipts using the <em>Create Lines From Order and Create Lines From Receipt</em> buttons.</li>
-<li>Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the <em>Copy Lines</em> button.</li>
-<li>Manually, line by line in the <em>Lines</em> tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.</li>
+<li>Selecting products from pending to be invoiced orders or receipts using the <strong>Create Lines From Order</strong> and <strong>Create Lines From Receipt</strong> buttons.</li>
+<li>Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the <strong>Copy Lines</strong> button.</li>
+<li>Manually, line by line in the <strong>Lines</strong> tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.</li>
 </ol>
-<p>The <strong>Complete</strong> button finishes the creation of the invoice document with the fulfillment of the <em>Payment Plan</em> tab and the <em>Payment Monitor</em> section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.</p>
+<p>The <strong>Complete</strong> button finishes the creation of the invoice document with the fulfillment of the <strong>Payment Plan</strong> tab and the <strong>Payment Monitor</strong> section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.</p>
 <p>Once completed, a purchase invoice can be:</p>
 <ul>
 <li><strong>posted</strong> to the ledger by using the button <a href="#post">Post</a></li>
@@ -16706,14 +16725,44 @@ That is the way the user could turn to in case there is not a booked purchase or
 <p>With the <strong>Void</strong> option, it is possible to totally void a purchase invoice. This action creates a new document that reverses the invoice.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-void.png" data-desc-position="bottom"><img alt="pop-up-void" src="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-void.png"></a></p>
 <p>Voiding allows specifying a <strong>Void Date</strong> and a <strong>Void Accounting Date</strong> for the new document that reverses the invoice.</p>
-<p>Both "date" fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.</p>
+<p>Both date fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.</p>
 <p>Also, this process window includes a <strong>Supplier Reference</strong> field to enter the supplier reference number to refer to the reversed document resulting from the invoice voiding. Here, you can enter the corresponding number or leave the field blank to complete it later.</p>
 <p>This action implies that:</p>
 <ul>
-<li>Etendo automatically generates a new document in the Purchase Invoice window that reverses the original invoice.</li>
-<li>Etendo also informs about the new document number. This new document is created as described below:
-The transaction document used by Etendo is the Reversed Purchase Invoice. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.</li>
-<li>Once the new document has been created, you can change both the Invoice Date and the Accounting Date of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.</li>
+<li>Etendo automatically generates a new document in the <em>Purchase Invoice</em> window that reverses the original invoice.</li>
+<li>
+<p>Etendo also informs about the new document number. This new document is created as described below:</p>
+<p>The transaction document used by Etendo is the <em>Reversed Purchase Invoice</em>. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.</p>
+</li>
+<li>
+<p>Once the new document has been created, you can change both the <em>Invoice Date</em> and the <em>Accounting Date</em> of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.</p>
+</li>
+<li>
+<p>The <em>Reversed Invoices</em> tab lists the original invoice being reversed as now both of them are linked.</p>
+<p>And it is also possible to partially void a supplier invoice by:</p>
+<ul>
+<li>
+<p>Manually creating any of the available reversed purchase documents, in the <a href="#purchase-invoice">Purchase Invoice</a> window:</p>
+<ul>
+<li><strong>AP Credit Memo</strong> or</li>
+<li><strong>Reversed Purchase Invoice</strong></li>
+</ul>
+</li>
+<li>
+<p>which besides must be manually linked to the invoice/s being reversed in the <strong>Reversed Invoices</strong> tab.</p>
+</li>
+</ul>
+<p>To learn more visit <a href="../../sales-management/transactions/#reversed-invoices">Reversed Invoices</a>.</p>
+<p>The <strong>AP Credit Memo</strong> posting looks the same as the <strong>Reversed Purchase Invoice</strong> posting. The main difference between those two purchase reversed document types is:</p>
+<ul>
+<li><strong>AP Credit Memo</strong> invoiced quantity is a positive quantity.</li>
+<li>and <strong>Reversed Purchase Invoice</strong> quantity is a negative quantity</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We strongly recommend you to use the <strong>Reversed Purchase Invoice</strong> document type while partially voiding supplier's invoices.</p>
+</div>
+</li>
 </ul>
 <h4 id="add-payment">Add Payment</h4>
 <p>Payment/s can be made against a purchase invoice by using the Add Payment button which opens the Add Payment pop-up window.</p>
@@ -16819,7 +16868,7 @@ The transaction document used by Etendo is the Reversed Purchase Invoice. This d
 </ul>
 <p>In the case of "Expense" product/s do not having the "Sales" checkbox selected, it is possible to use the product's purchase price instead of the product's cost whenever the checkbox <em>Book Using Purchase Order</em> Price is selected. In this case, it is required that a "Purchase Order" is related to the "Goods Receipt".</p>
 <h4 id="accounting_1">Accounting</h4>
-<p>Accounting information related to the matched purchase invoices</p>
+<p>Accounting information related to the matched purchase invoices.</p>
 <h3 id="bulk-posting_2">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>

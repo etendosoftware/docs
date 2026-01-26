@@ -3382,17 +3382,36 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-user-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced User Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced User Guide">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#document-definition" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
-      Document Definition
+      Header
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Templates">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#email-definitions" class="md-nav__link">
@@ -3400,6 +3419,11 @@
       Email Definitions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -14696,17 +14720,36 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-user-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced User Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced User Guide">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#document-definition" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
-      Document Definition
+      Header
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Templates">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#email-definitions" class="md-nav__link">
@@ -14714,6 +14757,11 @@
       Email Definitions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -14787,14 +14835,16 @@
 <h1 id="document-type">Document Type</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Document Type</code></p>
 <h2 id="overview">Overview</h2>
-<p>Each document type in Etendo refers to a business transaction such as purchase orders, shipments or sales invoices, among others.</p>
-<p>Etendo includes a complete set of standard Document Types needed for the application to work properly.</p>
+<p><strong>Each document type in Etendo refers to a business transaction</strong> such as purchase orders, shipments or sales invoices, among others. Etendo includes a complete set of standard Document Types needed for the application to work properly.</p>
 <p>This set is bundled into two reference datasets:</p>
 <ul>
 <li>Standard document types for orders, invoices, etc. and settings - Core - English (USA)</li>
 <li>Document types and default algorithm for bank statement auto matching - Advanced Payables</li>
 </ul>
-<p>These datasets can be imported into the application during its initial setup using Initial Client Setup or Initial Organization Setup processes. Or if the application is already up and running, these datasets or their updates can be installed using Enterprise Module Management window.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>These datasets can be imported into the application during its initial setup using <a href="../../../../general-setup/getting-started/#initial-client-setup">Initial Client Setup</a> or <a href="../../../../general-setup/enterprise-model/initial-organization-setup/">Initial Organization Setup</a> processes. Or if the application is already up and running, these datasets or their updates can be installed using <a href="../../../../general-setup/enterprise-model/enterprise-module-management/">Enterprise Module Management</a> window.</p>
+</div>
 <p>The complete list of standard document types is the following:</p>
 <table>
 <thead>
@@ -14806,181 +14856,259 @@
 </thead>
 <tbody>
 <tr>
-<td>Document Type Name&nbsp;</td>
-<td>Document Category&nbsp;</td>
-<td>Business Transaction&nbsp;</td>
+<td><strong>Document Type Name</strong>&nbsp;</td>
+<td><strong>Document Category</strong>&nbsp;</td>
+<td><strong>Business Transaction</strong>&nbsp;</td>
 </tr>
 <tr>
 <td>AP CreditMemo</td>
 <td>AP Credit Memo</td>
-<td>Purchase Credit Memo</td>
+<td><a href="../../../../procurement-management/transactions/#reactivate">Purchase Credit Memo</a></td>
 </tr>
 <tr>
 <td>AP Invoice</td>
 <td>AP Invoice</td>
-<td>Purchase Invoice</td>
+<td><a href="../../../../procurement-management/transactions/#purchase-invoice">Purchase Invoice</a></td>
 </tr>
 <tr>
 <td>AR CreditMemo</td>
 <td>AR Credit Memo</td>
-<td>Sales Credit Memo</td>
+<td><a href="../../../../sales-management/transactions/#header-6">Sales Credit Memo</a></td>
 </tr>
 <tr>
 <td>AR Invoice</td>
 <td>AR Invoice</td>
-<td>Sales Invoice</td>
+<td><a href="../../../../sales-management/transactions/#sales-invoice">Sales Invoice</a></td>
 </tr>
 <tr>
 <td>Return Material Sales Invoice</td>
 <td>AR Return Material Invoice</td>
-<td>Return Material Sales Invoice</td>
+<td><a href="../../../../sales-management/transactions/#a">Return Material Sales Invoice</a></td>
 </tr>
 <tr>
 <td>Reversed Sales Invoice</td>
 <td>AR Invoice</td>
-<td>Reversed Sales Invoice</td>
+<td><a href="../../../../sales-management/transactions/#header-6">Reversed Sales Invoice</a></td>
 </tr>
 <tr>
 <td>MM Receipt</td>
 <td>Material Receipt</td>
-<td>Goods Receipt</td>
+<td><a href="../../../../procurement-management/transactions/#goods-receipts">Goods Receipt</a></td>
 </tr>
 <tr>
 <td>RTV Shipment</td>
 <td>Material Receipt</td>
-<td>Return to Vendor Shipment</td>
+<td><a href="../../../../procurement-management/transactions/#return-to-vendor-shipment">Return to Vendor Shipment</a></td>
 </tr>
 <tr>
 <td>MM Shipment</td>
 <td>Material Delivery</td>
-<td>Goods Shipment</td>
+<td><a href="../../../../sales-management/transactions/#goods-shipment">Goods Shipment</a></td>
 </tr>
 <tr>
 <td>RFC Receipt</td>
 <td>Material Delivery</td>
-<td>Return from Customer receipt</td>
+<td><a href="../../../../sales-management/transactions/#return-material-receipt">Return from Customer receipt</a></td>
 </tr>
 <tr>
 <td>Purchase Order</td>
 <td>Purchase Order</td>
-<td>Purchase Order</td>
+<td><a href="../../../../procurement-management/transactions/#purchase-order">Purchase Order</a></td>
 </tr>
 <tr>
 <td>RTV Order</td>
 <td>Purchase Order</td>
-<td>Return to Vendor</td>
+<td><a href="../../../../procurement-management/transactions/#return-to-vendor-rtv">Return to Vendor</a></td>
 </tr>
 <tr>
 <td>Quotation</td>
 <td>Sales Order</td>
-<td>Sales Quotation</td>
+<td><a href="../../../../sales-management/transactions/#sales-quotation">Sales Quotation</a></td>
 </tr>
 <tr>
 <td>RFC Order</td>
 <td>Sales Order</td>
-<td>Return from Customer Sales Order</td>
+<td><a href="../../../../sales-management/transactions/#return-from-customer">Return from Customer Sales Order</a></td>
 </tr>
 <tr>
 <td>POS Order</td>
 <td>Sales Order</td>
-<td>Point of Sales Order</td>
+<td><a href="../../../../sales-management/transactions/#sales-invoice">Point of Sales Order</a></td>
 </tr>
 <tr>
 <td>Warehouse Order</td>
 <td>Sales Order</td>
-<td>Warehouse Order</td>
+<td><a href="../../../../sales-management/transactions/#sales-invoice">Warehouse Order</a></td>
 </tr>
 <tr>
 <td>Standard Order</td>
 <td>Sales Order</td>
-<td>Sales Order</td>
+<td><a href="../../../../sales-management/transactions/#sales-invoice">Sales Order</a></td>
 </tr>
 <tr>
 <td>AP Payment</td>
 <td>AP Payment</td>
-<td>Payment Out</td>
+<td><a href="../../../receivables-and-payables/transactions/#payment-out">Payment Out</a></td>
 </tr>
 <tr>
 <td>AR Receipt</td>
 <td>AR Receipt</td>
-<td>Payment In</td>
+<td><a href="../../../receivables-and-payables/transactions/#payment-in">Payment In</a></td>
 </tr>
 <tr>
 <td>Financial Account Transaction</td>
 <td>Financial Account Transaction</td>
-<td>Financial Account Transaction</td>
+<td><a href="../../../receivables-and-payables/transactions/#transaction">Financial Account Transaction</a></td>
 </tr>
 <tr>
 <td>Bank Statement File</td>
 <td>Bank Statement File</td>
-<td>Bank Statement</td>
+<td><a href="../../../receivables-and-payables/transactions/#imported-bank-statements">Bank Statement</a></td>
 </tr>
 <tr>
 <td>Payment Proposal</td>
 <td>AP Payment Proposal</td>
-<td>Payment Proposal</td>
+<td><a href="../../../receivables-and-payables/transactions/#payment-proposal">Payment Proposal</a></td>
 </tr>
 <tr>
 <td>Reconciliation</td>
 <td>Reconciliation</td>
-<td>Reconciliation</td>
+<td><a href="../../../receivables-and-payables/transactions/#reconciliations">Reconciliation</a></td>
 </tr>
 <tr>
 <td>Doubtful Debts</td>
 <td>Doubtful Debt</td>
-<td>Doubtful Debt</td>
+<td><a href="../../../receivables-and-payables/transactions/#doubtful-debt">Doubtful Debt</a></td>
 </tr>
 <tr>
 <td>Cost Adjustment</td>
 <td>Cost Adjustment</td>
-<td>Cost Adjustment</td>
+<td><a href="../../../../warehouse-management/transactions/#cost-adjustment">Cost Adjustment</a></td>
 </tr>
 <tr>
 <td>Landed Cost</td>
 <td>Landed Cost</td>
-<td>Landed Cost</td>
+<td><a href="../../../../procurement-management/transactions/#landed-cost-1">Landed Cost</a></td>
 </tr>
 <tr>
 <td>Landed Cost Cost</td>
 <td>Landed Cost Cost</td>
-<td>Landed Cost Cost</td>
+<td><a href="../../../../procurement-management/transactions/#header-7">Landed Cost Cost</a></td>
 </tr>
 <tr>
 <td>Inventory Amount Update</td>
 <td>Inventory Amount Update</td>
-<td>Inventory Amount Update</td>
+<td><a href="../../../../warehouse-management/transactions/#inventory-amount-update">Inventory Amount Update</a></td>
 </tr>
 </tbody>
 </table>
-<p>It is also important to remark that <em>new document types could be added to the list above</em>, if that is the case an updated version of the "Reference Data" containing the new document types will be provided by Etendo. That newly created "Reference Data" will have to be applied to the corresponding Organization in the Enterprise Module Management.</p>
-<h3 id="document-definition">Document Definition</h3>
-<p>Document type window allows the user to configure how each document type is going to behave in terms of accounting and sequencing among others.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi.png"></a></p>
-<p>"Standard" Document Types can be customized as required by having into account that:</p>
-<p>There are a few fields whose values should not be changed. Those are:</p>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p><strong>New document types could be added to the list above</strong>. If that is the case, an updated version of the Reference Data containing the new document types will be provided by Etendo in new versions. That newly created Reference Data will have to be applied to the corresponding Organization in the <a href="../../../../general-setup/enterprise-model/enterprise-module-management/">Enterprise Module Management</a>. It is also possible to <strong>manually create new document types</strong>, but this process should be done by an advanced user, as explained below.</p>
+</div>
+<h2 id="advanced-user-guide">Advanced User Guide</h2>
+<h3 id="header">Header</h3>
+<p>The Document Type window allows advanced users to configure how each document type is going to behave in terms of accounting and sequencing among others.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png"></a></p>
+<p>Fields to note:</p>
 <ul>
-<li>the <strong>Organization</strong></li>
-<li>the <strong>Document Category</strong></li>
-<li>and the <strong>Table</strong></li>
+<li>An <strong>Organization</strong> is a unit of your client or legal entity.</li>
+<li>The <strong>Name</strong> of the document.</li>
+<li>The <strong>G/L Category</strong> is an optional, user defined method of grouping journal lines.</li>
+<li>The <strong>Print Text</strong> which is the name of the document to be printed.</li>
+<li>A <strong>Document Category</strong> is the document base type that identifies a document. Multiple document types may share a single document category.</li>
+<li>
+<p>The <strong>SSO Sub Type</strong> indicates the type of sales order this document refers to.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This field only appears when the Document Category is <em>Sales Order</em>. </p>
+</div>
+<p>The selection made here will determine which documents will be generated when an order is processed and which documents must be generated manually or in batches. The following outlines this process.</p>
+<ul>
+<li>The <strong>Standard Order</strong> option generates just the Order document when the order is processed. The Delivery Note, Invoice and Receipt must be generated via other processes. </li>
+<li>The <strong>Warehouse Order</strong> option generates the Order and Delivery Note. The Invoice and Receipt must be generated via other processes.</li>
+<li>The <strong>On Credit Order</strong> option generates the Order, Delivery Note and Invoice. The Receipt must be generated via other processes.</li>
 </ul>
-<p>The rest of the fields can be changed, for instance:</p>
+</li>
+<li>
+<p>The <strong>Sequenced Document</strong> flag could be disabled or enabled if it is required to either</p>
 <ul>
-<li>the <strong>Name</strong> of the document</li>
-<li>the <strong>Print Text</strong> which is the name of the document to be printed while printing the document.</li>
-<li>the <strong>Sequenced Document</strong> flag could be disabled or enabled if it is required to either<ul>
 <li>manually number a document type</li>
-<li>or automatically number a document type according to a given document sequence.</li>
+<li>or automatically number a document type according to a given <a href="../document-sequence/">document sequence</a>.</li>
 </ul>
 </li>
-<li><strong>Document Cancelled,</strong> if any, is the document to use for voiding a given document type. For instance, a "Reversed Sales Invoice" document type can be set as the document canceled of an "AR Invoice", therefore that one will be the one to use while voiding an "AR Invoice"(or sales invoice).<ul>
-<li>A "Reversed Sales Invoice" document type is also an "AR Invoice" document type, but it can have a different sequencing by just linking it to a difference document sequence</li>
-<li>besides, it is set as a "<strong>Return</strong>" document type, which means that:<ul>
-<li>it generates a "negative" sales invoices with a negative invoiced quantity/ies</li>
-<li>therefore, the posting will be opposite to the sales invoice one, as described below, in case Allow Negative checkbox is enabled and in case it is not:</li>
-</ul>
+<li>
+<p>The <strong>Document Sequence</strong> indicates the sequencing rule to use for this document type.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This field is only displayed when the <strong>Sequenced Document</strong> checkbox is selected. </p>
+</div>
+</li>
+<li>
+<p>The <strong>Table</strong> indicates the table to which the document type corresponds. </p>
+</li>
+<li>The <strong>Sales Transaction</strong> checkbox indicates if this item is a Sales Transaction. If not checked, by default the item refers to a Purchase transaction.</li>
+<li>The <strong>Return</strong> checkbox indicates if the document is of reversal type. Documents with this flag enable using negative quantities.</li>
+<li>
+<p>The <strong>Credit Memo</strong> checkbox is enabled by default for <strong>Credit Memo</strong> document types such as <strong>AR Credit Memo</strong> and <strong>AP Credit Memo</strong>:</p>
+<ul>
+<li>
+<p><strong>Credit Memo</strong> document types are also <strong>reverse</strong> or <strong>cancelled</strong> documents type however, those behave differently than <strong>return</strong> document types, for instance:</p>
+<ul>
+<li>they generate invoices with <strong>positive</strong> invoiced quantity/ies</li>
+<li>
+<p>therefore, the posting is always opposite to the invoices one, regardless the <a href="../general-ledger-configuration/#general-ledger-configuration"><strong>Allow Negative</strong></a> checkbox setup:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Account</strong></td>
+<td><strong>Debit</strong></td>
+<td><strong>Credit</strong></td>
+<td><strong>Comments</strong></td>
+</tr>
+<tr>
+<td><a href="../../../../master-data-management/master-data/#customer">Customer Receivables</a></td>
+<td></td>
+<td>Line Net Amount</td>
+<td>One per invoice line</td>
+</tr>
+<tr>
+<td><a href="../tax-rate/#accounting">Tax Debit</a></td>
+<td>Tax Amount</td>
+<td></td>
+<td>One per tax line</td>
+</tr>
+<tr>
+<td><a href="../../../../master-data-management/product-setup/#accounting">Product Revenue</a></td>
+<td>Total Gross Amount</td>
+<td></td>
+<td>One per invoice</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li>
+<p><strong>Document Cancelled</strong>, if any, is the document to use for voiding a given document type. </p>
+<p>For instance, a <strong>Reversed Sales Invoice</strong> document type can be set as the document canceled of an <strong>AR Invoice</strong>, therefore that one will be the one to use while voiding an <strong>AR Invoice</strong> (or sales invoice).</p>
+<ul>
+<li>A <strong>Reversed Sales Invoice</strong> document type is also an <strong>AR Invoice</strong> document type, but it can have a different sequencing by just linking it to a different document sequence.</li>
+<li>
+<p>besides, it is set as a <strong>Return</strong> document type, which means that:</p>
+<ul>
+<li>it generates a <strong>negative</strong> sales invoice with a negative invoiced quantity/ies</li>
+<li>therefore, the posting will be opposite to the sales invoice one, as described below, in case <a href="../general-ledger-configuration/#general-ledger-configuration"><strong>Allow Negative</strong></a> checkbox is enabled and in case it is not:</li>
 </ul>
 <table>
 <thead>
@@ -14993,25 +15121,25 @@
 </thead>
 <tbody>
 <tr>
-<td>Account</td>
-<td>Debit</td>
-<td>Credit</td>
-<td>Comments</td>
+<td><strong>Account</strong></td>
+<td><strong>Debit</strong></td>
+<td><strong>Credit</strong></td>
+<td><strong>Comments</strong></td>
 </tr>
 <tr>
-<td>Customer Receivables</td>
+<td><a href="../../../../master-data-management/master-data/#customer">Customer Receivables</a></td>
 <td>(-) Line Net Amount</td>
 <td></td>
 <td>One per invoice line</td>
 </tr>
 <tr>
-<td>Tax Debit</td>
+<td><a href="../tax-rate/#accounting">Tax Debit</a></td>
 <td></td>
 <td>(-) Tax Amount</td>
 <td>One per tax line</td>
 </tr>
 <tr>
-<td>Product Revenue</td>
+<td><a href="../../../../master-data-management/product-setup/#accounting">Product Revenue</a></td>
 <td></td>
 <td>(-) Total Gross Amount</td>
 <td>One per invoice</td>
@@ -15029,121 +15157,95 @@
 </thead>
 <tbody>
 <tr>
-<td>Account</td>
-<td>Debit</td>
-<td>Credit</td>
-<td>Comments</td>
+<td><strong>Account</strong></td>
+<td><strong>Debit</strong></td>
+<td><strong>Credit</strong></td>
+<td><strong>Comments</strong></td>
 </tr>
 <tr>
-<td>Customer Receivables</td>
+<td><a href="../../../../master-data-management/master-data/#customer">Customer Receivables</a></td>
 <td></td>
 <td>Line Net Amount</td>
 <td>One per invoice line</td>
 </tr>
 <tr>
-<td>Tax Debit</td>
+<td><a href="../tax-rate/#accounting">Tax Debit</a></td>
 <td>Tax Amount</td>
 <td></td>
 <td>One per tax line</td>
 </tr>
 <tr>
-<td>Product Revenue</td>
+<td><a href="../../../../master-data-management/product-setup/#accounting">Product Revenue</a></td>
 <td>Total Gross Amount</td>
 <td></td>
 <td>One per invoice</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>the checkbox named "<strong>Credit Memo</strong>" is enabled by default for "Credit Memo" document types such as "AR Credit Memo" and "AP Credit Memo":<ul>
-<li><em>"Credit Memo"</em> document types are also "<em>reverse</em>" or "<em>cancelled</em>" documents type however, those behave differently than "<em>return</em>" document types, for instance:<ul>
-<li>they generate invoices with "<em>positive</em>" invoiced quantity/ies</li>
-<li>therefore, the posting is always opposite to the invoices one, regardless the Allow Negative checkbox setup:</li>
-</ul>
 </li>
 </ul>
 </li>
+<li>
+<p>The <strong>Active</strong> checkbox can be used to activate or deactivate this document type.</p>
+</li>
+<li>
+<p>The <strong>Default</strong> checkbox indicates if this record is to be used as a default value.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The following fields are <strong>only displayed when the selected document category is Sales Order</strong>.</p>
+</div>
+</li>
+<li>
+<p>The <strong>Document Type for Invoice</strong> field indicates the document type that will be used when an invoice is generated from this sales document. It allows to define the document (i.e. Return Material Sales Invoice) to use while creating a Sales Order from a Return Material Document Type, like Return From Customer.</p>
+</li>
+<li>The <strong>Document Type for Order</strong> field allows the user to define for the Quotation <strong>Document Type</strong> the document (i.e Standard Order) to use while creating a sales order from a sales quotation.</li>
+<li>The <strong>Document Type for Shipments</strong> field indicates the document type that will be used when a shipment is generated from this sales document. </li>
+<li>The <strong>Document Type for Simplified Invoice</strong> field indicates the document type that will be used when a simplified invoice is generated from this sales document.</li>
+<li>The <strong>Document Type for Aggregated Invoice</strong> indicates the document type that will be used when an aggregated invoice is generated from this sales document.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Account</td>
-<td>Debit</td>
-<td>Credit</td>
-<td>Comments</td>
-</tr>
-<tr>
-<td>Customer Receivables</td>
-<td></td>
-<td>Line Net Amount</td>
-<td>One per invoice line</td>
-</tr>
-<tr>
-<td>Tax Debit</td>
-<td>Tax Amount</td>
-<td></td>
-<td>One per tax line</td>
-</tr>
-<tr>
-<td>Product Revenue</td>
-<td>Total Gross Amount</td>
-<td></td>
-<td>One per invoice</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>The field "<strong>Document Type for Order</strong>" allows the user to define for the Quotation "Document Type" the document (i.e Standard Order) to use while creating a sales order from a sales quotation.</li>
-<li>The field "<strong>Document Type for Invoice</strong>" allows the user to define the document (i.e. Return Material Sales Invoice) to use while creating a Sales Order from a Return Material Document Type, like Return From Customer.</li>
-</ul>
-<p><strong>Report Templates</strong></p>
-<p>The report template tab allows the user to configure a different look and feel for the document types by setting up Jasper JRXML templates for each document type.</p>
-<p>It is possible to print document types such as Goods Shipments or Sales Invoices by using the "<em>Print</em>" action button, which can be found in the <em>Toolbar</em>.</p>
-<p>In Etendo, every document suitable to be printed is linked to a "standard" report template.</p>
-<p>If necessary, report templates can be customized and even new ones can be created and therefore linked to a given document type.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-.png"></a></p>
-<h3 id="email-definitions"><strong>Email Definitions</strong></h3>
-<p>Emails definition tab supports the creation of as many email templates as required depending on the language to be used for sending the documents by email.</p>
-<p>Documents can be sent by e-mail by using the action button <strong>Email</strong> which can be found in the <em>Toolbar</em>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh.png"></a></p>
+<h3 id="report-templates">Report Templates</h3>
+<p>The <strong>Report Templates</strong> tab allows the user to configure a different aspect for the <strong>printables</strong> related to each document type by setting up Jasper <code>.jrxml</code> templates.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By default, these templates are included in the datasets mentioned in the <a href="#overview">overview</a>.</p>
+</div>
+<p>It is possible to print document types such as <a href="../../../../sales-management/transactions/#goods-shipment">Goods Shipments</a> or <a href="../../../../sales-management/transactions/#sales-invoice">Sales Invoices</a> by using the <strong>Print</strong> action button, which can be found in the corresponding window toolbar.</p>
+<p>In Etendo, every document suitable to be printed is linked to a <em>standard</em> report template.</p>
+<p>If necessary, <strong>report templates can be customized</strong> and even new ones can be created and therefore linked to a given document type.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Even though this option is available in this functional tab, this configuration must be done by a developer.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png"></a></p>
+<h4 id="email-definitions">Email Definitions</h4>
+<p>The Email Definitions tab supports the creation of as many email templates as required, depending on the language to be used for sending the documents by email. Documents can be sent by email by using the action button <strong>Email</strong> which can be found in the corresponding toolbar.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png"></a></p>
 <p>As shown in the image above, it is possible to define:</p>
 <ul>
-<li>a <em>Subject template</em> to be populated with "real" data every time a given document is sent by email.<ul>
-<li>For instance "New Invoice (@our_ref@)" will turn into "New Invoice (SI/2589)" where SI/2589 is the number of the invoice sent by email.</li>
-</ul>
+<li>
+<p>A <strong>Subject template</strong> to be populated with real data every time a given document is sent by email.</p>
+<p>For instance: <code>New Invoice (@our_ref@)</code> will turn into <em>New Invoice (SI/2589)</em> where <em>SI/2589</em> is the number of the invoice sent by email.</p>
 </li>
-<li>a Body template to be populated with "real" data every time a given document is sent by email.<ul>
-<li>For instance:<ul>
-<li>"Dear @cus_nam@, Find attached the invoice @our_ref@ corresponding to the products you received from F&amp;B International Group."<br>
-    will turn into</li>
-<li>"Dear Healthly Food Supermarkets Co., Find attached the invoice SI/2589 corresponding to the products you received from F&amp;B International Group."</li>
-</ul>
-</li>
-</ul>
+<li>
+<p>A <strong>Body template</strong> to be populated with real data every time a given document is sent by email.</p>
+<p>For instance: <code>Dear @cus_nam@, Find attached the invoice @our_ref@ corresponding to the products you received from F&amp;B International Group.</code> will turn <em>Dear Healthly Food Supermarkets Co., Find attached the invoice SI/2589 corresponding to the products you received from F&amp;B International Group.</em></p>
 </li>
 </ul>
 <p>Here is the list of possible tags:</p>
 <ul>
-<li><em>@cus_ref@</em>: The document reference of the customer</li>
-<li><em>@our_ref@</em>: The reference of the document</li>
-<li><em>@cus_nam@</em>: The name of the customer</li>
-<li><em>@sal_nam@</em>: The name of the sales rep.</li>
-<li><em>@bp_nam@</em>: The Business Partner name [since 3.0MP27]</li>
-<li><em>@doc_date@</em>: The document date [since 3.0MP27]</li>
-<li><em>@doc_desc@</em>: The document description [since 3.0MP27]</li>
-<li><em>@doc_nextduedate@</em>: The next due date (if document has associated any payment plan) [since 3.0MP27]</li>
-<li><em>@doc_lastduedate@</em>: The last due date (if document has associated any payment plan) [since 3.0MP27]</li>
+<li><code>@cus_ref@</code>: The document reference of the customer.</li>
+<li><code>@our_ref@</code>: The reference of the document.</li>
+<li><code>@cus_nam@</code>: The name of the customer.</li>
+<li><code>@sal_nam@</code>: The name of the sales representative.</li>
+<li><code>@bp_nam@</code>: The Business Partner name.</li>
+<li><code>@doc_date@</code>: The document date.</li>
+<li><code>@doc_desc@</code>: The document description.</li>
+<li><code>@doc_nextduedate@</code>: The next due date (if document has associated any payment plan).</li>
+<li><code>@doc_lastduedate@</code>: The last due date (if document has associated any payment plan).</li>
 </ul>
 <h3 id="translation">Translation</h3>
-<p>Document types can be translated to any language required.</p>
+<p>In this tab, document types can be translated to any language required. To do this, create a new record and fill the corresponding fields, as shown below.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png"></a></p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Document_Type" target="_blank">Document Type</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
