@@ -18,8 +18,8 @@ tags:
 
 This set is bundled into two reference datasets:
 
--   Standard document types for orders, invoices, etc. and settings - Core - English (USA)
--   Document types and default algorithm for bank statement auto matching - Advanced Payables
+- Standard document types for orders, invoices, etc. and settings - Core - English (USA)
+- Document types and default algorithm for bank statement auto matching - Advanced Payables
 
 !!!info
     These datasets can be imported into the application during its initial setup using [Initial Client Setup](../../../general-setup/getting-started.md#initial-client-setup) or [Initial Organization Setup](../../../general-setup/enterprise-model/initial-organization-setup.md) processes. Or if the application is already up and running, these datasets or their updates can be installed using [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md) window.
@@ -67,19 +67,19 @@ The complete list of standard document types is the following:
 
 The Document Type window allows advanced users to configure how each document type is going to behave in terms of accounting and sequencing among others.
 
-![](../../../../../../assets/drive/1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png)
 
 Fields to note:
 
--   An **Organization** is a unit of your client or legal entity.
--   The **Name** of the document.
--   The **G/L Category** is an optional, user defined method of grouping journal lines.
--   The **Print Text** which is the name of the document to be printed.
--   A **Document Category** is the document base type that identifies a document. Multiple document types may share a single document category.
--   The **SSO Sub Type** indicates the type of sales order this document refers to.
+- An **Organization** is a unit of your client or legal entity.
+- The **Name** of the document.
+- The **G/L Category** is an optional, user defined method of grouping journal lines.
+- The **Print Text** which is the name of the document to be printed.
+- A **Document Category** is the document base type that identifies a document. Multiple document types may share a single document category.
+- The **SSO Sub Type** indicates the type of sales order this document refers to.
 
     !!! info
-        This field only appears when the Document Category is Sales Order. 
+        This field only appears when the Document Category is *Sales Order*. 
 
     The selection made here will determine which documents will be generated when an order is processed and which documents must be generated manually or in batches. The following outlines this process.
 
@@ -87,34 +87,42 @@ Fields to note:
     - The **Warehouse Order** option generates the Order and Delivery Note. The Invoice and Receipt must be generated via other processes.
     - The **On Credit Order** option generates the Order, Delivery Note and Invoice. The Receipt must be generated via other processes.
 
--   The **Sequenced Document** flag could be disabled or enabled if it is required to either
-    -   manually number a document type
-    -   or automatically number a document type according to a given [document sequence](../../../financial-management/accounting/setup/document-sequence.md).
--   The **Document Sequence** indicates the sequencing rule to use for this document type.
+- The **Sequenced Document** flag could be disabled or enabled if it is required to either
+    
+    - manually number a document type
+    - or automatically number a document type according to a given [document sequence](../../../financial-management/accounting/setup/document-sequence.md).
+
+- The **Document Sequence** indicates the sequencing rule to use for this document type.
 
     !!!info
         This field is only displayed when the **Sequenced Document** checkbox is selected. 
 
--   The **Table** indicates the table to which the document type corresponds. 
--   The **Sales Transaction** checkbox indicates if this item is a Sales Transaction. If not checked, by default the item refers to a Purchase transaction.
--   The **Return** checkbox indicates if the document is of reversal type. Documents with this flag enable using negative quantities.
--   the **Credit Memo** checkbox is enabled by default for **Credit Memo** document types such as **AR Credit Memo** and **AP Credit Memo**:
-    -   **Credit Memo** document types are also **reverse** or **cancelled** documents type however, those behave differently than **return** document types, for instance:
-    -   they generate invoices with **positive** invoiced quantity/ies
-    -   therefore, the posting is always opposite to the invoices one, regardless the [**Allow Negative**](../../../financial-management/accounting/setup/general-ledger-configuration.md#general-ledger-configuration) checkbox setup:
+- The **Table** indicates the table to which the document type corresponds. 
+- The **Sales Transaction** checkbox indicates if this item is a Sales Transaction. If not checked, by default the item refers to a Purchase transaction.
+- The **Return** checkbox indicates if the document is of reversal type. Documents with this flag enable using negative quantities.
+- The **Credit Memo** checkbox is enabled by default for **Credit Memo** document types such as **AR Credit Memo** and **AP Credit Memo**:
+    
+    - **Credit Memo** document types are also **reverse** or **cancelled** documents type however, those behave differently than **return** document types, for instance:
 
-        |     |     |     |     |
-        | --- | --- | --- | --- |
-        | **Account** | **Debit** | **Credit** | **Comments** |
-        | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
-        | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
-        | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+        - they generate invoices with **positive** invoiced quantity/ies
+        - therefore, the posting is always opposite to the invoices one, regardless the [**Allow Negative**](../../../financial-management/accounting/setup/general-ledger-configuration.md#general-ledger-configuration) checkbox setup:
 
--   **Document Cancelled**, if any, is the document to use for voiding a given document type. For instance, a **Reversed Sales Invoice** document type can be set as the document canceled of an **AR Invoice**, therefore that one will be the one to use while voiding an **AR Invoice** (or sales invoice).
-    -   A **Reversed Sales Invoice** document type is also an **AR Invoice** document type, but it can have a different sequencing by just linking it to a difference document sequence.
-    -   besides, it is set as a **Return** document type, which means that:
-        -   it generates a **negative** sales invoice with a negative invoiced quantity/ies
-        -   therefore, the posting will be opposite to the sales invoice one, as described below, in case [**Allow Negative**](../../../financial-management/accounting/setup/general-ledger-configuration.md#general-ledger-configuration) checkbox is enabled and in case it is not:
+            |     |     |     |     |
+            | --- | --- | --- | --- |
+            | **Account** | **Debit** | **Credit** | **Comments** |
+            | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
+            | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
+            | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+
+- **Document Cancelled**, if any, is the document to use for voiding a given document type. 
+
+    For instance, a **Reversed Sales Invoice** document type can be set as the document canceled of an **AR Invoice**, therefore that one will be the one to use while voiding an **AR Invoice** (or sales invoice).
+    
+    - A **Reversed Sales Invoice** document type is also an **AR Invoice** document type, but it can have a different sequencing by just linking it to a different document sequence.
+    - besides, it is set as a **Return** document type, which means that:
+        
+        - it generates a **negative** sales invoice with a negative invoiced quantity/ies
+        - therefore, the posting will be opposite to the sales invoice one, as described below, in case [**Allow Negative**](../../../financial-management/accounting/setup/general-ledger-configuration.md#general-ledger-configuration) checkbox is enabled and in case it is not:
 
         |     |     |     |     |
         | --- | --- | --- | --- |
@@ -130,76 +138,70 @@ Fields to note:
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
         | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
 
+- The **Active** checkbox can be used to activate or deactivate this document type.
+- The **Default** checkbox indicates if this record is to be used as a default value.
 
--   The **Active** checkbox can be used to activate or deactivate this document type.
--   The **Default** checkbox indicates if this record is to be used as a default value.
-
-!!!info
-    The following fields are **only displayed when the selected document category is Sales Order**.
+    !!!info
+        The following fields are **only displayed when the selected document category is Sales Order**.
 
 - The **Document Type for Invoice** field indicates the document type that will be used when an invoice is generated from this sales document. It allows to define the document (i.e. Return Material Sales Invoice) to use while creating a Sales Order from a Return Material Document Type, like Return From Customer.
-
--   The  **Document Type for Order** field allows the user to define for the Quotation **Document Type** the document (i.e Standard Order) to use while creating a sales order from a sales quotation.
-
--	The **Document Type for Shipments** field indicates the document type that will be used when a shipment is generated from this sales document. 
-
--   The **Document Type for Simplified Invoice** field indicates the document type that will be used when a simplified invoice is generated from this sales document. 
-    
--   The **Document Type for Aggregated Invoice** indicates the document type that will be used when an aggregated invoice is generated from this sales document.
+- The **Document Type for Order** field allows the user to define for the Quotation **Document Type** the document (i.e Standard Order) to use while creating a sales order from a sales quotation.
+- The **Document Type for Shipments** field indicates the document type that will be used when a shipment is generated from this sales document. 
+- The **Document Type for Simplified Invoice** field indicates the document type that will be used when a simplified invoice is generated from this sales document.
+- The **Document Type for Aggregated Invoice** indicates the document type that will be used when an aggregated invoice is generated from this sales document.
 
 
 ### Report Templates
 
-The Report Templates tab allows the user to configure a different aspect for the document types by setting up Jasper `.jrxml` templates for each document type.
+The **Report Templates** tab allows the user to configure a different aspect for the **printables** related to each document type by setting up Jasper `.jrxml` templates.
 
 !!!info
     By default, these templates are included in the datasets mentioned in the [overview](#overview).
 
-It is possible to print document types such as [Goods Shipments](../../../sales-management/transactions.md#goods-shipment) or [Sales Invoices](../../../sales-management/transactions.md#sales-invoice) by using the **Print** action button, which can be found in the corresponding toolbar.
+It is possible to print document types such as [Goods Shipments](../../../sales-management/transactions.md#goods-shipment) or [Sales Invoices](../../../sales-management/transactions.md#sales-invoice) by using the **Print** action button, which can be found in the corresponding window toolbar.
 
-In Etendo, every document suitable to be printed is linked to a **standard** report template.
+In Etendo, every document suitable to be printed is linked to a *standard* report template.
 
 If necessary, **report templates can be customized** and even new ones can be created and therefore linked to a given document type.
 
-!!!note
+!!! warning
     Even though this option is available in this functional tab, this configuration must be done by a developer.
 
-![](../../../../../../assets/drive/1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png)
 
 #### Email Definitions
 
 The Email Definitions tab supports the creation of as many email templates as required, depending on the language to be used for sending the documents by email. Documents can be sent by email by using the action button **Email** which can be found in the corresponding toolbar.
 
-![](../../../../../../assets/drive/1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png)
 
 As shown in the image above, it is possible to define:
 
--   a **Subject template** to be populated with real data every time a given document is sent by email.
-    -   For instance `New Invoice (@our\_ref@)` will turn into `New Invoice (SI/2589)` where `SI/2589` is the number of the invoice sent by email.
--   a **Body template** to be populated with real data every time a given document is sent by email.
-    -   For instance:
-        -   `Dear @cus\_nam@, Find attached the invoice @our\_ref@ corresponding to the products you received from F&B International Group.`  
-            will turn into
-        -   `Dear Healthly Food Supermarkets Co., Find attached the invoice SI/2589 corresponding to the products you received from F&B International Group.`
+- A **Subject template** to be populated with real data every time a given document is sent by email.
+
+    For instance: `New Invoice (@our_ref@)` will turn into *New Invoice (SI/2589)* where *SI/2589* is the number of the invoice sent by email.
+
+- A **Body template** to be populated with real data every time a given document is sent by email.
+    
+    For instance: `Dear @cus_nam@, Find attached the invoice @our_ref@ corresponding to the products you received from F&B International Group.` will turn *Dear Healthly Food Supermarkets Co., Find attached the invoice SI/2589 corresponding to the products you received from F&B International Group.*
 
 Here is the list of possible tags:
 
--   **@cus\_ref@**: The document reference of the customer
--   **@our\_ref@**: The reference of the document
--   **@cus\_nam@**: The name of the customer
--   **@sal\_nam@**: The name of the sales representative
--   **@bp\_nam@**: The Business Partner name
--   **@doc\_date@**: The document date 
--   **@doc\_desc@**: The document description 
--   **@doc\_nextduedate@**: The next due date (if document has associated any payment plan)
--   **@doc\_lastduedate@**: The last due date (if document has associated any payment plan)
+- `@cus_ref@`: The document reference of the customer.
+- `@our_ref@`: The reference of the document.
+- `@cus_nam@`: The name of the customer.
+- `@sal_nam@`: The name of the sales representative.
+- `@bp_nam@`: The Business Partner name.
+- `@doc_date@`: The document date.
+- `@doc_desc@`: The document description.
+- `@doc_nextduedate@`: The next due date (if document has associated any payment plan).
+- `@doc_lastduedate@`: The last due date (if document has associated any payment plan).
 
 ### Translation
 
 In this tab, document types can be translated to any language required. To do this, create a new record and fill the corresponding fields, as shown below.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/translation-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png)
 
 ---
-
 This work is a derivative of [Document Type](https://wiki.openbravo.com/wiki/Document_Type){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

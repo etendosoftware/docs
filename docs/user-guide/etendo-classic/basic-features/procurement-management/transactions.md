@@ -715,37 +715,33 @@ Also, this process window includes a **Supplier Reference** field to enter the s
 
 This action implies that:
 
-- Etendo automatically generates a new document in the Purchase Invoice window that reverses the original invoice.
+- Etendo automatically generates a new document in the *Purchase Invoice* window that reverses the original invoice.
 - Etendo also informs about the new document number. This new document is created as described below:
-The transaction document used by Etendo is the Reversed Purchase Invoice. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
-- Once the new document has been created, you can change both the Invoice Date and the Accounting Date of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.
-- The Reversed Invoices tab list the original invoice being reversed as now both of them are linked.
+    
+    The transaction document used by Etendo is the *Reversed Purchase Invoice*. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
 
-The reversed document posting creates the following accounting entries:
+- Once the new document has been created, you can change both the *Invoice Date* and the *Accounting Date* of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.
 
-| **Account**             | **Debit**              | **Credit**          | **Comments**                 |
-|---------------------|--------------------|------------------|--------------------------|
-| Product Expense     |                    | Line Net Amount  | One per invoice line     |
-| [Tax Credit](../financial-management/accounting/setup/tax-rate.md#accounting)          |                    | Tax Amount       | One per tax line         |
-| [Vendor Liability](../master-data-management/master-data.md#vendor)    | Total Gross Amount |                  | One per invoice          |
+- The *Reversed Invoices* tab lists the original invoice being reversed as now both of them are linked.
 
-And it is also possible to partially void a supplier invoice by:
+    And it is also possible to partially void a supplier invoice by:
 
-- manually creating any of the available reversed purchase documents, in the "Purchase Invoice" window:
-    - "AP Credit Memo" or
-    - "Reversed Purchase Invoice"
-- which besides must be manually linked to the invoice/s being reversed in the "Reversed Invoices tab".
-To learn more visit Reversed Invoices.
+    - Manually creating any of the available reversed purchase documents, in the [Purchase Invoice](#purchase-invoice) window:
+        
+        - **AP Credit Memo** or
+        - **Reversed Purchase Invoice**
 
-The "AP Credit Memo" posting looks the same as the "Reversed Purchase Invoice" posting.
+    - which besides must be manually linked to the invoice/s being reversed in the **Reversed Invoices** tab.
+    
+    To learn more visit [Reversed Invoices](../sales-management/transactions.md#reversed-invoices).
 
-The main difference between those two purchase reversed document types is:
+    The **AP Credit Memo** posting looks the same as the **Reversed Purchase Invoice** posting. The main difference between those two purchase reversed document types is:
 
-- AP Credit Memo invoiced quantity is a positive quantity
-- and Reversed Purchase Invoice quantity is a negative quantity
+    - **AP Credit Memo** invoiced quantity is a positive quantity.
+    - and **Reversed Purchase Invoice** quantity is a negative quantity
 
-!!!note
-    We strongly recommend you to use the "Reversed Purchase Invoice" document type while partially voiding supplier's invoices.
+    !!!note
+        We strongly recommend you to use the **Reversed Purchase Invoice** document type while partially voiding supplier's invoices.
 
 
 #### Add Payment 
@@ -871,7 +867,7 @@ In the case of "Expense" product/s do not having the "Sales" checkbox selected, 
 
 #### Accounting
 
-Accounting information related to the matched purchase invoices
+Accounting information related to the matched purchase invoices.
 
 ### Bulk Posting
 
