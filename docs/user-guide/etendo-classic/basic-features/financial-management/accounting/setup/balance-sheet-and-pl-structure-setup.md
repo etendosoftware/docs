@@ -1,10 +1,10 @@
 ---
 title: Balance Sheet and P/L Structure Setup
 tags:
-    - Balance
-    - Sheet
+    - Balance sheet
     - P/L Structure
-    - Setup
+    - Reports
+    - CSV file
     - Accounting
 ---
 
@@ -14,85 +14,107 @@ tags:
 
 ## Overview
 
-Balance Sheet and P&L structure setup allows the user to configure the two main financial reports which are the Balance Sheet and the P&L.
+The Balance Sheet and P&L Structure Setup allows users to define how Etendo generates its two main **financial reports**:
 
-Once configured, these two reports can be launched from the Balance Sheet and P&L window.
+- Balance Sheet
 
-It is important to remark that the *source of both reports structure* is the organization Account Tree which therefore needs to be structured in a way to obtain a meaningful Balance Sheet and P&L reports.
+- Profit and Loss (P&L)
 
-Moreover, and as already described, an Account Tree or chart of accounts can be imported or can be manually created:
+This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the **Balance Sheet and P&L window**.
 
--   in the case of imported account trees as a CSV file or as a reference data set:
-    -   Etendo provides the localized account tree structure required to get localized balance sheet and P&L reports for a given country, for instance, the Spanish Chart of Accounts
--   in the case of manually created account trees:
-    -   it is key to take into account that financial reports structure relies on the account tree structure.
+A key point is that both reports are built based on the **[Organization Account Tree](../setup/account-tree.md)** (Chart of Accounts). Therefore, the account tree must be properly structured to obtain meaningful and accurate financial reports.
 
-### Setup
 
-Each new record in the Balance Sheet and P&L structure setup window is a report.
+The structure of the Balance Sheet and P&L depends entirely on the Account Tree:
 
-It is really important the level up to which either a Balance Sheet or P&L report is defined. That level relies on the organization type selected because:
+- **Imported account trees** (CSV files or reference data):
 
--   If the organization selected is a *Legal with Accounting* which has other organizations underneath, the financial information provided by the reports will be a **roll-up** of the financial information of the organizations which belong to it. Roll-up means it produces an **aggregated** Balance Sheet. To get a **consolidated** Balance Sheet, transactions between organizations (intercompany transactions) need to be removed from the resulting report.
--   The same applies in the case of organizations which are *Organization* type which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.
--   If the organization selected is a *Generic* organization which belongs to a *Legal with Accounting* one, the financial information provided by the reports will be just the financial information of that organization.
+    - Etendo provides localized charts of accounts, such as the Spanish Chart of Accounts, already structured to produce compliant Balance Sheet and P&L reports.
 
-![](../../../../../../assets/drive/1xwB1sbOrMC6OtQejlrNDjg5Zss_vMddz.png)
+- **Manually created** account trees:
 
-The fields to fill in this window are:
+    - The user must carefully design the hierarchy, as the report structure directly reflects the way accounts are organized in the tree.
 
--   the **Report Name**
--   the **General Ledger** from which accounting information is required
--   the **Report Type**. The options available are:
-    -   **Point in Time**, this type is used for reports such the Balance Sheet as account's balance needs to be referred to a specific date.
-    -   and **Periodic**, this type is used for reports such the P&L as used account's balance needs to be referred to a specific period of time, for instance a month, a quarter, a year, etc.
--   finally the **Balanced** flag which must be activated whenever the report need to be launched just for "Legal with Accounting" organization types as that is the enterprise level where accounting balance is ensured.  
-    This flag needs to be checked as active for the Balance Sheet report.
+### Header
 
-### Grouping Category
+Each record created in this window represents one **financial report**. When defining a report, the selected [organization type](../../../general-setup/enterprise-model/organization-type.md) is crucial because it determines the scope of the financial data:
 
-Grouping category tab allows the user to define categories which groups report node/s. Each grouping category implies a page break in the report showing the defined report node/s.
+-   If the organization selected is a **Legal with Accounting** which has other organizations underneath, the financial information provided by the reports will be a **roll-up** of the financial information of the organizations which belong to it. Roll-up means it produces an **aggregated** Balance Sheet. To get a **consolidated** Balance Sheet, transactions between organizations (intercompany transactions) need to be removed from the resulting report.
+-   The same applies in the case of organizations which are **Organization type** which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.
+-   If the organization selected is a **Generic organization** which belongs to a Legal with Accounting one, the financial information provided by the reports will be just the financial information of that organization.
 
-![](../../../../../../assets/drive/1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF.png)
 
-### Node
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet1.png)
 
-A node defines the information shown in the report.
+Fields to note in this window:
 
-![](../../../../../../assets/drive/1jA6R5_RRLe7qWdGcNE_pWbiRmzfT61FF.png)
+- **General Ledger**: from which accounting information is required.
+- **Report Name**: e.g. Balance Sheet.
+- **Report Type**: the options available are:
+    -   **Point in Time**: this type is used for reports such the Balance Sheet as account's balance needs to be referred to a specific date.
+    -   **Periodic**: this type is used for reports such the P&L as used account's balance needs to be referred to a specific period of time, for instance a month, a quarter, a year, etc.
+- **Balanced**: this flag must be activated whenever the report needs to be launched just for **Legal with Accounting** organization types as that is the enterprise level where accounting balance is ensured.  
+- **Active**: this flag needs to be checked as active for the Balance Sheet report.
+
+### Lines
+
+The **Grouping Category** tab allows users to define sections within the report. Each grouping category creates a page break, helping organize the report into clear sections.
+
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet2.png)
+
+
+From the **Node** tab it is possible to define the information shown in the report.
+
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet3.png)
 
 A report node is defined by:
 
--   the **Name** of the node
--   and the Account Element which is going to be shown in the report.
-    -   The account elements selected here are usually "*Heading*" element level types,  
-        therefore the calculated balance of the node will take into account and will show the balance of all the account elements of other types which are underneath it.
+-   the **Name** of the node.
+-   the **Account Element** which is going to be shown in the report.
+    
+    !!!info
+        The account elements selected here are usually **Heading element level types**, therefore the calculated balance of the node will take into account and will show the balance of all the account elements of other types which are underneath it.
 
-### Balance Sheet Structure Setup Example
+### Examples
 
-One example of a Balance Sheet structure can be:
+#### Balance Sheet Structure Setup Example
 
--   *Report Name: Balance Sheet*  
-    *Report Type: Point in Time*  
-    *Balanced: Yes*
-    -   Grouping Category: Balance Sheet
-        -   Node: Assets linked to the Account Element of the Account Tree which collects all the "Asset" accounts.
-        -   Node: Liabilities and Owner's Equity linked to the Account Tree element which collects all the "Liabilities and Owner's Equity" account tree elements.
+This setup defines how Etendo generates a **Balance Sheet** showing the company’s financial position at a specific date.
 
-Above nodes must be an Account Tree element properly configured.
+- **Report Type**: Point in Time, as balances are calculated for a specific date.
+- **Balanced**: Yes, since the Balance Sheet must be balanced at Legal with Accounting level.
 
-### P&L Setup Example
+Nodes:
 
-An example for a Profit and Loss report would be:
+- **Assets**: Linked to the account tree heading that groups all asset accounts.
+- **Liabilities and Owner’s Equity**: Linked to the heading that groups liabilities and equity accounts.
 
--   *Report Name: Profit and Loss*  
-    *Report Type: Periodic*  
-    *Balanced: No*
-    -   Grouping Category: Profit and Loss
-        -   Node: Profit and Loss linked to the "Heading" Account Tree element which collects all the "Expenses" and "Revenue" account tree elements.
+Etendo calculates each node by **summing all accounts** located under the corresponding account tree heading. 
 
-Above node must be an Account Tree element properly configured.
+!!!note
+    A correctly structured Account Tree is essential for accurate results.
 
----
+
+#### Profit and Loss (P&L) Structure Setup Example
+
+
+This setup defines how Etendo generates a **Profit and Loss report** for a selected period.
+
+- **Report Type**: Periodic, as revenues and expenses are calculated over a time range.
+
+- **Balanced**: No, since this report does not represent a balance at a specific date.
+
+Node:
+
+- **Profit and Loss**: Linked to the account tree heading that groups all revenue and expense accounts.
+
+    !!!info
+        Above node must be an Account Tree element properly configured.
+        For more information visit, [Account Tree](../setup/account-tree.md).
+
+Etendo calculates the result by comparing total revenues and expenses for the selected period.
+
+!!!info
+    For more information about Balance Sheet and P/L Structure reports visit: [Balance Sheet and P/L Structure](../../accounting/analysis-tools.md#balance-sheet-and-pl-structure). 
 
 This work is a derivative of [Balance Sheet and P/L Structure Setup](https://wiki.openbravo.com/wiki/Balance_sheet_and_P%26L_structure_Setup){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
