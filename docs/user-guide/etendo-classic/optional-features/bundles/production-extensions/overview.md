@@ -25,7 +25,7 @@ This bundle includes enhancements for the Production Management functionalities 
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.work.effort`
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uqq7-LAoK-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KRcwM9tuMus?si=0w0iPDl9KGgWaLYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This module provides advanced document management capabilities for Work Efforts, including the ability to reactivate and void work effort documents.
 
