@@ -82,7 +82,7 @@ To start using this module correctly, the following installation and configurati
     - **Organization**: allows you to manage which organization will apply the configuration.
     - **Warehouse**: is a non-mandatory field that can be used to apply the configuration to a specific warehouse or to all warehouses in the organization.
     - **Active**: is checked or unchecked to enable or disable the configuration.
-    - **Barcode Condiguration**
+    - **Barcode Configuration**
 
         - **Barcode Algorithm**: The default barcode algorithm that allows interpretation according to any of the standards defined by international organizations. The options to select are:
 
@@ -352,7 +352,7 @@ When goods are received, the system can automatically generate RI records for ea
 
 ### Inbound Receipt Window  
 
-:material-menu: `Application` > `Warehouse Management` > `Transaction` > `Inbound Receipt`
+:material-menu: `Application` > `Procurement Management` > `Transaction` > `Inbound Receipt`
 
 The **Inbound Receipt** window enhances the [goods receipt](../../../basic-features/procurement-management/transactions.md#goods-receipts) flow by introducing an intermediate step between the purchase order and the goods receipt. This step centralizes multiple orders—even from different suppliers—into a single operation, improving flexibility, automation, and control. It also supports alternative units of measure (AUOM), enabling receipts to be recorded in pallets, boxes, or regrouped into different containers to reflect the actual inflow.
 
