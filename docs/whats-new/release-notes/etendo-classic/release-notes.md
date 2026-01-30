@@ -23,7 +23,8 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [25Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.3){target="_blank"} | 22/01/2026 | 25.4.3 | QAA | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) | :white_check_mark: |
+| [25Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.4){target="_blank"} | 30/01/2026 | 25.4.4 | QAA |  | :white_check_mark: |
+| [25Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.3){target="_blank"} | 22/01/2026 | 25.4.3 | C | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) | :white_check_mark: |
 | [25Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.2){target="_blank"} | 13/01/2026 | 25.4.2 | C |  | :white_check_mark: |
 | [25Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.1){target="_blank"} | 07/01/2026 | 25.4.1 | C |  | :white_check_mark: |
 | [25Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.0){target="_blank"} | 29/12/2025 | 25.4.0 | C | [25Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.0.iso){target="_blank"} | :white_check_mark: |
