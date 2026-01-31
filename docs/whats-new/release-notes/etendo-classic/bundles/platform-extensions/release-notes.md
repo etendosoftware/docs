@@ -17,7 +17,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [3.14.4](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.4){target="_blank"} | 27/01/2026 | 25.2.0 | 25.4.x | CS | :white_check_mark: |
+| [3.14.5](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.5){target="_blank"} | 31/01/2026 | 25.2.0 | 25.4.x | CS | :white_check_mark: |
+| [3.14.4](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.4){target="_blank"} | 27/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.14.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.3){target="_blank"} | 23/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.14.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.2){target="_blank"} | 16/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.14.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/3.14.1){target="_blank"} | 13/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
