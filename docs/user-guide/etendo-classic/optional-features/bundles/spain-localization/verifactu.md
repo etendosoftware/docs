@@ -283,7 +283,7 @@ A continuación se detallan los pasos necesarios para que una factura se dé de 
 
 ### Creación de Factura Manualmente
 
-Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Verifactu` > `Configuración Verifactu`.
+Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Configuración Verifactu`.
 
 Debe completar los siguientes campos obligatorios en la Factura:
 
