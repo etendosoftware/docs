@@ -341,6 +341,8 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
 ### Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The [Referenced Inventory (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) functionality has been extended to manage physical logistics units such as **pallets** and **boxes**, directly linked to the [Alternative Units of Measure (AUOM)](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.
 
 The [Stock Logistic Unit](./stock-logistic-unit.md) module, installed as a dependency, adds new UOMs (Box, Pallet) and reference inventory types, allowing users to configure equivalences in the **Alternate UOM** tab of the Product window. Once defined, if a different conversion is required, a new AUOM must be created.
