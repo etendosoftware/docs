@@ -12,6 +12,82 @@ tags:
 
 #
 
+## January 2026
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse Extensions 3.6.0: Faster execution, stronger controls, and smoother warehouse operations**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
+
+    With **Warehouse Extensions** version [3.6.0]((./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md)) (compatible from **Etendo 25.4**), a key control module was added to help warehouse and accounting teams **avoid costly date-related errors** in daily warehouse operations.
+
+    **New Material Management Rules module ⚡**
+
+    The new [Material Management Rules](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview#material-management-rules) module adds a clear rule to decide if Etendo should allow **warehouse transactions with dates prior to the current date**—a common source of inconsistencies and reprocessing when costing and stock movements are involved. **Default behavior:** the preference **Allow Backdated Cost Transactions** is set to **Y** by default (backdated transactions are allowed), and can be configured according to your policy.
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Main UI Beta 0.10.0 and platform hardening for Etendo 25.4**
+    
+    ---
+
+    ![](../assets/whats-new/etendo-news/new-ui-0.10.0.png){ width=500 align="right"}
+
+    The **Platform Extensions** bundle has been updated to [3.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md), delivering a round of platform improvements aimed at daily usability and stability.
+    
+    **Etendo Main UI – Beta 0.10.0**
+
+    - **Grid and table filters improvements**: filter-type selectors and the table filter dropdown, restoring reliable filtering in high-volume grids.
+    - **Copilot usability boost**: added **multiline input support**, making longer prompts and structured requests easier to write.
+    - **Faster data entry**: introduced a **New record** button directly in forms.
+    - **Processes from the menu**: run **processes and reports** directly from the menu, with manual processes opening in a **new tab**.
+    - **Cleaner exports and navigation**: fixed CSV export sorting and corrected visual issues when browsing long subtab lists.
+    - **More actions at hand**: added **Print Record** to the toolbar.
+
+</div>
+
+### Production
+
+
+<div class="grid cards" markdown>
+
+- :material-factory: **Void Work Efforts and Reactivate Internal Consumption**
+    
+    
+    ![](../assets/whats-new/etendo-news/production-void-reactivate.png){ width=500 align="right"}
+
+    ---
+
+    Production teams sometimes need to correct what was already processed, with **Production Extensions Bundle [3.4.0](./release-notes/etendo-classic/bundles/production-extensions/release-notes.md)**, you get two high-impact controls that make production corrections faster, safer, and fully auditable.
+
+    **Void completed Work Efforts**  
+    You can now **void a completed/processed Work Effort** directly from the Work Effort window. The system handles the reversal for you. The action is available only when the Work Effort is completed, not already voided, has no inconsistencies preventing reversal, and is **not posted to the ledger**.
+    
+    - Documentation: [How to Void Work Efforts](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-void-work-efforts)  
+    - Blog: [Improvements in Production Management with Etendo Production Extensions](https://etendo.software/en/blog/improvements-production-management-etendo-production-extensions/)
+
+    **Reactivate Internal Consumption**  
+    If an Internal Consumption document was processed by mistake, you can now **reactivate it** to correct quantities, bins, or products without manual cleanup. The document returns to **Draft** and the generated **material transactions are deleted**, reverting inventory movements. Reactivation is blocked when there are **calculated costs** associated with the document transactions.
+
+    - Documentation: [How to Reactivate Internal Consumption](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-reactivate-internal-consumption)
+
+</div>
+
+
+
+
+
+
+
 ## December 2025
 
 ### Etendo
