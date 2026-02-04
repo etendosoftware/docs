@@ -3566,17 +3566,17 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup
+      Header
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Header">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#grouping-category" class="md-nav__link">
@@ -3585,7 +3585,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Grouping Category">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#node" class="md-nav__link">
@@ -3596,26 +3597,31 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#balance-sheet-structure-setup-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Balance Sheet Structure Setup Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pl-setup-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      P&amp;L Setup Example
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-sheet-structure-setup-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Sheet Structure Setup - Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-and-loss-pl-structure-setup-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profit and Loss (P&amp;L) Structure Setup - Example
+    </span>
+  </a>
   
 </li>
       
@@ -14714,17 +14720,17 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup
+      Header
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Header">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#grouping-category" class="md-nav__link">
@@ -14733,7 +14739,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Grouping Category">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#node" class="md-nav__link">
@@ -14744,26 +14751,31 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#balance-sheet-structure-setup-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Balance Sheet Structure Setup Example
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pl-setup-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      P&amp;L Setup Example
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-sheet-structure-setup-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Sheet Structure Setup - Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-and-loss-pl-structure-setup-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profit and Loss (P&amp;L) Structure Setup - Example
+    </span>
+  </a>
   
 </li>
       
@@ -14792,7 +14804,13 @@
       
       
       
-        <span class="md-tag">Balance</span>
+        <span class="md-tag">Balance sheet</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">CSV file</span>
       
     
       
@@ -14804,13 +14822,7 @@
       
       
       
-        <span class="md-tag">Setup</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Sheet</span>
+        <span class="md-tag">Reports</span>
       
     
   </nav>
@@ -14823,85 +14835,104 @@
 <h1 id="balance-sheet-and-pl-structure-setup">Balance Sheet and P/L Structure Setup</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Balance Sheet and P/L Structure Setup</code></p>
 <h2 id="overview">Overview</h2>
-<p>Balance Sheet and P&amp;L structure setup allows the user to configure the two main financial reports which are the Balance Sheet and the P&amp;L.</p>
-<p>Once configured, these two reports can be launched from the Balance Sheet and P&amp;L window.</p>
-<p>It is important to remark that the <em>source of both reports structure</em> is the organization Account Tree which therefore needs to be structured in a way to obtain a meaningful Balance Sheet and P&amp;L reports.</p>
-<p>Moreover, and as already described, an Account Tree or chart of accounts can be imported or can be manually created:</p>
+<p>The Balance Sheet and P&amp;L Structure Setup allows users to define how Etendo generates its two main <strong>financial reports</strong>:</p>
 <ul>
-<li>in the case of imported account trees as a CSV file or as a reference data set:<ul>
-<li>Etendo provides the localized account tree structure required to get localized balance sheet and P&amp;L reports for a given country, for instance, the Spanish Chart of Accounts</li>
+<li>Balance Sheet</li>
+<li>Profit and Loss (P&amp;L)</li>
+</ul>
+<p>This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the <a href="../../analysis-tools/#balance-sheet-and-pl-structure-advanced">Balance Sheet and P&amp;L Structure Advanced</a> window.</p>
+<p>A key point is that both reports are built based on the <strong><a href="../account-tree/">Organization Account Tree</a></strong> (Chart of Accounts). Therefore, the account tree must be properly structured to obtain meaningful and accurate financial reports.</p>
+<p>The structure of the Balance Sheet and P&amp;L depends entirely on the Account Tree:</p>
+<ul>
+<li>
+<p><strong>Imported account trees</strong> (CSV files or reference data):</p>
+<p>Etendo provides localized charts of accounts, such as the Spanish Chart of Accounts, already structured to produce compliant Balance Sheet and P&amp;L reports.</p>
+</li>
+<li>
+<p><strong>Manually created</strong> account trees:
+    The user must carefully design the hierarchy, as the report structure directly reflects the way accounts are organized in the tree.</p>
+</li>
+</ul>
+<h2 id="header">Header</h2>
+<p>Each record created in this window represents one <strong>financial report</strong>. When defining a report, the selected <a href="../../../../general-setup/enterprise-model/organization-type/">organization type</a> is crucial because it determines the scope of the financial data:</p>
+<ul>
+<li>If the organization selected is a <strong>Legal with Accounting</strong> which has other organizations underneath, the financial information provided by the reports will be a <strong>roll-up</strong> of the financial information of the organizations which belong to it. Roll-up means it produces an <strong>aggregated</strong> Balance Sheet. To get a <strong>consolidated</strong> Balance Sheet, transactions between organizations (intercompany transactions) need to be removed from the resulting report.</li>
+<li>The same applies in the case of organizations which are <strong>Organization type</strong> which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.</li>
+<li>If the organization selected is a <strong>Generic organization</strong> which belongs to a Legal with Accounting one, the financial information provided by the reports will be just the financial information of that organization.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png"></a></p>
+<p>Fields to note in this window:</p>
+<ul>
+<li><strong>General Ledger</strong>: from which accounting information is required.</li>
+<li><strong>Report Name</strong>: e.g. Balance Sheet.</li>
+<li><strong>Report Type</strong>: the options available are:<ul>
+<li><strong>Point in Time</strong>: this type is used for reports such the Balance Sheet as account's balance needs to be referred to a specific date.</li>
+<li><strong>Periodic</strong>: this type is used for reports such the P&amp;L as used account's balance needs to be referred to a specific period of time, for instance a month, a quarter, a year, etc.</li>
 </ul>
 </li>
-<li>in the case of manually created account trees:<ul>
-<li>it is key to take into account that financial reports structure relies on the account tree structure.</li>
-</ul>
-</li>
-</ul>
-<h3 id="setup">Setup</h3>
-<p>Each new record in the Balance Sheet and P&amp;L structure setup window is a report.</p>
-<p>It is really important the level up to which either a Balance Sheet or P&amp;L report is defined. That level relies on the organization type selected because:</p>
-<ul>
-<li>If the organization selected is a <em>Legal with Accounting</em> which has other organizations underneath, the financial information provided by the reports will be a <strong>roll-up</strong> of the financial information of the organizations which belong to it. Roll-up means it produces an <strong>aggregated</strong> Balance Sheet. To get a <strong>consolidated</strong> Balance Sheet, transactions between organizations (intercompany transactions) need to be removed from the resulting report.</li>
-<li>The same applies in the case of organizations which are <em>Organization</em> type which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.</li>
-<li>If the organization selected is a <em>Generic</em> organization which belongs to a <em>Legal with Accounting</em> one, the financial information provided by the reports will be just the financial information of that organization.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1xwB1sbOrMC6OtQejlrNDjg5Zss_vMddz.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1xwB1sbOrMC6OtQejlrNDjg5Zss_vMddz.png"></a></p>
-<p>The fields to fill in this window are:</p>
-<ul>
-<li>the <strong>Report Name</strong></li>
-<li>the <strong>General Ledger</strong> from which accounting information is required</li>
-<li>the <strong>Report Type</strong>. The options available are:<ul>
-<li><strong>Point in Time</strong>, this type is used for reports such the Balance Sheet as account's balance needs to be referred to a specific date.</li>
-<li>and <strong>Periodic</strong>, this type is used for reports such the P&amp;L as used account's balance needs to be referred to a specific period of time, for instance a month, a quarter, a year, etc.</li>
-</ul>
-</li>
-<li>finally the <strong>Balanced</strong> flag which must be activated whenever the report need to be launched just for "Legal with Accounting" organization types as that is the enterprise level where accounting balance is ensured.<br>
-    This flag needs to be checked as active for the Balance Sheet report.</li>
+<li><strong>Balanced</strong>: this flag must be activated whenever the report needs to be launched just for <strong>Legal with Accounting</strong> organization types as that is the enterprise level where accounting balance is ensured.</li>
+<li><strong>Active</strong>: this flag needs to be checked as active for the Balance Sheet report.</li>
 </ul>
 <h3 id="grouping-category">Grouping Category</h3>
-<p>Grouping category tab allows the user to define categories which groups report node/s. Each grouping category implies a page break in the report showing the defined report node/s.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF.png"></a></p>
-<h3 id="node">Node</h3>
-<p>A node defines the information shown in the report.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1jA6R5_RRLe7qWdGcNE_pWbiRmzfT61FF.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1jA6R5_RRLe7qWdGcNE_pWbiRmzfT61FF.png"></a></p>
+<p>The <strong>Grouping Category</strong> tab allows users to define sections within the report. Each grouping category creates a page break, helping organize the report into clear sections.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png"></a></p>
+<h4 id="node">Node</h4>
+<p>From the <strong>Node</strong> sub-tab it is possible to define the information shown in the report.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png"></a></p>
 <p>A report node is defined by:</p>
 <ul>
-<li>the <strong>Name</strong> of the node</li>
-<li>and the Account Element which is going to be shown in the report.<ul>
-<li>The account elements selected here are usually "<em>Heading</em>" element level types,<br>
-    therefore the calculated balance of the node will take into account and will show the balance of all the account elements of other types which are underneath it.</li>
-</ul>
+<li>The <strong>Name</strong> of the node.</li>
+<li>
+<p>The <strong>Account Element</strong> which is going to be shown in the report.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The account elements selected here are usually <strong>Heading element level types</strong>, therefore the calculated balance of the node will take into account and will show the balance of all the account elements of other types which are underneath it.</p>
+</div>
 </li>
 </ul>
-<h3 id="balance-sheet-structure-setup-example">Balance Sheet Structure Setup Example</h3>
-<p>One example of a Balance Sheet structure can be:</p>
+<h2 id="balance-sheet-structure-setup-example">Balance Sheet Structure Setup - Example</h2>
+<p>This setup defines how Etendo generates a <strong>Balance Sheet</strong> showing the company’s financial position at a specific date.</p>
 <ul>
-<li><em>Report Name: Balance Sheet</em><br>
-<em>Report Type: Point in Time</em><br>
-<em>Balanced: Yes</em><ul>
-<li>Grouping Category: Balance Sheet<ul>
-<li>Node: Assets linked to the Account Element of the Account Tree which collects all the "Asset" accounts.</li>
-<li>Node: Liabilities and Owner's Equity linked to the Account Tree element which collects all the "Liabilities and Owner's Equity" account tree elements.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Above nodes must be an Account Tree element properly configured.</p>
-<h3 id="pl-setup-example">P&amp;L Setup Example</h3>
-<p>An example for a Profit and Loss report would be:</p>
+<li><strong>Report Name</strong>: Balance Sheet</li>
+<li><strong>Report Type</strong>: Point in Time, as balances are calculated for a specific date.</li>
+<li>
+<p><strong>Balanced</strong>: Yes, since the Balance Sheet must be balanced at Legal with Accounting level.</p>
 <ul>
-<li><em>Report Name: Profit and Loss</em><br>
-<em>Report Type: Periodic</em><br>
-<em>Balanced: No</em><ul>
-<li>Grouping Category: Profit and Loss<ul>
-<li>Node: Profit and Loss linked to the "Heading" Account Tree element which collects all the "Expenses" and "Revenue" account tree elements.</li>
+<li>
+<p><strong>Grouping Category</strong>: Balance Sheet</p>
+<ul>
+<li><strong>Node</strong>: Assets, linked to the account tree heading that groups all asset accounts.</li>
+<li><strong>Node</strong>: Liabilities and Owner’s Equity, linked to the heading that groups liabilities and equity accounts.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>Above node must be an Account Tree element properly configured.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo calculates each node by <strong>summing all accounts</strong> located under the corresponding account tree heading. A correctly structured <a href="../account-tree/#element-value-tab">Account Tree</a> is essential for accurate results.</p>
+</div>
+<h2 id="profit-and-loss-pl-structure-setup-example">Profit and Loss (P&amp;L) Structure Setup - Example</h2>
+<p>This setup defines how Etendo generates a <strong>Profit and Loss report</strong> for a selected period.</p>
+<ul>
+<li><strong>Report Type</strong>: Periodic, as revenues and expenses are calculated over a time range.</li>
+<li><strong>Balanced</strong>: No, since this report does not represent a balance at a specific date.<ul>
+<li><strong>Grouping Category</strong>: Profit and Loss<ul>
+<li><strong>Node</strong>: Profit and Loss, linked to the account tree heading that groups all revenue and expense accounts.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo calculates the result by comparing total revenues and expenses for the selected period.
+Above node must be an Account Tree element properly configured. For more information, visit <a href="../account-tree/">Account Tree</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about Balance Sheet and P/L Structure reports visit: <a href="../../analysis-tools/#balance-sheet-and-pl-structure-advanced">Balance Sheet and P/L Structure Advanced</a>. </p>
+</div>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Balance_sheet_and_P%26L_structure_Setup" target="_blank">Balance Sheet and P/L Structure Setup</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
