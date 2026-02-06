@@ -16208,35 +16208,33 @@ GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom pro
 <p>The <strong>Inbound Receipt</strong> window enhances the <a href="../../../../basic-features/procurement-management/transactions/#goods-receipts">goods receipt</a> flow by introducing an intermediate step between the purchase order and the goods receipt. This step centralizes multiple orders—even from different suppliers—into a single operation, improving flexibility, automation, and control. It also supports alternative units of measure (AUOM), enabling receipts to be recorded in pallets, boxes, or regrouped into different containers to reflect the actual inflow.</p>
 <p>Receipts are always created from purchase orders, not manually. Order lines are loaded with product, quantity, lot, and location details, which can be adjusted (e.g., quantity or unit) to register partial or alternative receipts. This ensures the goods receipt accurately reflects what was physically received and updates the purchase order accordingly.</p>
 <p>When AUOMs such as Pallet or Box are used, the system can automatically generate a Referenced Inventory (RI) record linked to the receipt line, representing the logistics unit and ensuring traceability.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1b.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1b.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png"></a></p>
 <p>Fields to note:</p>
 <h4 id="header">Header</h4>
 <ul>
 <li><strong>Organization</strong>: Defines the organization in which the inbound receipt will be created and filter the information.  </li>
-<li><strong>Active</strong>: Indicates whether the record is enabled for use.  </li>
-<li><strong>Description</strong>: Free text field to add additional information or notes about the receipt.  </li>
-<li><strong>Document No</strong>: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  </li>
 <li><strong>Document Type</strong>: Loaded by default with <em>Inbound Receipt</em> to classify the document type.  </li>
+<li><strong>Document No</strong>: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  </li>
 <li><strong>Movement Date</strong>: Date on which the physical goods movement is recorded. By default, it is the current date.  </li>
-<li><strong>Accounting Date</strong>: Date on which the transaction is recognized for accounting purposes.  </li>
+<li><strong>Description</strong>: Free text field to add additional information or notes about the receipt.  </li>
 </ul>
 <h4 id="lines-tab">Lines Tab</h4>
 <p>The Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png"></a></p>
 <p>Fields to note:</p>
 <ul>
-<li><strong>Active</strong>: Indicates whether the line is enabled for processing within the receipt.  </li>
 <li><strong>Line No</strong>: Sequential number automatically assigned to identify the line within the receipt.  </li>
-<li><strong>Purchase Order Line</strong>: Reference to the original purchase order line from which the receipt line was generated.  </li>
-<li><strong>Storage Bin</strong>: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  </li>
 <li><strong>Product</strong>: The product being received, linked to the purchase order.  </li>
-<li><strong>UOM</strong>: Base unit of measure of the product (e.g., units, liters, kilograms).  </li>
-<li><strong>Ordered Quantity</strong>: Quantity received expressed in the product's base unit of measure.  </li>
-<li><strong>Attribute Set Value</strong>: Attributes associated with the product, such as batch, serial number, or expiration date.  </li>
-<li><strong>Alternative UOM</strong>: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  </li>
 <li><strong>Operative Quantity</strong>: Quantity received expressed in the product's alternative unit of measure. Matches the Ordered Quantity if no AUOM is defined. If an AUOM exists, it indicates the number of pallets, boxes, or other alternative units received.  </li>
+<li><strong>Alternative UOM</strong>: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  </li>
+<li><strong>Ordered Quantity</strong>: Quantity received expressed in the product's base unit of measure.  </li>
+<li><strong>UOM</strong>: Base unit of measure of the product (e.g., units, liters, kilograms).  </li>
+<li><strong>Attribute Set Value</strong>: Attributes associated with the product, such as batch, serial number, or expiration date.  </li>
+<li><strong>Storage Bin</strong>: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  </li>
+<li><strong>Purchase Order Line</strong>: Reference to the original purchase order line from which the receipt line was generated.  </li>
 <li><strong>Grouped by</strong>: Identifier of the grouping to which the line belongs, generated when using the <em>Group By</em> button. It shows which lines are part of the same container or packaging unit.  </li>
-<li><strong>Reference Inventory Type</strong>: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).  </li>
+<li><strong>Reference Inventory Type</strong>: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).</li>
+<li><strong>Goods Receipt Line</strong>: Reference to the goods receipt generated upon completion of the goods receipt.  </li>
 </ul>
 <h4 id="buttons">Buttons</h4>
 <p><strong>Create Lines From Order</strong></p>
