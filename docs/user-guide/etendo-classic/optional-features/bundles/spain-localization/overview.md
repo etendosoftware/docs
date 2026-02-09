@@ -13,6 +13,15 @@ tags:
 ## Descripción
 El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo a los requerimientos legales y/o fiscales españoles.
 
+## Instalación
+
+!!! warning
+    Si se requiere actualizar el bundle a una versión superior a las versiones **1.37.0** o **3.9.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
+    
+    En las versiones mencionadas se unificó el campo **Fecha de Operación** de los módulos de **SII, Verifactu y TicketBai** en otro módulo intermedio (el módulo de [Funcionalidades Generales para SIFs](#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](#multidimensional-tax-report). 
+
+    Si es la primera vez que se instala el bundle, o los módulos del SII, Verifactu o TicketBai, la actualización intermedia no es necesaria
+
 ## Módulos
 
 - [Spain SII](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
@@ -28,6 +37,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
 - [Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md)
 - [Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md)
+- Funcionalidades Generales para SIFs
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -456,6 +466,16 @@ Este módulo permite cumplir con la Ley Antifraude de España en Etendo, reforza
     Para más información, visite la [Guía de usuario Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md).
 
  ---
+
+## Funcionalidades Generales para SIFs
+
+:octicons-package-16: Javapackage: `com.etendoerp.sif.general`
+
+:octicons-package-16: Javapackage: `com.etendoerp.sif.general.template`
+
+Este módulo unifica varias funcionalidades comunes al SII, Verifactu y TicketBai, como es el caso de la carga de certificados digitales y su validación, el uso del campo **Fecha de Operación**, y otras validaciones realizadas al emitir facturas. 
+
+---
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
