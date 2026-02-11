@@ -28,7 +28,7 @@ tags:
 
     **New Material Management Rules module ⚡**
 
-    The new [Material Management Rules](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview#material-management-rules) module adds a clear rule to decide if Etendo should allow **warehouse transactions with dates prior to the current date**—a common source of inconsistencies and reprocessing when costing and stock movements are involved. **Default behavior:** the preference **Allow Backdated Cost Transactions** is set to **Y** by default (backdated transactions are allowed), and can be configured according to your policy.
+    The new [Material Management Rules](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#material-management-rules) module adds a clear rule to decide if Etendo should allow **warehouse transactions with dates prior to the current date**—a common source of inconsistencies and reprocessing when costing and stock movements are involved. **Default behavior:** the preference **Allow Backdated Cost Transactions** is set to **Y** by default (backdated transactions are allowed), and can be configured according to your policy.
 
 </div>
 
@@ -71,13 +71,13 @@ tags:
     **Void completed Work Efforts**  
     You can now **void a completed/processed Work Effort** directly from the Work Effort window. The system handles the reversal for you. The action is available only when the Work Effort is completed, not already voided, has no inconsistencies preventing reversal, and is **not posted to the ledger**.
     
-    - Documentation: [How to Void Work Efforts](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-void-work-efforts)  
+    - Documentation: [How to Void Work Efforts](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-void-work-efforts.md)  
     - Blog: [Improvements in Production Management with Etendo Production Extensions](https://etendo.software/en/blog/improvements-production-management-etendo-production-extensions/)
 
     **Reactivate Internal Consumption**  
     If an Internal Consumption document was processed by mistake, you can now **reactivate it** to correct quantities, bins, or products without manual cleanup. The document returns to **Draft** and the generated **material transactions are deleted**, reverting inventory movements. Reactivation is blocked when there are **calculated costs** associated with the document transactions.
 
-    - Documentation: [How to Reactivate Internal Consumption](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-reactivate-internal-consumption)
+    - Documentation: [How to Reactivate Internal Consumption](../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-internal-consumption)
 
 </div>
 
@@ -110,7 +110,7 @@ tags:
         
     Margin-based commission issues have been resolved, and commissions can now be calculated in the desired currency. This provides greater transparency, precision, and adaptability for sales incentive management.
       
-    - Documentation: [Commission](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/commission)
+    - Documentation: [Commission](../user-guide/etendo-classic/basic-features/sales-management/setup/commission.md)
     - Blog: [Sales commissions in ERP: how Etendo turns incentives into real business results](https://etendo.software/en/blog/sales-commissions-erp-etendo/)
 
 </div>
