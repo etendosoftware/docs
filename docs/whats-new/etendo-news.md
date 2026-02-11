@@ -71,7 +71,7 @@ tags:
     **Void completed Work Efforts**  
     You can now **void a completed/processed Work Effort** directly from the Work Effort window. The system handles the reversal for you. The action is available only when the Work Effort is completed, not already voided, has no inconsistencies preventing reversal, and is **not posted to the ledger**.
     
-    - Documentation: [How to Void Work Efforts](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-void-work-efforts.md)  
+    - Documentation: [How to Void Work Efforts](../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-void-work-efforts)
     - Blog: [Improvements in Production Management with Etendo Production Extensions](https://etendo.software/en/blog/improvements-production-management-etendo-production-extensions/)
 
     **Reactivate Internal Consumption**  
