@@ -577,94 +577,120 @@ This window allows the user to:
 
 ### Overview
 
-The Purchase Invoice window allows the user to register and manage supplier's invoices.
+The Purchase Invoice window is used to **create, register, and manage supplier invoices for purchased goods and services**.
 
-This stage of the chain **usually comes after "Goods Receipts" booking and management**.
+Purchase invoices are typically generated after the Goods Receipt is completed, ensuring that received quantities match the supplier’s billing information.
 
-A purchase invoice is an itemized statement of the goods or services provided by a vendor or supplier. It indicates the quantity and price of each product or service provided or to be provided.
+Invoices can be created in two ways:
 
-Suppliers could send the corresponding purchase invoice/s together with the delivery note/s attached to the goods, that implies that Purchase Invoices can be automatically generated from the **Goods Receipt** window, but it is possible that this is not the case, therefore a Purchase Invoice can also be created from scratch in the **Purchase Invoice** window.
+1. Automatically, from a related Goods Receipt
 
-The purchase expenses can be recognized as soon as the purchase invoice is accounted, however if an expense deferred plan is configured, it is possible to defer the expense recognition as required.
+2. Manually, by entering the invoice directly in this window
 
-Supplier invoices can be registered, booked and managed in the header section of the **Purchase Invoice** window.
+Each invoice defines the products or services, quantities, prices, taxes, and amounts to be paid to the supplier.
+
+When the invoice is accounted, the corresponding purchase expenses are recognized in accounting. If a deferred expense plan is configured, expense recognition can be distributed over time according to the defined schedule.
 
 ### Header
 
-**Header** lists the main terms and conditions related to the purchase invoice.
-
-!!! info
-    In the majority of cases, the main (and the only) field needed to create a new purchase invoice document is the Business Partner field. All other fields will be pre-filled automatically based on the selected Business Partner, logged in User preferences and other system default parameters.
-
-Some other fields to note are:
-
-- **Transaction document** defaulted as "AP Invoice" or purchase invoice *document type* which can be manually changed to either "AP Credit Memo" or "Reversed Purchase Invoice".
-  - "AP Credit Memo" and "Reversed Purchase Invoice" document types can be considered credit purchase invoices, the difference between them is that:
-    - "AP Credit Memo" type must contain either an "Invoiced Quantity" > 0 or "line Net Amounts" >0.  
-      Above implies that invoices set as "Credit Memo" should not be related to "Orders" or "Shipments".
-    - "Reversed Purchase Invoice" type must contain either an "Invoiced Quantity" <0 or "line Net Amounts" < 0. These are the invoice types that can be related to return "Orders" or "Shipments".
-- **Document No**. you could manually fill in the supplier's invoice number in this field, if the document sequence number associated with the transaction document "AP Invoice" is set up to allow you to do that; otherwise it will be automatically provided by the system as an "Internal" purchase invoice number.
-- **Invoice Date**: the date the invoice is registered. It is used to calculate when the payment of the invoice is due. Defaults to the current date can always be changed.
-- **Accounting Date**: the date to be used in the posting record of the Purchase Invoice to the general ledger. Defaults to the Invoice Date field can always be changed.
-- **Payment Terms**: indicates **how** an invoice should be paid. Defaulted according to the Vendor/Creditor tab of the *Business Partner* window.
-- **Payment Method**: defines **when** a purchase invoice needs to be paid. Defaulted according to the Vendor/Creditor tab of the *Business Partner* window.
-- **Supplier Reference**: this is a not-mandatory field which can be used to enter the supplier invoice number.
-
-There are 3 ways of entering lines into the purchase invoice, two of them from the invoice header and the last one from the **Lines** tab:
-
-1.  Selecting products from pending to be invoiced orders or receipts using the **Create Lines From Order** and **Create Lines From Receipt** buttons.
-2.  Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the **Copy Lines** button.
-3.  Manually, line by line in the **Lines** tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.
-
-The **Complete** button finishes the creation of the invoice document with the fulfillment of the **Payment Plan** tab and the **Payment Monitor** section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.
-
-Once completed, a purchase invoice can be:
-
-- **posted** to the ledger by using the button [Post](#post)
-- **voided** by using the button [Reactivate](#reactivate)
-- and **paid** by using the button [Add Payment](#add-payment).
+The **Header** contains the basic information for a purchase invoice. In most cases you only need to select the Business Partner; the system will fill the rest from defaults and the selected partner.
 
 ![Purchase invoice window](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
+Fields to note:
+
+- **Transaction document**: defaults to AP Invoice or purchase invoice [document type](../financial-management/accounting/setup/document-type.md). You can change it to AP Credit Memo (positive-credit type, not linked to orders/shipments) or Reversed Purchase Invoice (negative amounts, for returns).
+- **Document No.**: supplier invoice number if allowed by sequence, otherwise an internal number is used.
+- **Invoice Date**: date of the invoice (used to calculate due date).
+- **Accounting Date**: posting date for the ledger (defaults to Invoice Date).
+- **Payment Terms**: how the invoice will be paid.
+- **Payment Method**: when the invoice will be paid.
+- **Supplier Reference**: optional supplier reference number.
+
+How to add lines:
+
+1. Use **Create Lines From Order** or **Create Lines From Receipt** to pull pending items.
+2. Use **Copy Lines** to copy lines from an existing invoice.
+3. Add lines manually in the **Lines** tab when there is no related order or receipt.
+
+Complete and next steps:
+
+- Click **Complete** to finish the invoice; this creates the Payment Plan and updates the Payment Monitor. Non-stockable BOMs will be exploded automatically if needed.
+
+After completion you can:
+
+- **Post** the invoice to the ledger with the [Post](#post) button.
+- **Void/Reactivate** using [Reactivate](#reactivate).
+- **Add Payment** with [Add Payment](#add-payment).
+
 ### Lines
 
-Once the purchase invoice header has been properly filled in and saved purchase invoice lines can be registered in this tab.
+Once the Purchase Invoice header is saved, add one or more invoice lines for the products or expenses being billed.
 
-Lines list each product to be purchased and its characteristics.
+Fields to note:
+- **Financial Invoice Line**: Select this for lines that are not products (for example, a G/L item or an asset). The Product field is replaced by an Account field.
+- **Attribute Set Value**: Shown if the product uses attributes (color, size, serial number, etc.).
+- **Purchase Order Line / Goods Receipt Line**: Links the invoice line to the related PO or Goods Receipt line, if any.
 
-The fields to note are:
+Deferring expenses (optional):
+- **Deferred Expense**: Check this to spread the expense over time and reveal the expense-plan fields.
+- **Expense Plan Type**: Frequency of recognition (currently: monthly).
+- **Period Number**: Number of periods to distribute the expense (e.g., enter 12 to spread over 12 months). For instance, if a company purchases business insurance for the duration of the year, the period number to enter would be 12 as the company would like to distribute that expense over 12 months.
 
-- **Financial Invoice Line** is selected when the invoice line is not a product but an account not set up as a product but as a *G/L Item*, or an asset not set up as a product.  
-  When selected, the product field disappears from the screen and an account field appears related to the purchase invoice line.
-- **Attribute Set Value**: field is displayed if the product in the line has *attributes* (color, size, serial number or several of them together etc).
-- **Purchase Order Line and Goods Receipt Line**: references to the purchase order and goods receipt line that is being invoiced.
+- **Starting Period**: First open period when recognition begins.
 
-As already mentioned, purchase expenses can be deferred therefore they are not recognized at the purchase accounting date but within a given number of accounting periods.
+These expense-plan values can be defaulted from the product. If an expense plan is used, the invoice accounting will follow that plan.
 
-When a purchase invoice line is created, it is possible to define at line level whether the line is going to cause the expense to be deferred. The relevant fields are:
+**Explode Button**
 
-- **Deferred Expense**: When this flag is checked, the Expense Plan field group becomes visible, allowing users to configure the next three fields.
-- **Expense Plan Type**: This field specifies the frequency of the expense distribution which currently is "monthly".
-- **Period Number**: This field specifies the duration of an expense plan.  
-  For instance, if a company purchases business insurance for the duration of the year, the period number to enter would be 12 as the company would like to distribute that expense over 12 months.
-- **Starting Period**: The first open period in which the expense is going to be recognized.
+The **Explode** button appears when the selected line contains a non-stockable BOM product that hasn't been exploded yet. Exploding replaces the BOM line with its components in the invoice. This action cannot be undone — to revert it, delete the component lines first and then re-add the non-stockable BOM product.
 
-These fields can be defaulted if configured for the *product*.
+**Match LC Cost**
 
-If an expense plan is configured, it implies a specific *purchase invoice accounting*.
+The **Match LC Cost** button allows you to match the **estimated landed cost** defined in the **Landed Cost window** with the **invoiced landed cost** entered in an invoice line.
 
-**Explode** button is shown when selecting a line with a non-stockable BOM product and the product is not already exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the invoice. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
+This option is available when the purchase order or invoice line contains a **product** or **account** configured as a **landed cost type**.
 
-**Match LC Cost** button is shown when the purchase order line contains either an "account" or a "product" setup as *landed cost type*.
+Both costs must belong to the **same landed cost type** to be matched.
 
-This process button allows to **match** both the "**estimated**" landed cost booked in the *landed cost* window, and the one being **invoiced** in the invoice line. Both need to be of the very **same landed cost type**.
+Matching helps to:
 
-Once selected, **"Match LC Cost**" button opens the **"Match LC Cost" pick and edit window**.
+- Reconcile estimated and invoiced landed costs  
+- Keep product costs accurate  
+- Generate the correct accounting entries  
 
-Only processed Landed Cost documents will be shown in this Window. It allows you to pick the corresponding landed cost, to enter an amount to match in the field "Matched Amt", and then to select the "**Process Matching**" check-box.
+After clicking **Match LC Cost**, the **Match LC Cost** pick-and-edit window opens.
 
-!!! warning
-    Note that if the "Process Matching" check-box is not selected here, landed cost matching will have to be processed in the *landed cost* window by using **Process Matching** button.
+Only **processed Landed Cost documents** are displayed.
+
+From this window, you can:
+
+- Select the corresponding landed cost document  
+- Enter the amount in **Matched Amt**  
+- Enable **Process Matching** to complete the process immediately 
+
+The **Is Matching Adjusted** checkbox controls how differences between estimated and invoiced costs are handled:
+
+- **Checked** → Creates an additional landed cost adjustment to update the product cost  
+- **Unchecked** → No cost adjustment is created  
+
+**Scenarios**
+
+1. Estimated = Invoiced
+
+- Only matching is posted to the ledger  
+- No adjustments are created  
+
+2. Estimated ≠ Invoiced + Adjustment enabled
+
+- A landed cost adjustment is created  
+- Product cost is updated to the invoiced amount  
+- Matching and adjustment are posted  
+
+3. Estimated ≠ Invoiced + Adjustment disabled
+
+- Only matching is posted  
+- Product cost is not modified  
 
 #### Line Tax
 
