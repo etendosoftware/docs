@@ -24,7 +24,7 @@ tags:
 
     ![](../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
 
-    With **Warehouse Extensions** version [3.6.0]((./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md)) (compatible from **Etendo 25.4**), a key control module was added to help warehouse and accounting teams **avoid costly date-related errors** in daily warehouse operations.
+    With **Warehouse Extensions** version [3.6.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) (compatible from **Etendo 25.4**), a key control module was added to help warehouse and accounting teams **avoid costly date-related errors** in daily warehouse operations.
 
     **New Material Management Rules module ⚡**
 
@@ -46,7 +46,7 @@ tags:
     
     **Etendo Main UI – Beta 0.10.0**
 
-    - **Grid and table filters improvements**: filter-type selectors and the table filter dropdown, restoring reliable filtering in high-volume grids.
+    - **Grid and table filters improvements**: improvements to filter-type selectors and the table filter dropdown, restoring reliable filtering in high-volume grids.
     - **Copilot usability boost**: added **multiline input support**, making longer prompts and structured requests easier to write.
     - **Faster data entry**: introduced a **New record** button directly in forms.
     - **Processes from the menu**: run **processes and reports** directly from the menu, with manual processes opening in a **new tab**.
@@ -62,12 +62,11 @@ tags:
 
 - :material-factory: **Void Work Efforts and Reactivate Internal Consumption**
     
-    
-    ![](../assets/whats-new/etendo-news/production-void-reactivate.png){ width=500 align="right"}
-
     ---
 
-    Production teams sometimes need to correct what was already processed, with **Production Extensions Bundle [3.4.0](./release-notes/etendo-classic/bundles/production-extensions/release-notes.md)**, you get two high-impact controls that make production corrections faster, safer, and fully auditable.
+    ![](../assets/whats-new/etendo-news/production-void-reactivate.png){ width=500 align="right"}
+
+    Production teams sometimes need to correct what was already processed. With **Production Extensions Bundle [3.4.0](./release-notes/etendo-classic/bundles/production-extensions/release-notes.md)**, you get two high-impact controls that make production corrections faster, safer, and fully auditable.
 
     **Void completed Work Efforts**  
     You can now **void a completed/processed Work Effort** directly from the Work Effort window. The system handles the reversal for you. The action is available only when the Work Effort is completed, not already voided, has no inconsistencies preventing reversal, and is **not posted to the ledger**.
@@ -81,12 +80,6 @@ tags:
     - Documentation: [How to Reactivate Internal Consumption](../user-guide/etendo-classic/basic-features/production-management/transactions#how-to-reactivate-internal-consumption)
 
 </div>
-
-
-
-
-
-
 
 ## December 2025
 
