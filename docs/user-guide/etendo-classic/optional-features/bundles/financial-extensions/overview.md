@@ -34,14 +34,14 @@ The Accounting Dimensions Assets module improves asset management and amortizati
     For more information, visit the [Accounting Dimensions Assets user guide](../../../basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
 
 
-### Accounting Templates
+### Accounting Template Module
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account.
+The Accounting Template Module allows setting a **non deductible tax's amount** to a specified financial account. This functionality only applies to **purchase invoices**. 
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md#purchase-invoice-which-includes-not-deductible-tax-amount).
+    For more information, visit the [Accounting Template Module user guide](../../bundles/financial-extensions/accounting-template-module.md).
 
 
 ### Adjust Invoice Tax
