@@ -1,8 +1,8 @@
 ---
 title: Tax Category
 tags:
-    - Tax
-    - Category
+    - Tax Category
+    - Product Configuration
     - Financial Management
     - Setup
     - Accounting
@@ -14,40 +14,55 @@ tags:
 
 ## Overview
 
-A tax category allows the user to group and manage similar product or services tax rates.
+A Tax Category is used to group products or services that share the same **tax treatment**. Since not all items have the same tax rate (standard, reduced, or exempt), tax categories help organize these differences and ensure taxes are applied automatically and correctly during transactions.
 
-Not all the products and services have the same tax rate.
+Each product or service must be assigned to one tax category, and [tax rates](../setup/tax-rate.md) are also linked to categories. When a transaction is created, Etendo only considers the tax rates associated with the selected category, reducing manual intervention and preventing errors.
 
-There are tax-exempt products and there are products or services to which a higher tax rate applies just due to the type of product or service.
+Additional factors, such as the [Business Partner tax category](../setup/business-partner-tax-category.md) and tax rate configuration, help the system determine the **final applicable tax**.
 
-Tax categories allow the user to group similar tax rates by having into account that:
 
--   the same tax category can be assigned to more than one product or service, by taking into account that it is recommended to split the tax categories by item type.
--   every product and service must be linked to one tax category same as each tax rate.  
-    Therefore when that product or service is entered in an invoice only the tax rate/s which belong to that tax category will be used to get the applicable tax rate.
--   there are other variables which can reduce up to just "one" the correct tax rate to use while entering a product and a business partner in an invoice.  
-    Those variables are related to the business partner tax category as well as the way each tax rate is configured.
+### Header
 
-### Tax Category
+It is possible to create as many tax categories as required to be later on linked to the corresponding tax rates and products. The Header defines the main information of the tax category.
 
-It is possible to create as many tax categories as required to be later on linked to the corresponding tax rates and products.
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
 
-![](../../../../../../assets/drive/1_UP-RLlLSipSAv4t40gnPbBj05ds58p0.png)
+Fields to note:
 
-As shown in the image above, a tax category can be created by just entering:
+- **Name**: A name to identify the tax category.
+- **Description of the Tax Category**: Optional explanation of its purpose or usage. Once created, the tax categories must be assigned to the corresponding products and services in the [Product](../../../master-data-management/master-data.md#product) window.
+- **Default**: This checkbox indicates if this record will be used as a default value.
+- **As per BOM**: When enabled, taxes are calculated proportionally based on the product’s Bill of Materials (BOM). This requires a single summary-level tax rate.
 
--   a *Name*
--   and a *Description*
+    !!!info
+        If the tax category is flagged as **As per BOM**, it indicates that products with this category will use the products included in its Bill of Materials list to calculate proportionally the taxes. In this case, only **one Tax Rate** has to be configured for this tax category flagged as **Summary level**.
 
-of the Tax Category.
 
-Once created, the tax categories must be assigned to the corresponding products and services in the Product window.
-
-If the tax category is flagged as *As per BOM*, it indicates that products with this category will use the products included in its Bill of Materials list to calculate proportionally the taxes. In this case, only one Tax\_Rate has to be configured for this tax category flagged as *Summary level*.
-
-### Translation
+### Line
 
 Tax categories can be translated to any language required.
+
+### Example
+
+A company sells different types of items:
+
+
+| Item Type   | Tax Rate | Tax Category |
+|-------------|-----------|--------------|
+| Electronics | 21%       | Standard VAT |
+| Food        | 10%       | Reduced VAT  |
+| Books       | 0%        | Exempt       |
+
+
+
+- **Create** three tax categories: Standard VAT, Reduced VAT, and Exempt.
+
+- **Assign** each tax rate to its corresponding category.
+
+- **Assign** products to the appropriate category.
+
+When a product is added to an invoice, Etendo automatically selects the correct tax rate based on its tax category, ensuring accurate and consistent tax calculation. This structure helps centralize tax logic and simplifies tax maintenance across the system.
+
 
 ---
 
