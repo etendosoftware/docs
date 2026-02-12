@@ -91,6 +91,15 @@ Al instalar este módulo, el usuario podrá comprobar que:
 6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
     Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
 
+## Instalación
+
+!!! warning
+    Si se requiere actualizar el módulo a una versión superior a las versiones **1.32.0** o **2.8.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
+    
+    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo intermedio (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
+    
+    Si es la primera vez que se instala el SII la actualización intermedia no es necesaria
+
 ## **Configuración**
 
 Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".

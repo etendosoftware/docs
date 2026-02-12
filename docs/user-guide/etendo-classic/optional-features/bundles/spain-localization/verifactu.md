@@ -70,6 +70,15 @@ La implementación cubre:
 
 Se añaden campos y pestañas específicas de *Verifactu* en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
 
+## Instalación
+
+!!! warning
+    Si se requiere actualizar el módulo a una versión superior a las versiones **1.10.0** o **2.9.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
+    
+    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
+    
+    Si es la primera vez que se instala Verifactu la actualización intermedia no es necesaria
+
 ## Configuración
 
 !!! info

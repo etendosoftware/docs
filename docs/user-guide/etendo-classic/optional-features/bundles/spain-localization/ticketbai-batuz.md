@@ -64,6 +64,15 @@ Al instalar este módulo, el usuario podrá comprobar que:
 
     - **Registrar facturas en Batuz**, para registrar facturas de compra en Batuz, también configurables para cada Organización o "Entidad Legal", permitiendo el alta masiva con la cadencia de envío configurada.
 
+## Instalación
+
+!!! warning
+    Si se requiere actualizar el módulo a una versión superior a las versiones **1.23.0** o **2.9.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
+    
+    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
+    
+    Si es la primera vez que se instala TicketBai la actualización intermedia no es necesaria
+
 ## Configuración
 
 ### Dataset
