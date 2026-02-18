@@ -3432,18 +3432,69 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tax-category_1" class="md-nav__link">
+  <a href="#how-tax-categories-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Tax Category
+      How Tax Categories Work
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-create-multiple-tax-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Create Multiple Tax Categories
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#translation" class="md-nav__link">
+  <a href="#where-tax-categories-are-used" class="md-nav__link">
     <span class="md-ellipsis">
-      Translation
+      Where Tax Categories Are Used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -14691,18 +14742,69 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tax-category_1" class="md-nav__link">
+  <a href="#how-tax-categories-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Tax Category
+      How Tax Categories Work
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-create-multiple-tax-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Create Multiple Tax Categories
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#translation" class="md-nav__link">
+  <a href="#where-tax-categories-are-used" class="md-nav__link">
     <span class="md-ellipsis">
-      Translation
+      Where Tax Categories Are Used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -14738,13 +14840,13 @@
       
       
       
-        <span class="md-tag">Category</span>
+        <span class="md-tag">Financial Management</span>
       
     
       
       
       
-        <span class="md-tag">Financial Management</span>
+        <span class="md-tag">Product Configuration</span>
       
     
       
@@ -14756,7 +14858,7 @@
       
       
       
-        <span class="md-tag">Tax</span>
+        <span class="md-tag">Tax Category</span>
       
     
   </nav>
@@ -14769,30 +14871,156 @@
 <h1 id="tax-category">Tax Category</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Tax Category</code></p>
 <h2 id="overview">Overview</h2>
-<p>A tax category allows the user to group and manage similar product or services tax rates.</p>
-<p>Not all the products and services have the same tax rate.</p>
-<p>There are tax-exempt products and there are products or services to which a higher tax rate applies just due to the type of product or service.</p>
-<p>Tax categories allow the user to group similar tax rates by having into account that:</p>
+<p>A Tax Category is used to group products or services that share the same <strong>tax treatment</strong>. Since not all items have the same tax rate (standard, reduced, or exempt), tax categories help organize these differences and ensure taxes are applied automatically and correctly during transactions.</p>
+<p>Each product or service must be assigned to one tax category in the <a href="../../../../master-data-management/master-data/#product">Product window</a>, and <a href="../tax-rate/">tax rates</a> are also linked to categories. When a transaction is created, Etendo only considers the tax rates associated with the selected category, reducing manual intervention and preventing errors.</p>
+<p>Additional factors, such as the <a href="../business-partner-tax-category/">Business Partner tax category</a> and tax rate configuration, help the system determine the <strong>final applicable tax</strong>.</p>
+<h3 id="how-tax-categories-work">How Tax Categories Work</h3>
+<p>The tax determination process follows this logic:</p>
+<ol>
+<li><strong>Product's Tax Category</strong> defines which tax rates are available</li>
+<li><strong>Business Partner's Tax Category</strong> (optional) further filters applicable tax rates</li>
+<li><strong>Tax Rate Configuration</strong> determines the final tax percentage based on additional criteria (location, document type, etc.)</li>
+<li><strong>Automatic Selection</strong> occurs when creating orders or invoices, but can always be manually overridden</li>
+</ol>
+<p>This structure allows for flexible tax management while maintaining consistency across the system.</p>
+<h2 id="header">Header</h2>
+<p>You can create as many tax categories as needed to organize different tax treatments in your system. Each category will be linked to specific tax rates and assigned to products. The Header tab defines the main information of the tax category.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png"></a></p>
+<p><strong>Fields to note:</strong></p>
 <ul>
-<li>the same tax category can be assigned to more than one product or service, by taking into account that it is recommended to split the tax categories by item type.</li>
-<li>every product and service must be linked to one tax category same as each tax rate.<br>
-    Therefore when that product or service is entered in an invoice only the tax rate/s which belong to that tax category will be used to get the applicable tax rate.</li>
-<li>there are other variables which can reduce up to just "one" the correct tax rate to use while entering a product and a business partner in an invoice.<br>
-    Those variables are related to the business partner tax category as well as the way each tax rate is configured.</li>
+<li><strong>Name</strong>: A descriptive name to identify the tax category (e.g., "Standard VAT", "Reduced VAT", "Exempt").</li>
+<li><strong>Description of the Tax Category</strong>: Optional explanation of the category's purpose or usage scenarios. This helps other users understand when to use this category.</li>
+<li><strong>Default</strong>: When checked, this tax category will be automatically selected as the default value when creating new products or configuring tax rates.</li>
+<li>
+<p><strong>As per BOM</strong> (Bill of Materials): When enabled, the tax is calculated proportionally based on the components in the product's Bill of Materials rather than a single rate.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If the tax category is flagged as <strong>As per BOM</strong>, it indicates that products with this category will use the products included in its Bill of Materials list to calculate proportionally the taxes. In this case, only <strong>one Tax Rate</strong> has to be configured for this tax category flagged as <strong>Summary level</strong>.</p>
+<p><strong>Use case example</strong>: A bundled product containing items with different tax rates (e.g., a gift basket with food at 10% and non-food items at 21%) can use this feature to calculate taxes proportionally based on each component's value and tax rate.</p>
+</div>
+</li>
 </ul>
-<h3 id="tax-category_1">Tax Category</h3>
-<p>It is possible to create as many tax categories as required to be later on linked to the corresponding tax rates and products.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1_UP-RLlLSipSAv4t40gnPbBj05ds58p0.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1_UP-RLlLSipSAv4t40gnPbBj05ds58p0.png"></a></p>
-<p>As shown in the image above, a tax category can be created by just entering:</p>
+<div class="admonition note">
+<p class="admonition-title">After Creating Tax Categories</p>
+<p>Once created, tax categories must be:</p>
+<ol>
+<li><strong>Linked to tax rates</strong> in the <a href="../tax-rate/">Tax Rate window</a> - Each tax rate must belong to at least one tax category</li>
+<li><strong>Assigned to products</strong> in the <a href="../../../../master-data-management/master-data/#product">Product window</a> - Each product must have one tax category</li>
+<li><strong>Optionally assigned to business partners</strong> via <a href="../business-partner-tax-category/">Business Partner Tax Category</a> to restrict applicable taxes for specific customers or vendors</li>
+</ol>
+</div>
+<h2 id="translation">Translation</h2>
+<p>The Translation tab allows you to provide translated names and descriptions for tax categories in multiple languages. This is useful for multinational organizations where users work in different languages.</p>
+<p>When a user logs in with a specific language preference, they will see the tax category names in their language, ensuring clarity and reducing confusion when selecting tax categories during transaction entry.</p>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="when-to-create-multiple-tax-categories">When to Create Multiple Tax Categories</h3>
+<p>You should create different tax categories when:</p>
 <ul>
-<li>a <em>Name</em></li>
-<li>and a <em>Description</em></li>
+<li><strong>Products have different tax rates</strong>: Standard (21%), reduced (10%), super-reduced (4%), or exempt (0%)</li>
+<li><strong>Different tax types apply</strong>: VAT, sales tax, excise tax, or special duties</li>
+<li><strong>Industry-specific tax rules exist</strong>: Real estate transactions, agricultural regime, financial services</li>
+<li><strong>Cross-border sales</strong>: Domestic vs. export products (taxable vs. zero-rated)</li>
+<li><strong>Regulatory requirements</strong>: Separating reportable vs. non-reportable items for tax authorities (e.g., SII in Spain)</li>
 </ul>
-<p>of the Tax Category.</p>
-<p>Once created, the tax categories must be assigned to the corresponding products and services in the Product window.</p>
-<p>If the tax category is flagged as <em>As per BOM</em>, it indicates that products with this category will use the products included in its Bill of Materials list to calculate proportionally the taxes. In this case, only one Tax_Rate has to be configured for this tax category flagged as <em>Summary level</em>.</p>
-<h3 id="translation">Translation</h3>
-<p>Tax categories can be translated to any language required.</p>
+<h3 id="where-tax-categories-are-used">Where Tax Categories Are Used</h3>
+<p>Tax categories appear throughout the system:</p>
+<table>
+<thead>
+<tr>
+<th>Window/Process</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../../../master-data-management/master-data/#product">Product</a></td>
+<td>Each product must be assigned one tax category</td>
+</tr>
+<tr>
+<td><a href="../tax-rate/">Tax Rate</a></td>
+<td>Each tax rate must be linked to at least one tax category</td>
+</tr>
+<tr>
+<td><a href="../business-partner-tax-category/">Business Partner Tax Category</a></td>
+<td>Optional tax category assignment to restrict applicable taxes for specific customers/vendors</td>
+</tr>
+<tr>
+<td>Sales Orders/Invoices</td>
+<td>Tax categories determine which tax rates are available for selection</td>
+</tr>
+<tr>
+<td>Purchase Orders/Invoices</td>
+<td>Tax categories filter applicable taxes based on product and vendor configuration</td>
+</tr>
+<tr>
+<td><a href="../gl-item/">G/L Item</a></td>
+<td>Required when enabling G/L items for financial invoices with tax implications</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<p>A company sells different types of items with varying tax rates:</p>
+<table>
+<thead>
+<tr>
+<th>Item Type</th>
+<th>Tax Rate</th>
+<th>Tax Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electronics</td>
+<td>21%</td>
+<td>Standard VAT</td>
+</tr>
+<tr>
+<td>Food</td>
+<td>10%</td>
+<td>Reduced VAT</td>
+</tr>
+<tr>
+<td>Books</td>
+<td>0%</td>
+<td>Exempt</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Setup Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Create</strong> three tax categories:</p>
+<ul>
+<li>Name: "Standard VAT" → For products with standard tax rate</li>
+<li>Name: "Reduced VAT" → For products with reduced tax rate</li>
+<li>Name: "Exempt" → For tax-exempt products</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure tax rates</strong> in the <a href="../tax-rate/">Tax Rate window</a>:</p>
+<ul>
+<li>Create a 21% tax rate and link it to the "Standard VAT" category</li>
+<li>Create a 10% tax rate and link it to the "Reduced VAT" category</li>
+<li>Create a 0% tax rate and link it to the "Exempt" category</li>
+</ul>
+</li>
+<li>
+<p><strong>Assign products</strong> to categories in the <a href="../../../../master-data-management/master-data/#product">Product window</a>:</p>
+<ul>
+<li>Product "Laptop" → Tax Category: "Standard VAT"</li>
+<li>Product "Bread" → Tax Category: "Reduced VAT"</li>
+<li>Product "Novel Book" → Tax Category: "Exempt"</li>
+</ul>
+</li>
+</ol>
+<p><strong>Result in Transactions:</strong></p>
+<p>When creating a sales order or invoice:</p>
+<ul>
+<li>Adding "Laptop" → Etendo automatically applies 21% tax (from Standard VAT category)</li>
+<li>Adding "Bread" → Etendo automatically applies 10% tax (from Reduced VAT category)</li>
+<li>Adding "Novel Book" → Etendo automatically applies 0% tax (from Exempt category)</li>
+</ul>
+<p>This structure helps centralize tax logic, ensures accurate tax calculation, and simplifies tax maintenance across the system. If tax rates change (e.g., standard VAT increases from 21% to 23%), you only need to update the tax rate configuration—all products linked to that category will automatically use the new rate.</p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Tax_Category" target="_blank">Tax Category</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
