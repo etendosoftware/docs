@@ -100,6 +100,336 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: "Etendo Documentation"
+        - locale: es
+          name: Español
+          build: true
+          site_name: "Documentación de Etendo"
+          nav_translations:
+            ABC Activity: Actividad (ABC)
+            Account Combination: Combinación de cuentas
+            Account Tree: Árbol de cuentas
+            Accounting: Contabilidad
+            Accounting Process: Proceso Contable
+            Accounting Templates: Plantillas de Contabilidad
+            Adjust Invoice Tax: Ajustar Impuesto de Factura
+            Advanced Bank Account Management: Gestión Avanzada de Cuentas Bancarias
+            Advanced Business Partner: Tercero Avanzado
+            Advanced Warehouse Management: Gestión Avanzada de Almacén
+            Alert: Alerta
+            Alerts: Alertas
+            Analysis Tools: Herramientas de análisis
+            API Changes: Cambios de API
+            Application: Aplicación
+            Application Menu: Menú de Aplicación
+            Assets: Activos
+            Attachments: Adjuntos
+            Attachments Configuration: Configuración de Adjuntos
+            Audit Trail: Histórico de auditoría
+            Authentication: Autenticación
+            Automated Remittance: Remesa Automatizada
+            Balance Sheet and P/L Structure Setup: Configuración de Estructura de Balance y P/G
+            Basic Features: Funcionalidades Básicas
+            Bulk Completion: Completado Masivo
+            Bulk Posting: Contabilización Masiva
+            Bundles: Paquetes
+            Business Partner Settlement: Liquidación de Terceros
+            Business Partner Setup: Configuración de terceros
+            Business Partner Tax Category: Categoría de Impuestos de Terceros
+            Client: Entidad
+            Client Side Development and API: Desarrollo del Lado del Cliente y API
+            Cluster Development Guidelines: Directrices de Desarrollo en Clúster
+            Code Review Process: Proceso de Revisión de Código
+            Commission: Comisión
+            Common Issues Tips and Tricks: Problemas Comunes, Consejos y Trucos
+            Concepts: Conceptos
+            Config Server: Servidor de Configuración
+            Connectors: Conectores
+            Constraints: Restricciones
+            Conversion Rate Downloader: Descargador de Tasas de Conversión
+            Conversion Rates: Rangos de conversión
+            Copilot Extensions: Extensiones de Copilot
+            Core format migration (JAR- Sources): Migración de formato del core (JAR-Sources)
+            Cost Center: Centro de costos
+            Country and Region: País, provincia y ciudad
+            Create New Subapplication: Crear Nueva Sub-aplicación
+            Create Sequences: Crear Secuencias
+            Creating a New Microservice: Creación de un Nuevo Microservicio
+            CRM Connector: Conector CRM
+            Currency: Moneda
+            Data Access Layer: Capa de Acceso a Datos
+            Data Model: Modelo de Datos
+            Datasets: Conjuntos de Datos
+            Datasources: Fuentes de datos
+            Deep Linking: Enlace Profundo
+            Developer Changelog: Registro de Cambios del Desarrollador
+            Developer Guide: Guía del Desarrollador
+            Developer Tools: Herramientas del Desarrollador
+            Development Model: Modelo de Desarrollo
+            Development Project Structure: Estructura del Proyecto de Desarrollo
+            Docker Management: Gestión de Docker
+            Dockerized Tomcat Service: Servicio Tomcat en Docker
+            Document Sequence: Secuencia de documento (numeración)
+            Document Type: Tipo de documento
+            Dynamic App: Aplicación Dinámica
+            Dynamic Expressions: Expresiones Dinámicas
+            Edge Server: Servidor Edge
+            Element and Synchronize Terminology: Elemento y Sincronización de Terminología
+            Enterprise Model: Organización
+            Enterprise Module Management: Gestión del módulo de Empresa
+            Etendo BI Inclusion/Exclusion Module Configuration: Configuración del Módulo de Inclusión/Exclusión de Etendo BI
+            Etendo Release Cycle: Ciclo de Lanzamientos de Etendo
+            Financial Management: Gestión Financiera
+            Financial Type: Tipo Financiero
+            Fiscal Calendar: Calendario anual y periodos
+            Format xml: Formato xml
+            General Ledger Configuration: Esquema contable
+            General Setup: Configuración General
+            Getting Started: Primeros Pasos
+            GL Category: Categoría Contable
+            GL Item: Concepto contable
+            Grid and Forms: Grillas y Formularios
+            Help and Support: Ayuda y Soporte
+            Home: Inicio
+            How Price Including Taxes are Calculated: Cómo se Calculan los Precios con Impuestos Incluidos
+            How to Add a Button to the Toolbar: Cómo Agregar un Botón a la Barra de Herramientas
+            How to Add a Canvas Field to a Form or Grid: Cómo Agregar un Campo Canvas a un Formulario o Grilla
+            How to Add a Constraint: Cómo Agregar una Restricción
+            How to Add a Field to a Window Tab: Cómo Agregar un Campo a una Pestaña de Ventana
+            How to Add a Masked Text Field: Cómo Agregar un Campo de Texto con Máscara
+            How to Add a Rich Text Field and Column: Cómo Agregar un Campo y Columna de Texto Enriquecido
+            How to Add Columns to a Table: Cómo Agregar Columnas a una Tabla
+            How to Add Telemetry to a Module: Cómo Agregar Telemetría a un Módulo
+            How to Automatically Populate Search Keys: Cómo Poblar Claves de Búsqueda Automáticamente
+            How to Call an Etendo Webservice from Java: Cómo Llamar a un Servicio Web de Etendo desde Java
+            How to Change an Existing Report: Cómo Modificar un Informe Existente
+            How to Change an Existing Window: Cómo Modificar una Ventana Existente
+            How to Change Date Format: Cómo Cambiar el Formato de Fecha
+            How to Change Fonts in Etendo Reports: Cómo Cambiar Fuentes en Informes de Etendo
+            How to Change the Size of a Column: Cómo Cambiar el Tamaño de una Columna
+            How to Configure API Tokens: Cómo Configurar Tokens de API
+            How to Configure Etendo Copilot to Use a Proxy: Cómo Configurar Etendo Copilot para Usar un Proxy
+            How to Configure Log: Cómo Configurar el Log
+            How to Configure MCP Servers on a Etendo Agent: Cómo Configurar Servidores MCP en un Agente de Etendo
+            How to Configure Memory Limits in Docker Containers: Cómo Configurar Límites de Memoria en Contenedores Docker
+            How to Configure Session Timeout: Cómo Configurar el Tiempo de Sesión
+            How to Connect an Etendo Copilot Agent to a Telegram Bot with n8n: Cómo Conectar un Agente de Etendo Copilot a un Bot de Telegram con n8n
+            How to Connect Etendo Copilot with Gmail via Pipedream: Cómo Conectar Etendo Copilot con Gmail vía Pipedream
+            How to Copy and Paste Images in Etendo: Cómo Copiar y Pegar Imágenes en Etendo
+            How to Create a Background Process: Cómo Crear un Proceso en Segundo Plano
+            How to Create a Callout: Cómo Crear un Callout
+            How to Create a Callout that Extends from Another Callout: Cómo Crear un Callout que Extiende de Otro Callout
+            How to Create a Chart of Accounts Module: Cómo Crear un Módulo de Plan de Cuentas
+            How to Create a Clone Hook: Cómo Crear un Hook de Clonación
+            How to Create a Computed Column: Cómo Crear una Columna Calculada
+            How to Create a Configuration Script: Cómo Crear un Script de Configuración
+            How to Create a Custom Tree: Cómo Crear un Árbol Personalizado
+            How to Create a Dataset: Cómo Crear un Conjunto de Datos
+            How to Create a General Ledger Configuration: Cómo Crear un Esquema Contable
+            How to create a HQL Based Table: Cómo Crear una Tabla Basada en HQL
+            How to create a Java Based Process: Cómo Crear un Proceso Basado en Java
+            How to Create a Module: Cómo Crear un Módulo
+            How to Create a Module that Adds an Accounting Process: Cómo Crear un Módulo que Agrega un Proceso Contable
+            How to Create a Multi Selector: Cómo Crear un Multi Selector
+            How to Create a Navigable Link: Cómo Crear un Enlace Navegable
+            How to Create a Navigation Bar Component: Cómo Crear un Componente de Barra de Navegación
+            How to Create a Navigation Rule: Cómo Crear una Regla de Navegación
+            How to Create a New Attachment Method: Cómo Crear un Nuevo Método de Adjuntos
+            How to Create a New REST Webservice: Cómo Crear un Nuevo Servicio Web REST
+            How to Create a Page in Etendo Documentation: Cómo Crear una Página en la Documentación de Etendo
+            How to Create a Pick and Execute Process: Cómo Crear un Proceso de Selección y Ejecución
+            How to Create a Report: Cómo Crear un Informe
+            How to Create a Report Using Process Definition: Cómo Crear un Informe Usando Definición de Proceso
+            How to create a Report with iReport: Cómo Crear un Informe con iReport
+            How to Create a Spreadsheet and Tasks Agent: Cómo Crear un Agente de Hojas de Cálculo y Tareas
+            How to Create a Standard Process Definition: Cómo Crear una Definición de Proceso Estándar
+            How to Create a Stored Procedure: Cómo Crear un Procedimiento Almacenado
+            How to Create a Table: Cómo Crear una Tabla
+            How to Create a Table Based on a User Defined Datasource: Cómo Crear una Tabla Basada en un Datasource Definido por el Usuario
+            How to Create a Tree Selector: Cómo Crear un Selector de Árbol
+            How to Create a Trigger: Cómo Crear un Trigger
+            How to Create a Window: Cómo Crear una Ventana
+            How to Create Accounts Files: Cómo Crear Archivos de Cuentas
+            How to Create an Account Tree: Cómo Crear un Árbol de Cuentas
+            How to Create an Agent: Cómo Crear un Agente
+            How to Create an Alert: Cómo Crear una Alerta
+            How to Create an External Connection Pool: Cómo Crear un Pool de Conexiones Externo
+            How to Create and Update Business Entities Using Web Services: Cómo Crear y Actualizar Entidades de Negocio Usando Servicios Web
+            How to Create and Update Translation Modules: Cómo Crear y Actualizar Módulos de Traducción
+            How to Create and Work with Bulk Tasks for Copilot: Cómo Crear y Trabajar con Tareas Masivas para Copilot
+            How to Create Build Validations and Module Scripts: Cómo Crear Validaciones de Build y Scripts de Módulo
+            How to Create Client Event Handler Actions: Cómo Crear Acciones de Manejo de Eventos del Cliente
+            How to Create Client Side Callout Onchange Function: Cómo Crear una Función Callout Onchange del Lado del Cliente
+            How to Create Copilot Tools: Cómo Crear Herramientas de Copilot
+            How to Create Jest Test Cases: Cómo Crear Casos de Test con Jest
+            How to Create Jobs and Actions: Cómo Crear Jobs y Acciones
+            How to Create JUnit Test Cases: Cómo Crear Casos de Test con JUnit
+            How to Create Scan Process: Cómo Crear un Proceso de Escaneo
+            How to Create Test Cases: Cómo Crear Casos de Test
+            How to Customize an Agent with Agent Memories: Cómo Personalizar un Agente con Memorias de Agente
+            How to Debug an Agent with Langsmith: Cómo Depurar un Agente con Langsmith
+            How to Define a Table as a Tree: Cómo Definir una Tabla como Árbol
+            How to Define an on Create Default: Cómo Definir un Valor por Defecto al Crear
+            How to Define Display Logic Evaluated at Server Level: Cómo Definir Lógica de Visualización Evaluada a Nivel de Servidor
+            How to Define Display Logic for Tabs: Cómo Definir Lógica de Visualización para Pestañas
+            How to Define the Timeout of a Query: Cómo Definir el Timeout de una Consulta
+            How to Develop a DAL Background Process: Cómo Desarrollar un Proceso en Segundo Plano con DAL
+            How to do a Complex Query Using DAL: Cómo Hacer una Consulta Compleja Usando DAL
+            How to Document an Endpoint with OpenAPI: Cómo Documentar un Endpoint con OpenAPI
+            How to Embed a Widget into a Window Tab: Cómo Insertar un Widget en una Pestaña de Ventana
+            How to Exclude Database Physical Objects From Model: Cómo Excluir Objetos Físicos de Base de Datos del Modelo
+            How to Execute Copilot Through the Console: Cómo Ejecutar Copilot desde la Consola
+            How to Explore ERP Data with MCP: Cómo Explorar Datos del ERP con MCP
+            How to Export Sample Data: Cómo Exportar Datos de Ejemplo
+            How to Export Tools and Agents: Cómo Exportar Herramientas y Agentes
+            How to Filter any Request for Active or all Records: Cómo Filtrar Solicitudes por Registros Activos o Todos
+            How to Give Public Access to RX with Apache2: Cómo Dar Acceso Público a RX con Apache2
+            How to Guides: Guías Prácticas
+            How to Implement a Business Event Handler: Cómo Implementar un Manejador de Eventos de Negocio
+            How to Implement a New Discount and Promotion Type: Cómo Implementar un Nuevo Tipo de Descuento y Promoción
+            How to Implement Create New in Selector: Cómo Implementar Crear Nuevo en un Selector
+            How to Implement FICExtension Hook: Cómo Implementar el Hook FICExtension
+            How to Implement JsonDataServiceExtraActions Hook: Cómo Implementar el Hook JsonDataServiceExtraActions
+            How to Implement OAuth Authentication and Token Management in Etendo RX: Cómo Implementar Autenticación OAuth y Gestión de Tokens en Etendo RX
+            How to Improve OCR Recognition: Cómo Mejorar el Reconocimiento OCR
+            How to Integrate a Sales Assistant with Shopify MCP: Cómo Integrar un Asistente de Ventas con Shopify MCP
+            How to Integrate Copilot with Jira via MCP: Cómo Integrar Copilot con Jira vía MCP
+            How to Log Using Log4j: Cómo Registrar Usando Log4j
+            How to Manage Deferred Revenue and Expenses: Cómo Gestionar Ingresos y Gastos Diferidos
+            How to Manage Prepaid Invoices in Payables: Cómo Gestionar Facturas Anticipadas en Pagos
+            How to Manage Prepaid Invoices in Receivables: Cómo Gestionar Facturas Anticipadas en Cobros
+            How to Modularize the Location Selector: Cómo Modularizar el Selector de Ubicación
+            How to Partition Tables with Etendo Database Extended Module: Cómo Particionar Tablas con el Módulo Etendo Database Extended
+            How to Print Reports with Subreports: Cómo Imprimir Informes con Subinformes
+            How to Publish Modules to a GitHub Repository: Cómo Publicar Módulos en un Repositorio de GitHub
+            How to report bugs: Cómo Reportar Errores
+            How to Restrict the Movements of Nodes in a Tree: Cómo Restringir los Movimientos de Nodos en un Árbol
+            How to Retrieve Parents Node by Level in a Tree: Cómo Obtener Nodos Padre por Nivel en un Árbol
+            How to Run an Initial Client Setup Process: Cómo Ejecutar un Proceso de Configuración Inicial de Entidad
+            How to Run Self-Hosted Models with Ollama: Cómo Ejecutar Modelos Auto-Alojados con Ollama
+            How to Send Emails on Events: Cómo Enviar Correos en Eventos
+            How to Start RX as Service: Cómo Iniciar RX como Servicio
+            How to Transfer Funds Between Financial Accounts: Cómo Transferir Fondos entre Cuentas Financieras
+            How to Use Advanced Sequences: Cómo Usar Secuencias Avanzadas
+            How to Use an Agent as MCP Server: Cómo Usar un Agente como Servidor MCP
+            How to use an Extension Point: Cómo Usar un Punto de Extensión
+            How to Use an External Connection Pool: Cómo Usar un Pool de Conexiones Externo
+            How to Use Context Features: Cómo Usar Funcionalidades de Contexto
+            How to Use Google Service Util: Cómo Usar Google Service Util
+            How to Use OpenTelemetry: Cómo Usar OpenTelemetry
+            How to Use Property Fields: Cómo Usar Campos de Propiedad
+            How to Use Secure Web Services: Cómo Usar Servicios Web Seguros
+            Initial Organization Setup: Crear organización
+            Install Etendo: Instalar Etendo
+            Install Etendo - Development Environment: Instalar Etendo - Entorno de Desarrollo
+            Install Etendo Main UI: Instalar Etendo Main UI
+            Install Modules in Etendo: Instalar Módulos en Etendo
+            Install Translation Bundles in Etendo: Instalar Paquetes de Traducción en Etendo
+            Installation: Instalación
+            IntelliJ Code Formatting: Formateo de Código en IntelliJ
+            Interactive Installation: Instalación Interactiva
+            Intercompany: Intercompañía
+            Inventory Status: Estado de Inventario
+            ISO image: Imagen ISO
+            Java Coding Conventions: Convenciones de Código Java
+            JavaScript Coding Conventions: Convenciones de Código JavaScript
+            JSON REST Web Services: Servicios Web JSON REST
+            Known Issues: Problemas Conocidos
+            Live Builds: Versiones en Vivo
+            Main Development Concepts: Conceptos Principales de Desarrollo
+            Master Data: Datos Maestros
+            Master Data Management: Gestión de Datos Maestros
+            Material Requirement Planning: Gestión de MRP
+            Merging Modules: Fusión de Módulos
+            Messages: Mensajes
+            Migrating to Etendo (from Openbravo): Migrar a Etendo (desde Openbravo)
+            Migration from Openbravo: Migración desde Openbravo
+            Model Context Protocol (MCP): Protocolo de Contexto de Modelo (MCP)
+            Model Object Mapping: Mapeo de Modelo a Objeto
+            Modularity Concepts: Conceptos de Modularidad
+            Multi-Client and Multi-Org: Multi-Entidad y Multi-Organización
+            Naming Guideliness for Modules: Directrices de Nomenclatura para Módulos
+            Navigation: Navegación
+            New UI: Nueva Interfaz
+            Open/Close Period Control: Abrir/Cerrar periodos
+            Optional Features: Funcionalidades Opcionales
+            Organization: Organización
+            Organization Type: Tipo de Organización
+            Overview: Visión General
+            Packing: Empaquetado
+            Period Control Log: Abrir/Cerrar Periodos
+            Picking List: Lista de Preparación
+            Plugins: Plugins
+            PostgreSQL Configuration: Configuración de PostgreSQL
+            Preference: Preferencias
+            Prerequisite Knowledge: Conocimientos Previos
+            Pricing: Tarifas
+            Print Provider: Proveedor de Impresión
+            Process Group: Grupo de Procesos
+            Process Monitor: Monitor de Procesos
+            Process Request: Procesamiento de Peticiones
+            Process Scheduling: Planificador de procesos
+            Processes: Procesos
+            Procurement Management: Gestión de Compras
+            Product Setup: Configuración de productos
+            Production Management: Gestión de Producción
+            Project and Service Management: Gestión de Proyectos y Servicios
+            Projections and Mappings: Proyecciones y Mapeos
+            Purchase Invoice Validation: Validación de Factura de Compra
+            Receivables and Payables: Gestión de Cobros y Pagos
+            Release Notes: Notas de la Versión
+            Requirements: Requisitos
+            Resolving Dependencies on GitHub: Resolver Dependencias en GitHub
+            Role: Rol
+            Role Access: Rol permisos
+            Sales Management: Gestión de Ventas
+            Security: Seguridad
+            Security Model: Modelo de Seguridad
+            Selectors: Selectores
+            Session Preferences: Preferencias Sesión
+            Setup: Configuración
+            Setup and Usage: Configuración y Uso
+            Standard Windows: Ventanas Estándar
+            Stock Logistic Unit: Unidad Logística de Stock
+            Sup-application Structure: Estructura de Sub-aplicación
+            Support Service: Servicio de Soporte
+            Supported Modules: Módulos Soportados
+            Tables: Tablas
+            Task: Mantenimiento
+            Task Management for Supervisors: Gestión de Tareas para Supervisores
+            Tax Category: Categoría de Impuesto
+            Tax Rate: Rango impuesto
+            Tax Report Launcher: Lanzador de Informes Fiscales
+            Tools: Herramientas
+            Transactions: Transacciones
+            Translation Bundles: Paquetes de Traducción
+            Tutorials: Tutoriales
+            Upgrade: Actualización
+            Upgrade Etendo to Any Version: Actualizar Etendo a Cualquier Versión
+            Upgrading to Openbravo 21Q3.2: Actualizar a Openbravo 21Q3.2
+            Use of Repositories in Etendo: Uso de Repositorios en Etendo
+            User: Usuario
+            User Guide: Guía del Usuario
+            User interface: Interfaz de Usuario
+            User Interface Improvements: Mejoras de Interfaz de Usuario
+            Warehouse Management: Gestión de Almacén
+            "What's New": "Novedades"
+            Window Personalization: Personalización de Ventana
+            Workspace: Espacio de Trabajo
+            ✨ Etendo News: ✨ Novedades de Etendo
+            ✨ Getting Started: ✨ Primeros Pasos
+            ✨ Installation: ✨ Instalación
+            ✨Getting Started: ✨Primeros Pasos
+            
   - search:
       indexing: full
       prebuild_index: true
