@@ -33,7 +33,7 @@ Some of the main fields to be completed are:
 - **Model**: Dropdown with the models available, such as OpenAI, Anthropic, etc. Go to section [Which model should I choose?](#which-model-should-i-choose) for more information.
 
 !!!info
-    The **Prompt** field can have the following dynamic variables: @ETENDO_HOST@, @ETENDO_HOST_DOCKER@ and @source.path@ 
+    The **Prompt** field can have the following dynamic variables: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@` 
     These variables will be replaced with the values defined in the properties.
 
 !!!note 
