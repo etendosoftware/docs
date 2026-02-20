@@ -67,7 +67,7 @@ Fields to note:
 - **Prompt**: Specific instructions of the agents. These instructions can be written in English or Spanish.
     
     !!!info
-        The **Prompt** field can have the following dynamic variables: `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@`. These variables will be replaced with the values defined in the `gradle.properties`file.
+        The **Prompt** field can have the following dynamic variables: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@`. These variables will be replaced with the values defined in the `gradle.properties`file.
 
 - **Graph Preview**:  In case of defining an **LangGraph** type app, it shows the tree of agents under a certain manager.
 
