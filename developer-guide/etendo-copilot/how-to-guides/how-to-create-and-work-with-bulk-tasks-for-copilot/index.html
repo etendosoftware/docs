@@ -15044,8 +15044,8 @@
 </ol>
 </li>
 <li>
-<p>Click on <code>Done</code> button. And the tasks will be created.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png"></a></p>
+<p>Click on <code>Done</code> button. And the tasks will be created.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png"></a></p>
 </li>
 </ol>
 <h4 id="using-the-task-creator-tool-in-an-agent">Using the <code>Task Creator Tool</code> in an agent</h4>
@@ -15068,9 +15068,9 @@
 </li>
 <li>
 <p>The agent will create the tasks based on the file data using the <code>Task Creator Tool</code>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png"></a></p>
 </li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png"></a></p>
 <h4 id="using-the-bulk-task-creator-agent">Using the <code>Bulk Task Creator</code> agent</h4>
 <p>This agent knows how to use the <code>Task Creator Tool</code> strategically, converting the request into singular tasks. The steps to create the bulk tasks are:</p>
 <ol>
@@ -15130,13 +15130,13 @@
 <p>The tasks can be processed in two ways:</p>
 <ul>
 <li>
-<p><strong>Manual processing</strong>: The user can process the tasks manually in the <code>Tasks</code> window. Select the tasks to be processed and click on the <code>EXECUTE TASK WITH COPILOT</code> button. After the task is processed, the status will be updated to <code>Completed</code> and the result will be shown in the <code>Response</code>.</p>
+<p><strong>Manual processing</strong>: The user can process the tasks manually in the <code>Tasks</code> window. Select the tasks to be processed and click on the <code>EXECUTE TASK WITH COPILOT</code> button. After the task is processed, the status will be updated to <code>Completed</code> and the result will be shown in the <code>Response</code> field.</p>
 </li>
 <li>
 <p><strong>Background processing</strong>: The tasks can be processed automatically in the background. Go to <code>Process Request</code> window to schedule the background process called <code>Execute Copilot Bulk Tasks</code>. In each execution, the process will take 10 tasks to process, so it is necessary to execute the process multiple times to process all the tasks.</p>
 </li>
 </ul>
-<p>After the task is processed, the status will be updated to <code>Completed</code> and the result will be shown in the <code>Response</code>.</p>
+<p>After the task is processed, the status will be updated to <code>Completed</code> and the result will be shown in the <code>Response</code> field. Additionally, the complete agent response will be stored in the <code>RAW Response</code> field, and the <code>Conversation ID</code> field will contain the identifier of the conversation with the agent.</p>
 <h3 id="example_1">Example</h3>
 <p>For example, we will process few tasks created in the previous example, in the manual way</p>
 <ol>
@@ -15146,7 +15146,7 @@
     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-4.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-4.png"></a></li>
 <li>The tasks will be processed and the status will be updated to <code>Completed</code>.
     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-5.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-5.png"></a></li>
-<li>In the field <code>Response</code> will be shown the result of the task.
+<li>In the field <code>Response</code> will be shown the result of the task. The complete agent response is available in the <code>RAW Response</code> field, and the <code>Conversation ID</code> field contains the identifier of the agent conversation.
     <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-6.png" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-6.png"></a></li>
 </ol>
 <p>For the remaining tasks, we will schedule the background process to process them.</p>
