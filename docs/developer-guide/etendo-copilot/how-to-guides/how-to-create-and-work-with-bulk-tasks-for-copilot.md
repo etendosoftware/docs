@@ -72,6 +72,7 @@ And the objective is to insert these products in Etendo. For this example we wil
     5. Set an **Element separator**. This is the character that will be used to separate the data from the file CSV. For example, `,` or  `;`.
   
 3. Click on `Done` button. And the tasks will be created.
+    
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
 
 #### Using the `Task Creator Tool` in an agent
@@ -94,7 +95,7 @@ And the objective is to insert these products in Etendo. For this example we wil
 
 5. The agent will create the tasks based on the file data using the `Task Creator Tool`.
 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
 #### Using the `Bulk Task Creator` agent
 This agent knows how to use the `Task Creator Tool` strategically, converting the request into singular tasks. The steps to create the bulk tasks are:
