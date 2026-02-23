@@ -135,6 +135,10 @@ Launch the interactive configuration assistant:
 ./gradlew setup -Pinteractive=true --console=plain
 ```
 
+### Start Etendo Configuration
+
+Launch de command ./gradlew setup --info
+
 ### Navigate the Configuration Menu
 
 It will be possible to see the main configuration menu:
