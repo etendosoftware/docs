@@ -2,11 +2,11 @@
 title: Cómo usar secuencias avanzadas
 
 tags:
-	- Cómo hacer
-    - Secuencias
-    - Secuencias transaccionales
-    - Secuencias no transaccionales
-    - Gestión de secuencias de base de datos
+- Cómo hacer
+- Secuencias
+- Secuencias transaccionales
+- Secuencias no transaccionales
+- Gestión de secuencias de base de datos
 ---
 
 # Secuencias

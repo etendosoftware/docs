@@ -1,11 +1,11 @@
 ---
 title: Cómo crear un Proceso en segundo plano
 tags:
-	- Cómo hacer
-	- Proceso en segundo plano
-	- Programación de procesos
-	- Ejecutar más tarde
-	- Desprogramar
+    - Cómo hacer
+    - Proceso en segundo plano
+    - Programación de procesos
+    - Ejecutar más tarde
+    - Desprogramar
 ---
   
 #  Cómo crear un Proceso en segundo plano
