@@ -135,7 +135,7 @@ Inicia el asistente de configuración interactiva:
 ./gradlew setup -Pinteractive=true --console=plain
 ```
 
-### Iniciar la configuración de Etendo
+### Iniciar la configuración de Etendo con Gradle
 
 Lanza el comando ./gradlew setup --info
 
@@ -306,3 +306,5 @@ Si tu proyecto incluye módulos personalizados con un archivo `config.gradle`, s
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
