@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Algolia configuration — switch index based on language
-    const isSpanish = window.location.pathname.startsWith('/es/');
-    const algoliaConfig = {
-        appId: 'XMLZ1ZZEY7',
-        apiKey: 'de992ae25d65509474690fe8761e2a21',
-        indexName: isSpanish ? 'etendo_docs_index2_es_test' : 'etendo_docs_index2'
-    };
+    // Algolia configuration — index switches dynamically based on language
+    const algoliaAppId = 'XMLZ1ZZEY7';
+    const algoliaApiKey = 'de992ae25d65509474690fe8761e2a21';
+    const client = algoliasearch(algoliaAppId, algoliaApiKey);
+
+    function getIndex() {
+        const isSpanish = window.location.pathname.startsWith('/es/');
+        return client.initIndex(isSpanish ? 'etendo_docs_index2_es' : 'etendo_docs_index2');
+    }
 
     // Select the search container
     const searchContainer = document.querySelector(".md-search");
@@ -20,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsContainer.innerHTML = "";
     resultsContainer.style.display = "none";
 
-    const client = algoliasearch(algoliaConfig.appId, algoliaConfig.apiKey);
-    const index = client.initIndex(algoliaConfig.indexName);
     const searchInput = document.querySelector("input.md-search__input");
 
     // Store last search results
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to perform a search using Algolia and render the results
     function performSearch(query) {
-        index.search(query)
+        getIndex().search(query)
             .then(({ hits }) => {
                 lastQuery = query;
                 lastHits = hits;
