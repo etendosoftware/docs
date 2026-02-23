@@ -86,6 +86,10 @@ Here are some of the **key benefits** of using **Etendo**:
 - **Scalability**: Grows with your business.  
 - **Regulatory Compliance**: Etendo helps meet local and international standards.
 
+# Why use Etendo ERP?
+
+**Etendo** is the best solution on the market for managing your business optimally. 
+
 # Best Practices for Working with an ERP
 
 **Etendo** isn’t just software—it reflects how your business operates. To use it effectively:
