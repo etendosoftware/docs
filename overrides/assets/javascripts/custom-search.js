@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Algolia configuration
+    // Algolia configuration — switch index based on language
+    const isSpanish = window.location.pathname.startsWith('/es/');
     const algoliaConfig = {
         appId: 'XMLZ1ZZEY7',
         apiKey: 'de992ae25d65509474690fe8761e2a21',
-        indexName: 'etendo_docs_index2'
+        indexName: isSpanish ? 'etendo_docs_index2_es_test' : 'etendo_docs_index2'
     };
 
     // Select the search container
