@@ -135,7 +135,7 @@ Launch the interactive configuration assistant:
 ./gradlew setup -Pinteractive=true --console=plain
 ```
 
-### Start Etendo Configuration
+### Start Etendo Configuration With Gradle
 
 Launch de command ./gradlew setup --info
 
@@ -147,7 +147,7 @@ It will be possible to see the main configuration menu:
 🎛️  Interactive Setup - Main Menu
 ============================================================
 
-📋 Choose configuration option:
+📋 Choose the correct configuration option:
 
 1️⃣  Default configuration (use current/default values)
 2️⃣  Group configuration:
