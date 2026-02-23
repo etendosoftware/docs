@@ -35,6 +35,10 @@ Etendo now includes an **Interactive Configuration System** that guides you thro
 
 **For a complete step-by-step interactive installation guide, see: [Interactive Installation Guide](interactive-installation.md)**
 
+## How to Install Etendo
+
+Etendo installation is very simple...
+
 ## Install Etendo 
 === ":material-language-java: JAR Format"
 
