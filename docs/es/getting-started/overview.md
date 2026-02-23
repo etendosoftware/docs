@@ -1,5 +1,5 @@
 ---
-title: Primeros pasos 
+title: Primeros Pasos 
 hide:
     - toc
 
@@ -19,15 +19,15 @@ tags:
 
 Bienvenido al primer paso para comprender los sistemas de **Enterprise Resource Planning (ERP)**, herramientas potentes que están en el corazón de la gestión empresarial moderna.
 
-Esta sección le ayuda a entender qué es un ERP, cómo funciona y por qué es esencial para organizaciones de todos los tamaños.
+Esta sección te ayuda a entender qué es un ERP, cómo funciona y por qué es esencial para organizaciones de todos los tamaños.
 
 Un sistema de **Enterprise Resource Planning (ERP)**, como **Etendo**, es una solución de software integral que integra y optimiza los procesos clave de una organización en una única plataforma unificada. Conecta departamentos, agiliza flujos de trabajo y ofrece a los responsables información en tiempo real para tomar decisiones fundamentadas.
 
 # ¿Cómo funciona un ERP?
 
-Desde un punto de vista técnico, un ERP está compuesto por **módulos interconectados** o **áreas funcionales**. Cada módulo se centra en una parte específica del negocio, pero **se comunican en tiempo real**, manteniendo todo sincronizado.
+Desde un punto de vista técnico, un ERP está compuesto por **interconnected modules** o **functional areas**. Cada módulo se centra en una parte específica del negocio, pero **communicate in real-time**, manteniendo todo sincronizado.
 
-En el caso de **Etendo**, puede encontrar funcionalidades como:
+En el caso de **Etendo**, puedes encontrar funcionalidades como:
 
 <div class="grid cards" markdown>
 
@@ -35,69 +35,73 @@ En el caso de **Etendo**, puede encontrar funcionalidades como:
 
     ---
     - Inicia el proceso con pedidos, incluye facturas e incluso gestiona devoluciones.  
-    - Desencadena acciones de **Producción**, **Almacén** y **Finanzas**.
+    - Dispara acciones de **Producción**, **Almacén** y **Finance**.
 
--   :material-shopping:{ .lg .middle } __[Gestión de Compras](../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md)__
+-   :material-shopping:{ .lg .middle } __[Gestión de Aprovisionamiento](../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md)__
 
     ---
     - Garantiza la disponibilidad de materias primas y mercancías.  
-    - Se coordina con **Producción** y **Finanzas**.
+    - Se coordina con **Producción** y **Finance**.
 
 -   :material-factory:{ .lg .middle } __[Gestión de Producción](../user-guide/etendo-classic/basic-features/production-management/getting-started.md)__
 
     ---
-    - Gestiona la fabricación utilizando datos de **Ventas**, **Almacén** y **Compra**.  
-    - Informa de costes y resultados a **Finanzas**.
+    - Gestiona la fabricación utilizando datos de **Ventas**, **Almacén** y **Purchases**.  
+    - Informa de costes y resultados a **Finance**.
 
 -   :material-warehouse:{ .lg .middle } __[Gestión de Almacén](../user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md)__
 
     --- 
-    - Realiza el seguimiento de entradas y salidas de mercancías.  
+    - Realiza el seguimiento de entradas y salidas de mercancía.  
     - Se sincroniza con **Ventas**, **Compra** y **Producción**.
 
 -   :material-finance:{ .lg .middle } __[Gestión Financiera](../user-guide/etendo-classic/basic-features/financial-management/getting-started.md)__  
 
     ---
-    - En el **núcleo** del ERP.  
-    - Integra datos de todos los módulos para proporcionar una **visión financiera general**.
+    - En el **core** del ERP.  
+    - Integra datos de todos los módulos para proporcionar una **financial overview**.
 
 
--   :material-list-box:{ .lg .middle } __[Gestión de MRP](../user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md)__  
+-   :material-list-box:{ .lg .middle } __[Planificación de Requerimientos de Material](../user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md)__  
 
     ---
-    - Garantiza que **los materiales estén disponibles para la producción** y que **los productos estén disponibles para la entrega**.
-    - **Calcula la demanda** en función de las previsiones de ventas, los niveles de inventario y los planes de producción.
+    - Garantiza que **materials are available for production** y que **products are available for delivery**.
+    - **Calculates demand** en base a previsiones de ventas, niveles de inventario y planes de producción.
 
 -   :material-progress-check:{ .lg .middle } __[Gestión de Proyectos y Servicios](../user-guide/etendo-classic/basic-features/project-and-service-management/getting-started.md)__ 
 
     ---
-    - Gestiona **los plazos del proyecto, los recursos y los presupuestos** dentro del ERP.
-    - Se conecta con Finanzas, RR. HH. y Ventas para realizar el seguimiento de **la prestación del servicio y la rentabilidad**.
+    - Gestiona **project timelines, resources, and budgets** dentro del ERP.
+    - Se conecta con Finance, RR. HH. y Ventas para hacer seguimiento de **service delivery and profitability**.
 
 </div>
 
 # ¿Por qué usar un ERP?
 
-Estos son algunos de los **beneficios clave** de utilizar **Etendo**:
+Estos son algunos de los **key benefits** de usar **Etendo**:
 
-- **Información centralizada**: todos sus datos críticos en un único lugar.  
-- **Toma de decisiones fundamentada**: los paneles y los informes ayudan a los responsables a actuar con rapidez.  
-- **Automatización de procesos**: reduce tareas manuales, ahorrando tiempo y esfuerzo.  
-- **Escalabilidad**: crece con su negocio.  
-- **Cumplimiento normativo**: Etendo ayuda a cumplir estándares locales e internacionales.
+- **Centralized Information**: Todos tus datos críticos en un solo lugar.  
+- **Informed Decision-Making**: Los cuadros de mando e informes ayudan a los responsables a actuar rápidamente.  
+- **Process Automation**: Reduce tareas manuales, ahorrando tiempo y esfuerzo.  
+- **Scalability**: Crece con tu negocio.  
+- **Regulatory Compliance**: Etendo ayuda a cumplir con estándares locales e internacionales.
+
+# ¿Por qué usar Etendo ERP?
+
+**Etendo** es la mejor solución del mercado para gestionar tu negocio de forma óptima. 
 
 # Buenas prácticas para trabajar con un ERP
 
-**Etendo** no es solo software: refleja cómo opera su empresa. Para utilizarlo de forma eficaz:
+**Etendo** no es solo software: refleja cómo opera tu negocio. Para usarlo de forma eficaz:
 
--  **Comprender los procesos de negocio**: conozca qué debe gestionarse antes de configurar el sistema.  
--  **Colaborar entre departamentos**: alinee necesidades y expectativas.  
--  **Documentarlo todo**: mantenga bien registradas todas las nuevas funcionalidades y cambios.  
--  **Formación continua**: asegúrese de que todos los usuarios sepan utilizar el sistema de forma eficaz.  
--  **Diseñar para la experiencia de usuario**: haga que el ERP sea fácil de adoptar y navegar.  
--  **Pensar de forma holística**: cada actualización puede afectar a todo el sistema, por lo que debe considerar el impacto global.
+-  **Understand Business Processes**: Conoce qué se necesita gestionar antes de configurar el sistema.  
+-  **Collaborate Across Departments**: Alinea necesidades y expectativas.  
+-  **Document Everything**: Mantén bien registradas todas las nuevas funcionalidades y cambios.  
+-  **Train Continuously**: Asegúrate de que todos los usuarios sepan utilizar el sistema de forma eficaz.  
+-  **Design for User Experience**: Haz que el ERP sea fácil de adoptar y navegar.  
+-  **Think Holistically**: Cada actualización puede afectar a todo el sistema, así que considera el impacto global.
 
-Un sistema ERP, como **Etendo**, es más que una herramienta: es un **activo estratégico**. Refleja las operaciones de su empresa, le ayuda a optimizar recursos y contribuye al éxito a largo plazo. **Comprender cómo funciona es el primer paso para aprovechar todo su potencial**.
+Un sistema ERP, como **Etendo**, es más que una herramienta: es un **strategic asset**. Refleja las operaciones de tu negocio, te ayuda a optimizar recursos y contribuye al éxito a largo plazo. **Understanding how it works is the first step toward harnessing its full potential**.
 
 [:material-order-bool-ascending-variant: Requisitos](../getting-started/requirements.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 [:material-tools: Instalar Etendo](../getting-started/installation.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
