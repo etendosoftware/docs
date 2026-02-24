@@ -62,3 +62,7 @@ Para informar de un error, debe seguirse una estructura estándar. Esta estructu
  
 
  ```
+
+## Mejores prácticas para informar de un error
+
+- Copie y pegue la traza del log
