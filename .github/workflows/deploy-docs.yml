@@ -36,6 +36,9 @@ jobs:
             - name: Deploy docs
               if: steps.commit-check.outputs.skip_steps != 'true'
               run: mkdocs gh-deploy --force
-            - name: Run Algolia Script
+            - name: Run Algolia Script (EN)
               if: steps.commit-check.outputs.skip_steps != 'true'
               run: python algolia.py ${{ secrets.ALGOLIA_WRITE_INDEX_KEY }} --app-id=XMLZ1ZZEY7 --index-name=etendo_docs_index2 --site-url=https://docs.etendo.software
+            - name: Run Algolia Script (ES)
+              if: steps.commit-check.outputs.skip_steps != 'true'
+              run: python algolia.py ${{ secrets.ALGOLIA_WRITE_INDEX_KEY }} --app-id=XMLZ1ZZEY7 --index-name=etendo_docs_index2_es --docs-dir=docs/es --site-url=https://docs.etendo.software/es
