@@ -62,3 +62,7 @@ To report a bug, a standard structure is meant to be followed. This structure is
  
 
  ```
+
+ ## Best Practices to report a Bug
+
+ - Copy and paste the log trace 
