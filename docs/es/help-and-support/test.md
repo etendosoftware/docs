@@ -90,12 +90,12 @@ Estos son algunos de los **key benefits** de usar **Etendo**:
 
 **Etendo** no es solo software: refleja cómo opera tu negocio. Para usarlo de forma eficaz:
 
--  **Understand Business Processes**: Conoce qué se necesita gestionar antes de configurar el sistema.  
--  **Collaborate Across Departments**: Alinea necesidades y expectativas.  
--  **Document Everything**: Mantén bien registradas todas las nuevas funcionalidades y cambios.  
--  **Train Continuously**: Asegura que todos los usuarios sepan utilizar el sistema de forma eficaz.  
--  **Design for User Experience**: Haz que el ERP sea fácil de adoptar y navegar.  
--  **Think Holistically**: Cada actualización puede afectar a todo el sistema, así que considera el impacto global.
+-  **Comprender los procesos de negocio**: Conoce qué se necesita gestionar antes de configurar el sistema.  
+-  **Colaborar entre departamentos**: Alinea necesidades y expectativas.  
+-  **Documentarlo todo**: Mantén bien registradas todas las nuevas funcionalidades y cambios.  
+-  **Formación continua**: Asegura que todos los usuarios sepan utilizar el sistema de forma eficaz.  
+-  **Diseñar pensando en la experiencia de usuario**: Haz que el ERP sea fácil de adoptar y navegar.  
+-  **Pensar de forma holística**: Cada actualización puede afectar a todo el sistema, así que considera el impacto global.
 
 Un sistema ERP, como **Etendo**, es más que una herramienta: es un **strategic asset**. Refleja las operaciones de tu negocio, te ayuda a optimizar recursos y contribuye al éxito a largo plazo. **Understanding how it works is the first step toward harnessing its full potential**.
 
