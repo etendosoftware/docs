@@ -344,7 +344,7 @@ plugins:
             JavaScript Coding Conventions: Convenciones de Código JavaScript
             JSON REST Web Services: Servicios Web JSON REST
             Known Issues: Problemas Conocidos
-            Live Builds: Versiones en Vivo
+            Live Builds: Live Builds
             Main Development Concepts: Conceptos Principales de Desarrollo
             Master Data: Datos Maestros
             Master Data Management: Gestión de Datos Maestros
@@ -404,7 +404,7 @@ plugins:
             Support Service: Servicio de Soporte
             Supported Modules: Módulos Soportados
             Tables: Tablas
-            Task: Mantenimiento
+            Task: Tarea
             Task Management for Supervisors: Gestión de Tareas para Supervisores
             Tax Category: Categoría de Impuesto
             Tax Rate: Rango impuesto
