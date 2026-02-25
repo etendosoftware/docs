@@ -46,6 +46,10 @@ jobs:
             print(f'error=No pude parsear el comando: {exc}')
             raise SystemExit(0)
 
+          if len(tokens) == 2 and tokens[1] == '--help':
+            print('status=help')
+            raise SystemExit(0)
+
           if len(tokens) < 2 or tokens[0] != '/retranslate':
             print('status=invalid')
             print('error=Uso: /retranslate docs/ruta/archivo.md [--mode=full|incremental] [--section="## Titulo"] [--note="instruccion"]')
@@ -53,7 +57,7 @@ jobs:
 
           path = tokens[1]
           note = ''
-          mode = 'full'
+          mode = 'incremental'
           section = ''
 
           for token in tokens[2:]:
@@ -99,15 +103,48 @@ jobs:
           print(f'note={note}')
           PY
 
-      - name: Comment invalid command
-        if: steps.parse.outputs.status == 'invalid' || steps.parse.outputs.status == 'forbidden'
+      - name: Comment help or error
+        if: steps.parse.outputs.status == 'invalid' || steps.parse.outputs.status == 'forbidden' || steps.parse.outputs.status == 'help'
         uses: actions/github-script@v7
         env:
           PARSE_ERROR: ${{ steps.parse.outputs.error }}
+          PARSE_STATUS: ${{ steps.parse.outputs.status }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const message = `${process.env.PARSE_ERROR}\n\nUso esperado:\n\`/retranslate docs/ruta/archivo.md\`\n\`/retranslate docs/ruta/archivo.md --mode=incremental\`\n\`/retranslate docs/ruta/archivo.md --section="## Titulo" --note="instruccion"\``;
+            const error = process.env.PARSE_ERROR;
+            const isHelp = process.env.PARSE_STATUS === 'help';
+            const header = isHelp ? [] : [`**${error}**`, '', '---', ''];
+            const message = [
+              ...header,
+              '### `/retranslate` — Retranslation command',
+              '',
+              'Re-runs the automatic translation for a specific file in this PR.',
+              '',
+              '**Syntax:**',
+              '```',
+              '/retranslate docs/path/file.md [--mode=full|incremental] [--section="## Title"] [--note="instruction"]',
+              '```',
+              '',
+              '**Parameters:**',
+              '| Parameter | Required | Default | Description |',
+              '|-----------|----------|---------|-------------|',
+              '| `docs/path/file.md` | Yes | — | Path to the English source file (must start with `docs/` and end in `.md`) |',
+              '| `--mode` | No | `incremental` | `incremental`: only translates new/changed sections. `full`: re-translates the entire file |',
+              '| `--section` | No | — | Prioritize a specific section (e.g. `"## Installation"`) |',
+              '| `--note` | No | — | Custom instruction for the translation agent (e.g. `"Use \'arrendatario\' instead of \'tenant\'"`) |',
+              '',
+              '**Examples:**',
+              '```',
+              '/retranslate docs/getting-started/installation.md',
+              '/retranslate docs/getting-started/installation.md --mode=full',
+              '/retranslate docs/getting-started/installation.md --section="## Database setup" --note="Use \'arrendatario\' instead of \'tenant\'"',
+              '```',
+              '',
+              '**Blocked paths:** `docs/es/`, `docs/assets/`, `docs/images/`, `docs/stylesheets/`',
+              '',
+              '**Permissions:** Only `OWNER`, `MEMBER`, or `COLLABORATOR` can use this command.',
+            ].join('\n');
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -132,6 +169,19 @@ jobs:
             core.setOutput('head_ref', pr.head.ref)
             core.setOutput('head_sha', pr.head.sha)
             core.setOutput('base_ref', pr.base.ref)
+
+      - name: React to comment
+        if: steps.parse.outputs.status == 'valid'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'rocket'
+            })
 
       - name: Trigger n8n retranslate webhook
         if: steps.parse.outputs.status == 'valid'
