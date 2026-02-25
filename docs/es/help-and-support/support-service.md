@@ -20,9 +20,11 @@ Aquí, el usuario puede realizar preguntas o enviar información en estas seccio
 -   :material-headphones-settings:  **Consultas sobre la prueba del producto**
 -   :material-message-text:  **Otras consultas**
 -   :fontawesome-solid-bug:  **Informar de un error**
--   :material-lightbulb:  **Sugerir una nueva funcionalidad**
--   :material-lightbulb-on:  **Sugerir una mejora**
 
 ## Contacto
 
 Si tiene consultas comerciales, o si todavía no es partner o cliente, puede visitar la sección [Contacte con nosotros](https://etendo.software/en/contact-us/){target="_blank"} en el sitio web de Etendo.
+
+## ¿Cómo informar de un error?
+
+- Para informar de un error, debe ser lo más específico posible.
