@@ -230,7 +230,18 @@ nav:
           - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
         - Procurement Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
-          - Transactions: user-guide/etendo-classic/basic-features/procurement-management/transactions.md
+          - Transactions: 
+            - Requisition: user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md
+            - Manage Requisitions: user-guide/etendo-classic/basic-features/procurement-management/transactions/manage-requisitions.md
+            - Requisition to Order: user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition-to-order.md
+            - Purchase Order: user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md
+            - Goods Receipt: user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md
+            - Pending Goods Receipts: user-guide/etendo-classic/basic-features/procurement-management/transactions/pending-goods-receipts.md
+            - Purchase Invoice: user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md
+            - Matched Purchase Invoices: user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.md
+            - Return to Vendor: user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md
+            - Return to Vendor Shipment: user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md
+            - Landed Cost: user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md
         - Warehouse Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
