@@ -20,9 +20,11 @@ Here, the user can ask questions or send information in these sections:
 -   :material-headphones-settings:  **Product Trial Questions**
 -   :material-message-text:  **Other Questions**
 -   :fontawesome-solid-bug:  **Report a Bug**
--   :material-lightbulb:  **Suggest a New Feature**
--   :material-lightbulb-on:  **Suggest Improvement**
 
 ## Get In Touch
 
 If you have commercial inquiries, or if you are not yet a partner or client, you can visit the [Contact Us](https://etendo.software/en/contact-us/){target="_blank"} section on the Etendo website.
+
+## How to report a bug?
+
+- To report an error, you must be as specific as possible.
