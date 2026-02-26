@@ -22,38 +22,11 @@ Esta sección describe el módulo **Etendo Antifraude**, incluido en el bundle d
 
 El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la [Ley 11/2021](https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf){target="_blank"}, vigente desde el *9 de julio de 2021*, de medidas de prevención y lucha contra el fraude fiscal, y el [Real Decreto 1007/2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840){target="_blank"}, vigente desde el *5 de diciembre de 2023*, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.
 
-## Funcionalidades
+## Configuración
 
-### Carga de Certificados Digitales por Organización Legal {#carga-certificados-digitales-organizacion-legal}
+### Configurar Certificado Digital
 
-:material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
-
-Se ha añadido a la ventana `Organización` el proceso **Añadir Certificado Digital**, el cual solo puede ejecutarse para organizaciones legales. 
-Este proceso se encarga de cargar para la organización seleccionada un certificado digital, el cual será utilizado luego en procesos que lo requieran, como por ejemplo la firma digital de documentos, el envío de facturas a VERI*FACTU, entre otros.
-
-!!! info
-    Para obtener un certificado digital se debe solicitar el mismo a través de la [FNMT (Fábrica Nacional de Moneda y Timbre)](https://www.cert.fnmt.es/){target="_blank"}. El solicitante del certificado varía según la forma jurídica de quien emite las facturas:
-
-    1. **Autónomos (Personas Físicas)**: lo solicita el propio trabajador por cuenta propia. Se utiliza el Certificado de Persona Física. Es personal e intransferible. El autónomo debe realizar la solicitud y acreditar su identidad (ya sea presencialmente con su DNI o mediante vídeo identificación).
-    2. **Sociedades (S.L., S.A., etc.)**: en el caso de empresas, el certificado no se emite a nombre de la "empresa" como ente abstracto, sino vinculado a una persona física responsable:
-        - Administrador Único o Solidario: Si la empresa tiene esta estructura, el administrador puede solicitar un Certificado de Representante para Administradores Únicos o Solidarios directamente con su DNIe o certificado de persona física, sin acudir a una oficina.
-        - Apoderado o Representante Legal: Si no se es administrador único, se debe solicitar un Certificado de Representante de Persona Jurídica. La persona que lo solicite debe acreditar mediante poderes notariales o certificado del Registro Mercantil que tiene autoridad para actuar en nombre de la sociedad.
-    3. **Entidades sin Personalidad Jurídica**: lo solicita el representante legal de la entidad (por ejemplo, el presidente de una comunidad de propietarios o el representante de una unión temporal de empresas). Se requiere el Certificado de Representante de Entidad sin Personalidad Jurídica.
-    
-    Siga la siguiente [Guía de la AEAT](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html){target="_blank"} para solicitar un certificado electrónico de la FNMT
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado.png)
-
-El proceso pedirá al usuario el archivo del certificado que se quiera cargar, y su contraseña.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-contraseña.png)
-
-Al finalizar, se mostrará en la solapa **Certificado Digital** la información del certificado cargado.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png)
-
-!!! info
-    Tenga en cuenta que solo se puede disponer de un certificad por *Organizacion Legal* a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.
+Debe configurar un certificado digital para las organizaciones legales que correspondan. Para esto, [siga la siguiente guía](./funcionalidades-generales-para-sifs.md#carga-de-certificados-digitales). 
 
 ### Proceso de generación de backups
 Se ha creado un proceso de generación de backups anuales, en respuesta al siguiente requerimiento:

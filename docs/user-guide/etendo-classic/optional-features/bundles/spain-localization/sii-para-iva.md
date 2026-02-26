@@ -77,7 +77,7 @@ La AEAT pone a disposición del contribuyente las siguientes URLs que entendemos
 
 Al instalar este módulo, el usuario podrá comprobar que:
 
-1.  Se crea un **nuevo menú** dentro de "Gestión Financiera", denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
+1.  Se crea un **nuevo menú** dentro de `Gestión Financiera` > `Sistemas de Facturación`, denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
     1.  **Configuración SII**, en la que se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a SII.
     2.  **Consulta Facturas SII**, en esta pantalla el usuario tendrá información sobre el estado de cuadre de las facturas enviadas a SII, estado de cuadre recibido de la AEAT.
     3.  **Descripciones SII**, en esta pantalla se pueden dar de alta descripciones tipo para las operaciones de compra y venta que realice la organización acogida a SII.
@@ -91,15 +91,6 @@ Al instalar este módulo, el usuario podrá comprobar que:
 6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
     Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
 
-## Instalación
-
-!!! warning
-    Si se requiere actualizar el módulo a una versión superior a las versiones **1.32.0** o **2.8.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
-    
-    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo intermedio (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
-    
-    Si es la primera vez que se instala el SII la actualización intermedia no es necesaria
-
 ## **Configuración**
 
 Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".
@@ -109,6 +100,10 @@ Los productos/servicios tienen que tener correctamente configurado su "Grupo/Cat
 Los terceros (cliente/proveedores) tienen que tener correctamente configurada su "Categoría de impuestos de Tercero", si aplica, así como su "CIF/NIF" o "Clave NIF País Residencia".
 
 Además, los impuestos tienen que estar configurados correctamente, tal y como se explica en el siguiente apartado.
+
+### **Proceso de actualización de Fecha de Operación**
+
+Se recomienda ejecutar el proceso [**Rellenar Fechas de Operación**](./funcionalidades-generales-para-sifs.md#rellenar-fechas-de-operacion) si se está actualizando el módulo a las versiones **1.34.0**, **2.10.0** o posteriores para actualizar los valores de Fecha de Operación en facturas previas a la actualización.
 
 ### **Configuración de impuestos**
 
@@ -187,6 +182,8 @@ Dependiendo de si el Tercero se configura con la categoría de impuestos de Terc
 Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.
 
 ### **Configuración SII**
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
 
 En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
 
@@ -861,7 +858,7 @@ seleccionamos varias facturas y procedemos a su Modificación en SII.
 
 El proceso "Generar facturas (manualmente)” permite crear facturas de venta del tipo "AR Invoice" en estado completado.
 
-Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro del grupo de campos "AEAT SII", con el fin de indicar en cada pedido de venta:
+Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro de los grupos de campos "Datos para Sistemas de Facturación" y "AEAT SII", con el fin de indicar en cada pedido de venta:
 
 - la "**Fecha de operación**", si ésta es conocida
 - y la "**Descripción SII**" de la operación.
@@ -913,6 +910,21 @@ Las facturas de compra/venta pueden crearse desde albaranes/devoluciones con la 
 Respecto de la información de SII, tenemos que tener en cuenta que:
 
 - Estos **albaranes y devoluciones no incorporan información de SII**, por tanto, la información de SII de la cabecera de las facturas deberá ser rellenada por el usuario, tanto la fecha de operación, como la clave de tipo factura y la descripción SII.
+
+## Integridad de facturas mediante huella digital (HMAC)
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
+
+Cada factura declarable ante el SII incluye una huella digital (HMAC), calculada a partir de campos identificativos de la factura que permanecen inalterables una vez emitida.
+
+Esta huella permite comprobar que el contenido no se modifica después de su emisión.
+Para detectar cambios en facturas emitidas (completadas), el sistema dispone del proceso **Validar Hash** en la ventana **Configuración SII**.
+
+En este proceso se consulta un rango de fechas y se verifican las facturas incluidas en dicho período.
+
+Si el sistema detecta modificaciones, registra el resultado en la solapa **Log Hash**, indicando qué factura presenta alteraciones.
+
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/validacion-hash-sii.png)
 
 ## **Casos de uso**
 

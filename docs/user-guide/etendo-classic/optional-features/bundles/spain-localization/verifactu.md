@@ -70,22 +70,17 @@ La implementación cubre:
 
 Se añaden campos y pestañas específicas de *Verifactu* en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
 
-## Instalación
-
-!!! warning
-    Si se requiere actualizar el módulo a una versión superior a las versiones **1.10.0** o **2.9.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
-    
-    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
-    
-    Si es la primera vez que se instala Verifactu la actualización intermedia no es necesaria
-
 ## Configuración
 
 !!! info
     Se recomienda que las siguientes configuraciones sean realizadas por un usuario con rol **administrador**, ya que requieren ajustes técnicos.
 
+### **Proceso de actualización de Fecha de Operación**
+
+Se recomienda ejecutar el proceso [**Rellenar Fechas de Operación**](./funcionalidades-generales-para-sifs.md#rellenar-fechas-de-operacion) si se está actualizando el módulo a las versiones **1.12.0**, **2.11.0** o posteriores para actualizar los valores de Fecha de Operación en facturas previas a la actualización.
+
 ### Configuración Verifactu
-:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Configuración Verifactu`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Configuración Verifactu`
 
 En la ventana **Configuración Verifactu** se define quién actuará como **emisor de las facturas** y con qué **impuesto se generarán**. En este caso, **cada organización legal que se cree será la responsable de la emisión**, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.
 
@@ -103,28 +98,7 @@ Por otra parte, el campo **Detalle Incidencia** se completará cuando un envío 
 ### Certificado Digital
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
 
-!!! info
-    Para más información sobre cómo obtener un certificado digital de la FNMT, [se puede seguir esta guía](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html){target="_blank"}
-
-Para poder emitir facturas electrónicas a través del sistema *Verifactu*, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. Siga los siguientes pasos para configurar correctamente su **Certificado Digital**:
-
-1. Acceder a la ventana **Organización**
-
-2. **Seleccionar la Organización Legal**: Elige la organización legal que será responsable de emitir las facturas electrónicas.
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png)
-
-3. Haz clic en el botón **Añadir Certificado Digital**.
-    
-4. **Subir el Certificado**: En el proceso, podrás cargar tu certificado digital ingresando la clave correspondiente.
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contrasena.png)
-
-5. **Guardar la configuración**: Al presionar el botón **Hecho**, el sistema guardará la información del certificado digital en la solapa **Certificado Digital**.
-    
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png)
-
-    Una vez completados estos pasos, el certificado digital estará correctamente configurado y listo para su uso en la emisión de facturas electrónicas.
+Para poder emitir facturas electrónicas a través del sistema *Verifactu*, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. [Siga la siguiente guía](./funcionalidades-generales-para-sifs.md#carga-de-certificados-digitales) para cargarlo en la organización correspondiente.
 
 ### Rango Impuesto
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango Impuesto`
@@ -292,7 +266,7 @@ A continuación se detallan los pasos necesarios para que una factura se dé de 
 
 ### Creación de Factura Manualmente
 
-Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Configuración Verifactu`.
+Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Configuración Verifactu`.
 
 Debe completar los siguientes campos obligatorios en la Factura:
 
@@ -438,7 +412,7 @@ Para crear una factura rectificativa, debe seleccionarse uno de los siguientes t
 Se informa únicamente la **variación de importes** con respecto a la factura original.
 
 **Acción:**  
-Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
+Crear una nueva factura de venta utilizando un [**tipo de documento para facturas rectificativas**](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la original. Luego:
 
 1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
 2. Indicar que se trata de una **Rectificativa por Diferencias**.
@@ -456,7 +430,7 @@ Crear una nueva factura de venta utilizando un **tipo de documento para facturas
 Se reemplaza por completo la factura original.
 
 **Acción:**  
-Crear una nueva factura de venta utilizando un **tipo de documento para facturas rectificativas**, en una **serie distinta** a la original. Luego:
+Crear una nueva factura de venta utilizando un [**tipo de documento para facturas rectificativas**](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la original. Luego:
 
 1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
 2. Indicar que se trata de una **Rectificativa por Sustitución**.
@@ -527,7 +501,7 @@ Se pueden generar **facturas rectificativas** a partir de un **Pedido de Venta**
 
 Para hacerlo:
 
-1. Seleccionar un tipo de documento rectificativo, en el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **Es Rectificativo**).
+1. Seleccionar un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en el **tipo de documento** del pedido o la devolución, seleccionar uno configurado como **rectificativo** (es decir, que tenga marcado el check **Es Rectificativo**).
 
 2. Completar los campos de la sección **Verifactu** del **documento** indicando el **tipo de rectificación** que se usará.
 
@@ -540,14 +514,14 @@ Con esta configuración, al **generar la factura** desde el pedido o la devoluci
 Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la **Agencia Tributaria.
 
 ### Monitor Verifactu
-:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Monitor Verifactu`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Monitor Verifactu`
 
 Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
 
 ### Consulta Facturas Verifactu
-:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Consulta Facturas Verifactu`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Consulta Facturas Verifactu`
 
 Este proceso permite obtener un **informe detallado de las facturas enviadas a Verifactu**, ofreciendo múltiples opciones de filtrado para facilitar la consulta:
 

@@ -64,16 +64,11 @@ Al instalar este módulo, el usuario podrá comprobar que:
 
     - **Registrar facturas en Batuz**, para registrar facturas de compra en Batuz, también configurables para cada Organización o "Entidad Legal", permitiendo el alta masiva con la cadencia de envío configurada.
 
-## Instalación
-
-!!! warning
-    Si se requiere actualizar el módulo a una versión superior a las versiones **1.23.0** o **2.9.0**, se recomienda actualizar primero a una de estas versiones si no se lo ha hecho. 
-    
-    En las versiones mencionadas se movió el campo **Fecha de Operación** a otro módulo (el módulo de [Funcionalidades Generales para SIFs](./overview.md#funcionalidades-generales-para-sifs)), y se introdujo en estas versiones un script para repoblar el nuevo campo con los valores de fecha de operación anteriores al momento de actualizar. Esto se hizo para habilitar un nuevo filtro por fecha de operación en la generación del [Informe Dimensional de Impuestos](./overview.md#multidimensional-tax-report). 
-    
-    Si es la primera vez que se instala TicketBai la actualización intermedia no es necesaria
-
 ## Configuración
+
+### **Proceso de actualización de Fecha de Operación**
+
+Se recomienda ejecutar el proceso [**Rellenar Fechas de Operación**](./funcionalidades-generales-para-sifs.md#rellenar-fechas-de-operacion) si se está actualizando el módulo a las versiones **1.25.0**, **2.11.0** o posteriores para actualizar los valores de Fecha de Operación en facturas previas a la actualización.
 
 ### Dataset
 
@@ -95,6 +90,8 @@ A continuación, si el proceso se ha ejecutado correctamente, el sistema mostrar
 Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa, Bizkaia y Álava.
 
 ### Configuración TBAI
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `TicketBAI` > `Configuración TBAI`
 
 La ventana de Configuración TBAI le permitirá ajustar los parámetros necesarios para comenzar a enviar facturas a través de TicketBai o Batuz. A continuación, se describen los campos principales a configurar:
 
@@ -153,6 +150,8 @@ Al configurar los impuestos en el sistema, es importante completar correctamente
 
 ### TBAI Facturas enviadas
 
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `TicketBAI` > `TBAI Facturas Enviadas`
+
 En la ventana de **TBAI Facturas Enviadas**, es posible visualizar todas las facturas que han sido enviadas desde la organización en la que está trabajando. Esta herramienta permite llevar un control detallado de los **envíos realizados**, facilitando la **gestión** y el **seguimiento** de las facturas que se han transmitido a través del sistema TicketBai o Batuz.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/sent-invoice.png)
@@ -173,9 +172,9 @@ Antes de realizar el primer envío de facturas, es esencial configurar correctam
 
 ### Tipo de Documento para Facturas Rectificativas
 
-Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero crear un tipo de documento que se utilizará específicamente para este tipo de facturas.
+Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero crear un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos) que se utilizará específicamente para este tipo de facturas.
 
-- Acceder a la ventana "**Secuencia de Documento (Numeración)**". En esta ventana se deberá elegir una secuencia ya existente o crear una nueva. Es importante que en la secuencia creada/elegida se marque la casilla "**Es Rectificativo**", y que además se asigne un valor en el campo "**Prefijo**". El prefijo asignado debe cumplir con las siguientes reglas:
+- La secuencia utilizada en este tipo debe tener un valor en el campo "**Prefijo**". El prefijo asignado debe cumplir con las siguientes reglas:
     
     * Debe ser menor a 20 caracteres.
     * No debe contener minúsculas.
@@ -188,10 +187,6 @@ Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero
     Si la secuencia creada/elegida es transaccional, debe tenerse en cuenta que el campo "**Prefijo**" seguirá las normas de formato del campo "**Mask**". Es decir, habrá caracteres reservados que cambiarán su valor cuando se asigne un número de documento a la factura. 
     
     La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup/document-sequence.md#sequence-masking) de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
-
-- Acceder a la ventana "**Tipo de Documento**". En esta ventana se deberá crear un nuevo tipo o elegir uno existente, el cual será utilizado exclusivamente para facturas rectificativas. Se debe marcar la casilla "**Es Rectificativo**" en el tipo de documento creado/elegido para que el sistema permita usarlo en rectificaciones. Si no se utilizan secuencias transaccionales, se debe asignar en el campo "**Sec. Doc. (Numeración)**" la secuencia rectificativa creada anteriormente. Esta secuencia sólo aparecerá si se ha marcado la casilla "**Es Rectificativo**" tanto en la secuencia como en el tipo de documento.
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/rectificative_doctype.png)
 
 ## Proceso de Envío de Factura
 
