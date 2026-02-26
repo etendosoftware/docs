@@ -166,7 +166,7 @@ Additionally, there are other advanced fields which also help to configure more 
 
 !!! info
     The **Account Structure Validation** module, provides functionality to validate the structure and configuration of subaccounts when they are created or modified, helping to prevent mismatches in financial reports. For more information, visit [Account Structure Validation](link-to-documentation).
-    This functionality is available starting from version **3.11.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    This functionality is available starting from version **3.11.0** of the Financial Extensions Bundle, compatible with **Etendo 25.1**. To install it, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
 ### Customized Elements Tab

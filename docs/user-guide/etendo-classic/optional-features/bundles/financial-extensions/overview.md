@@ -54,8 +54,8 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 
 ### Adjust Invoice Tax
-:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
+:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
 This extension enables controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems; it supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external or regulatory requirements.
 
@@ -170,6 +170,7 @@ This functionality allows the user to create settlements for invoices, both sale
 ### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
+
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
