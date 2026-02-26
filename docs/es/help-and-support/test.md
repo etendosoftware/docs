@@ -10,7 +10,7 @@ status: new
 
 ## Visión general
 
-Esta sección detalla las mejoras de la interfaz de usuario disponibles en la **Nueva UI de Etendo**.
+Esta sección detalla las mejoras de la interfaz de usuario disponibles en la **Nueva interfaz de Etendo**.
 
 ## Mejoras y ampliaciones de la UI de Etendo
 
@@ -149,3 +149,5 @@ El modal de **Filtros avanzados** es un potente componente de filtrado que permi
 ---
 
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"} por [Futit Services S.L](https://etendo.software){target="\_blank"}.
+
+---
