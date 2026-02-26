@@ -50,7 +50,7 @@ En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requie
 
 ## Ventana de empaquetado
 
-:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Empaquetado`
+:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Packing`
 
 El proceso de empaquetado puede iniciarse desde la ventana **Empaquetado** y/o desde la ventana [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment). Desde cualquiera de las dos ventanas, el procedimiento de empaquetado será el mismo, así como la información de empaquetado mostrada a través de la solapa `Packing Box` y la solapa Contenido, que se visualizan en ambas ventanas.
 
@@ -112,13 +112,16 @@ En la solapa Packing Box, la solapa **Contenido** es una solapa hija donde se mu
 Campos a tener en cuenta:
 
 - **Producto**: identifica un artículo que se compra o se vende en esta organización.
+- **Valor atributos**: muestra los atributos del producto cuando aplica, como lote, número de serie o fecha de caducidad.
+- **Cantidad Operativa**: cantidad introducida en la unidad de medida alternativa del producto.
+- **Unidad Alternativa**: unidad de medida alternativa utilizada para introducir la cantidad operativa (por ejemplo, caja o palé).
 - **Cantidad**: indica la cantidad de producto en la caja
 - **Unidad**: la unidad define una unidad de medida única no monetaria
 
 
 ### Botones
 
-- **Seleccionar albaranes**
+- **Pick Shipments**
     
     Este botón **solo se muestra** en la ventana Empaquetado, ya que permite seleccionar **todos los albaranes disponibles** que necesitan ser empaquetados.
 
@@ -190,3 +193,5 @@ Campos a tener en cuenta:
 ---
 
 Este trabajo es una obra derivada de [Gestión de Almacén](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
