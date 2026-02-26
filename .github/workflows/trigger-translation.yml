@@ -27,7 +27,8 @@ jobs:
 
           # synchronize -> only files from the latest push (BEFORE..HEAD)
           # opened -> all files in the PR (base..HEAD)
-          if [ "${{ github.event.action }}" = "synchronize" ] && [ -n "$BEFORE" ]; then
+          # On force push, BEFORE may no longer exist -> fallback to base
+          if [ "${{ github.event.action }}" = "synchronize" ] && [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
             FROM="$BEFORE"
           else
             FROM="${{ github.event.pull_request.base.sha }}"
