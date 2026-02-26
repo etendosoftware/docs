@@ -1,0 +1,61 @@
+name: Trigger Translation
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main, develop]
+    paths:
+      - 'docs/**/*.md'
+      - '!docs/es/**'
+
+jobs:
+  trigger-n8n:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Get changed docs files
+        id: changed
+        shell: bash
+        run: |
+          BEFORE="${{ github.event.before }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+
+          # synchronize -> only files from the latest push (BEFORE..HEAD)
+          # opened -> all files in the PR (base..HEAD)
+          # On force push, BEFORE may no longer exist -> fallback to base
+          if [ "${{ github.event.action }}" = "synchronize" ] && [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            FROM="$BEFORE"
+          else
+            FROM="${{ github.event.pull_request.base.sha }}"
+          fi
+
+          FILES=$(git diff --name-only --diff-filter=AM "$FROM" "$HEAD" \
+            -- 'docs/**/*.md' ':!docs/es/**' ':!docs/assets/**' ':!docs/images/**' ':!docs/stylesheets/**' \
+            | jq -R -s -c 'split("\n") | map(select(length > 0)) | unique')
+
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "count=$(echo "$FILES" | jq length)" >> "$GITHUB_OUTPUT"
+          echo "from=$FROM"
+          echo "head=$HEAD"
+          echo "files=$FILES"
+
+      - name: Trigger n8n webhook
+        if: steps.changed.outputs.count != '0'
+        shell: bash
+        run: |
+          curl -X POST "${{ secrets.N8N_WEBHOOK_TRL_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "files": ${{ steps.changed.outputs.files }},
+              "sourceBranch": "${{ github.event.pull_request.head.ref }}",
+              "targetBranch": "${{ github.event.pull_request.base.ref }}",
+              "prNumber": ${{ github.event.pull_request.number }},
+              "commit": "${{ github.event.pull_request.head.sha }}",
+              "actor": "${{ github.actor }}",
+              "repository": "${{ github.repository }}"
+            }'

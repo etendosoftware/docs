@@ -341,6 +341,8 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
 ### Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The [Referenced Inventory (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) functionality has been extended to manage physical logistics units such as **pallets** and **boxes**, directly linked to the [Alternative Units of Measure (AUOM)](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.
 
 The [Stock Logistic Unit](./stock-logistic-unit.md) module, installed as a dependency, adds new UOMs (Box, Pallet) and reference inventory types, allowing users to configure equivalences in the **Alternate UOM** tab of the Product window. Once defined, if a different conversion is required, a new AUOM must be created.
@@ -360,19 +362,17 @@ Receipts are always created from purchase orders, not manually. Order lines are 
 
 When AUOMs such as Pallet or Box are used, the system can automatically generate a Referenced Inventory (RI) record linked to the receipt line, representing the logistics unit and ensuring traceability.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1b.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png)
 
 Fields to note:
 
 #### Header
 
 - **Organization**: Defines the organization in which the inbound receipt will be created and filter the information.  
-- **Active**: Indicates whether the record is enabled for use.  
-- **Description**: Free text field to add additional information or notes about the receipt.  
-- **Document No**: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  
 - **Document Type**: Loaded by default with *Inbound Receipt* to classify the document type.  
+- **Document No**: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  
 - **Movement Date**: Date on which the physical goods movement is recorded. By default, it is the current date.  
-- **Accounting Date**: Date on which the transaction is recognized for accounting purposes.  
+- **Description**: Free text field to add additional information or notes about the receipt.  
 
 
 #### Lines Tab
@@ -383,18 +383,18 @@ The Lines Tab allows you to add and modify individual products from one or more 
 
 Fields to note:
 
-- **Active**: Indicates whether the line is enabled for processing within the receipt.  
 - **Line No**: Sequential number automatically assigned to identify the line within the receipt.  
-- **Purchase Order Line**: Reference to the original purchase order line from which the receipt line was generated.  
-- **Storage Bin**: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  
 - **Product**: The product being received, linked to the purchase order.  
-- **UOM**: Base unit of measure of the product (e.g., units, liters, kilograms).  
-- **Ordered Quantity**: Quantity received expressed in the product's base unit of measure.  
-- **Attribute Set Value**: Attributes associated with the product, such as batch, serial number, or expiration date.  
-- **Alternative UOM**: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  
 - **Operative Quantity**: Quantity received expressed in the product's alternative unit of measure. Matches the Ordered Quantity if no AUOM is defined. If an AUOM exists, it indicates the number of pallets, boxes, or other alternative units received.  
+- **Alternative UOM**: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  
+- **Ordered Quantity**: Quantity received expressed in the product's base unit of measure.  
+- **UOM**: Base unit of measure of the product (e.g., units, liters, kilograms).  
+- **Attribute Set Value**: Attributes associated with the product, such as batch, serial number, or expiration date.  
+- **Storage Bin**: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  
+- **Purchase Order Line**: Reference to the original purchase order line from which the receipt line was generated.  
 - **Grouped by**: Identifier of the grouping to which the line belongs, generated when using the *Group By* button. It shows which lines are part of the same container or packaging unit.  
-- **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).  
+- **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
+- **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
 #### Buttons
 
