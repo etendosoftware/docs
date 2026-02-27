@@ -1,6 +1,5 @@
 ---
-Title: Adjust Invoice Tax
-Tags:
+tags:
     - Adjust Amount
     - Tax
     - Rounding

@@ -9,6 +9,8 @@ tags:
 ---
 # Intercompañía
 
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
+
 ## Visión general
 
 Esta sección describe el módulo de Intercompañía incluido en el bundle **Financial Extensions**.
@@ -98,3 +100,5 @@ Para reactivar documentos de intercompañía, ambos documentos no deben tener un
 ---
 
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

@@ -49,19 +49,19 @@ Esta funcionalidad está disponible en las siguientes ventanas:
 
 ### Columna Estado contable
 
-Todos los registros existentes previamente a la instalación de esta nueva funcionalidad tienen un valor por defecto **pendiente de actualización** en la columna **Estado contable**. Para establecer el valor correcto para esta columna, es necesario configurar la siguiente preferencia para indicar la cantidad de días que debe considerar el proceso para establecer los valores correctos de los registros anteriores.
+Todos los registros existentes previamente a la instalación de esta nueva funcionalidad tienen un valor por defecto **pending refresh** en la columna **Estado contable**. Para establecer el valor correcto para esta columna, es necesario configurar la siguiente preferencia para indicar la cantidad de días que debe considerar el proceso para establecer los valores correctos de los registros anteriores.
 
 #### Configuración de preferencias
 
-Para configurar la preferencia, vaya a la ventana **Preferencias** y cree un nuevo registro con la propiedad **Cantidad de días** y el valor por defecto **90**. Si fuera necesario, es posible crear otra preferencia introduciendo un nuevo valor y marcando la casilla **Seleccionado**.
+Para configurar la preferencia, vaya a la ventana **Preferencias** y cree un nuevo registro con la propiedad **Amount of Days** y el valor por defecto **90**. Si fuera necesario, es posible crear otra preferencia introduciendo un nuevo valor y marcando la casilla **Seleccionado**.
 
 #### Proceso en segundo plano
 
-Es necesario ejecutar el proceso en segundo plano **Días anteriores para actualizar la contabilidad** para actualizar la columna de estado contable.
+Es necesario ejecutar el proceso en segundo plano **Days Back to Refresh Accounting** para actualizar la columna de estado contable.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/daysbacktorefreshaccounting.png)
 
-## Ventana Documentos no contabilizados
+## Not Posted Documents Window
 
 El módulo de Contabilización masiva incluye la funcionalidad de Documentos no contabilizados. Esta se utiliza para encontrar todos los documentos no contabilizados en la misma ventana y contabilizarlos de forma masiva.
 
@@ -70,3 +70,5 @@ El módulo de Contabilización masiva incluye la funcionalidad de Documentos no 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

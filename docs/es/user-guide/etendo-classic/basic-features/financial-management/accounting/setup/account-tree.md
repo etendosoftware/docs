@@ -164,6 +164,10 @@ Adicionalmente, existen otros campos avanzados que también ayudan a configurar 
 -   **Mostrar** define si un elemento del árbol de cuentas se va a mostrar en los informes financieros o no. Puede utilizarse para elementos usados para ejecutar cálculos que no necesitan mostrarse en un informe.
 -   **Nodo de Título** define si un elemento del árbol de cuentas se va a mostrar en los informes financieros solo como un **Tratamientos** sin incluir su saldo. Esta opción funciona para elementos de encabezado del árbol de cuentas cuyo saldo no es 100% preciso por cualquier motivo, ya que existe otro elemento que obtiene el valor de saldo correcto mediante operaciones o [Personalizar elementos](#operando) entre un conjunto de elementos determinados.
 
+!!! info
+    El módulo **Account Structure Validation** proporciona funcionalidad para validar la estructura y configuración de las subcuentas cuando se crean o modifican, ayudando a evitar desajustes en los informes financieros. Para más información, visite [Account Structure Validation](link-to-documentation).
+    Esta funcionalidad está disponible a partir de la versión **3.11.0** del Financial Extensions Bundle, compatible con **Etendo 25.1**. Para instalarlo, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Release notes](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
 ### Solapa Operando
 
 La solapa **Operando** permite al usuario obtener un elemento del árbol de cuentas como una combinación de una lista dada de elementos existentes.
@@ -189,3 +193,5 @@ En la solapa **Traducción**, los elementos de cuenta pueden traducirse a cualqu
 ---
 
 Este trabajo es una obra derivada de [Árbol de cuentas](https://wiki.openbravo.com/wiki/Account_Tree){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

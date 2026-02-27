@@ -18,6 +18,15 @@ Este bundle incluye mejoras para las funcionalidades de Gestión financiera en E
 -  :material-translate: Español: [Financial Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
 ## Módulo
 
+### Account Structure Validation
+
+:octicons-package-16: Javapackage: `com.etendoerp.account.structure.validation`
+
+Este módulo ayuda a prevenir errores comunes de configuración al crear o modificar subcuentas en el Árbol de cuentas. Valida la estructura y la configuración para evitar discrepancias en informes financieros como la Cuenta de resultados o el Balance de situación.
+
+!!! info
+    Para más información, visite [la guía de usuario del módulo Account Structure Validation](../../../optional-features/bundles/financial-extensions/account-structure-validation.md).
+
 ### Dimensiones contables de activos
 
 :octicons-package-16: Paquete Java: `com.etendoerp.accounting.dimensions.assets.template`
@@ -271,3 +280,5 @@ Esta funcionalidad permite al usuario ajustar cuentas, garantizando que el saldo
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

@@ -47,7 +47,7 @@ Para configurar la conexión:
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/currency-converters.png)
 
     - **Nombre de clase del servicio**: Clase Java utilizada para la conexión con la API. Por defecto: `com.smf.currency.apiconfig.CurrencyLayerConverter`
-    - **Entidad**: Entidad autorizada a usar esta configuración.
+    - **Entidad/Cliente**: Entidad/Cliente autorizada a usar esta configuración.
     - **Organización**: Organización autorizada a usar esta configuración. Use `*` para permitir todas las organizaciones.
     - **Nombre del servicio**: Identificador de esta configuración, p. ej., `Currency Data API`.
     - **URL del servicio**: Endpoint de la API. Por defecto: `https://api.apilayer.com/currency_data/`
@@ -70,8 +70,8 @@ Después de configurar la API, defina los pares de divisas que se descargarán.
 
 Campos a tener en cuenta:
 
-- **Moneda origen**: Moneda de origen.  
-- **Moneda objetivo**: Moneda de destino.  
+- **De Moneda**: Moneda de origen.  
+- **A Moneda**: Moneda de destino.  
 - **Tolerancia**: Diferencia máxima permitida entre el nuevo rango y el anterior. Esto evita insertar valores extremos durante periodos de volatilidad.
 
 ### Procesamiento de Peticiones
