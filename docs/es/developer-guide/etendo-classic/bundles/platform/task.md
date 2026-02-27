@@ -112,7 +112,7 @@ Un desarrollador, con el rol `System Administrator`, debe definir los tipos de m
     - **Algoritmo Round-Robin por carga de trabajo**: Asigna los mantenimientos al recurso con la menor carga actual. Úselo cuando el tamaño de los mantenimientos o la capacidad de los recursos varíe.
 
 ### Solapa Tabla
-En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento. 
+En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento.
 Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de la tabla o incluso filtros avanzados definidos como acciones. 
 
 !!!warning
@@ -148,6 +148,34 @@ Esta solapa define jobs asíncronos que se ejecutan automáticamente cuando el m
 - **Nivel**: Determina el orden de encolado, aunque al ser procesos asíncronos pueden ejecutarse en paralelo.
 - **Job**: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de [Jobs asíncronos]().
 - **Activo**: Casilla para habilitar o deshabilitar este evento.
+
+### Configuración de la secuencia del Nº de mantenimiento
+
+Cada Tipo de mantenimiento puede vincularse a una [Secuencia de documento (numeración)](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) para autogenerar el campo **Nº de mantenimiento** con un identificador secuencial y con formato.
+
+Para configurarlo, vaya a:
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de documento (numeración)`
+
+Cree una nueva secuencia con los siguientes valores:
+
+| Campo                    | Valor                                              |
+|--------------------------|----------------------------------------------------|
+| **Nombre**               | Un nombre descriptivo para la secuencia.           |
+| **Numeración automática**| Habilitar para autogenerar números secuenciales.   |
+| **Incrementar**          | Paso numérico entre los valores generados.         |
+| **Valor actual**         | El número inicial de la secuencia.                 |
+| **Prefijo**              | Cadena opcional antepuesta a cada número.          |
+| **Sufijo**               | Cadena opcional añadida al final de cada número.   |
+| **Mask**                 | Máscara de formato para la parte numérica.         |
+| **Tabla**                | Debe establecerse en `ETASK_Task`.                 |
+| **Columna clave**        | Debe establecerse en `Taskno`.                     |
+| **Tipo de mantenimiento**| Seleccione el Tipo de mantenimiento al que aplica esta secuencia. |
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
+
+!!! info
+    Cada Tipo de mantenimiento puede tener su propia secuencia, permitiendo diferentes prefijos, máscaras y rangos de numeración por tipo.
 
 
 ## Ventana Estado del mantenimiento
@@ -218,3 +246,5 @@ Ahora revisaremos la configuración:
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
