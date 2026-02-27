@@ -111,8 +111,10 @@ A developer, with the `System Administrator` role, must define the task types, s
     - **Round-Robin Algorithm**: Distributes tasks equally in sequence, without considering workload. Use when the tasks and resources are similar.
     - **Round-Robin By Workload Algorithm**: Assigns tasks to the resource with the lightest current load. Use when the task sizes or resource capacities vary.
 
+- **Priority**: Optional default priority assigned to tasks created from this task type (e.g., `Critical`, `Major`, `Minor`, `Trivial`). If set, all new tasks of this type will inherit this priority unless overridden manually.
+
 ### Table Tab
-In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task. 
+In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task.
 In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. 
 
 !!!warning
@@ -131,7 +133,7 @@ In addition, optional filters (JEXL) associated to the table fields or even adva
 Defines the lifecycle of the task by listing the possible statuses (e.g., Pending, In Progress, Closed) in a specific sequence. 
 When a task is created it is assigned the **first status** of the sequence. Assigning or changing the status of a task triggers the **events** defined in the following subtab.
 
-![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png)
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png){: .legacy-image-style}
 
 **Fields to note:**
 
@@ -149,13 +151,40 @@ This tab defines asynchronous jobs that are automatically executed when the task
 - **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [Async Jobs]() documentation.
 - **Active**: Checkbox to enable or disable this event.
 
+### Task No. Sequence Configuration
+
+Each Task Type can be linked to a [Document Sequence](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) to auto-generate the **Task No.** field with a formatted, sequential identifier.
+
+To configure it, go to:
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Sequence`
+
+Create a new sequence with the following values:
+
+| Field                     | Value                                            |
+|---------------------------|--------------------------------------------------|
+| **Name**                  | A descriptive name for the sequence.             |
+| **Auto Numbering**        | Enable to auto-generate sequential numbers.      |
+| **Increment By**          | Numeric step between generated values.           |
+| **Next Assigned Number**  | The starting number for the sequence.      |
+| **Prefix**                | Optional string prepended to each number.        |
+| **Suffix**                | Optional string appended to each number.         |
+| **Mask**                  | Format mask for the numeric part.                |
+| **Table**                 | Must be set to `ETASK_Task`.                     |
+| **Column**                | Must be set to `Taskno`.                         |
+| **Task Type**             | Select the Task Type this sequence applies to.   |
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
+
+!!! info
+    Each Task Type can have its own sequence, allowing different prefixes, masks, and numbering ranges per type.
 
 ## Task Status Window
 :material-menu: `Application` > `General Setup` > `Task Management` > `Task Status`
 
 This window allows you to create reusable statuses for task types. Default values include `Pending`, `In Progress`, `Completed`, and `Closed`. Developers with `System Administrator` role can add custom statuses and export them in a development module. In the Task Type window these statuses are used, enabling the workflow engine to track and trigger status transitions and associated events (including Kafka notifications).
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png)
 
 **Fields to note:**
 
@@ -170,7 +199,7 @@ This window allows you to create reusable statuses for task types. Default value
 
 This window allows you to create reusable priorities for tasks. Priorities help organize and categorize tasks by importance level. Developers with `System Administrator` role can add custom priorities and export them in a development module. These priorities can be assigned to tasks to indicate their relative importance.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png)
 
 **Fields to note:**
 
@@ -193,10 +222,10 @@ It only needed to define a name and the Java path where the implementation of th
 
 **Fields to note:**
 
+- **Active**: Checkbox to enable or disable this algorithm.
 - **Module**: The module where this component will be exported.
 - **Name**: The display name that will be shown when using this algorithm.
 - **Java Implementation**: Path of the Java file where the algorithm implementation is located, this implementation must extend `UserAvailabilityStrategy` interface.
-- **Active**: Checkbox to enable or disable this algorithm.
 
 
 ## Example Workflow
