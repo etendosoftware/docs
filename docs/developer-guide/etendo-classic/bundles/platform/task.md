@@ -112,7 +112,7 @@ A developer, with the `System Administrator` role, must define the task types, s
     - **Round-Robin By Workload Algorithm**: Assigns tasks to the resource with the lightest current load. Use when the task sizes or resource capacities vary.
 
 ### Table Tab
-In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task. 
+In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task.
 In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. 
 
 !!!warning
@@ -149,6 +149,33 @@ This tab defines asynchronous jobs that are automatically executed when the task
 - **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [Async Jobs]() documentation.
 - **Active**: Checkbox to enable or disable this event.
 
+### Task No. Sequence Configuration
+
+Each Task Type can be linked to a [Document Sequence](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) to auto-generate the **Task No.** field with a formatted, sequential identifier.
+
+To configure it, go to:
+
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Sequence`
+
+Create a new sequence with the following values:
+
+| Field                     | Value                                            |
+|---------------------------|--------------------------------------------------|
+| **Name**                  | A descriptive name for the sequence.             |
+| **Auto Numbering**        | Enable to auto-generate sequential numbers.      |
+| **Increment By**          | Numeric step between generated values.           |
+| **Next Assigned Number**  | The starting number for the sequence.      |
+| **Prefix**                | Optional string prepended to each number.        |
+| **Suffix**                | Optional string appended to each number.         |
+| **Mask**                  | Format mask for the numeric part.                |
+| **Table**                 | Must be set to `ETASK_Task`.                     |
+| **Column**                | Must be set to `Taskno`.                         |
+| **Task Type**             | Select the Task Type this sequence applies to.   |
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
+
+!!! info
+    Each Task Type can have its own sequence, allowing different prefixes, masks, and numbering ranges per type.
 
 ## Task Status Window
 :material-menu: `Application` > `General Setup` > `Task Management` > `Task Status`

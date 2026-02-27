@@ -26,12 +26,14 @@ jobs:
           HEAD="${{ github.event.pull_request.head.sha }}"
 
           # synchronize -> only files from the latest push (BEFORE..HEAD)
-          # opened -> all files in the PR (base..HEAD)
-          # On force push, BEFORE may no longer exist -> fallback to base
+          # opened -> all files in the PR (merge-base..HEAD)
+          # On force push, BEFORE may no longer exist -> fallback to merge-base
           if [ "${{ github.event.action }}" = "synchronize" ] && [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
             FROM="$BEFORE"
           else
-            FROM="${{ github.event.pull_request.base.sha }}"
+            # Use merge-base instead of base.sha to avoid including files
+            # that only changed on the base branch (main), not in the PR
+            FROM=$(git merge-base "${{ github.event.pull_request.base.sha }}" "$HEAD")
           fi
 
           FILES=$(git diff --name-only --diff-filter=AM "$FROM" "$HEAD" \
