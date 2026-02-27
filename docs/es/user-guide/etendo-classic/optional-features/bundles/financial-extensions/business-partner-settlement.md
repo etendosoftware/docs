@@ -38,7 +38,7 @@ También es necesario tener al menos un **Concepto contable** definido para las 
 En esta ventana se registran todas las liquidaciones. En una nueva, debe seleccionar:
 
 - **Tipo**: Crédito o Factura
-- **Fecha de liquidación**
+- **Fecha de Liquidación**
 - **Terceros**
 - **Concepto contable**: el saldo del Concepto contable después del proceso de liquidación no se verá afectado, por lo tanto, se puede crear y utilizar para ello una cuenta contable específica fuera del árbol de cuentas.
 
@@ -50,7 +50,7 @@ Dependiendo del tipo de liquidación, el botón de proceso seleccionado en la pa
 
 ![CS](../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png)
 
-En las liquidaciones de crédito, debe seleccionar los pagos de crédito que se requieren liquidar. Al hacer clic en el botón **Añadir pagos de crédito**, se abre un popup donde puede seleccionar desde 2 rejillas los pagos de *Crédito de entrada* y *Crédito de salida*. En la sección Totales, se calculan los importes totales de los pagos de crédito seleccionados.
+En las liquidaciones de crédito, debe seleccionar los pagos de crédito que se requieren liquidar. Al hacer clic en el botón **Agregar Cobros/Pagos a Crédito**, se abre un popup donde puede seleccionar desde 2 rejillas los pagos de *Crédito de entrada* y *Crédito de salida*. En la sección Totales, se calculan los importes totales de los pagos de crédito seleccionados.
 
 !!! warning
     No puede cerrar y añadir los pagos de crédito hasta que los importes totales de cada rejilla sean los mismos. Esto significa que *Importe de crédito de entrada* e *Importe de crédito de salida* deben ser iguales, por lo tanto el pago de crédito es 0.00
@@ -61,11 +61,11 @@ En las liquidaciones de crédito, debe seleccionar los pagos de crédito que se 
 
 ![IS](../../../../../assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png)
 
-Al igual que en las liquidaciones de crédito, al hacer clic en **Añadir facturas no pagadas** se abre un popup con 2 rejillas. En este caso, las rejillas muestran *facturas no pagadas*. Una vez más, no es posible crear pagos de liquidación hasta que el **Importe pendiente** sea 0.00, como se muestra en la imagen siguiente:
+Al igual que en las liquidaciones de crédito, al hacer clic en **Agregar Facturas no Pagadas** se abre un popup con 2 rejillas. En este caso, las rejillas muestran *facturas no pagadas*. Una vez más, no es posible crear pagos de liquidación hasta que el **Pending amount** sea 0.00, como se muestra en la imagen siguiente:
 
 ![IS](../../../../../assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png)
 
-#### Procesar liquidación
+#### Procesar Liquidación
 
 Dependiendo del estado de la liquidación, hay disponibles diferentes acciones:
 
@@ -82,7 +82,7 @@ Vea las imágenes siguientes en el caso de pagos de liquidación relacionados co
 
 <figure markdown="span">
     ![IS](../../../../../assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png)
-    <figcaption>**Cobros**</figcaption>
+    <figcaption>**Cobro**</figcaption>
 </figure>
 
 <figure markdown="span">
@@ -96,7 +96,7 @@ Como el importe total del pago de liquidación debe ser cero, se añade una lín
 
 El importe en las líneas relacionadas con el *Concepto contable* es el mismo en ambos pagos, por lo tanto el efecto neto sobre el saldo del Concepto contable es nulo. En otras palabras, el saldo del Concepto contable no se altera por el proceso de liquidación.
 
-    Contabilización del Cobros de liquidación:
+    Contabilización del Cobro de liquidación:
     2722.50 Cuenta contable de Concepto contable (55500) DEBE
     2722.50 Cuenta de clientes (43000) HABER
 
@@ -121,7 +121,7 @@ Al igual que en el proceso de Reactivar, los pagos de liquidación se cancelan c
 
 ## Usar la funcionalidad desde otras ventanas.
 
-- [Cobros](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+- [Cobro](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
 
 - [Pago](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
 
