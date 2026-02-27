@@ -13,7 +13,7 @@ tags:
 
 This module helps prevent common configuration errors when creating or modifying subaccounts in the Account Tree. It validates the structure and configuration to avoid mismatches in financial reports such as the Income Statement or Balance Sheet.
 
-The module includes the **"Enable Subaccount Validations"** system preference, which is configured to `YES` by default, ensuring the validation is active from the moment the module is installed.
+The module includes the **Enable Subaccount Validations** system preference, which is configured to `Y` by default, ensuring the validation is active from the moment the module is installed.
 
 ## Validations Performed
 
@@ -29,7 +29,7 @@ These validations are triggered not only when creating or modifying accounts, bu
 
 ### Exclusion from Validation
 
-The **"Exclude from Subaccount Validation"** checkbox allows flexibility in the account structure configuration. By setting this field to **YES** for specific accounts, those accounts will be excluded from all the validations mentioned above. This is particularly useful for accounts that require a different structure or configuration that does not need to follow the standard validation rules.
+The **Exclude from Subaccount Validation** checkbox allows flexibility in the account structure configuration. By checking this field to **YES** for specific accounts, those accounts will be excluded from all the validations mentioned above. This is particularly useful for accounts that require a different structure or configuration that does not need to follow the standard validation rules.
 
 ![Element Value Tab - Exclude from Subaccount Validation](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation/account-structure-validation.png)
 
