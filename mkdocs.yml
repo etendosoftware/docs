@@ -269,6 +269,7 @@ plugins:
                       - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
                       - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
                       - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md
+                      - Funcionalidades Generales para SIFs: user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs.md
                     - Warehouse Extensions Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
                       - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
