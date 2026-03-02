@@ -188,7 +188,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/" hreflang="en" class="md-select__link">
+            <a href="/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -3977,29 +3977,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../financial-extensions/account-structure-validation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Account Structure Validation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../financial-extensions/adjust-invoice-tax/" class="md-nav__link">
         
   
@@ -4636,13 +4613,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proceso-de-generacion-de-copias-de-seguridad" class="md-nav__link">
+  <a href="#proceso-de-generacion-de-backups" class="md-nav__link">
     <span class="md-ellipsis">
-      Proceso de generación de copias de seguridad
+      Proceso de generación de backups
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proceso de generación de copias de seguridad">
+    <nav class="md-nav" aria-label="Proceso de generación de backups">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -14892,13 +14869,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proceso-de-generacion-de-copias-de-seguridad" class="md-nav__link">
+  <a href="#proceso-de-generacion-de-backups" class="md-nav__link">
     <span class="md-ellipsis">
-      Proceso de generación de copias de seguridad
+      Proceso de generación de backups
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proceso de generación de copias de seguridad">
+    <nav class="md-nav" aria-label="Proceso de generación de backups">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -15116,14 +15093,14 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Tenga en cuenta que solo se puede disponer de un certificado por <em>Organización Legal</em> a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.</p>
+<p>Tenga en cuenta que solo se puede disponer de un certificad por <em>Organizacion Legal</em> a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.</p>
 </div>
-<h3 id="proceso-de-generacion-de-copias-de-seguridad">Proceso de generación de copias de seguridad</h3>
-<p>Se ha creado un proceso de generación de copias de seguridad anuales, en respuesta al siguiente requerimiento:</p>
+<h3 id="proceso-de-generacion-de-backups">Proceso de generación de backups</h3>
+<p>Se ha creado un proceso de generación de backups anuales, en respuesta al siguiente requerimiento:</p>
 <blockquote>
 <p>Disponer y aplicar políticas de copias de seguridad basadas en implementar un sistema seguro de copias de seguridad basado en políticas 3, 2, 1, mediante cifrado. QUE NO SEA MANIPULABLE UNA COPIA DE SEGURIDAD. CIFRADO Y NO MANIPULABLE Y ASEGURAR QUE SE HACEN. Lo normal sería una copia anual de los últimos 5 años. DEFINIR EL PROTOCOLO.</p>
 </blockquote>
-<p>Una vez al principio de cada año (fecha y hora a disposición del usuario), se ejecutará automáticamente, para aquellos que tengan el bundle de localización española instalado, un proceso de copias de seguridad automáticas.</p>
+<p>Una vez al principio de cada año (fecha y hora a disposición del usuario), se ejecutará automáticamente, para aquellos que tengan el bundle de localización española instalado, un proceso de backups automáticos.</p>
 <h4 id="configuracion-inicial">Configuración Inicial</h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -15132,34 +15109,34 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
 <p>Para configurar este proceso y que comience su uso en el servidor, el usuario debe ejecutar el siguiente comando en el mismo:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>modules/com.etendoerp.antifraud/scripts/setup-yearly-backup
 </span></code></pre></div>
-<p>Este comando ejecutará un script de configuración inicial para el proceso, en el que se pedirá al usuario el directorio donde se encuentra el ERP y la fecha (minuto, hora, día y mes del servidor) en la que se desea ejecutar el proceso de copias de seguridad anuales.</p>
-<p>El script creará un proceso programado para ejecutar las copias de seguridad una vez al año, en la fecha especificada. Además, se creará un archivo de configuración con permisos solo para root (por defecto guardado en <code>/etc</code>, de nombre <code>yearly-backup.conf</code>), el cual podrá ser editado por el usuario para definir variables como la contraseña de las copias de seguridad, la URL de los servidores a los que se enviarán copias, la cantidad de copias de seguridad a guardar (deben ser 5 o más), etc.</p>
+<p>Este comando ejecutará un script de configuración inicial para el proceso, en el que se pedirá al usuario el directorio donde se encuentra el ERP y la fecha (minuto, hora, día y mes del servidor) en la que se desea ejecutar el proceso de backups anuales.</p>
+<p>El script creará un proceso programado para ejecutar los backups una vez al año, en la fecha especificada. Además, se creará un archivo de configuración con permisos solo para root (por defecto guardado en <code>/etc</code>, de nombre <code>yearly-backup.conf</code>), el cual podrá ser editado por el usuario para definir variables como la contraseña de los backups, la URL de los servidores a los que se enviarán copias, la cantidad de backups a guardar (deben ser 5 o más), etc.</p>
 <h4 id="descripcion-del-proceso">Descripción del Proceso</h4>
 <p>Este proceso consiste en los siguientes pasos:</p>
 <ol>
 <li>Crear copias de seguridad de la base de datos, sources y attachments del ERP</li>
-<li>Inicializar un contador de copias de seguridad completadas exitosamente</li>
-<li>Intentar guardar una copia de seguridad local del ERP en una carpeta designada por el usuario, o <code>/backups-annual</code> si no se designó ninguna</li>
-<li>Las copias de seguridad serán encriptadas. Es decir, se necesitará una contraseña para poder utilizarlas</li>
-<li>Esta contraseña se debe agregar en el archivo de configuración de copias de seguridad <code>yearly-backup.conf</code> creado con el script de configuración, en la variable <code>ANNUAL_BACKUP_PASSWORD</code></li>
-<li>Si la copia de seguridad se realizó con éxito, incrementar en 1 el contador de copias de seguridad exitosas</li>
-<li>Realizar rotación de las copias de seguridad locales (si hay más copias de seguridad anuales que las definidas en la variable de rotación configurada se borra la más antigua de ellas)</li>
-<li>Sincronizar copias de seguridad utilizando los plugins disponibles (S3, label, samba, o sftp). También se da la opción de que el partner/proveedor desarrolle su propio método de sincronización y lo utilice</li>
-<li>En caso de que la copia de seguridad local no se haya realizado con éxito por falta de espacio en el servidor, lo que se hace en cada plugin de sincronización es ir creando la copia de seguridad mientras simultáneamente se envía, para no ocupar el espacio del servidor</li>
-<li>Incrementar el contador de copias de seguridad exitosas en 1 por cada plugin que haya finalizado correctamente</li>
-<li>Finalmente, si la copia de seguridad local se realizó correctamente, y si la opción está habilitada por el usuario, se hacen copias a servidores externos (utilizando rsync, o scp) y se incrementa el contador si terminaron exitosamente</li>
+<li>Inicializar un contador de backups completados exitosamente</li>
+<li>Intentar guardar un backup local del ERP en una carpeta designada por el usuario, o <code>/backups-annual</code> si no se designó ninguna</li>
+<li>Los backups serán encriptados. Es decir, se necesitará una contraseña para poder utilizarlos</li>
+<li>Esta contraseña se debe agregar en el archivo de configuración de backups <code>yearly-backup.conf</code> creado con el script de configuración, en la variable <code>ANNUAL_BACKUP_PASSWORD</code></li>
+<li>Si el backup se realizó con éxito, incrementar en 1 el contador de backups exitosos</li>
+<li>Realizar rotación de los backups locales (si hay más backups anuales que los definidos en la variable de rotación configurada se borra el más antiguo de ellos)</li>
+<li>Sincronizar copias de backups utilizando los plugins disponibles (S3, label, samba, o sftp). También se da la opción de que el partner/proveedor desarrolle su propio método de sincronización y lo utilice</li>
+<li>En caso de que el backup local no se haya realizado con éxito por falta de espacio en el servidor, lo que se hace en cada plugin de sincronización es ir creando el backup mientras simultáneamente se envía, para no ocupar el espacio del servidor</li>
+<li>Incrementar el contador de backups exitosos en 1 por cada plugin que haya finalizado correctamente</li>
+<li>Finalmente, si el backup local se realizó correctamente, y si la opción está habilitada por el usuario, se hacen copias a servidores externos (utilizando rsync, o scp) y se incrementa el contador si terminaron exitosamente</li>
 <li>Si no se llegaron a realizar 3 copias o más correctamente, el proceso terminará con una advertencia especificando esto mismo</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/configuracion-backup.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/configuracion-backup.png"></a></p>
-<p>El proceso de copias de seguridad generará en cada sitio donde se especificó un archivo comprimido y encriptado: <code>backup-&lt;año&gt;.&lt;formato de compresión&gt;.asc</code></p>
-<p>Si ocurrió algún error durante la generación de copias de seguridad, y no se llegaron a conseguir las 3 copias requeridas, se enviará un mail al destinatario configurado si se lo hizo (la configuración de mails es la misma que la que se hace para las copias de seguridad automáticas de Etendo)</p>
-<p>Para acceder al contenido de la copia de seguridad, primero se debe desencriptar, mediante el siguiente comando:</p>
+<p>El proceso de backups generará en cada sitio donde se especificó un archivo comprimido y encriptado: <code>backup-&lt;año&gt;.&lt;formato de compresión&gt;.asc</code></p>
+<p>Si ocurrió algún error durante la generación de backups, y no se llegaron a conseguir las 3 copias requeridas, se enviará un mail al destinatario configurado si se lo hizo (la configuración de mails es la misma que la que se hace para los backups automáticos de Etendo)</p>
+<p>Para acceder al contenido del backup, primero se debe desencriptar, mediante el siguiente comando:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>openssl<span class="w"> </span>enc<span class="w"> </span>-d<span class="w"> </span>-des3<span class="w"> </span>-a<span class="w"> </span>-salt<span class="w"> </span>-pbkdf2<span class="w"> </span>-in<span class="w"> </span><span class="o">[</span>nombre<span class="w"> </span>del<span class="w"> </span>backup<span class="w"> </span>encriptado<span class="o">]</span><span class="w"> </span>-out<span class="w"> </span><span class="o">[</span>nombre<span class="w"> </span>que<span class="w"> </span>se<span class="w"> </span>quiera<span class="w"> </span>dar<span class="w"> </span>al<span class="w"> </span>backup<span class="w"> </span>desencriptado<span class="w"> </span>+<span class="w"> </span>extensión<span class="w"> </span>de<span class="w"> </span>compresión<span class="w"> </span>utilizada<span class="o">]</span><span class="w"> </span>-k<span class="w"> </span><span class="o">[</span>contraseña<span class="w"> </span>de<span class="w"> </span>desencriptación<span class="o">]</span>
 </span></code></pre></div>
-<p>El comando desencriptará la copia de seguridad y la misma luego se puede descomprimir y utilizar normalmente.</p>
+<p>El comando desencriptará el backup y el mismo luego se puede descomprimir y utilizar normalmente.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>El usuario será el encargado de asegurar que tiene al menos 3 copias de cada copia de seguridad anual. Para esto debe configurar los servidores donde se sincronizará y los métodos para hacerlo</p>
+<p>El usuario será el encargado de asegurar que tiene al menos 3 copias de cada backup anual. Para esto debe configurar los servidores donde se sincronizará y los métodos para hacerlo</p>
 </div>
 <h3 id="firmas-digitales-de-documentos">Firmas Digitales de Documentos</h3>
 <p>Se dispone de la opción de agregar firmas digitales al imprimir documentos en PDF utilizando para ello el botón de la toolbar dedicado.</p>
@@ -15209,7 +15186,7 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
 <p>…la Ley 7/2012, de 29 de octubre, de modificación de la normativa tributaria y presupuestaria y de adecuación de la normativa financiera para la intensificación de las actuaciones en la prevención y lucha contra el fraude, en la línea también seguida por otros países de nuestro entorno, determinó la limitación al uso de efectivo para determinadas operaciones económicas. Los positivos resultados de dicha norma motivan la modificación que se introduce en el régimen sustantivo de los pagos en efectivo, dirigida a profundizar en la lucha contra el fraude fiscal, disminuyendo el límite general de pagos en efectivo de 2.500 a 1.000 euros …</p>
 </blockquote>
 <p>Aplica si al menos una de las partes tiene residencia fiscal en España (organización del documento o la del socio de negocio). Si ambas organizaciones son fuera de España, no interviene. Si no puede determinar el país, actúa de forma conservadora y aplica la validación.</p>
-<p>Esta restricción se activa solo si el método de pago está marcado como <code>En Efectivo</code>. Este es un nuevo campo introducido en la ventana <code>Método de Pago</code>.</p>
+<p>Esta restricción se activa sólo si el método de pago está marcado como <code>En Efectivo</code>. Este es un nuevo campo introducido en la ventana <code>Método de Pago</code>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/es-efectivo.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/es-efectivo.png"></a></p>
 <p>El método agrupa como una misma operación en los siguientes casos:</p>
 <p>Si se paga una factura:</p>
@@ -15263,7 +15240,7 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/borrar-contabilidad.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/borrar-contabilidad.png"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/error-borrado.gif" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/error-borrado.gif"></a></p>
 <h3 id="procesos-borrar-entidad-y-reinicializar-cuentas">Procesos Borrar Entidad y Reinicializar Cuentas</h3>
-<p>Se han restringido estos procesos, a raíz de uno de los requerimientos necesarios para garantizar el cumplimiento de la ley antifraude, el cual especifica que el sistema no debe proveer herramientas de borrado masivo de datos.</p>
+<p>Se han restringido estos procesos, a raiz de uno de los requerimientos necesarios para garantizar el cumplimiento de la ley antifraude, el cual especifica que el sistema no debe proveer herramientas de borrado masivo de datos.</p>
 <p>De acuerdo con la Ley 11/2021, reformada por la Ley General Tributaria (art. 29.2.j): </p>
 <blockquote>
 <p>los sistemas y programas informáticos que soportan procesos contables, de facturación o de gestión deben garantizar la integridad, conservación, accesibilidad, legibilidad, trazabilidad e inalterabilidad de los registros, sin interpolaciones, omisiones o alteraciones de las que no quede debida anotación en los sistemas mismos. </p>
