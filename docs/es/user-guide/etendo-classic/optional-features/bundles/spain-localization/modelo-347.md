@@ -2,25 +2,27 @@
 title: Modelo 347
 tags:
     - Modelo 347
-    - Localización Española
+    - Localizacion Española
 ---
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es`
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es.es_es`
+
 ## **Introducción**
 
-Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración anual de operaciones con terceros**” como un fichero de texto ("*.txt") válido conforme a los requerimientos de la Hacienda Pública española, por lo que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.
+Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros**” como un fichero de texto ("\*.txt") válido conforme a los requerimientos de la Hacienda Pública española, es por ello que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.
 
-El fichero del 347 se genera desde el "**Generador de declaraciones de impuestos**" que se encuentra en la ruta de aplicación: "Gestión financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos".
+El fichero del 347 se genera desde el "**Generador de Declaraciones de Impuesto**" que se encuentra en la ruta de aplicación: "Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos".
 
-El Modelo/Declaración 347 forma parte del módulo de Localización Española de Etendo.
+El Modelo/Declaración 347 es parte del módulo de Localización Española de Etendo.
+
 ## **Descripción del módulo**
 
 ### **Obligados a presentar la declaración**
 
-De acuerdo con la normativa de la Hacienda Pública española, están obligados a presentar el modelo 347:
+De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347:
 
-Todas aquellas personas físicas o jurídicas, de naturaleza pública o privada que desarrollen actividades empresariales o profesionales, siempre y cuando hayan realizado operaciones que, en su conjunto, respecto de otra persona o entidad, cualquiera que sea su naturaleza o carácter, hayan superado la cifra de 3.005,06€ durante el año natural al que se refiere la declaración. Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
+Todas aquellas personas físicas o jurídicas, de naturaleza pública o privada que desarrollen actividades empresariales o profesionales, siempre y cuando hayan realizado operaciones que, en su conjunto, respecto de otra persona o Entidad, cualquiera que sea su naturaleza o carácter, hayan superado la cifra de 3.005,06€ durante el año natural al que se refiere la declaración. Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
 
 De acuerdo con la normativa, no están obligados a presentar el modelo 347:
 
@@ -38,7 +40,7 @@ Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son l
 
 Además, se incluyen de forma específica y aparte:
 
--   los arrendamientos de locales de negocio
+-   los Arrendamientos de locales de negocios
 -   los importes superiores a 6.000,00€ percibidos en metálico de cada una de las personas o entidades relacionadas en la declaración
 -   las cantidades que se perciban en contraprestación por transmisiones de bienes inmuebles que constituyan entregas sujetas a IVA
 -   y las prestaciones de servicios de/a no residentes (incluyendo Canarias, Baleares, Ceuta y Melilla) que no estén sujetos a retención.
@@ -56,7 +58,7 @@ Las operaciones que en ningún caso se incluirán en el 347 por ser no declarabl
 -   las importaciones y exportaciones de mercancías, así como las entregas y adquisiciones de bienes que supongan envíos entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla.
 -   Todas aquellas que se incluyan en otros modelos de la Administración Tributaria como por ejemplo aquellas cuya contraprestación haya sido objeto de retención o ingreso a cuenta; las operaciones intracomunitarias de bienes y servicios que se declaran en el modelo 349 o las operaciones incluidas en los libros registro que deben incluirse en el modelo 340.
 
-El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se describen a continuación y que deberían incluirse en el modelo 347, por ser relativas a Administraciones Públicas, entidades aseguradoras y colegios profesionales:
+El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se describe a continuación y que deberían incluirse en el modelo 347, por ser relativas a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
 
 -   las subvenciones, auxilios o ayudas satisfechas por las entidades integradas en las distintas Administraciones Públicas
 -   las operaciones de seguros realizadas por las entidades aseguradoras
@@ -65,9 +67,10 @@ El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se
 -   las operaciones sujetas al impuesto sobre la producción, los servicios y la importación en las ciudades de Ceuta y Melilla.
 
 Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse sólo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento "Declaración Complementaria".
+
 ## **Instalación del módulo**
 
-Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operaciones con terceros”** (Spain AEAT Modelo 347 for APR), el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operaciones con terceros”**” (Spain AEAT Modelo 347 for APR),el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
 
 -   Instalación de la última versión disponible de Etendo 
 -   o la instalación del módulo de Localización Española.
@@ -75,7 +78,8 @@ Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operacio
 !!! info
     Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
-Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347. Este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347, tal y como se explica en el siguiente apartado.
+
+Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347, este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347 tal y como se explica en el siguiente apartado.
 
 ### **Aplicación del Módulo**
 
@@ -85,104 +89,107 @@ El módulo de impuestos para España es válido para todos los modelos de declar
 
 !!! info
     Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) o bien a la organización legal para la que se quiera obtener el 347.
-## **Module Configuration**
 
-### **347 Model Configuration**
 
-Once the 347 Model dataset has been applied, you can check in the application path: Financial Management / Accounting / Setup / Tax Report that the 347 model for the corresponding period is created as an annual tax report.
+## **Configuración del módulo**
 
-![](../../../../../assets/drive/2u88N7Cgi-SP2bdf8o4omVD0u1Up3nn33id19ei0bDPUxydw-cF9LLBl-YAE_5CNlQR7_9-rgia_VhhUwgW6QTKQgrHCC1qu4jTyfflLyVH9uDdav7NQWS47_h1ntt7M7800npJGiAbWAqRnzHfhIQ.png)
+### **Configuración del modelo 347**
 
-In the “Tax Report Sections” tab, 3 groups have been created for the 347 model:
+Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
 
--   347 File Name. This section contains:
-    -   an “input” parameter that will be displayed when generating the 347 so that the user manually enters the “347 txt file name” to be generated.
--   Identification and Totals. This section contains:
-    -   2 “constant” parameters that the system will take into account when including operations, since it will only include those that exceed the limit amounts detailed below:  
+![](../../../../../../assets/drive/2u88N7Cgi-SP2bdf8o4omVD0u1Up3nn33id19ei0bDPUxydw-cF9LLBl-YAE_5CNlQR7_9-rgia_VhhUwgW6QTKQgrHCC1qu4jTyfflLyVH9uDdav7NQWS47_h1ntt7M7800npJGiAbWAqRnzHfhIQ.png)
+
+En la pestaña “Secciones de la declaración” se han creado 3 grupos para el modelo 347:
+
+-   Nombre del Fichero del 347. Esta sección contiene:
+    -   un parámetro de tipo “entrada” que se mostrará en el momento de generar el 347 con el fin de que el usuario introduzca manualmente el “Nombre del fichero txt del 347” que se va a generar.
+-   Identificación y Totales. Esta sección contiene:
+    -   2 parámetros de tipo “constante” que el sistema tendrá en cuenta a la hora de incluir las operaciones, ya que solo incluirá las que superen las cifras límite que se detallan a continuación:  
           
-        -   Limit amount for including operations with third parties = 3.005,06€
-        -   Limit amount for cash collections received = 6.000,00€
-    -   and 5 “input” parameters that will be displayed when generating the 347 so that the user manually enters them, which are:  
+        -   Cifra límite de inclusión de operaciones con terceros = 3.005,06€
+        -   Cifra límite para cobros percibidos en efectivo = 6.000,00€
+    -   y 5 parámetros de tipo “entrada” que se mostrarán en el momento de generar el 347 con el fin de que el usuario los introduzca manualmente y que son:  
           
-        -   Name and surname of the contact person: This input parameter could be changed to a constant type and, therefore, the value of that constant should be specified, which in this case would be the name of the contact person, for scenarios in which the same person submits the report. If so, this parameter would not need to be filled in each time the report is generated.
-        -   Phone number of the contact person. This input parameter could be changed to a constant type and, therefore, the value of that constant should be specified, which in this case would be the phone number of the contact person, for scenarios in which the same person submits the report. If so, this parameter would not need to be filled in each time the report is generated.
-        -   Substitute report (yes/no)
-        -   No. of the report to be substituted
-        -   Tax ID of the legal representative
--   **Operations with third parties**. This section contains:
-    -   5 “output” parameters linked to the corresponding tax key, which, associated with the tax rates of the tax module for Spain, will include purchase/sale operations in the 347:
-        -   Goods acquisitions - Key A
-        -   Goods deliveries - Key B
-        -   Provision of services - Key A
-        -   Services provided - Key B
-        -   Real estate transfers - Key B
+        -   Nombre y apellidos de la persona de contacto: Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Nº Teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Declaración substitutiva (si/no)
+        -   Nº de la declaración a sustituir
+        -   NIF del representante legal
+-   **Operaciones con terceros**. Esta sección contiene:
+    -   5 parámetros de tipo “salida” ligados a la clave tributaria correspondiente, que asociados a los tipos impositivos del módulo de impuestos para España, incluirán las operaciones de compra/venta en el 347:
+        -   Adquisiciones de bienes - Clave A
+        -   Entregas de bienes - Clave B
+        -   Prestación de servicios - Clave A
+        -   Servicios prestados - Clave B
+        -   Transmisiones de inmuebles - Clave B
 
-In the path Financial Management / Accounting / Setup / AEAT347 Document Type, the user can specify the document types that the 347 must take into account. The operation of this parameterization screen is that if no document type is specified, Etendo will take into account all invoice-type document types that can be posted.
+En la ruta Gestión Financiera / Contabilidad / Configuración / AEAT347 Tipo de documento, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
 
-If the user enters any document type, only those will be taken into account.
+Si el usuario introduce algún tipo de documento, solo esos serán los que se tengan en cuenta.
 
-![](../../../../../assets/drive/OkdImkuzASfTUs2ne-BnPzKROain8Y-Z59B-4m3DX8xAjhoK-wvSJEmH6P1OBX-eIC9AGQXKGViX6K-0zMZHeGnfVD3v-eKgTvojkYKe-vEXykDdGYstwWmsUW4vRRjUAreAq7ndNhtf8zVm3rwbug.png)
+![](../../../../../../assets/drive/OkdImkuzASfTUs2ne-BnPzKROain8Y-Z59B-4m3DX8xAjhoK-wvSJEmH6P1OBX-eIC9AGQXKGViX6K-0zMZHeGnfVD3v-eKgTvojkYKe-vEXykDdGYstwWmsUW4vRRjUAreAq7ndNhtf8zVm3rwbug.png)
 
-### **Tax Configuration**
+### **Configuración de impuestos**
 
-This 347 model generation module is based on the tax module for Spain, since it uses the tax ranges included in that module. In addition, it includes a dataset that links the tax ranges of the tax module for Spain with the 347 parameters listed below, depending on the type of operation:
+Este módulo de generación del modelo 347 se basa en el módulo de impuestos para España, ya que utiliza los rangos de impuesto que incluye dicho módulo. Además, incluye un juego de datos que liga los rangos de impuesto del módulo de impuestos para España con los parámetros del 347 que se listan a continuación, en función de la operación de que se trate:
 
--   **Goods acquisitions – Acquisition “A”**
--   **Goods deliveries – Deliveries “B”**
--   **Provision of services– Acquisition “A”**
--   **Services provided– Deliveries “B”**
--   **Real estate transfers – Deliveries “B”**
+-   **Adquisiciones de bienes – Adquisición “A”**
+-   **Entregas de bienes – Entregas “B”**
+-   **Prestación de servicios– Adquisición “A”**
+-   **Servicios prestados– Entregas “B”**
+-   **Transmisiones de inmuebles – Entregas “B”**
 
-The user can check in the application path: Financial Management / Accounting / Setup / Tax Rate - Tax Parameter tab that the “tax rates/taxes” that must be included in the 347 have been associated with the corresponding 347 tax parameter:
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
 
--   Purchase/acquisition VAT types (domestic), including acquisitions of real estate and investment goods, have been associated with the “Goods acquisitions” parameter, which corresponds to the 347 operation key => “A”
--   Sales/delivery VAT types (domestic) (including Equivalence Surcharge) have been associated with the “Goods deliveries” parameter, which corresponds to the 347 operation key => “B”
--   VAT types for “reverse charge NON-EU” (in cases of NON-intra-community provision of services) have been associated with the “Provision of services” parameter, which corresponds to the 347 operation key => “A”
--   VAT types for deliveries of real estate (domestic) have been associated with the “Real estate transfers” parameter, which corresponds to the 347 operation key => “B”; since it must be reported twice as a sales operation and the amount of the real estate transfer must be stated separately.
--   Specific VAT types have been created for provision of services (domestic and international), associated with specific tax categories for services, which have been associated with the 347 parameters “Provision of services – operation key A” or “Services provided – operation key B” depending on whether the reporting company receives or provides the services.
--   VAT types for services from/to Canary Islands, Balearic Islands, Ceuta and Melilla have been associated either with the “Provision of services” parameter operation key of the 347 => “B” or with the “Service operations (Acquisition)” parameter operation key of the 347 => “A”, respectively, since only service operations are included in the 347 and not goods operations involving shipments of goods between the Spanish mainland territory or the Balearic Islands and the Canary Islands, Ceuta and Melilla
--   Finally, specific VAT types have been created for rentals (with and without withholdings associated with 2 BP tax category types, respectively). VAT types for rentals without withholdings have been associated with the 347 parameters “Provision of services – operation key A” or “Services provided – operation key B” depending on whether the company is the tenant or landlord of the rented premises or office and subject to VAT.
+-   Los tipos de IVA de compras/adquisiciones (nacional) incluyendo las adquisiciones de bienes inmuebles y bienes de inversión, se han asociado con el parámetro “Adquisiciones de bienes” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de ventas/entregas (nacional) (incluyendo Recargo de Equivalencia) se han asociado con el parámetro “Entregas de bienes” que corresponden con la clave de operación del 347 => “B”
+-   Los tipos de IVA de “inversión del sujeto pasivo NO UE” (en los casos de prestación de servicios NO intracomunitarios) se han asociado con el parámetro “Prestación de servicios” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de entregas de bienes inmuebles (nacional) se han asociado con el parámetro “Transmisiones de inmuebles” que se corresponden con la clave de operación del 347 => “B”; ya que tiene que declararse dos veces como operación de venta y consignarse a parte el importe de la transmisión del bien inmueble.
+-   Se han creado los tipos de IVA específicos para prestaciones de servicios (nacional e internacional), asociados a categorías de impuestos específicas para los servicios, que se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa declarante reciba o preste los servicios.
+-   Los tipos de IVA de servicios desde/a Canarias, Baleares, Ceuta y Melilla se han asociado bien con el parámetro “Prestaciones de servicios” clave de operación del 347 => “B” o bien con el parámetro “Operaciones de servicios (Adquisición) clave de operación del 347 => “A”, respectivamente, ya que sólo se incluyen en el 347 las operaciones de servicios y no las de bienes que supongan envíos de bienes entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla
+-   Y por último se han creado tipos de IVA específicos para alquileres (con y sin retenciones asociados a 2 tipos de BP tax category, respectivamente). Los tipos de IVA de alquiler sin retenciones se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa sea arrendatario o arrendador del local u oficina arrendado y sujeto a IVA.
 
-### **Business Premises Configuration**
+### **Configuración de los locales de negocio**
 
-In the 347 model, leases of business premises must be included, which is why in the application path: Master Data Management / Product a new parameter “Rented premises” has been created.
+En el modelo 347 se deben incluir los arrendamientos de locales de negocios, es por ello que en la ruta de aplicación: Gestión de Datos Maestros / Producto se ha creado un nuevo parámetro “Local arrendado”.
 
-If so, the user must enter into the system the information detailed below, as it is necessary to include it in the 347 model:
+De ser así, el usuario debe introducir en el sistema la información que se detalla a continuación, ya que es necesario incluirla en el modelo 347:
 
--   **Situation**. The user must choose one of the following options:
-    -   Premises abroad
-    -   Valid cadastral reference in the Basque Country or Navarre
-    -   Valid cadastral reference except in the Basque Country or Navarre
-    -   Without cadastral reference
--   **Cadastral reference.** Free text field.
--   **Street type.** The user must choose the street type from a standardized list according to the Spanish INE.
--   **Street name**. Free text field.
--   **Numbering type**. The user must choose the numbering type from a standardized list.
--   **Number**. Free text field.
--   **Number qualifier**. Free text field.
--   **Block**. Free text field.
--   **Portal**. Free text field.
--   **Staircase**. Free text field.
--   **Floor or apartment**. Free text field.
--   **Door**. Free text field.
--   **Complement**. Additional address data, if any.
--   **Locality or Town**. Free text field.
--   **Municipality**.
--   **Municipality code**. The user must choose the municipality code from a standardized list according to the Spanish INE.
--   **Province code.** The user must choose the province code from a list of two-digit numeric province codes.
--   **Postal code**. The user must choose the postal code.
+-   **Situación**. El usuario debe elegir entre una de las siguientes opciones:
+    -   Locales en el extranjero
+    -   Referencia catastral válida en País Vasco o en Navarra
+    -   Referencia catastral válida excepto en País Vasco o Navarra
+    -   Sin referencia catastral
+-   **Referencia catastral.** Campo de texto libre.
+-   **Tipo de vía.** El usuario debe elegir el tipo de vía de una lista normalizada según el INE español.
+-   **Nombre de la vía pública**. Campo de texto libre.
+-   **Tipo de numeración**. El usuario debe elegir el tipo de numeración de una lista normalizada.
+-   **Número**. Campo de texto libre.
+-   **Calificación del número**. Campo de texto libre.
+-   **Bloque**. Campo de texto libre.
+-   **Portal**. Campo de texto libre.
+-   **Escalera**. Campo de texto libre.
+-   **Planta o piso**. Campo de texto libre.
+-   **Puerta**. Campo de texto libre.
+-   **Complemento**. Datos complementarios del domicilio si los hubiera.
+-   **Localidad o Población**. Campo de texto libre.
+-   **Municipio**.
+-   **Código de municipio**. El usuario debe elegir el código del municipio de una lista normalizada según el INE español.
+-   **Código de provincia.** El usuario debe elegir el código de provincia de una lista de códigos de provincia de dos dígitos numéricos.
+-   **Código postal**. El usuario debe elegir el código postal.
 
-In the case of "Premises abroad" the data to be included are:
+En el caso de "Locales en el extranjero" los datos a incluir son:
 
--   **Street type.**
--   **Street name**.
+-   **Tipo de vía.**
+-   **Nombre de la vía pública**.
 
-The 347 reflects this type of operations separately as explained in the corresponding use case.
+El 347 refleja este tipo de operaciones de forma separada tal y como se explica en el correspondiente caso de usuario.
+
 ## **Generación del modelo 347**
 
 El modelo 347 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos.
 
-![](../../../../../assets/drive/I8vKXFszVIXPVZhyPNt7q1dl52OyNIGw-JWKniQBLnKUq21l25J9MbdniTdtPtnNIB1Q3aKoP3thNPaSWwmlwa3xdcBYC6jQWnQUxks9w9nH2cMZEKWtJMgTrWme0TlsVbG5dqhEh14CHBKAqglBiA.png)
+![](../../../../../../assets/drive/I8vKXFszVIXPVZhyPNt7q1dl52OyNIGw-JWKniQBLnKUq21l25J9MbdniTdtPtnNIB1Q3aKoP3thNPaSWwmlwa3xdcBYC6jQWnQUxks9w9nH2cMZEKWtJMgTrWme0TlsVbG5dqhEh14CHBKAqglBiA.png)
 
 El usuario deberá introducir los siguientes datos para generar el modelo 347:
 
@@ -194,7 +201,7 @@ El usuario deberá introducir los siguientes datos para generar el modelo 347:
 
 Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 347 en el botón de proceso “Parámetros de entrada”
 
-![](../../../../../assets/drive/BTVvmrL7eUYl5NhX1-PKOO_Aa_50C1NZd8bWXZAiD4oQsYc32KxEQKKhjq1bzpwL084nWtTneQN0cn2Fd9zQVoUqkGtIrzR8LnkUklnypDnn9CSFjpknNIHs5c6lV8fV4nsqaxBlFplBnEuRQ2_8pA.png)
+![](../../../../../../assets/drive/BTVvmrL7eUYl5NhX1-PKOO_Aa_50C1NZd8bWXZAiD4oQsYc32KxEQKKhjq1bzpwL084nWtTneQN0cn2Fd9zQVoUqkGtIrzR8LnkUklnypDnn9CSFjpknNIHs5c6lV8fV4nsqaxBlFplBnEuRQ2_8pA.png)
 
 y una vez introducidos los parámetros de entrada, como por ejemplo el "Nombre del Fichero" o la "Persona/Teléfono de contacto", el usuario puede generar el fichero del Modelo 347 a través del botón de proceso “Generar fichero”.
 
@@ -215,38 +222,39 @@ El fichero "Facturas.csv":
 El fichero "Metalico.csv":
 
 -   contiene un listado con información del tipo "Cuenta Financiera", "Identificación de Transacción", "Tercero", "Fecha Contable", "Importe" y "Ejercicio (de devengo)" de todos los cobros en efectivo susceptibles de incluirse en el fichero txt.
+
 ## **Casos de usuario**
 
 ### **Operaciones de compra y venta**
 
 Etendo permite la introducción y contabilización de facturas de compra y de venta, a través de la ventana correspondiente.
 
-El modelo 347 recogerá, agrupando por "tercero" y "clave \[A (compras) o B (ventas)\]", las siguientes operaciones de compra/venta que superen la cifra de 3.005,06 euros:
+El modelo 347 recogerá agrupando por "tercero" y "clave \[A (compras) o B (ventas)\]", las siguientes operaciones de compra/venta que superen la cifra de 3.005,06 euros:
 
 -   compra/venta de bienes/servicios (no sujetos a retención) dentro del territorio de aplicación del impuesto (IVA), España y Baleares
--   compra/venta de servicios desde/hacia el resto del mundo, incluyendo Canarias, Ceuta y Melilla.
+-   compra/venta de servicios desde/hacia resto del mundo, incluyendo Canarias, Ceuta y Melilla.
 
 No se van a tener en cuenta:
 
--   operaciones de compra/venta de bienes/servicios intracomunitarias, por reflejarse en otro modelo de Hacienda, el Modelo 349, excepto las operaciones que no se incluyen en el Modelo 349.
+-   operaciones de compra/venta de bienes/servicios intracomunitarias, por reflejarse en otro modelo de hacienda, el Modelo 349, excepto las operaciones que no se incluyen en el Modelo 349.
 -   importaciones/exportaciones de bienes.
 
 #### **Operaciones de compra y venta acogidas a RECC**
 
-Etendo permite la introducción y contabilización de facturas de compra y de venta acogidas al RECC (Régimen Especial de Criterio de Caja).
+Etendo permite la introducción y contabilización de facturas de compra y de venta acogidas al RECC (Régimen Especial de Critero de Caja).
 
 Para ello:
 
--   la "Organización" debe estar acogida a este régimen
--   o bien no estar acogida, pero sí alguno de los proveedores de los cuales recibe facturas de compra.
+-   la "Organización" debe estar acogida a este Régimen
+-   o bien no acogida pero si alguno de los proveedores de los cuales recibe facturas de compra.
 
-Estas organizaciones deben tener aplicado el juego de datos del módulo "Spain AEAT Modelo 347 Cash VAT compatible".
+Estas organizaciones deben tener aplicado el juego de datos del módulo "Spain AEAT Modelo 347 Cash VAT compatible.
 
 Este módulo incluye un juego de datos que relaciona los impuestos de IVA de Caja con los parámetros correspondientes del Modelo 347.
 
 Las transacciones de compra/venta se recogen en el Modelo 347 de forma anual conforme al criterio de devengo general de IVA y marcadas como "Operación de IVA de Caja". Además, se incluye la parte correspondiente anual devengada conforme al criterio de IVA de Caja en otro campo.
 
-**Transmisión de inmuebles**
+**Transmisión de Inmuebles**
 
 Etendo permite la introducción y contabilización de transmisiones (ventas) de bienes inmuebles sujetas a IVA.
 
@@ -255,15 +263,15 @@ Este tipo de operaciones se recogen de forma separada en el modelo 347.
 Es por ello que se ha creado en el módulo de impuestos para España:
 
 -   categorías de impuestos específicas para los B. Inmuebles (IVA Normal B.Inmuebles e IVA Reducido B.Inmuebles)
--   rangos de impuestos (IVA) de compra/venta de bienes inmuebles
+-   rangos de impuestos (IVA) de compra/venta de Bienes Inmuebles
 
 y en el conjunto de datos del 347:
 
 -   un parámetro específico denominado "Transmisiones de Inmuebles" ligado a los impuestos de venta de bienes inmuebles.
 
-#### **Transmisión de inmuebles sujetas a RECC**
+#### **Transmisión de Inmuebles sujetas a RECC**
 
-Este tipo de transacciones también se incluyen en el Modelo 347 de forma separada, en cómputo anual, y marcadas como "Operación IVA Caja".
+Este tipo de transacciones también se incluyen en el Modelo 347 de forma separada, en computo anual, y marcadas como "Operación IVA Caja".
 
 ### **Arrendamientos**
 
@@ -273,38 +281,39 @@ Solo en el caso de arrendamientos de locales de negocio por parte del propietari
 
 Esto implica rellenar datos como los que se muestran en la siguiente imagen:
 
-![](../../../../../assets/drive/dE833IZAyk5YYiQiYB9eDDk6wxK_0btiWm0ZxEGjetv8EO6eEVaFX1l49jftJWX3Kzpsjf7CYhV2xKGpTzoPPIHnWOtBreM6VjXKc9pppnC3uX0Da8TQSwz_CSSxFmBEVhREbwCzxTxCExDC9scqtRA.png)
+![](../../../../../../assets/drive/dE833IZAyk5YYiQiYB9eDDk6wxK_0btiWm0ZxEGjetv8EO6eEVaFX1l49jftJWX3Kzpsjf7CYhV2xKGpTzoPPIHnWOtBreM6VjXKc9pppnC3uX0Da8TQSwz_CSSxFmBEVhREbwCzxTxCExDC9scqtRA.png)
 
 Este tipo de operaciones tienen que reportarse de forma separada en el 347 tal y como se muestra en la siguiente imagen:
 
-![Arrendamiento fichero.png](../../../../../assets/drive/jbFjoMyVVnHbJWnBIr3G76slsiwl0sB1cuiVHPyZU3Fxi0xayrKTqa6KnmpwSN6pZAUm3FPIwxGY8b7sfijsMd2dXLmxmn4WI85_Pr8_F41aL7Y3GQUXNZYqaM4uvGleErZpzWqX3KiMv6ElEGHuxt8.png)
+![Arrendamiento fichero.png](../../../../../../assets/drive/jbFjoMyVVnHbJWnBIr3G76slsiwl0sB1cuiVHPyZU3Fxi0xayrKTqa6KnmpwSN6pZAUm3FPIwxGY8b7sfijsMd2dXLmxmn4WI85_Pr8_F41aL7Y3GQUXNZYqaM4uvGleErZpzWqX3KiMv6ElEGHuxt8.png)
 
 La transacción de venta (B) con el cliente "Cliente Arrendamiento" por un importe anual de 30.310,50, incluye además el arrendamiento de un inmueble por un importe de 13.370.50.
 
 #### **Arrendamientos en RECC**
 
-Estas operaciones se reflejan de forma anual en el modelo 347, marcadas como tal, incluyéndose también la información referente al registro del inmueble arrendado por el declarado.
+Estas operaciones se reflejan de forma anual en el modelo 347,marcadas como tal, incluyéndose también la información referente al registro del inmueble arrendado por el declarado. 
 
-### **Cobros en efectivo**
+### **Cobros en Efectivo**
 
 Etendo permite la introducción y contabilización de facturas de venta y sus correspondientes cobros en efectivo depositados y contabilizados en Etendo a través de cuentas financieras del tipo "Caja".
 
+  
 Se recomienda configurar el método de pago "Contado" asociado a la cuenta financiera "Caja" como se detalla a continuación:
 
--   Permitido para cobro
+-   Permitido para Cobro
 -   Depósito automático en cuenta
 -   Cuenta de depósito = Cuenta contable para depósito.
 -   los cobros que para un tercero (cliente) y para un periodo, por ejemplo 2014, que lógicamente será el periodo/año para el cual generamos el 347, superen el umbral de 6.000,00 €
     -   Dicho cobro puede referirse a operaciones incluidas en facturas de venta contabilizadas en 2014 o años anteriores.
 
-![Cobro Efectivo 2.png](../../../../../assets/drive/rQsEfez1_-0gnYadOcq2Dp9ptPt-fpXnvDJr-dZQKfhGd4CbMhpIZl8--qafNSbneZvk0iTvjQdOyesMqfRe8UKT1l8bwOYiPd4PojgZsEHUXOjQ5o5TiOrFYFxOVfBKW4hIp9qC0W8mkxbVsM54wz4.png)
+![Cobro Efectivo 2.png](../../../../../../assets/drive/rQsEfez1_-0gnYadOcq2Dp9ptPt-fpXnvDJr-dZQKfhGd4CbMhpIZl8--qafNSbneZvk0iTvjQdOyesMqfRe8UKT1l8bwOYiPd4PojgZsEHUXOjQ5o5TiOrFYFxOVfBKW4hIp9qC0W8mkxbVsM54wz4.png)
 
-![Cobro Efectivo 1.png](../../../../../assets/drive/Lxv-BIcYyAGs73YiuQW3z8G7HaswKFky4KLo0tygiKNTTsVyOQuux39shCmeBOucaw5We-Pq56fRIDdRr4VeMlWN2ffdh1Pw-u931b7tv1Ejq87qM-waVMN6DMHFg4VKOpgsvPeTu6Qwfx0BT3Rf_3k.png)
+![Cobro Efectivo 1.png](../../../../../../assets/drive/Lxv-BIcYyAGs73YiuQW3z8G7HaswKFky4KLo0tygiKNTTsVyOQuux39shCmeBOucaw5We-Pq56fRIDdRr4VeMlWN2ffdh1Pw-u931b7tv1Ejq87qM-waVMN6DMHFg4VKOpgsvPeTu6Qwfx0BT3Rf_3k.png)
 
 En el fichero ejemplo anterior se puede comprobar que:
 
 -   los cobros en efectivo tanto del "Cliente Efectivo" (por importe de 18.000,00) como del "Cliente Efectivo Varios" (por importe de 6.560,00) se especifican de forma separada en las posiciones (101-115). La diferencia entre estos cobros es:
-    -   para el "Cliente Efectivo Varios", la operación que generó el cobro en efectivo en el año 2014 se devengó y se declaró en el año 2013.  
+    -   para el "Cliente Efectivo Varios", la operación que generó el cobro en efectivo en el año 2014 se devengo y se declaró en el año 2013.  
         Esa es la razón por la cual no aparece importe de operación alguno en las posiciones 83-98 y el año de devengo de la operación es 2013.
     -   para el "Cliente efectivo B", la operación que generó el cobro en efectivo se devenga y se cobra en el año 2014, y forma parte del total de operaciones por importe de 81.675,00.
 
@@ -312,13 +321,13 @@ Faltaría un último caso:
 
 El caso en el que un cobro/s del año en curso (2014), sea un cobro/s de transacciones devengadas en un periodo/año anterior y, por tanto, ya declaradas, y transacciones devengadas en el periodo/año en curso y, por tanto, no declaradas, tal y como se muestra en la siguiente imagen:
 
-![Efectivo C 1.png](../../../../../assets/drive/UNvoZgjSZH4I3jP_aiFtWoh588bAF9cXNFgxPj9QwdIVRaSs2LQPqaO0OfaumKmjQOuONVkzQGnDksNIoLc7WsaMn_lM2LfMrDdYTlFaM7rQA2UzZu06m4Yujf8I4zN_3XE-sPOl7SnRi8i7pXJkujA.png)
+![Efectivo C 1.png](../../../../../../assets/drive/UNvoZgjSZH4I3jP_aiFtWoh588bAF9cXNFgxPj9QwdIVRaSs2LQPqaO0OfaumKmjQOuONVkzQGnDksNIoLc7WsaMn_lM2LfMrDdYTlFaM7rQA2UzZu06m4Yujf8I4zN_3XE-sPOl7SnRi8i7pXJkujA.png)
 
-![Efectivo C 2.png](../../../../../assets/drive/fUbrPtlbC-3LRPMGAoFSLSg5WJL9aJnB-ArVFC3JAq-ED3T3EyPf4rNPjlEEPdIhSqX31YFcp95zSSdXDdxNAwR0Jj6APn121ZA20w1dwxW571BuD2nXIjhchVDKE4BEHosSqTq9cd39qycG3KI9u5M.png)
+![Efectivo C 2.png](../../../../../../assets/drive/fUbrPtlbC-3LRPMGAoFSLSg5WJL9aJnB-ArVFC3JAq-ED3T3EyPf4rNPjlEEPdIhSqX31YFcp95zSSdXDdxNAwR0Jj6APn121ZA20w1dwxW571BuD2nXIjhchVDKE4BEHosSqTq9cd39qycG3KI9u5M.png)
 
 En la imagen anterior, se ha producido un cobro en el año 2014 por importe de 48.188,25; de los cuales 7.350,75 son por operaciones realizadas y declaradas en el año 2014 y el resto 40.837,50 por operaciones realizadas y declaradas en un ejercicio anterior (2013).
 
-#### **Cobros en efectivo en RECC**
+#### **Cobros en Efectivo en RECC**
 
 Todo lo dicho en este apartado aplica igualmente a las operaciones de venta en IVA de Caja que se cobran en efectivo, salvo que en este caso no aplicaría un "Ejercicio" de devengo anterior a 2014, ya que el periodo de validez de este régimen comenzó el 1 de enero de 2014.
 
@@ -326,18 +335,18 @@ Además del importe anual de las operaciones y el importe anual devengado en cri
 
 ### **Presentación del modelo 347 en formato electrónico**
 
-La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tengan un NIF español así como un certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro certificado válido y reconocido por Hacienda.
+La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
 
 La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
 
 #### **Datos en los ficheros csv**
 
-Tal y como ya se ha mencionado, con el módulo "Spain AEAT Modelo 347 for APR" se generan, además del fichero "txt" del Modelo 347, dos ficheros adicionales "\*.csv", un fichero denominado "Facturas.csv" y otro fichero denominado "Metalico.csv".
+Tal y como ya se ha mencionado, con módulo "Spain AEAT Modelo 347 for APR" se generan, además del fichero "txt" del Modelo 347, dos ficheros adicionales "\*.csv", un fichero denominado "Facturas.csv" y otro fichero denominado "Metalico.csv".
 
 El fichero csv "XXXFacturas.csv" incluye las siguientes columnas:
 
 -   "**Tipo de documento**".  
-    Estas son las facturas estándar (AP/AR Invoice, AP/AR Credit Memo..etc) de Etendo
+    Estos son las facturas estándar (AP/AR Invoice, AP/AR Credit Memo..etc) de Etendo
 -   "**Número de documento**"  
     O número de factura/abono.
 -   "**Tercero**"  
@@ -355,7 +364,7 @@ El fichero csv "XXXFacturas.csv" incluye las siguientes columnas:
 -   "**Base Imponible**"  
     Base imponible ligada al impuesto incluido en la factura.
 -   "**Total**"  
-    Suma de la base imponible y la cuota. Este valor es el que hay que tener en cuenta ya que el 347 incluye importes totales, incluido el IVA, al ser una declaración de operaciones con terceros y no una liquidación de IVA.
+    Suma de la base imponible y la cuota. Este valor es el que hay que tener en cuenta ya que el 347 incluye importes totales, incluído el IVA, al ser una declaración de operaciones con Terceros y no una liquidación de IVA.
 -   "**Tipo de Línea**"  
     Dado que en el 347 se tiene que incluir de forma separada tanto los arrendamientos como las transmisiones de bienes inmuebles y operaciones de inversión del sujeto pasivo, por tanto, en este campo las opciones que hay son "vacío" para operaciones de compra/venta normales, "Arrendamientos", "Transmisión B. Inmuebles" e "Inversión Sujeto Pasivo".
 
@@ -364,7 +373,7 @@ El fichero csv "XXXMetálico.csv" incluye las siguientes columnas:
 -   "**Cuenta Financiera**"  
     Cuentas financieras de tipo "Caja" de Etendo.
 -   "**Línea de Transacción**"  
-    Número de línea de la transacción en la pestaña "**Transacción**" de la cuenta financiera.
+    Número de línea de la transacción en la pestaña "**Transacción**" de la cuenta Financiera.
 -   "**Identificador de Transacción**"  
     Identificador formado por la cuenta financiera, la divisa, el número de cobro, la fecha del cobro, el tercero y el importe del depósito/cobro.
 -   "**Tercero**"
@@ -376,12 +385,12 @@ El fichero csv "XXXMetálico.csv" incluye las siguientes columnas:
 -   "**Importe transacción**"  
     Importe del cobro en metálico.
 
-Estos ficheros csv nos van a permitir saber, por ejemplo:
+Estos ficheros csv nos van a permitir saber por ejemplo:
 
--   qué tercero se debe incluir en la declaración y con qué importes por haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
--   qué tercero no se debe incluir en la declaración por no haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
--   cuáles son las facturas de compra cuya suma equivale al "Importe Anual/Trimestral de Operaciones" realizadas con un proveedor en concreto
--   o bien cuáles son los cobros en efectivo cuya suma equivale al "Importe percibido en metálico" de un cliente en concreto, incluido en la declaración.
+-   que tercero se debe incluir en la declaración y con qué importes por haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   que tercero no se debe incluir en la declaración por no haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   cuales son las facturas de compra cuya suma equivale al "Importe Anual/Trimestral de Operaciones" realizadas con un proveedor en concreto
+-   o bien cuales son los cobros en efectivo cuya suma equivale al "Importe percibido en metálico" de un cliente en concreto, incluido en la declaración.
 
 #### **Presentación de declaraciones sustitutivas**
 
@@ -392,8 +401,8 @@ Para ello, el usuario deberá realizar en la aplicación los cambios en los dato
 -   que la declaración es sustitutiva
 -   el número de la declaración original que se sustituye
 
-![](../../../../../assets/drive/beimgAXSJ1DvjNuJHa1G2tIQaIYdpHt769PulMwVmx7Y7bT0NJvb08DTbx5rt5GTBVuWu7XxfJ5ZTGw7iyFufV-kRKiw2OCLzoNH17Ul6h3y5ajyc1CcVbAr-XqjfQKBAnUFcjLZ7g1n27uXFZtbX5c.png)
+![](../../../../../../assets/drive/beimgAXSJ1DvjNuJHa1G2tIQaIYdpHt769PulMwVmx7Y7bT0NJvb08DTbx5rt5GTBVuWu7XxfJ5ZTGw7iyFufV-kRKiw2OCLzoNH17Ul6h3y5ajyc1CcVbAr-XqjfQKBAnUFcjLZ7g1n27uXFZtbX5c.png)
 
----
+ ---
 
-Este trabajo es una obra derivada de [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

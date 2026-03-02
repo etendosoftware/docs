@@ -10,12 +10,14 @@ status: new
 
 # Verifactu
 
-:octicons-package-16: Paquete Java: `com.etendoerp.verifactu`
+:octicons-package-16: Javapackage: `com.etendoerp.verifactu`
 
-:octicons-package-16: Paquete Java: `com.etendoerp.verifactu.template`
+:octicons-package-16: Javapackage: `com.etendoerp.verifactu.template`
+
+
 ## Introducción
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bOCK7A1cFms?si=VAfNntVPqse58GnU" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bOCK7A1cFms?si=VAfNntVPqse58GnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Las funcionalidades de *Verifactu* en Etendo proporcionan una solución integral para el cumplimiento de los nuevos requisitos establecidos por la **Agencia Estatal de Administración Tributaria Española** en materia de facturación. Su objetivo es garantizar la transparencia, prevenir el fraude fiscal y asegurar la integridad y trazabilidad de las facturas emitidas por empresas y profesionales.
 
@@ -35,6 +37,7 @@ Este módulo permite a Etendo automatizar procesos clave como la generación, el
         - *Verifactu* + *TBAI*.
         - La combinación *SII* + *TBAI* **sí está permitida**.
     - Eliminación de registros de facturación *Verifactu* y de su respuesta asociada (deben conservarse copias de seguridad de los registros y de las *llamadas/respuestas XML* durante el plazo legal correspondiente).
+
 ## Descripción del módulo
 
 El módulo permite:
@@ -42,16 +45,17 @@ El módulo permite:
 - Generar automáticamente los archivos `XML` de registro de facturación al emitir una factura, conforme a la estructura exigida por la AEAT.
 - Enviar estos archivos en tiempo real a la Agencia Tributaria.
 - Recibir las respuestas electrónicas de la AEAT con el resultado del procesamiento.
-- Incluir en las facturas los códigos QR y la marca *Verifactu* exigidos por la normativa.
+- Incluir en las facturas los códigos QR y la marca *VeriFactu* exigidos por la normativa.
 - Consultar un historial detallado de todos los registros enviados, incluyendo sus estados de validación por parte de la AEAT.
 
 La implementación cubre:
 
 1. **Cumplimiento** técnico de los requisitos de *Verifactu*.  
-2. **Automatización** del envío de registros desde Etendo a la AEAT.  
+2. **Automatización** del envío de registros desde el Etendo a la AEAT.  
 3. **Integración** con la generación de facturas en Etendo.  
 4. **Trazabilidad** y **control** del proceso de facturación, con registro de errores, rechazos y confirmaciones.  
 5. **Generación** de códigos QR compatibles con el visor de la AEAT.
+
 ## Contenido del módulo
 
 ### Ventanas nuevas
@@ -65,208 +69,211 @@ La implementación cubre:
 ### Nuevos campos
 
 Se añaden campos y pestañas específicas de *Verifactu* en las ventanas **Factura (Cliente)**, **Rango de Impuesto**, **Tipo de Documento**, **Pedido de Venta**.
-## Configuration
+
+## Configuración
 
 !!! info
-    It is recommended that the following configurations be carried out by a user with the **administrator** role, as they require technical adjustments.
+    Se recomienda que las siguientes configuraciones sean realizadas por un usuario con rol **administrador**, ya que requieren ajustes técnicos.
 
-### Verifactu Configuration
-:material-menu: `Application` > `Financial Management` > `Verifactu` > `Verifactu Configuration`
+### Configuración Verifactu
+:material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Configuración Verifactu`
 
-In the **Verifactu Configuration** window, you define who will act as the **invoice issuer** and with which **tax the invoices will be generated**. In this case, **each legal organization that is created will be responsible for issuing**, so it is necessary to configure these fields so that the system can issue invoices with the correct tax data and the corresponding tax treatment.
+En la ventana **Configuración Verifactu** se define quién actuará como **emisor de las facturas** y con qué **impuesto se generarán**. En este caso, **cada organización legal que se cree será la responsable de la emisión**, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.
 
-- **Organization**: issuing legal entity.
-- **Applicable Tax**: VAT, IPSI or IGIC.
-- **Default QR**: if selected, a predefined implementation will be used. Otherwise, the report must be customized following [this specification](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf){target="_blank"}.
+- **Organización**: entidad legal emisora.
+- **Impuesto de Aplicación**: IVA, IPSI o IGIC.
+- **QR por Defecto**: si se marca, se utilizará una implementación predefinida. En caso contrario, deberá personalizarse el reporte siguiendo [esta especificación](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf){target="_blank"}.
 
-In addition, there is a **Monitoring** section where the **System Start** and **System Stop** fields indicate, respectively, when the environment began to be operational and when it stopped being so. This information is useful to accurately identify the periods in which **Verifactu was available** and those in which **it was not**.
+Además, existe una sección de **Monitoreo** donde los campos **Arranque del Sistema** y **Parada del Sistema** indican, respectivamente, cuándo el entorno comenzó a estar operativo y cuándo dejó de estarlo. Esta información es útil para identificar con precisión los períodos en los que **Verifactu estuvo disponible** y aquellos en los que **no lo estuvo**.
 
-On the other hand, the **Incident Detail** field will be completed when a submission presents an incident caused by factors external to the content of the invoice, such as lack of internet connection, server errors, timeouts, or other infrastructure or communication issues.
+Por otra parte, el campo **Detalle Incidencia** se completará cuando un envío presente alguna incidencia causada por factores externos al contenido de la factura, como falta de conexión a internet, errores de servidores, timeouts u otros problemas de infraestructura o comunicación.
 
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
 
 
-### Digital Certificate
-:material-menu: `Application` > `General Setup` > `Organization` > `Organization`
+### Certificado Digital
+:material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
 
 !!! info
-    For more information on how to obtain a digital certificate from the FNMT, [you can follow this guide](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html){target="_blank"}
+    Para más información sobre cómo obtener un certificado digital de la FNMT, [se puede seguir esta guía](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html){target="_blank"}
 
-In order to issue electronic invoices through the *Verifactu* system, it is essential to have a digital certificate. This certificate ensures the authenticity of the issuer’s identity and guarantees that the transmitted data has not been altered during submission. Follow the steps below to correctly configure your **Digital Certificate**:
+Para poder emitir facturas electrónicas a través del sistema *Verifactu*, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. Siga los siguientes pasos para configurar correctamente su **Certificado Digital**:
 
-1. Access the **Organization** window
+1. Acceder a la ventana **Organización**
 
-2. **Select the Legal Organization**: Choose the legal organization that will be responsible for issuing electronic invoices.
+2. **Seleccionar la Organización Legal**: Elige la organización legal que será responsable de emitir las facturas electrónicas.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png)
 
-3. Click the **Add Digital Certificate** button.
+3. Haz clic en el botón **Añadir Certificado Digital**.
     
-4. **Upload the Certificate**: In the process, you will be able to upload your digital certificate by entering the corresponding password.
+4. **Subir el Certificado**: En el proceso, podrás cargar tu certificado digital ingresando la clave correspondiente.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contrasena.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contrasena.png)
 
-5. **Save the configuration**: By pressing the **Done** button, the system will save the digital certificate information in the **Digital Certificate** tab.
+5. **Guardar la configuración**: Al presionar el botón **Hecho**, el sistema guardará la información del certificado digital en la solapa **Certificado Digital**.
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png)
 
-    Once these steps are completed, the digital certificate will be correctly configured and ready to be used for issuing electronic invoices.
+    Una vez completados estos pasos, el certificado digital estará correctamente configurado y listo para su uso en la emisión de facturas electrónicas.
 
-### Tax Range
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Tax Range`
+### Rango Impuesto
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango Impuesto`
 
-In the **Tax Range** window, the required information must be completed for each tax used when issuing invoices. This data is necessary to correctly classify taxes according to the applicable regime and the type of transaction.
+En la ventana **Rango Impuesto**, debe completarse la información requerida para cada impuesto que se utilice al emitir facturas. Estos datos son necesarios para clasificar correctamente los impuestos según el régimen aplicable y el tipo de operación.
 
-It is recommended to consult your tax advisor to determine the applicable regime, as it may vary depending on the activity carried out.
+Se recomienda consultar con su asesor fiscal cuál es el régimen que corresponde, ya que puede variar en función de la actividad desarrollada.
 
-- For VAT as applicable tax: **Special VAT Regime**
+- Para impuesto de aplicación IVA: **Régimen Especial IVA**
 
-    | VALUES | DESCRIPTION OF THE REGIME KEY FOR BREAKDOWNS WHERE THE APPLICABLE TAX IS VAT |
+    | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IVA |
     |---|---|
-    | 01 | General regime operation. |
-    | 02 | Export. |
-    | 03 | Transactions to which the special regime for second-hand goods, works of art, antiques and collectors’ items applies. |
-    | 04 | Special regime for investment gold. |
-    | 05 | Special regime for travel agencies. |
-    | 06 | Special regime for group of entities in VAT (Advanced Level) |
-    | 07 | Special regime for cash accounting criterion. |
-    | 08 | Transactions subject to IPSI / IGIC (Tax on Production, Services and Importation / Canary Islands General Indirect Tax). |
-    | 09 | Invoicing of services provided by travel agencies acting as intermediaries in the name and on behalf of others<br>(D.A.4ª RD1619/2012) |
-    | 10 | Collections on behalf of third parties of professional fees or rights derived from industrial property, authorship or others on behalf of their members, associates or registered professionals carried out by companies, associations, professional bodies or other entities performing these collection functions. |
-    | 11 | Lease transactions for business premises. |
-    | 14 | Invoice with VAT pending accrual in work certifications whose recipient is a Public Administration. |
-    | 15 | Invoice with VAT pending accrual in successive tract operations. |
-    | 17 | Transaction covered by one of the regimes provided for in Chapter XI of Title IX (OSS and IOSS) |
-    | 18 | Surcharge of equivalence. |
-    | 19 | Transactions of activities included in the Special Regime for Agriculture, Livestock and Fishing (REAGYP) |
-    | 20 | Simplified regime |
+    | 01 | Operación de régimen general. |
+    | 02 | Exportación. |
+    | 03 | Operaciones a las que se aplique el régimen especial de bienes usados, objetos de arte, antigüedades y objetos de colección. |
+    | 04 | Régimen especial del oro de inversión. |
+    | 05 | Régimen especial de las agencias de viajes. |
+    | 06 | Régimen especial grupo de entidades en IVA (Nivel Avanzado) |
+    | 07 | Régimen especial del criterio de caja. |
+    | 08 | Operaciones sujetas al IPSI / IGIC (Impuesto sobre la Producción, los Servicios y la Importación / Impuesto General Indirecto Canario). |
+    | 09 | Facturación de las prestaciones de servicios de agencias de viaje que actúan como mediadoras en nombre y por cuenta ajena<br>(D.A.4ª RD1619/2012) |
+    | 10 | Cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que realicen estas funciones de cobro. |
+    | 11 | Operaciones de arrendamiento de local de negocio. |
+    | 14 | Factura con IVA pendiente de devengo en certificaciones de obra cuyo destinatario sea una Administración Pública. |
+    | 15 | Factura con IVA pendiente de devengo en operaciones de tracto sucesivo. |
+    | 17 | Operación acogida a alguno de los regímenes previstos en el Capítulo XI del Título IX (OSS e IOSS) |
+    | 18 | Recargo de equivalencia. |
+    | 19 | Operaciones de actividades incluidas en el Régimen Especial de Agricultura, Ganadería y Pesca (REAGYP) |
+    | 20 | Régimen simplificado |
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-iva.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-iva.png)
 
 
-- For IGIC as applicable tax: **Special IGIC Regime**
+- Para impuesto de aplicación IGIC: **Régimen Especial IGIC**
 
-    | VALUES | DESCRIPTION OF THE REGIME KEY FOR BREAKDOWNS WHERE THE APPLICABLE TAX IS IGIC |
+    | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IGIC |
     |---|---|
-    | 01 | General regime operation. |
-    | 02 | Export. |
-    | 03 | Transactions to which the special regime for second-hand goods, works of art, antiques and collectors’ items applies. |
-    | 04 | Special regime for investment gold. |
-    | 05 | Special regime for travel agencies. |
-    | 06 | Special regime for group of entities in IGIC (Advanced Level) |
-    | 07 | Special regime for cash accounting criterion. |
-    | 08 | Transactions subject to IPSI / VAT (Tax on Production, Services and Importation / Value Added Tax). |
-    | 09 | Invoicing of services provided by travel agencies acting as intermediaries in the name and on behalf of others<br>(D.A.4ª RD1619/2012) |
-    | 10 | Collections on behalf of third parties of professional fees or rights derived from industrial property, authorship or others on behalf of their members, associates or registered professionals carried out by companies, associations, professional bodies or other entities performing these collection functions. |
-    | 11 | Lease transactions for business premises. |
-    | 14 | Invoice with IGIC pending accrual in work certifications whose recipient is a Public Administration. |
-    | 15 | Invoice with IGIC pending accrual in successive tract operations. |
-    | 17 | Special regime for retail trader |
-    | 18 | Special regime for small entrepreneur or professional |
-    | 19 | Exempt domestic transactions by application of article 25 Law 19/1994 |
+    | 01 | Operación de régimen general. |
+    | 02 | Exportación. |
+    | 03 | Operaciones a las que se aplique el régimen especial de bienes usados, objetos de arte, antigüedades y objetos de colección. |
+    | 04 | Régimen especial del oro de inversión. |
+    | 05 | Régimen especial de las agencias de viajes. |
+    | 06 | Régimen especial grupo de entidades en IGIC (Nivel Avanzado) |
+    | 07 | Régimen especial del criterio de caja. |
+    | 08 | Operaciones sujetas al IPSI / IVA (Impuesto sobre la Producción, los Servicios y la Importación / Impuesto sobre el Valor Añadido). |
+    | 09 | Facturación de las prestaciones de servicios de agencias de viaje que actúan como mediadoras en nombre y por cuenta ajena<br>(D.A.4ª RD1619/2012) |
+    | 10 | Cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que realicen estas funciones de cobro. |
+    | 11 | Operaciones de arrendamiento de local de negocio. |
+    | 14 | Factura con IGIC pendiente de devengo en certificaciones de obra cuyo destinatario sea una Administración Pública. |
+    | 15 | Factura con IGIC pendiente de devengo en operaciones de tracto sucesivo. |
+    | 17 | Régimen especial de comerciante minorista |
+    | 18 | Régimen especial del pequeño empresario o profesional |
+    | 19 | Operaciones interiores exentas por aplicación artículo 25 Ley 19/1994 |
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-igic.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-igic.png)
 
-- For IPSI as applicable tax: **Special IPSI Regime**
+- Para impuesto de aplicación IPSI: **Régimen Especial IPSI**
 
-    | VALUES | DESCRIPTION OF THE REGIME KEY FOR BREAKDOWNS WHERE THE APPLICABLE TAX IS IPSI |
+    | VALORES | DESCRIPCIÓN DE LA CLAVE DE RÉGIMEN PARA DESGLOSES DONDE EL IMPUESTO DE APLICACIÓN ES EL IPSI |
     |---|---|
-    | 01 | General regime operation. |
-    | 08 | Transactions subject to IGIC / VAT (Canary Islands General Indirect Tax / Value Added Tax). |
-    | 11 | Lease transactions for business premises. |
-    | 18 | Transactions included in article 73.4 and 73.5 of the IPSI tax ordinance (Ceuta only). |
-    | 19 | Exempt domestic transactions. |
-    | 20 | Objective estimation regime. |
+    | 01 | Operación de régimen general. |
+    | 08 | Operaciones sujetas al IGIC / IVA (Impuesto General Indirecto Canario / Impuesto sobre el Valor Añadido). |
+    | 11 | Operaciones de arrendamiento de local de negocio. |
+    | 18 | Operaciones recogidas en el artículo 73.4 y 73.5 de la Ordenanza fiscal del IPSI (Sólo Ceuta). |
+    | 19 | Operaciones interiores exentas. |
+    | 20 | Régimen de estimación objetiva. |
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-ipsi.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-ipsi.png)
 
 
-- If no tax applies: **Non-Subject Cause**
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-no-sujecion.png)
+- Si no aplica impuesto: **Causa no Sujeción**
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-no-sujecion.png)
 
-- If exempt: **Exemption Cause**
+- Si está exento: **Causa de Exención**
 
-    | VALUES | DESCRIPTION |
+    | VALORES | DESCRIPCIÓN |
     |---|---|
-    | E1 | Exempt under article 20 |
-    | E2 | Exempt under article 21 |
-    | E3 | Exempt under article 22 |
-    | E4 | Exempt under articles 23 and 24 |
-    | E5 | Exempt under article 25 |
-    | E6 | Exempt for others |
+    | E1 | Exenta por el artículo 20 |
+    | E2 | Exenta por el artículo 21 |
+    | E3 | Exenta por el artículo 22 |
+    | E4 | Exenta por los artículos 23 y 24 |
+    | E5 | Exenta por el artículo 25 |
+    | E6 | Exenta por otros |
 
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-exencion.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-exencion.png)
 
 !!! note
-    If equivalence surcharges are used, it is enough to complete the field in the main tax. For example, for the tax **Deliveries VAT+RE 21+5.2%**, which includes the sub-taxes **Deliveries VAT+RE 21+5.2% (+21%)** and **Deliveries VAT+RE 21+5.2% (+5.2%)**, it is only necessary to fill in the field in the tax Deliveries **VAT+RE 21+5.2% (+21%)**.
+    Si se utilizan recargos de equivalencia, basta con completar el campo en el impuesto principal. Por ejemplo, para el impuesto **Entregas IVA+RE 21+5.2%**, que incluye los subimpuestos **Entregas IVA+RE 21+5.2% (+21%)** y **Entregas IVA+RE 21+5.2% (+5.2%)**, solo es necesario rellenar el campo en el impuesto Entregas **IVA+RE 21+5.2% (+21%)**.
 
 
-### Configuration for Processes that Generate Invoices
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Type`
+### Configuración para Procesos que Generan Facturas
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
 
-To send to *Verifactu* the invoices generated from other processes (for example, processes that **create invoices directly in Completed status**), you must **configure the Document Type beforehand**.
+Para enviar a *Verifactu* las facturas que se generan desde otros procesos (por ejemplo, procesos que **crean facturas directamente en estado Completado**), se debe **configurar previamente el Tipo de Documento**.
 
 
-In the **Document Type** window, in the document that will be assigned to the invoice, the fields in the **Verifactu** section must be filled in.  
-The following fields are **mandatory**:
+En la ventana **Tipo de Documento**, en el documento que se le asignará a la factura, se deben informar los campos de la sección **Verifactu**.  
+Los siguientes campos son **obligatorios**:
 
-- **Invoice Type**
-- **Operation Description**
+- **Tipo de Factura**
+- **Descripción de Operación**
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
 
-The values entered in this configuration will be used to generate the invoicing record that will later be sent to *Verifactu*.
+Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a *Verifactu*.
 
-### Settings for Corrective Invoices by Substitution or F3
-With the new invoicing procedures introduced by the AEAT, it is no longer possible to reactivate or modify an invoice that has already been issued (completed and sent to *Verifactu*). To correct errors in a previously issued invoice, the concept of a **Corrective Invoice** is introduced, which is issued specifically to correct incidents or rectify data from a previous invoice.
-Therefore, using this functionality requires certain configuration settings to ensure that the recorded and submitted information is correct.
+### Ajustes para Facturas Rectificativas por Sustitución o F3
+Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a *Verifactu*). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
+Por tanto, la utilización de esta funcionalidad requiere realizar determinados ajustes de configuración para garantizar que la información registrada y enviada sea correcta.
 
-### Accounting Settings
+### Ajustes Contables
 
-Issuing a substitute invoice requires adjusting accounting entries, since the only accounting data that must be preserved are those corresponding to the invoice created to replace the previous one.
+La emisión de una factura sustitutiva requiere ajustar los asientos contables, ya que los únicos datos contables que deben conservarse son los correspondientes a la factura que se crea para sustituir a la anterior.
 
-To do this, an accounting template has been developed that:
+Para ello, se ha desarrollado una plantilla contable que:
 
-- Detects the related original invoice.
-- Copies its accounting entries.
-- Generates reverse entries (swapping Debit and Credit), canceling the original accounting impact.
+- Detecta la factura original relacionada.
+- Copia sus apuntes contables.
+- Genera los apuntes inversos (intercambiando Debe y Haber), anulando el impacto contable original.
 
-### Accounting Template Configuration
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Accounting Templates`
+### Configuración de la Plantilla Contable
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Plantillas de Contabilidad`
 
-In the **Accounting Templates** window, create a record with the following values:
+En la ventana **Plantillas de Contabilidad**, crear un registro con los siguientes valores:
 
-- **Entity**: Current Client
-- **Organization**: Root Organization
-- **Table**: `C_Invoice`
-- **Name**: `Verifactu Accounting Template`
-- **Java Class**: `com.etendoerp.verifactu.accounting.DocInvoiceVerifactu`
+- **Entidad**: Cliente actual
+- **Organización**: Organización raíz
+- **Tabla**: `C_Invoice`
+- **Nombre**: `Plantilla Contabilidad Verifactu`
+- **Clase Java**: `com.etendoerp.verifactu.accounting.DocInvoiceVerifactu`
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla-contabilidad.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/plantilla-contabilidad.png)
 
 !!! note
-    If the system already has an accounting template, you must apply the changes that were in your template to the *Verifactu* accounting template, since it is only possible to have a single template configured.
+    Si el sistema ya dispone de una plantilla de contabilidad, debe aplicar los cambios que tenía en su plantilla a la plantilla de contabilidad de *Verifactu*, ya que solo es posible tener configurada una única plantilla.
 
-### Accounting Schema Configuration
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Accounting Schema`
+### Configuración de Esquema Contable
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema Contable`
 
-In the **Accounting Schema** window, in the **Tables to Post** tab, locate the `Invoice` table and link the created template in the **Accounting Template** field (the field may be hidden by application logic).
+En la ventana **Esquema Contable**, en la solapa **Tablas a Contabilizar**, localizar la tabla `Invoice` y vincularle la plantilla creada en el campo **Plantilla Contabilidad** (el campo puede estar oculto por lógica de aplicación).
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/esquema-contable.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/esquema-contable.png)
 
-### Zero Collection
+### Cobro Cero
 
-When the **original invoice** has not been collected, but has a defined **payment plan**, upon completing the **substitute invoice** the system automatically generates a **zero collection** on the original invoice.
+Cuando la **factura original** no ha sido cobrada, pero tiene un **plan de pagos** definido, al completar la **factura sustitutiva** el sistema genera automáticamente un **cobro cero** en la factura original.
 
-This collection is recorded on the **original invoice** using the **accounting account associated with the business partner**, in order to insert the necessary **accounting concept** and leave the original invoice without an active payment plan. In this way, the **only active payment plan** is linked to the **new substitute invoice**.
+Este cobro se registra en la **factura original** utilizando la **cuenta contable asociada al tercero**, con el objetivo de insertar el **concepto contable** necesario y dejar la factura original sin un plan de pagos activo. De este modo, el **único plan de pagos activo** queda vinculado a la **nueva factura sustitutiva**.
 
-To configure this **accounting concept**, go to the window :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Accounting Concept`, select the legal organization used and, in the **Accounting** tab, add a record with the **accounting schema** and finally complete the `Credit account` field with the **account associated with the business partner** used.
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
+Para configurar este **concepto contable**, se debe acceder a la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Concepto Contable`, seleccionar la organización legal utilizada y, en la solapa **Contabilidad**, añadir un registro con el **esquema contable** y por último, completar el campo `Cuenta crédito` con la **cuenta asociada al tercero** utilizado.
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
 
 
-This account is the one shown in the window :material-menu: `Application` > `Master Data` > `Business Partner`, subtab **Customer Accounting**, in the `Customer Receipts` field of the accounting schema used.
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
+Esta cuenta es la que figura en la ventana :material-menu: `Aplicación` > `Datos Maestros` > `Terceros`, subsolapa **Contabilidad Cliente**, en el campo `Recibos de clientes` del esquema contable utilizado.
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
+
+
 ## Proceso de Envío a Verifactu
 
 A continuación se detallan los pasos necesarios para que una factura se dé de alta en *Verifactu*.  
@@ -280,7 +287,7 @@ Para iniciar el proceso, cree una factura de venta utilizando una organización 
 
 Debe completar los siguientes campos obligatorios en la Factura:
 
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png)
 
 - **Tipo de Factura**
 
@@ -303,7 +310,7 @@ Debe completar los siguientes campos obligatorios en la Factura:
 
     Así, cada vez que se cree una factura con este documento, se rellenarán automáticamente los campos **Tipo de Factura** y **Descripción de la Operación**.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
 
 
 Opcionalmente, puede completar:
@@ -318,13 +325,13 @@ Al completar la factura:
 
 - Se genera un archivo adjunto con el **Registro de Facturación (RF)**, que será utilizado para dar de **Alta** la factura en *Verifactu*.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf-adjunto.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf-adjunto.png)
 
 - Una vez generado el RF, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de *Verifactu*) se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada *60 segundos*.
 
 - El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu** refrescando los datos.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/estado-envio-alta.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/estado-envio-alta.png)
 
 ### Creación Automática de Facturas de Venta
 
@@ -333,17 +340,18 @@ Para aquellas facturas de venta en estado **Completado** que se generen desde pr
 !!! example
 
     1. Se crea un **Pedido de Venta**.
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/pedido.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/pedido.png)
       
     2. Mediante el proceso **Crear Facturas Desde Pedidos** (o cualquier otro proceso utilizado para la generación de facturas), se genera la **Factura**, la cual tomará los datos configurados en el **Tipo de Documento** utilizado.
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
 
     3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a *Verifactu*.
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
 
 !!! warning  
     Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a *Verifactu*.  
     En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de *Verifactu*.
+
 ## Proceso de Anulación de Factura
 
 Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema *Verifactu* en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
@@ -359,12 +367,15 @@ En caso de necesitar realizar simulaciones en entorno productivo (por ejemplo, p
 Etendo implementa esta lógica de forma segura **exclusivamente en entornos de desarrollo**, permitiendo que las facturas se creen y anulen automáticamente como parte del flujo de testeo. **Este comportamiento no se encuentra disponible en entorno productivo**, donde las anulaciones deben gestionarse conforme al procedimiento fiscal establecido.
 
 !!! info
-    Para más información, consulte: [FAQs para desarrolladores Verifactu – Agencia Tributaria](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/FAQs-Desarrolladores.pdf), apartado 11.
+    Para más información, consulta: [FAQs para desarrolladores Verifactu – Agencia Tributaria](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/FAQs-Desarrolladores.pdf), apartado 11.
+
+
 ## Tratamiento de Errores en Facturación
 
 Esta sección describe cómo actuar ante errores durante la emisión de facturas o registros de facturación (RF), conforme al *RD 1619/2012* y al *RD 1007/2023*.
 
-### Subsanación
+
+### Subsanación 
 
 **Sin Factura Rectificativa**
 
@@ -382,11 +393,12 @@ Debe utilizarse cuando el error afecta únicamente al `XML` (registro de factura
 2. Corregir los datos que ocasionaron el rechazo o se aceptó con errores.
 3. El proceso automático genera un nuevo **Registro de Facturación** de **alta de subsanación** (`Subsanacion = "S"`) y lo enviará nuevamente.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion.png)
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion-aceptada.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion-aceptada.png)
 
     !!! warning
         No debe aplicarse subsanación si el error requiere una **factura rectificativa**, conforme al Reglamento de Facturación (ROF).
+
 
 ### Rectificación
 
@@ -400,6 +412,7 @@ Se utiliza cuando:
 !!! info
     Puede consultar ejemplos sobre cómo proceder ante rectificaciones en el siguiente enlace: [Procedimientos de facturación](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html).
 
+
 #### Claves Verifactu
 
 Para crear una factura rectificativa, debe seleccionarse uno de los siguientes tipos, según corresponda:
@@ -409,6 +422,7 @@ Para crear una factura rectificativa, debe seleccionarse uno de los siguientes t
 - `R3`: Factura rectificativa (Art. 80.4)
 - `R4`: Factura rectificativa (otros casos)
 - `R5`: Factura rectificativa en facturas simplificadas
+
 
 #### Rectificación por diferencias
 
@@ -421,9 +435,9 @@ Crear una nueva factura de venta utilizando un **tipo de documento para facturas
 2. Indicar que se trata de una **Rectificativa por Diferencias**.
 3. Enlazar la factura original en la solapa **Factura Rectificativa**.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-orig.png)  
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-rect.png)  
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/solapa-reversed-diferencia.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-orig.png)  
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-rect.png)  
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/solapa-reversed-diferencia.png)
 
     !!! example
         En este ejemplo, la factura original declaraba 20 unidades del producto, pero en realidad se debían facturar 21. Por lo tanto, la factura rectificativa incluye una línea adicional por esa unidad faltante.
@@ -439,9 +453,9 @@ Crear una nueva factura de venta utilizando un **tipo de documento para facturas
 2. Indicar que se trata de una **Rectificativa por Sustitución**.
 3. Enlazar la factura original en la solapa **Factura Rectificativa**.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-orig.png)  
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-rect.png)  
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/contabilidad-ajustada.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-orig.png)  
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-rect.png)  
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/contabilidad-ajustada.png)
 
     !!! example
         En este ejemplo, la factura original incluía un producto incorrecto. Se genera una factura rectificativa **por sustitución** con el producto correcto y se ajusta la contabilidad para reflejar la operación correctamente.
@@ -493,15 +507,14 @@ WHERE p.created >= v.created
       AND d2.FIN_Payment_Detail_ID IS NOT NULL
   )
 ```
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
 
 !!! note
     Puede consultar más información sobre cómo crear una [Alerta](../../../basic-features/general-setup/application/alert.md)
 
 ### Rectificaciones desde Pedidos de Venta o Devolución de Cliente
 
-Se pueden generar **facturas rectificativas** a partir de un **Pedido de Venta** o una **Devolución de Cliente**.
+Se pueden generar **facturas rectificativas** a partir de un **Pedido de Venta** o una **Devolución de Cliente**.  
 
 Para hacerlo:
 
@@ -512,16 +525,17 @@ Para hacerlo:
 3. Indicar la factura a rectificar. En la sección **Verifactu** del pedido o la devolución, completar el campo **Factura Rectificada** con la **factura original** que se va a rectificar.
 
 Con esta configuración, al **generar la factura** desde el pedido o la devolución, el sistema emitirá automáticamente una **factura rectificativa**, utilizando la configuración definida en el **tipo de documento**.
+
 ## Consulta del Estado de Envío de Facturas
 
-Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la Agencia Tributaria**.
+Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la **Agencia Tributaria.
 
 ### Monitor Verifactu
 :material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Monitor Verifactu`
 
 Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
 
 ### Consulta Facturas Verifactu
 :material-menu: `Aplicación` > `Gestión Financiera` > `Verifactu` > `Consulta Facturas Verifactu`
@@ -540,7 +554,9 @@ Cuando el resultado de la consulta **supera los 10.000 registros**, es posible a
 - **Número de Serie**: Número de serie y número de factura que identifican el **último registro de facturación consultado**.
 - **Fecha de Emisión**: Fecha de emisión del **último registro de facturación consultado**.
 
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/consulta-facturas.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/consulta-facturas.png)
+
+
 ## QR Tributario
 
 Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar la verificación de su emisión y registro ante la Agencia Tributaria (AEAT).
@@ -551,17 +567,19 @@ Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar
 - **Transparencia fiscal:** incrementa la confianza del cliente y contribuye a la prevención del fraude.
 - **Integridad documental:** garantiza la inalterabilidad y trazabilidad de las facturas una vez emitidas.
 
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-factura.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-factura.png)
 
 ### Resultados Posibles al Escanear el QR
 
 - **Factura encontrada en AEAT:**
   
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-alta.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-alta.png)
 
 - **Factura no encontrada en AEAT:**
   
-  ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-baja.png)
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-baja.png)
+
+
 ## Desinstalar el Módulo
 
 Para desinstalar el módulo y evitar futuros problemas con registros huérfanos, se debe seguir una secuencia de pasos:
@@ -572,7 +590,8 @@ Para desinstalar el módulo y evitar futuros problemas con registros huérfanos,
   DELETE FROM c_attachment_conf WHERE c_attachment_method_id = 'E30F0DBF1C164251B6163AA6B078F2AD';
   ```
 
-2. Una vez finalizada correctamente la consulta, [elimine el módulo](../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md#uninstall-modules-uninstallmodule) siguiendo el procedimiento correspondiente al método de instalación (Sources/JARs)
+2. Una vez finalizada correctamente la consulta, [elimine el módulo](../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md#desinstalar-módulos-uninstallmodule) siguiendo el procedimiento correspondiente al método de instalación (Sources/JARs)
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+

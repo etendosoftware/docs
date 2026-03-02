@@ -1,8 +1,8 @@
 ---
-title: Impuestos: configuración para España (Impuestos para España)
+title: Taxes:configuration for Spain (Impuestos para España)
 ---
 
-## Javapackages
+## Javapackages 
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
@@ -19,41 +19,42 @@ configurados con el objetivo de que los usuarios de Etendo puedan gestionar:
 -   el IVA Nacional
 -   el IVA Intracomunitario
 -   el IVA de Importación/Exportación
--   las retenciones de IRPF, "Impuesto sobre la Renta de las Personas Físicas" más comúnmente utilizados en España
+-   las retenciones de IRPF, "Impuesto sobre la Renta de las Personas Físicas" más comúnmente utilizados en el España
 -   así como el IGIC, "Impuesto General Indirecto Canario" de aplicación en Canarias y el IPSI, "Impuesto sobre la Producción, los Servicios y la Importación" de aplicación en Ceuta y Melilla.
 
 Es importante tener en cuenta que en el caso del:
 
--   **IVA Nacional**, los rangos de impuestos están asociados a España como país de origen y destino; España incluye "Península y Baleares".
+-   **IVA Nacional**, los rangos de impuestos están asociados a España como país de origen y destino, España inlcuye "Península y Baleares".
 -   **IVA Intracomunitario**:
-    -   los rangos de impuestos de venta o entregas intracomunitarias exentas están asociados a España como país de origen y a países de la UE como país de destino.
-    -   los rangos de impuestos de compra o adquisiciones intracomunitarias están asociados a países de la UE como país de origen y a España como país de destino.
+    -   los rangos de impuestos de venta o entregas intracomunitarias exentas, están asociados a España como país de origen y países de la UE como país de destino.
+    -   los rangos de impuestos de compra o adquisiciones intracomunitarias, están asociados a países de la UE como país de origen y España como país de destino.
 -   **IVA de Importación/Exportación**:
-    -   los rangos de impuestos de venta o exportaciones exentas están asociados a España como país de origen y a terceros países como país de destino.
-    -   los rangos de impuestos de importaciones están asociados a terceros países como país de origen y a España como país de destino.
+    -   los rangos de impuestos de venta o exportaciones exentas, están asociados a España como país de origen y terceros países como país de destino.
+    -   los rangos de impuestos de importaciones, están asociados a terceros países como país de origen y España como país de destino.
 -   **IGIC**, los rangos de impuestos están asociados a Canarias como región de origen/destino según aplique.
 -   **IPSI**, los rangos de impuestos están asociados a Ceuta y Melilla como región de origen/destino según aplique.
 
 Por tanto:
 
--   Si su organización se localiza en Península y Baleares, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IVA.
--   Si su organización se localiza en Canarias, Ceuta o Melilla, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IGIC o IPSI.
+-   Si su organización se localiza en Península y Baleares, sus productos/servicios tiene que estar asociados a las categorías de impuesto de IVA
+-   Si su organización se localiza en Canarias, Ceuta o Melilla, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IGIC o IPSI
 
-Es importante recalcar que la configuración de impuestos para España no incluye impuestos de "IVA Nacional" de otros países miembros de la UE como "IVA Nacional de Italia" o "Francia", para las ventas que, excediendo el límite requerido, deban liquidarse en el país de Europa que aplique.
+Es importante recalcar que la configuración de impuestos para España, no incluye impuestos de "IVA Nacional" de otros países miembros de la UE como "IVA Nacional de Italia" o "Francia", para las ventas que excediendo el límite requerido deban liquidarse en el país de Europa que aplique.
 
 ## **Instalación del Módulo**
 
 Para la instalación del módulo de Impuestos para España, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
 
--   Instalación de la última versión disponible de Etendo
+-   Instalación de la última versión disponible de Etendo 
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}.
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
 
 ## **Aplicación del Módulo**
 
-Es importante recalcar que, una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
+Es importante recalcar que una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
 
 Los datos se pueden aplicar:
 
@@ -64,6 +65,7 @@ Los datos se pueden aplicar:
 
 A continuación, se encuentran los impuestos disponibles en el conjunto de datos de este módulo.
 
+
 - Adquisiciones IVA 0%
 - Adquisiciones IVA 0+RE 0+0%
 - Adquisiciones IVA+RE 21+1.75%
@@ -73,7 +75,7 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Entregas IVA 0+RE 0+0%
 - Entregas IVA 5%
 - Entregas IVA+RE 21+1.75%
-- Entregas IVA+RE 5+0.62%
+- Entregas IVA+RE 5+0.62% 
 - Servicios prestados 0%
 - Prestación servicios nacional 5%
 - Servicios prestados nacional 5%
@@ -169,7 +171,7 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Adquisiciones IVA 10% -2%R
 - Adquisiciones IVA 21%
 - Adquisiciones IVA 4% -2%R
-- Adquisiciones IVA+RE 10+1.4%
+- Adquisiciones IVA+RE 10+1.4% 
 - Adquisiciones IVA+RE 21+5.2%
 - Adquisiciones Intracomunitarias 21% ISP
 - Adquisiciones a Canarias,Ceuta y Melilla 10%
@@ -198,8 +200,8 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Entregas IVA 21%
 - Entregas IVA 21% ISP
 - Entregas IVA 21% Revendedores
-- Entregas IVA+RE 10+1.4%
-- Entregas IVA+RE 21+5.2%
+- Entregas IVA+RE 10+1.4% 
+- Entregas IVA+RE 21+5.2% 
 - Entregas IVA+RE 21+5.2% ISP
 - Entregas IVA+RE 21+5.2% IVA Normal ISP
 - Importaciones 10%
@@ -219,9 +221,9 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Inversión Sujeto Pasivo no UE exento
 - Prestación servicios nacional 0% -21%R
 - Prestación servicios nacional 0% -9%R
-- Prestación servicios nacional 10%
+- Prestación servicios nacional 10% 
 - Prestación servicios nacional 10% -9%R
-- Prestación servicios nacional 21%
+- Prestación servicios nacional 21% 
 - Prestación servicios nacional 21% -1%R
 - Prestación servicios nacional 21% -21%R
 - Prestación servicios nacional 21% -9%R
@@ -263,7 +265,7 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Adquisiciones IVA 18%
 - Adquisiciones IVA 8%
 - Adquisiciones IVA+RE 18+4%
-- Adquisiciones IVA+RE 8+1%
+- Adquisiciones IVA+RE 8+1% 
 - Adquisiciones a Canarias,Ceuta y Melilla 18%
 - Adquisiciones a Canarias,Ceuta y Melilla 8%
 - Adquisiciones intracomunitarias 18%
@@ -279,8 +281,8 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Entregas Bienes Inversión 18%
 - Entregas IVA 18%
 - Entregas IVA 8%
-- Entregas IVA+RE 18+4%
-- Entregas IVA+RE 8+1%
+- Entregas IVA+RE 18+4% 
+- Entregas IVA+RE 8+1% 
 - Entregas intracomunitarias Bienes Inversión (%N=>0%)
 - Exportaciones Bienes Inversión (%N=>0%)
 - Importaciones 18%
@@ -293,11 +295,11 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Inversión Sujeto Pasivo UE 8%
 - Inversión Sujeto Pasivo no UE 18%
 - Inversión Sujeto Pasivo no UE 8%
-- Prestación servicios nacional 18%
+- Prestación servicios nacional 18% 
 - Prestación servicios nacional 18% -1%R
 - Prestación servicios nacional 18% -15%R
 - Prestación servicios nacional 18% -7%R
-- Prestación servicios nacional 8%
+- Prestación servicios nacional 8% 
 - Servicios prestados nacional 18%
 - Servicios prestados nacional 18% -15%R
 - Servicios prestados nacional 18% -7%R
@@ -333,10 +335,10 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Importaciones exentas
 - Inversión Sujeto Pasivo UE 16%
 - Inversión Sujeto Pasivo UE 7%
-- Inversión Sujeto Pasivo no UE 7%
+- Inversión Sujeto Pasivo no UE 7% 
 - Prestación servicios interiores exentos (art 20)
 - Prestación servicios interiores exentos (art 22)
-- Prestación servicios nacional 16%
+- Prestación servicios nacional 16% 
 - Prestación servicios nacional 16% -15%R
 - Prestación servicios nacional 16% -7%R
 - Prestación servicios nacional 4%
@@ -356,10 +358,10 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Transmisión B.Inmuebles 7%
 - Adquisiciones IVA 16%
 - Adquisiciones IVA 4%
-- Adquisiciones IVA 7%
+- Adquisiciones IVA 7% 
 - Adquisiciones IVA+RE 16+4%
-- Adquisiciones IVA+RE 4+0,5%
-- Adquisiciones IVA+RE 7+1%
+- Adquisiciones IVA+RE 4+0,5% 
+- Adquisiciones IVA+RE 7+1% 
 - Adquisiciones interiores exentas (art 20)
 - Adquisiciones intracomunitarias 16%
 - Adquisiciones intracomunitarias 4%
@@ -367,10 +369,10 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Entregas IVA 16%
 - Entregas IVA 4%
 - Entregas IVA 4% Revendedores
-- Entregas IVA 7%
-- Entregas IVA+RE 16+4%
-- Entregas IVA+RE 4+0,5%
-- Entregas IVA+RE 7+1%
+- Entregas IVA 7% 
+- Entregas IVA+RE 16+4% 
+- Entregas IVA+RE 4+0,5% 
+- Entregas IVA+RE 7+1% 
 - Entregas intracomunitarias (%N=>0%)
 - Entregas intracomunitarias (%N=>0%) ISP
 - Entregas intracomunitarias (%R=>0%)
@@ -385,6 +387,6 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 - Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
 - Servicios prestados exentos con derecho a deducción
 
----
+ ---
 
-Este trabajo es una obra derivada de [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
