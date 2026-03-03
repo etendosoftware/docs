@@ -46,7 +46,7 @@ Esta solapa muestra un registro detallado de todos los procesos asíncronos que 
 **Campos a tener en cuenta:**
 
 - **Nivel**: Número secuencial que determina el orden de las entradas de registro para esta tarea tras la ejecución de un proceso asíncrono.
-- **Definición del Proceso**: Referencia a la implementación de la definición del proceso utilizando la infraestructura Process with 3.0.
+- **Definición del Proceso**: Referencia a la implementación de la [definición de proceso](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md) utilizando la infraestructura Process with 3.0.
 - **Organización**: La unidad organizativa asociada a la entrada de registro (p. ej., tienda, departamento). Los datos pueden compartirse entre organizaciones.
 - **Activo**: Indica si el registro está activo o desactivado. Los registros desactivados no están disponibles para su selección, pero permanecen disponibles para informes.
 - **Comienzo**: La marca de tiempo cuando se inició la ejecución del proceso.
