@@ -46,7 +46,7 @@ This tab displays a detailed record of all asynchronous processes that have been
 **Fields to note:**
 
 - **Line No**: Sequential number that determines the order of log entries for this task after the execution of an asynchronous process.
-- **Process Definition**: Reference to the process definition implementation using Process with 3.0 infrastructure.
+- **Process Definition**: Reference to the [process definition](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition.md) implementation using Process with 3.0 infrastructure.
 - **Organization**: The organization unit associated with the log entry (e.g., store, department). Data can be shared between organizations.
 - **Active**: Indicates whether the record is active or deactivated. Deactivated records are not available for selection but remain available for reporting.
 - **Start Time**: The timestamp when the process execution started.

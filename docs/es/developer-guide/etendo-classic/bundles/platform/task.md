@@ -85,10 +85,18 @@ Estos comandos son **requisitos previos obligatorios** para que Debezium detecte
 
 
 ```bash title="Terminal"
-./gradlew update.database compile.complete smartbuild --info 
+./gradlew update.database compile.complete smartbuild --info
 ```
 
+### Inicializar servicios RX
 
+Una vez que el entorno esté compilado y Tomcat esté en ejecución, con el rol `System Administrator`, navegar a:
+
+:material-menu: `Aplicación` > `Etendo RX` > `RX Config`
+
+En esta ventana, ejecutar el proceso **Initialize RX Services** desde la barra de herramientas. Este paso registra los datos de acceso necesarios para la interacción entre los servicios de Etendo RX. Para más detalles, consultar [Configuraciones de Etendo RX](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
+
+![](../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
 
 ## Ventana Tipo de mantenimiento
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Tipo de mantenimiento`
