@@ -141,7 +141,7 @@ In addition, optional filters (JEXL) associated to the table fields or even adva
 Defines the lifecycle of the task by listing the possible statuses (e.g., Pending, In Progress, Closed) in a specific sequence. 
 When a task is created it is assigned the **first status** of the sequence. Assigning or changing the status of a task triggers the **events** defined in the following subtab.
 
-![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png){: .legacy-image-style}
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png)
 
 **Fields to note:**
 
