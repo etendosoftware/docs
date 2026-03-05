@@ -193,7 +193,7 @@ Cree una nueva secuencia con los siguientes valores:
 
 Esta ventana le permite crear estados reutilizables para tipos de mantenimiento. Los valores por defecto incluyen `Pendiente`, `En progreso`, `Completada` y `Cerrado`. Los desarrolladores con el rol `System Administrator` pueden añadir estados personalizados y exportarlos en un módulo en desarrollo. En la ventana Tipo de mantenimiento se utilizan estos estados, permitiendo al motor de flujo de trabajo rastrear y desencadenar transiciones de estado y eventos asociados (incluidas notificaciones de Kafka).
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png)
 
 **Campos a tener en cuenta:**
 
@@ -208,7 +208,7 @@ Esta ventana le permite crear estados reutilizables para tipos de mantenimiento.
 
 Esta ventana le permite crear prioridades reutilizables para mantenimientos. Las prioridades ayudan a organizar y categorizar los mantenimientos por nivel de importancia. Los desarrolladores con el rol `System Administrator` pueden añadir prioridades personalizadas y exportarlas en un módulo en desarrollo. Estas prioridades pueden asignarse a los mantenimientos para indicar su importancia relativa.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png)
 
 **Campos a tener en cuenta:**
 
@@ -231,10 +231,10 @@ Solo es necesario definir un nombre y la ruta Java donde se encuentra la impleme
 
 **Campos a tener en cuenta:**
 
+- **Activo**: Casilla para habilitar o deshabilitar este algoritmo.
 - **Módulo**: El módulo donde se exportará este componente.
 - **Nombre**: El nombre visible que se mostrará al usar este algoritmo.
 - **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`.
-- **Activo**: Casilla para habilitar o deshabilitar este algoritmo.
 
 
 ## Flujo de trabajo de ejemplo
