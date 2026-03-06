@@ -10599,6 +10599,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#inicializar-servicios-rx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializar servicios RX
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -10644,6 +10653,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-la-secuencia-del-no-de-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la secuencia del Nº de mantenimiento
+    </span>
+  </a>
   
 </li>
         
@@ -14850,6 +14868,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#inicializar-servicios-rx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicializar servicios RX
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14895,6 +14922,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-la-secuencia-del-no-de-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la secuencia del Nº de mantenimiento
+    </span>
+  </a>
   
 </li>
         
@@ -15079,8 +15115,12 @@
 </li>
 </ol>
 <h3 id="compilar-el-entorno-e-iniciar-tomcat">Compilar el entorno e iniciar Tomcat</h3>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
 </span></code></pre></div>
+<h3 id="inicializar-servicios-rx">Inicializar servicios RX</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
+<p>Una vez que el entorno esté compilado y Tomcat esté en ejecución, con el rol <code>System Administrator</code>, navegar a la ventana <strong>RX Config</strong> y ejecutar el proceso <strong>Initialize RX Services</strong> desde la barra de herramientas. Este paso registra los datos de acceso necesarios para la interacción entre los servicios de Etendo RX. Para más detalles, consultar <a href="../../../../etendo-rx/getting-started/#etendo-rx-configurations">Configuraciones de Etendo RX</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png"></a></p>
 <h2 id="ventana-tipo-de-mantenimiento">Ventana Tipo de mantenimiento</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Gestión de mantenimientos</code> &gt; <code>Tipo de mantenimiento</code></p>
 <p>En esta ventana se definen los tipos de mantenimiento. En este componente se definen los eventos de base de datos que crean automáticamente un nuevo mantenimiento, la secuencia de estados que debe seguir y las acciones que se ejecutarán en cada estado. </p>
@@ -15100,9 +15140,12 @@
 <li><strong>Algoritmo Round-Robin por carga de trabajo</strong>: Asigna los mantenimientos al recurso con la menor carga actual. Úselo cuando el tamaño de los mantenimientos o la capacidad de los recursos varíe.</li>
 </ul>
 </li>
+<li>
+<p><strong>Prioridad</strong>: Prioridad por defecto opcional asignada a los mantenimientos creados a partir de este tipo de mantenimiento (p. ej., <code>Crítica</code>, <code>Mayor</code>, <code>Menor</code>, <code>Trivial</code>). Si se establece, todos los nuevos mantenimientos de este tipo heredarán esta prioridad, a menos que se sobrescriba manualmente.</p>
+</li>
 </ul>
 <h3 id="solapa-tabla">Solapa Tabla</h3>
-<p>En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento. 
+<p>En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento.
 Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de la tabla o incluso filtros avanzados definidos como acciones. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -15120,7 +15163,7 @@ Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de l
 <h3 id="solapa-estado">Solapa Estado</h3>
 <p>Define el ciclo de vida del mantenimiento listando los posibles estados (p. ej., Pendiente, En progreso, Cerrado) en una secuencia específica. 
 Cuando se crea un mantenimiento, se le asigna el <strong>primer estado</strong> de la secuencia. Asignar o cambiar el estado de un mantenimiento desencadena los <strong>eventos</strong> definidos en la siguiente subsolapa.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png" data-desc-position="bottom"><img alt="alt text" class="legacy-image-style" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png"></a></p>
 <p><strong>Campos a tener en cuenta:</strong></p>
 <ul>
 <li><strong>Módulo</strong>: El módulo donde se exportará este componente.</li>
@@ -15136,10 +15179,70 @@ Cuando se crea un mantenimiento, se le asigna el <strong>primer estado</strong> 
 <li><strong>Job</strong>: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de <a href="">Jobs asíncronos</a>.</li>
 <li><strong>Activo</strong>: Casilla para habilitar o deshabilitar este evento.</li>
 </ul>
+<h3 id="configuracion-de-la-secuencia-del-no-de-mantenimiento">Configuración de la secuencia del Nº de mantenimiento</h3>
+<p>Cada Tipo de mantenimiento puede vincularse a una <a href="../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/">Secuencia de documento (numeración)</a> para autogenerar el campo <strong>Nº de mantenimiento</strong> con un identificador secuencial y con formato.</p>
+<p>Para configurarlo, vaya a:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Secuencia de documento (numeración)</code></p>
+<p>Cree una nueva secuencia con los siguientes valores:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre</strong></td>
+<td>Un nombre descriptivo para la secuencia.</td>
+</tr>
+<tr>
+<td><strong>Numeración automática</strong></td>
+<td>Habilitar para autogenerar números secuenciales.</td>
+</tr>
+<tr>
+<td><strong>Incrementar</strong></td>
+<td>Paso numérico entre los valores generados.</td>
+</tr>
+<tr>
+<td><strong>Valor actual</strong></td>
+<td>El número inicial de la secuencia.</td>
+</tr>
+<tr>
+<td><strong>Prefijo</strong></td>
+<td>Cadena opcional antepuesta a cada número.</td>
+</tr>
+<tr>
+<td><strong>Sufijo</strong></td>
+<td>Cadena opcional añadida al final de cada número.</td>
+</tr>
+<tr>
+<td><strong>Mask</strong></td>
+<td>Máscara de formato para la parte numérica.</td>
+</tr>
+<tr>
+<td><strong>Tabla</strong></td>
+<td>Debe establecerse en <code>ETASK_Task</code>.</td>
+</tr>
+<tr>
+<td><strong>Columna clave</strong></td>
+<td>Debe establecerse en <code>Taskno</code>.</td>
+</tr>
+<tr>
+<td><strong>Tipo de mantenimiento</strong></td>
+<td>Seleccione el Tipo de mantenimiento al que aplica esta secuencia.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Cada Tipo de mantenimiento puede tener su propia secuencia, permitiendo diferentes prefijos, máscaras y rangos de numeración por tipo.</p>
+</div>
 <h2 id="ventana-estado-del-mantenimiento">Ventana Estado del mantenimiento</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Gestión de mantenimientos</code> &gt; <code>Estado del mantenimiento</code></p>
 <p>Esta ventana le permite crear estados reutilizables para tipos de mantenimiento. Los valores por defecto incluyen <code>Pendiente</code>, <code>En progreso</code>, <code>Completada</code> y <code>Cerrado</code>. Los desarrolladores con el rol <code>System Administrator</code> pueden añadir estados personalizados y exportarlos en un módulo en desarrollo. En la ventana Tipo de mantenimiento se utilizan estos estados, permitiendo al motor de flujo de trabajo rastrear y desencadenar transiciones de estado y eventos asociados (incluidas notificaciones de Kafka).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png"></a></p>
 <p><strong>Campos a tener en cuenta:</strong></p>
 <ul>
 <li><strong>Módulo</strong>: El módulo donde se exportará este componente.</li>
@@ -15151,7 +15254,7 @@ Cuando se crea un mantenimiento, se le asigna el <strong>primer estado</strong> 
 <h2 id="ventana-prioridad-del-mantenimiento">Ventana Prioridad del mantenimiento</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Gestión de mantenimientos</code> &gt; <code>Prioridad del mantenimiento</code></p>
 <p>Esta ventana le permite crear prioridades reutilizables para mantenimientos. Las prioridades ayudan a organizar y categorizar los mantenimientos por nivel de importancia. Los desarrolladores con el rol <code>System Administrator</code> pueden añadir prioridades personalizadas y exportarlas en un módulo en desarrollo. Estas prioridades pueden asignarse a los mantenimientos para indicar su importancia relativa.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png"></a></p>
 <p><strong>Campos a tener en cuenta:</strong></p>
 <ul>
 <li><strong>Módulo</strong>: El módulo donde se exportará este componente.</li>
@@ -15169,10 +15272,10 @@ Cuando se crea un mantenimiento, se le asigna el <strong>primer estado</strong> 
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/available-user-algorithm.png" data-desc-position="bottom"><img alt="available-user-algorithm" src="../../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/available-user-algorithm.png"></a></p>
 <p><strong>Campos a tener en cuenta:</strong></p>
 <ul>
+<li><strong>Activo</strong>: Casilla para habilitar o deshabilitar este algoritmo.</li>
 <li><strong>Módulo</strong>: El módulo donde se exportará este componente.</li>
 <li><strong>Nombre</strong>: El nombre visible que se mostrará al usar este algoritmo.</li>
-<li><strong>Implementación Java</strong>: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz <code>UserAvailabilityStrategy</code>.</li>
-<li><strong>Activo</strong>: Casilla para habilitar o deshabilitar este algoritmo.</li>
+<li><strong>Implementación Java</strong>: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz <code>UserAvailabilityStrategy</code></li>
 </ul>
 <h2 id="flujo-de-trabajo-de-ejemplo">Flujo de trabajo de ejemplo</h2>
 <p>Si revisa la documentación de las diferentes ventanas, puede ver que se está siguiendo un ejemplo de cómo usar los mantenimientos.
@@ -15192,6 +15295,7 @@ Luego, asumiendo que el usuario asignado para hacer el seguimiento de este clien
 </div>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
+<hr>
 
 
 

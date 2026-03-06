@@ -10212,6 +10212,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#initialize-rx-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize RX Services
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -10257,6 +10266,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-no-sequence-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task No. Sequence Configuration
+    </span>
+  </a>
   
 </li>
         
@@ -14440,6 +14458,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#initialize-rx-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize RX Services
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14485,6 +14512,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-no-sequence-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task No. Sequence Configuration
+    </span>
+  </a>
   
 </li>
         
@@ -14669,8 +14705,12 @@
 </li>
 </ol>
 <h3 id="compile-the-environment-and-start-tomcat">Compile the Environment and Start Tomcat</h3>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
 </span></code></pre></div>
+<h3 id="initialize-rx-services">Initialize RX Services</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
+<p>Once the environment is compiled and Tomcat is running, as <code>System Administrator</code> role, navigate to <strong>RX Config</strong> window, run the <strong>Initialize RX Services</strong> process from the toolbar. This step registers the access data required for the interaction between Etendo RX services. For more details, see <a href="../../../../etendo-rx/getting-started/#etendo-rx-configurations">Etendo RX Configurations</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png"></a></p>
 <h2 id="task-type-window">Task Type Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Task Management</code> &gt; <code>Task Type</code></p>
 <p>In this window, Task Types are defined, in this component the database events that automatically create a new task, the sequence of states it must follow and the actions to be executed in each state are defined. </p>
@@ -14690,9 +14730,12 @@
 <li><strong>Round-Robin By Workload Algorithm</strong>: Assigns tasks to the resource with the lightest current load. Use when the task sizes or resource capacities vary.</li>
 </ul>
 </li>
+<li>
+<p><strong>Priority</strong>: Optional default priority assigned to tasks created from this task type (e.g., <code>Critical</code>, <code>Major</code>, <code>Minor</code>, <code>Trivial</code>). If set, all new tasks of this type will inherit this priority unless overridden manually.</p>
+</li>
 </ul>
 <h3 id="table-tab">Table Tab</h3>
-<p>In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task. 
+<p>In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task.
 In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -14726,10 +14769,31 @@ When a task is created it is assigned the <strong>first status</strong> of the s
 <li><strong>Job</strong>: Reference to the job to be executed (should be set up as asynchronous), for more information visit <a href="">Async Jobs</a> documentation.</li>
 <li><strong>Active</strong>: Checkbox to enable or disable this event.</li>
 </ul>
+<h3 id="task-no-sequence-configuration">Task No. Sequence Configuration</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Document Sequence</code></p>
+<p>Each Task Type can be linked to a <a href="../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/">Document Sequence</a> to auto-generate the <strong>Task No.</strong> field with a formatted, sequential identifier.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png"></a></p>
+<p>Create a new sequence with the following values:</p>
+<ul>
+<li><strong>Name</strong>: A descriptive name for the sequence.</li>
+<li><strong>Auto Numbering</strong>: Enable to auto-generate sequential numbers.</li>
+<li><strong>Increment By</strong>: Numeric step between generated values.</li>
+<li><strong>Next Assigned Number</strong>: The starting number for the sequence.</li>
+<li><strong>Prefix</strong>: Optional string prepended to each number.</li>
+<li><strong>Suffix</strong>: Optional string appended to each number.</li>
+<li><strong>Mask</strong>: Format mask for the numeric part.</li>
+<li><strong>Table</strong>: Must be set to <code>ETASK_Task</code>.</li>
+<li><strong>Column</strong>: Must be set to <code>Taskno</code>.</li>
+<li><strong>Task Type</strong>: Select the Task Type this sequence applies to.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Each Task Type can have its own sequence, allowing different prefixes, masks, and numbering ranges per type.</p>
+</div>
 <h2 id="task-status-window">Task Status Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Task Management</code> &gt; <code>Task Status</code></p>
 <p>This window allows you to create reusable statuses for task types. Default values include <code>Pending</code>, <code>In Progress</code>, <code>Completed</code>, and <code>Closed</code>. Developers with <code>System Administrator</code> role can add custom statuses and export them in a development module. In the Task Type window these statuses are used, enabling the workflow engine to track and trigger status transitions and associated events (including Kafka notifications).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png"></a></p>
 <p><strong>Fields to note:</strong></p>
 <ul>
 <li><strong>Module</strong>: The module where this component will be exported.</li>
@@ -14741,7 +14805,7 @@ When a task is created it is assigned the <strong>first status</strong> of the s
 <h2 id="task-priority-window">Task Priority Window</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Task Management</code> &gt; <code>Task Priority</code></p>
 <p>This window allows you to create reusable priorities for tasks. Priorities help organize and categorize tasks by importance level. Developers with <code>System Administrator</code> role can add custom priorities and export them in a development module. These priorities can be assigned to tasks to indicate their relative importance.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png"></a></p>
 <p><strong>Fields to note:</strong></p>
 <ul>
 <li><strong>Module</strong>: The module where this component will be exported.</li>
@@ -14759,10 +14823,10 @@ When a task is created it is assigned the <strong>first status</strong> of the s
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/available-user-algorithm.png" data-desc-position="bottom"><img alt="available-user-algorithm" src="../../../../../assets/developer-guide/etendo-classic/bundles/platform/task/available-user-algorithm.png"></a></p>
 <p><strong>Fields to note:</strong></p>
 <ul>
+<li><strong>Active</strong>: Checkbox to enable or disable this algorithm.</li>
 <li><strong>Module</strong>: The module where this component will be exported.</li>
 <li><strong>Name</strong>: The display name that will be shown when using this algorithm.</li>
 <li><strong>Java Implementation</strong>: Path of the Java file where the algorithm implementation is located, this implementation must extend <code>UserAvailabilityStrategy</code> interface.</li>
-<li><strong>Active</strong>: Checkbox to enable or disable this algorithm.</li>
 </ul>
 <h2 id="example-workflow">Example Workflow</h2>
 <p>If you review the documentation of the different windows, you can see that an example of how to use tasks is being followed.
