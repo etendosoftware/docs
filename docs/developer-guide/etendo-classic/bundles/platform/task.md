@@ -169,18 +169,16 @@ To configure it, go to:
 
 Create a new sequence with the following values:
 
-| Field                     | Value                                            |
-|---------------------------|--------------------------------------------------|
-| **Name**                  | A descriptive name for the sequence.             |
-| **Auto Numbering**        | Enable to auto-generate sequential numbers.      |
-| **Increment By**          | Numeric step between generated values.           |
-| **Next Assigned Number**  | The starting number for the sequence.      |
-| **Prefix**                | Optional string prepended to each number.        |
-| **Suffix**                | Optional string appended to each number.         |
-| **Mask**                  | Format mask for the numeric part.                |
-| **Table**                 | Must be set to `ETASK_Task`.                     |
-| **Column**                | Must be set to `Taskno`.                         |
-| **Task Type**             | Select the Task Type this sequence applies to.   |
+- **Name**: A descriptive name for the sequence.
+- **Auto Numbering**: Enable to auto-generate sequential numbers.
+- **Increment By**: Numeric step between generated values.
+- **Next Assigned Number**: The starting number for the sequence.
+- **Prefix**: Optional string prepended to each number.
+- **Suffix**: Optional string appended to each number.
+- **Mask**: Format mask for the numeric part.
+- **Table**: Must be set to `ETASK_Task`.
+- **Column**: Must be set to `Taskno`.
+- **Task Type**: Select the Task Type this sequence applies to.
 
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
 
