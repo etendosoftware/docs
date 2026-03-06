@@ -85,10 +85,15 @@ Estos comandos son **requisitos previos obligatorios** para que Debezium detecte
 
 
 ```bash title="Terminal"
-./gradlew update.database compile.complete smartbuild --info 
+./gradlew update.database compile.complete smartbuild --info
 ```
 
+### Inicializar servicios RX
+:material-menu: `Aplicación` > `Etendo RX` > `RX Config`
 
+Una vez que el entorno esté compilado y Tomcat esté en ejecución, con el rol `System Administrator`, navegar a la ventana **RX Config** y ejecutar el proceso **Initialize RX Services** desde la barra de herramientas. Este paso registra los datos de acceso necesarios para la interacción entre los servicios de Etendo RX. Para más detalles, consultar [Configuraciones de Etendo RX](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
+
+![](../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
 
 ## Ventana Tipo de mantenimiento
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Tipo de mantenimiento`
@@ -111,8 +116,10 @@ Un desarrollador, con el rol `System Administrator`, debe definir los tipos de m
     - **Algoritmo Round-Robin**: Distribuye los mantenimientos equitativamente en secuencia, sin considerar la carga de trabajo. Úselo cuando los mantenimientos y los recursos sean similares.
     - **Algoritmo Round-Robin por carga de trabajo**: Asigna los mantenimientos al recurso con la menor carga actual. Úselo cuando el tamaño de los mantenimientos o la capacidad de los recursos varíe.
 
+- **Prioridad**: Prioridad por defecto opcional asignada a los mantenimientos creados a partir de este tipo de mantenimiento (p. ej., `Crítica`, `Mayor`, `Menor`, `Trivial`). Si se establece, todos los nuevos mantenimientos de este tipo heredarán esta prioridad, a menos que se sobrescriba manualmente.
+
 ### Solapa Tabla
-En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento. 
+En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento.
 Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de la tabla o incluso filtros avanzados definidos como acciones. 
 
 !!!warning
@@ -131,7 +138,7 @@ Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de l
 Define el ciclo de vida del mantenimiento listando los posibles estados (p. ej., Pendiente, En progreso, Cerrado) en una secuencia específica. 
 Cuando se crea un mantenimiento, se le asigna el **primer estado** de la secuencia. Asignar o cambiar el estado de un mantenimiento desencadena los **eventos** definidos en la siguiente subsolapa.
 
-![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png)
+![alt text](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/status-events-tab.png){: .legacy-image-style}
 
 **Campos a tener en cuenta:**
 
@@ -149,13 +156,41 @@ Esta solapa define jobs asíncronos que se ejecutan automáticamente cuando el m
 - **Job**: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de [Jobs asíncronos]().
 - **Activo**: Casilla para habilitar o deshabilitar este evento.
 
+### Configuración de la secuencia del Nº de mantenimiento
+
+Cada Tipo de mantenimiento puede vincularse a una [Secuencia de documento (numeración)](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) para autogenerar el campo **Nº de mantenimiento** con un identificador secuencial y con formato.
+
+Para configurarlo, vaya a:
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de documento (numeración)`
+
+Cree una nueva secuencia con los siguientes valores:
+
+| Campo                    | Valor                                              |
+|--------------------------|----------------------------------------------------|
+| **Nombre**               | Un nombre descriptivo para la secuencia.           |
+| **Numeración automática**| Habilitar para autogenerar números secuenciales.   |
+| **Incrementar**          | Paso numérico entre los valores generados.         |
+| **Valor actual**         | El número inicial de la secuencia.                 |
+| **Prefijo**              | Cadena opcional antepuesta a cada número.          |
+| **Sufijo**               | Cadena opcional añadida al final de cada número.   |
+| **Mask**                 | Máscara de formato para la parte numérica.         |
+| **Tabla**                | Debe establecerse en `ETASK_Task`.                 |
+| **Columna clave**        | Debe establecerse en `Taskno`.                     |
+| **Tipo de mantenimiento**| Seleccione el Tipo de mantenimiento al que aplica esta secuencia. |
+
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
+
+!!! info
+    Cada Tipo de mantenimiento puede tener su propia secuencia, permitiendo diferentes prefijos, máscaras y rangos de numeración por tipo.
+
 
 ## Ventana Estado del mantenimiento
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Estado del mantenimiento`
 
 Esta ventana le permite crear estados reutilizables para tipos de mantenimiento. Los valores por defecto incluyen `Pendiente`, `En progreso`, `Completada` y `Cerrado`. Los desarrolladores con el rol `System Administrator` pueden añadir estados personalizados y exportarlos en un módulo en desarrollo. En la ventana Tipo de mantenimiento se utilizan estos estados, permitiendo al motor de flujo de trabajo rastrear y desencadenar transiciones de estado y eventos asociados (incluidas notificaciones de Kafka).
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-status-window.png)
 
 **Campos a tener en cuenta:**
 
@@ -170,7 +205,7 @@ Esta ventana le permite crear estados reutilizables para tipos de mantenimiento.
 
 Esta ventana le permite crear prioridades reutilizables para mantenimientos. Las prioridades ayudan a organizar y categorizar los mantenimientos por nivel de importancia. Los desarrolladores con el rol `System Administrator` pueden añadir prioridades personalizadas y exportarlas en un módulo en desarrollo. Estas prioridades pueden asignarse a los mantenimientos para indicar su importancia relativa.
 
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-windows.png)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-priority-window.png)
 
 **Campos a tener en cuenta:**
 
@@ -193,10 +228,10 @@ Solo es necesario definir un nombre y la ruta Java donde se encuentra la impleme
 
 **Campos a tener en cuenta:**
 
+- **Activo**: Casilla para habilitar o deshabilitar este algoritmo.
 - **Módulo**: El módulo donde se exportará este componente.
 - **Nombre**: El nombre visible que se mostrará al usar este algoritmo.
-- **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`.
-- **Activo**: Casilla para habilitar o deshabilitar este algoritmo.
+- **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`
 
 
 ## Flujo de trabajo de ejemplo
@@ -218,3 +253,5 @@ Ahora revisaremos la configuración:
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
