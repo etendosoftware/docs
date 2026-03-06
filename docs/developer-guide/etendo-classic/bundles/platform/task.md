@@ -89,12 +89,9 @@ These commands are **mandatory prerequisites** for Debezium to detect and propag
 ```
 
 ### Initialize RX Services
-
-Once the environment is compiled and Tomcat is running, as `System Administrator` role, navigate to:
-
 :material-menu: `Application` > `Etendo RX` > `RX Config`
 
-In this window, run the **Initialize RX Services** process from the toolbar. This step registers the access data required for the interaction between Etendo RX services. For more details, see [Etendo RX Configurations](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
+Once the environment is compiled and Tomcat is running, as `System Administrator` role, navigate to **RX Config** window, run the **Initialize RX Services** process from the toolbar. This step registers the access data required for the interaction between Etendo RX services. For more details, see [Etendo RX Configurations](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
 
 ![](../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
 
@@ -160,12 +157,11 @@ This tab defines asynchronous jobs that are automatically executed when the task
 - **Active**: Checkbox to enable or disable this event.
 
 ### Task No. Sequence Configuration
+:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Sequence`
 
 Each Task Type can be linked to a [Document Sequence](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) to auto-generate the **Task No.** field with a formatted, sequential identifier.
 
-To configure it, go to:
-
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `Document Sequence`
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
 
 Create a new sequence with the following values:
 
@@ -179,8 +175,6 @@ Create a new sequence with the following values:
 - **Table**: Must be set to `ETASK_Task`.
 - **Column**: Must be set to `Taskno`.
 - **Task Type**: Select the Task Type this sequence applies to.
-
-![](../../../../assets/developer-guide/etendo-classic/bundles/platform/task/task-type-sequence.png)
 
 !!! info
     Each Task Type can have its own sequence, allowing different prefixes, masks, and numbering ranges per type.
