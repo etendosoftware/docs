@@ -234,7 +234,7 @@ Solo es necesario definir un nombre y la ruta Java donde se encuentra la impleme
 - **Activo**: Casilla para habilitar o deshabilitar este algoritmo.
 - **Módulo**: El módulo donde se exportará este componente.
 - **Nombre**: El nombre visible que se mostrará al usar este algoritmo.
-- **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`.
+- **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`
 
 
 ## Flujo de trabajo de ejemplo
