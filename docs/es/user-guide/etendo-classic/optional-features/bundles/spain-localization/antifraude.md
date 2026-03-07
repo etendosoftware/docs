@@ -7,6 +7,8 @@ tags:
 status: new
 ---
 
+# Antifraude
+
 :octicons-package-16: Javapackage: `com.etendoerp.antifraud`
 
 ## Introducción
@@ -93,7 +95,7 @@ Se dispone de la opción de agregar firmas digitales al imprimir documentos en P
 
 Para firmar digitalmente un documento, se deben cumplir primero las siguientes condiciones:
 
-- Tener cargado en el sistema un certificado válido emitido por la AEAT, para la organización legal de la factura a imprimir. El mismo se debe cargar siguiendo la guía de [Carga de Certificados Digitales por Organización Legal](#carga-certificados-digitales-organizacion-legal)
+- Tener cargado en el sistema un certificado válido emitido por la AEAT, para la organización legal de la factura a imprimir. El mismo se debe cargar siguiendo la guía de [Carga de Certificados Digitales](./funcionalidades-generales-para-sifs.md#carga-de-certificados-digitales)
 - Tener conexión a internet.
 - Tener un entorno con una instancia de producción (si no se está en un entorno productivo esto se notificará en el documento impreso mediante marca de agua).
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/documento-no-oficial.png)

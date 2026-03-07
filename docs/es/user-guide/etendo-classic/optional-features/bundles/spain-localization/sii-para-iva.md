@@ -1,12 +1,13 @@
 ---
-title: Spain SII
+title: SII España
 tags:
     - SII
-    - Localizacion Española
+    - Localización Española
     - Facturas en RECC
     - Monitor SII
 ---
-## Javapackages 
+
+# SII España
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
@@ -14,13 +15,13 @@ tags:
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii.template`
 
-## **Introducción**
+## Introducción
 
 Esta sección explica el contenido del nuevo módulo comercial de Etendo, "**Spain AEAT SII template**", compatible con Etendo 21Q4 y posteriores, bajo licencia comercial "**Etendo Commercial License**".
 
 Este módulo forma parte del bundle (paquete) de Localización para España en su versión para Etendo.
 
-## **Descripción del Módulo**
+## Descripción del Módulo
 
 El módulo  "Spain AEAT SII template" permite que las organizaciones puedan gestionar el Impuesto sobre el Valor Añadido y el Impuesto General Indirecto Canario de forma telemática, dentro del marco del proyecto "Suministro Inmediato de Información" (SII).
 
@@ -73,7 +74,7 @@ La AEAT pone a disposición del contribuyente las siguientes URLs que entendemos
 - Proyecto SII, en el que se puede encontrar toda la información sobre SII
 - Herramienta de cálculo de plazos para la remisión de registros de facturas a SII, que permite calcular la "fecha fin de plazo", el "periodo", y el "ejercicio" para cada tipo de factura en función de su fecha de devengo/recepción y fecha de expedición/registro contable.
 
-## **Contenido del Módulo**
+## Contenido del Módulo
 
 Al instalar este módulo, el usuario podrá comprobar que:
 
@@ -91,7 +92,7 @@ Al instalar este módulo, el usuario podrá comprobar que:
 6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
     Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
 
-## **Configuración**
+## Configuración
 
 Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".
 
@@ -383,7 +384,7 @@ ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marc
 ![screenhunter_07_sep._01_11.18.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
 ![screenhunter_08_sep._01_11.19.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
 
-## **Envío de registros de facturas a SII**
+## Envío de registros de facturas a SII
 
 Una vez configurados todos los parámetros de envío a SII, ya es posible dar de alta/modificar los registros de facturas emitidas/recibidas en SII.
 
@@ -826,7 +827,7 @@ aunque, programemos el proceso de alta en SII con una frecuencia diaria, esta fa
 
 El plazo límite de alta en SII de esta factura sería el 15-07-2022.
 
-## **Gestión y envío de registros desde el "Monitor SII"**
+## Gestión y envío de registros desde el Monitor SII
 
 Desde la ventana "Monitor SII" podemos realizar gestionar y realizar envíos masivos de facturas emitidas/recibidas a SII, así como de los cobros/pagos de facturas en RECC y los cobros en metálico, esta última información a enviar de forma anual.
 
@@ -852,7 +853,7 @@ seleccionamos varias facturas y procedemos a su Modificación en SII.
 
 ![](../../../../../../assets/drive/GDKayCFFhT9bAkhr68IiFXboS51M5wwZQs89d7pc9uW3Uo1dXDTlfMgSrfBQZl6ZjHmIuJlSSTiXfOP_MdskUK7Rhbqw6l3RWQ506xpkixCHok3iH0RJ4-bd3RtElOGY0LlpuPEWUzEfAljwwuUNf4U.png)
 
-## **Creación automática de facturas de venta**
+## Creación automática de facturas de venta
 
 ### **Generar facturas (manualmente)**
 
@@ -926,7 +927,7 @@ Si el sistema detecta modificaciones, registra el resultado en la solapa **Log H
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/validacion-hash-sii.png)
 
-## **Casos de uso**
+## Casos de uso
 
 Dentro de este apartado se describen diferentes casos de uso tanto para las facturas de venta (LRFE) como de compra (LRFR), y su registro de "Alta" en SII.
 
@@ -2025,6 +2026,9 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 
 ![](../../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
 
- ---
+
+---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

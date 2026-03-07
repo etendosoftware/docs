@@ -1,17 +1,18 @@
 ---
-tags:
-- Localización Española
-- Ticketbai
-- Tbai
-- Batuz
-- Bizkaia
-- Álava
-- Factura
-- Gipuzkoa
 title: TicketBai y Batuz
+tags:
+    - Localización Española
+    - Ticketbai
+    - Tbai
+    - Batuz
+    - Bizkaia
+    - Álava
+    - Factura
+    - Gipuzkoa
+
 ---
 
-## Javapackages 
+# TicketBai y Batuz
 
 :octicons-package-16: Javapackage: `com.smf.ticketbai`
 

@@ -14,7 +14,6 @@ status: new
 
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu.template`
 
-
 ## Introducción
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bOCK7A1cFms?si=VAfNntVPqse58GnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

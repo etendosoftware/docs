@@ -1,11 +1,14 @@
 ---
-title: Localización Española
+title: Descripcion del Bundle de Localizacion Española
 tags:
     - Localización Española   
     - Características de Etendo
     - Requisitos fiscales
     - Legislación española
 ---
+
+# Descripcion del Bundle de Localizacion Española
+
 :octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
 
 :material-store: Etendo Marketplace:  [Bundle de Localizacion Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}
@@ -15,7 +18,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 ## Módulos
 
-- [Spain SII](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
+
 - [Tax Report: Modelo 303 (Spain)](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md)
 - [Withholding Report: Modelo 190 (Spain)](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
 - [Spain AEAT Modelo 347 for APR](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md)
@@ -25,6 +28,8 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - [Tax Report: Modelo 390 (Spain)](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md)
 - [Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
 - [Configuración de Impuestos para Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
+- [Funcionalidades Generales Para SIFs](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs.md)
+- [SII España](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
 - [TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md)
 - [Veri*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md)
 - [Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md)
