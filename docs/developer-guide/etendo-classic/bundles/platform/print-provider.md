@@ -175,6 +175,181 @@ Fields to note:
     - DOCUMENT_ID = recordId
     - SUBREPORT_DIR = template directory (for subreports)
 
+## Custom Parameter Injection with Hooks
+
+The Print Provider module supports a hook mechanism that allows external modules to inject custom JasperReports parameters during label generation. This capability enables advanced customization scenarios where business logic needs to add or modify report parameters before the report is rendered.
+
+### Hook Interface
+
+Modules can implement the `GenerateLabelHook` interface to customize JasperReports parameters. The hook execution occurs during the `generateLabel` phase, before the report is filled with data.
+
+**Key features:**
+
+- **Table-specific execution**: Each hook declares which tables it applies to via `tablesToWhichItApplies()`.
+- **Priority-based ordering**: Hooks execute in priority order (lower values first), allowing control over execution sequence.
+- **Full context access**: Hooks receive a `GenerateLabelContext` object providing access to provider configuration, table metadata, record ID, template information, and the parameter map.
+- **CDI integration**: Hooks are automatically discovered and managed through CDI.
+
+### Implementing a Hook
+
+To create a custom hook:
+
+1. **Create a class** that implements `GenerateLabelHook`
+2. **Annotate** with `@Dependent` for CDI discovery
+3. **Implement required methods**:
+   - `execute(GenerateLabelContext context)`: Main logic to add/modify parameters
+   - `tablesToWhichItApplies()`: Return list of table IDs where this hook applies
+   - `getPriority()` (optional): Return execution priority (default: 100)
+
+### Example: Custom Barcode Generation
+
+The following example demonstrates a hook that generates custom barcode labels for business documents. This hook replaces the default database query with a custom data source containing calculated barcode information.
+
+```java title="CustomDocumentLabelHook.java"
+package com.etendoerp.examples.hooks;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.enterprise.context.Dependent;
+
+import com.etendoerp.print.provider.api.GenerateLabelHook;
+import com.etendoerp.print.provider.api.PrintProviderException;
+import com.etendoerp.print.provider.dto.BarcodeLabelDTO;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+
+/**
+ * Hook that adds custom parameters for document label generation.
+ * Generates barcode data and provides it as a custom data source.
+ */
+@Dependent
+public class CustomDocumentLabelHook implements GenerateLabelHook {
+
+  private static final List<String> TABLES_TO_WHICH_IT_APPLIES = List.of(
+      "YOUR_DOCUMENT_TABLE_ID",      // Document header table ID
+      "YOUR_DOCUMENT_LINE_TABLE_ID"  // Document line table ID
+  );
+
+  @Override
+  public void execute(GenerateLabelContext context) throws PrintProviderException {
+    try {
+      final String recordId = context.getRecordId();
+
+      // Retrieve the document record
+      BaseOBObject currentRecord = getDocumentRecord(recordId);
+
+      if (currentRecord == null) {
+        throw new PrintProviderException("Document not found: " + recordId);
+      }
+
+      // Resolve the lines to process
+      List<DocumentLine> lines = resolveDocumentLines(currentRecord);
+
+      // Generate barcode data for each line
+      List<BarcodeLabelDTO> barcodeData = generateBarcodeData(lines);
+
+      // Create a JRBeanCollectionDataSource with the barcode data
+      JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(barcodeData);
+
+      // Add the datasource as a parameter
+      // IMPORTANT: This replaces the SQL query in the jasper template
+      context.addParameter("REPORT_DATA_SOURCE", dataSource);
+
+    } catch (PrintProviderException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new PrintProviderException("Failed to add barcode parameters: " + e.getMessage(), e);
+    }
+  }
+
+  protected List<BarcodeLabelDTO> generateBarcodeData(List<DocumentLine> lines) {
+    List<BarcodeLabelDTO> result = new ArrayList<>();
+
+    for (DocumentLine line : lines) {
+      // Build barcode based on business rules (product info, quantities, etc.)
+      String barcode = buildBarcodeForLine(line);
+      String barcodeWithSeparator = buildBarcodeWithSeparator(line);
+
+      result.add(new BarcodeLabelDTO(barcode, barcodeWithSeparator));
+    }
+
+    return result;
+  }
+
+  @Override
+  public int getPriority() {
+    return 50;  // Medium priority
+  }
+
+  @Override
+  public List<String> tablesToWhichItApplies() {
+    return TABLES_TO_WHICH_IT_APPLIES;
+  }
+}
+```
+
+### Hook Context API
+
+The `GenerateLabelContext` provides the following methods:
+
+| Method                                   | Description                                |
+| ---------------------------------------- | ------------------------------------------ |
+| `addParameter(String key, Object value)` | Adds or updates a JasperReports parameter  |
+| `getParameter(String key)`               | Retrieves the current value of a parameter |
+| `getParameters()`                        | Returns a read-only view of all parameters |
+| `getProvider()`                          | Gets the provider configuration            |
+| `getTable()`                             | Gets the target table metadata             |
+| `getRecordId()`                          | Gets the record ID being printed           |
+| `getTemplateLine()`                      | Gets the template line reference           |
+| `getJsonParameters()`                    | Gets the JSON parameters from the request  |
+
+### Custom Data Sources
+
+Hooks can provide custom data sources by setting the `REPORT_DATA_SOURCE` parameter. When this parameter is present, the Print Provider will use it instead of the default database connection:
+
+```java
+// Create a custom data source from a collection
+List<MyDataDTO> data = prepareCustomData();
+JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(data);
+
+// Set it as the data source
+context.addParameter("REPORT_DATA_SOURCE", dataSource);
+```
+
+This is particularly useful when:
+
+- The data needs complex transformations before rendering
+- Data comes from multiple sources (database + external APIs)
+- Business logic requires calculated fields not present in the database
+- Performance optimization requires pre-aggregated data
+
+### Best Practices
+
+1. **Error handling**: Always wrap business logic in try-catch blocks and throw `PrintProviderException` with meaningful messages.
+
+2. **Null safety**: Validate that required objects are present before accessing them:
+
+   ```java
+   if (context.getTable() == null) {
+       throw new PrintProviderException("Table information is required");
+   }
+   ```
+
+3. **Recommended priority coordination**: Use priority values to control execution order when multiple hooks apply to the same table:
+
+   - System/core hooks: 1-30
+   - Standard business hooks: 31-70
+   - Custom/extension hooks: 71-100
+
+4. **Logging**: Use SLF4J logging to aid troubleshooting:
+
+   ```java
+   private static final Logger log = LoggerFactory.getLogger(MyHook.class);
+
+   log.debug("Executing hook for record: {}", recordId);
+   ```
+
+5. **Performance**: Keep hook execution lightweight. Avoid heavy database queries or external API calls that could slow down label generation.
+
 ### Printer Update
 
 - The process calls strategy.fetchPrinters(provider) and performs an upsert on Printer:

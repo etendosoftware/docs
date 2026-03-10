@@ -124,7 +124,7 @@ When executing a process with a button, the record ID of the current record sele
 Backgroung processes are defined in `General Setup > Process Scheduling > Process Request`. 
 
 !!!info
-    For more information, read [How to create a Background Process](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md).
+    For more information, read [How to create a Background Process](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md).
 
 In this window you can define a background process. The process to be executed can be selected in the *Process* field. Then you define the scheduling for the background process and it is then ready to use.
 

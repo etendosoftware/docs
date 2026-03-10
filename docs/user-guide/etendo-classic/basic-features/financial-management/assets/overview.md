@@ -137,7 +137,7 @@ The dimensions the user can apply to the asset creation process are the followin
 ![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
 
 !!! info
-    For more information about Dimensions configuration visit [Dimensions](../../../../etendo-classic/basic-features/financial-management/accounting/setup.md#dimension).
+    For more information about Dimensions configuration visit [Dimensions](../../../../etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 #### Buttons 
 

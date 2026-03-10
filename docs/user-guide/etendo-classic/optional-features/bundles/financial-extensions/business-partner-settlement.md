@@ -1,5 +1,4 @@
 ---
-title: Business Partner Settlement
 tags: 
     - Settlement
     - Payment

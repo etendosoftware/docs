@@ -29,7 +29,7 @@ The calculation can be split into two steps:
 
 When the **Net Amount** is being calculated there might not be a single rate to work with, but a relation of **different tax rates**.
 
-[Cascade taxes](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#tax-rate) make the calculation of a net amount from a given gross amount a bit more difficult. The gross amount would normally be divided by the rate to get the net amount, but the rate might not be a unique one, in other words it might not be available therefore it **has to be calculated**.
+[Cascade taxes](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md) make the calculation of a net amount from a given gross amount a bit more difficult. The gross amount would normally be divided by the rate to get the net amount, but the rate might not be a unique one, in other words it might not be available therefore it **has to be calculated**.
 
 To calculate the tax rate, it is necessary to calculate the tax amount that corresponds to the gross price. If the tax amount is divided by the gross price the tax rate is obtained:
 

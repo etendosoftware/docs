@@ -170,11 +170,11 @@ PDF format shows the same fields explained before, but in XLS format, it shows i
 
 This window informs about the matching between each purchase order, goods receipt and invoice line.
 
-### Matched Purchase Order
+### Matched Purchase Orders
 
-Matched purchase order view informs about which purchase order line is linked to which receipt line and invoice line, if any.
+Matched Purchase Orders view informs about which purchase order line is linked to which receipt line and invoice line, if any.
 
-![](../../../../assets/drive/1HSNC0staVcayYFKAOz3rc8KZDYUxl8Ym.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/matched-purchase-orders.png)
 
 In other words, this window provides valuable information which helps to get a quick understanding of what order lines of a product have already been receipt and invoiced.
 

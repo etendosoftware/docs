@@ -20,6 +20,15 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ## Modules
 
+### Account Structure Validation
+
+:octicons-package-16: Javapackage: `com.etendoerp.account.structure.validation`
+
+This module helps prevent common configuration errors when creating or modifying subaccounts in the Account Tree. It validates the structure and configuration to avoid mismatches in financial reports such as the Income Statement or Balance Sheet.
+
+!!! info
+    For more information, visit [the Account Structure Validation Module user guide](../../../optional-features/bundles/financial-extensions/account-structure-validation.md).
+
 ### Accounting Dimensions Assets
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
@@ -41,13 +50,12 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 This module allows setting a non deductible tax's amount to a specified financial account.
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
-
+    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
 
 ### Adjust Invoice Tax
-:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
+:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
 This extension enables controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems; it supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external or regulatory requirements.
 
@@ -77,25 +85,6 @@ This module enhances the bank account management enabling greater customization 
     - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
     For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-
-
-### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
-
-!!! info
-    For more information, visit:
-
-    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
-    - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
-    - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
-    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
 
 ### Advanced Financial Docs. Processing
 
@@ -160,9 +149,28 @@ This functionality allows the user to post or unpost multiple records at the sam
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+### Business Partner Settlement
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
+
+!!! info
+    For more information, visit:
+
+    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+    - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+
 ### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
+
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
@@ -190,16 +198,17 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The **Balance Sheet and P&L Structure Advanced**, **General Ledger Report Advanced**, **Journal Entries Report Advanced**, **Trial Balance** and **Purchase Invoice Dimensional Report** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
+The **Balance Sheet and P&L Structure Advanced**, **Customer Statement** **General Ledger Report Advanced**, **Journal Entries Report Advanced**, **Purchase Invoice Dimensional Report** and **Trial Balance** reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
     For more information, visit:
     
     - [Balance Sheet and P&L Structure Advanced ](../../../basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced) user guide.
+    - [Customer Statement](../../../basic-features/financial-management/accounting/analysis-tools.md#customer-statement) user guide.
     - [General Ledger Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) user guide.
     - [Journal Entries Report Advanced](../../../basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced) user guide.
-    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
     - [Purchase Invoice Dimensional Report](../../../basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report) user guide.
+    - [Trial Balance](../../../basic-features/financial-management/accounting/analysis-tools.md#trial-balance) user guide.
 
 ### Financial Report Budget
 

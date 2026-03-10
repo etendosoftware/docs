@@ -249,7 +249,7 @@ To override this configuration, the following must be done inside the .jrxml rep
 
 ###  Creating a Report Using Report and Process
 
-In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary.md), you can find an example about how to create a Report in this way.
+In [this section](how-to-create-a-report-with-ireport.md#registering-the-report-in-application-dictionary), you can find an example about how to create a Report in this way.
 
 ###  Report Compilation
   
