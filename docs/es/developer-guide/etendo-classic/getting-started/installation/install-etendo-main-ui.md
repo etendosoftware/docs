@@ -41,16 +41,25 @@ Esta guía proporciona instrucciones para instalar y ejecutar Etendo Main UI, un
     
     :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-    Debe configurarse un token de cifrado de un solo uso para la autenticación. Este token es necesario para que **Etendo Main UI** inicie una sesión.
+    Se requiere un token de cifrado para la autenticación. Este token es necesario para que **Etendo Main UI** inicie una sesión.
+
+    !!! note
+        A partir de **26Q1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+    Para verificar o gestionar el token:
 
     1. Acceda a Etendo Classic como `System Administrator`.
     2. Vaya a `Entidad` > pestaña `Secure Web Service Configuration`.
-    3. Haga clic en el botón **Generar Clave** para crear un token. El tiempo de caducidad se mide en minutos; si se establece en 0, el token no caduca.
-    
+    3. Verifique que exista una clave. Si no existe, haga clic en el botón **Generar Clave** para crear una.
+    4. Revise el **tiempo de caducidad** (en minutos). Si está en `0`, el token no caduca. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+
     ![alt text](../../../../assets/developer-guide/etendo-mobile/getting-started/token.png)
-    
-    !!! info 
-        Este token no requiere ninguna acción; solo necesita generarse para que el proceso de autenticación funcione correctamente.
+
+    !!! warning "Recomendación de seguridad"
+        Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
+
+    !!! info
+        Este token no requiere ninguna acción adicional; solo necesita existir para que el proceso de autenticación funcione correctamente.
 
 ## Instalación
 

@@ -12,7 +12,7 @@ tags:
 ## Configuración inicial
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad` 
 
-Para poder utilizar Copilot, el usuario debe acceder a Etendo con el rol *System Administrator* y generar un token en `Entidad`>`Secure Web Service Configuration`, haciendo clic en **Generar Clave**.
+Para poder utilizar Copilot, debe existir un token SWS válido. A partir de **26Q1**, este token se **genera automáticamente** durante la instalación. Para versiones anteriores, o para verificar la configuración, acceda a Etendo con el rol *System Administrator* y navegue a `Entidad` > `Secure Web Service Configuration`. Verifique que exista una clave; si no, haga clic en **Generar Clave**. Si se configuró un tiempo de expiración personalizado, asegúrese de que el token no haya vencido. El equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos en lugar de dejarlo en `0` (sin expiración).
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 ## Cómo configurar agentes

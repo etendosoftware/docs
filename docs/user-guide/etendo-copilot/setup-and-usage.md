@@ -12,7 +12,7 @@ tags:
 ## Initial Configuration
 :material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
-In order to use Copilot, the user must access the Etendo under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
+In order to use Copilot, a valid SWS token must exist. Starting from **26Q1**, this token is **automatically generated** during installation. For previous versions, or to verify the configuration, access Etendo under the role *System Administrator* and navigate to `Client` > `Secure Web Service Configuration`. Verify that a key exists; if not, click **Generate Key**. If a custom expiration time was set, ensure the token has not expired. The Etendo team recommends setting a reasonable expiration time in production environments rather than leaving it at `0` (no expiration).
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
