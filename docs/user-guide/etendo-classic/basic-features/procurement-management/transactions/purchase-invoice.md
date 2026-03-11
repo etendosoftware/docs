@@ -157,138 +157,116 @@ The **Tax Amount** field reflects the tax value calculated automatically based o
 
     This functionality is compatible from Etendo 23.
 
-## Basic Discounts (TO CHECK)
+## Basic Discounts
 
-This tab lists information about the discounts automatically applied based on the supplier configuration and / or manually entered for the purchase invoice.
+This tab lists the discounts applied to the purchase invoice. Discounts can be:
 
-Learn [more](../../master-data-management/master-data.md#basic-discount).
+- **Automatically applied** based on the supplier's Business Partner configuration.
+- **Manually entered** for specific invoice adjustments.
 
-## Payment Plan (TO CHECK)
+Each discount record shows the discount percentage and whether it is applied in cascade (compounding on the already-discounted amount) or independently.
 
-The payment plan tab lists the scheduled payments expected against the invoice.
+!!! info
+    For more information about discount configuration, visit [Basic Discount](../../master-data-management/master-data.md#basic-discount).
 
-The payment plan of a non paid invoice can be changed:
+## Payment Plan
 
-- the payment "expected date" can be directly changed if required in this tab
-- the payment "expected date", the "payment method" and the "outstanding amount to be paid" among other can be changed if required by using the Editable Payment Plan advanced feature.
+The **Payment Plan** tab lists the scheduled payments expected against the invoice. Payment plan records are automatically generated when the invoice is completed, based on the **Payment Terms** defined in the header.
 
-## Reversed Invoices (TO CHECK)
+Each record shows:
 
-This tab allows the user to select the invoices (if any) being reversed by the invoice being created. When the user voids an existing invoice the reverse invoice is automatically created by Etendo and linked to the original invoice being reversed. In case of creating a Reverse Purchase Invoice which partially voids an existing invoice/s, the user must manually select the invoice/s being reversed in this tab.
+- **Expected Date**: the date when the payment is due.
+- **Expected Amount**: the amount to be paid on that date.
+- **Payment Method**: the payment mechanism to be used.
+- **Outstanding Amount**: the remaining amount not yet paid.
 
-As already described purchase invoices can be reversed without any problem, if required.
+The payment plan of an unpaid invoice can be modified:
 
-If a purchase invoice is totally voided:
+- The **Expected Date** can be changed directly in this tab.
+- The **Expected Date**, **Payment Method**, and **Outstanding Amount** can also be changed using the [Modify Payment Plan](#modify-payment-plan) button, if the Advanced Bank Account Management module is installed.
 
-Etendo informs about the Reversed Invoice number automatically created
+## Reversed Invoices
 
-VA
+The **Reversed Invoices** tab links a reversal document to the original invoice it reverses. This tab is used in two scenarios:
 
-the original invoice voided is listed in the "Reversed Invoices" tab of the "Reversed Purchase Invoice"
+**Fully voiding an invoice**
 
-VA
+When an invoice is voided using the [Reactivate](#reactivate) button with the **Void** action:
 
-If a purchase invoice/s require to be partially voided:
+- Etendo automatically creates a *Reversed Purchase Invoice* and links it to the original invoice.
+- The original invoice appears in the **Reversed Invoices** tab of the reversal document.
 
-you should manually add it/them in the "Reversed Invoices" tab of the "Reversed Purchase Invoice" documents used to void an invoice/s.
+**Partially voiding an invoice**
 
-## Exchange Rates (TO CHECK)
+When manually creating a partial reversal (*AP Credit Memo* or *Reversed Purchase Invoice*):
 
-The exchange rate tab allows to enter an exchange rate between the organization's general ledger currency and the currency of the supplier's invoice to be used while posting the invoice to the ledger.
+- The user must manually add the original invoice in the **Reversed Invoices** tab of the reversal document to establish the link between both documents.
 
-Openbravo allows to manage different currencies within an organization or business unit.
+## Exchange Rates
 
-Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.
-To learn more visit General Ledger Configuration.
+The **Exchange Rates** tab allows entering an exchange rate between the organization's general ledger currency and the supplier's invoice currency, to be used when posting the invoice to the ledger.
 
-Above described business scenario, implies the need of managing exchange rates between the organization's general ledger currency and the supplier's invoice currency to be used while posting the supplier's invoice to the ledger/s.
+This tab is relevant when the supplier's invoice currency differs from the organization's general ledger currency, for example, when purchasing goods from a foreign supplier.
 
-This tab allows you to enter:
+The tab allows entering:
 
-either an exchange rate between the organization's general ledger/s currency and the supplier's invoice currency
-or the total foreign invoice amount/s, therefore Openbravo can calculate the corresponding exchange rate/s
-Additionally, Openbravo has a "central" repository of exchange rates which are used in case there is no an exchange rate defined at document level.
+- An **exchange rate** between the general ledger currency and the supplier's invoice currency.
+- Or the **total foreign invoice amount**, so that Etendo calculates the corresponding exchange rate automatically.
 
-## Accounting (TO CHECK)
+!!! info
+    Etendo also maintains a central repository of exchange rates, which is used when no exchange rate is defined at the document level. For more information, visit [General Ledger Configuration](../../financial-management/accounting/setup/general-ledger-configuration.md).
 
-Accounting information related to the purchase invoice
+## Accounting
 
-For more details please review the accounting article.
+A purchase invoice can be posted to the ledger at a given **Accounting Date** using the [Post/Unpost](#postunpost) button.
 
+### Standard Purchase Invoice Posting
 
-A purchase invoice can be posted to the ledger when required at a given "Accounting Date" by using the process button "Post".
+| Account | Debit | Credit | Comments |
+|---|---|---|---|
+| Product Expense | Line Net Amount | | One per invoice line |
+| Tax Credit | Tax Amount | | One per tax line |
+| Discount Product Expense | | Discount Amount | One per invoice line (if discount exists) |
+| Vendor Liability | | Total Gross Amount | One per invoice |
 
-Purchase invoice posting creates the following accounting entries:
+### Deferred Expense Posting
 
-Account	Debit	Credit	Comments
-Product Expense	Line Net Amount		One per invoice line
-Tax Credit	Tax Amount		One per tax line.
-Discount Product Expense		Discount amount	One per invoice line (if discount exists)
-Vendor Liability		Total Gross Amount	One per invoice
+When a purchase invoice line has an [expense plan](#deferring-expenses) configured, the posting is distributed over multiple periods instead of recognizing the full expense at once.
 
-Same way, a Purchase Invoice including a purchase invoice line with an expense plan configured creates the following accounting entries.
-For instance a company purchasing a business insurance for the duration of a year would want to distribute that expense over 12 months.
+**Initial posting (Accounting Date):**
 
-Posting record date: Accounting Date:
+| Account | Debit | Credit |
+|---|---|---|
+| Product Deferred Expense | Line Net Amount | |
+| Tax Credit | Tax Amount | |
+| Vendor Liability | | Total Gross Amount |
 
-Account	Debit	Credit
-Product Deferred Expense	Line Net Amount	
-Tax Credit	Tax Amount	
-Vendor Liability		Total Gross Amount
-Posting record date: Accounting Date + 1 month:
+**Each subsequent period (Accounting Date + 1 month, + 2 months, ..., + N months):**
 
-Account	Debit	Credit
-Product Expense	Line Net Amount/12	
-Product Deferred Expense		Line Net Amount/12
-Posting record date: Accounting Date + 2 months:
+| Account | Debit | Credit |
+|---|---|---|
+| Product Expense | Line Net Amount / N | |
+| Product Deferred Expense | | Line Net Amount / N |
 
-Account	Debit	Credit
-Product Expense	Line Net Amount/12	
-Product Deferred Expense		Line Net Amount/12
-.....
+Where **N** is the number of periods defined in the expense plan.
 
-Posting record date: Accounting Date + 12 months:
+!!! info
+    For more information, visit [How to Manage Deferred Revenue and Expenses](../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses.md).
 
-Account	Debit	Credit
-Product Expense	Line Net Amount/12	
-Product Deferred Expense		Line Net Amount/12
-Voiding
-It is possible to totally void a purchase invoice, by using the header button "Reactivate" and then selecting the action "Void".
-This action creates a new document that reverse the invoice.
+### Reversed Invoice Posting
 
-Void action allows to specify a "Void Date" and a "Void Accounting Date" for the new document that reverse the invoice.
+When an invoice is voided, the reversal document creates the following accounting entries:
 
-Both "date" fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.
+| Account | Debit | Credit | Comments |
+|---|---|---|---|
+| Product Expense | | Line Net Amount | One per invoice line |
+| Tax Credit | | Tax Amount | One per tax line |
+| Vendor Liability | Total Gross Amount | | One per invoice |
 
-Overall "Void" action implies that:
+The *AP Credit Memo* posting follows the same structure as the *Reversed Purchase Invoice* posting.
 
-Openbravo automatically generates a new document in the "Purchase Invoice" window that reverse the "original" invoice.
-Openbravo also informs about the new document number. This new document is created as described below:
-The "transaction document" used by Openbravo is "Reversed Purchase Invoice". To learn more visit Document Type.
-This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
-Once the new document has been created, you can change both the "Invoice Date" and the "Accounting Date" of the new document prior to get it posted.
-The "Reversed Invoices" tab list the original invoice being reversed as now both of them are linked.
-To learn more visit Reversed Invoices.
-The reversed document posting creates the following accounting entries:
-
-Account	Debit	Credit	Comments
-Product Expense		Line Net Amount	One per invoice line
-Tax Credit		Tax Amount	One per tax line.
-Vendor Liability	Total Gross Amount		One per invoice
-And it is also possible to partially void a supplier invoice by:
-
-manually creating any of the available reversed purchase documents, in the "Purchase Invoice" window:
-"AP Credit Memo" or
-"Reversed Purchase Invoice"
-which besides must be manually linked to the invoice/s being reversed in the "Reversed Invoices tab".
-To learn more visit Reversed Invoices.
-The "AP Credit Memo" posting looks the same as the "Reversed Purchase Invoice" posting.
-
-The main different between those two purchase reversed document types is:
-
-AP Credit Memo invoiced quantity is a positive quantity
-and Reversed Purchase Invoice quantity is a negative quantity
-We strongly recommend you to use the "Reversed Purchase Invoice" document type while partially voiding supplier's invoices.
+!!! info
+    For details on how to void or partially void an invoice, see the [Reactivate](#reactivate) button section.
 
 
 ## Buttons
@@ -330,7 +308,7 @@ The *Reversed Invoices* tab links both the original and the reversal documents.
 
 **Partially voiding an invoice**
 
-It is also possible to partially void a supplier invoice by manually creating one of the following reversed purchase documents in the [Purchase Invoice](purchase-invoice.md) window:
+It is also possible to partially void a supplier invoice by manually creating one of the following reversed purchase documents in the Purchase Invoice window:
 
 - **AP Credit Memo**: invoiced quantity is positive.
 - **Reversed Purchase Invoice**: invoiced quantity is negative.
