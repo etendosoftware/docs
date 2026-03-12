@@ -6,75 +6,77 @@ tags:
   - Extensibility
 ---
 
-# Cómo Configurar el Soporte al Sistema de Colores en la UI
+# How to Configure Color System Support in the UI
 
-## Visión General
+## Overview
 
-El sistema de colores en Etendo permite asignar identificadores visuales (pastillas de color) a registros dentro de una grilla o formulario en Workspace UI, mejorando la experiencia del usuario al destacar información clave. Esta funcionalidad aprovecha el sistema de extensibilidad de Etendo para aplicarse transparentemente sin necesidad de alterar el código base de la interfaz gráfica.
+The color system in Etendo allows you to assign visual identifiers (color badges) to records within a grid or form in the Workspace UI, enhancing the user experience by highlighting key information. This feature leverages Etendo's extensibility system, allowing it to be applied transparently without altering the core codebase of the graphical interface.
 
-Un excelente caso de uso (y uno de los más visuales) es aplicarlo a tablas maestras como la **Categoría de Producto (M_Product_Category)** o el **Grupo de Terceros (C_BP_Group)**, ya que estas son muy utilizadas dentro de grillas principales (como la grilla de Productos o la de Terceros/Clientes).
+An excellent (and highly visual) use case is applying it to master tables such as the **Product Category (M_Product_Category)** or **Business Partner Group (C_BP_Group)**, as these are heavily used within main grids (like the Products or Customers grid).
 
-## ¿Cómo funciona la relación con la otra tabla?
+## How does the relationship work?
 
-Para que el color se refleje en la UI, el campo en cuestión en la tabla principal debe apuntar a una tabla maestra a través de una Foreign Key (Referencia **TableDir** o **Table**). 
+For the color to be reflected in the UI, the field in question within the main table must point to a master table via a Foreign Key (**TableDir** or **Table** Reference).
 
-La implementación actual en Workspace UI y Etendo funciona de manera coordinada gracias a una simbiosis entre la metadata y el frontend de React:
+The current implementation in Workspace UI and Etendo works in coordination through an interaction between the metadata and the React frontend:
 
-1. **Inyección de Metadata:** El backend deduce si una tabla hija necesita un color si nota que a lo que apunta contiene una propiedad cuya convención de nombre hace alusión a un color. De ser así, inyecta `colorFieldName` como metadato del campo a nivel del diccionario.
-2. **Petición del lado del Front:** Los hooks de obtención de datos (Datasource) en NextJS revisan activamente cada columna definida. Si alguna especifica el metadata `colorFieldName`, el frontend añade al vuelo esa dependencia solicitada como `_extraProperties` en la Request a la API (ej: `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). Esto le fuerza al backend a hacer los JOIN correspondientes y volcar el valor final de color al formato JSON.
-3. **Detección Dinámica de Interfaz:** Al momento de renderizar las celdas, el frontend es totalmente agnóstico e independiente: Escanea todas las claves (*keys*) de los registros recuperados y si alguna contiene dinámicamente la palabra `color` (o variables parecidas como `smfcolor`), le asigna automáticamente el componente visual en forma de 'Tag' envuelto, usando el valor hexa recuperado, su prefijo y deducido en un texto con buen contraste.
+1. **Metadata Injection:** The backend determines if a child table needs a color by checking if the table it points to has a property following a naming convention that implies a color. If so, it injects `colorFieldName` as the field metadata at the dictionary level.
+2. **Frontend Request:** The data fetching hooks (Datasource) in NextJS actively evaluate each defined column. If any column specifies the `colorFieldName` metadata, the frontend adds this requested dependency on the fly as `_extraProperties` to the API Request (e.g., `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). This forces the backend to perform the corresponding JOINs and dump the final color value into the JSON response.
+3. **Dynamic Interface Detection:** When rendering the cells, the frontend is completely agnostic and independent. It scans all the *keys* of the fetched records and if any key dynamically contains the word `color` (or similar variables like `smfcolor`), it automatically assigns the visual component in the form of a wrapped 'Tag', using the recovered hex value, its prefix, and deducting a text with good contrast.
 
-Esta arquitectura explícita garantiza eficiencia sin corromper el payload estándar. De igual manera, se actualiza en tiempo real tanto en la **Vista de Formulario (Form View)**, en la **Vista de Grilla Principal (Grid View)**, y a la hora de mutar la información por medio de la **Edición en Línea (Inline Editing)** (donde el cliente vuelve a efectuar una petición del registro pidiendo los `_extraProperties` de colores al guardar exitosamente).
+This explicit architecture ensures efficiency without corrupting the standard payload. Similarly, it updates in real time in the **Form View**, the **Main Grid View**, and when mutating information via **Inline Editing** (where the client fetches the record again requesting the color `_extraProperties` upon successful save).
 
-## Paso a Paso: Configurar el Color en la Categoría de Productos
+## Step-by-Step: Configuring Color in Product Category
 
-A continuación, se detalla el procedimiento exacto para probar e implementar esto utilizando la tabla `M_Product_Category` como ejemplo:
+Below is the exact procedure to test and implement this easily using the `M_Product_Category` table as an example:
 
-### 1. Agregar la columna de Color en el Diccionario de Datos
+### 1. Add the Color column in the Data Dictionary
 
-1. Ingresa a tu entorno de **Etendo ERP Classic** con el rol de **System Administrator** (Administrador del Sistema).
-2. Ve a la ventana **Tables and Columns** (Tablas y Columnas).
-3. Busca la tabla maestra de interés, en este caso `M_Product_Category` (Categoría de Producto).
-4. En la pestaña de *Columns*, crea una nueva columna utilizando tu prefijo de módulo (por ejemplo `EM_CRM_Color`, `EM_SMF_Color` o usar el prefijo de tu módulo de pruebas activo).
-5. Configúrala como tipo **String** (cadena de texto) con una longitud de 7 o 10 caracteres; suficientes para guardar en su interior un código hexadecimal (`#FF0000`).
+1. Log into your **Etendo ERP Classic** environment with the **System Administrator** role.
+2. Go to the **Tables and Columns** window.
+3. Search for the master table of interest, in this case, `M_Product_Category` (Product Category).
+4. On the *Columns* tab, create a new column using your module prefix (for example, `EM_CRM_Color`, `EM_SMF_Color`, or your active testing module prefix).
+5. Configure it as a **String** type with a length of 7 or 10 characters—enough to store a hex code like `#FF0000`.
 
-!!!note "Nota clave"
-      Gracias a la lógica de resolución entre la metadata y cómo nuestro Frontend evalúa las claves JSON al renderizar ([extractColorContext]), Etendo auto-asignará a la paleta cualquier variable cuya convención incluya el sufijo de forma de la palabra "color".
+!!!note "Key Note"
+      Thanks to the resolution logic between the metadata and how our Frontend evaluates the JSON keys when rendering ([extractColorContext]), Etendo will auto-assign to the palette any variable whose naming convention includes the "color" word suffix.
 
-### 2. Aplicar la tabla en la BD y mostrar la columna
+### 2. Apply DB changes and show the column in the window
 
-Luego de definir la columna en el diccionario de datos, debes materializarla en la base de datos:
-1. Aplica los cambios mediante el proceso clásico compilando en consola (ej. `gradlew smartbuild` o reconstruyendo de manera apropiada la base de datos).
-2. Ve a la ventana **Window, Tab and Field** (Ventana, Pestaña y Campo) dentro del entorno Etendo.
-3. Busca la ventana correspondiente, en este caso **Product Category**.
-4. Asegúrate recargar la pestaña o cerciorarte de agregar/crear el registro para la pestaña central de **Field** respecto a esa nueva columna, logrando así que el campo esté listo para ser usado y se visualice en la interfaz del ERP clásico.
+After defining the column in the data dictionary, you must materialize it in your database:
+1. Apply the changes compiling the system via console (e.g., `gradlew smartbuild` or rebuilding the database appropriately).
+2. Navigate to the **Window, Tab and Field** window within the Etendo environment.
+3. Search for the corresponding window, in this case, **Product Category**.
+4. Make sure to reload the tab or manually add/create the corresponding record in the **Field** tab for the new column, allowing it to appear in the classic ERP interface ready for use.
 
-### 3. Prueba de Fuego (¡La Magia Visual!)
+### 3. The Visual Test (The Visual Magic!)
 
-1. Abre la ventana **Product Category** (Categoría de Producto) en Etendo Classic.
-2. Selecciona un registro existente, por ejemplo la categoría titulada "Standard" (o directamente sobre la que decidas usar).
-3. Escribe un valor hexadecimal identificativo y bien llamativo sobre el nuevo campo de color. Por ejemplo: `#8E44AD` (Un color púrpura oscuro), y guarda finalmente el registro.
-4. Ahora, ve a través del frontend de **NextJS de Workspace UI**.
-5. Abre la ventana principal respectiva para **Products** (Productos o `M_Product`).
-6. En aquella grilla resultante de productos, busca la columna "Categoría de Producto" (`M_Product_Category_ID`).
-7. **¡Sorpresa!** Si esta categoría suele verse como un simple texto azul detallando el contenido "Standard", ahora notarás un cambio muy atractivo. Al pedirse los datos, el frontend detectará que hay una configuración para pedir metadatos de ese color (`_extraProperties`), inyectará la petición, la base de datos lo procesará en sus JOINs, Workspace captará la key "color" para esa columna y terminará pintándolo en una hermosa pastilla redondeada color púrpura.
+1. Open the **Product Category** window in Etendo Classic.
+2. Select an existing record, for example, the category titled "Standard" (or whichever you decide to use).
+3. Write an identifying and eye-catching hexadecimal value in the new assigned color field. For example: `#8E44AD` (a dark purple color), and hit save on the record.
+4. Now, go to the **NextJS frontend of Workspace UI**.
+5. Open the respective main window for **Products** (`M_Product`).
+6. In the resulting products grid, search for the "Product Category" column (`M_Product_Category_ID`).
+7. **Surprise!** If this category normally appeared as simple blue text detailing "Standard", you'll now witness an appealing change. When requesting the data, the frontend will detect the configuration to request metadata for that color (`_extraProperties`) and inject the request. The database will process it in its JOINs, Workspace will capture the "color" key for that column, and it will end up painting it in a beautiful rounded purple badge.
 
-Lo genial de este diseño es que todo ha quedado **totalmente agnóstico de módulos**. Uno puede crear a la vez módulos independientes para sus clientes, agregando variables idénticas referidas como `EM_Cliente_Color` para tablas de Monedas, Métodos de Pago, Vendedores o Almacenes... e instantáneamente brotarán coloreadas en la grilla y formulario de la UI sin que se requiera programar ni un solo *if* auxiliar del lado visual.
+The brilliance of this design is that everything is **completely module-agnostic**. You can create independent modules for your clients, adding exactly the same tracking variables referred to as `EM_Client_Color` to tables such as Currencies, Payment Methods, Sales Representatives, or Warehouses... and they will instantly pop up colored across the grid and form in the UI without needing a single additional *if* programmed on the frontend visual side.
 
-## Restricciones y Análisis de Alcance
+## Scope and Restrictions
 
-### ¿A qué campos afecta y permite intervenir?
+### What fields are affected?
 
-La lógica dinámica de inyección de metadata y renderizado de pastillas de color **solo afecta a campos (Fields) definidos como tipo de Referencia Foránea (Foreign Keys / TableDir / Table)** hacia la tabla maestra que ya cuenta con la columna de color configurada. Algunos ejemplos concisos incluyen:
+The dynamic logic for metadata injection and color badge rendering **only affects fields defined as Foreign Keys (TableDir / Table)** targeting a master table that already has the color column configured. Some concise examples include:
 
-* `M_Product_Category_ID` apuntando en la tabla de Productos.
-* `Priority_ID` reflejándose en la tabla de Tareas.
-* `C_Currency_ID` visualizándose en la tabla de Facturas.
+* `M_Product_Category_ID` pointing in the Products table.
+* `Priority_ID` reflecting in the Tasks table.
+* `C_Currency_ID` translating to the Invoices table.
 
-### ¿A qué campos NO afecta o resultan omitidos?
+### What is NOT affected?
 
-Su dinámica de control actual **NO afectará o incidirá bajo los elementos a continuación especificables**:
+This current control mechanism **DOES NOT affect or interfere with**:
 
-* Campos de texto estáticos y regulares (Cadenas o *Strings* convencionales).
-* Valores Numéricos, Fechas naturales o datos de tipo Booleanos.
-* Listas estáticas predefinidas en el sistema (Es decir, menús desplegables del propio tipo *List* codificados de forma fija o *hardcodeada* bajo los dominios de las Listas de Referencia en el diccionario).
+* Regular and simple static text fields (Strings).
+* Numbers, Dates, or Boolean values.
+* Hardcoded static lists in the dictionary (Dropdowns of type *List* defined fixedly within Reference lists domains in the system).
+
+---
