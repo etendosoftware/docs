@@ -20,9 +20,9 @@ Para que el color se refleje en la UI, el campo en cuestión en la tabla princip
 
 La implementación actual en Workspace UI y Etendo funciona de manera coordinada gracias a una simbiosis entre la metadata y el frontend de React:
 
-1. **Inyección de Metadata:** El backend deduce si una tabla hija necesita un color si nota que a lo que apunta contiene una propiedad cuya convención de nombre hace alusión a un color. De ser así, inyecta `colorFieldName` como metadato del campo a nivel del diccionario.
-2. **Petición del lado del Front:** Los hooks de obtención de datos (Datasource) en NextJS revisan activamente cada columna definida. Si alguna especifica el metadata `colorFieldName`, el frontend añade al vuelo esa dependencia solicitada como `_extraProperties` en la Request a la API (ej: `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). Esto le fuerza al backend a hacer los JOIN correspondientes y volcar el valor final de color al formato JSON.
-3. **Detección Dinámica de Interfaz:** Al momento de renderizar las celdas, el frontend es totalmente agnóstico e independiente: Escanea todas las claves (*keys*) de los registros recuperados y si alguna contiene dinámicamente la palabra `color` (o variables parecidas como `smfcolor`), le asigna automáticamente el componente visual en forma de 'Tag' envuelto, usando el valor hexa recuperado, su prefijo y deducido en un texto con buen contraste.
+1. **Inyección de Metadata:** El backend deduce si una tabla hija necesita mostrar un color verificando si el diccionario de datos tiene configurada la columna con la Referencia asignada al tipo "Color". De ser así, inyecta `colorFieldName` indicando cómo se llama esta propiedad hacia la metadata gráfica.
+2. **Petición del lado del Front:** Los hooks de obtención de datos (Datasource) en NextJS revisan activamente cada columna definida. Si alguna especifica la metadata `colorFieldName`, el frontend añade al vuelo esa dependencia para solicitarla en la Request a la API (ej: `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). Esto le fuerza al backend a hacer los JOIN correspondientes y volcar el valor final del color al formato JSON.
+3. **Renderizado en la Interfaz:** Al momento de procesar las celdas, el frontend comprueba si recibió esta propiedad vinculada al color y le asigna automáticamente el componente visual en forma de 'Tag' (pastilla envuelta), usando el valor hexa recuperado y calculando un texto con buen contraste de legibilidad.
 
 Esta arquitectura explícita garantiza eficiencia sin corromper el payload estándar. De igual manera, se actualiza en tiempo real tanto en la **Vista de Formulario (Form View)**, en la **Vista de Grilla Principal (Grid View)**, y a la hora de mutar la información por medio de la **Edición en Línea (Inline Editing)** (donde el cliente vuelve a efectuar una petición del registro pidiendo los `_extraProperties` de colores al guardar exitosamente).
 
@@ -35,11 +35,12 @@ A continuación, se detalla el procedimiento exacto para probar e implementar es
 1. Ingresa a tu entorno de **Etendo ERP Classic** con el rol de **System Administrator** (Administrador del Sistema).
 2. Ve a la ventana **Tables and Columns** (Tablas y Columnas).
 3. Busca la tabla maestra de interés, en este caso `M_Product_Category` (Categoría de Producto).
-4. En la pestaña de *Columns*, crea una nueva columna utilizando tu prefijo de módulo (por ejemplo `EM_CRM_Color`, `EM_SMF_Color` o usar el prefijo de tu módulo de pruebas activo).
-5. Configúrala como tipo **String** (cadena de texto) con una longitud de 7 o 10 caracteres; suficientes para guardar en su interior un código hexadecimal (`#FF0000`).
+4. En la pestaña de *Columns*, crea una nueva columna utilizando tu prefijo de módulo (por ejemplo `EM_CRM_Color` o usar el prefijo de tu módulo de pruebas activo).
+5. Asigna a esta nueva columna el tipo de referencia **Color**. Esta es la instrucción clave y mejor práctica para que el sistema reconozca oficial y estructuradamente que este campo soportará colores.
+6. La longitud ideal es de 7 o 10 caracteres; suficientes para guardar en su interior un código hexadecimal (`#FF0000`).
 
 !!!note "Nota clave"
-      Gracias a la lógica de resolución entre la metadata y cómo nuestro Frontend evalúa las claves JSON al renderizar ([extractColorContext]), Etendo auto-asignará a la paleta cualquier variable cuya convención incluya el sufijo de forma de la palabra "color".
+      Al utilizar el Reference "Color", el backend detectará explícita y correctamente el propósito de tu columna sin depender del nombre exacto bajo el que la registres, integrándola transparentemente a la metadata que lee el frontend.
 
 ### 2. Aplicar la tabla en la BD y mostrar la columna
 
@@ -57,9 +58,9 @@ Luego de definir la columna en el diccionario de datos, debes materializarla en 
 4. Ahora, ve a través del frontend de **NextJS de Workspace UI**.
 5. Abre la ventana principal respectiva para **Products** (Productos o `M_Product`).
 6. En aquella grilla resultante de productos, busca la columna "Categoría de Producto" (`M_Product_Category_ID`).
-7. **¡Sorpresa!** Si esta categoría suele verse como un simple texto azul detallando el contenido "Standard", ahora notarás un cambio muy atractivo. Al pedirse los datos, el frontend detectará que hay una configuración para pedir metadatos de ese color (`_extraProperties`), inyectará la petición, la base de datos lo procesará en sus JOINs, Workspace captará la key "color" para esa columna y terminará pintándolo en una hermosa pastilla redondeada color púrpura.
+7. **¡Sorpresa!** Si esta categoría suele verse como un simple texto azul detallando el contenido "Standard", ahora notarás un cambio muy atractivo. Al pedirse los datos, el frontend detectará que hay una configuración para pedir metadatos de ese color (`_extraProperties`), inyectará la petición extra, la base de datos lo procesará automáticamente por detrás y la UI terminará pintando el texto en una hermosa pastilla redondeada color púrpura.
 
-Lo genial de este diseño es que todo ha quedado **totalmente agnóstico de módulos**. Uno puede crear a la vez módulos independientes para sus clientes, agregando variables idénticas referidas como `EM_Cliente_Color` para tablas de Monedas, Métodos de Pago, Vendedores o Almacenes... e instantáneamente brotarán coloreadas en la grilla y formulario de la UI sin que se requiera programar ni un solo *if* auxiliar del lado visual.
+Lo genial de este diseño es que todo ha quedado **totalmente agnóstico de módulos y variables específicas**. Siempre que la tabla maestra cuente con una columna configurada con el Reference "Color", el componente subyacente de UI la aprovechará sin problemas. Uno puede aplicarlo a tablas de Monedas, Métodos de Pago, Vendedores o Almacenes... e instantáneamente brotarán coloreadas en la grilla y formulario sin que se requiera programar ni un solo componente auxiliar.
 
 ## Restricciones y Análisis de Alcance
 
