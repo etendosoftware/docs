@@ -302,6 +302,7 @@ plugins:
                     - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
               - New UI:
                 - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+                - How to Configure Color System Support: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
             - Developer Guide:
               - Overview: developer-guide/overview.md
@@ -723,6 +724,7 @@ plugins:
             How to Change Fonts in Etendo Reports: Cómo Cambiar Fuentes en Informes de Etendo
             How to Change the Size of a Column: Cómo Cambiar el Tamaño de una Columna
             How to Configure API Tokens: Cómo Configurar Tokens de API
+            How to Configure Color System Support: Cómo Configurar el Soporte al Sistema de Colores
             How to Configure Etendo Copilot to Use a Proxy: Cómo Configurar Etendo Copilot para Usar un Proxy
             How to Configure Log: Cómo Configurar el Log
             How to Configure MCP Servers on a Etendo Agent: Cómo Configurar Servidores MCP en un Agente de Etendo
@@ -1186,6 +1188,7 @@ nav:
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
     - New UI:
       - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+      - How to Configure Color System Support: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
