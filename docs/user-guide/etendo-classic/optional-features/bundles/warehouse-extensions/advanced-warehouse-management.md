@@ -406,17 +406,20 @@ Extracts product lines from purchase orders. When clicked, a pop-up shows all av
 
 **Create Reference Inventory**
 
-This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
+This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen. It also supports multi-selection in the reception cards, allowing users to select and group several lines in one action.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). 
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
+
+When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
     - Only lines from the same Sales Order can be grouped.  
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+    - Child logistics units remain associated with the parent logistics unit created from the button.
 
 **Clear Group By** 
 
