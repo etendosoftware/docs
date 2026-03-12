@@ -39,9 +39,6 @@ Esta funcionalidad permite al usuario configurar y conceder rappels a terceros. 
 !!! info
 	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
 
-!!! info
-	Para más información, visite la [guía del desarrollador de Print Document Web Service](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service).
-
 ### CRM Lead Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
