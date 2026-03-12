@@ -396,7 +396,7 @@ Fields to note:
 - **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
 - **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
-#### Buttons
+#### Available Process
 
 **Create Lines From Order**
 
@@ -406,7 +406,7 @@ Extracts product lines from purchase orders. When clicked, a pop-up shows all av
 
 **Create Reference Inventory**
 
-This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen. It also supports multi-selection in the reception cards, allowing users to select and group several lines in one action.
+This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
