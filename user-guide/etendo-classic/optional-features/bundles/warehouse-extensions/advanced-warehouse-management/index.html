@@ -4705,9 +4705,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#available-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Buttons
+      Available Process
     </span>
   </a>
   
@@ -4780,7 +4780,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons_1" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -14897,9 +14897,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons" class="md-nav__link">
+  <a href="#available-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Buttons
+      Available Process
     </span>
   </a>
   
@@ -14972,7 +14972,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buttons_1" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Buttons
     </span>
@@ -15854,20 +15854,22 @@ GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom pro
 <li><strong>Reference Inventory Type</strong>: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).</li>
 <li><strong>Goods Receipt Line</strong>: Reference to the goods receipt generated upon completion of the goods receipt.  </li>
 </ul>
-<h4 id="buttons">Buttons</h4>
+<h4 id="available-process">Available Process</h4>
 <p><strong>Create Lines From Order</strong></p>
 <p>Extracts product lines from purchase orders. When clicked, a pop-up shows all available products, even from multiple purchase orders. You can select one or more lines to add to the Lines tab. If a storage bin is defined, it will be assigned to all selected lines; otherwise, it can be set individually per line.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png"></a></p>
 <p><strong>Create Reference Inventory</strong></p>
 <p>This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png"></a></p>
-<p>The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). </p>
+<p>The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).</p>
+<p>When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
 <li>Only lines from the same Sales Order can be grouped.  </li>
 <li>If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.</li>
+<li>Child logistics units remain associated with the parent logistics unit created from the button.</li>
 </ul>
 </div>
 <p><strong>Clear Group By</strong> </p>
@@ -15983,7 +15985,7 @@ Use the <strong>Generate Reception Task</strong> button to create a reception ta
 <li><strong>Description</strong>: Free text field to add additional notes or observations about the inspection line.  </li>
 <li><strong>Movement Line</strong>: Reference to the inventory movement line associated with this inspection, if applicable.</li>
 </ul>
-<h4 id="buttons_1">Buttons</h4>
+<h4 id="buttons">Buttons</h4>
 <p><strong>Process</strong></p>
 <p>Processes the quality inspection document, validating the inspection data and updating the inventory based on the results recorded in the lines. This button is available when the inspection document has lines.</p>
 <p><strong>Generate Task</strong></p>
