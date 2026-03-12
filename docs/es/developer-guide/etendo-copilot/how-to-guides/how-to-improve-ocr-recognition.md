@@ -117,3 +117,5 @@ Campos marcados en la imagen de referencia para guiar la extracción OCR.
 
 !!! tip
     Si no quiere usar imágenes de referencia para una ejecución específica, puede deshabilitar esta funcionalidad indicando en el prompt del agente: *"Al usar OCRTool, no use imágenes de referencia de la base de conocimiento."*. El agente deshabilitará la búsqueda de referencias para esa ejecución mediante un parámetro de la herramienta OCR.
+
+---
