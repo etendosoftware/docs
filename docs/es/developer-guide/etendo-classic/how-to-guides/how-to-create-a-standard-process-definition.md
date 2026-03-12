@@ -640,3 +640,5 @@ JSONArray gridAllRows = gridInfo.getJSONArray("_allRows");
 ```
 ---
 Este trabajo es una obra derivada de [Cómo crear una Definición del Proceso estándar](http://wiki.openbravo.com/wiki/How_to_create_a_Standard_Process_Definition){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
