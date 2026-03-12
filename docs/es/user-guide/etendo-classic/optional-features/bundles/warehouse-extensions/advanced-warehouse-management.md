@@ -390,8 +390,8 @@ Campos a tener en cuenta:
 - **Tipo de inventario referenciado**: Tipo de inventario referenciado asociado a la agrupación (p. ej., Caja, Palé).
 - **Línea de albarán**: Referencia al albarán generado al completar el albarán.  
 
-#### Botones
-
+#### Procesos disponibles
+  
 **Crear líneas desde pedido**
 
 Extrae líneas de producto desde pedidos de compra. Al pulsarlo, un pop-up muestra todos los productos disponibles, incluso de múltiples pedidos de compra. Puede seleccionar una o varias líneas para añadirlas a la solapa Líneas. Si se define un hueco, se asignará a todas las líneas seleccionadas; en caso contrario, puede establecerse individualmente por línea.
