@@ -11,24 +11,26 @@ tags:
 
 ## Overview
 
-This module allows calling any standard Etendo web service in the same way as calling the `/ws` endpoint, but using token authentication.
+This module allows calling any standard **Etendo web service** in the same way as calling the `/ws` endpoint, but using token authentication.
 
-This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
+This authentication method also allows defining the context for the calls by choosing the role and or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
+Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the **OB Data Access Layer** with json).
 
-## Setup 
+## Initial Setup
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
+
+It is necessary to configure the encryption key and the expiration time for the authentication tokens in the **Client** window with the *System Administrator* role.
+
+If the *Expiration Time* field is equal to `0` the tokens do not expire.
+
+Generate a random key with the **Generate key** button.
 
 !!! Info 
-    By default, the ES256 encryption algorithm is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256`.
+    By default, the **ES256 encryption algorithm** is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256` to use a legacy algorithm.
 
-### Initial configuration
-:material-menu: `Application` > `General Setup` > `Client` > `Client`
-It is necessary to configure the encryption key and the expiration time for the authentication tokens in the Client window with the System Administrator role.
-
-If the expiration time is equal to "0" the tokens do not expire.
-
-Generate a random key with the "Generate key" button.
+!!! Warning
+    A valid domain name and `SSL/TLS` certificate are required to use **Secure Web Services**. Please install a certificate or contact your administrator to avoid runtime errors when generating tokens in server instances.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 

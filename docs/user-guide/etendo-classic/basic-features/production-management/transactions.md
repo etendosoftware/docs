@@ -220,6 +220,8 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 
 ### How to Reactivate Work Efforts
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KRcwM9tuMus?si=0w0iPDl9KGgWaLYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 !!! info
     This functionality is available starting from version **1.0.0** of the Production Extensions Bundle, from **Etendo 25.1**. To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
@@ -235,6 +237,8 @@ Once the effort is successfully reactivated, the state of the document changes t
     It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ### How to Void Work Efforts
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KRcwM9tuMus?si=0w0iPDl9KGgWaLYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 !!! info
     This functionality is available starting from version **3.4.0** of the Production Extensions Bundle, from **Etendo 22.1**. To install it, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 

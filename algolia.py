@@ -158,18 +158,45 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
         
     return records
 
-def index_docs(app_id, api_key, index_name, docs_dir, site_url, config_file):
+def get_locale_nav(config, locale):
+    """
+    Extrae el nav para un locale específico desde la configuración del plugin i18n.
+    Retorna None si no se encuentra, para que el caller use el nav global como fallback.
+    """
+    for plugin in config.get('plugins', []):
+        if not isinstance(plugin, dict) or 'i18n' not in plugin:
+            continue
+        for lang in plugin['i18n'].get('languages', []):
+            if lang.get('locale') == locale and 'nav' in lang:
+                return lang['nav']
+    return None
+
+
+def index_docs(app_id, api_key, index_name, docs_dir, site_url, config_file, locale=None):
     """
     Función principal que usa el cliente SÍNCRONO para indexar los documentos.
+    Si se pasa un locale (ej: 'es'), usa el nav definido en el plugin i18n para ese
+    locale en lugar del nav global, para que las jerarquías queden en el idioma correcto.
     """
     client = SearchClientSync(app_id, api_key)
-    
+
     try:
         with open(config_file, 'r', encoding='utf-8') as f:
             config_content = f.read()
         cleaned_content = re.sub(r'!!python/name:.*', '', config_content)
         config = yaml.load(cleaned_content, Loader=yaml.FullLoader)
-        nav_map = parse_nav_section(config.get('nav', []), docs_dir) if 'nav' in config else {}
+
+        if locale:
+            nav_data = get_locale_nav(config, locale)
+            if nav_data is None:
+                logging.warning(f"No se encontró nav para el locale '{locale}' en el plugin i18n. Usando nav global.")
+                nav_data = config.get('nav', [])
+            else:
+                logging.info(f"Usando nav del locale '{locale}' desde el plugin i18n.")
+        else:
+            nav_data = config.get('nav', [])
+
+        nav_map = parse_nav_section(nav_data, docs_dir) if nav_data else {}
     except FileNotFoundError:
         logging.error(f"Archivo de configuración no encontrado: {config_file}")
         return
@@ -180,20 +207,17 @@ def index_docs(app_id, api_key, index_name, docs_dir, site_url, config_file):
     for relative_path, hierarchy_titles in nav_map.items():
         file_path = os.path.join(docs_dir, relative_path)
         if not os.path.exists(file_path): continue
-        
+
         frontmatter, markdown_content = parse_markdown_file(file_path)
-        
+
         if frontmatter.get('title'): hierarchy_titles[-1] = frontmatter.get('title')
-        
+
         page_slug = os.path.splitext(relative_path)[0].replace('index', '')
         page_url = f"{site_url}{page_slug}"
         if not page_url.endswith('/'): page_url += '/'
-        
+
         if markdown_content:
-            # --- NUEVO: Obtener tags del frontmatter ---
             tags = frontmatter.get('tags', [])
-            
-            # --- MODIFICADO: Pasar tags a create_records ---
             records = create_records(markdown_content, hierarchy_titles, page_url, tags)
             all_records.extend(records)
             logging.info(f"Procesado: {relative_path} -> {len(all_records)} registros totales.")
@@ -202,59 +226,6 @@ def index_docs(app_id, api_key, index_name, docs_dir, site_url, config_file):
         logging.info("No se encontraron registros para indexar.")
         return
     try:
-        index = client.init_index(index_name) # Asegúrate de inicializar el índice
-        logging.info(f"Limpiando y enviando {len(all_records)} registros a Algolia...")
-        index.clear_objects()
-        index.save_objects(all_records)
-        logging.info("¡Proceso de indexación completado exitosamente!")
-    except Exception as e:
-        logging.error(f"Error al enviar registros a Algolia: {e}")
-        
-def index_docs(app_id, api_key, index_name, docs_dir, site_url, config_file):
-    """
-    Función principal que usa el cliente SÍNCRONO para indexar los documentos.
-    """
-    client = SearchClientSync(app_id, api_key)
-    
-    try:
-        with open(config_file, 'r', encoding='utf-8') as f:
-            config_content = f.read()
-        cleaned_content = re.sub(r'!!python/name:.*', '', config_content)
-        config = yaml.load(cleaned_content, Loader=yaml.FullLoader)
-        nav_map = parse_nav_section(config.get('nav', []), docs_dir) if 'nav' in config else {}
-    except FileNotFoundError:
-        logging.error(f"Archivo de configuración no encontrado: {config_file}")
-        return
-
-    all_records = []
-    if not site_url.endswith('/'): site_url += '/'
-
-    for relative_path, hierarchy_titles in nav_map.items():
-        file_path = os.path.join(docs_dir, relative_path)
-        if not os.path.exists(file_path): continue
-        
-        frontmatter, markdown_content = parse_markdown_file(file_path)
-        
-        if frontmatter.get('title'): hierarchy_titles[-1] = frontmatter.get('title')
-        
-        page_slug = os.path.splitext(relative_path)[0].replace('index', '')
-        page_url = f"{site_url}{page_slug}"
-        if not page_url.endswith('/'): page_url += '/'
-        
-        if markdown_content:
-            # --- NUEVO: Obtener tags del frontmatter ---
-            tags = frontmatter.get('tags', [])
-            
-            # --- MODIFICADO: Pasar tags a create_records ---
-            records = create_records(markdown_content, hierarchy_titles, page_url, tags)
-            all_records.extend(records)
-            logging.info(f"Procesado: {relative_path} -> {len(all_records)} registros totales.")
-
-    if not all_records:
-        logging.info("No se encontraron registros para indexar.")
-        return
-    try:
-        # Inicializar el índice para una mejor interacción con la API
         logging.info(f"Limpiando y enviando {len(all_records)} registros a Algolia...")
         client.clear_objects(index_name=index_name)
         client.save_objects(index_name=index_name, objects=all_records)
@@ -270,8 +241,9 @@ def main():
     parser.add_argument("--config-file", default="mkdocs.yml", help="Ruta a mkdocs.yml.")
     parser.add_argument("--docs-dir", default="docs", help="Directorio de los archivos Markdown.")
     parser.add_argument("--site-url", required=True, help="La URL base del sitio.")
+    parser.add_argument("--locale", default=None, help="Locale del sitio (ej: 'es'). Usa el nav del plugin i18n para ese locale.")
     args = parser.parse_args()
-    index_docs(args.app_id, args.api_key, args.index_name, args.docs_dir, args.site_url, args.config_file)
+    index_docs(args.app_id, args.api_key, args.index_name, args.docs_dir, args.site_url, args.config_file, args.locale)
 
 if __name__ == "__main__":
     main()

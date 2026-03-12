@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Algolia configuration
-    const algoliaConfig = {
-        appId: 'XMLZ1ZZEY7',
-        apiKey: 'de992ae25d65509474690fe8761e2a21',
-        indexName: 'etendo_docs_index2'
-    };
+    // Algolia configuration — index switches dynamically based on language
+    const algoliaAppId = 'XMLZ1ZZEY7';
+    const algoliaApiKey = 'de992ae25d65509474690fe8761e2a21';
+    const client = algoliasearch(algoliaAppId, algoliaApiKey);
+
+    function getIndex() {
+        const isSpanish = window.location.pathname.startsWith('/es/');
+        return client.initIndex(isSpanish ? 'etendo_docs_index2_es' : 'etendo_docs_index2');
+    }
 
     // Select the search container
     const searchContainer = document.querySelector(".md-search");
@@ -19,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsContainer.innerHTML = "";
     resultsContainer.style.display = "none";
 
-    const client = algoliasearch(algoliaConfig.appId, algoliaConfig.apiKey);
-    const index = client.initIndex(algoliaConfig.indexName);
     const searchInput = document.querySelector("input.md-search__input");
 
     // Store last search results
@@ -76,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             li.className = "md-search-result__item";
 
             const a = document.createElement("a");
-            // Dynamic link building
             let finalUrl = hit.url;
             if (finalUrl) {
                 if (!finalUrl.startsWith("http")) {
@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
             article.className = "md-search-result__article md-typeset";
             article.setAttribute("data-md-score", hit.score || "0");
 
-            // --- Title ---
             const h1 = document.createElement("h1");
             if (hit.title) {
                 const escapedQuery = escapeRegExp(query);
@@ -165,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to perform a search using Algolia and render the results
     function performSearch(query) {
-        index.search(query)
+        getIndex().search(query)
             .then(({ hits }) => {
                 lastQuery = query;
                 lastHits = hits;

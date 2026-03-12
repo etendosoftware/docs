@@ -18,3 +18,5 @@ pip install -r requirements.txt
 source venv/bin/activate
 mkdocs serve
 ```
+# DeepWiki Chat
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/etendosoftware/docs)
