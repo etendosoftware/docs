@@ -541,7 +541,7 @@ Además, el estado contable del/de los registro/s se muestra en la barra de esta
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
-La funcionalidad de **finalización masiva** permite al usuario completar, reactivar o anular múltiples registros seleccionándolos y haciendo clic en el botón **Finalización masiva**. Esto facilita y hace más eficiente la gestión de registros, reduciendo el tiempo dedicado a procesar registros individuales.
+La funcionalidad de **finalización masiva** permite al usuario completar, reactivar o anular múltiples registros seleccionando los registros correspondientes y haciendo clic en el botón **Finalización masiva**. Esto facilita y hace más eficiente la gestión de registros, reduciendo el tiempo dedicado a procesar registros individuales.
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
@@ -1333,3 +1333,5 @@ Este trabajo es una obra derivada de [Gestión de Compras](http://wiki.openbravo
 
 ---
 Esta obra está licenciada bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
