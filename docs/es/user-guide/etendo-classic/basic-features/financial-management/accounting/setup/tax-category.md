@@ -130,3 +130,5 @@ Esta estructura ayuda a centralizar la lógica fiscal, garantiza un cálculo de 
 ---
 
 Este trabajo es una obra derivada de [Categoría de Impuesto](https://wiki.openbravo.com/wiki/Tax_Category){target="\_blank"} por [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
