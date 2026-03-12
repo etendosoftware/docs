@@ -151,3 +151,5 @@ De forma predeterminada, el archivo de log está limitado a **100MB**. Se archiv
 
 ---
 Este trabajo es una obra derivada de [Cómo configurar el log](http://wiki.openbravo.com/wiki/How_To_Configure_Log){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

@@ -6,6 +6,10 @@ tags:
  - Banking
  - Accounting Enhancements
  - Automated Processes
+ - Bank Integration
+ - Salt Edge
+ - Open Banking
+ - Financial Account
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
@@ -126,6 +130,164 @@ This functionality allows the user to automatically process and protest remittan
 
 !!! info
     For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
+# Bank Integration Overview
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+## Introduction
+
+The Bank Integration module provides **automatic bank integration** for Etendo ERP through two main capabilities:
+
+- **AIS (Account Information Service)**: Securely connect your bank accounts and automatically download bank transactions.
+- **PIS (Payment Initiation Service)**: Initiate bank payments directly from Etendo, with authorization handled securely through your bank.
+
+The integration is powered by [Salt Edge](https://www.saltedge.com/){target="_blank"}, a leading Open Banking platform that provides secure access to thousands of banks worldwide, and uses a **centralized middleware** developed by Etendo that manages all communication, security, and compliance.
+
+## Architecture
+
+The integration uses a **three-tier architecture**:
+
+1. **Etendo ERP**: User interface and business logic
+2. **Etendo Middleware**: Centralized integration layer (managed by Futit Services)
+3. **Salt Edge Platform**: Open Banking connectivity to banks
+
+```
+┌─────────────────┐
+│   Etendo ERP    │
+│  (User Layer)   │
+└────────┬────────┘
+         │
+         │ API Calls
+         ▼
+┌─────────────────┐
+│   Middleware    │
+│ (Security Layer)│
+└────────┬────────┘
+         │
+         │ Salt Edge API
+         ▼
+┌─────────────────┐
+│   Salt Edge     │
+│ (Open Banking)  │
+└────────┬────────┘
+         │
+         │ Bank APIs
+         ▼
+┌─────────────────┐
+│  Banks / ASPSPs │
+└─────────────────┘
+```
+
+### Benefits of this Architecture
+
+- **Separation of Concerns**: Etendo focuses on ERP functionality while middleware handles integration complexity
+- **Security**: Sensitive credentials and certificates are managed at the middleware level
+- **Scalability**: Multiple Etendo instances can share the same middleware
+- **Maintainability**: Banking API changes are handled centrally without affecting Etendo instances
+- **Compliance**: PSD2 and Open Banking requirements are met at the middleware level
+
+## Key Features
+
+### Account Information (AIS)
+
+- **Automatic transaction import**: Download transactions directly from bank accounts — no need to manually upload bank statement files
+- **Configurable date ranges**: Control how far back transactions should be retrieved on initial setup
+- **Duplicate prevention**: Automatically filters out duplicate transactions using Salt Edge transaction IDs
+- **Statement grouping**: Configure how transactions are grouped into bank statements (per run, per week, or per month)
+- **Scheduled processing**: Background process for automatic import across all connected accounts
+
+### Bank Connection Management
+
+- **Secure authentication**: Bank credentials are entered directly on the bank's website via the Salt Edge widget — never stored in Etendo
+- **Thousands of banks**: Support for banks worldwide through Salt Edge
+- **Connection lifecycle**: Monitor, sync, reconnect, and disconnect bank connections from within Etendo
+- **Automatic account sync**: Bank accounts are retrieved automatically when a connection is established
+
+### Payment Initiation (PIS)
+
+- **Direct bank payments**: Initiate payments from Payment OUT records without leaving the ERP
+- **Multi-template support**: SEPA (EUR), FPS (GBP), and DOMESTIC payment templates — automatically selected based on currency
+- **Bank authorization**: Secure payment authorization through the bank's own authentication page
+- **Real-time status tracking**: Monitor payment progress from initiation to execution
+- **Automatic status updates**: Receive payment status updates via webhooks and a pre-configured scheduled refresh process
+- **Bank Provider management**: Maintain an up-to-date list of banks that support payment initiation
+
+### Monitoring and Logs
+
+- **PSD2 Logs window**: Centralized view of all integration activity and error logs
+- **Detailed log entries**: Each log includes financial account, execution date, status, source, description, and raw API response
+- **Bank Provider window**: View and manage the list of available bank providers
+
+## User Workflow
+
+### AIS (Account Information)
+
+1. **Setup**:
+    - Administrator obtains Salt Edge API Key from Futit Services
+    - User configures API Key in their profile (**PSD2 API Key** field)
+    - Financial accounts are configured with import date ranges, bank provider, and statement frequency
+
+2. **Connection**:
+    - User clicks **Connect Bank Account** on the Financial Account
+    - Salt Edge widget opens for bank selection and authentication
+    - User authenticates with their bank credentials (entered on the bank's own website)
+    - Connection is established and bank accounts are synchronized automatically
+
+3. **Transaction Import**:
+    - **Manual**: User clicks **Get Bank Statement** on the Financial Account
+    - **Automatic**: Schedule the **Get Bank Statements** process to run periodically
+    - Transactions are imported and bank statements are created automatically
+
+4. **Ongoing Use**:
+    - Scheduled process imports transactions automatically
+    - User reconciles imported transactions using Etendo's reconciliation features
+    - Connections are renewed via **Reconnect Connection** when they expire
+
+### PIS (Payment Initiation)
+
+1. **Setup**:
+    - Run the **Synchronize Bank Providers** process to populate the provider list
+    - Optionally assign a **Bank Provider** to each financial account
+
+2. **Payment**:
+    - User creates a **Payment OUT** record as usual
+    - Clicks **Generate Bank Payment** — a form appears with pre-filled values
+    - Reviews and confirms — a bank authorization popup opens
+    - User authorizes the payment in their bank's secure environment
+
+3. **Tracking**:
+    - Payment status is updated automatically via webhooks
+    - A pre-configured **Refresh Pending Payments** process runs every 10 minutes as a safety net
+    - User can also refresh status manually from the **Bank Payments** tab
+
+## Security & Privacy
+
+- **No Credential Storage**: Bank credentials are never stored in Etendo or middleware — users authenticate directly with their bank
+- **API Key Security**: Each user has their own API Key for middleware access
+- **Encrypted Communication**: All data transmission is encrypted
+- **Audit Logging**: All operations are logged in the **PSD2 Logs** window for compliance and troubleshooting
+
+## PSD2 Compliance
+
+The module uses Salt Edge, which is PSD2-compliant, and supports the following Open Banking standards:
+
+- **Account Information Services (AIS)**: Read access to account data and transactions
+- **Payment Initiation Services (PIS)**: Initiate payments through the bank
+- **Strong Customer Authentication (SCA)**: Bank-level authentication for both connections and payments
+- **Connection Lifecycle**: Consent expiration, renewal, and reconnection
+
+## Prerequisites
+
+To use this module, you need:
+
+1. **Financial Extensions Bundle** installed in Etendo
+2. **Salt Edge API Key** provided by Futit Services
+3. **Financial Accounts** created in Etendo
+4. **User permissions** to access Financial Management
+
+!!!info
+    For detailed setup and usage instructions, visit the [Bank Integration User Guide](ser-guide-bank-integration.md).
 
 ### Banking Pool
 

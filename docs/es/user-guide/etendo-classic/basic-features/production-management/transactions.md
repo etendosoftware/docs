@@ -632,3 +632,5 @@ En las solapas Operarios, Máquina y Costo Indirecto, el resultado de los costos
 - Este trabajo es una obra derivada de [Gestión de Producción](http://wiki.openbravo.com/wiki/Production_Management){target="_blank"} por [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
 
 - Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
