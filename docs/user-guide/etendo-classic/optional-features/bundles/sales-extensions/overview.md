@@ -38,9 +38,6 @@ This functionality allows the user to configure and grant rappels to business pa
 !!! info
 	For more information, visit the [Advanced Rappels user guide](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
 
-!!! info
-	For more information, visit the [Print Document Web Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service).
-
 ### CRM Lead Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
