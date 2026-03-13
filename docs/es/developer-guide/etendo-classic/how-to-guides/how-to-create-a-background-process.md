@@ -12,7 +12,7 @@ tags:
 
 ##  Descripción general
 
-Los Procesos en segundo plano son [Procesos](../../../developer-guide/etendo-classic/concepts/Processes.md) que se ejecutan sin la acción directa del usuario. Se pueden establecer diferentes reglas para programar cuándo se ejecuta el proceso.
+Los Procesos en segundo plano son [Procesos](../../../developer-guide/etendo-classic/concepts/processes.md) que se ejecutan sin la acción directa del usuario. Se pueden establecer diferentes reglas para programar cuándo se ejecuta el proceso.
 
 Este documento trata sobre la infraestructura de Etendo para los Procesos en segundo plano: cómo definir, programar y monitorizar los Procesos en segundo plano.
 
