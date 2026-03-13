@@ -14859,7 +14859,7 @@ Defining the selector is a three-step procedure:</p>
 <li><strong>Sorting of columns in a grid</strong>: the order in which the columns are shown in the popup grid. Only relevant if <strong>Show in grid</strong> is checked.</li>
 <li><strong>Sortable</strong>: determines if the user can sort on this column in the popup grid. Only relevant if <strong>Show in grid</strong> is checked.</li>
 <li><strong>Filterable</strong>: determines if the user filter on this column in the popup grid. Only relevant if <strong>Show in grid</strong> is checked.</li>
-<li><strong>Central Maintenance</strong>: if checked then the name, description and help/comment are copied/used from the column. This is handled by the <a href="../concepts/Element_and_Synchronize_Terminology.md">Synchronize Terminology</a> process.</li>
+<li><strong>Central Maintenance</strong>: if checked then the name, description and help/comment are copied/used from the column. This is handled by the <a href="../element-and-synchronize-terminology/">Synchronize Terminology</a> process.</li>
 <li><strong>Search in suggestion box</strong>: as a default, the suggestion box will use the string entered by the user to search in the display field (set in the selector header) or identifier. You can select additional fields to search in by setting this field (Search in suggestion box) to yes/checking it. To make search field invisible just uncheck the field <strong>show in grid</strong>, then the field is only used to search and not displayed in the popup grid.</li>
 </ul>
 <div class="admonition note">
@@ -14968,7 +14968,7 @@ Creating a new template needs to be done by a developer with a good understandin
 <p><strong>Solution</strong> : if the foreign key selection field is the only one on which is filtered this is fine, however if there are multiple search fields then searching on non-mandatory foreign key fields is not supported by the selector.</p>
 <h2 id="advanced-topics">Advanced Topics</h2>
 <h3 id="hql-transformers">HQL Transformers</h3>
-<p>It is possible to modify an HQL query entirely via java and dependency injection using transformers. To implement the new functionality, visit <a href="../how-to-guides/How_to_create_a_HQL_Based_Table.md#HQL_Transformers">HQL Transformers</a>.</p>
+<p>It is possible to modify an HQL query entirely via java and dependency injection using transformers. To implement the new functionality, visit <a href="../../how-to-guides/how-to-create-a-hql-based-table/#hql-transformers">HQL Transformers</a>.</p>
 <h3 id="using-foreign-keys-in-hql-custom-queries">Using foreign keys in HQL Custom queries</h3>
 <p>In order to do that, the HQL select clause for that property needs to point to an entity (i.e. e.organization, instead of e.organization.name). Then in the definition of the selector field we have to select a Table reference that points to the target entity.</p>
 <hr>

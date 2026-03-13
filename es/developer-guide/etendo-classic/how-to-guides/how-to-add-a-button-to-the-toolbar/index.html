@@ -14994,7 +14994,7 @@
 <h2 id="vision-general">Visión general</h2>
 <p>Esta sección explica cómo se puede añadir un botón a la barra de herramientas principal que se muestra en rejillas y formularios. La barra de herramientas contiene dos tipos de botones: los botones de la aplicación a la izquierda (visualizados mediante un icono) y los botones personalizados a la derecha (mostrados con una etiqueta). </p>
 <p>Esta sección describe cómo añadir un botón a la parte izquierda: los botones de la aplicación.</p>
-<p>Para seguir esta sección, desarrolle JavaScript así como Java del lado del servidor y comprenda los conceptos de la <a href="../concepts/Data_Access_Layer.md">Capa de Acceso a Datos</a>.</p>
+<p>Para seguir esta sección, desarrolle JavaScript así como Java del lado del servidor y comprenda los conceptos de la <a href="../../concepts/data-access-layer/">Capa de Acceso a Datos</a>.</p>
 <h2 id="modulo-de-ejemplo">Módulo de ejemplo</h2>
 <p>Esta sección se apoya en un módulo de ejemplo que muestra un ejemplo del código que se presenta y se comenta aquí.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png" data-desc-position="bottom"><img alt="Header" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png"></a></p>
@@ -15197,7 +15197,7 @@ La función habilita/deshabilita el botón si el formulario o la rejilla son nue
 </span></code></pre></div>
 Una breve explicación:<p></p>
 <ul>
-<li>Las anotaciones en la parte superior de la clase están relacionadas con <a href="../concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md">Weld</a>.</li>
+<li>Las anotaciones en la parte superior de la clase están relacionadas con <a href="../../concepts/etendo-architecture/#introducing-weld-dependency-injection-and-more">Weld</a>.</li>
 </ul>
 <p>Las anotaciones definen que solo se crea una instancia de esta clase (un singleton) y definen un identificador para esta instancia. </p>
 <ul>
@@ -15283,7 +15283,7 @@ Notas:<p></p>
 <li>Se amplía BaseActionHandler; a menudo este es el mejor enfoque al implementar un ActionHandler. En este caso, solo es necesario implementar el método execute. </li>
 <li>Los datos se pueden enviar al servidor de 2 formas: como parámetros y como parte del cuerpo de la solicitud. Por ello, el método execute tiene 2 parámetros. En este ejemplo se utiliza el cuerpo de la solicitud.</li>
 <li>Use BigDecimal para números, ya que es mucho más preciso que double; desafortunadamente JSON solo soporta doubles. En el sistema core de Etendo, por tanto, los números se envían de cliente-servidor (y viceversa) como cadenas. </li>
-<li>la lógica itera sobre los ids de pedido y recupera el pedido usando la <a href="../concepts/Data_Access_Layer.md">Capa de Acceso a Datos</a>. </li>
+<li>la lógica itera sobre los ids de pedido y recupera el pedido usando la <a href="../../concepts/data-access-layer/">Capa de Acceso a Datos</a>. </li>
 <li>el resultado se devuelve de nuevo como JSON.</li>
 </ul>
 <h3 id="llamar-al-lado-del-servidor-desde-el-cliente-mostrando-el-resultado">Llamar al lado del servidor desde el cliente, mostrando el resultado</h3>
@@ -15327,6 +15327,7 @@ Los parámetros se especifican usando %0, %1, etc.:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png"></a></p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar" target="_blank">Cómo añadir un botón a la barra de herramientas</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Wiki de Openbravo</a>, usado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

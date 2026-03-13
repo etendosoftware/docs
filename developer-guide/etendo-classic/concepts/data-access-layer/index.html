@@ -15799,7 +15799,7 @@ time or updated in the database:</p>
 existing object. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see <a href="../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces">here</a> for more information.</p>
+<p>For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see <a href="./#property-naming-and-supported-interfaces">here</a> for more information.</p>
 </div>
 <h3 id="creating-a-new-instance-of-a-business-object">Creating a new instance of a Business Object</h3>
 <p>A business object may never be created using the Java new operator. All business objects should be created using the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java" target="_blank">OBProvider</a>  factory class:</p>
@@ -15883,7 +15883,7 @@ unequal to the number of calls to restorePreviousMode then a warning is
 displayed: <em>Unbalanced calls to enableAsAdminContext and resetAsAdminContext</em>.</p>
 </div>
 <h4 id="cross-organization-reference-administrator-mode">Cross Organization Reference Administrator Mode</h4>
-<p>Validation for referenced object's organization in columns <a href="../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references">supporting it</a> can
+<p>Validation for referenced object's organization in columns <a href="./#cross-organization-references">supporting it</a> can
 be bypassed by using a special Administrator mode: <code>setCrossOrgReferenceAdminMode</code> . Restoring previous mode is done by <code>restorePreviousCrossOrgReferenceMode</code> . Similarly to standard admin mode,
 calls must be balanced for this mode, independently from standard admin mode.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setCrossOrgReferenceAdminMode</span><span class="p">();</span>
@@ -16320,7 +16320,7 @@ that you can make use of the standard logging capabilities in the OBException
 <h2 id="tips-tricks-and-troubleshooting">Tips &amp; Tricks and Troubleshooting</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For tips and tricks and common issues (and solutions) you may find, please visit the <a href="../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer">troubleshooting</a> section.</p>
+<p>For tips and tricks and common issues (and solutions) you may find, please visit the <a href="../common-issues-tips-and-tricks/#data-access-layer">troubleshooting</a> section.</p>
 </div>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Data_Access_Layer" target="_blank">Data Access Layer</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>. </p>

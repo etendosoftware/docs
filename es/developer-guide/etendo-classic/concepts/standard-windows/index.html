@@ -15023,7 +15023,7 @@
 <h2 id="ventana">Ventana</h2>
 <p>Las ventanas se generan automáticamente por <code>WAD</code> a partir de su definición en el Diccionario de la Aplicación; todas las ventanas tienen un diseño común.</p>
 <h3 id="menu">Menú</h3>
-<p>Las ventanas se pueden añadir al <a href="../concepts/application_menu.md">Menú de la aplicación</a>.</p>
+<p>Las ventanas se pueden añadir al <a href="../application-menu/">Menú de la aplicación</a>.</p>
 <h2 id="solapa">Solapa</h2>
 <p>Las <code>Solapa</code> se incluyen dentro de <code>Ventana</code>. Cada solapa está limitada a una única <code>Table</code> del Diccionario de la Aplicación. Las siguientes subsecciones detallan algunos temas importantes que deben tenerse en cuenta al crear una solapa.</p>
 <h3 id="jerarquia-de-solapas">Jerarquía de solapas</h3>
@@ -15099,7 +15099,7 @@
 <ol>
 <li>Usando el check <code>AD_Column.IsParent</code> en la tabla utilizada en la subsolapa. Cuando una tabla en una solapa contiene columnas marcadas como <code>Link to Parent Column</code>, se busca en la solapa padre una columna con el mismo nombre y, si se encuentra, esa será la maestra.</li>
 <li>Por <code>name</code>. En caso de que la tabla en la subsolapa tenga una columna con el mismo nombre que la <code>primary key</code> de la tabla padre, el enlace se generará usándolas.</li>
-<li>Usando <code>AD_Tab.WhereClause</code>. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo <code>Where Clause</code> de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre <a href="../concepts/dynamic_expressions.md">Expresiones dinámicas</a>. En estos casos, es posible marcar el indicador <code>Disable Parent Key Property</code>; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.</li>
+<li>Usando <code>AD_Tab.WhereClause</code>. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo <code>Where Clause</code> de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre <a href="../dynamic-expressions/">Expresiones dinámicas</a>. En estos casos, es posible marcar el indicador <code>Disable Parent Key Property</code>; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.</li>
 </ol>
 <h4 id="mecanismo-de-bloqueo">Mecanismo de bloqueo</h4>
 <p>Todas las solapas generadas por <code>WAD</code> implementan un mecanismo simple de <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control" target="_blank">bloqueo optimista</a>.</p>
@@ -15124,8 +15124,8 @@ Cuando se accede a una ventana transaccional, aparece filtrada por defecto. Esto
 <p>Los <code>Campo</code> están contenidos en las solapas; cada campo tiene asociada una <code>column</code> (de la misma <code>table</code> que la de la solapa). Muestra y permite editar el valor de la columna. La forma en que un campo se muestra dentro de la solapa viene determinada por la <a href="../data-model/#references">referencia</a> que tenga la columna asociada.</p>
 <p>Algunas de las cosas que deben tenerse en cuenta al configurar un campo son:</p>
 <ul>
-<li><code>Read Only Logic</code>, que permite determinar si el campo es de solo lectura (aplica solo cuando el campo es de lectura-escritura). El solo lectura indica que este campo solo puede leerse. No puede actualizarse. Tenga en cuenta que se define a nivel de Columna en el Diccionario de la Aplicación. Es una <a href="../concepts/dynamic_expressions.md">Expresión dinámica</a>.</li>
-<li><code>Display Logic</code>, que permite mostrar u ocultar el campo en función de los valores de otros campos. Es una <a href="../concepts/dynamic_expressions.md">Expresión dinámica</a>.<ul>
+<li><code>Read Only Logic</code>, que permite determinar si el campo es de solo lectura (aplica solo cuando el campo es de lectura-escritura). El solo lectura indica que este campo solo puede leerse. No puede actualizarse. Tenga en cuenta que se define a nivel de Columna en el Diccionario de la Aplicación. Es una <a href="../dynamic-expressions/">Expresión dinámica</a>.</li>
+<li><code>Display Logic</code>, que permite mostrar u ocultar el campo en función de los valores de otros campos. Es una <a href="../dynamic-expressions/">Expresión dinámica</a>.<ul>
 <li>La lógica de visualización se tiene en cuenta en <code>grid view</code> como la lógica de solo lectura, aplicándose únicamente cuando un registro se edita en la vista de cuadrícula.</li>
 </ul>
 </li>
@@ -15135,6 +15135,7 @@ Cuando se accede a una ventana transaccional, aparece filtrada por defecto. Esto
 </ul>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Standard_Windows" target="_blank">Ventanas estándar</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

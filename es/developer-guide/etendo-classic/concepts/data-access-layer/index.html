@@ -16149,7 +16149,7 @@ Además, las clases Java generadas establecen valores por defecto (en el constru
 <p>Por lo tanto, un desarrollador no necesita establecer explícitamente esta información en un objeto nuevo o existente. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Para que la Data Access Layer detecte que una tabla soporta las interfaces anteriores, los nombres de columna (AD_Column.name) deben ajustarse a estándares específicos; consulte <a href="../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces">aquí</a> para más información.</p>
+<p>Para que la Data Access Layer detecte que una tabla soporta las interfaces anteriores, los nombres de columna (AD_Column.name) deben ajustarse a estándares específicos; consulte <a href="./#property-naming-and-supported-interfaces">aquí</a> para más información.</p>
 </div>
 <h3 id="creacion-de-una-nueva-instancia-de-un-objeto-de-negocio">Creación de una nueva instancia de un objeto de negocio</h3>
 <p>Un objeto de negocio nunca debe crearse utilizando el operador new de Java. Todos los objetos de negocio deben crearse utilizando la clase factoría <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java" target="_blank">OBProvider</a>:</p>
@@ -16197,7 +16197,7 @@ desigual al número de llamadas a restorePreviousMode, entonces se muestra una a
 <em>Unbalanced calls to enableAsAdminContext and resetAsAdminContext</em>.</p>
 </div>
 <h4 id="modo-administrador-de-referencia-cruzada-de-organizacion">Modo administrador de referencia cruzada de organización</h4>
-<p>La validación de la organización del objeto referenciado en columnas <a href="../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references">que lo soportan</a> puede
+<p>La validación de la organización del objeto referenciado en columnas <a href="./#cross-organization-references">que lo soportan</a> puede
 omitirse usando un modo Administrador especial: <code>setCrossOrgReferenceAdminMode</code> . La restauración del modo anterior se realiza mediante <code>restorePreviousCrossOrgReferenceMode</code> . De forma similar al modo administrador estándar,
 las llamadas deben estar balanceadas para este modo, independientemente del modo administrador estándar.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setCrossOrgReferenceAdminMode</span><span class="p">();</span>
@@ -16506,10 +16506,11 @@ Esta clase es sencilla de usar; consulte el javadoc para más información. La c
 <h2 id="consejos-y-trucos-y-solucion-de-problemas">Consejos y trucos y solución de problemas</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de <a href="../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer">solución de problemas</a>.</p>
+<p>Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de <a href="../common-issues-tips-and-tricks/#data-access-layer">solución de problemas</a>.</p>
 </div>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Data_Access_Layer" target="_blank">Capa de Acceso a Datos</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

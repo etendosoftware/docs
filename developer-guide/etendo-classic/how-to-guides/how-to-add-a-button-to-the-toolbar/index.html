@@ -14554,7 +14554,7 @@
 <h2 id="overview">Overview</h2>
 <p>This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). </p>
 <p>This section describes how to add a button to the left part: the application buttons.</p>
-<p>To follow this section, develop javascript as well as server-side java and understand <a href="../concepts/Data_Access_Layer.md">Data Access Layer</a> concepts.</p>
+<p>To follow this section, develop javascript as well as server-side java and understand <a href="../../concepts/data-access-layer/">Data Access Layer</a> concepts.</p>
 <h2 id="example-module">Example Module</h2>
 <p>This section is supported by an example module which shows example of the code shown and discussed here.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png" data-desc-position="bottom"><img alt="Header" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png"></a></p>
@@ -14757,7 +14757,7 @@ The function enables/disables the button if the form or grid is new and if there
 </span></code></pre></div>
 A short explanation:<p></p>
 <ul>
-<li>The annotations in the top of the class are related to <a href="../concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md">Weld</a>.</li>
+<li>The annotations in the top of the class are related to <a href="../../concepts/etendo-architecture/#introducing-weld-dependency-injection-and-more">Weld</a>.</li>
 </ul>
 <p>The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. </p>
 <ul>
@@ -14843,7 +14843,7 @@ Notes:<p></p>
 <li>The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. </li>
 <li>Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.</li>
 <li>Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. </li>
-<li>the logic iterates over the order ids and retrieves the order using the <a href="../concepts/Data_Access_Layer.md">Data Access Layer</a>. </li>
+<li>the logic iterates over the order ids and retrieves the order using the <a href="../../concepts/data-access-layer/">Data Access Layer</a>. </li>
 <li>the result is returned as json again.</li>
 </ul>
 <h3 id="calling-the-server-side-from-the-client-displaying-the-result">Calling the server side from the client, displaying the result</h3>

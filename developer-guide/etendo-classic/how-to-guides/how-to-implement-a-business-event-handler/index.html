@@ -14538,15 +14538,15 @@ This helps productivity and quality as you can code, debug and test in an integr
 <li>They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity. </li>
 <li>Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. </li>
 <li>Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.</li>
-<li>You can make use of the full <a href="../concepts/Data_Access_Layer.md">data access layer</a> functionality in your event handling code, you can query, create new objects, persist etc.</li>
+<li>You can make use of the full <a href="../../concepts/data-access-layer/">data access layer</a> functionality in your event handling code, you can query, create new objects, persist etc.</li>
 </ul>
 <p>Warning: Don't call setters on the instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. 
   So you must change the value through the special <code>setCurrentState</code> method: <code>event.setCurrentState(greetingTitleProperty, title + ".");</code></p>
 </div>
-<p>Business events make use of the event framework provided by the <a href="../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more">Weld</a> framework. To register an event handler, annotations are used. </p>
+<p>Business events make use of the event framework provided by the <a href="../../concepts/etendo-architecture/#Introducing_Weld:_dependency_injection_and_more">Weld</a> framework. To register an event handler, annotations are used. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In order to maximize performance, certain part of the classpath are excluded, check out <a href="../concepts/Etendo_Architecture.md#Analyzing_the_classpath">this section</a> if your event handlers are not found.</p>
+<p>In order to maximize performance, certain part of the classpath are excluded, check out <a href="../../concepts/etendo-architecture/#Analyzing_the_classpath">this section</a> if your event handlers are not found.</p>
 </div>
 <p>In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png"></a></p>
@@ -14638,7 +14638,7 @@ This helps productivity and quality as you can code, debug and test in an integr
 <ul>
 <li>You only need to implement a method for the event you want to listen to, so if you only need to listen to update events, then only implement a method with the @Observes EntityUpdateEvent parameter. </li>
 <li>Each method starts with a check if the event is valid, this is needed to filter for relevant events only, see the section below. </li>
-<li>Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See <a href="../concepts/Etendo_Architecture.md#Event_Classes_and_API">here</a> for more information. </li>
+<li>Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See <a href="../../concepts/etendo-architecture/#Event_Classes_and_API">here</a> for more information. </li>
 </ul>
 </div>
 <h3 id="filtering-only-relevant-events">Filtering Only Relevant Events</h3>
@@ -14728,7 +14728,7 @@ names, this gives compile time checking and is a recommended practice.</p>
 </div>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">event</span><span class="p">.</span><span class="na">setCurrentState</span><span class="p">(</span><span class="n">greetingTitleProperty</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"."</span><span class="p">);</span>
 </span></code></pre></div>
-<p>The changed entity instance does not need to be saved explicitly, this is done by the <a href="../concepts/Data_Access_Layer.md">data access layer</a> and hibernate automatically.</p>
+<p>The changed entity instance does not need to be saved explicitly, this is done by the <a href="../../concepts/data-access-layer/">data access layer</a> and hibernate automatically.</p>
 <p>Then test the changes, go to the window (<a href="http://localhost:8080/etendo/?tabId=282">http://localhost:8080/etendo/?tabId=282</a>), enter a new greeting without a dot in the title. 
 When saving you will see a dot getting added. 
 Try updating the record, you will have the same behavior.</p>
@@ -14760,7 +14760,7 @@ This is a bit more complex. Add the following code to the onSave method at the e
 <p>Let's walk through the code. First the trl object is created and some properties are set. 
 Note as the object is not part of the event you can call its setters directly. 
 The language is arbitrarily chosen. 
-See the  <a href="../concepts/Data_Access_Layer.md">DAL</a> document for information on the api's you can use to retrieve objects from the database.</p>
+See the  <a href="../../concepts/data-access-layer/">DAL</a> document for information on the api's you can use to retrieve objects from the database.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">GreetingTrl</span><span class="w"> </span><span class="n">greetingTrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">GreetingTrl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">// set relevant translation properties</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">greetingTrl</span><span class="p">.</span><span class="na">setGreeting</span><span class="p">(</span><span class="n">greeting</span><span class="p">);</span>

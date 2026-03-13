@@ -14541,7 +14541,7 @@
 <h1 id="processes">Processes</h1>
 <h2 id="overview">Overview</h2>
 <p>A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes <em>SQL Processes</em> and <em>Java Processes</em>.</p>
-<p>All processes (as well as <a href="../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md">Reports</a>) are managed from the same window: <code>Application Dictionary &gt; Report and Process</code>. </p>
+<p>All processes (as well as <a href="../../how-to-guides/how-to-create-a-report/">Reports</a>) are managed from the same window: <code>Application Dictionary &gt; Report and Process</code>.</p>
 <p>Once a process is defined it can be added to the menu to be called directly from there, it can be invoked through a button or it can be scheduled to be executed in the background.</p>
 <p>Background processes can be set as <em>Prevent Concurrent Executions</em> . Before a process with this attribute is about to be executed, it is checked there are no other instances of the same process in execution at the same time, in this case another execution is aborted.</p>
 <h3 id="parameters">Parameters</h3>
@@ -14562,7 +14562,7 @@
 </div>
 <ul>
 <li><em>Sequence</em> : It is a numeric value to order the parameter in the pop-up. </li>
-<li><em>Application Element</em> : It is the <a href="Element_and_Synchronize_Terminology.md">Element</a>  that will be used to get the label from, in this way parameters are translatable. </li>
+<li><em>Application Element</em> : It is the <a href="../element-and-synchronize-terminology/">Element</a>  that will be used to get the label from, in this way parameters are translatable.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -14579,7 +14579,7 @@ Processes</em> . SQL processes are implemented in the SQL language and are execu
 <p><em>SQL Processes</em> are implemented by database stored procedures. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, read <a href="../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Stored_Procedure.md">How to create a Stored Procedure</a>.</p>
+<p>For more information, read <a href="../../how-to-guides/how-to-create-a-stored-procedure/">How to create a Stored Procedure</a>.</p>
 </div>
 <p>SQL processes are defined in <code>Application Dictionary &gt; Report and Process</code>. The only field to take into account for this kind of processes is <em>Procedure</em>: It is the procedure name in the database. </p>
 <div class="admonition note">
@@ -14598,7 +14598,7 @@ Pattern</em> field must be set as <em>Standard</em> .</p>
 <p>Java processes are implemented by java classes. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, read <a href="../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Java_Based_Process.md">How to create a Java Process</a>   .</p>
+<p>For more information, read <a href="../../how-to-guides/how-to-create-a-java-based-process/">How to create a Java Process</a>.</p>
 </div>
 <p>Java processes are also defined in the <code>Application Dictionary &gt; Report and Process</code> window. Depending on the <em>UI pattern</em> they use, they can be split into <em>Standard</em> and <em>Manual</em>. Additionally, if the <em>UI Pattern</em> is set to <em>Manual</em>, it is necessary to include an entry in the <em>Process Mapping</em> to make it accessible in the <code>web.xml</code>.</p>
 <div class="admonition note">

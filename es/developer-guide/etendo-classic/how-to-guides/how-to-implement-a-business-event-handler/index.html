@@ -14978,15 +14978,15 @@ Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y 
 <li>Se disparan cuando una instancia de entidad se actualiza, elimina o inserta. Antes de que la operación real se haya realizado en la base de datos, por lo que puede cambiar o añadir información que persiste junto con la entidad del evento. </li>
 <li>Su código de gestión de eventos se ejecuta en la misma transacción que el evento de negocio; los cambios que realice en la base de datos persisten junto con el evento de entidad de negocio en una única transacción. </li>
 <li>Los eventos de entidad de negocio solo funcionan cuando se accede a la base de datos a través de la capa de acceso a datos, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.</li>
-<li>Puede hacer uso de toda la funcionalidad de la <a href="../concepts/Data_Access_Layer.md">capa de acceso a datos</a> en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.</li>
+<li>Puede hacer uso de toda la funcionalidad de la <a href="../../concepts/data-access-layer/">capa de acceso a datos</a> en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.</li>
 </ul>
 <p>Advertencia: no llame a setters en la propia instancia; esto no funciona porque, cuando el evento se ha difundido, Hibernate ya ha leído el estado del objeto. 
   Por lo tanto, debe cambiar el valor mediante el método especial <code>setCurrentState</code>: <code>event.setCurrentState(greetingTitleProperty, title + ".");</code></p>
 </div>
-<p>Los eventos de negocio hacen uso del framework de eventos proporcionado por el framework <a href="../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more">Weld</a>. Para registrar un manejador de eventos, se utilizan anotaciones. </p>
+<p>Los eventos de negocio hacen uso del framework de eventos proporcionado por el framework <a href="../../concepts/etendo-architecture/#Introducing_Weld:_dependency_injection_and_more">Weld</a>. Para registrar un manejador de eventos, se utilizan anotaciones. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte <a href="../concepts/Etendo_Architecture.md#Analyzing_the_classpath">esta sección</a> si no se encuentran sus manejadores de eventos.</p>
+<p>Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte <a href="../../concepts/etendo-architecture/#Analyzing_the_classpath">esta sección</a> si no se encuentran sus manejadores de eventos.</p>
 </div>
 <p>En esta sección, implementaremos un manejador de eventos sobre la entidad Tratamientos. Cada vez que se guarde un título, se añadirá una traducción al español. Además, imprimiremos algunos mensajes en la consola para otros eventos de negocio.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png"></a></p>
@@ -15078,7 +15078,7 @@ Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y 
 <ul>
 <li>Solo necesita implementar un método para el evento que desea escuchar; por lo tanto, si solo necesita escuchar eventos de actualización, entonces implemente únicamente un método con el parámetro @Observes EntityUpdateEvent. </li>
 <li>Cada método comienza con una comprobación de si el evento es válido; esto es necesario para filtrar solo los eventos relevantes; consulte la sección siguiente. </li>
-<li>Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte <a href="../concepts/Etendo_Architecture.md#Event_Classes_and_API">aquí</a> para más información. </li>
+<li>Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte <a href="../../concepts/etendo-architecture/#Event_Classes_and_API">aquí</a> para más información. </li>
 </ul>
 </div>
 <h3 id="filtrar-solo-los-eventos-relevantes">Filtrar solo los eventos relevantes</h3>
@@ -15167,7 +15167,7 @@ Para este ejemplo, añadiremos una traducción al neerlandés.</p>
 </div>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">event</span><span class="p">.</span><span class="na">setCurrentState</span><span class="p">(</span><span class="n">greetingTitleProperty</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"."</span><span class="p">);</span>
 </span></code></pre></div>
-<p>La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la <a href="../concepts/Data_Access_Layer.md">capa de acceso a datos</a> y Hibernate automáticamente.</p>
+<p>La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la <a href="../../concepts/data-access-layer/">capa de acceso a datos</a> y Hibernate automáticamente.</p>
 <p>A continuación, pruebe los cambios: vaya a la ventana (<a href="http://localhost:8080/etendo/?tabId=282">http://localhost:8080/etendo/?tabId=282</a>) e introduzca un nuevo tratamiento sin punto en el título. 
 Al guardar, verá que se añade un punto. 
 Intente actualizar el registro; tendrá el mismo comportamiento.</p>
@@ -15199,7 +15199,7 @@ Esto es un poco más complejo. Añada el siguiente código al final del método 
 <p>Repasemos el código. Primero se crea el objeto trl y se establecen algunas propiedades. 
 Tenga en cuenta que, como el objeto no forma parte del evento, puede llamar a sus setters directamente. 
 El idioma se elige de forma arbitraria. 
-Consulte el documento <a href="../concepts/Data_Access_Layer.md">DAL</a> para obtener información sobre las API que puede usar para recuperar objetos de la base de datos.</p>
+Consulte el documento <a href="../../concepts/data-access-layer/">DAL</a> para obtener información sobre las API que puede usar para recuperar objetos de la base de datos.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">GreetingTrl</span><span class="w"> </span><span class="n">greetingTrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">GreetingTrl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">// set relevant translation properties</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">greetingTrl</span><span class="p">.</span><span class="na">setGreeting</span><span class="p">(</span><span class="n">greeting</span><span class="p">);</span>
@@ -15254,6 +15254,7 @@ varias ubicaciones; aquí tiene algunos ejemplos:</p>
 <p>El código fuente completo del manejador de eventos de ejemplo está disponible aquí: <a href="https://github.com/etendosoftware/com.etendoerp.client.application.examples">com.etendoerp.client.application.examples</a></p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler" target="_blank">How to implement a business event handler</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

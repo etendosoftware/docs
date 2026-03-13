@@ -15299,7 +15299,7 @@ Definir el selector es un procedimiento de tres pasos:</p>
 <li><strong>Orden de las columnas en el grid</strong>: el orden en el que se muestran las columnas en el grid emergente. Solo es relevante si <strong>Mostrar en grid</strong> está marcado.</li>
 <li><strong>Permitir ordenar</strong>: determina si el usuario puede ordenar por esta columna en el grid emergente. Solo es relevante si <strong>Mostrar en grid</strong> está marcado.</li>
 <li><strong>Filtrable</strong>: determina si el usuario puede filtrar por esta columna en el grid emergente. Solo es relevante si <strong>Mostrar en grid</strong> está marcado.</li>
-<li><strong>Centralizado</strong>: si está marcado, entonces el nombre, la descripción y la ayuda/comentario se copian/usan desde la columna. Esto se gestiona mediante el proceso <a href="../concepts/Element_and_Synchronize_Terminology.md">Sincronizar términos</a>.</li>
+<li><strong>Centralizado</strong>: si está marcado, entonces el nombre, la descripción y la ayuda/comentario se copian/usan desde la columna. Esto se gestiona mediante el proceso <a href="../element-and-synchronize-terminology/">Sincronizar términos</a>.</li>
 <li><strong>Usado en el cuadro de sugerencias</strong>: por defecto, el cuadro de sugerencias utilizará la cadena introducida por el usuario para buscar en el campo mostrado (establecido en la cabecera del selector) o en el identificador. Puede seleccionar campos adicionales en los que buscar estableciendo este campo (Usado en el cuadro de sugerencias) a sí/marcándolo. Para hacer invisible el campo de búsqueda, simplemente desmarque el campo <strong>Mostrar en grid</strong>; entonces el campo solo se utiliza para buscar y no se muestra en el grid emergente.</li>
 </ul>
 <div class="admonition note">
@@ -15408,11 +15408,12 @@ La creación de una nueva plantilla debe realizarla un desarrollador con un buen
 <p><strong>Solución</strong> : si el campo de selección de clave foránea es el único sobre el que se filtra, esto está bien; sin embargo, si hay múltiples campos de búsqueda, entonces la búsqueda sobre campos de clave foránea no obligatorios no está soportada por el selector.</p>
 <h2 id="temas-avanzados">Temas avanzados</h2>
 <h3 id="transformadores-hql">Transformadores HQL</h3>
-<p>Es posible modificar completamente una consulta HQL mediante Java e inyección de dependencias usando transformadores. Para implementar la nueva funcionalidad, visite <a href="../how-to-guides/How_to_create_a_HQL_Based_Table.md#HQL_Transformers">Transformadores HQL</a>.</p>
+<p>Es posible modificar completamente una consulta HQL mediante Java e inyección de dependencias usando transformadores. Para implementar la nueva funcionalidad, visite <a href="../../how-to-guides/how-to-create-a-hql-based-table/#hql-transformers">Transformadores HQL</a>.</p>
 <h3 id="usar-claves-foraneas-en-consultas-hql-personalizadas">Usar claves foráneas en consultas HQL personalizadas</h3>
 <p>Para hacerlo, la cláusula select de HQL para esa propiedad debe apuntar a una entidad (es decir, <code>e.organization</code>, en lugar de <code>e.organization.name</code>). Luego, en la definición del campo del selector, tenemos que seleccionar una referencia de Tabla que apunte a la entidad destino.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Selectors" target="_blank">Selectores</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, usado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

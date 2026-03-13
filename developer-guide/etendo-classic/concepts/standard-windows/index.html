@@ -14583,7 +14583,7 @@
 <h2 id="windows">Windows</h2>
 <p>Windows are generated automatically by <code>WAD</code> from their definition in Application Dictionary, all windows have a common layout.</p>
 <h3 id="menu">Menu</h3>
-<p>Windows can be added to <a href="../concepts/application_menu.md">Application Menu</a>.</p>
+<p>Windows can be added to <a href="../application-menu/">Application Menu</a>.</p>
 <h2 id="tabs">Tabs</h2>
 <p><code>Tabs</code> are included within <code>Windows</code>. Each tab is limited to a single Application Dictionary <code>Table</code>. The following subsections detail some important topics to be taken into account when creating a tab.</p>
 <h3 id="tabs-hierarchy">Tabs Hierarchy</h3>
@@ -14659,7 +14659,7 @@
 <ol>
 <li>Using the <code>AD_Column.IsParent</code> check in the table used in the subtab. When a table in a tab contains columns checked as <code>Link to Parent Column</code>, it is looked in the parent tab a column with the same name and if found that one will be the master.</li>
 <li>By <code>name</code>. In case the table in subtab has a column with the same name as the parent's <code>primary key</code> one, the link will be generated using them.</li>
-<li>Using <code>AD_Tab.WhereClause</code>. In case it is not possible to use #1 or #2, the relation must be set in the child tab's <code>Where Clause</code> field. For more info about this clause, read the document about <a href="../concepts/dynamic_expressions.md">Dynamic Expressions</a>. In these cases, it is possible to mark the <code>Disable Parent Key Property</code> flag, doing so only where clause will be used to create the relationship not adding any other criteria.</li>
+<li>Using <code>AD_Tab.WhereClause</code>. In case it is not possible to use #1 or #2, the relation must be set in the child tab's <code>Where Clause</code> field. For more info about this clause, read the document about <a href="../dynamic-expressions/">Dynamic Expressions</a>. In these cases, it is possible to mark the <code>Disable Parent Key Property</code> flag, doing so only where clause will be used to create the relationship not adding any other criteria.</li>
 </ol>
 <h4 id="locking-mechanism">Locking mechanism</h4>
 <p>All <code>WAD</code> generated tabs implement a simple <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control" target="_blank">Optimistic locking mechanism</a>.</p>
@@ -14684,12 +14684,12 @@ When a transactional window is accessed, it appears filtered by default. This is
 <p><code>Fields</code> are contained in tabs, each field has a <code>column</code> (from the same <code>table</code> as the tab's one) associated. It displays and allows editing the column's value. The way a field is displayed within the tab is determined by the <a href="../data-model/#references">reference</a> its associated column has.</p>
 <p>Some of the things to take into account when configuring a field are:</p>
 <ul>
-<li><code>Read Only Logic</code> which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a <a href="../concepts/dynamic_expressions.md">Dynamic Expression</a>.</li>
-<li><code>Display Logic</code> which allows showing or hiding the field depending on other fields' values. It is a <a href="../concepts/dynamic_expressions.md">Dynamic Expression</a>.<ul>
+<li><code>Read Only Logic</code> which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a <a href="../dynamic-expressions/">Dynamic Expression</a>.</li>
+<li><code>Display Logic</code> which allows showing or hiding the field depending on other fields' values. It is a <a href="../dynamic-expressions/">Dynamic Expression</a>.<ul>
 <li>Display logic is taken into account in <code>grid view</code> as read only logic, being only applied when a record is edited in grid view. </li>
 </ul>
 </li>
-<li><code>Central Maintenance</code>, how it works is explained in the document about <a href="../concepts/Element_and_Synchronize_Terminology.md">Elements and Synchronize Terminology</a>.</li>
+<li><code>Central Maintenance</code>, how it works is explained in the document about <a href="../element-and-synchronize-terminology/">Elements and Synchronize Terminology</a>.</li>
 <li><a href="../data-model/#callout"><code>Callout</code></a>, although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.</li>
 <li><code>Field group</code>, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; <code>Field Category</code> tab.</li>
 </ul>

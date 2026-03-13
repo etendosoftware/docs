@@ -15757,13 +15757,13 @@
 <p>El Modelo de datos de Etendo se define en el Diccionario de aplicación. En el modelo de datos, el Diccionario de aplicación mapea las tablas y columnas físicas de la base de datos en sus propias tablas (<code>AD_Table</code> y <code>AD_Column</code>) y, sobre esta base, se construye el resto del sistema (ventanas, solapas, campos, etc.).</p>
 <p>Este documento explica cómo se definen las tablas y columnas en la base de datos física y cómo se mapean en el Modelo de datos del Diccionario de aplicación.</p>
 <h2 id="tabla-en-el-diccionario-de-aplicacion">Tabla en el Diccionario de Aplicación</h2>
-<p>Una vez que las <a href="../concepts/Tables.md">Tabla</a> se definen físicamente en la base de datos, deben mapearse con el Diccionario de Aplicación. Este mapeo se realiza a través de <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> &gt; solapa <code>Tabla</code>, que rellena la tabla <code>AD_Table</code>.</p>
+<p>Una vez que las <a href="../tables/">Tabla</a> se definen físicamente en la base de datos, deben mapearse con el Diccionario de Aplicación. Este mapeo se realiza a través de <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> &gt; solapa <code>Tabla</code>, que rellena la tabla <code>AD_Table</code>.</p>
 <h3 id="nomenclatura-de-tablas">Nomenclatura de tablas</h3>
 <p>Una tabla definida en el diccionario de aplicación tiene varios nombres que Etendo utiliza de diferentes maneras:</p>
 <ul>
-<li>Nombre lógico (<code>AD_Table</code>.name): utilizado por la Capa de Acceso a Datos en los servicios web REST <a href="../concepts/xml-rest-web-services.md">XML</a> y <a href="../concepts/JSON_REST_Web_Services.md">JSON</a>. Consulte <a href="../concepts/Data_Access_Layer.md#entity-naming">aquí</a> para más información.</li>
+<li>Nombre lógico (<code>AD_Table</code>.name): utilizado por la Capa de Acceso a Datos en los servicios web REST <a href="../concepts/xml-rest-web-services.md">XML</a> y <a href="../json-rest-web-services/">JSON</a>. Consulte <a href="../data-access-layer/#entity-naming">aquí</a> para más información.</li>
 <li>Nombre físico (<code>AD_Table</code>.tablename): es el nombre de la tabla en la base de datos.</li>
-<li>Nombre de clase (<code>AD_Table</code>.classname): el nombre de la clase de entidad Java generada](../concepts/Data_Access_Layer.md#generated-business-object-classes).</li>
+<li>Nombre de clase (<code>AD_Table</code>.classname): el nombre de la clase de entidad Java generada](../concepts/data-access-layer.md#generated-business-object-classes).</li>
 </ul>
 <h2 id="columnas-en-el-diccionario-de-aplicacion">Columnas en el Diccionario de Aplicación</h2>
 <p>Después de definir la tabla en el Diccionario de Aplicación, el siguiente paso es añadirle columnas. Existe un proceso que lee las columnas de la base de datos y las inserta como columnas en la tabla. Este proceso se invoca desde el botón <strong>Crear columnas desde BD</strong> en <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> &gt; solapa <code>Tabla</code>.</p>
@@ -15772,21 +15772,21 @@
 <h3 id="nomenclatura-de-columnas">Nomenclatura de columnas</h3>
 <p>Una columna definida en el Diccionario de Aplicación tiene varios nombres que Etendo utiliza de diferentes maneras:</p>
 <ul>
-<li>El nombre lógico (<code>AD_Column</code>.name): este nombre lo utiliza la Data Access Layer para la <a href="../concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces">detección automática de interfaces compatibles</a> y la <a href="../concepts/Data_Access_Layer.md#property-naming">nomenclatura de propiedades XML y Java</a>.</li>
+<li>El nombre lógico (<code>AD_Column</code>.name): este nombre lo utiliza la Data Access Layer para la <a href="../data-access-layer/#property-naming-and-supported-interfaces">detección automática de interfaces compatibles</a> y la <a href="../data-access-layer/#property-naming">nomenclatura de propiedades XML y Java</a>.</li>
 <li>El nombre físico de la columna (<code>AD_Column</code>.columnname): es el nombre de la columna en la tabla de la base de datos.</li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Al nombrar columnas relacionadas con información de auditoría, cliente/organización y activo, es muy importante ser preciso en el nombre. Si se utiliza un nombre mal escrito, Etendo no podrá detectar que una entidad es compatible con una determinada interfaz y se deshabilitará un comportamiento automático específico. Consulte <a href="../concepts/Data_Access_Layer.md#important-interfaces">aquí</a> una lista de interfaces y sus nombres lógicos de columna esperados.</p>
+<p>Al nombrar columnas relacionadas con información de auditoría, cliente/organización y activo, es muy importante ser preciso en el nombre. Si se utiliza un nombre mal escrito, Etendo no podrá detectar que una entidad es compatible con una determinada interfaz y se deshabilitará un comportamiento automático específico. Consulte <a href="../data-access-layer/#important-interfaces">aquí</a> una lista de interfaces y sus nombres lógicos de columna esperados.</p>
 </div>
 <h3 id="definicion-de-objetos-de-negocio-el-isparent">Definición de objetos de negocio: el isParent</h3>
-<p>La definición de columna en el diccionario de aplicación también se utiliza para definir estructuras de objetos de negocio en Etendo. Si el campo <code>isParent</code> de una columna de clave externa está establecido (marcado/true), entonces esta clave externa modela una asociación de un hijo a un padre. Con esta información, la <a href="../concepts/Data_Access_Layer.md">Data Access Layer</a> creará automáticamente una asociación (en memoria) del padre al hijo.</p>
+<p>La definición de columna en el diccionario de aplicación también se utiliza para definir estructuras de objetos de negocio en Etendo. Si el campo <code>isParent</code> de una columna de clave externa está establecido (marcado/true), entonces esta clave externa modela una asociación de un hijo a un padre. Con esta información, la <a href="../data-access-layer/">Data Access Layer</a> creará automáticamente una asociación (en memoria) del padre al hijo.</p>
 <p>Por ejemplo, la tabla <code>C_OrderLine</code> tiene una columna <code>c_order_id</code>. En el diccionario de aplicación, esta columna está marcada como <code>isParent</code> (por lo que <code>c_order_id</code> apunta al padre de la línea de pedido: la cabecera del pedido). La capa de acceso a datos traducirá esta columna de clave externa en dos asociaciones en el modelo de entidad:</p>
 <ul>
 <li>Una asociación de muchos a uno desde la entidad de línea de pedido al pedido (su padre)</li>
 <li>Una asociación de uno a muchos desde el pedido a las líneas de pedido; en Java esto da como resultado un miembro de tipo <code>java.util.List</code>.</li>
 </ul>
-<p>Para más información, consulte <a href="../concepts/Data_Access_Layer.md#business-object">aquí</a>.</p>
+<p>Para más información, consulte <a href="../data-access-layer/#business-object">aquí</a>.</p>
 <h3 id="referencia">Referencia</h3>
 <p>Las referencias se utilizan en el Diccionario de Aplicación de Etendo para dos propósitos:</p>
 <ul>
@@ -16110,7 +16110,7 @@
 <p>Debido a todas estas razones, no se debería confiar la integridad de los datos únicamente a los callouts. También debería implementarse en la base de datos, mediante triggers o restricciones.</p>
 </div>
 <h5 id="definir-un-callout">Definir un Callout</h5>
-<p>Existe una <a href="../how-to-guides/How_to_create_a_Callout.md">guía</a> relacionada con los callouts que puede leer para disponer de un ejemplo paso a paso para la creación de un callout.</p>
+<p>Existe una <a href="../../how-to-guides/how-to-create-a-callout/">guía</a> relacionada con los callouts que puede leer para disponer de un ejemplo paso a paso para la creación de un callout.</p>
 <h6 id="diccionario-de-aplicacion">Diccionario de aplicación</h6>
 <p>Los callouts se definen en <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; ventana <code>Callout</code> y luego se asocian con la columna que los invocará cuando se modifique.</p>
 <h6 id="implementacion-java">Implementación Java</h6>
@@ -16153,6 +16153,7 @@ Después de ejecutar un callout con la salida anterior, el resultado sería:<p><
 <p>Valor por defecto, lógica de solo lectura y condición transitoria son valores que permiten una expresión dinámica. Visite <a href="../dynamic-expressions/">este documento</a> que explica cómo se definen las expresiones dinámicas.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Data_Model" target="_blank">Modelo de datos</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 

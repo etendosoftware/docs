@@ -14933,7 +14933,7 @@
 <li><em>Salary Category</em> una referencia que apunta a la tabla existente <em>Salary Category</em>. </li>
 </ul>
 <h3 id="creacion-del-nuevo-modulo">Creación del nuevo módulo</h3>
-<p>Esta sección solo enumera los principales elementos importantes necesarios para el nuevo módulo. Puede encontrar más detalles en <a href="How_To_Create_a_Module.md">Cómo crear un módulo</a></p>
+<p>Esta sección solo enumera los principales elementos importantes necesarios para el nuevo módulo. Puede encontrar más detalles en <a href="../how-to-create-a-module/">Cómo crear un módulo</a></p>
 <ul>
 <li>dbprefix: <code>HT2</code></li>
 <li>Dependencias: <ul>
@@ -15063,10 +15063,11 @@
 <p>Estas actualizaciones son necesarias para tener etiquetas útiles en la UI para cualquier ventana definida sobre esta tabla y para evitar que estas utilicen nombres internos con la terminología técnica <code>EM</code>.</p>
 <h3 id="reconstruccion-del-sistema">Reconstrucción del sistema</h3>
 <p>Finalmente, para que las columnas recién añadidas estén disponibles en tiempo de ejecución, debe ejecutarse <code>./gradlew generate.entities</code> y desplegarse los cambios en tomcat. Estos dos pasos pueden realizarse juntos ejecutando <code>./gradlew smartbuild</code>. Después de eso, debe reiniciarse Tomcat para refrescar el modelo DAL en memoria, de modo que conozca las columnas recién añadidas.</p>
-<p>Una vez que las columnas se añaden a la tabla, el usuario puede <a href="../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module">exportar</a> el módulo.</p>
+<p>Una vez que las columnas se añaden a la tabla, el usuario puede <a href="../how-to-create-a-module/#exporting-a-module">exportar</a> el módulo.</p>
 <p>Para añadir las nuevas columnas a la ventana definida sobre esta tabla, visite <a href="../how-to-add-a-field-to-a-window-tab/">Cómo añadir un campo a una pestaña de ventana</a>.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/How_to_add_Columns_to_a_Table" target="_blank">Cómo añadir columnas a una tabla</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<hr>
 
 
 
