@@ -17,15 +17,15 @@ El Modelo de datos de Etendo se define en el Diccionario de aplicación. En el m
 Este documento explica cómo se definen las tablas y columnas en la base de datos física y cómo se mapean en el Modelo de datos del Diccionario de aplicación.
 ## Tabla en el Diccionario de Aplicación
 
-Una vez que las [Tabla](../concepts/Tables.md) se definen físicamente en la base de datos, deben mapearse con el Diccionario de Aplicación. Este mapeo se realiza a través de `Application Dictionary` > `Tables and Columns` > solapa `Tabla`, que rellena la tabla `AD_Table`.
+Una vez que las [Tabla](../concepts/tables.md) se definen físicamente en la base de datos, deben mapearse con el Diccionario de Aplicación. Este mapeo se realiza a través de `Application Dictionary` > `Tables and Columns` > solapa `Tabla`, que rellena la tabla `AD_Table`.
 
 ### Nomenclatura de tablas
 
 Una tabla definida en el diccionario de aplicación tiene varios nombres que Etendo utiliza de diferentes maneras:
 
-- Nombre lógico (`AD_Table`.name): utilizado por la Capa de Acceso a Datos en los servicios web REST [XML](../concepts/xml-rest-web-services.md) y [JSON](../concepts/JSON_REST_Web_Services.md). Consulte [aquí](../concepts/Data_Access_Layer.md#entity-naming) para más información.
+- Nombre lógico (`AD_Table`.name): utilizado por la Capa de Acceso a Datos en los servicios web REST [XML](../concepts/xml-rest-web-services.md) y [JSON](../concepts/json-rest-web-services.md). Consulte [aquí](../concepts/data-access-layer.md#entity-naming) para más información.
 - Nombre físico (`AD_Table`.tablename): es el nombre de la tabla en la base de datos.
-- Nombre de clase (`AD_Table`.classname): el nombre de la clase de entidad Java generada](../concepts/Data_Access_Layer.md#generated-business-object-classes).
+- Nombre de clase (`AD_Table`.classname): el nombre de la clase de entidad Java generada](../concepts/data-access-layer.md#generated-business-object-classes).
 ## Columnas en el Diccionario de Aplicación
 
 Después de definir la tabla en el Diccionario de Aplicación, el siguiente paso es añadirle columnas. Existe un proceso que lee las columnas de la base de datos y las inserta como columnas en la tabla. Este proceso se invoca desde el botón **Crear columnas desde BD** en `Application Dictionary` > `Tables and Columns` > solapa `Tabla`.
@@ -37,21 +37,21 @@ Las siguientes secciones explican algunos detalles que deben tenerse en cuenta a
 
 Una columna definida en el Diccionario de Aplicación tiene varios nombres que Etendo utiliza de diferentes maneras:
 
-- El nombre lógico (`AD_Column`.name): este nombre lo utiliza la Data Access Layer para la [detección automática de interfaces compatibles](../concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) y la [nomenclatura de propiedades XML y Java](../concepts/Data_Access_Layer.md#property-naming).
+- El nombre lógico (`AD_Column`.name): este nombre lo utiliza la Data Access Layer para la [detección automática de interfaces compatibles](../concepts/data-access-layer.md#property-naming-and-supported-interfaces) y la [nomenclatura de propiedades XML y Java](../concepts/data-access-layer.md#property-naming).
 - El nombre físico de la columna (`AD_Column`.columnname): es el nombre de la columna en la tabla de la base de datos.
 
 !!!important
-    Al nombrar columnas relacionadas con información de auditoría, cliente/organización y activo, es muy importante ser preciso en el nombre. Si se utiliza un nombre mal escrito, Etendo no podrá detectar que una entidad es compatible con una determinada interfaz y se deshabilitará un comportamiento automático específico. Consulte [aquí](../concepts/Data_Access_Layer.md#important-interfaces) una lista de interfaces y sus nombres lógicos de columna esperados.
+    Al nombrar columnas relacionadas con información de auditoría, cliente/organización y activo, es muy importante ser preciso en el nombre. Si se utiliza un nombre mal escrito, Etendo no podrá detectar que una entidad es compatible con una determinada interfaz y se deshabilitará un comportamiento automático específico. Consulte [aquí](../concepts/data-access-layer.md#important-interfaces) una lista de interfaces y sus nombres lógicos de columna esperados.
 ### Definición de objetos de negocio: el isParent
 
-La definición de columna en el diccionario de aplicación también se utiliza para definir estructuras de objetos de negocio en Etendo. Si el campo `isParent` de una columna de clave externa está establecido (marcado/true), entonces esta clave externa modela una asociación de un hijo a un padre. Con esta información, la [Data Access Layer](../concepts/Data_Access_Layer.md) creará automáticamente una asociación (en memoria) del padre al hijo.
+La definición de columna en el diccionario de aplicación también se utiliza para definir estructuras de objetos de negocio en Etendo. Si el campo `isParent` de una columna de clave externa está establecido (marcado/true), entonces esta clave externa modela una asociación de un hijo a un padre. Con esta información, la [Data Access Layer](../concepts/data-access-layer.md) creará automáticamente una asociación (en memoria) del padre al hijo.
 
 Por ejemplo, la tabla `C_OrderLine` tiene una columna `c_order_id`. En el diccionario de aplicación, esta columna está marcada como `isParent` (por lo que `c_order_id` apunta al padre de la línea de pedido: la cabecera del pedido). La capa de acceso a datos traducirá esta columna de clave externa en dos asociaciones en el modelo de entidad:
 
 - Una asociación de muchos a uno desde la entidad de línea de pedido al pedido (su padre)
 - Una asociación de uno a muchos desde el pedido a las líneas de pedido; en Java esto da como resultado un miembro de tipo `java.util.List`.
 
-Para más información, consulte [aquí](../concepts/Data_Access_Layer.md#business-object).
+Para más información, consulte [aquí](../concepts/data-access-layer.md#business-object).
 ### Referencia
 
 Las referencias se utilizan en el Diccionario de Aplicación de Etendo para dos propósitos:
@@ -454,7 +454,7 @@ Tanto los callouts como los triggers se ejecutan cuando hay cambios en los datos
 
 ##### Definir un Callout
 
-Existe una [guía](../how-to-guides/How_to_create_a_Callout.md) relacionada con los callouts que puede leer para disponer de un ejemplo paso a paso para la creación de un callout.
+Existe una [guía](../how-to-guides/how-to-create-a-callout.md) relacionada con los callouts que puede leer para disponer de un ejemplo paso a paso para la creación de un callout.
 
 ###### Diccionario de aplicación
 
@@ -507,3 +507,5 @@ Valor por defecto, lógica de solo lectura y condición transitoria son valores 
 ---
 
 Este trabajo es una obra derivada de [Modelo de datos](http://wiki.openbravo.com/wiki/Data_Model){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
