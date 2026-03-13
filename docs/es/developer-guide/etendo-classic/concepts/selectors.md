@@ -113,7 +113,7 @@ Descripción de los campos de Campo de Selector Definido:
   * **Orden de las columnas en el grid**: el orden en el que se muestran las columnas en el grid emergente. Solo es relevante si **Mostrar en grid** está marcado.
   * **Permitir ordenar**: determina si el usuario puede ordenar por esta columna en el grid emergente. Solo es relevante si **Mostrar en grid** está marcado.
   * **Filtrable**: determina si el usuario puede filtrar por esta columna en el grid emergente. Solo es relevante si **Mostrar en grid** está marcado.
-  * **Centralizado**: si está marcado, entonces el nombre, la descripción y la ayuda/comentario se copian/usan desde la columna. Esto se gestiona mediante el proceso [Sincronizar términos](../concepts/Element_and_Synchronize_Terminology.md).
+  * **Centralizado**: si está marcado, entonces el nombre, la descripción y la ayuda/comentario se copian/usan desde la columna. Esto se gestiona mediante el proceso [Sincronizar términos](../concepts/element-and-synchronize-terminology.md).
   * **Usado en el cuadro de sugerencias**: por defecto, el cuadro de sugerencias utilizará la cadena introducida por el usuario para buscar en el campo mostrado (establecido en la cabecera del selector) o en el identificador. Puede seleccionar campos adicionales en los que buscar estableciendo este campo (Usado en el cuadro de sugerencias) a sí/marcándolo. Para hacer invisible el campo de búsqueda, simplemente desmarque el campo **Mostrar en grid**; entonces el campo solo se utiliza para buscar y no se muestra en el grid emergente.
 
 !!! note
@@ -266,7 +266,7 @@ El estilo del selector se deriva en su mayor parte automáticamente del estilo d
 
 ### Transformadores HQL
 
-Es posible modificar completamente una consulta HQL mediante Java e inyección de dependencias usando transformadores. Para implementar la nueva funcionalidad, visite [Transformadores HQL](../how-to-guides/How_to_create_a_HQL_Based_Table.md#HQL_Transformers).
+Es posible modificar completamente una consulta HQL mediante Java e inyección de dependencias usando transformadores. Para implementar la nueva funcionalidad, visite [Transformadores HQL](../how-to-guides/how-to-create-a-hql-based-table.md#hql-transformers).
 
 ### Usar claves foráneas en consultas HQL personalizadas
 
@@ -274,3 +274,5 @@ Para hacerlo, la cláusula select de HQL para esa propiedad debe apuntar a una e
 
 ---
 Este trabajo es una obra derivada de [Selectores](http://wiki.openbravo.com/wiki/Selectors){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

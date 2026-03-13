@@ -111,7 +111,7 @@ Seguir esta regla de nomenclatura permite definir referencias estándar como *Ta
 En Etendo, se generan clases Java a partir de la definición de las tablas. Se genera una entidad DAL a partir de cada tabla definida en el Diccionario de Aplicación.
 
 !!!info
-    Para más información, visite [Data Access Layer](../concepts/Data_Access_Layer.md).
+    Para más información, visite [Data Access Layer](../concepts/data-access-layer.md).
 
 Es importante que tenga esto en cuenta al pensar en los nombres de sus columnas. Las columnas que defina en una tabla se corresponderán con propiedades Java en una clase Java generada. Por lo tanto, *no debe elegir nombres que colisionen con palabras clave de Java*, como *class*, *if*, *int*, ...
 
@@ -134,3 +134,5 @@ clob  |  text
 ---
 
 Este trabajo es una obra derivada de [Tabla](http://wiki.openbravo.com/wiki/Tables){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

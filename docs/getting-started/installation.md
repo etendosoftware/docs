@@ -252,7 +252,7 @@ Etendo now includes an **Interactive Configuration System** that guides you thro
 
     ### Steps to Install Etendo with Postgres Database and Tomcat Dockerized
 
-    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) module, which, as its name suggests, provides the Tomcat service.
+    The [Docker Management](../developer-guide/etendo-classic/bundles/platform/docker-management.md) module allows for the distribution of the infrastructure needed to configure Etendo Classic within Etendo modules, which include Docker containers for each service. Specifically, the Docker Management module includes the [PostgreSQL Database Service](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and the [Dockerized Tomcat Service](../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) module, which, as its name suggests, provides the Tomcat service.
     These modules are part of the [Platform Extensions](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md) bundle, which will be covered in this step-by-step guide on how to install them.
     
     !!! info

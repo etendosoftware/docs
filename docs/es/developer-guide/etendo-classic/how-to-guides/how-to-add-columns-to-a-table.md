@@ -45,7 +45,7 @@ Para mostrar cómo se configuran diferentes tipos de columna, añadiremos 3 colu
 
 ###  Creación del nuevo módulo
 
-Esta sección solo enumera los principales elementos importantes necesarios para el nuevo módulo. Puede encontrar más detalles en [Cómo crear un módulo](How_To_Create_a_Module.md)
+Esta sección solo enumera los principales elementos importantes necesarios para el nuevo módulo. Puede encontrar más detalles en [Cómo crear un módulo](how-to-create-a-module.md)
 
   * dbprefix: `HT2`
   * Dependencias: 
@@ -178,10 +178,12 @@ Estas actualizaciones son necesarias para tener etiquetas útiles en la UI para 
 
 Finalmente, para que las columnas recién añadidas estén disponibles en tiempo de ejecución, debe ejecutarse `./gradlew generate.entities` y desplegarse los cambios en tomcat. Estos dos pasos pueden realizarse juntos ejecutando `./gradlew smartbuild`. Después de eso, debe reiniciarse Tomcat para refrescar el modelo DAL en memoria, de modo que conozca las columnas recién añadidas.
 
-Una vez que las columnas se añaden a la tabla, el usuario puede [exportar](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) el módulo.
+Una vez que las columnas se añaden a la tabla, el usuario puede [exportar](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md#exporting-a-module) el módulo.
 
 Para añadir las nuevas columnas a la ventana definida sobre esta tabla, visite [Cómo añadir un campo a una pestaña de ventana](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md).
 
 ---
 
 Este trabajo es una obra derivada de [Cómo añadir columnas a una tabla](http://wiki.openbravo.com/wiki/How_to_add_Columns_to_a_Table){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

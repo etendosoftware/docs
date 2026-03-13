@@ -157,7 +157,7 @@ docker_com.etendoerp.etendorx=true
     Para más información sobre cómo gestionar las dockerizaciones de Etendo, visite [Gestión de Docker](../../etendo-classic/bundles/platform/dependency-manager.md). 
 
 ??? Note "Tomcat y PostgresSQL dockerizados (opcional)"
-    También es posible ejecutar el [servicio PostgreSQL](../platform/docker-management.md#postgres-database-service) y el [servicio Tomcat](../platform/tomcat-dockerized-service.md), añadiendo **opcionalmente** el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} y las siguientes variables de configuración:
+    También es posible ejecutar el [servicio PostgreSQL](../../etendo-classic/bundles/platform/docker-management.md#postgres-database-service) y el [servicio Tomcat](../../etendo-classic/bundles/platform/dockerized-tomcat-service.md), añadiendo **opcionalmente** el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} y las siguientes variables de configuración:
 
     ```groovy title="gradle.properties"
     docker_com.etendoerp.tomcat=true
@@ -640,3 +640,5 @@ Al integrar esta utilidad de registro, los desarrolladores pueden realizar un se
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
