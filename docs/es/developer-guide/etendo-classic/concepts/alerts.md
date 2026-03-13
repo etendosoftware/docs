@@ -38,7 +38,7 @@ El flujo de las alertas basadas en datos es el siguiente:
   * Cuando un usuario inicia sesión en la aplicación, existe otro proceso que comprueba constantemente si hay instancias de alerta para este usuario y las muestra. 
 
 !!!info
-    Para más información, consulte [cómo crear una alerta](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md).
+    Para más información, consulte [cómo crear una alerta](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert.md).
 
 ###  Definición
 
@@ -129,3 +129,5 @@ definir si el/los usuario(s) deben ser notificados por correo electrónico.
 ---
 
 Este trabajo es una obra derivada de [Alertas](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
