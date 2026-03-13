@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#antifraude" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4529,6 +4529,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -4577,6 +4579,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4594,19 +4598,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidades" class="md-nav__link">
+  <a href="#configuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Funcionalidades
+      Configuración
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Funcionalidades">
+    <nav class="md-nav" aria-label="Configuración">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#carga-certificados-digitales-organizacion-legal" class="md-nav__link">
+  <a href="#configurar-certificado-digital" class="md-nav__link">
     <span class="md-ellipsis">
-      Carga de Certificados Digitales por Organización Legal
+      Configurar Certificado Digital
     </span>
   </a>
   
@@ -4983,6 +4987,36 @@
     Modelo 390
     
   </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funcionalidades-generales-para-sifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funcionalidades Generales para SIFs
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
   
 
       </a>
@@ -14833,6 +14867,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -14850,19 +14886,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidades" class="md-nav__link">
+  <a href="#configuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Funcionalidades
+      Configuración
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Funcionalidades">
+    <nav class="md-nav" aria-label="Configuración">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#carga-certificados-digitales-organizacion-legal" class="md-nav__link">
+  <a href="#configurar-certificado-digital" class="md-nav__link">
     <span class="md-ellipsis">
-      Carga de Certificados Digitales por Organización Legal
+      Configurar Certificado Digital
     </span>
   </a>
   
@@ -15049,8 +15085,7 @@
   
 
 
-  <h1>Antifraude</h1>
-
+<h1 id="antifraude">Antifraude</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.antifraud</code></p>
 <h2 id="introduccion">Introducción</h2>
 <p>Esta sección describe el módulo <strong>Etendo Antifraude</strong>, incluido en el bundle de Localización Española.</p>
@@ -15067,34 +15102,9 @@
 <p>El módulo incluye múltiples restricciones en el flujo de facturación, requeridas por ley en Etendo. Tenga en cuenta esto al utilizar el mismo, y planifique sus procesos siguiendo los nuevos flujos.</p>
 </div>
 <p>El módulo de Antifraude incluye nuevas funcionalidades y restricciones en el flujo de facturación y gestión de datos, pensadas para garantizar la integridad, conservación, legibilidad, trazabilidad e inalterabilidad de los datos. El módulo se enmarca en la <a href="https://www.boe.es/buscar/pdf/2021/BOE-A-2021-11473-consolidado.pdf" target="_blank">Ley 11/2021</a>, vigente desde el <em>9 de julio de 2021</em>, de medidas de prevención y lucha contra el fraude fiscal, y el <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24840" target="_blank">Real Decreto 1007/2023</a>, vigente desde el <em>5 de diciembre de 2023</em>, por el que se aprueba el Reglamento que establece los requisitos que deben adoptar los sistemas y programas informáticos o electrónicos que soporten los procesos de facturación de empresarios y profesionales, y la estandarización de formatos de los registros de facturación.</p>
-<h2 id="funcionalidades">Funcionalidades</h2>
-<h3 id="carga-certificados-digitales-organizacion-legal">Carga de Certificados Digitales por Organización Legal</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Organización</code></p>
-<p>Se ha añadido a la ventana <code>Organización</code> el proceso <strong>Añadir Certificado Digital</strong>, el cual solo puede ejecutarse para organizaciones legales. 
-Este proceso se encarga de cargar para la organización seleccionada un certificado digital, el cual será utilizado luego en procesos que lo requieran, como por ejemplo la firma digital de documentos, el envío de facturas a VERI*FACTU, entre otros.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Para obtener un certificado digital se debe solicitar el mismo a través de la <a href="https://www.cert.fnmt.es/" target="_blank">FNMT (Fábrica Nacional de Moneda y Timbre)</a>. El solicitante del certificado varía según la forma jurídica de quien emite las facturas:</p>
-<ol>
-<li><strong>Autónomos (Personas Físicas)</strong>: lo solicita el propio trabajador por cuenta propia. Se utiliza el Certificado de Persona Física. Es personal e intransferible. El autónomo debe realizar la solicitud y acreditar su identidad (ya sea presencialmente con su DNI o mediante vídeo identificación).</li>
-<li><strong>Sociedades (S.L., S.A., etc.)</strong>: en el caso de empresas, el certificado no se emite a nombre de la "empresa" como ente abstracto, sino vinculado a una persona física responsable:<ul>
-<li>Administrador Único o Solidario: Si la empresa tiene esta estructura, el administrador puede solicitar un Certificado de Representante para Administradores Únicos o Solidarios directamente con su DNIe o certificado de persona física, sin acudir a una oficina.</li>
-<li>Apoderado o Representante Legal: Si no se es administrador único, se debe solicitar un Certificado de Representante de Persona Jurídica. La persona que lo solicite debe acreditar mediante poderes notariales o certificado del Registro Mercantil que tiene autoridad para actuar en nombre de la sociedad.</li>
-</ul>
-</li>
-<li><strong>Entidades sin Personalidad Jurídica</strong>: lo solicita el representante legal de la entidad (por ejemplo, el presidente de una comunidad de propietarios o el representante de una unión temporal de empresas). Se requiere el Certificado de Representante de Entidad sin Personalidad Jurídica.</li>
-</ol>
-<p>Siga la siguiente <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html" target="_blank">Guía de la AEAT</a> para solicitar un certificado electrónico de la FNMT</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado.png"></a></p>
-<p>El proceso pedirá al usuario el archivo del certificado que se quiera cargar, y su contraseña.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-contrase%C3%B1a.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-contrase%C3%B1a.png"></a></p>
-<p>Al finalizar, se mostrará en la solapa <strong>Certificado Digital</strong> la información del certificado cargado.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/certificado-cargado.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Tenga en cuenta que solo se puede disponer de un certificad por <em>Organizacion Legal</em> a la vez, ya que las ejecuciones posteriores del proceso sobrescribirán cualquier certificado previamente cargado.</p>
-</div>
+<h2 id="configuracion">Configuración</h2>
+<h3 id="configurar-certificado-digital">Configurar Certificado Digital</h3>
+<p>Debe configurar un certificado digital para las organizaciones legales que correspondan. Para esto, <a href="../funcionalidades-generales-para-sifs/#carga-de-certificados-digitales">siga la siguiente guía</a>. </p>
 <h3 id="proceso-de-generacion-de-backups">Proceso de generación de backups</h3>
 <p>Se ha creado un proceso de generación de backups anuales, en respuesta al siguiente requerimiento:</p>
 <blockquote>
@@ -15143,7 +15153,7 @@ Este proceso se encarga de cargar para la organización seleccionada un certific
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/boton-imprimir-firma.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude/boton-imprimir-firma.png"></a></p>
 <p>Para firmar digitalmente un documento, se deben cumplir primero las siguientes condiciones:</p>
 <ul>
-<li>Tener cargado en el sistema un certificado válido emitido por la AEAT, para la organización legal de la factura a imprimir. El mismo se debe cargar siguiendo la guía de <a href="#carga-certificados-digitales-organizacion-legal">Carga de Certificados Digitales por Organización Legal</a></li>
+<li>Tener cargado en el sistema un certificado válido emitido por la AEAT, para la organización legal de la factura a imprimir. El mismo se debe cargar siguiendo la guía de <a href="../funcionalidades-generales-para-sifs/#carga-de-certificados-digitales">Carga de Certificados Digitales</a></li>
 <li>Tener conexión a internet.</li>
 <li>
 <p>Tener un entorno con una instancia de producción (si no se está en un entorno productivo esto se notificará en el documento impreso mediante marca de agua).

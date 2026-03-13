@@ -4783,6 +4783,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../funcionalidades-generales-para-sifs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funcionalidades Generales para SIFs
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sii-para-iva/" class="md-nav__link">
         
   
@@ -4954,6 +4984,15 @@
   
     <nav class="md-nav" aria-label="Configuración">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-actualizacion-de-fecha-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso de actualización de Fecha de Operación
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#configuracion-verifactu" class="md-nav__link">
@@ -15103,6 +15142,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#proceso-de-actualizacion-de-fecha-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso de actualización de Fecha de Operación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuracion-verifactu" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración Verifactu
@@ -15514,8 +15562,10 @@
 <p class="admonition-title">Info</p>
 <p>Se recomienda que las siguientes configuraciones sean realizadas por un usuario con rol <strong>administrador</strong>, ya que requieren ajustes técnicos.</p>
 </div>
+<h3 id="proceso-de-actualizacion-de-fecha-de-operacion">Proceso de actualización de Fecha de Operación</h3>
+<p>Se recomienda ejecutar el proceso <a href="../funcionalidades-generales-para-sifs/#rellenar-fechas-de-operacion">Rellenar Fechas de Operación</a> si se está actualizando el módulo a las versiones <strong>1.12.0</strong>, <strong>2.11.0</strong> o posteriores para actualizar los valores de Fecha de Operación en facturas previas a la actualización.</p>
 <h3 id="configuracion-verifactu">Configuración Verifactu</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Verifactu</code> &gt; <code>Configuración Verifactu</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Verifactu</code> &gt; <code>Configuración Verifactu</code></p>
 <p>En la ventana <strong>Configuración Verifactu</strong> se define quién actuará como <strong>emisor de las facturas</strong> y con qué <strong>impuesto se generarán</strong>. En este caso, <strong>cada organización legal que se cree será la responsable de la emisión</strong>, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.</p>
 <ul>
 <li><strong>Organización</strong>: entidad legal emisora.</li>
@@ -15527,32 +15577,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png"></a></p>
 <h3 id="certificado-digital">Certificado Digital</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Organización</code></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Para más información sobre cómo obtener un certificado digital de la FNMT, <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/informacion-pasos-obtencion-certificado-electronico.html" target="_blank">se puede seguir esta guía</a></p>
-</div>
-<p>Para poder emitir facturas electrónicas a través del sistema <em>Verifactu</em>, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. Siga los siguientes pasos para configurar correctamente su <strong>Certificado Digital</strong>:</p>
-<ol>
-<li>
-<p>Acceder a la ventana <strong>Organización</strong></p>
-</li>
-<li>
-<p><strong>Seleccionar la Organización Legal</strong>: Elige la organización legal que será responsable de emitir las facturas electrónicas.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado.png"></a></p>
-</li>
-<li>
-<p>Haz clic en el botón <strong>Añadir Certificado Digital</strong>.</p>
-</li>
-<li>
-<p><strong>Subir el Certificado</strong>: En el proceso, podrás cargar tu certificado digital ingresando la clave correspondiente.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contrasena.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-contrasena.png"></a></p>
-</li>
-<li>
-<p><strong>Guardar la configuración</strong>: Al presionar el botón <strong>Hecho</strong>, el sistema guardará la información del certificado digital en la solapa <strong>Certificado Digital</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/certificado-cargado.png"></a></p>
-<p>Una vez completados estos pasos, el certificado digital estará correctamente configurado y listo para su uso en la emisión de facturas electrónicas.</p>
-</li>
-</ol>
+<p>Para poder emitir facturas electrónicas a través del sistema <em>Verifactu</em>, es indispensable contar con un certificado digital. Este certificado asegura la autenticidad de la identidad del emisor de la factura y garantiza que los datos transmitidos no hayan sido alterados durante su envío. <a href="../funcionalidades-generales-para-sifs/#carga-de-certificados-digitales">Siga la siguiente guía</a> para cargarlo en la organización correspondiente.</p>
 <h3 id="rango-impuesto">Rango Impuesto</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Rango Impuesto</code></p>
 <p>En la ventana <strong>Rango Impuesto</strong>, debe completarse la información requerida para cada impuesto que se utilice al emitir facturas. Estos datos son necesarios para clasificar correctamente los impuestos según el régimen aplicable y el tipo de operación.</p>
@@ -15860,7 +15885,7 @@ Por tanto, la utilización de esta funcionalidad requiere realizar determinados 
 <p>Es importante aclarar que únicamente se envían a <em>Verifactu</em> las <strong>facturas de venta</strong>, facturas emitidas desde la ventana <strong>Factura (Cliente)</strong>.</p>
 </div>
 <h3 id="creacion-de-factura-manualmente">Creación de Factura Manualmente</h3>
-<p>Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Verifactu</code> &gt; <code>Configuración Verifactu</code>.</p>
+<p>Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Verifactu</code> &gt; <code>Configuración Verifactu</code>.</p>
 <p>Debe completar los siguientes campos obligatorios en la Factura:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png"></a></p>
 <ul>
@@ -16027,7 +16052,7 @@ En este flujo automático <strong>pueden no aplicarse</strong> validaciones prev
 <h4 id="rectificacion-por-diferencias">Rectificación por diferencias</h4>
 <p>Se informa únicamente la <strong>variación de importes</strong> con respecto a la factura original.</p>
 <p><strong>Acción:</strong><br>
-Crear una nueva factura de venta utilizando un <strong>tipo de documento para facturas rectificativas</strong>, en una <strong>serie distinta</strong> a la original. Luego:</p>
+Crear una nueva factura de venta utilizando un <a href="../funcionalidades-generales-para-sifs/#tipos-de-documento-rectificativos">tipo de documento para facturas rectificativas</a>, en una <strong>serie distinta</strong> a la original. Luego:</p>
 <ol>
 <li>Seleccionar el tipo de factura correspondiente (<code>R1</code> a <code>R5</code>).</li>
 <li>Indicar que se trata de una <strong>Rectificativa por Diferencias</strong>.</li>
@@ -16045,7 +16070,7 @@ Crear una nueva factura de venta utilizando un <strong>tipo de documento para fa
 <h4 id="rectificacion-por-sustitucion">Rectificación por Sustitución</h4>
 <p>Se reemplaza por completo la factura original.</p>
 <p><strong>Acción:</strong><br>
-Crear una nueva factura de venta utilizando un <strong>tipo de documento para facturas rectificativas</strong>, en una <strong>serie distinta</strong> a la original. Luego:</p>
+Crear una nueva factura de venta utilizando un <a href="../funcionalidades-generales-para-sifs/#tipos-de-documento-rectificativos">tipo de documento para facturas rectificativas</a>, en una <strong>serie distinta</strong> a la original. Luego:</p>
 <ol>
 <li>Seleccionar el tipo de factura correspondiente (<code>R1</code> a <code>R5</code>).</li>
 <li>Indicar que se trata de una <strong>Rectificativa por Sustitución</strong>.</li>
@@ -16113,7 +16138,7 @@ Crear una nueva factura de venta utilizando un <strong>tipo de documento para fa
 <p>Para hacerlo:</p>
 <ol>
 <li>
-<p>Seleccionar un tipo de documento rectificativo, en el <strong>tipo de documento</strong> del pedido o la devolución, seleccionar uno configurado como <strong>rectificativo</strong> (es decir, que tenga marcado el check <strong>Es Rectificativo</strong>).</p>
+<p>Seleccionar un <a href="../funcionalidades-generales-para-sifs/#tipos-de-documento-rectificativos">tipo de documento rectificativo</a>, en el <strong>tipo de documento</strong> del pedido o la devolución, seleccionar uno configurado como <strong>rectificativo</strong> (es decir, que tenga marcado el check <strong>Es Rectificativo</strong>).</p>
 </li>
 <li>
 <p>Completar los campos de la sección <strong>Verifactu</strong> del <strong>documento</strong> indicando el <strong>tipo de rectificación</strong> que se usará.</p>
@@ -16126,11 +16151,11 @@ Crear una nueva factura de venta utilizando un <strong>tipo de documento para fa
 <h2 id="consulta-del-estado-de-envio-de-facturas">Consulta del Estado de Envío de Facturas</h2>
 <p>Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una <strong>obtiene la información almacenada en el sistema</strong>, mientras que la otra realiza la consulta <strong>directamente contra los datos de la </strong>Agencia Tributaria.</p>
 <h3 id="monitor-verifactu">Monitor Verifactu</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Verifactu</code> &gt; <code>Monitor Verifactu</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Verifactu</code> &gt; <code>Monitor Verifactu</code></p>
 <p>Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png"></a></p>
 <h3 id="consulta-facturas-verifactu">Consulta Facturas Verifactu</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Verifactu</code> &gt; <code>Consulta Facturas Verifactu</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Verifactu</code> &gt; <code>Consulta Facturas Verifactu</code></p>
 <p>Este proceso permite obtener un <strong>informe detallado de las facturas enviadas a Verifactu</strong>, ofreciendo múltiples opciones de filtrado para facilitar la consulta:</p>
 <ul>
 <li><strong>Emisor</strong></li>
