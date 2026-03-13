@@ -15,7 +15,7 @@ El objetivo de esta sección es mostrar cómo puede crear una nueva ventana desd
 
 !!!info
     Esta sección se basa en dos secciones anteriores que explican
-    [Cómo crear un Módulo](../how-to-guides/How_To_Create_a_Module.md) y [Cómo crear una Tabla](../how-to-guides/How_to_create_a_Table.md).
+    [Cómo crear un Módulo](../how-to-guides/how-to-create-a-module.md) y [Cómo crear una Tabla](../how-to-guides/how-to-create-a-table.md).
 
 ## Módulo y tabla
 
@@ -165,3 +165,5 @@ Usando el rol *F&B International Group Admin*, seleccione el enlace a la nueva v
 ---
 
 Este trabajo es una obra derivada de [Cómo crear una ventana](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
