@@ -1,5 +1,5 @@
 ---
-title: Descripcion del Bundle de Localizacion Española
+title: Descripción del Bundle de Localización Española
 tags:
     - Localización Española   
     - Características de Etendo
@@ -7,7 +7,7 @@ tags:
     - Legislación española
 ---
 
-# Descripcion del Bundle de Localizacion Española
+# Descripción del Bundle de Localización Española
 
 :octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
 
@@ -77,7 +77,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Integration with Google APIs Translation Spanish Spain
 - Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
-## Incoterms
+### Incoterms
 
 :octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
 
@@ -85,19 +85,19 @@ Este módulo añade el listado de Incoterms a Etendo.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
-## European Union Countries
+### European Union Countries
 
 :octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
 
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
-## Provincias de España
+### Provincias de España
 
 :octicons-package-16: Javapackage: `org.openbravo.spain.regions`
 
 Este módulo añade el listado de provincias españolas a Etendo.
 
-## Legal Representative of the Organization
+### Legal Representative of the Organization
 
 :octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
 
@@ -105,7 +105,7 @@ Este módulo añade a la ventana de la Organización una pestaña que permite co
 
 La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
 
-## I.A.E. Epigraphs (Epígrafes del I.A.E.)
+### I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
 :octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
 
@@ -115,7 +115,7 @@ El tipo de información agregada por este módulo se requiere en determinados mo
 
 En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea incluir un epígrafe que pertenezca a cualquier otra clave, se debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa “Actividades del IAE” de la ventana de Organización.
 
-## CIF and NIF validator
+### CIF and NIF validator
 
 :octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
 
@@ -125,13 +125,13 @@ Este módulo implementa un callout que comprueba si se ha introducido un Número
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
-## Validador de número de cuenta financiera
+### Validador de número de cuenta financiera
 
 :octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
-## Check Printing
+### Check Printing
 
 :octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
 
@@ -156,19 +156,19 @@ La ventana aplica un primer filtro para mostrar solamente los cheques que están
 
 Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
 
-## Tipo de Número de Identificación de Tercero
+### Tipo de Número de Identificación de Tercero
 
 :octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
 
 Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
-## Professional Localization pack Spain (España) Datasets
+### Professional Localization pack Spain (España) Datasets
 
 :octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
 
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
-## Multidimensional Tax Report
+### Multidimensional Tax Report
 
 :octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
 
@@ -180,19 +180,19 @@ El módulo permite obtener los datos necesarios para cumplimentar modelos de la 
 
 La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
 
-## Cuaderno 43
+### Cuaderno 43
 
 :octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
 
 Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
-## 3 digits ISO country codes
+### 3 digits ISO country codes
 
 :octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
 
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
-## Métodos de Pago
+### Métodos de Pago
 
 :octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
 
@@ -200,7 +200,7 @@ Este módulo contiene las formas de pago más utilizadas en España, las cuales 
 
 El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
 
-## Tax Report Launcher
+### Tax Report Launcher
 
 :octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
 
@@ -252,7 +252,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
 
 
-## Spanish Tax Module Improvements
+### Spanish Tax Module Improvements
 
 :octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
 
@@ -265,17 +265,17 @@ Este módulo añade campos en la ventana de “Rango de impuestos” para mejora
 - Recargo de equivalencia ("Equivalent Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es un recargo de equivalencia.
 - Impuesto Intracomunitario ("Intra Community Tax"): El usuario puede seleccionar este check para indicar que un rango de impuesto es intracomunitario.
 
-## Nueva versión del módulo de Impuestos de España
+### Nueva versión del módulo de Impuestos de España
 
 Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
-## Condiciones de pago
+### Condiciones de pago
 
 :octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
 
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
-## Chart of accounts: PGC 2007 General
+### Chart of accounts: PGC 2007 General
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
 
@@ -303,7 +303,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 - La moneda funcional es distinta del euro.
 - Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
 
-## Chart of accounts: PGC 2007 PYMEs
+### Chart of accounts: PGC 2007 PYMEs
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
 
@@ -321,37 +321,37 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 - Cuadro de cuentas
 - Definiciones y relaciones contables
 
-## Professional Localization pack Spain (España)
+### Professional Localization pack Spain (España)
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
 
-## Localization pack Spain (España)
+### Localization pack Spain (España)
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
 
-## Traducción al español del módulo 'Default Jobs'
+### Traducción al español del módulo 'Default Jobs'
 
 :octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
 
-## JSON Datasource Translation: Spanish Spain (es_ES)
+### JSON Datasource Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
 
-## Workspace & Widgets Translation: Spanish Spain (es_ES)
+### Workspace & Widgets Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
 
-## User Interface Selector Translation: Spanish Spain (es_ES)
+### User Interface Selector Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
 
-## Traducción al Español del módulo Payment Report
+### Traducción al Español del módulo Payment Report
 
 :octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
 
-## Number To Word
+### Number To Word
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
@@ -359,79 +359,79 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
 
-## User Interface Client Kernel Translation Spanish Spain(esES)
+### User Interface Client Kernel Translation Spanish Spain(esES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
 
-## Translation: Spanish-Spain (es_ES) español-España
+### Translation: Spanish-Spain (es_ES) español-España
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
 
-## Openbravo Multi Business Partner Selector
+### Openbravo Multi Business Partner Selector
 
 :octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
 
 :octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
 
-## Orders Awaiting Delivery Spanish (Spain) Translation
+### Orders Awaiting Delivery Spanish (Spain) Translation
 
 :octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
 
-## Smartclient Translation: Spanish Spain (es_ES)
+### Smartclient Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
 
-## Query/List Widget Translation Spanish Spain (es_ES)
+### Query/List Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
 
-## Widgets Collection Translation Spanish Spain (es_ES)
+### Widgets Collection Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
 
-## Advanced Payables and Receivables - Spanish Translation
+### Advanced Payables and Receivables - Spanish Translation
 
 :octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
 
-## User Interface Application Translation Spanish Spain (es_ES)
+### User Interface Application Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
 
-## Alerts: Accounting
+### Alerts: Accounting
 
 :octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
 
 :octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
 
-## SOAP with Attachments API for Java Implementation
+### SOAP with Attachments API for Java Implementation
 
 :octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
 
-## Payment Method Type
+### Payment Method Type
 
 :octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
 
-## Javax XML SOAP API
+### Javax XML SOAP API
 
 :octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
-## HTML Widget Translation Spanish Spain (es_ES)
+### HTML Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
 
-## OpenID Service Integration Translation Spanish Spain
+### OpenID Service Integration Translation Spanish Spain
 
 :octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
 
-## Integration with Google APIs Translation Spanish Spain
+### Integration with Google APIs Translation Spanish Spain
 
 :octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
 
-## Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
+### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
 
-## TicketBai y Batuz
+### TicketBai y Batuz
 
 :octicons-package-16: Javapackage: `com.smf.ticketbai`
 
@@ -440,7 +440,7 @@ Este módulo permite cumplir con las normativas fiscales del País Vasco, automa
 !!! info
     Para más información, visite la [Guía de usuario TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
 
-## Veri*Factu
+### Veri*Factu
 
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu`
 
@@ -451,7 +451,7 @@ Este módulo automatiza el proceso de emisión y envío de facturas electrónica
 
  ---
 
-## Antifraude
+### Antifraude
 
 :octicons-package-16: Javapackage: `com.etendoerp.antifraud`
 
@@ -461,6 +461,114 @@ Este módulo permite cumplir con la Ley Antifraude de España en Etendo, reforza
     Para más información, visite la [Guía de usuario Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md).
 
  ---
+
+
+## FAQ
+### ¿Al actualizar o re-aplicar un dataset se pueden modificar registros que ya existen?
+
+Sí.
+
+Cuando se importa o actualiza un dataset, los registros incluidos en ese dataset se aplican nuevamente sobre la base de datos, por lo que pueden actualizar valores de registros existentes, incluso si estos fueron modificados manualmente previamente.
+
+Este es el comportamiento esperado del mecanismo de importación de datasets.
+
+No existe una configuración estándar para evitar que estos cambios se apliquen. En caso de requerir que ciertas configuraciones locales no se sobrescriban, sería necesario implementar una lógica personalizada, definida según los requisitos del cliente.
+
+### ¿Los valores del desplegable "VERIFACTU" (Régimen Especial IVA, Causa de Exención, etc.) se configuran automáticamente desde el dataset?
+
+No. Estos valores no se asignan automáticamente desde el dataset de localización y deben configurarse manualmente en cada caso.
+
+La razón es que la clave a utilizar no depende únicamente del impuesto, sino también de factores propios de cada empresa, como por ejemplo:
+
+- el tipo de operación que realiza (ventas, servicios, alquileres, etc.)
+- la actividad económica
+- el contexto fiscal específico de la empresa
+
+Incluso con el mismo tipo impositivo de IVA, pueden corresponder diferentes claves según la actividad o el régimen fiscal aplicable.
+
+Por este motivo, la configuración debe realizarse de forma manual y adaptada a cada cliente, ya que solo la empresa o su asesoría fiscal pueden determinar qué clave corresponde en cada caso.
+
+### ¿Por qué el rango de impuesto "Prestación de servicios exenta por suplido" no tiene parámetro para el Modelo 347?
+
+Porque los suplidos no se consideran operaciones propias con terceros.
+
+Un suplido es un importe que una empresa paga en nombre de su cliente y posteriormente le repercute, por lo que no forma parte del volumen real de operaciones de la empresa.
+
+De acuerdo con la normativa fiscal española, los suplidos no deben declararse en el Modelo 347, y por ese motivo Etendo no incluye ni permite asociar un parámetro de este modelo a ese rango de impuesto.
+
+### ¿Etendo soporta la gestión de facturas simplificadas recibidas con clave F2 en el SII?
+
+Actualmente Etendo ERP no soporta la gestión de facturas simplificadas recibidas con clave F2 en el SII.
+
+### ¿Etendo soporta la presentación del Modelo 592?
+
+No. Actualmente Etendo ERP no soporta la presentación del Modelo 592.
+
+### ¿Por qué Veri*Factu no permite dar de alta facturas manualmente como en el SII?
+
+En Veri*Factu no está disponible la opción de envío manual de facturas.
+
+Esto se debe a que, tras enviar una factura, la AEAT devuelve en la respuesta un parámetro llamado `tiempoParaEnvio`, que indica el tiempo mínimo que debe esperarse antes de enviar la siguiente factura. Este valor lo define la AEAT y normalmente es de 60 segundos.
+
+Además, la normativa de Veri*Factu busca garantizar la integridad, conservación, accesibilidad, legibilidad, trazabilidad e inalterabilidad de los registros de facturación. La remisión automática e inmediata de la información a la AEAT contribuye a evitar manipulaciones posteriores, ya que dificulta alterar, eliminar o rehacer facturas una vez emitidas.
+
+Por este motivo, Etendo gestiona el envío de las facturas de forma automática, asegurando que se respeten los tiempos definidos por la AEAT y los requisitos establecidos por la normativa.
+
+### ¿La configuración de Veri*Factu afecta a las facturas si está marcada como “Activo = No”?
+
+Se han introducido nuevos cambios por los que ya no está permitido activar o desactivar manualmente la configuración. Ahora, al crear el registro de configuración en Verifactu, este quedará como un borrador. Mientras se mantenga en esta situación, todas las operaciones que dependen de dicha configuración aún no estarán operativas.
+
+No obstante, existe un botón denominado “Marcar como lista”. Al pulsarlo, la configuración pasa a estar activa y, desde ese momento, se habilitan todas las funcionalidades y restricciones de Verifactu. Además, esta acción completa automáticamente el campo “Fecha de acogida”, que indica la fecha a partir de la cual Verifactu comienza a estar operativo.
+
+Por este motivo, una vez que la configuración ha sido marcada como lista, ya no será posible activarla ni desactivarla manualmente. En caso de que deje de utilizarse, será necesario eliminar el registro, siempre que no existan facturas pendientes de envío asociadas a esa configuración.
+
+### ¿Cómo se pueden realizar pruebas de Veri*Factu sin afectar a producción?
+
+Para realizar pruebas, se recomienda trabajar en una instancia configurada como entorno de desarrollo.
+
+En estos casos, las pruebas deben realizarse generando facturas de prueba y registrando posteriormente su anulación, de forma que el sistema genere tanto el registro de alta como el registro de anulación.
+
+Este enfoque sigue las recomendaciones de la AEAT, que establece que las facturas utilizadas para pruebas o formación deben tratarse como facturas reales a efectos del sistema de facturación. Por este motivo, el proceso consiste en emitir la factura (que genera su registro) y posteriormente anularla, dejando trazabilidad completa de la operación.
+
+De esta manera se pueden realizar pruebas o formaciones cumpliendo con la normativa (RD 1007/2023) y manteniendo el registro de todas las operaciones realizadas durante las pruebas.
+
+### ¿Es posible conectar Etendo al entorno PRE de la AEAT para Veri*Factu?
+
+No.
+
+El entorno PRE de Veri*Factu está destinado únicamente a fabricantes de software durante la fase de desarrollo, y no para pruebas de usuarios finales, demos o formaciones.
+
+Por este motivo Etendo no permite configurar la conexión a dicho entorno.
+
+### ¿Etendo soporta la modalidad "No Veri*Factu"?
+
+No.
+
+Actualmente Etendo solo soporta la modalidad Veri*Factu.
+
+La modalidad “No Veri*Factu” no está soportada, por lo que no es posible configurar el sistema para operar bajo ese esquema.
+
+### ¿Qué se debe configurar en los rangos de impuestos para Veri*Factu?
+
+En Veri*Factu, la configuración del Rango de Impuestos se utiliza para indicar la naturaleza fiscal de la operación que se está facturando.
+
+Esta información no afecta al cálculo del impuesto, sino que se utiliza para informar correctamente a la AEAT en el XML del Registro de Facturación (RF).
+
+La configuración se realiza en:
+
+**Aplicación → Gestión Financiera → Contabilidad → Configuración → Rango Impuesto**
+
+Según el tipo de operación, se deben completar los siguientes campos:
+
+- **Operaciones con IVA:** configurar el campo **Régimen Especial IVA**. Si no aplica un régimen especial, se debe utilizar **01 – Régimen General**.
+- **Operaciones con IGIC:** configurar el campo **Régimen Especial IGIC**.
+- **Operaciones no sujetas:** completar el campo **Causa de No Sujeción**.
+- **Operaciones exentas:** completar el campo **Causa de Exención**.
+- **Operaciones con IPSI:** configurar el campo **Régimen Especial IPSI**.
+
+La elección del régimen o de la causa correspondiente depende de la actividad y de las operaciones específicas de cada empresa, por lo que esta configuración debe definirse según el criterio fiscal del cliente o de su asesoría.
+
+---
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
