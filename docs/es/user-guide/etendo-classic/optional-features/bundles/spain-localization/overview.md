@@ -18,9 +18,9 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 ## Módulos
 
-#### Módulos funcionales
+### Módulos funcionales
 
-### Antifraude
+#### Antifraude
 
 :octicons-package-16: Javapackage: `com.etendoerp.antifraud`
 
@@ -29,7 +29,7 @@ Este módulo permite cumplir con la Ley Antifraude de España en Etendo, reforza
 !!! info
     Para más información, visite la [Guía de usuario Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md).
 
-### Configuración de Impuestos para Libro de Facturas
+#### Configuración de Impuestos para Libro de Facturas
 
 :octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
 
@@ -38,7 +38,7 @@ Este módulo permite configurar los parámetros fiscales necesarios para la gene
 !!! info
     Para más información, visite la [Guía de usuario Configuración de Impuestos para Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md).
 
-### Funcionalidades Generales Para SIFs
+#### Funcionalidades Generales Para SIFs
 
 :octicons-package-16: Javapackage: `com.etendoerp.sif.general`
 
@@ -49,7 +49,7 @@ Este módulo provee las funcionalidades comunes y la infraestructura base para l
 !!! info
     Para más información, visite la [Guía de usuario Funcionalidades Generales Para SIFs](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs.md).
 
-### Impuestos para España
+#### Impuestos para España
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
@@ -58,7 +58,7 @@ Este módulo incluye el dataset con los tipos impositivos españoles, incluyendo
 !!! info
     Para más información, visite la [Guía de usuario Impuestos para España](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md).
 
-### Intrastat
+#### Intrastat
 
 :octicons-package-16: Javapackage: `org.openbravo.module.intrastat`
 
@@ -69,14 +69,14 @@ Este módulo permite gestionar las declaraciones Intrastat para el comercio de b
 !!! info
     Para más información, visite la [Guía de usuario Intrastat](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md).
 
-### IVA de Caja
+#### IVA de Caja
 
 Este módulo implementa el régimen especial del criterio de caja, que permite retrasar el devengo del IVA repercutido hasta el momento del cobro y la deducción del IVA soportado hasta el momento del pago.
 
 !!! info
     Para más información, visite la [Guía de usuario IVA de Caja](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/iva-de-caja.md).
 
-### Libro de Facturas
+#### Libro de Facturas
 
 :octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook`
 
@@ -87,7 +87,7 @@ Este módulo genera los libros de registro de facturas emitidas y recibidas conf
 !!! info
     Para más información, visite la [Guía de usuario Libro de Facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md).
 
-### Modelo 190
+#### Modelo 190
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
 
@@ -96,7 +96,7 @@ Este módulo permite generar el resumen anual de retenciones e ingresos a cuenta
 !!! info
     Para más información, visite la [Guía de usuario Modelo 190](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md).
 
-### Modelo 303
+#### Modelo 303
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es`
 
@@ -105,7 +105,7 @@ Este módulo permite generar la declaración trimestral y mensual del IVA confor
 !!! info
     Para más información, visite la [Guía de usuario Modelo 303](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md).
 
-### Modelo 347
+#### Modelo 347
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es`
 
@@ -114,7 +114,7 @@ Este módulo permite generar la declaración anual de operaciones con terceros (
 !!! info
     Para más información, visite la [Guía de usuario Modelo 347](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md).
 
-### Modelo 349
+#### Modelo 349
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es`
 
@@ -123,7 +123,7 @@ Este módulo permite generar la declaración recapitulativa de operaciones intra
 !!! info
     Para más información, visite la [Guía de usuario Modelo 349](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md).
 
-### Modelo 390
+#### Modelo 390
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
 
@@ -132,7 +132,7 @@ Este módulo permite generar el resumen anual del IVA (Modelo 390).
 !!! info
     Para más información, visite la [Guía de usuario Modelo 390](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md).
 
-### SII España
+#### SII España
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
@@ -143,7 +143,7 @@ Este módulo permite gestionar el IVA y el IGIC de forma telemática dentro del 
 !!! info
     Para más información, visite la [Guía de usuario SII España](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md).
 
-### TicketBai y Batuz
+#### TicketBai y Batuz
 
 :octicons-package-16: Javapackage: `com.smf.ticketbai`
 
@@ -152,7 +152,7 @@ Este módulo permite cumplir con las normativas fiscales del País Vasco, automa
 !!! info
     Para más información, visite la [Guía de usuario TicketBai y Batuz](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md).
 
-### Veri\*Factu
+#### Veri\*Factu
 
 :octicons-package-16: Javapackage: `com.etendoerp.verifactu`
 
@@ -161,25 +161,25 @@ Este módulo automatiza el proceso de emisión y envío de facturas electrónica
 !!! info
     Para más información, visite la [Guía de usuario Veri\*Factu](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md).
 
-#### Módulos de soporte
+### Módulos de soporte
 
-### 3 digits ISO country codes
+#### 3 digits ISO country codes
 
 :octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
 
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
-### Advanced Payables and Receivables - Spanish Translation
+#### Advanced Payables and Receivables - Spanish Translation
 
 :octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
 
-### Alerts: Accounting
+#### Alerts: Accounting
 
 :octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
 
 :octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
 
-### Chart of accounts: PGC 2007 General
+#### Chart of accounts: PGC 2007 General
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
 
@@ -207,7 +207,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 - La moneda funcional es distinta del euro.
 - Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
 
-### Chart of accounts: PGC 2007 PYMEs
+#### Chart of accounts: PGC 2007 PYMEs
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
 
@@ -225,7 +225,7 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 - Cuadro de cuentas
 - Definiciones y relaciones contables
 
-### Check Printing
+#### Check Printing
 
 :octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
 
@@ -235,22 +235,22 @@ Este módulo permite la impresión de cheques desde Etendo. Además, provee un s
 
 Este módulo incluye el dataset `Check Printing Infrastructure` que crea un formato de impresión llamado `Standard Format`, un método de pago denominado `Check` y un proceso de ejecución llamado **Check Printing**.
 
-### Ejecutar pago
+#### Ejecutar pago
 
 Después de crear un pago, permanecerá en estado `Awaiting Execution`. Se necesita un paso adicional para ejecutarlo y proveer el primer número para la secuencia de los cheques, esto puede hacerse a través del formulario **Payment Execution**.
 
 Para seleccionar los pagos que serán impresos, tras hacer click en **Process** aparece un pop up que requiere un número para el cheque. Este número es opcional.
-El sistema creará automáticamente las entradas en la ventana **Check Printing** en estado `Not Printed`. Además, el sistema asociará automáticamente el tipo de documento `Check` y el número de secuencia.
+El sistema creará automáticamente las entradas en la ventana **Check Printing** en estado `Not printed`. Además, el sistema asociará automáticamente el tipo de documento `Check` y el número de secuencia.
 
-### Imprimir cheques
+#### Imprimir cheques
 
-Se genera una nueva ventana para imprimir cheques. Esta puede encontrarse en :material-menu: `Gestión Financiera` > `Gestión de cobros y pagos` > `Transacciones` > `Impresión de cheques`. La información de esta ventana será automáticamente completada cuando se ejecuten transacciones payment out que están usando el método de pago `Check`.
+Se genera una nueva ventana para imprimir cheques. Esta puede encontrarse en :material-menu: `Gestión Financiera` > `Gestión de cobros y pagos` > `Transacciones` > `Impresión de cheques`. La información de esta ventana será automáticamente completada cuando se ejecuten transacciones `payment out` que están usando el método de pago `Check`.
 
 La ventana aplica un primer filtro para mostrar solamente los cheques que están en estado `Not printed`. Ese filtro puede ser removido para mostrar todos los cheques, incluidos los que están en estado `Printed`.
 
 Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón **Imprimir**.
 
-### CIF and NIF validator
+#### CIF and NIF validator
 
 :octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
 
@@ -260,29 +260,29 @@ Este módulo implementa un callout que comprueba si se ha introducido un Número
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
-### Condiciones de pago
+#### Condiciones de pago
 
 :octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
 
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en `30 días`, `60 días`, `90 días`, `120 días`, `50% en el acto, resto 60 días`, `20% a 10 días resto a 30 días` y `20% a 15 días, 40% a 30 días, resto a 60 días`.
 
-### Cuaderno 43
+#### Cuaderno 43
 
 :octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
 
 Este módulo implementa el formato de importación bancaria `Cuaderno 43` (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
-### European Union Countries
+#### European Union Countries
 
 :octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
 
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
-### HTML Widget Translation Spanish Spain (es_ES)
+#### HTML Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
 
-### I.A.E. Epigraphs (Epígrafes del I.A.E.)
+#### I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
 :octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
 
@@ -292,27 +292,27 @@ El tipo de información agregada por este módulo se requiere en determinados mo
 
 En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea incluir un epígrafe que pertenezca a cualquier otra clave, se debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa **Actividades del IAE** de la ventana de Organización.
 
-### Incoterms
+#### Incoterms
 
 :octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
 
 Este módulo añade el listado de Incoterms a Etendo.
 
-Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
+Los Incoterms o International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
-### Integration with Google APIs Translation Spanish Spain
+#### Integration with Google APIs Translation Spanish Spain
 
 :octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
 
-### Javax XML SOAP API
+#### Javax XML SOAP API
 
 :octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
-### JSON Datasource Translation: Spanish Spain (es_ES)
+#### JSON Datasource Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
 
-### Legal Representative of the Organization
+#### Legal Representative of the Organization
 
 :octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
 
@@ -320,13 +320,13 @@ Este módulo añade a la ventana de la Organización una pestaña que permite co
 
 La pestaña **Representante Legal** que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
 
-### Localization pack Spain (España)
+#### Localization pack Spain (España)
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
 
-### Métodos de Pago
+#### Métodos de Pago
 
 :octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
 
@@ -334,7 +334,7 @@ Este módulo contiene las formas de pago más utilizadas en España, las cuales 
 
 El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
 
-### Multidimensional Tax Report
+#### Multidimensional Tax Report
 
 :octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
 
@@ -346,11 +346,11 @@ El módulo permite obtener los datos necesarios para cumplimentar modelos de la 
 
 La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
 
-### Nueva versión del módulo de Impuestos de España
+#### Nueva versión del módulo de Impuestos de España
 
 Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
-### Number To Word
+#### Number To Word
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
@@ -358,57 +358,57 @@ Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplic
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
 
-### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
+#### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
 
-### Openbravo Multi Business Partner Selector
+#### Openbravo Multi Business Partner Selector
 
 :octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
 
 :octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
 
-### OpenID Service Integration Translation Spanish Spain
+#### OpenID Service Integration Translation Spanish Spain
 
 :octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
 
-### Orders Awaiting Delivery Spanish (Spain) Translation
+#### Orders Awaiting Delivery Spanish (Spain) Translation
 
 :octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
 
-### Payment Method Type
+#### Payment Method Type
 
 :octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
 
-### Professional Localization pack Spain (España)
+#### Professional Localization pack Spain (España)
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
 
-### Professional Localization pack Spain (España) Datasets
+#### Professional Localization pack Spain (España) Datasets
 
 :octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
 
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
-### Provincias de España
+#### Provincias de España
 
 :octicons-package-16: Javapackage: `org.openbravo.spain.regions`
 
 Este módulo añade el listado de provincias españolas a Etendo.
 
-### Query/List Widget Translation Spanish Spain (es_ES)
+#### Query/List Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
 
-### Smartclient Translation: Spanish Spain (es_ES)
+#### Smartclient Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
 
-### SOAP with Attachments API for Java Implementation
+#### SOAP with Attachments API for Java Implementation
 
 :octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
 
-### Spanish Tax Module Improvements
+#### Spanish Tax Module Improvements
 
 :octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
 
@@ -421,7 +421,7 @@ Este módulo añade campos en la ventana **Rango de impuestos** para mejorar la 
 - **Recargo de equivalencia** (`Equivalent Charge`): El usuario puede seleccionar este check para indicar que un rango de impuesto es un recargo de equivalencia.
 - **Impuesto Intracomunitario** (`Intra Community Tax`): El usuario puede seleccionar este check para indicar que un rango de impuesto es intracomunitario.
 
-### Tax Report Launcher
+#### Tax Report Launcher
 
 :octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
 
@@ -432,7 +432,7 @@ Este módulo consiste en un launcher de impuestos que permite la definición de 
 Este módulo permite crear y enviar formularios de informe de impuestos desde Etendo. Es posible ingresar los datos requeridos en un formulario en particular y generar un fichero que luego puede ser enviado a las autoridades.
 Los impuestos para una localización determinada se instalan con módulos que extienden de este.
 
-### Configuración de declaraciones de impuestos
+#### Configuración de declaraciones de impuestos
 
 Para habilitar el uso del launcher de declaraciones de impuestos, se deben descargar e instalar los siguientes módulos:
 
@@ -472,53 +472,53 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Click en **Generar archivo electrónico**.
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción **Guardar**, se debe especificar una ubicación de archivo.
 
-### Tipo de Número de Identificación de Tercero
+#### Tipo de Número de Identificación de Tercero
 
 :octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
 
 Este módulo añade el campo **Número de identificación de tercero** a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
-### Traducción al español del módulo 'Default Jobs'
+#### Traducción al español del módulo 'Default Jobs'
 
 :octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
 
-### Traducción al Español del módulo Payment Report
+#### Traducción al Español del módulo Payment Report
 
 :octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
 
-### Translation: Spanish-Spain (es_ES) español-España
+#### Translation: Spanish-Spain (es_ES) español-España
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
 
-### User Interface Application Translation Spanish Spain (es_ES)
+#### User Interface Application Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
 
-### User Interface Client Kernel Translation Spanish Spain(esES)
+#### User Interface Client Kernel Translation Spanish Spain(esES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
 
-### User Interface Selector Translation: Spanish Spain (es_ES)
+#### User Interface Selector Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
 
-### Validador de número de cuenta financiera
+#### Validador de número de cuenta financiera
 
 :octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
-### Widgets Collection Translation Spanish Spain (es_ES)
+#### Widgets Collection Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
 
-### Workspace & Widgets Translation: Spanish Spain (es_ES)
+#### Workspace & Widgets Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
 
 
 ## FAQ
-### **¿Al actualizar o re-aplicar un dataset se pueden modificar registros que ya existen?**
+### **¿Al actualizar o reaplicar un dataset se pueden modificar registros que ya existen?**
 
 Sí. Cuando se importa o actualiza un dataset, los registros incluidos en ese dataset se aplican nuevamente sobre la base de datos, por lo que pueden actualizar valores de registros existentes, incluso si estos fueron modificados manualmente previamente.
 
