@@ -120,7 +120,7 @@ plugins:
               - Overview: getting-started/overview.md
               - Requirements: getting-started/requirements.md
               - Install Etendo: getting-started/installation.md
-              - Interactive Installation: getting-started/interactive-installation.md
+              - Quick Installation: getting-started/interactive-installation.md
               - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
               - User interface:
                 - Workspace: getting-started/user-interface/workspace.md
@@ -455,6 +455,7 @@ plugins:
                   - How to Retrieve Parents Node by Level in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-retrieve-parents-node-by-level-in-a-tree.md
                   - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
                   - How to Send Emails on Events: developer-guide/etendo-classic/how-to-guides/how-to-send-emails-on-events.md
+                  - How to Use Setup Apply Templates: developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates.md
           #        - How to Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
           #        - How to setup Visual Studio Code IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Visual_Studio_Code_IDE.md
           #        - How to Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
@@ -843,7 +844,7 @@ plugins:
             Install Translation Bundles in Etendo: Instalar Paquetes de Traducción en Etendo
             Installation: Instalación
             IntelliJ Code Formatting: Formateo de Código en IntelliJ
-            Interactive Installation: Instalación Interactiva
+            Quick Installation: Instalación Rápida
             Intercompany: Intercompañía
             Inventory Status: Estado de Inventario
             ISO image: Imagen ISO
@@ -1020,7 +1021,7 @@ nav:
     - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Install Etendo: getting-started/installation.md
-    - Interactive Installation: getting-started/interactive-installation.md
+    - Quick Installation: getting-started/interactive-installation.md
     - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
@@ -1339,6 +1340,7 @@ nav:
         - How to Retrieve Parents Node by Level in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-retrieve-parents-node-by-level-in-a-tree.md
         - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
         - How to Send Emails on Events: developer-guide/etendo-classic/how-to-guides/how-to-send-emails-on-events.md
+        - How to Use Setup Apply Templates: developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates.md
 #        - How to Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
 #        - How to setup Visual Studio Code IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Visual_Studio_Code_IDE.md
 #        - How to Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
