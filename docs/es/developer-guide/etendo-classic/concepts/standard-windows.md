@@ -38,7 +38,7 @@ Las ventanas se generan automáticamente por `WAD` a partir de su definición en
 
 ### Menú
 
-Las ventanas se pueden añadir al [Menú de la aplicación](../concepts/application_menu.md).
+Las ventanas se pueden añadir al [Menú de la aplicación](../concepts/application-menu.md).
 
 ## Solapa
 
@@ -83,7 +83,7 @@ Existen tres formas posibles de establecer cuál es la columna maestra en la sol
 
   1. Usando el check `AD_Column.IsParent` en la tabla utilizada en la subsolapa. Cuando una tabla en una solapa contiene columnas marcadas como `Link to Parent Column`, se busca en la solapa padre una columna con el mismo nombre y, si se encuentra, esa será la maestra.
   2. Por `name`. En caso de que la tabla en la subsolapa tenga una columna con el mismo nombre que la `primary key` de la tabla padre, el enlace se generará usándolas.
-  3. Usando `AD_Tab.WhereClause`. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo `Where Clause` de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre [Expresiones dinámicas](../concepts/dynamic_expressions.md). En estos casos, es posible marcar el indicador `Disable Parent Key Property`; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.
+  3. Usando `AD_Tab.WhereClause`. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo `Where Clause` de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre [Expresiones dinámicas](../concepts/dynamic-expressions.md). En estos casos, es posible marcar el indicador `Disable Parent Key Property`; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.
 
 #### Mecanismo de bloqueo
 
@@ -123,8 +123,8 @@ Los `Campo` están contenidos en las solapas; cada campo tiene asociada una `col
 
 Algunas de las cosas que deben tenerse en cuenta al configurar un campo son:
 
-  * `Read Only Logic`, que permite determinar si el campo es de solo lectura (aplica solo cuando el campo es de lectura-escritura). El solo lectura indica que este campo solo puede leerse. No puede actualizarse. Tenga en cuenta que se define a nivel de Columna en el Diccionario de la Aplicación. Es una [Expresión dinámica](../concepts/dynamic_expressions.md).
-  * `Display Logic`, que permite mostrar u ocultar el campo en función de los valores de otros campos. Es una [Expresión dinámica](../concepts/dynamic_expressions.md).
+  * `Read Only Logic`, que permite determinar si el campo es de solo lectura (aplica solo cuando el campo es de lectura-escritura). El solo lectura indica que este campo solo puede leerse. No puede actualizarse. Tenga en cuenta que se define a nivel de Columna en el Diccionario de la Aplicación. Es una [Expresión dinámica](../concepts/dynamic-expressions.md).
+  * `Display Logic`, que permite mostrar u ocultar el campo en función de los valores de otros campos. Es una [Expresión dinámica](../concepts/dynamic-expressions.md).
     * La lógica de visualización se tiene en cuenta en `grid view` como la lógica de solo lectura, aplicándose únicamente cuando un registro se edita en la vista de cuadrícula.
   * `Central Maintenance`, cuyo funcionamiento se explica en el documento sobre [Elementos y sincronizar terminología](../concepts/Element_and_Synchronize_Terminology.md).
   * [`Callout`](../concepts/data-model.md#callout), aunque no se define en los campos, les afecta directamente porque se disparan cuando se modifican los valores de los campos.
@@ -133,3 +133,5 @@ Algunas de las cosas que deben tenerse en cuenta al configurar un campo son:
 ---
 
 Este trabajo es una obra derivada de [Ventanas estándar](http://wiki.openbravo.com/wiki/Standard_Windows){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
