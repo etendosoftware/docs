@@ -81,5 +81,3 @@ Su dinámica de control actual **NO afectará o incidirá bajo los elementos a c
 * Listas estáticas predefinidas en el sistema (Es decir, menús desplegables del propio tipo *List* codificados de forma fija o *hardcodeada* bajo los dominios de las Listas de Referencia en el diccionario).
 
 ---
-
----
