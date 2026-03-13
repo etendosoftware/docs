@@ -1,12 +1,13 @@
 ---
-title: Spain SII
+title: SII España
 tags:
     - SII
-    - Localizacion Española
+    - Localización Española
     - Facturas en RECC
     - Monitor SII
 ---
-## Javapackages 
+
+# SII España
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
@@ -14,13 +15,13 @@ tags:
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii.template`
 
-## **Introducción**
+## Introducción
 
 Esta sección explica el contenido del nuevo módulo comercial de Etendo, "**Spain AEAT SII template**", compatible con Etendo 21Q4 y posteriores, bajo licencia comercial "**Etendo Commercial License**".
 
 Este módulo forma parte del bundle (paquete) de Localización para España en su versión para Etendo.
 
-## **Descripción del Módulo**
+## Descripción del Módulo
 
 El módulo  "Spain AEAT SII template" permite que las organizaciones puedan gestionar el Impuesto sobre el Valor Añadido y el Impuesto General Indirecto Canario de forma telemática, dentro del marco del proyecto "Suministro Inmediato de Información" (SII).
 
@@ -73,11 +74,11 @@ La AEAT pone a disposición del contribuyente las siguientes URLs que entendemos
 - Proyecto SII, en el que se puede encontrar toda la información sobre SII
 - Herramienta de cálculo de plazos para la remisión de registros de facturas a SII, que permite calcular la "fecha fin de plazo", el "periodo", y el "ejercicio" para cada tipo de factura en función de su fecha de devengo/recepción y fecha de expedición/registro contable.
 
-## **Contenido del Módulo**
+## Contenido del Módulo
 
 Al instalar este módulo, el usuario podrá comprobar que:
 
-1.  Se crea un **nuevo menú** dentro de "Gestión Financiera", denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
+1.  Se crea un **nuevo menú** dentro de `Gestión Financiera` > `Sistemas de Facturación`, denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
     1.  **Configuración SII**, en la que se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a SII.
     2.  **Consulta Facturas SII**, en esta pantalla el usuario tendrá información sobre el estado de cuadre de las facturas enviadas a SII, estado de cuadre recibido de la AEAT.
     3.  **Descripciones SII**, en esta pantalla se pueden dar de alta descripciones tipo para las operaciones de compra y venta que realice la organización acogida a SII.
@@ -91,7 +92,7 @@ Al instalar este módulo, el usuario podrá comprobar que:
 6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
     Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
 
-## **Configuración**
+## Configuración
 
 Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".
 
@@ -100,6 +101,10 @@ Los productos/servicios tienen que tener correctamente configurado su "Grupo/Cat
 Los terceros (cliente/proveedores) tienen que tener correctamente configurada su "Categoría de impuestos de Tercero", si aplica, así como su "CIF/NIF" o "Clave NIF País Residencia".
 
 Además, los impuestos tienen que estar configurados correctamente, tal y como se explica en el siguiente apartado.
+
+### Proceso de actualización de Fecha de Operación
+
+Se recomienda ejecutar el proceso [Rellenar Fechas de Operación](./funcionalidades-generales-para-sifs.md#rellenar-fechas-de-operacion) si se está actualizando el módulo a las versiones **1.34.0**, **2.10.0** o posteriores para actualizar los valores de Fecha de Operación en facturas previas a la actualización.
 
 ### **Configuración de impuestos**
 
@@ -178,6 +183,8 @@ Dependiendo de si el Tercero se configura con la categoría de impuestos de Terc
 Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.
 
 ### **Configuración SII**
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
 
 En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
 
@@ -377,7 +384,7 @@ ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marc
 ![screenhunter_07_sep._01_11.18.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
 ![screenhunter_08_sep._01_11.19.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
 
-## **Envío de registros de facturas a SII**
+## Envío de registros de facturas a SII
 
 Una vez configurados todos los parámetros de envío a SII, ya es posible dar de alta/modificar los registros de facturas emitidas/recibidas en SII.
 
@@ -820,7 +827,7 @@ aunque, programemos el proceso de alta en SII con una frecuencia diaria, esta fa
 
 El plazo límite de alta en SII de esta factura sería el 15-07-2022.
 
-## **Gestión y envío de registros desde el "Monitor SII"**
+## Gestión y envío de registros desde el Monitor SII
 
 Desde la ventana "Monitor SII" podemos realizar gestionar y realizar envíos masivos de facturas emitidas/recibidas a SII, así como de los cobros/pagos de facturas en RECC y los cobros en metálico, esta última información a enviar de forma anual.
 
@@ -846,13 +853,13 @@ seleccionamos varias facturas y procedemos a su Modificación en SII.
 
 ![](../../../../../../assets/drive/GDKayCFFhT9bAkhr68IiFXboS51M5wwZQs89d7pc9uW3Uo1dXDTlfMgSrfBQZl6ZjHmIuJlSSTiXfOP_MdskUK7Rhbqw6l3RWQ506xpkixCHok3iH0RJ4-bd3RtElOGY0LlpuPEWUzEfAljwwuUNf4U.png)
 
-## **Creación automática de facturas de venta**
+## Creación automática de facturas de venta
 
 ### **Generar facturas (manualmente)**
 
 El proceso "Generar facturas (manualmente)” permite crear facturas de venta del tipo "AR Invoice" en estado completado.
 
-Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro del grupo de campos "AEAT SII", con el fin de indicar en cada pedido de venta:
+Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro de los grupos de campos "Datos para Sistemas de Facturación" y "AEAT SII", con el fin de indicar en cada pedido de venta:
 
 - la "**Fecha de operación**", si ésta es conocida
 - y la "**Descripción SII**" de la operación.
@@ -905,7 +912,22 @@ Respecto de la información de SII, tenemos que tener en cuenta que:
 
 - Estos **albaranes y devoluciones no incorporan información de SII**, por tanto, la información de SII de la cabecera de las facturas deberá ser rellenada por el usuario, tanto la fecha de operación, como la clave de tipo factura y la descripción SII.
 
-## **Casos de uso**
+## Integridad de facturas mediante huella digital (HMAC)
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
+
+Cada factura declarable ante el SII incluye una huella digital (HMAC), calculada a partir de campos identificativos de la factura que permanecen inalterables una vez emitida.
+
+Esta huella permite comprobar que el contenido no se modifica después de su emisión.
+Para detectar cambios en facturas emitidas (completadas), el sistema dispone del proceso **Validar Hash** en la ventana **Configuración SII**.
+
+En este proceso se consulta un rango de fechas y se verifican las facturas incluidas en dicho período.
+
+Si el sistema detecta modificaciones, registra el resultado en la solapa **Log Hash**, indicando qué factura presenta alteraciones.
+
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/validacion-hash-sii.png)
+
+## Casos de uso
 
 Dentro de este apartado se describen diferentes casos de uso tanto para las facturas de venta (LRFE) como de compra (LRFR), y su registro de "Alta" en SII.
 
@@ -2004,6 +2026,9 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 
 ![](../../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
 
- ---
+
+---
+
+This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
