@@ -13,7 +13,7 @@ tags:
 
 A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes _SQL Processes_ and _Java Processes_.
 
-All processes (as well as [Reports](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md)) are managed from the same window: `Application Dictionary > Report and Process`. 
+All processes (as well as [Reports](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md)) are managed from the same window: `Application Dictionary > Report and Process`.
 
 Once a process is defined it can be added to the menu to be called directly from there, it can be invoked through a button or it can be scheduled to be executed in the background.
 
@@ -44,7 +44,7 @@ Let's overview some of the most important fields in this tab:
       Notice that `Postgresql` is case-sensitive. In case the parameter references an existing column in database (for example, it is a parameter of type search), then the _DB Column name_ field must be cased the same way as the column in the Application Dictionary. 
   
   * *Sequence* : It is a numeric value to order the parameter in the pop-up. 
-  * *Application Element* : It is the [Element](Element_and_Synchronize_Terminology.md)  that will be used to get the label from, in this way parameters are translatable. 
+  * *Application Element* : It is the [Element](element-and-synchronize-terminology.md)  that will be used to get the label from, in this way parameters are translatable.
   
 !!!note 
     It is also possible to set or not this element as *Centrally Maintained*. 
@@ -62,7 +62,7 @@ Processes_ . SQL processes are implemented in the SQL language and are executed 
 _SQL Processes_ are implemented by database stored procedures. 
 
 !!!info
-    For more information, read [How to create a Stored Procedure](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Stored_Procedure.md).
+    For more information, read [How to create a Stored Procedure](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md).
 
 SQL processes are defined in `Application Dictionary > Report and Process`. The only field to take into account for this kind of processes is *Procedure*: It is the procedure name in the database. 
 
@@ -83,7 +83,7 @@ In case the process requires any parameter, it is possible to define them.
 Java processes are implemented by java classes. 
 
 !!!info
-    For more information, read [How to create a Java Process](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Java_Based_Process.md)   .
+    For more information, read [How to create a Java Process](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process.md).
 
 Java processes are also defined in the `Application Dictionary > Report and Process` window. Depending on the _UI pattern_ they use, they can be split into _Standard_ and _Manual_. Additionally, if the _UI Pattern_ is set to _Manual_, it is necessary to include an entry in the *Process Mapping* to make it accessible in the `web.xml`.
 
