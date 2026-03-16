@@ -16557,13 +16557,12 @@ Los impuestos para una localización determinada se instalan con módulos que ex
 <p>Incluso con el mismo tipo impositivo de IVA, pueden corresponder diferentes claves según la actividad o el régimen fiscal aplicable.</p>
 <p>Por este motivo, la configuración debe realizarse de forma manual y adaptada a cada cliente, ya que solo la empresa o su asesoría fiscal pueden determinar qué clave corresponde en cada caso.</p>
 <h3 id="por-que-el-rango-de-impuesto-prestacion-de-servicios-exenta-por-suplido-no-tiene-parametro-para-el-modelo-347"><strong>¿Por qué el rango de impuesto <code>Prestación de servicios exenta por suplido</code> no tiene parámetro para el Modelo 347?</strong></h3>
-<p>Porque los suplidos no se consideran operaciones propias con terceros.</p>
-<p>Un suplido es un importe que una empresa paga en nombre de su cliente y posteriormente le repercute, por lo que no forma parte del volumen real de operaciones de la empresa.</p>
-<p>De acuerdo con la normativa fiscal española, los suplidos no deben declararse en el Modelo 347, y por ese motivo Etendo no incluye ni permite asociar un parámetro de este modelo a ese rango de impuesto.</p>
+<p>Los suplidos no se consideran operaciones propias realizadas con terceros, ya que corresponden a importes abonados por una empresa por cuenta de su cliente y posteriormente reintegrados por este. En consecuencia, no forman parte del volumen real de operaciones de la empresa.</p>
+<p>Por este motivo, y conforme a la normativa fiscal española, los suplidos no deben incluirse en el Modelo 347.</p>
 <h3 id="etendo-soporta-la-gestion-de-facturas-simplificadas-recibidas-con-clave-f2-en-el-sii"><strong>¿Etendo soporta la gestión de facturas simplificadas recibidas con clave F2 en el SII?</strong></h3>
 <p>No. Actualmente Etendo ERP no soporta la gestión de facturas simplificadas recibidas con clave F2 en el SII. Este tipo de facturas debe gestionarse de forma manual fuera del módulo SII.</p>
 <h3 id="etendo-soporta-la-presentacion-del-modelo-592"><strong>¿Etendo soporta la presentación del Modelo 592?</strong></h3>
-<p>No. Actualmente Etendo ERP no soporta la presentación del Modelo 592. Para su presentación, se debe gestionar directamente a través de la sede electrónica de la AEAT.</p>
+<p>Etendo ERP únicamente soporta los modelos 303, 390, 347, 349 y 190.</p>
 <h3 id="por-que-verifactu-no-permite-dar-de-alta-facturas-manualmente-como-en-el-sii"><strong>¿Por qué Veri*Factu no permite dar de alta facturas manualmente como en el SII?</strong></h3>
 <p>En Veri*Factu no está disponible la opción de envío manual de facturas.</p>
 <p>Esto se debe a que, tras enviar una factura, la AEAT devuelve en la respuesta un parámetro llamado <code>tiempoParaEnvio</code>, que indica el tiempo mínimo que debe esperarse antes de enviar la siguiente factura. Este valor lo define la AEAT y normalmente es de 60 segundos.</p>
