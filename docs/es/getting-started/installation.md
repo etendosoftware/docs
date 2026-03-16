@@ -357,6 +357,10 @@ Etendo ahora incluye un **Sistema de configuración interactivo** que le guía a
         `https://<Public server IP>/<context.name>` o, en caso de que lo ejecute en un entorno local, [`http://localhost:8080/etendo`](http://localhost:8080/etendo){target="_blank"}
 
 
+## Próximos pasos
+
+Después de instalar Etendo, puede continuar con el siguiente paso de la guía de Primeros pasos: [Inicio de sesión y espacio de trabajo](../getting-started/user-interface/workspace.md).
+
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
 

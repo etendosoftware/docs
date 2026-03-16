@@ -125,6 +125,10 @@ En esta sección, puede:
 
 En esta sección, el usuario puede cambiar la contraseña a través de esta pestaña escribiendo primero la contraseña actual y, a continuación, introduciendo la nueva contraseña. Después, haga clic en **Confirmar contraseña.**
 
+#### Cambiar sesión
+
+En esta sección, puede cambiar las opciones de sesión como el rol, la entidad, la organización, el almacén y el idioma con los que desea trabajar. Esto le permite cambiar el contexto de su sesión sin necesidad de cerrar sesión e iniciar sesión de nuevo.
+
 ### Cerrar sesión
 
 |     |     |
@@ -134,3 +138,5 @@ En esta sección, el usuario puede cambiar la contraseña a través de esta pest
 
 ---
 Este trabajo es una obra derivada de [Introducción a la interfaz de usuario](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
+
+---

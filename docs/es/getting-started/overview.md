@@ -99,6 +99,12 @@ Estos son algunos de los **beneficios clave** de utilizar **Etendo**:
 
 Un sistema ERP, como **Etendo**, es más que una herramienta: es un **activo estratégico**. Refleja las operaciones de su empresa, le ayuda a optimizar recursos y contribuye al éxito a largo plazo. **Comprender cómo funciona es el primer paso para aprovechar todo su potencial**.
 
+# Próximos pasos
+
+Ahora que tiene una comprensión básica de qué es un ERP y cómo funciona, puede continuar con el siguiente paso de la guía de Primeros pasos: [Inicio de sesión y espacio de trabajo](../getting-started/user-interface/workspace.md).
+
+
+
 [:material-order-bool-ascending-variant: Requisitos](../getting-started/requirements.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 [:material-tools: Instalar Etendo](../getting-started/installation.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
 [:material-page-previous-outline: Navegar por la interfaz](../getting-started/user-interface/workspace.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
@@ -106,3 +112,5 @@ Un sistema ERP, como **Etendo**, es más que una herramienta: es un **activo est
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
