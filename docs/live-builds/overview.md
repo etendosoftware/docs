@@ -25,8 +25,8 @@ This page provides quick access to Etendo live test environments that are always
     ---
 
     [Etendo 24 + Bundles](https://demo24.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [Etendo 25+ Bundles](https://demo25.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [:material-new-box: Etendo 25+ Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
+    [Etendo 25 + Bundles](https://demo.etendo.cloud/etendo/security/Login){ target="blank"}<br>
+    [:material-new-box: Etendo 25 + Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
 
