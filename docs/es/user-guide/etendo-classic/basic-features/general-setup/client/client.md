@@ -117,38 +117,12 @@ Información adicional que se permite especificar:
 
 ### Configuración del correo electrónico
 
-Documentos como pedidos o facturas pueden enviarse por correo electrónico. La pestaña Configuración del correo electrónico permite al usuario configurar el servidor de correo electrónico, la cuenta y la contraseña, variables que deben configurarse correctamente antes de enviar documentos por correo electrónico.
+La pestaña **Configuración del correo electrónico** permite configurar el servidor SMTP utilizado
+para enviar documentos por correo electrónico (p. ej., pedidos o facturas).
 
-![](../../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
-
-La pestaña Configuración del correo electrónico recopila la configuración de correo electrónico necesaria para enviar documentos como pedidos o facturas.
-
-!!! info
-    Es importante conocer la configuración del servidor SMTP que se va a utilizar para poder rellenar correctamente la información siguiente:
-
-- **Servidor SMTP**, servidor de correo electrónico con SMTP
-- **Autenticación SMTP**, indicador "sí/no" para definir si el servidor de correo electrónico requiere autenticación o no antes de enviar correos.
-- **Cuenta del servidor SMTP**, nombre de usuario del servidor de correo electrónico en caso de que se requiera autenticación.
-- **Contraseña del servidor SMTP**, contraseña del servidor de correo electrónico en caso de que se requiera autenticación.
-- **Dirección de envío del servidor SMTP**, dirección de correo electrónico desde la que se enviarán los correos.
-- **Conexión de seguridad Smtp**, nivel de seguridad necesario para la conexión con los servidores SMTP. Las opciones disponibles son:
-    - Ninguna
-    - STARTTLS
-    - SSL
-    
-- **Puerto Smtp**, puerto requerido para su servidor SMTP
-- **Timeout conexión Smtp**, cantidad máxima de tiempo (en segundos) permitida para que una conexión SMTP se conecte o se comunique.
-
-En la captura de pantalla proporcionada, puede ver una configuración válida para una cuenta de gmail:
-
-- **Servidor SMTP**, [smtp.gmail.com](http://smtp.gmail.com)
-- **Autenticación SMTP**, "sí"
-- **Cuenta del servidor SMTP**, una cuenta de gmail válida (incluyendo el @gmail.com o @sudominio)
-- **Contraseña del servidor SMTP**, la contraseña de esta cuenta de gmail
-- **Dirección de envío del servidor SMTP**, dirección de correo electrónico desde la que se enviarán los correos.
-- **Conexión de seguridad Smtp**, SSL
-- **Puerto Smtp**, 465
-- **Timeout conexión Smtp**, 600 (10 minutos)
+El correo electrónico puede configurarse en tres niveles: Entidad, Organización y Usuario.
+Para la referencia completa de campos e instrucciones de configuración, consulte
+[How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensiones
 
@@ -165,3 +139,5 @@ La configuración en la pestaña Dimensiones se rellena a partir de la configura
 ---
 
 Este trabajo es una obra derivada de [Configuración General](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
+
+---
