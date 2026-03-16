@@ -540,11 +540,9 @@ Por este motivo, la configuración debe realizarse de forma manual y adaptada a 
 
 ### **¿Por qué el rango de impuesto `Prestación de servicios exenta por suplido` no tiene parámetro para el Modelo 347?**
 
-Porque los suplidos no se consideran operaciones propias con terceros.
+Los suplidos no se consideran operaciones propias realizadas con terceros, ya que corresponden a importes abonados por una empresa por cuenta de su cliente y posteriormente reintegrados por este. En consecuencia, no forman parte del volumen real de operaciones de la empresa.
 
-Un suplido es un importe que una empresa paga en nombre de su cliente y posteriormente le repercute, por lo que no forma parte del volumen real de operaciones de la empresa.
-
-De acuerdo con la normativa fiscal española, los suplidos no deben declararse en el Modelo 347, y por ese motivo Etendo no incluye ni permite asociar un parámetro de este modelo a ese rango de impuesto.
+Por este motivo, y conforme a la normativa fiscal española, los suplidos no deben incluirse en el Modelo 347.
 
 ### **¿Etendo soporta la gestión de facturas simplificadas recibidas con clave F2 en el SII?**
 
@@ -552,7 +550,7 @@ No. Actualmente Etendo ERP no soporta la gestión de facturas simplificadas reci
 
 ### **¿Etendo soporta la presentación del Modelo 592?**
 
-No. Actualmente Etendo ERP no soporta la presentación del Modelo 592. Para su presentación, se debe gestionar directamente a través de la sede electrónica de la AEAT.
+Etendo ERP únicamente soporta los modelos 303, 390, 347, 349 y 190.
 
 ### **¿Por qué Veri\*Factu no permite dar de alta facturas manualmente como en el SII?**
 
