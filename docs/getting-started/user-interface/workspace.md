@@ -125,6 +125,10 @@ In this section, you can:
 
 In this section, the user is able to change the password through this tab by writing the current password first and then, introducing the new password. Then, click **Confirm password.**
 
+#### Change Session
+
+In this section, you can change the session options such as role, client, organization, warehouse and language you want to work with. This allows you to change the context of your session without the need to log out and log in again.
+
 ### End Session
 
 |     |     |

@@ -99,6 +99,12 @@ Here are some of the **key benefits** of using **Etendo**:
 
 An ERP system, like **Etendo**, is more than a tool— it's a **strategic asset**. It mirrors your business operations, helps you optimize resources, and contributes to long-term success. **Understanding how it works is the first step toward harnessing its full potential**.
 
+# Next Steps
+
+Now that you have a basic understanding of what an ERP is and how it works, you can proceed to the next step of the Getting Started guide: [Login and Workspace](../getting-started/user-interface/workspace.md).
+
+
+
 [:material-order-bool-ascending-variant: Requirements](../getting-started/requirements.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 [:material-tools: Install Etendo](../getting-started/installation.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
 [:material-page-previous-outline: Navigating the Interface](../getting-started/user-interface/workspace.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
