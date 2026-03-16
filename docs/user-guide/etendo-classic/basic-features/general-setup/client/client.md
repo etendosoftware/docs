@@ -117,38 +117,12 @@ Additional information allowed to be specified:
 
 ### Email Configuration
 
-Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
+The **Email Configuration** tab allows configuring the SMTP server used
+to send documents by email (e.g. orders or invoices).
 
-![](../../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
-
-Email Configuration tab gathers the email configuration required for sending out documents such as orders or invoices.
-
-!!! info
-    It is important to know the smtp server configuration which is going to be used in order to properly fill the information below:
-
-- **Smtp Server**, email server with SMTP
-- **SMTP Authentication**, "yes/no" flag to define if the email server requires authentication or not before sending emails.
-- **SMTP Server Account**, email server username in case of authentication required.
-- **SMTP Server Password**, email server password in case of authentication required.
-- **SMTP Server Sender Address**, email address to send emails from.
-- **SMTP Connection Security**, security level needed for the SMTP servers connection. Available options are:
-    - None
-    - STARTTLS
-    - SSL
-    
-- **SMTP Port**, port required for your SMTP server
-- **SMTP Connection Timeout**, maximum amount of time (in seconds) allowed for an SMTP connection to connect or communicate.
-
-In the provided screenshot, you can see a valid configuration for a gmail account:
-
-- **Smtp Server**, [smtp.gmail.com](http://smtp.gmail.com)
-- **SMTP Authentication**, "yes"
-- **SMTP Server Account**, a valid gmail account (including the @gmail.com or @yourdomain)
-- **SMTP Server Password**, the password for this gmail account
-- **SMTP Server Sender Address**, email address to send emails from.
-- **SMTP Connection Security**, SSL
-- **SMTP Port**, 465
-- **SMTP Connection Timeout**, 600 (10 minutes)
+Email can be configured at three levels: Client, Organization, and User.
+For the full field reference and configuration instructions, see
+[How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensions
 
