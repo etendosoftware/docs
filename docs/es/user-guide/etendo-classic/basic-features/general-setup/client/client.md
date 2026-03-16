@@ -122,7 +122,7 @@ para enviar documentos por correo electrónico (p. ej., pedidos o facturas).
 
 El correo electrónico puede configurarse en tres niveles: Entidad, Organización y Usuario.
 Para la referencia completa de campos e instrucciones de configuración, consulte
-[How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
+[Cómo configurar el correo electrónico](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensiones
 
@@ -139,5 +139,3 @@ La configuración en la pestaña Dimensiones se rellena a partir de la configura
 ---
 
 Este trabajo es una obra derivada de [Configuración General](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
-
----
