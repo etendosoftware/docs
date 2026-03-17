@@ -537,6 +537,10 @@ Fields to note:
 - **Position** in the business partner.
 - **Active** flag: to indicate if this contact is available for use or disabled. 
 - **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
+- **Default**: Checkbox that marks this contact as the default recipient when sending documents by email. When selected, this contact's email address is automatically preloaded in the *To* field of the Email Options popup. If no contact has this flag set, the system falls back to the last used email for the business partner or, if none exists, to the first active contact ordered alphabetically.
+
+    !!! info
+        Only one contact per Business Partner should have this checkbox selected to ensure a deterministic preselection.
 
 #### Basic Discount
 
