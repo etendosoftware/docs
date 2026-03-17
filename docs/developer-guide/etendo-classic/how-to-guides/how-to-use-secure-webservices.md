@@ -19,49 +19,37 @@ Besides the authentication implementation, the module includes utilities for dev
 
 ## Setup
 
-!!! Info
-    By default, the **ES256 encryption algorithm** is used, it is possible to change it by setting a new preference with the `Encryption Algorithm` property and set its value to `HS256` to use a legacy algorithm.
-
 !!! Warning
     A valid domain name and `SSL/TLS` certificate are required to use **Secure Web Services**. Please install a certificate or contact your administrator to avoid runtime errors when generating tokens in server instances.
 
-### Automatic Configuration (26Q1+)
+!!! Info
+    By default, the **ES256 encryption algorithm** is used. To switch to a legacy algorithm, create a preference with the property `Encryption Algorithm` and set its value to `HS256`.
 
-Starting from **26Q1**, the Secure Web Services key is **automatically generated** when running the `./gradlew install` task. No manual setup is required for new installations.
+### Token Configuration
 
-- The generated key uses the **ES256 algorithm** by default.
-- The token expiration is set to **0** (no expiration) by default.
-- The token expiration time can be changed later from the Client window (value expressed in **minutes**, where `0` means no expiration).
+:material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-!!! warning "Security recommendation"
-    While the default expiration is set to `0` (no expiration) for ease of setup, the Etendo team recommends configuring a reasonable expiration time for production environments. Non-expiring tokens pose a security risk — if a token is compromised, it remains valid indefinitely. Set an expiration policy and rotate tokens periodically.
+In the **Secure Web Service Configuration** tab, the *System Administrator* can manage the SWS key and configure token expiration.
 
-### Existing Installations
+Starting from **Etendo 26.1**, the key is automatically generated during `./gradlew install` — no manual action is required for new installations. For earlier versions or to rotate the key, use one of the following methods:
 
-For instances installed before 26Q1, the SWS key can be generated or rotated in two ways:
-
-1. **From the UI:** Navigate to :material-menu: `Application` > `General Setup` > `Client` > `Client`, open the **Secure Web Service Configuration** tab, and use the **Generate Key** button.
-
-2. **From the command line:** Run the following Gradle task:
+1. **From the command line:**
 
     ```bash
     ./gradlew generate.sws.keys
     ```
 
+2. **From the UI:** Open the **Secure Web Service Configuration** tab and click **Generate Key**.
+
 !!! warning
-    Both methods will **overwrite the existing SWS key**. All tokens signed with the previous key will be immediately invalidated.
+    Both methods **overwrite the existing SWS key**. All tokens signed with the previous key are immediately invalidated.
 
-### Manual Configuration (Optional)
-
-:material-menu: `Application` > `General Setup` > `Client` > `Client`
-
-It is also possible to manually configure or rotate the encryption key and the expiration time for the authentication tokens in the Client window with the *System Administrator* role.
-
-The expiration time value is expressed in **minutes** (set to `0` for no expiration).
-
-Use the **Generate Key** button to generate a random key.
+The **Token expiration** field controls how long tokens remain valid, expressed in **minutes** (`0` = no expiration).
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
+
+!!! warning "Security recommendation"
+    Non-expiring tokens pose a risk in production — a compromised token remains valid indefinitely. Set a reasonable expiration time and rotate tokens periodically.
 
 ## Secure Web Services Swagger
 

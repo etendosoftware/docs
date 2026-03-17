@@ -12,7 +12,7 @@ tags:
 ## Initial Configuration
 :material-menu: `Application` > `General Setup` > `Client` > `Client` 
 
-A valid SWS token is required to use Copilot. Starting from **26Q1**, this token is **automatically generated** during installation.
+A valid SWS token is required to use Copilot. Starting from **Etendo 26.1**, this token is **automatically generated** during installation.
 
 For previous versions, or to verify the configuration:
 

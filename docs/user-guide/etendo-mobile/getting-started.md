@@ -101,7 +101,7 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
     An encryption token is required for authentication. This token is necessary for **Etendo Mobile** to start a session.
 
     !!! note
-        Starting from **26Q1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
+        Starting from **Etendo 26.1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
 
     To verify or manage the token:
 

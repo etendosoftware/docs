@@ -439,7 +439,7 @@ After starting the dockerized services, there are some configurations that need 
 An encryption token is required for authentication.
 
 !!! note
-    Starting from **26Q1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
+    Starting from **Etendo 26.1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
 
 To verify or manage the token, open the `Client` window with the `System Administrator` role and navigate to the **Secure Web Service Configuration** tab. Verify that a key exists; if not, click the **Generate Key** button. If the expiration time is equal to `0`, the tokens do not expire. If a custom expiration was configured, ensure the token has not expired.
 
