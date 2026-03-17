@@ -521,6 +521,10 @@ Campos a tener en cuenta:
 - **Cargo** en el tercero.
 - Indicador **Activo**: para indicar si este contacto está disponible para su uso o deshabilitado. 
 - **Autorización comercial**: esta casilla de verificación se selecciona para indicar si el cliente desea o no recibir información comercial de la organización.
+- **Valor por defecto**: casilla de verificación que marca este contacto como el destinatario por defecto al enviar documentos por correo electrónico. Cuando se selecciona, la dirección de correo electrónico de este contacto se precarga automáticamente en el campo *Para* del pop-up de Opciones de correo electrónico. Si ningún contacto tiene este indicador marcado, el sistema utiliza el último correo electrónico utilizado para el tercero o, si no existe, el primer contacto activo ordenado alfabéticamente.
+
+    !!! info
+        Solo un contacto por tercero debería tener esta casilla seleccionada para garantizar una preselección determinista.
 #### Descuentos
 
 La solapa **Descuentos** permite al usuario añadir y configurar los descuentos de terceros.
@@ -1287,3 +1291,5 @@ Permite visualizar el stock por unidades logísticas (inventario referenciado) d
 ---
 
 Este trabajo es una obra derivada de [Gestión de Datos Maestros](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
