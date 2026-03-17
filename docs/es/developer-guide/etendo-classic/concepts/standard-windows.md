@@ -81,7 +81,7 @@ Al crear subsolapas, es necesario establecer qué columna en la solapa padre va 
 
 Existen tres formas posibles de establecer cuál es la columna maestra en la solapa padre:
 
-  1. Usando el check `AD_Column.IsParent` en la tabla utilizada en la subsolapa. Cuando una tabla en una solapa contiene columnas marcadas como `Link to Parent Column`, se busca en la solapa padre una columna con el mismo nombre y, si se encuentra, esa será la maestra.
+  1. Usando el check `AD_Column.IsParent` en la tabla utilizada en la subsolapa. Cuando una tabla en una solopa contiene columnas marcadas como `Link to Parent Column`, se busca en la solapa padre una columna con el mismo nombre y, si se encuentra, esa será la maestra.
   2. Por `name`. En caso de que la tabla en la subsolapa tenga una columna con el mismo nombre que la `primary key` de la tabla padre, el enlace se generará usándolas.
   3. Usando `AD_Tab.WhereClause`. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo `Where Clause` de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre [Expresiones dinámicas](../concepts/dynamic-expressions.md). En estos casos, es posible marcar el indicador `Disable Parent Key Property`; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.
 

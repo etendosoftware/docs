@@ -98,15 +98,24 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
 2. ### Client Access Token
     :material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-    A one-time encryption token must be configured for authentication. This token is required for **Etendo Mobile** to start a session.
+    An encryption token is required for authentication. This token is necessary for **Etendo Mobile** to start a session.
+
+    !!! note
+        Starting from **Etendo 26.1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
+
+    To verify or manage the token:
 
     1. Access Etendo Classic as a `System Administrator`.
     2. Navigate to `Client` > `Secure Web Service Configuration` tab.
-    3. Click the **Generate Key** button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
+    3. Verify that a key exists. If not, click the **Generate Key** button to create one.
+    4. Check the **expiration time** (in minutes). If set to `0`, the token does not expire. If a custom expiration was configured, ensure the token has not expired.
     ![alt text](../../assets/developer-guide/etendo-mobile/getting-started/token.png)
 
+    !!! warning "Security recommendation"
+        While `0` (no expiration) is the default, the Etendo team recommends setting a reasonable expiration time in production environments and rotating tokens periodically.
+
     !!! info
-        This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.
+        This token does not require any additional action; it just needs to exist for the authentication process to work properly.
 
 3. ### Configure Roles and Dynamic Subapps
     :material-menu: `Application` > `General Setup` > `Security` > `Role`

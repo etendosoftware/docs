@@ -44,10 +44,15 @@ Antes de iniciar los servicios dockerizados, hay algunas configuraciones que deb
 ### Configuración de la Entidad 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-Es necesario configurar el token de cifrado para la autenticación en la ventana `Entidad` con el rol `System Administrator`.
-Si el tiempo de expiración es igual a `0`, los tokens no caducan.
+Se requiere un token de cifrado para la autenticación.
 
-Genere una clave aleatoria con el botón **Generar Clave**.
+!!! note
+    A partir de **Etendo 26.1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+Para verificar o gestionar el token, abra la ventana `Entidad` con el rol `System Administrator` y navegue a la pestaña **Configuración de Secure Web Services**. Verifique que exista una clave; si no, haga clic en el botón **Generar Clave**. Si el tiempo de expiración es igual a `0`, los tokens no caducan. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+
+!!! warning "Recomendación de seguridad"
+    Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
 
 ![](../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 ### Ventana RX Config
@@ -62,7 +67,7 @@ Tras la ejecución de este proceso, se completan las variables de configuración
 ![default-rx-config.png](../../assets/developer-guide/etendo-rx/getting-started/default-rx-config.png)
 
 !!!info
-    El campo **URL pública** solo necesita configurarse cuando los servicios estén configurados para producción.
+    El campo **Public URL** solo necesita configurarse cuando los servicios estén configurados para producción.
 ### Lanzar servicios RX
 
 A continuación, para ejecutar eficazmente los servicios, es necesario **ejecutar el comando** en el terminal:
@@ -188,7 +193,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 | `OTEL_METRICS_EXPORTER`                                      | Exportador de métricas                                                                                        | enum     | `otlp`, `prometheus`, `console`, `logging`, `none`                | `none`                                       | —                                                                                                                                                            |
 | `OTEL_LOGS_EXPORTER`                                         | Exportador de logs                                                                                           | enum     | `otlp`, `console`, `logging`, `none`                              | `none`                                       | —                                                                                                                                                            |
 | `OTEL_TRACES_EXPORTER`                                       | Exportador de trazas                                                                                         | enum     | `otlp`, `zipkin`, `console`, `logging`, `none`                    | `otlp`                                        | —                                                                                                                                                            |
-| `OTEL_EXPORTER_OTLP_TIMEOUT`                                 | Tiempo de espera (ms) para la exportación de datos OTLP (trazas, métricas, logs)                            | integer  | Cualquier número positivo                                         | `10000`                                       | —                                                                                                                                                            |
+| `OTEL_EXPORTER_OTLP_TIMEOUT`                                 | Tiempo de espera (ms) para la exportación de datos OTLP (trazas, métricas, logs)                            | integer  | Cualquier número positivo                                         | `10000`                                      | —                                                                                                                                                            |
 | `SPRING_PROFILES_ACTIVE`                                     | Perfiles Spring activos                                                                                      | string   | Lista separada por comas                                          | *null*                                        | Ejemplo: `prod,dev`                                                                                                                                         |
 | `SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCHLOCATIONS`          | Rutas de búsqueda nativas para el servidor Spring Config                                                    | string   | Rutas de archivo separadas por comas                              | *null*                                        | Ejemplo: `file:///config,classpath:/defaults`                                                                                                               |
 | `DISABLE_DEBUG`                                              | Deshabilitar el agente de depuración de la JVM                                                              | boolean  | `true`, `false`                                                   | `false`                                       | Si es `true`, añade `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:${DEBUG_PORT}`. `dt_socket`: el mecanismo de transporte (es decir, un socket TCP) usado para la conexión de depuración. `server=y` indica a la JVM que actúe como servidor de depuración (esperando a que se conecte un depurador). `suspend=n` significa “no pausar al inicio”: la aplicación se ejecutará inmediatamente y puede adjuntar el depurador en cualquier momento. (Si configura `suspend=y`, la JVM se pausará en la primera línea hasta que se adjunte un depurador). |

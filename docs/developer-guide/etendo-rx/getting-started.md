@@ -49,10 +49,15 @@ Before starting the dockerized services, there are some configurations that need
 ### Client Setup 
 :material-menu: `Application` > `General Setup` > `Client` > `Client`
 
-It is necessary to configure the encryption token for the authentication in the `Client` window with the `System Administrator` role.
-If the expiration time is equal to `0` the tokens do not expire.
+An encryption token is required for authentication.
 
-Generate a random key with the **Generate key** button.
+!!! note
+    Starting from **Etendo 26.1**, the SWS key is **automatically generated** during installation (`./gradlew install`). No manual action is required for new installations.
+
+To verify or manage the token, open the `Client` window with the `System Administrator` role and navigate to the **Secure Web Service Configuration** tab. Verify that a key exists; if not, click the **Generate Key** button. If the expiration time is equal to `0`, the tokens do not expire. If a custom expiration was configured, ensure the token has not expired.
+
+!!! warning "Security recommendation"
+    While `0` (no expiration) is the default, the Etendo team recommends setting a reasonable expiration time in production environments and rotating tokens periodically.
 
 ![](../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 

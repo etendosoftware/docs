@@ -273,3 +273,5 @@ En el módulo Platform Features, hay un ejemplo de un informe que hace uso de di
 Este trabajo es una obra derivada de [Cómo crear un informe](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---
