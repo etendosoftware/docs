@@ -30,7 +30,7 @@ El módulo admite dos modos de funcionamiento:
 
 
 !!! tip
-    Además, este módulo permite la implementación de proveedores de impresión personalizados, expone servicios de back-end reutilizables que pueden ser consumidos por diferentes módulos, y una API pública para imprimir desde desarrollos personalizados. Para más información, visite: [Proveedor de impresión - Guía del desarrollador](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+    Además, este módulo permite la implementación de proveedores de impresión personalizados, expone servicios de back-end reutilizables que pueden ser consumidos por diferentes módulos, y una API pública para imprimir desde desarrollos personalizados. Para más información, visite: [Proveedor de impresión - Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 ## Configuración inicial
@@ -67,7 +67,7 @@ Esta ventana se utiliza para registrar proveedores de impresión. En este caso, 
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-window.png)
 
-Aquí se muestra información general como **Identificador** y **Nombre**. También incluye el campo específico **Implementación del proveedor**, que hace referencia al registro creado en la ventana Implementación del proveedor. Para más información sobre cómo crear un proveedor de impresión, visite [Proveedor de impresión - Guía del desarrollador](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+Aquí se muestra información general como **Identificador** y **Nombre**. También incluye el campo específico **Implementación del proveedor**, que hace referencia al registro creado en la ventana Implementación del proveedor. Para más información sobre cómo crear un proveedor de impresión, visite [Proveedor de impresión - Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 #### Parámetros del proveedor
