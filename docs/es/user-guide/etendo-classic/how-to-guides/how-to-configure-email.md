@@ -24,6 +24,25 @@ Este diseño permite a una empresa establecer un servidor SMTP global a nivel de
 
 ---
 
+## Referencia de campos
+
+En una instalación estándar de Etendo, el mismo conjunto de campos está disponible a nivel de **Entidad**, **Organización** y **Usuario**.
+
+![Campos de configuración del correo electrónico](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/email-configuration-fields.png)
+
+- **Servidor SMTP** nombre de host o dirección IP del servidor SMTP (p. ej. `smtp.gmail.com`).
+- **Puerto Smtp** puerto utilizado por el servidor SMTP (p. ej. `465` para SSL, `587` para STARTTLS o `25` para conexiones sin cifrar).
+- **Conexión de seguridad Smtp** modo de seguridad de transporte a utilizar al conectar con el servidor SMTP. Las opciones disponibles son **Ninguno**, **STARTTLS** y **SSL**. Debe coincidir con la configuración del servidor.
+- **Timeout conexión Smtp** timeout de comunicación en segundos. Tras este tiempo, el proceso de envío de correo se detiene.
+- **Autenticación SMTP** indica si el servidor SMTP requiere autenticación con usuario y contraseña antes de enviar correos. Si se habilita, **Cuenta del servidor SMTP** y **Contraseña del servidor SMTP** pasan a ser obligatorios.
+- **Cuenta del servidor SMTP** usuario SMTP utilizado para autenticación. Obligatorio cuando **Autenticación SMTP** está habilitada.
+- **Contraseña del servidor SMTP** contraseña de la cuenta SMTP. Obligatorio cuando **Autenticación SMTP** está habilitada.
+- **Dirección de envío del servidor SMTP** dirección de correo que aparece en la cabecera `From` de los correos salientes. Debe completarse para enviar documentos por correo correctamente.
+- **Nombre del remitente** nombre para mostrar opcional junto a la dirección del remitente.
+- **Dirección de respuesta (Reply-To)** si se establece, las respuestas se dirigen a esta dirección en lugar de a la dirección del remitente.
+
+---
+
 ## Nivel de entidad
 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad` > pestaña **Configuración del correo electrónico**

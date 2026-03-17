@@ -31,7 +31,7 @@ Las organizaciones se crean ejecutando el proceso de configuración inicial de l
 
 La ventana Entidad permite al usuario ver y mantener las entidades creadas al ejecutar el proceso **Crear entidad**.
 
-![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![Client Window](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-window.png)
 
 !!! info
     El campo **Días para la Caducidad de Contraseña** permite al usuario establecer un límite de días durante el cual una contraseña puede ser válida para los usuarios. El límite se restablecerá cada vez que un usuario cambie su contraseña.
@@ -90,7 +90,7 @@ Siempre es posible personalizar la configuración predeterminada; por ejemplo:
 
 La pestaña Información permite al usuario añadir, editar y mantener información genérica de la entidad, como las unidades de medida predeterminadas e imágenes.
 
-![](../../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![Client Information Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-information-tab.png)
 
 Información adicional que se permite especificar:
 
@@ -132,10 +132,12 @@ Esta pestaña puede utilizarse para configurar la disponibilidad de dimensiones 
 
 Por ejemplo, si una entidad necesita mostrar la dimensión proyecto en la cabecera y en las líneas en todos los documentos excepto en el documento de amortización, la ventana Entidad debería tener la siguiente configuración:
 
-![](../../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![Client Dimensions Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-dimensions-tab.png)
 
 La configuración en la pestaña Dimensiones se rellena a partir de la configuración existente en la ventana Asignación de dimensiones.
 
 ---
 
 Este trabajo es una obra derivada de [Configuración General](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
+
+---
