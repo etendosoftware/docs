@@ -51,7 +51,7 @@ Esta guía proporciona instrucciones para instalar y ejecutar Etendo Main UI, un
     1. Acceda a Etendo Classic como `System Administrator`.
     2. Vaya a `Entidad` > pestaña `Secure Web Service Configuration`.
     3. Verifique que exista una clave. Si no existe, haga clic en el botón **Generar Clave** para crear una.
-    4. Revise el **tiempo de caducidad** (en minutos). Si está en `0`, el token no caduca. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+    4. Revise el **tiempo de expiración** (en minutos). Si está en `0`, el token no caduca. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
 
     ![alt text](../../../../assets/developer-guide/etendo-mobile/getting-started/token.png)
 
@@ -273,7 +273,7 @@ pnpm install
 
 Cada paquete también puede ejecutarse de forma independiente usando comandos de workspace de pnpm:
 
-```bash title="Comando"
+```bash title="Commands"
 # Run MainUI development server
 pnpm --filter @workspaceui/mainui dev
 
@@ -314,28 +314,28 @@ pnpm format:fix
 
 Contiene definiciones TypeScript y funciones de API para comunicarse con el backend de Etendo. Proporciona:
 
-- APIs de autenticación
-- APIs de metadatos
-- APIs de datasource
-- APIs de integración con Copilot
+- Authentication APIs
+- Metadata APIs
+- Datasource APIs
+- Copilot integration APIs
 
 **Component Library (`@workspaceui/componentlibrary`)**
 
 Una colección de componentes React reutilizables construidos con Material-UI. Incluye:
 
-- Componentes de formulario (inputs, selectores, etc.)
-- Componentes de navegación
-- Componentes modales y de diálogo
-- Componentes de visualización de datos
+- Form components (inputs, selectors, etc.)
+- Navigation components
+- Modal and dialog components
+- Data display components
 
 **Main UI (`@workspaceui/mainui`)**
 
 La aplicación principal de Next.js que proporciona la interfaz de usuario completa. Funcionalidades:
 
-- Arquitectura moderna React/TypeScript
-- Renderizado del lado del servidor con Next.js
-- Integración del tema de Material-UI
-- Diseño responsive
+- Modern React/TypeScript architecture
+- Server-side rendering with Next.js
+- Material-UI theme integration
+- Responsive design
 
 ### Ejecutar pruebas
 
@@ -353,3 +353,5 @@ El entorno de desarrollo ya está listo para compilar y personalizar Etendo Main
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

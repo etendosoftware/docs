@@ -101,7 +101,7 @@ Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder r
     Se requiere un token de cifrado para la autenticación. Este token es necesario para que **Etendo Mobile** inicie una sesión.
 
     !!! note
-        A partir de **26Q1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+        A partir de **Etendo 26.1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
 
     Para verificar o gestionar el token:
 
@@ -112,7 +112,7 @@ Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder r
     ![alt text](../../assets/developer-guide/etendo-mobile/getting-started/token.png)
 
     !!! warning "Recomendación de seguridad"
-        Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
+        Si bien `0` (sin expiración) es el valor por defecto, el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
 
     !!! info
         Este token no requiere ninguna acción adicional; solo necesita existir para que el proceso de autenticación funcione correctamente.
@@ -180,3 +180,5 @@ Etendo Mobile admite la **recepción de archivos** desde aplicaciones externas p
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

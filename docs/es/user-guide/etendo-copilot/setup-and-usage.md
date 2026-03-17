@@ -12,7 +12,17 @@ tags:
 ## Configuración inicial
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad` 
 
-Para poder utilizar Copilot, debe existir un token SWS válido. A partir de **26Q1**, este token se **genera automáticamente** durante la instalación. Para versiones anteriores, o para verificar la configuración, acceda a Etendo con el rol *System Administrator* y navegue a `Entidad` > `Secure Web Service Configuration`. Verifique que exista una clave; si no, haga clic en **Generar Clave**. Si se configuró un tiempo de expiración personalizado, asegúrese de que el token no haya vencido. El equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos en lugar de dejarlo en `0` (sin expiración).
+Para poder utilizar Copilot, debe existir un token SWS válido. A partir de **Etendo 26.1**, este token se **genera automáticamente** durante la instalación.
+
+Para versiones anteriores, o para verificar la configuración:
+
+1. Acceda a Etendo Classic como `System Administrator`.
+2. Navegue a `Entidad` > `Secure Web Service Configuration`.
+3. Verifique que exista una clave. Si no, haga clic en **Generar Clave** para crear una.
+4. Si se configuró un tiempo de expiración personalizado, asegúrese de que el token no haya vencido.
+
+!!! warning "Recomendación de seguridad"
+    Configure un tiempo de expiración razonable en entornos productivos. Dejarlo en `0` (sin expiración) implica que, si el token se ve comprometido, seguirá siendo válido indefinidamente.
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 ## Cómo configurar agentes
@@ -449,3 +459,5 @@ Este proceso permite sincronizar bajo demanda los modelos distribuidos por Etend
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
