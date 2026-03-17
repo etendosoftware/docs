@@ -17,20 +17,12 @@ The **Print Provider** module connects Etendo with printing platforms, offering 
 
 It allows each organization to configure its print provider, manage and synchronize the catalog of available printers, administer print templates, and execute on-demand printing from specific windows.
 
-The module supports two operating modes:
-
-- **Print & Download mode**: The user selects a provider and printer. The system generates the document, sends it to the printer and, optionally, downloads it as a PDF.
-- **Download-only mode**: The user leaves the Provider field empty. The system generates the document and downloads it as a PDF without sending it to any printer. This is useful when no printing provider has been configured or when a digital copy is the only requirement.
-
-!!! tip
-    Download-only mode does not require any provider configuration. It can be used immediately after installing the module and configuring at least one print template.
-
-!!! info 
+!!! info
     This module includes by default the implementation of a specific print provider [Print Node](https://www.printnode.com/){target="_blank"}, and all configuration and usage examples are based on this provider. This service includes a free plan, although if you require large print volumes, you should consult the [service pricing](https://www.printnode.com/pricing){target="_blank"}.    
 
 
 !!! tip
-    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 ## Initial Setup
@@ -67,14 +59,12 @@ This window is used to register print providers. In this case, the **PrintNode**
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-window.png)
 
-Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the Provider Implementation window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the Provider Implementation window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 #### Provider Params
 
 This tab defines the configuration values required for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-tab.png)
 
 The system allows the user to create any parameter that the printing provider requires, adapting to their needs. To add a new parameter, use the following fields:
 
@@ -155,8 +145,6 @@ The pop-up presents the following fields. Multiple record selection is allowed.
 
 ### Download-only Mode
 
-When the **Provider** field is left empty, the process generates the printable documents using the configured template and immediately downloads them as a PDF file to the browser, without requiring any printer or provider configuration. In this mode, a single copy of each document is generated regardless of any previous Number of Copies setting.
-
 - If multiple records are selected, all generated labels are merged into a single PDF for download.
 - If some records fail to generate, the successfully generated labels are still downloaded and a warning is displayed indicating how many failed.
 - If all records fail to generate, an error message is shown.
@@ -165,8 +153,6 @@ When the **Provider** field is left empty, the process generates the printable d
     This mode is ideal for users who only need digital copies of their printables, for example to attach them to emails, archive them, or print them manually from a different device or application.
 
 ### Print & Download Mode
-
-When a **Provider** and **Printer** are selected, the system generates the printable and sends it to the selected printer. If the **Download** option is set to **Yes**, the generated PDF is also downloaded to the browser.
 
 - If the print job is sent successfully, a success message is displayed with the print job ID.
 - If the print job fails but the label was generated, the PDF is still available for download (when Download is enabled) and a warning is shown.
