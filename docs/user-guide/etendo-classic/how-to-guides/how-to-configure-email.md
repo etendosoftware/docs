@@ -24,52 +24,58 @@ This design allows a company to set a global SMTP server at the client level whi
 
 ---
 
+## Field Reference
+
+In a standard Etendo installation, the same set of fields is available at **Client**, **Organization**, and **User** level.
+
+![Email Configuration Fields](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/email-configuration-fields.png)
+
+- **SMTP Server** hostname or IP address of the SMTP server (e.g. `smtp.gmail.com`).
+- **SMTP Port** port used by the SMTP server (e.g. `465` for SSL, `587` for STARTTLS, or `25` for plain connections).
+- **SMTP Connection Security** transport security mode to use when connecting to the SMTP server. Available options are **None**, **STARTTLS**, and **SSL**. It must match the server configuration.
+- **SMTP Connection Timeout** communication timeout in seconds. After this time, the email send process stops.
+- **SMTP Authentication** indicates whether the SMTP server requires username and password authentication before sending emails. If enabled, **SMTP Server Account** and **SMTP Server Password** become required.
+- **SMTP Server Account** SMTP username used for authentication. Required when **SMTP Authentication** is enabled.
+- **SMTP Server Password** password for the SMTP account. Required when **SMTP Authentication** is enabled.
+- **SMTP Server Sender Address** email address that appears in the `From` header of outgoing emails. Must be filled in to successfully send documents by email.
+- **From Name** optional display name shown alongside the sender address.
+- **Reply-To Address** if set, replies are directed to this address instead of the sender address.
+
+---
+
 ## Client Level
 
-:material-menu: `Application` > `General Setup` > `Client` > `Client` > **Email Configuration** tab
+`Application` > `General Setup` > `Client` > `Client` > `Email Configuration` tab
 
 The **Email Configuration** sub-tab of the Client window defines the global SMTP settings used as the last resort when no organization- or user-level configuration is available.
 
-In a standard Etendo installation, the same set of fields is available at **Client**, **Organization**, and **User** level. The table below describes each field, whether it is mandatory to configure a working SMTP setup, and its typical default value when creating a new record.
-
 ![Client Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/client-email-configuration.png)
 
-| Field | Description | Required | Default |
-|---|---|---|---|
-| **SMTP Server** | Hostname or IP address of the SMTP server (e.g. `smtp.gmail.com`). | Yes | Empty |
-| **SMTP Port** | Port used by the SMTP server (e.g. `465` for SSL, `587` for STARTTLS, or `25` for plain connections). | Yes | Empty |
-| **SMTP Connection Security** | Select the transport security mode to use when connecting to the SMTP server (**None**, **STARTTLS**, or **SSL**). It must match the server configuration. | Yes (recommended) | `None` |
-| **SMTP Connection Timeout** | SMTP server communication timeout defined in seconds. After this timeout the email send process will stop. | No | Empty (system default is used) |
-| **SMTP Authentication** | Indicates whether the SMTP server requires username and password authentication before sending emails. If enabled, **SMTP Server Account** and **SMTP Server Password** become required. | No | Unchecked |
-| **SMTP Server Account** | SMTP username (often the email address) used for authentication. Required when SMTP Authentication is enabled. | Conditionally (if authentication is enabled) | Empty |
-| **SMTP Server Password** | Password for the SMTP Account. This value should be stored encrypted and is required when SMTP Authentication is enabled. | Conditionally (if authentication is enabled) | Empty |
-| **SMTP Server Sender Address** | The email address that appears in the `From` header of outgoing emails. It is not a mandatory database field, but it must be filled in to successfully send documents by email. | No | Empty |
-| **From Name** | Optional display name to show alongside the From Address when sending emails. | No | Empty |
-| **Reply-To Address** | If set, replies to the sent email will be directed to this address instead of the From Address. | No | Empty |
+For a description of all available fields, see [Field Reference](#field-reference).
 
 ---
 
 ## Organization Level
 
-:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization` > **Email Configuration** tab
+`Application` > `General Setup` > `Enterprise Model` > `Organization` > `Email Configuration` tab
 
 Each organization can define its own SMTP settings in the **Email Configuration** sub-tab. When present and active, this configuration overrides the client-level settings for all emails sent by users of that organization.
 
 ![Organization Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/organization-email-configuration.png)
 
-The fields available at organization level are the same as those described in the [Client Level](#client-level) section above, with the same **Required** and **Default** behavior. Multiple records can be created per organization; **only one can be marked as Default**, and that is the configuration used by the cascade for that organization.
+The fields available at organization level are the same as those described in the [Field Reference](#field-reference) section, with the same **Required** and **Default** behavior. Multiple records can be created per organization; **only one can be marked as Default**, and that is the configuration used by the cascade for that organization.
 
 ---
 
 ## User Level
 
-:material-menu: `Application` > `General Setup` > `Security` > `User` > **Email Configuration** tab
+`Application` > `General Setup` > `Security` > `User` > `Email Configuration` tab
 
 An individual user can have their own SMTP credentials configured in the **Email Configuration** sub-tab of the User window. This takes the highest priority in the cascade: if the user has a valid active configuration, it will always be used regardless of organization or client settings.
 
 ![User Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/user-email-configuration.png)
 
-The fields available at user level are the same as those described in the [Client Level](#client-level) section above, with the same **Required** and **Default** behavior.
+The fields available at user level are the same as those described in the [Field Reference](#field-reference) section, with the same **Required** and **Default** behavior.
 
 !!! info
     The **Default** checkbox on a user-level configuration determines which record is selected when a user has more than one email configuration record defined. As with other levels, **only one user email configuration can be marked as Default at the same time**.

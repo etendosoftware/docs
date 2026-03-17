@@ -31,7 +31,7 @@ Organizations are created by running the Initial Organization setup process avai
 
 The Client window allows the user to view and maintain the clients created by running the **Initial Client Setup** process.
 
-![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![Client Window](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-window.png)
 
 !!! info
     The field **Days To Password expiration** allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
@@ -90,7 +90,7 @@ It is always possible to customize the defaulted configuration, for instance:
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
-![](../../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![Client Information Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-information-tab.png)
 
 Additional information allowed to be specified:
 
@@ -132,7 +132,7 @@ This tab can be used to configure accounting dimensions availability at document
 
 For example, if a client needs to display project dimension in the header and lines in all documents less in amortization document, the client window should have the following configuration:
 
-![](../../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![Client Dimensions Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-dimensions-tab.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.
 
