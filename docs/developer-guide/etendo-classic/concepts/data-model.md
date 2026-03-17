@@ -18,15 +18,15 @@ This document explains how tables and columns are defined in physical database a
 
 ## Tables in Application Dictionary
 
-Once [tables](../concepts/Tables.md) are physically defined in database, they must be mapped with Application Dictionary. This mapping is done through `Application Dictionary` > `Tables and Columns` > `Table` tab, which populates `AD_Table` table.
+Once [tables](../concepts/tables.md) are physically defined in database, they must be mapped with Application Dictionary. This mapping is done through `Application Dictionary` > `Tables and Columns` > `Table` tab, which populates `AD_Table` table.
 
 ### Table Naming
 
 A table defined in the application dictionary has several names which are used by Etendo in different ways:
 
-- Logical name (`AD_Table`.name): used by the [Data Access Layer](../concepts/Data_Access_Layer.md) in [XML](../concepts/xml-rest-web-services.md) and [JSON](../concepts/JSON_REST_Web_Services.md) REST web services. See [here](../concepts/Data_Access_Layer.md#entity-naming) for more information.
+- Logical name (`AD_Table`.name): used by the [Data Access Layer](../concepts/data-access-layer.md) in [XML](../concepts/xml-rest-web-services.md) and [JSON](../concepts/json-rest-web-services.md) REST web services. See [here](../concepts/data-access-layer.md#entity-naming) for more information.
 - Physical name (`AD_Table`.tablename): is the name of the table in the database.
-- Class name (`AD_Table`.classname): the name of the [generated entity java class](../concepts/Data_Access_Layer.md#generated-business-object-classes).
+- Class name (`AD_Table`.classname): the name of the [generated entity java class](../concepts/data-access-layer.md#generated-business-object-classes).
 
 ## Columns in Application Dictionary
 
@@ -40,22 +40,22 @@ The following sections explain some details to be taken into account when defini
 
 A column defined in the application dictionary has several names which are used by Etendo in different ways:
 
-- The logical name (`AD_Column`.name): this name is used by the Data Access Layer for [automatically detecting supported interfaces](../concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) and [XML and Java property naming](../concepts/Data_Access_Layer.md#property-naming).
+- The logical name (`AD_Column`.name): this name is used by the Data Access Layer for [automatically detecting supported interfaces](../concepts/data-access-layer.md#property-naming-and-supported-interfaces) and [XML and Java property naming](../concepts/data-access-layer.md#property-naming).
 - The physical column name (`AD_Column`.columnname): is the name of the column in the database table.
 
 !!!important
-    When naming columns related to audit info, client/organization and active it is very important to be precise in the name. If a wrongly spelled name is used then Etendo will not be able to detect that an entity [supports a certain interface](../concepts/Data_Access_Layer.md#important-interfaces) and specific automatic behavior is disabled. See [here](../concepts/Data_Access_Layer.md#important-interfaces) for a list of interfaces and their expected logical column names.
+    When naming columns related to audit info, client/organization and active it is very important to be precise in the name. If a wrongly spelled name is used then Etendo will not be able to detect that an entity [supports a certain interface](../concepts/data-access-layer.md#important-interfaces) and specific automatic behavior is disabled. See [here](../concepts/data-access-layer.md#important-interfaces) for a list of interfaces and their expected logical column names.
 
 ### Defining Business Objects: the isParent
 
-The column definition in the application dictionary is also used to define business object structures in Etendo. If the `isParent` field of a foreign key column is set (checked/true) then this foreign key models an association from a child to a parent. With this information the [Data Access Layer](../concepts/Data_Access_Layer.md) will automatically create an association (in-memory) from the parent to the child.
+The column definition in the application dictionary is also used to define business object structures in Etendo. If the `isParent` field of a foreign key column is set (checked/true) then this foreign key models an association from a child to a parent. With this information the [Data Access Layer](../concepts/data-access-layer.md) will automatically create an association (in-memory) from the parent to the child.
 
 For example the `C_OrderLine` table has a column `c_order_id`. In the application dictionary this column is flagged as `isParent` (so the `c_order_id` points to the parent of the order line: the order header). The data access layer will translate this foreign key column in two association in the entity model:
 
 - A many-to-one association from the order line entity to the order (its parent)
 - A one-to-many association from the order to the order lines, in java this results in a member of type `java.util.List`.
 
-For more information, see [here](../concepts/Data_Access_Layer.md#business-object).
+For more information, see [here](../concepts/data-access-layer.md#business-object).
 
 ### References
 
@@ -465,7 +465,7 @@ Both callouts and triggers are executed when there are changes in data. The main
 
 ##### Defining a Callout
 
-There is a [guide](../how-to-guides/How_to_create_a_Callout.md) related to callouts you can read to have an step by step example for a callout creation.
+There is a [guide](../how-to-guides/how-to-create-a-callout.md) related to callouts you can read to have an step by step example for a callout creation.
 
 ###### Application Dictionary
 

@@ -361,7 +361,7 @@ Las interfaces anteriores son utilizadas por la DAL cuando un objeto se guarda p
 Por lo tanto, un desarrollador no necesita establecer explícitamente esta información en un objeto nuevo o existente. 
 
 !!!note 
-    Para que la Data Access Layer detecte que una tabla soporta las interfaces anteriores, los nombres de columna (AD_Column.name) deben ajustarse a estándares específicos; consulte [aquí](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) para más información.
+    Para que la Data Access Layer detecte que una tabla soporta las interfaces anteriores, los nombres de columna (AD_Column.name) deben ajustarse a estándares específicos; consulte [aquí](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#property-naming-and-supported-interfaces) para más información.
 
 ###  Creación de una nueva instancia de un objeto de negocio
 
@@ -430,7 +430,7 @@ En algunos casos, sin embargo, también es necesario evitar la comprobación de 
 
 ####  Modo administrador de referencia cruzada de organización
   
-La validación de la organización del objeto referenciado en columnas [que lo soportan](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references) puede
+La validación de la organización del objeto referenciado en columnas [que lo soportan](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#cross-organization-references) puede
 omitirse usando un modo Administrador especial: `
 setCrossOrgReferenceAdminMode ` . La restauración del modo anterior se realiza mediante `
 restorePreviousCrossOrgReferenceMode ` . De forma similar al modo administrador estándar,
@@ -819,8 +819,10 @@ La plantilla de formato de código y su configuración se pueden encontrar en el
 ## Consejos y trucos y solución de problemas
 
 !!!info
-    Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de [solución de problemas](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer).
+    Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de [solución de problemas](../../../developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md#data-access-layer).
 
 ---
 
 Este trabajo es una obra derivada de [Capa de Acceso a Datos](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

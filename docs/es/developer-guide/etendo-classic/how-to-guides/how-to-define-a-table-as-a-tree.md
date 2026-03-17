@@ -78,7 +78,7 @@ Los siguientes campos se aplican a todos los árboles, independientemente de su 
   * **Fuente de datos**: Una fuente de datos que gestionará todas las operaciones del árbol. 
   
 !!!info
-    Para más información, visite [Cómo crear un árbol personalizado](../how-to-guides/How_to_Create_a_Custom_Tree.md).
+    Para más información, visite [Cómo crear un árbol personalizado](../how-to-guides/how-to-create-a-custom-tree.md).
 
 ## Habilitar la vista de cuadrícula de árbol en una pestaña
 
@@ -95,6 +95,6 @@ Por defecto, los nodos raíz serán aquellos cuyo padre sea null o '0'. El usuar
 Las tablas que tienen árboles definidos están destinadas a utilizarse en **selectores de árbol**. Los selectores de árbol son una variante de los selectores de Etendo, que aprovechan los datos jerárquicos de las tablas, permitiendo utilizar árboles para filtrar y seleccionar registros.
 
 !!!info
-    Para más información, visite [Cómo crear un selector de árbol](../../etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md). 
+    Para más información, visite [Cómo crear un selector de árbol](../../etendo-classic/how-to-guides/how-to-create-a-tree-selector.md). 
 
 Este trabajo es una obra derivada de [Cómo definir una tabla como un árbol](https://wiki.openbravo.com/wiki/How_to_Define_a_Table_as_a_Tree){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.

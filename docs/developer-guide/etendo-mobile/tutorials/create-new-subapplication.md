@@ -169,7 +169,7 @@ docker_com.etendoerp.etendorx=true
     For more information about how to handle Etendo Dockerizations, visit [Docker Management](../../etendo-classic/bundles/platform/dependency-manager.md). 
 
 ??? Note "Tomcat and PostgresSQL Dockerized (Optional)"
-    It is also possible to run the dockerized [PostgreSQL service](../platform/docker-management.md#postgres-database-service) and [Tomcat service](../platform/tomcat-dockerized-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
+    It is also possible to run the dockerized [PostgreSQL service](../../etendo-classic/bundles/platform/docker-management.md#postgres-database-service) and [Tomcat service](../../etendo-classic/bundles/platform/dockerized-tomcat-service.md), **optionally** adding the [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} and the following configuration variables:
 
     ```groovy title="gradle.properties"
     docker_com.etendoerp.tomcat=true
