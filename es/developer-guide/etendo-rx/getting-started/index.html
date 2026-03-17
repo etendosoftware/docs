@@ -15053,9 +15053,16 @@
 <p>Antes de iniciar los servicios dockerizados, hay algunas configuraciones que deben realizarse en Etendo Classic.</p>
 <h3 id="configuracion-de-la-entidad">Configuración de la Entidad</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Entidad</code> &gt; <code>Entidad</code></p>
-<p>Es necesario configurar el token de cifrado para la autenticación en la ventana <code>Entidad</code> con el rol <code>System Administrator</code>.
-Si el tiempo de expiración es igual a <code>0</code>, los tokens no caducan.</p>
-<p>Genere una clave aleatoria con el botón <strong>Generar Clave</strong>.</p>
+<p>Se requiere un token de cifrado para la autenticación.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A partir de <strong>Etendo 26.1</strong>, la clave SWS se <strong>genera automáticamente</strong> durante la instalación (<code>./gradlew install</code>). No se requiere ninguna acción manual para instalaciones nuevas.</p>
+</div>
+<p>Para verificar o gestionar el token, abra la ventana <code>Entidad</code> con el rol <code>System Administrator</code> y navegue a la pestaña <strong>Configuración de Secure Web Services</strong>. Verifique que exista una clave; si no, haga clic en el botón <strong>Generar Clave</strong>. Si el tiempo de expiración es igual a <code>0</code>, los tokens no caducan. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.</p>
+<div class="admonition warning">
+<p class="admonition-title">Recomendación de seguridad</p>
+<p>Si bien el valor por defecto es <code>0</code> (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png"></a></p>
 <h3 id="ventana-rx-config">Ventana RX Config</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
@@ -15065,7 +15072,7 @@ Si el tiempo de expiración es igual a <code>0</code>, los tokens no caducan.</p
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-rx/getting-started/default-rx-config.png" data-desc-position="bottom"><img alt="default-rx-config.png" src="../../../../assets/developer-guide/etendo-rx/getting-started/default-rx-config.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>El campo <strong>URL pública</strong> solo necesita configurarse cuando los servicios estén configurados para producción.</p>
+<p>El campo <strong>Public URL</strong> solo necesita configurarse cuando los servicios estén configurados para producción.</p>
 </div>
 <h3 id="lanzar-servicios-rx">Lanzar servicios RX</h3>
 <p>A continuación, para ejecutar eficazmente los servicios, es necesario <strong>ejecutar el comando</strong> en el terminal:</p>

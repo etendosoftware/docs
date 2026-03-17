@@ -14648,16 +14648,26 @@
 <li>
 <h3 id="client-access-token">Client Access Token</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
-<p>A one-time encryption token must be configured for authentication. This token is required for <strong>Etendo Mobile</strong> to start a session.</p>
+<p>An encryption token is required for authentication. This token is necessary for <strong>Etendo Mobile</strong> to start a session.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Starting from <strong>Etendo 26.1</strong>, the SWS key is <strong>automatically generated</strong> during installation (<code>./gradlew install</code>). No manual action is required for new installations.</p>
+</div>
+<p>To verify or manage the token:</p>
 <ol>
 <li>Access Etendo Classic as a <code>System Administrator</code>.</li>
 <li>Navigate to <code>Client</code> &gt; <code>Secure Web Service Configuration</code> tab.</li>
-<li>Click the <strong>Generate Key</strong> button to create a token. The expiration time is measured in minutes, if set to 0 the token does not expire.
+<li>Verify that a key exists. If not, click the <strong>Generate Key</strong> button to create one.</li>
+<li>Check the <strong>expiration time</strong> (in minutes). If set to <code>0</code>, the token does not expire. If a custom expiration was configured, ensure the token has not expired.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/developer-guide/etendo-mobile/getting-started/token.png" data-desc-position="bottom"><img alt="alt text" src="../../../assets/developer-guide/etendo-mobile/getting-started/token.png"></a></li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Security recommendation</p>
+<p>While <code>0</code> (no expiration) is the default, the Etendo team recommends setting a reasonable expiration time in production environments and rotating tokens periodically.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This token doesn’t require any action; it just needs to be generated for the authentication process to work properly.</p>
+<p>This token does not require any additional action; it just needs to exist for the authentication process to work properly.</p>
 </div>
 </li>
 <li>

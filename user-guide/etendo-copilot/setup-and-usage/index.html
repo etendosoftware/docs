@@ -14785,7 +14785,18 @@
 <h1 id="copilot-setup-and-usage">Copilot Setup and Usage</h1>
 <h2 id="initial-configuration">Initial Configuration</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code> </p>
-<p>In order to use Copilot, the user must access the Etendo under the role <em>System Administrator</em> and generate a token in <code>Client</code>&gt;<code>Secure Web Service Configuration</code>, clicking <strong>generate key</strong>.</p>
+<p>A valid SWS token is required to use Copilot. Starting from <strong>Etendo 26.1</strong>, this token is <strong>automatically generated</strong> during installation.</p>
+<p>For previous versions, or to verify the configuration:</p>
+<ol>
+<li>Access Etendo Classic as a <code>System Administrator</code>.</li>
+<li>Navigate to <code>Client</code> &gt; <code>Secure Web Service Configuration</code> tab.</li>
+<li>Verify that a key exists. If not, click <strong>Generate Key</strong> to create one.</li>
+<li>If a custom expiration time was set, ensure the token has not expired.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Security recommendation</p>
+<p>Set a reasonable expiration time in production environments. Leaving it at <code>0</code> (no expiration) means a compromised token remains valid indefinitely.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png" data-desc-position="bottom"><img alt="" src="../../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png"></a></p>
 <h2 id="how-to-set-up-agents">How to Set up Agents</h2>
 <p>With Etendo Copilot, it is possible to:</p>

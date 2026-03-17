@@ -15335,23 +15335,30 @@
 </ol>
 <h3 id="configuracion-de-la-entidad">Configuración de la Entidad</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Entidad</code> &gt; <code>Entidad</code></p>
-<p>Es necesario configurar el token de cifrado para la autenticación en la ventana Entidad con el rol de Administrador del Sistema.<br>
-Si el tiempo de expiración es igual a "0", los tokens no caducan.</p>
-<p>Genere una clave aleatoria con el botón "Generar Clave".</p>
+<p>Se requiere un token de cifrado para la autenticación.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A partir de <strong>Etendo 26.1</strong>, la clave SWS se <strong>genera automáticamente</strong> durante la instalación (<code>./gradlew install</code>). No se requiere ninguna acción manual para instalaciones nuevas.</p>
+</div>
+<p>Para verificar o gestionar el token, abra la ventana Entidad con el rol de Administrador del Sistema y navegue a la pestaña <strong>Configuración de Secure Web Services</strong>. Verifique que exista una clave; si no, haga clic en el botón <strong>Generar Clave</strong>. Si el tiempo de expiración es igual a <code>0</code>, los tokens no caducan. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.</p>
+<div class="admonition warning">
+<p class="admonition-title">Recomendación de seguridad</p>
+<p>Si bien <code>0</code> (sin expiración) es el valor por defecto, el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png"></a></p>
 <h3 id="ventana-rx-config">Ventana RX Config</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Etendo RX</code> &gt; <code>RX Config</code></p>
 <p>Esta ventana de configuración almacena los datos de acceso para los servicios de Etendo RX, que son cruciales para la interacción entre diferentes servicios. En este caso, es necesario crear algunos registros.<br>
 Con el rol <code>Administrador del Sistema</code>, en esta ventana es necesario añadir las entradas, una por cada servicio que se vaya a utilizar. Deben incluirse los siguientes campos:</p>
 <ul>
-<li><strong>Nombre del servicio</strong>: el nombre de cada servicio.</li>
-<li><strong>URL del servicio</strong>: la URL interna del servicio Docker.</li>
+<li><strong>Service Name</strong>: el nombre de cada servicio.</li>
+<li><strong>Service URL</strong>: la URL interna del servicio Docker.</li>
 <li><strong>Configuraciones actualizables</strong>: marque esta casilla de verificación.</li>
-<li><strong>URL pública</strong>: configure la URL accesible públicamente para el servicio.</li>
+<li><strong>Public URL</strong>: configure la URL accesible públicamente para el servicio.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>El campo <strong>URL pública</strong> solo necesita configurarse cuando la subaplicación esté configurada para producción.</p>
+<p>El campo <strong>Public URL</strong> solo necesita configurarse cuando la subaplicación esté configurada para producción.</p>
 </div>
 <p>Consulte los ejemplos de configuración a continuación y replíquelos.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application   
@@ -15386,7 +15393,7 @@ Con el rol <code>Administrador del Sistema</code>, en esta ventana es necesario 
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
 <p>Aquí pueden verse todos los servicios y sus respectivos logs en ejecución utilizando la herramienta <a href="https://www.docker.com/products/docker-desktop/" target="_isblank">Docker Desktop</a>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png" data-desc-position="bottom"><img alt="Servicios RX en Docker" src="../../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png" data-desc-position="bottom"><img alt="Docker RX Services" src="../../../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png"></a></p>
 <h2 id="proyecciones-y-busqueda">Proyecciones y búsqueda</h2>
 <p>Esta sección cubre la creación de proyecciones, mapeos y búsquedas, que permiten la generación de una API REST dinámica en el servicio RX DAS. Estas configuraciones permiten leer, escribir y filtrar datos. Las proyecciones se aplican a tablas de Etendo Classic, creando un subconjunto de datos con el que se puede interactuar a través de la API.</p>
 <h3 id="crear-una-proyeccion">Crear una proyección</h3>
