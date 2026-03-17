@@ -51,7 +51,7 @@ Para detener futuras ejecuciones de un Proceso en segundo plano, simplemente pul
 
 ###  Monitorización de ejecuciones de Procesos en segundo plano
 
-Todas las ejecuciones de Procesos en segundo plano se pueden monitorizar en `General Setup` > `Process Scheduling ` > `Process Monitor`.
+Todas las ejecuciones de Procesos en segundo plano se pueden monitorizar en `General Setup` > `Process Scheduling  ` > `Process Monitor`.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png)
 
@@ -63,3 +63,5 @@ En esta ventana, hay una entrada por cada ejecución de Proceso en segundo plano
   * *Registro del Proceso*: la información registrada durante la ejecución del Proceso. Por ejemplo, si el *Estado* de la ejecución es _Error_, aquí en el *Registro del Proceso* se puede detectar el motivo del error. 
 
 Este trabajo es una obra derivada de [Cómo crear un Proceso en segundo plano](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

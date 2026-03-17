@@ -826,3 +826,5 @@ La plantilla de formato de código y su configuración se pueden encontrar en el
 Este trabajo es una obra derivada de [Capa de Acceso a Datos](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---

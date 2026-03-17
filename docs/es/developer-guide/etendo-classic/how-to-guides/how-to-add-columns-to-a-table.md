@@ -187,3 +187,5 @@ Para añadir las nuevas columnas a la ventana definida sobre esta tabla, visite 
 Este trabajo es una obra derivada de [Cómo añadir columnas a una tabla](http://wiki.openbravo.com/wiki/How_to_add_Columns_to_a_Table){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---
