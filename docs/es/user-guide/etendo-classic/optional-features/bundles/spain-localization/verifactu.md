@@ -84,7 +84,7 @@ Se recomienda ejecutar el proceso [Rellenar Fechas de Operación](./funcionalida
 En la ventana **Configuración Verifactu** se define quién actuará como **emisor de las facturas** y con qué **impuesto se generarán**. En este caso, **cada organización legal que se cree será la responsable de la emisión**, por lo que es necesario configurar estos campos para que el sistema pueda emitir las facturas con los datos fiscales correctos y el tratamiento impositivo correspondiente.
 
 - **Organización**: entidad legal emisora.
-- **Impuesto de Aplicación**: IVA, IPSI o IGIC.
+- **Impuesto de Aplicación**: IVA, IPSI o IGIC. Este campo pasa a ser de solo lectura una vez que la configuración ha sido marcada como lista.
 - **QR por Defecto**: si se marca, se utilizará una implementación predefinida. En caso contrario, deberá personalizarse el reporte siguiendo [esta especificación](https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/DetalleEspecificacTecnCodigoQRfactura.pdf){target="_blank"}.
 
 Además, existe una sección de **Monitoreo** donde los campos **Arranque del Sistema** y **Parada del Sistema** indican, respectivamente, cuándo el entorno comenzó a estar operativo y cuándo dejó de estarlo. Esta información es útil para identificar con precisión los períodos en los que **Verifactu estuvo disponible** y aquellos en los que **no lo estuvo**.
@@ -92,6 +92,19 @@ Además, existe una sección de **Monitoreo** donde los campos **Arranque del Si
 Por otra parte, el campo **Detalle Incidencia** se completará cuando un envío presente alguna incidencia causada por factores externos al contenido de la factura, como falta de conexión a internet, errores de servidores, timeouts u otros problemas de infraestructura o comunicación.
 
   ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
+
+#### Marcar como Listo
+
+Una vez guardada la configuración, la organización debe ser **acogida a Verifactu** pulsando el botón **Marcar como Listo**. Este botón está disponible únicamente mientras la configuración no haya sido marcada como lista.
+
+Al pulsar **Marcar como Listo**, el sistema asigna automáticamente la **Fecha de Acogida a Verifactu** con la fecha actual. A partir de esa fecha, el proceso de envío automático toma en cuenta únicamente las facturas emitidas desde ese momento para su envío a la Agencia Tributaria.
+
+- **Fecha de Acogida a Verifactu**: fecha a partir de la cual el emisor comienza a operar con *Verifactu*. Se asigna automáticamente al pulsar **Marcar como Listo** y es de solo lectura.
+
+!!!info
+    Una organización cuya configuración no haya sido marcada como lista no envía facturas a *Verifactu*, aunque disponga de una configuración guardada.
+
+  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/marcar-como-listo.png)
 
 
 ### Certificado Digital
@@ -265,7 +278,7 @@ A continuación se detallan los pasos necesarios para que una factura se dé de 
 
 ### Creación de Factura Manualmente
 
-Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido configurada en la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Configuración Verifactu`.
+Para iniciar el proceso, cree una factura de venta utilizando una organización que esté incluida en el árbol de organizaciones de aquella que ha sido **configurada y marcada como lista** en la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Configuración Verifactu`.
 
 Debe completar los siguientes campos obligatorios en la Factura:
 
@@ -317,7 +330,7 @@ Al completar la factura:
 
 ### Creación Automática de Facturas de Venta
 
-Para aquellas facturas de venta en estado **Completado** que se generen desde procesos externos al flujo manual de facturación, el sistema ejecuta automáticamente un proceso interno —habilitado por defecto tras la instalación del módulo *Verifactu* y sin necesidad de configuración previa— que **genera el registro de facturación** y **remite dicho registro de forma inmediata a Verifactu**, utilizando los datos configurados en el **Tipo de Documento**, tal como se describe en la sección [Configuración para Procesos que Generan Facturas](#configuracion-para-procesos-que-generan-facturas).  
+Para aquellas facturas de venta en estado **Completado** que se generen desde procesos externos al flujo manual de facturación, el sistema ejecuta automáticamente un proceso interno —habilitado por defecto tras la instalación del módulo *Verifactu* y sin necesidad de configuración previa— que **genera el registro de facturación** y **remite dicho registro de forma inmediata a Verifactu**, utilizando los datos configurados en el **Tipo de Documento**, tal como se describe en la sección [Configuración para Procesos que Generan Facturas](#configuracion-para-procesos-que-generan-facturas). Este proceso solo toma en cuenta las facturas cuya organización emisora haya sido **acogida a Verifactu**, es decir, cuya configuración haya sido marcada como lista.  
 
 !!! example
 
