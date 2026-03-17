@@ -60,7 +60,7 @@ This guide provides instructions to install and run the Etendo Main UI, a modern
         While `0` (no expiration) is the default, the Etendo team recommends setting a reasonable expiration time in production environments and rotating tokens periodically.
 
     !!! info
-        This token doesn’t require any additional action; it just needs to exist for the authentication process to work properly.
+        This token does not require any additional action; it just needs to exist for the authentication process to work properly.
 
 
 ## Installation

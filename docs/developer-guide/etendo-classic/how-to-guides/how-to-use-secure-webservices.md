@@ -34,7 +34,7 @@ Starting from **26Q1**, the Secure Web Services key is **automatically generated
 - The token expiration time can be changed later from the Client window (value expressed in **minutes**, where `0` means no expiration).
 
 !!! warning "Security recommendation"
-    While the default expiration is set to `0` (no expiration) for ease of setup, the Etendo team recommends configuring a reasonable expiration time for production environments. Non-expiring tokens pose a security risk — if a token is compromised, it remains valid indefinitely. It is recommended to set an expiration policy and rotate tokens periodically.
+    While the default expiration is set to `0` (no expiration) for ease of setup, the Etendo team recommends configuring a reasonable expiration time for production environments. Non-expiring tokens pose a security risk — if a token is compromised, it remains valid indefinitely. Set an expiration policy and rotate tokens periodically.
 
 ### Existing Installations
 
@@ -59,7 +59,7 @@ It is also possible to manually configure or rotate the encryption key and the e
 
 The expiration time value is expressed in **minutes** (set to `0` for no expiration).
 
-Use the **Generate Key** button to generate a new random key.
+Use the **Generate Key** button to generate a random key.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 

@@ -115,7 +115,7 @@ Etendo Mobile is a **mobile application** that allows users to quickly access di
         While `0` (no expiration) is the default, the Etendo team recommends setting a reasonable expiration time in production environments and rotating tokens periodically.
 
     !!! info
-        This token doesn’t require any additional action; it just needs to exist for the authentication process to work properly.
+        This token does not require any additional action; it just needs to exist for the authentication process to work properly.
 
 3. ### Configure Roles and Dynamic Subapps
     :material-menu: `Application` > `General Setup` > `Security` > `Role`
