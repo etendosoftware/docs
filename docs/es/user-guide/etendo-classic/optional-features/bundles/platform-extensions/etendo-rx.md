@@ -30,11 +30,11 @@ Para utilizar esta funcionalidad, los desarrolladores deben seguir algunos pasos
 !!! warning "Claves de cifrado requeridas antes de pasar a producción"
     Los tokens OAuth se almacenan cifrados en reposo en la base de datos. Antes de desplegar en producción, los administradores deben configurar la clave de cifrado:
 
-    - **Etendo Core**: configure `etrx.token.encryption.key` en `gralde.properties` (cadena hexadecimal de 64 caracteres).
+    - **Etendo Core**: configure `etrx.token.encryption.key` en `gradle.properties` (cadena hexadecimal de 64 caracteres).
 
     Genere cada clave con: `openssl rand -hex 32`
 
-    Para detalles completos de configuración, consulte la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#configuración-de-etendo-middleware-recomendado).
+    Para detalles completos de configuración, consulte la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-middleware-setup-recommended).
 
 ### Iniciar sesión en Etendo con un proveedor externo
 
@@ -75,3 +75,5 @@ La próxima vez que inicie sesión en Etendo:
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

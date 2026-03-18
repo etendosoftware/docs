@@ -184,7 +184,7 @@ Observabilidad:
 
 ### C. Obtener token de Google (ejemplo de Drive)
 
-1. En el ERP invoque la acción "Obtener token del Middleware" seleccionando el scope (p. ej. `drive.file`).
+1. En el ERP invoque la acción "Get Middleware Token" seleccionando el scope (p. ej. `drive.file`).
 2. Flujo: `/oauth/google/start` → consentimiento de Google → `/oauth/google/callback` → redirección al ERP.
 3. Valide una nueva entrada en `ETRX_TOKEN_INFO` con el valor correcto de `MIDDLEWARE_PROVIDER` y su expiración.
 4. Pruebe la integración con la API de Google / Picker; el Middleware refresca los tokens de forma transparente.
@@ -230,3 +230,4 @@ Este documento centraliza los pasos y las estructuras necesarias para implementa
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+---
