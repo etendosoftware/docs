@@ -318,3 +318,5 @@ Cuando un proceso se para, el estado en el monitor de procesos será *Parado por
 Este trabajo es una obra derivada de [Procesos](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---
