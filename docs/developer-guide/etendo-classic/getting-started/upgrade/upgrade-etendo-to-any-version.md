@@ -55,9 +55,9 @@ This guide explains how to upgrade your Etendo environment to any version you wa
 
 The required technology stack depends on the target version.
 
-- For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged, For more information, visit: [Etendo 24 and Earlier - Software Stack](../../../../getting-started/requirements.md#etendo-24-and-earlier)
+- For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged, For more information, visit: [Etendo 24 and Earlier - Software Stack](../installation/requirements.md#etendo-24-and-earlier)
 
-- If you are migrating to **Etendo 25**, you must first update the **entire technology stack** (Java SE, PostgreSQL, Apache Tomcat). For more information, visit: [Etendo 25 - Software Stack](../../../../getting-started/requirements.md#etendo-25)
+- If you are migrating to **Etendo 25**, you must first update the **entire technology stack** (Java SE, PostgreSQL, Apache Tomcat). For more information, visit: [Etendo 25 - Software Stack](../installation/requirements.md#etendo-25)
    
     !!!tip 
         The [Developer Changelog](../../developer-changelog/apichanges.md) guide provides details about the required stack and possible changes needed in custom modules. 
