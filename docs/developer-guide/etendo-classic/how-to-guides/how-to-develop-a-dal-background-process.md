@@ -27,7 +27,7 @@ Consider that this is a simple exercise and that we are demonstrating how a back
 In this section, it will be shown how a java process can be implemented as a background process. A java process can however also be called directly from the user interface and have a user interface which allows entering parameters. 
 
 !!!info
-      For a generic description of java processes see [Processes](../../../developer-guide/etendo-classic/concepts/Processes.md).
+      For a generic description of java processes see [Processes](../../../developer-guide/etendo-classic/concepts/processes.md).
 
 ##  Definition within the application dictionary
 
@@ -66,7 +66,7 @@ Since the first method will eventually become deprecated due to database depende
 The Data Access Layer is discussed in several other articles and sections.
 
 !!!info
-      For more information, read the [Data Access Layer](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md) reference manual.
+      For more information, read the [Data Access Layer](../../../developer-guide/etendo-classic/concepts/data-access-layer.md) reference manual.
 
 ##  Implementation
 

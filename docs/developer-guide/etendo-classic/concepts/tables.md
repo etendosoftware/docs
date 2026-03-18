@@ -147,7 +147,7 @@ In Etendo, Java classes are generated from the tables definition. A DAL
 entity is generated from every table defined in the Application Dictionary.
 
 !!!info
-    For more information, visit [Data Access Layer](../concepts/Data_Access_Layer.md).
+    For more information, visit [Data Access Layer](../concepts/data-access-layer.md).
 
 It is important you take this into account when thinking about the names for
 your columns. The columns you define in a table will correspond to Java

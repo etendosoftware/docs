@@ -20,16 +20,16 @@ Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y 
     * Se disparan cuando una instancia de entidad se actualiza, elimina o inserta. Antes de que la operación real se haya realizado en la base de datos, por lo que puede cambiar o añadir información que persiste junto con la entidad del evento. 
     * Su código de gestión de eventos se ejecuta en la misma transacción que el evento de negocio; los cambios que realice en la base de datos persisten junto con el evento de entidad de negocio en una única transacción. 
     * Los eventos de entidad de negocio solo funcionan cuando se accede a la base de datos a través de la capa de acceso a datos, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.
-    * Puede hacer uso de toda la funcionalidad de la [capa de acceso a datos](../concepts/Data_Access_Layer.md) en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.
+    * Puede hacer uso de toda la funcionalidad de la [capa de acceso a datos](../concepts/data-access-layer.md) en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.
       
       Advertencia: no llame a setters en la propia instancia; esto no funciona porque, cuando el evento se ha difundido, Hibernate ya ha leído el estado del objeto. 
       Por lo tanto, debe cambiar el valor mediante el método especial `setCurrentState`: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Los eventos de negocio hacen uso del framework de eventos proporcionado por el framework [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more). Para registrar un manejador de eventos, se utilizan anotaciones. 
+Los eventos de negocio hacen uso del framework de eventos proporcionado por el framework [Weld](../concepts/etendo-architecture.md#Introducing_Weld:_dependency_injection_and_more). Para registrar un manejador de eventos, se utilizan anotaciones. 
 
 !!!note
-    Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte [esta sección](../concepts/Etendo_Architecture.md#Analyzing_the_classpath) si no se encuentran sus manejadores de eventos.
+    Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte [esta sección](../concepts/etendo-architecture.md#Analyzing_the_classpath) si no se encuentran sus manejadores de eventos.
 
 En esta sección, implementaremos un manejador de eventos sobre la entidad Tratamientos. Cada vez que se guarde un título, se añadirá una traducción al español. Además, imprimiremos algunos mensajes en la consola para otros eventos de negocio.
 
@@ -133,7 +133,7 @@ public void onDelete(@Observes EntityDeleteEvent event) {
 !!!note 
     * Solo necesita implementar un método para el evento que desea escuchar; por lo tanto, si solo necesita escuchar eventos de actualización, entonces implemente únicamente un método con el parámetro @Observes EntityUpdateEvent. 
     * Cada método comienza con una comprobación de si el evento es válido; esto es necesario para filtrar solo los eventos relevantes; consulte la sección siguiente. 
-    * Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte [aquí](../concepts/Etendo_Architecture.md#Event_Classes_and_API) para más información. 
+    * Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte [aquí](../concepts/etendo-architecture.md#Event_Classes_and_API) para más información. 
 
 ###  Filtrar solo los eventos relevantes
 
@@ -242,7 +242,7 @@ Y, a continuación, establezca el estado actual.
 event.setCurrentState(greetingTitleProperty, title + ".");
 ```
 
-La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la [capa de acceso a datos](../concepts/Data_Access_Layer.md) y Hibernate automáticamente.
+La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la [capa de acceso a datos](../concepts/data-access-layer.md) y Hibernate automáticamente.
 
 A continuación, pruebe los cambios: vaya a la ventana ([http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)) e introduzca un nuevo tratamiento sin punto en el título. 
 Al guardar, verá que se añade un punto. 
@@ -281,7 +281,7 @@ greetingTrls.add(greetingTrl);
 Repasemos el código. Primero se crea el objeto trl y se establecen algunas propiedades. 
 Tenga en cuenta que, como el objeto no forma parte del evento, puede llamar a sus setters directamente. 
 El idioma se elige de forma arbitraria. 
-Consulte el documento [DAL](../concepts/Data_Access_Layer.md) para obtener información sobre las API que puede usar para recuperar objetos de la base de datos.
+Consulte el documento [DAL](../concepts/data-access-layer.md) para obtener información sobre las API que puede usar para recuperar objetos de la base de datos.
 
 ```java
 final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
@@ -351,3 +351,7 @@ El código fuente completo del manejador de eventos de ejemplo está disponible 
 ---
 
 Este trabajo es una obra derivada de [How to implement a business event handler](https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

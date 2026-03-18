@@ -15,7 +15,7 @@ This section discusses how a button can be added the main toolbar shown in grids
 
 This section describes how to add a button to the left part: the application buttons.
   
-To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](../concepts/Data_Access_Layer.md) concepts.
+To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](../concepts/data-access-layer.md) concepts.
 
 ##  Example Module
 
@@ -263,7 +263,7 @@ Now Etendo should know where to find these resources when initializing and gener
 ```
 A short explanation:
 
-  * The annotations in the top of the class are related to [Weld](../concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md).
+  * The annotations in the top of the class are related to [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
   
   The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
 
@@ -361,7 +361,7 @@ Notes:
   * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
   * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.
   * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
-  * the logic iterates over the order ids and retrieves the order using the [Data Access Layer](../concepts/Data_Access_Layer.md). 
+  * the logic iterates over the order ids and retrieves the order using the [Data Access Layer](../concepts/data-access-layer.md). 
   * the result is returned as json again.
 
 ###  Calling the server side from the client, displaying the result

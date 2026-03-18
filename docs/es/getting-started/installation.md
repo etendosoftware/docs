@@ -252,7 +252,7 @@ Etendo ahora incluye un **Sistema de configuración interactivo** que le guía a
 
     ### Pasos para instalar Etendo con base de datos Postgres y Tomcat dockerizados
 
-    El módulo [Gestión de Docker](../developer-guide/etendo-classic/bundles/platform/docker-management.md) permite distribuir la infraestructura necesaria para configurar Etendo Classic dentro de módulos de Etendo, que incluyen contenedores Docker para cada servicio. En concreto, el módulo Gestión de Docker incluye el módulo [Servicio de base de datos PostgreSQL](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) y el módulo [Servicio de Tomcat dockerizado](../developer-guide/etendo-classic/bundles/platform/tomcat-dockerized-service.md) que, como su nombre indica, proporciona el servicio de Tomcat.
+    El módulo [Gestión de Docker](../developer-guide/etendo-classic/bundles/platform/docker-management.md) permite distribuir la infraestructura necesaria para configurar Etendo Classic dentro de módulos de Etendo, que incluyen contenedores Docker para cada servicio. En concreto, el módulo Gestión de Docker incluye el módulo [Servicio de base de datos PostgreSQL](../developer-guide/etendo-classic/bundles/platform/docker-management.md#postgres-database-service) y el módulo [Servicio de Tomcat dockerizado](../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md) que, como su nombre indica, proporciona el servicio de Tomcat.
     Estos módulos forman parte del bundle [Platform Extensions](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md), que se tratará en esta guía paso a paso sobre cómo instalarlos.
     
     !!! info
@@ -359,3 +359,5 @@ Etendo ahora incluye un **Sistema de configuración interactivo** que le guía a
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

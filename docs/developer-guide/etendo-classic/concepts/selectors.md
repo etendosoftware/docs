@@ -113,7 +113,7 @@ The description of the fields of the Defined Selector Field:
   * **Sorting of columns in a grid**: the order in which the columns are shown in the popup grid. Only relevant if **Show in grid** is checked.
   * **Sortable**: determines if the user can sort on this column in the popup grid. Only relevant if **Show in grid** is checked.
   * **Filterable**: determines if the user filter on this column in the popup grid. Only relevant if **Show in grid** is checked.
-  * **Central Maintenance**: if checked then the name, description and help/comment are copied/used from the column. This is handled by the [Synchronize Terminology](../concepts/Element_and_Synchronize_Terminology.md) process.
+  * **Central Maintenance**: if checked then the name, description and help/comment are copied/used from the column. This is handled by the [Synchronize Terminology](../concepts/element-and-synchronize-terminology.md) process.
   * **Search in suggestion box**: as a default, the suggestion box will use the string entered by the user to search in the display field (set in the selector header) or identifier. You can select additional fields to search in by setting this field (Search in suggestion box) to yes/checking it. To make search field invisible just uncheck the field **show in grid**, then the field is only used to search and not displayed in the popup grid.
 
 !!! note
@@ -266,7 +266,7 @@ The styling of the selector is mostly automatically derived from the styling of 
 
 ### HQL Transformers
 
-It is possible to modify an HQL query entirely via java and dependency injection using transformers. To implement the new functionality, visit [HQL Transformers](../how-to-guides/How_to_create_a_HQL_Based_Table.md#HQL_Transformers).
+It is possible to modify an HQL query entirely via java and dependency injection using transformers. To implement the new functionality, visit [HQL Transformers](../how-to-guides/how-to-create-a-hql-based-table.md#hql-transformers).
 
 ### Using foreign keys in HQL Custom queries
 

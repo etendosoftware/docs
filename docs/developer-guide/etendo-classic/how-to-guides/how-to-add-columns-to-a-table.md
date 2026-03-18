@@ -45,7 +45,7 @@ To show how different types of column are configured, we will be adding 3 new co
 
 ###  Creating the new module
 
-This section only lists the main important elements needed for the new module. More details can be found in the [How To Create a Module](How_To_Create_a_Module.md)
+This section only lists the main important elements needed for the new module. More details can be found in the [How To Create a Module](how-to-create-a-module.md)
 
   * dbprefix: `HT2`
   * Dependencies: 
@@ -178,7 +178,7 @@ Those updates are needed to have useful labels in the UI for any windows defined
 
 Finally, to make the newly added columns available at runtime `./gradlew generate.entities` needs to be called and the changes deployed to tomcat. Those two steps can be done together by calling `./gradlew smartbuild`. After that, Tomcat must be restarted to refresh the DAL In-Memory Model so it knows about the newly added columns.
 
-Once the columns are added to the table, the user can [export](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) the module.
+Once the columns are added to the table, the user can [export](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module.md#exporting-a-module) the module.
 
 To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md).
 
