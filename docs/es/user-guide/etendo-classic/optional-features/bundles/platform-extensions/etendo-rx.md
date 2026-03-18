@@ -27,6 +27,15 @@ Para utilizar esta funcionalidad, los desarrolladores deben seguir algunos pasos
 !!! info
     Para leer sobre esta configuración, visite la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
 
+!!! warning "Claves de cifrado requeridas antes de pasar a producción"
+    Los tokens OAuth se almacenan cifrados en reposo en la base de datos. Antes de desplegar en producción, los administradores deben configurar la clave de cifrado:
+
+    - **Etendo Core**: configure `etrx.token.encryption.key` en `gralde.properties` (cadena hexadecimal de 64 caracteres).
+
+    Genere cada clave con: `openssl rand -hex 32`
+
+    Para detalles completos de configuración, consulte la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#configuración-de-etendo-middleware-recomendado).
+
 ### Iniciar sesión en Etendo con un proveedor externo
 
 Al acceder a la pantalla de inicio de sesión de Etendo, verá botones de los **proveedores disponibles** para autenticarse.

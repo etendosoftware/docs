@@ -32,7 +32,7 @@ Cubre la arquitectura, el modelo de datos, el flujo de autenticación, la obtenc
 - Proporciona SSO mediante Auth0 (o cualquier IdP OIDC): construye la URL de autorización, intercambia el código de autorización, valida el ID Token (JWKS) y devuelve el control al ERP.
 - Orquesta el consentimiento OAuth 2.0 de Google y el intercambio / refresco de tokens.
 - Emite códigos de autorización internos de corta duración (efímeros) para un intercambio seguro por canal de backchannel (opcional).
-- Almacena los refresh tokens de forma segura (en producción use una base de datos cifrada, no un mapa en memoria).
+- Almacena `access_token` y `refresh_token` cifrados en reposo en SQLite usando AES-256-GCM (requiere la variable de entorno `ENCRYPTION_KEY`).
 
 ### Modelo de datos (Etendo RX)
 
@@ -104,6 +104,9 @@ Almacena:
 - `MIDDLEWARE_PROVIDER` (p. ej. `google - drive.file`)
 - Flags (p. ej. `APPROVE_GOOGLE_DOC`)
 
+!!! note "Cifrado del token en reposo"
+    El campo `TOKEN` en `ETRXTokenInfo` se almacena cifrado en reposo usando AES-256-GCM. La propiedad `etrx.token.encryption.key` debe configurarse en `gradle.properties` con una cadena hexadecimal de 64 caracteres (32 bytes) antes de iniciar el servidor. Genere una clave con: `openssl rand -hex 32`
+
 ### `ETRX_INSTANCE_CONNECTOR`
 Registra:
 
@@ -155,7 +158,7 @@ Seguridad:
 
 Fiabilidad:
 
-- Sustituya el almacén de tokens en memoria por almacenamiento persistente cifrado en producción.
+- Los tokens OAuth se almacenan cifrados en reposo usando AES-256-GCM.
 - Sincronice relojes (evitar rechazos por expiración prematura).
 - Implemente reintentos con backoff para errores de red transitorios hacia Google / Auth0.
 
@@ -218,6 +221,8 @@ Observabilidad:
 - Certificados TLS válidos.
 - Los logs del Middleware muestran la secuencia esperada `[LOGIN]` → `[CALLBACK]`.
 - En errores `access_denied`: verifique el consentimiento del usuario, los scopes y la política del IdP.
+- Middleware: variable de entorno `ENCRYPTION_KEY` configurada (hexadecimal de 64 caracteres — genere con `openssl rand -hex 32`)
+- Etendo Core: propiedad `etrx.token.encryption.key` configurada en `gradle.properties` (hexadecimal de 64 caracteres — genere con `openssl rand -hex 32`)
 
 ## Resumen
 
