@@ -1,22 +1,201 @@
 ---
-tags: 
+tags:
     - API Changes
     - Updating Guide
+    - Migrate to Etendo 26
+    - Etendo 26
     - Migrate to Etendo 25
     - Etendo 25
     - Update Etendo
     - Developer Changelog
-    
+
 ---
 
-# API Change Documentation 
+# API Change Documentation
 
 ## Overview
 
-This document provides detailed information about API and stack changes introduced in the latest Etendo releases.  
-It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.  
+This document provides detailed information about API and stack changes introduced in the latest Etendo releases.
+It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.
 
 If you are planning to upgrade your environment, make sure to also review the official upgrade guide: [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
+
+## March 2026
+
+- [Etendo - Release 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0)
+
+[Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
+### Etendo Platform Stack Upgrade
+
+#### :material-language-java: Java SE
+
+!!! danger "Breaking Change: Java 17 is Now Mandatory"
+    Starting with **Etendo 26.1.0**, Java 17 is the **only supported** Java version. The `-Pjava.version=11` compatibility flag introduced in Etendo 25 has been **completely removed**.
+
+    Any environment still running Java 11 will be **blocked from building**. You must install and configure **Java 17 or higher** before upgrading to Etendo 26.
+
+- Minimum Version Required: `17.0.14`
+- Release Notes:
+
+    <div class="grid cards" markdown>
+
+    - Java SE 17 (LTS)
+
+        - [Java SE 17.0.14 (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
+        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+
+    </div>
+
+##### Recompiling Custom BuildValidation and ModuleScript Classes
+
+!!! warning "Action Required for Custom Developments"
+    If you have custom modules that include `BuildValidation` or `ModuleScript` classes, these **must be recompiled with Java 17** before upgrading to Etendo 26.
+
+    BuildValidation and ModuleScript classes are executed during the `update.database` process. If they were compiled with Java 11, they will fail at runtime under Java 17 due to bytecode incompatibility.
+
+To recompile your custom BuildValidation and ModuleScript classes:
+
+1. Ensure your build environment is configured with **Java 17**.
+2. Recompile all modules containing custom `BuildValidation` or `ModuleScript` classes:
+
+    ```bash title="Terminal"
+    ./gradlew compile.modulescript=<javapackage>
+    ```
+
+    ```bash title="Terminal"
+    ./gradlew compile.buildvalidation=<javapackage>
+    ```
+
+!!! info
+    This applies only to **custom** modules. Core Etendo modules are already compiled with Java 17 as part of the release.
+
+#### :simple-postgresql: PostgreSQL
+
+- New Version Supported: `17`
+- JDBC Driver: `42.5.4` -> `42.7.8`
+- Release Notes:
+
+    <div class="grid cards" markdown>
+
+    - PostgreSQL 17.x
+        - [PostgreSQL 17.0](https://www.postgresql.org/docs/release/17.0/){target="\_blank"}
+        - [PostgreSQL 17.1](https://www.postgresql.org/docs/release/17.1/){target="\_blank"}
+        - [PostgreSQL 17.2](https://www.postgresql.org/docs/release/17.2/){target="\_blank"}
+
+    </div>
+
+#### :octicons-file-code-24: Etendo Gradle Plugin
+
+- New Version Required: `3.0.0` or higher
+- Release Notes:
+
+    - [Etendo Gradle Plugin - Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+
+- **Java 17 Enforcement**: The `-Pjava.version=11` compatibility flag has been removed. The plugin now enforces Java 17 as the minimum version with no bypass.
+
+#### :octicons-file-code-24: DBSourceManager (DBSM)
+
+- New Version: `1.1.0` -> `1.2.0`
+- Release Notes:
+
+    - Gradle wrapper upgraded from 7.3.2 to 8.12.1.
+    - Added PostgreSQL 16 platform support (`PostgreSql16Platform`).
+    - New constraint exclusion system (`ExcludedConstraint`) for managing partitioned tables and complex database schemas.
+    - Improved partition table handling during database export.
+    - All bundled JAR libraries removed from `lib/` directory; dependencies are now resolved from the Etendo project classpath.
+
+### Third-Party Libraries
+
+#### Updated Libraries
+
+- `org.postgresql:postgresql` `42.5.4` -> `42.7.8`
+
+    - Release Notes:
+        - [PostgreSQL JDBC Changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
+
+    - This is a compatible upgrade. Review the changelog if you use driver-specific features.
+
+- `org.mozilla:rhino` `1.7.13` -> `1.8.0`
+- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0`
+
+    - Release Notes:
+        - [Rhino 1.8.0 Release](https://github.com/nicerobot/nicerobot.github.io/releases/tag/Rhino1_8_0_Release){target="\_blank"}
+        - [Rhino Releases - GitHub](https://github.com/mozilla/rhino/releases){target="\_blank"}
+
+    !!! warning
+        If you have custom JavaScript scripts executed via the Rhino engine, test them for compatibility with version 1.8.0. The upgrade includes changes to ECMAScript compliance and internal APIs.
+
+- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3`
+
+    - Release Notes:
+        - [ANTLR 3 Documentation](https://www.antlr3.org/){target="\_blank"}
+
+    !!! warning
+        This is a **major version upgrade** (ANTLR 2 to ANTLR 3). If you have custom code that uses ANTLR APIs directly, you will need to migrate. The package structure and API have changed significantly.
+
+- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6`
+
+    - Release Notes:
+        - [Woodstox Releases - GitHub](https://github.com/FasterXML/woodstox/releases){target="\_blank"}
+
+    - This is a major version upgrade for the XML stream processing library. Review if you use Woodstox APIs directly.
+
+- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0`
+
+    - See the [DBSM section above](#file_code-24-dbsourcemanager-dbsm) for details.
+
+#### Dependency Cleanup: Migration to Upstream Artifacts
+
+Starting with Etendo 26.1.0, several libraries that were previously re-packaged under the `com.etendoerp` group have been replaced with their official upstream Maven Central coordinates. This is a cleanup change that should be transparent to most users.
+
+| Previous (com.etendoerp) | New (upstream) | Version |
+|---|---|---|
+| `com.etendoerp:yuiant` 1.0 | `com.etendoerp:YUIAnt` 1.0.0 | Renamed |
+| `com.etendoerp:jettison` 1.3 | `org.codehaus.jettison:jettison` 1.3 | Same version |
+| `com.etendoerp:wstx-asl` 3.0.2 | `org.codehaus.woodstox:wstx-asl` 4.0.6 | Version upgraded |
+| `com.etendoerp:slf4j-api` 1.7.25 | `org.slf4j:slf4j-api` 1.7.25 | Same version |
+| `com.etendoerp:antlr` 2.7.7 | `org.antlr:antlr-complete` 3.5.3 | Version upgraded |
+| `com.etendoerp:rhino-engine` 1.7.13 | `org.mozilla:rhino-engine` 1.8.0 | Version upgraded |
+
+#### New Libraries
+
+- `org.apache.poi:ooxml-schemas` `1.4`
+    - [Documentation](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+
+- `org.hamcrest:hamcrest-all` `1.3`
+    - [Documentation](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+
+- `junit:junit` `4.12`
+    - [Documentation](https://junit.org/junit4/){target="\_blank"}
+
+#### Removed Libraries
+
+- `org.apache.commons:commons-compress` `1.27.1`
+
+    !!! warning
+        If your custom modules depend on `commons-compress`, you must add it as an explicit dependency in your module's `build.gradle`.
+
+- `org.eclipse.jdt:ecj` `3.23.0` (Eclipse Compiler for Java)
+- `com.etendoerp:ant-nodeps` `1.0.0`
+- `com.etendoerp:catalina-ant` `1.0.0`
+
+### Database Schema Changes
+
+The following database schema changes are applied automatically during `update.database`:
+
+| Table | Change | Details |
+|---|---|---|
+| `AD_HEARTBEAT_LOG` | Columns removed | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
+| `AD_HEARTBEAT_LOG` | Column added | `STATUS` |
+| `AD_SYSTEM_INFO` | Columns added | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+
+### Other Notable Changes
+
+- **Secure Web Services Key Generation**: A new Ant target `generate.sws.keys` is automatically called during `install.source`, reducing manual configuration steps for secure web services.
+- **Dependency file reorganization**: The `artifacts.list.COMPILATION.gradle` file has been restructured with thematic grouping (Authentication, JSON/Serialization, Utility, Reporting, Database, etc.) and descriptive comments for improved maintainability.
+
+---
 
 ## March 2025
 
