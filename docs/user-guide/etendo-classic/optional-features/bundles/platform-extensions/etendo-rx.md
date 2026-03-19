@@ -22,10 +22,13 @@ Etendo allows you to authenticate using these external provider accounts: **Goog
 
 ### Initial Setup
 
-To use this functionality, developers must follow some setup steps.
+SSO Login is **enabled by default** for all clients. No configuration is required to activate it. Developers only need to configure the connection settings in `gradle.properties` to complete the integration with the authentication provider.
 
 !!! info
-    To read about this configuration, visit the [Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
+    To read about the technical configuration, visit the [Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
+
+!!! note "Disabling SSO Login for a specific client"
+    If your organization does not want SSO Login to be available, a System Administrator can disable it by creating a client-level preference named `Allow SSO Login` with value `N` in the **Preferences** window. This overrides the system default for that client only.
 
 ### Logging into Etendo with an external provider
 

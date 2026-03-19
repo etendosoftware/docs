@@ -18,26 +18,29 @@ Etendo allows you to authenticate using these external provider accounts: **Goog
 
 ### Set up Etendo to Login with EtendoAuth Middleware Service (Recommended)
 
-To enable login to **Etendo** using external providers (Google, Microsoft, LinkedIn, GitHub or Facebook), you need to perform two main steps:
+To enable login to **Etendo** using external providers (Google, Microsoft, LinkedIn, GitHub or Facebook), you need to perform the following main step:
 
-- [x] Enable the SSO (Single Sign-On) feature through a system preference
 - [x] Configure the connection settings in `gradle.properties`
+
+!!! info "SSO Login is enabled by default"
+    Starting from version 26.1, the `ETRX_AllowSSOLogin` system preference is automatically created with value `Y`, meaning **SSO Login is enabled by default** for all clients. No manual preference creation is required to activate it.
+
+    If a specific client needs to **disable** SSO Login, a System Administrator must create a client-level override:
+
+    1. Log in as **System Administrator**.
+    2. Go to the **Preferences** window.
+    3. Create a new preference with the following settings:
+
+        - **Property**: `Allow SSO Login`
+        - **Client**: *(select the client that should have SSO Login disabled)*
+        - **Selected**: Yes
+        - **Value**: `N`
+
+    This client-level preference overrides the system default and disables the SSO Login option for that client only.
 
 ---
 
-1. #### Enable the SSO Login Preference
-
-    1. Log in as **System Administrator**
-    2. Go to the **Preferences** window
-    3. Create a new preference with the following settings:
-
-        - **Property**: `Allow SSO Login`  
-        - **Selected**: Yes  
-        - **Value**: `Y`
-
-        ![SSO Preference](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewSSOPreference.png)
-
-2. #### Configure EtendoAuth Middleware Integration
+1. #### Configure EtendoAuth Middleware Integration
 
     - **Interactive Setup**
 
@@ -74,10 +77,10 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
             !!! warning "Potential SSO Configuration Mismatch"
 
                 ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
-            
-                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
 
-                To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
+                If the `gradle.properties` configuration is missing or incorrect, attempting to log in using an external provider will display the following error message:
+
+                To resolve this issue, ensure that the SSO-related entries in `gradle.properties` are correctly configured. Also verify that no client-level preference named `ETRX_AllowSSOLogin` with value `N` is blocking SSO Login for the affected client.
 
     !!! info
         For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).

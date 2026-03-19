@@ -18,26 +18,29 @@ Etendo le permite autenticarse utilizando estas cuentas de proveedores externos:
 
 ### Configurar Etendo para iniciar sesión con el servicio EtendoAuth Middleware (Recomendado)
 
-Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externos (Google, Microsoft, LinkedIn, GitHub o Facebook), debe realizar dos pasos principales:
+Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externos (Google, Microsoft, LinkedIn, GitHub o Facebook), debe realizar el siguiente paso principal:
 
-- [x] Habilitar la funcionalidad SSO (Single Sign-On) mediante una preferencia del sistema
 - [x] Configurar los ajustes de conexión en `gradle.properties`
+
+!!! info "El inicio de sesión SSO está habilitado por defecto"
+    A partir de la versión 26.1, la preferencia del sistema `ETRX_AllowSSOLogin` se crea automáticamente con el valor `Y`, lo que significa que el **inicio de sesión SSO está habilitado por defecto** para todos los clientes. No es necesario crear manualmente ninguna preferencia para activarlo.
+
+    Si un cliente específico necesita **deshabilitar** el inicio de sesión SSO, un Administrador del sistema debe crear una preferencia a nivel de cliente:
+
+    1. Inicie sesión como **Administrador del sistema**.
+    2. Vaya a la ventana **Preferencias**.
+    3. Cree una nueva preferencia con la siguiente configuración:
+
+        - **Propiedad**: `Allow SSO Login`
+        - **Cliente**: *(seleccione el cliente para el que debe deshabilitarse el inicio de sesión SSO)*
+        - **Seleccionado**: Sí
+        - **Valor**: `N`
+
+    Esta preferencia a nivel de cliente anula el valor predeterminado del sistema y deshabilita la opción de inicio de sesión SSO únicamente para ese cliente.
 
 ---
 
-1. #### Habilitar la preferencia de inicio de sesión SSO
-
-    1. Inicie sesión como **Administrador del sistema**
-    2. Vaya a la ventana **Preferencias**
-    3. Cree una nueva preferencia con la siguiente configuración:
-
-        - **Propiedad**: `Allow SSO Login`  
-        - **Seleccionado**: Sí  
-        - **Costo**: `Y`
-
-        ![Preferencia SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewSSOPreference.png)
-
-2. #### Configurar la integración con EtendoAuth Middleware
+1. #### Configurar la integración con EtendoAuth Middleware
 
     - **Configuración interactiva**
 
@@ -74,10 +77,10 @@ Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externo
             !!! warning "Posible desajuste en la configuración de SSO"
 
                 ![SSO mal configurado](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
-            
-                Si se omite alguno de los pasos anteriores, al intentar iniciar sesión usando un proveedor externo se mostrará el siguiente mensaje de error:           
 
-                Para resolver este problema, asegúrese de que tanto la preferencia de SSO como la entrada correspondiente en `gradle.properties` estén correctamente configuradas y sean coherentes entre sí.
+                Si la configuración de `gradle.properties` está ausente o es incorrecta, al intentar iniciar sesión usando un proveedor externo se mostrará el siguiente mensaje de error:
+
+                Para resolver este problema, asegúrese de que las entradas de SSO en `gradle.properties` estén correctamente configuradas. Verifique también que ninguna preferencia a nivel de cliente llamada `ETRX_AllowSSOLogin` con valor `N` esté bloqueando el inicio de sesión SSO para el cliente afectado.
 
     !!! info
         Para más información sobre el uso de la funcionalidad de inicio de sesión SSO, visite la [Guía de usuario de inicio de sesión SSO](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).

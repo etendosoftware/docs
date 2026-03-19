@@ -22,10 +22,13 @@ Etendo le permite autenticarse utilizando estas cuentas de proveedores externos:
 
 ### Configuración inicial
 
-Para utilizar esta funcionalidad, los desarrolladores deben seguir algunos pasos de configuración.
+El inicio de sesión SSO está **habilitado por defecto** para todos los clientes. No se requiere ninguna configuración para activarlo. Los desarrolladores solo necesitan configurar los ajustes de conexión en `gradle.properties` para completar la integración con el proveedor de autenticación.
 
 !!! info
-    Para leer sobre esta configuración, visite la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
+    Para leer sobre la configuración técnica, visite la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
+
+!!! note "Deshabilitar el inicio de sesión SSO para un cliente específico"
+    Si su organización no desea que el inicio de sesión SSO esté disponible, un Administrador del sistema puede deshabilitarlo creando una preferencia a nivel de cliente llamada `Allow SSO Login` con valor `N` en la ventana **Preferencias**. Esto anula el valor predeterminado del sistema únicamente para ese cliente.
 
 ### Iniciar sesión en Etendo con un proveedor externo
 
