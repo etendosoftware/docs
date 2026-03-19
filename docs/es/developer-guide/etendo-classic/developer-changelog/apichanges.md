@@ -2,6 +2,8 @@
 tags: 
     - Cambios de API
     - Guía de actualización
+    - Migrar a Etendo 26
+    - Etendo 26
     - Migrar a Etendo 25
     - Etendo 25
     - Actualizar Etendo
@@ -13,10 +15,188 @@ tags:
 
 ## Visión general
 
-Este documento proporciona información detallada sobre los cambios de API y de stack introducidos en las últimas versiones de Etendo.  
-Sirve como referencia para desarrolladores y administradores de sistemas para comprender qué componentes se han actualizado, quedado obsoletos o eliminado, y cómo estos cambios pueden afectar a los desarrollos personalizados.  
+Este documento proporciona información detallada sobre los cambios de API y de stack introducidos en las últimas versiones de Etendo.
+Sirve como referencia para desarrolladores y administradores de sistemas para comprender qué componentes se han actualizado, quedado obsoletos o eliminado, y cómo estos cambios pueden afectar a los desarrollos personalizados.
 
 Si está planificando actualizar su entorno, asegúrese de revisar también la guía oficial de actualización: [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
+
+## Marzo 2026
+
+- [Etendo - Versión 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0)
+
+[Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
+### Actualización del stack de la plataforma de Etendo
+
+#### :material-language-java: Java SE
+
+!!! danger "Cambio incompatible: Java 17 ahora es obligatorio"
+    A partir de **Etendo 26.1.0**, Java 17 es la **única versión compatible** de Java. El indicador de compatibilidad `-Pjava.version=11` introducido en Etendo 25 se ha **eliminado por completo**.
+
+    Cualquier entorno que siga ejecutándose con Java 11 quedará **bloqueado para compilar**. Debe instalar y configurar **Java 17 o superior** antes de actualizar a Etendo 26.
+
+- Versión mínima requerida: `17.0.14`
+- Notas de la versión:
+
+    <div class="grid cards" markdown>
+
+    - Java SE 17 (LTS)
+
+        - [Java SE 17.0.14 (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
+        - [Todas las actualizaciones de Java 17](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+
+    </div>
+
+##### Recompilación de clases BuildValidation y ModuleScript personalizadas
+
+!!! warning "Acción requerida para desarrollos personalizados"
+    Si tiene módulos personalizados que incluyen clases `BuildValidation` o `ModuleScript`, estas **deben recompilarse con Java 17** antes de actualizar a Etendo 26.
+
+    Las clases BuildValidation y ModuleScript se ejecutan durante el proceso `update.database`. Si se compilaron con Java 11, fallarán en tiempo de ejecución bajo Java 17 debido a la incompatibilidad del bytecode.
+
+Para recompilar sus clases BuildValidation y ModuleScript personalizadas:
+
+1. Asegúrese de que su entorno de compilación esté configurado con **Java 17**.
+2. Recompile todos los módulos que contengan clases `BuildValidation` o `ModuleScript` personalizadas:
+
+    ```bash title="Terminal"
+    ./gradlew compile.modulescript=<javapackage>
+    ```
+
+    ```bash title="Terminal"
+    ./gradlew compile.buildvalidation=<javapackage>
+    ```
+
+!!! info
+    Esto aplica solo a módulos **personalizados**. Los módulos core de Etendo ya están compilados con Java 17 como parte de la versión.
+
+#### :simple-postgresql: PostgreSQL
+
+- Nueva versión compatible: `17`
+- Driver JDBC: `42.5.4` -> `42.7.8`
+- Notas de la versión:
+
+    <div class="grid cards" markdown>
+
+    - PostgreSQL 17.x
+        - [PostgreSQL 17.0](https://www.postgresql.org/docs/release/17.0/){target="\_blank"}
+        - [PostgreSQL 17.1](https://www.postgresql.org/docs/release/17.1/){target="\_blank"}
+        - [PostgreSQL 17.2](https://www.postgresql.org/docs/release/17.2/){target="\_blank"}
+
+    </div>
+
+#### :octicons-file-code-24: Etendo Gradle Plugin
+
+- Nueva versión requerida: `3.0.0` o superior
+- Notas de la versión:
+
+    - [Etendo Gradle Plugin - Notas de la versión](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+
+- **Aplicación de Java 17**: se ha eliminado el indicador de compatibilidad `-Pjava.version=11`. El plugin ahora fuerza Java 17 como versión mínima sin posibilidad de omitirlo.
+
+#### :octicons-file-code-24: DBSourceManager (DBSM)
+
+- Nueva versión: `1.1.0` -> `1.2.0`
+- Notas de la versión:
+
+    - Se actualizó el wrapper de Gradle de 7.3.2 a 8.12.1.
+    - Se añadió soporte de plataforma para PostgreSQL 16 (`PostgreSql16Platform`).
+    - Nuevo sistema de exclusión de restricciones (`ExcludedConstraint`) para gestionar tablas particionadas y esquemas de base de datos complejos.
+    - Se mejoró el manejo de tablas particionadas durante la exportación de base de datos.
+    - Se eliminaron todas las bibliotecas JAR incluidas del directorio `lib/`; las dependencias ahora se resuelven desde el classpath del proyecto Etendo.
+
+### Bibliotecas de terceros
+
+#### Bibliotecas actualizadas
+
+- `org.postgresql:postgresql` `42.5.4` -> `42.7.8`
+
+    - Notas de la versión:
+        - [PostgreSQL JDBC Changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
+
+    - Esta es una actualización compatible. Revise el changelog si utiliza funcionalidades específicas del driver.
+
+- `org.mozilla:rhino` `1.7.13` -> `1.8.0`
+- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0`
+
+    - Notas de la versión:
+        - [Rhino 1.8.0 Release](https://github.com/nicerobot/nicerobot.github.io/releases/tag/Rhino1_8_0_Release){target="\_blank"}
+        - [Rhino Releases - GitHub](https://github.com/mozilla/rhino/releases){target="\_blank"}
+
+    !!! warning
+        Si tiene scripts JavaScript personalizados ejecutados mediante el motor Rhino, pruébelos para verificar la compatibilidad con la versión 1.8.0. La actualización incluye cambios en el cumplimiento de ECMAScript y en APIs internas.
+
+- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3`
+
+    - Notas de la versión:
+        - [Documentación de ANTLR 3](https://www.antlr3.org/){target="\_blank"}
+
+    !!! warning
+        Esta es una **actualización de versión mayor** (ANTLR 2 a ANTLR 3). Si tiene código personalizado que utiliza directamente APIs de ANTLR, deberá migrarlo. La estructura de paquetes y la API han cambiado significativamente.
+
+- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6`
+
+    - Notas de la versión:
+        - [Woodstox Releases - GitHub](https://github.com/FasterXML/woodstox/releases){target="\_blank"}
+
+    - Esta es una actualización de versión mayor para la biblioteca de procesamiento de streams XML. Revíselo si utiliza directamente APIs de Woodstox.
+
+- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0`
+
+    - Consulte la [sección de DBSM anterior](#file_code-24-dbsourcemanager-dbsm) para más detalles.
+
+#### Limpieza de dependencias: migración a artefactos upstream
+
+A partir de Etendo 26.1.0, varias bibliotecas que anteriormente se reempaquetaban bajo el grupo `com.etendoerp` se han sustituido por sus coordenadas oficiales upstream en Maven Central. Este es un cambio de limpieza que debería ser transparente para la mayoría de usuarios.
+
+| Anterior (com.etendoerp) | Nuevo (upstream) | Versión |
+|---|---|---|
+| `com.etendoerp:yuiant` 1.0 | `com.etendoerp:YUIAnt` 1.0.0 | Renombrado |
+| `com.etendoerp:jettison` 1.3 | `org.codehaus.jettison:jettison` 1.3 | Misma versión |
+| `com.etendoerp:wstx-asl` 3.0.2 | `org.codehaus.woodstox:wstx-asl` 4.0.6 | Versión actualizada |
+| `com.etendoerp:slf4j-api` 1.7.25 | `org.slf4j:slf4j-api` 1.7.25 | Misma versión |
+| `com.etendoerp:antlr` 2.7.7 | `org.antlr:antlr-complete` 3.5.3 | Versión actualizada |
+| `com.etendoerp:rhino-engine` 1.7.13 | `org.mozilla:rhino-engine` 1.8.0 | Versión actualizada |
+
+#### Bibliotecas nuevas
+
+- `org.apache.poi:ooxml-schemas` `1.4`
+    - [Documentación](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+
+- `org.hamcrest:hamcrest-all` `1.3`
+    - [Documentación](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+
+- `junit:junit` `4.12`
+    - [Documentación](https://junit.org/junit4/){target="\_blank"}
+
+#### Bibliotecas eliminadas
+
+- `org.apache.commons:commons-compress` `1.27.1`
+
+    !!! warning
+        Si sus módulos personalizados dependen de `commons-compress`, debe añadirlo como dependencia explícita en el `build.gradle` de su módulo.
+
+- `org.eclipse.jdt:ecj` `3.23.0` (Eclipse Compiler for Java)
+- `com.etendoerp:ant-nodeps` `1.0.0`
+- `com.etendoerp:catalina-ant` `1.0.0`
+
+### Cambios en el esquema de base de datos
+
+Los siguientes cambios en el esquema de base de datos se aplican automáticamente durante `update.database`:
+
+| Tabla | Cambio | Detalles |
+|---|---|---|
+| `AD_HEARTBEAT_LOG` | Columnas eliminadas | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
+| `AD_HEARTBEAT_LOG` | Columna añadida | `STATUS` |
+| `AD_SYSTEM_INFO` | Columnas añadidas | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+
+### Otros cambios destacables
+
+- **Generación segura de claves de servicios web**: un nuevo target de Ant `generate.sws.keys` se llama automáticamente durante `install.source`, reduciendo los pasos de configuración manual para servicios web seguros.
+- **Reorganización del archivo de dependencias**: el archivo `artifacts.list.COMPILATION.gradle` se ha reestructurado con agrupación temática (Autenticación, JSON/Serialización, Utilidades, Reporting, Base de datos, etc.) y comentarios descriptivos para mejorar el mantenimiento.
+
+---
+
 ## Marzo 2025
 
 - [Etendo - Versión 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
@@ -527,3 +707,5 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
