@@ -48,12 +48,12 @@ Por último, Etendo dispone de un *sistema contable integrado* que combina conta
 
 En otras palabras, Etendo permite contabilizar transacciones en el libro mayor, que pueden incluir diferentes dimensiones:
 
-- Esas dimensiones pueden mantenerse de forma centralizada en la [Entidad](../general-setup/client.md) y, por tanto, están disponibles para todas las organizaciones dentro de esa Entidad.  
+- Esas dimensiones pueden mantenerse de forma centralizada en la [Entidad](../general-setup/client/client.md) y, por tanto, están disponibles para todas las organizaciones dentro de esa Entidad.  
 Además, las Organizaciones de esa Entidad también pueden tener dimensiones adicionales configuradas por separado en su [Esquema contable](../financial-management/accounting/setup/general-ledger-configuration.md).
 
 Estas dimensiones quedan entonces disponibles solo para esa Organización.
 
-- Por otro lado, esas dimensiones no pueden mantenerse de forma centralizada en la [Entidad](../general-setup/client.md), sino mantenerse de forma independiente en el [Esquema contable de la Organización](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
+- Por otro lado, esas dimensiones no pueden mantenerse de forma centralizada en la [Entidad](../general-setup/client/client.md), sino mantenerse de forma independiente en el [Esquema contable de la Organización](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 Esta área de aplicación cubre el flujo de negocio [Cierre de periodo hasta informe financiero](../financial-management/getting-started.md#period-end-close-to-financial-report) y el flujo de negocio [Gestión de cuentas a pagar y a cobrar](../financial-management/getting-started.md#payables-and-receivables-management).
 ## Gestión de pagos y cobros
@@ -423,3 +423,7 @@ Gestión Financiera tiene conexión con otras áreas de la aplicación, ya que e
 ---
 
 Este trabajo es una obra derivada de [Gestión Financiera](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

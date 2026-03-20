@@ -22,7 +22,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
     !!! warning
         Avoid install Docker via [Snap](https://snapcraft.io){target="_blank"}, can be confined by this sandbox and may not have access to host directories such as `/opt/`, which can prevent Etendo Docker containers from starting correctly.
     
-        Recommendation: install Etendo using the [latest ISO](../../../../whats-new/release-notes/etendo-classic/iso.md)(which includes Docker) or install Docker following the official installation guide from your distribution.
+        Recommendation: install Etendo using the [latest ISO](../../whats-new/release-notes/etendo-classic/iso.md)(which includes Docker) or install Docker following the official installation guide from your distribution.
 
 !!!info
     The [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md) module, included as a dependency allows for the distribution of the infrastructure within Etendo modules, which include Docker containers for each service.
@@ -31,7 +31,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
 Etendo Copilot is distributed within the [Copilot Extensions](./bundles/overview.md) bundle, which in addition to including the **Copilot Infrastructure**, includes **default agents** and **tools** that can be used directly or compose their use in new agents.  
 
 !!! info
-    To be able to include this functionality, the **Copilot Extensions** bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    To be able to include this functionality, the **Copilot Extensions** bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 
 ## Running Etendo Copilot

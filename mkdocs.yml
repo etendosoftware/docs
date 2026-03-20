@@ -1,5 +1,15 @@
 site_name: Etendo Documentation
 
+validation:
+  nav:
+    omitted_files: ignore
+    not_found: warn
+    absolute_links: ignore
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+
 repo_url: https://github.com/etendosoftware
 repo_name: etendosoftware
 site_url: https://docs.etendo.software

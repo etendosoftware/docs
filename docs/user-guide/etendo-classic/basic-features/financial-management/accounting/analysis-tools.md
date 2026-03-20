@@ -82,7 +82,7 @@ These reports need to be configured prior to be launched in the [Balance Sheet a
 As shown in the image above, data to fill in is:
 
 - The **General Ledger** from which the accounting information needs to be obtained.
-- The **Accounting Report** to launch. This field lists the reports created and configured in the [Balance Sheet and P&L structure Setup](./setup.md#balance-sheet-and-pl-structure-setup) window.
+- The **Accounting Report** to launch. This field lists the reports created and configured in the [Balance Sheet and P&L structure Setup](./setup/balance-sheet-and-pl-structure-setup.md) window.
 - The **Organization**. This field lists the organization for which the report has been configured in the Balance Sheet and P&L structure setup window.
 
     - If the report is configured for a "Legal with Accounting" organization type, only that one is shown in this field. The account's balances shown in the report will be a roll-up of the organizations which belong to it, if any.

@@ -78,7 +78,7 @@ Estos informes deben configurarse antes de poder lanzarse en la ventana [Configu
 Como se muestra en la imagen anterior, los datos a cumplimentar son:
 
 - El **Esquema contable** del que se debe obtener la información contable.
-- El **Informe contable** a lanzar. Este campo lista los informes creados y configurados en la ventana [Configuración de informes contables](./setup.md#configuración-de-informes-contables).
+- El **Informe contable** a lanzar. Este campo lista los informes creados y configurados en la ventana [Configuración de informes contables](./setup/balance-sheet-and-pl-structure-setup.md).
 - La **Organización**. Este campo lista la organización para la cual se ha configurado el informe en la ventana de configuración de Cuadros plan general contable.
 
     - Si el informe está configurado para un tipo de organización "Legal con contabilidad", en este campo solo se muestra esa. Los saldos de las cuentas mostrados en el informe serán una consolidación de las organizaciones que pertenezcan a ella, si las hubiera.
@@ -647,3 +647,7 @@ Una vez introducidos estos campos, será posible imprimir el Informe, que mostra
 ---
 
 Este trabajo es una obra derivada de [Gestión Financiera](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

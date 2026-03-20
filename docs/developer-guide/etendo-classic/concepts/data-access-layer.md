@@ -445,7 +445,7 @@ So, a developer does not need to explicitly set this information in a new or
 existing object. 
 
 !!!note 
-    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) for more information.
+    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#property-naming-and-supported-interfaces) for more information.
 
 ###  Creating a new instance of a Business Object
 
@@ -551,7 +551,7 @@ check, this can be done using ` OBContext.setAdminMode(false) ` .
 
 ####  Cross Organization Reference Administrator Mode
   
-Validation for referenced object's organization in columns [supporting it](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references) can
+Validation for referenced object's organization in columns [supporting it](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#cross-organization-references) can
 be bypassed by using a special Administrator mode: `
 setCrossOrgReferenceAdminMode ` . Restoring previous mode is done by `
 restorePreviousCrossOrgReferenceMode ` . Similarly to standard admin mode,
@@ -1076,7 +1076,7 @@ The code formatting template and his configuration can be found in the following
 ##  Tips & Tricks and Troubleshooting
 
 !!!info
-    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer) section.
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md#data-access-layer) section.
 
 ---
 

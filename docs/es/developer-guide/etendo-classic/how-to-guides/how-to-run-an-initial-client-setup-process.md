@@ -59,7 +59,7 @@ El **Esquema contable** está vinculado al **Árbol de cuentas**, ya que la **Cu
 
 ### Archivo contable 
 
-Etendo también permite seleccionar el archivo contable `CSV` con el plan de cuentas correspondiente ([Árbol de cuentas](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup/account-tree.mdaccount-tree)) para cargarlo en el sistema desde el campo *Archivo contable*. 
+Etendo también permite seleccionar el archivo contable `CSV` con el plan de cuentas correspondiente ([Árbol de cuentas](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md)) para cargarlo en el sistema desde el campo *Archivo contable*. 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
@@ -91,7 +91,7 @@ Estos módulos son útiles, ya que las configuraciones de impuestos generalmente
     Instalación de conjuntos de datos: se pueden añadir módulos adicionales desde la ventana [Gestión del módulo de Empresa](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md) dentro del sistema.
 
 
-Cada nueva [Entidad](../../../user-guide/etendo-classic/basic-features/general-setup/client.md) creada en Etendo mantiene de forma centralizada al menos las dimensiones contables obligatorias que se enumeran a continuación:
+Cada nueva [Entidad](../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md) creada en Etendo mantiene de forma centralizada al menos las dimensiones contables obligatorias que se enumeran a continuación:
 
 - Organización
 - Tercero
@@ -107,3 +107,7 @@ Para concluir, es importante realizar cuidadosamente la configuración inicial e
 ---
 
 Este trabajo es una obra derivada de [Configuración inicial de la Entidad](https://wiki.openbravo.com/wiki/Initial_Client_Setup){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

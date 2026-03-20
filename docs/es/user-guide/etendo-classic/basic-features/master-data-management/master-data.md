@@ -8,7 +8,7 @@ Esta sección describe el proceso de Gestión de Datos Maestros. Uno de los paso
 
 La Gestión de Datos Maestros ayuda a organizar y centralizar en un único repositorio los datos clave de la organización.
 
-Disponer de un único repositorio de datos evita la duplicación de datos, proporciona una forma única de codificación de datos y es un aspecto clave para garantizar la coherencia y la trazabilidad de los procesos de negocio de cualquier tipo.
+Disponer de un único repositorio de datos evita la duplicación de datos, proporciona una forma única de codificación de datos y es un aspecto clave para garantizar la coherencia y la la trazabilidad de los procesos de negocio de cualquier tipo.
 
 !!! info
     La creación de datos maestros es una parte del flujo general de Configuración del Negocio en Etendo y, como cualquier otra configuración, es necesaria antes de introducir transacciones.
@@ -1287,3 +1287,5 @@ Permite visualizar el stock por unidades logísticas (inventario referenciado) d
 ---
 
 Este trabajo es una obra derivada de [Gestión de Datos Maestros](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

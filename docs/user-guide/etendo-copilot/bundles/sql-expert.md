@@ -19,7 +19,7 @@ This Agent is designed to help users read information from the database. It allo
 
 The SQL Expert Agent is composed of the following components:
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+- [API Call Tool](../../../developer-guide/etendo-copilot/available-tools/api-call-tool.md)
 
 - **DBQueryExec - Webhook**: This Webhook allows the Agent to execute SQL queries in the database. The agent call the Webhook to execute the query in the database and returns the result to the Agent. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
 
