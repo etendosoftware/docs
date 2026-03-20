@@ -302,6 +302,8 @@ plugins:
                     - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
               - New UI:
                 - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+                - How-To Guides:
+                  - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
             - Developer Guide:
               - Overview: developer-guide/overview.md
@@ -1188,6 +1190,8 @@ nav:
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
     - New UI:
       - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+      - How-To Guides:
+        - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md

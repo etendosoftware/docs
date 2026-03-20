@@ -34,7 +34,7 @@ The following procedure uses `M_Product_Category` as an example.
 
 1. Access the Etendo ERP Classic environment with the **System Administrator** role.
 2. Navigate to the **Tables and Columns** window.
-3. Search for the master table — in this case, `M_Product_Category` (Product Category).
+3. Search for the master table — in this case, `M_Product_Category` (Product Category). This is the table **being referenced** by the foreign key (e.g., the table that other tables point to via `M_Product_Category_ID`). The color column must be added here, not in the referencing table.
 4. In the **Columns** tab, create a new column using the module prefix (e.g., `EM_CRM_Color` or `EM_SMF_Color`).
 5. Assign the **Color** reference type to the new column. This is the key step that allows the system to recognize the column's purpose.
 6. Set the length to 7 or 10 characters — sufficient to store a hex code such as `#FF0000`.
@@ -52,7 +52,7 @@ The following procedure uses `M_Product_Category` as an example.
 
 2. Navigate to the **Window, Tab and Field** window in Etendo Classic.
 3. Search for the **Product Category** window.
-4. In the **Field** tab, add or reload the record for the new column so it appears in the classic ERP interface.
+4. In the **Field** tab, check if the new column already appears. If it does not, use the **Create Fields from Application Dictionary** process (available in the tab toolbar) to synchronize the window fields with the updated column definition. This step makes the field visible in the Classic ERP interface.
 
 ### 3. Verify the Configuration
 
@@ -62,7 +62,7 @@ The following procedure uses `M_Product_Category` as an example.
 4. Open the Workspace UI and navigate to the **Products** window (`M_Product`).
 5. In the products grid, locate the **Product Category** column (`M_Product_Category_ID`).
 
-The frontend detects the color configuration, adds the `_extraProperties` request parameter, and renders the category value as a colored badge.
+If the configuration is correct, the **Product Category** value will be rendered as a colored **Tag** badge instead of plain text, using the hex color you assigned in the previous step. The badge will automatically calculate a contrasting text color for readability.
 
 !!! info
     This behavior is module-agnostic and variable-agnostic. Any master table with a column configured with the **Color** reference type is automatically supported across grids and forms without additional development.
@@ -73,9 +73,8 @@ The frontend detects the color configuration, adds the `_extraProperties` reques
 
 Color badge rendering applies only to **Foreign Key fields (TableDir / Table)** that reference a master table with a color column configured. Examples:
 
-- `M_Product_Category_ID` in the Products table.
-- `Priority_ID` in the Tasks table.
-- `C_Currency_ID` in the Invoices table.
+- `M_Product_Category_ID` in the Products table — the reference used throughout this guide.
+- Any other foreign key column pointing to a master table that has a column with the **Color** reference type configured.
 
 ### Fields Not Affected
 

@@ -21,7 +21,7 @@ Para que el color se refleje en la UI, el campo en cuestión en la tabla princip
 La implementación actual en Workspace UI y Etendo funciona de manera coordinada gracias a una simbiosis entre la metadata y el frontend de React:
 
 1. **Inyección de Metadata:** El backend deduce si una tabla hija necesita mostrar un color verificando si el diccionario de datos tiene configurada la columna con la Referencia asignada al tipo "Color". De ser así, inyecta `colorFieldName` indicando cómo se llama esta propiedad hacia la metadata gráfica.
-2. **Petición del lado del Front:** Los hooks de obtención de datos (Datasource) en NextJS revisan activamente cada columna definida. Si alguna especifica la metadata `colorFieldName`, el frontend añade al vuelo esa dependencia para solicitarla en la Request a la API (ej: `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). Esto le fuerza al backend a hacer los JOIN correspondientes y volcar el valor final del color al formato JSON.
+2. **Petición del lado del Front:** Los hooks de obtención de datos (Datasource) en Next.js revisan activamente cada columna definida. Si alguna especifica la metadata `colorFieldName`, el frontend añade al vuelo esa dependencia para solicitarla en la Request a la API (ej: `_extraProperties=M_Product_Category_ID$EM_SMF_Color`). Esto le fuerza al backend a hacer los JOIN correspondientes y volcar el valor final del color al formato JSON.
 3. **Renderizado en la Interfaz:** Al momento de procesar las celdas, el frontend comprueba si recibió esta propiedad vinculada al color y le asigna automáticamente el componente visual en forma de 'Tag' (pastilla envuelta), usando el valor hexa recuperado y calculando un texto con buen contraste de legibilidad.
 
 Esta arquitectura explícita garantiza eficiencia sin corromper el payload estándar. De igual manera, se actualiza en tiempo real tanto en la **Vista de Formulario (Form View)**, en la **Vista de Grilla Principal (Grid View)**, y a la hora de mutar la información por medio de la **Edición en Línea (Inline Editing)** (donde el cliente vuelve a efectuar una petición del registro pidiendo los `_extraProperties` de colores al guardar exitosamente).
@@ -45,17 +45,17 @@ A continuación, se detalla el procedimiento exacto para probar e implementar es
 ### 2. Aplicar la tabla en la BD y mostrar la columna
 
 Luego de definir la columna en el diccionario de datos, debes materializarla en la base de datos:
-1. Aplica los cambios mediante el proceso clásico compilando en consola (ej. `gradlew smartbuild` o reconstruyendo de manera apropiada la base de datos).
+1. Aplica los cambios mediante el proceso clásico compilando en consola (ej. `./gradlew smartbuild` o reconstruyendo de manera apropiada la base de datos).
 2. Ve a la ventana **Window, Tab and Field** (Ventana, Pestaña y Campo) dentro del entorno Etendo.
 3. Busca la ventana correspondiente, en este caso **Product Category**.
-4. Asegúrate recargar la pestaña o cerciorarte de agregar/crear el registro para la pestaña central de **Field** respecto a esa nueva columna, logrando así que el campo esté listo para ser usado y se visualice en la interfaz del ERP clásico.
+4. Asegúrate de recargar la pestaña o cerciorarte de agregar/crear el registro para la pestaña central de **Field** respecto a esa nueva columna, logrando así que el campo esté listo para ser usado y se visualice en la interfaz del ERP clásico.
 
 ### 3. Prueba de Fuego (¡La Magia Visual!)
 
 1. Abre la ventana **Product Category** (Categoría de Producto) en Etendo Classic.
 2. Selecciona un registro existente, por ejemplo la categoría titulada "Standard" (o directamente sobre la que decidas usar).
 3. Escribe un valor hexadecimal identificativo y bien llamativo sobre el nuevo campo de color. Por ejemplo: `#8E44AD` (Un color púrpura oscuro), y guarda finalmente el registro.
-4. Ahora, ve a través del frontend de **NextJS de Workspace UI**.
+4. Ahora, ve a través del frontend de **Next.js de Workspace UI**.
 5. Abre la ventana principal respectiva para **Products** (Productos o `M_Product`).
 6. En aquella grilla resultante de productos, busca la columna "Categoría de Producto" (`M_Product_Category_ID`).
 7. **¡Sorpresa!** Si esta categoría suele verse como un simple texto azul detallando el contenido "Standard", ahora notarás un cambio muy atractivo. Al pedirse los datos, el frontend detectará que hay una configuración para pedir metadatos de ese color (`_extraProperties`), inyectará la petición extra, la base de datos lo procesará automáticamente por detrás y la UI terminará pintando el texto en una hermosa pastilla redondeada color púrpura.
