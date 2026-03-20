@@ -34,7 +34,7 @@ The Client window allows the user to view and maintain the clients created by ru
 ![Client Window](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-window.png)
 
 !!! info
-    The field **Days To Password expiration** allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
+    The field **Days To Password expiration** allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes their password.
 
 The value of the field determines the day limit during which a password must be valid for users:
 
@@ -117,7 +117,7 @@ Additional information allowed to be specified:
 
 ### Email Configuration
 
-The **Email Configuration** tab allows configuring the SMTP server used
+The **Email Configuration** tab allows the user to configure the SMTP server used
 to send documents by email (e.g. orders or invoices).
 
 Email can be configured at three levels: Client, Organization, and User.
