@@ -117,12 +117,13 @@ Additional information allowed to be specified:
 
 ### Email Configuration
 
-The **Email Configuration** tab allows the user to configure the SMTP server used
-to send documents by email (e.g. orders or invoices).
+The **Email Configuration** tab allows configuring a global SMTP server at the client level, shared by all organizations and users within the client.
 
-Email can be configured at three levels: Client, Organization, and User.
-For the full field reference and configuration instructions, see
-[How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
+![Client Email Configuration](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-email-configuration.png)
+
+
+!!! info
+    For the full field reference and step-by-step configuration instructions, see [How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensions
 

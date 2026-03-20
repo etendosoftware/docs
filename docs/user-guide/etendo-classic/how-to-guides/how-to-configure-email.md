@@ -23,54 +23,6 @@ Etendo supports a **multi-level SMTP configuration** that allows email settings 
 
 ---
 
-## Steps
-
-### 1. Configure at Client Level
-
-:material-menu: `Application` > `General Setup` > `Client` > `Client` > `Email Configuration` tab
-
-The **Email Configuration** sub-tab of the Client window defines the global SMTP settings. This is the fallback configuration shared by all organizations and users of that client.
-
-![Client Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/client-email-configuration.png)
-
-Fill in the SMTP fields. For a description of each field, see [Field Reference](#field-reference).
-
-After filling in the fields, click the **Test SMTP Connection** button to verify that Etendo can reach the server with the provided credentials.
-
-!!! info
-    The **Last Test Date** field is updated automatically after each test, and the **Test Successful** checkbox reflects whether the last test passed. A successful test does not guarantee that all emails are delivered, but it confirms that the connection and authentication are working correctly.
-
----
-
-### 2. (Optional) Override at Organization Level
-
-:material-menu: `Application` > `General Setup` > `Enterprise Model` > `Organization` > `Email Configuration` tab
-
-Each organization can define its own SMTP settings in the **Email Configuration** sub-tab. When present and active, this configuration overrides the client-level settings for all emails sent by users of that organization.
-
-![Organization Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/organization-email-configuration.png)
-
-The fields are the same as those described in the [Field Reference](#field-reference) section.
-
----
-
-### 3. (Optional) Override at User Level
-
-:material-menu: `Application` > `General Setup` > `Security` > `User` > `Email Configuration` tab
-
-An individual user can have their own SMTP credentials configured in the **Email Configuration** sub-tab of the User window. This takes the highest priority: if the user has a valid active configuration, it is always used regardless of organization or client settings.
-
-![User Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/user-email-configuration.png)
-
-The fields are the same as those described in the [Field Reference](#field-reference) section.
-
----
-
-!!! info
-    Each level can store more than one SMTP configuration record. **Only one record can be marked as Default per level**, and that is the one selected when the cascade is evaluated.
-
----
-
 ## How the Cascade Works
 
 When Etendo sends an email (e.g. an invoice), it resolves the SMTP configuration using the following priority order:
