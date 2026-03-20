@@ -98,13 +98,22 @@ When prompted, provide:
     ```
     For more details, see the [How to Use the Interactive Setup](../../how-to-guides/how-to-use-interactive-setup.md) guide.
 
-### 6. Compile and Deploy
+### 6. Start Docker Services
+
+```bash title="Terminal"
+./gradlew resources.up
+```
+
+This starts the **Copilot** and **Main UI** containers.
+
+### 7. Compile and Deploy
 
 ```bash title="Terminal"
 ./gradlew install smartbuild --info
 ```
+This creates the database, compiles the sources, and deploys to the local Tomcat directory.
 
-### 7. Configure Apache
+### 8. Configure Apache
 
 From the `/opt/EtendoERP` directory, run the Apache configuration script:
 
@@ -115,13 +124,6 @@ sudo ./apache-config.sh <domain>
 
 This configures Apache as a reverse proxy for the server. Once complete, the Main UI and Classic UI URLs are set automatically based on the domain provided.
 
-### 8. Start Docker Services
-
-```bash title="Terminal"
-./gradlew resources.up
-```
-
-This starts the **Copilot** and **Main UI** containers.
 
 ### 9. Start Tomcat
 

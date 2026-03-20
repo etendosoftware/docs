@@ -98,7 +98,14 @@ The template configures `gradle.properties` automatically with all required sett
     ```
     For more details, see the [How to Use the Interactive Setup](../../how-to-guides/how-to-use-interactive-setup.md) guide.
 
-### 5. Install Etendo
+### 5. Start Docker Services
+
+```bash title="Terminal"
+./gradlew resources.up --info
+```
+This starts the **Copilot** and **Main UI** containers. Both are included in the base installation.
+
+### 6. Install Etendo
 
 ```bash title="Terminal"
 ./gradlew install smartbuild --info
@@ -106,13 +113,6 @@ The template configures `gradle.properties` automatically with all required sett
 
 This creates the database, compiles the sources, and deploys to the local Tomcat directory.
 
-### 6. Start Docker Services
-
-```bash title="Terminal"
-./gradlew resources.up --info
-```
-
-This starts the **Copilot** and **Main UI** containers. Both are included in the base installation.
 
 ## Run in IntelliJ
 
