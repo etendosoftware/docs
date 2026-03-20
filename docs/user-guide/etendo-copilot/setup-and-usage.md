@@ -98,6 +98,9 @@ Fields to note:
 
 - **Sync Agent**: This process takes care of updating or creating a new agent, in case it does not exist. In addition to creating the agent based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.
 
+    !!! info "Sync from any role"
+        Any user with access to the Agent window can synchronize agents, regardless of their role. When synchronizing, the knowledge base files are scoped to the user's client, ensuring that each client's data remains isolated in the vector database. Files belonging to the system client (`*`) are shared across all clients.
+
 - **Refresh Preview**: Show only when agent type is **Langraph**, allowing the user to refresh the Graph Preview when changes to the team members are introduced.
 
 - **Check hosts**: This button checks the configuration of Etendo and Copilot, to ensure that the communication between them is correct. In case of any error, a message will be shown.
@@ -122,7 +125,7 @@ Fields to note:
 - **File**: The file selected as knowledge base.
 - **Behaviour**: The way in which the agent will use the file. It has multiple available options:
 
-    - **[Agent] Add to the agent as Knowledge Base**: Suitable for large files. The agent uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Agent](#buttons) button.
+    - **[Agent] Add to the agent as Knowledge Base**: Suitable for large files. The agent uses a a default `Knowledge Base Search tool` to retrieve information during execution. Requires synchronization using the [Sync Agent](#buttons) button. When synchronized, documents in the vector database are tagged with the client ID, ensuring data isolation between clients.
     - **[Agent] Append the file content to the prompt**: Recommended for small files with essential data. The file content is inserted into the prompt at each @alias@ or appended at the end if no alias is defined.
     - **[Agent] SPEC: Add as agent specification**: Used for `OpenAPI Specification` type files. Automatically generates tools for each method and endpoint, allowing the agent to interact with APIs.
     - **[User question] Append content to each question**: Best when file content changes frequently. The file is appended to each user message, ensuring the agent always receives updated data.
@@ -284,7 +287,7 @@ Fields to note:
 
     === "HQL Query"
 
-        This type allows using an HQL query result as a file for knowledge base file.
+        This type allows using an HQL query result as a file for knowledge base file. HQL Query files are **multi-client**: when synchronizing, the query is executed separately for each client, generating a client-specific version of the results. This ensures each client's knowledge base contains only its own data.
 
         ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
 

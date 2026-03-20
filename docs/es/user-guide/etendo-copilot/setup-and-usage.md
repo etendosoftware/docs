@@ -93,6 +93,9 @@ Campos a tener en cuenta:
 
 - **Sincronizar agente**: este proceso se encarga de actualizar o crear un nuevo agente, en caso de que no exista. Además de crear el agente en base a las configuraciones, inicialmente obtiene o actualiza la lista de modelos y, finalmente, obtiene y/o sube los archivos usados como base de conocimiento.
 
+    !!! info "Sincronización desde cualquier rol"
+        Cualquier usuario con acceso a la ventana de Agente puede sincronizar agentes, independientemente de su rol. Al sincronizar, los archivos de la base de conocimiento se limitan al cliente del usuario, asegurando que los datos de cada cliente permanezcan aislados en la base de datos vectorial. Los archivos pertenecientes al cliente del sistema (`*`) se comparten entre todos los clientes.
+
 - **Actualizar vista previa**: se muestra solo cuando el tipo de agente es **Langraph**, permitiendo al usuario actualizar la Vista previa del grafo cuando se introducen cambios en los miembros del equipo.
 
 - **Comprobar hosts**: este botón comprueba la configuración de Etendo y Copilot, para asegurar que la comunicación entre ambos es correcta. En caso de error, se mostrará un mensaje.
@@ -116,7 +119,7 @@ Campos a tener en cuenta:
 - **Archivo**: el archivo seleccionado como base de conocimiento.
 - **Comportamiento**: la forma en que el agente utilizará el archivo. Tiene múltiples opciones disponibles:
 
-    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones).
+    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones). Al sincronizar, los documentos en la base de datos vectorial se etiquetan con el ID del cliente, asegurando el aislamiento de datos entre clientes.
     - **[Agente] Añadir el contenido del archivo al prompt**: recomendado para archivos pequeños con datos esenciales. El contenido del archivo se inserta en el prompt en cada @alias@ o se añade al final si no se define ningún alias.
     - **[Agente] SPEC: Añadir como especificación del agente**: usado para archivos de tipo `OpenAPI Specification`. Genera automáticamente herramientas para cada método y endpoint, permitiendo que el agente interactúe con APIs.
     - **[Pregunta del usuario] Añadir contenido a cada pregunta**: lo mejor cuando el contenido del archivo cambia con frecuencia. El archivo se añade a cada mensaje del usuario, asegurando que el agente siempre reciba datos actualizados.
@@ -276,7 +279,7 @@ Campos a tener en cuenta:
 
     === "Consulta HQL"
 
-        Este tipo permite usar el resultado de una consulta HQL como archivo para el archivo de base de conocimiento.
+        Este tipo permite usar el resultado de una consulta HQL como archivo para el archivo de base de conocimiento. Los archivos de consulta HQL son **multicliente**: al sincronizar, la consulta se ejecuta por separado para cada cliente, generando una versión específica de los resultados por cliente. Esto asegura que la base de conocimiento de cada cliente contenga solo sus propios datos.
 
         ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
 
