@@ -443,13 +443,13 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 
 **Print Labels**
 
-This button generates barcode labels for **all lines** of the selected Inbound Receipt document.  
-Each label is created with the **full set of attributes defined during the reception**, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+This button generates barcode labels for **all lines** of the selected Inbound Receipt document.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet). If no attributes are defined for a product, the label displays *No attributes*. If no logistics unit applies, the logistics unit line is not shown.
 
-- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.  
+- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.
   This means that as many labels are printed as units specified in the **Operative Quantity** field.
 - For **lines with logistics units (Box or Pallet)** where multiple units are received (for example, 3 boxes), the system generates **one unique barcode label per logistics unit**, since each unit is registered as a unique referenced inventory.
-- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.  
+- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.
   In this case, the label identifies the **logistics unit and its locator**, as it may contain multiple grouped products.
 
 This button is available **only when the Inbound Receipt is completed**.
@@ -472,8 +472,8 @@ This button is available **only when the Inbound Receipt is completed**.
 
 **Print Line Label**
 
-This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.  
-Each label contains the **complete set of attributes assigned at reception time** for the selected lines.
+This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet), following the same display rules as the **Print Labels** button.
 
 The label generation follows the same rules described above, applied **only to the selected line or lines**:
 
