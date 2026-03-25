@@ -59,7 +59,7 @@ Add invoice lines using one of the following methods:
 
 ### Completing the Invoice
 
-Click **Complete** to finish the invoice. This creates the Payment Plan and updates the Payment Monitor. Non-stockable BOM products are exploded automatically if needed.
+Click **Complete** to finish the invoice. This creates the Payment Plan and updates the Payment Monitor. If the invoice contains a bundled product (a product made up of multiple components, also called a Bill of Materials or BOM), the system automatically breaks it down into its individual component lines.
 
 After completing the invoice, the following actions are available:
 
@@ -73,7 +73,7 @@ Once the Purchase Invoice header is saved, add one or more invoice lines for the
 
 Fields to note:
 
-- **Financial Invoice Line**: Select this for lines that are not products (for example, a G/L item or an asset). The Product field is replaced by an Account field.
+- **Financial Invoice Line**: Select this for lines that are not physical products — for example, a general ledger account (G/L item) or a fixed asset charge. The Product field is replaced by an Account field.
 - **Attribute Set Value**: Shown if the product uses attributes (color, size, serial number, etc.).
 - **Purchase Order Line / Goods Receipt Line**: Links the invoice line to the related Purchase Order or Goods Receipt line, if any.
 
@@ -100,10 +100,10 @@ These expense-plan values can be defaulted from the product configuration. If an
 
 ### Explode
 
-The **Explode** button appears when the selected line contains a non-stockable BOM product that has not been exploded yet. Exploding replaces the BOM line with its individual components in the invoice.
+The **Explode** button appears when a selected invoice line contains a bundled product (Bill of Materials) that has not yet been broken down into its components. Clicking this button replaces the bundle line with one line per component, so each item appears individually on the invoice.
 
 !!! warning
-    This action cannot be undone. To revert it, delete the component lines first and then re-add the non-stockable BOM product.
+    This action cannot be undone. To revert it, delete the component lines first and then re-add the bundled product.
 
 ### Match LC Cost
 
@@ -149,7 +149,7 @@ The **Tax** tab summarizes tax-related information for the whole purchase invoic
 The **Tax Amount** field reflects the tax value calculated automatically based on the tax rate and tax base settings.
 
 !!! info
-    It is possible to add a feature that allows controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems or when invoices are submitted to **governmental entities**. It supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external, governmental, or regulatory requirements.
+    If your organization needs to adjust tax amounts on invoices to match external systems or regulatory requirements (for example, to correct rounding differences of a few cents), this functionality is available through the **Financial Extensions Bundle**.
 
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
@@ -164,7 +164,7 @@ This tab lists the discounts applied to the purchase invoice. Discounts can be:
 - **Automatically applied** based on the supplier's Business Partner configuration.
 - **Manually entered** for specific invoice adjustments.
 
-Each discount record shows the discount percentage and whether it is applied in cascade (compounding on the already-discounted amount) or independently.
+Each discount record shows the discount percentage and whether it is applied in **cascade** (each discount is calculated on the price already reduced by the previous discount — for example, 10% off 100 USD = 90 USD, then 5% off 90 USD = 85.50 USD) or **independently** (each discount is calculated on the original price — 10% + 5% = 15% off 100 USD = 85 USD).
 
 !!! info
     For more information about discount configuration, visit [Basic Discount](../../master-data-management/master-data.md#basic-discount).
@@ -200,7 +200,7 @@ When an invoice is voided using the [Reactivate](#reactivate) button with the **
 
 When manually creating a partial reversal (*AP Credit Memo* or *Reversed Purchase Invoice*):
 
-- The user must manually add the original invoice in the **Reversed Invoices** tab of the reversal document to establish the link between both documents.
+- To link a partial reversal to the original invoice: open the reversal document (the AP Credit Memo or Reversed Purchase Invoice you just created), go to its **Reversed Invoices** tab, and add the original invoice number. This step is required to keep the audit trail between both documents.
 
 ## Exchange Rates
 
@@ -313,9 +313,9 @@ It is also possible to partially void a supplier invoice by manually creating on
 - **AP Credit Memo**: invoiced quantity is positive.
 - **Reversed Purchase Invoice**: invoiced quantity is negative.
 
-The created document must be manually linked to the invoice being reversed in the **Reversed Invoices** tab.
+To link a partial reversal to the original invoice: open the reversal document (the AP Credit Memo or Reversed Purchase Invoice you just created), go to its **Reversed Invoices** tab, and add the original invoice number. This step is required to keep the audit trail between both documents.
 
-To learn more, visit [Reversed Invoices](../../sales-management/transactions.md#reversed-invoices).
+To learn more, visit [Reversed Invoices](#reversed-invoices).
 
 The **AP Credit Memo** posting looks the same as the **Reversed Purchase Invoice** posting. The main difference between the two document types is:
 
@@ -332,7 +332,7 @@ Register one or more payments against a purchase invoice using the **Add Payment
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the **Bulk Posting** button.
 
@@ -352,7 +352,7 @@ The Bulk Completion functionality allows the user to complete, reactivate, or vo
     For more information, visit [the Bulk Completion module user guide](../../../optional-features/bundles/essentials-extensions/bulk-completion.md).
 
 !!! warning
-    The bulk voiding option fails when the [Purchase Invoice Validation](../../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is installed. This is because the module includes a default preference that prevents the duplication of invoices with the same business partner, accounting year, and supplier reference. Since bulk voiding attempts to reverse invoices, it leads to duplication, as the supplier reference for each reversed invoice cannot be modified. As a result, the module prevents the bulk voiding process from functioning.
+    **Note:** If the [Purchase Invoice Validation](../../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md) module is active in your system, bulk voiding will not work. In that case, void each invoice individually using the **Reactivate > Void** option, which allows entering a unique supplier reference for each reversal.
     ![popup-bulk-void](../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-bulk-void.png)
 
 ### Remove Payment
@@ -360,7 +360,7 @@ The Bulk Completion functionality allows the user to complete, reactivate, or vo
 The Payment Removal functionality deletes and reactivates payments. It also allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 To remove a payment, select the corresponding document and click the **Remove Payment** button. The following related records are also removed:
 
@@ -371,16 +371,16 @@ To remove a payment, select the corresponding document and click the **Remove Pa
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
+![Remove Payment confirmation dialog](../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
 
 ### Unvoid
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Unvoid** button reactivates voided purchase invoices. Select the invoice and click **Unvoid** to restore it.
 
-![](../../../../../assets/drive/1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW.png)
+![Unvoid button restoring a voided purchase invoice to Complete status](../../../../../assets/drive/1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW.png)
 
 Once the process is finished, the purchase invoice status turns to *Complete*.
 
@@ -388,7 +388,9 @@ Once the process is finished, the purchase invoice status turns to *Complete*.
     In the case of the standard version of the module, also unvoid the corresponding reversed invoice.
 
 !!! warning
-    This reactivation process affects the accounting. If the original information is not manually removed from the reactivated document, accounting entries are doubled.
+    **Important:** When you unvoid an invoice, the system restores the original accounting entries. If the reversed invoice was already posted, those entries may still exist, which would cause duplicate accounting entries.
+
+    Before posting the reactivated invoice, check the **Accounting** tab and delete any existing entries that were created by the prior void. If you are unsure whether entries exist, contact your system administrator before proceeding.
 
 !!! info
     Check the Technical documentation about [Advanced Financial Docs Processing](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing) to extend the process.
@@ -396,7 +398,7 @@ Once the process is finished, the purchase invoice status turns to *Complete*.
 ### Modify Payment Plan
 
 !!! info
-    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Advanced Bank Account Management module adds a **Bank Account** field to the Purchase Invoice header. This field is automatically filled with the bank account related to the address or business partner of the invoice. The **Modify Payment Plan** button is also added for flexible payment management.
 
@@ -407,17 +409,19 @@ The Advanced Bank Account Management module adds a **Bank Account** field to the
 
 ## Intercompany
 
+If your company operates multiple legal entities within Etendo (for example, a parent company that purchases on behalf of a subsidiary), the Intercompany functionality automatically creates the matching sales invoice in the receiving organization when a purchase invoice is posted — eliminating the need to register the transaction twice.
+
 When orders or invoices involve two or more organizations that belong to the same client, this functionality automatically generates the corresponding inverse document.
 
 !!! info
     For more information, visit [the Intercompany module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ---
 
-This work is a derivative of [Procurement Management](http://wiki.openbravo.com/wiki/Procurement_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Procurement Management](http://wiki.openbravo.com/wiki/Procurement_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
