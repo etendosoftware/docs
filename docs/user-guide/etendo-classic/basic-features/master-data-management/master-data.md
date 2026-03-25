@@ -533,9 +533,11 @@ Fields to note:
 - **First** and **Last Name** of the contact.
 - **Email** of the contact.
 - **Phone** of the contact.
-- **Comments**: To enter additional information.
+- **Alternative Phone** of the contact.
 - **Position** in the business partner.
-- **Active** flag: to indicate if this contact is available for use or disabled. 
+- **Comments**: To enter additional information.
+- **Active** flag: to indicate if this contact is available for use or disabled.
+- **Default** flag: marks this contact as the default one for the business partner. This contact's email address will be automatically suggested in the email popup when sending emails from documents related to the business partner.
 - **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
 - **Default**: Checkbox that marks this contact as the default recipient when sending documents by email. When selected, this contact's email address is automatically preloaded in the *To* field of the Email Options popup. If no contact has this flag set, the system falls back to the last used email for the business partner or, if none exists, to the first active contact ordered alphabetically.
 
