@@ -59,7 +59,7 @@ The *General Ledger Configuration* is linked to the *Account Tree* as the *Accou
 
 ### Accounting file 
 
-Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup/account-tree.mdaccount-tree)) to upload into the system from the field *Accounting File*. 
+Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md)) to upload into the system from the field *Accounting File*. 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
@@ -91,7 +91,7 @@ These modules are useful as tax configurations generally apply to all organizati
     Datasets Installation: additional modules can be added from the [Enterprise Module Management](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md) window within the system.
 
 
-Every new [Client](../../../user-guide/etendo-classic/basic-features/general-setup/client.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
+Every new [Client](../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
 
 - Organization
 - Business Partner

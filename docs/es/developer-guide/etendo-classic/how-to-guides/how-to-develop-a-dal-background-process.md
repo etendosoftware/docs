@@ -27,7 +27,7 @@ Tenga en cuenta que este es un ejercicio sencillo y que estamos demostrando cóm
 En esta sección se mostrará cómo un proceso Java puede implementarse como un proceso en segundo plano. No obstante, un proceso Java también puede llamarse directamente desde la interfaz de usuario y tener una interfaz de usuario que permita introducir parámetros.
 
 !!!info
-      Para una descripción genérica de los procesos Java, consulte [Procesos](../../../developer-guide/etendo-classic/concepts/Processes.md).
+      Para una descripción genérica de los procesos Java, consulte [Procesos](../../../developer-guide/etendo-classic/concepts/processes.md).
 
 ##  Definición dentro del diccionario de aplicación
 
@@ -66,7 +66,7 @@ Dado que el primer método acabará quedando obsoleto debido a la dependencia de
 La Data Access Layer se trata en varios otros artículos y secciones.
 
 !!!info
-      Para más información, lea el manual de referencia de [Data Access Layer](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md).
+      Para más información, lea el manual de referencia de [Data Access Layer](../../../developer-guide/etendo-classic/concepts/data-access-layer.md).
 
 ##  Implementación
 
@@ -208,3 +208,5 @@ A continuación, navegue a la ventana `Master Data Management` > `Product` y enc
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-5.png)
 
 Este trabajo es una obra derivada de [Cómo desarrollar un proceso en segundo plano DAL](http://wiki.openbravo.com/wiki/How_to_develop_a_DAL_background_process){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

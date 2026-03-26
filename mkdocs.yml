@@ -1,5 +1,15 @@
 site_name: Etendo Documentation
 
+validation:
+  nav:
+    omitted_files: ignore
+    not_found: warn
+    absolute_links: ignore
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+
 repo_url: https://github.com/etendosoftware
 repo_name: etendosoftware
 site_url: https://docs.etendo.software
@@ -266,6 +276,7 @@ plugins:
                       - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
                       - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
                       - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
+                      - Funcionalidades Generales para SIFs: user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs.md
                       - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
                       - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
                       - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md

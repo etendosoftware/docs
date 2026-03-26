@@ -38,7 +38,7 @@ El Agente de Desarrollo actúa como un asistente integrado que automatiza y acel
 
 **Herramientas**
 
-- [Herramienta de llamada a la API](../available-tools/openapi-tool.md)
+- [Herramienta de llamada a la API](../available-tools/api-call-tool.md)
 - [Herramienta de lectura de archivos](../available-tools/read-file-tool.md)
 - [Herramienta de escritura de archivos](../available-tools/write-file-tool.md)
 
@@ -69,7 +69,7 @@ El **Agente de creación de procesos de botón** simplifica el proceso de creaci
 
 **Herramientas**
 
-- [ApiCallTool](../available-tools/openapi-tool.md) 
+- [ApiCallTool](../available-tools/api-call-tool.md) 
     
 - [ReadFileTool](../available-tools/read-file-tool.md)
 
@@ -362,7 +362,7 @@ El **Creador de mensajes** agiliza el proceso de creación y registro de AD_Mess
 
 **Herramientas**
 
-- [ApiCallTool](../available-tools/openapi-tool.md)
+- [ApiCallTool](../available-tools/api-call-tool.md)
 
 **Funcionalidad**
 
@@ -429,7 +429,7 @@ Etendo Classic le permite crear módulos que proporcionan funcionalidad adiciona
 
 **Herramientas**
 
-- [ApiCallTool](../available-tools/openapi-tool.md)
+- [ApiCallTool](../available-tools/api-call-tool.md)
 
 **Funcionalidad**
 
@@ -564,7 +564,7 @@ Es especialmente útil en el proceso de desarrollo, ya que permite a administrad
 
 **Herramientas**
 
-- [Herramienta de llamada a API](../available-tools/openapi-tool.md)
+- [Herramienta de llamada a API](../available-tools/api-call-tool.md)
 
 **Funcionalidad**
 
@@ -684,7 +684,7 @@ El agente opera mediante un flujo de trabajo guiado que incluye validación de d
 
 **Herramientas**
 
-- [Herramienta de llamada a API](../available-tools/openapi-tool.md)
+- [Herramienta de llamada a API](../available-tools/api-call-tool.md)
 - [Herramienta de lectura de archivos](../available-tools/read-file-tool.md)
 - [Herramienta de escritura de archivos](../available-tools/write-file-tool.md)
 
@@ -867,3 +867,5 @@ Este agente ayuda al usuario a inicializar entidades u organizaciones.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

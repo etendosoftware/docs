@@ -42,7 +42,7 @@ The Development Agent acts as a built-in assistant that automates and accelerate
 
 **Tools**
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+- [API Call Tool](../available-tools/api-call-tool.md)
 - [Read File Tool](../available-tools/read-file-tool.md)
 - [Write File Tool](../available-tools/write-file-tool.md)
 
@@ -76,7 +76,7 @@ The **Button Process Creator** simplifies the process of creating and registerin
 
 **Tools**
 
-- [ApiCallTool](../available-tools/openapi-tool.md) 
+- [ApiCallTool](../available-tools/api-call-tool.md) 
     
 - [ReadFileTool](../available-tools/read-file-tool.md)
 
@@ -379,7 +379,7 @@ The **Message Creator** streamlines the process of creating and registering AD_M
 
 **Tools**
 
-- [ApiCallTool](../available-tools/openapi-tool.md)
+- [ApiCallTool](../available-tools/api-call-tool.md)
 
 **Functionality**
 
@@ -447,7 +447,7 @@ Etendo Classic allows you to create modules that provide additional functionalit
 
 **Tools**
 
-- [ApiCallTool](../available-tools/openapi-tool.md)
+- [ApiCallTool](../available-tools/api-call-tool.md)
 
 **Functionality**
 
@@ -591,7 +591,7 @@ It is particularly useful in the development process, enabling system administra
 
 **Tools**
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+- [API Call Tool](../available-tools/api-call-tool.md)
 
 **Functionality**
 
@@ -716,7 +716,7 @@ The agent operates through a guided workflow that includes data validation, sync
 
 **Tools**
 
-- [API Call Tool](../available-tools/openapi-tool.md)
+- [API Call Tool](../available-tools/api-call-tool.md)
 - [Read File Tool](../available-tools/read-file-tool.md)
 - [Write File Tool](../available-tools/write-file-tool.md)
 

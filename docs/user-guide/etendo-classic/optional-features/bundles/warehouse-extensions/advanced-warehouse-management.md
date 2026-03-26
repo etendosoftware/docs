@@ -396,7 +396,7 @@ Fields to note:
 - **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
 - **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
-#### Buttons
+#### Available Process
 
 **Create Lines From Order**
 
@@ -410,13 +410,16 @@ This button appears when at least one line is selected. It allows multiple/mixed
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). 
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
+
+When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
     - Only lines from the same Sales Order can be grouped.  
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+    - Child logistics units remain associated with the parent logistics unit created from the button.
 
 **Clear Group By** 
 

@@ -17,14 +17,12 @@ The **Print Provider** module connects Etendo with printing platforms, offering 
 
 It allows each organization to configure its print provider, manage and synchronize the catalog of available printers, administer print templates, and execute on-demand printing from specific windows.
 
-The system provides a simple one-click printing workflow: the user selects the printer and template, and Etendo generates the document in the required format and sends it directly to the print provider.
-
-!!! info 
+!!! info
     This module includes by default the implementation of a specific print provider [Print Node](https://www.printnode.com/){target="_blank"}, and all configuration and usage examples are based on this provider. This service includes a free plan, although if you require large print volumes, you should consult the [service pricing](https://www.printnode.com/pricing){target="_blank"}.    
 
 
 !!! tip
-    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+    In addition, this module enables the implementation of custom print providers, exposes reusable back-end services that can be consumed by different modules, and a public API for printing from custom developments. For more information, visit: [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 ## Initial Setup
@@ -61,14 +59,12 @@ This window is used to register print providers. In this case, the **PrintNode**
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-window.png)
 
-Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the Provider Implementation window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../assets/user-guide/developer-guide/etendo-classic/bundles/platform/print-provider.md)
+Here, general information such as **Search Key** and **Name** is displayed. It also includes the specific **Provider Implementation** field that refers to the record created in the Provider Implementation window. For more information on how to create a print provider, visit [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
 #### Provider Params
 
 This tab defines the configuration values required for integration with a printing provider. This configuration is essential for the system to communicate correctly with your services.
-
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/print-provider-tab.png)
 
 The system allows the user to create any parameter that the printing provider requires, adapting to their needs. To add a new parameter, use the following fields:
 
@@ -129,22 +125,38 @@ Fields to note:
 
 ## Generate Printables
 
-This **button** is a reusable component of the print provider module that can be configured in Etendo windows according to business needs. It allows multiple selection of records to be printed, and when the button is pressed, a pop-up window opens allowing the supplier, desired printer, and number of copies to be selected. Once confirmed, the system generates the printable using the selected template and sends the print job to the configured provider.
+This **button** is a reusable component of the print provider module that can be configured in Etendo windows according to business needs. It allows multiple selection of records and, when pressed, opens a pop-up window where the user can optionally select a provider and printer, specify the number of copies, and choose whether to download the generated file.
 
 !!!info 
-    When selecting multiple records to print, the Number of Copies field indicates the number of copies of each selected record.
+    When selecting multiple records, the Number of Copies field indicates the number of copies of each selected record.
 
-For example, the **Print Provider** module integrates this button into the **Product** window, generating a barcode label for the product.
+For example, the **Print Provider** module integrates this button into the **Product** window, generating a barcode printable for the product.
 
 ![generate-printable](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable.png)
 
-The pop-up allows you to select a previously configured print provider, assign the corresponding printer from the list of available devices, and specify the number of copies. Multiple selections are allowed.
+The pop-up presents the following fields. Multiple record selection is allowed.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/generate-printable-popup.png)
 
-   - **Provider**: Select the previously configured print provider.
-   - **Printers**: Only displays printers associated with the selected provider. Loads the default printer, if available.
-   - **Number of Copies**: Number of copies to be printed.
+   - **Provider**: (Optional) Select a previously configured print provider. When left empty, the system operates in **download-only mode**: it generates the document and downloads it as a PDF without sending it to any printer.
+   - **Printers**: Only visible when a Provider is selected. Displays printers associated with the selected provider. Loads the default printer, if available.
+   - **Number of Copies**: Only visible when a Provider is selected. Number of copies to be printed. In download-only mode this field is hidden and defaults to one copy.
+   - **Download**: When set to **Yes**, the generated printable PDF file is also downloaded to the browser. This option is enabled by default and is always visible regardless of whether a provider is selected. In download-only mode (no provider selected), this field must remain set to **Yes**; otherwise, no action will be performed and a warning will be displayed.
+
+### Download-only Mode
+
+- If multiple records are selected, all generated labels are merged into a single PDF for download.
+- If some records fail to generate, the successfully generated labels are still downloaded and a warning is displayed indicating how many failed.
+- If all records fail to generate, an error message is shown.
+
+!!! tip
+    This mode is ideal for users who only need digital copies of their printables, for example to attach them to emails, archive them, or print them manually from a different device or application.
+
+### Print & Download Mode
+
+- If the print job is sent successfully, a success message is displayed with the print job ID.
+- If the print job fails but the label was generated, the PDF is still available for download (when Download is enabled) and a warning is shown.
+- If all print jobs fail and no labels were retained, an error message is displayed.
 
 !!! Warning
     The Print Providers module acts as a bridge between Etendo and the printer. Printer operational issues, such as low paper, low ink, or network connectivity problems, are not managed by this system.

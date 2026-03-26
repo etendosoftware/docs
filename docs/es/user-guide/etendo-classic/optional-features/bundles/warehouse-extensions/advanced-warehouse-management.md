@@ -390,8 +390,8 @@ Campos a tener en cuenta:
 - **Tipo de inventario referenciado**: Tipo de inventario referenciado asociado a la agrupación (p. ej., Caja, Palé).
 - **Línea de albarán**: Referencia al albarán generado al completar el albarán.  
 
-#### Botones
-
+#### Procesos disponibles
+  
 **Crear líneas desde pedido**
 
 Extrae líneas de producto desde pedidos de compra. Al pulsarlo, un pop-up muestra todos los productos disponibles, incluso de múltiples pedidos de compra. Puede seleccionar una o varias líneas para añadirlas a la solapa Líneas. Si se define un hueco, se asignará a todas las líneas seleccionadas; en caso contrario, puede establecerse individualmente por línea.
@@ -400,17 +400,20 @@ Extrae líneas de producto desde pedidos de compra. Al pulsarlo, un pop-up muest
 
 **Crear inventario referenciado**
 
-Este botón aparece cuando se selecciona al menos una línea. Permite realizar una agrupación múltiple/mixta en un único tipo de unidad logística (cajas, palés u otros tipos definidos en el sistema). Su función es reunir los productos seleccionados de la solapa Líneas en una agrupación específica, según el tipo de agrupación elegido.
+Este botón aparece cuando se selecciona al menos una línea. Permite realizar una agrupación múltiple/mixta en un único tipo de unidad logística (cajas, palés u otros tipos definidos en el sistema). Su función es reunir los productos seleccionados de la solapa Líneas en una agrupación específica, según el tipo de agrupación elegido. También admite la multiselección en las tarjetas de recepción, permitiendo a los usuarios seleccionar y agrupar varias líneas en una sola acción.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-La agrupación se refleja en la columna Agrupado por de las líneas seleccionadas (p. ej., Caja-1). 
+La agrupación se refleja en la columna Agrupado por de las líneas seleccionadas (p. ej., Caja-1).
+
+Cuando los elementos seleccionados ya pertenecen a unidades logísticas, el botón puede crear una unidad logística padre que contenga las unidades logísticas hijas seleccionadas. Por ejemplo, es posible crear un palé que agrupe cajas previamente identificadas durante el proceso de recepción. La jerarquía resultante se refleja entonces en el Inventario referenciado generado, preservando la relación padre-hijo y la trazabilidad del stock.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
     - Solo se pueden agrupar líneas del mismo **Pedido de venta**.  
     - Si una línea ya está agrupada y se incluye en una nueva agrupación, la agrupación anterior será reemplazada.
+    - Las unidades logísticas hijas permanecen asociadas a la unidad logística padre creada desde el botón.
 
 **Limpiar Agrupar por** 
 
@@ -1132,3 +1135,5 @@ Desde esta ventana puede ver y trabajar con todos los tipos de tareas, como Pick
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
