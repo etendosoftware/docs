@@ -276,3 +276,5 @@ Para hacerlo, la cláusula select de HQL para esa propiedad debe apuntar a una e
 Este trabajo es una obra derivada de [Selectores](http://wiki.openbravo.com/wiki/Selectors){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---
