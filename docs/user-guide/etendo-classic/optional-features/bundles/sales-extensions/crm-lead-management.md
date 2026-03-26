@@ -1,5 +1,6 @@
 ---
 title: CRM Lead Management
+status: beta
 tags:
     - CRM
     - Lead Management
@@ -14,6 +15,9 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
 
+!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+    This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
+
 ## Overview
 
 The **CRM Lead Management** module provides native lead tracking capabilities inside Etendo ERP. It allows the commercial team to register prospects, manage their full lifecycle through configurable statuses, organize follow-up tasks, and convert qualified leads into Business Partners — directly integrating with the Sales flow (quotations → orders → invoices).
@@ -21,6 +25,24 @@ The **CRM Lead Management** module provides native lead tracking capabilities in
 ## Initial Setup
 
 Before using the module, the following master data must be configured:
+
+### Lead Status
+
+:material-menu: `Application` > `CRM` > `Lead Status`
+
+The statuses that define the commercial pipeline stages can be managed from this window. New statuses can be added to adapt the pipeline to the organization's needs.
+
+!!! info
+    If custom statuses need to be exported as part of a module, this must be done using the **System Administrator** role. See the [CRM Lead Management Developer Guide](../../../../../developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md#lead-status) for details.
+
+### Lead Source
+
+:material-menu: `Application` > `CRM` > `Lead Source`
+
+The origin channels through which leads are captured (e.g., Web, Referral, Event, WhatsApp) can be managed from this window. New sources can be added as needed and will appear as options in the **Source** field of the Lead form.
+
+!!! info
+    If custom sources need to be exported as part of a module, this must be done using the **System Administrator** role. See the [CRM Lead Management Developer Guide](../../../../../developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md#lead-source) for details.
 
 ### Lead Classification
 
@@ -119,6 +141,7 @@ Additional rules:
 - Any status can transition to any other status.
 - Changing the status always generates a record in the **Status History** tab.
 - Changing to **Dead** automatically sets the Opportunity Status to **Lost**.
+- Transitioning **from Dead** to any other status automatically resets the Opportunity Status to **Open**.
 - Changing to **Converted** triggers the [Lead Conversion Process](#lead-conversion-process).
 
 Use the **Change Status** button in the toolbar to open the status change dialog and select the target status.
@@ -137,7 +160,7 @@ When a lead's status is changed to **Converted**, the system automatically creat
 
 - The lead must have a **Company** name.
 - The lead must have a **Location / Address**.
-- The lead must not already be in *Converted* or *Dead* status.
+- The lead must not already be in *Converted* status.
 
 When selecting *Converted* in the Change Status dialog, an optional **Business Partner Category** field appears to classify the newly created BP.
 
@@ -178,12 +201,13 @@ A value between 0% and 100% representing the likelihood of the lead converting i
 
 It is calculated automatically based on:
 
-- **Lead Status**: Base probability (New: 10%, Contacted: 25%, Qualified: 50%, Converted: 70%, Dead: 0%).
+- **Lead Status**: Base probability by status — New: 10%, Contacted: 25%, Qualified: 50%, Converted: 70%, Dead: 0%.
 - **Completed task in last 7 days**: +10 points.
-- **No activity in last 30 days**: -20 points.
-- **Quotations with Order Created status**: Up to +20 points.
-- **Quotations Under Evaluation**: Moderate positive contribution.
-- **Rejected quotations**: Negative contribution.
+- **No activity in last 30 days**: -20 points. Activity is defined as a task update or a status change. If the lead has no recorded activity at all (e.g., just created, no tasks), this penalty applies immediately.
+- **Quotations**: Up to +20 points based on their status. Order Created quotations count fully, Under Evaluation count at 50% weight, and Rejected quotations count as 0 — reducing the overall quotation score without applying a direct penalty.
+
+!!! info
+    Because the inactivity penalty (-20) applies when there is no recorded activity, a newly created lead starts at a lower probability than its status base value suggests. For example, a New lead starts at 0% (10 - 20, clamped) until a task or status change is registered.
 
 !!! info
     The probability is recalculated automatically on every save. Manually editing the field will be overridden on the next change.
@@ -212,6 +236,40 @@ When a lead is selected in a quotation:
 - The **Business Partner** field is automatically populated from the lead's linked BP.
 - Quotation status changes automatically update the lead's **Success Probability** and **Estimated Value**.
 - When a quotation reaches the *Order Created* status, the lead's **Opportunity Status** is automatically set to **Won**.
+
+---
+
+## Mobile App
+
+The CRM Lead Management module includes a mobile application that allows the sales team to manage their leads from any device, without needing access to the desktop ERP.
+
+The mobile experience is **task-driven**: the app shows the tasks assigned to the logged-in user, and all lead interactions — including data updates and status changes — are performed through those tasks.
+
+### Task List
+
+Upon opening the app, the user sees the list of CRM tasks assigned to them, ordered by priority and due date. Each task shows the lead it belongs to, the task type, and its current status.
+
+![Mobile task list](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-task-list.png)
+
+### Lead Detail
+
+Tapping a task opens the lead detail view, where the user can:
+
+- Review and update the lead's contact and company information.
+- See the current status and opportunity data.
+- View the full status history.
+
+![Mobile lead detail](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-lead-detail.png)
+
+### Changing Lead Status
+
+From the lead detail view, the user can change the lead status using the **Change Status** action. The same rules apply as in the desktop — changing to *Converted* triggers the business partner creation, and changing to *Dead* sets the opportunity to *Lost*.
+
+![Mobile change status](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-change-status.png)
+
+### Completing a Task
+
+Once the activity is done, the user can mark the task as completed directly from the app. Completing a task registers it as recent activity, which positively impacts the lead's **Success Probability** calculation.
 
 ---
 
