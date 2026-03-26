@@ -649,7 +649,7 @@ El ejemplo siguiente ilustra cómo hacerlo. Este método traducirá cualquier en
             // cast to the parent of all openbravo objects
             final BaseOBObject referencedObject = (BaseOBObject) value;
             // assumes that the id is always a primitive type
-            System.err.println(indent + "<" + p.getName() + ">" + referencedObject.getId() + + 
+            System.err.println(indent + "<" + p.getName() + ">" + referencedObject.getId() + 
     		"</" + p.getName() + ">");
           }
         }

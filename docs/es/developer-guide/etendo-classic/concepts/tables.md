@@ -10,7 +10,6 @@ tags:
 ---
 # Tabla
 
-  
 ## Visión general
 
 Las tablas físicas de la base de datos son la base sobre la que se construye el Modelo de Datos del Diccionario de Aplicación. Este documento analiza las particularidades que deben tener todas las tablas en Etendo ERP.

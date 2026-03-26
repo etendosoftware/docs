@@ -44,7 +44,7 @@ Los canales de origen a través de los cuales se capturan leads (p. ej., Web, Re
 !!! info
     Si es necesario exportar orígenes personalizados como parte de un módulo, esto debe hacerse usando el rol **System Administrator**. Consulta la [CRM Lead Management Developer Guide](../../../../../developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md#lead-source) para más detalles.
 
-### Clasificación de leads
+### Lead Classification
 
 :material-menu: `Aplicación` > `CRM` > `Lead Classification`
 

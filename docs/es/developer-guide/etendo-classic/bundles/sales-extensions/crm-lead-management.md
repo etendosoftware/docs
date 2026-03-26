@@ -3,7 +3,7 @@ title: Gestión de Leads CRM | Guía del Desarrollador
 status: beta
 tags:
     - CRM
-    - Lead Management
+    - Gestión de Leads
     - Lead Status
     - Lead Source
     - Administrador del Sistema
@@ -11,7 +11,7 @@ tags:
 
 # Gestión de Leads CRM
 
-:octicons-package-16: Javapackage: `com.etendoerp.crm`
+:octicons-package-16: Paquete Java: `com.etendoerp.crm`
 
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsala **bajo tu propia responsabilidad**.
@@ -27,13 +27,13 @@ Esta página explica cómo exportar los datos maestros de CRM (estados y orígen
 
 En esta ventana se gestionan los estados del lead que definen el ciclo de vida del pipeline comercial. El módulo incluye los siguientes estados por defecto:
 
-| Identificador | Nombre |
-|---|---|
-| `NEW` | Nuevo |
-| `CONT` | Contactado |
-| `QUAL` | Cualificado |
-| `CONV` | Convertido |
-| `DEAD` | Perdido |
+| Identificador | Nombre | Base Probability |
+|---|---|---|
+| `NEW` | Nuevo | 10 |
+| `CONT` | Contactado | 25 |
+| `QUAL` | Cualificado | 50 |
+| `CONV` | Convertido | 70 |
+| `DEAD` | Perdido | 0 |
 
 Los desarrolladores con el rol `Administrador del Sistema` pueden añadir estados personalizados y exportarlos en un módulo de desarrollo.
 

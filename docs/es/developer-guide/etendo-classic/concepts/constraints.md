@@ -165,6 +165,7 @@ Este no es el comportamiento en las `bases de datos PostgreSQL`, donde necesitar
 ```
 
 ###  Índices para búsqueda por contiene
+
   
 Los índices para búsqueda por *contiene* son aquellos destinados a proporcionar una búsqueda rápida de subcadenas dentro de los valores almacenados en una columna concreta de la base de datos.
 
