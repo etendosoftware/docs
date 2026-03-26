@@ -1163,7 +1163,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
             - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+          - Sales Extensions Bundle:
+            - Overview: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+            - CRM Lead Management: user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
@@ -1376,8 +1378,10 @@ nav:
           - Task: developer-guide/etendo-classic/bundles/platform/task.md
           - Print Provider: developer-guide/etendo-classic/bundles/platform/print-provider.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
-        - Financial Extensions Bundle: 
+        - Financial Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
+        - Sales Extensions Bundle:
+          - CRM Lead Management: developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
       - Developer Changelog:
         - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md
