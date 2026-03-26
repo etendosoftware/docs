@@ -99,7 +99,7 @@ Displays the follow-up tasks associated with the lead. Each task represents a co
 **Fields to note:**
 
 - **Task No.**: Auto-generated identifier.
-- **Task Type**: Type of activity. This list can be expanded as needed — see [Task Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/task.md) for details.
+- **Task Type**: Type of activity. The module includes the following default types: *Call*, *Email*, *Meeting*, *Follow-up*, and *Sales Quotation*. This list can be expanded as needed — see [Task Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/task.md) for details.
 - **Status**: Current task status (In Progress, Completed, etc.).
 - **Assigned User**: Salesperson responsible for the task.
 - **Priority**: Low / Medium / High.
@@ -270,6 +270,9 @@ From the lead detail view, the user can change the lead status using the **Chang
 ### Completing a Task
 
 Once the activity is done, the user can mark the task as completed directly from the app. Completing a task registers it as recent activity, which positively impacts the lead's **Success Probability** calculation.
+
+!!! warning
+    Creating sales quotations from the mobile app is not currently supported. Quotations must be managed from Etendo ERP.
 
 ---
 
