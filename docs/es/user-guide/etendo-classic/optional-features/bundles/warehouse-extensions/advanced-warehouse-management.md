@@ -433,17 +433,17 @@ En la ventana emergente, puede asignar un usuario o habilitar la asignación aut
 
 **Completar recepción**
 
-Finaliza la recepción, generando y completando los **Albarán (Proveedor)** correspondientes. Además, si la recepción incluye productos con AUOM (palé o caja), se crea automáticamente el registro asociado de **Referencia de inventario**.
+Finaliza la recepción, generando y completando los correspondientes **albaranes**. Además, si la recepción incluye productos con AUOM (palé o caja), se crea automáticamente el registro asociado de **Inventario referenciado**.
 
 **Imprimir etiquetas**
 
-Este botón genera etiquetas de código de barras para **todas las líneas** del documento de Recepción de entrada seleccionado.  
-Cada etiqueta se crea con el **conjunto completo de atributos definidos durante la recepción**, incluyendo datos del producto y atributos como lote, número de serie, fecha de caducidad e inventario referenciado cuando aplique.
+Este botón genera etiquetas de código de barras para **todas las líneas** del documento de Recepción de entrada seleccionado.
+Cada etiqueta muestra el **código de barras GS1-128** junto con información legible por humanos, incluyendo el **nombre del producto**, los **atributos relevantes** (como lote, fecha de caducidad y número de serie cuando aplique) y el **tipo de unidad logística** (Caja o Palé). Si no hay atributos definidos para un producto, la etiqueta muestra *Sin atributos*. Si no aplica ninguna unidad logística, la línea de unidad logística no se muestra.
 
-- Para **productos sueltos** (sin unidades logísticas), el sistema genera **una etiqueta de código de barras por cantidad operativa** definida en la línea de recepción.  
+- Para **productos sueltos** (sin unidades logísticas), el sistema genera **una etiqueta de código de barras por cantidad operativa** definida en la línea de recepción.
   Esto significa que se imprimen tantas etiquetas como unidades se indiquen en el campo **Cantidad Operativa**.
 - Para **líneas con unidades logísticas (Caja o Palé)** en las que se reciben múltiples unidades (por ejemplo, 3 cajas), el sistema genera **una etiqueta de código de barras única por unidad logística**, ya que cada unidad se registra como un inventario referenciado único.
-- Cuando los productos se **agrupan en una única unidad logística** usando el botón **Crear inventario referenciado**, el sistema genera **una única etiqueta de código de barras** para esa unidad logística.  
+- Cuando los productos se **agrupan en una única unidad logística** usando el botón **Crear inventario referenciado**, el sistema genera **una única etiqueta de código de barras** para esa unidad logística.
   En este caso, la etiqueta identifica la **unidad logística y su hueco**, ya que puede contener múltiples productos agrupados.
 
 Este botón está disponible **solo cuando la Recepción de entrada está completada**.
@@ -466,8 +466,8 @@ Este botón está disponible **solo cuando la Recepción de entrada está comple
 
 **Imprimir etiqueta de línea**
 
-Esta acción genera **etiquetas de código de barras solo para la línea o líneas seleccionadas** de la Recepción de entrada.  
-Cada etiqueta contiene el **conjunto completo de atributos asignados en el momento de la recepción** para las líneas seleccionadas.
+Esta acción genera **etiquetas de código de barras solo para la línea o líneas seleccionadas** de la Recepción de entrada.
+Cada etiqueta muestra el **código de barras GS1-128** junto con información legible por humanos, incluyendo el **nombre del producto**, los **atributos relevantes** (como lote, fecha de caducidad y número de serie cuando aplique) y el **tipo de unidad logística** (Caja o Palé), siguiendo las mismas reglas de visualización que el botón **Imprimir etiquetas**.
 
 La generación de etiquetas sigue las mismas reglas descritas anteriormente, aplicadas **solo a la línea o líneas seleccionadas**:
 
