@@ -16052,10 +16052,14 @@ GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom pro
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <ul>
-<li>Only lines from the same Sales Order can be grouped.  </li>
+<li>Only lines from the same Sales Order can be grouped.</li>
 <li>If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.</li>
 <li>Child logistics units remain associated with the parent logistics unit created from the button.</li>
 </ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Partial grouping</p>
+<p>If the grouped action includes a line that cannot be nested due to a type incompatibility (e.g., a Pallet inside another Pallet), the system will <strong>not block</strong> the entire receipt. Instead, it processes compatible lines normally and automatically creates a <strong>standalone Referenced Inventory</strong> for the incompatible line. The receipt completes successfully and a <strong>Warning message</strong> is displayed indicating how many lines were processed normally and how many were created as standalone RIs.</p>
 </div>
 <p><strong>Clear Group By</strong> </p>
 <p>Button allows you to remove a line from your grouping without affecting the rest of the lines in the group.</p>
@@ -16071,13 +16075,13 @@ In the pop-up window, you can assign a user or enable automatic assignment. If m
 <p><strong>Complete Receipt</strong></p>
 <p>Finishes the receipt, generating and completing the corresponding <strong>goods receipts</strong>. In addition, if the receipt includes products with AUOM (pallet or box), the associated <strong>Inventory Reference</strong> record is automatically created.</p>
 <p><strong>Print Labels</strong></p>
-<p>This button generates barcode labels for <strong>all lines</strong> of the selected Inbound Receipt document.<br>
+<p>This button generates barcode labels for <strong>all lines</strong> of the selected Inbound Receipt document.
 Each label is created with the <strong>full set of attributes defined during the reception</strong>, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.</p>
 <ul>
-<li>For <strong>loose products</strong> (without logistics units), the system generates <strong>one barcode label per operative quantity</strong> defined in the receipt line.<br>
+<li>For <strong>loose products</strong> (without logistics units), the system generates <strong>one barcode label per operative quantity</strong> defined in the receipt line.
   This means that as many labels are printed as units specified in the <strong>Operative Quantity</strong> field.</li>
 <li>For <strong>lines with logistics units (Box or Pallet)</strong> where multiple units are received (for example, 3 boxes), the system generates <strong>one unique barcode label per logistics unit</strong>, since each unit is registered as a unique referenced inventory.</li>
-<li>When products are <strong>grouped into a single logistics unit</strong> using the <strong>Create Reference Inventory</strong> button, the system generates <strong>one single barcode label</strong> for that logistics unit.<br>
+<li>When products are <strong>grouped into a single logistics unit</strong> using the <strong>Create Reference Inventory</strong> button, the system generates <strong>one single barcode label</strong> for that logistics unit.
   In this case, the label identifies the <strong>logistics unit and its locator</strong>, as it may contain multiple grouped products.</li>
 </ul>
 <p>This button is available <strong>only when the Inbound Receipt is completed</strong>.</p>
@@ -16092,7 +16096,7 @@ Each label is created with the <strong>full set of attributes defined during the
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png"></a></p>
 </details>
 <p><strong>Print Line Label</strong></p>
-<p>This action generates <strong>barcode labels only for the selected line or lines</strong> of the Inbound Receipt.<br>
+<p>This action generates <strong>barcode labels only for the selected line or lines</strong> of the Inbound Receipt.
 Each label contains the <strong>complete set of attributes assigned at reception time</strong> for the selected lines.</p>
 <p>The label generation follows the same rules described above, applied <strong>only to the selected line or lines</strong>:</p>
 <ul>

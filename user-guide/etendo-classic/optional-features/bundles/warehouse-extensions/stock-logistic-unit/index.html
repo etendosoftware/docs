@@ -14796,9 +14796,9 @@ These UOM serve as the basis for configuring products with alternative units, wh
 <h3 id="product-alternate-uom">Product - Alternate UOM</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Product</code></p>
 <p>In the <a href="../../../../basic-features/master-data-management/master-data/#alternate-uom-tab">Alternate UOM</a> tab of the <strong>Product window</strong>, enabling the <strong>Enable UOM Management</strong> preference allows users to assign <em>Box</em> or <em>Pallet</em> as <strong>alternative units of measure</strong></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Only one level of logistic units is supported. For example, products can be managed in pallets or in boxes, but pallets containing boxes of products are not yet supported.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Logistic unit nesting is supported: pallets can contain boxes, and boxes can contain basic units. When receiving goods, the <strong>Create Reference Inventory</strong> button in the Inbound Receipt window handles this hierarchy automatically. See <a href="../bundles/warehouse-extensions/advanced-warehouse-management.md#available-process">Create Reference Inventory</a> for details.</p>
 </div>
 <p>Users can define conversion rates and specify in which processes (sales, purchasing, logistics) these conversions apply. Based on this configuration, stock reservation rules automatically prioritize full pallets and boxes before using individual units, optimizing inventory management.</p>
 <p>An additional feature introduced is greater granularity through the ability to select a <strong>Logistic Unit Type</strong>. For example, if the alternative unit is <em>Box</em>, the system allows specifying whether it is a large, medium, or small box. This provides a higher level of control and accuracy in inventory management.</p>

@@ -16335,6 +16335,10 @@ Los identificadores GS1-128 90–99 son códigos de uso libre y pueden asignarse
 <li>Las unidades logísticas hijas permanecen asociadas a la unidad logística padre creada desde el botón.</li>
 </ul>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Agrupación parcial</p>
+<p>Si la acción de agrupación incluye una línea que no puede anidarse debido a una incompatibilidad de tipo (p. ej., un Palé dentro de otro Palé), el sistema <strong>no bloqueará</strong> toda la recepción. En su lugar, procesa las líneas compatibles con normalidad y crea automáticamente un <strong>Inventario referenciado independiente</strong> para la línea incompatible. La recepción se completa correctamente y se muestra un <strong>mensaje de advertencia</strong> indicando cuántas líneas se procesaron con normalidad y cuántas se crearon como RI independientes.</p>
+</div>
 <p><strong>Limpiar Agrupar por</strong> </p>
 <p>Este botón permite eliminar una línea de su agrupación sin afectar al resto de líneas del grupo.</p>
 <p><strong>Generar tarea de recepción</strong> </p>
