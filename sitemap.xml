@@ -428,20 +428,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
@@ -463,11 +449,32 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/local-development/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/local-development/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/local-development/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/production-server/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/production-server/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/production-server/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/requirements/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/requirements/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/requirements/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/</loc>
@@ -615,6 +622,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-log/</loc>
@@ -1128,6 +1142,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
@@ -1140,6 +1161,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/</loc>
@@ -1651,20 +1679,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-rx/tutorials/creating-a-new-microservice/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/getting-started/installation/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/installation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/installation/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/getting-started/interactive-installation/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/interactive-installation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/interactive-installation/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/getting-started/overview/</loc>
@@ -3207,20 +3221,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-testing-plugin/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/</loc>
-        <lastmod>2026-03-30</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
@@ -3242,11 +3242,32 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/local-development/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/local-development/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/local-development/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/production-server/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/production-server/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/production-server/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/requirements/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/requirements/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/requirements/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/</loc>
@@ -3394,6 +3415,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-log/</loc>
@@ -3907,6 +3935,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-google-service-util/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
@@ -3919,6 +3954,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/</loc>
@@ -4432,18 +4474,28 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/es/getting-started/installation/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/installation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/installation/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/getting-started/interactive-installation/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/interactive-installation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/interactive-installation/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/getting-started/overview/</loc>
