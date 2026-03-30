@@ -84,8 +84,8 @@ In the Referenced Inventory Type window, the module adds the referenced inventor
 
 In the [Alternate UOM](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) tab of the **Product window**, enabling the **Enable UOM Management** preference allows users to assign *Box* or *Pallet* as **alternative units of measure**
 
-!!! warning
-    Only one level of logistic units is supported. For example, products can be managed in pallets or in boxes, but pallets containing boxes of products are not yet supported.
+!!! info
+    Logistic unit nesting is supported: pallets can contain boxes, and boxes can contain basic units. When receiving goods, the **Create Reference Inventory** button in the Inbound Receipt window handles this hierarchy automatically. See [Create Reference Inventory](../bundles/warehouse-extensions/advanced-warehouse-management.md#available-process) for details.
 
 Users can define conversion rates and specify in which processes (sales, purchasing, logistics) these conversions apply. Based on this configuration, stock reservation rules automatically prioritize full pallets and boxes before using individual units, optimizing inventory management.
 
