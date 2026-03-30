@@ -2262,6 +2262,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-configure-email/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-configure-email/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/how-to-guides/how-to-configure-email/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration/</loc>
         <lastmod>2026-03-30</lastmod>
         <changefreq>daily</changefreq>
@@ -5032,6 +5039,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/how-to-guides/how-to-configure-email/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/how-to-guides/how-to-configure-email/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-configure-email/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration/</loc>
