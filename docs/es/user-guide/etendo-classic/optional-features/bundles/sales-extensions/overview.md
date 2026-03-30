@@ -5,6 +5,8 @@ tags:
     - Extensiones de ventas
     - Presupuesto de ventas
     - Rappels avanzados
+    - CRM
+    - Gestión de leads
 
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.sales.extensions`
@@ -23,20 +25,6 @@ Este bundle incluye mejoras para las funcionalidades de Gestión de ventas en Et
 ## Módulo
 
 
-### Presupuesto de ventas
-
-:octicons-package-16: Javapackage: `com.etendoerp.quotation`
-
-:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Se añaden diferentes funcionalidades a esta ventana, lo que permite al usuario realizar cambios y/o ajustar la información introducida, para generar los presupuestos de ventas con el fin de crear los pedidos correspondientes a partir de dichos presupuestos.
-
-!!! info
-	Para más información, visite la [guía de usuario de Presupuesto de ventas](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#advanced-sales-quotation).
-
-
 ### Rappels avanzados
 
 :octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
@@ -49,10 +37,31 @@ Se añaden diferentes funcionalidades a esta ventana, lo que permite al usuario 
 Esta funcionalidad permite al usuario configurar y conceder rappels a terceros. Los rappels son descuentos basados en el volumen de consumo del tercero en un periodo de tiempo determinado.
 
 !!! info
-	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration). 
+	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
+
+### CRM Lead Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.crm`
+
+Seguimiento y gestión nativos de leads para el equipo comercial. Permite registrar prospectos, gestionar su ciclo de vida mediante estados configurables, organizar tareas de seguimiento y convertir leads cualificados en Terceros — integrándose directamente con el flujo de Ventas (presupuestos → pedidos → facturas).
 
 !!! info
-	Para más información, visite la [guía del desarrollador de Print Document Web Service](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+    Para más información, visite la [guía de usuario de CRM Lead Management](crm-lead-management.md).
+
+### Presupuesto de ventas
+
+:octicons-package-16: Javapackage: `com.etendoerp.quotation`
+
+:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Se añaden diferentes funcionalidades a esta ventana, lo que permite al usuario realizar cambios y/o ajustar la información introducida, para generar los presupuestos de ventas con el fin de crear los pedidos correspondientes a partir de dichos presupuestos.
+
+!!! info
+	Para más información, visite la [guía de usuario de Presupuesto de ventas](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#advanced-sales-quotation). 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

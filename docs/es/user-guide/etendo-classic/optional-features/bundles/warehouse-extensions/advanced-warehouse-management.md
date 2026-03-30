@@ -415,6 +415,9 @@ Cuando los elementos seleccionados ya pertenecen a unidades logísticas, el bot�
     - Si una línea ya está agrupada y se incluye en una nueva agrupación, la agrupación anterior será reemplazada.
     - Las unidades logísticas hijas permanecen asociadas a la unidad logística padre creada desde el botón.
 
+!!! warning "Agrupación parcial"
+    Si la acción de agrupación incluye una línea que no puede anidarse debido a una incompatibilidad de tipo (p. ej., un Palé dentro de otro Palé), el sistema **no bloqueará** toda la recepción. En su lugar, procesa las líneas compatibles con normalidad y crea automáticamente un **Inventario referenciado independiente** para la línea incompatible. La recepción se completa correctamente y se muestra un **mensaje de advertencia** indicando cuántas líneas se procesaron con normalidad y cuántas se crearon como RI independientes.
+
 **Limpiar Agrupar por** 
 
 Este botón permite eliminar una línea de su agrupación sin afectar al resto de líneas del grupo.

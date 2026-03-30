@@ -417,9 +417,12 @@ When the selected elements already belong to logistics units, the button can cre
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
-    - Only lines from the same Sales Order can be grouped.  
+    - Only lines from the same Sales Order can be grouped.
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
     - Child logistics units remain associated with the parent logistics unit created from the button.
+
+!!! warning "Partial grouping"
+    If the grouped action includes a line that cannot be nested due to a type incompatibility (e.g., a Pallet inside another Pallet), the system will **not block** the entire receipt. Instead, it processes compatible lines normally and automatically creates a **standalone Referenced Inventory** for the incompatible line. The receipt completes successfully and a **Warning message** is displayed indicating how many lines were processed normally and how many were created as standalone RIs.
 
 **Clear Group By** 
 

@@ -348,7 +348,7 @@ El informe de Libro mayor también puede visualizarse y guardarse en formato Exc
 
 ### Visión general
 
-Este informe **Libro mayor avanzado** es una versión mejorada del anterior [Libro mayor](#libro-mayor). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables existentes en la tabla Datos de contabilidad.
+Este informe **Libro mayor avanzado** es una versión mejorada del anterior [Libro mayor](#libro-mayor). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones de contabilidad existentes en la tabla Datos de contabilidad.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-1.png)
 
@@ -647,6 +647,8 @@ Una vez introducidos estos campos, será posible imprimir el Informe, que mostra
 ---
 
 Este trabajo es una obra derivada de [Gestión Financiera](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
 
 ---
 
