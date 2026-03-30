@@ -18,6 +18,8 @@ A **Cost Center** is an accounting dimension used to classify and track expenses
 
 The Cost Center window serves as the master record for all cost centers within an organization. From here, users can create, view, and manage the cost centers available for use during accounting transactions.
 
+![Cost Center window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center.png)
+
 ### Creating a Cost Center
 
 To create a new cost center:
