@@ -32,8 +32,8 @@ Algunos de los campos principales que deben completarse son:
 - **Model**: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección [¿Qué modelo debería elegir?](#qué-modelo-debería-elegir) para más información.
 
 !!!info
-    El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` y `@source.path@`  
-    Estas variables se sustituirán por los valores definidos en las propiedades.
+    El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`.
+    Estas variables se sustituyen por los valores definidos en el archivo `gradle.properties`.
 
 !!!note
     Para más información sobre para qué se utiliza cada campo, visite la guía [Configuración y uso - Agentes](../../../user-guide/etendo-copilot/setup-and-usage.md#header).

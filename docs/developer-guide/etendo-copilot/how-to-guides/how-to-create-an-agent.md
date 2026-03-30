@@ -33,8 +33,8 @@ Some of the main fields to be completed are:
 - **Model**: Dropdown with the models available, such as OpenAI, Anthropic, etc. Go to section [Which model should I choose?](#which-model-should-i-choose) for more information.
 
 !!!info
-    The **Prompt** field can have the following dynamic variables: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@` 
-    These variables will be replaced with the values defined in the properties.
+    The **Prompt** field can have the following dynamic variables: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` and `@source.path@`.
+    These variables are replaced with the values defined in the `gradle.properties` file.
 
 !!!note 
     For more information on what each field is used for, visit the [Setup and Usage - Agents](../../../user-guide/etendo-copilot/setup-and-usage.md#header) guide.

@@ -123,7 +123,7 @@ En este ejemplo, creará una herramienta que realiza un **ping** a un host espec
     !!! note "Variables de entorno"
         Copilot lee automáticamente el archivo `gradle.properties` de **Etendo Classic** y las expone como variables de entorno (puntos reemplazados por guiones bajos). Por ejemplo:
 
-        - `COPILOT_PORT` → `COPILOT_PORT`
+        - `copilot.port` → `copilot_port`
         - `bbdd.sid` → `bbdd_sid`
 
         Puede acceder a estas variables de entorno en sus herramientas.
@@ -268,7 +268,7 @@ La herramienta anterior aprovecha utilidades proporcionadas por Copilot Core:
 
 - `get_etendo_token()`: esta función devuelve el token de autenticación para Etendo Classic, permitiendo que la herramienta opere dentro de la sesión del usuario. Copilot, actuando como un "proxy", gestiona estas sesiones.
 
-- `get_etendo_host()`: esta función devuelve la URL de la instancia de Etendo Classic, que es necesaria para disparar el WebHook. Esta URL de host se configura como `ETENDO_HOST` en el archivo de configuración `gradle.properties`.
+- `get_etendo_host()`: esta función devuelve la URL de la instancia de Etendo Classic, que es necesaria para disparar el WebHook. Esta URL de host se configura como `etendo.host` en el archivo de configuración `gradle.properties`.
 
 - `call_webhook(url:String, webhook_name:String, access_token:String, body_params:Dict)`: esta función dispara el WebHook, pasando la URL de Etendo Classic, el nombre del WebHook, el token de autenticación y los parámetros necesarios por el WebHook.
 

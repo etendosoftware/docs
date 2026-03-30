@@ -71,11 +71,18 @@ Campos a tener en cuenta:
 
 - **Módulo**: módulo en el que se exportarán el agente y todas sus configuraciones. Este campo solo está disponible con el rol `System Administrator`.
 - **Activo**: casilla para activar o no el agente.
-- **SystemApp**: casilla para limitar el uso de determinados agentes únicamente bajo el rol `system administrator` y no disponible para usuarios finales.
+- **Alcance del agente**: define el alcance de visibilidad del agente. Opciones disponibles:
+
+    - **Client**: el agente solo está disponible para el cliente en el que fue creado. Este es el valor por defecto.
+    - **System**: el agente solo está disponible bajo el rol `System Administrator`.
+    - **Client + System**: el agente está disponible para el cliente y también bajo el rol `System Administrator`.
+
+- **Sincronizar al inicio**: cuando está habilitado, el agente se sincroniza automáticamente cuando el sistema Etendo se inicia. Esto elimina la necesidad de ejecutar manualmente el proceso `Sincronizar agente` después de cada reinicio, asegurando que el agente esté siempre actualizado.
+- **Destacado**: cuando está habilitado, el agente se resalta y aparece primero en el desplegable de agentes del Chat de Copilot. Cuando existen agentes destacados, el desplegable del chat muestra un botón de filtro (⭐) que permite a los usuarios alternar entre ver solo agentes destacados o todos los agentes disponibles. Por defecto, cuando existen agentes destacados, el desplegable muestra solo los destacados.
 - **Prompt**: instrucciones específicas de los agentes. Estas instrucciones pueden escribirse en inglés o en español.
     
     !!!info
-        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` y `@source.path@`. Estas variables se sustituirán por los valores definidos en el archivo `gradle.properties`.
+        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`. Estas variables se sustituyen por los valores definidos en el archivo `gradle.properties`.
 
 - **Vista previa del grafo**: en caso de definir una aplicación de tipo **LangGraph**, muestra el árbol de agentes bajo un determinado gestor.
 

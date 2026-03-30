@@ -73,11 +73,18 @@ Fields to note:
 
 - **Module**: Module in which the agent and all its configurations will be exported. This field is only available with the `System Administrator` role.
 - **Active**: Checkbox to activate or not the agent.
-- **SystemApp**: Checkbox to limit the use of certain agents only under the `system administrator` role and not available to end users.
+- **Agent Scope**: Defines the visibility scope of the agent. Available options:
+
+    - **Client**: The agent is available only for the client in which it was created. This is the default value.
+    - **System**: The agent is available only under the `System Administrator` role.
+    - **Client + System**: The agent is available for the client and also under the `System Administrator` role.
+
+- **Sync on Startup**: When enabled, the agent is automatically synchronized when the Etendo system starts up. This eliminates the need to manually trigger the `Sync Agent` process after each restart, ensuring the agent is always up to date.
+- **Featured**: When enabled, the agent is highlighted and shown first in the Copilot Chat agent dropdown. When there are featured agents, the chat dropdown shows a filter toggle button (⭐) that allows users to switch between viewing only featured agents or all available agents. By default, when featured agents exist, the dropdown shows only the featured ones.
 - **Prompt**: Specific instructions of the agents. These instructions can be written in English or Spanish.
     
     !!!info
-        The **Prompt** field can have the following dynamic variables: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@`. These variables will be replaced with the values defined in the `gradle.properties`file.
+        The **Prompt** field can have the following dynamic variables: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` and `@source.path@`. These variables are replaced with the values defined in the `gradle.properties` file.
 
 - **Graph Preview**:  In case of defining an **LangGraph** type app, it shows the tree of agents under a certain manager.
 
