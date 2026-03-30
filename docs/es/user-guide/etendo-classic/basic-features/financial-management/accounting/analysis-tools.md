@@ -348,7 +348,7 @@ El informe de Libro mayor también puede visualizarse y guardarse en formato Exc
 
 ### Visión general
 
-Este informe **Libro mayor avanzado** es una versión mejorada del anterior [Libro mayor](#libro-mayor). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables existentes en la tabla Datos de contabilidad.
+Este informe **Libro mayor avanzado** es una versión mejorada del anterior [Libro mayor](#libro-mayor). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones de contabilidad existentes en la tabla Datos de contabilidad.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-adv-1.png)
 

@@ -742,6 +742,7 @@ Para aquellas consultas que quieran utilizar el pool de solo lectura, el proveed
 ``` java 
     ConnectionProvider cp = DalConnectionProvider.getReadOnlyConnectionProvider();
 ```
+
 ## Uso de la Data Access Layer en una tarea Ant
 
 Para facilitar el uso de la DAL en Ant, la DAL ofrece una clase base de tarea Ant: la DalInitializingTask en el paquete _org.openbravo.dal.core_. Esta clase se encarga de inicializar la capa DAL y otros detalles (p. ej., usar el classloader correcto).
