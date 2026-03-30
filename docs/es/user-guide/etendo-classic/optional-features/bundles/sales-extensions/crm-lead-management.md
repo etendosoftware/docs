@@ -28,7 +28,7 @@ Antes de usar el módulo, deben configurarse los siguientes datos maestros:
 
 ### Lead Status
 
-:material-menu: `Aplicación` > `CRM` > `Lead Status`
+:material-menu: `Aplicación` > `Conector CRM` > `Lead Status`
 
 Los estados que definen las etapas del pipeline comercial se pueden gestionar desde esta ventana. Se pueden añadir nuevos estados para adaptar el pipeline a las necesidades de la organización.
 
@@ -37,7 +37,7 @@ Los estados que definen las etapas del pipeline comercial se pueden gestionar de
 
 ### Lead Source
 
-:material-menu: `Aplicación` > `CRM` > `Lead Source`
+:material-menu: `Aplicación` > `Conector CRM` > `Lead Source`
 
 Los canales de origen a través de los cuales se capturan los leads (por ejemplo, Web, Referencia, Evento, WhatsApp) se pueden gestionar desde esta ventana. Se pueden añadir nuevas fuentes según sea necesario y aparecerán como opciones en el campo **Source** del formulario de Lead.
 
@@ -54,7 +54,7 @@ Agrupación opcional para leads. Las clasificaciones se crean desde esta ventana
 
 ## Lead Window
 
-:material-menu: `Aplicación` > `CRM` > `Lead`
+:material-menu: `Aplicación` > `Conector CRM` > `Lead`
 
 Esta es la ventana principal del módulo. Cada registro representa un prospecto comercial en el pipeline de ventas. Desde aquí, el equipo comercial puede registrar nuevos leads, seguir su progreso a través de estados, registrar tareas de seguimiento y activar la conversión a Tercero cuando el lead esté listo.
 

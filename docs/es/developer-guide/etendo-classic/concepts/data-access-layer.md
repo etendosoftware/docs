@@ -742,4 +742,92 @@ Para aquellas consultas que quieran utilizar el pool de solo lectura, el proveed
 ``` java 
     ConnectionProvider cp = DalConnectionProvider.getReadOnlyConnectionProvider();
 ```
+
 ## Uso de la Data Access Layer en una tarea Ant
+
+Para facilitar el uso de la DAL en Ant, la DAL ofrece una clase base de tarea Ant: la DalInitializingTask en el paquete _org.openbravo.dal.core_. Esta clase se encarga de inicializar la capa DAL y otros detalles (p. ej., usar el classloader correcto).
+
+Para utilizar esta clase, es necesario realizar los siguientes cambios en la tarea Ant y en la implementación personalizada de la tarea Ant en Java:
+
+- La clase Java de la tarea Ant personalizada debe heredar de _DalInitializatingTask_. 
+- La clase Java de la tarea Ant personalizada debe implementar un método _doExecute_ en lugar del método execute en la clase Ant Java personalizada (es suficiente con renombrar el método execute a _doExecute_). 
+- Se requieren dos propiedades adicionales en la definición de la tarea ant (en el build.xml):
+
+    - propertiesFile= `${base.config}/Openbravo.properties`. 
+    - userId="100". 
+
+La primera propiedad configura la ubicación donde se puede encontrar el archivo _Openbravo.properties_. La segunda propiedad establece el usuario bajo el cual se ejecuta la tarea.
+##  Información importante
+
+###  Proxies de Hibernate
+
+Para mejorar el rendimiento de las asociaciones de un solo extremo, la DAL hace uso de la funcionalidad de proxies de Hibernate. La funcionalidad de proxies de Hibernate envuelve un objeto dentro de un objeto proxy de Hibernate. Esto se realiza en tiempo de ejecución usando cglib. El objeto proxy de Hibernate se encarga de cargar el objeto de negocio cuando realmente se accede a él. La ventaja de este enfoque es que, si nunca se accede a un objeto, entonces no se carga, ahorrando rendimiento.
+
+Sin embargo, el proxy de Hibernate es muy visible cuando un desarrollador depura una aplicación, porque la instancia de un objeto en tiempo de ejecución no será la clase exacta (por ejemplo, BPGroup), sino una instancia de una clase proxy de Hibernate.
+
+Para entender cuál es la consecuencia de usar proxies de Hibernate, es esencial que un desarrollador que use la DAL lea [esta parte](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html#performance-fetching-proxies){target="\_blank"} del manual de Hibernate.
+
+###  Rendimiento: obtener el ID de un BaseOBObject
+
+La sección anterior trató el concepto de proxy de Hibernate. Un proxy de Hibernate cargará su objeto de negocio envuelto cuando se llame a uno de los métodos del objeto de negocio. En muchos casos, un desarrollador solo quiere acceder al ID o al nombre de entidad de un objeto. Para evitar la carga del objeto de negocio al recuperar únicamente esta información, la clase DalUtil en _org.openbravo.dal.core_ ofrece un método _getId_ y un método _getEntityName_. Estos métodos trabajan directamente con el objeto HibernateProxy y no cargan el objeto de negocio subyacente.
+
+###  Funcionamiento interno de Hibernate
+
+Para entender cómo opera Hibernate internamente, se recomienda encarecidamente leer el capítulo 21 del manual de Hibernate: [Mejorar el rendimiento](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
+
+###  Carga de clases
+
+La DAL carga clases al inicializar la DAL. La DAL, de forma predeterminada, utiliza el cargador de clases de contexto del hilo. En algunos casos, esto no funciona correctamente (por ejemplo, cuando se usa la DAL en Ant). La DAL utiliza la clase OBClassLoader para hacer que el cargador de clases sea configurable. Llamando a _OBClassLoader.setInstance_ con su propio OBClassLoader, puede controlar el cargador de clases utilizado por la DAL.
+
+###  Crear un nuevo objeto de negocio con un ID específico
+
+Hibernate detectará que un objeto de negocio es nuevo cuando:
+
+- el ID del objeto de negocio no está establecido 
+- cuando el indicador newOBObject se establece explícitamente en true 
+
+Por lo tanto, si quiere crear un nuevo objeto de negocio con un ID específico (llamando a _setId(...)_), entonces necesita llamar explícitamente a _businessObject.setNewOBObject(true)_. De lo contrario, Hibernate no detectará el objeto de negocio como nuevo y lanzará una excepción ('count of batch update operation....').
+##  Prácticas de codificación al usar/ampliar la DAL
+
+Esta sección analiza una serie de prácticas de codificación esenciales que deben seguirse al usar o ampliar la DAL.
+
+###  Estructura de excepciones
+
+Todas las excepciones lanzadas por la DAL extienden la clase base OBException. La OBException es una _RuntimeException_, por lo que no se requieren sentencias explícitas de `catch` y `throw`.
+
+La clase OBException se encarga de registrar la excepción de la forma correcta.
+
+Al crear su propia clase de excepción, es recomendable extender OBException para poder hacer uso de las capacidades estándar de registro en OBException (las capacidades de registro se ampliarán con el tiempo).
+
+###  Invariantes en tiempo de ejecución: la clase Check
+
+La Data Access Layer, en varias ubicaciones, realiza aserciones o comprobaciones de invariantes en tiempo de ejecución. Por ejemplo, para comprobar si los argumentos no son nulos o si se cumple una determinada condición. Implementar este tipo de comprobaciones ayuda a que su sistema sea mucho más robusto. Para que la implementación de este tipo de comprobaciones sea más conveniente, la Data Access Layer utiliza la clase Check, que se encuentra en el paquete _org.openbravo.base.util_. La clase Check ofrece métodos para comprobar _instanceof_, _isNull_, _isNotNull_, etc.
+
+El uso de una clase común para aserciones en todo su código hace que su código sea más legible y más fácil de entender (en comparación con implementar su propia comprobación de aserciones).
+
+###  Formato de código
+
+El código fuente, que forma parte de la Data Access Layer, está formateado utilizando una plantilla de formato. Es esencial que, al desarrollar código en la Data Access Layer o al utilizarla, se use esta misma plantilla de formato de código.
+
+Un formato de código común tiene los siguientes beneficios:
+
+- Todo el código de Etendo Classic obtiene un aspecto uniforme, se ve más limpio/ordenado y, por lo tanto, es más profesional.
+- El código será más fácil de entender y se cometerán menos errores.
+- Es posible hacer diff de diferentes versiones del código en mercurial (a través de su IDE), y es más fácil entender los cambios a lo largo del tiempo.
+- Resolver conflictos de mercurial es más sencillo.
+
+La plantilla de formato de código y su configuración se pueden encontrar en el siguiente artículo: [Formato de código de IntelliJ](../../etendo-classic/getting-started/installation/intellij-code-formatting.md).
+## Consejos y trucos y solución de problemas
+
+!!!info
+    Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de [solución de problemas](../../../developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md#data-access-layer).
+
+---
+
+Este trabajo es una obra derivada de [Capa de Acceso a Datos](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---
+
+---
