@@ -23,7 +23,7 @@ Esta página explica cómo exportar los datos maestros de CRM (estados y orígen
 ---
 
 ## Lead Status
-:material-menu: `Aplicación` > `CRM` > `Lead Status`
+:material-menu: `Aplicación` > `Conector CRM` > `Lead Status`
 
 En esta ventana se gestionan los estados de oportunidad que definen el ciclo de vida del pipeline comercial. El módulo crea los siguientes estados predeterminados:
 
@@ -53,7 +53,7 @@ Los desarrolladores con rol `System Administrator` pueden añadir estados person
 ---
 
 ## Lead Source
-:material-menu: `Aplicación` > `CRM` > `Lead Source`
+:material-menu: `Aplicación` > `Conector CRM` > `Lead Source`
 
 En esta ventana se definen los canales de origen a través de los cuales se capturan las oportunidades (por ejemplo, Web, Referral, Cold Call, Event, Social Media).
 

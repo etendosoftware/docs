@@ -17,7 +17,7 @@ tags:
 
     There was a significant change in the software stack between **Etendo 25** and earlier versions. For more information, visit:
 
-    - [Etendo Installation - Requirements](../../../getting-started/requirements.md#software-stack)
+    - [Etendo Installation - Requirements](../../../developer-guide/etendo-classic/getting-started/installation/requirements.md#software-stack)
     - [Developer Changelog - Stack Upgrade](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md#etendo-platform-stack-upgrade)
 
 

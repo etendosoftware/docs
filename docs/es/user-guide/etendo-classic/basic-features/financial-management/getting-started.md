@@ -223,7 +223,7 @@ Dicho esto, la configuración contable detallada en esta sección es la requerid
 - y un Calendario anual y periodos
 
 Obviamente, estos tipos de organización permiten contabilizar transacciones en el libro mayor.
-El resto de tipos de Organización se comportan tal y como se explica en la sección [Crear organización](../general-setup/enterprise-model/initial-organization-setup.md) y en la sección [Organización](../general-setup/enterprise-model/organization.md).
+El resto de tipos de Organización se comporta tal y como se explica en la sección [Crear organización](../general-setup/enterprise-model/initial-organization-setup.md) y en la sección [Organización](../general-setup/enterprise-model/organization.md).
 
 Muy brevemente:
 

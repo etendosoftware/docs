@@ -44,7 +44,7 @@ Algunas propiedades de Jaspersoft Studio deben modificarse para que funcione cor
   
 ###  Configuración del Classpath
 
-En Jaspersoft Studio, se supone que cada informe forma parte de un proyecto. Por lo tanto, primero necesita crear un nuevo proyecto (`File` > `New` > `Project`).
+En Jaspersoft Studio, se supone que cada informe forma parte de un un proyecto. Por lo tanto, primero necesita crear un nuevo proyecto (`File` > `New` > `Project`).
 
 El proyecto tiene un classpath, y aquí es donde puede añadir los jars que necesite.
 

@@ -1,5 +1,5 @@
 ---
-title: Instalar Etendo - Guía interactiva
+title: Install Etendo - Quick Installation Guide
 
 tags:
     - Instalación de Etendo
@@ -8,18 +8,18 @@ tags:
     - Configuración de PostgreSQL
     - Entorno de Etendo
     - Instalar
-    - Instalación interactiva
+    - Quick Installation
 
 status: beta
 ---
-# Instalar Etendo - Guía interactiva
+# Install Etendo - Quick Installation Guide
 
 ## Visión general
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No la utilice en entornos de producción. 
 
-Utilice el Sistema de configuración interactiva para instalar y configurar Etendo. El asistente le guía por cada ajuste, aplica valores predeterminados seguros y realiza cambios solo después de que usted los confirme.
+Utilice la funcionalidad de Instalación rápida para instalar y configurar Etendo. El asistente le guía por cada ajuste, aplica valores predeterminados seguros y realiza cambios solo después de que usted los confirme.
 
 Beneficios clave:
 
@@ -43,9 +43,99 @@ Antes de comenzar, es necesario disponer de:
 
 - Etendo Gradle Plugin [2.1.0](../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) o superior. Para más información, visite [Etendo Gradle Plugin](../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md).
 
-## Proceso de instalación interactiva
+## Quick Installation
 
-### Preparar el entorno
+Utilice la tarea `setup.applyTemplates` para configurar e instalar Etendo en unos pocos pasos usando plantillas predefinidas. Seleccione la pestaña que coincida con su entorno:
+
+=== ":material-laptop: Local Development"
+
+    1. Clone el proyecto Etendo Base:
+        ```bash title="Terminal"
+        cd /path/to/workspace
+        git clone https://github.com/etendosoftware/etendo_base.git EtendoERP
+        cd /path/to/workspace/EtendoERP
+        ```
+
+    2. Añada las credenciales de GitHub a `gradle.properties`:
+        ```groovy title="gradle.properties"
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+
+    3. Expanda Etendo Base:
+        ```bash title="Terminal"
+        ./gradlew expand
+        ```
+
+    4. Aplique la plantilla local:
+        ```bash title="Terminal"
+        ./gradlew setup.applyTemplates --template=local
+        ```
+        Cuando se le solicite, introduzca su **OpenAI API Key**.
+
+    5. Ejecute la instalación:
+        ```bash title="Terminal"
+        ./gradlew install smartbuild
+        ```
+
+    6. Inicie Tomcat:
+        ```bash title="Terminal"
+        sudo /etc/init.d/tomcat start
+        ```
+
+    7. Abra el navegador y navegue a `http://localhost:8080/etendo`.
+
+=== ":material-server: Server"
+
+    1. Clone el proyecto Etendo Base:
+        ```bash title="Terminal"
+        cd /opt/
+        git clone https://github.com/etendosoftware/etendo_base.git EtendoERP
+        cd /opt/EtendoERP
+        ```
+
+    2. Añada las credenciales de GitHub a `gradle.properties`:
+        ```groovy title="gradle.properties"
+        githubUser=<username>
+        githubToken=<*******>
+        ```
+
+    3. Expanda Etendo Base:
+        ```bash title="Terminal"
+        ./gradlew expand
+        ```
+
+    4. Aplique la plantilla de servidor:
+        ```bash title="Terminal"
+        ./gradlew setup.applyTemplates --template=server
+        ```
+        Cuando se le solicite, proporcione:
+
+        - **Etendo ERP URL** — la dirección completa de su instalación (p. ej., `http://myserver.com/etendo`). El nombre de contexto y el host se derivan automáticamente.
+        - **OpenAI API Key** — su clave para la integración con Copilot (la entrada se enmascara).
+
+    5. Ejecute la instalación:
+        ```bash title="Terminal"
+        ./gradlew install smartbuild
+        ```
+
+    6. Inicie Tomcat:
+        ```bash title="Terminal"
+        sudo /etc/init.d/tomcat start
+        ```
+
+    7. Abra el navegador y navegue a `https://<Public server IP>/<Context Name>`.
+
+!!! info
+    Para más detalles sobre las plantillas disponibles, opciones y uso avanzado, consulte la [guía Setup Apply Templates](../developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates.md).
+
+## Características avanzadas
+
+### Proceso de instalación interactiva
+
+Para una instalación totalmente guiada, paso a paso, con solicitudes por propiedad y un resumen de confirmación, utilice el asistente de configuración interactiva en lugar de `setup.applyTemplates`.
+
+#### Preparar el entorno
 
 Elija el formato de instalación y prepare los archivos base:
 
@@ -126,7 +216,7 @@ Elija el formato de instalación y prepare los archivos base:
         ./gradlew expand
         ```
 
-### Iniciar la configuración interactiva
+#### Iniciar la configuración interactiva
 
 Inicie el asistente de configuración interactiva:
 
@@ -134,7 +224,7 @@ Inicie el asistente de configuración interactiva:
 ./gradlew setup -Pinteractive=true --console=plain
 ```
 
-### Navegar por el menú de configuración
+#### Navegar por el menú de configuración
 
 Será posible ver el menú principal de configuración:
 
@@ -155,7 +245,7 @@ Será posible ver el menú principal de configuración:
 🎯 Seleccione una opción:
 ```
 
-### Configurar propiedades
+#### Configurar propiedades
 
 Al seleccionar un grupo de configuración, se le guiará por cada propiedad, por ejemplo:
 
@@ -175,7 +265,7 @@ Al seleccionar un grupo de configuración, se le guiará por cada propiedad, por
 
 🔧 Propiedad: bbdd.password
    ℹ️  Contraseña de conexión a la base de datos
-   Valor actual: 
+   Valor actual:
 🔐 Nuevo valor (oculto): [La entrada de contraseña está oculta]
 ```
 
@@ -185,7 +275,7 @@ Al seleccionar un grupo de configuración, se le guiará por cada propiedad, por
     - **Las propiedades sensibles** (contraseñas, tokens) ocultarán su entrada.
     - **Las propiedades obligatorias** deben tener un valor para continuar.
 
-### Revisar el resumen de configuración
+#### Revisar el resumen de configuración
 
 Antes de aplicar los cambios, se mostrará un resumen completo:
 
@@ -218,7 +308,7 @@ Antes de aplicar los cambios, se mostrará un resumen completo:
 - [X] Las credenciales de GitHub/Nexus están configuradas correctamente.
 - [X] El nombre de contexto de la aplicación es el deseado.
 
-### Completar la instalación
+#### Completar la instalación
 
 Después de confirmar la configuración:
 
@@ -261,15 +351,12 @@ Complete el proceso de instalación:
     ./gradlew install smartbuild
     ```
 
-### Acceder a su instalación
+#### Acceder a su instalación
 
 Abra el navegador y navegue a:
 
 - **Instalación estándar**: `https://<Public server IP>/<Context Name>`
 - **Desarrollo local**: `http://localhost:8080/etendo`
-
-
-## Características avanzadas
 
 ### Volver a ejecutar la configuración interactiva
 
@@ -301,3 +388,4 @@ Si su proyecto incluye módulos personalizados con un archivo `config.gradle`, s
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+---
