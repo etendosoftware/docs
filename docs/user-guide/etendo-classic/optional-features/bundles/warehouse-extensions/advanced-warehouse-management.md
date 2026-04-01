@@ -463,15 +463,33 @@ This button is available **only when the Inbound Receipt is completed**.
 
 ??? example "Print Inbound Receipt - Examples"
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png)
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png)
+    ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png)
+    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
+
+    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
+
+    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
 
 **Print Line Label**
 
