@@ -5,7 +5,7 @@ tags:
   - UI
   - Extensibility
 
-status: new
+status: beta
 ---
 
 # How to Configure Color System Support in the UI
