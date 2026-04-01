@@ -64,10 +64,29 @@ Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externo
             ```
 
             !!! warning
-                Este módulo no puede configurarse junto con [Etendo Advanced Security](overview.md#etendo-advanced-security) porque ambos utilizan la propiedad `authentication.class`. 
+                Este módulo no puede configurarse junto con [Etendo Advanced Security](overview.md#etendo-advanced-security) porque ambos utilizan la propiedad `authentication.class`.
 
             !!!note
                 Durante el desarrollo, puede usar `localhost`. Sin embargo, para producción, establezca su dominio real.
+
+        3. Añada la clave de cifrado de tokens a `gradle.properties`:
+
+            !!! warning "Requerido: clave de cifrado de tokens"
+                Las integraciones de SSO y OAuth fallarán con una página de error de configuración si falta esta propiedad.
+
+            Añada:
+
+            ```properties title="gradle.properties"
+            etrx.token.encryption.key=<cadena hexadecimal de 64 caracteres>
+            ```
+
+            Genere el valor con:
+
+            ```bash
+            openssl rand -hex 32
+            ```
+
+            Almacene el resultado como valor de `etrx.token.encryption.key`. Esta clave se utiliza para cifrar los tokens OAuth en reposo (AES-256-GCM) en la base de datos.
 
             Con estos ajustes, Etendo podrá autenticar usuarios mediante proveedores de inicio de sesión externos usando el middleware.
 
@@ -379,6 +398,9 @@ Esta sección define los endpoints del proveedor OAuth necesarios para que su ap
 
 Esta solapa almacena los tokens generados a través del ERP. Aunque por motivos de seguridad no se muestran los tokens completos, está disponible la siguiente información:
 
+!!! note
+    Los tokens también se almacenan cifrados en reposo en la base de datos usando AES-256-GCM. Esto aplica al campo `Token` de la entidad `ETRXTokenInfo` y al campo `OAuthToken` de la entidad `ETRXTokenUser`.
+
 - **Usuario:** Usuario del ERP que generó el token.
 - **Proveedor:** Proveedor OAuth desde el que se emitió el token.
 - **Válido hasta:** Fecha y hora de caducidad del token.
@@ -402,3 +424,5 @@ Esta solapa almacena los tokens generados a través del ERP. Aunque por motivos 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
