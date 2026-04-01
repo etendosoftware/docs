@@ -9,6 +9,8 @@ tags:
     - Software Stack
     - Etendo Classic
     - Requirements
+    - Etendo 26
+    - Migrate to Etendo 26
 ---
 ## Overview
 
@@ -51,6 +53,19 @@ Either PostgreSQL should also be supported by your target system
 
 ## Software Stack
 
+### Etendo 26
+
+!!! warning "Breaking Change: Java 17 is Now Mandatory"
+    Starting with **Etendo 26**, Java 11 is no longer supported. Java 17 or higher is required to build and run Etendo 26. See [API Changes - Etendo 26](../../developer-changelog/apichanges.md#etendo-26) for migration details.
+
+| Stack component | Supported versions | Recommended version | Installation Guide |
+| :--- | :--- | :--- | :--- |
+| :fontawesome-brands-java:  Java SE | 17 | 17.0.14 or higher | [Java Installation Guide](https://www.oracle.com/java/technologies/downloads/#java17){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 16.x, 17.x, Amazon RDS | Latest 17.x | [Postgres Installation Guide](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Installation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
+| :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Gradle Docs](https://docs.gradle.org/8.12.1){target="_blank"} |
+| :material-database:  Oracle | 19c (LTS) | 19c (LTS) | |
+
 ### Etendo 25
 
 | Stack component | Supported versions | Recommended version | Installation Guide |
@@ -59,9 +74,12 @@ Either PostgreSQL should also be supported by your target system
 | :simple-postgresql:  PostgreSQL | 14.x, 16.x, Amazon RDS | Latest 16.x | [Postgres Installation Guide ](https://www.postgresql.org/download/){target="_blank"} |
 | :simple-apachetomcat:  Apache Tomcat | 9.0.x | Latest 9.0.x | [Tomcat Installation Guide](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
 | :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Gradle Docs](https://docs.gradle.org/8.12.1){target="_blank"} |
-| :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
+| :material-database:  Oracle | 19c (LTS) | 19c (LTS) | |
 
-### Etendo 24 and earlier
+### Etendo 24 and earlier (Deprecated)
+
+!!!failure "Deprecated"
+    Etendo 24 and earlier are no longer supported. Upgrade to Etendo 25 or higher. See the [Upgrade Guide](../upgrade/upgrade-etendo-to-any-version.md) for instructions.
 
 | Stack component | Supported versions | Recommended version | Installation Guide |
 | :--- | :--- | :--- | :--- |

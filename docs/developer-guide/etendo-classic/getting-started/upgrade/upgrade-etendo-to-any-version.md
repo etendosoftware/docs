@@ -6,6 +6,7 @@ tags:
     - Version Management
     - Gradle Plugin
     - Core
+    - Etendo
 ---
 
 # Upgrade Etendo to Any Version
@@ -45,7 +46,7 @@ This guide explains how to upgrade your Etendo environment to any version you wa
     ./gradlew wrapper --gradle-version 7.3.2
     ```
 
-- If you are upgrading to **Etendo 25**, update Gradle by running:
+- If you are upgrading to **Etendo 25** or **Etendo 26**, update Gradle by running:
   
     ```bash title="Terminal"
     ./gradlew wrapper --gradle-version 8.12.1
@@ -55,12 +56,17 @@ This guide explains how to upgrade your Etendo environment to any version you wa
 
 The required technology stack depends on the target version.
 
-- For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged, For more information, visit: [Etendo 24 and Earlier - Software Stack](../installation/requirements.md#etendo-24-and-earlier)
+- For Etendo versions prior to **Etendo 25**, the initial stack remains unchanged. For more information, visit: [Etendo 24 and Earlier - Software Stack](../installation/requirements.md#etendo-24-and-earlier)
 
 - If you are migrating to **Etendo 25**, you must first update the **entire technology stack** (Java SE, PostgreSQL, Apache Tomcat). For more information, visit: [Etendo 25 - Software Stack](../installation/requirements.md#etendo-25)
-   
+
+- If you are migrating to **Etendo 26**, the stack is the same as Etendo 25 with one critical difference: **Java 17 is now mandatory**. The `-Pjava.version=11` compatibility flag has been completely removed. For more information, visit: [Etendo 26 - Software Stack](../installation/requirements.md#etendo-26)
+
+    !!! warning "Action Required for Custom Developments"
+        If your custom modules include `BuildValidation` or `ModuleScript` classes compiled with Java 11, recompile them before upgrading. See [API Changes - Etendo 26](../../developer-changelog/apichanges.md#etendo-26) for details.
+
     !!!tip 
-        The [Developer Changelog](../../developer-changelog/apichanges.md) guide provides details about the required stack and possible changes needed in custom modules. 
+        The [Developer Changelog](../../developer-changelog/apichanges.md) guide provides details about the required stack and possible changes needed in custom modules.
 
 ### Etendo Upgrade
 
@@ -130,7 +136,7 @@ Etendo can be installed or upgraded using two formats: Source or JAR. The Source
 6.  Check for any compilation errors that may occur due to incompatible customizations or modifications.
 
     !!! warning
-        Remember to review the API Changes that may affect modules installed in **Etendo 25** or later. For more information, visit: [Etendo API Changes](../../developer-changelog/apichanges.md)
+        Remember to review the API Changes that may affect modules installed in **Etendo 25** or **Etendo 26** or later. For more information, visit: [Etendo API Changes](../../developer-changelog/apichanges.md)
 
     !!! success
         Your Etendo environment is now updated!
@@ -189,7 +195,7 @@ Etendo can be installed or upgraded using two formats: Source or JAR. The Source
 
     
     !!! warning
-        Remember to review the API Changes that may affect modules installed in **Etendo 25** or later. For more information, visit: [Etendo API Changes](../../developer-changelog/apichanges.md)
+        Remember to review the API Changes that may affect modules installed in **Etendo 25** or **Etendo 26** or later. For more information, visit: [Etendo API Changes](../../developer-changelog/apichanges.md)
 
 
     !!! success
