@@ -14690,6 +14690,15 @@
 <p class="admonition-title">Info</p>
 <p>To read about this configuration, visit the <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/#etendo-sso-login">Developer Guide</a>.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Encryption keys required before going to production</p>
+<p>OAuth tokens are stored encrypted at rest in the database. Before deploying to production, administrators must configure the encryption key:</p>
+<ul>
+<li><strong>Etendo Core</strong>: set <code>etrx.token.encryption.key</code> in <code>gradle.properties</code> (64-character hex string).</li>
+</ul>
+<p>Generate each key with: <code>openssl rand -hex 32</code></p>
+<p>For full configuration details, see the <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx/#etendo-middleware-setup-recommended">Developer Guide</a>.</p>
+</div>
 <h3 id="logging-into-etendo-with-an-external-provider">Logging into Etendo with an external provider</h3>
 <p>When accessing the Etendo login screen, you’ll see buttons for the <strong>available providers</strong> to authenticate with.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/SSOLogin2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx/SSOLogin2.png"></a></p>

@@ -15108,7 +15108,7 @@
 <li>Provides SSO via Auth0 (or any OIDC IdP): builds authorize URL, exchanges authorization code, validates ID Token (JWKS), and returns control to the ERP.</li>
 <li>Orchestrates Google OAuth 2.0 consent and token exchange / refresh.</li>
 <li>Issues short‑lived internal authorization codes (ephemeral) for secure backchannel exchange (optional).</li>
-<li>Stores refresh tokens securely (in production use an encrypted database, not in‑memory map).</li>
+<li>Stores <code>access_token</code> and <code>refresh_token</code> encrypted at rest in SQLite using AES-256-GCM (requires <code>ENCRYPTION_KEY</code> env var).</li>
 </ul>
 <h3 id="data-model-etendo-rx">Data Model (Etendo RX)</h3>
 <table>
@@ -15190,6 +15190,10 @@
 <li><code>MIDDLEWARE_PROVIDER</code> (e.g. <code>google - drive.file</code>)</li>
 <li>Flags (e.g. <code>APPROVE_GOOGLE_DOC</code>)</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Token encryption at rest</p>
+<p>The <code>TOKEN</code> field in <code>ETRXTokenInfo</code> is stored encrypted at rest using AES-256-GCM. The property <code>etrx.token.encryption.key</code> must be set in <code>gradle.properties</code> with a 64-character hex string (32 bytes) before starting the server. Generate a key with: <code>openssl rand -hex 32</code></p>
+</div>
 <h3 id="etrx_instance_connector"><code>ETRX_INSTANCE_CONNECTOR</code></h3>
 <p>Registers:</p>
 <ul>
@@ -15281,7 +15285,7 @@
 </ul>
 <p>Reliability:</p>
 <ul>
-<li>Replace in-memory token store with encrypted persistent storage in production.</li>
+<li>OAuth tokens are stored encrypted at rest using AES-256-GCM.</li>
 <li>Synchronize clocks (avoid premature expiry rejections).</li>
 <li>Implement retry with backoff for transient network errors to Google / Auth0.</li>
 </ul>
@@ -15345,6 +15349,8 @@
 <li>Valid TLS certificates.</li>
 <li>Middleware logs show expected sequence <code>[LOGIN]</code> → <code>[CALLBACK]</code>.</li>
 <li>On <code>access_denied</code> errors: verify user consent, scopes, and IdP policy.</li>
+<li>Middleware: <code>ENCRYPTION_KEY</code> env var set (64-char hex — generate with <code>openssl rand -hex 32</code>)</li>
+<li>Etendo Core: <code>etrx.token.encryption.key</code> property set in <code>gradle.properties</code> (64-char hex — generate with <code>openssl rand -hex 32</code>)</li>
 </ul>
 <h2 id="summary">Summary</h2>
 <p>This document centralizes the steps and structures required to implement secure OAuth SSO and Google token management in Etendo RX using a dedicated Middleware layer. Follow best practices to ensure security, reliability, and maintainability.</p>

@@ -4841,6 +4841,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#certificado-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificado Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuracion-sii" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración SII
@@ -15513,6 +15522,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#certificado-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificado Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configuracion-sii" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración SII
@@ -16297,10 +16315,13 @@
 <p>Dependiendo de si el Tercero se configura con la categoría de impuestos de Tercero "Arrendamiento con retención" o "Arrendamientos sin retención", el arrendamiento del local de negocio estará o no sujeto a retención.</p>
 <h3 id="configuracion-transmision-de-bienes-inmuebles"><strong>Configuración Transmisión de Bienes Inmuebles</strong></h3>
 <p>Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.</p>
+<h3 id="certificado-digital">Certificado Digital</h3>
+<p>Antes de configurar el envío de facturas a SII, es necesario cargar el certificado digital en la organización legal correspondiente. SII utiliza directamente el certificado almacenado en la sección <strong>Certificado Digital</strong> de la ventana <strong>Organización</strong>.</p>
+<p>Para cargar o actualizar el certificado, consulte la sección <a href="../funcionalidades-generales-para-sifs/#carga-de-certificados-digitales">Carga de Certificados Digitales</a>.</p>
 <h3 id="configuracion-sii"><strong>Configuración SII</strong></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Suministro Inmediato de Información (SII)</code> &gt; <code>Configuración SII</code></p>
 <p>En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-sii.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-sii.png"></a></p>
 <p>Tal y como se muestra en la imagen anterior, los parámetros de configuración de SII son los siguientes:</p>
 <ul>
 <li><strong>Organización</strong>: organización (entidad legal) para la que se configura el envío de registros a SII.<br>
@@ -16310,8 +16331,6 @@
   El usuario lo puede desmarcar con posterioridad, en el caso en que la organización ya no esté acogida a SII.<br>
   Si se desmarca este check, todos los demás campos aparecerán como no editables y la organización ya no estará acogida a SII, es decir, ya no será necesario ni se podrá enviar el registro de sus facturas a SII (alta/modificación).</li>
 <li><strong>Fecha acogida a SII</strong>: campo de fecha en el que se puede indicar la fecha en la que la organización se acoge a SII. En general, esta fecha es el 01-07-2017.</li>
-<li><strong>Ruta de ubicación del certificado electrónico</strong> : el usuario debe especificar la ruta en la que se encuentra el certificado de la AEAT válido para dicha organización.</li>
-<li><strong>Contraseña certificada</strong>: una vez informado el campo anterior, el usuario debe indicar la contraseña de dicho certificado. El contenido se guardará como texto cifrado.</li>
 <li><strong>Plazo límite de alta en SII</strong>: campo "informativo" que por defecto mostrará 8 días como plazo límite de alta en SII, ya que para 2017 y para este tipo de comunicación Alta (A0) ese es el plazo límite.<br>
   El usuario tendrá que modificarlo a 4 días o al número de días que indique la AEAT para el alta de registros de factura a realizar a partir del 1 de enero de 2018.</li>
 <li><strong>Cadencia Proceso Alta Facturas Venta a SII</strong>: en este campo, el usuario puede configurar el número de días naturales de margen que necesita para revisar/modificar las facturas de venta, antes de que estas se envíe de forma automática por el Proceso de "alta"en SII, proceso que se recomienda programar para que sea ejecutado diariamente. Además, se recomienda que el número de días introducido en este campo no supere el <strong>plazo límite de alta en SII</strong>, que en el caso de las facturas de venta es de 8 días (sin contar sábados, domingos y festivos nacionales) desde la fecha de "expedición" de la factura (fecha factura).<br>
@@ -16409,7 +16428,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png"></a></p>
 <h3 id="configuracion-alta-de-factura-de-compra-solo-tras-su-contabilizacion"><strong>Configuración alta de factura de compra sólo tras su contabilización</strong></h3>
 <p>Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check "Alta en SII facturas de compra tras su contabilización" ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-alta-contabilizacion.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-alta-contabilizacion.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.</p>
