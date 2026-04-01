@@ -447,7 +447,7 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 **Print Labels**
 
 This button generates barcode labels for **all lines** of the selected Inbound Receipt document.
-Each label is created with the **full set of attributes defined during the reception**, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet). If no attributes are defined for a product, the label displays *No attributes*. If no logistics unit applies, the logistics unit line is not shown.
 
 - For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.
   This means that as many labels are printed as units specified in the **Operative Quantity** field.
@@ -463,20 +463,38 @@ This button is available **only when the Inbound Receipt is completed**.
 
 ??? example "Print Inbound Receipt - Examples"
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png)
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png)
+    ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png)
+    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
+
+    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
+
+    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
 
 **Print Line Label**
 
 This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.
-Each label contains the **complete set of attributes assigned at reception time** for the selected lines.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet), following the same display rules as the **Print Labels** button.
 
 The label generation follows the same rules described above, applied **only to the selected line or lines**:
 
