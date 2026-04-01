@@ -182,13 +182,19 @@ Dependiendo de si el Tercero se configura con la categoría de impuestos de Terc
 
 Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.
 
+### Certificado Digital
+
+Antes de configurar el envío de facturas a SII, es necesario cargar el certificado digital en la organización legal correspondiente. SII utiliza directamente el certificado almacenado en la sección **Certificado Digital** de la ventana **Organización**.
+
+Para cargar o actualizar el certificado, consulte la sección [Carga de Certificados Digitales](./funcionalidades-generales-para-sifs.md#carga-de-certificados-digitales).
+
 ### **Configuración SII**
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
 
 En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
 
-![](../../../../../../assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-sii.png)
 
 Tal y como se muestra en la imagen anterior, los parámetros de configuración de SII son los siguientes:
 
@@ -199,8 +205,6 @@ Tal y como se muestra en la imagen anterior, los parámetros de configuración d
   El usuario lo puede desmarcar con posterioridad, en el caso en que la organización ya no esté acogida a SII.  
   Si se desmarca este check, todos los demás campos aparecerán como no editables y la organización ya no estará acogida a SII, es decir, ya no será necesario ni se podrá enviar el registro de sus facturas a SII (alta/modificación).
 - **Fecha acogida a SII**: campo de fecha en el que se puede indicar la fecha en la que la organización se acoge a SII. En general, esta fecha es el 01-07-2017.
-- **Ruta de ubicación del certificado electrónico** : el usuario debe especificar la ruta en la que se encuentra el certificado de la AEAT válido para dicha organización.
-- **Contraseña certificada**: una vez informado el campo anterior, el usuario debe indicar la contraseña de dicho certificado. El contenido se guardará como texto cifrado.
 - **Plazo límite de alta en SII**: campo "informativo" que por defecto mostrará 8 días como plazo límite de alta en SII, ya que para 2017 y para este tipo de comunicación Alta (A0) ese es el plazo límite.  
   El usuario tendrá que modificarlo a 4 días o al número de días que indique la AEAT para el alta de registros de factura a realizar a partir del 1 de enero de 2018.
 - **Cadencia Proceso Alta Facturas Venta a SII**: en este campo, el usuario puede configurar el número de días naturales de margen que necesita para revisar/modificar las facturas de venta, antes de que estas se envíe de forma automática por el Proceso de "alta"en SII, proceso que se recomienda programar para que sea ejecutado diariamente. Además, se recomienda que el número de días introducido en este campo no supere el **plazo límite de alta en SII**, que en el caso de las facturas de venta es de 8 días (sin contar sábados, domingos y festivos nacionales) desde la fecha de "expedición" de la factura (fecha factura).  
@@ -325,7 +329,7 @@ En Etendo existen dos opciones para indicar la causa de exención junto con la b
 
 Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check "Alta en SII facturas de compra tras su contabilización" ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.
 
-![](../../../../../../assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-alta-contabilizacion.png)
 
 !!! info
     Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
