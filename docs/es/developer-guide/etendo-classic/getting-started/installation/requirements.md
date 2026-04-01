@@ -9,6 +9,8 @@ tags:
     - Pila de software
     - Etendo Classic
     - Requisitos
+    - Etendo 26
+    - Migrar a Etendo 26
 ---
 ## Visión general
 
@@ -51,6 +53,19 @@ PostgreSQL también debería estar soportado por tu sistema objetivo.
 
 ## Pila de software
 
+### Etendo 26
+
+!!! warning "Breaking Change: Java 17 is Now Mandatory"
+    A partir de **Etendo 26**, Java 11 ya no es compatible. Se requiere Java 17 o superior para compilar y ejecutar Etendo 26. Consulta [API Changes - Etendo 26](../../developer-changelog/apichanges.md#etendo-26) para obtener detalles de la migración.
+
+| Componente de la pila | Versiones soportadas | Versión recomendada | Guía de instalación |
+| :--- | :--- | :--- | :--- |
+| :fontawesome-brands-java:  Java SE | 17 | 17.0.14 o superior | [Guía de instalación de Java](https://www.oracle.com/java/technologies/downloads/#java17){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 16.x, 17.x, Amazon RDS | Última 17.x | [Guía de instalación de Postgres](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 9.0.x | Última 9.0.x | [Guía de instalación de Tomcat](https://tomcat.apache.org/download-90.cgi){target="_blank"} |
+| :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Documentación de Gradle](https://docs.gradle.org/8.12.1){target="_blank"} |
+| :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
+
 ### Etendo 25
 
 | Componente de la pila | Versiones soportadas | Versión recomendada | Guía de instalación |
@@ -61,7 +76,10 @@ PostgreSQL también debería estar soportado por tu sistema objetivo.
 | :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Documentación de Gradle](https://docs.gradle.org/8.12.1){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
 
-### Etendo 24 y anteriores
+### Etendo 24 y anteriores (Deprecados)
+
+!!!failure "Deprecados"
+    Etendo 24 y anteriores ya no son compatibles. Actualiza a Etendo 25 o superior. Consulta la [Guía de actualización](../upgrade/upgrade-etendo-to-any-version.md) para obtener instrucciones.
 
 | Componente de la pila | Versiones soportadas | Versión recomendada | Guía de instalación |
 | :--- | :--- | :--- | :--- |
@@ -72,4 +90,6 @@ PostgreSQL también debería estar soportado por tu sistema objetivo.
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) | |
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

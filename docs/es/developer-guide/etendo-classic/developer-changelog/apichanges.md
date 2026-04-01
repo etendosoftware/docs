@@ -1,32 +1,165 @@
 ---
-tags: 
-    - Cambios de API
-    - Guía de actualización
-    - Migrar a Etendo 25
+tags:
+    - API Changes
+    - Etendo 26
     - Etendo 25
-    - Actualizar Etendo
-    - Registro de cambios para desarrolladores
-    
+    - Migrate to Etendo 25
+    - Update Etendo
+    - Updating Guide
+    - Developer Changelog
 ---
 
-# Documentación de cambios de API 
+# Documentación de cambios de API
 
-## Visión general
+## Resumen
 
-Este documento proporciona información detallada sobre los cambios de API y de stack introducidos en las últimas versiones de Etendo.  
-Sirve como referencia para desarrolladores y administradores de sistemas para comprender qué componentes se han actualizado, quedado obsoletos o eliminado, y cómo estos cambios pueden afectar a los desarrollos personalizados.  
+Este documento proporciona información detallada sobre los cambios de API y de stack introducidos en las últimas versiones de Etendo.
+Sirve como referencia para desarrolladores y administradores de sistemas para entender qué componentes se han actualizado, quedado obsoletos o eliminado, y cómo estos cambios pueden afectar a los desarrollos personalizados.
 
-Si está planificando actualizar su entorno, asegúrese de revisar también la guía oficial de actualización: [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
-## Marzo 2025
+Si estás planificando actualizar tu entorno, asegúrate de revisar también la guía oficial de actualización: [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
+
+## Etendo 26
+
+- [Etendo - Release 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="\_blank"}
+
+[Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
+### Actualización de la pila de plataforma
+
+**:material-language-java: Java SE**
+
+- Versión mínima requerida: `17.0.14` — [Notas de la versión](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+
+    !!! danger "Cambio incompatible: Java 17 es ahora obligatorio"
+    
+        A partir de **Etendo 26.1.0**, Java 17 es la **única versión compatible** de Java. El indicador de compatibilidad `-Pjava.version=11` introducido en Etendo 25 ha sido **completamente eliminado**.
+
+        Cualquier entorno que siga ejecutando Java 11 quedará **bloqueado al compilar**. Debes instalar y configurar **Java 17 o superior** antes de actualizar a Etendo 26.
+
+    !!! warning "Acción requerida para desarrollos personalizados"
+        Si tienes módulos personalizados con clases `BuildValidation` o `ModuleScript`, recompílalos con Java 17 antes de actualizar. Estas clases se ejecutan durante `update.database` y fallan en tiempo de ejecución si se compilan con Java 11 debido a incompatibilidades de bytecode.
+
+        ```bash title="Terminal"
+        ./gradlew compile.modulescript -Dmodule=<javapackage>
+        ./gradlew compile.buildvalidation -Dmodule=<javapackage>
+        ```
+
+        Esto solo aplica a módulos **personalizados**. Los módulos núcleo de Etendo ya están compilados con Java 17.
+
+---
+
+**:simple-postgresql: PostgreSQL**
+
+- Nueva versión compatible: `17`
+- Controlador JDBC: `42.5.4` -> `42.7.8` — [Registro de cambios](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
+
+PostgreSQL 17 es compatible a partir de esta versión. No es necesaria ninguna acción si te mantienes en una versión actualmente compatible. Si actualizas el motor de base de datos, revisa las [notas de la versión de PostgreSQL 17](https://www.postgresql.org/docs/release/17.0/){target="\_blank"} para ver los cambios incompatibles.
+
+---
+
+**:octicons-file-code-24: Etendo Gradle Plugin**
+
+- Nueva versión requerida: `2.3.0` o superior — [Notas de la versión](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+- El indicador `-Pjava.version=11` ha sido eliminado. Java 17 ahora se aplica sin posibilidad de omisión.
+
+---
+
+**:octicons-file-code-24: DBSourceManager**
+
+- Nueva versión: `1.1.0` -> `1.2.0`
+- Cambios:
+    - El wrapper de Gradle se ha actualizado de `7.3.2` a `8.12.1`.
+    - Se ha añadido compatibilidad con la plataforma PostgreSQL 16 (`PostgreSql16Platform`).
+    - Nuevo sistema `ExcludedConstraint` para gestionar tablas particionadas y esquemas de base de datos complejos.
+    - Mejora en el manejo de tablas particionadas durante la exportación de la base de datos.
+    - Se han eliminado todos los JAR incluidos en `lib/`; ahora las dependencias se resuelven desde el classpath del proyecto.
+
+### Bibliotecas de terceros
+
+**Actualizado**
+
+- `org.postgresql:postgresql` `42.5.4` -> `42.7.8` — actualización compatible. Revisa el [registro de cambios](https://jdbc.postgresql.org/changelogs/){target="\_blank"} si utilizas funciones específicas del controlador.
+
+- `org.mozilla:rhino` `1.7.13` -> `1.8.0`
+- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0` — [Versiones de Rhino](https://github.com/mozilla/rhino/releases){target="\_blank"}
+
+    !!! warning
+        Si tienes JavaScript personalizado ejecutado a través del motor Rhino, pruébalo para comprobar su compatibilidad con la versión 1.8.0. Esta actualización incluye cambios en la compatibilidad con ECMAScript y en las API internas.
+
+- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3` — [Documentación de ANTLR 3](https://www.antlr3.org/){target="\_blank"}
+
+    !!! warning
+        Esta es una **actualización de versión mayor** (ANTLR 2 a ANTLR 3). Si utilizas las API de ANTLR directamente en código personalizado, debes migrar. La estructura de paquetes y la API han cambiado significativamente.
+
+- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6` — [Versiones de Woodstox](https://github.com/FasterXML/woodstox/releases){target="\_blank"} — actualización de versión mayor para la biblioteca de procesamiento de flujos XML. Revísalo si utilizas las API de Woodstox directamente.
+
+- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0` — ver arriba [DBSourceManager (DBSM)](#dbsourcemanager-dbsm).
+
+---
+
+**Coordenadas de artefactos migradas al upstream**
+
+Varias bibliotecas anteriormente reempaquetadas bajo `com.etendoerp` ahora se resuelven desde sus coordenadas oficiales de Maven Central upstream. Si tus módulos declaran alguna de estas como dependencias explícitas, actualiza las coordenadas del artefacto. Sin cambios funcionales.
+
+| Anterior | Nuevo | Versión |
+|---|---|---|
+| `com.etendoerp:yuiant` `1.0` | `com.etendoerp:YUIAnt` `1.0.0` | Cambio de mayúsculas/minúsculas en el ID del artefacto |
+| `com.etendoerp:jettison` `1.3` | `org.codehaus.jettison:jettison` `1.3` | Misma versión |
+| `com.etendoerp:wstx-asl` `3.0.2` | `org.codehaus.woodstox:wstx-asl` `4.0.6` | Versión actualizada |
+| `com.etendoerp:slf4j-api` `1.7.25` | `org.slf4j:slf4j-api` `1.7.25` | Misma versión |
+| `com.etendoerp:antlr` `2.7.7` | `org.antlr:antlr-complete` `3.5.3` | Versión actualizada |
+| `com.etendoerp:rhino-engine` `1.7.13` | `org.mozilla:rhino-engine` `1.8.0` | Versión actualizada |
+
+---
+
+**Nuevas**
+
+Las siguientes bibliotecas son nuevas incorporaciones al classpath de la plataforma. No es necesaria ninguna acción salvo que tus módulos personalizados declaren versiones en conflicto.
+
+- `org.apache.poi:ooxml-schemas` `1.4` — [Documentación](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+- `org.hamcrest:hamcrest-all` `1.3` — [Documentación](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+- `junit:junit` `4.12` — [Documentación](https://junit.org/junit4/){target="\_blank"}
+
+---
+
+**Eliminadas**
+
+- `org.apache.commons:commons-compress` `1.27.1`
+
+    !!! warning
+        Si tus módulos personalizados dependen de `commons-compress`, añádelo como dependencia explícita en el `build.gradle` de tu módulo.
+
+- `org.eclipse.jdt:ecj` `3.23.0` (Eclipse Compiler for Java)
+- `com.etendoerp:ant-nodeps` `1.0.0`
+- `com.etendoerp:catalina-ant` `1.0.0`
+- `org.apache.poi:ooxml-schemas` `1.4`   
+
+### Cambios en el esquema de base de datos
+
+Los siguientes cambios se aplican automáticamente durante `update.database`:
+
+| Tabla | Cambio | Detalles |
+|---|---|---|
+| `AD_HEARTBEAT_LOG` | Columnas eliminadas | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
+| `AD_HEARTBEAT_LOG` | Columna añadida | `STATUS` |
+| `AD_SYSTEM_INFO` | Columnas añadidas | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+
+### Otros cambios
+
+- **Generación de claves de Secure Web Services**: el objetivo de Ant `generate.sws.keys` ahora se ejecuta automáticamente durante `install.source`, reduciendo los pasos de configuración manual para los servicios web seguros.
+
+---
+## Etendo 25
 
 - [Etendo - Versión 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
 - [Etendo - Versión 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
 - [Etendo - Versión 25.1.2](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.2)
 
 [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
-### Actualización del stack de la plataforma de Etendo
 
-#### :material-language-java: Java SE
+### Actualización de la pila de plataforma
+
+**:material-language-java: Java SE**
 
 - Nueva versión compatible: `17.0.14`
 - Notas de la versión:
@@ -65,9 +198,9 @@ Si está planificando actualizar su entorno, asegúrese de revisar también la g
 
     </div>
 
+---
 
-    
-#### :simple-postgresql: PostgreSQL
+**:simple-postgresql: PostgreSQL**
 
 - Nueva versión compatible: `16.8.1`
 - Notas de la versión:
@@ -100,18 +233,18 @@ Si está planificando actualizar su entorno, asegúrese de revisar también la g
 
         </div>
 
+---
 
-
-#### :simple-gradle: Gradle
+**:simple-gradle: Gradle**
 
 !!! warning
-    Para actualizar el wrapper de Gradle en un entorno existente, debe ejecutar:
+    Para actualizar el wrapper de Gradle en un entorno existente, debes ejecutar:
     
     ``` bash title="Terminal"
         ./gradlew wrapper --gradle-version 8.12.1 
     ```
 
-    Para obtener directrices de migración más detalladas, consulte [Actualización del wrapper de Gradle](https://docs.gradle.org/8.12.1/userguide/gradle_wrapper.html#sec:upgrading_wrapper){target="\_blank"}
+    Para obtener directrices de migración más detalladas, consulta [Actualización del wrapper de Gradle](https://docs.gradle.org/8.12.1/userguide/gradle_wrapper.html#sec:upgrading_wrapper){target="\_blank"}
 
 - Nueva versión compatible: `8.12.1`
 - Notas de la versión:
@@ -144,21 +277,22 @@ Si está planificando actualizar su entorno, asegúrese de revisar también la g
         - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
 
         </div>
-    
-#### :simple-apachetomcat: Apache Tomcat
+
+---
+
+**:simple-apachetomcat: Apache Tomcat**
 
 - Nueva versión compatible: `9.0.98`
 - Notas de la versión: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
 
+---
 
-
-
-#### :octicons-file-code-24: Etendo Gradle Plugin
+**:octicons-file-code-24: Etendo Gradle Plugin**
 
 - Nueva versión compatible: `2.0.0` o superior
 - Notas de la versión:
 
-    - [Etendo Gradle Plugin - Notas de la versión](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+    - [Notas de la versión de Etendo Gradle Plugin](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
     - Nueva tarea del plugin de Gradle: 
 
         ``` bash title="Terminal"
@@ -166,24 +300,28 @@ Si está planificando actualizar su entorno, asegúrese de revisar también la g
         ```
         Esta nueva tarea elimina los directorios creados por la tarea `expandCore`.
 
-    - Indicador de compatibilidad
+    - Marca de compatibilidad
 
         ``` bash title="Terminal"
         -Pjava.version=11
         ```
-        Este nuevo indicador fuerza el uso de Java 11 con la versión 25Q1.
+        Esta nueva marca fuerza el uso de Java 11 con la versión 25Q1.
 
-#### :octicons-issue-opened-24: Etendo ISO
+---
+
+**:octicons-issue-opened-24: Etendo ISO**
        
 !!!note 
-    Las ISO de **Etendo 25** actualmente se basan en la imagen amd64 de Ubuntu Live Server `22.04.5`. <br>
-    Para obtener más información, visite [Notas de la versión de Etendo ISO](../../../whats-new/release-notes/etendo-classic/iso.md).
-### Bibliotecas de terceros 
-
-Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como archivos JAR se han actualizado a dependencias de Gradle, ahora definidas en el archivo `artifacts.list.COMPILATION.gradle` en la raíz del proyecto.
+    Las ISO de **Etendo 25** se basan actualmente en la imagen amd64 de Ubuntu Live Server `22.04.5`. <br>
+    Para más información, visita [Notas de la versión de Etendo ISO](../../../whats-new/release-notes/etendo-classic/iso.md).
 
 
-#### Bibliotecas actualizadas
+
+### Bibliotecas de terceros
+
+Todas las bibliotecas ubicadas anteriormente en `/lib/runtime` como archivos JAR se han actualizado a dependencias de Gradle, ahora definidas en el archivo `artifacts.list.COMPILATION.gradle` en la raíz del proyecto.
+
+**Actualizado**
 
 - `dbsourcemanager.jar` -> `com.etendoerp.dbsm` versión `1.1.0`
 
@@ -191,8 +329,8 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 
         - Cambios para usar la nueva versión de la biblioteca Apache Commons Lang 3.
         - Cambios para usar la nueva versión de la biblioteca Apache Commons Collections 4.
-        - Cambios en funcionalidades obsoletas o eliminadas utilizadas en Java 17.
-        - Se añadió soporte para PostgreSQL 16.
+        - Cambios en características obsoletas o eliminadas usadas en Java 17.
+        - Se añadió compatibilidad con PostgreSQL 16.
     
  - `commons-collections.commons-collections` `3.2.2` -> `4.4`
 
@@ -204,27 +342,27 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         - [Commons Collections 4.3](https://commons.apache.org/proper/commons-collections/release_4_3.html){target="\_blank"}
         - [Commons Collections 4.4](https://commons.apache.org/proper/commons-collections/release_4_4.html){target="\_blank"}
 
-    - Cambios en la API - Migración de Apache Commons Collections `3.2.2` a `4.4`:
+    - Cambios de API - Migración de Apache Commons Collections `3.2.2` a `4.4`:
 
-        A partir de **Etendo 25.1.0**, Apache Commons Collections se ha actualizado de **3.2.2** a **4.4**. Esta versión introduce una nueva estructura de paquetes. Las clases que anteriormente se importaban desde `org.apache.commons.collections` ahora deben actualizarse a `org.apache.commons.collections4`.
+        A partir de **Etendo 25.1.0**, Apache Commons Collections se ha actualizado de **3.2.2** a **4.4**. Esta versión introduce una nueva estructura de paquetes. Las clases importadas anteriormente desde `org.apache.commons.collections` ahora deben actualizarse a `org.apache.commons.collections4`.
 
     - Instrucciones de migración:
 
-        Actualice todas las sentencias de importación y referencias para reflejar la nueva estructura de paquetes:
+        Actualiza todas las sentencias de importación y referencias para reflejar la nueva estructura de paquetes:
 
         ```java
-        // Before (Apache Commons Collections 3.2.2)
+        // Antes (Apache Commons Collections 3.2.2)
         import org.apache.commons.collections.CollectionUtils;
 
-        // After (Apache Commons Collections 4.4)
+        // Después (Apache Commons Collections 4.4)
         import org.apache.commons.collections4.CollectionUtils;
         ```
 
-        Además, revise su código en busca de métodos obsoletos, eliminados o modificados para garantizar la compatibilidad total con la biblioteca actualizada.
+        Además, revisa tu código en busca de métodos obsoletos, eliminados o modificados para garantizar la compatibilidad total con la biblioteca actualizada.
 
    
     !!! info 
-        Para directrices de migración detalladas, consulte la documentación de [Apache Commons Collections 4.4](https://commons.apache.org/proper/commons-collections/){target="\_blank"}.
+        Para obtener directrices de migración detalladas, consulta la documentación de [Apache Commons Collections 4.4](https://commons.apache.org/proper/commons-collections/){target="\_blank"}.
 
 - `org.apache.commons:commons-lang3` `2.6` -> `3.17.0`
     - Notas de la versión:
@@ -244,23 +382,23 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         - [Commons Lang 3.12.0](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.12.0){target="\_blank"}
         - [Commons Lang 3.13.0](https://commons.apache.org/proper/commons-lang/changes-report.html#a3.13.0){target="\_blank"}
 
-    - Cambios en la API - Migración de Apache Commons Lang `2.6` a `3.17`
+    - Cambios de API - Migración de Apache Commons Lang `2.6` a `3.17`
 
-        A partir de **Etendo 25.1.0**, Apache Commons Lang se ha actualizado de la versión **2.6** a **3.17**. Como parte de esta actualización, la estructura de paquetes ha cambiado. Las clases que anteriormente se importaban desde `org.apache.commons.lang.*` ahora deben actualizarse para usar `org.apache.commons.lang3.*`.
+        A partir de **Etendo 25.1.0**, Apache Commons Lang se ha actualizado de la versión **2.6** a **3.17**. Como parte de esta actualización, la estructura de paquetes ha cambiado. Las clases importadas anteriormente desde `org.apache.commons.lang.*` ahora deben actualizarse para usar `org.apache.commons.lang3.*`.
 
     - Instrucciones de migración
 
-        Actualice sus sentencias de importación para reflejar la nueva estructura de paquetes:
+        Actualiza tus sentencias de importación para reflejar la nueva estructura de paquetes:
 
         ```java
-        // Before (Apache Commons Lang 2.6)
+        // Antes (Apache Commons Lang 2.6)
         import org.apache.commons.lang.StringUtils;
 
-        // After (Apache Commons Lang 3.17)
+        // Después (Apache Commons Lang 3.17)
         import org.apache.commons.lang3.StringUtils;
         ```
 
-        Además, revise su código en busca de métodos obsoletos o modificados y asegure la compatibilidad con la biblioteca actualizada.
+        Además, revisa tu código en busca de métodos obsoletos o modificados y asegúrate de que sea compatible con la biblioteca actualizada.
 
     - Notas adicionales
 
@@ -270,7 +408,7 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
             Recomendamos encarecidamente migrar todos los desarrollos personalizados a **Apache Commons Lang 3.17** para garantizar soporte y compatibilidad a largo plazo.
 
         !!! info
-            Para directrices de migración detalladas, consulte las [Apache Commons Lang 3 migration notes](https://commons.apache.org/proper/commons-lang/article3_0.html){target="\_blank"}.
+            Para obtener directrices de migración detalladas, consulta las [notas de migración de Apache Commons Lang 3](https://commons.apache.org/proper/commons-lang/article3_0.html){target="\_blank"}.
 
 - `org.hibernate.common.hibernate-commons-annotations` `5.1.0.Final` -> `5.1.2.Final`
     - Notas de la versión:
@@ -305,37 +443,37 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         - [Apache POI 4.0.1 (2018-11-24)](https://poi.apache.org/changes.html#version-4.0.1-2018-11-24){target="\_blank"}
         - [Apache POI 4.0.0 (2018-09-07)](https://poi.apache.org/changes.html#version-4.0.0-2018-09-07){target="\_blank"}
         
-        Para versiones anteriores, puede consultar:
-        - [Apache POI Release Archive (source & binaries)](https://archive.apache.org/dist/poi/release/){target="\_blank"}
-        - [Resumen completo del registro de cambios](https://poi.apache.org/changes.html){target="\_blank"}
+        Para versiones anteriores, puedes consultar:
+        - [Archivo de versiones de Apache POI (código fuente y binarios)](https://archive.apache.org/dist/poi/release/){target="\_blank"}
+        - [Resumen completo del historial de cambios](https://poi.apache.org/changes.html){target="\_blank"}
 
 - Guía de migración de Apache POI 5.x
 
-    Esta guía describe los cambios necesarios para migrar proyectos que usan Apache POI 3.x/4.x a la versión 5.x, incluyendo cómo reemplazar clases, métodos y constantes obsoletos eliminados en versiones recientes.
+    Esta guía describe los cambios necesarios para migrar proyectos que usan Apache POI 3.x/4.x a la versión 5.x, incluida la sustitución de clases, métodos y constantes obsoletos eliminados en versiones recientes.
 
     1. Sustitución de constantes obsoletas (`CellType`)
         
-        En POI 5.x, las constantes `Cell.CELL_TYPE_*` se sustituyen por el enum `CellType`.
+        En POI 5.x, las constantes `Cell.CELL_TYPE_*` se sustituyen por la enumeración `CellType`.
 
         Ejemplo:
 
         ```java
-        // Before
+        // Antes
         cell.getCellType() == Cell.CELL_TYPE_STRING;
 
-        // After
+        // Después
         cell.getCellType() == CellType.STRING;
         ```
 
         Correspondencias clave:
 
-        | Constante antigua         | Constante nueva    |
-        |---------------------------|--------------------|
-        | `Cell.CELL_TYPE_STRING`   | `CellType.STRING`  |
-        | `Cell.CELL_TYPE_NUMERIC`  | `CellType.NUMERIC` |
-        | `Cell.CELL_TYPE_BOOLEAN`  | `CellType.BOOLEAN` |
-        | `Cell.CELL_TYPE_FORMULA`  | `CellType.FORMULA` |
-        | `Cell.CELL_TYPE_BLANK`    | `CellType.BLANK`   |
+        | Constante antigua         | Nueva constante       |
+        |---------------------------|-----------------------|
+        | `Cell.CELL_TYPE_STRING`   | `CellType.STRING`     |
+        | `Cell.CELL_TYPE_NUMERIC`  | `CellType.NUMERIC`    |
+        | `Cell.CELL_TYPE_BOOLEAN`  | `CellType.BOOLEAN`    |
+        | `Cell.CELL_TYPE_FORMULA`  | `CellType.FORMULA`    |
+        | `Cell.CELL_TYPE_BLANK`    | `CellType.BLANK`      |
 
         Importación requerida:
 
@@ -347,21 +485,17 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 
         Alineación
 
-        | Constante antigua         | Constante nueva             |
-        |--------------------------|-----------------------------|
-        | `CellStyle.ALIGN_LEFT`   | `HorizontalAlignment.LEFT`  |
-        | `CellStyle.ALIGN_CENTER` | `HorizontalAlignment.CENTER`|
-        | `CellStyle.ALIGN_RIGHT`  | `HorizontalAlignment.RIGHT` |
-        
-               
-                - CellStyle.ALIGN_CENTER → 
-                -  → 
+        | Constante antigua          | Nueva constante                 |
+        |---------------------------|----------------------------------|
+        | `CellStyle.ALIGN_LEFT`    | `HorizontalAlignment.LEFT`       |
+        | `CellStyle.ALIGN_CENTER`  | `HorizontalAlignment.CENTER`     |
+        | `CellStyle.ALIGN_RIGHT`   | `HorizontalAlignment.RIGHT`      |
 
         ```java
-        // Before
+        // Antes
         style.setAlignment(CellStyle.ALIGN_CENTER);
 
-        // After
+        // Después
         style.setAlignment(HorizontalAlignment.CENTER);
         ```
 
@@ -372,10 +506,10 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         Patrones de relleno
 
         ```java
-        // Before
+        // Antes
         style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
-        // After
+        // Después
         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         ```
 
@@ -386,10 +520,10 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         Bordes
 
         ```java
-        // Before
+        // Antes
         setBorderBottom((short) 1);
 
-        // After
+        // Después
         setBorderBottom(BorderStyle.THIN);
         ```
 
@@ -400,35 +534,35 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
     3. Cambios en la API de fuentes
 
         El método `Font.setBoldweight()` está obsoleto.  
-        Ahora debe usar `Font.setBold(boolean)`.
+        Ahora debes usar `Font.setBold(boolean)`.
 
         Ejemplo:
 
         ```java
-        // Before
+        // Antes
         font.setBoldweight(Font.BOLDWEIGHT_BOLD);
 
-        // After
+        // Después
         font.setBold(true);
         ```
 
         ```java
-        // Before
+        // Antes
         font.setBoldweight(Font.BOLDWEIGHT_NORMAL);
 
-        // After
+        // Después
         font.setBold(false);
         ```
 
     4. Cambios en la API de evaluación de fórmulas:
 
         ```java
-        // Before
+        // Antes
         switch (cellValue.getCellType()) {
             case Cell.CELL_TYPE_NUMERIC:
         }
 
-        // After
+        // Después
         switch (cellValue.getCellType()) {
             case NUMERIC:
         }
@@ -448,40 +582,40 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
         switch (cellValue.getCellType()) {
             case STRING:
                 return cellValue.getStringValue();
-            // other cases...
+            // otros casos...
         }
         ```
 
     5. Buenas prácticas adicionales
 
-        Evite crear `XSSFWorkbook()` nuevos innecesariamente. En su lugar, reutilice:
+        Evita crear `XSSFWorkbook()` innecesariamente. En su lugar, reutiliza:
 
         ```java
         Workbook workbook = cell.getSheet().getWorkbook();
         ```
 
-        Use la API moderna de Map:
+        Usa la API moderna de Map:
 
         ```java
-        // Instead of containsKey + put
+        // En lugar de containsKey + put
         map.computeIfAbsent(key, k -> new ArrayList<>());
         ```
 
     6. Ejemplo completo de migración
 
         ```java
-        // Before
+        // Antes
         cellFont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
         style.setAlignment(CellStyle.ALIGN_RIGHT);
         style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
-        // After
+        // Después
         cellFont.setBold(true);
         style.setAlignment(HorizontalAlignment.RIGHT);
         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         ```
 
-    7. **Pruebe cuidadosamente su código migrado**. Pueden existir algunos cambios sutiles de comportamiento en la evaluación de fórmulas y el estilo.
+    7. **Prueba cuidadosamente el código migrado**. Pueden existir cambios sutiles de comportamiento en la evaluación de fórmulas y el estilo.
     
     
     !!! info "Recursos oficiales"
@@ -497,9 +631,11 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 - `com.sun.istack.istack-commons-runtime` `3.0.7` -> `4.2.0`    
 
 !!! info
-    Consulte las notas de la versión de cada biblioteca para obtener información más detallada sobre los cambios y cómo podrían afectar a su sistema.
+    Consulta las notas de la versión de cada biblioteca para obtener información más detallada sobre los cambios y cómo pueden afectar a tu sistema.
 
-#### Bibliotecas nuevas
+---
+
+**Nuevo**
 
 - `org.apache.commons.commons-text` `1.10.0`
     - [Documentación](https://commons.apache.org/proper/commons-text/){target="\_blank"}
@@ -516,7 +652,9 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 - `com.lowagie:itext` `2.1.7`
     - [Documentación](https://itextpdf.com/resources){target="\_blank"}
 
-#### Bibliotecas eliminadas
+---
+
+**Eliminado**
 
 - `itext-pdfa-5.5.0.jar`
 - `itextpdf-5.5.0.jar`
@@ -526,4 +664,4 @@ Todas las bibliotecas que anteriormente se encontraban en `/lib/runtime` como ar
 
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+Este trabajo está bajo licencia :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L.](https://etendo.software){target="_blank"}.
