@@ -624,6 +624,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/</loc>
+        <lastmod>2026-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/</loc>
         <lastmod>2026-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -2591,6 +2598,13 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/new-ui/ui-improvements/"/>
     </url>
     <url>
+        <loc>https://docs.etendo.software/user-guide/new-ui/how-to-guides/how-to-configure-color-system/</loc>
+        <lastmod>2026-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/new-ui/how-to-guides/how-to-configure-color-system/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/new-ui/how-to-guides/how-to-configure-color-system/"/>
+    </url>
+    <url>
         <loc>https://docs.etendo.software/whats-new/etendo-news/</loc>
         <lastmod>2026-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -3408,6 +3422,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/</loc>
+        <lastmod>2026-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui/</loc>
@@ -5501,6 +5522,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/new-ui/ui-improvements/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/new-ui/ui-improvements/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/new-ui/how-to-guides/how-to-configure-color-system/</loc>
+        <lastmod>2026-04-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/new-ui/how-to-guides/how-to-configure-color-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/new-ui/how-to-guides/how-to-configure-color-system/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/whats-new/etendo-news/</loc>
