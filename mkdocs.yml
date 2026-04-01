@@ -310,6 +310,8 @@ plugins:
                     - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
               - New UI:
                 - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+                - How-To Guides:
+                  - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
             - Developer Guide:
               - Overview: developer-guide/overview.md
@@ -390,6 +392,7 @@ plugins:
                   - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
                   - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
                   - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
+                  - How to Configure Color System Support: developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system.md
                   - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
                   - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
                   - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
@@ -734,6 +737,7 @@ plugins:
             How to Change Fonts in Etendo Reports: Cómo Cambiar Fuentes en Informes de Etendo
             How to Change the Size of a Column: Cómo Cambiar el Tamaño de una Columna
             How to Configure API Tokens: Cómo Configurar Tokens de API
+            How to Configure Color System Support: Cómo Configurar el Soporte al Sistema de Colores
             How to Configure Etendo Copilot to Use a Proxy: Cómo Configurar Etendo Copilot para Usar un Proxy
             How to Configure Etendo Main UI: Cómo Configurar Etendo Main UI
             How to Configure Log: Cómo Configurar el Log
@@ -1202,6 +1206,8 @@ nav:
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
     - New UI:
       - User Interface Improvements: user-guide/new-ui/ui-improvements.md
+      - How-To Guides:
+        - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -1282,6 +1288,7 @@ nav:
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
         - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
+        - How to Configure Color System Support: developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system.md
         - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
         - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
