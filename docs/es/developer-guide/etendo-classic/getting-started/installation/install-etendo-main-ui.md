@@ -41,16 +41,25 @@ Esta guía proporciona instrucciones para instalar y ejecutar Etendo Main UI, un
     
     :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-    Debe configurarse un token de cifrado de un solo uso para la autenticación. Este token es necesario para que **Etendo Main UI** inicie una sesión.
+    Se requiere un token de cifrado para la autenticación. Este token es necesario para que **Etendo Main UI** inicie una sesión.
+
+    !!! note
+        A partir de **26Q1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+    Para verificar o gestionar el token:
 
     1. Acceda a Etendo Classic como `System Administrator`.
     2. Vaya a `Entidad` > pestaña `Secure Web Service Configuration`.
-    3. Haga clic en el botón **Generar Clave** para crear un token. El tiempo de caducidad se mide en minutos; si se establece en 0, el token no caduca.
-    
+    3. Verifique que exista una clave. Si no existe, haga clic en el botón **Generar Clave** para crear una.
+    4. Revise el **tiempo de expiración** (en minutos). Si está en `0`, el token no caduca. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+
     ![alt text](../../../../assets/developer-guide/etendo-mobile/getting-started/token.png)
-    
-    !!! info 
-        Este token no requiere ninguna acción; solo necesita generarse para que el proceso de autenticación funcione correctamente.
+
+    !!! warning "Recomendación de seguridad"
+        Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
+
+    !!! info
+        Este token no requiere ninguna acción adicional; solo necesita existir para que el proceso de autenticación funcione correctamente.
 
 ## Instalación
 
@@ -264,7 +273,7 @@ pnpm install
 
 Cada paquete también puede ejecutarse de forma independiente usando comandos de workspace de pnpm:
 
-```bash title="Comando"
+```bash title="Commands"
 # Run MainUI development server
 pnpm --filter @workspaceui/mainui dev
 
@@ -305,28 +314,28 @@ pnpm format:fix
 
 Contiene definiciones TypeScript y funciones de API para comunicarse con el backend de Etendo. Proporciona:
 
-- APIs de autenticación
-- APIs de metadatos
-- APIs de datasource
-- APIs de integración con Copilot
+- Authentication APIs
+- Metadata APIs
+- Datasource APIs
+- Copilot integration APIs
 
 **Component Library (`@workspaceui/componentlibrary`)**
 
 Una colección de componentes React reutilizables construidos con Material-UI. Incluye:
 
-- Componentes de formulario (inputs, selectores, etc.)
-- Componentes de navegación
-- Componentes modales y de diálogo
-- Componentes de visualización de datos
+- Form components (inputs, selectors, etc.)
+- Navigation components
+- Modal and dialog components
+- Data display components
 
 **Main UI (`@workspaceui/mainui`)**
 
 La aplicación principal de Next.js que proporciona la interfaz de usuario completa. Funcionalidades:
 
-- Arquitectura moderna React/TypeScript
-- Renderizado del lado del servidor con Next.js
-- Integración del tema de Material-UI
-- Diseño responsive
+- Modern React/TypeScript architecture
+- Server-side rendering with Next.js
+- Material-UI theme integration
+- Responsive design
 
 ### Ejecutar pruebas
 

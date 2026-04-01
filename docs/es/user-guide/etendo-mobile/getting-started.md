@@ -98,15 +98,24 @@ Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder r
 2. ### Token de acceso de la entidad
     :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-    Debe configurarse un token de cifrado de un solo uso para la autenticación. Este token es necesario para que **Etendo Mobile** inicie una sesión.
+    Se requiere un token de cifrado para la autenticación. Este token es necesario para que **Etendo Mobile** inicie una sesión.
+
+    !!! note
+        A partir de **Etendo 26.1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+    Para verificar o gestionar el token:
 
     1. Acceda a Etendo Classic como `System Administrator`.
     2. Navegue a la pestaña `Entidad` > `Secure Web Service Configuration`.
-    3. Haga clic en el botón **Generar Clave** para crear un token. El tiempo de caducidad se mide en minutos; si se establece en 0, el token no caduca.
+    3. Verifique que exista una clave. Si no existe, haga clic en el botón **Generar Clave** para crear una.
+    4. Revise el **tiempo de caducidad** (en minutos). Si está en `0`, el token no caduca. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
     ![alt text](../../assets/developer-guide/etendo-mobile/getting-started/token.png)
 
+    !!! warning "Recomendación de seguridad"
+        Si bien `0` (sin expiración) es el valor por defecto, el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
+
     !!! info
-        Este token no requiere ninguna acción; solo necesita generarse para que el proceso de autenticación funcione correctamente.
+        Este token no requiere ninguna acción adicional; solo necesita existir para que el proceso de autenticación funcione correctamente.
 
 3. ### Configurar roles y subaplicaciones dinámicas
     :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol`
@@ -171,3 +180,7 @@ Etendo Mobile admite la **recepción de archivos** desde aplicaciones externas p
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---

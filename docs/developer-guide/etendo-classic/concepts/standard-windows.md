@@ -38,7 +38,7 @@ Windows are generated automatically by `WAD` from their definition in Applicatio
 
 ### Menu
 
-Windows can be added to [Application Menu](../concepts/application_menu.md).
+Windows can be added to [Application Menu](../concepts/application-menu.md).
 
 ## Tabs
 
@@ -83,7 +83,7 @@ There are three possible ways of setting which is the master column in the paren
 
   1. Using the `AD_Column.IsParent` check in the table used in the subtab. When a table in a tab contains columns checked as `Link to Parent Column`, it is looked in the parent tab a column with the same name and if found that one will be the master.
   2. By `name`. In case the table in subtab has a column with the same name as the parent's `primary key` one, the link will be generated using them.
-  3. Using `AD_Tab.WhereClause`. In case it is not possible to use #1 or #2, the relation must be set in the child tab's `Where Clause` field. For more info about this clause, read the document about [Dynamic Expressions](../concepts/dynamic_expressions.md). In these cases, it is possible to mark the `Disable Parent Key Property` flag, doing so only where clause will be used to create the relationship not adding any other criteria.
+  3. Using `AD_Tab.WhereClause`. In case it is not possible to use #1 or #2, the relation must be set in the child tab's `Where Clause` field. For more info about this clause, read the document about [Dynamic Expressions](../concepts/dynamic-expressions.md). In these cases, it is possible to mark the `Disable Parent Key Property` flag, doing so only where clause will be used to create the relationship not adding any other criteria.
 
 #### Locking mechanism
 
@@ -123,10 +123,10 @@ In `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` > `tab` tab
 
 Some of the things to take into account when configuring a field are:
 
-  * `Read Only Logic` which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a [Dynamic Expression](../concepts/dynamic_expressions.md).
-  * `Display Logic` which allows showing or hiding the field depending on other fields' values. It is a [Dynamic Expression](../concepts/dynamic_expressions.md).
+  * `Read Only Logic` which allows determining if field is read only (applies only when field is read-write).The Read Only indicates that this field may only be Read. It may not be updated. Note that it is defined at Column level in the Application Dictionary. It is a [Dynamic Expression](../concepts/dynamic-expressions.md).
+  * `Display Logic` which allows showing or hiding the field depending on other fields' values. It is a [Dynamic Expression](../concepts/dynamic-expressions.md).
     * Display logic is taken into account in `grid view` as read only logic, being only applied when a record is edited in grid view. 
-  * `Central Maintenance`, how it works is explained in the document about [Elements and Synchronize Terminology](../concepts/Element_and_Synchronize_Terminology.md).
+  * `Central Maintenance`, how it works is explained in the document about [Elements and Synchronize Terminology](../concepts/element-and-synchronize-terminology.md).
   * [`Callout`](../concepts/data-model.md#callout), although it is not defined in the fields, it affects them directly becuse they are raised when fields' values are modified.
   * `Field group`, fields can be assigned to a field group, when a group of fields has a field group, a separator is shown in the tab. Field Groups are defined in `Application Dictionary` > `Setup` > `Field Category` tab.
 

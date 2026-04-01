@@ -23,7 +23,7 @@ De forma predeterminada, todas las ubicaciones estarán en un Estado de inventar
 El estado inicial de las ubicaciones dependerá de la configuración previa del Cliente. Para aquellos clientes que estaban configurados para Permitir stock negativo, se establecerá el Estado de inventario Indefinido Stock Negativo. Para el resto, será el Estado de inventario Indefinido. 
 
 !!! info
-    Para más información, visite la [guía de usuario de Permitir stock negativo](../../../user-guide/etendo-classic/basic-features/general-setup/client.md).
+    Para más información, visite la [guía de usuario de Permitir stock negativo](../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md).
 
 ## Funcionalidad
 

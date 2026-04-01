@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This section discusses how to implement **client side (javascript) functions** which are executed when a field value in the user interface changes. The onChange concept corresponds to the traditional [callout](How_to_create_a_Callout.md), the main difference is that the **onChange functionality is implemented on the client**. This gives the following advantages:
+This section discusses how to implement **client side (javascript) functions** which are executed when a field value in the user interface changes. The onChange concept corresponds to the traditional [callout](how-to-create-a-callout.md), the main difference is that the **onChange functionality is implemented on the client**. This gives the following advantages:
 
 - better performance as for many actions no server side call is needed
 - direct access to user interface components such as field, the form and the grid

@@ -31,7 +31,7 @@ Esta guía proporciona instrucciones detalladas sobre cómo empezar con Etendo C
 Etendo Copilot se distribuye dentro del bundle [Copilot Extensions](./bundles/overview.md), que además de incluir la **Infraestructura de Copilot**, incluye **agentes predeterminados** y **herramientas** que pueden utilizarse directamente o componer su uso en nuevos agentes.  
 
 !!! info
-    Para poder incluir esta funcionalidad, debe instalarse el bundle **Copilot Extensions**. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+    Para poder incluir esta funcionalidad, debe instalarse el bundle **Copilot Extensions**. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
 ## Ejecución de Etendo Copilot
 
@@ -265,3 +265,7 @@ Hay dos formas principales de depurar Etendo Copilot, dependiendo de su configur
     
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
+
+---

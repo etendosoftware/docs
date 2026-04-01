@@ -15,7 +15,7 @@ Esta sección explica cómo se puede añadir un botón a la barra de herramienta
 
 Esta sección describe cómo añadir un botón a la parte izquierda: los botones de la aplicación.
   
-Para seguir esta sección, desarrolle JavaScript así como Java del lado del servidor y comprenda los conceptos de la [Capa de Acceso a Datos](../concepts/Data_Access_Layer.md).
+Para seguir esta sección, desarrolle JavaScript así como Java del lado del servidor y comprenda los conceptos de la [Capa de Acceso a Datos](../concepts/data-access-layer.md).
 
 ##  Módulo de ejemplo
 
@@ -263,7 +263,7 @@ Ahora Etendo debe saber dónde encontrar estos recursos al inicializar y generar
 ```
 Una breve explicación:
 
-  * Las anotaciones en la parte superior de la clase están relacionadas con [Weld](../concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md).
+  * Las anotaciones en la parte superior de la clase están relacionadas con [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
   
   Las anotaciones definen que solo se crea una instancia de esta clase (un singleton) y definen un identificador para esta instancia. 
 
@@ -361,7 +361,7 @@ Notas:
   * Se amplía BaseActionHandler; a menudo este es el mejor enfoque al implementar un ActionHandler. En este caso, solo es necesario implementar el método execute. 
   * Los datos se pueden enviar al servidor de 2 formas: como parámetros y como parte del cuerpo de la solicitud. Por ello, el método execute tiene 2 parámetros. En este ejemplo se utiliza el cuerpo de la solicitud.
   * Use BigDecimal para números, ya que es mucho más preciso que double; desafortunadamente JSON solo soporta doubles. En el sistema core de Etendo, por tanto, los números se envían de cliente-servidor (y viceversa) como cadenas. 
-  * la lógica itera sobre los ids de pedido y recupera el pedido usando la [Capa de Acceso a Datos](../concepts/Data_Access_Layer.md). 
+  * la lógica itera sobre los ids de pedido y recupera el pedido usando la [Capa de Acceso a Datos](../concepts/data-access-layer.md). 
   * el resultado se devuelve de nuevo como JSON.
 
 ###  Llamar al lado del servidor desde el cliente, mostrando el resultado
@@ -417,3 +417,9 @@ El resultado muestra la suma de las 2 cabeceras de pedido seleccionadas:
 ---
 
 Este trabajo es una obra derivada de [Cómo añadir un botón a la barra de herramientas](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---
+
+---

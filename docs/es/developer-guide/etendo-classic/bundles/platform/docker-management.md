@@ -69,7 +69,7 @@ Este proyecto depende de las siguientes herramientas:
     docker_com.etendoerp.tomcat_debug=8009
     ``` 
     !!! note
-        En este ejemplo, esta variable configura el puerto del módulo [Servicio de Tomcat Dockerizado](./tomcat-dockerized-service.md), aunque las configuraciones necesarias se incluirán en la documentación de cada módulo.
+        En este ejemplo, esta variable configura el puerto del módulo [Servicio de Tomcat Dockerizado](./dockerized-tomcat-service.md), aunque las configuraciones necesarias se incluirán en la documentación de cada módulo.
 
 - **Excluir servicios**
 
@@ -167,3 +167,7 @@ En este módulo se incluye un servicio de base de datos Postgres; esto permite u
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
+
+---

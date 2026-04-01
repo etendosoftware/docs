@@ -106,10 +106,15 @@ Antes de iniciar los servicios dockerizados, hay algunas configuraciones que deb
 ### Configuración de la Entidad 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-Es necesario configurar el token de cifrado para la autenticación en la ventana Entidad con el rol de Administrador del Sistema.  
-Si el tiempo de expiración es igual a "0", los tokens no caducan.
+Se requiere un token de cifrado para la autenticación.
 
-Genere una clave aleatoria con el botón "Generar Clave".
+!!! note
+    A partir de **Etendo 26.1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+Para verificar o gestionar el token, abra la ventana Entidad con el rol de Administrador del Sistema y navegue a la pestaña **Configuración de Secure Web Services**. Verifique que exista una clave; si no, haga clic en el botón **Generar Clave**. Si el tiempo de expiración es igual a `0`, los tokens no caducan. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+
+!!! warning "Recomendación de seguridad"
+    Si bien `0` (sin expiración) es el valor por defecto, el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 
@@ -119,13 +124,13 @@ Genere una clave aleatoria con el botón "Generar Clave".
 Esta ventana de configuración almacena los datos de acceso para los servicios de Etendo RX, que son cruciales para la interacción entre diferentes servicios. En este caso, es necesario crear algunos registros.  
 Con el rol `Administrador del Sistema`, en esta ventana es necesario añadir las entradas, una por cada servicio que se vaya a utilizar. Deben incluirse los siguientes campos:
 
-- **Nombre del servicio**: el nombre de cada servicio.
-- **URL del servicio**: la URL interna del servicio Docker.
+- **Service Name**: el nombre de cada servicio.
+- **Service URL**: la URL interna del servicio Docker.
 - **Configuraciones actualizables**: marque esta casilla de verificación.
-- **URL pública**: configure la URL accesible públicamente para el servicio.
+- **Public URL**: configure la URL accesible públicamente para el servicio.
 
 !!!info
-    El campo **URL pública** solo necesita configurarse cuando la subaplicación esté configurada para producción.
+    El campo **Public URL** solo necesita configurarse cuando la subaplicación esté configurada para producción.
 
 Consulte los ejemplos de configuración a continuación y replíquelos.
 
@@ -157,7 +162,7 @@ docker_com.etendoerp.etendorx=true
     Para más información sobre cómo gestionar las dockerizaciones de Etendo, visite [Gestión de Docker](../../etendo-classic/bundles/platform/dependency-manager.md). 
 
 ??? Note "Tomcat y PostgresSQL dockerizados (opcional)"
-    También es posible ejecutar el [servicio PostgreSQL](../platform/docker-management.md#postgres-database-service) y el [servicio Tomcat](../platform/tomcat-dockerized-service.md), añadiendo **opcionalmente** el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} y las siguientes variables de configuración:
+    También es posible ejecutar el [servicio PostgreSQL](../../etendo-classic/bundles/platform/docker-management.md#postgres-database-service) y el [servicio Tomcat](../../etendo-classic/bundles/platform/dockerized-tomcat-service.md), añadiendo **opcionalmente** el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank} y las siguientes variables de configuración:
 
     ```groovy title="gradle.properties"
     docker_com.etendoerp.tomcat=true
@@ -172,7 +177,7 @@ A continuación, para ejecutar los servicios de forma efectiva, es necesario **e
 
 Aquí pueden verse todos los servicios y sus respectivos logs en ejecución utilizando la herramienta [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
 
-![Servicios RX en Docker](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
+![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
 ## Proyecciones y búsqueda
 
 Esta sección cubre la creación de proyecciones, mapeos y búsquedas, que permiten la generación de una API REST dinámica en el servicio RX DAS. Estas configuraciones permiten leer, escribir y filtrar datos. Las proyecciones se aplican a tablas de Etendo Classic, creando un subconjunto de datos con el que se puede interactuar a través de la API.
@@ -640,3 +645,7 @@ Al integrar esta utilidad de registro, los desarrolladores pueden realizar un se
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---

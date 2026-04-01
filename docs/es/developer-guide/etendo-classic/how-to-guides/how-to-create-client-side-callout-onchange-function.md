@@ -11,7 +11,7 @@ tags:
 
 ## Visión general
 
-Esta sección explica cómo implementar **funciones del lado del cliente (javascript)** que se ejecutan cuando cambia el valor de un campo en la interfaz de usuario. El concepto de onChange se corresponde con el [Callout](How_to_create_a_Callout.md) tradicional; la principal diferencia es que la **funcionalidad onChange se implementa en el cliente**. Esto ofrece las siguientes ventajas:
+Esta sección explica cómo implementar **funciones del lado del cliente (javascript)** que se ejecutan cuando cambia el valor de un campo en la interfaz de usuario. El concepto de onChange se corresponde con el [Callout](how-to-create-a-callout.md) tradicional; la principal diferencia es que la **funcionalidad onChange se implementa en el cliente**. Esto ofrece las siguientes ventajas:
 
 - mejor rendimiento, ya que para muchas acciones no es necesario llamar al servidor
 - acceso directo a componentes de la interfaz de usuario como el campo, el formulario y la cuadrícula
@@ -195,3 +195,9 @@ Puede **habilitar/deshabilitar** diferentes funciones onchange yendo al archivo 
 ---
 
 Este trabajo es una obra derivada de [Cómo crear una función onchange de Callout del lado del cliente](http://wiki.openbravo.com/wiki/How_to_create_client_side_callout_onchange_function){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---
+
+---

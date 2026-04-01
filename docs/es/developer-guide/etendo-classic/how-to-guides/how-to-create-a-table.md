@@ -12,7 +12,7 @@ tags:
 
 ## Cómo crear una nueva tabla
 
-Puede encontrar documentación más genérica sobre las tablas y sus características en Etendo en la página [Tabla](../../concepts/Tables.md). Esa página explica las columnas comunes necesarias para todas las tablas en Etendo, las reglas de nomenclatura y otra información importante.
+Puede encontrar documentación más genérica sobre las tablas y sus características en Etendo en la página [Tabla](../concepts/tables.md). Esa página explica las columnas comunes necesarias para todas las tablas en Etendo, las reglas de nomenclatura y otra información importante.
 
 En primer lugar, es necesario crear las estructuras subyacentes de la base de datos que contendrán los datos. En otras palabras, utilizando una herramienta de administración de bases de datos (p. ej., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} o [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} para PostgreSQL y [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) primero se debe ejecutar `CREATE TABLE` para crear la tabla que se utilizará para almacenar los datos de la nueva ventana/solapas.
 
@@ -22,7 +22,7 @@ Imagine que estamos desarrollando un módulo de RR. HH. y necesitamos una ventan
 
 ### Modularidad
 
-Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo _core_. Siga la sección [Cómo crear un módulo](How_To_Create_a_Module.md) del Manual del desarrollador de Modularidad para crear un nuevo módulo.
+Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo _core_. Siga la sección [Cómo crear un módulo](how-to-create-a-module.md) del Manual del desarrollador de Modularidad para crear un nuevo módulo.
 
 Una vez que haya registrado el módulo, debe decidir el prefijo de base de datos que indicará los elementos de BD que pertenecen a este módulo. Esto se hace añadiendo prefijo(s) de base de datos al módulo. De esta forma, cualquier artefacto de base de datos (tabla, trigger, procedimiento almacenado) que pertenezca a ese módulo deberá tener el nombre con dicho prefijo. En nuestro caso, añada el _Prefijo de Base de Datos_ `HT`.
 
@@ -88,8 +88,8 @@ Para ello, primero inicie sesión en Etendo Classic utilizando un nombre de usua
 
 Los campos principales de esta ventana son (para más información, consulte la descripción de la tabla `AD_Table`):
 
-- _Paquete de Datos_ especifica a qué paquete de datos Java dentro del módulo pertenecerá la tabla cuando se utilice dentro de [DAL](../concepts/Data_Access_Layer.md) (Data Access Layer).
-- _Nombre_ define el nombre que Etendo Classic utiliza para reconocer la tabla de base de datos definida. Este nombre se utiliza en [servicios web REST](../../concepts/xml-rest-web-services.md) y en la [Data Access Layer](../../concepts/Data_Access_Layer.md#entity-naming).
+- _Paquete de Datos_ especifica a qué paquete de datos Java dentro del módulo pertenecerá la tabla cuando se utilice dentro de [DAL](../concepts/data-access-layer.md) (Data Access Layer).
+- _Nombre_ define el nombre que Etendo Classic utiliza para reconocer la tabla de base de datos definida. Este nombre se utiliza en [servicios web REST](../../concepts/xml-rest-web-services.md) y en la [Data Access Layer](../concepts/data-access-layer.md#entity-naming).
 - _Descripción_ proporciona una breve descripción de la tabla.
 - _Ayuda/Comentario_ define el texto que se muestra en la ventana de ayuda.
 - _Nombre tabla BD_ define el nombre de la tabla de base de datos tal y como se definió mediante `CREATE TABLE` durante su creación.
@@ -122,7 +122,7 @@ Este proceso intenta encontrar un elemento de aplicación existente (dentro del 
 
 Cada tabla debe tener al menos una columna marcada como identificador. Los valores reales de las columnas identificadoras se concatenan posteriormente para mostrarse al usuario como representación de un registro concreto (consulte el enlace al Pedido de venta dentro de la ventana Factura de venta). Estos identificadores también se utilizarán para construir listas desplegables de registros de esa tabla concreta. Por defecto, todas las columnas cuyo nombre de columna sea _Nombre_ se establecen como identificador. En caso de que no exista ninguna columna con este _Nombre_, no se establece ningún identificador y es necesario hacerlo manualmente o la compilación fallará.
 
-El nombre se utiliza en la [Data Access Layer](../../concepts/Data_Access_Layer.md) y en [servicios web REST](../../concepts/xml-rest-web-services.md). Para columnas específicas (información de auditoría, cliente/organización, activo) es importante ser preciso en la nomenclatura.
+El nombre se utiliza en la [Data Access Layer](../concepts/data-access-layer.md) y en [servicios web REST](../../concepts/xml-rest-web-services.md). Para columnas específicas (información de auditoría, cliente/organización, activo) es importante ser preciso en la nomenclatura.
 
 !!!note
     Las columnas que se denominan `line` o `seqNo` se utilizan para contener el número de secuencia de un registro (es decir, el número de una línea en una factura). Toman un valor por defecto como:
@@ -155,3 +155,7 @@ Por último, para que la tabla recién añadida esté disponible en tiempo de ej
 ---
 
 Este trabajo es una obra derivada de [Cómo crear una tabla](http://wiki.openbravo.com/wiki/How_to_create_a_Table){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

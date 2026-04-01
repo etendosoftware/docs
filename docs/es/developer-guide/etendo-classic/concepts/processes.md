@@ -13,7 +13,7 @@ tags:
 
 Un proceso es una serie sistemática de acciones dirigidas a un fin. Un proceso recibe algunos parámetros y, teniéndolos en cuenta, realiza algunas acciones para obtener un resultado. Etendo define dos tipos principales de procesos: _Procesos SQL_ y _Procesos Java_.
 
-Todos los procesos (así como los [Informes](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md)) se gestionan desde la misma ventana: `Application Dictionary > Informes y procesos`. 
+Todos los procesos (así como los [Informes](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-report.md)) se gestionan desde la misma ventana: `Application Dictionary > Informes y procesos`. 
 
 Una vez definido un proceso, puede añadirse al menú para ser llamado directamente desde allí, puede invocarse mediante un botón o puede programarse para ejecutarse en segundo plano.
 
@@ -44,7 +44,7 @@ Veamos algunos de los campos más importantes en esta solapa:
       Tenga en cuenta que `Postgresql` distingue entre mayúsculas y minúsculas. En caso de que el parámetro haga referencia a una columna existente en la base de datos (por ejemplo, si es un parámetro de tipo búsqueda), entonces el campo _Nombre columna BD_ debe tener las mismas mayúsculas/minúsculas que la columna en el Diccionario de Aplicación. 
   
   * *Secuencia* : es un valor numérico para ordenar el parámetro en el emergente. 
-  * *Elemento de aplicación* : es el [Elemento](Element_and_Synchronize_Terminology.md) que se utilizará para obtener la etiqueta; de este modo, los parámetros son traducibles. 
+  * *Elemento de aplicación* : es el [Elemento](element-and-synchronize-terminology.md) que se utilizará para obtener la etiqueta; de este modo, los parámetros son traducibles. 
   
 !!!note 
     También es posible establecer o no este elemento como *Mantenido centralmente*. 
@@ -61,7 +61,7 @@ Los procesos pueden ser de dos tipos diferentes: _Procesos SQL_ y _Procesos Java
 Los _Procesos SQL_ se implementan mediante procedimientos almacenados de base de datos. 
 
 !!!info
-    Para más información, consulte [Cómo crear un procedimiento almacenado](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Stored_Procedure.md).
+    Para más información, consulte [Cómo crear un procedimiento almacenado](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-stored-procedure.md).
 
 Los procesos SQL se definen en `Application Dictionary > Informes y procesos`. El único campo a tener en cuenta para este tipo de procesos es *Procedimiento*: es el nombre del procedimiento en la base de datos. 
 
@@ -81,7 +81,7 @@ En caso de que el proceso requiera algún parámetro, es posible definirlos.
 Los procesos Java se implementan mediante clases Java. 
 
 !!!info
-    Para más información, consulte [Cómo crear un proceso Java](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Java_Based_Process.md).
+    Para más información, consulte [Cómo crear un proceso Java](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-java-based-process.md).
 
 Los procesos Java también se definen en la ventana `Application Dictionary > Informes y procesos`. Dependiendo del _Patrón de la Interfaz de Usuario_ que utilicen, pueden dividirse en _Estándar_ y _Manual_. Además, si el _Patrón de la Interfaz de Usuario_ se establece como _Manual_, es necesario incluir una entrada en la solapa *Process mapping* para hacerlo accesible en el `web.xml`.
 
@@ -316,3 +316,7 @@ Cuando un proceso se para, el estado en el monitor de procesos será *Parado por
 ---
 
 Este trabajo es una obra derivada de [Procesos](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---

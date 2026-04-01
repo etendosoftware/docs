@@ -28,9 +28,9 @@ Los pasos implicados en la creación de un nuevo callout son:
 
 !!!Important
     Los desarrollos relacionados con los puntos (1) y (2) deben pertenecer a
-    un módulo que no sea el módulo _core_. Siga la sección [Cómo crear un módulo](How_To_Create_a_Module.md) para crear un nuevo módulo. Para el desarrollo relacionado
+    un módulo que no sea el módulo _core_. Siga la sección [Cómo crear un módulo](how-to-create-a-module.md) para crear un nuevo módulo. Para el desarrollo relacionado
     con el punto (3) sobre la modificación de una columna ubicada en _core_, se
-    necesita una nueva plantilla. Puede leer el artículo [Cómo cambiar una ventana existente](How_to_change_an_existing_Window.md) para obtener más información.
+    necesita una nueva plantilla. Puede leer el artículo [Cómo cambiar una ventana existente](how-to-change-an-existing-window.md) para obtener más información.
 
 !!!Note
     Este artículo asume que ha creado tanto el módulo como la plantilla de acuerdo con los artículos mencionados.  
@@ -92,7 +92,7 @@ es la parte interesante del código que realiza la lógica:
 ###  Ampliar un Callout
 
 Es posible implementar un callout que extienda de otro callout. Para
-más información, visite este tutorial [Cómo crear un callout que extiende de otro callout](How_to_create_a_callout_that_extends_from_another_callout.md).
+más información, visite este tutorial [Cómo crear un callout que extiende de otro callout](how-to-create-a-callout-that-extends-from-another-callout.md).
 
   
 ###  Cálculo del Identificador del producto usando SimpleCallout
@@ -248,3 +248,9 @@ Por último, guarde los cambios.
 ---
 
 Este trabajo es una obra derivada de [Cómo crear un Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---
+
+---

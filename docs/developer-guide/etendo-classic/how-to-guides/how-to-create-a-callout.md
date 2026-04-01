@@ -28,9 +28,9 @@ The steps involved in creating a new callout are:
 
 !!!Important
     Developments related to points (1) and (2) must belong to
-    a module that is not the _core_ module. Please follow the [How to create a module](How_To_Create_a_Module.md)  section to create a new module. For the development related
+    a module that is not the _core_ module. Please follow the [How to create a module](how-to-create-a-module.md)  section to create a new module. For the development related
     to point (3) about modifying a _core_ located column, a new template is
-    needed. You can read the [How to Change an Existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
+    needed. You can read the [How to Change an Existing Window](how-to-change-an-existing-window.md) article to obtain more information.
 
 !!!Note
     This article assumes you have created both module and template according to the articles just mentioned.  
@@ -92,7 +92,7 @@ is the interesting part of the code that performs the logic:
 ###  Extend a Callout
 
 It is possible to implement a callout that extends from another callout. For
-more information visit this [How to create a callout that extends from another callout](How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+more information visit this [How to create a callout that extends from another callout](how-to-create-a-callout-that-extends-from-another-callout.md) tutorial.
 
   
 ###  Product Search Key Calculation using SimpleCallout

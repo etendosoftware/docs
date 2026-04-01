@@ -44,7 +44,7 @@ Las restricciones de comprobación no tienen ninguna particularidad en Etendo, e
 Es posible definir un mensaje que se mostrará cuando no se satisfaga la regla definida por la restricción. 
 
 !!!info
-    Cómo hacerlo se explica en la documentación de [Mensaje](Messages.md#checks).
+    Cómo hacerlo se explica en la documentación de [Mensaje](messages.md#checks).
 
 ###  Compatibilidad hacia atrás
 
@@ -195,3 +195,9 @@ Además, esta funcionalidad permite definir un [índice basado en funciones](#í
 ---
 
 Este trabajo es una obra derivada de [Restricciones y triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
+
+---
+
+---

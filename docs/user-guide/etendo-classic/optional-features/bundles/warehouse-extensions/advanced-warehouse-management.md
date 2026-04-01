@@ -396,7 +396,7 @@ Fields to note:
 - **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
 - **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
-#### Buttons
+#### Available Process
 
 **Create Lines From Order**
 
@@ -410,13 +410,19 @@ This button appears when at least one line is selected. It allows multiple/mixed
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). 
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
+
+When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
-    - Only lines from the same Sales Order can be grouped.  
+    - Only lines from the same Sales Order can be grouped.
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+    - Child logistics units remain associated with the parent logistics unit created from the button.
+
+!!! warning "Partial grouping"
+    If the grouped action includes a line that cannot be nested due to a type incompatibility (e.g., a Pallet inside another Pallet), the system will **not block** the entire receipt. Instead, it processes compatible lines normally and automatically creates a **standalone Referenced Inventory** for the incompatible line. The receipt completes successfully and a **Warning message** is displayed indicating how many lines were processed normally and how many were created as standalone RIs.
 
 **Clear Group By** 
 
@@ -440,13 +446,13 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 
 **Print Labels**
 
-This button generates barcode labels for **all lines** of the selected Inbound Receipt document.  
-Each label is created with the **full set of attributes defined during the reception**, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+This button generates barcode labels for **all lines** of the selected Inbound Receipt document.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet). If no attributes are defined for a product, the label displays *No attributes*. If no logistics unit applies, the logistics unit line is not shown.
 
-- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.  
+- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.
   This means that as many labels are printed as units specified in the **Operative Quantity** field.
 - For **lines with logistics units (Box or Pallet)** where multiple units are received (for example, 3 boxes), the system generates **one unique barcode label per logistics unit**, since each unit is registered as a unique referenced inventory.
-- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.  
+- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.
   In this case, the label identifies the **logistics unit and its locator**, as it may contain multiple grouped products.
 
 This button is available **only when the Inbound Receipt is completed**.
@@ -457,20 +463,38 @@ This button is available **only when the Inbound Receipt is completed**.
 
 ??? example "Print Inbound Receipt - Examples"
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png)
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png)
+    ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png)
+    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
+
+    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
+
+    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
 
 **Print Line Label**
 
-This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.  
-Each label contains the **complete set of attributes assigned at reception time** for the selected lines.
+This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet), following the same display rules as the **Print Labels** button.
 
 The label generation follows the same rules described above, applied **only to the selected line or lines**:
 

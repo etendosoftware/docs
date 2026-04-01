@@ -427,10 +427,15 @@ Tras iniciar los servicios dockerizados, hay algunas configuraciones que deben r
 ### Configuración de la Entidad 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-Es necesario configurar el token de cifrado para la autenticación en la ventana `Entidad` con el rol `System Administrator`.
-Si el tiempo de expiración es igual a `0`, los tokens no caducan.
+Se requiere un token de cifrado para la autenticación.
 
-Genere una clave aleatoria con el botón **Generar Clave**.
+!!! note
+    A partir de **26Q1**, la clave SWS se **genera automáticamente** durante la instalación (`./gradlew install`). No se requiere ninguna acción manual para instalaciones nuevas.
+
+Para verificar o gestionar el token, abra la ventana `Entidad` con el rol `System Administrator` y navegue a la pestaña **Secure Web Service Configuration**. Verifique que exista una clave; si no, haga clic en el botón **Generar Clave**. Si el tiempo de expiración es igual a `0`, los tokens no caducan. Si se configuró una expiración personalizada, asegúrese de que el token no haya vencido.
+
+!!! warning "Recomendación de seguridad"
+    Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
 
 ![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 
@@ -542,3 +547,7 @@ En el entorno de Openbravo, con sesión iniciada como `System Administrator`, es
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
