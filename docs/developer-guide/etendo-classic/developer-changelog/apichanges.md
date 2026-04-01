@@ -1,14 +1,12 @@
 ---
 tags:
     - API Changes
-    - Updating Guide
-    - Migrate to Etendo 26
     - Etendo 26
-    - Migrate to Etendo 25
     - Etendo 25
+    - Migrate to Etendo 25
     - Update Etendo
+    - Updating Guide
     - Developer Changelog
-
 ---
 
 # API Change Documentation
@@ -20,169 +18,125 @@ It serves as a reference for developers and system administrators to understand 
 
 If you are planning to upgrade your environment, make sure to also review the official upgrade guide: [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
 
-## March 2026
+## Etendo 26
 
-- [Etendo - Release 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0)
+- [Etendo - Release 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="\_blank"}
 
 [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
 
-### Etendo Platform Stack Upgrade
+### Platform Stack Upgrade
 
-#### :material-language-java: Java SE
+**:material-language-java: Java SE**
 
-!!! danger "Breaking Change: Java 17 is Now Mandatory"
-    Starting with **Etendo 26.1.0**, Java 17 is the **only supported** Java version. The `-Pjava.version=11` compatibility flag introduced in Etendo 25 has been **completely removed**.
+- Minimum Version Required: `17.0.14` — [Release Notes](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
 
-    Any environment still running Java 11 will be **blocked from building**. You must install and configure **Java 17 or higher** before upgrading to Etendo 26.
+    !!! danger "Breaking Change: Java 17 is Now Mandatory"
+    
+        Starting with **Etendo 26.1.0**, Java 17 is the **only supported** Java version. The `-Pjava.version=11` compatibility flag introduced in Etendo 25 has been **completely removed**.
 
-- Minimum Version Required: `17.0.14`
-- Release Notes:
+        Any environment still running Java 11 will be **blocked from building**. You must install and configure **Java 17 or higher** before upgrading to Etendo 26.
 
-    <div class="grid cards" markdown>
+    !!! warning "Action Required for Custom Developments"
+        If you have custom modules with `BuildValidation` or `ModuleScript` classes, recompile them with Java 17 before upgrading. These classes run during `update.database` and fail at runtime if compiled with Java 11 due to bytecode incompatibility.
 
-    - Java SE 17 (LTS)
+        ```bash title="Terminal"
+        ./gradlew compile.modulescript -Dmodule=<javapackage>
+        ./gradlew compile.buildvalidation -Dmodule=<javapackage>
+        ```
 
-        - [Java SE 17.0.14 (Oracle)](https://www.oracle.com/java/technologies/javase/17-0-14-relnotes.html){target="\_blank"}
-        - [All Java 17 Updates](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+        This applies only to **custom** modules. Core Etendo modules are already compiled with Java 17.
 
-    </div>
+---
 
-##### Recompiling Custom BuildValidation and ModuleScript Classes
-
-!!! warning "Action Required for Custom Developments"
-    If you have custom modules that include `BuildValidation` or `ModuleScript` classes, these **must be recompiled with Java 17** before upgrading to Etendo 26.
-
-    BuildValidation and ModuleScript classes are executed during the `update.database` process. If they were compiled with Java 11, they will fail at runtime under Java 17 due to bytecode incompatibility.
-
-To recompile your custom BuildValidation and ModuleScript classes:
-
-1. Ensure your build environment is configured with **Java 17**.
-2. Recompile all modules containing custom `BuildValidation` or `ModuleScript` classes:
-
-    ```bash title="Terminal"
-    ./gradlew compile.modulescript=<javapackage>
-    ```
-
-    ```bash title="Terminal"
-    ./gradlew compile.buildvalidation=<javapackage>
-    ```
-
-!!! info
-    This applies only to **custom** modules. Core Etendo modules are already compiled with Java 17 as part of the release.
-
-#### :simple-postgresql: PostgreSQL
+**:simple-postgresql: PostgreSQL**
 
 - New Version Supported: `17`
-- JDBC Driver: `42.5.4` -> `42.7.8`
-- Release Notes:
+- JDBC Driver: `42.5.4` -> `42.7.8` — [Changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
 
-    <div class="grid cards" markdown>
+PostgreSQL 17 is supported from this release. No action is required if you stay on a currently supported version. If you upgrade the database engine, review the [PostgreSQL 17 release notes](https://www.postgresql.org/docs/release/17.0/){target="\_blank"} for breaking changes.
 
-    - PostgreSQL 17.x
-        - [PostgreSQL 17.0](https://www.postgresql.org/docs/release/17.0/){target="\_blank"}
-        - [PostgreSQL 17.1](https://www.postgresql.org/docs/release/17.1/){target="\_blank"}
-        - [PostgreSQL 17.2](https://www.postgresql.org/docs/release/17.2/){target="\_blank"}
+---
 
-    </div>
+**:octicons-file-code-24: Etendo Gradle Plugin**
 
-#### :octicons-file-code-24: Etendo Gradle Plugin
+- New Version Required: `2.3.0` or higher — [Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+- The `-Pjava.version=11` flag has been removed. Java 17 is now enforced with no bypass.
 
-- New Version Required: `3.0.0` or higher
-- Release Notes:
+---
 
-    - [Etendo Gradle Plugin - Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
-
-- **Java 17 Enforcement**: The `-Pjava.version=11` compatibility flag has been removed. The plugin now enforces Java 17 as the minimum version with no bypass.
-
-#### :octicons-file-code-24: DBSourceManager (DBSM)
+**:octicons-file-code-24: DBSourceManager**
 
 - New Version: `1.1.0` -> `1.2.0`
-- Release Notes:
-
-    - Gradle wrapper upgraded from 7.3.2 to 8.12.1.
+- Changes:
+    - Gradle wrapper upgraded from `7.3.2` to `8.12.1`.
     - Added PostgreSQL 16 platform support (`PostgreSql16Platform`).
-    - New constraint exclusion system (`ExcludedConstraint`) for managing partitioned tables and complex database schemas.
+    - New `ExcludedConstraint` system for managing partitioned tables and complex database schemas.
     - Improved partition table handling during database export.
-    - All bundled JAR libraries removed from `lib/` directory; dependencies are now resolved from the Etendo project classpath.
+    - All bundled JARs removed from `lib/`; dependencies are now resolved from the project classpath.
 
 ### Third-Party Libraries
 
-#### Updated Libraries
+**Updated**
 
-- `org.postgresql:postgresql` `42.5.4` -> `42.7.8`
-
-    - Release Notes:
-        - [PostgreSQL JDBC Changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
-
-    - This is a compatible upgrade. Review the changelog if you use driver-specific features.
+- `org.postgresql:postgresql` `42.5.4` -> `42.7.8` — compatible upgrade. Review the [changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"} if you use driver-specific features.
 
 - `org.mozilla:rhino` `1.7.13` -> `1.8.0`
-- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0`
-
-    - Release Notes:
-        - [Rhino 1.8.0 Release](https://github.com/nicerobot/nicerobot.github.io/releases/tag/Rhino1_8_0_Release){target="\_blank"}
-        - [Rhino Releases - GitHub](https://github.com/mozilla/rhino/releases){target="\_blank"}
+- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0` — [Rhino Releases](https://github.com/mozilla/rhino/releases){target="\_blank"}
 
     !!! warning
-        If you have custom JavaScript scripts executed via the Rhino engine, test them for compatibility with version 1.8.0. The upgrade includes changes to ECMAScript compliance and internal APIs.
+        If you have custom JavaScript executed via the Rhino engine, test it for compatibility with version 1.8.0. This upgrade includes changes to ECMAScript compliance and internal APIs.
 
-- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3`
-
-    - Release Notes:
-        - [ANTLR 3 Documentation](https://www.antlr3.org/){target="\_blank"}
+- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3` — [ANTLR 3 Docs](https://www.antlr3.org/){target="\_blank"}
 
     !!! warning
-        This is a **major version upgrade** (ANTLR 2 to ANTLR 3). If you have custom code that uses ANTLR APIs directly, you will need to migrate. The package structure and API have changed significantly.
+        This is a **major version upgrade** (ANTLR 2 to ANTLR 3). If you use ANTLR APIs directly in custom code, you need to migrate. The package structure and API have changed significantly.
 
-- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6`
+- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6` — [Woodstox Releases](https://github.com/FasterXML/woodstox/releases){target="\_blank"} — major version upgrade for the XML stream processing library. Review if you use Woodstox APIs directly.
 
-    - Release Notes:
-        - [Woodstox Releases - GitHub](https://github.com/FasterXML/woodstox/releases){target="\_blank"}
+- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0` — see [DBSourceManager (DBSM)](#dbsourcemanager-dbsm) above.
 
-    - This is a major version upgrade for the XML stream processing library. Review if you use Woodstox APIs directly.
+---
 
-- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0`
+**Artifact Coordinates Migrated to Upstream**
 
-    - See the [DBSM section above](#file_code-24-dbsourcemanager-dbsm) for details.
+Several libraries previously re-packaged under `com.etendoerp` are now resolved from their official upstream Maven Central coordinates. If your modules declare any of these as explicit dependencies, update the artifact coordinates. No functional changes.
 
-#### Dependency Cleanup: Migration to Upstream Artifacts
-
-Starting with Etendo 26.1.0, several libraries that were previously re-packaged under the `com.etendoerp` group have been replaced with their official upstream Maven Central coordinates. This is a cleanup change that should be transparent to most users.
-
-| Previous (com.etendoerp) | New (upstream) | Version |
+| Previous | New | Version |
 |---|---|---|
-| `com.etendoerp:yuiant` 1.0 | `com.etendoerp:YUIAnt` 1.0.0 | Renamed |
-| `com.etendoerp:jettison` 1.3 | `org.codehaus.jettison:jettison` 1.3 | Same version |
-| `com.etendoerp:wstx-asl` 3.0.2 | `org.codehaus.woodstox:wstx-asl` 4.0.6 | Version upgraded |
-| `com.etendoerp:slf4j-api` 1.7.25 | `org.slf4j:slf4j-api` 1.7.25 | Same version |
-| `com.etendoerp:antlr` 2.7.7 | `org.antlr:antlr-complete` 3.5.3 | Version upgraded |
-| `com.etendoerp:rhino-engine` 1.7.13 | `org.mozilla:rhino-engine` 1.8.0 | Version upgraded |
+| `com.etendoerp:yuiant` `1.0` | `com.etendoerp:YUIAnt` `1.0.0` | Artifact ID case change |
+| `com.etendoerp:jettison` `1.3` | `org.codehaus.jettison:jettison` `1.3` | Same version |
+| `com.etendoerp:wstx-asl` `3.0.2` | `org.codehaus.woodstox:wstx-asl` `4.0.6` | Version upgraded |
+| `com.etendoerp:slf4j-api` `1.7.25` | `org.slf4j:slf4j-api` `1.7.25` | Same version |
+| `com.etendoerp:antlr` `2.7.7` | `org.antlr:antlr-complete` `3.5.3` | Version upgraded |
+| `com.etendoerp:rhino-engine` `1.7.13` | `org.mozilla:rhino-engine` `1.8.0` | Version upgraded |
 
-#### New Libraries
+---
 
-- `org.apache.poi:ooxml-schemas` `1.4`
-    - [Documentation](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+**New**
 
-- `org.hamcrest:hamcrest-all` `1.3`
-    - [Documentation](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+The following libraries are new additions to the platform classpath. No action is required unless your custom modules declare conflicting versions.
 
-- `junit:junit` `4.12`
-    - [Documentation](https://junit.org/junit4/){target="\_blank"}
+- `org.apache.poi:ooxml-schemas` `1.4` — [Documentation](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+- `org.hamcrest:hamcrest-all` `1.3` — [Documentation](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+- `junit:junit` `4.12` — [Documentation](https://junit.org/junit4/){target="\_blank"}
 
-#### Removed Libraries
+---
+
+**Removed**
 
 - `org.apache.commons:commons-compress` `1.27.1`
 
     !!! warning
-        If your custom modules depend on `commons-compress`, you must add it as an explicit dependency in your module's `build.gradle`.
+        If your custom modules depend on `commons-compress`, add it as an explicit dependency in your module's `build.gradle`.
 
 - `org.eclipse.jdt:ecj` `3.23.0` (Eclipse Compiler for Java)
 - `com.etendoerp:ant-nodeps` `1.0.0`
 - `com.etendoerp:catalina-ant` `1.0.0`
+- `org.apache.poi:ooxml-schemas` `1.4`   
 
 ### Database Schema Changes
 
-The following database schema changes are applied automatically during `update.database`:
+The following changes are applied automatically during `update.database`:
 
 | Table | Change | Details |
 |---|---|---|
@@ -190,14 +144,13 @@ The following database schema changes are applied automatically during `update.d
 | `AD_HEARTBEAT_LOG` | Column added | `STATUS` |
 | `AD_SYSTEM_INFO` | Columns added | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
 
-### Other Notable Changes
+### Other Changes
 
-- **Secure Web Services Key Generation**: A new Ant target `generate.sws.keys` is automatically called during `install.source`, reducing manual configuration steps for secure web services.
-- **Dependency file reorganization**: The `artifacts.list.COMPILATION.gradle` file has been restructured with thematic grouping (Authentication, JSON/Serialization, Utility, Reporting, Database, etc.) and descriptive comments for improved maintainability.
+- **Secure Web Services Key Generation**: The `generate.sws.keys` Ant target is now called automatically during `install.source`, reducing manual configuration steps for secure web services.
 
 ---
 
-## March 2025
+## Etendo 25
 
 - [Etendo - Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
 - [Etendo - Release 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
@@ -205,9 +158,9 @@ The following database schema changes are applied automatically during `update.d
 
 [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
 
-### Etendo Platform Stack Upgrade
+### Platform Stack Upgrade
 
-#### :material-language-java: Java SE
+**:material-language-java: Java SE**
 
 - New Version Supported: `17.0.14`
 - Release Notes:
@@ -246,9 +199,9 @@ The following database schema changes are applied automatically during `update.d
 
     </div>
 
+---
 
-    
-#### :simple-postgresql: PostgreSQL
+**:simple-postgresql: PostgreSQL**
 
 - New Version Supported: `16.8.1`
 - Release Notes:
@@ -281,9 +234,9 @@ The following database schema changes are applied automatically during `update.d
 
         </div>
 
+---
 
-
-#### :simple-gradle: Gradle
+**:simple-gradle: Gradle**
 
 !!! warning
     To update the Gradle wrapper in an existing environment , you must run:
@@ -325,16 +278,17 @@ The following database schema changes are applied automatically during `update.d
         - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
 
         </div>
-    
-#### :simple-apachetomcat: Apache Tomcat
+
+---
+
+**:simple-apachetomcat: Apache Tomcat**
 
 - New Version Supported: `9.0.98`
 - Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
 
+---
 
-
-
-#### :octicons-file-code-24: Etendo Gradle Plugin
+**:octicons-file-code-24: Etendo Gradle Plugin**
 
 - New Version Supported: `2.0.0` or higher
 - Release Notes:
@@ -354,7 +308,9 @@ The following database schema changes are applied automatically during `update.d
         ```
         This new flag forces the use of Java 11 with version 25Q1.
 
-#### :octicons-issue-opened-24: Etendo ISO
+---
+
+**:octicons-issue-opened-24: Etendo ISO**
        
 !!!note 
     The **Etendo 25** ISOs are currently based on Ubuntu Live Server `22.04.5` amd64 image. <br>
@@ -362,12 +318,11 @@ The following database schema changes are applied automatically during `update.d
 
 
 
-### Third-Party Libraries 
+### Third-Party Libraries
 
 All libraries previously located in `/lib/runtime` as JAR files have been updated to Gradle dependencies now defined in the `artifacts.list.COMPILATION.gradle` file at the root of the project.
 
-
-#### Updated Libraries
+**Updated**
 
 - `dbsourcemanager.jar` -> `com.etendoerp.dbsm` version  `1.1.0`
 
@@ -536,10 +491,6 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
         | `CellStyle.ALIGN_LEFT`   | `HorizontalAlignment.LEFT`  |
         | `CellStyle.ALIGN_CENTER` | `HorizontalAlignment.CENTER`|
         | `CellStyle.ALIGN_RIGHT`  | `HorizontalAlignment.RIGHT` |
-        
-               
-                - CellStyle.ALIGN_CENTER → 
-                -  → 
 
         ```java
         // Before
@@ -683,7 +634,9 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 !!! info
     Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
-#### New Libraries
+---
+
+**New**
 
 - `org.apache.commons.commons-text` `1.10.0`
     - [Documentation](https://commons.apache.org/proper/commons-text/){target="\_blank"}
@@ -700,7 +653,9 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 - `com.lowagie:itext` `2.1.7`
     - [Documentation](https://itextpdf.com/resources){target="\_blank"}
 
-#### Removed Libraries
+---
+
+**Removed**
 
 - `itext-pdfa-5.5.0.jar`
 - `itextpdf-5.5.0.jar`
