@@ -1688,13 +1688,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/overview/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/getting-started/requirements/</loc>
-        <lastmod>2026-04-01</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/requirements/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/requirements/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/getting-started/user-interface/grid-and-forms/</loc>
         <lastmod>2026-04-01</lastmod>
         <changefreq>daily</changefreq>
@@ -4509,7 +4502,6 @@
         <lastmod>2026-04-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/requirements/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/requirements/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/getting-started/user-interface/grid-and-forms/</loc>

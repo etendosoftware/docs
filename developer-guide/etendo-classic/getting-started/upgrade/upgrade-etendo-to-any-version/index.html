@@ -14605,6 +14605,12 @@
       
       
       
+        <span class="md-tag">Etendo</span>
+      
+    
+      
+      
+      
         <span class="md-tag">Etendo Upgrade</span>
       
     
@@ -14667,7 +14673,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>If you are upgrading to <strong>Etendo 25</strong>, update Gradle by running:</p>
+<p>If you are upgrading to <strong>Etendo 25</strong> or <strong>Etendo 26</strong>, update Gradle by running:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>wrapper<span class="w"> </span>--gradle-version<span class="w"> </span><span class="m">8</span>.12.1
 </span></code></pre></div>
 </li>
@@ -14676,13 +14682,20 @@
 <p>The required technology stack depends on the target version.</p>
 <ul>
 <li>
-<p>For Etendo versions prior to <strong>Etendo 25</strong>, the initial stack remains unchanged, For more information, visit: <a href="../../installation/requirements/#etendo-24-and-earlier">Etendo 24 and Earlier - Software Stack</a></p>
+<p>For Etendo versions prior to <strong>Etendo 25</strong>, the initial stack remains unchanged. For more information, visit: <a href="../../installation/requirements/#etendo-24-and-earlier">Etendo 24 and Earlier - Software Stack</a></p>
 </li>
 <li>
 <p>If you are migrating to <strong>Etendo 25</strong>, you must first update the <strong>entire technology stack</strong> (Java SE, PostgreSQL, Apache Tomcat). For more information, visit: <a href="../../installation/requirements/#etendo-25">Etendo 25 - Software Stack</a></p>
+</li>
+<li>
+<p>If you are migrating to <strong>Etendo 26</strong>, the stack is the same as Etendo 25 with one critical difference: <strong>Java 17 is now mandatory</strong>. The <code>-Pjava.version=11</code> compatibility flag has been completely removed. For more information, visit: <a href="../../installation/requirements/#etendo-26">Etendo 26 - Software Stack</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Action Required for Custom Developments</p>
+<p>If your custom modules include <code>BuildValidation</code> or <code>ModuleScript</code> classes compiled with Java 11, recompile them before upgrading. See <a href="../../../developer-changelog/apichanges/#etendo-26">API Changes - Etendo 26</a> for details.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The <a href="../../../developer-changelog/apichanges/">Developer Changelog</a> guide provides details about the required stack and possible changes needed in custom modules. </p>
+<p>The <a href="../../../developer-changelog/apichanges/">Developer Changelog</a> guide provides details about the required stack and possible changes needed in custom modules.</p>
 </div>
 </li>
 </ul>
@@ -14744,7 +14757,7 @@ And the other possible combinations.</p>
 <p>Check for any compilation errors that may occur due to incompatible customizations or modifications.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to review the API Changes that may affect modules installed in <strong>Etendo 25</strong> or later. For more information, visit: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
+<p>Remember to review the API Changes that may affect modules installed in <strong>Etendo 25</strong> or <strong>Etendo 26</strong> or later. For more information, visit: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
@@ -14795,7 +14808,7 @@ And the other possible combinations.</p>
 <p>Verify any compilation errors that may arise due to incompatible customization or modifications.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to review the API Changes that may affect modules installed in <strong>Etendo 25</strong> or later. For more information, visit: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
+<p>Remember to review the API Changes that may affect modules installed in <strong>Etendo 25</strong> or <strong>Etendo 26</strong> or later. For more information, visit: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>

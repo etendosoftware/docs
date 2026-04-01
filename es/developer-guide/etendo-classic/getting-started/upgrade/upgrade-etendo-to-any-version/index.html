@@ -14895,6 +14895,12 @@
       
       
       
+        <span class="md-tag">Etendo</span>
+      
+    
+      
+      
+      
         <span class="md-tag">Gestión de versiones</span>
       
     
@@ -14945,7 +14951,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Si está actualizando a <strong>Etendo 25</strong>, actualice Gradle ejecutando:</p>
+<p>Si está actualizando a <strong>Etendo 25</strong> o <strong>Etendo 26</strong>, actualice Gradle ejecutando:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>wrapper<span class="w"> </span>--gradle-version<span class="w"> </span><span class="m">8</span>.12.1
 </span></code></pre></div>
 </li>
@@ -14954,13 +14960,20 @@
 <p>La pila tecnológica requerida depende de la versión objetivo.</p>
 <ul>
 <li>
-<p>Para versiones de Etendo anteriores a <strong>Etendo 25</strong>, la pila inicial permanece sin cambios. Para más información, visite: <a href="../../../../../getting-started/requirements/#etendo-24-and-earlier">Etendo 24 and Earlier - Software Stack</a></p>
+<p>Para versiones de Etendo anteriores a <strong>Etendo 25</strong>, la pila inicial permanece sin cambios. Para más información, visite: <a href="../../installation/requirements/#etendo-24-and-earlier">Etendo 24 and Earlier - Software Stack</a></p>
 </li>
 <li>
-<p>Si está migrando a <strong>Etendo 25</strong>, primero debe actualizar <strong>toda la pila tecnológica</strong> (Java SE, PostgreSQL, Apache Tomcat). Para más información, visite: <a href="../../../../../getting-started/requirements/#etendo-25">Etendo 25 - Software Stack</a></p>
+<p>Si está migrando a <strong>Etendo 25</strong>, primero debe actualizar <strong>toda la pila tecnológica</strong> (Java SE, PostgreSQL, Apache Tomcat). Para más información, visite: <a href="../../installation/requirements/#etendo-25">Etendo 25 - Software Stack</a></p>
+</li>
+<li>
+<p>Si está migrando a <strong>Etendo 26</strong>, la pila es la misma que en Etendo 25 con una diferencia crítica: <strong>Java 17 es ahora obligatorio</strong>. La marca de compatibilidad <code>-Pjava.version=11</code> se ha eliminado por completo. Para más información, visite: <a href="../../installation/requirements/#etendo-26">Etendo 26 - Software Stack</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Acción requerida para desarrollos personalizados</p>
+<p>Si sus módulos personalizados incluyen clases <code>BuildValidation</code> o <code>ModuleScript</code> compiladas con Java 11, recompílelas antes de actualizar. Consulte <a href="../../../developer-changelog/apichanges/#etendo-26">API Changes - Etendo 26</a> para más detalles.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>La guía <a href="../../../developer-changelog/apichanges/">Developer Changelog</a> proporciona detalles sobre la pila requerida y los posibles cambios necesarios en módulos personalizados. </p>
+<p>La guía <a href="../../../developer-changelog/apichanges/">Developer Changelog</a> proporciona detalles sobre la pila requerida y los posibles cambios necesarios en módulos personalizados.</p>
 </div>
 </li>
 </ul>
@@ -15022,7 +15035,7 @@ Y las demás combinaciones posibles.</p>
 <p>Compruebe si se producen errores de compilación debido a personalizaciones o modificaciones incompatibles.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en <strong>Etendo 25</strong> o posterior. Para más información, visite: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
+<p>Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en <strong>Etendo 25</strong> o <strong>Etendo 26</strong> o posterior. Para más información, visite: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
@@ -15073,7 +15086,7 @@ Y las demás combinaciones posibles.</p>
 <p>Verifique cualquier error de compilación que pueda surgir debido a personalizaciones o modificaciones incompatibles.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en <strong>Etendo 25</strong> o posterior. Para más información, visite: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
+<p>Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en <strong>Etendo 25</strong> o <strong>Etendo 26</strong> o posterior. Para más información, visite: <a href="../../../developer-changelog/apichanges/">Etendo API Changes</a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
