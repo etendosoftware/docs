@@ -84,8 +84,8 @@ En la ventana Tipo de Inventario Referenciado, el módulo añade los tipos de in
 
 En la solapa [Unidad Alternativa](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) de la **ventana Producto**, al habilitar la preferencia **Habilitar la gestión de UDM** se permite a los usuarios asignar *Empaquetar* o *Pallet* como **unidades alternativas de medida**
 
-!!! warning
-    Solo se admite un nivel de unidades logísticas. Por ejemplo, los productos pueden gestionarse en pallets o en cajas, pero todavía no se admiten pallets que contengan cajas de productos.
+!!! info
+    Se admite el anidamiento de unidades logísticas: los pallets pueden contener cajas, y las cajas pueden contener unidades básicas. Al recibir mercancía, el botón **Create Reference Inventory** en la ventana Recepción de entrada gestiona esta jerarquía automáticamente. Para más detalles, consulte [Create Reference Inventory](../bundles/warehouse-extensions/advanced-warehouse-management.md#available-process).
 
 Los usuarios pueden definir tasas de conversión y especificar en qué procesos (ventas, compras, logística) se aplican estas conversiones. En base a esta configuración, las reglas de reserva de stock priorizan automáticamente pallets y cajas completos antes de utilizar unidades individuales, optimizando la gestión de inventario.
 
@@ -199,3 +199,5 @@ La trazabilidad de las Unidades Alternativas y de los Inventarios Referenciados 
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---

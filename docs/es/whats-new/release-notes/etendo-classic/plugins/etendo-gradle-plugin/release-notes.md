@@ -11,6 +11,7 @@ tags:
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado |
 | --- | --- | --- | --- | --- |
+| [2.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.3.0){target="_blank"} | 25/03/2026 | 25.1.0 | 26.4.X | CS |
 | [2.2.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.2.1){target="_blank"} | 28/11/2025 | 25.1.0 | 25.4.x | CS |
 | [2.2.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.2.0){target="_blank"} | 29/09/2025 | 25.1.0 | 25.4.x | C |
 | [2.1.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.1.0){target="_blank"} | 12/08/2025 | 25.1.0 | 25.4.x | C |
@@ -39,3 +40,7 @@ tags:
 ---
 
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---

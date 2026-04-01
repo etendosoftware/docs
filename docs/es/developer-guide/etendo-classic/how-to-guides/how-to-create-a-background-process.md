@@ -65,3 +65,5 @@ En esta ventana, hay una entrada por cada ejecución de Proceso en segundo plano
 Este trabajo es una obra derivada de [Cómo crear un Proceso en segundo plano](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
 
 ---
+
+---

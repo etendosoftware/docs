@@ -128,10 +128,6 @@ plugins:
             - Home : index.md
             - Getting Started:
               - Overview: getting-started/overview.md
-              - Requirements: getting-started/requirements.md
-              - Install Etendo: getting-started/installation.md
-              - Interactive Installation: getting-started/interactive-installation.md
-              - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
               - User interface:
                 - Workspace: getting-started/user-interface/workspace.md
                 - Navigation: getting-started/user-interface/navigation.md
@@ -289,8 +285,9 @@ plugins:
                   - Supported Modules:
                     - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
                 - How to Guides:
-                    - How to Create a General Ledger Configuration: user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration.md
+                    - How to Configure Email: user-guide/etendo-classic/how-to-guides/how-to-configure-email.md
                     - How to Create an Account Tree: user-guide/etendo-classic/how-to-guides/how-to-create-an-account-tree.md
+                    - How to Create a General Ledger Configuration: user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration.md
                     - How to Manage Deferred Revenue and Expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
                     - How to Manage Prepaid Invoices in Payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
                     - How to Manage Prepaid Invoices in Receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
@@ -319,14 +316,14 @@ plugins:
               - Etendo: 
                 - ✨ Getting Started:
                   - Installation :
-                    - Install Etendo: getting-started/installation.md
-                    - Install Etendo - Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
+                    - Requirements: developer-guide/etendo-classic/getting-started/installation/requirements.md
+                    - Install Etendo - Local Development Environment: developer-guide/etendo-classic/getting-started/installation/local-development.md
+                    - Install Etendo - Server Installation: developer-guide/etendo-classic/getting-started/installation/production-server.md
+                    - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
                     - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
                     - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
                     - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
-                    - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
                     - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
-                    - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
                   - Migration from Openbravo:
                     - Migrating to Etendo (from Openbravo): developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo.md
                     - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md
@@ -393,6 +390,7 @@ plugins:
                   - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
                   - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
                   - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
+                  - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
                   - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
                   - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
                   - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
@@ -465,6 +463,8 @@ plugins:
                   - How to Retrieve Parents Node by Level in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-retrieve-parents-node-by-level-in-a-tree.md
                   - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
                   - How to Send Emails on Events: developer-guide/etendo-classic/how-to-guides/how-to-send-emails-on-events.md
+                  - How to Use Setup Apply Templates: developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates.md
+                  - How to Use the Interactive Setup: developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup.md
           #        - How to Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
           #        - How to setup Visual Studio Code IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Visual_Studio_Code_IDE.md
           #        - How to Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
@@ -735,6 +735,7 @@ plugins:
             How to Change the Size of a Column: Cómo Cambiar el Tamaño de una Columna
             How to Configure API Tokens: Cómo Configurar Tokens de API
             How to Configure Etendo Copilot to Use a Proxy: Cómo Configurar Etendo Copilot para Usar un Proxy
+            How to Configure Etendo Main UI: Cómo Configurar Etendo Main UI
             How to Configure Log: Cómo Configurar el Log
             How to Configure MCP Servers on a Etendo Agent: Cómo Configurar Servidores MCP en un Agente de Etendo
             How to Configure Memory Limits in Docker Containers: Cómo Configurar Límites de Memoria en Contenedores Docker
@@ -845,15 +846,20 @@ plugins:
             How to Use OpenTelemetry: Cómo Usar OpenTelemetry
             How to Use Property Fields: Cómo Usar Campos de Propiedad
             How to Use Secure Web Services: Cómo Usar Servicios Web Seguros
+            How to Use Setup Apply Templates: Cómo Usar Setup Apply Templates
+            How to Use the Interactive Setup: Cómo Usar la Configuración Interactiva
             Initial Organization Setup: Crear organización
             Install Etendo: Instalar Etendo
             Install Etendo - Development Environment: Instalar Etendo - Entorno de Desarrollo
+            Install Etendo - Local Development Environment: Instalar Etendo - Entorno de Desarrollo Local
+            Install Etendo - Server Installation: Instalar Etendo - Instalación en Servidor
             Install Etendo Main UI: Instalar Etendo Main UI
             Install Modules in Etendo: Instalar Módulos en Etendo
             Install Translation Bundles in Etendo: Instalar Paquetes de Traducción en Etendo
             Installation: Instalación
             IntelliJ Code Formatting: Formateo de Código en IntelliJ
-            Interactive Installation: Instalación Interactiva
+            Quick Installation: Instalación Rápida
+            Interactive Setup: Configuración Interactiva
             Intercompany: Intercompañía
             Inventory Status: Estado de Inventario
             ISO image: Imagen ISO
@@ -1028,10 +1034,6 @@ nav:
   - Home : index.md
   - Getting Started:
     - Overview: getting-started/overview.md
-    - Requirements: getting-started/requirements.md
-    - Install Etendo: getting-started/installation.md
-    - Interactive Installation: getting-started/interactive-installation.md
-    - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
     - User interface:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
@@ -1163,7 +1165,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
             - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-          - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+          - Sales Extensions Bundle:
+            - Overview: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+            - CRM Lead Management: user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md
           - Warehouse Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
             - Advanced Warehouse Management: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md
@@ -1173,8 +1177,9 @@ nav:
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
-          - How to Create a General Ledger Configuration: user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration.md
+          - How to Configure Email: user-guide/etendo-classic/how-to-guides/how-to-configure-email.md
           - How to Create an Account Tree: user-guide/etendo-classic/how-to-guides/how-to-create-an-account-tree.md
+          - How to Create a General Ledger Configuration: user-guide/etendo-classic/how-to-guides/how-to-create-a-general-ledger-configuration.md
           - How to Manage Deferred Revenue and Expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
           - How to Manage Prepaid Invoices in Payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
           - How to Manage Prepaid Invoices in Receivables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md
@@ -1203,14 +1208,14 @@ nav:
     - Etendo: 
       - ✨ Getting Started:
         - Installation :
-          - Install Etendo: getting-started/installation.md
-          - Install Etendo - Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
+          - Requirements: developer-guide/etendo-classic/getting-started/installation/requirements.md
+          - Install Etendo - Local Development Environment: developer-guide/etendo-classic/getting-started/installation/local-development.md
+          - Install Etendo - Server Installation: developer-guide/etendo-classic/getting-started/installation/production-server.md
+          - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
           - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Translation Bundles in Etendo: developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo.md
-          - Install Etendo Main UI: developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
-          - PostgreSQL Configuration: developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md
         - Migration from Openbravo:
           - Migrating to Etendo (from Openbravo): developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo.md
           - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md
@@ -1277,6 +1282,7 @@ nav:
         - How to Change an Existing Window: developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-window.md
         - How to Change Fonts in Etendo Reports: developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports.md
         - How to Change the Size of a Column: developer-guide/etendo-classic/how-to-guides/how-to-change-the-size-of-a-column.md
+        - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
         - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
@@ -1349,6 +1355,8 @@ nav:
         - How to Retrieve Parents Node by Level in a Tree: developer-guide/etendo-classic/how-to-guides/how-to-retrieve-parents-node-by-level-in-a-tree.md
         - How to Run an Initial Client Setup Process: developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md
         - How to Send Emails on Events: developer-guide/etendo-classic/how-to-guides/how-to-send-emails-on-events.md
+        - How to Use Setup Apply Templates: developer-guide/etendo-classic/how-to-guides/how-to-use-setup-apply-templates.md
+        - How to Use the Interactive Setup: developer-guide/etendo-classic/how-to-guides/how-to-use-interactive-setup.md
 #        - How to Setup ESLint And Prettier In Your IDE: developer-guide/etendo-classic/how-to-guides/How_To_Setup_ESLint_And_Prettier_In_Your_IDE.md
 #        - How to setup Visual Studio Code IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Visual_Studio_Code_IDE.md
 #        - How to Upgrade a Library: developer-guide/etendo-classic/how-to-guides/How_To_Upgrade_a_Library.md
@@ -1376,8 +1384,10 @@ nav:
           - Task: developer-guide/etendo-classic/bundles/platform/task.md
           - Print Provider: developer-guide/etendo-classic/bundles/platform/print-provider.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
-        - Financial Extensions Bundle: 
+        - Financial Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
+        - Sales Extensions Bundle:
+          - CRM Lead Management: developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md
         - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
       - Developer Changelog:
         - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md
