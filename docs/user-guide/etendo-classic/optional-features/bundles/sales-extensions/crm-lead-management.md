@@ -253,9 +253,9 @@ Upon opening the app, the user sees the list of CRM tasks assigned to them, orde
 
 - **Task No**: Unique identifier for the task
 - **Company Name**: The company associated with the lead
-- **Status**: Task status (e.g., New, Converted) with color-coded badge
+- **Lead Status**: Lead status (e.g., New, Converted) with color-coded badge
 - **Task Type**: Type of activity (e.g., Email, Meeting)
-- **Priority**: Task priority level (e.g., Critical, Major) with color-coded badge
+- **Task Priority**: Task priority level (e.g., Critical, Major) with color-coded badge
 - **Task Due Date**: The due date of the task
 
 <br clear="all">
