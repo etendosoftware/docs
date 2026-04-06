@@ -1088,7 +1088,14 @@ nav:
         - Warehouse Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
-          - Analysis Tools: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md
+          - Analysis Tools:
+            - Pareto Product Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md
+            - Material Transaction Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md
+            - Stock Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report.md
+            - Stock History: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history.md
+            - Valued Stock Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report.md
+            - Product Movements Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report.md
+            - Product Operations: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations.md
           - Setup: user-guide/etendo-classic/basic-features/warehouse-management/setup.md
         - Production Management:
           -  ✨Getting Started: user-guide/etendo-classic/basic-features/production-management/getting-started.md 
