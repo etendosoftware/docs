@@ -245,9 +245,18 @@ La experiencia móvil está **task-driven**: la app muestra las tareas asignadas
 
 ### Task List
 
-Al abrir la app, el usuario ve la lista de tareas de CRM asignadas, ordenadas por prioridad y fecha de vencimiento. Cada tarea muestra el lead al que pertenece, el tipo de tarea y su estado actual.
+![Mobile task list](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-task-list.png){align=right width=300}
 
-![Mobile task list](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-task-list.png)
+Al abrir la app, el usuario ve la lista de tareas de CRM asignadas, ordenadas por prioridad y fecha de vencimiento. Cada tarjeta de tarea muestra:
+
+- **Task No**: Identificador único de la tarea
+- **Company Name**: La empresa asociada al lead
+- **Status**: Estado de la tarea (por ejemplo, New, Converted) con una insignia codificada por color
+- **Task Type**: Tipo de actividad (por ejemplo, Email, Meeting)
+- **Priority**: Nivel de prioridad de la tarea (por ejemplo, Critical, Major) con una insignia codificada por color
+- **Task Due Date**: Fecha de vencimiento de la tarea
+
+<br clear="all">
 
 ### Lead Detail
 
