@@ -18,7 +18,7 @@ El coste se calcula como la suma del coste de cada transacción de material del 
 
 -   **Organización**: Este campo permite al usuario seleccionar entre organizaciones de tipo "Legal with Accounting" y "Generic".
 -   **Almacén**: Si la organización seleccionada es "Generic", entonces se listan todos los almacenes que pertenecen a ella; en caso contrario, si la organización es "Legal with accounting", no se muestra ningún almacén para seleccionar.
--   **Date**: El informe mostrará la información hasta la fecha seleccionada.
+-   **Fecha**: El informe mostrará la información hasta la fecha seleccionada.
 -   **Consolidated Warehouse**: Si está marcado, la información del stock se consolidará a nivel de organización; en caso contrario, la información se desglosará por almacén.
 -   **Categoría del Producto**: Permite mostrar información solo de la Categoría del Producto seleccionada.
 -   **Moneda**: Define la moneda en la que se muestran todos los valores monetarios (como Coste, Valoración) del informe.

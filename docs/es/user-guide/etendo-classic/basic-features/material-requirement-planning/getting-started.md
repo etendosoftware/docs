@@ -93,3 +93,5 @@ El MRP interactúa con los siguientes módulos:
 - Este trabajo es una obra derivada de [Gestión de MRP](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} de [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
 
 ---
+
+---

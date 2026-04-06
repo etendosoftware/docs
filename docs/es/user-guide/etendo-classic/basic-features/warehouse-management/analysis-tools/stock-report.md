@@ -14,7 +14,7 @@ El resultado de este informe puede filtrarse utilizando la fecha de movimiento, 
 
 El resultado de este informe puede visualizarse en formato HTML y PDF.
 
-Los campos **Estantería (x)**, **Columna (y)**, **Altura (z)** corresponden a **Estantería (X)**, **Columna (Y)** y **Altura (Z)** del hueco de almacenamiento.
+**Estanterías (x)**, **Columna (y)**, **Altura (z)** corresponden a **Estantería (X)**, **Columna (Y)** y **Altura (Z)** del hueco de almacenamiento.
 
 **Salida de ejemplo del informe**
 
