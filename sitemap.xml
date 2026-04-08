@@ -2248,13 +2248,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/sales-management/setup/setup/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/</loc>
-        <lastmod>2026-04-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/</loc>
         <lastmod>2026-04-08</lastmod>
         <changefreq>daily</changefreq>
@@ -2274,6 +2267,55 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-configure-email/</loc>
@@ -5082,7 +5124,6 @@
         <lastmod>2026-04-08</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/</loc>
@@ -5725,5 +5766,54 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/"/>
     </url>
 </urlset>
