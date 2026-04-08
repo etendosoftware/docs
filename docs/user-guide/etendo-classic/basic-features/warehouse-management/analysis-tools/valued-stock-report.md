@@ -1,12 +1,19 @@
 ---
 title: Valued Stock Report
+
+tags:
+    - Valued Stock
+    - Inventory
+    - Warehouse Management
+    - Cost Analysis
+    - Financial Reporting
 ---
 
-## Valued Stock Report
+# Valued Stock Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Valued Stock Report`
 
-### **Overview**
+## Overview
 
 The **Valued Stock Report** provides a comprehensive view of the inventory held in each warehouse along with its monetary value. It is an essential tool for understanding how much capital is tied up in stock, supporting key business processes such as:
 
@@ -17,7 +24,7 @@ The **Valued Stock Report** provides a comprehensive view of the inventory held 
 
 The valuation is calculated by summing the cost of every [material transaction](../transactions.md) for each product in the warehouse. Transaction costs are determined by the [Costing Server](../getting-started.md) process.
 
-### **Parameters Window**
+## Parameters Window
 
 ![Material Transaction Report](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
@@ -33,7 +40,7 @@ Before generating the report, configure the following parameters:
 !!! warning
     A [conversion rate](../../general-setup/application/conversion-rates.md) to the selected report currency must be defined for the report to generate correctly. Verify that the appropriate currency conversion rates are configured before running the report.
 
-### **Output Window**
+## Output 
 
 ![Material Transaction Report](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
@@ -47,7 +54,7 @@ The report output includes the following columns:
 -   **Actual Average/Standard Algorithm Cost**: The most recently calculated Average or Standard cost for the product.
 -   **Actual Average/Standard Algorithm Valuation**: The stock valuation based on the current Average or Standard cost. It is calculated by multiplying the stock quantity by the current cost.
 
-### **Improving Report Performance (Data Pre-Calculation)**
+## Improving Report Performance (Data Pre-Calculation)
 
 !!! note
     This step is **optional**. The Valued Stock Report works without it. However, if your report takes a long time to generate because your system has a large volume of transactions, enabling data pre-calculation can significantly reduce waiting times.
@@ -69,7 +76,7 @@ The image below shows the Process Request window configured to run the data pre-
 !!! info
     It is recommended to schedule this process to run daily during a period of low system activity. The process only generates new pre-calculated data when an additional period has been closed or permanently closed since the last run.
 
-#### **Limitations**
+### Limitations
 
 When the system pre-calculates data for a closed period, it combines all transactions in that period into a single summary. The original date of each individual transaction is not kept.
 
