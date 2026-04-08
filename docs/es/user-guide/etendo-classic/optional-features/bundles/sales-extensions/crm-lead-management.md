@@ -18,6 +18,9 @@ tags:
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsala **bajo tu propia responsabilidad**.
 
+!!! info
+    Esta funcionalidad está disponible a partir de la versión **4.0.0** del Sales Extensions Bundle, desde **Etendo 26.1**. Para poder incluir esta funcionalidad, el Sales Extensions Bundle debe estar instalado. Para ello, sigue las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con core y las nuevas funcionalidades, visita [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
+
 ## Overview
 
 El módulo **Gestión de Leads de CRM** proporciona capacidades nativas de seguimiento de leads dentro de Etendo ERP. Permite al equipo comercial registrar prospectos, gestionar su ciclo de vida completo mediante estados configurables, organizar tareas de seguimiento y convertir leads cualificados en Terceros, integrándose directamente con el flujo de Ventas (presupuestos → pedidos → facturas).
@@ -45,6 +48,8 @@ Los canales de origen a través de los cuales se capturan los leads (por ejemplo
     Si es necesario exportar fuentes personalizadas como parte de un módulo, esto debe hacerse usando el rol **System Administrator**. Consulta la [CRM Lead Management Developer Guide](../../../../../developer-guide/etendo-classic/bundles/sales-extensions/crm-lead-management.md#lead-source) para más detalles.
 
 ### Lead Classification
+
+:material-menu: `Aplicación` > `Conector CRM` > `Lead Classification`
 
 Agrupación opcional para leads. Las clasificaciones se crean desde esta ventana y se pueden usar para segmentar leads por sector, región, nivel de valor potencial o cualquier otra categoría de negocio relevante. Una vez creadas, aparecen como opciones en el campo **Classification** del formulario de Lead.
 
