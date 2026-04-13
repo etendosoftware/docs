@@ -80,7 +80,7 @@ Cuando se solicite, proporciona:
 - **Clave de API de OpenAI** — tu clave para la integración de Copilot (la entrada se enmascara).
 
 !!! info "Disponibilidad"
-    `setup.applyTemplates` está disponible a partir de **Etendo 26**, o en versiones anteriores con el [Etendo Gradle Plugin 3.0.0](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) o superior.
+    `setup.applyTemplates` está disponible a partir de **Etendo 26**, o en versiones anteriores con el [Etendo Gradle Plugin 2.3.0](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) o superior.
 
 !!! info
     Para más detalles sobre plantillas disponibles, opciones y uso avanzado, consulta la guía [Cómo usar Setup Apply Templates](../../how-to-guides/how-to-use-setup-apply-templates.md).
