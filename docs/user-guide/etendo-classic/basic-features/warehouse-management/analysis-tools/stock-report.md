@@ -10,7 +10,7 @@ Stock Report shows a stock level of all products (that have quantity on hand dif
 
 The outcome of this report can be filtered by using movement date, product category, product and warehouse locators.
 
-![Material Transaction Report](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
+![Stock Report Parameters Window](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
 
 The outcome of this report can be viewed in HTML and PDF format.
 
@@ -18,7 +18,7 @@ The outcome of this report can be viewed in HTML and PDF format.
 
 **Sample Report output**
 
-![Material Transaction Report](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
+![Stock Report Sample Output](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
 
 ---
 

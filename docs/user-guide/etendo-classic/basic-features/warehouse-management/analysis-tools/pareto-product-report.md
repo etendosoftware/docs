@@ -1,5 +1,11 @@
 ---
 title: Pareto Product Report
+tags:
+ - Pareto Product Report
+ - Warehouse Management
+ - Inventory
+ - ABC Classification
+ - Analysis Tools
 ---
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Pareto Product Report`
