@@ -13,6 +13,7 @@ tags:
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [26.1.1](#2611) | 09/04/2026 | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) |
 | [25.4.3](#2543) | 22/01/2026 | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) |
 | [25.4.0](#2540) | 29/12/2025 | [25Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.0.iso) |
 | [25.3.0](#2530) | 30/09/2025 | [25Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q3.0.iso) |
@@ -31,12 +32,15 @@ tags:
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
 
+## 26.1.1
+New ISO with Etendo Classsic version 26.1.1
+
 ## 25.4.3
 
 - New ISO with Etendo version `25.4.3`
 - Add **Platform Extensions** and **Copilot Extensions** bundles.
 - ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
-    - python3 → Python `3.10`
+    - python3 ? Python `3.10`
 
 
 ## 25.4.0
