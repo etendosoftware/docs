@@ -49,12 +49,12 @@ Finally Etendo has an *integrated accounting system* that combines general accou
 
 In other words, Etendo allows to post transactions to the ledger which can include different dimensions:
 
-- Those dimensions can be centrally maintained in the [Client](../general-setup/client.md) therefore are available to all the organizations within that Client.
+- Those dimensions can be centrally maintained in the [Client](../general-setup/client/client.md) therefore are available to all the organizations within that Client.
 Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md).
 
 Those dimensions are then available just for that Organization.
 
-- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client.md) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
+- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client/client.md) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 This application area covers the [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](../financial-management/getting-started.md#payables-and-receivables-management) business flow.
 

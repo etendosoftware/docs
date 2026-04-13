@@ -20,16 +20,16 @@ This helps productivity and quality as you can code, debug and test in an integr
     * They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity. 
     * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. 
     * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
-    * You can make use of the full [data access layer](../concepts/Data_Access_Layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
+    * You can make use of the full [data access layer](../concepts/data-access-layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
       
       Warning: Don't call setters on the instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. 
       So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
+Business events make use of the event framework provided by the [Weld](../concepts/etendo-architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
 
 !!!note
-    In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/Etendo_Architecture.md#Analyzing_the_classpath) if your event handlers are not found.
+    In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/etendo-architecture.md#Analyzing_the_classpath) if your event handlers are not found.
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
@@ -133,7 +133,7 @@ public void onDelete(@Observes EntityDeleteEvent event) {
 !!!note 
     * You only need to implement a method for the event you want to listen to, so if you only need to listen to update events, then only implement a method with the @Observes EntityUpdateEvent parameter. 
     * Each method starts with a check if the event is valid, this is needed to filter for relevant events only, see the section below. 
-    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](../concepts/Etendo_Architecture.md#Event_Classes_and_API) for more information. 
+    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](../concepts/etendo-architecture.md#Event_Classes_and_API) for more information. 
 
 ###  Filtering Only Relevant Events
 
@@ -243,7 +243,7 @@ And then set the current state.
 event.setCurrentState(greetingTitleProperty, title + ".");
 ```
 
-The changed entity instance does not need to be saved explicitly, this is done by the [data access layer](../concepts/Data_Access_Layer.md) and hibernate automatically.
+The changed entity instance does not need to be saved explicitly, this is done by the [data access layer](../concepts/data-access-layer.md) and hibernate automatically.
 
 Then test the changes, go to the window ([http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)), enter a new greeting without a dot in the title. 
 When saving you will see a dot getting added. 
@@ -282,7 +282,7 @@ greetingTrls.add(greetingTrl);
 Let's walk through the code. First the trl object is created and some properties are set. 
 Note as the object is not part of the event you can call its setters directly. 
 The language is arbitrarily chosen. 
-See the  [DAL](../concepts/Data_Access_Layer.md) document for information on the api's you can use to retrieve objects from the database.
+See the  [DAL](../concepts/data-access-layer.md) document for information on the api's you can use to retrieve objects from the database.
 
 ```java
 final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);

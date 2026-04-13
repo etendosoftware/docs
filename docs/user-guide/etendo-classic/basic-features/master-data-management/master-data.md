@@ -533,10 +533,16 @@ Fields to note:
 - **First** and **Last Name** of the contact.
 - **Email** of the contact.
 - **Phone** of the contact.
-- **Comments**: To enter additional information.
+- **Alternative Phone** of the contact.
 - **Position** in the business partner.
-- **Active** flag: to indicate if this contact is available for use or disabled. 
+- **Comments**: To enter additional information.
+- **Active** flag: to indicate if this contact is available for use or disabled.
+- **Default** flag: marks this contact as the default one for the business partner. This contact's email address will be automatically suggested in the email popup when sending emails from documents related to the business partner.
 - **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
+- **Default**: Checkbox that marks this contact as the default recipient when sending documents by email. When selected, this contact's email address is automatically preloaded in the *To* field of the Email Options popup. If no contact has this flag set, the system falls back to the last used email for the business partner or, if none exists, to the first active contact ordered alphabetically.
+
+    !!! info
+        Only one contact per Business Partner should have this checkbox selected to ensure a deterministic preselection.
 
 #### Basic Discount
 
@@ -1318,7 +1324,7 @@ It allows viewing stock by logistics units (referenced inventory) in a clearer a
 
 
 !!! info
-    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 ---
 

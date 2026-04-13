@@ -5,6 +5,8 @@ tags:
     - Sales Extensions
     - Sales Quotation
     - Advanced Rappels
+    - CRM
+    - Lead Management
 
 ---
 :octicons-package-16: Javapackage: `com.etendoerp.sales.extensions`
@@ -22,21 +24,6 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 
 ## Modules
 
-
-### Sales Quotation
-
-:octicons-package-16: Javapackage: `com.etendoerp.quotation`
-
-:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Different functionalities are added to this window which allows the user to make changes and/or to adjust the information entered, to generate the sales quotations in order to create the corresponding orders from those quotations.
-
-!!! info
-	For more information, visit the [Sales Quotation user guide](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#advanced-sales-quotation).
-
-
 ### Advanced Rappels
 
 :octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
@@ -49,10 +36,33 @@ Different functionalities are added to this window which allows the user to make
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-	For more information, visit the [Advanced Rappels user guide](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration). 
+	For more information, visit the [Advanced Rappels user guide](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
+
+### CRM Lead Management
+
+:octicons-package-16: Javapackage: `com.etendoerp.crm`
+:octicons-package-16: Javapackage: `com.etendoerp.crm.tenplate`
 
 !!! info
-	For more information, visit the [Print Document Web Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+    This functionality is available starting from version **4.0.0** of the Sales Extensions Bundle, from **Etendo 26.1**. To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
+
+Native lead tracking and management for the commercial team. Allows registering prospects, managing their lifecycle through configurable statuses, organizing follow-up tasks, and converting qualified leads into Business Partners — directly integrating with the Sales flow (quotations → orders → invoices).
+
+!!! info
+    For more information, visit the [CRM Lead Management user guide](crm-lead-management.md).
+
+### Sales Quotation
+
+:octicons-package-16: Javapackage: `com.etendoerp.quotation`
+
+:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Different functionalities are added to this window which allows the user to make changes and/or to adjust the information entered, to generate the sales quotations in order to create the corresponding orders from those quotations.
+
+!!! info
+	For more information, visit the [Sales Quotation user guide](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#advanced-sales-quotation). 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

@@ -112,6 +112,9 @@ In the Packing Box tab, the **Content** tab is a child tab where the **content o
 Fields to note:
 
 - **Product**: identifies an item which is either purchased or sold in this organization.
+- **Attribute Set Value**: shows product attributes when applicable, such as batch, serial number, or expiration date.
+- **Operative Quantity**: quantity entered in the alternative unit of measure for the product.
+- **Alternative UOM**: alternative unit of measure used to enter the operative quantity (for example, box or pallet).
 - **Quantity**: indicates the quantity of product in the box
 - **UOM**: the UOM defines a unique non monetary unit of measure
 

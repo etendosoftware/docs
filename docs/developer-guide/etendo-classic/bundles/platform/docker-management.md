@@ -69,7 +69,7 @@ This project depends on the following tools:
     docker_com.etendoerp.tomcat_debug=8009
     ``` 
     !!! note
-        In this example, this variable configures the [Dockerized Tomcat Service](./tomcat-dockerized-service.md) module port, although the necessary configurations will be included in the documentation of each module.
+        In this example, this variable configures the [Dockerized Tomcat Service](./dockerized-tomcat-service.md) module port, although the necessary configurations will be included in the documentation of each module.
 
 - **Exclude Services**
 

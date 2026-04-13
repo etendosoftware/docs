@@ -72,6 +72,7 @@ And the objective is to insert these products in Etendo. For this example we wil
     5. Set an **Element separator**. This is the character that will be used to separate the data from the file CSV. For example, `,` or  `;`.
   
 3. Click on `Done` button. And the tasks will be created.
+    
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
 
 #### Using the `Task Creator Tool` in an agent
@@ -94,7 +95,7 @@ And the objective is to insert these products in Etendo. For this example we wil
 
 5. The agent will create the tasks based on the file data using the `Task Creator Tool`.
 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
+    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
 #### Using the `Bulk Task Creator` agent
 This agent knows how to use the `Task Creator Tool` strategically, converting the request into singular tasks. The steps to create the bulk tasks are:
@@ -171,11 +172,11 @@ The tool will return a preview showing how many tasks would be created and their
 ## How to Process Copilot tasks
 The tasks can be processed in two ways:
 
-- **Manual processing**: The user can process the tasks manually in the `Tasks` window. Select the tasks to be processed and click on the `EXECUTE TASK WITH COPILOT` button. After the task is processed, the status will be updated to `Completed` and the result will be shown in the `Response`.
+- **Manual processing**: The user can process the tasks manually in the `Tasks` window. Select the tasks to be processed and click on the `EXECUTE TASK WITH COPILOT` button. After the task is processed, the status will be updated to `Completed` and the result will be shown in the `Response` field.
 
 - **Background processing**: The tasks can be processed automatically in the background. Go to `Process Request` window to schedule the background process called `Execute Copilot Bulk Tasks`. In each execution, the process will take 10 tasks to process, so it is necessary to execute the process multiple times to process all the tasks.
 
-After the task is processed, the status will be updated to `Completed` and the result will be shown in the `Response`.
+After the task is processed, the status will be updated to `Completed` and the result will be shown in the `Response` field. Additionally, the complete agent response will be stored in the `RAW Response` field, and the `Conversation ID` field will contain the identifier of the conversation with the agent.
 
 ### Example
 
@@ -187,7 +188,7 @@ For example, we will process few tasks created in the previous example, in the m
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-4.png)
 4. The tasks will be processed and the status will be updated to `Completed`.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-5.png)
-5. In the field `Response` will be shown the result of the task.
+5. In the field `Response` will be shown the result of the task. The complete agent response is available in the `RAW Response` field, and the `Conversation ID` field contains the identifier of the agent conversation.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-6.png)
 
 For the remaining tasks, we will schedule the background process to process them.

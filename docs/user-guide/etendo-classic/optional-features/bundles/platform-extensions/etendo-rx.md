@@ -27,6 +27,15 @@ To use this functionality, developers must follow some setup steps.
 !!! info
     To read about this configuration, visit the [Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-sso-login).
 
+!!! warning "Encryption keys required before going to production"
+    OAuth tokens are stored encrypted at rest in the database. Before deploying to production, administrators must configure the encryption key:
+
+    - **Etendo Core**: set `etrx.token.encryption.key` in `gradle.properties` (64-character hex string).
+
+    Generate each key with: `openssl rand -hex 32`
+
+    For full configuration details, see the [Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-middleware-setup-recommended).
+
 ### Logging into Etendo with an external provider
 
 When accessing the Etendo login screen, you’ll see buttons for the **available providers** to authenticate with.
