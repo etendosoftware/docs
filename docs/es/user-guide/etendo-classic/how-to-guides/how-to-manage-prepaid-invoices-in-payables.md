@@ -124,7 +124,7 @@ Una vez procesado, Etendo informa del número de albarán recién registrado.
 
 El siguiente paso es introducir la factura del proveedor. Hay varias formas de introducir una factura de proveedor.
 
-La empresa de este ejemplo utiliza, por ejemplo, el proceso "Crear líneas de", que se puede encontrar en la ventana [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4). Este proceso puede utilizarse una vez que la información de cabecera de la factura de compra se haya introducido correctamente. Recupera información del pedido o del albarán para copiarla en la factura introducida.
+La empresa de este ejemplo utiliza, por ejemplo, el proceso "Crear líneas de", que se puede encontrar en la ventana [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines). Este proceso puede utilizarse una vez que la información de cabecera de la factura de compra se haya introducido correctamente. Recupera información del pedido o del albarán para copiarla en la factura introducida.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 

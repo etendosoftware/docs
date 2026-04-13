@@ -133,7 +133,7 @@ Los gastos de compra pueden reconocerse de diferentes maneras:
 En Etendo, en esta situación, el gasto se genera como parte de la contabilidad de la factura de proveedor correspondiente a la transacción.
 - En algunas circunstancias, sin embargo, se requiere diferir el reconocimiento del gasto. Por ejemplo, una empresa que compra un seguro empresarial por la duración de un año querría
 distribuir ese gasto durante 12 meses.
-En Etendo, en esta situación, el gasto puede diferirse dentro de un número determinado de periodos introduciendo un plan de diferimiento de gastos en las [líneas de factura de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md).
+En Etendo, en esta situación, el gasto puede diferirse dentro de un número determinado de periodos introduciendo un plan de diferimiento de gastos en las [líneas de factura de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines).
 
 !!!info
     Para una descripción completa de esta funcionalidad, visite la sección [Cómo gestionar ingresos y gastos diferidos](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md).

@@ -20,7 +20,7 @@ La funcionalidad de Comisión en Etendo comienza con la **ventana Comisión**, d
 
 Desde la ventana Comisión, se definen criterios más detallados, incluyendo filtros por tercero, producto o región, junto con la estructura real de la comisión. Una funcionalidad clave es la posibilidad de asignar un **agente comercial** directamente al crear documentos de venta (pedidos y/o facturas), lo que permite a Etendo vincular esas transacciones al plan de comisiones correspondiente y garantiza un filtrado preciso. 
 
-Una vez establecidas todas las condiciones, el sistema genera la comisión correspondiente, que se muestra en la ventana [**Procesar comisión**](../../../../etendo-classic/basic-features/sales-management/transactions.md#commission-payment), donde los usuarios pueden revisar un desglose detallado del cálculo e incluso generar una [**Factura (Proveedor)**](../../../../etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) para procesar el pago de la comisión al agente comercial.
+Una vez establecidas todas las condiciones, el sistema genera la comisión correspondiente, que se muestra en la ventana [**Procesar comisión**](../../../../etendo-classic/basic-features/sales-management/transactions.md#commission-payment), donde los usuarios pueden revisar un desglose detallado del cálculo e incluso generar una [**Factura (Proveedor)**](../../procurement-management/transactions/purchase-invoice.md) para procesar el pago de la comisión al agente comercial.
 
 En resumen, el flujo general es:
 

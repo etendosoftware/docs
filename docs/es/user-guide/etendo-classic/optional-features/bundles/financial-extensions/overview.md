@@ -70,9 +70,9 @@ Este módulo mejora la gestión de cuentas bancarias, permitiendo una mayor pers
 
     - [Terceros](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
     - [Factura (Cliente)](../../../basic-features/sales-management/transactions/purchase-invoice.md)
-    - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md)
+    - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md#modify-payment-plan)
     - [Pedido de venta](../../../basic-features/sales-management/transactions/purchase-order.md)
-    - [Pedido de compra](../../../basic-features/procurement-management/transactions/purchase-order.md)
+    - [Pedido de compra](../../../basic-features/procurement-management/transactions/purchase-order.md#advanced-bank-account-management)
     - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice.md)
     - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-order.md)
 
@@ -112,8 +112,8 @@ Esta funcionalidad forma parte de Financial Extensions Bundle y es útil cuando 
 
     - [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
     - [Factura (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
-    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md)
-    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md)
+    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md#how-to-reactivate-a-closed-purchase-order)
+    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate)
     - [Amortización](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
     - y la [Guía del desarrollador de Procesamiento avanzado de documentos financieros](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing)
 ### Informe de Amortización de Activos
@@ -280,6 +280,8 @@ Esta funcionalidad permite al usuario ajustar cuentas, garantizando que el saldo
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
 
 ---
 

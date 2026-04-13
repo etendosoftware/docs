@@ -26,23 +26,23 @@ La funcionalidad de Contabilización masiva permite al usuario contabilizar o de
 Esta funcionalidad está disponible en las siguientes ventanas:
 
 - [Amortización](../../../basic-features/financial-management/assets/overview.md#bulk-posting)
-- [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/purchase-invoice.md)
-- [Cuenta financiera](../../../basic-features/financial-management/receivables-and-payables/transactions/matched-purchase-invoices.md)
-- [Facturas cuadradas](../../../basic-features/procurement-management/transactions/matched-purchase-invoices.md)
-- [Ajuste de Costes](../../../basic-features/warehouse-management/transactions/return-to-vendor-shipment.md)
-- [Producción LDM](../../../basic-features/warehouse-management/transactions/matched-purchase-invoices.md)
+- [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#bulk-posting_1)
+- [Cuenta financiera](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
+- [Facturas cuadradas](../../../basic-features/procurement-management/transactions/matched-purchase-invoices.md#bulk-posting)
+- [Ajuste de Costes](../../../basic-features/warehouse-management/transactions.md#bulk-posting_3)
+- [Producción LDM](../../../basic-features/warehouse-management/transactions.md#bulk-posting_2)
 - [Consumo interno](../../../basic-features/production-management/transactions/purchase-invoice.md)
-- [Dudoso cobro](../../../basic-features/financial-management/receivables-and-payables/transactions/return-to-vendor-shipment.md)
-- [Landed Cost](../../../basic-features/procurement-management/transactions/landed-cost.md)
+- [Dudoso cobro](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
+- [Landed Cost](../../../basic-features/procurement-management/transactions/landed-cost.md#bulk-posting)
 - [Asientos manuales](../../../basic-features/financial-management/accounting/transactions/purchase-invoice.md)
 - [Asientos Manuales Simplificados](../../../basic-features/financial-management/accounting/transactions/goods-receipt.md)
 - [Parte de Trabajo](../../../basic-features/production-management/transactions/goods-receipt.md)
 - [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions/goods-receipt.md)
 - [Albarán (Cliente)](../../../basic-features/sales-management/transactions/goods-receipt.md)
 - [Recibo devolución de material](../../../basic-features/sales-management/transactions/purchase-invoice.md)
-- [Devolución a albarán de proveedor](../../../basic-features/procurement-management/transactions/return-to-vendor-shipment.md)
+- [Devolución a albarán de proveedor](../../../basic-features/procurement-management/transactions/return-to-vendor-shipment.md#bulk-posting)
 - [Factura (Cliente)](../../../basic-features/sales-management/transactions/matched-purchase-invoices.md)
-- [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md)
+- [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md#bulk-posting)
 - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice.md)
 - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions/goods-receipt.md)
 - [Inventario físico](../../../basic-features/warehouse-management/transactions/goods-receipt.md)
@@ -70,6 +70,8 @@ El módulo de Contabilización masiva incluye la funcionalidad de Documentos no 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
 
 ---
 

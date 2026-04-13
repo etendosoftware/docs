@@ -29,7 +29,7 @@ La lista completa de tipos de documento estándar es la siguiente:
 |     |     |     |
 |-----|-----|-----|
 | **Nombre del tipo de documento**  | **Tipo doc. base**  | **Transacción empresarial** |
-| AP CreditMemo | Nota de abono de proveedor | [Nota de crédito de compra](../../../procurement-management/transactions/purchase-invoice.md) |
+| AP CreditMemo | Nota de abono de proveedor | [Nota de crédito de compra](../../../procurement-management/transactions/purchase-invoice.md#reactivate) |
 | AP Invoice | Factura de proveedor | [Factura (Proveedor)](../../../procurement-management/transactions/purchase-invoice.md) |
 | AR CreditMemo | Nota de abono de cliente | [Nota de crédito de venta](../../../sales-management/transactions.md#header-6) |
 | AR Invoice | Factura de cliente | [Factura (Cliente)](../../../sales-management/transactions.md#sales-invoice) |
@@ -55,7 +55,7 @@ La lista completa de tipos de documento estándar es la siguiente:
 | Dudoso cobro | Dudoso cobro | [Dudoso cobro](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
 | Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions.md#cost-adjustment) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
-| Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
+| Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions/landed-cost.md#header) |
 | Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions.md#inventory-amount-update) |
 
 !!! note "Importante"

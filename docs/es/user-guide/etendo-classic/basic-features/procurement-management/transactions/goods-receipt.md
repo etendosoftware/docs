@@ -35,7 +35,7 @@ En la **barra de estado** de la cabecera, el usuario puede encontrar la siguient
 **Una vez que la información de cabecera se ha cumplimentado correctamente, puede ir a la pestaña "Líneas" para introducir la/s "Línea/s de albarán (proveedor)"**.
 
 !!! info
-    Para aprender cómo introducir líneas de albarán, visite la siguiente sección [Líneas](goods-receipts.md#lines)
+    Para aprender cómo introducir líneas de albarán, visite la siguiente sección [Líneas](goods-receipt.md#lines)
 
 Si un **albarán (proveedor)** se completa y, por tanto, queda **contabilizado**:
 

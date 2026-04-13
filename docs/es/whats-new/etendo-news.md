@@ -684,7 +684,7 @@ tags:
 - :octicons-rocket-24: **Anulación mejorada de la Factura (Proveedor) con referencia del proveedor**
 
     ---  
-    Al anular una Factura (Proveedor), Etendo crea un documento inverso que ahora referencia el documento de anulación del proveedor. El proceso de [reactivación de factura](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) incluye un nuevo campo `Referencia del proveedor` para garantizar una trazabilidad clara y la alineación.
+    Al anular una Factura (Proveedor), Etendo crea un documento inverso que ahora referencia el documento de anulación del proveedor. El proceso de [reactivación de factura](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate) incluye un nuevo campo `Referencia del proveedor` para garantizar una trazabilidad clara y la alineación.
 
 </div>
 
