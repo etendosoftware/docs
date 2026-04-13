@@ -371,7 +371,7 @@ To remove a payment, select the corresponding document and click the **Remove Pa
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![Remove Payment confirmation dialog](../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
+![Remove Payment](../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/remove-payment.png)
 
 ### Unvoid
 
