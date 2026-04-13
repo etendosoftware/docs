@@ -26,7 +26,7 @@ The valuation is calculated by summing the cost of every [material transaction](
 
 ## Parameters Window
 
-![Material Transaction Report](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
 Before generating the report, configure the following parameters:
 
@@ -42,7 +42,7 @@ Before generating the report, configure the following parameters:
 
 ## Output 
 
-![Material Transaction Report](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
 The report output includes the following columns:
 
