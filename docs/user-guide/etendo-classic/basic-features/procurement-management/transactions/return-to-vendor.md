@@ -25,7 +25,7 @@ Only *Booked* documents can be shipped to the vendor.
 
 ## Lines
 
-Add products to be included in your purchase order. Each product is added by creating a line.
+Add products to be included in your return to vendor document. Each product is added by creating a line.
 
 The Lines tab is not editable, since the returned lines always come from receipt lines, to avoid:
 

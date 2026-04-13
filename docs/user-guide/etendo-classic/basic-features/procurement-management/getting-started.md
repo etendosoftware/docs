@@ -116,10 +116,10 @@ Finance staff:
         - in a manual way
         - or by retrieving purchase orders or receipts lines pending to be invoiced
         - or by copying invoice lines from existing purchase invoices.
-- Registers landed cost invoices and match those ["invoiced" landed costs](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) with the landed costs:
-    - booked directly in a [receipt(s)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
+- Registers landed cost invoices and match those ["invoiced" landed costs](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines) with the landed costs:
+    - booked directly in a [receipt(s)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md#landed-cost).
     - or booked through a [landed cost document](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
-- [Processes](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) and [Posts](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) landed cost matching.
+- [Processes](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md#process-matching) and [Posts](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md#post-matching) landed cost matching.
 - Once a Purchase Invoice is Processed, a Payment Plan of the invoice is created based on the payment terms agreed with the supplier and the purchase invoice can be posted to create the accounting entries of the invoice. Afterwards, the payment plan can be modified.
 
 Additionally:
@@ -133,7 +133,7 @@ Purchase expenses can be recognized in different ways:
 In Etendo, in this situation, the expense is generated as part of the accounting of the purchase invoice corresponding to the transaction.
 - Under some circumstances, however, it is required to defer the expense recognition. For instance, a company purchasing a business insurance for the duration of a year would want
 to distribute that expense over 12 months.
-In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md).
+In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines).
 
 !!!info
     For a full description of this functionality, please visit the [How to manage deferred revenue and expenses](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md) section.
@@ -163,7 +163,7 @@ In Procurement Management, the *Return to Vendor business flow* is executed as f
 Procurement staff:
 
 - Creates a new document in the [Return to Vendor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the button [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md)
+- And continues by adding lines clicking the button [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md#lines)
     - It is possible to pick goods receipt lines and edit the quantity you want to return and the price
 - Once the Return Material document is accepted by the Vendor, you can process it by clicking the Book button. The status of the document changes from Draft to Booked.
 - Only Booked documents can be shipped to the vendor
@@ -171,7 +171,7 @@ Procurement staff:
 Warehouse staff:
 
 - Creates a new document in the [Return to Vendor Shipment](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md) button
+- And continues by adding lines clicking the [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md#lines) button
     - Return to Vendor lines are picked
     - It is possible to edit the quantity to be shipped
 - Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed

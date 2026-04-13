@@ -29,7 +29,7 @@ The complete list of standard document types is the following:
 |     |     |     |
 |-----|-----|-----|
 | **Document Type Name**  | **Document Category**  | **Business Transaction** |
-| AP CreditMemo | AP Credit Memo | [Purchase Credit Memo](../../../procurement-management/transactions/purchase-invoice.md) |
+| AP CreditMemo | AP Credit Memo | [Purchase Credit Memo](../../../procurement-management/transactions/purchase-invoice.md#reactivate) |
 | AP Invoice | AP Invoice | [Purchase Invoice](../../../procurement-management/transactions/purchase-invoice.md) |
 | AR CreditMemo | AR Credit Memo | [Sales Credit Memo](../../../sales-management/transactions.md#header-6) |
 | AR Invoice | AR Invoice | [Sales Invoice](../../../sales-management/transactions.md#sales-invoice) |
@@ -55,7 +55,7 @@ The complete list of standard document types is the following:
 | Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
 | Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions.md#cost-adjustment) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
-| Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions/landed-cost.md) |
+| Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions/landed-cost.md#header) |
 | Inventory Amount Update | Inventory Amount Update | [Inventory Amount Update](../../../warehouse-management/transactions.md#inventory-amount-update) |
 
 !!! note "Important"

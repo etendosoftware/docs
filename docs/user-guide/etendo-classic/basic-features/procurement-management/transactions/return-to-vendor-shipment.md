@@ -38,7 +38,7 @@ To invoice these documents you must use the **Purchase invoice** window. All sce
 
 ## Lines
 
-Add products which are included in your goods receipt. Each product is shown on its own line.
+Add products which are included in your return to vendor shipment. Each product is shown on its own line.
 
 The Lines tab is not editable, since the lines always come from return to vendor lines, to avoid:
 

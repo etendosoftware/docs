@@ -72,7 +72,7 @@ As a consequence, the information to manually fill in is:
 - the quantity received
 - the storage bin where the items are going to be stored
 
-**Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the shipment. Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
+**Explode** button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the shipment. Once you have exploded it, you cannot compress it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
 2.On the other hand, it is also possible to **"automatically" create goods receipt lines**, by using the header process button **"Create Lines From"**.
 

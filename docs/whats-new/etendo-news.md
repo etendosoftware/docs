@@ -689,7 +689,7 @@ tags:
 - :octicons-rocket-24: **Enhanced Purchase Invoice Voiding with Supplier Reference**
 
     ---  
-    When canceling a purchase invoice, Etendo creates a reverse document that now references the supplier’s cancellation document. The [invoice reactivation](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) process includes a new `Supplier Reference` field to ensure clear traceability and alignment.
+    When canceling a purchase invoice, Etendo creates a reverse document that now references the supplier’s cancellation document. The [invoice reactivation](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate) process includes a new `Supplier Reference` field to ensure clear traceability and alignment.
 
 </div>
 

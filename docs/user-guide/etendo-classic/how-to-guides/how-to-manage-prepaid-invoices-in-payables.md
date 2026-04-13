@@ -124,7 +124,7 @@ Once processed, Etendo informs about the Goods Receipt number just registered.
 
 Next step is to enter the vendor invoice. There are several ways of entering a vendor invoice.
 
-The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
+The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 

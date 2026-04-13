@@ -88,7 +88,7 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     For more information, visit the user guide for:
 
     - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
-    - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md)
+    - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
