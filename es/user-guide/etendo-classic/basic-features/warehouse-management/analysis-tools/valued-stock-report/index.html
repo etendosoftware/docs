@@ -15121,7 +15121,7 @@
 <p>Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.</p>
 <p>The cost is calculated as a sum of the cost of each material transaction of the product in the warehouse. The cost of the product transactions is calculated by the Costing Server process.</p>
 <h3 id="parameters-window"><strong>Parameters Window</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png" data-desc-position="bottom"><img alt="Material Transaction Report" src="../../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png" data-desc-position="bottom"><img alt="Valued Stock Report Parameters Window" src="../../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png"></a></p>
 <ul>
 <li><strong>Organization</strong>: This field allows the user to select among  Organizations of type "Legal with Accounting" and "Generic".</li>
 <li><strong>Warehouse</strong>: If the selected organization is "Generic", then lists all warehouses that belong to it, else if the organization is "Legal with accounting" then no warehouse is displayed to be selected.</li>
@@ -15135,25 +15135,25 @@
 <p>Please note that Conversion Rate to the report Currency should be specified for the report to work.</p>
 </div>
 <h3 id="output-window"><strong>Output Window</strong></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png" data-desc-position="bottom"><img alt="Material Transaction Report" src="../../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png" data-desc-position="bottom"><img alt="Valued Stock Report Output" src="../../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png"></a></p>
 <ul>
 <li><strong>Product</strong>: Name of the Product.</li>
 <li><strong>Quantity</strong>: Stock of the Product on the selected date.</li>
 <li><strong>Unit</strong> : Unit in which the stock is measured.</li>
-<li><strong>Unit Cost</strong>: Cost of each particular unit. Ii is the result of dividing the Valuation between the Stock.</li>
+<li><strong>Unit Cost</strong>: Cost of each particular unit. It is the result of dividing the Valuation between the Stock.</li>
 <li><strong>Valuation</strong>: Valuation of the Stock. It is calculated by adding up all the valuations of each transaction that has happened in the Warehouse.</li>
-<li><strong>Actual Average/Standard Algorithm Cost</strong>: Current Average/Standard Cost, the latest calculation of it's value.</li>
-<li><strong>Actual Average/Standard Algorithm Valuation</strong>: Valuation of the Stock based on the Actual Average/Standard Cost. Ii is the result of multiplying the Stock by the Actual Cost.</li>
+<li><strong>Actual Average/Standard Algorithm Cost</strong>: Current Average/Standard Cost, the latest calculation of its value.</li>
+<li><strong>Actual Average/Standard Algorithm Valuation</strong>: Valuation of the Stock based on the Actual Average/Standard Cost. It is the result of multiplying the Stock by the Actual Cost.</li>
 </ul>
 <h3 id="persisted-information"><strong>Persisted Information</strong></h3>
 <p>This step is not necessary in order to launch the Report. However, if there are performance problems, this can help to greatly improve the performance of the Report.</p>
 <p>It is possible to aggregate information that allows for faster queries. This information is aggregated for each Closed Accounting Period, that means that accounting periods must be defined and, at least some of them, must be in a <em>Closed</em> or <em>Permanently Closed</em> Status. </p>
-<p>The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non optimal performance of the report if it needs to retrieve plenty of information.</p>
+<p>The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non-optimal performance of the report if it needs to retrieve plenty of information.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>In order to use this functionality it is necessary to schedule the Background Process named <em>Generate Aggregated Data Background</em>. This can be done through the <em>Process Request</em> Window.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png" data-desc-position="bottom"><img alt="Material Transaction Report" src="../../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png" data-desc-position="bottom"><img alt="Valued Stock Report Process Request" src="../../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.</p>
