@@ -1,5 +1,11 @@
 ---
 title: Stock Report
+tags:
+ - Stock Report
+ - Warehouse Management
+ - Inventory
+ - Stock Levels
+ - Analysis Tools
 ---
 
 ## Stock Report
