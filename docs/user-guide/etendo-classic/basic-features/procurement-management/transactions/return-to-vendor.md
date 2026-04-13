@@ -12,7 +12,7 @@ This window allows the user to create a Return Material document in case a given
 
 ## Header
 
-The user can create a purchase order and process it.
+The user can create a Return to Vendor document and process it.
 
 Once the Return Material document is accepted by the Vendor, the user can process it by clicking the button **Book**. The document changes from *Draft* to *Booked*.
 

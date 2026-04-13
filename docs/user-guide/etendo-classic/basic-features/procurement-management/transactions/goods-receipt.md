@@ -35,7 +35,7 @@ In the **Status Bar** of the header, the user can find the following information
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
 !!! info
-    To learn how to enter goods receipt lines, visit the next section [Lines](goods-receipts.md#lines)
+    To learn how to enter goods receipt lines, visit the next section [Lines](goods-receipt.md#lines)
 
 If a **Goods Receipt** is completed and therefore **booked**:
 

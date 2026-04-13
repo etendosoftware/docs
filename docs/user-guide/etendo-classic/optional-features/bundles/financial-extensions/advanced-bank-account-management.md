@@ -25,12 +25,12 @@ This functionality enhances the bank account management enabling greater customi
 This functionality is available in the following windows: 
 
 - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management)
-- [Sales Invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
-- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
-- [Sales Order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
-- [Purchase Order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
-- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
-- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+- [Sales Invoice](../../../basic-features/sales-management/transactions/purchase-invoice.md)
+- [Purchase Invoice](../../../basic-features/procurement-management/transactions/purchase-invoice.md)
+- [Sales Order](../../../basic-features/sales-management/transactions/purchase-order.md)
+- [Purchase Order](../../../basic-features/procurement-management/transactions/purchase-order.md)
+- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice.md)
+- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-order.md)
 
 ## Business Partner - Bank Account
 :material-menu: `Application` > `Master Data Management` > `Business Partner`

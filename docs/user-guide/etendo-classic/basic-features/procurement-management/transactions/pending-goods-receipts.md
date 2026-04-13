@@ -17,7 +17,7 @@ This window allows the user to:
     - Purchase Order number
 - Enter a **"Reception date".**
 - **Select** the "**Order line/s of a purchase order/s" delivered** which are shown grouped by Business Partner and Purchase Order.
-- **Change** the "**Quantity**" of the goods being receipt if needed.
+- **Change** the "**Quantity**" of the goods being received if needed.
 - **Enter** the "**Goods receipt location**" or storage bin within a warehouse.
 - **Process it** in order to create the corresponding goods receipts.
 

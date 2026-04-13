@@ -176,7 +176,7 @@ An Expense Sheet is used to register time sheets and item expenses.
 
 Based on time sheets, the cost related to assigned employees to the project is calculated and can be viewed on the [Project Profitability](../project-and-service-management/analysis-tools.md#project-profitability) report.
 
-For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
+For item expenses, the cost employees made related to projects is documented. Based on this, the follow up to reimburse the cost to the employee is done with the creation of a [Purchase Invoice](../procurement-management/transactions/purchase-invoice.md). To link the corresponding invoices to the project, there is a project dimension field in the header of the Purchase Invoice window.
 
 For both time sheets and item expenses, it can be indicated whether the customer related to the project is invoiced for these costs. The follow up of this is that a [Sales Order](../sales-management/transactions.md#sales-order) is created in order to create a [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 

@@ -26,7 +26,7 @@ The **Purchase order header** allows you to enter the following information:
 - **Document No**, or the Company purchase order number.
 - **Order date:** This date is also defaulted by Etendo based on the system date, but it can always be changed.
 - **Business Partner**: End-user needs to select the supplier to which the purchase order is being issued.
-- **Partner Address**: Automatically populated once the business partner is selected based on the address or location set us "Ship to Address".
+- **Partner Address**: Automatically populated once the business partner is selected based on the address or location set as "Ship to Address".
 - **Warehouse**: Regardless it is defaulted by Etendo based on the "Profile" selected options, it must be verified by the end-user.
 - **Scheduled Delivery Date**: This is the date when the organization or legal entity requires the items to be delivered.
 - **Payment Method**, **Payment Terms** and **Price List**: These ones are defaulted by Etendo once a business partner is selected.
@@ -98,7 +98,7 @@ In the **Status Bar** of each line, you can find information about:
 Explode button is shown when selecting a line with a non-stockable BOM product and the product has not already been exploded. When exploding a product, the bill of materials components the selected product consists of are shown in the order.
 
 !!! info
-    Once you have exploded it, you cannot comprime it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
+    Once you have exploded it, you cannot compress it. You should delete all the lines (first bill of materials components and then the BOM product), and insert again the non-stockable BOM product.
 
 ### Line Tax
 
@@ -198,7 +198,7 @@ The Bulk Completion functionality allows the user to complete, reactivate or clo
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the adress or business partner of the order.
+This module adds a new field to the header of the Purchase Order window: **Bank Account**. This field is automatically filled with the bank account related to the address or business partner of the order.
 
 ![bank-account-3.png](../../../../../assets/legacy/bank-account-3.png)
 

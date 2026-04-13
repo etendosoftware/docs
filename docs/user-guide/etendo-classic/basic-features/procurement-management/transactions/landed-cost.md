@@ -54,7 +54,7 @@ In Summary, landed cost feature follows below detailed steps:
   - This landed cost document can be related to a single goods receipt, to several goods receipts or to specific goods receipts lines.
   - This landed cost document can record "actual" landed cost in case of selecting the corresponding invoice, therefore the landed cost process and matching is done in one step.
   - Landed cost is processed.
-    - This action creates a *landed cost adjustmen* linked to the landed cost document.
+    - This action creates a *landed cost adjustment* linked to the landed cost document.
       This cost adjustment has as many adjustment lines as products included in the goods receipt(s) selected, therefore the cost of those products is adjusted as applicable.
 - **Landed Cost Post**:
   - Once a landed cost document is processed it can be posted to the ledger, therefore product(s) asset accounting is adjusted as well.

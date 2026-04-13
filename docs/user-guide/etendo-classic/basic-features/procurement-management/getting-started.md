@@ -73,7 +73,7 @@ In Procurement Management, the Procure to Pay business process is executed as fo
 
 Any member of the organization allowed to do so can directly issue a Requisition as a result of an organization or business unit need.
 
-- The requestor creates a new document in the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) window, enters a "Need by date" and then looks for the product or service needed.
+- The requestor creates a new document in the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md) window, enters a "Need by date" and then looks for the product or service needed.
 If the product does not exist it can be entered at that time in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) window.
 - The requestor continues by adding for each product needed a new line with the need by date, the product, the quantity, the price if known and if needed its attribute (size and/or color, etc).
 A preferred supplier can also be added if known.
@@ -81,45 +81,45 @@ A preferred supplier can also be added if known.
 
 Requisitions notify the purchase staff of products to order, their quantity and the time frame for its delivery. Purchase staff is then in charge of managing already created purchase requisitions or even creating new ones, if required.
 
-- Purchase staff manages requisitions in the [Manage Requisitions](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions) window.
+- Purchase staff manages requisitions in the [Manage Requisitions](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/manage-requisitions.md) window.
 - Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) window.
 - Purchase staff can also enter the purchase net unit price and discounts if any, once known.
 - Once the requisition is ready, it is completed. The Document Status of the requisition changes to Completed and can then turn into a purchase order.
 
 Purchase staff:
 
-- can massively create Purchase Order/s for the Completed Requisitions in the [Requisition to Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition-to-order) window by searching and then adding requisition lines not linked to an order yet.
+- can massively create Purchase Order/s for the Completed Requisitions in the [Requisition to Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition-to-order.md) window by searching and then adding requisition lines not linked to an order yet.
 The purchase order/s created that way are shown in the Purchase Order window in Booked status.
-- and can also directly create Purchase Orders in the [Purchase Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.
+- and can also directly create Purchase Orders in the [Purchase Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.
 - To review past and present purchases of the supplier, purchase staff uses the [Purchase Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report).
 
 Warehouse staff:
 
 - Receives the merchandise as well as the delivery notes attached in 2 ways:
-    - With the [Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
+    - With the [Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
     This window also allows creating a receipt in a manual way.
-    - With the [Pending Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts) window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.
+    - With the [Pending Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/pending-goods-receipts.md) window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.
 - Allocates landed cost, if any, to the products included in a receipt by:
     - selecting a landed cost type and entering an "estimated" landed cost amount which will be distributed among receipt lines
     - or by selecting a landed cost type and entering a landed cost amount already invoiced which will also be distributed among receipt lines.
 - Completes the receipts.
-    - Completed receipts updates stock information (product levels increase) and can be [posted](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) to the ledger therefore product assets accounting is being increased.
+    - Completed receipts updates stock information (product levels increase) and can be [posted](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) to the ledger therefore product assets accounting is being increased.
     - A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the [Costing Background process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing) needs to be run.
-- [Matched Purchase Invoices](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#matched-invoices) window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.
+- [Matched Purchase Invoices](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.md) window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.
 - [Goods Receipts Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report) is used to review past receipts of the Business Partner.
 
 Finance staff:
 
 - Registers supplier invoices in different ways:
-    - With the [Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window, Finance staff can generate an invoice from a Receipt in status Complete.
-    - With the [Purchase Invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) window, Finance staff can enter supplier invoices:
+    - With the [Goods Receipt](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) window, Finance staff can generate an invoice from a Receipt in status Complete.
+    - With the [Purchase Invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) window, Finance staff can enter supplier invoices:
         - in a manual way
         - or by retrieving purchase orders or receipts lines pending to be invoiced
         - or by copying invoice lines from existing purchase invoices.
-- Registers landed cost invoices and match those ["invoiced" landed costs](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_4) with the landed costs:
-    - booked directly in a [receipt(s)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost).
-    - or booked through a [landed cost document](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost_1).
-- [Processes](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#process-matching) and [Posts](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#post-matching) landed cost matching.
+- Registers landed cost invoices and match those ["invoiced" landed costs](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) with the landed costs:
+    - booked directly in a [receipt(s)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
+    - or booked through a [landed cost document](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
+- [Processes](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) and [Posts](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) landed cost matching.
 - Once a Purchase Invoice is Processed, a Payment Plan of the invoice is created based on the payment terms agreed with the supplier and the purchase invoice can be posted to create the accounting entries of the invoice. Afterwards, the payment plan can be modified.
 
 Additionally:
@@ -133,7 +133,7 @@ Purchase expenses can be recognized in different ways:
 In Etendo, in this situation, the expense is generated as part of the accounting of the purchase invoice corresponding to the transaction.
 - Under some circumstances, however, it is required to defer the expense recognition. For instance, a company purchasing a business insurance for the duration of a year would want
 to distribute that expense over 12 months.
-In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_4).
+In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md).
 
 !!!info
     For a full description of this functionality, please visit the [How to manage deferred revenue and expenses](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md) section.
@@ -162,22 +162,22 @@ In Procurement Management, the *Return to Vendor business flow* is executed as f
 
 Procurement staff:
 
-- Creates a new document in the [Return to Vendor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-rtv) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the button [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_5)
+- Creates a new document in the [Return to Vendor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md) window and looks for the vendor name in the Business Partner field.
+- And continues by adding lines clicking the button [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md)
     - It is possible to pick goods receipt lines and edit the quantity you want to return and the price
 - Once the Return Material document is accepted by the Vendor, you can process it by clicking the Book button. The status of the document changes from Draft to Booked.
 - Only Booked documents can be shipped to the vendor
 
 Warehouse staff:
 
-- Creates a new document in the [Return to Vendor Shipment](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-shipment) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_6) button
+- Creates a new document in the [Return to Vendor Shipment](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md) window and looks for the vendor name in the Business Partner field.
+- And continues by adding lines clicking the [Pick/Edit lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md) button
     - Return to Vendor lines are picked
     - It is possible to edit the quantity to be shipped
 - Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed
 - Completed shipment updates stock information (product levels decrease)
 
-Finance staff: To invoice these documents, go to the [Purchase invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) window. All scenarios are covered:
+Finance staff: To invoice these documents, go to the [Purchase invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) window. All scenarios are covered:
 
 - If the vendor sends an invoice just for that specific document, you need to select a Reverse purchase invoice document type and then select the lines through the *Create lines from* button
 - If the vendor sends an invoice with the original purchase order plus the return materials order, you need to select a Purchase invoice document type and then select the lines through the *Create lines from* button

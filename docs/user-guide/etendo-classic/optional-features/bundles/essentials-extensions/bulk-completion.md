@@ -40,15 +40,15 @@ For orders, quotations and return documents it is possible to close multiple doc
 
 This functionality is available in the following windows:
 
-- [Sales Quotation](../../../basic-features/sales-management/transactions.md#bulk-completion)
-- [Sales Order](../../../basic-features/sales-management/transactions.md#bulk-completion_1)
-- [Goods Shipment](../../../basic-features/sales-management/transactions.md#bulk-completion_2)
-- [Return From Customer](../../../basic-features/sales-management/transactions.md#bulk-completion_3)
+- [Sales Quotation](../../../basic-features/sales-management/transactions/purchase-order.md)
+- [Sales Order](../../../basic-features/sales-management/transactions/goods-receipt.md)
+- [Goods Shipment](../../../basic-features/sales-management/transactions/purchase-invoice.md)
+- [Return From Customer](../../../basic-features/sales-management/transactions/return-to-vendor.md)
 - [Sales Invoice](../../../basic-features/sales-management/transactions.md#bulk-completion_4)
-- [Purchase Order](../../../basic-features/procurement-management/transactions.md#bulk-completion)
-- [Goods Receipt](../../../basic-features/procurement-management/transactions.md#bulk-completion_1)
-- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#bulk-completion_2)
-- [Return To Vendor](../../../basic-features/procurement-management/transactions.md#bulk-completion_3)
+- [Purchase Order](../../../basic-features/procurement-management/transactions/purchase-order.md)
+- [Goods Receipt](../../../basic-features/procurement-management/transactions/goods-receipt.md)
+- [Purchase Invoice](../../../basic-features/procurement-management/transactions/purchase-invoice.md)
+- [Return To Vendor](../../../basic-features/procurement-management/transactions/return-to-vendor.md)
 
 
 As explained, using Bulk Completion improves efficiency by allowing users to perform document actions in bulk, streamlining operations and saving time.

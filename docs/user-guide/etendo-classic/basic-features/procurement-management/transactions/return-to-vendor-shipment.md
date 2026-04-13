@@ -12,7 +12,7 @@ From this window, the user can deliver the returned goods to the vendor.
 
 ## Header
 
-The user can create and edit a goods receipt.
+The user can create and edit a Return to Vendor Shipment.
 
 The **RMA vendor ref.** field is populated automatically or not based on:
 

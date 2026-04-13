@@ -29,18 +29,18 @@ The complete list of standard document types is the following:
 |     |     |     |
 |-----|-----|-----|
 | **Document Type Name**  | **Document Category**  | **Business Transaction** |
-| AP CreditMemo | AP Credit Memo | [Purchase Credit Memo](../../../procurement-management/transactions.md#reactivate) |
-| AP Invoice | AP Invoice | [Purchase Invoice](../../../procurement-management/transactions.md#purchase-invoice) |
+| AP CreditMemo | AP Credit Memo | [Purchase Credit Memo](../../../procurement-management/transactions/purchase-invoice.md) |
+| AP Invoice | AP Invoice | [Purchase Invoice](../../../procurement-management/transactions/purchase-invoice.md) |
 | AR CreditMemo | AR Credit Memo | [Sales Credit Memo](../../../sales-management/transactions.md#header-6) |
 | AR Invoice | AR Invoice | [Sales Invoice](../../../sales-management/transactions.md#sales-invoice) |
 | Return Material Sales Invoice | AR Return Material Invoice | [Return Material Sales Invoice](../../../sales-management/transactions.md#a) |
 | Reversed Sales Invoice | AR Invoice | [Reversed Sales Invoice](../../../sales-management/transactions.md#header-6) |
-| MM Receipt | Material Receipt | [Goods Receipt](../../../procurement-management/transactions.md#goods-receipts) |
-| RTV Shipment | Material Receipt | [Return to Vendor Shipment](../../../procurement-management/transactions.md#return-to-vendor-shipment) |
+| MM Receipt | Material Receipt | [Goods Receipt](../../../procurement-management/transactions/goods-receipt.md) |
+| RTV Shipment | Material Receipt | [Return to Vendor Shipment](../../../procurement-management/transactions/return-to-vendor-shipment.md) |
 | MM Shipment | Material Delivery | [Goods Shipment](../../../sales-management/transactions.md#goods-shipment) |
 | RFC Receipt | Material Delivery | [Return from Customer receipt](../../../sales-management/transactions.md#return-material-receipt) |
-| Purchase Order | Purchase Order | [Purchase Order](../../../procurement-management/transactions.md#purchase-order) |
-| RTV Order | Purchase Order | [Return to Vendor](../../../procurement-management/transactions.md#return-to-vendor-rtv) |
+| Purchase Order | Purchase Order | [Purchase Order](../../../procurement-management/transactions/purchase-order.md) |
+| RTV Order | Purchase Order | [Return to Vendor](../../../procurement-management/transactions/return-to-vendor.md) |
 | Quotation | Sales Order | [Sales Quotation](../../../sales-management/transactions.md#sales-quotation) |
 | RFC Order | Sales Order | [Return from Customer Sales Order](../../../sales-management/transactions.md#return-from-customer) |
 | POS Order | Sales Order | [Point of Sales Order](../../../sales-management/transactions.md#sales-invoice) |
@@ -54,8 +54,8 @@ The complete list of standard document types is the following:
 | Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
 | Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
 | Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions.md#cost-adjustment) |
-| Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
-| Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions.md#header-7) |
+| Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
+| Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions/landed-cost.md) |
 | Inventory Amount Update | Inventory Amount Update | [Inventory Amount Update](../../../warehouse-management/transactions.md#inventory-amount-update) |
 
 !!! note "Important"

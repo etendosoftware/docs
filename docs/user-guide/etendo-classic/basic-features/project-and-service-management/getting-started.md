@@ -35,7 +35,7 @@ The key project and service management concepts mentioned in this chapter are:
     - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on [time sheets](../project-and-service-management/transactions.md#expense-sheet).
 - [Sales Order](../sales-management/transactions.md#sales-order): document that lists goods and/or services provided to a customer and the conditions of the sale.
 - [Sales Invoice](../sales-management/transactions.md#sales-invoice): document used to administer a right to collect. The document lists the goods and/or services provided to a customer and the conditions of the sale.
-- [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice): document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
+- [Purchase Invoice](../procurement-management/transactions/purchase-invoice.md): document used to administer an obligation to pay. The document lists goods and/or services provided by a supplier.
 - [Project Type](../project-and-service-management/setup.md#project-type): template used to easily create phases and tasks on a multiphase project. This is specially useful to automatically complete phases and tasks according to the template without doing the process manually.
 - [Multiphase Project](../project-and-service-management/transactions.md#multiphase-project): form used to registrate a project, the planned expenses, margins, who the project will be executed for and the phases and tasks of the project.
 - [Project Phase](../project-and-service-management/transactions.md#project-phase-tab): a time period during which certain activities are executed.
