@@ -29,18 +29,18 @@ La lista completa de tipos de documento estándar es la siguiente:
 |     |     |     |
 |-----|-----|-----|
 | **Nombre del tipo de documento**  | **Tipo doc. base**  | **Transacción empresarial** |
-| AP CreditMemo | Nota de abono de proveedor | [Nota de crédito de compra](../../../procurement-management/transactions.md#reactivate) |
-| AP Invoice | Factura de proveedor | [Factura (Proveedor)](../../../procurement-management/transactions.md#purchase-invoice) |
+| AP CreditMemo | Nota de abono de proveedor | [Nota de crédito de compra](../../../procurement-management/transactions/purchase-invoice.md) |
+| AP Invoice | Factura de proveedor | [Factura (Proveedor)](../../../procurement-management/transactions/purchase-invoice.md) |
 | AR CreditMemo | Nota de abono de cliente | [Nota de crédito de venta](../../../sales-management/transactions.md#header-6) |
 | AR Invoice | Factura de cliente | [Factura (Cliente)](../../../sales-management/transactions.md#sales-invoice) |
 | Return Material Sales Invoice | Factura de devolución de material (cliente) | [Factura de venta de devolución de material](../../../sales-management/transactions.md#a) |
 | Reversed Sales Invoice | Factura de cliente | [Factura de venta revertida](../../../sales-management/transactions.md#header-6) |
-| MM Receipt | Recepción de material | [Albarán (Proveedor)](../../../procurement-management/transactions.md#goods-receipts) |
-| RTV Shipment | Recepción de material | [Devolución a albarán de proveedor](../../../procurement-management/transactions.md#return-to-vendor-shipment) |
+| MM Receipt | Recepción de material | [Albarán (Proveedor)](../../../procurement-management/transactions/goods-receipt.md) |
+| RTV Shipment | Recepción de material | [Devolución a albarán de proveedor](../../../procurement-management/transactions/return-to-vendor-shipment.md) |
 | MM Shipment | Entrega de material | [Albarán (Cliente)](../../../sales-management/transactions.md#goods-shipment) |
 | RFC Receipt | Entrega de material | [Recepción de devolución de cliente](../../../sales-management/transactions.md#return-material-receipt) |
-| Pedido de compra | Pedido de compra | [Pedido de compra](../../../procurement-management/transactions.md#purchase-order) |
-| RTV Order | Pedido de compra | [Devolución a proveedor](../../../procurement-management/transactions.md#return-to-vendor-rtv) |
+| Pedido de compra | Pedido de compra | [Pedido de compra](../../../procurement-management/transactions/purchase-order.md) |
+| RTV Order | Pedido de compra | [Devolución a proveedor](../../../procurement-management/transactions/return-to-vendor.md) |
 | Presupuesto | Pedido de venta | [Presupuesto de ventas](../../../sales-management/transactions.md#sales-quotation) |
 | RFC Order | Pedido de venta | [Pedido de venta de devolución de cliente](../../../sales-management/transactions.md#return-from-customer) |
 | POS Order | Pedido de venta | [Pedido de punto de venta](../../../sales-management/transactions.md#sales-invoice) |
@@ -54,8 +54,8 @@ La lista completa de tipos de documento estándar es la siguiente:
 | Conciliación | Conciliación | [Conciliación](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
 | Dudoso cobro | Dudoso cobro | [Dudoso cobro](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
 | Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions.md#cost-adjustment) |
-| Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
-| Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions.md#header-7) |
+| Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
+| Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions/landed-cost.md) |
 | Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions.md#inventory-amount-update) |
 
 !!! note "Importante"

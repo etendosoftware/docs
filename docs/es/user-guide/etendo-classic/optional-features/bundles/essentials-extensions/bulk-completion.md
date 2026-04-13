@@ -40,18 +40,20 @@ Para pedidos, presupuestos y documentos de devolución es posible cerrar múltip
 
 Esta funcionalidad está disponible en las siguientes ventanas:
 
-- [Presupuesto de ventas](../../../basic-features/sales-management/transactions.md#bulk-completion)
-- [Pedido de venta](../../../basic-features/sales-management/transactions.md#bulk-completion_1)
-- [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#bulk-completion_2)
-- [Devolución de cliente](../../../basic-features/sales-management/transactions.md#bulk-completion_3)
+- [Presupuesto de ventas](../../../basic-features/sales-management/transactions/purchase-order.md)
+- [Pedido de venta](../../../basic-features/sales-management/transactions/goods-receipt.md)
+- [Albarán (Cliente)](../../../basic-features/sales-management/transactions/purchase-invoice.md)
+- [Devolución de cliente](../../../basic-features/sales-management/transactions/return-to-vendor.md)
 - [Factura (Cliente)](../../../basic-features/sales-management/transactions.md#bulk-completion_4)
-- [Pedido de compra](../../../basic-features/procurement-management/transactions.md#bulk-completion)
-- [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#bulk-completion_1)
-- [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#bulk-completion_2)
-- [Devolución a proveedor](../../../basic-features/procurement-management/transactions.md#bulk-completion_3)
+- [Pedido de compra](../../../basic-features/procurement-management/transactions/purchase-order.md)
+- [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions/goods-receipt.md)
+- [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md)
+- [Devolución a proveedor](../../../basic-features/procurement-management/transactions/return-to-vendor.md)
 
 
 Como se ha explicado, el uso de Finalización masiva mejora la eficiencia al permitir a los usuarios realizar acciones sobre documentos de forma masiva, agilizando las operaciones y ahorrando tiempo.
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

@@ -242,7 +242,7 @@ La funcionalidad de Contabilización masiva permite al usuario contabilizar o de
 Además, el Estado contable del/de los registro(s) se muestra en la barra de estado, en vista de formulario, o en una columna, en vista de rejilla.
 
 !!! info
-    Para más información, visite [la guía de usuario del módulo de Contabilización masiva](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información, visite [la guía de usuario del módulo Contabilización masiva](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 ## Producción LDM
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Producción LDM`
@@ -365,7 +365,7 @@ Para más información, visite [Pedido de venta](../../../../user-guide/etendo-c
 
 Las pre-reservas también pueden realizarse desde el **Pedido de compra**. Estando en la línea del pedido de compra, existe la posibilidad de seleccionar cualquier línea de pedido de venta pendiente de entrega que esté esperando recibir la mercancía en el almacén. Una vez que se reciben los artículos, la pre-reserva se convierte en reserva y las existencias quedan reservadas para esa línea de pedido de venta.
 
-Para más información, visite [Pedido de compra](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
+Para más información, visite [Pedido de compra](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md).
 
 ### Plan de compras (MRP)
 
@@ -781,7 +781,7 @@ Ajuste de la transacción **"Movimiento a"**:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| Cuenta                                                                                          | Débito                                         | Crédito                                        |
+| Cuenta                                                                                          | Débito                                         | Crédito                                         |
 | [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Importe del ajuste de la transacción "Movimiento a" |                                                |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) |                                                | Importe del ajuste de la transacción "Movimiento a" |
 ### **Corrección de stock negativo**
@@ -1084,6 +1084,8 @@ Este tipo de transacciones son en realidad Movimientos entre almacenes creados a
 ---
 
 Este trabajo es una obra derivada de [Gestión de Almacén](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, usada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
 
 ---
 

@@ -461,6 +461,7 @@ tags:
     - Documentación: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
 
 </div>
+
 ## Agosto 2025
 
 ### Financial Extensions
@@ -631,7 +632,7 @@ tags:
 
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
+    ![](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
 
     En la versión [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, desbloquee operaciones de almacén sin fricciones con el módulo [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md), una subaplicación móvil repleta de funcionalidades que se integra en profundidad con Etendo Mobile para ofrecer trazabilidad completa y operaciones de almacén automatizadas.
     
@@ -652,7 +653,7 @@ tags:
 <div class="grid cards" markdown>
 
 - :octicons-rocket-24: **¡Nueva versión de Etendo: ya está disponible la versión 25.1!**
-
+    
     ---
 
     <iframe align="right" width="560" height="315" src="https://www.youtube.com/embed/OtHb45n2dgU?si=dttVeLQxnf97HGjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -667,13 +668,13 @@ tags:
 - :octicons-rocket-24: **Nuevos estados de envío y facturación en los pedidos de compra y albaranes (proveedor)**
 
     ---  
-    Esta versión introduce una visibilidad mejorada en los procesos de aprovisionamiento. En la ventana [Pedido de compra](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), la barra de estado ahora muestra los porcentajes de envío y facturación. A nivel de línea, verá cantidades detalladas de lo que se ha facturado y enviado.  
-    Del mismo modo, la ventana [Albarán (Proveedor)](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) muestra los porcentajes de facturación tanto a nivel de cabecera como de línea.
+    Esta versión introduce una visibilidad mejorada en los procesos de aprovisionamiento. En la ventana [Pedido de compra](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md), la barra de estado ahora muestra los porcentajes de envío y facturación. A nivel de línea, verá cantidades detalladas de lo que se ha facturado y enviado.  
+    Del mismo modo, la ventana [Albarán (Proveedor)](../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) muestra los porcentajes de facturación tanto a nivel de cabecera como de línea.
 
 - :octicons-rocket-24: **Excluya promociones y descuentos fácilmente con una simple casilla de verificación**
 
     ---
-    Una nueva casilla de verificación en la sección *Más información* de las líneas de [Pedido de venta](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_1) y [Factura (Cliente)](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_5) permite a los usuarios **cancelar descuentos y promociones automáticos**. Esto le ofrece un mayor control sobre los precios a nivel de línea.
+    Una nueva casilla de verificación en la sección *Más información* de las líneas de [Pedido de venta](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_1) y [Factura (Cliente)](../user-guide/etendo-classic/basic-features/sales-management/transactions/return-to-vendor.md) permite a los usuarios **cancelar descuentos y promociones automáticos**. Esto le ofrece un mayor control sobre los precios a nivel de línea.
 
 - :octicons-rocket-24: **Navegación mejorada en el proceso Crear facturas desde pedidos**
 
@@ -683,9 +684,10 @@ tags:
 - :octicons-rocket-24: **Anulación mejorada de la Factura (Proveedor) con referencia del proveedor**
 
     ---  
-    Al anular una Factura (Proveedor), Etendo crea un documento inverso que ahora referencia el documento de anulación del proveedor. El proceso de [reactivación de factura](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#reactivate) incluye un nuevo campo `Referencia del proveedor` para garantizar una trazabilidad clara y la alineación.
+    Al anular una Factura (Proveedor), Etendo crea un documento inverso que ahora referencia el documento de anulación del proveedor. El proceso de [reactivación de factura](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) incluye un nuevo campo `Referencia del proveedor` para garantizar una trazabilidad clara y la alineación.
 
 </div>
+
 ## Abril 2025
 
 ### Etendo
@@ -729,6 +731,7 @@ tags:
 
 
 </div>
+
 ## Marzo 2025
 
 ### Etendo Mobile
@@ -758,7 +761,7 @@ tags:
 
 - :material-chart-bar: **Ahora en los informes financieros avanzados puede ver dimensiones contables.**
     ---
-
+    
     ![texto alternativo](../assets/whats-new/etendo-news/financial-reports-advanced.png)
 
     En la versión [1.25.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, se incluyen mejoras en los informes financieros avanzados. En esta versión, el [General Ledger Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) y el [Journal Entries Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) le permitirán ver y filtrar por las dimensiones contables deseadas.
@@ -784,6 +787,7 @@ tags:
     *Consulte más detalles en la incidencia [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
 
 </div>
+
 ## Febrero 2025
 
 ### Etendo ISO
@@ -965,6 +969,7 @@ tags:
     En la versión [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se ha añadido el tipo de asistente Multi-Model Assistant; estos agentes amplían el tipo `Langchain` con la particularidad de que puede utilizarse con modelos de varios proveedores como Anthropic o Gemini, además de los modelos OpenAI existentes.
     Además, se ha añadido la ventana AI Models, donde el usuario puede gestionar los modelos que utilizarán los distintos agentes.
 </div>
+
 ## Noviembre 2024
 
 ### Copilot Extensions
@@ -1035,6 +1040,7 @@ Nueva versión del bundle Copilot Extensions [1.5.0](./release-notes/etendo-copi
     ¡Potencie las capacidades de su agente con esta potente nueva funcionalidad!
 
 </div>
+
 ## Agosto 2024
 
 ### Copilot Extensions

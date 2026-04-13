@@ -73,7 +73,7 @@ En Gestión de Compras, el proceso de negocio Procure to Pay se ejecuta del sigu
 
 Cualquier miembro de la organización autorizado puede emitir directamente una Necesidad de material como resultado de una necesidad de la organización o de una unidad de negocio.
 
-- El solicitante crea un nuevo documento en la ventana [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition), introduce una "Fecha de necesidad" y después busca el producto o servicio necesario.
+- El solicitante crea un nuevo documento en la ventana [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md), introduce una "Fecha de necesidad" y después busca el producto o servicio necesario.
 Si el producto no existe, puede introducirse en ese momento en la ventana [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
 - El solicitante continúa añadiendo, para cada producto necesario, una nueva línea con la fecha de necesidad, el producto, la cantidad, el precio si se conoce y, si es necesario, su atributo (talla y/o color, etc.).
 También puede añadirse un proveedor preferente si se conoce.
@@ -81,45 +81,45 @@ También puede añadirse un proveedor preferente si se conoce.
 
 Las necesidades de material notifican al personal de compras los productos a pedir, su cantidad y el plazo de entrega. El personal de compras se encarga entonces de gestionar las necesidades de material ya creadas o incluso de crear nuevas, si fuera necesario.
 
-- El personal de compras gestiona las necesidades en la ventana [Administrar necesidades](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions).
+- El personal de compras gestiona las necesidades en la ventana [Administrar necesidades](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/manage-requisitions.md).
 - El personal de compras puede cambiar cualquier dato de las necesidades creadas en estado borrador y, además, puede buscar el proveedor que se utilizará en el campo Terceros. Si el tercero no existe, puede introducirse en ese momento en la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
 - El personal de compras también puede introducir el precio neto unitario de compra y los descuentos, si los hubiera, una vez se conozcan.
 - Una vez que la necesidad está lista, se completa. El estado del documento de la necesidad cambia a Completado y entonces puede convertirse en un pedido de compra.
 
 El personal de compras:
 
-- puede crear de forma masiva Pedido/s de compra para las necesidades completadas en la ventana [Necesidad a Pedido](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition-to-order), buscando y añadiendo líneas de necesidad que aún no estén vinculadas a un pedido.
+- puede crear de forma masiva Pedido/s de compra para las necesidades completadas en la ventana [Necesidad a Pedido](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition-to-order.md), buscando y añadiendo líneas de necesidad que aún no estén vinculadas a un pedido.
 Los pedidos de compra creados de este modo se muestran en la ventana Pedido de compra en estado Reservado.
-- y también puede crear directamente pedidos de compra en la ventana [Pedido de compra](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order). Las líneas de compra se rellenan como en el caso de la necesidad. Una vez que el pedido de compra está listo, se procesa haciendo clic en el botón Reservar.
+- y también puede crear directamente pedidos de compra en la ventana [Pedido de compra](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md). Las líneas de compra se rellenan como en el caso de la necesidad. Una vez que el pedido de compra está listo, se procesa haciendo clic en el botón Reservar.
 - Para revisar compras pasadas y presentes del proveedor, el personal de compras utiliza el [Análisis dimensional pedidos compras](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report).
 
 El personal de almacén:
 
 - Recibe la mercancía, así como los albaranes adjuntos, de 2 formas:
-    - Con la ventana [Albarán (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts), el personal de almacén busca los pedidos pendientes de entrega uno a uno y obtiene la cantidad de las líneas de pedido correspondientes, ubicándola en un almacén y una ubicación.
+    - Con la ventana [Albarán (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md), el personal de almacén busca los pedidos pendientes de entrega uno a uno y obtiene la cantidad de las líneas de pedido correspondientes, ubicándola en un almacén y una ubicación.
     Esta ventana también permite crear un albarán de forma manual.
-    - Con la ventana [Albarán (Proveedor) pendiente](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts). El personal de almacén puede seleccionar masivamente las líneas de pedido de compra que se están entregando y ubicar la cantidad recibida en un almacén y una ubicación.
+    - Con la ventana [Albarán (Proveedor) pendiente](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/pending-goods-receipts.md). El personal de almacén puede seleccionar masivamente las líneas de pedido de compra que se están entregando y ubicar la cantidad recibida en un almacén y una ubicación.
 - Imputa Landed Cost, si lo hubiera, a los productos incluidos en un albarán mediante:
     - la selección de un tipo de Landed Cost e introduciendo un importe de Landed Cost "estimado" que se distribuirá entre las líneas del albarán
     - o seleccionando un tipo de Landed Cost e introduciendo un importe de Landed Cost ya facturado, que también se distribuirá entre las líneas del albarán.
 - Completa los albaranes.
-    - Los albaranes completados actualizan la información de stock (aumentan los niveles de producto) y pueden ser [contabilizados](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) en el libro mayor, por lo que aumenta la contabilidad de activos del producto.
+    - Los albaranes completados actualizan la información de stock (aumentan los niveles de producto) y pueden ser [contabilizados](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) en el libro mayor, por lo que aumenta la contabilidad de activos del producto.
     - Un Albarán (Proveedor) solo puede contabilizarse si se ha calculado el coste de los productos recibidos. Para ello, debe ejecutarse el [proceso en segundo plano de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing).
-- La ventana [Facturas cuadradas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#matched-invoices) ayuda a gestionar y contabilizar las discrepancias, si las hubiera, entre la contabilidad del albarán y la contabilidad de la factura correspondiente posteriormente, debido a diferencias de precio de compra.
+- La ventana [Facturas cuadradas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.md) ayuda a gestionar y contabilizar las discrepancias, si las hubiera, entre la contabilidad del albarán y la contabilidad de la factura correspondiente posteriormente, debido a diferencias de precio de compra.
 - El [Análisis dimensional albaranes compras](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report) se utiliza para revisar albaranes anteriores del tercero.
 
 El personal de finanzas:
 
 - Registra facturas de proveedor de diferentes maneras:
-    - Con la ventana [Albarán (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts), el personal de finanzas puede generar una factura a partir de un albarán en estado Completado.
-    - Con la ventana [Factura (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice), el personal de finanzas puede introducir facturas de proveedor:
+    - Con la ventana [Albarán (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md), el personal de finanzas puede generar una factura a partir de un albarán en estado Completado.
+    - Con la ventana [Factura (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md), el personal de finanzas puede introducir facturas de proveedor:
         - de forma manual
         - o recuperando líneas de pedidos de compra o de albaranes pendientes de facturar
         - o copiando líneas de factura de facturas de proveedor existentes.
 - Registra facturas de Landed Cost y concilia esos Landed Cost "facturados" con los Landed Cost:
-    - registrados directamente en un/unos [albarán/es](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost).
-    - o registrados mediante un [documento de Landed Cost](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost_1).
-- [Procesa](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#process-matching) y [contabiliza](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#post-matching) la conciliación de Landed Cost.
+    - registrados directamente en un/unos [albarán/es](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
+    - o registrados mediante un [documento de Landed Cost](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md).
+- [Procesa](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) y [contabiliza](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/landed-cost.md) la conciliación de Landed Cost.
 - Una vez que una Factura (Proveedor) se procesa, se crea un plan de pagos de la factura basado en las condiciones de pago acordadas con el proveedor y la factura de proveedor puede contabilizarse para crear los asientos contables de la factura. Posteriormente, el plan de pagos puede modificarse.
 
 Adicionalmente:
@@ -133,7 +133,7 @@ Los gastos de compra pueden reconocerse de diferentes maneras:
 En Etendo, en esta situación, el gasto se genera como parte de la contabilidad de la factura de proveedor correspondiente a la transacción.
 - En algunas circunstancias, sin embargo, se requiere diferir el reconocimiento del gasto. Por ejemplo, una empresa que compra un seguro empresarial por la duración de un año querría
 distribuir ese gasto durante 12 meses.
-En Etendo, en esta situación, el gasto puede diferirse dentro de un número determinado de periodos introduciendo un plan de diferimiento de gastos en las [líneas de factura de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_4).
+En Etendo, en esta situación, el gasto puede diferirse dentro de un número determinado de periodos introduciendo un plan de diferimiento de gastos en las [líneas de factura de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md).
 
 !!!info
     Para una descripción completa de esta funcionalidad, visite la sección [Cómo gestionar ingresos y gastos diferidos](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md).
@@ -162,22 +162,22 @@ En Gestión de Compras, el *flujo de negocio de Devolución a proveedor* se ejec
 
 El personal de compras:
 
-- Crea un nuevo documento en la ventana [Devolución a proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-rtv) y busca el nombre del vendedor en el campo Terceros.
-- Y continúa añadiendo líneas haciendo clic en el botón [Elegir/Editar lineas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_5)
+- Crea un nuevo documento en la ventana [Devolución a proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md) y busca el nombre del vendedor en el campo Terceros.
+- Y continúa añadiendo líneas haciendo clic en el botón [Elegir/Editar lineas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor.md)
     - Es posible seleccionar líneas de albarán de proveedor y editar la cantidad que desea devolver y el precio
 - Una vez que el documento de devolución de material es aceptado por el vendedor, puede procesarlo haciendo clic en el botón Reservar. El estado del documento cambia de Borrador a Reservado.
 - Solo los documentos Reservados pueden enviarse al vendedor
 
 El personal de almacén:
 
-- Crea un nuevo documento en la ventana [Devolución a albarán de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-shipment) y busca el nombre del vendedor en el campo Terceros.
-- Y continúa añadiendo líneas haciendo clic en el botón [Elegir/Editar lineas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_6)
+- Crea un nuevo documento en la ventana [Devolución a albarán de proveedor](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md) y busca el nombre del vendedor en el campo Terceros.
+- Y continúa añadiendo líneas haciendo clic en el botón [Elegir/Editar lineas](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/return-to-vendor-shipment.md)
     - Se seleccionan líneas de Devolución a proveedor
     - Es posible editar la cantidad a enviar
 - Una vez que el documento está listo, procéselo haciendo clic en el botón Completar. El estado del documento cambia de Borrador a Completado
 - El envío completado actualiza la información de stock (disminuyen los niveles de producto)
 
-Personal de finanzas: para facturar estos documentos, vaya a la ventana [Factura (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice). Se cubren todos los escenarios:
+Personal de finanzas: para facturar estos documentos, vaya a la ventana [Factura (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md). Se cubren todos los escenarios:
 
 - Si el vendedor envía una factura solo para ese documento específico, debe seleccionar un tipo de documento de factura de compra revertida y después seleccionar las líneas mediante el botón *Crear líneas de*
 - Si el vendedor envía una factura con el pedido de compra original más el pedido de devolución de material, debe seleccionar un tipo de documento de Factura (Proveedor) y después seleccionar las líneas mediante el botón *Crear líneas de*

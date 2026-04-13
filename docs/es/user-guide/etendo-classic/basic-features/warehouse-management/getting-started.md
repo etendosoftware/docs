@@ -40,7 +40,7 @@ Los principales subprocesos del flujo de negocio Precisión del inventario son:
 Es necesario crear y configurar [Almacén y huecos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins) antes de ejecutar el flujo de negocio.
 Además, es necesario definir y validar una [Regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) para la entidad legal. Cada regla de cálculo de costes requiere una fecha de inicio a partir de la cual será válida, así como un [Algoritmo de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm) que será utilizado por el proceso [Costing Background Process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing), que debe planificarse.
 
-Además, es necesario configurar [Tipo de Landed Cost](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type), por lo que podrán seleccionarse al asignar este tipo de coste a [Albarán (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts).
+Además, es necesario configurar [Tipo de Landed Cost](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type), por lo que podrán seleccionarse al asignar este tipo de coste a [albaranes](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md).
 
 Por último, pueden configurarse [Reglas de almacén](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-rules) para que se apliquen al recuperar stock del inventario de forma automática.
 
@@ -93,3 +93,5 @@ Gestión de Almacén tiene conexión con otras áreas de aplicación:
 ---
 
 Este trabajo es una obra derivada de [Gestión de Almacén](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---

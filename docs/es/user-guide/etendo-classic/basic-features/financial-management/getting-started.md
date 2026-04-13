@@ -17,7 +17,7 @@ Etendo genera automáticamente una representación contable de todas las transac
 La contabilidad es el sistema de seguimiento de los activos, las deudas, los ingresos y los gastos de una empresa.  
 En Etendo, la mayoría de los asientos contables se crean automáticamente al contabilizar [documentos](../financial-management/accounting/setup/document-type.md).
 
-- [Albarán (Proveedor)](../procurement-management/transactions.md#goods-receipts) y [Factura (Proveedor)](../procurement-management/transactions.md#purchase-invoice) en el área de negocio [Gestión de Compras](../procurement-management/getting-started.md)
+- [Albaranes (Proveedor)](../procurement-management/transactions/goods-receipt.md) y [Facturas (Proveedor)](../procurement-management/transactions/purchase-invoice.md) en el área de negocio [Gestión de Compras](../procurement-management/getting-started.md)
 - [Albarán (Cliente)](../sales-management/transactions.md#goods-shipment) y [Factura (Cliente)](../sales-management/transactions.md#sales-invoice) en el área de negocio [Gestión de Ventas](../sales-management/getting-started.md).
 
 Los asientos contables no relacionados directamente con [documentos](../financial-management/accounting/setup/document-type.md) gestionados dentro de un área de aplicación determinada pueden crearse y contabilizarse en [Asientos manuales](../financial-management/accounting/transactions.md#gl-journal). Por ejemplo, un asiento de provisión por depreciación de existencias.
@@ -25,7 +25,7 @@ Los asientos contables no relacionados directamente con [documentos](../financia
 Hay tres formas de contabilizar en Etendo:
 
 - Contabilizar manualmente cada documento usando el botón de proceso *Contabilizar*.  
-El botón de proceso *Contabilizar* se puede encontrar en la ventana utilizada para crear un documento determinado. Por ejemplo, una factura de proveedor se crea y, por tanto, podría contabilizarse en la [ventana Factura (Proveedor)](../procurement-management/transactions.md#purchase-invoice). Este botón se muestra para los usuarios contables si el atributo *ShowAcct* es visible para ellos. Esta configuración se habilita mediante una [Preferencias](../general-setup/application/preference.md).
+El botón de proceso *Contabilizar* se puede encontrar en la ventana utilizada para crear un documento determinado. Por ejemplo, una factura de proveedor se crea y, por tanto, podría contabilizarse en la [ventana Factura (Proveedor)](../procurement-management/transactions/purchase-invoice.md). Este botón se muestra para los usuarios contables si el atributo *ShowAcct* es visible para ellos. Esta configuración se habilita mediante una [Preferencias](../general-setup/application/preference.md).
 
 - Contabilizar manualmente todos los documentos/transacciones relacionados con una tabla de base de datos determinada, por ejemplo la tabla *Facturas*, usando el proceso [Proceso contable](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
@@ -423,6 +423,8 @@ Gestión Financiera tiene conexión con otras áreas de la aplicación, ya que e
 ---
 
 Este trabajo es una obra derivada de [Gestión Financiera](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
 
 ---
 

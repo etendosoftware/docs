@@ -351,807 +351,816 @@ Cuando se reciben mercancías, el sistema puede generar automáticamente registr
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacción` > `Recepción de entrada`
 
-La ventana **Recepción de entrada** mejora el flujo de [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts) introduciendo un paso intermedio entre el pedido de compra y el albarán. Este paso centraliza múltiples pedidos —incluso de distintos proveedores— en una única operación, mejorando la flexibilidad, la automatización y el control. También admite unidades alternativas de medida (AUOM), permitiendo registrar recepciones en palés, cajas o reagruparlas en distintos contenedores para reflejar la entrada real.
+La ventana **Recepción de entrada** mejora el flujo de [albarán](../../../basic-features/procurement-management/transactions/goods-receipt.md) introduciendo un paso intermedio entre el pedido de compra y el albarán. Este paso centraliza múltiples pedidos—even from different suppliers—into a single operation, improving flexibility, automation, and control. It also supports alternative units of measure (AUOM), enabling receipts to be recorded in pallets, boxes, or regrouped into different containers to reflect the actual inflow.
 
-Las recepciones siempre se crean a partir de pedidos de compra, no manualmente. Las líneas del pedido se cargan con los detalles de producto, cantidad, lote y ubicación, que pueden ajustarse (p. ej., cantidad o unidad) para registrar recepciones parciales o alternativas. Esto garantiza que el albarán refleje con precisión lo recibido físicamente y actualice el pedido de compra en consecuencia.
+Receipts are always created from purchase orders, not manually. Order lines are loaded with product, quantity, lot, and location details, which can be adjusted (e.g., quantity or unit) to register partial or alternative receipts. This ensures the goods receipt accurately reflects what was physically received and updates the purchase order accordingly.
 
-Cuando se utilizan AUOM como Palé o Caja, el sistema puede generar automáticamente un registro de Inventario referenciado (RI) vinculado a la línea de recepción, representando la unidad logística y garantizando la trazabilidad.
+When AUOMs such as Pallet or Box are used, the system can automatically generate a Referenced Inventory (RI) record linked to the receipt line, representing the logistics unit and ensuring traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png)
 
-Campos a tener en cuenta:
+Fields to note:
 
-#### Cabecera
+#### Header
 
-- **Organización**: Define la organización en la que se creará la recepción de entrada y filtra la información.  
-- **Tipo de documento**: Se carga por defecto con *Recepción de entrada* para clasificar el tipo de documento.  
-- **Nº de documento**: Identificador único generado automáticamente para la recepción, con una secuencia específica para este tipo de documento.  
-- **Fecha del movimiento**: Fecha en la que se registra el movimiento físico de mercancías. Por defecto, es la fecha actual.  
-- **Descripción**: Campo de texto libre para añadir información adicional o notas sobre la recepción.  
+- **Organization**: Defines the organization in which the inbound receipt will be created and filter the information.  
+- **Document Type**: Loaded by default with *Inbound Receipt* to classify the document type.  
+- **Document No**: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  
+- **Movement Date**: Date on which the physical goods movement is recorded. By default, it is the current date.  
+- **Description**: Free text field to add additional information or notes about the receipt.  
 
-#### Solapa Líneas
 
-La solapa Líneas permite añadir y modificar productos individuales de uno o varios pedidos de compra, ajustando su cantidad y/o unidad. Representa la lista de productos recibidos, mostrando los siguientes campos además de los básicos.
+#### Lines Tab
+
+The Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
 
-Campos a tener en cuenta:
+Fields to note:
 
-- **Nivel**: Número secuencial asignado automáticamente para identificar la línea dentro de la recepción.  
-- **Producto**: El producto que se está recibiendo, vinculado al pedido de compra.  
-- **Cantidad Operativa**: Cantidad recibida expresada en la unidad alternativa de medida del producto. Coincide con **Cant. pedido** si no hay AUOM definida. Si existe una AUOM, indica el número de palés, cajas u otras unidades alternativas recibidas.  
-- **Unidad Alternativa**: Unidad alternativa de medida del producto. Si no hay AUOM definida, por defecto toma la **Unidad**. Se utiliza para registrar la recepción de productos en palés, cajas u otros contenedores.  
-- **Cant. pedido**: Cantidad recibida expresada en la unidad base de medida del producto.  
-- **Unidad**: Unidad base de medida del producto (p. ej., unidades, litros, kilogramos).  
-- **Valor atributos**: Atributos asociados al producto, como lote, número de serie o fecha de caducidad.  
-- **Hueco**: Ubicación donde se almacenará el producto recibido. Puede variar entre líneas, permitiendo asignar distintas ubicaciones a productos del mismo o de diferentes pedidos de compra.  
-- **Línea de pedido de compra**: Referencia a la línea original del pedido de compra desde la que se generó la línea de recepción.  
-- **Agrupado por**: Identificador de la agrupación a la que pertenece la línea, generado al usar el botón *Agrupar por*. Muestra qué líneas forman parte del mismo contenedor o unidad de embalaje.  
-- **Tipo de inventario referenciado**: Tipo de inventario referenciado asociado a la agrupación (p. ej., Caja, Palé).
-- **Línea de albarán**: Referencia al albarán generado al completar el albarán.  
+- **Line No**: Sequential number automatically assigned to identify the line within the receipt.  
+- **Product**: The product being received, linked to the purchase order.  
+- **Operative Quantity**: Quantity received expressed in the product's alternative unit of measure. Matches the Ordered Quantity if no AUOM is defined. If an AUOM exists, it indicates the number of pallets, boxes, or other alternative units received.  
+- **Alternative UOM**: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  
+- **Ordered Quantity**: Quantity received expressed in the product's base unit of measure.  
+- **UOM**: Base unit of measure of the product (e.g., units, liters, kilograms).  
+- **Attribute Set Value**: Attributes associated with the product, such as batch, serial number, or expiration date.  
+- **Storage Bin**: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  
+- **Purchase Order Line**: Reference to the original purchase order line from which the receipt line was generated.  
+- **Grouped by**: Identifier of the grouping to which the line belongs, generated when using the *Group By* button. It shows which lines are part of the same container or packaging unit.  
+- **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
+- **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
-#### Procesos disponibles
-  
-**Crear líneas desde pedido**
+#### Available Process
 
-Extrae líneas de producto desde pedidos de compra. Al pulsarlo, un pop-up muestra todos los productos disponibles, incluso de múltiples pedidos de compra. Puede seleccionar una o varias líneas para añadirlas a la solapa Líneas. Si se define un hueco, se asignará a todas las líneas seleccionadas; en caso contrario, puede establecerse individualmente por línea.
+**Create Lines From Order**
+
+Extracts product lines from purchase orders. When clicked, a pop-up shows all available products, even from multiple purchase orders. You can select one or more lines to add to the Lines tab. If a storage bin is defined, it will be assigned to all selected lines; otherwise, it can be set individually per line.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png)
 
-**Crear inventario referenciado**
+**Create Reference Inventory**
 
-Este botón aparece cuando se selecciona al menos una línea. Permite realizar una agrupación múltiple/mixta en un único tipo de unidad logística (cajas, palés u otros tipos definidos en el sistema). Su función es reunir los productos seleccionados de la solapa Líneas en una agrupación específica, según el tipo de agrupación elegido. También admite la multiselección en las tarjetas de recepción, permitiendo a los usuarios seleccionar y agrupar varias líneas en una sola acción.
+This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-La agrupación se refleja en la columna Agrupado por de las líneas seleccionadas (p. ej., Caja-1).
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
 
-Cuando los elementos seleccionados ya pertenecen a unidades logísticas, el botón puede crear una unidad logística padre que contenga las unidades logísticas hijas seleccionadas. Por ejemplo, es posible crear un palé que agrupe cajas previamente identificadas durante el proceso de recepción. La jerarquía resultante se refleja entonces en el Inventario referenciado generado, preservando la relación padre-hijo y la trazabilidad del stock.
+When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
-    - Solo se pueden agrupar líneas del mismo **Pedido de venta**.  
-    - Si una línea ya está agrupada y se incluye en una nueva agrupación, la agrupación anterior será reemplazada.
-    - Las unidades logísticas hijas permanecen asociadas a la unidad logística padre creada desde el botón.
+    - Only lines from the same Sales Order can be grouped.
+    - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+    - Child logistics units remain associated with the parent logistics unit created from the button.
 
-!!! warning "Agrupación parcial"
-    Si la acción de agrupación incluye una línea que no puede anidarse debido a una incompatibilidad de tipo (p. ej., un Palé dentro de otro Palé), el sistema **no bloqueará** toda la recepción. En su lugar, procesa las líneas compatibles con normalidad y crea automáticamente un **Inventario referenciado independiente** para la línea incompatible. La recepción se completa correctamente y se muestra un **mensaje de advertencia** indicando cuántas líneas se procesaron con normalidad y cuántas se crearon como RI independientes.
+!!! warning "Partial grouping"
+    If the grouped action includes a line that cannot be nested due to a type incompatibility (e.g., a Pallet inside another Pallet), the system will **not block** the entire receipt. Instead, it processes compatible lines normally and automatically creates a **standalone Referenced Inventory** for the incompatible line. The receipt completes successfully and a **Warning message** is displayed indicating how many lines were processed normally and how many were created as standalone RIs.
 
-**Limpiar Agrupar por** 
+**Clear Group By** 
 
-Este botón permite eliminar una línea de su agrupación sin afectar al resto de líneas del grupo.
+Button allows you to remove a line from your grouping without affecting the rest of the lines in the group.
 
-**Generar tarea de recepción** 
+**Generate Reception Task** 
 
-Permite gestionar recepciones operativas desde la app móvil mediante la creación de Tareas de recepción. Está disponible cuando existe una Recepción de entrada que aún no está completada y tiene líneas cargadas.
+Allows managing operational receptions from the mobile app through the creation of Reception Tasks. It is available when there is an Inbound Receipt that is not yet completed and has loaded lines.
 
-Al pulsar el botón, se genera una tarea vinculada al documento seleccionado y pasa a ser visible en la app móvil y en la ventana Mantenimiento del ERP.  
-En la ventana emergente, puede asignar un usuario o habilitar la asignación automática. Si se seleccionan múltiples registros, se creará una tarea por cada registro, todas asignadas al mismo usuario o rol definido en el pop-up.
+By pressing the button, a task linked to the selected document is generated and becomes visible in the mobile app and in the Task window of the ERP. 
+In the pop-up window, you can assign a user or enable automatic assignment. If multiple records are selected, one task will be created for each record, all assigned to the same user or role defined in the pop-up.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
 !!!Info
-    Para más información, visite [Tareas de recepción](#tareas-de-recepción).
+    For more information, visit [Reception Tasks](#reception-tasks).
 
-**Completar recepción**
+**Complete Receipt**
 
-Finaliza la recepción, generando y completando los correspondientes **albaranes**. Además, si la recepción incluye productos con AUOM (palé o caja), se crea automáticamente el registro asociado de **Inventario referenciado**.
+Finishes the receipt, generating and completing the corresponding **goods receipts**. In addition, if the receipt includes products with AUOM (pallet or box), the associated **Inventory Reference** record is automatically created.
 
-**Imprimir etiquetas**
+**Print Labels**
 
-Este botón genera etiquetas de código de barras para **todas las líneas** del documento de Recepción de entrada seleccionado.  
-Cada etiqueta muestra el **código de barras GS1-128** junto con información legible por humanos, incluyendo el **nombre del producto**, los **atributos relevantes** (como lote, fecha de caducidad y número de serie cuando aplique) y el **tipo de unidad logística** (Caja o Palé). Si no hay atributos definidos para un producto, la etiqueta muestra *Sin atributos*. Si no aplica ninguna unidad logística, la línea de unidad logística no se muestra.
+This button generates barcode labels for **all lines** of the selected Inbound Receipt document.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet). If no attributes are defined for a product, the label displays *No attributes*. If no logistics unit applies, the logistics unit line is not shown.
 
-- Para **productos sueltos** (sin unidades logísticas), el sistema genera **una etiqueta de código de barras por cantidad operativa** definida en la línea de recepción.
-  Esto significa que se imprimen tantas etiquetas como unidades se indiquen en el campo **Cantidad Operativa**.
-- Para **líneas con unidades logísticas (Caja o Palé)** en las que se reciben múltiples unidades (por ejemplo, 3 cajas), el sistema genera **una etiqueta de código de barras única por unidad logística**, ya que cada unidad se registra como un inventario referenciado único.
-- Cuando los productos se **agrupan en una única unidad logística** usando el botón **Crear inventario referenciado**, el sistema genera **una única etiqueta de código de barras** para esa unidad logística.
-  En este caso, la etiqueta identifica la **unidad logística y su hueco**, ya que puede contener múltiples productos agrupados.
+- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.
+  This means that as many labels are printed as units specified in the **Operative Quantity** field.
+- For **lines with logistics units (Box or Pallet)** where multiple units are received (for example, 3 boxes), the system generates **one unique barcode label per logistics unit**, since each unit is registered as a unique referenced inventory.
+- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.
+  In this case, the label identifies the **logistics unit and its locator**, as it may contain multiple grouped products.
 
-Este botón está disponible **solo cuando la Recepción de entrada está completada**.
+This button is available **only when the Inbound Receipt is completed**.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png)
 
-??? example "Imprimir Recepción de entrada - Ejemplos"
+??? example "Print Inbound Receipt - Examples"
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
 
-    *Etiqueta para el producto **Ale Beer** con todos los atributos (Lote, F. caducidad y Nº de serie) y tipo de unidad logística **Caja**.*
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
 
     ---
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
 
-    *Etiqueta para una **unidad logística agrupada (Palé)** que puede contener varios productos diferentes — no se muestran el nombre del producto ni los atributos, solo la referencia de la unidad logística.*
+    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
 
     ---
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
 
-    *Etiqueta para el producto **Lager Beer** sin atributos definidos — muestra "Sin atributos".*
+    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
 
     ---
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
 
-    *Etiqueta para **unidades sueltas** del producto **Ale Beer** con atributos (Lote, F. caducidad y Nº de serie) — no se asigna ninguna unidad logística, por lo que no se muestra la línea de LU.*
+    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
 
     ---
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
 
-    *Etiqueta para el producto **Ale Beer** con todos los atributos (Lote, F. caducidad y Nº de serie) y tipo de unidad logística **Palé**.*
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
 
-**Imprimir etiqueta de línea**
+**Print Line Label**
 
-Esta acción genera **etiquetas de código de barras solo para la línea o líneas seleccionadas** de la Recepción de entrada.  
-Cada etiqueta muestra el **código de barras GS1-128** junto con información legible por humanos, incluyendo el **nombre del producto**, los **atributos relevantes** (como lote, fecha de caducidad y número de serie cuando aplique) y el **tipo de unidad logística** (Caja o Palé), siguiendo las mismas reglas de visualización que el botón **Imprimir etiquetas**.
+This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet), following the same display rules as the **Print Labels** button.
 
-La generación de etiquetas sigue las mismas reglas descritas anteriormente, aplicadas **solo a la línea o líneas seleccionadas**:
+The label generation follows the same rules described above, applied **only to the selected line or lines**:
 
-- Para **productos sueltos**, se genera una etiqueta de código de barras **por cantidad operativa** definida en cada línea seleccionada.
-- Para **múltiples unidades logísticas**, se genera una etiqueta única por unidad logística.
-- Para **unidades logísticas agrupadas**, se genera una única etiqueta que identifica la unidad logística.
+- For **loose products**, one barcode label is generated **per operative quantity** defined in each selected line.
+- For **multiple logistics units**, one unique label is generated per logistics unit.
+- For **grouped logistics units**, a single label is generated identifying the logistics unit.
 
-Este botón está disponible **solo cuando la Recepción de entrada está completada**.
+This button is available **only when the Inbound Receipt is completed**.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png)
 
-### Flujo de trabajo
+### Workflow
 
-**Flujo de recepción**
+**Receipt Flow**
 
-1. En el flujo de recepción, el usuario dispone de un **Pedido de compra** que incluye líneas de producto configuradas con una Unidad alternativa de medida (AUOM) de tipo Caja o Palé, con su equivalencia definida previamente en la ventana Producto (por ejemplo, 1 Palé = 100 unidades). 
+1. In the receipt flow, the user has a **Purchase Order** that includes product lines configured with an Alternative Unit of Measure (AUOM) of the Box or Pallet type, with its equivalence previously defined in the product window (for example, 1 Pallet = 100 units). 
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-1.png)
 
-2. Desde la ventana **Recepción de entrada**, el usuario crea un nuevo registro de recepción usando el botón *Crear líneas desde pedido*, seleccionando el Pedido de compra como documento de referencia. El sistema incorpora los datos del pedido, como el producto, la cantidad (en AUOM), los atributos (lote, serie) y otra información asociada. 
+2. From the **Inbound Receipt** window, the user creates a new receipt record using the *Create Lines From Order* button, selecting the Purchase Order as the reference document. The system incorporates the order data, such as the product, quantity (in AUOM), attributes (batch, series), and other associated information. 
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-3.png)
 
-    !!!info "Dos formas de completar la recepción"
-        En este punto, puede elegir entre dos flujos de trabajo para completar la recepción de entrada:
+    !!!info "Two Ways to Complete the Receipt"
+        At this point, you can choose between two workflows to complete the inbound receipt:
         
-        **Opción 1: Completar desde Etendo (ERP)**  
-        Continúe con los pasos 3 y 4 siguientes para completar la recepción directamente en la ventana **Recepción de entrada** pulsando el botón **Completar recepción**.
+        **Option 1: Complete from Etendo (ERP)**  
+        Continue with steps 3 and 4 below to complete the receipt directly in the **Inbound Receipt** window by pressing the **Complete Receipt** button.
         
-        **Opción 2: Completar desde Etendo Mobile**  
-        Utilice el botón **Generar tarea de recepción** para crear una tarea de recepción visible en **Etendo Mobile**. Esto permite a los operarios de almacén realizar la recepción directamente desde sus dispositivos móviles. Para más información, visite [Tareas de recepción](#tareas-de-recepción).
+        **Option 2: Complete from Etendo Mobile**  
+        Use the **Generate Reception Task** button to create a reception task visible in **Etendo Mobile**. This allows warehouse operators to perform the reception directly from their mobile devices. For more information, visit [Reception Tasks](#reception-tasks).
 
-3. Al pulsar el botón Completar, el sistema genera y completa secuencialmente el **Albarán (Proveedor)** y crea un registro en **Inventario referenciado (RI)** para cada unidad logística recibida (Caja o Palé), respetando las equivalencias definidas en la AUOM.
+3. When the Complete button is pressed, the system sequentially generates and completes the **Goods Receipt** and creates a record in **Referenced Inventory (RI)** for each logistics unit received (Box or Pallet), respecting the equivalencies defined in AUOM.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-2.png)
 
-4. El Inventario referenciado queda vinculado a la cantidad recibida, al producto y a sus atributos correspondientes. Como resultado, el stock se actualiza en el inventario, incrementando el número de unidades en la ubicación definida y habilitando la trazabilidad mediante el RI generado.
+4. The Referenced Inventory is linked to the quantity received, the product, and its corresponding attributes. As a result, the stock is updated in the inventory, increasing the number of units in the defined location and enabling traceability through the generated RI.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-4.png)
 
-**Flujo de recepción parcial**
+**Partial Receipt Flow**
 
-1. El proceso de recepción parcial comienza cuando existe un **Pedido de compra** que contiene una línea de producto configurada con una AUOM; por ejemplo, 1 caja de zumo de piña equivalente a 12 unidades. 
-2. Desde la ventana **Recepción de entrada**, el usuario inicia un nuevo registro de recepción usando el botón *Crear líneas desde pedido* y selecciona el Pedido de compra como referencia. El sistema carga automáticamente las líneas del pedido, incluyendo el producto y la cantidad esperada, como 1 caja.
-3. A continuación, en la línea de recepción, el usuario modifica la cantidad para reflejar la recepción parcial; por ejemplo, si el pedido es de 1 caja (12 unidades) pero solo se reciben 6 unidades, el usuario cambia la cantidad a 6 y, si es necesario, ajusta la unidad de medida a **unidades** en lugar de **caja**.
-4. Una vez ajustada la cantidad real recibida, el usuario completa la recepción pulsando el botón *Completar* en la ventana Recepciones de entrada.
-5. En ese momento, el sistema genera y completa el albarán, reflejando la cantidad parcial realmente recibida. El inventario se actualiza con la cantidad recibida. El **Pedido de compra** mostrará el porcentaje recibido en la barra de estado.
-## Inspección de calidad de inventario
+1. The partial receipt process begins when there is a **Purchase Order** that contains a product line configured with an AUOM, for example, 1 box of pineapple juice equivalent to 12 units. 
+2. From the **Inbound Receipt** window, the user initiates a new receipt record using the *Create Lines From Order* button and selects the Purchase Order as a reference. The system automatically loads the order lines, including the product and expected quantity, such as 1 box.
+3. Then, in the receipt line, the user modifies the quantity to reflect the partial receipt; for example, if the order is for 1 box (12 units) but only 6 units are received, the user changes the quantity to 6 and, if necessary, adjusts the unit of measure to **units** instead of **box**.
+4. Once the actual quantity received has been adjusted, the user completes the receipt by pressing the *Complete* button in the Inbound Receipts window.
+5. At that point, the system generates and completes the goods receipt, reflecting the partial quantity actually received. The inventory is updated with the quantity received. The **Purchase Order** will show the percentage received in the status bar.
 
-### Visión general
+## Inventory Quality Inspection
 
-La ventana **Inspección de calidad de inventario** permite una gestión y control exhaustivos de los procesos de inspección de calidad dentro de las operaciones de almacén. Sirve como una herramienta centralizada para registrar, auditar y ejecutar controles de calidad, manteniendo una trazabilidad completa entre las inspecciones, las tareas de operador asignadas y los movimientos de existencias resultantes. Esta funcionalidad garantiza que los productos cumplan los estándares de calidad antes de ponerse a disposición para la venta o para su posterior procesamiento, evitando que artículos defectuosos o no conformes entren en la cadena de distribución.
+### Overview
 
-### Ventana Inspección de calidad de inventario
+The **Inventory Quality Inspection** window enables comprehensive management and control of quality inspection processes within warehouse operations. It serves as a centralized tool to register, audit, and execute quality controls, maintaining full traceability between inspections, assigned operator tasks, and resulting stock movements. This functionality ensures that products meet quality standards before being made available for sale or further processing, preventing defective or non-compliant items from entering the distribution chain.
 
-:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacción` > `Inspección de calidad de inventario`
+### Inventory Quality Inspection Window
 
-Esta ventana permite a los usuarios crear y gestionar registros de inspección de calidad para artículos de inventario. Las inspecciones pueden realizarse sobre existencias existentes. El sistema realiza el seguimiento de qué productos necesitan inspección, su estado actual, ubicación y las cantidades planificadas para revisión.
+:material-menu: `Application` > `Warehouse Management` > `Transaction` > `Inventory Quality Inspection`
+
+This window allows users to create and manage quality inspection records for inventory items. Inspections can be conducted on existing stock. The system tracks which products need inspection, their current status, location, and the quantities planned for review.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-window.png)
 
-Campos a tener en cuenta:
+Fields to note:
 
-#### Cabecera
+#### Header
 
-- **Organización**: Define la organización en la que se creará la inspección de calidad y filtra la información disponible.  
-- **Nº de documento**: Identificador único generado automáticamente para el documento de inspección, siguiendo una secuencia específica para este tipo de documento.  
-- **Nombre**: Un nombre descriptivo para el registro de inspección de calidad que ayuda a identificar su propósito o contenido.  
-- **Fecha de control de calidad**: Fecha en la que la inspección está programada o se realiza. Por defecto, es la fecha actual.  
-- **Descripción**: Campo de texto libre para añadir información adicional o notas sobre la inspección.
+- **Organization**: Defines the organization in which the quality inspection will be created and filters the available information.  
+- **Document No**: Unique identifier automatically generated for the inspection document, following a specific sequence for this document type.  
+- **Name**: A descriptive name for the quality inspection record to help identify its purpose or content.  
+- **Quality Control Date**: Date on which the inspection is scheduled or performed. By default, it is the current date.  
+- **Description**: Free text field to add additional information or notes about the inspection.
 
-#### Solapa Líneas
+#### Lines Tab
 
-La solapa Líneas lista los productos a inspeccionar, incluyendo su estado de inventario actual, ubicación y cantidades planificadas para inspección. Cada línea representa un producto o lote que requiere inspección de calidad.
+The Lines tab lists the products to be inspected, including their current inventory status, location, and planned inspection quantities. Each line represents a product or batch that requires quality inspection.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-lines.png)
 
-Campos a tener en cuenta:
+Fields to note:
 
-- **Nivel**: Número secuencial asignado automáticamente para identificar la línea dentro del documento de inspección.  
-- **Producto**: El producto que se está inspeccionando.  
-- **Hueco**: Ubicación actual del producto en el almacén.  
-- **Cantidad teórica**: La cantidad registrada en los registros de inventario del sistema para este producto en la ubicación especificada.  
-- **Unidad**: Unidad de medida del producto (p. ej., Unidad, Caja, Kg).  
-- **A estado**: Estado de inventario objetivo que se asignará al producto tras la inspección (p. ej., *Disponible*, *Dañado*, *Bloqueado*).  
-- **Cant.total**: La cantidad real contada o inspeccionada durante el proceso de control de calidad.  
-- **Descripción**: Campo de texto libre para añadir notas u observaciones adicionales sobre la línea de inspección.  
-- **Línea de movimiento**: Referencia a la línea de movimiento de inventario asociada a esta inspección, si aplica.
+- **Line No**: Sequential number automatically assigned to identify the line within the inspection document.  
+- **Product**: The product being inspected.  
+- **Storage Bin**: Current location of the product in the warehouse.  
+- **Book Quantity**: The quantity registered in the system's inventory records for this product at the specified location.  
+- **UOM**: Unit of measure of the product (e.g., Unit, Box, Kg).  
+- **To State**: Target inventory status to be assigned to the product after inspection (e.g., *Available*, *Damaged*, *Blocked*).  
+- **Quantity count**: The actual quantity counted or inspected during the quality control process.  
+- **Description**: Free text field to add additional notes or observations about the inspection line.  
+- **Movement Line**: Reference to the inventory movement line associated with this inspection, if applicable.
 
-#### Botones
+#### Buttons
 
-**Proceso**
+**Process**
 
-Procesa el documento de inspección de calidad, validando los datos de inspección y actualizando el inventario en función de los resultados registrados en las líneas. Este botón está disponible cuando el documento de inspección tiene líneas.
+Processes the quality inspection document, validating the inspection data and updating the inventory based on the results recorded in the lines. This button is available when the inspection document has lines.
 
-**Generar tarea**
+**Generate Task**
 
-Crea una tarea de inspección de calidad que es visible tanto en la ventana **Mantenimiento** en Etendo como en **Etendo Mobile**. Este botón está disponible cuando el documento de inspección tiene líneas cargadas. 
+Creates a quality inspection task that is visible in both the **Task** window in Etendo and **Etendo Mobile**. This button is available when the inspection document has loaded lines. 
 
-Al hacer clic, aparece una ventana emergente donde puede asignar la tarea a un usuario específico o habilitar la asignación automática basada en el rol. Si se seleccionan varios documentos de inspección, se creará una tarea para cada uno, todas asignadas al mismo usuario o rol definido en la ventana emergente.
+When clicked, a pop-up window appears where you can assign the task to a specific user or enable automatic assignment based on role. If multiple inspection documents are selected, one task will be created for each, all assigned to the same user or role defined in the pop-up.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
 
-### Flujo de trabajo
+### Workflow
 
-El proceso de Inspección de calidad de inventario comienza en Etendo cuando un usuario crea un nuevo registro en la ventana **Inspección de calidad de inventario**.
+The Inventory Quality Inspection process begins in Etendo when a user creates a new record in the **Inventory Quality Inspection** window.
 
-1. **Crear documento de inspección**: Se crea un nuevo documento de inspección en la ventana **Inspección de calidad de inventario** con la información necesaria de cabecera (organización, nombre, fecha de control de calidad, descripción).
+1. **Create Inspection Document**: A new inspection document is created in the **Inventory Quality Inspection** window with the necessary header information (organization, name, quality control date, description).
 
-2. **Añadir productos a inspeccionar**: Los productos que requieren inspección se añaden a la solapa Líneas. Para cada línea, especifique:
-    - El producto a inspeccionar
-    - Ubicación del hueco
-    - Cantidad teórica (inventario del sistema)
-    - Cualquier descripción o nota relevante
+2. **Add Products to Inspect**: Products requiring inspection are added to the Lines tab. For each line, specify:
+    - The product to be inspected
+    - Storage bin location
+    - Book quantity (system inventory)
+    - Any relevant descriptions or notes
 
-    !!!info "Dos formas de completar la inspección"
-        En este punto, puede elegir entre dos flujos de trabajo para completar la inspección de calidad:
+    !!!info "Two Ways to Complete the Inspection"
+        At this point, you can choose between two workflows to complete the quality inspection:
         
-        **Opción 1: Completar desde Etendo (ERP)**  
-        Continúe con los pasos 3 y 4 a continuación para realizar la inspección directamente en la ventana **Inspección de calidad de inventario**.
+        **Option 1: Complete from Etendo (ERP)**  
+        Continue with steps 3 and 4 below to perform the inspection directly in the **Inventory Quality Inspection** window.
         
-        **Opción 2: Completar desde Etendo Mobile**  
-        Utilice el botón **Generar tarea** para crear una tarea de inspección de calidad visible en **Etendo Mobile**. Esto permite a los operarios de almacén realizar la inspección directamente desde sus dispositivos móviles. Para más información, visite [Tareas de inspección de calidad](#tareas-de-inspección-de-calidad).
+        **Option 2: Complete from Etendo Mobile**  
+        Use the **Generate Task** button to create a quality inspection task visible in **Etendo Mobile**. This allows warehouse operators to perform the inspection directly from their mobile devices. For more information, visit [Quality Inspection Tasks](#quality-inspection-tasks).
 
-3. **Procesar inspección**: 
-    - Revise cada línea de producto y actualice el campo **A estado** con el nuevo estado para las unidades; a continuación, introduzca la **Cant.total** para las unidades que coincidan con ese estado.
-    - El sistema comparará la Cantidad teórica con la Cant.total para identificar discrepancias.
-    - Asigne el estado objetivo adecuado en función de los resultados de la inspección.
+3. **Process Inspection**: 
+    - Review each product line and update the **To State** field with the new status for the units, then enter the **Quantity count** for the units that match that status.
+    - The system will compare the Book Quantity with the Quantity count to identify discrepancies.
+    - Assign the appropriate target status based on inspection results.
 
-4. **Completar la inspección**: Haga clic en el botón **Proceso** para finalizar el documento. El sistema:
-    - Actualizará el estado de inventario de los productos inspeccionados según el campo **A estado**
-    - Creará movimientos de inventario que reflejen los resultados de la inspección
-    - Gestionará la reubicación del producto en función del estado objetivo:
-        - Si existe una [regla de movimiento](#ventana-de-configuración-de-reglas-de-movimiento) para el estado objetivo, el sistema la aplica automáticamente
-        - Si no existe una regla de movimiento, el sistema comprueba si ya hay un hueco asignado a ese estado
-        - Si no se encuentra ningún hueco, el sistema crea un **hueco virtual** para el estado objetivo para mantener la consistencia del inventario
-    - Actualizará el **Informe Stock** con el nuevo estado de inventario
+4. **Complete the Inspection**: Click the **Process** button to finalize the document. The system will:
+    - Update the inventory status of inspected products according to the **To State** field
+    - Create inventory movements reflecting the inspection results
+    - Handle product relocation based on the target status:
+        - If a [movement rule](#movement-rules-configuration-window) exists for the target status, the system applies it automatically
+        - If no movement rule exists, the system checks if a storage bin is already assigned to that status
+        - If no storage bin is found, the system creates a **virtual storage bin** for the target status to maintain inventory consistency
+    - Update the **Stock Report** with the new inventory status
 
-5. Todos los cambios se reflejan en el sistema, manteniendo una trazabilidad completa del proceso de inspección de calidad.
+5. All changes are reflected in the system, maintaining full traceability of the quality inspection process.
 
-!!!warning "Reglas de movimiento y huecos"
-    Se recomienda configurar [Reglas de movimiento](#ventana-de-configuración-de-reglas-de-movimiento) para los estados de inspección de uso común (p. ej., *Dañado*, *Bloqueado*) para mantener una organización adecuada del almacén.
-## Reserva de existencias AUOM
+!!!warning "Movement Rules and Storage Bins"
+    It is recommended to configure [Movement Rules](#movement-rules-configuration-window) for commonly used inspection statuses (e.g., *Damaged*, *Blocked*) to maintain proper warehouse organization.
+## AUOM Stock Reservation
 
-### Visión general
+### Overview
 
-Se ha añadido la opción de reservas de existencias basadas en la unidad definida en el pedido de venta (campo AUOM), que determina si el producto se vende en su unidad base o en una unidad alternativa (por ejemplo, una sola botella o una caja de 12).  
+The option of stock reservations based on the unit defined in the sales order (AUOM field) has been added, which determines whether the product is sold in its base unit or in an alternative unit (for example, a single bottle or a box of 12).  
 
 !!! info 
-    De forma predeterminada, cuando el módulo está instalado, las preferencias `Enable Stock Reservations` y `Enable UOM Management` están habilitadas. Para más detalles, consulte [Stock Logistic Unit - Preference](./stock-logistic-unit.md#preference).
+    By default, when the module is installed the preferences `Enable Stock Reservations` and `Enable UOM Management` are enabled. For details, see [Stock Logistic Unit - Preference](./stock-logistic-unit.md#preference).
 
-### Flujo de reserva
+### Reservation Flow
 
-1. El proceso comienza cuando se crea un **Pedido de venta** con líneas de producto definidas con una Unidad Alternativa de Medida (AUOM) (p. ej., 1 Caja = 24 Unidades).
-2. En cada línea, el campo **Reserva de existencias** se establece como *Automático*, por lo que el sistema intenta reservar existencias cuando se confirma el pedido.
+1. The process starts when a **Sales Order** is created with product lines defined with an Alternative Unit of Measure (AUOM) (e.g., 1 Box = 24 Units).
+2. In each line, the **Stock Reservation** field is set to *Automatic*, so the system attempts to reserve stock when the order is confirmed.
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation.png)
-3. Lógica de reserva:
+3. Reservation logic:
 
-    - El sistema reserva existencias en la unidad especificada en la línea del pedido.  
-    - Si hay existencias suficientes, se crea una reserva completa.  
-    - Si no, reserva la cantidad disponible en esa unidad y complementa con otras AUOM o unidades base.  
-    - Si se cubre el total, la reserva es completa; en caso contrario, es parcial.
+    - The system reserves stock in the unit specified in the order line.  
+    - If there is enough stock, a full reservation is created.  
+    - If not, it reserves the available quantity in that unit and supplements with other AUOMs or base units.  
+    - If the total is covered, the reservation is complete; otherwise, it is partial.
     
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation-1.png)
 
-**Ejemplos**
+**Examples**
 
-- Pedido: 10 unidades; Stock: 5 unidades + 1 caja de 10 → Solo se reservan 5 unidades (la caja no se puede dividir).  
-- Pedido: 110 unidades; Stock: 100 unidades + 1 caja de 10 → Reserva completada con ambas.  
-- Si no hay stock disponible en la unidad solicitada, el sistema igualmente intenta reservar usando otras AUOM.  
+- Order: 10 units; Stock: 5 units + 1 box of 10 → Only 5 units reserved (the box cannot be split).  
+- Order: 110 units; Stock: 100 units + 1 box of 10 → Reservation completed with both.  
+- If no stock is available in the requested unit, the system still attempts to reserve using other AUOMs.  
 
-### Flujo de picking/packing
+### Picking/Packing Flow
 
-En los procesos de [Picking](./picking.md) y [Packing](./packing.md). Si los códigos de barras **GS1-128** están configurados, una vez que se ha validado un [código de barras](#código-de-barras), el sistema puede identificar no solo el producto, sino también su unidad alternativa de medida (AUOM) y los atributos asociados, como el lote o la fecha de caducidad.
+In the [Picking](./picking.md) and [Packing](./packing.md) processes. If the **GS1-128** barcodes are configured,  once a [barcode](#barcode) has been validated, the system can identify not only the product, but also its alternative unit of measure (AUOM) and associated attributes, such as batch or expiration date.
 
-Durante el picking, cuando se escanea el código, el sistema interpreta la información estructurada que contiene (producto, lote, fecha de caducidad, etc.) y la compara con la reserva, registrando directamente la cantidad correspondiente. Esto garantiza que la salida de existencias coincida exactamente con el producto real que se va a preparar.
+During picking, when the code is scanned, the system interprets the structured information it contains (product, batch, expiration date, etc.) and compares it with the reservation, directly recording the corresponding quantity. This ensures that the stock output exact matches the actual product to be prepared.
 
-En packing, se utiliza la misma validación al empaquetar productos. El sistema reconoce qué producto es, en qué presentación y con qué atributos, y lo asigna a la caja correspondiente. Esto garantiza que el envío refleje exactamente lo que se ha recogido, manteniendo una trazabilidad completa.
+In packing, the same validation is used when packaging products. The system recognizes what product it is, in what presentation and with what attributes, and assigns it to the corresponding box. This ensures that the shipment reflects exactly what was picked, maintaining complete traceability.
 
-De este modo, Etendo garantiza que un único escaneo reconozca de forma integral el producto que está saliendo o va a salir, teniendo en cuenta sus medidas alternativas y atributos, y evitando errores en toda la cadena desde el pedido hasta la expedición.
+In this way, the Etendo ensures that a single scan comprehensively recognizes the product that is leaving or will leave, taking into account its alternative measurements and attributes, and avoiding errors throughout the chain from order to dispatch.
 
 !!! Example
-    Ejemplo de código de barras con atributos: **01** 95012345678930 **\x1D** **10**L101 **\x1D** **17** 260910 **91** Rn-0-0-0
+    Example of barcode with attributes: **01** 95012345678930 **\x1D** **10**L101 **\x1D** **17** 260910 **91** Rn-0-0-0
 
-    donde:
+    where:
 
-    - \x1D = separador para valores variables
-    - 01 = identificador de producto
-    - 95012345678930 = id de producto
-    - 10 = identificador de lote
-    - L101 = lote
-    - 17 = identificador de caducidad
-    - 260910 = fecha de caducidad (YYMMDD)
-    - 91 = identificador de hueco
-    - Rn-0-0-0 = código de unidad logística
-## Uso de Etendo Mobile
+    - \x1D = separator for variable values
+    - 01 = product identifier
+    - 95012345678930 = id product
+    - 10 = lot identifier
+    - L101 = lot
+    - 17 = expiration identifier
+    - 260910 = expiration date (YYMMDD)
+    - 91 = locator identifier
+    - Rn-0-0-0 = logistic unit code
 
-Al iniciar sesión en Etendo Mobile, al operario de almacén se le presentarán las aplicaciones y menús disponibles según su rol.
+## Using Etendo Mobile
+
+When logging in to Etendo Mobile, the warehouse operator will be presented with the applications and menus available according to his role.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management.png)
 
-Como se ha visto anteriormente, la opción de Gestión avanzada de almacén incluye los siguientes menús:
+As seen above, the Advanced Warehouse Management option includes the following menus:
 
-- [Mantenimiento de recepción](#mantenimiento-de-recepción)
-- [Mantenimiento de picking](#mantenimiento-de-picking)
-- [Mantenimiento de empaquetado](#mantenimiento-de-empaquetado)
-- [Mantenimiento de reubicación](#mantenimiento-de-reubicación)
-- [Mantenimiento de ajuste](#mantenimiento-de-ajuste)
-- [Todos los mantenimientos](#todos-los-mantenimientos)
-### Tareas de recepción
+- [Reception Tasks](#reception-tasks)
+- [Picking Tasks](#picking-tasks)
+- [Packing Tasks](#packing-tasks)
+- [Relocation Tasks](#relocation-tasks)
+- [Adjustment Tasks](#adjustment-tasks)
+- [All Tasks](#all-tasks)
+### Reception Tasks
 
-Permite crear y controlar recepciones directamente desde la aplicación móvil mediante **tareas de recepción**, que reproducen el mismo comportamiento y flujo de proceso que las ventanas [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions/#goods-receipts) y [Recepción de entrada](#recepción-de-entrada) en el ERP.
+It allows creating and controlling receipts directly from the mobile application using **receipt tasks**, which reproduce the same behavior and process flow as the [Goods Receipt](../../../basic-features/procurement-management/transactions/#goods-receipts) and [Inbound Receipt](#inbound-receipt) windows in the ERP.
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-El proceso comienza haciendo clic en el botón **Generar tarea de recepción** en la ventana *Recepción de entrada* del ERP. Allí, la tarea se asigna a un operario, se define la prioridad y, a continuación, se refleja en la aplicación móvil del operario asignado.
+The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned to an operator, the priority is defined, and then it is reflected in the mobile application of the assigned operator.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
-#### Acceso a las tareas de recepción (Etendo Mobile)
+#### Access to Reception Tasks (Etendo Mobile)
 
-Al acceder a **Etendo Mobile** en la sección **Tareas de recepción**, se mostrarán todas las tareas y sus estados correspondientes pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran con estado *Pendiente*.
+When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
 
-**Tareas de recepción**
+**Reception Tasks**
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
 
-Para realizar una **Recepción**:
+To perform a **Reception**:
 
-- Acceda al menú **Tareas de recepción**. Allí, las tareas se dividen por estado: Pendiente, En curso, Completada.
-- Busque y seleccione la tarea desde la lista o utilizando el buscador.
-- Cuando se selecciona una tarea, se abre una pantalla con la información de la tarea.
-- Pulse el botón **Iniciar recepción**.
-- **Escanee** los productos para almacenarlos o **cárguelos** manualmente.
-- Si el producto tiene un **Conjunto atributos** configurado (como número de lote, número de serie, fecha de caducidad u otros atributos personalizados), aparecerá una ventana emergente solicitando esta información. Complete los campos obligatorios y confirme para continuar con la recepción.
+- Access the **Reception Tasks** menu. There, tasks are divided by status: Pending, In Progress, Completed.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Receipt** button.
+- **Scan** the products to stock them or **load** them manually.
+- If the product has an **Attribute Set** configured (such as batch number, serial number, expiration date or other custom attributes), a pop-up window will appear requesting this information. Complete the required fields and confirm to continue with the reception.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-3.png)
 
-- Si es necesario, se puede modificar el **hueco (localizador)** para cambiar la ubicación de destino de los productos recibidos.
-- Confirme la tarea con el botón **Finalizar recepción**.
-- Confirme que desea finalizar la tarea.
-- Vea el **Mensaje de éxito**.
-### Tareas de picking
+- If needed, the **storage bin (locator)** can be modified to change the destination location of the received products.
+- Confirm the task with the **End Reception** button.
+- Confirm that you want to finish the task.
+- See **Success message**.
+### Picking Tasks
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
 
-El proceso de picking permite al operario recoger de forma eficiente los productos requeridos para un pedido utilizando Etendo Mobile. A continuación se detalla el flujo completo del proceso.
+The picking process allows the operator to pick the products required for an order efficiently using Etendo Mobile. The complete process flow is detailed below.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Picking](./picking.md).
+    For more information about how to use this functionality in Etendo, visit [Picking](./picking.md).
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-El proceso se inicia en Etendo cuando se crea una [Lista de picking](picking.md#picking-list-generation) a partir de un Pedido de venta. Esto puede realizarse mediante el botón **Generar lista de picking** disponible en la ventana Pedido de venta, que crea una nueva **tarea** que se asignará a un usuario para su ejecución en Etendo Mobile.
+The process is started in Etendo when a [Picking List](picking.md#picking-list-generation) is created from a Sales Order. This can be done using the **Generate Picking List** button available in the Sales Order window, which creates a new **task** that will be assigned to a user for execution in Etendo Mobile.
 
 !!!Important
-    Recuerde que las únicas listas de picking que se muestran en Etendo Mobile son las marcadas como tipo **Lista de picking directa al cliente**.
+    Remember the only picking lists that are shown in Etendo Mobile are those marked as **Direct Picking List to Customer** type.
 
-Cuando se genera una lista de picking, el sistema ejecuta procesos automáticos en segundo plano que varían en función de la configuración. En determinadas situaciones, algunos de estos procesos pueden fallar sin que el usuario lo advierta inmediatamente.
+When a picking list is generated, the system runs automatic background processes that vary depending on the configuration. In certain situations, some of these processes can fail without the user noticing immediately.
 
-Para proporcionar una mayor visibilidad, el sistema muestra un **mensaje de advertencia** en diferentes etapas del proceso, que incluye un enlace a la ventana Mantenimiento. Desde allí, el usuario puede comprobar el detalle de cada proceso ejecutado y revisar los logs correspondientes, garantizando un mejor control sobre la correcta finalización de las operaciones.
+In order to provide greater visibility, the system displays a **warning message** at different stages of the process, that includes a link to the Task window. From there, the user can check the details of each process executed and review the corresponding logs, ensuring better control over the correct completion of operations.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png)
 
-Los procesos que deben verificarse son los siguientes:
+The processes that must be verified are as follows:
 
-- Para **tareas de picking con creación activa de tarea de packing**:
+- For a **Picking tasks with active Packing task creation**:
 
-    - Crear albarán de salida
-    - Crear lista de picking
-    - Procesar lista de picking
-    - Crear tarea de packing
+    - Create Shipment
+    - Create Picking List
+    - Process Picking List
+    - Create Packing Task
 
-- Para **tareas de picking sin crear una tarea de packing**:
+- For a **Picking tasks without creating a Packing task**:
 
-    - Crear lista de picking
-    - Crear albarán de salida
-    - Procesar lista de picking
+    - Create Picking List
+    - Create Shipment
+    - Process Picking List
 
-Ejemplo de logs sin errores:
+Example of logs without errors:
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png)
 
-Ejemplo de logs con errores:
+Example of logs with errors:
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png)
 
-#### Acceso a las tareas de picking (Etendo Mobile)
+#### Access to Picking Tasks (Etendo Mobile)
 
-Al acceder a **Etendo Mobile** en la sección **Picking**, se mostrarán todas las tareas y sus correspondientes estados y prioridades, pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
+When accessing **Etendo Mobile** into the **Picking** section, all tasks and their corresponding statuses and priorities, belonging to the logged in user, will be displayed. By default, the tasks are shown in *Pending* status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png){align=right width=300}
  
-Esta pantalla contiene:
+This screen contains:
 
-- Botones de Actualizar y Atrás.
-- Un campo de búsqueda para filtrar tareas.
-- Filtros rápidos que limitan entre tareas `Pendiente`, `En proceso` o `Completada`.
-- Una lista de tarjetas con tareas.
+- Refresh and Back buttons.
+- A search field to filter tasks.
+- Quick filters that limit between `Pending`, `In Process` or `Completed` tasks.
+- A list of cards with tasks. 
 
 !!! Note
-    Tal y como se explicó anteriormente en la sección de la solapa Preferencias de [Configuración inicial](#configuración-inicial), existe una preferencia para definir los días a mostrar las tareas en estado `Completada`: `Task From Date Completed Days`. Esto permite al usuario definir el número de días hacia atrás, desde la fecha actual, que se utilizará como criterio para mostrar tareas en estado Completada.
+    As explained above in the Preference tab section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `Task From Date Completed Days`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
 
 <br clear="all">
 
-#### Picking de productos
+#### Product Picking
 
-1. El operario de almacén debe seleccionar una tarea `Pendiente`.
+1. The warehouse operator must select a `Pending` task.
 
-2. Una vez seleccionada la tarea, se abre una ventana con la lista de productos a recoger.
+2. Once the task is selected, a window opens with the list of products to be picked.
 
-3. Para iniciar el proceso, haga clic en el botón **Iniciar picking** ubicado en la parte superior; una vez hecho esto, la tarea pasa al estado `En curso`.
+3. To start the process, click on the **Start Picking** button located at the top; once this is done, the task goes to the `In Progress` status.
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png)
 
-4. Una vez iniciado el picking, se abre una nueva ventana con los siguientes elementos:
+4. Once picking is started, a new window opens with the following items:
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png){align=right width=300}
 
 
-    - **Escanear código de barras:** activa la cámara del dispositivo móvil.
-    - **Introducir código de barras:** permite introducir el código de barras manualmente. Hay disponible un botón Validar para lanzar el proceso de validación del código de barras.
-    - **Cantidad con botones `+` y `-`** permite cargar manualmente la cantidad a escanear.
-    - **Lista de productos (N):** lista de tarjetas con información del producto, donde (N) es la cantidad total de productos.
+    - **Scan Barcode:** activates the camera of the mobile device.
+    - **Type barcode:** allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.
+    - **Quantity with: `+` and `-` buttons** allows manual loading of the quantity to be scanned.
+    - **List of products (N):** list of cards with product information, where (N) is the total quantity of products. 
 
-        - Producto
-        - Estado:
+        - Product
+        - Status:
             - <span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
-                Sin escanear
+                Unscanned
             </span>
             - <span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
-                Escaneado parcialmente
+                Partially Scanned
             </span>
             - <span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
-                Escaneado
+                Scanned
             </span>
-        - Código de barras
-        - Ubicador
-        - Valor atributos
-        - Cantidad de movimiento: cantidad total a recoger.
+        - Barcode
+        - Locator
+        - Attribute Set Value
+        - Movement Quantity: total quantity to be collected.
         - AUOM
-        - Cantidad contada con botones `+` y `-`: que permiten sumar o restar, de uno en uno, la cantidad manualmente.
+        - Counted Quantity with buttons `+` and `-`: that allow to add or subtract one by one the quantity manually.
 
-#### Métodos de picking
+#### Picking Methods
 
-En el proceso de picking, el operario tiene flexibilidad tanto en qué recoger como en cómo hacerlo. Por un lado, aunque el sistema solicite un código específico (por ejemplo, caja BX100020), es posible sustituirlo por otra unidad equivalente (como BX100023) siempre que el producto y la cantidad coincidan, o adaptarse a la disponibilidad de stock (por ejemplo, entregar 10 unidades sueltas en lugar de una caja de 10). Estas variaciones se registran automáticamente en la reserva y en el albarán de salida.
+In the picking process, the operator has flexibility in both what to pick and how to do it. On the one hand, even if the system requests a specific code (for example, box BX100020), it is possible to replace it with another equivalent unit (such as BX100023) as long as the product and quantity match, or to adapt to stock availability (for example, delivering 10 individual units instead of a box of 10). These variations are automatically recorded in the reservation and on the goods sheepment.
 
-Por otro lado, el sistema también permite flexibilidad en el modo de operación mediante diferentes métodos de selección:
+On the other hand, the system also allows flexibility in the mode of operation through different selection methods:
 
-- Escanear el producto el número de veces solicitado (ej.: 10 escaneos para 10 unidades).
-- Escanear una unidad logística, que carga automáticamente la cantidad solicitada junto con su equivalente en unidades según la tasa de conversión.    
-- Cargar manualmente "10" en el campo de cantidad y escanear una vez.
-- Introducir tanto el código como la cantidad manualmente.
-- Introducir manualmente solo la cantidad en el campo Cantidad dentro de una tarjeta de producto, usando los botones + y - o introduciendo el número desde el teclado.
-
-!!! tip
-    Al escanear un producto válido, el campo Código de barras se completa automáticamente, se muestra la tarjeta asociada y se incrementa el valor 1 en el producto, si la cantidad no se había modificado previamente.
+- Scan the product the requested number of times (ex: 10 scans for 10 units).
+- Scan a logistics unit, which automatically loads the requested quantity along with its equivalent in units according to the conversion rate.    
+- Manually load "10" in the quantity field and scan once.
+- Enter both code and quantity manually.
+- Manually enter only the quantity in the Quantity field within a product card, using the + and - buttons or by entering the number from the keypad.
 
 !!! tip
-    Si previamente se introdujo en el campo Cantidad una cantidad distinta de la cantidad por defecto, por ejemplo 5, y luego se escanea el producto, esas 5 unidades se añadirán directamente a la tarjeta del producto.
+    When scanning a valid product, the Barcode field is automatically filled in, the associated card is displayed and the value 1 is incremented in the product, if the quantity was not previously changed.
+
+!!! tip
+    If a quantity other than the default quantity, e.g. 5, was previously entered in the Quantity field, and then the product is scanned, those 5 units will be added directly to the product card.
 
 
 !!! Warning
     
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png){align=right width=200}
 
-    Posibles escenarios de error:
+    Possible error scenarios:
 
-    - Si se escanea un código incorrecto (no coincide con ningún producto de la tarea), el campo de código de barras se resalta en rojo, muestra una cruz y no añade cantidad a ningún producto.   <br><br>
-    - Si se intenta introducir una cantidad superior a la requerida, el sistema cargará el máximo definido en la tarjeta del producto. Una vez completada la cantidad y se vuelve a escanear o recargar el código del producto, el sistema no añade cantidad al producto. Si la cantidad se carga manualmente en la tarjeta del producto, el sistema permite cargar la cantidad máxima solicitada.
+    - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.   <br><br>
+    - If an attempt is made to enter a quantity greater than required, the system will charge the maximum defined in the product card. Once the quantity is completed and the product code is re-scanned or reloaded, the system does not add quantity to the product. If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
     
-    En ambos casos, el mensaje de error mostrado es el que se visualiza en la imagen.
+    In both cases, the error message shown is the one displayed in the image.
 
     
 
-#### Finalización del picking
+#### Picking Completion
 
-Una vez que se registra al menos una unidad de cualquier producto, el botón **Finalizar picking** se activa. Esto permite el picking parcial, es decir, solo se puede recoger parte de la cantidad solicitada, lo cual resulta útil cuando faltan productos o no son aptos para su uso.
+Once at least one unit of any product is registered, the **End Picking** button becomes active. This allows partial picking, meaning only part of the requested quantity can be picked, which is useful when products are missing or unsuitable for use.
 
-Tras la confirmación, la tarea se marca como Completada.
+After confirmation, the task is marked as Completed.
 
 !!!warning
-    Para el picking parcial, la tarea se cierra y no se crea automáticamente una nueva tarea para los productos faltantes. Cualquier cantidad restante debe gestionarse manualmente.
+    For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png)
 
-Una vez completada, la tarea aparecerá en la sección de Tareas completadas, donde es posible revisar los productos y cantidades validados para esa tarea de picking específica.
+Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
-### Tareas de empaquetado
+
+
+### Packing Tasks
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
 
-El proceso de empaquetado permite al operario empaquetar los productos de forma eficiente utilizando Etendo Mobile. A continuación se detalla el flujo completo del proceso.
+The packing process allows the operator to pack the products efficiently using Etendo Mobile. The complete process flow is detailed below.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Empaquetado](./packing.md).
+    For more information about how to use this functionality in Etendo, visit [Packing](./packing.md).
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-Las tareas de empaquetado están vinculadas a un registro en la ventana **Empaquetado**. La creación de una tarea de empaquetado se desencadena tras:
+Packing tasks are linked to a record in the **Packing** window.  The creation of a packing task is triggered after:
 
-- La finalización de una tarea de picking (cuando el Tipo de tarea `Picking and Packing` está activo).
-- Desde la ventana **Empaquetado** de Etendo al añadir al menos un pedido de venta a un nuevo Empaquetado.
+- The completion of a picking task (when the Task Type `Picking and Packing` is active).
+- From the **Packing** window of Etendo when adding at least one sales order to a new Packing.
 
-#### Acceso a las tareas de empaquetado (Etendo Mobile)
+#### Access to Packing Tasks (Etendo Mobile)
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.png){align=right width=300}
 
-Al acceder a Etendo Mobile y seleccionar el menú **Empaquetado**, se muestra la pantalla principal de empaquetado con el número de tareas `Empaquetado` disponibles para el usuario actual.
 
-Esta pantalla contiene:
+When accessing Etendo Mobile and selecting the **Packing** menu, the packing main screen with the number of available `Packing` tasks to the current user. 
 
-- Botones de Actualizar y Atrás.
-- Un campo de búsqueda para filtrar tareas.
-- Filtros rápidos que limitan entre tareas `Pendiente`, `En progreso` o `Completada`. Por defecto, muestra seleccionado el filtro `Pendiente` y, en el caso de tareas en estado `Completada`, existe una preferencia donde se define desde qué día se traerán las tareas completadas.
-- Una lista de tarjetas, donde cada tarjeta representa una tarea de empaquetado e incluye la siguiente información:
+This screen contains:
 
-    - Empaquetado como título: se muestra la referencia del documento.
-    - Estado.
-    - Tipo de tarea.
-    - Prioridad.
+- Refresh and Back buttons.
+- A search field to filter tasks.
+- Quick filters that limit between `Pending`, `In Progress` or `Completed` tasks. By default it shows the `Pending` filter selected, and in the case of tasks in `Completed` status, there is a preference where it is defined from which day it will bring completed tasks.
+- A list of cards, where each card represents a packing task and includes the following information:
+
+    - Packing as title: The document reference is shown.
+    - Status.
+    - Task Type.
+    - Priority.
 
 <br clear="all">
 
-#### Empaquetado de productos
+#### Product Packing
 
-1. El operario de almacén debe **seleccionar una tarea**. Para seleccionar la tarea, desplácese o introduzca datos clave en el buscador.
+1. The warehouse operator must **select a task**. To select the task, scroll or enter key data in the search engine.
 
-2. Al seleccionar una tarea, se abre una pantalla con el número de la lista de empaquetado y el botón **Iniciar empaquetado**.
+2. When selecting a task, a screen opens with the packing list number and the **Start Packing** button.
 
-3. Al pulsar **Iniciar empaquetado**, el estado de la tarea cambia a `En progreso` tanto en Etendo Mobile como en Etendo.
+3. When pressing **Start Packing**, the status of the task changes to `In Progress` in both Etendo Mobile and Etendo. 
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png)
 
-4. La ventana tiene los siguientes elementos:
+4. The window has the following elements:
 
-    - Botón **Escanear código de barras** para activar la cámara del dispositivo y escanear.
-    - **Introducir código de barras** permite introducir el código de barras manualmente. Hay disponible un botón Validar para lanzar el proceso de validación del código de barras.
-    - Campo **Seleccionar paquete** para seleccionar el paquete de destino al escanear el producto.
-    - Campo **Cantidad** que actúa como multiplicador para cargar la cantidad al escanear el producto.
-    - Botón **+ Añadir paquete** que permite añadir nuevas cajas.
-    - Una lista de tarjetas de **Producto**, cada una mostrando:
+    - **Scan Barcode** button to activate the device camera and scan.
+    - **Type barcode** allows to enter the barcode manually. A Validate button is available to trigger the barcode validation process.
+    - **Select Pack** field to select the destination pack when scanning the product.
+    - **Quantity** field that acts as a multiplier to load the quantity when scanning the product.
+    - **+ Add Pack** button that allows you to add new boxes.
+    - A list of **Product** cards, each showing:
 
-        - Producto
-        - Estado:
+        - Product
+        - Status:
             - <span style="padding:4px;background-color:#F5F5F5;color:#BDBDBD;border-radius:4px;"> 
-                Sin escanear
+                Unscanned
             </span>
             - <span style="padding:4px;background-color:#fba643ff;color:white;border-radius:4px;"> 
-                Escaneando
+                Scanning
             </span>
             - <span style="padding:4px;background-color:#00B34C;color:white;border-radius:4px;"> 
-                Escaneado
+                Scanned
             </span>
-        - Código de barras
-        - Localizador
-        - Valor atributos
-        - Cantidad
+        - Barcode
+        - Locator
+        - Attribute Set Value
+        - Quantity
         - AUOM
-        - Cantidad empaquetada con botones `+` y `-`: que permiten añadir o restar, uno a uno, la cantidad manualmente.
+        - Packed Quantity with buttons `+` and `-`: that allow to add or subtract one by one the quantity manually.
 
-    - Una lista de **Paquetes**, mostrando:
+    - A list of **Packs**, showing:
 
-        - Nombre (o número) del paquete
-        - Productos y sus cantidades
+        - Pack name (or number)
+        - Products and their quantities
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png)
 
-    Los selectores de vista por **Producto** o por **Paquete** permiten:
 
-    - En la vista **Productos**, al entrar en una tarjeta de producto, se muestra cómo se distribuyó ese producto en las diferentes cajas, permitiendo navegar producto por producto para revisar las cantidades asignadas por paquete.
+    The view selectors by **Product** or by **Pack** allow:
 
-    - En la vista **Paquetes**, al entrar en un paquete, se muestra el contenido detallado con la posibilidad de navegar paquete por paquete para comprobar qué productos contiene cada paquete.
+    - In the **Products** view, when entering a product card, it shows how that product was distributed in the different boxes, allowing you to browse product by product to review the quantities assigned per pack.
+
+    - In the **Packs** view, when entering a pack, the detailed contents are displayed with the possibility of browsing pack by pack to check which products are contained in each pack.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png)
 
     !!! tip 
-        En ambas vistas, es posible modificar las cantidades cargadas y añadir paquetes si fuese necesario. Sin embargo, para poder asignar contenido a las cajas añadidas, debe cumplirse una de las siguientes condiciones:
+        In both views, it is possible to modify the quantities loaded and add packs if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
 
-        - La carga total de productos aún no se ha completado, o se modifican (disminuyen) cantidades asignadas previamente para permitir su reubicación al nuevo paquete.
+        - The total load of products has not yet been completed, or previously assigned quantities are modified (decreased) to allow their relocation to the new pack.
 
-5. Una vez iniciado el empaquetado, el usuario selecciona o crea un paquete y comienza a cargar productos escaneando o introduciendo los datos manualmente.
+5. Once packing is started, the user selects or creates a pack and starts loading products by scanning or manually entering data.
 
-    - Cada producto empaquetado se registra bajo un paquete específico.
-    - Puede alternar entre cajas para distribuir los productos según sea necesario.
+    - Each packed product is registered under a specific pack.
+    - You can switch between boxes to distribute products as needed.
 
     !!!Info
-        Los paquetes recién creados no pueden eliminarse manualmente. Sin embargo, si un paquete se deja vacío (sin productos añadidos), se eliminará automáticamente al final del proceso. Solo se guardarán y mostrarán los paquetes con productos empaquetados.
+        Newly created packs cannot be deleted manually. However, if a pack is left empty (no products added), it will be automatically removed at the end of the process. Only packs with packed products will be saved and displayed.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-6.png)
 
-#### Métodos de empaquetado
 
-Durante el proceso de empaquetado, el operario debe ceñirse estrictamente a lo que debe recogerse, es decir, solo puede escanear los códigos de barras listados en el documento de empaquetado. No está permitido sustituir unas cajas por otras ni cambiar unidades logísticas, ya que los productos ya han sido reservados durante el picking y el empaquetado debe reflejar exactamente lo solicitado.
+#### Packing Methods
 
-En cuanto a cómo realizar el empaquetado, el sistema ofrece flexibilidad en los métodos operativos:
+During the packing process, the operator must strictly adhere to what is to be picked, i.e., they can only scan the barcodes listed on the packing document. It is not permitted to substitute boxes for others or change logistics units, as the products have already been reserved during picking and the packing must reflect exactly what was requested.
 
-- Escanear el producto el número exacto de veces (p. ej.: 10 escaneos para 10 unidades).
-- Cargar la cantidad manualmente en el campo Cantidad y luego escanear el producto.
+In terms of how to perform packing, the system offers flexibility in operating methods:
 
-- Introducir tanto la cantidad como el código manualmente y, a continuación, pulsar el botón Validar para confirmar la entrada.
+- Scan the product the exact number of times (ex: 10 scans for 10 units).
+- Load the amount manually in the Quantity field and then Scan the product. 
 
-- Introducir la cantidad manualmente desde la vista **Producto** o desde la vista **Paquetes**.
+- Enter both quantity and code manually, and then press the Validate button to confirm the entry.
+
+- Enter the quantity manually from the **Product** view or from the **Packs** view.
 
 !!! Warning
 
-    Posibles escenarios de error:
+    Possible error scenarios:
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png){align=right width=200}
 
-    - Si se escanea un código incorrecto (no coincide con ningún producto de la tarea), el campo de código de barras se resalta en rojo, muestra una cruz y no añade cantidad a ningún producto.
-    - Si se intenta introducir más cantidad de la requerida, también se muestra un mensaje de error. Si la cantidad se carga manualmente en la tarjeta de producto, el sistema permite cargar la cantidad máxima solicitada.
+    - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.
+    - If an attempt is made to enter more than the required quantity, an error message is also displayed. If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
 
-    En ambos casos, el mensaje de error mostrado es el que aparece en la imagen.
+    In both cases, the error message shown is the one displayed in the image.
 
-#### Finalización del empaquetado
+#### Packing Completion
 
-Una vez que los productos han sido empaquetados:
+Once the products have been packed: 
 
-- El sistema muestra un resumen por paquete con los productos incluidos y se muestra el mensaje *Empaquetado completado correctamente*.
+- The system displays a summary per pack with the products included and the message *Packing completed successfully* is displayed.
 
-- Hasta que se confirme, el contenido de las cajas puede editarse.
+- Until confirmed, the contents of the boxes can be edited.
 
-- Al final, puede elegir calcular el peso de las cajas.
+- At the end, you can choose to calculate the weight of the boxes.
 
-- Tras la confirmación, la tarea se marca como Completada.
+- After confirmation, the task is marked as Completed.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png)
 
-Una vez completada, la tarea aparecerá en la sección de Tareas completadas. Desde ahí, es posible revisar toda la información validada para esa tarea de empaquetado, incluyendo:
+Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:
 
-- En la vista Producto: en qué cajas se empaquetó cada producto.
-- En la vista Paquete: qué productos se empaquetaron en cada paquete.
+- In the Product view: which boxes each product was packed into.
+- In the Pack view: which products were packed into each pack.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
-### Tareas de reubicación
+### Relocation Tasks
 
-Las tareas de reubicación permiten mover productos desde su ubicación original hasta su ubicación de destino dentro del mismo almacén. Cada tarea se muestra en formato de tarjeta, donde se puede confirmar o ajustar la cantidad movida y la ubicación de destino. La información introducida se sincroniza con el ERP al final de la tarea, garantizando la coherencia entre el movimiento registrado y el stock.
+Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Movimiento entre almacenes`
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
 
-El proceso de reubicación comienza en el ERP desde el botón **Generar tarea de reubicación** en la ventana de Movimiento entre almacenes.
+The relocation process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
 
-Permite al responsable crear una tarea de reubicación a partir del documento **Movimiento entre almacenes**. El sistema toma la información cargada en el registro y sus líneas y la envía a la aplicación móvil, donde el operario puede ejecutar el movimiento desde la subaplicación correspondiente. Al pulsarlo, se abre un pop-up para asignar la tarea de forma manual o automática y definir su prioridad.
+Allows the manager to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to the mobile application, where the operator can execute the movement from the corresponding sub-application. When pressed, a pop-up opens to assign the task manually or automatically and define its priority.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
 
-El uso del botón **Generar tarea de reubicación** está sujeto a una validación del sistema que determina su disponibilidad. Solo se muestra cuando el documento *Movimiento entre almacenes* no ha sido procesado y no tiene ya una tarea asignada.
+Use of the **Generate Relocation Task** button is subject to system validation that determines its availability. It is only displayed when the *Goods Movement* document has not been processed and does not have a task already assigned to it.
 
-#### Acceso a las tareas de reubicación (Etendo Mobile)
+#### Access to Relocation Tasks (Etendo Mobile)
 
-Al acceder a Etendo Mobile en la sección Tareas de reubicación, se mostrarán todas las tareas y sus correspondientes estados y prioridades pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran como Pendiente.
+When accessing Etendo Mobile in the Relocation Tasks section, all tasks and their corresponding statuses and priorities belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
 
-Para realizar una **reubicación**:
+To perform a **relocation**:
 
-- Acceda al menú **Tareas de reubicación**. Allí, las tareas se dividen por estado: *Pendiente*, *En curso*, *Completada*.
-- Busque y seleccione la tarea desde la lista o utilizando el buscador.
-- Cuando se selecciona una tarea, se abre una pantalla con la información de la tarea.
-- Pulse el botón **Iniciar reubicación**.
-- Complete el campo **Cantidad contada**.
-- Complete el campo **Hueco destino**. (Opcional)
-- Confirme la tarea con el botón **Finalizar reubicación**.
-- Confirme que desea finalizar la tarea.
-- Vea el mensaje de éxito.
+- Access the **Relocation Tasks** menu. There, tasks are divided by status: *Pending*, *In Progress*, *Completed*.
+- Search for and select the task from the list or using the search engine.
+- When a task is selected, a screen with the task information opens.
+- Press the **Start Relocation** button.
+- Complete **Counted Quantity** field.
+- Complete **To Locator** field. (Optional)
+- Confirm the task with the **End Relocation** button.
+- Confirm that you want to finish the task.
+- See Success message.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
-### Mantenimiento de ajuste
+### Adjustment Tasks
 
-Las tareas de ajuste de inventario permiten a los operarios de almacén realizar recuentos físicos y ajustes de existencias directamente desde la aplicación móvil. Estas tareas se generan a partir de inventarios físicos en el sistema ERP.
+Inventory adjustment tasks allow warehouse operators to perform physical counts and stock adjustments directly from the mobile app. These tasks are generated from physical inventories in the ERP system.
 
-Esta funcionalidad corresponde a la misma operación realizada en la ventana **Inventario físico** de Etendo: registrar la cantidad real contada de un producto y actualizar las existencias en consecuencia, ya sea corrigiendo cantidades existentes o introduciendo existencias donde no había previamente. Cuando el estado de inventario cambia durante el proceso de ajuste, el sistema mueve automáticamente el/los producto(s) a los huecos asociados al nuevo estado, reflejando con precisión la condición actual de las existencias.
+This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inventario físico](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
 
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Inventario físico`
+:material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
 
-El proceso comienza creando tareas dentro de Etendo usando la ventana **Inventario físico**. Se crea un nuevo registro con líneas de producto para las que se desea la verificación y el ajuste de existencias. Una vez listo, debe generarse la tarea mediante el botón **Generar tarea**.
+The process begins by creating tasks within Etendo using the **Physical Inventory** window. A new record is created with product lines for which stock verification and adjustment is desired. Once this is ready, the task must be generated using the **Generate Task** button.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
 
-#### Acceso a las tareas de ajuste (Etendo Mobile)
+#### Access to Adjustment Tasks (Etendo Mobile)
 
-Al acceder a Etendo Mobile en la sección de Tareas de ajuste, se mostrarán todas las tareas y sus correspondientes estados y prioridades, pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
+When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and their corresponding statuses and priorities, belonging to the logged in user, will be displayed. By default, the tasks are shown in *Pending* status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
 
-Para **Ajustar** el inventario
+To **Adjust** inventory
 
-- Desde el menú principal de Etendo Mobile, navegue hasta la sección **Tareas de ajuste**. Las tareas se organizan por estado: *Pendiente*, *En curso* y *Completada*.
-- Busque y seleccione la tarea deseada de la lista o utilizando la función de búsqueda.
-- Al seleccionar una tarea, se abre una pantalla que muestra la información de la tarea.
-- Pulse el botón **Iniciar ajuste** para comenzar el proceso.
-- Introduzca la información relevante, incluidos los detalles del hueco y los recuentos de cantidad.
-- Escanee los productos para registrarlos o introduzca los datos manualmente.
-- Confirme la tarea pulsando el botón **Finalizar ajuste**.
-- Confirme que desea completar la tarea.
+- From the Etendo Mobile main menu, navigate to the **Adjustment Tasks** section. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
+- Search for and select the desired task from the list or using the search function.
+- When a task is selected, a screen opens displaying the task information.
+- Press the **Start Adjustment** button to begin the process.
+- Enter relevant information including storage bin details and quantity counts.
+- Scan products to stock them or manually enter the data.
+- Confirm the task by pressing the **End Adjustment** button.
+- Confirm that you want to complete the task.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
-### Mantenimiento de inspección de calidad
+### Quality Inspection Tasks
 
-Las tareas de inspección de calidad permiten a los operarios de almacén realizar la verificación de calidad del producto directamente desde Etendo Mobile. Estas tareas permiten a los operarios inspeccionar la mercancía, registrar los resultados de la inspección y actualizar el estado del inventario en función de las condiciones del producto, garantizando que solo los artículos aprobados por calidad estén disponibles para la venta o para su posterior procesamiento.
+Quality inspection tasks enable warehouse operators to perform product quality verification directly from Etendo Mobile. These tasks allow operators to inspect merchandise, record inspection results, and update inventory status based on product conditions, ensuring that only quality-approved items are available for sale or further processing.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inspección de calidad de inventario](#inspección-de-calidad-de-inventario).
+    For more information about how to use this functionality in Etendo, visit [Inventory Quality Inspection](#inventory-quality-inspection).
 
-#### Inicio del proceso (Etendo)
+#### Process Start (Etendo)
 
-El proceso comienza en Etendo creando tareas desde la ventana **Inspección de calidad de inventario**. Tras crear un documento de inspección con líneas de producto que requieren verificación de calidad, utilice el botón **Generar tarea** para crear una tarea móvil.
+The process begins in Etendo by creating tasks from the **Inventory Quality Inspection** window. After creating an inspection document with product lines requiring quality verification, use the **Generate Task** button to create a mobile task.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
 
-#### Acceso a las tareas de inspección de calidad (Etendo Mobile)
+#### Access to Quality Inspection Tasks (Etendo Mobile)
 
-Al acceder a Etendo Mobile en la sección **Mantenimiento de inspección de calidad**, se mostrarán todas las tareas y sus estados correspondientes pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
+When accessing Etendo Mobile in the **Quality Inspection Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are shown in *Pending* status.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-0.png)
 
-Para realizar una **inspección de calidad**:
+To perform a **quality inspection**:
 
-1. Desde el menú principal de Etendo Mobile, navegue hasta la sección **Mantenimiento de inspección de calidad**. Las tareas se organizan por estado: *Pendiente*, *En curso* y *Completada*.
+1. From the Etendo Mobile main menu, navigate to the **Quality Inspection Tasks** section. Tasks are organized by status: *Pending*, *In Progress*, and *Completed*.
 
-2. Busque y seleccione la tarea deseada de la lista o utilizando la función de búsqueda.
+2. Search for and select the desired task from the list or using the search function.
 
-3. Al seleccionar una tarea, se abre una pantalla que muestra la información de la tarea y las líneas de producto a inspeccionar.
+3. When a task is selected, a screen opens displaying the task information and product lines to be inspected.
 
-4. Pulse el botón **Iniciar inspección** para comenzar el proceso de control de calidad.
+4. Press the **Start Inspection** button to begin the quality control process.
 
-5. Los productos pueden escanearse utilizando el lector de códigos de barras o introducirse manualmente. Para cada línea de producto, complete los detalles de la inspección:
-    - Seleccione el **Estado destino** (estado objetivo según los resultados de la inspección: *Disponible*, *Dañado*, *Bloqueado*, etc.)
-    - Verifique el producto y sus atributos (lote, fecha de caducidad, etc.)
-    - Introduzca la **Cant.total** (cantidad real inspeccionada)
-    - Opcionalmente, añada notas o motivos de rechazo en el campo **Descripción**
+5. Products can be scanned using the barcode scanner or entered manually. For each product line, complete the inspection details:
+    - Select the **To State** (target status based on inspection results: *Available*, *Damaged*, *Blocked*, etc.)
+    - Verify the product and its attributes (batch, expiration date, etc.)
+    - Enter the **Quantity count** (actual quantity inspected)
+    - Optionally, add notes or rejection reasons in the **Description** field
 
-6. Una vez inspeccionados todos los productos, confirme la tarea pulsando el botón **Finalizar inspección**.
+6. Once all products have been inspected, confirm the task by pressing the **End Inspection** button.
 
-7. Confirme que desea completar la tarea.
+7. Confirm that you want to complete the task.
 
-8. Se mostrará un mensaje de éxito y los resultados de la inspección se sincronizarán con Etendo.
+8. A success message will be displayed, and the inspection results will be synchronized with Etendo.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-1.png)
 
 !!!note
-    Cuando se completa la inspección, el sistema actualiza automáticamente el estado del inventario y aplica las [Reglas de movimiento](#ventana-de-configuración-de-reglas-de-movimiento) si están configuradas. Los productos marcados con un estado diferente se reubicarán en consecuencia, o se creará un hueco de almacenamiento virtual si no se ha definido una ubicación específica para ese estado.
-### Todas las tareas
+    When the inspection is completed, the system automatically updates inventory status and applies [Movement Rules](#movement-rules-configuration-window) if configured. Products marked with a different status will be relocated accordingly, or a virtual storage bin will be created if no specific location is defined for that status.
+
+### All Tasks
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png)
 
-Desde esta ventana puede ver y trabajar con todos los tipos de tareas, como Picking, Packing y tareas de inventario.
+From this window you can view and work with all types of tasks, like Picking, Packing and Inventory Tasks.
 
 
 ---

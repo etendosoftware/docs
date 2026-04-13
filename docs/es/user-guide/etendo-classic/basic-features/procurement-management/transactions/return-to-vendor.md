@@ -41,7 +41,7 @@ Para introducir nuevas líneas debes hacer clic en el botón de proceso PICK/EDI
   - **Devuelto**: cantidad que deseas devolver. Al seleccionar la fila, la cantidad no se establece por defecto ya que el sistema no puede saber cuántos artículos se devuelven.
   - **Precio unitario**: precio de la orden de compra original.
   - **Motivos de devolución**: el motivo por el que devuelves el artículo.
-  - y **Unidad de Devolución**, solo en caso de que esté habilitada la preferencia de \*unidad de medida alternativa (AUM)\*.
+  - y **Unidad de Devolución**, solo en caso de que esté habilitada la preferencia de \*unidad de medida alternativa (AUM)*.
     En ese caso, se muestra la AUM "primary" del producto para el flujo de compra si existe; en caso contrario, se muestra la UdM del producto. El usuario siempre puede cambiarla a la UdM del producto.
 
 Puedes definir el Motivo de devolución a nivel de cabecera. En este caso, al elegir una línea hereda lo seleccionado en la cabecera, pero puedes modificarlo como desees.
@@ -76,3 +76,5 @@ Este trabajo es una obra derivada de [Procurement Management](http://wiki.openbr
 
 ---
 Esta obra está licenciada bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
