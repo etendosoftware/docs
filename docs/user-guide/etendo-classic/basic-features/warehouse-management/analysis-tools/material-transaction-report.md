@@ -1,10 +1,18 @@
 ---
 title: Material Transaction Report
+tags:
+ - Material Transaction Report
+ - Warehouse Management
+ - Inventory
+ - Transactions
+ - Analysis Tools
 ---
+
+# Material Transaction Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Material Transaction Report`
 
-### **Overview**
+## **Overview**
 
 The **Material Transaction Report** provides a consolidated view of all material movements recorded in the system, including outgoing shipments and incoming receipts. Transactions are grouped by Business Partner and document, making it straightforward to trace which products were shipped or received, in what quantities, and through which warehouse.
 
@@ -14,7 +22,7 @@ This report is useful for:
 - Auditing inventory transactions to verify that shipments and receipts match expected quantities.
 - Reconciling documents by Business Partner to ensure completeness and accuracy of recorded transactions.
 
-### **Parameters Window**
+## **Parameters Window**
 
 ![Material Transaction Report](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
 
