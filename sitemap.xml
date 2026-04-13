@@ -4530,18 +4530,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/</loc>
-        <lastmod>2026-04-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/</loc>
-        <lastmod>2026-04-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/es/getting-started/installation/</loc>
         <lastmod>2026-04-13</lastmod>
         <changefreq>daily</changefreq>
