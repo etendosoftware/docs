@@ -22,8 +22,8 @@ In Material Requirement Planning the application is used to *automatically revie
 
 The Material Requirement Planning consists of two plans:
 
-- Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](../production-management/transactions.md#work-requirement) and the [Requisition](../procurement-management/transactions.md#requisition).
-- Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](../procurement-management/transactions.md#purchase-order).
+- Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](../production-management/transactions.md#work-requirement) and the [Requisition](../procurement-management/transactions/requisition.md).
+- Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](../procurement-management/transactions/purchase-order.md).
 
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
@@ -80,8 +80,8 @@ In the created overview the material planner reviews and analyzes the lines. Bas
 The MRP interacts with the following modules:
 
 - [Procurement Management](../procurement-management/getting-started.md):
-    - [Requisitions](../procurement-management/transactions.md#requisition) are created from the Manufacturing Plan
-    - [Purchase Orders](../procurement-management/transactions.md#purchase-order) are created from the Purchasing Plan
+    - [Requisitions](../procurement-management/transactions/requisition.md) are created from the Manufacturing Plan
+    - [Purchase Orders](../procurement-management/transactions/purchase-order.md) are created from the Purchasing Plan
 - [Sales Management](../sales-management/getting-started.md):
     - [Sales Orders](../sales-management/transactions.md#sales-order) are optionally taken into account in the calculations of both plans
 - [Warehouse Management](../warehouse-management/getting-started.md):

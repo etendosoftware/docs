@@ -89,14 +89,14 @@ Dependiendo del producto, pueden aparecer diferentes tipos de transacción en la
     Al hacer clic en el botón **Generar órdenes de fabricación**, las órdenes de fabricación se crean automáticamente. Los documentos deben procesarse; consulte la sección [Orden de Fabricación](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#work-requirement) en la sección de Gestión de producción para más detalles.
 
 !!! info
-    Al hacer clic en el botón **Generar necesidades de material**, las necesidades de material se crean automáticamente en borrador. Los documentos deben completarse; consulte la sección [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) en la sección de Gestión de aprovisionamiento para más detalles.
+    Al hacer clic en el botón **Generar necesidades de material**, las necesidades de material se crean automáticamente en borrador. Los documentos deben completarse; consulte la sección [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md) en la sección de Gestión de aprovisionamiento para más detalles.
 
 Las necesidades de material pueden seleccionarse como entrada en el método de planificación de la Planificación de compras para incluirse en los cálculos de ese plan, con el fin de calcular si es necesario crear pedidos de compra.
 
 Una vez que los documentos se crean automáticamente, los números de los documentos aparecen en las columnas **Orden de Fabricación** y **Línea de necesidad de material** de las líneas. El pedido de compra creado está en estado borrador y debe contabilizarse.
 
 !!! info
-    Para más información, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
+    Para más información, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md).
 
 ## Planificación de compras
 
@@ -182,7 +182,7 @@ Al hacer clic en el botón **Crear pedidos de compra**, se crea el pedido de com
 Una vez que el pedido de compra se crea automáticamente, el número del documento aparece en la columna **Línea de pedido** de la línea. El pedido de compra creado está en estado borrador y debe contabilizarse.
 
 !!! info
-    Para más información, consulte la sección [Pedido de compra](../procurement-management/transactions.md#purchase-order).
+    Para más información, consulte la sección [Pedido de compra](../procurement-management/transactions/purchase-order.md).
 
 ## Previsión de ventas
 
@@ -216,3 +216,5 @@ Añada productos que se incluirán en su previsión de MRP. Cada producto se añ
 ---
 
 - Este trabajo es una obra derivada de [Planificación de necesidades de material](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} de [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+
+---

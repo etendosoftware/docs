@@ -69,12 +69,12 @@ Este módulo mejora la gestión de cuentas bancarias, permitiendo una mayor pers
     Esta funcionalidad está disponible en las siguientes ventanas:
 
     - [Terceros](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
-    - [Factura (Cliente)](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
-    - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
-    - [Pedido de venta](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
-    - [Pedido de compra](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
-    - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
-    - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+    - [Factura (Cliente)](../../../basic-features/sales-management/transactions/purchase-invoice.md)
+    - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions/purchase-invoice.md#modify-payment-plan)
+    - [Pedido de venta](../../../basic-features/sales-management/transactions/purchase-order.md)
+    - [Pedido de compra](../../../basic-features/procurement-management/transactions/purchase-order.md#advanced-bank-account-management)
+    - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice.md)
+    - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions/purchase-order.md)
 
     Para más información, visite [Gestión avanzada de cuentas bancarias](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 ### Liquidación de terceros
@@ -112,10 +112,10 @@ Esta funcionalidad forma parte de Financial Extensions Bundle y es útil cuando 
 
     - [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
     - [Factura (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
-    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
-    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
+    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md#how-to-reactivate-a-closed-purchase-order)
+    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate)
     - [Amortización](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
-    - y la [Guía del desarrollador de Procesamiento avanzado de documentos financieros](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
+    - y la [Guía del desarrollador de Procesamiento avanzado de documentos financieros](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing)
 ### Informe de Amortización de Activos
 
 :octicons-package-16: Paquete Java: `com.smf.asset.amortization.report`
@@ -236,12 +236,12 @@ El botón Eliminar pago está disponible en las ventanas Pedido de venta, Pedido
 !!! info
     Para más información, visite:
 
-    - [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal)
-    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal)
-    - [Factura (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal_1)
-    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
-    - [Cobros](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
-    - [Pago](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
+    - [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions/purchase-order.md)
+    - [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md)
+    - [Factura (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions/purchase-invoice.md)
+    - [Factura (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md)
+    - [Cobros](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice.md)
+    - [Pago](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/purchase-order.md)
     - [Cuenta financiera](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)
 ### Remesas
 
@@ -280,6 +280,10 @@ Esta funcionalidad permite al usuario ajustar cuentas, garantizando que el saldo
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
 
 ---
 

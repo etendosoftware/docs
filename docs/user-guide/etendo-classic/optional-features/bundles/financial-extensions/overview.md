@@ -78,9 +78,9 @@ This module enhances the bank account management enabling greater customization 
 
     - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
     - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
-    - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
+    - [Purchase Invoice](../../../basic-features/procurement-management/transactions/purchase-invoice.md#modify-payment-plan)
     - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
-    - [Purchase order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
+    - [Purchase order](../../../basic-features/procurement-management/transactions/purchase-order.md#advanced-bank-account-management)
     - [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
     - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
@@ -104,8 +104,8 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 
     - [Sales Order](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
     - [Sales Invoice](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
-    - [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
-    - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
+    - [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md#how-to-reactivate-a-closed-purchase-order)
+    - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate)
     - [Amortization](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
     - and the [Advanced Financial Docs. Processing developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing)
 
@@ -260,9 +260,9 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
     For more information, visit:
 
     - [Sales Order](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal)
-    - [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal)
+    - [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md#payment-removal)
     - [Sales Invoice](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal_1)
-    - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
+    - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#remove-payment)
     - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
     - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
     - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)

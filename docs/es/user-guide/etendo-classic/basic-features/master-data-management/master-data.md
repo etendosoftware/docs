@@ -63,7 +63,7 @@ Campos a tener en cuenta:
 - **Días consumo**: información que se utilizará al crear pedidos de venta o pedidos de compra para ese tercero en particular, mediante un proceso denominado *Copiar líneas*.  
     
     !!! info
-        Para más información sobre este proceso, visite las secciones [Pedido de venta](../sales-management/transactions.md#sales-order) y [Pedido de compra](../procurement-management/transactions.md#purchase-order).
+        Para más información sobre este proceso, visite las secciones [Pedido de venta](../sales-management/transactions.md#sales-order) y [Pedido de compra](../procurement-management/transactions/purchase-order.md) secciones.
 
 - **Crédito límite**: Etendo informará cuando se supere el límite de crédito introducido en este campo para el tercero al contabilizar facturas de venta.
 - **Consentimiento para el Procesamiento de Datos del Cliente**: casilla de verificación en el modelo de datos de terceros, para reflejar si un contacto determinado consiente o no que sus datos puedan ser utilizados por la organización.
@@ -334,7 +334,7 @@ El usuario puede configurar, para cada proveedor o acreedor y para el esquema co
 - las transacciones de **Pasivo del proveedor**, como la contabilización de facturas de compra.  
     
     !!! info
-        Para más información, visite [Factura (Proveedor)](../procurement-management/transactions.md#purchase-invoice).
+        Para más información, visite [Factura (Proveedor)](../procurement-management/transactions/purchase-invoice.md).
 
 - las transacciones de **Pagos por adelantado del proveedor**, como aquellos casos en los que el proveedor de los bienes requiere que la empresa pague por adelantado una parte o la totalidad del importe de la deuda.  
     
@@ -597,7 +597,7 @@ En esta sección, el usuario puede ver información relacionada con los pedidos,
 
 El usuario puede seleccionar un tercero para comenzar a ver las transacciones relacionadas.
 
-![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
+![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-bmTZbQ.png)
 
 #### Pedidos tercero
 
@@ -1293,6 +1293,8 @@ Permite visualizar el stock por unidades logísticas (inventario referenciado) d
 ---
 
 Este trabajo es una obra derivada de [Gestión de Datos Maestros](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
 
 ---
 

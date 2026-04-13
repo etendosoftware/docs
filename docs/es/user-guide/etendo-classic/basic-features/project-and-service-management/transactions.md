@@ -176,7 +176,7 @@ Un Informe de gasto se utiliza para registrar partes de horas y gastos de artíc
 
 En base a las partes de horas, se calcula el coste relacionado con los operarios asignados al proyecto y puede consultarse en el informe [Rentabilidad de Proyectos](../project-and-service-management/analysis-tools.md#project-profitability).
 
-Para los gastos de artículos, se documenta el coste que los operarios han realizado relacionado con proyectos. En base a esto, el seguimiento para reembolsar el coste al operario se realiza con la creación de una [Factura (Proveedor)](../procurement-management/transactions.md#purchase-invoice). Para vincular las facturas correspondientes al proyecto, existe un campo de dimensión de proyecto en la cabecera de la ventana Factura (Proveedor).
+Para los gastos de artículos, se documenta el coste que los operarios han realizado relacionado con proyectos. En base a esto, el seguimiento para reembolsar el coste al operario se realiza con la creación de una [Factura (Proveedor)](../procurement-management/transactions/purchase-invoice.md). Para vincular las facturas correspondientes al proyecto, existe un campo de dimensión de proyecto en la cabecera de la ventana Factura (Proveedor).
 
 Tanto para partes de horas como para gastos de artículos, se puede indicar si al cliente relacionado con el proyecto se le facturan estos costes. El seguimiento de esto es que se crea un [Pedido de venta](../sales-management/transactions.md#sales-order) para crear una [Factura (Cliente)](../sales-management/transactions.md#sales-invoice).
 

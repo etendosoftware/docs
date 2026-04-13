@@ -18,7 +18,7 @@ Etendo automatically generates an accounting representation of all the transacti
 Accounting is the system of tracking the assets, the debts, the income and the expenses of a business.
 In Etendo, most of the accounting entries are automatically created while posting [documents](../financial-management/accounting/setup/document-type.md). 
 
-- [Goods Receipts](../procurement-management/transactions.md#goods-receipts) and [Purchase Invoices](../procurement-management/transactions.md#purchase-invoice) in the [Procurement Management](../procurement-management/getting-started.md) business area
+- [Goods Receipts](../procurement-management/transactions/goods-receipt.md) and [Purchase Invoices](../procurement-management/transactions/purchase-invoice.md) in the [Procurement Management](../procurement-management/getting-started.md) business area
 - [Goods Shipments](../sales-management/transactions.md#goods-shipment) and [Sales Invoices](../sales-management/transactions.md#sales-invoice) in the [Sales Management](../sales-management/getting-started.md) business area.
 
 Accounting entries not directly related to [documents](../financial-management/accounting/setup/document-type.md) managed within a given application area can be created and posted in a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal). For instance a provision for stock depreciation accounting entry.
@@ -26,7 +26,7 @@ Accounting entries not directly related to [documents](../financial-management/a
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
-The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application/preference.md).
+The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions/purchase-invoice.md). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application/preference.md).
 
 - To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
@@ -135,7 +135,7 @@ When a Payment is Received the Finance staff can register it in different ways:
 !!!note
     Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
 
-- Using the [Add Payment button](../sales-management/transactions.md#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
+- Using the [Add Payment button](../sales-management/transactions/return-to-vendor.md) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
 
 - It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 

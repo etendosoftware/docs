@@ -68,7 +68,7 @@ Fields to note:
 - **Consumption Days**: information which will be used while creating sales or purchase orders for that particular business partner, by using a process named *Copy Lines*.  
     
     !!! info
-        For more information about this process, visit [Sales Order](../sales-management/transactions.md#sales-order) and [Purchase Order](../procurement-management/transactions.md#purchase-order) sections.
+        For more information about this process, visit [Sales Order](../sales-management/transactions.md#sales-order) and [Purchase Order](../procurement-management/transactions/purchase-order.md) sections.
 
 - **Credit Line Limit**: Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
 - **Consent for Customer Data Processing**: Checkbox in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization. 
@@ -344,7 +344,7 @@ The user can configure for each supplier or creditor and available accounting sc
 - the **Vendor Liability** transactions such as purchase invoices posting.  
     
     !!! info
-        For more information, visit [Purchase Invoice](../procurement-management/transactions.md#purchase-invoice).
+        For more information, visit [Purchase Invoice](../procurement-management/transactions/purchase-invoice.md).
 
 - the **Vendor Prepayment** transactions such as those cases when the supplier of the goods requires the company to pay in advance part or full amount of the debt.  
     

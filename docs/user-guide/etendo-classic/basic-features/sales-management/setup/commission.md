@@ -20,7 +20,7 @@ The Commission functionality in Etendo begins with the **Commission window**, wh
 
 From the Commission window, more detailed criteria are defined, including filters by business partner, product, or region, along with the actual commission structure. A key feature is the ability to assign a **sales representative** directly when creating sales documents (orders and/or invoices), which allows Etendo to link those transactions to the appropriate commission plan and ensures accurate filtering. 
 
-Once all conditions are set, the system generates the corresponding commission, which is displayed in the [**Commission Payment**](../../../../etendo-classic/basic-features/sales-management/transactions.md#commission-payment) window, where users can review a detailed breakdown of the calculation and even generate a [**purchase invoice**](../../../../etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) to process the commission payment to the sales representative.
+Once all conditions are set, the system generates the corresponding commission, which is displayed in the [**Commission Payment**](../../../../etendo-classic/basic-features/sales-management/transactions.md#commission-payment) window, where users can review a detailed breakdown of the calculation and even generate a [**purchase invoice**](../../procurement-management/transactions/purchase-invoice.md) to process the commission payment to the sales representative.
 
 To sum up, the overall flow is:
 

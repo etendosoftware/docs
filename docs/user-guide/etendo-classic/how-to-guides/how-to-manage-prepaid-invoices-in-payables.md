@@ -20,7 +20,7 @@ In these situations, a particular payment term is agreed upon by the Company and
 
 ## Recommended articles
 
-Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) and a [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) as well as how to register a [Vendor Payment](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
+Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) and a [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md) as well as how to register a [Vendor Payment](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
 It is recommended as well to understand how to set up a [Payment Term](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
@@ -45,7 +45,7 @@ Please note that, prepay payment term has a header and a line:
 
 ### Purchase Order creation
 
-As already mentioned, the first step is to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) which contains the goods that the company needs.
+As already mentioned, the first step is to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) which contains the goods that the company needs.
 
 In this scenario, the parties have agreed a specific payment term which can be filled in the corresponding field of the purchase order header.
 
@@ -100,7 +100,7 @@ The purchase order payment plan includes the payment registered in the Payment O
 
 ### Payment check
 
-Back to the [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
+Back to the [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md), it is possible to check the recently created Payment Plan with its Payment Details.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
 
@@ -114,7 +114,7 @@ To summarize:
 
 ### Pre-Paid invoice management and accounting
 
-The company in this example can register the [Goods Receipt](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) before registering the vendor invoice by using the process [Pending Goods Receipts](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts).
+The company in this example can register the [Goods Receipt](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) before registering the vendor invoice by using the process [Pending Goods Receipts](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/pending-goods-receipts.md).
 
 This process allows introducing the exact amount of goods received from the vendor against each purchase order line.
 
@@ -124,7 +124,7 @@ Once processed, Etendo informs about the Goods Receipt number just registered.
 
 Next step is to enter the vendor invoice. There are several ways of entering a vendor invoice.
 
-The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
+The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 

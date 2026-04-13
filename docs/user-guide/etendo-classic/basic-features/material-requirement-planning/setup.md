@@ -29,7 +29,7 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Material Requirement**: demand for the product on requisitions in completed status. 
 !!! info
-    For more details, see the [_Requisition_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section.
+    For more details, see the [_Requisition_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md) section.
 
 - **Sales Forecast**: prevision of future demand for the product. 
 !!! info
@@ -45,7 +45,7 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Pending Purchase Order**: supply for the product on a booked purchase order that is not received yet. 
 !!! info
-    For more details, see the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
+    For more details, see the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) section.
 
 
 ### Header

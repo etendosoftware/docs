@@ -22,8 +22,8 @@ En Gestión de MRP, la aplicación se utiliza para *revisar automáticamente la 
 
 La Gestión de MRP consta de dos planes:
 
-- Planificación de la producción: plan para mostrar cálculos relacionados con productos que pasan por Producción. Los documentos sugeridos para crear en este plan son la [Orden de Fabricación](../production-management/transactions.md#work-requirement) y la [Necesidad de material](../procurement-management/transactions.md#requisition).
-- Planificación de compras: plan para mostrar cálculos relacionados con productos que se aprovisionan. El documento sugerido para crear en este plan es el [Pedido de compra](../procurement-management/transactions.md#purchase-order).
+- Planificación de la producción: plan para mostrar cálculos relacionados con productos que pasan por Producción. Los documentos sugeridos para crear en este plan son la [Orden de Fabricación](../production-management/transactions.md#work-requirement) y la [Necesidad de material](../procurement-management/transactions/requisition.md).
+- Planificación de compras: plan para mostrar cálculos relacionados con productos que se aprovisionan. El documento sugerido para crear en este plan es el [Pedido de compra](../procurement-management/transactions/purchase-order.md).
 
 Los **Método de planificación** se introducen para definir qué componentes de suministro se tienen en cuenta en los cálculos de estos planes.
 
@@ -78,8 +78,8 @@ En la visión general creada, el planificador de material revisa y analiza las l
 El MRP interactúa con los siguientes módulos:
 
 - [Gestión de Compras](../procurement-management/getting-started.md):
-    - [Necesidad de material](../procurement-management/transactions.md#requisition) se crean desde la Planificación de la producción
-    - [Pedido de compra](../procurement-management/transactions.md#purchase-order) se crean desde la Planificación de compras
+    - [Necesidad de material](../procurement-management/transactions/requisition.md) se crean desde la Planificación de la producción
+    - [Pedido de compra](../procurement-management/transactions/purchase-order.md) se crean desde la Planificación de compras
 - [Gestión de Ventas](../sales-management/getting-started.md):
     - [Pedido de venta](../sales-management/transactions.md#sales-order) se tienen opcionalmente en cuenta en los cálculos de ambos planes
 - [Gestión de Almacén](../warehouse-management/getting-started.md):
@@ -91,3 +91,5 @@ El MRP interactúa con los siguientes módulos:
 ---
 
 - Este trabajo es una obra derivada de [Gestión de MRP](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} de [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+
+---

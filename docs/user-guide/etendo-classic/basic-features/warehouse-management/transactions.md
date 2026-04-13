@@ -370,7 +370,7 @@ For more information, visit [Sales Order](../../../../user-guide/etendo-classic/
 
 Pre-reservations can also be made from the Purchase Order. Being in the purchase order line, there is the possibility of selecting any sales order line pending to be delivered that is waiting to receive the goods in the warehouse. Once the items are received the pre-reservation is converted to reservation and the goods are reserved for that sales order line.
 
-For more information, visit [Purchase Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
+For more information, visit [Purchase Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md).
 
 ### Purchasing Plan (MRP)
 

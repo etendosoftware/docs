@@ -88,7 +88,7 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
     Para más información, visite la guía de usuario de:
 
     - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
-    - [Albarán (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
+    - [Albarán (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md#how-to-reactivate-goods-receipts)
     - [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
@@ -124,7 +124,7 @@ Este módulo le permite configurar si el sistema permite transacciones de materi
 
 La preferencia **Permitir transacciones de coste con fecha anterior** se establece en **Y** por defecto, lo que significa que se permiten transacciones con fechas anteriores a la fecha actual. 
 
-Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Inventarios físicos](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
+Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions/goods-receipt.md), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Inventarios físicos](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
 
 !!! warning
     Si necesita crear una nueva configuración para esta preferencia, debe establecerse únicamente a nivel global, sin distinguir ningún nivel de visibilidad específico (Organización, Usuario, Rol, etc.), ya que podría afectar al correcto funcionamiento de la validación.
@@ -145,3 +145,5 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

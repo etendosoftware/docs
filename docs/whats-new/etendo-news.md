@@ -673,13 +673,13 @@ tags:
 - :octicons-rocket-24: **New Shipment and Invoicing Statuses in Purchase Orders and Goods Receipts**
 
     ---  
-    This release introduces improved visibility in procurement processes. In the [Purchase Order](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) window, the status bar now shows shipment and invoicing percentages. At the line level, you’ll see detailed quantities for what has been invoiced and shipped.  
-    Similarly, the [Goods Receipt](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window shows invoicing percentages at both header and line levels.
+    This release introduces improved visibility in procurement processes. In the [Purchase Order](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) window, the status bar now shows shipment and invoicing percentages. At the line level, you’ll see detailed quantities for what has been invoiced and shipped.  
+    Similarly, the [Goods Receipt](../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) window shows invoicing percentages at both header and line levels.
 
 - :octicons-rocket-24: **Easily Exclude Promotions and Discounts with a Simple Checkbox**
 
     ---
-    A new checkbox in the *More Information* section of [Sales Order](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_1) and [Sales Invoice](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_5) lines allows users to **cancel automatic discounts and promotions**. This gives you more control over pricing on a per-line basis.
+    A new checkbox in the *More Information* section of [Sales Order](../user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines_1) and [Sales Invoice](../user-guide/etendo-classic/basic-features/sales-management/transactions/return-to-vendor.md) lines allows users to **cancel automatic discounts and promotions**. This gives you more control over pricing on a per-line basis.
 
 - :octicons-rocket-24: **Improved Navigation in the Create Invoices from Orders Process**
 
@@ -689,7 +689,7 @@ tags:
 - :octicons-rocket-24: **Enhanced Purchase Invoice Voiding with Supplier Reference**
 
     ---  
-    When canceling a purchase invoice, Etendo creates a reverse document that now references the supplier’s cancellation document. The [invoice reactivation](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#reactivate) process includes a new `Supplier Reference` field to ensure clear traceability and alignment.
+    When canceling a purchase invoice, Etendo creates a reverse document that now references the supplier’s cancellation document. The [invoice reactivation](../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#reactivate) process includes a new `Supplier Reference` field to ensure clear traceability and alignment.
 
 </div>
 

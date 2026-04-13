@@ -28,7 +28,7 @@ Por **valor por defecto**, MRP tiene en cuenta el **stock** y el **stock mín.**
 
 -   **Necesidad de material**: demanda del producto en necesidades de material en estado completado.
 !!! info
-    Para más detalles, consulte la sección [_Necesidad de material_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition).
+    Para más detalles, consulte la sección [_Necesidad de material_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md).
 
 - **Previsión de ventas**: previsión de demanda futura del producto.
 !!! info
@@ -44,7 +44,7 @@ Por **valor por defecto**, MRP tiene en cuenta el **stock** y el **stock mín.**
 
 -   **Pedido de compra pendiente**: oferta del producto en un pedido de compra reservado que aún no se ha recibido.
 !!! info
-    Para más detalles, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
+    Para más detalles, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md).
 
 ### Cabecera
 
@@ -86,3 +86,5 @@ Defina el planificador encargado de gestionar la compra o la producción de prod
 ---
 
 - Este trabajo es una obra derivada de [Material_Requirement_Planning](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} de [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+
+---

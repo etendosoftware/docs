@@ -20,7 +20,7 @@ En estas situaciones, la empresa y el proveedor acuerdan unas condiciones de pag
 
 ## Artículos recomendados
 
-La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) y una [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice), así como de cómo registrar un [Pago a proveedor](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
+La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) y una [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md), así como de cómo registrar un [Pago a proveedor](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
 También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
@@ -45,7 +45,7 @@ Tenga en cuenta que las condiciones de pago de prepago tienen una cabecera y una
 
 ### Creación del Pedido de compra
 
-Tal y como se ha mencionado, el primer paso es crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) que contenga los bienes que la empresa necesita.
+Tal y como se ha mencionado, el primer paso es crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) que contenga los bienes que la empresa necesita.
 
 En este escenario, las partes han acordado unas condiciones de pago específicas que pueden informarse en el campo correspondiente de la cabecera del pedido de compra.
 
@@ -100,7 +100,7 @@ El plan de pagos del pedido de compra incluye el pago registrado en la solapa De
 
 ### Comprobación del pago
 
-De vuelta al [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), es posible comprobar el plan de pagos creado recientemente con sus detalles de pago.
+De vuelta al [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md), es posible comprobar el plan de pagos creado recientemente con sus detalles de pago.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
 
@@ -114,7 +114,7 @@ En resumen:
 
 ### Gestión y contabilidad de facturas prepagadas
 
-La empresa de este ejemplo puede registrar el [Albarán (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) antes de registrar la factura del proveedor utilizando el proceso [Albaranes pendientes de recibir](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts).
+La empresa de este ejemplo puede registrar el [Albarán (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/goods-receipt.md) antes de registrar la factura del proveedor utilizando el proceso [Albaranes pendientes de recibir](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/pending-goods-receipts.md).
 
 Este proceso permite introducir la cantidad exacta de bienes recibidos del proveedor contra cada línea del pedido de compra.
 
@@ -124,7 +124,7 @@ Una vez procesado, Etendo informa del número de albarán recién registrado.
 
 El siguiente paso es introducir la factura del proveedor. Hay varias formas de introducir una factura de proveedor.
 
-La empresa de este ejemplo utiliza, por ejemplo, el proceso "Crear líneas de", que se puede encontrar en la ventana [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4). Este proceso puede utilizarse una vez que la información de cabecera de la factura de compra se haya introducido correctamente. Recupera información del pedido o del albarán para copiarla en la factura introducida.
+La empresa de este ejemplo utiliza, por ejemplo, el proceso "Crear líneas de", que se puede encontrar en la ventana [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-invoice.md#lines). Este proceso puede utilizarse una vez que la información de cabecera de la factura de compra se haya introducido correctamente. Recupera información del pedido o del albarán para copiarla en la factura introducida.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 

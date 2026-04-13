@@ -40,15 +40,15 @@ For orders, quotations and return documents it is possible to close multiple doc
 
 This functionality is available in the following windows:
 
-- [Sales Quotation](../../../basic-features/sales-management/transactions.md#bulk-completion)
-- [Sales Order](../../../basic-features/sales-management/transactions.md#bulk-completion_1)
-- [Goods Shipment](../../../basic-features/sales-management/transactions.md#bulk-completion_2)
-- [Return From Customer](../../../basic-features/sales-management/transactions.md#bulk-completion_3)
+- [Sales Quotation](../../../basic-features/sales-management/transactions.md#sales-quotation)
+- [Sales Order](../../../basic-features/sales-management/transactions.md#sales-order)
+- [Goods Shipment](../../../basic-features/sales-management/transactions.md#goods-shipment)
+- [Return From Customer](../../../basic-features/sales-management/transactions.md#return-from-customer)
 - [Sales Invoice](../../../basic-features/sales-management/transactions.md#bulk-completion_4)
-- [Purchase Order](../../../basic-features/procurement-management/transactions.md#bulk-completion)
-- [Goods Receipt](../../../basic-features/procurement-management/transactions.md#bulk-completion_1)
-- [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#bulk-completion_2)
-- [Return To Vendor](../../../basic-features/procurement-management/transactions.md#bulk-completion_3)
+- [Purchase Order](../../../basic-features/procurement-management/transactions/purchase-order.md#bulk-completion)
+- [Goods Receipt](../../../basic-features/procurement-management/transactions/goods-receipt.md#bulk-completion)
+- [Purchase Invoice](../../../basic-features/procurement-management/transactions/purchase-invoice.md#bulk-completion)
+- [Return To Vendor](../../../basic-features/procurement-management/transactions/return-to-vendor.md#bulk-completion)
 
 
 As explained, using Bulk Completion improves efficiency by allowing users to perform document actions in bulk, streamlining operations and saving time.

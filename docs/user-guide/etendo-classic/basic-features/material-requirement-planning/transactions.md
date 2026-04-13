@@ -92,7 +92,7 @@ Depending on the product, different transaction types may appear in the lines. A
 
 
 !!! info
-    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section in the Procurement Management section for details.
+    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/requisition.md) section in the Procurement Management section for details.
 
 
 The requisitions can be selected as input in the planning method of the Purchasing Plan to be included in the calculations of that plan, in order to calculate if Purchase Orders need to be created.
@@ -100,7 +100,7 @@ The requisitions can be selected as input in the planning method of the Purchasi
 Once the documents are created automatically, the numbers of the documents appear in the Work Requirement and the Requisition Line columns of the lines. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information please check the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
+    For more information please check the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions/purchase-order.md) section.
 
 
 ## Purchasing Plan
@@ -189,7 +189,7 @@ By clicking the Create Purchase Orders button, the purchase order is created, pr
 Once the purchase order is created automatically, the number of the document appears in the Order Line column of the line. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information, please check the [Purchase Order](../procurement-management/transactions.md#purchase-order) section.
+    For more information, please check the [Purchase Order](../procurement-management/transactions/purchase-order.md) section.
 
 
 ## MRP Forecast
