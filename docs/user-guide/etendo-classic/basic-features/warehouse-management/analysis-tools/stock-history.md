@@ -29,7 +29,7 @@ The window shows the following fields from which the user is able to filter and 
 - Warehouse
 - Storage Bin
 - Quantity on hand
-- Reserved QtY
+- Reserved Qty
 - Allocated Quantity
 - Quantity in draft transaction
  

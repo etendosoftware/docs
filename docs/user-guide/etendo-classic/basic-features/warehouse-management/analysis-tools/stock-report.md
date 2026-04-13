@@ -8,7 +8,7 @@ title: Stock Report
 
 ### **Overview**
 
-The Stock Report shows current stock levels for all products that have inventory on hand (quantity greater than zero). Data is grouped by product category, with each row displaying the product, warehouse, and storage bin location. This report provides quick visibility into how inventory is distributed across warehouses and bins.
+The Stock Report shows current stock levels for all products with inventory different from zero (including negative on-hand quantities). Data is grouped by product category, with each row displaying the product, warehouse, and storage bin location. This report provides quick visibility into how inventory is distributed across warehouses and bins.
 
 Regularly reviewing the Stock Report helps maintain inventory accuracy and supports better purchasing decisions. By identifying products that are running low or accumulating beyond expected levels, users can take timely action to avoid stockouts that delay operations or overstock situations that tie up capital and warehouse space. This makes the report a practical tool for keeping inventory aligned with actual business demand.
 
