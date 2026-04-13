@@ -24,9 +24,10 @@ This page provides quick access to Etendo live test environments that are always
 
     ---
 
-    [Etendo 24 + Bundles](https://demo24.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [Etendo 25 + Bundles](https://demo.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [:material-new-box: Etendo 25 + Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
+    [Etendo 26 + Bundles (New UI)](https://demo.etendo.cloud){ target="blank"}<br>
+    [Etendo 26 + Bundles (Classic UI)](https://demo.etendo.cloud/etendo){ target="blank"}<br><br>
+    [Etendo 25 + Bundles (New UI)](https://demo25.bundles.etendo.cloud){ target="blank"}<br>
+    [Etendo 25 + Bundles (Classic UI)](https://demo25.bundles.etendo.cloud/etendo){ target="blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
 
@@ -34,8 +35,9 @@ This page provides quick access to Etendo live test environments that are always
 
     ---
 
-    [Etendo 24](https://demo24.etendo.cloud/etendo/security/Login){ target="blank"} <br>
-    [Etendo 25](https://demo25.etendo.cloud/etendo/security/Login){ target="blank"} 
+    [Etendo 26 (New UI)](https://demo26.etendo.cloud){ target="blank"}<br>
+    [Etendo 26 (Classic UI)](https://demo26.etendo.cloud/etendo){ target="blank"}<br><br>
+    [Etendo 25](https://demo25.etendo.cloud){ target="blank"}
 
 </div>
 
