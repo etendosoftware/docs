@@ -43,9 +43,9 @@ This is useful when you want to, for example, group individual team cost centers
 
 ## Related Setup
 
-- [General Ledger Configuration](../general-ledger-configuration/) – Configure how accounting dimensions like cost centers are used in your ledger.
-- [Account Combination](../account-combination/) – Define how cost centers combine with accounts and other dimensions.
-- [ABC Activity](../abc-activity/) – Another accounting dimension that can be used alongside cost centers.
+- [General Ledger Configuration](general-ledger-configuration.md) – Configure how accounting dimensions like cost centers are used in your ledger.
+- [Account Combination](account-combination.md) – Define how cost centers combine with accounts and other dimensions.
+- [ABC Activity](abc-activity.md) – Another accounting dimension that can be used alongside cost centers.
 
 ---
 
