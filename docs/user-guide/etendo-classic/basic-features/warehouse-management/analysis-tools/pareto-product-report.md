@@ -11,7 +11,7 @@ title: Pareto Product Report
 **Pareto Product Report** distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
 
 Following distribution is used: A products represent 80% value of the warehouse, B - 15% and C- 5%.
-> 
+
 !!! info
     The classification is based on the cost of the product. That is why it is needed to have a Costing Rule validated and the Material Transaction costs of the product calculated up to date.
 

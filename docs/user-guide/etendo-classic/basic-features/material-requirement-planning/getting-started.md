@@ -85,7 +85,7 @@ The MRP interacts with the following modules:
 - [Sales Management](../sales-management/getting-started.md):
     - [Sales Orders](../sales-management/transactions.md#sales-order) are optionally taken into account in the calculations of both plans
 - [Warehouse Management](../warehouse-management/getting-started.md):
-    - [Stock levels](../warehouse-management/analysis-tools.md#stock-report) are automatically taken into account in the calculations of both plans
+    - [Stock levels](../warehouse-management/analysis-tools/stock-report.md) are automatically taken into account in the calculations of both plans
 - [Production Management](../production-management/getting-started.md):
     - the [Process Plan](../production-management/setup.md#process-plan) is used for the calculation of the Manufacturing Plan
     - [Work Requirements](../production-management/transactions.md#work-requirement) are created from the Manufacturing Plan
