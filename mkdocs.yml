@@ -735,6 +735,7 @@ plugins:
             Getting Started: Primeros Pasos
             GL Category: Categoría Contable
             GL Item: Concepto contable
+            Goods Receipt: Albarán (Proveedor)
             Grid and Forms: Grillas y Formularios
             Help and Support: Ayuda y Soporte
             Home: Inicio
@@ -889,10 +890,13 @@ plugins:
             JavaScript Coding Conventions: Convenciones de Código JavaScript
             JSON REST Web Services: Servicios Web JSON REST
             Known Issues: Problemas Conocidos
+            Landed Cost: Landed Cost
             Live Builds: Live Builds
             Main Development Concepts: Conceptos Principales de Desarrollo
+            Manage Requisitions: Administrar Necesidades
             Master Data: Datos Maestros
             Master Data Management: Gestión de Datos Maestros
+            Matched Purchase Invoices: Facturas Cuadradas
             Material Requirement Planning: Gestión de MRP
             Merging Modules: Fusión de Módulos
             Messages: Mensajes
@@ -911,6 +915,7 @@ plugins:
             Organization Type: Tipo de Organización
             Overview: Visión General
             Packing: Empaquetado
+            Pending Goods Receipts: Albaranes Pendientes de Recibir
             Period Control Log: Abrir/Cerrar Periodos
             Picking List: Lista de Preparación
             Plugins: Plugins
@@ -929,11 +934,17 @@ plugins:
             Production Management: Gestión de Producción
             Project and Service Management: Gestión de Proyectos y Servicios
             Projections and Mappings: Proyecciones y Mapeos
+            Purchase Invoice: Factura de Compra
             Purchase Invoice Validation: Validación de Factura de Compra
+            Purchase Order: Pedido de Compra
             Receivables and Payables: Gestión de Cobros y Pagos
             Release Notes: Notas de la Versión
             Requirements: Requisitos
+            Requisition: Necesidad de Material
+            Requisition to Order: Necesidad a Pedido
             Resolving Dependencies on GitHub: Resolver Dependencias en GitHub
+            Return to Vendor: Devolución a Proveedor
+            Return to Vendor Shipment: Devolución a albarán de proveedor
             Role: Rol
             Role Access: Rol permisos
             Sales Management: Gestión de Ventas
