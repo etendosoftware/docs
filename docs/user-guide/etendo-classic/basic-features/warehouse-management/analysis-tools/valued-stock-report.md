@@ -14,7 +14,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Parameters Window**
 
-![Material Transaction Report](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
 
 
@@ -30,16 +30,16 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Output Window** 
 
-![Material Transaction Report](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
 
 -   **Product**: Name of the Product.
 -   **Quantity**: Stock of the Product on the selected date.
 -   **Unit** : Unit in which the stock is measured.
--   **Unit Cost**: Cost of each particular unit. Ii is the result of dividing the Valuation between the Stock.
+-   **Unit Cost**: Cost of each particular unit. It is the result of dividing the Valuation between the Stock.
 -   **Valuation**: Valuation of the Stock. It is calculated by adding up all the valuations of each transaction that has happened in the Warehouse.
--   **Actual Average/Standard Algorithm Cost**: Current Average/Standard Cost, the latest calculation of it's value.
--   **Actual Average/Standard Algorithm Valuation**: Valuation of the Stock based on the Actual Average/Standard Cost. Ii is the result of multiplying the Stock by the Actual Cost.
+-   **Actual Average/Standard Algorithm Cost**: Current Average/Standard Cost, the latest calculation of its value.
+-   **Actual Average/Standard Algorithm Valuation**: Valuation of the Stock based on the Actual Average/Standard Cost. It is the result of multiplying the Stock by the Actual Cost.
 
 ### **Persisted Information**
 
@@ -47,12 +47,12 @@ This step is not necessary in order to launch the Report. However, if there are 
 
 It is possible to aggregate information that allows for faster queries. This information is aggregated for each Closed Accounting Period, that means that accounting periods must be defined and, at least some of them, must be in a *Closed* or *Permanently Closed* Status. 
 
-The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non optimal performance of the report if it needs to retrieve plenty of information.
+The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non-optimal performance of the report if it needs to retrieve plenty of information.
 
 !!! info
     In order to use this functionality it is necessary to schedule the Background Process named *Generate Aggregated Data Background*. This can be done through the *Process Request* Window.
 
-![Material Transaction Report](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Valued Stock Report Process Request](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
 
 !!! info
     It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.
