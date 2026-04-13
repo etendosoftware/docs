@@ -33,7 +33,7 @@ tags:
 
 
 ## 26.1.1
-New ISO with Etendo Classsic version 26.1.1
+New ISO with Etendo version 26.1.1. Includes the `/utils/apache-config.sh` script. For more information, visit [Configure Apache](../../../developer-guide/etendo-classic/getting-started/installation/production-server.md#8-configure-apache).
 
 ## 25.4.3
 
