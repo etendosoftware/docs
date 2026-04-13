@@ -15,7 +15,7 @@ The objective of this section is to show how you can create a new window from sc
 
 !!!info
     This section builds on top of two previous sections which explain
-    [How to Create a Module](../how-to-guides/How_To_Create_a_Module.md)  and [How to Create a Table](../how-to-guides/How_to_create_a_Table.md).
+    [How to Create a Module](../how-to-guides/how-to-create-a-module.md)  and [How to Create a Table](../how-to-guides/how-to-create-a-table.md).
 
 ## Module & Table
 

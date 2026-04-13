@@ -1,5 +1,4 @@
 ---
-title: Conversion Rate Downloader
 tags:
     - Conversion Rate
     - Currency
@@ -10,7 +9,8 @@ tags:
 
 # Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`  
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
+
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 ## Overview
