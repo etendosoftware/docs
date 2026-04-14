@@ -3610,9 +3610,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cost-center_1" class="md-nav__link">
+  <a href="#creating-a-cost-center" class="md-nav__link">
     <span class="md-ellipsis">
-      Cost Center
+      Creating a Cost Center
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-center-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Center Hierarchy
     </span>
   </a>
   
@@ -3620,6 +3629,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Setup
+    </span>
+  </a>
   
 </li>
       
@@ -14739,9 +14757,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cost-center_1" class="md-nav__link">
+  <a href="#creating-a-cost-center" class="md-nav__link">
     <span class="md-ellipsis">
-      Cost Center
+      Creating a Cost Center
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-center-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Center Hierarchy
     </span>
   </a>
   
@@ -14749,6 +14776,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Setup
+    </span>
+  </a>
   
 </li>
       
@@ -14808,11 +14844,39 @@
 <h1 id="cost-center">Cost Center</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Cost Center</code></p>
 <h2 id="overview">Overview</h2>
-<p>Cost Center is an accounting dimension which can be used while posting documents to the ledger.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1vk6c1L49EaXAtzd0A121Tq55wJZfq1Fu.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1vk6c1L49EaXAtzd0A121Tq55wJZfq1Fu.png"></a></p>
-<h3 id="cost-center_1">Cost Center</h3>
-<p>The Cost Center window allows the user to create organization's cost centers. It is used as a master of the cost centers of an organization.</p>
-<p>A cost center can be created by just entering the name and the description of the organization's cost center. If a cost center is created for the (*) organization that cost center will then be available to all the organizations of the client. A cost center can be created as summary which helps to get a tree structure of cost centers.</p>
+<p>A <strong>Cost Center</strong> is an accounting dimension used to classify and track expenses or revenues by organizational unit. When posting documents to the general ledger, cost centers allow you to assign transactions to specific areas of the business — such as departments, teams, or projects — enabling more detailed financial reporting and analysis.</p>
+<p>The Cost Center window is where all cost centers for an organization are managed. From here, users can create, view, and maintain the cost centers available for use in accounting transactions.</p>
+<p>Once created, cost centers are available as an accounting dimension in documents across the system — such as purchase invoices, sales invoices, and journal entries. After assigning cost centers to transactions, use accounting reports to classify and filter results by cost center.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center.png" data-desc-position="bottom"><img alt="Cost Center window" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center.png"></a></p>
+<h3 id="creating-a-cost-center">Creating a Cost Center</h3>
+<p>To create a new cost center:</p>
+<ol>
+<li>Navigate to <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Cost Center</code>.</li>
+<li>Click <strong>New</strong> to open a blank record.</li>
+<li>
+<p>Enter the following fields:</p>
+<ul>
+<li><strong>Organization</strong> <em>(required)</em>: Select the organization this cost center belongs to. Select <code>(*)</code> to make the cost center available across all organizations in the system.</li>
+<li><strong>Search Key</strong> <em>(required)</em>: A short, unique code to identify the cost center (e.g., <code>CC-IT</code>, <code>CC-SALES</code>).</li>
+<li><strong>Name</strong> <em>(required)</em>: A descriptive name for the cost center (e.g., <em>IT Department</em>, <em>Sales Team</em>, <em>Project Alpha</em>).</li>
+<li><strong>Description</strong> <em>(optional)</em>: A brief explanation of what the cost center represents.</li>
+<li><strong>Summary Level</strong>: Check this option to mark the cost center as a grouping node. A summary-level cost center does not hold transactions directly — it groups child cost centers for reporting purposes. See <a href="#cost-center-hierarchy">Cost Center Hierarchy</a> for details.</li>
+</ul>
+</li>
+<li>
+<p>Save the record.</p>
+</li>
+</ol>
+<h3 id="cost-center-hierarchy">Cost Center Hierarchy</h3>
+<p>Cost centers can be organized in a parent-child tree structure using the <strong>Summary Level</strong> flag. A summary-level cost center acts as a grouping node and does not hold transactions directly. It is used to aggregate the results of its child cost centers in reports.</p>
+<p><strong>Example:</strong> You can create a <em>Finance Department</em> cost center marked as Summary Level, and then create <em>Accounts Payable</em> and <em>Accounts Receivable</em> as child cost centers under it. Reports show the totals at each level, so you can see the financial activity of the whole Finance Department as well as each sub-area individually.</p>
+<p>To set up the hierarchy, switch to the <strong>tree view</strong> in the Cost Center window. In this view, drag a cost center and drop it onto a Summary Level cost center to establish the parent-child relationship.</p>
+<h2 id="related-setup">Related Setup</h2>
+<ul>
+<li><a href="../general-ledger-configuration/">General Ledger Configuration</a> – Configure how accounting dimensions like cost centers are used in your ledger.</li>
+<li><a href="../account-combination/">Account Combination</a> – Define how cost centers combine with accounts and other dimensions.</li>
+<li><a href="../abc-activity/">ABC Activity</a> – Another accounting dimension that can be used alongside cost centers.</li>
+</ul>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Cost_Center" target="_blank">Cost Center</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
