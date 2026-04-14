@@ -133,3 +133,6 @@ dmypy.json
 
 # Others
 .vscode/
+.claude/
+.claude/
+.fyso/
