@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-The Tax Rate functionality in Etendo defines how taxes are **calculated, selected, and posted** in sales and purchase transactions such as Orders and Invoices.
+The Tax Rate window is where you define the taxes that Etendo applies automatically to your sales and purchase documents — such as orders and invoices. Each tax rate specifies the percentage to charge, which transactions it applies to, and how the tax amount is calculated and recorded in your accounts. Configuring tax rates correctly ensures that every document carries the right tax without manual work, and that your company meets its tax reporting obligations.
 
 A tax rate is determined by a combination of configuration elements, including:
 
@@ -23,18 +23,18 @@ A tax rate is determined by a combination of configuration elements, including:
 - **Sales/Purchase type**
 - **[Business Partner Tax Category](../setup/business-partner-tax-category.md)**
 - **Geographic origin and destination (Tax Zone)**
-- **Special behaviors (Withholding, Exempt, Cash VAT, Deductible, etc.)**
+- **Special tax behaviors**: Withholding (a tax deducted at source before payment), Tax Exempt (no tax applies), Cash VAT (tax settled on payment rather than invoice date), Deductible (the company can recover the tax), and Not Deductible (the tax is treated as an expense).
 
 When these parameters are properly configured, Etendo automatically assigns the correct tax to each transaction line based on predefined rules.
 
 Taxes are first **associated to document lines**, then the actual tax amounts are calculated when the document is **processed**, ensuring accounting accuracy.
 
-Etendo also supports summary taxes, which group multiple taxes into a single definition. This is useful when more than one tax must be applied simultaneously (for example, VAT and Income Tax).
+Some transactions require two separate taxes at the same time — for example, VAT and an income-tax withholding on a service invoice. Etendo handles this through summary taxes: you create one parent tax that groups the individual taxes underneath it. When you select the parent tax on a document line, Etendo automatically applies and calculates each underlying tax separately. This means you only have to choose one tax per line, even when two taxes apply.
 
 
 ## Obtaining Default Tax
 
-When a product is selected in a document line (order or invoice), the system automatically assigns a **default tax** to that line. The user can also manually select a different tax if needed. The system determines the default tax by evaluating the following rules in order:
+When you add a product to an order or invoice, Etendo automatically selects the tax for that line. Understanding how this selection works helps you explain why a specific tax appeared on a document, or why no tax was found. The system checks the following conditions in order and stops at the first match:
 
 1. **Project tax (sales only):** If the sales order was generated from a Project, the system uses the tax rate defined on the project line.
 2. **Tax-exempt business partner (sales only):** If the business partner is marked as tax exempt, the system selects the most recently dated tax rate flagged as exempt, relative to the order or invoice date.
@@ -43,8 +43,10 @@ When a product is selected in a document line (order or invoice), the system aut
 5. **Geographic proximity (Tax Zone):** The system evaluates the origin and destination locations. Tax rates defined for more specific regions take priority over broader ones (for example, a region-level tax is selected over a country-level tax). This information is configured in the **Tax Zone** tab.
 6. **Sales/Purchase type:** The system filters tax rates based on whether they are defined as Sales, Purchases, or Both.
 
+If Etendo cannot find a tax that matches all applicable conditions, no tax is assigned to the line. This usually means a required tax rate has not been created yet or is missing a required configuration (for example, a Tax Zone entry or a Business Partner Tax Category link).
+
 !!!note
-    Apart from these rules, and only in the case of **Purchase/Sales Orders and Invoices**, the system will filter the tax rates taking into account the **Cash VAT** flag defined at the document's header too, which is automatically set based on the organization's and the business partner's configuration for sales and purchase documents respectively (although it can be manually overridden afterwards). Thus, in case the document is enabled for the Cash VAT regime, the system will get a Cash VAT tax rate and the other way around.
+    There is one additional filter that applies only to Orders and Invoices: Cash VAT. Cash VAT is a tax regime in which a company settles its VAT obligation when the invoice is actually paid, rather than when it is issued. Etendo marks each document automatically based on whether the organization and business partner use this regime. When a document is flagged as Cash VAT, the system selects only tax rates configured for Cash VAT; when it is not flagged, the system selects only standard (non-Cash-VAT) tax rates. This flag can be changed manually on the document header if needed.
 
 Once the tax is selected (either the default or one chosen by the user), the system calculates an approximate tax amount on the document line. If the tax is defined as **summary**, this preliminary calculation uses the parent rate rather than expanding the child rates. The actual tax amount is calculated when the document is **processed**.
 
@@ -71,8 +73,10 @@ The Header defines the main characteristics and behavior of the tax rate.
 
 Fields to Note: 
 
-- **Valid From Date**: Date when the tax becomes effective. For instance an existing tax rate increases its rate, in this case:
-    - it is recommended to create a new tax rate configured with the new requirements, rather than changing the original tax rate which can be still in use if required. That way there will be two tax rates which are exactly the same for a given organization but the rate (%) and the valid from date.
+- **Valid From Date**: Date when the tax becomes effective.
+
+    !!! warning
+        If a tax rate changes (for example, the government raises the VAT rate), do not edit the existing tax rate. Create a new tax rate with the updated percentage and a new Valid From Date. This preserves the original rate on past documents and ensures the new rate is applied from the effective date onward.
 
 - **Tax Category**: Every tax rate must be linked to a given [tax category](../setup/tax-category.md) as the way of grouping similar tax rates.
 - **Rate (%)**: Percentage applied to the tax base.
@@ -83,8 +87,8 @@ Fields to Note:
 
 - **Document Tax Amount Calculation**: The way how the tax amount is going to be calculated per each tax rate (or %). 
     The options available are:
-    - **Document based amount by rate**: the tax amount is calculated by summing all line base amounts at the same rate and then applying the rate once: tax amount = (sum of tax base amounts) * tax rate. This method may produce slight rounding differences compared to line-by-line calculation.
-    - **Line base amount by rate**: the tax amount is calculated per line and then summed: tax amount = (line 1 base amount * tax rate) + (line 2 base amount * tax rate) + ... + (line N base amount * tax rate). This method rounds each line independently, which can be useful when per-line tax precision is required.
+    - **Document based amount by rate**: Etendo adds up all the taxable amounts on the document that share the same tax rate, and then applies the percentage once to the total. This is the most common option. It can produce very small rounding differences (a few cents) compared to calculating line by line.
+    - **Line base amount by rate**: Etendo calculates the tax separately for each document line and then adds the results together. Use this option when your tax authority or your customer requires the tax to be shown and rounded at the individual line level.
 
 - **Country/Region** and **Destination Country/Region**: Taxes such as VAT and US Sales Tax take into account where a transaction originates and where it is destined in order to determine whether the tax applies.
     These two fields allow to enter that information by taking into account if the tax is a **purchase** or a **sales** tax type, therefore when issuing a sales invoice from F&B US Inc (USA Country and New York Region) to a customer also located in Destination Country USA and Destination Region New York, only the sales tax rates created within that specified Tax Zone would be applied.
@@ -147,7 +151,7 @@ By default, the accounting amount that is generated in the supplier invoices whe
 
 Tax zone defines the origin country/region and destination country/region where a given tax rate applies, for those cases where it is not enough to define only one **Origin** Country/Region and only one **Destination** Country/Region at header level.
 
-For instance, an **Export** tax rate must detail as Origin Country/Region the location of the warehouse organization and as Destination Country/Region the rest of countries and regions where it is possible to export the goods. This tax rate would apply to sales transactions between the **local** organization and its customers located abroad.
+For instance, an **Export** tax rate must detail as Origin Country/Region the location of the warehouse organization and as Destination Country/Region the rest of countries and regions where it is possible to export the goods. This tax rate applies to sales transactions where the seller is your own company (the origin) and the buyer is located in another country (the destination). The origin country and region in this tab must match the address configured for your legal entity in Etendo.
 
 The same would apply to an **Import** tax rate, in this case Origin Country/Region would be all the countries from where goods can be imported and the Destination Country/Region would be the organization's own location.
 
@@ -189,9 +193,7 @@ And a sales invoice posting looks like:
 
 **Negative** Withholding tax rates need to have specific accounting information in this tab in order to get that withholding tax amounts are posted in a different account.
 
-Below posting applies in the case that the **Allow Negative** feature is not enabled either for the General Ledger configuration used while posting or for the Document Type which in this case is an **AP Invoice**.
-
-In other words, a negative withholding posting means a negative debit posting which will turn into a positive credit posting if a negative feature is not enabled.
+The accounting entries below apply when negative amounts are not permitted in your General Ledger configuration or in the AP Invoice document type (AP stands for Accounts Payable). In that case, a withholding amount — which is negative by nature — is automatically converted into a positive credit entry in the accounting records. If your system is configured to allow negative amounts, the withholding will be posted directly as a negative debit.
 
 |     |     |     |     |
 | --- | --- | --- | --- |
@@ -216,7 +218,7 @@ In other words, a negative withholding posting means a negative debit posting wh
     - Use case: a service invoice where both VAT and an income-tax withholding apply.
     - How to set it up:
         - Create a **Parent** tax rate of type **Summary** and assign it to the tax category **Normal VAT for Services** and to the appropriate **Business Partner Tax Category**.
-        - Add two **child** tax rates under the parent (both must use the same tax and partner categories):
+        - Add two **child** tax rates under the parent (both must use the same tax and partner categories). For each child tax rate, open its record and set the **Parent Tax Rate** field (found under the More Information section of the Header tab) to point to the parent tax rate you just created. This is what links the child to the parent and builds the summary structure.
             - *Service VAT* — Rate: **18%** (positive).
             - *Withholding (Income Tax)* — Rate: **-15%** (negative withholding).
     - Behaviour: select the parent (summary) tax on the document line; during processing, the system uses the children to calculate and post the separate tax and withholding amounts.

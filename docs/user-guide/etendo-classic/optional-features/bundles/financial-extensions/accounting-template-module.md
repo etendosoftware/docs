@@ -52,16 +52,9 @@ Finally, The checkbox, **Use the configured account** must be checked in the Tax
 
 ## Example
 
-
-
 ![Accounting template module example screenshot 1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module2.png)
 
-
-This checkbox, **Use the configured account**, will only be visible if the checkbox under the heading **Non-deductible tax** was previously checked. The default value of this checkbox will be NO.
-
 ![Accounting template module example screenshot 2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module3.png)
-
-![Accounting template module example screenshot 3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module3.png)
 
 The VAT amount needs to be posted to the ledger in a Tax Credit account, therefore purchase invoice posting looks like:
 
