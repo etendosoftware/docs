@@ -1,24 +1,174 @@
 ---
-tags: 
+tags:
     - API Changes
-    - Updating Guide
-    - Migrate to Etendo 25
+    - Etendo 26
     - Etendo 25
+    - Migrate to Etendo 25
     - Update Etendo
+    - Updating Guide
     - Developer Changelog
-    
 ---
 
-# API Change Documentation 
+# API Change Documentation
 
 ## Overview
 
-This document provides detailed information about API and stack changes introduced in the latest Etendo releases.  
-It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.  
+This document provides detailed information about API and stack changes introduced in the latest Etendo releases.
+It serves as a reference for developers and system administrators to understand which components have been updated, deprecated, or removed, and how these changes may impact custom developments.
 
 If you are planning to upgrade your environment, make sure to also review the official upgrade guide: [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md).
 
-## March 2025
+## Etendo 26
+
+- [Etendo - Release 26.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="\_blank"}
+
+[Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
+
+### Platform Stack Upgrade
+
+**:material-language-java: Java SE**
+
+- Minimum Version Required: `17.0.14` — [Release Notes](https://www.oracle.com/java/technologies/javase/17all-relnotes.html){target="\_blank"}
+
+    !!! danger "Breaking Change: Java 17 is Now Mandatory"
+    
+        Starting with **Etendo 26.1.0**, Java 17 is the **only supported** Java version. The `-Pjava.version=11` compatibility flag introduced in Etendo 25 has been **completely removed**.
+
+        Any environment still running Java 11 will be **blocked from building**. You must install and configure **Java 17 or higher** before upgrading to Etendo 26.
+
+    !!! warning "Action Required for Custom Developments"
+        If you have custom modules with `BuildValidation` or `ModuleScript` classes, recompile them with Java 17 before upgrading. These classes run during `update.database` and fail at runtime if compiled with Java 11 due to bytecode incompatibility.
+
+        ```bash title="Terminal"
+        ./gradlew compile.modulescript -Dmodule=<javapackage>
+        ./gradlew compile.buildvalidation -Dmodule=<javapackage>
+        ```
+
+        This applies only to **custom** modules. Core Etendo modules are already compiled with Java 17.
+
+---
+
+**:simple-postgresql: PostgreSQL**
+
+- New Version Supported: `17`
+- JDBC Driver: `42.5.4` -> `42.7.8` — [Changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"}
+
+PostgreSQL 17 is supported from this release. No action is required if you stay on a currently supported version. If you upgrade the database engine, review the [PostgreSQL 17 release notes](https://www.postgresql.org/docs/release/17.0/){target="\_blank"} for breaking changes.
+
+---
+
+**:octicons-file-code-24: Etendo Gradle Plugin**
+
+- New Version Required: `2.3.0` or higher — [Release Notes](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
+- The `-Pjava.version=11` flag has been removed. Java 17 is now enforced with no bypass.
+
+---
+
+**:octicons-file-code-24: DBSourceManager**
+
+- New Version: `1.1.0` -> `1.2.0`
+- Changes:
+    - Gradle wrapper upgraded from `7.3.2` to `8.12.1`.
+    - Added PostgreSQL 16 platform support (`PostgreSql16Platform`).
+    - New `ExcludedConstraint` system for managing partitioned tables and complex database schemas.
+    - Improved partition table handling during database export.
+    - All bundled JARs removed from `lib/`; dependencies are now resolved from the project classpath.
+
+### Third-Party Libraries
+
+**Updated**
+
+- `org.postgresql:postgresql` `42.5.4` -> `42.7.8` — compatible upgrade. Review the [changelog](https://jdbc.postgresql.org/changelogs/){target="\_blank"} if you use driver-specific features.
+
+- `org.mozilla:rhino` `1.7.13` -> `1.8.0`
+- `org.mozilla:rhino-engine` `1.7.13` -> `1.8.0` — [Rhino Releases](https://github.com/mozilla/rhino/releases){target="\_blank"}
+
+    !!! warning
+        If you have custom JavaScript executed via the Rhino engine, test it for compatibility with version 1.8.0. This upgrade includes changes to ECMAScript compliance and internal APIs.
+
+- `org.antlr:antlr` `2.7.7` -> `org.antlr:antlr-complete` `3.5.3` — [ANTLR 3 Docs](https://www.antlr3.org/){target="\_blank"}
+
+    !!! warning
+        This is a **major version upgrade** (ANTLR 2 to ANTLR 3). If you use ANTLR APIs directly in custom code, you need to migrate. The package structure and API have changed significantly.
+
+- `org.codehaus.woodstox:wstx-asl` `3.0.2` -> `4.0.6` — [Woodstox Releases](https://github.com/FasterXML/woodstox/releases){target="\_blank"} — major version upgrade for the XML stream processing library. Review if you use Woodstox APIs directly.
+
+- `com.etendoerp:dbsm` `1.1.0` -> `1.2.0` — see [DBSourceManager (DBSM)](#dbsourcemanager-dbsm) above.
+
+---
+
+**Artifact Coordinates Migrated to Upstream**
+
+Several libraries previously re-packaged under `com.etendoerp` are now resolved from their official upstream Maven Central coordinates. If your modules declare any of these as explicit dependencies, update the artifact coordinates. No functional changes.
+
+| Previous | New | Version |
+|---|---|---|
+| `com.etendoerp:yuiant` `1.0` | `com.etendoerp:YUIAnt` `1.0.0` | Artifact ID case change |
+| `com.etendoerp:jettison` `1.3` | `org.codehaus.jettison:jettison` `1.3` | Same version |
+| `com.etendoerp:wstx-asl` `3.0.2` | `org.codehaus.woodstox:wstx-asl` `4.0.6` | Version upgraded |
+| `com.etendoerp:slf4j-api` `1.7.25` | `org.slf4j:slf4j-api` `1.7.25` | Same version |
+| `com.etendoerp:antlr` `2.7.7` | `org.antlr:antlr-complete` `3.5.3` | Version upgraded |
+| `com.etendoerp:rhino-engine` `1.7.13` | `org.mozilla:rhino-engine` `1.8.0` | Version upgraded |
+
+---
+
+**New**
+
+The following libraries are new additions to the platform classpath. No action is required unless your custom modules declare conflicting versions.
+
+- `org.apache.poi:ooxml-schemas` `1.4` — [Documentation](https://poi.apache.org/components/oxml4j/){target="\_blank"}
+- `org.hamcrest:hamcrest-all` `1.3` — [Documentation](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
+- `junit:junit` `4.12` — [Documentation](https://junit.org/junit4/){target="\_blank"}
+
+---
+
+**Removed**
+
+- `org.apache.commons:commons-compress` `1.27.1`
+
+    !!! warning
+        If your custom modules depend on `commons-compress`, add it as an explicit dependency in your module's `build.gradle`.
+
+- `org.eclipse.jdt:ecj` `3.23.0` (Eclipse Compiler for Java)
+- `com.etendoerp:ant-nodeps` `1.0.0`
+- `com.etendoerp:catalina-ant` `1.0.0`
+- `org.apache.poi:ooxml-schemas` `1.4`   
+
+### Database Schema Changes
+
+The following changes are applied automatically during `update.database`:
+
+| Table | Change | Details |
+|---|---|---|
+| `AD_HEARTBEAT_LOG` | Columns removed | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
+| `AD_HEARTBEAT_LOG` | Column added | `STATUS` |
+| `AD_SYSTEM_INFO` | Columns added | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+| `C_ExtBP_Config` | Table removed | CRM Connector main configuration table (and all its columns) |
+| `C_ExtBP_Config_Property` | Table removed | CRM Connector property mappings table |
+| `C_ExtBP_Config_Prop_Opt` | Table removed | CRM Connector property accepted values table |
+| `C_ExtBP_Config_Filter` | Table removed | CRM Connector filters table |
+| `C_ExtBP_Config_Filter_Opt` | Table removed | CRM Connector filter option values table |
+| `AD_Org` | Columns removed | `C_Extbp_Enabled`, `C_Extbp_Config_ID` |
+| `AD_ClientInfo` | Column removed | `C_Extbp_Config_ID` |
+
+See [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} for full details on the CRM removal.
+
+### Removed Java Classes
+
+The following event handler classes in the `org.openbravo.event` package have been deleted as part of the CRM Connector removal. Any custom module that extends, imports, or directly invokes these classes must remove those references:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
+
+### Other Changes
+
+- **Secure Web Services Key Generation**: The `generate.sws.keys` Ant target is now called automatically during `install.source`, reducing manual configuration steps for secure web services.
+
+---
+
+## Etendo 25
 
 - [Etendo - Release 25.1.0](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.0)
 - [Etendo - Release 25.1.1](https://github.com/etendosoftware/etendo_core/releases/tag/25.1.1)
@@ -26,9 +176,9 @@ If you are planning to upgrade your environment, make sure to also review the of
 
 [Upgrade Etendo to Any Version](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
 
-### Etendo Platform Stack Upgrade
+### Platform Stack Upgrade
 
-#### :material-language-java: Java SE
+**:material-language-java: Java SE**
 
 - New Version Supported: `17.0.14`
 - Release Notes:
@@ -67,9 +217,9 @@ If you are planning to upgrade your environment, make sure to also review the of
 
     </div>
 
+---
 
-    
-#### :simple-postgresql: PostgreSQL
+**:simple-postgresql: PostgreSQL**
 
 - New Version Supported: `16.8.1`
 - Release Notes:
@@ -102,9 +252,9 @@ If you are planning to upgrade your environment, make sure to also review the of
 
         </div>
 
+---
 
-
-#### :simple-gradle: Gradle
+**:simple-gradle: Gradle**
 
 !!! warning
     To update the Gradle wrapper in an existing environment , you must run:
@@ -146,16 +296,17 @@ If you are planning to upgrade your environment, make sure to also review the of
         - [Gradle 7.3.3](https://docs.gradle.org/7.3.3/release-notes.html){target="\_blank"}
 
         </div>
-    
-#### :simple-apachetomcat: Apache Tomcat
+
+---
+
+**:simple-apachetomcat: Apache Tomcat**
 
 - New Version Supported: `9.0.98`
 - Release Notes: [Apache Tomcat 9](https://tomcat.apache.org/tomcat-9.0-doc/changelog.html){target="\_blank"}
 
+---
 
-
-
-#### :octicons-file-code-24: Etendo Gradle Plugin
+**:octicons-file-code-24: Etendo Gradle Plugin**
 
 - New Version Supported: `2.0.0` or higher
 - Release Notes:
@@ -175,7 +326,9 @@ If you are planning to upgrade your environment, make sure to also review the of
         ```
         This new flag forces the use of Java 11 with version 25Q1.
 
-#### :octicons-issue-opened-24: Etendo ISO
+---
+
+**:octicons-issue-opened-24: Etendo ISO**
        
 !!!note 
     The **Etendo 25** ISOs are currently based on Ubuntu Live Server `22.04.5` amd64 image. <br>
@@ -183,12 +336,11 @@ If you are planning to upgrade your environment, make sure to also review the of
 
 
 
-### Third-Party Libraries 
+### Third-Party Libraries
 
 All libraries previously located in `/lib/runtime` as JAR files have been updated to Gradle dependencies now defined in the `artifacts.list.COMPILATION.gradle` file at the root of the project.
 
-
-#### Updated Libraries
+**Updated**
 
 - `dbsourcemanager.jar` -> `com.etendoerp.dbsm` version  `1.1.0`
 
@@ -357,10 +509,6 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
         | `CellStyle.ALIGN_LEFT`   | `HorizontalAlignment.LEFT`  |
         | `CellStyle.ALIGN_CENTER` | `HorizontalAlignment.CENTER`|
         | `CellStyle.ALIGN_RIGHT`  | `HorizontalAlignment.RIGHT` |
-        
-               
-                - CellStyle.ALIGN_CENTER → 
-                -  → 
 
         ```java
         // Before
@@ -504,7 +652,9 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 !!! info
     Refer to each library’s release notes for more detailed information on changes and how they might affect your system.
 
-#### New Libraries
+---
+
+**New**
 
 - `org.apache.commons.commons-text` `1.10.0`
     - [Documentation](https://commons.apache.org/proper/commons-text/){target="\_blank"}
@@ -521,7 +671,9 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 - `com.lowagie:itext` `2.1.7`
     - [Documentation](https://itextpdf.com/resources){target="\_blank"}
 
-#### Removed Libraries
+---
+
+**Removed**
 
 - `itext-pdfa-5.5.0.jar`
 - `itextpdf-5.5.0.jar`
@@ -529,6 +681,44 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 - `jxl-2.6.10.jar`
 
 
+
+---
+
+### Database Schema Changes
+
+The following changes are applied automatically during `update.database` as part of **25Q4 patch releases (March 2026)**. See [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} for full details.
+
+**Removed Tables**
+
+The following tables and all associated columns, tabs, and Application Dictionary entries have been completely removed from core. Any custom module that directly queries or references these Hibernate entities must be updated:
+
+| Table | Hibernate Entity Class | Description |
+|---|---|---|
+| `C_ExtBP_Config` | `ExternalBusinessPartnerConfig` | CRM Connector main configuration |
+| `C_ExtBP_Config_Property` | `ExternalBusinessPartnerConfigProperty` | CRM Connector property mappings |
+| `C_ExtBP_Config_Prop_Opt` | `ExternalBusinessPartnerConfigPropertyOption` | CRM Connector property accepted values |
+| `C_ExtBP_Config_Filter` | `ExternalBusinessPartnerConfigFilter` | CRM Connector filters |
+| `C_ExtBP_Config_Filter_Opt` | `ExternalBusinessPartnerConfigFilterOption` | CRM Connector filter option values |
+
+**Removed Columns**
+
+| Table | Column | Description |
+|---|---|---|
+| `AD_Org` | `C_Extbp_Enabled` | Enable CRM Connector flag |
+| `AD_Org` | `C_Extbp_Config_ID` | CRM Connector Configuration reference |
+| `AD_ClientInfo` | `C_Extbp_Config_ID` | CRM Connector Configuration reference |
+
+### Removed Java Classes
+
+The following event handler classes in the `org.openbravo.event` package have been deleted. Any custom module that extends, imports, or directly invokes these classes must remove those references:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
+
+!!! warning "Action Required for Custom Modules"
+    If your custom modules reference any of the removed tables (`C_ExtBP_Config*`), columns (`C_Extbp_Enabled`, `C_Extbp_Config_ID`), or Java event handler classes listed above, remove or update those references before upgrading to the release that includes this change.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

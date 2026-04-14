@@ -17,14 +17,15 @@ tags:
 
     There was a significant change in the software stack between **Etendo 25** and earlier versions. For more information, visit:
 
-    - [Etendo Installation - Requirements](../../../getting-started/requirements.md#software-stack)
+    - [Etendo Installation - Requirements](../../../developer-guide/etendo-classic/getting-started/installation/requirements.md#software-stack)
     - [Developer Changelog - Stack Upgrade](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md#etendo-platform-stack-upgrade)
 
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [26Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="_blank"} | 27/03/2026 | 26.1.0 | QAA | [26Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.0.iso){target="_blank"} | :white_check_mark: |
-| [26Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="_blank"} | 27/03/2026 | 26.1.0 | CS | [26Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.0.iso){target="_blank"} | :white_check_mark: |
+| [26Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.1){target="_blank"} | 09/04/2026 | 26.1.1 | QAA | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) | :white_check_mark: |
+| [26Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="_blank"} | 27/03/2026 | 26.1.0 | C |  | :white_check_mark: |
+| [25Q4.12](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.12){target="_blank"} | 09/04/2026 | 25.4.12 | CS |  | :white_check_mark: |
 | [25Q4.11](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.11){target="_blank"} | 10/03/2026 | 25.4.11 | C |  | :white_check_mark: |
 | [25Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.10){target="_blank"} | 06/03/2026 | 25.4.10 | C |  | :white_check_mark: |
 | [25Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.9){target="_blank"} | 02/03/2026 | 25.4.9 | C |  | :white_check_mark: |
