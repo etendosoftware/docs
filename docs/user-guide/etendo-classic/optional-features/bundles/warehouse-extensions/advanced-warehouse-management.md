@@ -341,6 +341,8 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
 ### Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The [Referenced Inventory (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) functionality has been extended to manage physical logistics units such as **pallets** and **boxes**, directly linked to the [Alternative Units of Measure (AUOM)](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.
 
 The [Stock Logistic Unit](./stock-logistic-unit.md) module, installed as a dependency, adds new UOMs (Box, Pallet) and reference inventory types, allowing users to configure equivalences in the **Alternate UOM** tab of the Product window. Once defined, if a different conversion is required, a new AUOM must be created.
@@ -360,19 +362,17 @@ Receipts are always created from purchase orders, not manually. Order lines are 
 
 When AUOMs such as Pallet or Box are used, the system can automatically generate a Referenced Inventory (RI) record linked to the receipt line, representing the logistics unit and ensuring traceability.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1b.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png)
 
 Fields to note:
 
 #### Header
 
 - **Organization**: Defines the organization in which the inbound receipt will be created and filter the information.  
-- **Active**: Indicates whether the record is enabled for use.  
-- **Description**: Free text field to add additional information or notes about the receipt.  
-- **Document No**: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  
 - **Document Type**: Loaded by default with *Inbound Receipt* to classify the document type.  
+- **Document No**: Unique identifier automatically generated for the receipt, with a sequence specific to this type of document.  
 - **Movement Date**: Date on which the physical goods movement is recorded. By default, it is the current date.  
-- **Accounting Date**: Date on which the transaction is recognized for accounting purposes.  
+- **Description**: Free text field to add additional information or notes about the receipt.  
 
 
 #### Lines Tab
@@ -383,20 +383,20 @@ The Lines Tab allows you to add and modify individual products from one or more 
 
 Fields to note:
 
-- **Active**: Indicates whether the line is enabled for processing within the receipt.  
 - **Line No**: Sequential number automatically assigned to identify the line within the receipt.  
-- **Purchase Order Line**: Reference to the original purchase order line from which the receipt line was generated.  
-- **Storage Bin**: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  
 - **Product**: The product being received, linked to the purchase order.  
-- **UOM**: Base unit of measure of the product (e.g., units, liters, kilograms).  
-- **Ordered Quantity**: Quantity received expressed in the product's base unit of measure.  
-- **Attribute Set Value**: Attributes associated with the product, such as batch, serial number, or expiration date.  
-- **Alternative UOM**: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  
 - **Operative Quantity**: Quantity received expressed in the product's alternative unit of measure. Matches the Ordered Quantity if no AUOM is defined. If an AUOM exists, it indicates the number of pallets, boxes, or other alternative units received.  
+- **Alternative UOM**: Alternative unit of measure for the product. If no AUOM is defined, it defaults to the UOM. Used to record the receipt of products in pallets, boxes, or other containers.  
+- **Ordered Quantity**: Quantity received expressed in the product's base unit of measure.  
+- **UOM**: Base unit of measure of the product (e.g., units, liters, kilograms).  
+- **Attribute Set Value**: Attributes associated with the product, such as batch, serial number, or expiration date.  
+- **Storage Bin**: Location where the received product will be stored. It can vary between lines, allowing different locations to be assigned to products from the same or different purchase orders.  
+- **Purchase Order Line**: Reference to the original purchase order line from which the receipt line was generated.  
 - **Grouped by**: Identifier of the grouping to which the line belongs, generated when using the *Group By* button. It shows which lines are part of the same container or packaging unit.  
-- **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).  
+- **Reference Inventory Type**: Type of referenced inventory associated with the grouping (e.g., Box, Pallet).
+- **Goods Receipt Line**: Reference to the goods receipt generated upon completion of the goods receipt.  
 
-#### Buttons
+#### Available Process
 
 **Create Lines From Order**
 
@@ -410,13 +410,19 @@ This button appears when at least one line is selected. It allows multiple/mixed
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
 
-The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1). 
+The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
+
+When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
 
 !!! info
-    - Only lines from the same Sales Order can be grouped.  
+    - Only lines from the same Sales Order can be grouped.
     - If a line is already grouped and is included in a new grouping, the previous grouping will be replaced.
+    - Child logistics units remain associated with the parent logistics unit created from the button.
+
+!!! warning "Partial grouping"
+    If the grouped action includes a line that cannot be nested due to a type incompatibility (e.g., a Pallet inside another Pallet), the system will **not block** the entire receipt. Instead, it processes compatible lines normally and automatically creates a **standalone Referenced Inventory** for the incompatible line. The receipt completes successfully and a **Warning message** is displayed indicating how many lines were processed normally and how many were created as standalone RIs.
 
 **Clear Group By** 
 
@@ -440,13 +446,13 @@ Finishes the receipt, generating and completing the corresponding **goods receip
 
 **Print Labels**
 
-This button generates barcode labels for **all lines** of the selected Inbound Receipt document.  
-Each label is created with the **full set of attributes defined during the reception**, including product data and attributes such as lot, serial number, expiration date, and referenced inventory when applicable.
+This button generates barcode labels for **all lines** of the selected Inbound Receipt document.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet). If no attributes are defined for a product, the label displays *No attributes*. If no logistics unit applies, the logistics unit line is not shown.
 
-- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.  
+- For **loose products** (without logistics units), the system generates **one barcode label per operative quantity** defined in the receipt line.
   This means that as many labels are printed as units specified in the **Operative Quantity** field.
 - For **lines with logistics units (Box or Pallet)** where multiple units are received (for example, 3 boxes), the system generates **one unique barcode label per logistics unit**, since each unit is registered as a unique referenced inventory.
-- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.  
+- When products are **grouped into a single logistics unit** using the **Create Reference Inventory** button, the system generates **one single barcode label** for that logistics unit.
   In this case, the label identifies the **logistics unit and its locator**, as it may contain multiple grouped products.
 
 This button is available **only when the Inbound Receipt is completed**.
@@ -457,20 +463,38 @@ This button is available **only when the Inbound Receipt is completed**.
 
 ??? example "Print Inbound Receipt - Examples"
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png)
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png)
+    ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png)
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png)
+    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
+
+    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
+
+    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
+
+    ---
+
+    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+
+    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
 
 **Print Line Label**
 
-This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.  
-Each label contains the **complete set of attributes assigned at reception time** for the selected lines.
+This action generates **barcode labels only for the selected line or lines** of the Inbound Receipt.
+Each label displays the **GS1-128 barcode** along with human-readable information, including the **product name**, **relevant attributes** (such as lot, expiration date, and serial number when applicable), and the **logistics unit type** (Box or Pallet), following the same display rules as the **Print Labels** button.
 
 The label generation follows the same rules described above, applied **only to the selected line or lines**:
 

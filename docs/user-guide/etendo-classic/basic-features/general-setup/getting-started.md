@@ -13,7 +13,7 @@ tags:
 ## Overview
 
 This section describes the steps that need to be performed first to configure Etendo.
-Etendo installations require at least a [Client](../../../../user-guide/etendo-classic/basic-features/general-setup/client.md) and an [Organization](../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization.md). Client and Organization are the two key concepts within the General Setup.
+Etendo installations require at least a [Client](../../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md) and an [Organization](../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization.md). Client and Organization are the two key concepts within the General Setup.
 
 In other words, it is not possible to issue an invoice or to post a journal entry to the ledger in Etendo if there is no Client and Organization properly created and configured.
 
@@ -39,7 +39,7 @@ The setup of the taxes is also available for selection while running either the 
 
 #### Initial Client Setup
 
-A [Client](../general-setup/client.md) in Etendo is the top-most level of configuration and data within Etendo.
+A [Client](../general-setup/client/client.md) in Etendo is the top-most level of configuration and data within Etendo.
 
 Above means that certain configurations such as users, customers, vendors and other [master data](../master-data-management/master-data.md) can be managed in a client and therefore be available across all the organizations within the client.
 

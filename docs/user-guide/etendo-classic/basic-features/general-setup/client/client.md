@@ -31,10 +31,10 @@ Organizations are created by running the Initial Organization setup process avai
 
 The Client window allows the user to view and maintain the clients created by running the **Initial Client Setup** process.
 
-![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![Client Window](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-window.png)
 
 !!! info
-    The field **Days To Password expiration** allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
+    The field **Days To Password expiration** allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes their password.
 
 The value of the field determines the day limit during which a password must be valid for users:
 
@@ -90,7 +90,7 @@ It is always possible to customize the defaulted configuration, for instance:
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
-![](../../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![Client Information Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-information-tab.png)
 
 Additional information allowed to be specified:
 
@@ -117,38 +117,13 @@ Additional information allowed to be specified:
 
 ### Email Configuration
 
-Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
+The **Email Configuration** tab allows configuring a global SMTP server at the client level, shared by all organizations and users within the client.
 
-![](../../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
+![Client Email Configuration](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-email-configuration.png)
 
-Email Configuration tab gathers the email configuration required for sending out documents such as orders or invoices.
 
 !!! info
-    It is important to know the smtp server configuration which is going to be used in order to properly fill the information below:
-
-- **Smtp Server**, email server with SMTP
-- **SMTP Authentication**, "yes/no" flag to define if the email server requires authentication or not before sending emails.
-- **SMTP Server Account**, email server username in case of authentication required.
-- **SMTP Server Password**, email server password in case of authentication required.
-- **SMTP Server Sender Address**, email address to send emails from.
-- **SMTP Connection Security**, security level needed for the SMTP servers connection. Available options are:
-    - None
-    - STARTTLS
-    - SSL
-    
-- **SMTP Port**, port required for your SMTP server
-- **SMTP Connection Timeout**, maximum amount of time (in seconds) allowed for an SMTP connection to connect or communicate.
-
-In the provided screenshot, you can see a valid configuration for a gmail account:
-
-- **Smtp Server**, [smtp.gmail.com](http://smtp.gmail.com)
-- **SMTP Authentication**, "yes"
-- **SMTP Server Account**, a valid gmail account (including the @gmail.com or @yourdomain)
-- **SMTP Server Password**, the password for this gmail account
-- **SMTP Server Sender Address**, email address to send emails from.
-- **SMTP Connection Security**, SSL
-- **SMTP Port**, 465
-- **SMTP Connection Timeout**, 600 (10 minutes)
+    For the full field reference and step-by-step configuration instructions, see [How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensions
 
@@ -158,7 +133,7 @@ This tab can be used to configure accounting dimensions availability at document
 
 For example, if a client needs to display project dimension in the header and lines in all documents less in amortization document, the client window should have the following configuration:
 
-![](../../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![Client Dimensions Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-dimensions-tab.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.
 

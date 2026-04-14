@@ -3,6 +3,7 @@ title: Organization
 tags:
     - Organization
     - Client
+    - Email Configuration
 ---
 
 # Organization
@@ -180,6 +181,15 @@ Relation of prioritized on-hand warehouses of the Organization.
 In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.
 
 It is possible to define the priority of each organization's warehouse/s therefore Etendo proposes first the goods of the warehouse with a higher priority.
+
+### Email Configuration
+
+The **Email Configuration** tab allows configuring an SMTP server at the organization level. When present, this configuration overrides the client-level settings for all emails sent by users of that organization.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-email-configuration.png)
+
+!!! info
+    For the full field reference and step-by-step configuration instructions, see [How to Configure Email](../../../how-to-guides/how-to-configure-email.md).
 
 ---
 

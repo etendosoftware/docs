@@ -44,7 +44,7 @@ Check constraints do not have any particularity in Etendo, except for how they s
 It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
 
 !!!info
-    How to do that is explained in the [Messages](Messages.md#checks) documentation.
+    How to do that is explained in the [Messages](messages.md#checks) documentation.
 
 ###  Backwards compatibility
 

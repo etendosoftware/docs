@@ -169,7 +169,7 @@ ORGANIZATIONID needs to be the UUID of the Organization whose log you want to sh
 
 ###  Creating the Report
 
-It is possible to create a report using a process definition. For more information, visit [this section](How_to_create_a_Report_using_Process_Definition.md).
+It is possible to create a report using a process definition. For more information, visit [this section](how-to-create-a-report-using-process-definition.md).
 
   * Using the System Administrator role 
   * Using the quick-launch, open: *Process Definition* window 

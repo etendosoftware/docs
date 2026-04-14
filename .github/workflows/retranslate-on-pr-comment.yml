@@ -1,0 +1,243 @@
+name: Retranslate On PR Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  retranslate:
+    if: github.event.issue.pull_request != null
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse /retranslate command
+        id: parse
+        shell: bash
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          AUTHOR_ASSOCIATION: ${{ github.event.comment.author_association }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          import re
+          import shlex
+
+          body = (os.getenv('COMMENT_BODY') or '').strip()
+          assoc = (os.getenv('AUTHOR_ASSOCIATION') or '').strip().upper()
+          allowed = {'OWNER', 'MEMBER', 'COLLABORATOR'}
+
+          if not body.startswith('/retranslate'):
+            print('status=skip')
+            raise SystemExit(0)
+
+          if assoc not in allowed:
+            print('status=forbidden')
+            print('error=No autorizado. Solo OWNER/MEMBER/COLLABORATOR pueden usar /retranslate.')
+            raise SystemExit(0)
+
+          try:
+            tokens = shlex.split(body)
+          except ValueError as exc:
+            print('status=invalid')
+            print(f'error=No pude parsear el comando: {exc}')
+            raise SystemExit(0)
+
+          if len(tokens) == 2 and tokens[1] == '--help':
+            print('status=help')
+            raise SystemExit(0)
+
+          if len(tokens) < 2 or tokens[0] != '/retranslate':
+            print('status=invalid')
+            print('error=Uso: /retranslate docs/ruta/archivo.md [--mode=full|incremental] [--section="## Titulo"] [--note="instruccion"]')
+            raise SystemExit(0)
+
+          path = tokens[1]
+          note = ''
+          mode = 'incremental'
+          section = ''
+
+          for token in tokens[2:]:
+            if token.startswith('--note='):
+              note = token[len('--note='):].strip()
+            elif token.startswith('--mode='):
+              mode = token[len('--mode='):].strip().lower()
+            elif token.startswith('--section='):
+              section = token[len('--section='):].strip()
+            else:
+              print('status=invalid')
+              print(f'error=Parametro no soportado: {token}. Se admiten --mode, --section y --note.')
+              raise SystemExit(0)
+
+          if mode not in ('full', 'incremental'):
+            print('status=invalid')
+            print('error=--mode invalido. Valores permitidos: full o incremental.')
+            raise SystemExit(0)
+
+          if not re.match(r'^docs/.+\.md$', path):
+            print('status=invalid')
+            print('error=El path debe comenzar con docs/ y terminar en .md')
+            raise SystemExit(0)
+
+          blocked_prefixes = (
+            'docs/es/',
+            'docs/assets/',
+            'docs/images/',
+            'docs/stylesheets/',
+          )
+          if path.startswith(blocked_prefixes):
+            print('status=invalid')
+            print('error=Ese archivo esta excluido de traduccion automatica.')
+            raise SystemExit(0)
+
+          note = note.replace('\n', ' ').strip()
+          section = section.replace('\n', ' ').strip()
+
+          print('status=valid')
+          print(f'path={path}')
+          print(f'mode={mode}')
+          print(f'section={section}')
+          print(f'note={note}')
+          PY
+
+      - name: Comment help or error
+        if: steps.parse.outputs.status == 'invalid' || steps.parse.outputs.status == 'forbidden' || steps.parse.outputs.status == 'help'
+        uses: actions/github-script@v7
+        env:
+          PARSE_ERROR: ${{ steps.parse.outputs.error }}
+          PARSE_STATUS: ${{ steps.parse.outputs.status }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const error = process.env.PARSE_ERROR;
+            const isHelp = process.env.PARSE_STATUS === 'help';
+            const header = isHelp ? [] : [`**${error}**`, '', '---', ''];
+            const message = [
+              ...header,
+              '### `/retranslate` — Retranslation command',
+              '',
+              'Re-runs the automatic translation for a specific file in this PR.',
+              '',
+              '**Syntax:**',
+              '```',
+              '/retranslate docs/path/file.md [--mode=full|incremental] [--section="## Title"] [--note="instruction"]',
+              '```',
+              '',
+              '**Parameters:**',
+              '| Parameter | Required | Default | Description |',
+              '|-----------|----------|---------|-------------|',
+              '| `docs/path/file.md` | Yes | — | Path to the English source file (must start with `docs/` and end in `.md`) |',
+              '| `--mode` | No | `incremental` | `incremental`: only translates new/changed sections. `full`: re-translates the entire file |',
+              '| `--section` | No | — | Prioritize a specific section (e.g. `"## Installation"`) |',
+              '| `--note` | No | — | Custom instruction for the translation agent (e.g. `"Use \'arrendatario\' instead of \'tenant\'"`) |',
+              '',
+              '**Examples:**',
+              '```',
+              '/retranslate docs/getting-started/installation.md',
+              '/retranslate docs/getting-started/installation.md --mode=full',
+              '/retranslate docs/getting-started/installation.md --section="## Database setup" --note="Use \'arrendatario\' instead of \'tenant\'"',
+              '```',
+              '',
+              '**Blocked paths:** `docs/es/`, `docs/assets/`, `docs/images/`, `docs/stylesheets/`',
+              '',
+              '**Permissions:** Only `OWNER`, `MEMBER`, or `COLLABORATOR` can use this command.',
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: message
+            })
+
+      - name: Get PR metadata
+        if: steps.parse.outputs.status == 'valid'
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.issue.number
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber
+            })
+            core.setOutput('number', String(pr.number))
+            core.setOutput('head_ref', pr.head.ref)
+            core.setOutput('head_sha', pr.head.sha)
+            core.setOutput('base_ref', pr.base.ref)
+
+      - name: React to comment
+        if: steps.parse.outputs.status == 'valid'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'rocket'
+            })
+
+      - name: Trigger n8n retranslate webhook
+        if: steps.parse.outputs.status == 'valid'
+        shell: bash
+        env:
+          N8N_WEBHOOK_URL: ${{ secrets.N8N_WEBHOOK_TRL_URL }}
+          FILE_PATH: ${{ steps.parse.outputs.path }}
+          SOURCE_BRANCH: ${{ steps.pr.outputs.head_ref }}
+          TARGET_BRANCH: ${{ steps.pr.outputs.base_ref }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          COMMIT_SHA: ${{ steps.pr.outputs.head_sha }}
+          ACTOR: ${{ github.actor }}
+          REPOSITORY: ${{ github.repository }}
+          NOTE: ${{ steps.parse.outputs.note }}
+          MODE: ${{ steps.parse.outputs.mode }}
+          SECTION: ${{ steps.parse.outputs.section }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+        run: |
+          payload=$(jq -n \
+            --arg file "$FILE_PATH" \
+            --arg sourceBranch "$SOURCE_BRANCH" \
+            --arg targetBranch "$TARGET_BRANCH" \
+            --argjson prNumber "$PR_NUMBER" \
+            --arg commit "$COMMIT_SHA" \
+            --arg actor "$ACTOR" \
+            --arg repository "$REPOSITORY" \
+            --arg note "$NOTE" \
+            --arg section "$SECTION" \
+            --arg triggerType "pr_comment_retranslate" \
+            --arg retranslateMode "$MODE" \
+            --arg requestedBy "$ACTOR" \
+            --argjson commentId "$COMMENT_ID" \
+            '{
+              files: [$file],
+              sourceBranch: $sourceBranch,
+              targetBranch: $targetBranch,
+              prNumber: $prNumber,
+              commit: $commit,
+              actor: $actor,
+              repository: $repository,
+              triggerType: $triggerType,
+              retranslate: true,
+              retranslateMode: $retranslateMode,
+              retranslateSection: $section,
+              retranslateNote: $note,
+              requestedBy: $requestedBy,
+              commentId: $commentId
+            }')
+
+          http_code=$(curl -sS -o /tmp/n8n-response.json -w "%{http_code}" \
+            -X POST "$N8N_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "$payload")
+
+          if [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+            echo "n8n webhook failed with status $http_code"
+            cat /tmp/n8n-response.json
+            exit 1
+          fi
