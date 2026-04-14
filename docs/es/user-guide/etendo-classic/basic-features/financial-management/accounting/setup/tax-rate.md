@@ -1,11 +1,11 @@
 ---
 title: Rango impuesto
 tags:
-    - Impuesto
-    - Índice
-    - Gestión Financiera
-    - Configuración
-    - Contabilidad
+    - Configuración de impuestos
+    - Configuración de impuestos
+    - Gestión de IVA
+    - Configuración financiera
+    - Impuestos de contabilidad
 ---
 
 # Rango impuesto
@@ -14,89 +14,115 @@ tags:
 
 ## Visión general
 
-Cada rango impuesto en Etendo es una combinación de diferentes variables como la categoría de impuesto, el índice y la categoría de impuestos de terceros, entre otras. Si todas esas variables están correctamente configuradas, el rango impuesto correcto se completa automáticamente en cada transacción empresarial.
+La ventana Rango impuesto es donde se definen los impuestos que Etendo aplica automáticamente a los documentos de venta y compra, como pedidos y facturas. Cada rango impuesto especifica el porcentaje a aplicar, a qué transacciones se aplica y cómo se calcula y registra el importe del impuesto en la contabilidad. Configurar correctamente los rangos impuesto garantiza que cada documento lleve el impuesto adecuado sin trabajo manual y que la empresa cumpla con sus obligaciones de información fiscal.
 
-Es posible crear *Rango impuesto* que son una *Combinación* de más de un rango impuesto. Ese escenario puede aplicarse a un tercero que está sujeto a IVA e Impuesto sobre la Renta al mismo tiempo mientras alquila una oficina a un tercero fuera de sus actividades empresariales "normales".
+Un rango impuesto se determina mediante una combinación de elementos de configuración, entre los que se incluyen:
 
-### Aplicación de impuestos
+- **[Categoría de Impuesto](../setup/tax-category.md)**
+- **Índice**
+- **Tipo venta/compra**
+- **[Categorías de Impuestos de Terceros](../setup/business-partner-tax-category.md)**
+- **Origen y destino geográficos (Zona de Impuesto)**
+- **Comportamientos fiscales especiales**: Retención (un impuesto deducido en origen antes del pago), Exento de impuestos (no se aplica impuesto), IVA de caja (el impuesto se liquida al cobro/pago y no en la fecha de la factura), Deducible (la empresa puede recuperar el impuesto) y No deducible (el impuesto se trata como un gasto).
 
-Los impuestos se aplican a pedidos y facturas. En este proceso, hay dos pasos: asociar el impuesto deseado a la línea y procesar el documento que aplicará el impuesto y calculará el importe real.
+Cuando estos parámetros están correctamente configurados, Etendo asigna automáticamente el impuesto correcto a cada línea de transacción según reglas predefinidas.
 
-### Obtención del impuesto por defecto
+Los impuestos se asocian primero a las líneas de documento y, después, los importes reales de impuestos se calculan cuando el documento se procesa, garantizando la exactitud contable.
 
-Cuando en una línea de documento (pedido o factura) se selecciona un producto, se asocia un impuesto por defecto a esta línea. Tenga en cuenta que podemos seleccionar el impuesto que queramos para esta línea. La selección del impuesto por defecto se realiza mediante el procedimiento almacenado de BD C\_GetTax. Las reglas seguidas por este procedimiento son las siguientes:
+Algunas transacciones requieren dos impuestos separados al mismo tiempo, por ejemplo, IVA y una retención de IRPF en una factura de servicios. Etendo gestiona esto mediante impuestos de agrupación: se crea un impuesto padre que agrupa los impuestos individuales debajo de él. Cuando se selecciona el impuesto padre en una línea de documento, Etendo aplica y calcula automáticamente cada impuesto subyacente por separado. Esto significa que solo hay que elegir un impuesto por línea, incluso cuando se aplican dos impuestos.
 
-Para transacciones de venta con un proyecto asociado, si un proyecto tiene un rango impuesto, se toma este rango impuesto. Esto funciona cuando un pedido es generado por un Proyecto (Pedido). En este caso, el impuesto se toma directamente del impuesto de la línea del proyecto. Para transacciones de venta, si un tercero está marcado como exento de impuestos, el impuesto seleccionado será el que esté marcado como exento con la fecha más reciente relativa a la fecha del pedido o de la factura.
+## Obtención del impuesto por defecto
 
-En caso contrario, el impuesto se selecciona de entre los definidos en la misma categoría de impuesto que el producto en la línea. Los impuestos con categoría de impuestos de terceros definida solo pueden aplicarse a aquellos terceros con la misma categoría de impuesto (para proveedor o cliente). Si el impuesto no tiene una categoría de impuestos de terceros, puede aplicarse a cualquier tercero (con o sin una categoría de impuesto asociada). Si un impuesto con categoría de impuestos de terceros y otro sin ella pueden aplicarse ambos, se seleccionará el que tenga categoría de impuestos de terceros. Además, se tienen en cuenta las ubicaciones “hasta” y “desde”. En primer lugar, se seleccionan aquellos impuestos definidos para regiones más cercanas (si un impuesto es para región y otro para país, se seleccionará el de región). Esta información se asocia al rango impuesto, a través de la solapa “Zona de Impuesto”. Los impuestos se aplican teniendo en cuenta si están definidos como Ventas, Compra o Ambos.
+Cuando se añade un producto a un pedido o factura, Etendo selecciona automáticamente el impuesto para esa línea. Entender cómo funciona esta selección ayuda a explicar por qué apareció un impuesto concreto en un documento o por qué no se encontró ninguno. El sistema comprueba las siguientes condiciones en orden y se detiene en la primera coincidencia:
 
-Aparte de estas reglas, y solo en el caso de Pedidos y Facturas de Compra/Venta, el sistema filtra los rangos impuesto teniendo en cuenta también el indicador IVA de caja definido en la cabecera del documento, que se establece automáticamente en función de la configuración de la organización y del tercero para documentos de venta y compra respectivamente (aunque puede sobrescribirse manualmente después). Así, en caso de que el documento esté habilitado para el régimen de IVA de caja, el sistema obtendrá un rango impuesto de IVA de caja y viceversa.
+1. **Impuesto del proyecto (solo ventas):** Si el pedido de venta se generó a partir de un proyecto, el sistema usa el rango impuesto definido en la línea del proyecto.
+2. **Tercero exento de impuestos (solo ventas):** Si el tercero está marcado como exento de impuestos, el sistema selecciona el rango impuesto marcado como exento con la fecha más reciente, relativa a la fecha del pedido o de la factura.
+3. **Coincidencia de categoría de impuesto:** El sistema selecciona un impuesto de los definidos en la misma categoría de impuesto que el producto de la línea.
+4. **Categoría de impuestos de terceros:** Si el rango impuesto está vinculado a una categoría de impuestos de terceros específica, solo se aplica a los terceros asignados a esa misma categoría, como proveedor o cliente. Los rangos impuesto sin categoría de impuestos de terceros pueden aplicarse a cualquier tercero. Cuando existen ambos, el que tiene una categoría de impuestos de terceros coincidente tiene prioridad.
+5. **Proximidad geográfica (Zona de Impuesto):** El sistema evalúa las ubicaciones de origen y destino. Los rangos impuesto definidos para regiones más específicas tienen prioridad sobre los más amplios, por ejemplo, se selecciona un impuesto a nivel de región antes que uno a nivel de país. Esta información se configura en la solapa **Zona de Impuesto**.
+6. **Tipo venta/compra:** El sistema filtra los rangos impuesto según si están definidos como Ventas, Compras o Ambos.
 
-Una vez seleccionado el impuesto (el por defecto, u otro seleccionado por el usuario), se calcula un importe aproximado mediante los callouts SL\_Order\_Tax o SL\_Invoice\_Tax. Si el impuesto está marcado como nivel de agrupación, el cálculo se realizará usando el índice definido en el impuesto padre, sin desglosarlo ni tomar los valores reales de sus hijos. Además, en este punto se rellenan las tablas c\_order\_tax y c\_invoice\_tax con los impuestos. El importe real se calcula cuando se procesa el documento.
+Si Etendo no puede encontrar un impuesto que coincida con todas las condiciones aplicables, no se asigna ningún impuesto a la línea. Esto suele significar que todavía no se ha creado un rango impuesto necesario o que falta alguna configuración obligatoria, por ejemplo, una entrada de Zona de Impuesto o un vínculo de Categoría de Impuestos de Terceros.
 
-Al crear una nueva factura, es posible introducir impuestos manualmente y marcarlos como “no recalcular”. En este caso, el impuesto se aplica con el importe introducido en la solapa Impuesto de la factura, por lo que no se realizará ningún recálculo al procesar la factura. Cuando un impuesto en una factura está marcado como recalculado, si el impuesto se edita manualmente, todos los cambios se perderán al procesar la factura. Esto se debe a que el importe de impuestos de la factura se recalcula. Los impuestos “no recalcular” no están asociados a ninguna línea de factura, mientras que los recalculados sí lo están. Por tanto, cuando un impuesto proviene de una línea, se marcará como recalcular. Si se crea manualmente, no se marcará, y este valor no será actualizable.
+!!!note
+    Hay un filtro adicional que solo se aplica a Pedidos y Facturas: IVA de caja. El IVA de caja es un régimen fiscal en el que la empresa liquida su obligación de IVA cuando la factura se cobra realmente, en lugar de cuando se emite. Etendo marca cada documento automáticamente en función de si la organización y el tercero usan este régimen. Cuando un documento está marcado como IVA de caja, el sistema selecciona solo los rangos impuesto configurados para IVA de caja; cuando no está marcado, selecciona solo los rangos impuesto estándar (sin IVA de caja). Esta marca puede cambiarse manualmente en la cabecera del documento si es necesario.
 
-No recalcular impuestos es útil para facturas que incluyen líneas de impuesto sin un producto. Por ejemplo, puede utilizarse para productos importados: estos productos suelen tener una factura exenta de impuestos y otra factura creada por el agente de aduanas sin ningún producto, pero con un importe de impuestos para los productos importados.
+Una vez seleccionado el impuesto, ya sea el por defecto o uno elegido por el usuario, el sistema calcula un importe aproximado en la línea del documento. Si el impuesto está definido como **nivel de agrupación**, este cálculo preliminar usa el índice del padre en lugar de expandir los índices de los hijos. El importe real del impuesto se calcula cuando el documento se **procesa**.
 
-### Cálculo del importe real
+Las líneas de impuesto en las facturas siguen uno de estos dos comportamientos:
 
-Cuando se procesan estos documentos (c\_order\_post y c\_invoice\_post), los impuestos e importes reales se calculan a partir de los impuestos seleccionados (salvo que estén definidos como “no recalcular” para facturas) siguiendo estos pasos:
+- **Recalcular (por defecto):** La línea de impuesto está vinculada a una línea de factura. Cuando la factura se procesa, el sistema recalcula el importe del impuesto en función de los datos de la línea. Cualquier edición manual de una línea de impuesto recalculada se sobrescribe durante el proceso.
+- **No recalcular:** La línea de impuesto se introduce manualmente en la solapa Impuesto de la factura y no está vinculada a ninguna línea de factura. Cuando la factura se procesa, el sistema conserva el importe introducido manualmente tal cual. Esta marca se establece automáticamente cuando un impuesto se crea manualmente y no puede cambiarse después.
 
-Se elimina cada impuesto de las tablas C\_OrderTax o C\_InvoiceTax. Esto se hace porque los impuestos en estas tablas antes del proceso del documento son solo informativos y pueden ser inexactos.
+!!!info
+    **No recalcular** es útil para facturas que incluyen importes de impuestos sin una línea de producto correspondiente. Por ejemplo, al importar mercancías, normalmente existe una factura exenta de impuestos para los productos y una factura separada del agente de aduanas que contiene solo un importe de impuesto, como un arancel, sin ninguna línea de producto.
 
-Se crea una nueva línea en las tablas C\_OrderTax o C\_InvoiceTax para cada impuesto diferente aplicado a las líneas del documento (cada línea tendrá solo un impuesto). El importe pagado al impuesto se calcula a partir de la base imponible de las líneas que están asociadas a este impuesto.
+Cuando se procesa un documento, el sistema calcula los importes finales de impuestos a partir de los impuestos seleccionados, salvo que estén definidos como **No recalcular** en facturas, siguiendo estos pasos:
 
-Para impuestos definidos como nivel de agrupación, se inserta una nueva línea por cada uno de sus hijos y el importe se calcula teniendo en cuenta si los hijos son en cascada o no.
+1. Se eliminan todos los importes de impuestos preliminares mostrados antes del proceso, ya que son aproximados y pueden ser inexactos.
+2. Para cada impuesto distinto aplicado a las líneas del documento, el sistema crea un registro de impuesto y calcula el importe en función de las bases imponibles de las líneas asociadas (cada línea tiene solo un impuesto).
+3. Para los impuestos definidos como **nivel de agrupación**, el sistema expande el padre en sus rangos impuesto hijos y calcula cada importe de hijo por separado, teniendo en cuenta si los hijos están configurados como en cascada.
 
-### Impuesto
+## Cabecera
 
-La ventana Rango impuesto permite al usuario crear tantos rangos impuesto como sean necesarios.
+La cabecera define las características principales y el comportamiento del rango impuesto.
 
-![](../../../../../../assets/drive/1CNDReMFRW2DoxDedviRdGoWwXmcDGTAp.png)
+![Tax Rate header fields](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate1.png)
 
-Los campos a completar para configurar correctamente un rango impuesto son:
+Campos a tener en cuenta: 
 
--   **"Válido desde"**, que es la fecha a partir de la cual un rango impuesto pasa a ser válido.  
-    Por ejemplo, un rango impuesto existente incrementa su índice; en este caso:
-    -   se recomienda crear un nuevo rango impuesto configurado con los nuevos requisitos, en lugar de cambiar el rango impuesto original, que puede seguir en uso si fuese necesario.  
-        De ese modo, habrá dos rangos impuesto que son exactamente iguales para una organización determinada, pero con distinto índice (%) y distinta fecha válido desde.
--   **"Categoría de Impuesto"**, ya que cada rango impuesto debe estar vinculado a una categoría de impuesto determinada como forma de agrupar rangos impuesto similares.
--   **"Índice"**, que es el % o índice del impuesto.
--   **"Tipo venta/compra"** como forma de distinguir entre impuestos de venta y de compra.  
-    El tipo de impuesto es otra variable que Etendo tiene en cuenta al recuperar el rango impuesto correcto tanto en transacciones de venta como de compra. También es una variable muy valiosa a tener en cuenta al informar sobre impuestos, ya que hay informes fiscales que requieren presentar la información de impuestos de compra y de venta por separado.  
-    Existe una opción adicional que es "Ambos"; esta opción permite usar el mismo rango impuesto tanto para transacciones de compra como de venta.
--   **"País/Región"** y **"País/Región de destino"**.  
-    Impuestos como el *IVA* y el *Impuesto sobre ventas de EE. UU.* tienen en cuenta desde dónde/hacia dónde se realiza una transacción para determinar si está sujeta al impuesto o no.  
-    Estos dos campos permiten al usuario introducir esa información teniendo en cuenta si el impuesto es de tipo "Compra" o "Ventas"; por lo tanto, al emitir una factura de venta desde F&B US Inc (País USA y Región Nueva York) a un cliente también ubicado en País de destino USA y Región de destino Nueva York, solo se aplicarían los rangos impuesto de ventas creados dentro de esa Zona de Impuesto especificada.
--   **"Nivel agrupación"**, un rango impuesto puede definirse como de agrupación, lo que significa que tendrá algunos rangos impuesto por debajo.  
-    Los rangos impuesto de agrupación también se establecen como "*Impuesto padre*", por lo que sus rangos impuesto hijos pueden vincularse a él.  
-    Por ejemplo, se emite una factura de venta a un tercero bajo un régimen de IVA específico que incluye un rango impuesto adicional además del tipo de IVA.  
-    Para este escenario, es necesario crear tres rangos impuesto: el padre como de agrupación y dos más para el tipo de IVA y para el otro tipo, ambos vinculados al padre.  
-    *"Es importante remarcar que al emitir la factura de venta para ese tercero, **el rango impuesto mostrado/seleccionado es el de agrupación** o el padre."*
--   **"Base Imponible"**, que es la base imponible a tener en cuenta en el cálculo del importe de impuestos. Las opciones disponibles son:
-    -   Imp. línea
-    -   Imp. línea + Impuestos
-    -   Base imponible alternativa
-    -   Base imponible alternativa + Impuestos
--   **"Cálculo del importe de impuestos del documento"** que es la forma en que se va a calcular el importe de impuestos por cada rango impuesto (o %). Las opciones disponibles son:
-    -   "Importe basado en documento por índice"; esta opción implica que el importe de impuestos se va a calcular como importe de impuestos = (suma de bases imponibles al mismo índice \* índice del impuesto)
-    -   "Importe base de línea por índice"; esta opción implica que el importe de impuestos se va a calcular por línea como importe de impuestos = (base imponible línea 1 \* índice del impuesto) + (base imponible línea 2 \* índice del impuesto) + ....+ (base imponible línea n + índice del impuesto).
+- **Válido desde**: fecha en la que el impuesto entra en vigor.
 
-En la sección "Más información" también hay algunos campos relevantes:
+    !!! warning
+        Si un rango impuesto cambia, por ejemplo, porque el gobierno aumenta el índice del IVA, no edite el rango impuesto existente. Cree un nuevo rango impuesto con el porcentaje actualizado y una nueva fecha de Válido desde. Así se conserva el índice original en los documentos antiguos y se garantiza que el nuevo índice se aplique a partir de la fecha efectiva.
 
--   **"Impuesto padre"**, los rangos impuesto que pertenecen a un rango impuesto de agrupación deben vincularse a él en este campo para que el árbol de rangos impuesto esté correctamente estructurado.
--   **"Categoría de Impuestos de Terceros"**, un rango impuesto puede vincularse a una categoría de impuestos de terceros específica; por lo tanto, solo se aplicará a los terceros que pertenezcan a esa categoría.
--   **"Retención"**, un rango impuesto puede configurarse como "Retención", por lo que se gestiona correctamente como un tipo de impuesto separado en los informes fiscales.
-    -   Los rangos impuesto de retención son rangos impuesto "*Negativo*".
--   **Exento de impuestos**. Un rango impuesto puede configurarse como exento; por lo tanto, es el que se muestra automáticamente en las líneas de pedido/factura creadas para un Cliente configurado también como exento de impuestos.
--   **IVA de caja**. Este tipo de rangos impuesto se utiliza para soportar el régimen de IVA de caja, que permite a las empresas liquidar el importe de IVA cuando han cobrado/pagado las facturas en lugar de en la creación de la factura. Al usar rangos impuesto de IVA de caja, las cuentas Impuesto repercutido transitorio e Impuesto soportado transitorio deben declararse en la solapa Contabilidad.
--   Los rangos impuesto también pueden configurarse como **"No está sujeto a impuestos"**. Un rango impuesto no sujeto a impuestos puede vincularse a transacciones sujetas a impuestos que pasan a no estar sujetas a impuestos bajo una situación determinada. Hay informes fiscales que requieren información sobre ambos tipos de impuestos: exentos y no sujetos a impuestos.
--   Rangos impuesto específicos pueden configurarse como **"Deducible"** (para aquellas Organizaciones para las que NO se permite la deducción de impuestos).
--   Rangos impuesto específicos pueden configurarse como **"No deducible"** (para aquellas Organizaciones para las que se permite la deducción de impuestos).
+- **Categoría de Impuesto**: cada rango impuesto debe estar vinculado a una [categoría de impuesto](../setup/tax-category.md) como forma de agrupar rangos impuesto similares.
+- **Índice**: porcentaje aplicado a la base imponible.
+- **Tipo venta/compra**: forma de distinguir entre impuestos de venta y de compra. El tipo de impuesto es otra variable que Etendo tiene en cuenta al recuperar el rango impuesto correcto tanto en transacciones de venta como de compra y también es una variable muy valiosa a tener en cuenta al informar sobre impuestos, ya que hay informes fiscales que requieren presentar la información de impuestos de compra y de venta por separado.
 
-La forma en que se comportan los rangos impuesto Deducible y No deducible en términos contables se explica a continuación:
+    !!!info
+        Existe una opción adicional, **Ambos**, que permite usar el **mismo rango impuesto** tanto para transacciones de compra como de venta.
 
--   Factura de compra que incluye un importe de impuestos 100% deducible.  
+- **Cálculo del importe de impuestos del documento**: forma en que se va a calcular el importe de impuestos para cada rango impuesto (o %). 
+    Las opciones disponibles son:
+    - **Importe basado en documento por índice**: Etendo suma todos los importes imponibles del documento que comparten el mismo índice y luego aplica el porcentaje una sola vez al total. Es la opción más habitual. Puede producir diferencias de redondeo muy pequeñas, de unos céntimos, en comparación con el cálculo línea a línea.
+    - **Importe base de línea por índice**: Etendo calcula el impuesto por separado para cada línea del documento y luego suma los resultados. Use esta opción cuando la autoridad fiscal o el cliente requiera que el impuesto se muestre y redondee a nivel de línea individual.
+
+- **País/Región** y **País/Región de destino**: impuestos como el IVA y el Impuesto sobre ventas de EE. UU. tienen en cuenta desde dónde y hacia dónde se origina una transacción para determinar si el impuesto se aplica o no.
+    Estos dos campos permiten introducir esa información teniendo en cuenta si el impuesto es de tipo **compra** o **ventas**; por lo tanto, al emitir una factura de venta desde F&B US Inc (País USA y Región Nueva York) a un cliente también ubicado en País de destino USA y Región de destino Nueva York, solo se aplicarían los rangos impuesto de ventas creados dentro de esa Zona de Impuesto especificada.
+
+- **Base Imponible**: base imponible a tener en cuenta en el cálculo del importe de impuestos. Las opciones disponibles son:
+    - **Imp. línea**
+    - **Imp. línea + Impuestos**
+    - **Base imponible alternativa**
+    - **Base imponible alternativa + Impuestos**
+
+- **Nivel agrupación**: un rango impuesto puede definirse como de agrupación, lo que significa que tendrá algunos rangos impuesto por debajo.
+    Los rangos impuesto de agrupación también se establecen como **Impuesto padre**, por lo que sus rangos impuesto hijos pueden vincularse a él. Por ejemplo, se emite una factura de venta a un tercero bajo un régimen de IVA específico que incluye un rango impuesto adicional además del tipo de IVA.
+    Para este escenario, es necesario crear tres rangos impuesto: el padre como de agrupación y dos más para el tipo de IVA y para el otro tipo, ambos vinculados al padre.
+
+    !!!info
+        Es importante remarcar que al emitir la factura de venta para ese tercero, el rango impuesto mostrado/seleccionado es el de agrupación o el padre.
+
+En la sección **Más información** también hay algunos campos relevantes:
+
+-   **Impuesto padre**: los rangos impuesto que pertenecen a un rango impuesto de agrupación deben vincularse a él en este campo para que el árbol de rangos impuesto esté correctamente estructurado.
+-   **Categoría de Impuestos de Terceros**: un rango impuesto puede vincularse a una categoría de impuestos de terceros específica; por lo tanto, solo se aplicará a los terceros que pertenezcan a esa categoría.
+-   **Retención**: un rango impuesto puede configurarse como **Retención**, por lo que se gestiona correctamente como un tipo de impuesto separado en los informes fiscales.
+    -   Los rangos impuesto de retención son rangos impuesto **Negativo**.
+-   **Exento de impuestos**: un rango impuesto puede configurarse como exento; por lo tanto, es el que se muestra automáticamente en las líneas de pedido/factura creadas para un Cliente configurado también como exento de impuestos.
+-   **IVA de caja**: este tipo de rangos impuesto se utiliza para soportar el régimen de IVA de caja, que permite a las empresas liquidar el importe de IVA cuando han cobrado/pagado las facturas en lugar de en la creación de la factura. 
+
+    !!!note
+        Al usar rangos impuesto de IVA de caja, las cuentas Impuesto repercutido transitorio e Impuesto soportado transitorio deben declararse en la solapa Contabilidad.
+
+-   Los rangos impuesto también pueden configurarse como **No está sujeto a impuestos**. Un rango impuesto no sujeto a impuestos puede vincularse a transacciones sujetas a impuestos que pasan a no estar sujetas a impuestos bajo una situación determinada. Hay informes fiscales que requieren información sobre ambos tipos de impuestos: exentos y no sujetos a impuestos.
+-   **Deducible**: la organización puede recuperar el importe del impuesto. El IVA se contabiliza en una cuenta de **Impuesto reclamado** y puede compensarse con las obligaciones fiscales.
+-   **No deducible**: la organización no puede recuperar el importe del impuesto. El IVA se trata como un gasto adicional y se contabiliza en la cuenta de **Gastos del producto** en lugar de en Impuesto reclamado.
+
+La forma en que se comportan los rangos impuesto **Deducible** y **No deducible** en términos contables se explica a continuación:
+
+-   Factura de compra que incluye un importe de impuestos **deducible**.  
     El importe de IVA debe contabilizarse en el libro mayor en una cuenta de Impuesto reclamado; por lo tanto, el asiento de la factura de compra es:
 
 |     |     |     |     |
@@ -106,9 +132,8 @@ La forma en que se comportan los rangos impuesto Deducible y No deducible en té
 | Impuesto reclamado | Impuestos |     | Uno por línea de impuesto |
 | Pasivo del proveedor |     | Importe total | Uno por factura |
 
-## Factura de compra que incluye un importe de impuestos NO deducible
-
-El importe de IVA no puede contabilizarse en el libro mayor en una cuenta de Impuesto reclamado, ya que significa un gasto; por lo tanto, el asiento de la factura de compra es:
+-   Factura de compra que incluye un importe de impuestos **no deducible**.  
+    El importe de IVA no puede contabilizarse en el libro mayor en una cuenta de Impuesto reclamado, ya que significa un gasto; por lo tanto, el asiento de la factura de compra es:
 
 |     |     |     |     |
 | --- | --- | --- | --- |
