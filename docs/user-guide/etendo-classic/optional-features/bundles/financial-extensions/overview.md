@@ -41,7 +41,7 @@ The Accounting Dimensions Assets module improves asset management and amortizati
 The Accounting Template Module allows setting a **non deductible tax's amount** to a specified financial account. This functionality only applies to **purchase invoices**. 
 
 !!! info
-    For more information, visit the [Accounting Template Module user guide](../../bundles/financial-extensions/accounting-template-module.md).
+    For more information, visit the [Accounting Template Module user guide](./accounting-template-module.md).
 
 
 ### Adjust Invoice Tax

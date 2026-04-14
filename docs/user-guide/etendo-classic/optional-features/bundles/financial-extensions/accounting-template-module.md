@@ -44,9 +44,7 @@ As System Admin, go to the **Windows, Tabs and Fields** and in the General Ledge
 
 ## GL Configuration
 
-The **Accounting Template field** in the Active Table tab of the General Ledger Configuration window must be activated then, set the template called **Purchase Invoice Not Deductible**.  
-
-VA
+The **Accounting Template field** in the Active Table tab of the General Ledger Configuration window must be activated then, set the template called **Purchase Invoice Not Deductible**.
 
 Finally, The checkbox, **Use the configured account** must be checked in the Tax Rate window. It will only be visible if the checkbox under the heading **Non-deductible tax** was previously checked. The default value of this checkbox will be NO.
 
@@ -56,14 +54,14 @@ Finally, The checkbox, **Use the configured account** must be checked in the Tax
 
 
 
-![](../../../../../../assets/drive/vgIVffeOmiu30VHVRRMlIlN41BbaPKe2vydojUxBx1boZS64zEcr5NgKw6fh0iMflSP60qpC-gb2f36uFWzzast-6LFJ2mV1IAkboxENkBoWlmzrxsBMSu-sudz9F7X6n-mzSD7Q.png)
+![Accounting template module example screenshot 1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module2.png)
 
 
 This checkbox, **Use the configured account**, will only be visible if the checkbox under the heading **Non-deductible tax** was previously checked. The default value of this checkbox will be NO.
 
-![](../../../../../../assets/drive/Nn8EaIsRTZnkCxDRlhahXZsX_A1UGjiokZHVkHfTxQCyhd9mOvS8f_IrcGX6YwX_vHu3NQsqvJ-M5JLYAzxUE-NDdb5K1HwTPruHSxRaoj8pNuHgFHhhNSqh86-xmctvh1rcoiYF.png)
+![Accounting template module example screenshot 2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module3.png)
 
-![](../../../../../../assets/drive/idDd6mEz0pXGB5MWi7L2wgYeas5dOXuCJCVhH_Zb2a4TWYGbHc1fgGwHEy5Yyv4ss9G-zP736NwP95l5IgFScpal65Z8G-ueARkHn6ije6drfpJAcR7XlxrXqeVLLMGgA5DJzvGV.png)
+![Accounting template module example screenshot 3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module3.png)
 
 The VAT amount needs to be posted to the ledger in a Tax Credit account, therefore purchase invoice posting looks like:
 
