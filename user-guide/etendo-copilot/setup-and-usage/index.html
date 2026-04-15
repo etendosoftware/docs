@@ -15343,6 +15343,10 @@
 <ul>
 <li>
 <p><strong>Sync Agent</strong>: This process takes care of updating or creating a new agent, in case it does not exist. In addition to creating the agent based on the configurations, it initially gets or updates the list of models, and finally gets and/or uploads the files used as knowledge base.</p>
+<div class="admonition info">
+<p class="admonition-title">Sync from any role</p>
+<p>Any user with access to the Agent window can synchronize agents, regardless of their role. When synchronizing, the knowledge base files are limited to the data of the user's client, ensuring that each client's information remains private and separate. Files belonging to the system client (identified with <code>*</code>) are shared across all clients.</p>
+</div>
 </li>
 <li>
 <p><strong>Refresh Preview</strong>: Show only when agent type is <strong>Langraph</strong>, allowing the user to refresh the Graph Preview when changes to the team members are introduced.</p>
@@ -15371,7 +15375,7 @@
 <li>
 <p><strong>Behaviour</strong>: The way in which the agent will use the file. It has multiple available options:</p>
 <ul>
-<li><strong>[Agent] Add to the agent as Knowledge Base</strong>: Suitable for large files. The agent uses a a default <code>Knowledge Base Search tool</code> to retrieve information during execution. Requires synchronization using the <a href="#buttons">Sync Agent</a> button.</li>
+<li><strong>[Agent] Add to the agent as Knowledge Base</strong>: Suitable for large files. The agent uses a a default <code>Knowledge Base Search tool</code> to retrieve information during execution. Requires synchronization using the <a href="#buttons">Sync Agent</a> button. When synchronized, documents are stored with a client identifier, ensuring that each client's data remains separate.</li>
 <li><strong>[Agent] Append the file content to the prompt</strong>: Recommended for small files with essential data. The file content is inserted into the prompt at each @alias@ or appended at the end if no alias is defined.</li>
 <li><strong>[Agent] SPEC: Add as agent specification</strong>: Used for <code>OpenAPI Specification</code> type files. Automatically generates tools for each method and endpoint, allowing the agent to interact with APIs.</li>
 <li><strong>[User question] Append content to each question</strong>: Best when file content changes frequently. The file is appended to each user message, ensuring the agent always receives updated data.</li>
@@ -15534,7 +15538,7 @@
 </div>
 </div>
 <div class="tabbed-block">
-<p>This type allows using an HQL query result as a file for knowledge base file.</p>
+<p>This type allows using an HQL query result as a file for knowledge base file. HQL Query files are <strong>multi-client</strong>: when synchronizing, the query is executed separately for each client, generating a client-specific version of the results. This ensures each client's knowledge base contains only its own data.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/hql-query.png" data-desc-position="bottom"><img alt="hql-query.png" src="../../../assets/user-guide/etendo-copilot/setup/hql-query.png"></a></p>
 <p>Fields to note:</p>
 <ul>
