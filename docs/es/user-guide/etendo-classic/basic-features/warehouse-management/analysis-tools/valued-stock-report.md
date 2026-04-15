@@ -1,18 +1,24 @@
 ---
 title: Informe de Valuación de Existencias
+tags:
+    - Valued Stock
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Informe de Valuación de Existencias
+# Informe de Valuación de Existencias
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe de Valuación de Existencias`
 
-### **Overview**
+## Overview
 
 El Informe de Valuación de Existencias muestra el stock de un almacén concreto, así como el valor del stock.
 
 El coste se calcula como la suma del coste de cada transacción de material del producto en el almacén. El coste de las transacciones del producto se calcula mediante el proceso Costing Server.
 
-### **Parameters Window**
+## Parameters Window
 
 ![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
@@ -28,7 +34,7 @@ El coste se calcula como la suma del coste de cada transacción de material del 
 !!! warning
     Tenga en cuenta que para que el informe funcione debe especificarse el tipo de cambio a la moneda del informe.
 
-### **Output Window** 
+## Output Window
 
 ![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
@@ -41,7 +47,7 @@ El coste se calcula como la suma del coste de cada transacción de material del 
 -   **Actual Average/Standard Algorithm Cost**: Coste medio/estándar actual, el cálculo más reciente de su valor.
 -   **Actual Average/Standard Algorithm Valuation**: Valoración del stock basada en el Coste medio/estándar actual. Es el resultado de multiplicar el stock por el coste actual.
 
-### **Persisted Information**
+## Persisted Information
 
 Este paso no es necesario para lanzar el informe. Sin embargo, si existen problemas de rendimiento, esto puede ayudar a mejorar considerablemente el rendimiento del informe.
 
@@ -58,7 +64,7 @@ La información persistirá hasta el primer período no cerrado. De este modo, e
     Se recomienda programarlo diariamente, en un momento en que el sistema no tenga mucha actividad. Agregará datos solo cuando un nuevo período se cierre o se cierre permanentemente.
 
 
-### **Limitations**
+## Limitations
 
 Al agregar la información por cada período cerrado, no es posible conservar la fecha de cada transacción. Por tanto, cuando el informe se lance para una moneda diferente, toda esa información se convertirá en la fecha de cierre del período. Esto puede provocar pequeñas discrepancias con la versión anterior debido a conversiones entre monedas en fechas diferentes.
 

@@ -24,7 +24,6 @@ Para versiones anteriores, o para verificar la configuración:
 !!! warning "Recomendación de seguridad"
     Configure un tiempo de expiración razonable en entornos productivos. Dejarlo en `0` (sin expiración) implica que, si el token se ve comprometido, seguirá siendo válido indefinidamente.
 
-![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 ## Cómo configurar agentes
 
 Con Etendo Copilot, es posible:
@@ -48,12 +47,13 @@ La ventana Agente le permite definir y configurar agentes. Las capacidades de un
 
 ### Cabecera
 
-![agents-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
+The Header section contains the main configuration of the agent: its identity, availability, and synchronization behavior. Most of these fields need to be set when the agent is first created and rarely change afterwards.
+
+![agents-window](../../assets/user-guide/etendo-copilot/setup/agent-window.png)
 
 Campos a tener en cuenta:
 
 - **Nombre**: nombre del agente
-- **Descripción**: descripción del agente
 - **Descripción**: la descripción del agente para que el gestor pueda elegir el agente adecuado para cada caso.
 - **Tipo de aplicación**:
 
@@ -66,16 +66,23 @@ Campos a tener en cuenta:
         Esta opción funciona como un gestor de otros agentes y permite seleccionar miembros del equipo. Como librería, LangGraph suele funcionar como una herramienta de software diseñada para ayudar a desarrolladores e investigadores a trabajar con datos lingüísticos en un formato estructurado basado en grafos. La cantidad máxima por defecto de interacciones entre el gestor y los agentes es 50, aunque se puede configurar una cantidad diferente.
 
 - **Estado de sincronización**: este campo de solo lectura indica el estado actual del agente.
-    - `Pending synchronization` el agente cambiará a este estado ante cualquier cambio, ya sea en la cabecera o en las solapas.
+    - `Pending synchronization`: el agente cambiará a este estado ante cualquier cambio, ya sea en la cabecera o en las solapas.
     - `Synchronized`, es necesario sincronizar el agente usando el botón “Sincronizar agente”.
 
 - **Módulo**: módulo en el que se exportarán el agente y todas sus configuraciones. Este campo solo está disponible con el rol `System Administrator`.
 - **Activo**: casilla para activar o no el agente.
-- **SystemApp**: casilla para limitar el uso de determinados agentes únicamente bajo el rol `system administrator` y no disponible para usuarios finales.
+- **Alcance del agente**: define el alcance de visibilidad del agente. Opciones disponibles:
+
+    - **Client**: el agente solo está disponible para el cliente en el que fue creado. Este es el valor por defecto.
+    - **System**: el agente solo está disponible bajo el rol `System Administrator`.
+    - **Client + System**: el agente está disponible para el cliente y también bajo el rol `System Administrator`.
+
+- **Sincronizar al inicio**: cuando está habilitado, el agente se sincroniza automáticamente cuando el sistema Etendo se inicia. Esto elimina la necesidad de ejecutar manualmente el proceso `Sincronizar agente` después de cada reinicio, asegurando que el agente esté siempre actualizado.
+- **Destacado**: cuando está habilitado, el agente se resalta y aparece primero en el desplegable de agentes del Chat de Copilot. Cuando existen agentes destacados, el desplegable del chat muestra un botón de filtro (⭐) que permite a los usuarios alternar entre ver solo agentes destacados o todos los agentes disponibles. Por defecto, cuando existen agentes destacados, el desplegable muestra solo los destacados.
 - **Prompt**: instrucciones específicas de los agentes. Estas instrucciones pueden escribirse en inglés o en español.
     
     !!!info
-        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` y `@source.path@`. Estas variables se sustituirán por los valores definidos en el archivo `gradle.properties`.
+        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`. Estas variables se sustituyen por los valores definidos en el archivo `gradle.properties`.
 
 - **Vista previa del grafo**: en caso de definir una aplicación de tipo **LangGraph**, muestra el árbol de agentes bajo un determinado gestor.
 
@@ -261,7 +268,7 @@ Campos a tener en cuenta:
                 - `/`: Siempre comienza con una barra.  
                 - `{owner}`: El usuario u organización de GitHub (sin dominio). P. ej.:`etendosoftware`  
                 - `/{repo}`: El nombre del repositorio de GitHub. P. ej.: `etendo_core`  
-                - `{branch}`: El nombre de la rama o etiqueta que desea descargar. P. ej.: `main` o `release/24.4`  
+                - `{branch}`: El nombre de la rama o etiqueta que desea descargar. P. ej: `main` o `release/24.4`  
                 - `/{subpath}` La ruta interna dentro del repositorio que desea filtrar. Puede apuntar a un directorio o incluir un patrón de nombre de archivo con `*`.
 
                     Ejemplos:  
@@ -462,5 +469,11 @@ Este proceso permite sincronizar bajo demanda los modelos distribuidos por Etend
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
+
+---
 
 ---
