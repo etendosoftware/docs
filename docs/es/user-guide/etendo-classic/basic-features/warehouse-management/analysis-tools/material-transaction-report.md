@@ -6,7 +6,7 @@ title: Informe Transacción de Material
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Transacción de Material`
 
-El Informe Transacción de Material lista todos los documentos (envíos de salida y recepciones de entrada) agrupados por tercero y documento. Para cada número de documento se muestran los datos, el producto, el almacén, el contenedor y la cantidad.
+El Informe Transacción de Material lista todos los documentos (envíos de salida y recepciones de entrada) agrupados por tercero y documento. Para cada documento, se muestran el número de documento, el producto, el almacén, el contenedor y la cantidad.
 
 ### Parámetros de la ventana
 

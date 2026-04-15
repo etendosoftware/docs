@@ -71,7 +71,7 @@ En Etendo, la funcionalidad de Preparación de pedidos está diseñada para ayud
 Este módulo le permite observar y analizar en detalle todas las transacciones asociadas al producto seleccionado. 
 
 !!! info
-    Para más información, visite la [Guía de usuario de Operaciones de producto](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+    Para más información, visite la [Guía de usuario de Operaciones de producto](../../../basic-features/warehouse-management/analysis-tools/product-operations.md).
 
 
 ### Reactivar documentos de almacén
@@ -99,7 +99,7 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
 Este módulo proporciona información actualizada sobre el historial diario de existencias de los productos. 
 
 !!! info
-    Para más información, visite la [Guía de usuario de Historial de existencias](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) y la [Guía del desarrollador de Historial de existencias](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    Para más información, visite la [Guía de usuario de Historial de existencias](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history.md) y la [Guía del desarrollador de Historial de existencias](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ### Unidad logística de existencias
 

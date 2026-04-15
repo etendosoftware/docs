@@ -6,13 +6,13 @@ title: Informe Stock
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Stock`
 
-El Informe Stock muestra el nivel de stock de todos los productos (que tengan una cantidad en mano distinta de cero) y su ubicación (almacén y hueco de almacenamiento) agrupados por categoría de producto. Para cada producto de la fila, cantidad, unidad, atributo, estantería, columna, altura y almacén.
+El Informe Stock muestra el nivel de stock de todos los productos (que tengan una cantidad en mano distinta de cero) y su ubicación (almacén y hueco de almacenamiento) agrupados por categoría de producto. Cada fila del informe incluye el producto, cantidad, unidad, atributo, estanterías, columna, altura y almacén.
 
 ### **Ventana de parámetros**
 
 El resultado de este informe puede filtrarse utilizando la fecha de movimiento, la categoría de producto, el producto y los ubicadores de almacén.
 
-![Material Transaction Report](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
+![Stock Report parameters](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
 
 El resultado de este informe puede visualizarse en formato HTML y PDF.
 
@@ -20,7 +20,7 @@ Los campos **Estanterías (x)**, **Columna (y)**, **Altura (z)** corresponden a 
 
 **Salida de ejemplo del informe**
 
-![Material Transaction Report](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
+![Stock Report sample output](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
 
 ---
 

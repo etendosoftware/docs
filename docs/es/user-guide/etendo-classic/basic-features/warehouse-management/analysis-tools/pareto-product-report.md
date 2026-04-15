@@ -27,7 +27,7 @@ El botón **Update ABC** completa el campo **ABC** (actualiza el valor si el reg
 
 ### **Sample Report Output**
 
-![Material Transaction Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+![Pareto Product Report sample output](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
 
 
 Columnas a tener en cuenta:
