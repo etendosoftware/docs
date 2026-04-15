@@ -99,7 +99,7 @@ When exporting agents that need to be pre-configured in a module installation, t
 
     - Log in as System Administrator.
     - Configure the agent and its tabs, ensuring to select the module (under development) in the **Module** field.
-    - If the agent should be restricted to System Administrator use only, check the **System App** checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.
+    - Use the **Agent Scope** field to control who can access the agent. Set it to **System** to restrict the agent to the platform-level System Administrator only. Set it to **Client + System** to allow the agent to be used across all data access levels as well. This field replaces the former **System App** checkbox. For a full description of each option, see [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
     <figure markdown="span">
     ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png)

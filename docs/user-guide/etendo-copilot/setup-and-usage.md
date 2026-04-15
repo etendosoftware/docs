@@ -50,12 +50,13 @@ The Agent window allows you to define and configure agents. The capabilities of 
 
 ### Header
 
-![agents-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
+The Header section contains the main configuration of the agent: its identity, availability, and synchronization behavior. Most of these fields need to be set when the agent is first created and rarely change afterwards.
+
+![agents-window](../../assets/user-guide/etendo-copilot/setup/agent-window.png)
 
 Fields to note:
 
 - **Name**: Agent name
-- **Description**: Agent description
 - **Description**: The description of the agent so that the manager can choose the appropriate agent for each case.
 - **App Type**:
 
@@ -69,18 +70,18 @@ Fields to note:
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
     - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
-    - `Synchronized`, it is necessary to synchronize the agent using the “Synchronize Agent" button.
+    - `Synchronized`, it is necessary to synchronize the agent using the **Synchronize Agent** button.
 
 - **Module**: Module in which the agent and all its configurations will be exported. This field is only available with the `System Administrator` role.
 - **Active**: Checkbox to activate or not the agent.
 - **Agent Scope**: Defines the visibility scope of the agent. Available options:
 
-    - **Client**: The agent is available only for the client in which it was created. This is the default value.
-    - **System**: The agent is available only under the `System Administrator` role.
-    - **Client + System**: The agent is available for the client and also under the `System Administrator` role.
+    - **Client**: The agent is available only to users within the company (client) where it was created. This is the default value and the recommended option for most agents.
+    - **System**: The agent is only accessible to the platform-level System Administrator — the technical role that manages the entire Etendo installation, not a company-level admin user. Use this for agents that should not be visible to any regular company users.
+    - **Client + System**: The agent is available to users within the company where it was created and also to the platform-level System Administrator.
 
-- **Sync on Startup**: When enabled, the agent is automatically synchronized when the Etendo system starts up. This eliminates the need to manually trigger the `Sync Agent` process after each restart, ensuring the agent is always up to date.
-- **Featured**: When enabled, the agent is highlighted and shown first in the Copilot Chat agent dropdown. When there are featured agents, the chat dropdown shows a filter toggle button (⭐) that allows users to switch between viewing only featured agents or all available agents. By default, when featured agents exist, the dropdown shows only the featured ones.
+- **Sync on Startup**: When enabled, the agent is automatically updated every time the Etendo application server restarts (for example, after a system update or a scheduled maintenance restart). This means you do not need to manually click the **Sync Agent** button after each restart to apply your agent configuration changes — the system handles it automatically. If this option is disabled, you must click **Sync Agent** manually after each restart to ensure the agent reflects the latest configuration.
+- **Featured**: When enabled, this agent appears at the top of the agent list in the Copilot Chat and is shown by default when the chat opens. If at least one agent is marked as Featured, all users will see only the Featured agents in the chat list by default. A star button (⭐) appears in the chat allowing any user to switch between the Featured agents view and the full list of all available agents. If no agents are marked as Featured, all agents are shown as usual.
 - **Prompt**: Specific instructions of the agents. These instructions can be written in English or Spanish.
     
     !!!info

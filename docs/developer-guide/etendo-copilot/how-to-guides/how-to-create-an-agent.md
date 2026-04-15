@@ -39,6 +39,14 @@ Some of the main fields to be completed are:
 !!!note 
     For more information on what each field is used for, visit the [Setup and Usage - Agents](../../../user-guide/etendo-copilot/setup-and-usage.md#header) guide.
 
+!!!info "Visibility and display settings"
+    When creating an agent, also consider the following fields available in the Agent window header:
+    - **Agent Scope**: Controls which users can see and use this agent. Defaults to **Client**.
+    - **Featured**: Marks the agent as a priority option in the Copilot Chat agent list.
+    - **Sync on Startup**: Automatically synchronizes the agent each time the application server restarts.
+    
+    For full details on each field, see [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
+
 ### Agent Definition Example
 
 For example, to create a new agent called **Task Definition Agent** to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:
