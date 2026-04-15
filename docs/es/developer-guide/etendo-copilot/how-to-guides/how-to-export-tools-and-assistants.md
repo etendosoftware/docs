@@ -52,7 +52,7 @@ Los agentes deben exportarse como un conjunto de datos, en caso de que se requie
     ```
     - **Habilidades/Herramientas:** Tabla `etcop_app_tool`
     ```sql title="Where Clause"
-    `copilotApp.id in ('<AssistantID>')
+    copilotApp.id in ('<AssistantID>')
     ```
     - **Miembros del Equipo:** Tabla `ETCOP_Team_Member`
     ```sql title="Where Clause"

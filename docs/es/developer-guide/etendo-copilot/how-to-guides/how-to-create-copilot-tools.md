@@ -178,11 +178,11 @@ En este ejemplo, creará una herramienta que realiza un **ping** a un host espec
 
 4. Reiniciar el servicio de Copilot: 
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.stop
     ```
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.up
     ```
 

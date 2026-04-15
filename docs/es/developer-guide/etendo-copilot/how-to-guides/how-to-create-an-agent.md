@@ -5,7 +5,6 @@ tags:
     - Agente
     - Crear
     - LLM
-    - Agente
 ---
 
 # Cómo crear un agente
@@ -143,7 +142,7 @@ Lo más crucial es determinar:
 |**Archivo remoto** | Se recomienda encarecidamente cuando el archivo puede cambiar y se puede acceder a la última versión desde la misma URL. Por ejemplo, un archivo en un repositorio en GitHub. | URL del archivo |
 |**Consulta HQL** | Se utiliza cuando desea que el agente pueda leer información de una tabla o del resultado de una consulta a la base de datos. Por ejemplo, una lista de terceros o pedidos. | Consulta HQL |
 |**Texto** | Cuando la información es estática y puede escribirse directamente en la ventana. | El propio texto |
-|**Especificación de flujo OpenAPI** | Úselo cuando el archivo de base de conocimiento sea la especificación OpenAPI de un flujo de Etendo. Consulte [Cómo permitir que Copilot interactúe con Etendo](#cómo-permitir-que-copilot-interactúe-con-etendo-classic) para más información. | Seleccione el flujo en el selector |
+|**Especificación de flujo OpenAPI** | Úselo cuando el archivo de base de conocimiento sea la especificación OpenAPI de un flujo de Etendo. Consulte [Cómo permitir que Copilot interactúe con Etendo](#cómo-permitir-que-copilot-interactúe-con-una-api-o-con-etendo) para más información. | Seleccione el flujo en el selector |
 |**Índice de código** | Cuando el agente necesita conocer código almacenado **localmente**. | Especifique las rutas de las carpetas |
 
 !!! info
@@ -353,7 +352,7 @@ La funcionalidad más potente y útil de Etendo Copilot es la capacidad de inter
 
 ### API externa
 La forma más habitual se basa en una combinación de una Especificación OpenAPI y una herramienta que permite realizar solicitudes a esa API. Para ello, se necesitan los siguientes pasos:
-- **Añadir la Especificación OpenAPI**: la Especificación OpenAPI es una forma estándar de describir una API. Esta especificación se añade como un archivo de Base de conocimiento. Y se configura como `[Agent] Append the file content to the prompt`. Esto permitirá que el agente conozca los endpoints y métodos de la API.
+- **Añadir la Especificación OpenAPI**: la Especificación OpenAPI es una forma estándar de describir una API. Esta especificación se añade como un archivo de Base de conocimiento. Y se configura como `[Agente] Añadir el contenido del archivo al prompt`. Esto permitirá que el agente conozca los endpoints y métodos de la API.
 - **Añadir la herramienta de llamada a API**: la herramienta de llamada a API es una herramienta que permite realizar solicitudes a una API. Esta herramienta se añade como una herramienta en el agente. El agente puede usar esta herramienta para realizar solicitudes a la API.
 
 ### Etendo
@@ -361,20 +360,20 @@ Para Etendo, el proceso es un poco diferente. La principal diferencia es que pod
 Para saber más sobre cómo crear un flow en Etendo, consulte la guía [Cómo documentar un endpoint con OpenAPI](../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md).
 Los pasos para permitir que un agente interactúe con Etendo son:
 
-- **Añadir la Especificación OpenAPI**: esta especificación se añade como un archivo de Base de conocimiento de tipo `OpenAPI Flow Specification`. Cuando se selecciona este tipo, se muestra un selector con los flows disponibles, para seleccionar el flow que queremos usar. El comportamiento de este archivo puede ser `[Agent] Append the file content to the prompt`. Esto permitirá que el agente conozca los endpoints y métodos de la API.
+- **Añadir la Especificación OpenAPI**: esta especificación se añade como un archivo de Base de conocimiento de tipo `Especificación de flujo OpenAPI`. Cuando se selecciona este tipo, se muestra un selector con los flows disponibles, para seleccionar el flow que queremos usar. El comportamiento de este archivo puede ser `[Agente] Añadir el contenido del archivo al prompt`. Esto permitirá que el agente conozca los endpoints y métodos de la API.
 - **Añadir la herramienta de llamada a API**: la herramienta de llamada a API es una herramienta que permite realizar solicitudes a una API. Esta herramienta se añade como una herramienta en el agente. El agente puede usar esta herramienta para realizar solicitudes a la API.
 
 !!!warning
-    Si el comportamiento del archivo de Base de conocimiento es `[Agent] Add to the agent as Knowledge Base`, el agente no podrá usar la información del archivo de base de conocimiento para generar respuestas sin usar la herramienta `Knowledge base Search`. Por lo tanto, el agente necesita **buscar** en el archivo de base de conocimiento para encontrar la información. Esto no se recomienda debido al rendimiento del agente.
+    Si el comportamiento del archivo de Base de conocimiento es `[Agente] Añadir al agente como base de conocimiento`, el agente no podrá usar la información del archivo de base de conocimiento para generar respuestas sin usar la herramienta `Knowledge base Search`. Por lo tanto, el agente necesita **buscar** en el archivo de base de conocimiento para encontrar la información. Esto no se recomienda debido al rendimiento del agente.
 
 ### Generación automática de herramientas
 
-Cuando la Especificación OpenAPI se añade como un archivo de Base de conocimiento de tipo `OpenAPI Flow Specification`, el agente generará automáticamente herramientas para cada método y endpoint de la API. Estas herramientas se pueden usar para realizar solicitudes a la API sin necesidad de configurar la herramienta de llamada a API. El agente tendrá una herramienta para cada método y endpoint de la API. Esta funcionalidad se encuentra actualmente en fase experimental.
+Cuando la Especificación OpenAPI se añade como un archivo de Base de conocimiento de tipo `Especificación de flujo OpenAPI`, el agente generará automáticamente herramientas para cada método y endpoint de la API. Estas herramientas se pueden usar para realizar solicitudes a la API sin necesidad de configurar la herramienta de llamada a API. El agente tendrá una herramienta para cada método y endpoint de la API. Esta funcionalidad se encuentra actualmente en fase experimental.
 
 ### Ejemplo de interacción de Copilot con Etendo
 Por ejemplo, crearemos un agente para crear Productos en Etendo, usando un flow ya definido con los endpoints necesarios para crear Productos, Categorías de producto y Precios.
 
-1. Primero, crearemos un nuevo archivo de Base de conocimiento de tipo `OpenAPI Flow Specification` y seleccionaremos el flow `Product Flow`.
+1. Primero, crearemos un nuevo archivo de Base de conocimiento de tipo `Especificación de flujo OpenAPI` y seleccionaremos el flow `Product Flow`.
 
     !!!info
         Asegúrese de usar el agente que tenga los permisos necesarios para interactuar con los datos. En este caso, el agente debe tener los permisos necesarios para crear productos, categorías y precios en Etendo.

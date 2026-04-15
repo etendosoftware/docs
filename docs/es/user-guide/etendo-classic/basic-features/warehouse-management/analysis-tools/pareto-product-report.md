@@ -1,14 +1,20 @@
 ---
 title: Informe Pareto de Productos
+tags:
+    - Pareto
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Informe Pareto de Productos
+# Informe Pareto de Productos
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Pareto de Productos`
 
-### **Overview**
+## Overview
 
-**Informe Pareto de Productos** distribuye los productos en tres clases (A, B o C) según el valor del costo que tiene el inventario de cada producto en el almacén. En función de esta clasificación se puede decidir la frecuencia del ciclo de conteo (por ejemplo, los productos A se cuentan semanalmente, los B mensualmente y los C anualmente).
+El Informe Pareto de Productos distribuye los productos en tres clases (A, B o C) según el valor del costo que tiene el inventario de cada producto en el almacén. En función de esta clasificación se puede decidir la frecuencia del ciclo de conteo (por ejemplo, los productos A se cuentan semanalmente, los B mensualmente y los C anualmente).
 
 Se utiliza la siguiente distribución: los productos A representan el 80% del valor del almacén, los B el 15% y los C el 5%.
 
@@ -16,7 +22,7 @@ Se utiliza la siguiente distribución: los productos A representan el 80% del va
     La clasificación se basa en el costo del producto. Por eso es necesario tener una Regla de Costeo validada y los costos de las transacciones de material del producto calculados y actualizados.
 
 
-### **Parameters window**
+## Parameters Window
 
 El campo **Moneda** define la moneda en la que se muestran todos los valores monetarios (como **Costo**, **Valor**) del informe. El campo toma por defecto la moneda del sistema.
 
@@ -25,9 +31,9 @@ El campo **Moneda** define la moneda en la que se muestran todos los valores mon
 
 El botón **Update ABC** completa el campo **ABC** (actualiza el valor si el registro existe o crea un nuevo registro en caso contrario) de la pestaña Org. Specific de la ventana **Producto** para las organizaciones de la salida del informe.
 
-### **Sample Report Output**
+## Sample Report Output
 
-![Material Transaction Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+![Informe Pareto de Productos](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
 
 
 Columnas a tener en cuenta:
@@ -37,7 +43,7 @@ Columnas a tener en cuenta:
 -   **Costo:** este costo se calcula como la relación entre el valor del producto y la cantidad del producto indicada arriba.
 -   **Porcentaje:** este porcentaje es la relación entre el valor del producto y el Valor Total del almacén (que es la suma de todas las líneas del informe).
 
-### **Persisted information**
+## Persisted Information
 
 Se puede utilizar la información agregada calculada para el Valued Stock. Consulte la documentación del Valued Stock Report para obtener más detalles sobre cómo generar la información agregada.
 
