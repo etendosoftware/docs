@@ -38,6 +38,14 @@ Algunos de los campos principales que deben completarse son:
 !!!note
     Para más información sobre para qué se utiliza cada campo, visite la guía [Configuración y uso - Agentes](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
+!!!info "Configuración de visibilidad y visualización"
+    Al crear un agente, tenga también en cuenta los siguientes campos disponibles en el encabezado de la ventana Agente:
+    - **Agent Scope**: controla qué usuarios pueden ver y usar este agente. El valor predeterminado es **Client**.
+    - **Featured**: marca el agente como una opción prioritaria en la lista de agentes del chat de Copilot.
+    - **Sync on Startup**: sincroniza automáticamente el agente cada vez que se reinicia el servidor de aplicaciones.
+    
+    Para obtener todos los detalles de cada campo, consulte [Ventana Agente – Encabezado](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
+
 ### Ejemplo de definición de agente
 
 Por ejemplo, para crear un nuevo agente llamado **Task Definition Agent** para ayudar a los usuarios a definir una incidencia con el formato obligatorio para su equipo. El propósito del agente es recibir una descripción de la tarea y devolver la definición de la tarea con el formato obligatorio. Crearemos un nuevo agente con la siguiente información:

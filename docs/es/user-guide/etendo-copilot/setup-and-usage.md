@@ -48,12 +48,13 @@ La ventana Agente le permite definir y configurar agentes. Las capacidades de un
 
 ### Cabecera
 
-![agents-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
+The Header section contains the main configuration of the agent: its identity, availability, and synchronization behavior. Most of these fields need to be set when the agent is first created and rarely change afterwards.
+
+![agents-window](../../assets/user-guide/etendo-copilot/setup/agent-window.png)
 
 Campos a tener en cuenta:
 
 - **Nombre**: nombre del agente
-- **Descripción**: descripción del agente
 - **Descripción**: la descripción del agente para que el gestor pueda elegir el agente adecuado para cada caso.
 - **Tipo de aplicación**:
 
@@ -469,6 +470,8 @@ Este proceso permite sincronizar bajo demanda los modelos distribuidos por Etend
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
 
 ---
 
