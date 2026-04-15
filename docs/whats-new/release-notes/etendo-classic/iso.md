@@ -1,5 +1,5 @@
 ---
-title: Etendo Classic - ISO Image
+title: Etendo - ISO Image
 tags:
     - Release Notes
     - Etendo
@@ -7,12 +7,14 @@ tags:
     - ISO
 ---
 
-# Etendo Classic - ISO Image
+# Etendo  - ISO Image
 
 :material-tools: Installation Guide: [ISO Installation Guide](../../../getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [26.1.1](#2611) | 09/04/2026 | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) |
+| [25.4.3](#2543) | 22/01/2026 | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) |
 | [25.4.0](#2540) | 29/12/2025 | [25Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.0.iso) |
 | [25.3.0](#2530) | 30/09/2025 | [25Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q3.0.iso) |
 | [25.2.0](#2520) | 02/07/2025 | [25Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q2.0.iso) |
@@ -30,64 +32,90 @@ tags:
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
 
+## 26.1.1
+New ISO with Etendo version 26.1.1. Includes the `/utils/apache-config.sh` script. For more information, visit [Configure Apache](../../../developer-guide/etendo-classic/getting-started/installation/production-server.md#8-configure-apache).
+
+## 25.4.3
+
+- New ISO with Etendo version `25.4.3`
+- Add **Platform Extensions** and **Copilot Extensions** bundles.
+- ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
+    - python3 ? Python `3.10`
+
+
 ## 25.4.0
-New ISO with Etendo Classsic version 25.4.0
+
+- New ISO with Etendo version `25.4.0`
+- ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
 
 ## 25.3.0
-New ISO with Etendo Classsic version 25.3.0
+
+- New ISO with Etendo version `25.3.0`
+- ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
+- Add **Docker** and **Docker Compose** to the Etendo Stack.
 
 ## 25.2.0
-New ISO with Etendo Classsic version 25.2.0
+
+- New ISO with Etendo version `25.2.0`
+- ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
 
 ## 25.1.2
-New ISO with Etendo Classsic version 25.1.2
 
-- **Changes**
-
-    - Upgrade Etendo software stack. For more information visit [API Change Documentation](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+- New ISO with Etendo version `25.1.2`
+- ISO are currently based on Ubuntu Live Server `22.04.5` amd64 image.
+- Apache Tomcat `9.0.98`
+- Gradle `8.12.1`
+- PostgreSQL `16.8.1`
+- Java SE `17.0.14`
+- For more information visit [API Change Documentation](../../../developer-guide/etendo-classic/developer-changelog/apichanges.md)
 
 
 ## 24.4.3
-New ISO with Etendo Classsic version 24.4.3
 
-- **Fixed**
-    - Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
+- New ISO with Etendo version `24.4.3`
+- Issue [#573](https://github.com/etendosoftware/etendo_core/issues/573) Fix Etendo ISO performance issues
 
 ## 24.4.0
-New ISO with Etendo Classsic version 24.4.0
+
+- New ISO with Etendo version `24.4.0`
 
 ## 24.3.0
-New ISO with Etendo Classsic version 24.3.0
+
+- New ISO with Etendo version `24.3.0`
 
 ## 24.2.0
-New ISO with Etendo Classsic version 24.2.0
+
+- New ISO with Etendo version `24.2.0`
 
 ## 24.1.4
-New ISO with Etendo Classsic version 24.1.4
 
-- **Fixed**
-    - Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+- New ISO with Etendo version `24.1.4`
+- Issue [#1](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
 
 ## 24.1.0
-New ISO with Etendo Classsic version 24.1.0
 
-- **Changes**
-    - Upgrade Tomcat version to 9.0.87
+- New ISO with Etendo version `24.1.0`
+- Upgrade Tomcat version to `9.0.87`
 
 ## 23.4.0
-New ISO with Etendo Classsic version 23.4.0
+
+- New ISO with Etendo version `23.4.0`
 
 ## 23.3.0
-New ISO with Etendo Classsic version 23.3.0
+
+- New ISO with Etendo version `23.3.0`
 
 ## 23.2.0
-New ISO with Etendo Classsic version 23.2.0
+
+- New ISO with Etendo version `23.2.0`
 
 ## 23.1.0
-New ISO with Etendo Classsic version 23.1.0
+
+- New ISO with Etendo version `23.1.0`
 
 ## 22.4.5
-First ISO version with Etendo Classsic version 22.4.5 :sparkles:
+
+- First ISO version with Etendo version `22.4.5`
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

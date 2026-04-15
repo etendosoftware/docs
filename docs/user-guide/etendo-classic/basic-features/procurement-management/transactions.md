@@ -575,17 +575,19 @@ This window allows the user to:
 
 :material-menu: `Application` > `Procurement Management` > `Transactions` > `Purchase Invoice`
 
+### Overview
+
 The Purchase Invoice window allows the user to register and manage supplier's invoices.
 
 This stage of the chain **usually comes after "Goods Receipts" booking and management**.
 
 A purchase invoice is an itemized statement of the goods or services provided by a vendor or supplier. It indicates the quantity and price of each product or service provided or to be provided.
 
-Suppliers could send the corresponding purchase invoice/s together with the delivery note/s attached to the goods, that implies that "Purchase Invoices" can be automatically generated from the "Goods Receipt" window, but it is possible that this is not the case, therefore a Purchase Invoice can also be created from scratch in the "Purchase Invoice" window.
+Suppliers could send the corresponding purchase invoice/s together with the delivery note/s attached to the goods, that implies that Purchase Invoices can be automatically generated from the **Goods Receipt** window, but it is possible that this is not the case, therefore a Purchase Invoice can also be created from scratch in the **Purchase Invoice** window.
 
 The purchase expenses can be recognized as soon as the purchase invoice is accounted, however if an expense deferred plan is configured, it is possible to defer the expense recognition as required.
 
-Supplier invoices can be registered, booked and managed in the header section of the purchase invoice window.
+Supplier invoices can be registered, booked and managed in the header section of the **Purchase Invoice** window.
 
 ### Header
 
@@ -610,11 +612,11 @@ Some other fields to note are:
 
 There are 3 ways of entering lines into the purchase invoice, two of them from the invoice header and the last one from the **Lines** tab:
 
-1.  Selecting products from pending to be invoiced orders or receipts using the *Create Lines From Order and Create Lines From Receipt* buttons.
-2.  Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the *Copy Lines* button.
-3.  Manually, line by line in the *Lines* tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.
+1.  Selecting products from pending to be invoiced orders or receipts using the **Create Lines From Order** and **Create Lines From Receipt** buttons.
+2.  Copying all products from the chosen invoice selected in the history of all invoices for different business partners using the **Copy Lines** button.
+3.  Manually, line by line in the **Lines** tab. This option is used if the underlying document (Purchase Order or Goods Receipt) does not exist in the system prior invoicing takes place.
 
-The **Complete** button finishes the creation of the invoice document with the fulfillment of the *Payment Plan* tab and the *Payment Monitor* section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.
+The **Complete** button finishes the creation of the invoice document with the fulfillment of the **Payment Plan** tab and the **Payment Monitor** section in the Header. If there are non-stockable BOM products in the lines and they have not been exploded, the Complete button will explode them automatically.
 
 Once completed, a purchase invoice can be:
 
@@ -707,16 +709,40 @@ With the **Void** option, it is possible to totally void a purchase invoice. Thi
 
 Voiding allows specifying a **Void Date** and a **Void Accounting Date** for the new document that reverses the invoice.
 
-Both "date" fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.
+Both date fields above take the current date as default date and validate that the dates entered are not prior to the invoice date and the invoice accounting date, respectively.
 
 Also, this process window includes a **Supplier Reference** field to enter the supplier reference number to refer to the reversed document resulting from the invoice voiding. Here, you can enter the corresponding number or leave the field blank to complete it later.
 
 This action implies that:
 
-- Etendo automatically generates a new document in the Purchase Invoice window that reverses the original invoice.
+- Etendo automatically generates a new document in the *Purchase Invoice* window that reverses the original invoice.
 - Etendo also informs about the new document number. This new document is created as described below:
-The transaction document used by Etendo is the Reversed Purchase Invoice. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
-- Once the new document has been created, you can change both the Invoice Date and the Accounting Date of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.
+    
+    The transaction document used by Etendo is the *Reversed Purchase Invoice*. This document is exactly the same as the original one being reversed but the invoiced quantity is negative.
+
+- Once the new document has been created, you can change both the *Invoice Date* and the *Accounting Date* of the new document prior to get it posted. You can also enter the Supplier Reference if not entered before or modify the existing one.
+
+- The *Reversed Invoices* tab lists the original invoice being reversed as now both of them are linked.
+
+    And it is also possible to partially void a supplier invoice by:
+
+    - Manually creating any of the available reversed purchase documents, in the [Purchase Invoice](#purchase-invoice) window:
+        
+        - **AP Credit Memo** or
+        - **Reversed Purchase Invoice**
+
+    - which besides must be manually linked to the invoice/s being reversed in the **Reversed Invoices** tab.
+    
+    To learn more visit [Reversed Invoices](../sales-management/transactions.md#reversed-invoices).
+
+    The **AP Credit Memo** posting looks the same as the **Reversed Purchase Invoice** posting. The main difference between those two purchase reversed document types is:
+
+    - **AP Credit Memo** invoiced quantity is a positive quantity.
+    - and **Reversed Purchase Invoice** quantity is a negative quantity
+
+    !!!note
+        We strongly recommend you to use the **Reversed Purchase Invoice** document type while partially voiding supplier's invoices.
+
 
 #### Add Payment 
 
@@ -841,7 +867,7 @@ In the case of "Expense" product/s do not having the "Sales" checkbox selected, 
 
 #### Accounting
 
-Accounting information related to the matched purchase invoices
+Accounting information related to the matched purchase invoices.
 
 ### Bulk Posting
 

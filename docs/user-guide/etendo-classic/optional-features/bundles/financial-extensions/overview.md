@@ -20,6 +20,15 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ## Modules
 
+### Account Structure Validation
+
+:octicons-package-16: Javapackage: `com.etendoerp.account.structure.validation`
+
+This module helps prevent common configuration errors when creating or modifying subaccounts in the Account Tree. It validates the structure and configuration to avoid mismatches in financial reports such as the Income Statement or Balance Sheet.
+
+!!! info
+    For more information, visit [the Account Structure Validation Module user guide](../../../optional-features/bundles/financial-extensions/account-structure-validation.md).
+
 ### Accounting Dimensions Assets
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.dimensions.assets.template`
@@ -34,19 +43,19 @@ The Accounting Dimensions Assets module improves asset management and amortizati
     For more information, visit the [Accounting Dimensions Assets user guide](../../../basic-features/financial-management/assets/overview.md#accounting-dimensions-assets).
 
 
-### Accounting Templates
+### Accounting Template Module
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-This module allows setting a non deductible tax's amount to a specified financial account.
+The Accounting Template Module allows setting a **non deductible tax's amount** to a specified financial account. This functionality only applies to **purchase invoices**. 
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate.md#purchase-invoice-which-includes-not-deductible-tax-amount).
+    For more information, visit the [Accounting Template Module user guide](./accounting-template-module.md).
 
 
 ### Adjust Invoice Tax
-:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
+:octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
 This extension enables controlled adjustments to invoice tax amounts to reconcile small **rounding differences** with external systems; it supports both **sales** and **purchase** invoices, offers **manual and automated adjustments** for minimal corrections at cents level, and records all changes for **auditability**, ensuring the final invoice total matches external or regulatory requirements.
 
@@ -77,25 +86,6 @@ This module enhances the bank account management enabling greater customization 
 
     For more information, visit the [Advanced Bank Account Management](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
-
-### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
-
-!!! info
-    For more information, visit:
-
-    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
-    - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
-    - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
-    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
-
 ### Advanced Financial Docs. Processing
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
@@ -107,7 +97,7 @@ This functionality allows the user to create settlements for invoices, both sale
 This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
 
 !!! warning "Dependency Notice"
-    This module depends on the [**Bulk Completion**](../../optional-features/bundles/essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
+    This module depends on the [**Bulk Completion**](../essentials-extensions/bulk-completion.md) module, as **order** processing actions must be performed using modern processes that allow the triggering of Hooks, instead of legacy processing. Due to this requirement, the legacy **close/reactivate** actions for orders will be hidden and these actions will only be available through the **Bulk Completion** button.
 
 !!! info
     For more information, visit:
@@ -117,7 +107,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
     - [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
     - [Purchase Invoice](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
     - [Amortization](../../../../../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
-    - and the [Advanced Financial Docs. Processing developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
+    - and the [Advanced Financial Docs. Processing developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing)
 
 ### Asset Amortization Report
 
@@ -146,7 +136,7 @@ This functionality allows the user to automatically process and protest remittan
 This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
 
 !!! info
-    For more information, visit [the Banking Pool user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
+    For more information, visit [the Banking Pool user guide](../../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#banking-pool).
 
 ### Bulk Posting
 
@@ -159,9 +149,28 @@ This functionality allows the user to post or unpost multiple records at the sam
 !!! info
     For more information, visit [the Bulk Posting Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
+### Business Partner Settlement
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
+
+!!! info
+    For more information, visit:
+
+    - [Business Partner Settlement - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+    - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+    - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+
 ### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
+
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.

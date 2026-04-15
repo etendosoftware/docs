@@ -1,5 +1,4 @@
 ---
-title: Intercompany
 tags:
     - Intercompany
     - Organization
@@ -8,6 +7,8 @@ tags:
     - Invoice
 ---
 # Intercompany
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
 
 ## Overview
 

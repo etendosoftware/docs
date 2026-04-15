@@ -1,0 +1,70 @@
+name: Trigger Translation
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main, develop]
+    paths:
+      - 'docs/**/*.md'
+      - '!docs/es/**'
+
+jobs:
+  trigger-n8n:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Fetch base branch
+        run: git fetch origin "${{ github.event.pull_request.base.ref }}"
+
+      - name: Get changed docs files
+        id: changed
+        shell: bash
+        run: |
+          BEFORE="${{ github.event.before }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          BASE="${{ github.event.pull_request.base.sha }}"
+
+          MERGE_BASE=$(git merge-base "$BASE" "$HEAD")
+
+          # All files changed in this PR relative to base
+          PR_FILES=$(git diff --name-only --diff-filter=AM "$MERGE_BASE" "$HEAD" \
+            -- 'docs/**/*.md' ':!docs/es/**' ':!docs/assets/**' ':!docs/images/**' ':!docs/stylesheets/**')
+
+          # For synchronize: narrow to files touched in the latest push only,
+          # intersected with PR files to exclude files from merge commits of the base branch
+          if [ "${{ github.event.action }}" = "synchronize" ] && [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            PUSH_FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" "$HEAD" \
+              -- 'docs/**/*.md' ':!docs/es/**' ':!docs/assets/**' ':!docs/images/**' ':!docs/stylesheets/**')
+            FILES=$(comm -12 <(echo "$PR_FILES" | sort -u) <(echo "$PUSH_FILES" | sort -u))
+          else
+            FILES="$PR_FILES"
+          fi
+
+          FILES_JSON=$(echo "$FILES" | jq -R -s -c 'split("\n") | map(select(length > 0)) | unique')
+
+          echo "files=$FILES_JSON" >> "$GITHUB_OUTPUT"
+          echo "count=$(echo "$FILES_JSON" | jq length)" >> "$GITHUB_OUTPUT"
+          echo "merge_base=$MERGE_BASE"
+          echo "head=$HEAD"
+          echo "files=$FILES_JSON"
+
+      - name: Trigger n8n webhook
+        if: steps.changed.outputs.count != '0'
+        shell: bash
+        run: |
+          curl -X POST "${{ secrets.N8N_WEBHOOK_TRL_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "files": ${{ steps.changed.outputs.files }},
+              "sourceBranch": "${{ github.event.pull_request.head.ref }}",
+              "targetBranch": "${{ github.event.pull_request.base.ref }}",
+              "prNumber": ${{ github.event.pull_request.number }},
+              "commit": "${{ github.event.pull_request.head.sha }}",
+              "actor": "${{ github.actor }}",
+              "repository": "${{ github.repository }}"
+            }'
