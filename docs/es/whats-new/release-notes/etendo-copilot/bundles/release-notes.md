@@ -14,7 +14,13 @@ tags:
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [3.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.12.0){target="_blank"} | 20/02/2026 | 25.2.0 | 25.4.x | CS | :white_check_mark: |
+| [4.0.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.0.1){target="_blank"} | 10/04/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.0.0){target="_blank"} | 30/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
+| [3.13.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.13.1){target="_blank"} | 10/04/2026 | 25.2.0 | 25.4.x | CS | :white_check_mark: |
+| [3.13.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.13.0){target="_blank"} | 27/03/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
+| [3.12.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.12.2){target="_blank"} | 17/03/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
+| [3.12.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.12.1){target="_blank"} | 06/03/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
+| [3.12.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.12.0){target="_blank"} | 20/02/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.6](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.11.6){target="_blank"} | 14/02/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.5](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.11.5){target="_blank"} | 27/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.4](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.11.4){target="_blank"} | 23/01/2026 | 25.2.0 | 25.4.x | C | :white_check_mark: |
@@ -43,7 +49,8 @@ tags:
 | [3.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.1.0){target="_blank"} | 03/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |
 | [3.0.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.0.1){target="_blank"} | 26/06/2025 | 25.1.0 | 25.1.x | C  | :white_check_mark: |
 | [3.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/3.0.0){target="_blank"} | 29/05/2025 | 25.1.0 | 25.1.x | C  | :white_check_mark: |
-| [1.15.14](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.14){target="_blank"} | 07/01/2026 | 23.4.0 | 24.4.x | CS | :white_check_mark: |
+| [1.15.15](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.15){target="_blank"} | 06/02/2026 | 23.4.0 | 24.4.x | C | :white_check_mark: |
+| [1.15.14](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.14){target="_blank"} | 07/01/2026 | 23.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.15.13](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.13){target="_blank"} | 12/11/2025 | 23.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.15.12](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.12){target="_blank"} | 06/11/2025 | 23.4.0 | 24.4.x | C | :white_check_mark: |
 | [1.15.11](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.15.11){target="_blank"} | 29/10/2025 | 23.4.0 | 24.4.x | C | :white_check_mark: |
@@ -97,3 +104,7 @@ tags:
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
