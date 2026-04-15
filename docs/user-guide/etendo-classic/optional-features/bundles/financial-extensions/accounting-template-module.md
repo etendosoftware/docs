@@ -40,7 +40,7 @@ In order to assign a non-deductible tax to a specific financial account, there i
 
 As System Admin, go to the **Windows, Tabs and Fields** and in the General Ledger Configuration window in the Active Tables tab set the Accounting Template field displayed as **Yes**. This allows the necessary accounting template to be set from the General Ledger Configuration window later on. 
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module1.png)
+![Windows, Tabs and Fields — Accounting Template field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module1.png)
 
 ## GL Configuration
 
@@ -48,7 +48,7 @@ The **Accounting Template field** in the Active Table tab of the General Ledger 
 
 Finally, The checkbox, **Use the configured account** must be checked in the Tax Rate window. It will only be visible if the checkbox under the heading **Non-deductible tax** was previously checked. The default value of this checkbox will be NO.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module-3.png)
+![General Ledger Configuration — Purchase Invoice Not Deductible template and Use the configured account checkbox](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module-3.png)
 
 ## Example
 

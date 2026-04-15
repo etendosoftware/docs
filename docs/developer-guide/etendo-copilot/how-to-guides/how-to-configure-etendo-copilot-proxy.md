@@ -40,9 +40,9 @@ A convenient option is **LiteLLM Proxy**, which simplifies handling different LL
 2.  **Create the `.env` file**: Store provider API keys securely in this file. Replace placeholders with your real keys:
 
     ```bash
-    openai.api.key=sk-proj-XXXXXXX
-    anthropic.api.key=sk-ant-XXXXXXXXXX
-    google.api.key=
+    OPENAI_API_KEY=sk-proj-XXXXXXX
+    ANTHROPIC_API_KEY=sk-ant-XXXXXXXXXX
+    GOOGLE_API_KEY=
     ```
 
 3.  **Run the proxy with Docker**: Place `litellm_config.yaml` and `.env` in the same directory and run:

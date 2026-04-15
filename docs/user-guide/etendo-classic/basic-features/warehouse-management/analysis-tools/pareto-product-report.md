@@ -1,43 +1,49 @@
 ---
 title: Pareto Product Report
+tags:
+    - Pareto
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Pareto Product Report
+# Pareto Product Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Pareto Product Report`
 
-### **Overview**
+## Overview
 
-**Pareto Product Report** distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
+The Pareto Product Report distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
 
-Following distribution is used: A products represent 80% value of the warehouse, B - 15% and C- 5%.
+Following distribution is used: A products represent 80% value of the warehouse, B - 15% and C - 5%.
 
 !!! info
     The classification is based on the cost of the product. That is why it is needed to have a Costing Rule validated and the Material Transaction costs of the product calculated up to date.
 
 
-### **Parameters window**
+## Parameters Window
 
-**Currency** field defines currency in which all monetary values (like **Cost**, **Value**) of the report are shown. Field is defaulted to the system currency.
+The **Currency** field defines the currency in which all monetary values (like **Cost**, **Value**) of the report are shown. The field is defaulted to the system currency.
 
 !!! warning
     Please note that **Conversion Rate** to the report **Currency** should be specified for the report to work.
 
-**Update ABC** button fills in **ABC** field (updates value if the record exists or creates new record otherwise) of Org. Specific tab of the **Product** window for the organizations of the report output.
+The **Update ABC** button fills in the **ABC** field (updates the value if the record exists or creates a new record otherwise) of the Org. Specific tab of the **Product** window for the organizations of the report output.
 
-### **Sample Report Output**
+## Sample Report Output
 
-![Material Transaction Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+![Pareto Product Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
 
 
 Columns to note:
 
 -   **Quantity:** is the current stock of the product (Quantity on Hand) in the warehouse selected.
--   **Value:** that is the sum of all the material transaction costs of the product.
--   **Cost:** this cost is calculated as the ratio between the product value and the product quantity above
--   **Percentage:** that percentage is the ratio between the product value and the Total Value of the warehouse (which is the sum of all report lines).
+-   **Value:** is the sum of all the material transaction costs of the product.
+-   **Cost:** this cost is calculated as the ratio between the product value and the product quantity above.
+-   **Percentage:** this percentage is the ratio between the product value and the Total Value of the warehouse (which is the sum of all report lines).
 
-### **Persisted information**
+## Persisted Information
 
 Aggregated information calculated for the Valued Stock can be used. Please refer to the  Valued Stock Report documentation for more details about how to generate the aggregated information.
 

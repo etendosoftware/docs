@@ -1,8 +1,14 @@
 ---
 title: Product Operations
+tags:
+    - Product Operations
+    - Inventory
+    - Warehouse Management
+    - Warehouse Extensions
+    - Inventory Analysis
 ---
 
-## Product Operations
+# Product Operations
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Product Operations`
 

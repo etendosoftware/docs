@@ -21,7 +21,7 @@ This enables seamless interaction between your Python-based tools and the Etendo
 
 
 ## Etendo Copilot
-The **Etendo Copilot** infraestructure allows you to create tools that extend agents functionality. These tools are developed in Python and run in the Docker container where Copilot operates.
+The **Etendo Copilot** infrastructure allows you to create tools that extend agents functionality. These tools are developed in Python and run in the Docker container where Copilot operates.
 In this guide, you will learn how to create a new Copilot tool in a dedicated module. However, it is also possible to add tools to an existing module. Each module can contain one or multiple tools.
 
 !!! note "Etendo Copilot is based on Langchain"
@@ -161,7 +161,7 @@ In this example, you will create a tool that performs a **ping** to a specified 
         During the load of Copilot service, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
 
 
-    !!! warning "Different name of depedency while installing and importing"
+    !!! warning "Different name of dependency while installing and importing"
         
         If the name of the dependency is different from the name of the package that is imported in the tool, it is necessary to specify it. 
         
@@ -178,11 +178,11 @@ In this example, you will create a tool that performs a **ping** to a specified 
 
 4. Restart the Copilot service: 
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.stop
     ```
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.up
     ```
 

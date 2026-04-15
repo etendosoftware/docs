@@ -24,8 +24,6 @@ For previous versions, or to verify the configuration:
 !!! warning "Security recommendation"
     Set a reasonable expiration time in production environments. Leaving it at `0` (no expiration) means a compromised token remains valid indefinitely.
 
-![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
-
 ## How to Set up Agents
 
 With Etendo Copilot, it is possible to:
@@ -39,11 +37,11 @@ With Etendo Copilot, it is possible to:
 
 The Agent window allows you to define and configure agents. The capabilities of an agent are:
 
-- **Text Generation**: The agent can answer questions or retrieve results from his knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.
-- **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its useful when there is documentation or information that the agent can use to answer questions.
+- **Text Generation**: The agent can answer questions or retrieve results from its knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.
+- **Retrieval**: The agent can be configured with a custom knowledge base, which can be used to retrieve information. It is useful when there is documentation or information that the agent can use to answer questions.
 - **Tools**: The agent can use tools to perform specific tasks. The tools are defined in the [Skill/Tool window](#skilltool-window).
 - **Receive attachments**: Both agents and tools can utilize files in multiple formats.
-- **Read images**: There are models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.
+- **Read images**: Some models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.
 
 !!! tip
     It is recommended to read this entire page to understand the possible configurations, but then you can continue to the [How to Create an Agent](../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md) page.
@@ -69,8 +67,8 @@ Fields to note:
         This option works as a manager of other agents and allows to select team members. As a library, LangGraph typically works as a software tool designed to help developers and researchers work with linguistic data in a structured, graph-based format. The default maximum amount of interactions between the manager and the agents is 50, though a different amount can be configured. 
 
 - **Sync Status**: This read-only field indicates the current status of the agent.
-    - `Pending synchronization` the agent will switch to this status at any change, either in the header or in the tabs.
-    - `Synchronized`, it is necessary to synchronize the agent using the **Synchronize Agent** button.
+    - `Pending synchronization`: the agent will switch to this status after any change, either in the header or in the tabs. Click the **Sync Agent** button to apply the changes.
+    - `Synchronized`: the agent is up to date. No action is required.
 
 - **Module**: Module in which the agent and all its configurations will be exported. This field is only available with the `System Administrator` role.
 - **Active**: Checkbox to activate or not the agent.

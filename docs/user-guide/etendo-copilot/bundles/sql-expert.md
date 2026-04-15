@@ -100,7 +100,7 @@ The SQL Expert Agent is composed of the following components:
 2.  <figure markdown>
     ![DBQueryGenerator tool](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-4.png){ align=right }
     <br>
-    **Query to know the name of the best 5 customer of junuary 2011?**
+    **Query to know the name of the best 5 customer of January 2011?**
     </figure>
     
 3.  <figure markdown>

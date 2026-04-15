@@ -8,6 +8,8 @@ tags:
     - Agents
 ---
 
+# Copilot Installation
+
 ## Overview
 
 This guide provides detailed instructions on how to get started with Etendo Copilot, an API that allows interaction with a bot capable of selecting the appropriate tools to respond to user queries. It includes the necessary requirements, instructions for adding dependencies, environment variable configurations, and steps to run Copilot on an Etendo project. Additionally, it covers optional configurations to customize Copilot's behavior and provides links to detailed installation guides for required software.

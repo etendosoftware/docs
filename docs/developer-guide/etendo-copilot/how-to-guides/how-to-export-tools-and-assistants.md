@@ -52,7 +52,7 @@ Agents must be exported as a dataset, in case optional installation is required 
     ```
     - **Skills/Tools:** Table `etcop_app_tool`
     ```sql title="Where Clause"
-    `copilotApp.id in ('<AssistantID>')
+    copilotApp.id in ('<AssistantID>')
     ```
     - **Team Members:** Table `ETCOP_Team_Member`
     ```sql title="Where Clause"
