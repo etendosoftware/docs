@@ -178,7 +178,14 @@ plugins:
                   - Warehouse Management:
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
                     - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
-                    - Analysis Tools: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md
+                    - Analysis Tools:
+                      - Pareto Product Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md
+                      - Material Transaction Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md
+                      - Stock Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report.md
+                      - Stock History: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history.md
+                      - Valued Stock Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report.md
+                      - Product Movements Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report.md
+                      - Product Operations: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations.md
                     - Setup: user-guide/etendo-classic/basic-features/warehouse-management/setup.md
                   - Production Management:
                     -  ✨Getting Started: user-guide/etendo-classic/basic-features/production-management/getting-started.md 
@@ -239,8 +246,9 @@ plugins:
                     - Etendo BI Extensions Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
                       - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
-                    - Financial Extensions Bundle: 
+                    - Financial Extensions Bundle:
                       - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+                      - Accounting Template Module: user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module.md
                       - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
                       - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
                       - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
@@ -640,6 +648,7 @@ plugins:
             Account Tree: Árbol de cuentas
             Accounting: Contabilidad
             Accounting Process: Proceso Contable
+            Accounting Template Module: Módulo de Plantillas de Contabilidad
             Accounting Templates: Plantillas de Contabilidad
             Adjust Invoice Tax: Ajustar Impuesto de Factura
             Advanced Bank Account Management: Gestión Avanzada de Cuentas Bancarias
@@ -1158,6 +1167,7 @@ nav:
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+            - Accounting Template Module: user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module.md
             - Account Structure Validation: user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md
             - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md

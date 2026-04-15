@@ -41,6 +41,10 @@ This functionality allows the user to configure and grant rappels to business pa
 ### CRM Lead Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
+:octicons-package-16: Javapackage: `com.etendoerp.crm.tenplate`
+
+!!! info
+    This functionality is available starting from version **4.0.0** of the Sales Extensions Bundle, from **Etendo 26.1**. To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Native lead tracking and management for the commercial team. Allows registering prospects, managing their lifecycle through configurable statuses, organizing follow-up tasks, and converting qualified leads into Business Partners — directly integrating with the Sales flow (quotations → orders → invoices).
 

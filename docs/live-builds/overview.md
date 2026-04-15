@@ -20,13 +20,14 @@ This page provides quick access to Etendo live test environments that are always
 
 -   :material-test-tube:{ .lg .middle } **Etendo with Supported Bundles Installed**
 
-    For detailed information about the installed bundles, please visit the [Etendo Marketplace](https://marketplace.etendo.cloud/#/modules?page=1&partner=434C406CDC664DD38BF4CDABBD72BAE2){ target="blank"}.
+    For detailed information about the installed bundles, please visit the [Etendo Marketplace](https://marketplace.etendo.cloud/#/modules?page=1&partner=434C406CDC664DD38BF4CDABBD72BAE2){ target="_blank"}.
 
     ---
 
-    [Etendo 24 + Bundles](https://demo24.bundles.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [Etendo 25 + Bundles](https://demo.etendo.cloud/etendo/security/Login){ target="blank"}<br>
-    [:material-new-box: Etendo 25 + Bundles + New UI](https://demo25.bundles.newui.etendo.cloud){ target="blank"}
+    [Etendo 26 + Bundles (New UI)](https://demo.etendo.cloud){ target="_blank"}<br>
+    [Etendo 26 + Bundles (Classic UI)](https://demo.etendo.cloud/etendo){ target="_blank"}<br><br>
+    [Etendo 25 + Bundles (New UI)](https://demo25.bundles.etendo.cloud){ target="_blank"}<br>
+    [Etendo 25 + Bundles (Classic UI)](https://demo25.bundles.etendo.cloud/etendo){ target="_blank"}
 
 -   :material-test-tube:{ .lg .middle } **Etendo**
 
@@ -34,12 +35,13 @@ This page provides quick access to Etendo live test environments that are always
 
     ---
 
-    [Etendo 24](https://demo24.etendo.cloud/etendo/security/Login){ target="blank"} <br>
-    [Etendo 25](https://demo25.etendo.cloud/etendo/security/Login){ target="blank"} 
+    [Etendo 26 (New UI)](https://demo26.etendo.cloud){ target="_blank"}<br>
+    [Etendo 26 (Classic UI)](https://demo26.etendo.cloud/etendo){ target="_blank"}<br><br>
+    [Etendo 25 (Classic UI)](https://demo25.etendo.cloud){ target="_blank"}
 
 </div>
 
-[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="blank"} *Here you can check the Etendo servers status.*
+[![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="_blank"} *Here you can check the Etendo servers status.*
 
 !!! tip "Credentials"
     The default access credentials are: <br> 

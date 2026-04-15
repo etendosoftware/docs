@@ -80,7 +80,7 @@ Cuando se te solicite, introduce tu **Clave de API de OpenAI**.
 La plantilla configura `gradle.properties` automáticamente con todos los ajustes necesarios para un entorno local, incluyendo los servicios Docker de Copilot y la UI principal.
 
 !!! info "Availability"
-    `setup.applyTemplates` está disponible a partir de **Etendo 26**, o en versiones anteriores con el [Etendo Gradle Plugin 3.0.0](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) o superior.
+    `setup.applyTemplates` está disponible a partir de **Etendo 26**, o en versiones anteriores con el [Etendo Gradle Plugin 2.3.0](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) o superior.
 
 !!! info
     Para más detalles sobre las plantillas disponibles, opciones y uso avanzado, consulta la guía [Cómo usar Setup Apply Templates](../../how-to-guides/how-to-use-setup-apply-templates.md).
