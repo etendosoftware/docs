@@ -119,7 +119,7 @@ Campos a tener en cuenta:
 - **Archivo**: el archivo seleccionado como base de conocimiento.
 - **Comportamiento**: la forma en que el agente utilizará el archivo. Tiene múltiples opciones disponibles:
 
-    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones). Al sincronizar, los documentos en la base de datos vectorial se etiquetan con el ID del cliente, asegurando el aislamiento de datos entre clientes.
+    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones). Al sincronizar, los documentos se almacenan con un identificador de cliente, asegurando que los datos de cada cliente permanezcan separados.
     - **[Agente] Añadir el contenido del archivo al prompt**: recomendado para archivos pequeños con datos esenciales. El contenido del archivo se inserta en el prompt en cada @alias@ o se añade al final si no se define ningún alias.
     - **[Agente] SPEC: Añadir como especificación del agente**: usado para archivos de tipo `OpenAPI Specification`. Genera automáticamente herramientas para cada método y endpoint, permitiendo que el agente interactúe con APIs.
     - **[Pregunta del usuario] Añadir contenido a cada pregunta**: lo mejor cuando el contenido del archivo cambia con frecuencia. El archivo se añade a cada mensaje del usuario, asegurando que el agente siempre reciba datos actualizados.
@@ -462,7 +462,5 @@ Este proceso permite sincronizar bajo demanda los modelos distribuidos por Etend
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
-
----
 
 ---

@@ -41,7 +41,7 @@ El agente Experto SQL se compone de los siguientes componentes:
 
 3. Se ha creado un nuevo agente llamado **Experto SQL** en la ventana `Application` > `Service` > `Copilot` > `Agent`.
 
-4. Ejecute el proceso **Sincronizar agente**, iniciando sesión con el rol de **Administrador del sistema**.
+4. Ejecute el proceso **Sincronizar agente**. Cualquier usuario con acceso a la ventana Agente puede realizar este paso, independientemente de su rol.
 
 5. Reinicie la imagen de Docker usando las tareas `./gradlew resources.up`.
 
@@ -96,17 +96,19 @@ El agente Experto SQL se compone de los siguientes componentes:
 2.  <figure markdown>
     ![Herramienta DBQueryGenerator](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-4.png){ align=right }
     <br>
-    **¿Consulta para conocer el nombre de los 5 mejores clientes de enero de 2011?**
+    **Consulta para conocer el nombre de los 5 mejores clientes de enero de 2011?**
     </figure>
     
 3.  <figure markdown>
     ![Herramienta DBQueryGenerator](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-5.png){ align=right }
     <br>
-    **¿Consulta para obtener cuál es la factura con el importe registrado más alto?**
+    **Consulta para obtener cuál es la factura con el importe registrado más alto?**
     </figure> 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
 
 ---
 
