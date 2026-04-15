@@ -2,8 +2,6 @@
 title: Stock History
 ---
 
-## Stock History
-
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Stock History`
 
 !!! info
@@ -20,7 +18,7 @@ The Stock History window is filled only by the background process "Create Stock 
 
 No data will be displayed in the window until search filters are applied to the window. Once the filters are applied, click the button on the right to complete the process. 
 
-![](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
+![Stock History](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
 
 The window shows the following fields from which the user is able to filter and get the needed data: 
 - Stock date 
@@ -33,7 +31,7 @@ The window shows the following fields from which the user is able to filter and 
 - Allocated Quantity
 - Quantity in draft transaction
  
-![](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
+![Stock History](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
 
 This functionality includes a process to close the stock and save the historical information.
 

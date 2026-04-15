@@ -2,8 +2,6 @@
 title: Product Operations
 ---
 
-## Product Operations
-
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Product Operations`
 
 !!! info
@@ -14,7 +12,7 @@ This functionality **centralizes all the transactions** associated with the sele
 
 This centralization facilitates the analysis and a complete understanding of the product operation performance.
 
-![Product Operations window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
+![Product Operations](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
 
 ---
 

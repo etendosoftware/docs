@@ -2,8 +2,6 @@
 title: Valued Stock Report
 ---
 
-## Valued Stock Report
-
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Valued Stock Report`
 
 ### **Overview**
@@ -14,7 +12,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Parameters Window**
 
-![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Valued Stock Report](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
 
 
@@ -30,7 +28,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Output Window** 
 
-![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
 
 -   **Product**: Name of the Product.
@@ -52,7 +50,7 @@ The information will persist until the first not closed Period. By doing so, it 
 !!! info
     In order to use this functionality it is necessary to schedule the Background Process named *Generate Aggregated Data Background*. This can be done through the *Process Request* Window.
 
-![Valued Stock Report Process Request](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Valued Stock Report](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
 
 !!! info
     It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.
