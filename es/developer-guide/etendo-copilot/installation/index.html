@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vision-general" class="md-skip">
+        <a href="#instalacion-de-copilot" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11768,6 +11768,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -11801,6 +11803,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="In This Page">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -15095,6 +15099,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -15266,8 +15272,7 @@
   
 
 
-  <h1>✨ Primeros Pasos</h1>
-
+<h1 id="instalacion-de-copilot">Instalación de Copilot</h1>
 <h2 id="vision-general">Visión general</h2>
 <p>Esta guía proporciona instrucciones detalladas sobre cómo empezar con Etendo Copilot, una API que permite la interacción con un bot capaz de seleccionar las herramientas adecuadas para responder a las consultas de los usuarios. Incluye los requisitos necesarios, instrucciones para añadir dependencias, configuraciones de variables de entorno y los pasos para ejecutar Copilot en un proyecto de Etendo. Además, cubre configuraciones opcionales para personalizar el comportamiento de Copilot y proporciona enlaces a guías de instalación detalladas del software requerido.</p>
 <h2 id="requisitos">Requisitos</h2>
@@ -15315,11 +15320,11 @@
 <li>
 <p>El archivo <code>gradle.properties</code> debería verse ahora así:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">COPILOT_HOST</span><span class="o">=</span><span class="n">copilot</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5005</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">openai</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">etendo</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">etendo</span><span class="o">.</span><span class="na">host</span><span class="o">.</span><span class="na">docker</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">copilot</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="n">copilot</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">copilot</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5005</span>
 </span></code></pre></div>
 </li>
 <li>
@@ -15344,14 +15349,14 @@
 <p>Añada en <code>gradle.properties</code> la variable <code>docker_com.etendoerp.copilot=true</code> para habilitar el contenedor Docker de Copilot y al menos una <code>API_KEY</code>, dependiendo del proveedor de modelos que utilice.</p>
 <p>Recuerde que, debido a limitaciones de acceso a nivel de API, se requieren versiones de pago. Estas variables son obligatorias para ejecutar el contenedor de Copilot y acceder a los modelos utilizados.</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">openai</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">anthropic</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">GOOGLE_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using Gemini</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">google</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using Gemini</span>
 </span></code></pre></div>
 </li>
 <li>
-<p>Las variables de <code>gradle.properties</code> <code>ETENDO_HOST</code>, <code>ETENDO_HOST_DOCKER</code>, <code>COPILOT_HOST</code> y <code>COPILOT_PORT</code> se utilizan para configurar la conexión entre el servicio <strong>Copilot</strong> y <strong>Etendo</strong>.</p>
+<p>Las variables de <code>gradle.properties</code> <code>etendo.host</code>, <code>etendo.host.docker</code>, <code>copilot.host</code> y <code>copilot.port</code> se utilizan para configurar la conexión entre el servicio <strong>Copilot</strong> y <strong>Etendo</strong>.</p>
 <p>Etendo Copilot proporciona una <strong>tarea de Gradle</strong> para recuperar automáticamente estas variables en función de la configuración de su instancia de Etendo. Para ello, ejecute el siguiente comando en el terminal:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>copilot.variables.setup<span class="w">  </span>--console<span class="o">=</span>plain
 </span></code></pre></div>
@@ -15362,13 +15367,13 @@
 <li>
 <p>El archivo <code>gradle.properties</code> debería verse ahora así:</p>
 <p></p><div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">=</span><span class="kc">true</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">openai</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">    </span><span class="c1">// If you are using OpenAI</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">anthropic</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">key</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w"> </span><span class="c1">// If you are using Anthropic</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">DEEPSEEK_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span><span class="w">  </span><span class="c1">// If you are using DeepSeek</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">ETENDO_HOST_DOCKER</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">COPILOT_HOST</span><span class="o">=</span><span class="n">copilot</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5005</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">etendo</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8080/etendo</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">etendo</span><span class="o">.</span><span class="na">host</span><span class="o">.</span><span class="na">docker</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//host.docker.internal:8080/etendo</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">copilot</span><span class="o">.</span><span class="na">host</span><span class="o">=</span><span class="n">copilot</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">copilot</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5005</span>
 </span></code></pre></div>
 4. Una vez añadida la dependencia <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a> y configuradas las variables, ejecute en el terminal el siguiente comando para aplicar los cambios:<p></p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>setup
@@ -15397,7 +15402,7 @@
 <table>
 <thead>
 <tr>
-<th><strong>Variable de entorno</strong></th>
+<th><strong>Variable</strong></th>
 <th><strong>Predeterminado</strong></th>
 <th><strong>Obligatorio</strong></th>
 <th><strong>Información</strong></th>
@@ -15411,19 +15416,19 @@
 <td>Habilita el contenedor Docker de Etendo Copilot.</td>
 </tr>
 <tr>
-<td><code>OPENAI_API_KEY</code></td>
+<td><code>openai.api.key</code></td>
 <td><code>none</code></td>
 <td>✅ Si usa OpenAI</td>
 <td>Clave API para <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI</a>. Contacte con Etendo o use la suya propia.</td>
 </tr>
 <tr>
-<td><code>GOOGLE_API_KEY</code></td>
+<td><code>google.api.key</code></td>
 <td><code>none</code></td>
 <td>✅ Si usa Gemini</td>
 <td>Clave API para <a href="https://aistudio.google.com/app/api-keys" target="_blank">Gemini</a>. Solo necesaria si usa modelos Gemini.</td>
 </tr>
 <tr>
-<td><code>ANTHROPIC_API_KEY</code></td>
+<td><code>anthropic.api.key</code></td>
 <td><code>none</code></td>
 <td>✅ Si usa Anthropic</td>
 <td>Clave API para <a href="https://docs.anthropic.com/en/api/getting-started" target="_blank">Anthropic</a>. Solo necesaria si usa modelos Anthropic.</td>
@@ -15435,31 +15440,31 @@
 <td>Clave API para <a href="https://deepseek.ai/" target="_blank">DeepSeek</a>. Solo necesaria si usa modelos DeepSeek.</td>
 </tr>
 <tr>
-<td><code>ETENDO_HOST</code></td>
+<td><code>etendo.host</code></td>
 <td><code>none</code></td>
 <td>✅ (Obligatorio)</td>
 <td>URL a la que Copilot envía solicitudes para comunicarse con el sistema Etendo.</td>
 </tr>
 <tr>
-<td><code>ETENDO_HOST_DOCKER</code></td>
+<td><code>etendo.host.docker</code></td>
 <td><code>none</code></td>
 <td>✅ (Obligatorio)</td>
 <td>Se utiliza cuando Copilot se ejecuta en Docker y Etendo no es accesible desde un dominio.</td>
 </tr>
 <tr>
-<td><code>COPILOT_HOST</code></td>
+<td><code>copilot.host</code></td>
 <td><code>none</code></td>
 <td>✅ (Obligatorio)</td>
 <td>Host del servicio Copilot.</td>
 </tr>
 <tr>
-<td><code>COPILOT_PORT</code></td>
+<td><code>copilot.port</code></td>
 <td><code>5005</code></td>
 <td>✅ (Obligatorio)</td>
 <td>Puerto utilizado por el servicio Copilot.</td>
 </tr>
 <tr>
-<td><code>COPILOT_DEBUG</code></td>
+<td><code>copilot.debug</code></td>
 <td><code>false</code></td>
 <td>❌ (Opcional)</td>
 <td>Habilita logs detallados de Copilot en la consola.</td>
@@ -15477,7 +15482,7 @@
 <td>Tiempo de espera en segundos para la ejecución del agente (<code>0</code> = ilimitado).</td>
 </tr>
 <tr>
-<td><code>COPILOT_STREAM_DEBUG</code></td>
+<td><code>copilot.stream.debug</code></td>
 <td><code>false</code></td>
 <td>❌ (Opcional)</td>
 <td>Habilita el log de respuesta en tiempo real en el pop-up de Copilot.</td>
@@ -15507,7 +15512,7 @@
 <td>Tag de la imagen Docker a utilizar.</td>
 </tr>
 <tr>
-<td><code>COPILOT_PORT_DEBUG</code></td>
+<td><code>copilot.port.debug</code></td>
 <td><code>5100</code></td>
 <td>❌ (Opcional)</td>
 <td>Puerto para depurar Copilot (si está habilitado).</td>
@@ -15613,6 +15618,7 @@ Esto utilizará la imagen Docker heredada con la dependencia <code>poetry</code>
 </ul>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
+<hr>
 <hr>
 <hr>
 

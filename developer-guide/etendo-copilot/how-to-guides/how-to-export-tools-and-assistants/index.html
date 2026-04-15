@@ -14929,7 +14929,7 @@
 <div class="language-sql highlight"><span class="filename">Where Clause</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">etcopApp</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">'&lt;AssistantID&gt;'</span><span class="p">)</span>
 </span></code></pre></div></li>
 <li><strong>Skills/Tools:</strong> Table <code>etcop_app_tool</code>
-<div class="language-sql highlight"><span class="filename">Where Clause</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">`</span><span class="n">copilotApp</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">'&lt;AssistantID&gt;'</span><span class="p">)</span>
+<div class="language-sql highlight"><span class="filename">Where Clause</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">copilotApp</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">'&lt;AssistantID&gt;'</span><span class="p">)</span>
 </span></code></pre></div></li>
 <li><strong>Team Members:</strong> Table <code>ETCOP_Team_Member</code>
 <div class="language-sql highlight"><span class="filename">Where Clause</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">copilotApp</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">'&lt;AssistantID&gt;'</span><span class="p">)</span>
@@ -14979,7 +14979,7 @@
 <ul>
 <li>Log in as System Administrator.</li>
 <li>Configure the agent and its tabs, ensuring to select the module (under development) in the <strong>Module</strong> field.</li>
-<li>If the agent should be restricted to System Administrator use only, check the <strong>System App</strong> checkbox. Otherwise, leave it unchecked to allow execution across all data access levels.</li>
+<li>Use the <strong>Agent Scope</strong> field to control who can access the agent. Set it to <strong>System</strong> to restrict the agent to the platform-level System Administrator only. Set it to <strong>Client + System</strong> to allow the agent to be used across all data access levels as well. This field replaces the former <strong>System App</strong> checkbox. For a full description of each option, see <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Agent Window – Header</a>.</li>
 </ul>
 <p></p><figure markdown="span">
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png"></a>

@@ -15574,12 +15574,20 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>El campo <strong>Prompt</strong> puede tener las siguientes variables dinámicas: <code>@context.url@</code>, <code>@ETENDO_HOST@</code>, <code>@ETENDO_HOST_DOCKER@</code> y <code>@source.path@</code><br>
-Estas variables se sustituirán por los valores definidos en las propiedades.</p>
+<p>El campo <strong>Prompt</strong> puede tener las siguientes variables dinámicas: <code>@context.url@</code>, <code>@etendo.host@</code>, <code>@etendo.host.docker@</code> y <code>@source.path@</code>.
+Estas variables se sustituyen por los valores definidos en el archivo <code>gradle.properties</code>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Para más información sobre para qué se utiliza cada campo, visite la guía <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Configuración y uso - Agentes</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Configuración de visibilidad y visualización</p>
+<p>Al crear un agente, tenga también en cuenta los siguientes campos disponibles en el encabezado de la ventana Agente:
+- <strong>Agent Scope</strong>: controla qué usuarios pueden ver y usar este agente. El valor predeterminado es <strong>Client</strong>.
+- <strong>Featured</strong>: marca el agente como una opción prioritaria en la lista de agentes del chat de Copilot.
+- <strong>Sync on Startup</strong>: sincroniza automáticamente el agente cada vez que se reinicia el servidor de aplicaciones.</p>
+<p>Para obtener todos los detalles de cada campo, consulte <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Ventana Agente – Encabezado</a>.</p>
 </div>
 <h3 id="ejemplo-de-definicion-de-agente">Ejemplo de definición de agente</h3>
 <p>Por ejemplo, para crear un nuevo agente llamado <strong>Task Definition Agent</strong> para ayudar a los usuarios a definir una incidencia con el formato obligatorio para su equipo. El propósito del agente es recibir una descripción de la tarea y devolver la definición de la tarea con el formato obligatorio. Crearemos un nuevo agente con la siguiente información:</p>
@@ -15695,7 +15703,7 @@ Estas variables se sustituirán por los valores definidos en las propiedades.</p
 </tr>
 <tr>
 <td><strong>Especificación de flujo OpenAPI</strong></td>
-<td>Úselo cuando el archivo de base de conocimiento sea la especificación OpenAPI de un flujo de Etendo. Consulte <a href="#cómo-permitir-que-copilot-interactúe-con-etendo-classic">Cómo permitir que Copilot interactúe con Etendo</a> para más información.</td>
+<td>Úselo cuando el archivo de base de conocimiento sea la especificación OpenAPI de un flujo de Etendo. Consulte <a href="#cómo-permitir-que-copilot-interactúe-con-una-api-o-con-etendo">Cómo permitir que Copilot interactúe con Etendo</a> para más información.</td>
 <td>Seleccione el flujo en el selector</td>
 </tr>
 <tr>
@@ -15933,27 +15941,27 @@ En este caso, el archivo <code>ZIP</code> contiene la documentación de Etendo e
 <p>La funcionalidad más potente y útil de Etendo Copilot es la capacidad de interactuar con APIs (incluida la API de Etendo). Actualmente, el paradigma de los agentes de IA es automatizar y/o reutilizar lo que ya está <strong>hecho</strong>. En otras palabras, la utilidad surge del hecho de que los agentes de IA pueden usar toda la lógica de negocio que ya está disponible.</p>
 <h3 id="api-externa">API externa</h3>
 <p>La forma más habitual se basa en una combinación de una Especificación OpenAPI y una herramienta que permite realizar solicitudes a esa API. Para ello, se necesitan los siguientes pasos:
-- <strong>Añadir la Especificación OpenAPI</strong>: la Especificación OpenAPI es una forma estándar de describir una API. Esta especificación se añade como un archivo de Base de conocimiento. Y se configura como <code>[Agent] Append the file content to the prompt</code>. Esto permitirá que el agente conozca los endpoints y métodos de la API.
+- <strong>Añadir la Especificación OpenAPI</strong>: la Especificación OpenAPI es una forma estándar de describir una API. Esta especificación se añade como un archivo de Base de conocimiento. Y se configura como <code>[Agente] Añadir el contenido del archivo al prompt</code>. Esto permitirá que el agente conozca los endpoints y métodos de la API.
 - <strong>Añadir la herramienta de llamada a API</strong>: la herramienta de llamada a API es una herramienta que permite realizar solicitudes a una API. Esta herramienta se añade como una herramienta en el agente. El agente puede usar esta herramienta para realizar solicitudes a la API.</p>
 <h3 id="etendo">Etendo</h3>
 <p>Para Etendo, el proceso es un poco diferente. La principal diferencia es que podemos aprovechar la Especificación OpenAPI generada automáticamente por los <code>Flows</code>, donde podemos definir un conjunto de endpoints a los que queremos dar acceso a nuestro agente.
 Para saber más sobre cómo crear un flow en Etendo, consulte la guía <a href="../../../etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/">Cómo documentar un endpoint con OpenAPI</a>.
 Los pasos para permitir que un agente interactúe con Etendo son:</p>
 <ul>
-<li><strong>Añadir la Especificación OpenAPI</strong>: esta especificación se añade como un archivo de Base de conocimiento de tipo <code>OpenAPI Flow Specification</code>. Cuando se selecciona este tipo, se muestra un selector con los flows disponibles, para seleccionar el flow que queremos usar. El comportamiento de este archivo puede ser <code>[Agent] Append the file content to the prompt</code>. Esto permitirá que el agente conozca los endpoints y métodos de la API.</li>
+<li><strong>Añadir la Especificación OpenAPI</strong>: esta especificación se añade como un archivo de Base de conocimiento de tipo <code>Especificación de flujo OpenAPI</code>. Cuando se selecciona este tipo, se muestra un selector con los flows disponibles, para seleccionar el flow que queremos usar. El comportamiento de este archivo puede ser <code>[Agente] Añadir el contenido del archivo al prompt</code>. Esto permitirá que el agente conozca los endpoints y métodos de la API.</li>
 <li><strong>Añadir la herramienta de llamada a API</strong>: la herramienta de llamada a API es una herramienta que permite realizar solicitudes a una API. Esta herramienta se añade como una herramienta en el agente. El agente puede usar esta herramienta para realizar solicitudes a la API.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Si el comportamiento del archivo de Base de conocimiento es <code>[Agent] Add to the agent as Knowledge Base</code>, el agente no podrá usar la información del archivo de base de conocimiento para generar respuestas sin usar la herramienta <code>Knowledge base Search</code>. Por lo tanto, el agente necesita <strong>buscar</strong> en el archivo de base de conocimiento para encontrar la información. Esto no se recomienda debido al rendimiento del agente.</p>
+<p>Si el comportamiento del archivo de Base de conocimiento es <code>[Agente] Añadir al agente como base de conocimiento</code>, el agente no podrá usar la información del archivo de base de conocimiento para generar respuestas sin usar la herramienta <code>Knowledge base Search</code>. Por lo tanto, el agente necesita <strong>buscar</strong> en el archivo de base de conocimiento para encontrar la información. Esto no se recomienda debido al rendimiento del agente.</p>
 </div>
 <h3 id="generacion-automatica-de-herramientas">Generación automática de herramientas</h3>
-<p>Cuando la Especificación OpenAPI se añade como un archivo de Base de conocimiento de tipo <code>OpenAPI Flow Specification</code>, el agente generará automáticamente herramientas para cada método y endpoint de la API. Estas herramientas se pueden usar para realizar solicitudes a la API sin necesidad de configurar la herramienta de llamada a API. El agente tendrá una herramienta para cada método y endpoint de la API. Esta funcionalidad se encuentra actualmente en fase experimental.</p>
+<p>Cuando la Especificación OpenAPI se añade como un archivo de Base de conocimiento de tipo <code>Especificación de flujo OpenAPI</code>, el agente generará automáticamente herramientas para cada método y endpoint de la API. Estas herramientas se pueden usar para realizar solicitudes a la API sin necesidad de configurar la herramienta de llamada a API. El agente tendrá una herramienta para cada método y endpoint de la API. Esta funcionalidad se encuentra actualmente en fase experimental.</p>
 <h3 id="ejemplo-de-interaccion-de-copilot-con-etendo">Ejemplo de interacción de Copilot con Etendo</h3>
 <p>Por ejemplo, crearemos un agente para crear Productos en Etendo, usando un flow ya definido con los endpoints necesarios para crear Productos, Categorías de producto y Precios.</p>
 <ol>
 <li>
-<p>Primero, crearemos un nuevo archivo de Base de conocimiento de tipo <code>OpenAPI Flow Specification</code> y seleccionaremos el flow <code>Product Flow</code>.</p>
+<p>Primero, crearemos un nuevo archivo de Base de conocimiento de tipo <code>Especificación de flujo OpenAPI</code> y seleccionaremos el flow <code>Product Flow</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Asegúrese de usar el agente que tenga los permisos necesarios para interactuar con los datos. En este caso, el agente debe tener los permisos necesarios para crear productos, categorías y precios en Etendo.</p>
@@ -15994,7 +16002,6 @@ Los pasos para permitir que un agente interactúe con Etendo son:</p>
 </ol>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
-<hr>
 
 
 

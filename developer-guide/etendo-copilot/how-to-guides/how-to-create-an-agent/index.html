@@ -15296,12 +15296,20 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The <strong>Prompt</strong> field can have the following dynamic variables: <code>@context.url@</code>, <code>@ETENDO_HOST@</code>, <code>@ETENDO_HOST_DOCKER@</code> and <code>@source.path@</code> 
-These variables will be replaced with the values defined in the properties.</p>
+<p>The <strong>Prompt</strong> field can have the following dynamic variables: <code>@context.url@</code>, <code>@etendo.host@</code>, <code>@etendo.host.docker@</code> and <code>@source.path@</code>.
+These variables are replaced with the values defined in the <code>gradle.properties</code> file.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For more information on what each field is used for, visit the <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Setup and Usage - Agents</a> guide.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Visibility and display settings</p>
+<p>When creating an agent, also consider the following fields available in the Agent window header:
+- <strong>Agent Scope</strong>: Controls which users can see and use this agent. Defaults to <strong>Client</strong>.
+- <strong>Featured</strong>: Marks the agent as a priority option in the Copilot Chat agent list.
+- <strong>Sync on Startup</strong>: Automatically synchronizes the agent each time the application server restarts.</p>
+<p>For full details on each field, see <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Agent Window – Header</a>.</p>
 </div>
 <h3 id="agent-definition-example">Agent Definition Example</h3>
 <p>For example, to create a new agent called <strong>Task Definition Agent</strong> to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:</p>
@@ -15371,7 +15379,7 @@ These variables will be replaced with the values defined in the properties.</p>
 <p>Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. Additionally, if the provider offers models that are not present in this list, they can be added manually. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>More information here <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#ai-models">AI Models</a></p>
+<p>More information here <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#ai-models-window">AI Models</a></p>
 </div>
 <h3 id="image-input">Image Input</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png" data-desc-position="bottom"><img align="right" alt="Image Input" src="../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png" width="250"></a></p>
@@ -15417,7 +15425,7 @@ These variables will be replaced with the values defined in the properties.</p>
 </tr>
 <tr>
 <td><strong>OpenAPI Flow Specification</strong></td>
-<td>Use when the knowledge base file is the OpenAPI Specification of a Etendo Flow. See <a href="#how-to-allow-copilot-to-interact-with-etendo-classic">How to allow Copilot to interact with Etendo</a> for more information.</td>
+<td>Use when the knowledge base file is the OpenAPI Specification of a Etendo Flow. See <a href="#how-to-allow-copilot-to-interact-with-an-api-or-etendo">How to allow Copilot to interact with Etendo</a> for more information.</td>
 <td>Select the flow in the selector</td>
 </tr>
 <tr>
@@ -15553,14 +15561,14 @@ These variables will be replaced with the values defined in the properties.</p>
 <tbody>
 <tr>
 <td><strong>[Agent] Append the file content to the prompt</strong></td>
-<td>Its recommended when the volume of the file content can be handled by the model or the information its crucial for the agent work.</td>
-<td>When the prompt is builded, the content of the file will be inserted in every @alias@ ocurrence inside the prompt. If the alias was not defined, the content of the file is appended at the final of the prompt.</td>
+<td>It is recommended when the volume of the file content can be handled by the model or the information is crucial for the agent work.</td>
+<td>When the prompt is built, the content of the file will be inserted in every @alias@ occurrence inside the prompt. If the alias was not defined, the content of the file is appended at the end of the prompt.</td>
 <td>The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.</td>
 </tr>
 <tr>
 <td><strong>[Agent] Add to the agent as Knowledge Base</strong></td>
-<td>Its recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'.</td>
-<td>The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a <code>Knowledge base Search</code> tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors, proper of the agent and the search tool is the one that allows to search in it by "Meaning".</td>
+<td>It is recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'.</td>
+<td>The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a <code>Knowledge base Search</code> tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors belonging to the agent, and the search tool is the one that allows to search in it by "Meaning".</td>
 <td>The agent will not be able to use the information in the knowledge base to generate responses without using the <code>Knowledge base Search</code> tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be <a href="#advanced-settings">configured</a> in the agent configuration. The agent needs to <strong>search</strong> in the knowledge base file to find the information. This is not recommended due to the performance of the agent.</td>
 </tr>
 <tr>
@@ -15584,8 +15592,8 @@ These variables will be replaced with the values defined in the properties.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li><strong>Remember the Synchronization</strong>: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes. Any user with access to the Agent window can perform the synchronization, regardless of their role. The knowledge base data is stored separately for each client.</li>
-<li><strong>Splitting</strong>: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as <code>Skip Splitting</code> in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.</li>
+<li><strong>Remember the Synchronization</strong>: After adding/modifying/deleting a knowledge base file from an Agent, it is necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes. Any user with access to the Agent window can perform the synchronization, regardless of their role. The knowledge base data is stored separately for each client.</li>
+<li><strong>Splitting</strong>: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is split into chunks by the headers. If the files are not large, it is possible to mark as <code>Skip Splitting</code> in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.</li>
 </ul>
 </div>
 <h3 id="add-a-knowledge-base-example">Add a Knowledge Base Example</h3>

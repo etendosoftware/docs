@@ -15261,7 +15261,6 @@
 <p class="admonition-title">Security recommendation</p>
 <p>Set a reasonable expiration time in production environments. Leaving it at <code>0</code> (no expiration) means a compromised token remains valid indefinitely.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png" data-desc-position="bottom"><img alt="" src="../../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png"></a></p>
 <h2 id="how-to-set-up-agents">How to Set up Agents</h2>
 <p>With Etendo Copilot, it is possible to:</p>
 <ol>
@@ -15272,22 +15271,22 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Service</code> &gt; <code>Copilot</code> &gt; <code>Agent</code></p>
 <p>The Agent window allows you to define and configure agents. The capabilities of an agent are:</p>
 <ul>
-<li><strong>Text Generation</strong>: The agent can answer questions or retrieve results from his knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.</li>
-<li><strong>Retrieval</strong>: The agent can be configured with a custom knowledge base, which can be used to retrieve information. Its useful when there is documentation or information that the agent can use to answer questions.</li>
+<li><strong>Text Generation</strong>: The agent can answer questions or retrieve results from its knowledge base from the LLM model (general knowledge). Those models are able to generate text based on the input prompt.</li>
+<li><strong>Retrieval</strong>: The agent can be configured with a custom knowledge base, which can be used to retrieve information. It is useful when there is documentation or information that the agent can use to answer questions.</li>
 <li><strong>Tools</strong>: The agent can use tools to perform specific tasks. The tools are defined in the <a href="#skilltool-window">Skill/Tool window</a>.</li>
 <li><strong>Receive attachments</strong>: Both agents and tools can utilize files in multiple formats.</li>
-<li><strong>Read images</strong>: There are models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.</li>
+<li><strong>Read images</strong>: Some models can receive images as input, and work directly with them. This feature is only available for the Multi-Model Agent type.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It is recommended to read this entire page to understand the possible configurations, but then you can continue to the <a href="../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/">How to Create an Agent</a> page.</p>
 </div>
 <h3 id="header">Header</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/assistant-window.png" data-desc-position="bottom"><img alt="agents-window" src="../../../assets/user-guide/etendo-copilot/setup/assistant-window.png"></a></p>
+<p>The Header section contains the main configuration of the agent: its identity, availability, and synchronization behavior. Most of these fields need to be set when the agent is first created and rarely change afterwards.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/user-guide/etendo-copilot/setup/agent-window.png" data-desc-position="bottom"><img alt="agents-window" src="../../../assets/user-guide/etendo-copilot/setup/agent-window.png"></a></p>
 <p>Fields to note:</p>
 <ul>
 <li><strong>Name</strong>: Agent name</li>
-<li><strong>Description</strong>: Agent description</li>
 <li><strong>Description</strong>: The description of the agent so that the manager can choose the appropriate agent for each case.</li>
 <li>
 <p><strong>App Type</strong>:</p>
@@ -15306,20 +15305,31 @@
 <li>
 <p><strong>Sync Status</strong>: This read-only field indicates the current status of the agent.</p>
 <ul>
-<li><code>Pending synchronization</code> the agent will switch to this status at any change, either in the header or in the tabs.</li>
-<li><code>Synchronized</code>, it is necessary to synchronize the agent using the “Synchronize Agent" button.</li>
+<li><code>Pending synchronization</code>: the agent will switch to this status after any change, either in the header or in the tabs. Click the <strong>Sync Agent</strong> button to apply the changes.</li>
+<li><code>Synchronized</code>: the agent is up to date. No action is required.</li>
 </ul>
 </li>
 <li>
 <p><strong>Module</strong>: Module in which the agent and all its configurations will be exported. This field is only available with the <code>System Administrator</code> role.</p>
 </li>
 <li><strong>Active</strong>: Checkbox to activate or not the agent.</li>
-<li><strong>SystemApp</strong>: Checkbox to limit the use of certain agents only under the <code>system administrator</code> role and not available to end users.</li>
+<li>
+<p><strong>Agent Scope</strong>: Defines the visibility scope of the agent. Available options:</p>
+<ul>
+<li><strong>Client</strong>: The agent is available only to users within the company (client) where it was created. This is the default value and the recommended option for most agents.</li>
+<li><strong>System</strong>: The agent is only accessible to the platform-level System Administrator — the technical role that manages the entire Etendo installation, not a company-level admin user. Use this for agents that should not be visible to any regular company users.</li>
+<li><strong>Client + System</strong>: The agent is available to users within the company where it was created and also to the platform-level System Administrator.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sync on Startup</strong>: When enabled, the agent is automatically updated every time the Etendo application server restarts (for example, after a system update or a scheduled maintenance restart). This means you do not need to manually click the <strong>Sync Agent</strong> button after each restart to apply your agent configuration changes — the system handles it automatically. If this option is disabled, you must click <strong>Sync Agent</strong> manually after each restart to ensure the agent reflects the latest configuration.</p>
+</li>
+<li><strong>Featured</strong>: When enabled, this agent appears at the top of the agent list in the Copilot Chat and is shown by default when the chat opens. If at least one agent is marked as Featured, all users will see only the Featured agents in the chat list by default. A star button (⭐) appears in the chat allowing any user to switch between the Featured agents view and the full list of all available agents. If no agents are marked as Featured, all agents are shown as usual.</li>
 <li>
 <p><strong>Prompt</strong>: Specific instructions of the agents. These instructions can be written in English or Spanish.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The <strong>Prompt</strong> field can have the following dynamic variables: <code>@context.url@</code>, <code>@ETENDO_HOST@</code>, <code>@ETENDO_HOST_DOCKER@</code> and <code>@source.path@</code>. These variables will be replaced with the values defined in the <code>gradle.properties</code>file.</p>
+<p>The <strong>Prompt</strong> field can have the following dynamic variables: <code>@context.url@</code>, <code>@etendo.host@</code>, <code>@etendo.host.docker@</code> and <code>@source.path@</code>. These variables are replaced with the values defined in the <code>gradle.properties</code> file.</p>
 </div>
 </li>
 <li>
