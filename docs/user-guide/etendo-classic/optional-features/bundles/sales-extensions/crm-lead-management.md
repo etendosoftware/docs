@@ -18,6 +18,9 @@ tags:
 !!! example  "IMPORTANT: THIS IS A BETA VERSION"
     This page is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**.
 
+!!! info
+    This functionality is available starting from version **4.0.0** of the Sales Extensions Bundle, from **Etendo 26.1**. To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
+
 ## Overview
 
 The **CRM Lead Management** module provides native lead tracking capabilities inside Etendo ERP. It allows the commercial team to register prospects, manage their full lifecycle through configurable statuses, organize follow-up tasks, and convert qualified leads into Business Partners — directly integrating with the Sales flow (quotations → orders → invoices).
@@ -247,9 +250,18 @@ The mobile experience is **task-driven**: the app shows the tasks assigned to th
 
 ### Task List
 
-Upon opening the app, the user sees the list of CRM tasks assigned to them, ordered by priority and due date. Each task shows the lead it belongs to, the task type, and its current status.
+![Mobile task list](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-task-list.png){align=right width=300}
 
-![Mobile task list](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm/mobile-task-list.png)
+Upon opening the app, the user sees the list of CRM tasks assigned to them, ordered by priority and due date. Each task card displays:
+
+- **Task No**: Unique identifier for the task
+- **Company Name**: The company associated with the lead
+- **Lead Status**: Lead status (e.g., New, Converted) with color-coded badge
+- **Task Type**: Type of activity (e.g., Email, Meeting)
+- **Task Priority**: Task priority level (e.g., Critical, Major) with color-coded badge
+- **Task Due Date**: The due date of the task
+
+<br clear="all">
 
 ### Lead Detail
 

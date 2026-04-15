@@ -184,5 +184,3 @@ This work is licensed under :material-creative-commons: :fontawesome-brands-crea
 ---
 
 ---
-
----

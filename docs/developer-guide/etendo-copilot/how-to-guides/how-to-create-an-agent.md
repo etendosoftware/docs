@@ -277,7 +277,7 @@ Question asked to `Bastian` and structured JSON response received:
     More information about this window can be found in the [Knowledge Tab](../../../user-guide/etendo-copilot/setup-and-usage.md#knowledge-tab) section.
 
 !!! tip
-    - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes.
+    - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes. Any user with access to the Agent window can perform the synchronization, regardless of their role. The knowledge base data is stored separately for each client.
     - **Splitting**: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
 
 ### Add a Knowledge Base Example

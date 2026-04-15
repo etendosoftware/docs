@@ -44,7 +44,7 @@ The SQL Expert Agent is composed of the following components:
 
 3.  A new agent named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Agent` window.
 
-4. Run **Sync Agent** process, loged as System Administrator role.
+4. Run **Sync Agent** process. Any user with access to the Agent window can perform this step, regardless of their role.
 
 5. Restart Docker image using `./gradlew resources.up` tasks.
 

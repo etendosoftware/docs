@@ -31,7 +31,7 @@ Las organizaciones se crean ejecutando el proceso de configuración inicial de l
 
 La ventana Entidad permite al usuario ver y mantener las entidades creadas al ejecutar el proceso **Crear entidad**.
 
-![](../../../../../assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![Client Window](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-window.png)
 
 !!! info
     El campo **Días para la Caducidad de Contraseña** permite al usuario establecer un límite de días durante el cual una contraseña puede ser válida para los usuarios. El límite se restablecerá cada vez que un usuario cambie su contraseña.
@@ -90,7 +90,7 @@ Siempre es posible personalizar la configuración predeterminada; por ejemplo:
 
 La pestaña Información permite al usuario añadir, editar y mantener información genérica de la entidad, como las unidades de medida predeterminadas e imágenes.
 
-![](../../../../../assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![Client Information Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-information-tab.png)
 
 Información adicional que se permite especificar:
 
@@ -117,38 +117,12 @@ Información adicional que se permite especificar:
 
 ### Configuración del correo electrónico
 
-Documentos como pedidos o facturas pueden enviarse por correo electrónico. La pestaña Configuración del correo electrónico permite al usuario configurar el servidor de correo electrónico, la cuenta y la contraseña, variables que deben configurarse correctamente antes de enviar documentos por correo electrónico.
+La pestaña **Configuración del correo electrónico** permite configurar el servidor SMTP utilizado
+para enviar documentos por correo electrónico (p. ej., pedidos o facturas).
 
-![](../../../../../assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
-
-La pestaña Configuración del correo electrónico recopila la configuración de correo electrónico necesaria para enviar documentos como pedidos o facturas.
-
-!!! info
-    Es importante conocer la configuración del servidor SMTP que se va a utilizar para poder rellenar correctamente la información siguiente:
-
-- **Servidor SMTP**, servidor de correo electrónico con SMTP
-- **Autenticación SMTP**, indicador "sí/no" para definir si el servidor de correo electrónico requiere autenticación o no antes de enviar correos.
-- **Cuenta del servidor SMTP**, nombre de usuario del servidor de correo electrónico en caso de que se requiera autenticación.
-- **Contraseña del servidor SMTP**, contraseña del servidor de correo electrónico en caso de que se requiera autenticación.
-- **Dirección de envío del servidor SMTP**, dirección de correo electrónico desde la que se enviarán los correos.
-- **Conexión de seguridad Smtp**, nivel de seguridad necesario para la conexión con los servidores SMTP. Las opciones disponibles son:
-    - Ninguna
-    - STARTTLS
-    - SSL
-    
-- **Puerto Smtp**, puerto requerido para su servidor SMTP
-- **Timeout conexión Smtp**, cantidad máxima de tiempo (en segundos) permitida para que una conexión SMTP se conecte o se comunique.
-
-En la captura de pantalla proporcionada, puede ver una configuración válida para una cuenta de gmail:
-
-- **Servidor SMTP**, [smtp.gmail.com](http://smtp.gmail.com)
-- **Autenticación SMTP**, "sí"
-- **Cuenta del servidor SMTP**, una cuenta de gmail válida (incluyendo el @gmail.com o @sudominio)
-- **Contraseña del servidor SMTP**, la contraseña de esta cuenta de gmail
-- **Dirección de envío del servidor SMTP**, dirección de correo electrónico desde la que se enviarán los correos.
-- **Conexión de seguridad Smtp**, SSL
-- **Puerto Smtp**, 465
-- **Timeout conexión Smtp**, 600 (10 minutos)
+El correo electrónico puede configurarse en tres niveles: Entidad, Organización y Usuario.
+Para la referencia completa de campos e instrucciones de configuración, consulte
+[Cómo configurar el correo electrónico](../../../how-to-guides/how-to-configure-email.md).
 
 ### Dimensiones
 
@@ -158,10 +132,14 @@ Esta pestaña puede utilizarse para configurar la disponibilidad de dimensiones 
 
 Por ejemplo, si una entidad necesita mostrar la dimensión proyecto en la cabecera y en las líneas en todos los documentos excepto en el documento de amortización, la ventana Entidad debería tener la siguiente configuración:
 
-![](../../../../../assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![Client Dimensions Tab](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-dimensions-tab.png)
 
 La configuración en la pestaña Dimensiones se rellena a partir de la configuración existente en la ventana Asignación de dimensiones.
 
 ---
 
 Este trabajo es una obra derivada de [Configuración General](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
+
+---
+
+---
