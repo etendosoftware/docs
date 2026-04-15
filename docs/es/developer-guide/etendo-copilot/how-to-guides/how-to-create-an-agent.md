@@ -271,7 +271,7 @@ Pregunta realizada a `Bastian` y respuesta JSON estructurada recibida:
     Puede encontrar más información sobre esta ventana en la sección [Pestaña Conocimiento](../../../user-guide/etendo-copilot/setup-and-usage.md#knowledge-tab).
 
 !!! tip
-    - **Recuerde la sincronización**: Después de añadir/modificar/eliminar un archivo de base de conocimiento de un Agente, es necesario sincronizar el agente para aplicar los cambios. Esto no solo regenera/recarga el archivo de base de conocimiento, sino que también actualiza el Agente con los últimos cambios.
+    - **Recuerde la sincronización**: Después de añadir/modificar/eliminar un archivo de base de conocimiento de un Agente, es necesario sincronizar el agente para aplicar los cambios. Esto no solo regenera/recarga el archivo de base de conocimiento, sino que también actualiza el Agente con los últimos cambios. Cualquier usuario con acceso a la ventana de Agente puede realizar la sincronización, independientemente de su rol. Los datos de la base de conocimiento se aíslan por cliente en la base de datos vectorial.
     - **División**: Cuando se realiza la indexación en el archivo de base de conocimiento, el contenido se divide en fragmentos dependiendo del tipo de archivo. Por ejemplo, si el archivo es un archivo markdown, el contenido se divide en fragmentos por los encabezados. Si los archivos no son grandes, es posible marcar `Skip Splitting` en la configuración del archivo de base de conocimiento. Esto evitará la división del contenido en fragmentos. Esto provoca que el contenido de los documentos se recupere como un único fragmento, lo cual puede ser útil en algunos casos.
 
 ### Ejemplo de añadir una base de conocimiento
@@ -410,3 +410,5 @@ Por ejemplo, crearemos un agente para crear Productos en Etendo, usando un flow 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---
