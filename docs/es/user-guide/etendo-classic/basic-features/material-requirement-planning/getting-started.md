@@ -83,7 +83,7 @@ El MRP interactúa con los siguientes módulos:
 - [Gestión de Ventas](../sales-management/getting-started.md):
     - [Pedido de venta](../sales-management/transactions.md#sales-order) se tienen opcionalmente en cuenta en los cálculos de ambos planes
 - [Gestión de Almacén](../warehouse-management/getting-started.md):
-    - los [niveles de stock](../warehouse-management/analysis-tools.md#stock-report) se tienen automáticamente en cuenta en los cálculos de ambos planes
+    - los [niveles de stock](../warehouse-management/analysis-tools/stock-report.md) se tienen automáticamente en cuenta en los cálculos de ambos planes
 - [Gestión de Producción](../production-management/getting-started.md):
     - el [Plan de Producción](../production-management/setup.md#process-plan) se utiliza para el cálculo de la Planificación de la producción
     - [Orden de Fabricación](../production-management/transactions.md#work-requirement) se crean desde la Planificación de la producción
@@ -91,3 +91,5 @@ El MRP interactúa con los siguientes módulos:
 ---
 
 - Este trabajo es una obra derivada de [Gestión de MRP](https://wiki.openbravo.com/wiki/Material_Requirement_Planning){target="_blank"} de [Openbravo S.L.U](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, con licencia [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}.
+
+---

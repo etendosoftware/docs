@@ -27,7 +27,7 @@ Following distribution is used: A products represent 80% value of the warehouse,
 
 ### **Sample Report Output**
 
-![Material Transaction Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+![Pareto Product Report sample output](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
 
 
 Columns to note:
@@ -42,7 +42,7 @@ Columns to note:
 Aggregated information calculated for the Valued Stock can be used. Please refer to the  Valued Stock Report documentation for more details about how to generate the aggregated information.
 
 !!! note
-    Exactly as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However, this feature is specially useful in high volume environments when you experience performance issues launching the report.
+    Exactly as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However, this feature is especially useful in high volume environments when you experience performance issues launching the report.
 
 ---
 

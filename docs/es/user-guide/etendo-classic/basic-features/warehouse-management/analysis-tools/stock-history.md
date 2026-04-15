@@ -20,7 +20,7 @@ La ventana Historial de existencias se rellena únicamente mediante el proceso e
 
 No se mostrarán datos en la ventana hasta que se apliquen filtros de búsqueda. Una vez aplicados los filtros, haga clic en el botón de la derecha para completar el proceso. 
 
-![](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
+![Stock History window](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
 
 La ventana muestra los siguientes campos a partir de los cuales el usuario puede filtrar y obtener los datos necesarios: 
 - Fecha de stock 
@@ -33,7 +33,7 @@ La ventana muestra los siguientes campos a partir de los cuales el usuario puede
 - Cantidad asignada
 - Cantidad en transacción en borrador
  
-![](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
+![Stock History filtered results](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
 
 Esta funcionalidad incluye un proceso para cerrar el stock y guardar la información histórica.
 
