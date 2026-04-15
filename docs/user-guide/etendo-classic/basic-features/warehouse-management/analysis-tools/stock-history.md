@@ -2,8 +2,6 @@
 title: Stock History
 ---
 
-## Stock History
-
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Stock History`
 
 !!! info

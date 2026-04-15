@@ -1,48 +1,93 @@
 ---
 title: Pareto Product Report
+tags:
+ - Pareto Product Report
+ - Warehouse Management
+ - Inventory
+ - ABC Classification
+ - Analysis Tools
 ---
-
-## Pareto Product Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Pareto Product Report`
 
-### **Overview**
+## Overview
 
-**Pareto Product Report** distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
+The Pareto Product Report classifies products into three categories — A, B and C — based on the proportion of total warehouse value each product represents. This technique is commonly known as **ABC analysis**, and it helps organizations focus inventory management efforts where they matter most.
 
-Following distribution is used: A products represent 80% value of the warehouse, B - 15% and C- 5%.
+For example:
 
-!!! info
-    The classification is based on the cost of the product. That is why it is needed to have a Costing Rule validated and the Material Transaction costs of the product calculated up to date.
+| Category | Share of warehouse value | Typical action |
+|----------|--------------------------|----------------|
+| **A** | ~80 % | Cycle-count weekly, negotiate supplier terms, keep safety stock tight |
+| **B** | ~15 % | Cycle-count monthly, standard reorder rules |
+| **C** | ~5 %  | Cycle-count yearly, consider consolidation or discontinuation |
 
+!!! info "Prerequisites"
+    The classification is based on the cost of each product. Before running the report, make sure the following are in place:
 
-### **Parameters window**
+    - A validated [Costing Rule](../setup.md#costing-rules) for the organization.
+    - Up-to-date **Material Transaction** costs (found under `Warehouse Management` > `Transactions` > `Material Transaction`) — these are the cost entries recorded each time stock moves in or out.
 
-**Currency** field defines currency in which all monetary values (like **Cost**, **Value**) of the report are shown. Field is defaulted to the system currency.
+    If either is missing, the report may return zero values or incomplete results.
+
+## Parameters
+
+Before generating the report, configure the following filters:
+
+| Field | Description |
+|-------|-------------|
+| **Organization** | Filters the report by the selected organization. |
+| **Currency** | Defines the currency in which all monetary values (Cost, Value) are displayed. Defaults to the system currency. |
+| **Warehouse** | Restricts the report to a specific warehouse within the selected organization. |
 
 !!! warning
-    Please note that **Conversion Rate** to the report **Currency** should be specified for the report to work.
+    A **Conversion Rate** to the selected currency must be defined for the report to work correctly. Verify this under `General Setup` > `Application` > `Conversion Rates` before running the report.
 
-**Update ABC** button fills in **ABC** field (updates value if the record exists or creates new record otherwise) of Org. Specific tab of the **Product** window for the organizations of the report output.
+After setting the filters, choose one of the two actions:
 
-### **Sample Report Output**
+- **Search** — Displays the results in the same window.
+- **View Results** — Opens the report in a separate view, which can be useful for printing or side-by-side comparison.
 
-![Material Transaction Report](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+## Report Output
 
+The report lists every product in the selected warehouse, sorted by descending value, and assigns each product its ABC category.
 
-Columns to note:
+![Pareto Product Report output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.png)
 
--   **Quantity:** is the current stock of the product (Quantity on Hand) in the warehouse selected.
--   **Value:** that is the sum of all the material transaction costs of the product.
--   **Cost:** this cost is calculated as the ratio between the product value and the product quantity above
--   **Percentage:** that percentage is the ratio between the product value and the Total Value of the warehouse (which is the sum of all report lines).
+### Column Reference
 
-### **Persisted information**
+| Column | Description |
+|--------|-------------|
+| **Search Key** | The unique identifier code of the product. |
+| **Name** | The descriptive name of the product. |
+| **Quantity** | The current stock (quantity on hand) of the product in the selected warehouse. |
+| **Unit** | The unit of measure for the product. |
+| **Cost** | The unit cost of the product (total Value divided by Quantity). |
+| **Value** | The total inventory value of the product, calculated as the sum of all its material transaction costs. |
+| **Percentage** | The ratio between the product Value and the total value of the warehouse (the sum of all report lines). |
+| **Category** | The ABC classification assigned to the product (A, B or C). Products whose cumulative value reaches up to 80 % of the total are classified as A, those between 80 % and 95 % as B, and the remainder as C. |
 
-Aggregated information calculated for the Valued Stock can be used. Please refer to the  Valued Stock Report documentation for more details about how to generate the aggregated information.
+!!! tip "Reading the results"
+    Products at the top of the list (Category A) have the highest individual impact on warehouse value. Focus review and control efforts on these items first.
+
+## Update ABC
+
+The **Update ABC** button at the bottom of the window writes each product's classification back to the **ABC** field in the **Org. Specific** tab of the Product window.
+
+- If a record already exists for that organization, the value is **updated**.
+- If no record exists, a **new record is created**.
+
+Once persisted, the ABC category becomes available for filtering and reporting in other areas of the application — for instance, when defining reorder rules or generating purchasing reports.
+
+!!! tip "When to update"
+    Run the report and click **Update ABC** periodically — for example, after each inventory valuation cycle or whenever significant stock movements have occurred. This keeps the classification aligned with current warehouse conditions.
+
+## Using Pre-Aggregated Data
+
+For faster performance in high-volume environments, this report can reuse aggregated data previously generated by the [Valued Stock Report](valued-stock-report.md).
 
 !!! note
-    Exactly as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However, this feature is specially useful in high volume environments when you experience performance issues launching the report.
+    The Pareto Product Report can also run without aggregated data. However, using aggregated data is especially useful in high-volume environments where you experience performance issues when launching the report.
 
 ---
 
