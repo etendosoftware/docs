@@ -6,77 +6,62 @@ title: Informe de Valuación de Existencias
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe de Valuación de Existencias`
 
-### **Resumen**
+### **Overview**
 
-El **Informe de Valuación de Existencias** proporciona una vista completa del inventario mantenido en cada almacén junto con su valor monetario. Es una herramienta esencial para comprender cuánto capital está inmovilizado en existencias, y da soporte a procesos empresariales clave como:
+El Informe de Valuación de Existencias muestra el stock de un almacén concreto, así como el valor del stock.
 
-- **Informes financieros**: Determinar el valor total del inventario para balances y cierres de periodo.
-- **Conciliación contable**: Comparar las valoraciones de existencias con los asientos del libro mayor para identificar discrepancias.
-- **Análisis de costes**: Evaluar los costes unitarios entre productos y almacenes para apoyar decisiones de compra y precios.
-- **Visibilidad multi-almacén**: Revisar los valores de existencias en varios almacenes, ya sea consolidados a nivel de organización o desglosados por almacén individual.
+El coste se calcula como la suma del coste de cada transacción de material del producto en el almacén. El coste de las transacciones del producto se calcula mediante el proceso Costing Server.
 
-La valoración se calcula sumando el coste de cada [transacción de material](../transactions.md) de cada producto en el almacén. Los costes de las transacciones se determinan mediante el proceso [Costing Server](../getting-started.md).
+### **Parameters Window**
 
-### **Ventana de parámetros**
+![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
-![Informe de Transacción de Material](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
-Antes de generar el informe, configure los siguientes parámetros:
 
--   **Organización**: Seleccione la organización sobre la que informar. Solo están disponibles las organizaciones de tipo *Legal con Contabilidad* o *Genérica*.
--   **Almacén**: Cuando se selecciona una organización *Genérica*, se listan todos los almacenes pertenecientes a esa organización. Cuando se selecciona una organización *Legal con Contabilidad*, no está disponible la selección de un almacén específico.
--   **Fecha**: El informe muestra la información de inventario hasta esta fecha, incluida.
--   **Almacén consolidado**: Cuando está marcado, la información de existencias se consolida a nivel de organización. Cuando no está marcado, el informe muestra un desglose por almacén individual.
--   **Categoría de producto**: Filtra opcionalmente el informe para mostrar solo los productos pertenecientes a una [categoría](../../master-data-management/product-setup.md#product-category) específica.
--   **Moneda**: Establece la [moneda](../../general-setup/application/currency.md) en la que se muestran todos los valores monetarios (como coste y valoración).
+-   **Organización**: Este campo permite al usuario seleccionar entre organizaciones de tipo "Legal with Accounting" y "Generic".
+-   **Almacén**: Si la organización seleccionada es "Generic", entonces lista todos los almacenes que le pertenecen; en caso contrario, si la organización es "Legal with accounting", no se muestra ningún almacén para seleccionar.
+-   **Date**: El informe mostrará la información hasta la fecha seleccionada.
+-   **Consolidated Warehouse**: Si se marca, la información del stock se consolidará a nivel de organización; en caso contrario, la información se desglosará por almacén.
+-   **Categoría del Producto**: Permite mostrar información solo de la Categoría del Producto seleccionada.
+-   **Moneda**: Define la moneda en la que se muestran todos los valores monetarios del informe (como Coste, Valoración).
 
 !!! warning
-    Debe definirse un [ratio de conversión](../../general-setup/application/conversion-rates.md) a la moneda seleccionada para que el informe se genere correctamente. Verifique que los ratios de conversión de moneda adecuados estén configurados antes de ejecutar el informe.
+    Tenga en cuenta que para que el informe funcione debe especificarse el tipo de cambio a la moneda del informe.
 
-### **Ventana de salida**
+### **Output Window** 
 
-![Informe de Transacción de Material](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
-La salida del informe incluye las siguientes columnas:
 
--   **Producto**: El nombre del producto.
--   **Cantidad**: La cantidad de existencias del producto a la fecha seleccionada.
--   **Unidad de medida**: La unidad de medida en la que se expresa la cantidad de existencias.
--   **Coste Unitario**: El coste por unidad individual. Se calcula dividiendo la valoración total entre la cantidad de existencias.
--   **Valoración**: El valor monetario total de las existencias. Se calcula sumando las valoraciones de todas las transacciones de material que han ocurrido en el almacén para ese producto.
--   **Coste real del algoritmo de promedio/estándar**: El coste de promedio o estándar calculado más recientemente para el producto.
--   **Valoración real del algoritmo de promedio/estándar**: La valoración de existencias basada en el coste actual de promedio o estándar. Se calcula multiplicando la cantidad de existencias por el coste actual.
+-   **Producto**: Nombre del producto.
+-   **Cantidad**: Stock del producto en la fecha seleccionada.
+-   **Unidad de medida** : Unidad en la que se mide el stock.
+-   **Coste Unitario**: Coste de cada unidad concreta. Es el resultado de dividir la Valoración entre el stock.
+-   **Valoración**: Valoración del stock. Se calcula sumando todas las valoraciones de cada transacción que ha tenido lugar en el almacén.
+-   **Actual Average/Standard Algorithm Cost**: Coste medio/estándar actual, el cálculo más reciente de su valor.
+-   **Actual Average/Standard Algorithm Valuation**: Valoración del stock basada en el Coste medio/estándar actual. Es el resultado de multiplicar el stock por el coste actual.
 
-### **Mejorar el rendimiento del informe (pre-cálculo de datos)**
+### **Persisted Information**
 
-!!! note
-    Este paso es **opcional**. El Informe de Valuación de Existencias funciona sin él. Sin embargo, si su informe tarda mucho en generarse porque su sistema tiene un gran volumen de transacciones, habilitar el pre-cálculo de datos puede reducir significativamente los tiempos de espera.
+Este paso no es necesario para lanzar el informe. Sin embargo, si existen problemas de rendimiento, esto puede ayudar a mejorar considerablemente el rendimiento del informe.
 
-El sistema puede resumir (precalcular) los datos de inventario de cada [periodo contable](../../financial-management/accounting/setup/openclose-period-control.md) cerrado con antelación, de modo que el informe no tenga que procesar cada transacción individual cada vez que se ejecuta. Para que esta funcionalidad funcione:
+Es posible agregar información que permite realizar consultas más rápidas. Esta información se agrega para cada período contable cerrado, lo que significa que los períodos contables deben estar definidos y, al menos algunos de ellos, deben estar en un estado *Cerrado* o *Cerrado permanentemente*.
 
-- Los periodos contables deben estar definidos en el [Calendario anual y periodos](../../financial-management/accounting/setup/fiscal-calendar.md).
-- Al menos algunos periodos deben estar en estado *Cerrado* o *Cerrado permanentemente*.
+La información persistirá hasta el primer período no cerrado. De este modo, es posible evitar recorrer muchos registros. Sin embargo, no se agregará información después del primer período cerrado y esto puede provocar un rendimiento no óptimo del informe si necesita recuperar mucha información.
 
 !!! info
-    Para habilitar esta funcionalidad, programe el proceso en segundo plano denominado *Generate Aggregated Data Background* a través de la ventana [Procesamiento de Peticiones](../../general-setup/process-scheduling/process-request.md).
+    Para usar esta funcionalidad es necesario programar el proceso en segundo plano llamado *Generate Aggregated Data Background*. Esto puede hacerse a través de la ventana *Process Request*.
 
-El pre-cálculo cubre todas las transacciones hasta el periodo cerrado más reciente. Las transacciones que ocurren después de ese periodo siguen calculándose en tiempo real. Si existe un largo intervalo de periodos abiertos con muchas transacciones, el informe aún puede experimentar un rendimiento más lento.
-
-La imagen siguiente muestra la ventana de Procesamiento de Peticiones configurada para ejecutar el proceso de pre-cálculo de datos.
-
-![Informe de Valuación de Existencias - ventana de programación de Procesamiento de Peticiones](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Valued Stock Report Process Request](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
 
 !!! info
-    Se recomienda programar este proceso para que se ejecute diariamente durante un periodo de baja actividad del sistema. El proceso solo genera nuevos datos precalculados cuando se ha cerrado o cerrado permanentemente un periodo adicional desde la última ejecución.
+    Se recomienda programarlo diariamente, en un momento en que el sistema no tenga mucha actividad. Agregará datos solo cuando un nuevo período se cierre o se cierre permanentemente.
 
-#### **Limitaciones**
 
-Cuando el sistema precalcula datos para un periodo cerrado, combina todas las transacciones de ese periodo en un único resumen. No se conserva la fecha original de cada transacción individual.
+### **Limitations**
 
-**Qué significa esto para los informes multimoneda:** Si ejecuta el informe en una moneda distinta de la moneda base de su organización, el sistema convierte los totales precalculados utilizando el tipo de cambio de la fecha de cierre del periodo, no el tipo de cambio de la fecha en que ocurrió originalmente cada transacción.
-
-Como resultado, puede ver pequeñas diferencias en los valores de moneda en comparación con ejecutar el informe sin el pre-cálculo habilitado, donde cada transacción se convertiría al tipo de cambio de su propia fecha.
+Al agregar la información por cada período cerrado, no es posible conservar la fecha de cada transacción. Por tanto, cuando el informe se lance para una moneda diferente, toda esa información se convertirá en la fecha de cierre del período. Esto puede provocar pequeñas discrepancias con la versión anterior debido a conversiones entre monedas en fechas diferentes.
 
 ---
 
-Este trabajo es un derivado de [Gestión de Almacén](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

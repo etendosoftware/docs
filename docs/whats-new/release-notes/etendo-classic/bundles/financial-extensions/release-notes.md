@@ -17,8 +17,10 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [4.0.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
-| [3.11.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.1){target="_blank"} | 17/03/2026 | 25.1.0 | 25.4.x | CS | :white_check_mark: |
+| [4.0.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.1){target="_blank"} | 10/04/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.0.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
+| [3.11.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.2){target="_blank"} | 10/04/2026 | 25.1.0 | 25.4.x | CS | :white_check_mark: |
+| [3.11.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.1){target="_blank"} | 17/03/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.0){target="_blank"} | 27/02/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
 | [3.10.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.10.0){target="_blank"} | 06/02/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
 | [3.9.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.9.2){target="_blank"} | 04/02/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |

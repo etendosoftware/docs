@@ -143,6 +143,24 @@ Los siguientes cambios se aplican automáticamente durante `update.database`:
 | `AD_HEARTBEAT_LOG` | Columnas eliminadas | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
 | `AD_HEARTBEAT_LOG` | Columna añadida | `STATUS` |
 | `AD_SYSTEM_INFO` | Columnas añadidas | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+| `C_ExtBP_Config` | Tabla eliminada | Tabla de configuración principal del conector CRM (y todas sus columnas) |
+| `C_ExtBP_Config_Property` | Tabla eliminada | Tabla de mapeo de propiedades del conector CRM |
+| `C_ExtBP_Config_Prop_Opt` | Tabla eliminada | Tabla de valores aceptados para propiedades del conector CRM |
+| `C_ExtBP_Config_Filter` | Tabla eliminada | Tabla de filtros del conector CRM |
+| `C_ExtBP_Config_Filter_Opt` | Tabla eliminada | Tabla de valores de opciones de filtro del conector CRM |
+| `AD_Org` | Columnas eliminadas | `C_Extbp_Enabled`, `C_Extbp_Config_ID` |
+| `AD_ClientInfo` | Columna eliminada | `C_Extbp_Config_ID` |
+
+Consulta el [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} para ver todos los detalles sobre la eliminación del módulo CRM.
+
+### Clases Java eliminadas
+
+Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event` han sido eliminadas como parte de la eliminación del conector CRM. Cualquier módulo personalizado que extienda, importe o invoque directamente estas clases debe eliminar esas referencias:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
 
 ### Otros cambios
 
@@ -662,6 +680,44 @@ Todas las bibliotecas ubicadas anteriormente en `/lib/runtime` como archivos JAR
 - `jxl-2.6.10.jar`
 
 
+
+---
+
+### Cambios en el esquema de base de datos
+
+Los siguientes cambios se aplican automáticamente durante `update.database` como parte de las **versiones patch 25Q4 (marzo de 2026)**. Consulta el [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} para ver todos los detalles.
+
+**Tablas eliminadas**
+
+Las siguientes tablas, junto con todas sus columnas, pestañas y entradas del Application Dictionary, han sido completamente eliminadas del core. Cualquier módulo personalizado que consulte o referencie directamente estas entidades Hibernate debe ser actualizado:
+
+| Tabla | Clase de entidad Hibernate | Descripción |
+|---|---|---|
+| `C_ExtBP_Config` | `ExternalBusinessPartnerConfig` | Configuración principal del conector CRM |
+| `C_ExtBP_Config_Property` | `ExternalBusinessPartnerConfigProperty` | Mapeo de propiedades del conector CRM |
+| `C_ExtBP_Config_Prop_Opt` | `ExternalBusinessPartnerConfigPropertyOption` | Valores aceptados para propiedades del conector CRM |
+| `C_ExtBP_Config_Filter` | `ExternalBusinessPartnerConfigFilter` | Filtros del conector CRM |
+| `C_ExtBP_Config_Filter_Opt` | `ExternalBusinessPartnerConfigFilterOption` | Valores de opciones de filtro del conector CRM |
+
+**Columnas eliminadas**
+
+| Tabla | Columna | Descripción |
+|---|---|---|
+| `AD_Org` | `C_Extbp_Enabled` | Indicador para activar el conector CRM |
+| `AD_Org` | `C_Extbp_Config_ID` | Referencia a la configuración del conector CRM |
+| `AD_ClientInfo` | `C_Extbp_Config_ID` | Referencia a la configuración del conector CRM |
+
+### Clases Java eliminadas
+
+Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event` han sido eliminadas. Cualquier módulo personalizado que extienda, importe o invoque directamente estas clases debe eliminar esas referencias:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
+
+!!! warning "Acción requerida para módulos personalizados"
+    Si tus módulos personalizados referencian alguna de las tablas eliminadas (`C_ExtBP_Config*`), columnas (`C_Extbp_Enabled`, `C_Extbp_Config_ID`) o clases Java de manejadores de eventos listadas anteriormente, elimina o actualiza esas referencias antes de actualizar a la versión que incluye este cambio.
 
 ---
 Este trabajo está bajo licencia :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L.](https://etendo.software){target="_blank"}.
