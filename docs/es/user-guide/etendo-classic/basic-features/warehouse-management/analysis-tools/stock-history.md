@@ -2,10 +2,12 @@
 title: Historial de existencias
 ---
 
+## Historial de existencias
+
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Historial de existencias`
 
 !!! info
-    Para poder incluir esta funcionalidad, debe estar instalado el paquete Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con core y las nuevas funcionalidades, visite [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe instalarse el paquete Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
  
 
 Esta es una ventana de solo lectura en la que el usuario puede consultar el stock diario. Esta funcionalidad actualiza la información diaria recopilada por el proceso en segundo plano que se creó previamente para este propósito. 
@@ -21,7 +23,7 @@ No se mostrarán datos en la ventana hasta que se apliquen filtros de búsqueda.
 ![](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
 
 La ventana muestra los siguientes campos a partir de los cuales el usuario puede filtrar y obtener los datos necesarios: 
-- Fecha de existencias 
+- Fecha de stock 
 - Producto
 - Valor del conjunto de atributos
 - Almacén
@@ -29,7 +31,7 @@ La ventana muestra los siguientes campos a partir de los cuales el usuario puede
 - Cantidad en stock
 - Cantidad reservada
 - Cantidad asignada
-- Cantidad en transacción borrador
+- Cantidad en transacción en borrador
  
 ![](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
 
