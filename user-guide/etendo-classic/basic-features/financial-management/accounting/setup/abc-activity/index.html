@@ -3629,20 +3629,50 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activity" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Activity
+      Prerequisites
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#managing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-activities-in-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Activities in Transactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-cost-reports-by-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Cost Reports by Activity
+    </span>
+  </a>
   
 </li>
       
@@ -14758,20 +14788,50 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#activity" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Activity
+      Prerequisites
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#managing-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-activities-in-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Activities in Transactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-cost-reports-by-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Cost Reports by Activity
+    </span>
+  </a>
   
 </li>
       
@@ -14812,6 +14872,18 @@
       
       
       
+        <span class="md-tag">Costing</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Dimension</span>
+      
+    
+      
+      
+      
         <span class="md-tag">Financial Management</span>
       
     
@@ -14831,12 +14903,84 @@
 <h1 id="abc-activity">ABC Activity</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>ABC Activity</code></p>
 <h2 id="overview">Overview</h2>
-<p>Activity based costing (ABC) is a special costing model that identifies activities in an organization for which managing cost is required.</p>
-<p>"<em>Activity</em>" is one of the dimensions which can be set up for a given general ledger configuration.</p>
-<h3 id="activity">Activity</h3>
-<p>ABC Activity window allows the user to create as many activities as required per each organization.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1ekUpsYTliIZF7K_3I_HrqIgD5DGf7vrw.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1ekUpsYTliIZF7K_3I_HrqIgD5DGf7vrw.png"></a></p>
-<p>As shown in the screen above, it is possible to define summary activities which support a hierarchical structure or activities within an organization.</p>
+<p>ABC Activity is part of <strong>Etendo's Activity-Based Costing (ABC)</strong> functionality. It is an <a href="../general-ledger-configuration/#dimension-tab"><strong>accounting dimension</strong></a> which can be set up for a given general ledger configuration allowing organizations to analyze costs based on the activities that generate them, instead of relying only on traditional accounting dimensions.</p>
+<p>In Etendo, an Activity represents a type of work, process, or operation within an organization. Activities can be enabled in a General Ledger configuration and later used in accounting entries to improve <strong>cost analysis</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Activity and <a href="../cost-center/">Cost Center</a> are both analytical accounting dimensions used for cost analysis, but they serve different purposes. Activity tracks costs by <em>what work was done</em> (a process or operation), while Cost Center tracks costs by <em>which department or unit</em> incurred them. Both dimensions can be used together for more detailed cost breakdowns.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before activities can be selected on transactions, the <strong>Activity dimension must be enabled</strong> in the organization's General Ledger Configuration.</p>
+<p>Go to <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>General Ledger Configuration</code>. Open the <a href="../general-ledger-configuration/#dimension-tab"><strong>Dimension</strong></a> tab, add <strong>Activity</strong> as a dimension for the relevant general ledger, and optionally mark it as mandatory if every transaction must include an activity. Save the record. Once saved, the Activity field appears on transaction forms for that organization.</p>
+<p>If the Activity field does not appear after completing the step above, a developer may need to perform additional configuration.</p>
+<div class="admonition info">
+<p class="admonition-title">For Developers</p>
+<p>Enabling the Activity dimension in the General Ledger Configuration is not enough on its own for the field to appear in transaction windows. A developer must also configure the Activity column in the <strong>Application Dictionary</strong> for each window tab where the field should be visible. This involves setting the column as displayed and, if needed, adding display logic so the field only appears when the Activity dimension is active for the organization's general ledger. After any Application Dictionary changes, a smartbuild must be run to compile and apply the updates to the system.</p>
+<p>For reference, see <a href="../../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab/">How to Add a Field to a Window Tab</a> and <a href="../../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/">How to Define Display Logic Evaluated at Server Level</a>.</p>
+</div>
+<h2 id="managing-activities">Managing Activities</h2>
+<p>The <strong>ABC Activity</strong> window allows users to define and manage activities per organization.</p>
+<p>Using this window, it is possible to:</p>
+<ul>
+<li>
+<p>Create <strong>multiple activities</strong> for an organization.</p>
+</li>
+<li>
+<p>Define <strong>summary activities</strong> to build a hierarchical structure.</p>
+</li>
+<li>
+<p>Group <strong>related activities</strong> to simplify reporting and cost analysis.</p>
+</li>
+</ul>
+<p>This structure helps organizations understand how costs are distributed across different operational areas.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png" data-desc-position="bottom"><img alt="ABC Activity window showing fields to define activities per organization" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png"></a></p>
+<p>Some fields to note to create as many activities as required:</p>
+<ul>
+<li><strong>Organization</strong>: Organizational entity within client.</li>
+<li><strong>Search Key</strong>: A short code used to quickly find this activity in search boxes and dropdowns. For example, enter <em>ASSEM</em> for an Assembly activity.</li>
+<li><strong>Name</strong>: The full name of the activity as it appears in reports and transaction forms. For example, <em>Assembly</em> or <em>Packaging</em>.</li>
+<li><strong>Description</strong>: Optional. A brief explanation of what this activity covers, for internal reference.</li>
+<li><strong>Help/Comment</strong>: Optional. Additional guidance for other users who work with this activity.</li>
+<li><strong>Summary Level</strong>: When enabled, this activity acts as a parent container to group sub-activities. Summary activities cannot be assigned directly to transactions — only their child activities can.</li>
+<li><strong>Active</strong>: When checked, this activity is available for selection on transactions. Uncheck it to retire an activity without deleting it — it no longer appears in dropdowns but its historical data is preserved.</li>
+</ul>
+<h2 id="using-activities-in-transactions">Using Activities in Transactions</h2>
+<p>Once the Activity dimension is enabled in the General Ledger Configuration and activities are created, the <strong>Activity</strong> field appears in the <strong>Dimensions</strong> section when posting transactions — such as invoices, journal entries, and other accounting documents. Select the applicable activity from the dropdown to tag that transaction for cost tracking purposes.</p>
+<h2 id="example">Example</h2>
+<p>A manufacturing company wants to analyze its operational costs in more detail so it defines the following ABC Activities:</p>
+<ul>
+<li>
+<p><strong>Production</strong> (Summary Activity)</p>
+<ul>
+<li>
+<p><strong>Assembly</strong></p>
+</li>
+<li>
+<p><strong>Packaging</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Logistics</strong> (Summary Activity)</p>
+<ul>
+<li>
+<p><strong>Warehousing</strong></p>
+</li>
+<li>
+<p><strong>Shipping</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>When invoices, expenses, or other accounting entries are posted, users can assign an <strong>Activity</strong> to each entry.</p>
+<p>Later, the company can easily report on how much cost was generated by Production versus Logistics, or drill down into specific activities such as Assembly or Shipping.</p>
+<p>This approach provides better cost visibility, supports more informed decision-making, and enhances financial analysis within Etendo ERP.</p>
+<h2 id="viewing-cost-reports-by-activity">Viewing Cost Reports by Activity</h2>
+<p>Once activities are assigned to posted transactions, costs can be filtered and analyzed by activity using the accounting analysis tools:</p>
+<ul>
+<li><a href="../../analysis-tools/#accounting-transaction-details">Accounting Transaction Details</a>: A detailed list of every ledger entry, filterable by Activity and other dimensions.</li>
+<li><a href="../../analysis-tools/#general-ledger-report">General Ledger Report</a>: A summary view of posted transactions that supports filtering by accounting dimensions including Activity.</li>
+</ul>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/ABC_Activity" target="_blank">ABC Activity</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
