@@ -6,6 +6,8 @@ tags:
     - Dimension
     - Costing
     - Accounting
+    - Financial Management
+    - Setup
 ---
 
 # Actividad (ABC)
@@ -14,7 +16,7 @@ tags:
 
 ## Overview
 
-La Actividad (ABC) forma parte de la funcionalidad de **Costeo Basado en Actividades (ABC) de Etendo**. Es una [**dimensión de contabilidad**](../setup/general-ledger-configuration.md#dimension-tab) que puede configurarse para una determinada configuración del libro mayor, permitiendo a las organizaciones analizar los costes en función de las actividades que los generan, en lugar de depender únicamente de las dimensiones contables tradicionales.
+La Actividad (ABC) forma parte de la funcionalidad de **Costeo Basado en Actividades (ABC) de Etendo**. Es una [**dimensión de contabilidad**](general-ledger-configuration.md#dimension-tab) que puede configurarse para una determinada configuración del libro mayor, permitiendo a las organizaciones analizar los costes en función de las actividades que los generan, en lugar de depender únicamente de las dimensiones contables tradicionales.
 
 En Etendo, una Actividad representa un tipo de trabajo, proceso u operación dentro de una organización. Las actividades pueden habilitarse en una configuración del Libro mayor y utilizarse posteriormente en asientos contables para mejorar el **análisis de costes**.
 
@@ -25,14 +27,16 @@ En Etendo, una Actividad representa un tipo de trabajo, proceso u operación den
 
 Antes de que se puedan seleccionar actividades en las transacciones, la **dimensión Activity debe estar habilitada** en la Configuración del Libro mayor de la organización.
 
-Para ello, vaya a [General Ledger Configuration — Dimension Tab](../setup/general-ledger-configuration.md#dimension-tab), añada **Activity** como dimensión para el libro mayor correspondiente y, opcionalmente, márquela como obligatoria si cada transacción debe incluir una actividad. Hasta que este paso no se complete, el campo Activity no aparecerá en ningún formulario de transacción.
+Vaya a :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema contable`. Abra la pestaña [**Dimensión**](general-ledger-configuration.md#dimension-tab), añada **Activity** como dimensión para el libro mayor correspondiente y, opcionalmente, márquela como obligatoria si cada transacción debe incluir una actividad. Guarde el registro. Una vez guardado, el campo Activity aparece en los formularios de transacción de esa organización.
+
+Si el campo Activity no aparece después de completar el paso anterior, es posible que un desarrollador deba realizar una configuración adicional.
 
 !!!info "For Developers"
     Habilitar la dimensión Activity en la Configuración del Libro mayor no es suficiente por sí solo para que el campo aparezca en las ventanas de transacción. Un desarrollador también debe configurar la columna Activity en el **Diccionario de la Aplicación** para cada pestaña de ventana donde el campo deba ser visible. Esto implica establecer la columna como mostrada y, si es necesario, añadir lógica de visualización para que el campo solo aparezca cuando la dimensión Activity esté activa para el libro mayor de la organización. Después de cualquier cambio en el Diccionario de la Aplicación, debe ejecutarse un smartbuild para compilar y aplicar las actualizaciones al sistema.
 
     Como referencia, consulte [How to Add a Field to a Window Tab](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md) y [How to Define Display Logic Evaluated at Server Level](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md).
 
-## Header
+## Managing Activities
 
 La ventana **Actividad (ABC)** permite a los usuarios definir y gestionar actividades por organización.
 
@@ -44,19 +48,19 @@ Mediante esta ventana, es posible:
 
 - Agrupar **actividades relacionadas** para simplificar los informes y el análisis de costes.
 
-Esta estructura ayuda a las organizaciones a comprender cómo se distribuyen los costes entre distintas áreas operativas. Desde esta ventana, es posible definir actividades de resumen que admiten una estructura jerárquica o actividades dentro de una organización.
+Esta estructura ayuda a las organizaciones a comprender cómo se distribuyen los costes entre distintas áreas operativas.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/abc-activity1.png)
+![Ventana Actividad (ABC) mostrando los campos para definir actividades por organización](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png)
 
 Algunos campos a tener en cuenta para crear tantas actividades como sea necesario:
 
 - **Organización**: Entidad organizativa dentro del cliente.
-- **Identificador**: Un método rápido para encontrar un registro concreto.
-- **Nombre**: Un identificador no único para un registro/documento, a menudo utilizado como herramienta de búsqueda.
-- **Descripción**: Un espacio para escribir información adicional relacionada.
-- **Ayuda/Comentario**: Un comentario que añade información adicional para ayudar a los usuarios a trabajar con los campos.
+- **Identificador**: Un código corto utilizado para encontrar rápidamente esta actividad en cuadros de búsqueda y listas desplegables. Por ejemplo, introduzca *ASSEM* para una actividad de Assembly.
+- **Nombre**: El nombre completo de la actividad tal como aparece en informes y formularios de transacción. Por ejemplo, *Assembly* o *Packaging*.
+- **Descripción**: Opcional. Una breve explicación de lo que cubre esta actividad, para referencia interna.
+- **Ayuda/Comentario**: Opcional. Orientación adicional para otros usuarios que trabajen con esta actividad.
 - **Nivel agrupación**: Cuando está habilitado, esta actividad actúa como contenedor padre para agrupar subactividades. Las actividades de resumen no pueden asignarse directamente a transacciones; solo pueden asignarse sus actividades hijas.
-- **Activo**: Un indicador que señala si este registro está disponible para su uso o desactivado.
+- **Activo**: Cuando está marcado, esta actividad está disponible para su selección en transacciones. Desmárquelo para retirar una actividad sin eliminarla; dejará de aparecer en las listas desplegables, pero se conservarán sus datos históricos.
 
 ## Using Activities in Transactions
 
@@ -84,7 +88,7 @@ Más adelante, la empresa puede informar fácilmente sobre cuánto coste generó
 
 Este enfoque proporciona una mejor visibilidad de los costes, favorece una toma de decisiones más informada y mejora el análisis financiero dentro de Etendo ERP.
 
-### Viewing Cost Reports by Activity
+## Viewing Cost Reports by Activity
 
 Una vez que las actividades se asignan a las transacciones contabilizadas, los costes pueden filtrarse y analizarse por actividad utilizando las herramientas de análisis contable:
 
