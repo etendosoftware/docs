@@ -39,6 +39,15 @@ Elija cómo desea interactuar con el agente:
 | **Simple** | Chatear de forma natural con el agente | Conversaciones, preguntas, uso general |
 | **Directo** | Ejecutar herramientas específicas directamente | Automatización, flujos de trabajo, desarrollo |
 
+### Modos de autenticación
+
+El diálogo de configuración de MCP ahora le permite elegir cómo se autentica el cliente contra el servidor MCP del agente:
+
+| Tipo de autenticación | Cómo funciona | Mejor para |
+|----------------------|--------------|----------|
+| **OAuth 2.1** | Usa una URL MCP limpia y permite que el cliente complete la autenticación mediante un flujo de inicio de sesión en el navegador | Clientes con compatibilidad nativa con OAuth de MCP |
+| **Token in Header** | Envía el token de Etendo en una cabecera HTTP `Authorization` o compatible | Clientes que admiten cabeceras personalizadas |
+| **Token in URL** | Añade el token como `?token=...` en la URL del endpoint MCP | Clientes que no pueden enviar cabeceras personalizadas |
 
 ### Arquitectura del servidor MCP en Etendo Copilot
 
@@ -50,6 +59,13 @@ Cada agente de Etendo Copilot expone automáticamente un endpoint de servidor MC
 - **Prompts**: plantillas de prompt preconfiguradas para tareas comunes.
 
 El servidor MCP se ejecuta junto al agente y se comunica usando transporte `HTTP` con `Server-Sent Events (SSE)` opcional para respuestas en streaming.
+
+Cuando OAuth está habilitado, el servidor MCP también expone los endpoints de descubrimiento y autorización OAuth requeridos por clientes MCP compatibles. Los usuarios se autentican a través de una página de inicio de sesión de Etendo, y el cliente recibe automáticamente el resultado de la autorización.
+
+El flujo de inicio de sesión OAuth incluye dos posibles rutas de interfaz:
+
+- **Organización y rol predeterminados**: el usuario introduce nombre de usuario y contraseña, activa **Usar rol y organización predeterminados** y completa la autenticación directamente.
+- **Selección manual de rol y organización**: el usuario introduce nombre de usuario y contraseña sin activar la casilla. Si las credenciales son válidas, el flujo continúa a una segunda pantalla donde el usuario debe elegir un **Rol** y una **Organización** antes de completar la autenticación.
 
 ### Tipos de agente y modos de conexión
 
@@ -95,22 +111,46 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     ![Diálogo de configuración de MCP](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png)
 
     - **Modo Directo**: márquelo para ejecución de herramientas, desmárquelo para conversación.
+    - **Tipo de autenticación**: elija `OAuth 2.1`, `Token in Header` o `Token in URL`.
     - **Compatibilidad con MCP-remote**: márquelo para una mejor compatibilidad con el cliente.
-    - **Valores personalizados**: sobrescrituras opcionales de URL y nombre.
+    - **Valores personalizados**: sobrescrituras opcionales de URL y nombre. Si establece una **URL personalizada**, esta tiene prioridad sobre la resolución de URL predeterminada usada por Etendo.
+
+    !!! info "Tipo de autenticación"
+
+        **OAuth 2.1**
+
+        - Genera una URL MCP limpia sin incrustar el token.
+        - El cliente MCP gestiona la autenticación y abre un flujo de inicio de sesión en el navegador cuando es necesario.
+        - La interfaz de inicio de sesión solicita primero nombre de usuario y contraseña.
+        - Si **Usar rol y organización predeterminados** está habilitado, la autenticación finaliza inmediatamente después de un inicio de sesión correcto.
+        - Si la casilla no está habilitada, el flujo continúa a una segunda página donde el usuario selecciona el rol y la organización.
+        - Recomendado cuando su cliente MCP admite OAuth 2.1 para servidores MCP.
+
+        **Token in Header**
+
+        - Envía el token a través de la cabecera `Authorization`.
+        - Esta es la opción predeterminada.
+        - Recomendado para clientes que admiten cabeceras HTTP personalizadas.
+
+        **Token in URL**
+
+        - Añade el token como `?token=...` en la URL MCP generada.
+        - Útil para clientes que no pueden enviar cabeceras personalizadas.
+        - Úselo solo en entornos de confianza porque el token pasa a formar parte de la URL.
     
     !!! info "Modo de compatibilidad con MCP-remote"
     
-        **Qué hace**: usa la librería `mcp-remote` para añadir compatibilidad con clientes MCP que no gestionan correctamente el transporte `HTTP` con cabeceras de autenticación.
+        **Qué hace**: usa la biblioteca `mcp-remote` para añadir compatibilidad con clientes MCP que no gestionan directamente el transporte `HTTP` de MCP de Etendo.
         
         **Cuándo usarlo**: 
         
-        - Claude Desktop: requiere este modo para una autenticación correcta.
-        - Algunas extensiones de IDE que tienen limitaciones de transporte `HTTP`.
+        - Claude Desktop y clientes similares que necesitan un puente compatible con stdio.
+        - Extensiones de IDE o herramientas con compatibilidad nativa limitada con MCP `HTTP`.
         
         **Diferencia de configuración**:
 
-        - **Modo estándar**: configuración HTTP directa con cabeceras.
-        - **Modo de compatibilidad**: usa el comando wrapper `npx mcp-remote`.
+        - **Modo estándar**: configuración HTTP directa de MCP.
+        - **Modo de compatibilidad**: usa `npx mcp-remote` como envoltorio del endpoint MCP generado.
     
 
 4.  **Copie la configuración generada** desde el popup
@@ -121,71 +161,155 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
         
         Si ve este mensaje: *"The MCP URL begins with `http://localhost`, which only works in development environments"*
         
-        - **Qué significa**: la URL generada solo es accesible desde la misma máquina
-        - **Para uso en producción**: configure la propiedad `context.url.copilot.mcp` en Etendo para usar su dominio público en lugar de localhost
-        - **Para acceso externo**: use el campo **URL personalizada** en el diálogo para especificar la dirección pública de su host de Copilot
+        - **Qué significa**: el endpoint MCP generado usa `localhost`, por lo que solo los clientes que se ejecuten en la misma máquina pueden conectarse a él.
+        - **Cuándo lo notará más**: esta advertencia es especialmente relevante para las configuraciones **Token in Header** y **Token in URL**, porque esos modos generan un endpoint concreto al que el cliente debe llamar directamente.
+        - **Dónde se configura**: `context.url.copilot.mcp` se lee desde `gradle.properties`, no desde el servidor web ni desde la configuración de Apache.
+        - **Qué hace `context.url.copilot.mcp`**: esta propiedad define la URL base pública que Etendo usa al generar fragmentos de configuración MCP y metadatos OAuth.
+        - **Orden de resolución**: Etendo usa primero el campo **URL personalizada** del popup si se proporcionó, después `context.url.copilot.mcp` de `gradle.properties` y, por último, recurre a `http://localhost:<copilot.port.mcp>`, donde el puerto MCP predeterminado es `5006`.
+        - **Para producción o clientes remotos**: configure `context.url.copilot.mcp` en `gradle.properties` con la URL de Copilot accesible externamente, por ejemplo `https://your-domain.example.com:5006`.
+        - **Para pruebas puntuales**: también puede usar el campo **URL personalizada** en el diálogo para sobrescribir la URL base generada sin cambiar la propiedad global.
+        - **Ejemplo**: si Copilot está expuesto en `https://copilot.example.com`, el endpoint generado debería parecerse a `https://copilot.example.com/AGENT_ID/mcp` en lugar de `http://localhost:5006/AGENT_ID/mcp`.
+
+        Ejemplo de entrada en `gradle.properties`:
+
+        ```properties
+        context.url.copilot.mcp=https://your-external-host:5006
+        ```
 
     !!! info "Configuraciones de ejemplo" 
 
-        **Configuración de VS Code**
+                Elija el ejemplo que coincida con el **Tipo de autenticación** seleccionado.
 
-        Añada a la configuración de VS Code:
+                **Configuración de VS Code con OAuth 2.1**
 
-        ```json
-        "mcp": {
-        "servers": {
-            "etendoAgent": {
-            "type": "http",
-            "url": "http://localhost:5006/AGENT_ID/mcp",
-            "headers": {
-                "etendo-token": "Bearer your-token-here"
-            }
-            }
-        }
-        }
-        ```
+                Añada a la configuración de VS Code:
 
-        **Configuración de Gemini CLI**
+                ```json
+                "mcp": {
+                    "servers": {
+                        "etendoAgent": {
+                            "type": "http",
+                            "url": "http://localhost:5006/AGENT_ID/mcp"
+                        }
+                    }
+                }
+                ```
 
-        Cree o actualice su configuración de Gemini CLI:
+                Esta configuración usa una URL limpia. Si el cliente admite OAuth de MCP, abrirá automáticamente el flujo de inicio de sesión en el navegador.
 
-        ```json
-        {
-        "mcpServers": {
-            "etendoAgent": {
-            "type": "http", 
-            "httpUrl": "http://localhost:5006/AGENT_ID/mcp/",
-            "headers": {
-                "etendo-token": "Bearer your-token-here"
-            }
-            }
-        }
-        }
-        ```
+                **Configuración de VS Code con Token in Header**
 
-        **Configuración de Claude Desktop**
+                Añada a la configuración de VS Code:
 
-        Añada a su configuración de Claude Desktop:
+                ```json
+                "mcp": {
+                    "servers": {
+                        "etendoAgent": {
+                            "type": "http",
+                            "url": "http://localhost:5006/AGENT_ID/mcp",
+                            "headers": {
+                                "etendo-token": "Bearer your-token-here"
+                            }
+                        }
+                    }
+                }
+                ```
 
-        ```json
-        {
-        "mcpServers": {
-            "etendoAgent": {
-            "command": "npx",
-            "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp", "--headers", "etendo-token=Bearer your-token-here"]
-            }
-        }
-        }
-        ```
+                **Configuración de VS Code con Token in URL**
+
+                ```json
+                "mcp": {
+                    "servers": {
+                        "etendoAgent": {
+                            "type": "http",
+                            "url": "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"
+                        }
+                    }
+                }
+                ```
+
+                **Configuración de Gemini CLI con Token in Header**
+
+                Cree o actualice su configuración de Gemini CLI:
+
+                ```json
+                {
+                    "mcpServers": {
+                        "etendoAgent": {
+                            "type": "http",
+                            "httpUrl": "http://localhost:5006/AGENT_ID/mcp/",
+                            "headers": {
+                                "etendo-token": "Bearer your-token-here"
+                            }
+                        }
+                    }
+                }
+                ```
+
+                **Configuración de Gemini CLI con Token in URL**
+
+                ```json
+                {
+                    "mcpServers": {
+                        "etendoAgent": {
+                            "type": "http",
+                            "httpUrl": "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"
+                        }
+                    }
+                }
+                ```
+
+                **Configuración de Claude Desktop con MCP-remote y OAuth 2.1**
+
+                Añada a su configuración de Claude Desktop:
+
+                ```json
+                {
+                    "mcpServers": {
+                        "etendoAgent": {
+                            "command": "npx",
+                            "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp"]
+                        }
+                    }
+                }
+                ```
+
+                **Configuración de Claude Desktop con MCP-remote y Token in Header**
+
+                Añada a su configuración de Claude Desktop:
+
+                ```json
+                {
+                    "mcpServers": {
+                        "etendoAgent": {
+                            "command": "npx",
+                            "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp", "--header", "Authorization: Bearer your-token-here"]
+                        }
+                    }
+                }
+                ```
+
+                **Configuración de Claude Desktop con MCP-remote y Token in URL**
+
+                ```json
+                {
+                    "mcpServers": {
+                        "etendoAgent": {
+                            "command": "npx",
+                            "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"]
+                        }
+                    }
+                }
+                ```
 
 ### Probar la conexión
 
 1. **Inicie su cliente MCP** [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers){target="_blank"}, [Gemini CLI](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server){target="_blank"}, [Claude Desktop](https://modelcontextprotocol.io/docs/develop/connect-local-servers){target="_blank"}, etc.
 
-2. **Pruebe la conectividad básica**:
+2. **Confirme que el servidor está disponible**:
 
     ```
-    Use the ping tool to test connection
+    Verifique que el servidor MCP se conecte correctamente y que el cliente pueda listar las herramientas disponibles
     ```
 
 3. **Pruebe la interacción con el agente**:
@@ -197,21 +321,45 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
     **Modo Directo**:
     ```
-    Use get_agent_prompt to see agent capabilities
+    Use get_agent_prompt first to see agent capabilities
     Execute specific tools directly
     ```
+
+4. **Si seleccionó OAuth 2.1**:
+
+    ```
+    Complete the browser login flow when the client requests authentication
+    ```
+
+    El flujo de inicio de sesión OAuth funciona de la siguiente manera:
+
+    1. El cliente MCP abre la página de inicio de sesión de Etendo en el navegador.
+    2. El usuario introduce nombre de usuario y contraseña.
+
+        ![Paso 1 del inicio de sesión OAuth](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png)
+
+    3. Si **Usar rol y organización predeterminados** está habilitado, Etendo completa la autenticación inmediatamente.
+    4. Si la casilla no está habilitada y las credenciales son válidas, Etendo abre una segunda página.
+    5. En la segunda página, el usuario selecciona un **Rol** y una **Organización**.
+
+        ![Paso 2 del inicio de sesión OAuth](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png)
+
+    6. Después de confirmar la selección, el flujo OAuth se completa y el cliente MCP continúa la conexión.
 
 ## Explicación de los modos de conexión
 
 ### Modo Simple
 - **URL**: `http://HOST:PORT/AGENT_ID/mcp`
-- **Herramientas**: `ask_agent`, utilidades básicas.
+- **Herramientas**: `ask_agent` y, según la configuración generada, un alias específico del agente `ask_agent_<AgentName>`.
 - **Uso**: conversación natural con el agente.
 
 ### Modo Directo  
 - **URL**: `http://HOST:PORT/AGENT_ID/direct/mcp`
-- **Herramientas**: todas las herramientas del agente + `get_agent_prompt`.
+- **Herramientas**: herramientas del agente expuestas directamente + `get_agent_prompt`.
 - **Uso**: ejecución directa de herramientas y acceso al sistema.
+
+!!! tip
+    En **Modo Directo**, llame a `get_agent_prompt` antes de usar otras herramientas. El prompt explica el propósito del agente, sus capacidades y el uso esperado de las herramientas expuestas.
 
 ## Casos de uso
 
@@ -248,24 +396,44 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 **Falla la conexión:**
 
-- Verifique que el token de Etendo sea válido.
+- Verifique que el tipo de autenticación seleccionado coincida con las capacidades de su cliente.
+- Si usa `Token in Header`, verifique que el token de Etendo sea válido.
 - Compruebe que el ID del agente sea correcto.
 - Asegúrese de que el servicio de Copilot esté en ejecución.
 
-**Herramientas no disponibles:**
+**OAuth login does not start:**
+
+- Confirme que su cliente MCP admite OAuth 2.1 para servidores MCP.
+- Verifique que la URL generada no incluya un token si seleccionó `OAuth 2.1`.
+- Asegúrese de que el navegador pueda الوصول a la página de inicio de sesión de Etendo expuesta por el servidor MCP.
+
+**OAuth login stops after credentials:**
+
+- Si **Usar rol y organización predeterminados** está deshabilitado, espere una segunda página que solicite **Rol** y **Organización**.
+- Si esa segunda página no aparece, verifique que el usuario tenga asignaciones válidas de rol y organización en Etendo.
+- Si **Usar rol y organización predeterminados** está habilitado pero la autenticación sigue sin continuar, verifique que el usuario tenga configurados un rol y una organización predeterminados válidos.
+
+**Client cannot send headers:**
+
+- Use `Token in URL` en lugar de `Token in Header`.
+- Si es necesario, habilite **Modo de compatibilidad con MCP-remote** y regenere la configuración.
+
+**Tools not available:**
 
 - Compruebe los permisos del usuario en Etendo.
 - Verifique que la configuración del agente incluya las herramientas necesarias.
-- Confirme que el modo de conexión coincide con sus necesidades.
+- Confirme que el modo de conexión coincida con sus necesidades.
+- En **Modo Directo**, llame primero a `get_agent_prompt` para entender cómo debe usarse el conjunto de herramientas.
 
-**Errores de autenticación:**
+**Authentication errors:**
 
-- Regenere el token SWS mediante `/sws/login`.
-- Compruebe que el formato del token incluya el prefijo "Bearer ".
-- Verifique que el usuario tenga permisos de acceso al agente.
+- Regenere el token SWS mediante `/sws/login` si está usando autenticación basada en token.
+- Compruebe que el formato del token incluya el prefijo `Bearer ` al enviarlo en una cabecera.
+- Verifique que el usuario tenga acceso al agente seleccionado.
+- Si usa `Token in URL`, confirme que el endpoint generado siga incluyendo el parámetro de consulta `token`.
 
 !!! warning "Nota de seguridad"
-    Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos.
+    Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera **OAuth 2.1** o **Token in Header** frente a **Token in URL** siempre que el cliente los admita.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
