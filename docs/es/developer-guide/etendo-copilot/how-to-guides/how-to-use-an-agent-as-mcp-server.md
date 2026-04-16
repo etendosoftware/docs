@@ -14,7 +14,7 @@ tags:
 
 ## Visión general
 
-!!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
+!!! example  "Beta Version — Important Notice"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
 
 Esta guía muestra cómo conectarse a agentes de Etendo Copilot usando el [Model Context Protocol (MCP)](../concepts/model-context-protocol.md). Cada agente expone automáticamente un servidor MCP al que puede conectarse desde varios clientes compatibles con MCP como Claude Desktop, VS Code, Gemini CLI y aplicaciones personalizadas.
@@ -50,13 +50,6 @@ El diálogo de configuración de MCP ahora le permite elegir cómo se autentica 
 | **Token in URL** | Añade el token como `?token=...` en la URL del endpoint MCP | Clientes que no pueden enviar cabeceras personalizadas |
 
 ### Arquitectura del servidor MCP en Etendo Copilot
-
-Cada agente de Etendo Copilot expone automáticamente un endpoint de servidor MCP que proporciona:
-
-- **Herramientas de interacción**: herramientas que facilitan la comunicación entre el agente y el cliente MCP, como `ask_agent` para enviar preguntas y recibir respuestas.
-- **Herramientas del agente**: funciones que el agente puede ejecutar.
-- **Recursos**: datos estáticos o dinámicos a los que se puede acceder (documentos, configuraciones, logs, etc.).
-- **Prompts**: plantillas de prompt preconfiguradas para tareas comunes.
 
 El servidor MCP se ejecuta junto al agente y se comunica usando transporte `HTTP` con `Server-Sent Events (SSE)` opcional para respuestas en streaming.
 
@@ -105,7 +98,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agente`
 
 1.  Abra la ventana Agente en **Etendo**
-2.  **Seleccione su agente** y haga clic en el botón **"Server MCP Config"**.
+2.  **Seleccione su agente** y haga clic en el botón **Server MCP Config**.
 3.  **Configure las opciones de conexión**:
     
     ![Diálogo de configuración de MCP](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png)
@@ -179,6 +172,9 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     !!! info "Configuraciones de ejemplo" 
 
                 Elija el ejemplo que coincida con el **Tipo de autenticación** seleccionado.
+
+                !!!note "Acerca de AGENT_ID"
+                    `AGENT_ID` en todos los ejemplos siguientes es un marcador de posición. El valor real es el identificador único asignado al agente en Etendo. Al usar el diálogo **Server MCP Config**, la configuración generada reemplaza automáticamente este marcador por el ID correcto del agente.
 
                 **Configuración de VS Code con OAuth 2.1**
 
@@ -306,11 +302,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 1. **Inicie su cliente MCP** [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers){target="_blank"}, [Gemini CLI](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server){target="_blank"}, [Claude Desktop](https://modelcontextprotocol.io/docs/develop/connect-local-servers){target="_blank"}, etc.
 
-2. **Confirme que el servidor está disponible**:
-
-    ```
-    Verifique que el servidor MCP se conecte correctamente y que el cliente pueda listar las herramientas disponibles
-    ```
+2. **Confirme que el servidor está disponible**: En la lista de herramientas o inspector del cliente, verifique que aparezca al menos una herramienta — por ejemplo, `ask_agent` en Modo Simple, o las herramientas propias del agente en Modo Directo. Si no aparece ninguna herramienta, vaya a la sección de Resolución de problemas.
 
 3. **Pruebe la interacción con el agente**:
    
@@ -319,11 +311,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     Ask the agent: "What can you help me with?"
     ```
 
-    **Modo Directo**:
-    ```
-    Use get_agent_prompt first to see agent capabilities
-    Execute specific tools directly
-    ```
+    **Modo Directo**: En la lista de herramientas del cliente, invoque `get_agent_prompt` sin parámetros. Revise la salida devuelta para comprender las herramientas disponibles del agente y las entradas esperadas. Después invoque cualquier herramienta de la lista directamente — por ejemplo, una herramienta `search_customers` con `{"query": "test", "limit": 1}`.
 
 4. **Si seleccionó OAuth 2.1**:
 
@@ -336,13 +324,13 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     1. El cliente MCP abre la página de inicio de sesión de Etendo en el navegador.
     2. El usuario introduce nombre de usuario y contraseña.
 
-        ![Paso 1 del inicio de sesión OAuth](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png)
+        ![Página de inicio de sesión de Etendo mostrando los campos de nombre de usuario y contraseña con la casilla Usar organización y rol predeterminados](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png)
 
     3. Si **Usar organización y rol predeterminados** está activado, Etendo completa la autenticación inmediatamente.
     4. Si la casilla no está activada y las credenciales son válidas, Etendo abre una segunda página.
     5. En la segunda página, el usuario selecciona un **Rol** y una **Organización**.
 
-        ![Paso 2 del inicio de sesión OAuth](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png)
+        ![Página de selección de Rol y Organización en el flujo de inicio de sesión OAuth de Etendo](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png)
 
     6. Después de confirmar la selección, el flujo OAuth se completa y el cliente MCP continúa la conexión.
 
@@ -350,13 +338,9 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 ### Modo Simple
 - **URL**: `http://HOST:PORT/AGENT_ID/mcp`
-- **Herramientas**: `ask_agent` y, según la configuración generada, un alias específico del agente `ask_agent_<AgentName>`.
-- **Uso**: conversación natural con el agente.
 
 ### Modo Directo  
 - **URL**: `http://HOST:PORT/AGENT_ID/direct/mcp`
-- **Herramientas**: herramientas del agente expuestas directamente + `get_agent_prompt`.
-- **Uso**: ejecución directa de herramientas y acceso al sistema.
 
 !!! tip
     En **Modo Directo**, llame a `get_agent_prompt` antes de usar otras herramientas. El prompt explica el propósito del agente, sus capacidades y el uso esperado de las herramientas expuestas.
@@ -436,4 +420,4 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera **OAuth 2.1** o **Token in Header** frente a **Token in URL** siempre que el cliente los admita.
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
