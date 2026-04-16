@@ -6,6 +6,8 @@ tags:
     - Dimension
     - Costing
     - Accounting
+    - Financial Management
+    - Setup
 ---
 
 # ABC Activity
@@ -14,7 +16,7 @@ tags:
 
 ## Overview
 
-ABC Activity is part of **Etendo's Activity-Based Costing (ABC)** functionality. It is an [**accounting dimension**](../setup/general-ledger-configuration.md#dimension-tab) which can be set up for a given general ledger configuration allowing organizations to analyze costs based on the activities that generate them, instead of relying only on traditional accounting dimensions.
+ABC Activity is part of **Etendo's Activity-Based Costing (ABC)** functionality. It is an [**accounting dimension**](general-ledger-configuration.md#dimension-tab) which can be set up for a given general ledger configuration allowing organizations to analyze costs based on the activities that generate them, instead of relying only on traditional accounting dimensions.
 
 In Etendo, an Activity represents a type of work, process, or operation within an organization. Activities can be enabled in a General Ledger configuration and later used in accounting entries to improve **cost analysis**.
 
@@ -25,14 +27,16 @@ In Etendo, an Activity represents a type of work, process, or operation within a
 
 Before activities can be selected on transactions, the **Activity dimension must be enabled** in the organization's General Ledger Configuration.
 
-To do this, go to [General Ledger Configuration — Dimension Tab](../setup/general-ledger-configuration.md#dimension-tab), add **Activity** as a dimension for the relevant general ledger, and optionally mark it as mandatory if every transaction must include an activity. Until this step is completed, the Activity field does not appear on any transaction form.
+Go to :material-menu: `Application` > `Financial Management` > `Accounting` > `Setup` > `General Ledger Configuration`. Open the [**Dimension**](general-ledger-configuration.md#dimension-tab) tab, add **Activity** as a dimension for the relevant general ledger, and optionally mark it as mandatory if every transaction must include an activity. Save the record. Once saved, the Activity field appears on transaction forms for that organization.
+
+If the Activity field does not appear after completing the step above, a developer may need to perform additional configuration.
 
 !!!info "For Developers"
-    Enabling the Activity dimension in the GL Configuration is not enough on its own for the field to appear in transaction windows. A developer must also configure the Activity column in the **Application Dictionary** for each window tab where the field should be visible. This involves setting the column as displayed and, if needed, adding display logic so the field only appears when the Activity dimension is active for the organization's general ledger. After any Application Dictionary changes, a smartbuild must be run to compile and apply the updates to the system.
+    Enabling the Activity dimension in the General Ledger Configuration is not enough on its own for the field to appear in transaction windows. A developer must also configure the Activity column in the **Application Dictionary** for each window tab where the field should be visible. This involves setting the column as displayed and, if needed, adding display logic so the field only appears when the Activity dimension is active for the organization's general ledger. After any Application Dictionary changes, a smartbuild must be run to compile and apply the updates to the system.
 
     For reference, see [How to Add a Field to a Window Tab](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md) and [How to Define Display Logic Evaluated at Server Level](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md).
 
-## Header
+## Managing Activities
 
 The **ABC Activity** window allows users to define and manage activities per organization.
 
@@ -44,23 +48,23 @@ Using this window, it is possible to:
 
 - Group **related activities** to simplify reporting and cost analysis.
 
-This structure helps organizations understand how costs are distributed across different operational areas. From this window, it is possible to define summary activities which support a hierarchical structure or activities within an organization.
+This structure helps organizations understand how costs are distributed across different operational areas.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/abc-activity1.png)
+![ABC Activity window showing fields to define activities per organization](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png)
 
 Some fields to note to create as many activities as required:
 
 - **Organization**: Organizational entity within client.
-- **Search Key**: A fast method for finding a particular record.
-- **Name**: A non-unique identifier for a record/document often used as a search tool.
-- **Description**: A space to write additional related information.
-- **Help/Comment**: A comment that adds additional information to help users work with fields.
+- **Search Key**: A short code used to quickly find this activity in search boxes and dropdowns. For example, enter *ASSEM* for an Assembly activity.
+- **Name**: The full name of the activity as it appears in reports and transaction forms. For example, *Assembly* or *Packaging*.
+- **Description**: Optional. A brief explanation of what this activity covers, for internal reference.
+- **Help/Comment**: Optional. Additional guidance for other users who work with this activity.
 - **Summary Level**: When enabled, this activity acts as a parent container to group sub-activities. Summary activities cannot be assigned directly to transactions — only their child activities can.
-- **Active**: A flag indicating whether this record is available for use or de-activated.
+- **Active**: When checked, this activity is available for selection on transactions. Uncheck it to retire an activity without deleting it — it no longer appears in dropdowns but its historical data is preserved.
 
 ## Using Activities in Transactions
 
-Once the Activity dimension is enabled in the GL Configuration and activities are created, the **Activity** field appears in the **Dimensions** section when posting transactions — such as invoices, journal entries, and other accounting documents. Select the applicable activity from the dropdown to tag that transaction for cost tracking purposes.
+Once the Activity dimension is enabled in the General Ledger Configuration and activities are created, the **Activity** field appears in the **Dimensions** section when posting transactions — such as invoices, journal entries, and other accounting documents. Select the applicable activity from the dropdown to tag that transaction for cost tracking purposes.
 
 ## Example
 
@@ -84,7 +88,7 @@ Later, the company can easily report on how much cost was generated by Productio
 
 This approach provides better cost visibility, supports more informed decision-making, and enhances financial analysis within Etendo ERP.
 
-### Viewing Cost Reports by Activity
+## Viewing Cost Reports by Activity
 
 Once activities are assigned to posted transactions, costs can be filtered and analyzed by activity using the accounting analysis tools:
 
