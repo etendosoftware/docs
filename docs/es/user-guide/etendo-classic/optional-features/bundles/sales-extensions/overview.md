@@ -42,6 +42,10 @@ Esta funcionalidad permite al usuario configurar y conceder rappels a terceros. 
 ### CRM Lead Management
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
+:octicons-package-16: Javapackage: `com.etendoerp.crm.template`
+
+!!! info
+    Esta funcionalidad está disponible a partir de la versión **4.0.0** del Bundle de extensiones de ventas, desde **Etendo 26.1**. Para poder incluir esta funcionalidad, el Bundle de extensiones de ventas debe estar instalado. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Seguimiento y gestión nativos de leads para el equipo comercial. Permite registrar prospectos, gestionar su ciclo de vida mediante estados configurables, organizar tareas de seguimiento y convertir leads cualificados en Terceros — integrándose directamente con el flujo de Ventas (presupuestos → pedidos → facturas).
 

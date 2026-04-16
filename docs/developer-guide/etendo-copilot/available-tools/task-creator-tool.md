@@ -33,7 +33,7 @@ It is especially useful for team collaboration, project onboarding, data entry w
 
 ## Setup
 
-The tool doesn’t require specific environment variables from the user. However, it depends on the internal Etendo configuration for token and host retrieval, using the `ETENDO_TOKEN` and `ETENDO_HOST` values internally. These values are handled securely and **are never exposed to the model**.
+The tool does not require specific environment variables from the user. However, it depends on the internal Etendo configuration for token and host retrieval, using the `ETENDO_TOKEN` and `etendo.host` values internally. These values are handled securely and **are never exposed to the model**.
 
 ### Supported File Formats
 

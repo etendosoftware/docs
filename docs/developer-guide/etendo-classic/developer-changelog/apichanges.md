@@ -143,6 +143,24 @@ The following changes are applied automatically during `update.database`:
 | `AD_HEARTBEAT_LOG` | Columns removed | `ACTIVITY_RATE`, `COMPLEXITY_RATE`, `ANT_VERSION` |
 | `AD_HEARTBEAT_LOG` | Column added | `STATUS` |
 | `AD_SYSTEM_INFO` | Columns added | `License_Edition`, `Subscription_Type`, `Subscription_Start_Date`, `Subscription_End_Date`, `Concurrent_Global_System_Users`, `Instance_Number`, `WEB_Service_Access`, `Customer_Name` |
+| `C_ExtBP_Config` | Table removed | CRM Connector main configuration table (and all its columns) |
+| `C_ExtBP_Config_Property` | Table removed | CRM Connector property mappings table |
+| `C_ExtBP_Config_Prop_Opt` | Table removed | CRM Connector property accepted values table |
+| `C_ExtBP_Config_Filter` | Table removed | CRM Connector filters table |
+| `C_ExtBP_Config_Filter_Opt` | Table removed | CRM Connector filter option values table |
+| `AD_Org` | Columns removed | `C_Extbp_Enabled`, `C_Extbp_Config_ID` |
+| `AD_ClientInfo` | Column removed | `C_Extbp_Config_ID` |
+
+See [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} for full details on the CRM removal.
+
+### Removed Java Classes
+
+The following event handler classes in the `org.openbravo.event` package have been deleted as part of the CRM Connector removal. Any custom module that extends, imports, or directly invokes these classes must remove those references:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
 
 ### Other Changes
 
@@ -663,6 +681,44 @@ All libraries previously located in `/lib/runtime` as JAR files have been update
 - `jxl-2.6.10.jar`
 
 
+
+---
+
+### Database Schema Changes
+
+The following changes are applied automatically during `update.database` as part of **25Q4 patch releases (March 2026)**. See [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} for full details.
+
+**Removed Tables**
+
+The following tables and all associated columns, tabs, and Application Dictionary entries have been completely removed from core. Any custom module that directly queries or references these Hibernate entities must be updated:
+
+| Table | Hibernate Entity Class | Description |
+|---|---|---|
+| `C_ExtBP_Config` | `ExternalBusinessPartnerConfig` | CRM Connector main configuration |
+| `C_ExtBP_Config_Property` | `ExternalBusinessPartnerConfigProperty` | CRM Connector property mappings |
+| `C_ExtBP_Config_Prop_Opt` | `ExternalBusinessPartnerConfigPropertyOption` | CRM Connector property accepted values |
+| `C_ExtBP_Config_Filter` | `ExternalBusinessPartnerConfigFilter` | CRM Connector filters |
+| `C_ExtBP_Config_Filter_Opt` | `ExternalBusinessPartnerConfigFilterOption` | CRM Connector filter option values |
+
+**Removed Columns**
+
+| Table | Column | Description |
+|---|---|---|
+| `AD_Org` | `C_Extbp_Enabled` | Enable CRM Connector flag |
+| `AD_Org` | `C_Extbp_Config_ID` | CRM Connector Configuration reference |
+| `AD_ClientInfo` | `C_Extbp_Config_ID` | CRM Connector Configuration reference |
+
+### Removed Java Classes
+
+The following event handler classes in the `org.openbravo.event` package have been deleted. Any custom module that extends, imports, or directly invokes these classes must remove those references:
+
+- `ExternalBusinessPartnerConfigColspan`
+- `ExternalBusinessPartnerConfigFilterEventHandler`
+- `ExternalBusinessPartnerConfigPropertyEventHandler`
+- `ExternalBusinessPartnerConfigurationEventHandler`
+
+!!! warning "Action Required for Custom Modules"
+    If your custom modules reference any of the removed tables (`C_ExtBP_Config*`), columns (`C_Extbp_Enabled`, `C_Extbp_Config_ID`), or Java event handler classes listed above, remove or update those references before upgrading to the release that includes this change.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

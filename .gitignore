@@ -133,3 +133,9 @@ dmypy.json
 
 # Others
 .vscode/
+
+# Claude Code / Fyso (local config, regenerable via /sync-team)
+.claude/
+.fyso/
+.mcp.json
+CLAUDE.md

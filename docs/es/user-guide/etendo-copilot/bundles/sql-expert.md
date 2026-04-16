@@ -30,10 +30,10 @@ El agente Experto SQL se compone de los siguientes componentes:
     !!! info
         Para poder incluir este agente, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-2. Compruebe la variable `ETENDO_HOST` necesaria en el archivo `gradle.properties`.
-    
+2. Compruebe la variable `etendo.host` necesaria en el archivo `gradle.properties`.
+
     ```groovy title="gradle.properties"
-    ETENDO_HOST=http://localhost:8080/etendo
+    etendo.host=http://localhost:8080/etendo
     ```
 
     !!! warning
@@ -41,7 +41,7 @@ El agente Experto SQL se compone de los siguientes componentes:
 
 3. Se ha creado un nuevo agente llamado **Experto SQL** en la ventana `Application` > `Service` > `Copilot` > `Agent`.
 
-4. Ejecute el proceso **Sincronizar agente**, iniciando sesión con el rol de **Administrador del sistema**.
+4. Ejecute el proceso **Sincronizar agente**. Cualquier usuario con acceso a la ventana Agente puede realizar este paso, independientemente de su rol.
 
 5. Reinicie la imagen de Docker usando las tareas `./gradlew resources.up`.
 
@@ -96,17 +96,23 @@ El agente Experto SQL se compone de los siguientes componentes:
 2.  <figure markdown>
     ![Herramienta DBQueryGenerator](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-4.png){ align=right }
     <br>
-    **¿Consulta para conocer el nombre de los 5 mejores clientes de enero de 2011?**
+    **Consulta para conocer el nombre de los 5 mejores clientes de enero de 2011?**
     </figure>
     
 3.  <figure markdown>
     ![Herramienta DBQueryGenerator](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-5.png){ align=right }
     <br>
-    **¿Consulta para obtener cuál es la factura con el importe registrado más alto?**
+    **Consulta para obtener cuál es la factura con el importe registrado más alto?**
     </figure> 
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
+
+---
 
 ---
 

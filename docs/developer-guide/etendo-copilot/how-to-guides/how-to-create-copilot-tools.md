@@ -21,7 +21,7 @@ This enables seamless interaction between your Python-based tools and the Etendo
 
 
 ## Etendo Copilot
-The **Etendo Copilot** infraestructure allows you to create tools that extend agents functionality. These tools are developed in Python and run in the Docker container where Copilot operates.
+The **Etendo Copilot** infrastructure allows you to create tools that extend agents functionality. These tools are developed in Python and run in the Docker container where Copilot operates.
 In this guide, you will learn how to create a new Copilot tool in a dedicated module. However, it is also possible to add tools to an existing module. Each module can contain one or multiple tools.
 
 !!! note "Etendo Copilot is based on Langchain"
@@ -123,7 +123,7 @@ In this example, you will create a tool that performs a **ping** to a specified 
     !!! note "Environment variables"
         Copilot automatically reads the `gradle.properties` file of **Etendo Classic** and exposes these as environment variables (dots replaced with underscores). For example:
 
-        - `COPILOT_PORT` → `COPILOT_PORT`
+        - `copilot.port` → `copilot_port`
         - `bbdd.sid` → `bbdd_sid`
 
         You can access these environment variables in your tools.
@@ -161,7 +161,7 @@ In this example, you will create a tool that performs a **ping** to a specified 
         During the load of Copilot service, the tool will be loaded and the dependencies will be installed. Additionally, the dependencies will be tested to ensure that they are installed correctly.
 
 
-    !!! warning "Different name of depedency while installing and importing"
+    !!! warning "Different name of dependency while installing and importing"
         
         If the name of the dependency is different from the name of the package that is imported in the tool, it is necessary to specify it. 
         
@@ -178,11 +178,11 @@ In this example, you will create a tool that performs a **ping** to a specified 
 
 4. Restart the Copilot service: 
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.stop
     ```
 
-    ``` Title="Termina"
+    ```bash title="Terminal"
     ./gradlew resources.up
     ```
 
@@ -268,7 +268,7 @@ The above tool leverages utilities provided by Copilot Core:
 
 - `get_etendo_token()`: This function returns the authentication token for Etendo Classic, allowing the tool to operate within the user's session. Copilot, acting as a "proxy," manages these sessions.
 
-- `get_etendo_host()`: This function returns the URL of the Etendo Classic instance, which is required to trigger the WebHook. This host URL is configured as `ETENDO_HOST` in the `gradle.properties` configuration file.
+- `get_etendo_host()`: This function returns the URL of the Etendo Classic instance, which is required to trigger the WebHook. This host URL is configured as `etendo.host` in the `gradle.properties` configuration file.
 
 - `call_webhook(url:String, webhook_name:String, access_token:String, body_params:Dict)`: This function triggers the WebHook, passing the Etendo Classic URL, the WebHook name, the authentication token, and the parameters needed by the WebHook.
 
