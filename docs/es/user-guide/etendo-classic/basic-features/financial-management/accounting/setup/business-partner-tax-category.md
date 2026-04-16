@@ -19,8 +19,6 @@ No todos los terceros están sujetos a los mismos impuestos. Un proveedor nacion
 
 Esta configuración se realiza una sola vez, durante la configuración inicial del esquema fiscal. Una vez que cada tercero tiene asignada una categoría, esta funciona en segundo plano: cada vez que un usuario crea un pedido o una factura, Etendo lee la categoría de impuestos del tercero y la usa como uno de los filtros para determinar qué tipo impositivo se rellena automáticamente en la línea del documento. El usuario no tiene que preocuparse por ello: el impuesto correcto aparece por sí solo.
 
-Si un tercero no tiene asignada una categoría de impuestos, Etendo no filtra por este criterio y considera todos los tipos impositivos disponibles al seleccionar el impuesto predeterminado para las transacciones de ese tercero.
-
 ## Ventana Categoría de Impuestos de Terceros
 
 La ventana muestra todas las categorías de impuestos de terceros existentes y permite crear nuevas. Es posible definir tantas categorías como requiera la estructura fiscal de la empresa.
@@ -64,5 +62,7 @@ La página [Categoría de Impuesto](tax-category.md) describe cómo se agrupan l
 ---
 
 Este trabajo es una obra derivada de [Categoría de Impuestos de Terceros](https://wiki.openbravo.com/wiki/Business_Partner_Tax_Category){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+
+---
 
 ---
