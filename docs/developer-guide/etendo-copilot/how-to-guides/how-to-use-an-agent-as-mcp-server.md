@@ -14,7 +14,7 @@ tags:
 
 ## Overview
 
-!!! example  "IMPORTANT: THIS IS A BETA VERSION"
+!!! example  "Beta Version — Important Notice"
     It is under active development and may contain **unstable or incomplete features**. Use it **at your own risk**. The module behavior may change without notice. Do not use it in production environments.
 
 This guide shows you how to connect to Etendo Copilot agents using the [Model Context Protocol (MCP)](../concepts/model-context-protocol.md). Each agent automatically exposes an MCP server that you can connect to from various MCP-compatible clients like Claude Desktop, VS Code, Gemini CLI, and custom applications.
@@ -41,7 +41,7 @@ Choose how you want to interact with the agent:
 
 ### Authentication Modes
 
-The MCP configuration dialog now lets you choose how the client authenticates against the agent MCP server:
+The MCP configuration dialog lets you choose how the client authenticates against the agent MCP server:
 
 | Authentication Type | How it works | Best for |
 |---------------------|--------------|----------|
@@ -51,13 +51,6 @@ The MCP configuration dialog now lets you choose how the client authenticates ag
 
 
 ### MCP Server Architecture in Etendo Copilot
-
-Each Etendo Copilot agent automatically exposes an MCP server endpoint that provides:
-
-- **Interaction Tools**: Tools that facilitate communication between the agent and the MCP Client, like `ask_agent` for sending questions and receiving answers.
-- **Agent Tools**: Functions that the agent can execute.
-- **Resources**: Static or dynamic data that can be accessed (documents, configurations, logs, etc.).
-- **Prompts**: Pre-configured prompt templates for common tasks.
 
 The MCP server runs alongside the agent and communicates using `HTTP` transport with optional `Server-Sent Events (SSE)` for streaming responses.
 
@@ -106,7 +99,7 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 :material-menu: `Application` > `Service` > `Copilot` > `Agent`
 
 1.  Open the Agent window in **Etendo**
-2.  **Select your agent** and click **"Server MCP Config"** button.
+2.  **Select your agent** and click **Server MCP Config** button.
 3.  **Configure connection options**:
     
     ![MCP Configuration Dialog](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png)
@@ -180,6 +173,9 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
     !!! info "Example Configurations" 
 
                 Choose the example that matches the selected **Authentication Type**.
+
+                !!!note "About AGENT_ID"
+                    `AGENT_ID` in all examples below is a placeholder. The actual value is the unique identifier assigned to the agent in Etendo. When using the **Server MCP Config** dialog, the generated configuration replaces this placeholder automatically with the correct agent ID.
 
                 **VS Code Configuration with OAuth 2.1**
 
@@ -307,11 +303,7 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 
 1. **Start your MCP client** [VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers){target="_blank"}, [Gemini CLI](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server){target="_blank"}, [Claude Desktop](https://modelcontextprotocol.io/docs/develop/connect-local-servers){target="_blank"}, etc.
 
-2. **Confirm the server is available**:
-
-    ```
-    Verify that the MCP server connects successfully and the client can list the available tools
-    ```
+2. **Confirm the server is available**: In the client's tool list or inspector, verify that at least one tool appears — for example, `ask_agent` in Simple Mode, or the agent's own tools in Direct Mode. If no tools appear, go to the Troubleshooting section.
 
 3. **Try agent interaction**:
    
@@ -320,11 +312,7 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
     Ask the agent: "What can you help me with?"
     ```
 
-    **Direct Mode**:
-    ```
-    Use get_agent_prompt first to see agent capabilities
-    Execute specific tools directly
-    ```
+    **Direct Mode**: In the client's tool list, invoke `get_agent_prompt` with no parameters. Review the returned output to understand the agent's available tools and expected inputs. Then invoke any tool from the list directly — for example, a `search_customers` tool with `{"query": "test", "limit": 1}`.
 
 4. **If you selected OAuth 2.1**:
 
@@ -335,15 +323,15 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
     The OAuth login flow works as follows:
 
     1. The MCP client opens the Etendo login page in the browser.
-    2. The user enters username and password.
+    2. Enter your username and password.
 
-        ![OAuth Login Step 1](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png)
+        ![Etendo login page showing username and password fields with Use default role and organization checkbox](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png)
 
     3. If **Use default role and organization** is enabled, Etendo completes the authentication immediately.
     4. If the checkbox is not enabled, and the credentials are valid, Etendo opens a second page.
-    5. On the second page, the user selects a **Role** and an **Organization**.
+    5. On the second page, select a **Role** and an **Organization**.
 
-        ![OAuth Login Step 2](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png)
+        ![Role and Organization selection page in the Etendo OAuth login flow](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png)
 
     6. After the selection is confirmed, the OAuth flow completes and the MCP client continues the connection.
 
@@ -351,13 +339,9 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 
 ### Simple Mode
 - **URL**: `http://HOST:PORT/AGENT_ID/mcp`
-- **Tools**: `ask_agent` and, depending on the generated configuration, an agent-specific `ask_agent_<AgentName>` alias.
-- **Use**: Natural conversation with the agent.
 
 ### Direct Mode  
 - **URL**: `http://HOST:PORT/AGENT_ID/direct/mcp`
-- **Tools**: Agent tools exposed directly + `get_agent_prompt`.
-- **Use**: Direct tool execution and system access.
 
 !!! tip
     In **Direct Mode**, call `get_agent_prompt` before using other tools. The prompt explains the agent purpose, capabilities, and the expected usage of the exposed tools.
@@ -428,7 +412,7 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 
 **Authentication errors:**
 
-- Regenerate the SWS token via `/sws/login` if you are using token-based authentication.
+- If you are using token-based authentication and receive a 401 error, regenerate the Etendo session token by calling `/sws/login` with valid Etendo credentials (this is Etendo's web service login endpoint). Update the token in the client configuration afterwards.
 - Check token format includes `Bearer ` when sending it in a header.
 - Verify user has access to the selected agent.
 - If you use `Token in URL`, confirm the generated endpoint still includes the `token` query parameter.
@@ -437,4 +421,4 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
     Always use HTTPS in production environments. Keep your SWS tokens secure and never expose them in client-side code or public repositories. Prefer **OAuth 2.1** or **Token in Header** over **Token in URL** whenever the client supports them.
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
