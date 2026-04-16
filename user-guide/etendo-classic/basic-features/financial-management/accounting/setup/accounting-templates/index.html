@@ -3665,26 +3665,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dataset-definition" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
-      Dataset Definition
+      Fields
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Dataset Definition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testing-the-dataset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing the Dataset
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3694,46 +3679,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functional-specification" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Functional Specification
+      Dataset Definition
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functional Specification">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Background
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design Considerations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#functional-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functional Requirements
+      How It Works
     </span>
   </a>
   
@@ -14846,26 +14831,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dataset-definition" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
-      Dataset Definition
+      Fields
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Dataset Definition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testing-the-dataset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing the Dataset
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -14875,46 +14845,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functional-specification" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Functional Specification
+      Dataset Definition
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functional Specification">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Background
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#scope" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#design-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design Considerations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#functional-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functional Requirements
+      How It Works
     </span>
   </a>
   
@@ -14973,52 +14943,78 @@
 
 
 <h1 id="accounting-templates">Accounting Templates</h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Accounting Templates</code></p>
 <h2 id="overview">Overview</h2>
-<p>Accounting templates in Etendo overwrite default accounting behavior. Each template is related to a specific table.</p>
-<p>The accounting entries generated by Etendo usually need to be generated in a different way to fulfill the legal requirements for a concrete country. To support this kind of requirements, Etendo allows overriding the code that generates the accounting entries through what is called Accounting Templates. Each time a document is posted, the accounting engine checks whether any Accounting Template is defined for the associated table or for the concrete document and executes it instead of the default Core's code.</p>
+<p>Accounting Templates allow organizations to customize how Etendo generates journal entries for specific document types, without modifying the core application. This is typically required when local legal or business rules demand posting logic that differs from the default behavior — for example, a country-specific tax treatment for invoices or a custom accrual method for goods receipts.</p>
+<p>A system administrator registers the template in this window. A Java developer implements and deploys the corresponding class as part of a module beforehand. Once configured, the template applies automatically every time a matching document is posted — end users are not affected by the change.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is a powerful feature that must be used with caution. The code that generates the accounting entries must be deeply tested before deploying it in a real instance.</p>
+<p>This is a powerful feature that must be used with caution. The custom posting class must be thoroughly tested before deploying it in a production environment.</p>
 </div>
 <h2 id="creating-the-accounting-template-configuration">Creating the Accounting Template Configuration</h2>
-<p>The Java class that implements the generation of the new accounting entries is defined into the Accounting Templates window. The definition is quite simple and only requires a name, the Java class name, which must be inside the java package of the module, and the table for which the user wants to override its accounting entries (for example, C_Invoice for Invoices, M_InOut for goods shipments/receipts, etc.).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png"></a></p>
-<p>This Accounting Template will be later on associated with the Active Tables or a Document. So in this step it is important to define as many Java classes as Active Tables or Document to override their accounting behavior.
-For example, we can define an unique java class for overriding the accounting behavior of all the invoices (sales invoices, purchase invoices, purchase/sales credit memo, etc.), or alternatively define a class for overriding only the accounting entries for Purchase Invoices (AP Invoice) and keep the default behavior to the rest of the invoices.</p>
-<h3 id="dataset-definition">Dataset Definition</h3>
-<p>Dataset definition is a key step in this process. A wrong dataset definition can waste all previous work, so it is important to follow all these considerations:</p>
-<ul>
-<li>The dataset must belong to the accounting template module</li>
-<li>Try avoiding strange characters in the dataset's name. This string is used for generating the XML file name that stores the dataset.</li>
-<li>The Data Access Level must be set to System/Client, which means we allow users to apply the configuration only at Client level (Organization *).</li>
-<li>The Export allowed flag must be set.</li>
-<li>Inside the Table tab, include the AD_CreateFact_template table, which is the one that stores the Accounting Template configuration.</li>
-<li>The HQL/SQL Where clause is an important field, because it allows filtering the records the user wants to include into the dataset. In the example all the records that are inside the module java package name have been filtered. </li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png"></a></p>
-<p>The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
-In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table.</p>
-<h4 id="testing-the-dataset">Testing the Dataset</h4>
-<p>The real test to ensure the taxes dataset is OK can be done inside the development instance. The test consists on creating a new client running the Initial Client Setup and selecting the new dummy accounting template dataset.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If the data inside the dataset are consistent, the Initial Client Setup Process should be completed successfully, otherwise it will fail giving a description about the error.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Setup</code> &gt; <code>Accounting Templates</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although this is a functional configuration window managed at the administrator level, accounting templates must be developed by a Java developer. The Java class referenced in the <strong>Java Class Name</strong> field must be implemented and deployed as part of a module before it can be registered here.</p>
 </div>
-<p>After a successful Initial Client Setup, login into the new client, go to the Accounting Templates window and check the record is there.</p>
-<h2 id="functional-specification">Functional Specification</h2>
-<h3 id="overview_1">Overview</h3>
-<p>Nowadays, Etendo  builds entries associated with documents following a hard-coded behavior. In order to modify the generated entry, code must be modified. The current code has become a module called core. If a module wants to modify accounting entries generated by documents, core must be modified, and this is not desired at all.
-With this new development in core, modules will be able to easily modify the entries generated by each document.</p>
-<h3 id="scope">Scope</h3>
-<p>The aim of this project is to allow modules to modify the way entries are generated when posting documents.</p>
-<h3 id="design-considerations">Design Considerations</h3>
-<p>A new layer will be included between the document, and the logic that posts that document. In a new window each document is mapped to the servlet that implements the logic to post it. This way, just modifying the values on this window, accounting behavior is changed. If a new module wants to change the entry generated when posting an invoice, a new servlet is developed following the desired behavior. At the same time, the mapping of the invoices to the servlet that posts will be changed to the servlet developed in the module. This way, the whole application behavior is changed.</p>
-<h3 id="functional-requirements">Functional Requirements</h3>
+<p>The <strong>Accounting Templates</strong> window is used to register the Java class that implements the custom posting logic. Each template requires a name, the fully qualified Java class name (within the module's Java package), and the database table that corresponds to the document type to customize — for example, <code>C_Invoice</code> for invoices or <code>M_InOut</code> for goods shipments and receipts.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png" data-desc-position="bottom"><img alt="Accounting Templates window showing a configured template record" src="../../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png"></a></p>
+<p>Each template is later associated with specific active tables or document types. You can define a single template that covers all documents of a given type (for example, all invoices), or create separate templates that target only specific <a href="../document-type/">document categories</a> (for example, only purchase invoices), while leaving the default behavior for the rest.</p>
+<h3 id="fields">Fields</h3>
+<ul>
+<li><strong>Name</strong>: A descriptive identifier for the accounting template. Use a clear name that reflects the posting rule or the document type it affects.</li>
+<li><strong>Java Class Name</strong>: The technical identifier for the custom posting logic. The developer provides this value — enter it exactly as given.</li>
+<li><strong>Table</strong>: The document type this template overrides. Select the table corresponding to the transactions to customize. In the dropdown, look for names like <code>C_Invoice</code> (invoices) or <code>M_InOut</code> (goods shipments) — these are the internal table names Etendo uses to identify each document type.</li>
+<li><strong>Description</strong>: Optional additional information about the purpose or behavior of this template (not shown in the grid view above).</li>
+<li><strong>Active</strong>: Indicates whether this template is currently in use. Deactivating a template restores the default posting behavior for the associated document type.</li>
+</ul>
+<p>Once the template is configured, it is associated with the corresponding active tables or documents. The entries it generates appear in the <a href="../general-ledger-configuration/">General Ledger Configuration</a> reports alongside standard postings, following the rules defined in the <a href="../account-tree/">Account Tree</a>.</p>
+<h2 id="dataset-definition">Dataset Definition</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This section is for development teams that need to package and distribute a custom accounting template as an installable module. If you are an administrator registering an existing template in the Accounting Templates window, skip this section and the Dataset Testing section entirely — they do not apply to your workflow.</p>
+</div>
+<p>The dataset definition determines which records are exported with the accounting template module so that the template can be installed in other environments. A correct dataset definition is essential — an incorrect one can render the entire template unusable after installation. For background on how organizations and datasets interact during setup, see <a href="../../../../general-setup/enterprise-model/initial-organization-setup/">Initial Organization Setup</a>.</p>
+<p>Follow these guidelines when defining the dataset:</p>
+<ul>
+<li>The dataset <strong>must belong to the accounting template module</strong>.</li>
+<li><strong>Avoid special characters</strong> in the dataset name. This string is used to generate the XML filename that stores the dataset.</li>
+<li><strong>Data Access Level</strong> must be set to <code>System/Client</code>, which means the configuration can only be applied at Client level (Organization <code>*</code>). Note: the screenshot below may show a different value depending on the Etendo version.</li>
+<li>The <strong>Export Allowed</strong> flag must be checked.</li>
+<li>In the <strong>Table</strong> tab, include the <code>AD_CreateFact_template</code> table (the database table that stores Accounting Template records — each row in the Accounting Templates window corresponds to a row in this table).</li>
+<li>The <strong>HQL/SQL Where Clause</strong> filters which rows from the table are included in the exported dataset (HQL and SQL are query languages used to select specific records from the database). Typically, this clause selects all records whose Java class name falls within the module's Java package, so that only the templates belonging to this module are exported.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png" data-desc-position="bottom"><img alt="Dataset definition window" src="../../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png"></a></p>
+<p>Once the dataset definition is complete, export it by pressing the <strong>Export Reference Data</strong> button. This process queries the configured tables, retrieves all records matching the HQL/SQL Where Clause, and generates an XML file in the <code>referencedata/standard</code> directory of the module.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Application is not affected by these developments, because all changes to the way the documents are posted are transparent to the user. Only a new window is necessary, that is configured automatically for the user when updating.</p>
+<p>As a quick check, open the generated XML file with a text editor and verify it contains data. If the file is empty, review the dataset definition — especially the HQL/SQL Where Clause for each table.</p>
+</div>
+<h2 id="dataset-testing">Dataset Testing</h2>
+<p>The recommended way to verify that the dataset is correct is to create a new client within the development instance using the <a href="../../../../general-setup/getting-started/#initial-client-setup">Initial Client Setup</a> process, selecting the new accounting template dataset during setup.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png" data-desc-position="bottom"><img alt="Initial Client Setup reference data selection" src="../../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If the data within the dataset is consistent, the Initial Client Setup process completes successfully. Otherwise, it fails with an error description indicating what went wrong.</p>
+</div>
+<p>After a successful setup, log in to the new client, navigate to the <strong>Accounting Templates</strong> window, and confirm that the template record is present. Proceed to test posting by creating sample documents and verifying that the custom accounting entries are generated correctly. This validation step applies to any environment where the template has been installed — not only during module development.</p>
+<h2 id="technical-reference">Technical Reference</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This section describes the internal design of Accounting Templates. It is intended for developers and is not required for day-to-day configuration.</p>
+</div>
+<h3 id="background">Background</h3>
+<p>By default, Etendo generates journal entries for documents using built-in posting logic. Accounting Templates introduce a mechanism that allows <strong>modules to override this default behavior</strong> without modifying the core application code. This means organizations can adapt how accounting entries are generated to meet specific legal or business requirements through independent, installable modules.</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>Accounting Templates work by inserting a <strong>new layer between the document and the posting logic</strong>. In the Accounting Templates window, each document type is mapped to the class that implements its posting behavior. To change how a document is posted:</p>
+<ol>
+<li>A developer creates a new class that implements the desired posting logic.</li>
+<li>The template is configured in this window to map the relevant document type to the new class.</li>
+<li>From that point on, all documents of that type use the custom logic.</li>
+</ol>
+<p>This approach is transparent to end users — the posting process looks and works the same from the application interface. The only difference is in the accounting entries generated, which follow the rules defined by the custom template rather than the built-in defaults.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The application interface is not affected by these changes. All modifications to posting behavior happen behind the scenes. The Accounting Templates window is the only additional configuration needed, and it is set up automatically when the template module is installed.</p>
 </div>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Projects:Accounting_Templates" target="_blank">Accounting Templates</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
