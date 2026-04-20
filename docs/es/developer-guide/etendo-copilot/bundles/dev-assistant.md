@@ -11,6 +11,7 @@ tags:
 # Asistente de desarrollo
 
 :octicons-package-16: Paquete Java:  `com.etendoerp.copilot.devassistant`
+
 ## Visión general
 
 Esta página proporciona una visión general de las herramientas, la funcionalidad y los ejemplos de uso de los distintos agentes de desarrollo disponibles en Etendo. **Dev Assistant** agiliza la gestión del flujo de trabajo para los desarrolladores ofreciendo agentes especializados que simplifican tareas como la creación de botones, ventanas, solapas y tablas, manejadores de eventos, informes Jasper, procesos en segundo plano y más. Estos agentes están diseñados para mejorar la productividad y reducir la complejidad, facilitando que los desarrolladores creen y gestionen de forma eficiente distintos componentes dentro de la plataforma Etendo.

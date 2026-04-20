@@ -64,10 +64,29 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
             ```
 
             !!! warning
-                This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property. 
+                This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property.
 
             !!!note
                 During development, you can use `localhost`. However, for production, set your actual domain.
+
+        3. Add the token encryption key to `gradle.properties`:
+
+            !!! warning "Required: token encryption key"
+                SSO and OAuth integrations will fail with a configuration error page if this property is missing.
+
+            Add:
+
+            ```properties title="gradle.properties"
+            etrx.token.encryption.key=<64-char hex string>
+            ```
+
+            Generate the value with:
+
+            ```bash
+            openssl rand -hex 32
+            ```
+
+            Store the output as the value of `etrx.token.encryption.key`. This key is used to encrypt OAuth tokens at rest (AES-256-GCM) in the database.
 
             With these settings, Etendo will be able to authenticate users through external login providers using the middleware.
 
@@ -378,6 +397,9 @@ This section defines the OAuth provider's endpoints required for your app to con
 ### Token Info tab
 
 This tab stores the tokens generated through the ERP. While full tokens are not displayed for security reasons, the following information is available:
+
+!!! note
+    Tokens are also encrypted at rest in the database using AES-256-GCM. This applies to the `Token` field in the `ETRXTokenInfo` entity and the `OAuthToken` field in the `ETRXTokenUser` entity.
 
 - **User:** ERP user who generated the token.
 - **Provider:** The OAuth provider from which the token was issued.

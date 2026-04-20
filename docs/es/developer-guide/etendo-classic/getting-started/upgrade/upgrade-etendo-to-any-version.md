@@ -6,6 +6,7 @@ tags:
     - Gestión de versiones
     - Plugin de Gradle
     - Core
+    - Etendo
 ---
 
 # Actualizar Etendo a cualquier versión
@@ -45,7 +46,7 @@ Esta guía explica cómo actualizar su entorno de Etendo a cualquier versión qu
     ./gradlew wrapper --gradle-version 7.3.2
     ```
 
-- Si está actualizando a **Etendo 25**, actualice Gradle ejecutando:
+- Si está actualizando a **Etendo 25** o **Etendo 26**, actualice Gradle ejecutando:
   
     ```bash title="Terminal"
     ./gradlew wrapper --gradle-version 8.12.1
@@ -55,12 +56,17 @@ Esta guía explica cómo actualizar su entorno de Etendo a cualquier versión qu
 
 La pila tecnológica requerida depende de la versión objetivo.
 
-- Para versiones de Etendo anteriores a **Etendo 25**, la pila inicial permanece sin cambios. Para más información, visite: [Etendo 24 and Earlier - Software Stack](../../../../getting-started/requirements.md#etendo-24-and-earlier)
+- Para versiones de Etendo anteriores a **Etendo 25**, la pila inicial permanece sin cambios. Para más información, visite: [Etendo 24 and Earlier - Software Stack](../installation/requirements.md#etendo-24-and-earlier)
 
-- Si está migrando a **Etendo 25**, primero debe actualizar **toda la pila tecnológica** (Java SE, PostgreSQL, Apache Tomcat). Para más información, visite: [Etendo 25 - Software Stack](../../../../getting-started/requirements.md#etendo-25)
-   
+- Si está migrando a **Etendo 25**, primero debe actualizar **toda la pila tecnológica** (Java SE, PostgreSQL, Apache Tomcat). Para más información, visite: [Etendo 25 - Software Stack](../installation/requirements.md#etendo-25)
+
+- Si está migrando a **Etendo 26**, la pila es la misma que en Etendo 25 con una diferencia crítica: **Java 17 es ahora obligatorio**. La marca de compatibilidad `-Pjava.version=11` se ha eliminado por completo. Para más información, visite: [Etendo 26 - Software Stack](../installation/requirements.md#etendo-26)
+
+    !!! warning "Acción requerida para desarrollos personalizados"
+        Si sus módulos personalizados incluyen clases `BuildValidation` o `ModuleScript` compiladas con Java 11, recompílelas antes de actualizar. Consulte [API Changes - Etendo 26](../../developer-changelog/apichanges.md#etendo-26) para más detalles.
+
     !!!tip 
-        La guía [Developer Changelog](../../developer-changelog/apichanges.md) proporciona detalles sobre la pila requerida y los posibles cambios necesarios en módulos personalizados. 
+        La guía [Developer Changelog](../../developer-changelog/apichanges.md) proporciona detalles sobre la pila requerida y los posibles cambios necesarios en módulos personalizados.
 
 ### Actualización de Etendo
 
@@ -130,7 +136,7 @@ Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El for
 6. Compruebe si se producen errores de compilación debido a personalizaciones o modificaciones incompatibles.
 
     !!! warning
-        Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en **Etendo 25** o posterior. Para más información, visite: [Etendo API Changes](../../developer-changelog/apichanges.md)
+        Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en **Etendo 25** o **Etendo 26** o posterior. Para más información, visite: [Etendo API Changes](../../developer-changelog/apichanges.md)
 
     !!! success
         ¡Su entorno de Etendo ya está actualizado!
@@ -189,7 +195,7 @@ Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El for
 
     
     !!! warning
-        Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en **Etendo 25** o posterior. Para más información, visite: [Etendo API Changes](../../developer-changelog/apichanges.md)
+        Recuerde revisar los cambios de la API que puedan afectar a los módulos instalados en **Etendo 25** o **Etendo 26** o posterior. Para más información, visite: [Etendo API Changes](../../developer-changelog/apichanges.md)
 
 
     !!! success

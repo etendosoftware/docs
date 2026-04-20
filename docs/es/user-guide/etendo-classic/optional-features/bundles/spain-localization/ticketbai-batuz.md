@@ -89,6 +89,12 @@ A continuación, si el proceso se ha ejecutado correctamente, el sistema mostrar
 
 Este dataset proveerá los datos necesarios para gestionar el envío de facturas a Gipuzkoa, Bizkaia y Álava.
 
+### Certificado Digital
+
+Antes de configurar el envío de facturas a TicketBAI, es necesario cargar el certificado digital en la organización legal correspondiente. TicketBAI utiliza directamente el certificado almacenado en la sección **Certificado Digital** de la ventana **Organización**.
+
+Para cargar o actualizar el certificado, consulte la sección [Carga de Certificados Digitales](./funcionalidades-generales-para-sifs.md#carga-de-certificados-digitales).
+
 ### Configuración TBAI
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `TicketBAI` > `Configuración TBAI`
@@ -113,20 +119,12 @@ La ventana de Configuración TBAI le permitirá ajustar los parámetros necesari
 
 - **Validar factura anterior**: Active esta opción para que el sistema verifique si la factura anterior fue enviada correctamente antes de enviar la actual. Si no fue enviada, se mostrará una advertencia y se cancelará el envío.
 
-- **NIF**: Ingrese el NIF del emisor de la factura.
-
-- **Nombre y Apellido del Emisor de Certificado**: Información requerida para el certificado que se adjunta en la configuración.
-
-- **Contraseña del certificado**: Introduzca la contraseña del certificado adjunto.
-
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_conf.png)
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_bizkaia.png)
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/tbai/tbai_config_alava.png)
 
-
-*No olvide adjuntar el certificado necesario.*
 
 ### Rango de impuesto
 

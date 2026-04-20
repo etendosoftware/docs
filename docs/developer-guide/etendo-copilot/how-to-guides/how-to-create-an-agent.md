@@ -5,7 +5,6 @@ tags:
     - Agent
     - Create
     - LLM
-    - Agent
 ---
 
 # How to Create an Agent
@@ -33,11 +32,19 @@ Some of the main fields to be completed are:
 - **Model**: Dropdown with the models available, such as OpenAI, Anthropic, etc. Go to section [Which model should I choose?](#which-model-should-i-choose) for more information.
 
 !!!info
-    The **Prompt** field can have the following dynamic variables: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` and `@source.path@` 
-    These variables will be replaced with the values defined in the properties.
+    The **Prompt** field can have the following dynamic variables: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` and `@source.path@`.
+    These variables are replaced with the values defined in the `gradle.properties` file.
 
 !!!note 
     For more information on what each field is used for, visit the [Setup and Usage - Agents](../../../user-guide/etendo-copilot/setup-and-usage.md#header) guide.
+
+!!!info "Visibility and display settings"
+    When creating an agent, also consider the following fields available in the Agent window header:
+    - **Agent Scope**: Controls which users can see and use this agent. Defaults to **Client**.
+    - **Featured**: Marks the agent as a priority option in the Copilot Chat agent list.
+    - **Sync on Startup**: Automatically synchronizes the agent each time the application server restarts.
+    
+    For full details on each field, see [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
 ### Agent Definition Example
 
@@ -111,7 +118,7 @@ The default model for Etendo Copilot is `gpt-4.1` from **OpenAI**. This model is
 Etendo Copilot provides a Window where you can see the available models and their details. This window is populated when synchronizing the models. Additionally, if the provider offers models that are not present in this list, they can be added manually. 
 
 !!! info 
-    More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
+    More information here [AI Models](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models-window)
 
 ### Image Input
 
@@ -139,7 +146,7 @@ The most crucial is to determine:
 |**Remote File** | It is highly recommended when the file can change and the latest version can be accessed from the same url. For example, a file in a repository on GitHub. | File URL |
 |**HQL Query** | It is used when you want the agent to be able to read information from a table or from the result of a database query. For example, a list of Business Partners or orders. | HQL Query |
 |**Text** | When the information is static and can be written directly in the window. | The text itself |
-|**OpenAPI Flow Specification** | Use when the knowledge base file is the OpenAPI Specification of a Etendo Flow. See [How to allow Copilot to interact with Etendo](#how-to-allow-copilot-to-interact-with-etendo-classic) for more information. | Select the flow in the selector|
+|**OpenAPI Flow Specification** | Use when the knowledge base file is the OpenAPI Specification of a Etendo Flow. See [How to allow Copilot to interact with Etendo](#how-to-allow-copilot-to-interact-with-an-api-or-etendo) for more information. | Select the flow in the selector|
 |**Code Index** | When the agent needs to know **Locally** stored code. | Specify the paths of the folders  |
 
 !!! info
@@ -268,8 +275,8 @@ Question asked to `Bastian` and structured JSON response received:
 
 | Behavior | When to Use It | Functionality | Limitations |
 |--|--|------|--|
-|**[Agent] Append the file content to the prompt**| Its recommended when the volume of the file content can be handled by the model or the information its crucial for the agent work.| When the prompt is builded, the content of the file will be inserted in every @alias@ ocurrence inside the prompt. If the alias was not defined, the content of the file is appended at the final of the prompt.| The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.|
-|**[Agent] Add to the agent as Knowledge Base**| Its recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'. | The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a `Knowledge base Search` tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors, proper of the agent and the search tool is the one that allows to search in it by "Meaning". | The agent will not be able to use the information in the knowledge base to generate responses without using the `Knowledge base Search` tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be [configured](#advanced-settings) in the agent configuration. The agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.|
+|**[Agent] Append the file content to the prompt**| It is recommended when the volume of the file content can be handled by the model or the information is crucial for the agent work.| When the prompt is built, the content of the file will be inserted in every @alias@ occurrence inside the prompt. If the alias was not defined, the content of the file is appended at the end of the prompt.| The length of the file directly impacts the length of the system prompt, which has a limit in each module. In addition, a very large prompt can slow down the agent's responses.|
+|**[Agent] Add to the agent as Knowledge Base**| It is recommended to use when the volume of information is larger than the limit of tokens that the model can handle as 'prompt'. | The agent will not "know" the content of the knowledge base file from the beginning of the execution, but will be equipped with a `Knowledge base Search` tool to search for information in the knowledge base, working as a search engine. This is so because the information is indexed in a database of vectors belonging to the agent, and the search tool is the one that allows to search in it by "Meaning". | The agent will not be able to use the information in the knowledge base to generate responses without using the `Knowledge base Search` tool. The tool will return an array of results, which can be used to generate a response. The quantity of results returned can be [configured](#advanced-settings) in the agent configuration. The agent needs to **search** in the knowledge base file to find the information. This is not recommended due to the performance of the agent.|
 |**[User question] Append content to each question**| It is recommended when data changes very frequently and you need to have the data at the time of each question. The content of the file should be as short as possible.|Add the content of the file at the end of each message.| It has a direct impact on the length of messages, which have character limits. It can also slow down the agent's responses if the message is very large.|
 |**[Agent] SPEC: Add as agent specification**| Can be used when the file content is an OpenAPI Specification| The specification is not added to the request, but is sent to Copilot. When the agent is built, the specification is processed and tools are generated automatically (for each method and each endpoint), which are then added to the agent. In this way, the agent has tools to be able to use the Call Tool API without the need to use the Call Tool API and have all the OpenAPI Spec at the prompt.| It is currently in the experimental phase.|
 
@@ -277,8 +284,8 @@ Question asked to `Bastian` and structured JSON response received:
     More information about this window can be found in the [Knowledge Tab](../../../user-guide/etendo-copilot/setup-and-usage.md#knowledge-tab) section.
 
 !!! tip
-    - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, its necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes.
-    - **Splitting**: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is splitted in chunks by the headers. If the files are not large, its possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
+    - **Remember the Synchronization**: After adding/modifying/deleting a knowledge base file from an Agent, it is necessary to synchronize the agent to apply the changes. This not only regenerates/reloads the Knowledge Base File but also updates the Agent with the latest changes. Any user with access to the Agent window can perform the synchronization, regardless of their role. The knowledge base data is stored separately for each client.
+    - **Splitting**: When the indexation in the knowledge base file is done, the content is split into chunks depending on the type of the file. For example, if the file is a markdown file, the content is split into chunks by the headers. If the files are not large, it is possible to mark as `Skip Splitting` in the knowledge base file configuration. This will avoid the splitting of the content in chunks. This causes that the content of the documents is retrieved as a single chunk, which can be useful in some cases.
 
 ### Add a Knowledge Base Example
 

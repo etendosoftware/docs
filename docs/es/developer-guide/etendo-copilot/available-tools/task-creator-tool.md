@@ -33,7 +33,7 @@ Es especialmente útil para la colaboración en equipo, la incorporación a proy
 
 ## Configuración
 
-La herramienta no requiere variables de entorno específicas por parte del usuario. Sin embargo, depende de la configuración interna de Etendo para la obtención del token y del host, utilizando internamente los valores `ETENDO_TOKEN` y `ETENDO_HOST`. Estos valores se gestionan de forma segura y **nunca se exponen al modelo**.
+La herramienta no requiere variables de entorno específicas por parte del usuario. Sin embargo, depende de la configuración interna de Etendo para la obtención del token y del host, utilizando internamente los valores `ETENDO_TOKEN` y `etendo.host`. Estos valores se gestionan de forma segura y **nunca se exponen al modelo**.
 
 ### Formatos de archivo compatibles
 

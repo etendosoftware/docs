@@ -32,7 +32,7 @@ It covers architecture, data model, authentication flow, token acquisition, pers
 - Provides SSO via Auth0 (or any OIDC IdP): builds authorize URL, exchanges authorization code, validates ID Token (JWKS), and returns control to the ERP.
 - Orchestrates Google OAuth 2.0 consent and token exchange / refresh.
 - Issues short‑lived internal authorization codes (ephemeral) for secure backchannel exchange (optional).
-- Stores refresh tokens securely (in production use an encrypted database, not in‑memory map).
+- Stores `access_token` and `refresh_token` encrypted at rest in SQLite using AES-256-GCM (requires `ENCRYPTION_KEY` env var).
 
 ### Data Model (Etendo RX)
 
@@ -104,6 +104,9 @@ Stores:
 - `MIDDLEWARE_PROVIDER` (e.g. `google - drive.file`)
 - Flags (e.g. `APPROVE_GOOGLE_DOC`)
 
+!!! note "Token encryption at rest"
+    The `TOKEN` field in `ETRXTokenInfo` is stored encrypted at rest using AES-256-GCM. The property `etrx.token.encryption.key` must be set in `gradle.properties` with a 64-character hex string (32 bytes) before starting the server. Generate a key with: `openssl rand -hex 32`
+
 ### `ETRX_INSTANCE_CONNECTOR`
 Registers:
 
@@ -155,7 +158,7 @@ Security:
 
 Reliability:
 
-- Replace in-memory token store with encrypted persistent storage in production.
+- OAuth tokens are stored encrypted at rest using AES-256-GCM.
 - Synchronize clocks (avoid premature expiry rejections).
 - Implement retry with backoff for transient network errors to Google / Auth0.
 
@@ -218,6 +221,8 @@ Observability:
 - Valid TLS certificates.
 - Middleware logs show expected sequence `[LOGIN]` → `[CALLBACK]`.
 - On `access_denied` errors: verify user consent, scopes, and IdP policy.
+- Middleware: `ENCRYPTION_KEY` env var set (64-char hex — generate with `openssl rand -hex 32`)
+- Etendo Core: `etrx.token.encryption.key` property set in `gradle.properties` (64-char hex — generate with `openssl rand -hex 32`)
 
 ## Summary
 
