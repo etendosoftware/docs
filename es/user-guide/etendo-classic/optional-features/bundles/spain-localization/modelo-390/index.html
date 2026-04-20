@@ -5006,6 +5006,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#comportamiento-ante-rangosimpuestos-inactivos-con-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comportamiento ante rangos/impuestos Inactivos con histórico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades-del-iae" class="md-nav__link">
     <span class="md-ellipsis">
       Actividades del I.A.E.
@@ -15291,6 +15300,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#comportamiento-ante-rangosimpuestos-inactivos-con-historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comportamiento ante rangos/impuestos Inactivos con histórico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades-del-iae" class="md-nav__link">
     <span class="md-ellipsis">
       Actividades del I.A.E.
@@ -15584,6 +15602,64 @@
 </ul>
 <p>no permitirán la generación del Modelo 390 ya que el índice 10.50% no es un índice o tipo que reconozca el fichero del 390.</p>
 <p>Estos impuestos no deberán estar ligados a parámetros del 390 y sus importes (base y cuota) deberán reflejarse en el programa "IVA 2021" o el que corresponda de forma manual.</p>
+<h4 id="comportamiento-ante-rangosimpuestos-inactivos-con-historico"><strong>Comportamiento ante rangos/impuestos Inactivos con histórico</strong></h4>
+<p>Cuando un rango o tipo de impuesto se marca como <strong>Inactivo</strong> en Etendo, el sistema lo excluye automáticamente del listado de impuestos considerados al generar el Modelo 390, incluso si existen facturas contabilizadas en ejercicios anteriores que utilizaron ese rango.</p>
+<p>Esto significa que <strong>regenerar el Modelo 390 de un ejercicio cerrado después de haber desactivado un rango de impuestos provocará que los importes asociados a dicho rango desaparezcan del informe</strong>, alterando los totales de una declaración que ya había sido calculada y presentada.</p>
+<div class="admonition warning">
+<p class="admonition-title">Comportamiento conocido con impacto en declaraciones históricas</p>
+<p>El Modelo 390 no hace una captura (snapshot) de la configuración de impuestos en el momento de la generación. Cada vez que se genera o regenera el informe, el sistema consulta qué rangos de impuestos están activos en ese momento. Por ello, desactivar un rango con histórico afecta retroactivamente a todos los ejercicios anteriores en los que se utilice ese rango.</p>
+</div>
+<p><strong>Ejemplo concreto:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Acción</th>
+<th>Resultado en el 390 de 2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Se contabilizan facturas en 2025 usando el rango "Entregas IVA 10%" — Base imponible: 10.000 €, Cuota de IVA: 1.000 €</td>
+<td>El 390 de 2025 incluye esos importes correctamente</td>
+</tr>
+<tr>
+<td>2</td>
+<td>En enero de 2026, un administrador marca "Entregas IVA 10%" como <strong>Inactivo</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Se regenera el 390 de 2025</td>
+<td>Los 10.000 € de base y 1.000 € de cuota <strong>ya no aparecen</strong> en el informe</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Se reactiva el rango o se crea uno nuevo con las mismas características</td>
+<td>Los importes <strong>vuelven a aparecer</strong> al regenerar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendación operativa:</strong></p>
+<p>Para dejar de utilizar un rango de impuestos en operaciones futuras sin afectar las declaraciones históricas, se recomienda seguir estas alternativas en lugar de desactivarlo:</p>
+<ul>
+<li><strong>No asignarlo en nuevos documentos:</strong> dejar el rango activo pero no seleccionarlo al crear nuevas facturas. Es la opción más segura.</li>
+<li><strong>Crear un rango nuevo</strong> para las operaciones futuras y mantener el rango original activo para preservar el histórico.</li>
+<li><strong>Desactivarlo únicamente si se tiene certeza</strong> de que el Modelo 390 de todos los ejercicios en los que se utilizó ese rango ya ha sido presentado definitivamente y no será regenerado.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">No desactivar rangos con histórico antes de cerrar todas las declaraciones</p>
+<p>Si el Modelo 390 de algún ejercicio anterior aún no ha sido presentado o puede necesitar ser regenerado, <strong>no marque como Inactivo ningún rango de impuestos utilizado en ese ejercicio</strong>. Hacerlo alterará los importes del informe de forma que no refleja la realidad fiscal de ese período.</p>
+</div>
+<p><strong>Antes de marcar el rango como Inactivo:</strong> Exporte y archive el fichero XML y el CSV del último Modelo 390 generado con ese rango todavía activo. Esto le permitirá consultar los importes originales si fuera necesario en el futuro.</p>
+<p><strong>Checklist antes de desactivar un rango con histórico:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Verificar que el Modelo 390 de todos los ejercicios en los que se utilizó el rango ya ha sido presentado ante la AEAT.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Confirmar que no existe ninguna factura pendiente de contabilizar que use ese rango.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Asegurarse de que no hay procesos de rectificación o sustitución de declaraciones anteriores en curso.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Considerar si será necesario regenerar el informe de algún ejercicio histórico por auditoría u otro motivo.</li>
+</ul>
 <h4 id="actividades-del-iae"><strong>Actividades del I.A.E.</strong></h4>
 <p>En el Modelo 390 se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.</p>
 <p>El módulo Epígrafes I.A.E., instalado como dependencia del 390, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 390 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.</p>
