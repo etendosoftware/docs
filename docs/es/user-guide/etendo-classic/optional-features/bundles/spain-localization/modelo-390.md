@@ -180,13 +180,13 @@ Cuando un rango o tipo de impuesto se marca como **Inactivo** en Etendo, el sist
 Esto significa que **regenerar el Modelo 390 de un ejercicio cerrado después de haber desactivado un rango de impuestos provocará que los importes asociados a dicho rango desaparezcan del informe**, alterando los totales de una declaración que ya había sido calculada y presentada.
 
 !!! warning "Comportamiento conocido con impacto en declaraciones históricas"
-    El Modelo 390 no hace una captura (snapshot) de la configuración de impuestos en el momento de la generación. En cada ejecución consulta los rangos de impuestos **activos en ese momento**. Por ello, desactivar un rango con histórico afecta retroactivamente a todos los ejercicios anteriores en los que se utilice ese rango.
+    El Modelo 390 no hace una captura (snapshot) de la configuración de impuestos en el momento de la generación. Cada vez que se genera o regenera el informe, el sistema consulta qué rangos de impuestos están activos en ese momento. Por ello, desactivar un rango con histórico afecta retroactivamente a todos los ejercicios anteriores en los que se utilice ese rango.
 
 **Ejemplo concreto:**
 
 | Paso | Acción | Resultado en el 390 de 2025 |
 |------|--------|-----------------------------|
-| 1 | Se contabilizan facturas en 2025 usando el rango "Entregas IVA 10%" — Base: 10.000 €, Cuota: 1.000 € | El 390 de 2025 incluye esos importes correctamente |
+| 1 | Se contabilizan facturas en 2025 usando el rango "Entregas IVA 10%" — Base imponible: 10.000 €, Cuota de IVA: 1.000 € | El 390 de 2025 incluye esos importes correctamente |
 | 2 | En enero de 2026, un administrador marca "Entregas IVA 10%" como **Inactivo** | — |
 | 3 | Se regenera el 390 de 2025 | Los 10.000 € de base y 1.000 € de cuota **ya no aparecen** en el informe |
 | 4 | Se reactiva el rango o se crea uno nuevo con las mismas características | Los importes **vuelven a aparecer** al regenerar |
@@ -202,13 +202,14 @@ Para dejar de utilizar un rango de impuestos en operaciones futuras sin afectar 
 !!! danger "No desactivar rangos con histórico antes de cerrar todas las declaraciones"
     Si el Modelo 390 de algún ejercicio anterior aún no ha sido presentado o puede necesitar ser regenerado, **no marque como Inactivo ningún rango de impuestos utilizado en ese ejercicio**. Hacerlo alterará los importes del informe de forma que no refleja la realidad fiscal de ese período.
 
+**Antes de marcar el rango como Inactivo:** Exporte y archive el fichero XML y el CSV del último Modelo 390 generado con ese rango todavía activo. Esto le permitirá consultar los importes originales si fuera necesario en el futuro.
+
 **Checklist antes de desactivar un rango con histórico:**
 
 - [ ] Verificar que el Modelo 390 de todos los ejercicios en los que se utilizó el rango ya ha sido presentado ante la AEAT.
 - [ ] Confirmar que no existe ninguna factura pendiente de contabilizar que use ese rango.
 - [ ] Asegurarse de que no hay procesos de rectificación o sustitución de declaraciones anteriores en curso.
 - [ ] Considerar si será necesario regenerar el informe de algún ejercicio histórico por auditoría u otro motivo.
-- [ ] Como medida adicional, exportar y archivar el fichero XML y el CSV del último 390 generado con el rango aún activo, antes de desactivarlo.
 
 #### **Actividades del I.A.E.**
 
