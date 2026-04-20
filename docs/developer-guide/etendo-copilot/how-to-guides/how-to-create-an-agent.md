@@ -42,9 +42,12 @@ Some of the main fields to be completed are:
     When creating an agent, also consider the following fields available in the Agent window header:
     - **Agent Scope**: Controls which users can see and use this agent. Defaults to **Client**.
     - **Featured**: Marks the agent as a priority option in the Copilot Chat agent list.
-    - **Sync on Startup**: Automatically synchronizes the agent each time the application server restarts.
-    
+    - **Sync on Startup**: Automatically synchronizes the agent each time the application server restarts. During this startup sync, every active **Client Admin** role of the agent's client is automatically granted access to the agent (a corresponding record is created in the [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window) window if it does not already exist).
+
     For full details on each field, see [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
+
+!!!info "Automatic access on synchronization"
+    Whenever an agent is synchronized (manually from the Agent window or automatically on startup), the role performing the sync is automatically granted access to the agent if it did not have it yet. This ensures that the webhook access checks performed during the sync include the current role without requiring manual setup in the [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window) window.
 
 ### Agent Definition Example
 
