@@ -210,12 +210,58 @@ plugins:
                   - Financial Management: 
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
                     - Receivables and Payables:
-                      - Transactions: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md
-                      - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md
-                      - Setup: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup.md
+                      - Transactions:
+                        - Purchase Invoice Payment Plan: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice-payment-plan.md
+                        - Payment Out: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out.md
+                        - Payment Proposal: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal.md
+                        - Sales Invoice Payment Plan: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/sales-invoice-payment-plan.md
+                        - Payment In: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md
+                        - Financial Account: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account.md
+                        - Payment Execution: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-execution.md
+                        - Business Partner Settlement: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/business-partner-settlement.md
+                        - Tax Payment: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment.md
+                        - Remittance: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance.md
+                        - Doubtful Debt: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt.md
+                        - Doubtful Debt Run: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run.md
+                      - Analysis Tools:
+                        - Cashflow Forecast Report: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/cashflow-forecast-report.md
+                        - Receivables Aging Schedule: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule.md
+                        - Payables Aging Schedule: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule.md
+                        - Payment Report: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md
+                        - Payment Run: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-run.md
+                      - Setup:
+                        - Tax Register Type: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type.md
+                        - Payment Method: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/payment-method.md
+                        - Matching Algorithm: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/matching-algorithm.md
+                        - Bank File Format: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/bank-file-format.md
+                        - Execution Process: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/execution-process.md
+                        - Remittance Type: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type.md
+                        - Doubtful Debt Method: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/doubtful-debt-method.md
                     - Accounting:
-                      - Transactions: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md
-                      - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md
+                      - Transactions:
+                        - Financial Type Configuration: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration.md
+                        - Simple G/L Journal: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal.md
+                        - G/L Journal: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal.md
+                        - End Year Close: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close.md
+                        - GL Posting by DB Tables: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables.md
+                        - Budget: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget.md
+                        - Create Budget Reports in Excel: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/create-budget-reports-in-excel.md
+                        - Not Posted Transaction Report: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-transaction-report.md
+                        - VAT Regularization: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization.md
+                        - Not Posted Documents: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.md
+                        - Reset Accounting: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/reset-accounting.md
+                      - Analysis Tools:
+                        - Accounting Transaction Details: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/accounting-transaction-details.md
+                        - Balance Sheet and P&L Structure: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure.md
+                        - Balance Sheet and P&L Structure Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md
+                        - Trial Balance: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance.md
+                        - General Ledger Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report.md
+                        - General Ledger Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced.md
+                        - Journal Entries Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report.md
+                        - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
+                        - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
+                        - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
+                        - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
                       - Setup: 
                         - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
                         - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
@@ -236,7 +282,11 @@ plugins:
                         - ABC Activity: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity.md
                         - Accounting Templates: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates.md
                         - Balance Sheet and P/L Structure Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup.md
-                    - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
+                    - Assets:
+                      - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/assets.md
+                      - Asset Group: user-guide/etendo-classic/basic-features/financial-management/assets/asset-group.md
+                      - Amortization: user-guide/etendo-classic/basic-features/financial-management/assets/amortization.md
+                      - Asset Amortization Report (Excel): user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report.md
                 - Optional Features:
                   - Bundles:
                     - Essentials Extensions Bundle: 
