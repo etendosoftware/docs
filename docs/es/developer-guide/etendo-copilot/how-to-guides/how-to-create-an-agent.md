@@ -28,7 +28,7 @@ Algunos de los campos principales que deben completarse son:
     - **Agente multimodelo**
     - **LangGraph**
 
-- **Model**: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección [¿Qué modelo debería elegir?](#qué-modelo-debería-elegir) para más información.
+- **Model**: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección [¿Qué modelo debería elegir?](#qué-modelo-debo-elegir) para más información.
 
 !!!info
     El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`.
