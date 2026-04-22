@@ -169,9 +169,9 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
     
     There could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
 
-    That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the [Remittance](../financial-management/receivables-and-payables/transactions.md#remittance) financial workflow.
+    That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the [Remittance](../financial-management/receivables-and-payables/transactions/remittance.md) financial workflow.
 
-    For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+    For more information about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions/financial-account.md).
 
 #### Customer
 
@@ -196,7 +196,7 @@ Fields to note:
     If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.
 
     !!! info  
-        For more information, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
+        For more information, visit [Payment Method](../financial-management/receivables-and-payables/setup/payment-method.md).
 
 - **Payment Terms**: The one selected will be the one used while managing sales invoices payment plan.
 
@@ -206,7 +206,7 @@ Fields to note:
 - **Financial Account**: The one selected will be the one used while collecting and reconciling the payments made by that customer. 
 
     !!! info
-        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions/financial-account.md).
 
 - **Invoice Terms**: There are few invoice terms which can be used while generating sales invoices.
 
@@ -293,7 +293,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
     If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
   
     !!! info
-        For more information, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
+        For more information, visit [Payment Method](../financial-management/receivables-and-payables/setup/payment-method.md).
 
 - **Payment Terms**: The one selected will be the one used while managing supplier invoices payment plans. 
 
@@ -315,7 +315,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
 - **Financial account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
 
     !!! info
-        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
+        For more information, visit [Financial Account](../financial-management/receivables-and-payables/transactions/financial-account.md).
 
 - **Tax Category**: You can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
     
@@ -349,7 +349,7 @@ The user can configure for each supplier or creditor and available accounting sc
 - the **Vendor Prepayment** transactions such as those cases when the supplier of the goods requires the company to pay in advance part or full amount of the debt.  
     
     !!! info
-        For more information, visit [Vendor Prepayments](../financial-management/receivables-and-payables/transactions.md#payment-out).
+        For more information, visit [Vendor Prepayments](../financial-management/receivables-and-payables/transactions/payment-out.md).
 
 At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. The user can always change them.
 

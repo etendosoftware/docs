@@ -21,7 +21,7 @@ tags:
 In this window, the user can configure the different options to use in the Financial Type Configuration window.
 
 !!! info
-    For more information, visit [Financial Type Configuration](../../../financial-management/accounting/transactions.md#financial-type-configuration).
+    For more information, visit [Financial Type Configuration](../../../financial-management/accounting/transactions/financial-type-configuration.md).
 
 
 ### How to install the Financial Type dataset

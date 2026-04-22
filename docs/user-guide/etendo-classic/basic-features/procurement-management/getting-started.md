@@ -183,7 +183,7 @@ Finance staff: To invoice these documents, go to the [Purchase invoice](../../..
 - If the vendor sends an invoice with the original purchase order plus the return materials order, you need to select a Purchase invoice document type and then select the lines through the *Create lines from* button
 - If the vendor does not send an invoice for the return materials order but wants to keep it as credit so you can use it later, you have to:
     - Create a *Reverse purchase invoice* for these returned materials
-    - Leave it as credit to be used later through the [Payment out](../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out) window
+    - Leave it as credit to be used later through the [Payment out](../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out.md) window
     - A new purchase invoice based on the original purchase order can consume that credit
 
 ## Relationship with other application areas

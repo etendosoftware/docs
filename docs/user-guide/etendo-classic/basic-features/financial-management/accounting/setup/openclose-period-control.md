@@ -39,7 +39,7 @@ Here’s how the process works in Etendo:
     !!!warning
         Permanently closed periods can’t be reopened unless you run Undo Close Year first.
 
-6. If needed, **run [Undo Close Year](../../accounting/transactions.md#undo-close-year)** to reopen periods and allow further changes. After making changes, you can run Close Year again.
+6. If needed, **run [Undo Close Year](../../accounting/transactions/end-year-close.md)** to reopen periods and allow further changes. After making changes, you can run Close Year again.
 
 !!!important
     - You can’t create years or periods in the Open/Close Period Control window—use the Fiscal Calendar window for that.

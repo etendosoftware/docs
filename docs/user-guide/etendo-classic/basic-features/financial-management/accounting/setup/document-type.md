@@ -46,13 +46,13 @@ The complete list of standard document types is the following:
 | POS Order | Sales Order | [Point of Sales Order](../../../sales-management/transactions.md#sales-invoice) |
 | Warehouse Order | Sales Order | [Warehouse Order](../../../sales-management/transactions.md#sales-invoice) |
 | Standard Order | Sales Order | [Sales Order](../../../sales-management/transactions.md#sales-invoice) |
-| AP Payment | AP Payment | [Payment Out](../../../financial-management/receivables-and-payables/transactions.md#payment-out) |
-| AR Receipt | AR Receipt | [Payment In](../../../financial-management/receivables-and-payables/transactions.md#payment-in) |
-| Financial Account Transaction | Financial Account Transaction | [Financial Account Transaction](../../../financial-management/receivables-and-payables/transactions.md#transaction) |
-| Bank Statement File | Bank Statement File | [Bank Statement](../../../financial-management/receivables-and-payables/transactions.md#imported-bank-statements) |
-| Payment Proposal | AP Payment Proposal | [Payment Proposal](../../../financial-management/receivables-and-payables/transactions.md#payment-proposal) |
-| Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
-| Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
+| AP Payment | AP Payment | [Payment Out](../../../financial-management/receivables-and-payables/transactions/payment-out.md) |
+| AR Receipt | AR Receipt | [Payment In](../../../financial-management/receivables-and-payables/transactions/payment-in.md) |
+| Financial Account Transaction | Financial Account Transaction | [Financial Account Transaction](../../../financial-management/receivables-and-payables/transactions/financial-account.md) |
+| Bank Statement File | Bank Statement File | [Bank Statement](../../../financial-management/receivables-and-payables/transactions/financial-account.md#import-statement) |
+| Payment Proposal | AP Payment Proposal | [Payment Proposal](../../../financial-management/receivables-and-payables/transactions/payment-proposal.md) |
+| Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions/financial-account.md#reconcile) |
+| Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions/doubtful-debt.md) |
 | Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions.md#cost-adjustment) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
 | Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions.md#header-7) |

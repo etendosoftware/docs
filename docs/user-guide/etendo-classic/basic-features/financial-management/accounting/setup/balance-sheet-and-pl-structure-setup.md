@@ -19,7 +19,7 @@ The Balance Sheet and P&L Structure Setup allows users to define how Etendo gene
 - Balance Sheet
 - Profit and Loss (P&L)
 
-This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the [Balance Sheet and P&L Structure Advanced](../analysis-tools.md#balance-sheet-and-pl-structure-advanced) window.
+This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the [Balance Sheet and P&L Structure Advanced](../analysis-tools/balance-sheet-and-pl-structure-advanced.md) window.
 
 A key point is that both reports are built based on the **[Organization Account Tree](./account-tree.md)** (Chart of Accounts). Therefore, the account tree must be properly structured to obtain meaningful and accurate financial reports.
 
@@ -107,7 +107,7 @@ This setup defines how Etendo generates a **Profit and Loss report** for a selec
     Above node must be an Account Tree element properly configured. For more information, visit [Account Tree](./account-tree.md).
 
 !!! info
-    For more information about Balance Sheet and P/L Structure reports visit: [Balance Sheet and P/L Structure Advanced](../../accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced). 
+    For more information about Balance Sheet and P/L Structure reports visit: [Balance Sheet and P/L Structure Advanced](../../accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md). 
 
 ---
 

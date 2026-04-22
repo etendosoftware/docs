@@ -21,14 +21,14 @@ In Etendo, most of the accounting entries are automatically created while postin
 - [Goods Receipts](../procurement-management/transactions.md#goods-receipts) and [Purchase Invoices](../procurement-management/transactions.md#purchase-invoice) in the [Procurement Management](../procurement-management/getting-started.md) business area
 - [Goods Shipments](../sales-management/transactions.md#goods-shipment) and [Sales Invoices](../sales-management/transactions.md#sales-invoice) in the [Sales Management](../sales-management/getting-started.md) business area.
 
-Accounting entries not directly related to [documents](../financial-management/accounting/setup/document-type.md) managed within a given application area can be created and posted in a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal). For instance a provision for stock depreciation accounting entry.
+Accounting entries not directly related to [documents](../financial-management/accounting/setup/document-type.md) managed within a given application area can be created and posted in a [G/L Journal](../financial-management/accounting/transactions/gl-journal.md). For instance a provision for stock depreciation accounting entry.
 
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
 The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](../procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](../general-setup/application/preference.md).
 
-- To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables)
+- To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](../financial-management/accounting/transactions/gl-posting-by-db-tables.md)
 
 - or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](../general-setup/process-scheduling/process-request.md) window.
 
@@ -71,8 +71,8 @@ Payables and Receivables Management addresses customer collections and supplier 
 The following setup needs to be done before performing the process:
 
 - [Payables and Receivables Document Types](../financial-management/accounting/setup/document-type.md).
-- [Payment Methods](../financial-management/receivables-and-payables/transactions.md#payment-method).
-- [Financial Accounts](../financial-management/receivables-and-payables/transactions.md#financial-account).
+- [Payment Methods](../financial-management/receivables-and-payables/setup/payment-method.md).
+- [Financial Accounts](../financial-management/receivables-and-payables/transactions/financial-account.md).
 - [Business Partners](../master-data-management/master-data.md#business-partner) to use above configured Payment Methods and Financial Accounts.
 
 !!!note
@@ -103,23 +103,23 @@ A payment plan contains the payment amount/s expected for the document and its f
 
 #### Creation of payments do not related to orders/invoices
 
-In the [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](../financial-management/accounting/transactions.md#gl-journal) therefore it is not related to an order/invoice but to a G/L Item.
+In the [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](../financial-management/accounting/transactions/gl-journal.md) therefore it is not related to an order/invoice but to a G/L Item.
 
 A G/L Item payment created in a G/L Journals implies:
 
-- the creation of a [Payment Made](../financial-management/receivables-and-payables/transactions.md#payment-out) if the payment information is entered in the *Credit* line of the G/L Journal.
+- the creation of a [Payment Made](../financial-management/receivables-and-payables/transactions/payment-out.md) if the payment information is entered in the *Credit* line of the G/L Journal.
 
-The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](../financial-management/receivables-and-payables/setup.md#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
+The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](../financial-management/receivables-and-payables/setup/payment-method.md#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
 
-- Or the creation of a [Payment Received](../financial-management/receivables-and-payables/transactions.md#payment-in) if the payment information is entered in the *Debit* line of the G/L Journal.
+- Or the creation of a [Payment Received](../financial-management/receivables-and-payables/transactions/payment-in.md) if the payment information is entered in the *Debit* line of the G/L Journal.
 
-The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](../financial-management/receivables-and-payables/setup.md#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
+The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](../financial-management/receivables-and-payables/setup/payment-method.md#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
 
 #### Review of the status of the pending payments
 
 On a periodic basis the Finance Staff reviews the status of the payments pending to be collected / to be paid by looking:
 
-- At the [Payment Report](../financial-management/receivables-and-payables/analysis-tools.md#payment-report) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
+- At the [Payment Report](../financial-management/receivables-and-payables/analysis-tools/payment-report.md) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
 
      Overdue check-box allows to narrow down the search and to show only overdue payments.
      Payment Type displays Receivables, Payables or both.
@@ -130,14 +130,14 @@ On a periodic basis the Finance Staff reviews the status of the payments pending
 
 When a Payment is Received the Finance staff can register it in different ways:
 
-- In the [Payment In](../financial-management/receivables-and-payables/transactions.md#payment-in) window by selecting the Sales Invoices and/or Orders payment is received against.
+- In the [Payment In](../financial-management/receivables-and-payables/transactions/payment-in.md) window by selecting the Sales Invoices and/or Orders payment is received against.
 
 !!!note
     Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
 
 - Using the [Add Payment button](../sales-management/transactions.md#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
 
-- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
+- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](../financial-management/receivables-and-payables/setup/payment-method.md).
 
 If collection does not happen on time:
 
@@ -169,8 +169,8 @@ There are 3 ways to pay vendor bills:
 
 #### Recording of the financial account transactions
 
-Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account) window by pressing the Add Transaction button and selecting either the received or made payments.
-This step in the process can also be completely automated through the configuration of the [Payment Method](../financial-management/receivables-and-payables/setup.md#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
+Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](../financial-management/receivables-and-payables/transactions/financial-account.md) window by pressing the Add Transaction button and selecting either the received or made payments.
+This step in the process can also be completely automated through the configuration of the [Payment Method](../financial-management/receivables-and-payables/setup/payment-method.md#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
 
 #### Reconciliation of the financial account transactions
 
@@ -267,9 +267,9 @@ Overall the Period End Close to Financial Report business flow can be split into
 
 This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
 
-- The ledger accounts balance can be initialized by using a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
+- The ledger accounts balance can be initialized by using a [G/L Journal](../financial-management/accounting/transactions/gl-journal.md) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
 A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.
-- The financial accounts balance can be initialized in the [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
+- The financial accounts balance can be initialized in the [Financial Account](../financial-management/receivables-and-payables/transactions/financial-account.md) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
 
 
 ##### Review of the accounting transactions
@@ -285,25 +285,25 @@ Etendo allows reviewing and correcting if needed the accounting entries of trans
 Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.
 
 
-Additionally, the [Accounting Transactions Details](../financial-management/accounting/analysis-tools.md#accounting-transaction-details) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](../financial-management/accounting/transactions.md#not-posted-transaction-report) report shows the transactions which need to be accounted for but have not been accounted yet.
+Additionally, the [Accounting Transactions Details](../financial-management/accounting/analysis-tools/accounting-transaction-details.md) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](../financial-management/accounting/transactions/not-posted-transaction-report.md) report shows the transactions which need to be accounted for but have not been accounted yet.
 
 Finally Etendo allows to massively fix accounting errors if any, for instance a vendor liability account wrongly assigned to a vendor or to a set of vendors.
 The way to do that is:
 
-- run the [Reset Accounting](../financial-management/accounting/transactions.md#reset-accounting) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
+- run the [Reset Accounting](../financial-management/accounting/transactions/reset-accounting.md) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
 - correct the accounting configuration
-- get the transactions posted once again by using the [GL Posting by DB Tables](../financial-management/accounting/transactions.md#gl-posting-by-db-tables) feature.
+- get the transactions posted once again by using the [GL Posting by DB Tables](../financial-management/accounting/transactions/gl-posting-by-db-tables.md) feature.
 This feature performs a massive posting of all the accounting or just the accounting of a table for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
 
 ##### Creation of accounting transactions and G/L item payments
 
-As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](../financial-management/accounting/transactions.md#gl-journal).
+As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](../financial-management/accounting/transactions/gl-journal.md).
 A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
 G/L items payments are also managed within the [Payables and Receivables management](../financial-management/getting-started.md#payables-and-receivables-management) area.
 
 ##### Printing of the Trial Balance to check that Debit=Credit
 
-The [Trial Balance](../financial-management/accounting/analysis-tools.md#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
+The [Trial Balance](../financial-management/accounting/analysis-tools/trial-balance.md) is a list indicating the balances of every single general ledger account at a given point in time.
 
 The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.
 
@@ -345,7 +345,7 @@ This way allows the calculation of the *Operating Income* as the difference betw
 Other adjustments required can be:
 
 - Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
-This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](../financial-management/accounting/transactions.md#gl-journal).
+This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](../financial-management/accounting/transactions/gl-journal.md).
 - Taxes such as the VAT needs to be settled periodically.
 It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.
 - Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:
@@ -361,22 +361,22 @@ It is very useful to print these financial reports prior to the closing of the y
 
 During the accounting cycle there are other reports which can also be printed:
 
-- the [General Ledger Report](../financial-management/accounting/analysis-tools.md#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
-- the [Journal Entries Report](../financial-management/accounting/analysis-tools.md#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
+- the [General Ledger Report](../financial-management/accounting/analysis-tools/general-ledger-report.md) list all the debits entries and all the credits entries of every T-Account within a given period of time
+- the [Journal Entries Report](../financial-management/accounting/analysis-tools/journal-entries-report.md) lists in a chronological order every journal entry posted in the ledger.
 
 ##### The closing of the fiscal year
 
 Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
 
-- Run the [Not Posted Transaction](../financial-management/accounting/transactions.md#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
+- Run the [Not Posted Transaction](../financial-management/accounting/transactions/not-posted-transaction-report.md) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
 - Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](../financial-management/accounting/setup/general-ledger-configuration.md#active-tables-tab).
 - Unscheduled the [Accounting Server Process](../general-setup/process-scheduling/process-request.md) therefore an stable scene can be assured.
-- Check the [Financial Account/s](../financial-management/receivables-and-payables/transactions.md#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](../../how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
+- Check the [Financial Account/s](../financial-management/receivables-and-payables/transactions/financial-account.md) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](../../how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
 
 Before running the close year process the accounting periods can be [closed](../financial-management/accounting/setup/openclose-period-control.md) not to allow any further posting within those periods, but the *13th period*.
-The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](../financial-management/accounting/transactions.md#gl-journal) prior to closing the year.
+The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](../financial-management/accounting/transactions/gl-journal.md) prior to closing the year.
 
-The *Close Year* process can be executed from the [End Year Close](../financial-management/accounting/transactions.md#end-year-close) window.
+The *Close Year* process can be executed from the [End Year Close](../financial-management/accounting/transactions/end-year-close.md) window.
 
 The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
 
@@ -389,7 +389,7 @@ That check-box is named *Reverse Permanent Account Balances*.
 Etendo uses the adjustment period (i.e. December 31st) for accounting the closing transactions if any, and the next period's first date (i.e. January 1st) for accounting the opening transactions if any.
 
 !!!info
-    For more information, visit the [End Year Close](../financial-management/accounting/transactions.md#end-year-close) window.
+    For more information, visit the [End Year Close](../financial-management/accounting/transactions/end-year-close.md) window.
 
 
 
@@ -397,18 +397,18 @@ Etendo uses the adjustment period (i.e. December 31st) for accounting the closin
 
 Once a year has been closed every financial report contains the corresponding closing and opening transactions:
 
-- the [Balance Sheet](../financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure) will show the financial situation of the organization as of the end of the closed accounting period.
+- the [Balance Sheet](../financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure.md) will show the financial situation of the organization as of the end of the closed accounting period.
 Etendo allows to get a two columns balance sheet:
           One column shows the balances as of the end of the most recent accounting period
           and the other column shows the balances as of the prior period end.
 
 This balance allows seeing how the financial position of the organization has changed over time.
 
-- the [Income Statement](../financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure) will show the organization performance over the year closed
+- the [Income Statement](../financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure.md) will show the organization performance over the year closed
 
 And besides: 
 
-- the [General ledger Journal](../financial-management/accounting/analysis-tools.md#general-ledger-report) allows to show for a given accounting period below entries posted by the Close Year process:
+- the [General Ledger Report](../financial-management/accounting/analysis-tools/general-ledger-report.md) allows to show for a given accounting period below entries posted by the Close Year process:
     the opening balance entry
     the closing balance entry
     and the P&L closing entry

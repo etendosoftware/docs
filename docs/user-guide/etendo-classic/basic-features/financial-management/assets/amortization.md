@@ -63,7 +63,7 @@ Fields to note:
 ![assets6](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
 
 !!!info 
-    For more information about Financial Account functionality visit [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
+    For more information about Financial Account functionality visit [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md).
 
 ## Accounting Dimensions Assets
 

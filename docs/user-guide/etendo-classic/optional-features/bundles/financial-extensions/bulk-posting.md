@@ -27,17 +27,17 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](../../../basic-features/financial-management/assets/overview.md#bulk-posting)
+- [Amortization](../../../basic-features/financial-management/assets/amortization.md)
 - [Goods Movements](../../../basic-features/warehouse-management/transactions.md#bulk-posting_1)
-- [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
+- [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md)
 - [Matched Purchase Invoices](../../../basic-features/procurement-management/transactions.md#bulk-posting_2)
 - [Cost Adjustment](../../../basic-features/warehouse-management/transactions.md#bulk-posting_3)
 - [Bill of Materials Production](../../../basic-features/warehouse-management/transactions.md#bulk-posting_2)
 - [Internal Consumption](../../../basic-features/production-management/transactions.md#bulk-posting_1)
-- [Doubtful Debt](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
+- [Doubtful Debt](../../../basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt.md#bulk-posting)
 - [Landed Cost](../../../basic-features/procurement-management/transactions.md#bulk-posting_4)
-- [G/L Journal](../../../basic-features/financial-management/accounting/transactions.md#bulk-posting_1)
-- [Simple G/L Journal](../../../basic-features/financial-management/accounting/transactions.md#bulk-posting)
+- [G/L Journal](../../../basic-features/financial-management/accounting/transactions/gl-journal.md)
+- [Simple G/L Journal](../../../basic-features/financial-management/accounting/transactions/simple-gl-journal.md)
 - [Work Effort](../../../basic-features/production-management/transactions.md#bulk-posting)
 - [Goods Receipt](../../../basic-features/procurement-management/transactions.md#bulk-posting)
 - [Goods Shipment](../../../basic-features/sales-management/transactions.md#bulk-posting)
@@ -45,8 +45,8 @@ This functionality is available in the following windows:
 - [Return to Vendor Shipment](../../../basic-features/procurement-management/transactions.md#bulk-posting_3)
 - [Sales Invoice](../../../basic-features/sales-management/transactions.md#bulk-posting_2)
 - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#bulk-posting_1)
-- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
-- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
+- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-in.md)
+- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-out.md)
 - [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#bulk-posting)
 
 ### Accounting Status Column
@@ -68,7 +68,7 @@ It is necessary to run the **Days Back to Refresh Accounting** background proces
 The Bulk Posting module includes the Not Posted Documents functionality. This is used to find all the not posted documents in the same window and to post them massively.
 
 !!!info
-    For more information, visit [Not Posted Documents](../../../basic-features/financial-management/accounting/transactions.md#not-posted-documents) user guide.
+    For more information, visit [Not Posted Documents](../../../basic-features/financial-management/accounting/transactions/not-posted-documents.md) user guide.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

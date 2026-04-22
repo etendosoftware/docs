@@ -90,7 +90,7 @@ Finally, a year can be:
 -   **closed**
 -   and **re-opened**
 
-Both actions are performed in the [End Year Close](../../accounting/transactions.md#end-year-close) window.
+Both actions are performed in the [End Year Close](../../accounting/transactions/end-year-close.md) window.
 
 ---
 
