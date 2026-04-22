@@ -4,3 +4,22 @@
   {{ super() }}
   <div id="etendo-chat-widget"></div>
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('.md-select__link');
+      if (!link) return;
+      var lang = link.getAttribute('hreflang');
+      if (!lang) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var path = window.location.pathname;
+      var target = lang === 'es'
+        ? (path.startsWith('/es/') ? path : '/es' + path)
+        : (path.startsWith('/es/') ? path.slice(3) : path);
+      window.location.href = target;
+    }, true);
+  </script>
+{% endblock %}
