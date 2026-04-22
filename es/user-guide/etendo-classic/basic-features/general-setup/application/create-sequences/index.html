@@ -15326,6 +15326,7 @@
       <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
+  
       <script src="../../../../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../../../../../assets/javascripts/feedback.js"></script>
@@ -15341,6 +15342,22 @@
         <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
       
     
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('.md-select__link');
+      if (!link) return;
+      var lang = link.getAttribute('hreflang');
+      if (!lang) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var path = window.location.pathname;
+      var target = lang === 'es'
+        ? (path.startsWith('/es/') ? path : '/es' + path)
+        : (path.startsWith('/es/') ? path.slice(3) : path);
+      window.location.href = target;
+    }, true);
+  </script>
+
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
