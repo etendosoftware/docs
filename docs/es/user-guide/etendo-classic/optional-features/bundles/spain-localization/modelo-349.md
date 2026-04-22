@@ -17,11 +17,13 @@ Esta sección describe el módulo **Modelo AEAT 349 - Declaración recapitulativ
 
 ### Descripción del módulo
 
-El módulo de generación del Modelo 349 genera un fichero `*.txt` válido de acuerdo con los requisitos establecidos por la Hacienda Española. Esto permite a las empresas españolas cumplir con sus obligaciones fiscales de presentación de la declaración recapitulativa de las entregas y adquisiciones intracomunitarias de bienes.
+El módulo de generación del Modelo 349 genera un fichero `*.txt` válido conforme a los requisitos establecidos por la Hacienda Española.
 
-La funcionalidad sigue la Orden HAC/360/2002, modificada en última instancia por la Orden HAC/174/2020.
+Esto permite a las empresas españolas cumplir con sus obligaciones fiscales relacionadas con la declaración recapitulativa de las entregas y adquisiciones intracomunitarias de bienes.
 
-De acuerdo con el reglamento del IVA, están obligados a presentar el modelo 349, los sujetos pasivos del Impuesto que realicen cualquiera de las siguientes operaciones:
+La funcionalidad sigue la Orden HAC/360/2002, modificada por última vez por la Orden HAC/174/2020.
+
+De acuerdo con el reglamento del IVA, deben presentar el modelo 349 los sujetos pasivos del impuesto que realicen cualquiera de las siguientes operaciones:
 
 -   Las entregas de bienes destinados a otro Estado miembro, entregas de bienes exentas del impuesto.
 -   Las adquisiciones intracomunitarias de bienes sujetas al impuesto.
@@ -33,11 +35,16 @@ La declaración recapitulativa de operaciones intracomunitarias incluye:
 -   Los datos de identificación de los proveedores y adquirientes.
 -   La base imponible en euros de las operaciones intracomunitarias de bienes declaradas.
 
-En general, la declaración recapitulativa deberá presentarse por cada mes natural durante los veinte primeros días naturales del mes inmediato siguiente, salvo la correspondiente al mes de julio, que podrá presentarse durante el mes de agosto y los veinte primeros días naturales del mes de septiembre y la correspondiente al último período del año, que deberá presentarse durante los 30 primeros días naturales del mes de enero.
+En general, la declaración recapitulativa debe presentarse por cada mes natural dentro de los veinte primeros días naturales del mes siguiente.
 
-Cuando ni durante el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa sea superior a 50.000 euros, excluido el Impuesto sobre el Valor Añadido, la declaración recapitulativa deberá presentarse durante los veinte primeros días naturales del mes inmediato siguiente al correspondiente período trimestral.
+Hay dos excepciones:
 
-Si al final de cualquiera de los meses que componen cada trimestre natural se superará el importe mencionado en el párrafo anterior, deberá presentarse una declaración recapitulativa para el mes o los meses transcurridos desde el comienzo de dicho trimestre natural durante los veinte primeros días naturales inmediatos siguientes.
+- La correspondiente al mes de julio puede presentarse durante el mes de agosto y los veinte primeros días naturales de septiembre.
+- La correspondiente al último período del año debe presentarse durante los treinta primeros días naturales de enero.
+
+Cuando ni en el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa supere los 50.000 euros, excluido el IVA, la declaración debe presentarse dentro de los veinte primeros días naturales del mes siguiente al correspondiente período trimestral.
+
+Si al final de cualquiera de los meses que componen un trimestre natural se supera ese importe, debe presentarse una declaración recapitulativa para el mes o meses transcurridos desde el inicio del trimestre, dentro de los veinte primeros días naturales siguientes.
 
 !!! info
     Desde 2020 se suprime el período anual de declaración.
@@ -49,9 +56,16 @@ El modelo 349 diferencia las notas de abono que rectifican facturas ya incluidas
 !!! info
     El módulo de generación del Modelo 349 no incluye las operaciones triangulares, puesto que dichas operaciones no se gestionan en Etendo. 
 
-Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo `AP/AR credit memo` como facturas de abono, ya que dicho tipo de transacciones no reflejan devoluciones de mercancía. Por ello, el módulo 349 tiene en cuenta los tipos de documento `AP/AR invoice` (como facturas de compra y venta) y los tipos de documento `AP/AR invoice` negativos (como notas de abono o facturas rectificativas).
+Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo `AP/AR credit memo` como facturas de abono, ya que ese tipo de transacción no refleja devoluciones de mercancía.
 
-Además, el módulo no incluye el supuesto de Declaración Complementaria para los casos en que deban incluirse solo operaciones que, aun debiendo haberse declarado en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deben incluirse manualmente a través de la página de la AEAT, tal y como se explica en la sección `Declaración Complementaria`.
+Por ello, el módulo 349 sí tiene en cuenta:
+
+- los tipos de documento `AP/AR invoice`, como facturas de compra y venta
+- los tipos de documento `AP/AR invoice` negativos, como notas de abono o facturas rectificativas
+
+Además, el módulo no contempla el supuesto de **Declaración Complementaria** para los casos en que deban incluirse solo operaciones que, aun debiendo haberse declarado en otra declaración del mismo ejercicio ya presentada, no se incluyeron.
+
+Estas operaciones deben incorporarse manualmente a través de la página de la AEAT, tal y como se explica en la sección `Declaración Complementaria`.
 
 ## Instalación del módulo
 
@@ -63,17 +77,14 @@ Para la instalación del módulo **Modelo AEAT 349 - Declaración recapitulativa
 !!! info
     Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
-Es importante recalcar que:
-
--   El módulo del Modelo AEAT 349 incluye el correspondiente conjunto de datos que relaciona los tipos/rangos de impuestos con los parámetros del 349.
--   Una vez instalado el módulo, éste se debe aplicar a la Organización para la cual se requiere obtener el modelo 349, tal y como se describe en el apartado siguiente.
+Es importante recalcar que el módulo del Modelo AEAT 349 incluye el correspondiente conjunto de datos que relaciona los tipos/rangos de impuestos con los parámetros del 349.
 
 ### Aplicación del módulo
 
 Una vez instalado el módulo del 349, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
 
 !!!note
-    Es fundamental que el [módulo de impuestos para España](impuestos-para-españa.md) esté instalado y aplicado a la organización correspondiente. Ese módulo es válido para todos los modelos de declaración de impuestos y debe estar instalado antes de aplicar el módulo del 349.
+    Es fundamental que el [módulo de impuestos para España](impuestos-para-españa.md) esté instalado y aplicado a la organización correspondiente. Ese módulo es válido para todos los modelos de declaración de impuestos.
 
 El usuario deberá navegar a `Configuración General` > `Gestión del módulo de Empresa`, seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado: primero el módulo de impuestos, si no está aplicado previamente, y después el módulo del 349.
 
@@ -291,7 +302,9 @@ La misma lógica aplica a las declaraciones trimestrales y anuales.
 
 Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono o devolución es una `rectificativa del 349`.
 
-Para introducir esta información, el usuario debe navegar a `Gestión de compras` o `Ventas` > `Transacciones` > `Factura (Proveedor)` o `Factura (Cliente)` y crear una nueva factura como una de las siguientes opciones:
+Para introducir esta información, el usuario debe navegar a `Gestión de compras` o `Ventas` > `Transacciones` > `Factura (Proveedor)` o `Factura (Cliente)`.
+
+Allí debe crear una nueva factura utilizando una de las siguientes opciones:
 
 -   `AP/AR invoice` negativa
 -   `AP/AR credit Memo`
@@ -308,9 +321,11 @@ Después, en la solapa `Factura Rectificativa`, debe crear un nuevo registro par
     -   Base imponible del 349 de productos, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en productos
     -   Base imponible del 349 de servicios, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en servicios
 
-Si la nota de abono o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa `Factura Rectificativa`. En ese caso, no es necesario marcar el parámetro `Rectificativa del 349`.
+Si la nota de abono o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa `Factura Rectificativa`.
 
-En este escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. De este modo, genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.
+En ese caso, no es necesario marcar el parámetro `Rectificativa del 349`.
+
+En este escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. Así genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.
 
 ![](../../../../../../assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
 
@@ -324,11 +339,11 @@ Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostr
 -   Base Imponible del 349 Servicios
 
 !!! info
-    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, sólo aquellas que así se configuren por el usuario. 
+    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, solo aquellas que así configure el usuario.
 
-En caso de que la nota de abono o devolución de mercancía y la factura original pertenezcan al mismo periodo, por ejemplo al 1er mes del año 2022 (Enero 2022, en caso de declaración del 349 mensual), al 1er periodo del año 2022 (Enero 2022 a Marzo 2022, en caso de declaración del 349 trimestral) o al mismo mes (Enero 2022, en el caso de declaración del 349 mensual), tan sólo será necesario relacionar ambos documentos en la nueva solapa `Factura Rectificativa` sin tener que seleccionar el parámetro `Rectificativa del 349`.
+Si la nota de abono o devolución de mercancía y la factura original pertenecen al mismo periodo, por ejemplo al primer mes del año 2022 (enero 2022, en caso de declaración mensual) o al primer trimestre del año 2022 (enero 2022 a marzo 2022, en caso de declaración trimestral), solo será necesario relacionar ambos documentos en la solapa `Factura Rectificativa`, sin seleccionar el parámetro `Rectificativa del 349`.
 
-En este último escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. De este modo, genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.
+En este último escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. Así genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.
 
 ### Presentación del modelo 349 en formato electrónico
 
@@ -337,8 +352,7 @@ La presentación telemática del modelo 349 en formato electrónico requiere que
 La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde `Oficina virtual` > `Presentación de declaraciones` > `Todas las declaraciones` > `Modelo 349`.
 
 !!! info
-    Existe una **Guía de presentación telemática** en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [**aquí**](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
-
+    Existe una **Guía de presentación telemática** en la página web de Hacienda que explica cómo debe realizarse este trámite y que se puede descargar [**aquí**](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
 
 ### Presentación de declaraciones sustitutivas
 
