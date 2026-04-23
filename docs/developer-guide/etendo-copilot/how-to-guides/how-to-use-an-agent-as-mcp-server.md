@@ -46,7 +46,7 @@ The MCP configuration dialog lets you choose how the client authenticates agains
 | Authentication Type | How it works | Best for |
 |---------------------|--------------|----------|
 | **OAuth 2.1** | Uses a clean MCP URL and lets the client complete authentication through a browser login flow | Clients with native MCP OAuth support |
-| **Token in Header** | Sends the Etendo token in an `Authorization` or compatible HTTP header | Clients that support custom headers |
+| **Token in Header** | Sends the Etendo token in a custom HTTP header such as `etendo-token` | Clients that support custom headers |
 | **Token in URL** | Appends the token as `?token=...` in the MCP endpoint URL | Clients that cannot send custom headers |
 
 
@@ -421,4 +421,4 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
     Always use HTTPS in production environments. Keep your SWS tokens secure and never expose them in client-side code or public repositories. Prefer **OAuth 2.1** or **Token in Header** over **Token in URL** whenever the client supports them.
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

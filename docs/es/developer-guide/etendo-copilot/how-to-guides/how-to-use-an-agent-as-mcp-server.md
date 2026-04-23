@@ -14,7 +14,7 @@ tags:
 
 ## Visión general
 
-!!! example  "Beta Version — Important Notice"
+!!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
 
 Esta guía muestra cómo conectarse a agentes de Etendo Copilot usando el [Model Context Protocol (MCP)](../concepts/model-context-protocol.md). Cada agente expone automáticamente un servidor MCP al que puede conectarse desde varios clientes compatibles con MCP como Claude Desktop, VS Code, Gemini CLI y aplicaciones personalizadas.
@@ -46,7 +46,7 @@ El diálogo de configuración de MCP ahora le permite elegir cómo se autentica 
 | Tipo de autenticación | Cómo funciona | Mejor para |
 |----------------------|--------------|----------|
 | **OAuth 2.1** | Usa una URL MCP limpia y permite que el cliente complete la autenticación mediante un flujo de inicio de sesión en el navegador | Clientes con compatibilidad nativa con OAuth de MCP |
-| **Token in Header** | Envía el token de Etendo en una cabecera HTTP `Authorization` o compatible | Clientes que admiten cabeceras personalizadas |
+| **Token in Header** | Envía el token de Etendo en la cabecera HTTP personalizada `etendo-token` | Clientes que admiten cabeceras personalizadas |
 | **Token in URL** | Añade el token como `?token=...` en la URL del endpoint MCP | Clientes que no pueden enviar cabeceras personalizadas |
 
 ### Arquitectura del servidor MCP en Etendo Copilot
@@ -121,7 +121,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
         **Token in Header**
 
-        - Envía el token a través de la cabecera `Authorization`.
+        - Envía el token a través de la cabecera `etendo-token`.
         - Esta es la opción predeterminada.
         - Recomendado para clientes que admiten cabeceras HTTP personalizadas.
 
@@ -308,7 +308,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
    
     **Modo Simple**:
     ```
-    Ask the agent: "What can you help me with?"
+    Pregunta al agente: "¿Con qué puedes ayudarme?"
     ```
 
     **Modo Directo**: En la lista de herramientas del cliente, invoque `get_agent_prompt` sin parámetros. Revise la salida devuelta para comprender las herramientas disponibles del agente y las entradas esperadas. Después invoque cualquier herramienta de la lista directamente — por ejemplo, una herramienta `search_customers` con `{"query": "test", "limit": 1}`.
@@ -316,7 +316,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 4. **Si seleccionó OAuth 2.1**:
 
     ```
-    Complete the browser login flow when the client requests authentication
+    Completa el flujo de inicio de sesión en el navegador cuando el cliente solicite autenticación
     ```
 
     El flujo de inicio de sesión OAuth funciona de la siguiente manera:
@@ -349,9 +349,9 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 ### Interfaz de chat simple
 
-- **Usuario**: *"What can you help me with?"*
+- **Usuario**: *"¿Con qué puedes ayudarme?"*
 - **Agente**: *"Puedo ayudarle con operaciones de Etendo, análisis de datos, informes y más. ¿Qué le gustaría saber?"*
-- **Usuario**: *"Show me recent sales data"*
+- **Usuario**: *"Muéstrame los datos de ventas recientes"*
 - **Agente**: 
     
     [Usa herramientas internas] 
@@ -385,11 +385,11 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 - Compruebe que el ID del agente sea correcto.
 - Asegúrese de que el servicio de Copilot esté en ejecución.
 
-**OAuth login does not start:**
+**El inicio de sesión OAuth no arranca:**
 
 - Confirme que su cliente MCP admite OAuth 2.1 para servidores MCP.
 - Verifique que la URL generada no incluya un token si seleccionó `OAuth 2.1`.
-- Asegúrese de que el navegador pueda الوصول a la página de inicio de sesión de Etendo expuesta por el servidor MCP.
+- Asegúrese de que el navegador pueda acceder a la página de inicio de sesión de Etendo expuesta por el servidor MCP.
 
 **OAuth login stops after credentials:**
 
@@ -397,19 +397,19 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 - Si esa segunda página no aparece, verifique que el usuario tenga asignaciones válidas de rol y organización en Etendo.
 - Si **Usar organización y rol predeterminados** está activado pero la autenticación aún no continúa, verifique que el usuario tenga configurados un rol y una organización predeterminados válidos.
 
-**Client cannot send headers:**
+**El cliente no puede enviar cabeceras:**
 
 - Use `Token in URL` en lugar de `Token in Header`.
 - Si es necesario, active el **Modo de compatibilidad con MCP-remote** y regenere la configuración.
 
-**Tools not available:**
+**Herramientas no disponibles:**
 
 - Compruebe los permisos del usuario en Etendo.
 - Verifique que la configuración del agente incluya las herramientas necesarias.
 - Confirme que el modo de conexión coincide con sus necesidades.
 - En **Modo Directo**, llame primero a `get_agent_prompt` para entender cómo debe usarse el conjunto de herramientas.
 
-**Authentication errors:**
+**Errores de autenticación:**
 
 - Regenere el token SWS mediante `/sws/login` si está usando autenticación basada en token.
 - Compruebe que el formato del token incluya el prefijo `Bearer ` cuando lo envíe en una cabecera.
@@ -420,4 +420,4 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
     Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera **OAuth 2.1** o **Token in Header** frente a **Token in URL** siempre que el cliente los admita.
 
 ---
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
