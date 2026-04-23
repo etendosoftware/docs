@@ -12,6 +12,150 @@ tags:
 
 #
 
+## Marzo 2026
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Nueva versión de Etendo: 26.1 — Renovación del correo electrónico y modernización del stack tecnológico**
+
+    ---
+
+    La versión [26.1.0](./release-notes/etendo-classic/release-notes.md) marca el inicio de la nueva generación **Etendo 26**. **Todos los módulos compatibles** han sido actualizados para garantizar la plena integración.
+
+    **Configuración y envío de correo electrónico renovados**
+
+    El envío de correo en Etendo ha sido completamente rediseñado. Ahora es posible configurar la dirección de envío en tres niveles: para **usuarios** individuales, para cada **organización** o para toda la **empresa**. Etendo selecciona automáticamente la dirección más específica disponible, dando prioridad a la dirección del propio usuario frente al valor por defecto de la empresa. El [popup de correo](../getting-started/user-interface/navigation.md#email) también incorpora **selección asistida de destinatarios**: el sistema preselecciona destinatarios según reglas configurables, reduciendo la entrada manual y el riesgo de envíos incorrectos. Los mensajes enviados quedan registrados en los logs del sistema.
+
+    - Documentación: [Cómo configurar el correo electrónico](../user-guide/etendo-classic/how-to-guides/how-to-configure-email.md)
+
+    **Actualización de infraestructura: acción requerida antes de actualizar**
+
+    Esta versión requiere un entorno de servidor actualizado (Java 17). Se trata de un cambio de infraestructura que debe gestionar el **equipo de IT o el partner de implementación de Etendo** antes de realizar la actualización. Los usuarios de negocio no necesitan realizar ninguna acción. Si la organización gestiona sus propios servidores, contacte con el equipo de IT para confirmar la disponibilidad antes de actualizar.
+
+    **PostgreSQL 17 compatible**
+
+    PostgreSQL 17 está ahora oficialmente soportado. Las bases de datos existentes en versiones anteriores compatibles no requieren cambios; la actualización del motor de base de datos es opcional.
+
+    - Guía de actualización técnica: [Documentación de cambios de API](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Platform Extensions 3.17.0: Mejoras en gestión de tareas e interfaz UI 0.11.2**
+
+    ---
+
+    La versión [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle **Platform Extensions** incorpora mejoras relevantes en el módulo de gestión de tareas y en la interfaz principal de Etendo.
+
+    **Módulo de tareas: numeración y planificación**
+
+    Cada tarea creada a través del módulo de [Gestión de Tareas](../developer-guide/etendo-classic/bundles/platform/task.md) recibe ahora automáticamente un **número de referencia único por categoría de tarea** — por ejemplo, todas las tareas de entrega se numeran de forma independiente a las de aprobación. Esto facilita encontrar, ordenar y referenciar tareas específicas sin que los números se solapen entre categorías. Las tareas también incorporan campos de **fecha de inicio y fecha de vencimiento**, lo que permite la planificación y el seguimiento de plazos directamente en Etendo.
+
+    **Main UI 0.11.2: Mejoras en procesos y formularios**
+
+    La interfaz principal de Etendo alcanza la versión [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, con correcciones y mejoras en flujos de trabajo clave:
+
+    - **[Proceso de remesas](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resueltos problemas en el flujo de datos que impedían su correcta ejecución.
+    - **Automatización de facturas de compra**: los flujos automatizados conectan ahora las facturas de compra con las transacciones financieras.
+    - **[Cobros](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Añadir detalles**: corregido el error en la ventana de Cobros al usar la definición de proceso.
+    - **Navegación en grillas**: nuevo sistema de redirección dentro de las grillas que mejora la navegación entre ventanas.
+    - **Soporte de colores**: las configuraciones de color personalizadas están ahora disponibles en toda la interfaz.
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse Extensions 3.8.0: Unidades Logísticas anidadas y validación de stock en la app móvil**
+
+    ---
+
+    La versión [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle **Warehouse Extensions** mejora la recepción de mercancía y el control de stock usando la app móvil de Etendo. Dos mejoras específicas abordan la recepción de embalajes complejos y la sobreasignación de stock.
+
+    **Recepción de palés con contenedores internos (anidamiento de Unidades Logísticas)**
+
+    La pantalla de [Tareas de Recepción](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) en la app móvil ya soporta la recepción de **Unidades Logísticas (LU) contenidas dentro de otras Unidades Logísticas** — por ejemplo, un palé que contiene varias cajas etiquetadas en su interior. Anteriormente, solo podía registrarse un único nivel de contenedor en la recepción. Los datos del código de barras GS1-128 ahora se muestran en texto legible junto al código escaneado, facilitando la verificación de lo recibido por parte de los operarios.
+
+    **Validación de reservas de stock en la app móvil**
+
+    La app móvil de almacén comprueba ahora si el stock ya está comprometido con un pedido de venta o una reserva antes de permitir un movimiento de almacén. Si una transacción utilizaría stock que ya está apartado para otro pedido, el sistema bloquea la acción y alerta al operario — evitando roturas de stock y conflictos en la preparación de pedidos sin necesidad de comprobaciones manuales.
+
+    - Documentación: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+## Febrero 2026
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Actualización de Financial Extensions: Validación de cuentas más inteligente y exportación de presupuestos más limpia**
+
+    ---
+
+    Con las versiones [3.10.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) y [3.11.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle **Financial Extensions**, los equipos de contabilidad que gestionan el plan de cuentas y la planificación financiera reciben dos mejoras relevantes.
+
+    **Nuevo módulo: Account Structure Validation ⚡**
+
+    El nuevo módulo [Account Structure Validation](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md) previene errores de configuración al crear o modificar subcuentas en el árbol de cuentas — una fuente habitual de desequilibrios difíciles de detectar en el Balance y la Cuenta de Resultados.
+
+    Cuando está activo (activado por defecto), el sistema valida:
+
+    - Que la cuenta tenga un padre en el nivel **Desglose**.
+    - Que la longitud de la **Clave de Búsqueda** sea coherente con las cuentas hermanas.
+    - Que el **Tipo de Cuenta** y el **Signo** coincidan con los de la cuenta padre.
+
+    Si alguna validación falla, la cuenta no se guarda. Las cuentas individuales pueden excluirse de la validación cuando sea necesario.
+
+    **Exportación de presupuesto a Excel: sin más popups bloqueados**
+
+    El proceso **Exportar Presupuesto a Excel** ha sido migrado a una **Definición de Proceso**, sustituyendo la implementación anterior basada en servlet. El resultado: la exportación se ejecuta correctamente y el popup ya no permanece abierto tras completarse la descarga. El comportamiento es ahora consistente en Etendo 24 y Etendo 25.
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Main UI Beta 0.11.0: Adjuntos, agregaciones y empaquetado**
+
+    ---
+
+    El bundle **Platform Extensions** versión [3.15.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) incorpora la siguiente iteración de la **Etendo Main UI**, ahora en Beta [0.11.0](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.0){target="_blank"}.
+
+    - **Botón de adjuntos**: los registros pueden tener archivos adjuntos directamente desde la barra de herramientas de la nueva interfaz.
+    - **Actualización automática de funciones de agregación**: los valores agregados en las grillas se actualizan automáticamente, manteniendo totales y resúmenes sincronizados sin necesidad de actualización manual.
+    - **Proceso de empaquetado**: el proceso de Empaquetado ya está disponible y puede ejecutarse desde la nueva interfaz.
+    - **Flujo de guardado mejorado**: el estado del botón Guardar cambios es ahora preciso en todas las interacciones del formulario, eliminando los casos en que aparecía habilitado o deshabilitado incorrectamente.
+    - **Seguridad**: la interfaz ya no redirige a los usuarios a ventanas a las que no tienen acceso autorizado.
+
+    - Documentación: [Mejoras de interfaz](../user-guide/new-ui/ui-improvements.md)
+
+</div>
+
+### Etendo BI
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Etendo BI: Consultas base refactorizadas — el proceso de BI ya no se bloquea por errores**
+
+    ---
+
+    En la versión [3.4.0](./release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md) del bundle **Etendo BI Extensions**, se ha resuelto un problema crítico que afectaba al pipeline de datos de BI.
+
+    Varias consultas base en `com.etendoerp.powerbi.queries` referenciaban columnas y tablas que ya no existen. Dado que las consultas se ejecutan de forma secuencial, una sola consulta fallida bloqueaba todas las siguientes — lo que significaba que una consulta mal configurada podía impedir silenciosamente que grandes partes de los datos de BI fueran procesados.
+
+    Todas las consultas afectadas han sido actualizadas o reemplazadas por versiones funcionales compatibles con **Etendo 24** y **Etendo 25**, garantizando que el pipeline completo se ejecute hasta el final.
+
+</div>
+
 ## Enero 2026
 
 ### Warehouse Extensions
@@ -46,7 +190,7 @@ tags:
     
     **Etendo Main UI – Beta 0.10.0**
 
-    - **Mejoras en filtros de rejillas y tablas**: mejoras en los selectores de tipo de filtro y en el desplegable de filtros de tabla, restaurando un filtrado fiable en rejillas de alto volumen.
+    - **Mejoras en filtros de grillas y tablas**: mejoras en los selectores de tipo de filtro y en el desplegable de filtros de tabla, restaurando un filtrado fiable en grillas de alto volumen.
     - **Mejora de usabilidad de Copilot**: se añadió **soporte de entrada multilínea**, facilitando la redacción de prompts más largos y solicitudes estructuradas.
     - **Entrada de datos más rápida**: se incorporó un botón **Nuevo registro** directamente en los formularios.
     - **Procesos desde el menú**: ejecute **procesos e informes** directamente desde el menú, abriéndose los procesos manuales en una **nueva pestaña**.
@@ -182,10 +326,10 @@ tags:
 
     **Nueva UI de Etendo – Beta 0.9.0**  
     
-    La Workspace UI continúa evolucionando con mejoras orientadas a la usabilidad en *filtros, rejillas y navegación*, ofreciendo una experiencia de usuario más limpia, rápida e intuitiva.
+    La Workspace UI continúa evolucionando con mejoras orientadas a la usabilidad en *filtros, grillas y navegación*, ofreciendo una experiencia de usuario más limpia, rápida e intuitiva.
         
     - Documentación: [Mejoras de UI](../user-guide/new-ui/ui-improvements.md)
-    - Blog: [Nueva interfaz de Etendo: mejoras beta para filtros y rejillas](https://etendo.software/en/blog/etendo-new-interface-beta-improvements-filters-grids/)
+    - Blog: [Nueva interfaz de Etendo: mejoras beta para filtros y grillas](https://etendo.software/en/blog/etendo-new-interface-beta-improvements-filters-grids/)
 
     **Gestión de tareas más potente con prioridades**  
     
@@ -391,7 +535,7 @@ tags:
     En la versión [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions compatible con **Etendo 25**, la ventana **Not Posted Documents**, parte del módulo **Bulk Posting**, introduce una forma más inteligente y eficiente de gestionar los registros contables. Ahora los usuarios pueden:  
 
     - **Filtrar por múltiples tipos de documento** para acotar exactamente lo que necesitan.  
-    - **Navegar rápidamente** directamente a cualquier documento no contabilizado desde la cuadrícula de resultados.  
+    - **Navegar rápidamente** directamente a cualquier documento no contabilizado desde la grilla de resultados.  
     - **Ejecutar acciones de contabilización masiva** para un procesamiento más rápido y consistente.  
     - **Refinar búsquedas** con filtros avanzados como organización, fecha contable y estado contable.
     --- 
@@ -542,7 +686,7 @@ tags:
     - **Herramientas más inteligentes**: nuevas herramientas como [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (leer datos desde imágenes de hojas de cálculo) y [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) le ayudan a trabajar más rápido con datos complejos.  
     - **Mejores integraciones**: el nuevo soporte de MCP Server le permite conectar y gestionar herramientas externas y APIs de forma sencilla.
     ---
-
+    
     - Documentación: [Cómo configurar servidores MCP en agentes](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
     - Blog: [¿Cansado de integraciones lentas y caras? Descubra cómo MCP está cambiando las reglas del juego](https://etendo.software/en/blog/discover-how-mcp-is-changing-the-game/){target="_blank"}
     - Blog: [Gmail al alcance de su mano con Etendo Copilot: productividad sin fricciones](https://etendo.software/en/blog/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
@@ -729,6 +873,7 @@ tags:
 
 
 </div>
+
 ## Marzo 2025
 
 ### Etendo Mobile
