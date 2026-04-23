@@ -775,7 +775,7 @@ tags:
 
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
+    ![](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
 
     En la versión [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, desbloquee operaciones de almacén sin fricciones con el módulo [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md), una subaplicación móvil repleta de funcionalidades que se integra en profundidad con Etendo Mobile para ofrecer trazabilidad completa y operaciones de almacén automatizadas.
     
@@ -796,7 +796,7 @@ tags:
 <div class="grid cards" markdown>
 
 - :octicons-rocket-24: **¡Nueva versión de Etendo: ya está disponible la versión 25.1!**
-
+    
     ---
 
     <iframe align="right" width="560" height="315" src="https://www.youtube.com/embed/OtHb45n2dgU?si=dttVeLQxnf97HGjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1110,6 +1110,7 @@ tags:
     En la versión [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se ha añadido el tipo de asistente Multi-Model Assistant; estos agentes amplían el tipo `Langchain` con la particularidad de que puede utilizarse con modelos de varios proveedores como Anthropic o Gemini, además de los modelos OpenAI existentes.
     Además, se ha añadido la ventana AI Models, donde el usuario puede gestionar los modelos que utilizarán los distintos agentes.
 </div>
+
 ## Noviembre 2024
 
 ### Copilot Extensions
