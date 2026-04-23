@@ -15569,7 +15569,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Model</strong>: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección <a href="#qué-modelo-debería-elegir">¿Qué modelo debería elegir?</a> para más información.</p>
+<p><strong>Model</strong>: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección <a href="#qué-modelo-debo-elegir">¿Qué modelo debo elegir?</a> para más información.</p>
 </li>
 </ul>
 <div class="admonition info">
@@ -15586,8 +15586,12 @@ Estas variables se sustituyen por los valores definidos en el archivo <code>grad
 <p>Al crear un agente, tenga también en cuenta los siguientes campos disponibles en el encabezado de la ventana Agente:
 - <strong>Agent Scope</strong>: controla qué usuarios pueden ver y usar este agente. El valor predeterminado es <strong>Client</strong>.
 - <strong>Featured</strong>: marca el agente como una opción prioritaria en la lista de agentes del chat de Copilot.
-- <strong>Sync on Startup</strong>: sincroniza automáticamente el agente cada vez que se reinicia el servidor de aplicaciones.</p>
+- <strong>Sync on Startup</strong>: sincroniza automáticamente el agente cada vez que se reinicia el servidor de aplicaciones. Durante esta sincronización de inicio, cada rol <strong>Administrador de la Entidad</strong> activo del cliente del agente recibe automáticamente acceso al agente (se crea un registro correspondiente en la ventana <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#agent-access-window">Agent Access</a> si aún no existe).</p>
 <p>Para obtener todos los detalles de cada campo, consulte <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Ventana Agente – Encabezado</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Acceso automático en la sincronización</p>
+<p>Cada vez que se sincroniza un agente (manualmente desde la ventana Agente o automáticamente al iniciar), el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no lo tenía. Esto garantiza que quien realice la sincronización tenga permiso para usar el agente de inmediato, sin necesidad de agregar manualmente una entrada en la ventana <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#agent-access-window">Agent Access</a>.</p>
 </div>
 <h3 id="ejemplo-de-definicion-de-agente">Ejemplo de definición de agente</h3>
 <p>Por ejemplo, para crear un nuevo agente llamado <strong>Task Definition Agent</strong> para ayudar a los usuarios a definir una incidencia con el formato obligatorio para su equipo. El propósito del agente es recibir una descripción de la tarea y devolver la definición de la tarea con el formato obligatorio. Crearemos un nuevo agente con la siguiente información:</p>

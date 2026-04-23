@@ -15323,8 +15323,14 @@
 </li>
 <li>
 <p><strong>Sync on Startup</strong>: When enabled, the agent is automatically updated every time the Etendo application server restarts (for example, after a system update or a scheduled maintenance restart). This means you do not need to manually click the <strong>Sync Agent</strong> button after each restart to apply your agent configuration changes — the system handles it automatically. If this option is disabled, you must click <strong>Sync Agent</strong> manually after each restart to ensure the agent reflects the latest configuration.</p>
+<div class="admonition info">
+<p class="admonition-title">Automatic access grant on startup sync</p>
+<p>When <strong>Sync on Startup</strong> triggers, the system automatically grants access to the agent for every active <strong>Client Admin</strong> role (the company-level administrator role in Etendo) in the client. If no access entry exists yet in the <a href="#agent-access-window">Agent Access</a> window for a given Client Admin role, one is created automatically. This ensures that company administrators always have access to newly synced agents without any manual configuration.</p>
+</div>
 </li>
-<li><strong>Featured</strong>: When enabled, this agent appears at the top of the agent list in the Copilot Chat and is shown by default when the chat opens. If at least one agent is marked as Featured, all users will see only the Featured agents in the chat list by default. A star button (⭐) appears in the chat allowing any user to switch between the Featured agents view and the full list of all available agents. If no agents are marked as Featured, all agents are shown as usual.</li>
+<li>
+<p><strong>Featured</strong>: When enabled, this agent appears at the top of the agent list in the Copilot Chat and is shown by default when the chat opens. If at least one agent is marked as Featured, all users will see only the Featured agents in the chat list by default. A star button (⭐) appears in the chat allowing any user to switch between the Featured agents view and the full list of all available agents. If no agents are marked as Featured, all agents are shown as usual.</p>
+</li>
 <li>
 <p><strong>Prompt</strong>: Specific instructions of the agents. These instructions can be written in English or Spanish.</p>
 <div class="admonition info">
@@ -15619,6 +15625,14 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This configuration is also possible from the Role window.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Automatic access grants</p>
+<p>Access records can be created automatically — you do not always need to add them manually:</p>
+<ul>
+<li><strong>On any sync</strong> (manual or startup): the role that triggers the sync is automatically granted access to the agent if no record exists yet.</li>
+<li><strong>On Sync on Startup</strong>: every active <strong>Client Admin</strong> role (the company-level administrator role in Etendo) is automatically granted access.</li>
+</ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

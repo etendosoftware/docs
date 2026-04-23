@@ -15308,8 +15308,12 @@ These variables are replaced with the values defined in the <code>gradle.propert
 <p>When creating an agent, also consider the following fields available in the Agent window header:
 - <strong>Agent Scope</strong>: Controls which users can see and use this agent. Defaults to <strong>Client</strong>.
 - <strong>Featured</strong>: Marks the agent as a priority option in the Copilot Chat agent list.
-- <strong>Sync on Startup</strong>: Automatically synchronizes the agent each time the application server restarts.</p>
+- <strong>Sync on Startup</strong>: Automatically synchronizes the agent each time the application server restarts. During this startup sync, every active <strong>Client Admin</strong> role of the agent's client is automatically granted access to the agent (a corresponding record is created in the <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#agent-access-window">Agent Access</a> window if it does not already exist).</p>
 <p>For full details on each field, see <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#header">Agent Window – Header</a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Automatic access on synchronization</p>
+<p>Whenever an agent is synchronized (manually from the Agent window or automatically on startup), the role performing the sync is automatically granted access to the agent if it did not have it yet. This ensures that whoever triggers a sync always has permission to use the agent immediately, without needing to manually add an entry in the <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#agent-access-window">Agent Access</a> window first.</p>
 </div>
 <h3 id="agent-definition-example">Agent Definition Example</h3>
 <p>For example, to create a new agent called <strong>Task Definition Agent</strong> to help users define an issue with the mandatory format for his team. The purpose of the agent is to receive a description of the task and return the task definition with the mandatory format. We will create a new agent with the following information:</p>
