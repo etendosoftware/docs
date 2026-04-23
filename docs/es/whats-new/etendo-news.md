@@ -686,7 +686,7 @@ tags:
     - **Herramientas más inteligentes**: nuevas herramientas como [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (leer datos desde imágenes de hojas de cálculo) y [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) le ayudan a trabajar más rápido con datos complejos.  
     - **Mejores integraciones**: el nuevo soporte de MCP Server le permite conectar y gestionar herramientas externas y APIs de forma sencilla.
     ---
-
+    
     - Documentación: [Cómo configurar servidores MCP en agentes](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
     - Blog: [¿Cansado de integraciones lentas y caras? Descubra cómo MCP está cambiando las reglas del juego](https://etendo.software/en/blog/discover-how-mcp-is-changing-the-game/){target="_blank"}
     - Blog: [Gmail al alcance de su mano con Etendo Copilot: productividad sin fricciones](https://etendo.software/en/blog/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
@@ -873,6 +873,7 @@ tags:
 
 
 </div>
+
 ## Marzo 2025
 
 ### Etendo Mobile
