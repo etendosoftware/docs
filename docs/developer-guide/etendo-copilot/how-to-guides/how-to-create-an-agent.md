@@ -47,7 +47,7 @@ Some of the main fields to be completed are:
     For full details on each field, see [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
 !!!info "Automatic access on synchronization"
-    Whenever an agent is synchronized (manually from the Agent window or automatically on startup), the role performing the sync is automatically granted access to the agent if it did not have it yet. This ensures that the webhook access checks performed during the sync include the current role without requiring manual setup in the [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window) window.
+    Whenever an agent is synchronized (manually from the Agent window or automatically on startup), the role performing the sync is automatically granted access to the agent if it did not have it yet. This ensures that whoever triggers a sync always has permission to use the agent immediately, without needing to manually add an entry in the [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window) window first.
 
 ### Agent Definition Example
 

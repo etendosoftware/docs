@@ -79,6 +79,10 @@ Fields to note:
     - **Client + System**: The agent is available to users within the company where it was created and also to the platform-level System Administrator.
 
 - **Sync on Startup**: When enabled, the agent is automatically updated every time the Etendo application server restarts (for example, after a system update or a scheduled maintenance restart). This means you do not need to manually click the **Sync Agent** button after each restart to apply your agent configuration changes — the system handles it automatically. If this option is disabled, you must click **Sync Agent** manually after each restart to ensure the agent reflects the latest configuration.
+
+    !!!info "Automatic access grant on startup sync"
+        When **Sync on Startup** triggers, the system automatically grants access to the agent for every active **Client Admin** role (the company-level administrator role in Etendo) in the client. If no access entry exists yet in the [Agent Access](#agent-access-window) window for a given Client Admin role, one is created automatically. This ensures that company administrators always have access to newly synced agents without any manual configuration.
+
 - **Featured**: When enabled, this agent appears at the top of the agent list in the Copilot Chat and is shown by default when the chat opens. If at least one agent is marked as Featured, all users will see only the Featured agents in the chat list by default. A star button (⭐) appears in the chat allowing any user to switch between the Featured agents view and the full list of all available agents. If no agents are marked as Featured, all agents are shown as usual.
 - **Prompt**: Specific instructions of the agents. These instructions can be written in English or Spanish.
     
@@ -380,6 +384,12 @@ In this window, it is possible to configure access roles for each Agent. This me
 
 !!!info
     This configuration is also possible from the Role window.
+
+!!!info "Automatic access grants"
+    Access records can be created automatically — you do not always need to add them manually:
+
+    - **On any sync** (manual or startup): the role that triggers the sync is automatically granted access to the agent if no record exists yet.
+    - **On Sync on Startup**: every active **Client Admin** role (the company-level administrator role in Etendo) is automatically granted access.
 
 !!!note
     In case of deleting an agent, the related agent access records are also deleted.

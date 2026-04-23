@@ -78,6 +78,10 @@ Campos a tener en cuenta:
     - **Client + System**: el agente está disponible para el cliente y también bajo el rol `System Administrator`.
 
 - **Sincronizar al inicio**: cuando está habilitado, el agente se sincroniza automáticamente cuando el sistema Etendo se inicia. Esto elimina la necesidad de ejecutar manualmente el proceso `Sincronizar agente` después de cada reinicio, asegurando que el agente esté siempre actualizado.
+
+    !!!info "Acceso automático al sincronizar al inicio"
+        Cuando se activa **Sincronizar al inicio**, el sistema otorga automáticamente acceso al agente a cada rol **Client Admin** activo (el rol de administrador a nivel de empresa en Etendo) del cliente. Si aún no existe una entrada de acceso en la ventana [Acceso del Agente](#agent-access-window) para un rol Client Admin determinado, se crea automáticamente. Esto garantiza que los administradores de la empresa siempre tengan acceso a los agentes sincronizados sin necesidad de configuración manual.
+
 - **Destacado**: cuando está habilitado, el agente se resalta y aparece primero en el desplegable de agentes del Chat de Copilot. Cuando existen agentes destacados, el desplegable del chat muestra un botón de filtro (⭐) que permite a los usuarios alternar entre ver solo agentes destacados o todos los agentes disponibles. Por defecto, cuando existen agentes destacados, el desplegable muestra solo los destacados.
 - **Prompt**: instrucciones específicas de los agentes. Estas instrucciones pueden escribirse en inglés o en español.
     
@@ -368,6 +372,12 @@ En esta ventana, es posible configurar los roles de acceso para cada Agente. Est
 
 !!!info
     Esta configuración también es posible desde la ventana de Rol.
+
+!!!info "Acceso automático"
+    Los registros de acceso pueden crearse automáticamente; no siempre es necesario agregarlos manualmente:
+
+    - **En cualquier sincronización** (manual o al inicio): el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no existe un registro.
+    - **Al sincronizar al inicio**: cada rol **Client Admin** activo (el rol de administrador a nivel de empresa en Etendo) recibe automáticamente acceso.
 
 !!!note
     En caso de eliminar un agente, los registros de acceso del agente relacionados también se eliminan.

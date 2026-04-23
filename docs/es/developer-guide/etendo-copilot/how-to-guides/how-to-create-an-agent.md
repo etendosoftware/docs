@@ -28,7 +28,7 @@ Algunos de los campos principales que deben completarse son:
     - **Agente multimodelo**
     - **LangGraph**
 
-- **Model**: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección [¿Qué modelo debería elegir?](#qué-modelo-debo-elegir) para más información.
+- **Model**: desplegable con los modelos disponibles, como OpenAI, Anthropic, etc. Vaya a la sección [¿Qué modelo debo elegir?](#qué-modelo-debo-elegir) para más información.
 
 !!!info
     El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`.
@@ -46,7 +46,7 @@ Algunos de los campos principales que deben completarse son:
     Para obtener todos los detalles de cada campo, consulte [Ventana Agente – Encabezado](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
 !!!info "Acceso automático en la sincronización"
-    Cada vez que se sincroniza un agente (manualmente desde la ventana Agente o automáticamente al iniciar), el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no lo tenía. Esto garantiza que las comprobaciones de acceso de webhook realizadas durante la sincronización incluyan el rol actual sin necesidad de configuración manual en la ventana [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window).
+    Cada vez que se sincroniza un agente (manualmente desde la ventana Agente o automáticamente al iniciar), el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no lo tenía. Esto garantiza que quien realice la sincronización tenga permiso para usar el agente de inmediato, sin necesidad de agregar manualmente una entrada en la ventana [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window).
 
 ### Ejemplo de definición de agente
 
