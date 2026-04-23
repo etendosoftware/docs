@@ -38,7 +38,7 @@ tags:
 
     PostgreSQL 17 is now officially supported. Existing databases on earlier supported versions require no changes; upgrading the database engine is optional.
 
-    - IT upgrade guide: [API Changes](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+    - IT upgrade guide: [API Change Documentation](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
 
 </div>
 
