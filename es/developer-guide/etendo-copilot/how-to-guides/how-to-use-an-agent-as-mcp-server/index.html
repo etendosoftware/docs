@@ -8,10 +8,10 @@
         <link rel="canonical" href="https://docs.etendo.software/es/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/">
       
       
-        <link rel="prev" href="../how-to-integrate-sales-assistant-with-shopify-mcp/">
+        <link rel="prev" href="../how-to-use-run-self-hosted-models-with-ollama/">
       
       
-        <link rel="next" href="../how-to-use-run-self-hosted-models-with-ollama/">
+        <link rel="next" href="../how-to-use-context-features/">
       
       
         <link rel="alternate" type="application/rss+xml" title="Fuente RSS" href="../../../../../feed_rss_created.xml">
@@ -13216,6 +13216,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo Ejecutar Modelos Auto-Alojados con Ollama
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -13298,6 +13321,15 @@
   <a href="#modos-de-conexion" class="md-nav__link">
     <span class="md-ellipsis">
       Modos de conexión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modos-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de autenticación
     </span>
   </a>
   
@@ -13453,29 +13485,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-use-run-self-hosted-models-with-ollama/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cómo Ejecutar Modelos Auto-Alojados con Ollama
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -15191,6 +15200,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#modos-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#arquitectura-del-servidor-mcp-en-etendo-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       Arquitectura del servidor MCP en Etendo Copilot
@@ -15436,15 +15454,42 @@
 </tr>
 </tbody>
 </table>
+<h3 id="modos-de-autenticacion">Modos de autenticación</h3>
+<p>El diálogo de configuración de MCP ahora le permite elegir cómo se autentica el cliente contra el servidor MCP del agente:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de autenticación</th>
+<th>Cómo funciona</th>
+<th>Mejor para</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OAuth 2.1</strong></td>
+<td>Usa una URL MCP limpia y permite que el cliente complete la autenticación mediante un flujo de inicio de sesión en el navegador</td>
+<td>Clientes con compatibilidad nativa con OAuth de MCP</td>
+</tr>
+<tr>
+<td><strong>Token in Header</strong></td>
+<td>Envía el token de Etendo en la cabecera HTTP personalizada <code>etendo-token</code></td>
+<td>Clientes que admiten cabeceras personalizadas</td>
+</tr>
+<tr>
+<td><strong>Token in URL</strong></td>
+<td>Añade el token como <code>?token=...</code> en la URL del endpoint MCP</td>
+<td>Clientes que no pueden enviar cabeceras personalizadas</td>
+</tr>
+</tbody>
+</table>
 <h3 id="arquitectura-del-servidor-mcp-en-etendo-copilot">Arquitectura del servidor MCP en Etendo Copilot</h3>
-<p>Cada agente de Etendo Copilot expone automáticamente un endpoint de servidor MCP que proporciona:</p>
-<ul>
-<li><strong>Herramientas de interacción</strong>: herramientas que facilitan la comunicación entre el agente y el cliente MCP, como <code>ask_agent</code> para enviar preguntas y recibir respuestas.</li>
-<li><strong>Herramientas del agente</strong>: funciones que el agente puede ejecutar.</li>
-<li><strong>Recursos</strong>: datos estáticos o dinámicos a los que se puede acceder (documentos, configuraciones, logs, etc.).</li>
-<li><strong>Prompts</strong>: plantillas de prompt preconfiguradas para tareas comunes.</li>
-</ul>
 <p>El servidor MCP se ejecuta junto al agente y se comunica usando transporte <code>HTTP</code> con <code>Server-Sent Events (SSE)</code> opcional para respuestas en streaming.</p>
+<p>Cuando OAuth está habilitado, el servidor MCP también expone los endpoints de descubrimiento y autorización OAuth requeridos por clientes MCP compatibles. Los usuarios se autentican a través de una página de inicio de sesión de Etendo, y el cliente recibe automáticamente el resultado de la autorización.</p>
+<p>El flujo de inicio de sesión OAuth incluye dos posibles rutas de interfaz:</p>
+<ul>
+<li><strong>Organización y rol predeterminados</strong>: el usuario introduce nombre de usuario y contraseña, activa <strong>Usar organización y rol predeterminados</strong> y completa la autenticación directamente.</li>
+<li><strong>Selección manual de organización y rol</strong>: el usuario introduce nombre de usuario y contraseña sin activar la casilla. Si las credenciales son válidas, el flujo continúa a una segunda pantalla donde el usuario debe elegir un <strong>Rol</strong> y una <strong>Organización</strong> antes de completar la autenticación.</li>
+</ul>
 <h3 id="tipos-de-agente-y-modos-de-conexion">Tipos de agente y modos de conexión</h3>
 <p>Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión. El tipo de agente define el rol, y el modo define cómo interactúa con él.</p>
 <table>
@@ -15518,27 +15563,52 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Servicios</code> &gt; <code>Copilot</code> &gt; <code>Agente</code></p>
 <ol>
 <li>Abra la ventana Agente en <strong>Etendo</strong></li>
-<li><strong>Seleccione su agente</strong> y haga clic en el botón <strong>"Server MCP Config"</strong>.</li>
+<li><strong>Seleccione su agente</strong> y haga clic en el botón <strong>Server MCP Config</strong>.</li>
 <li>
 <p><strong>Configure las opciones de conexión</strong>:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png" data-desc-position="bottom"><img alt="Diálogo de configuración de MCP" src="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-config-dialog.png"></a></p>
 <ul>
 <li><strong>Modo Directo</strong>: márquelo para ejecución de herramientas, desmárquelo para conversación.</li>
+<li><strong>Tipo de autenticación</strong>: elija <code>OAuth 2.1</code>, <code>Token in Header</code> o <code>Token in URL</code>.</li>
 <li><strong>Compatibilidad con MCP-remote</strong>: márquelo para una mejor compatibilidad con el cliente.</li>
-<li><strong>Valores personalizados</strong>: sobrescrituras opcionales de URL y nombre.</li>
+<li><strong>Valores personalizados</strong>: sobrescrituras opcionales de URL y nombre. Si define una <strong>URL personalizada</strong>, esta tiene prioridad sobre la resolución de URL predeterminada usada por Etendo.</li>
 </ul>
 <div class="admonition info">
+<p class="admonition-title">Tipo de autenticación</p>
+<p><strong>OAuth 2.1</strong></p>
+<ul>
+<li>Genera una URL MCP limpia sin incrustar el token.</li>
+<li>El cliente MCP gestiona la autenticación y abre un flujo de inicio de sesión en el navegador cuando es necesario.</li>
+<li>La interfaz de inicio de sesión solicita primero nombre de usuario y contraseña.</li>
+<li>Si <strong>Usar organización y rol predeterminados</strong> está activado, la autenticación finaliza inmediatamente después de un inicio de sesión correcto.</li>
+<li>Si la casilla no está activada, el flujo continúa a una segunda página donde el usuario selecciona la organización y el rol.</li>
+<li>Recomendado cuando su cliente MCP admite OAuth 2.1 para servidores MCP.</li>
+</ul>
+<p><strong>Token in Header</strong></p>
+<ul>
+<li>Envía el token a través de la cabecera <code>etendo-token</code>.</li>
+<li>Esta es la opción predeterminada.</li>
+<li>Recomendado para clientes que admiten cabeceras HTTP personalizadas.</li>
+</ul>
+<p><strong>Token in URL</strong></p>
+<ul>
+<li>Añade el token como <code>?token=...</code> en la URL MCP generada.</li>
+<li>Útil para clientes que no pueden enviar cabeceras personalizadas.</li>
+<li>Úselo solo en entornos de confianza porque el token pasa a formar parte de la URL.</li>
+</ul>
+</div>
+<div class="admonition info">
 <p class="admonition-title">Modo de compatibilidad con MCP-remote</p>
-<p><strong>Qué hace</strong>: usa la librería <code>mcp-remote</code> para añadir compatibilidad con clientes MCP que no gestionan correctamente el transporte <code>HTTP</code> con cabeceras de autenticación.</p>
+<p><strong>Qué hace</strong>: usa la biblioteca <code>mcp-remote</code> para añadir compatibilidad con clientes MCP que no gestionan directamente el transporte <code>HTTP</code> de MCP de Etendo.</p>
 <p><strong>Cuándo usarlo</strong>: </p>
 <ul>
-<li>Claude Desktop: requiere este modo para una autenticación correcta.</li>
-<li>Algunas extensiones de IDE que tienen limitaciones de transporte <code>HTTP</code>.</li>
+<li>Claude Desktop y clientes similares que necesitan un puente compatible con stdio.</li>
+<li>Extensiones de IDE o herramientas con compatibilidad nativa limitada con MCP <code>HTTP</code>.</li>
 </ul>
 <p><strong>Diferencia de configuración</strong>:</p>
 <ul>
-<li><strong>Modo estándar</strong>: configuración HTTP directa con cabeceras.</li>
-<li><strong>Modo de compatibilidad</strong>: usa el comando wrapper <code>npx mcp-remote</code>.</li>
+<li><strong>Modo estándar</strong>: configuración HTTP directa de MCP.</li>
+<li><strong>Modo de compatibilidad</strong>: usa <code>npx mcp-remote</code> como envoltorio alrededor del endpoint MCP generado.</li>
 </ul>
 </div>
 </li>
@@ -15549,52 +15619,148 @@
 <p class="admonition-title">Advertencia de desarrollo con localhost</p>
 <p>Si ve este mensaje: <em>"The MCP URL begins with <code>http://localhost</code>, which only works in development environments"</em></p>
 <ul>
-<li><strong>Qué significa</strong>: la URL generada solo es accesible desde la misma máquina</li>
-<li><strong>Para uso en producción</strong>: configure la propiedad <code>context.url.copilot.mcp</code> en Etendo para usar su dominio público en lugar de localhost</li>
-<li><strong>Para acceso externo</strong>: use el campo <strong>URL personalizada</strong> en el diálogo para especificar la dirección pública de su host de Copilot</li>
+<li><strong>Qué significa</strong>: el endpoint MCP generado usa <code>localhost</code>, por lo que solo los clientes que se ejecuten en la misma máquina pueden conectarse a él.</li>
+<li><strong>Cuándo se notará más</strong>: esta advertencia es especialmente relevante para las configuraciones <strong>Token in Header</strong> y <strong>Token in URL</strong>, porque esos modos generan un endpoint concreto al que el cliente debe llamar directamente.</li>
+<li><strong>Dónde se configura</strong>: <code>context.url.copilot.mcp</code> se lee desde <code>gradle.properties</code>, no desde el servidor web ni desde la configuración de Apache.</li>
+<li><strong>Qué hace <code>context.url.copilot.mcp</code></strong>: esta propiedad define la URL base pública que Etendo usa al generar fragmentos de configuración MCP y metadatos OAuth.</li>
+<li><strong>Orden de resolución</strong>: Etendo usa primero el campo <strong>URL personalizada</strong> del popup si se proporcionó, después <code>context.url.copilot.mcp</code> de <code>gradle.properties</code> y, por último, recurre a <code>http://localhost:&lt;copilot.port.mcp&gt;</code>, donde el puerto MCP predeterminado es <code>5006</code>.</li>
+<li><strong>Para producción o clientes remotos</strong>: configure <code>context.url.copilot.mcp</code> en <code>gradle.properties</code> con la URL de Copilot accesible externamente, por ejemplo <code>https://your-domain.example.com:5006</code>.</li>
+<li><strong>Para pruebas puntuales</strong>: también puede usar el campo <strong>URL personalizada</strong> en el diálogo para sobrescribir la URL base generada sin cambiar la propiedad global.</li>
+<li><strong>Ejemplo</strong>: si Copilot está expuesto en <code>https://copilot.example.com</code>, el endpoint generado debería parecerse a <code>https://copilot.example.com/AGENT_ID/mcp</code> en lugar de <code>http://localhost:5006/AGENT_ID/mcp</code>.</li>
 </ul>
+<p>Entrada de ejemplo en <code>gradle.properties</code>:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">context.url.copilot.mcp</span><span class="o">=</span><span class="s">https://your-external-host:5006</span>
+</span></code></pre></div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Configuraciones de ejemplo</p>
-<p><strong>Configuración de VS Code</strong></p>
-<p>Añada a la configuración de VS Code:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">"mcp"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">"servers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">"etendoAgent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:5006/AGENT_ID/mcp"</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">"etendo-token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer your-token-here"</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><strong>Configuración de Gemini CLI</strong></p>
-<p>Cree o actualice su configuración de Gemini CLI:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"etendoAgent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">"httpUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:5006/AGENT_ID/mcp/"</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">"etendo-token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer your-token-here"</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><strong>Configuración de Claude Desktop</strong></p>
-<p>Añada a su configuración de Claude Desktop:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">"etendoAgent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mcp-remote"</span><span class="p">,</span><span class="w"> </span><span class="s2">"http://localhost:5006/AGENT_ID/mcp"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--headers"</span><span class="p">,</span><span class="w"> </span><span class="s2">"etendo-token=Bearer your-token-here"</span><span class="p">]</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
-</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>    Elija el ejemplo que coincida con el **Tipo de autenticación** seleccionado.
+
+    !!!note "Acerca de AGENT_ID"
+        `AGENT_ID` en todos los ejemplos siguientes es un marcador de posición. El valor real es el identificador único asignado al agente en Etendo. Al usar el diálogo **Server MCP Config**, la configuración generada reemplaza automáticamente este marcador por el ID correcto del agente.
+
+    **Configuración de VS Code con OAuth 2.1**
+
+    Añada a la configuración de VS Code:
+
+    ```json
+    "mcp": {
+        "servers": {
+            "etendoAgent": {
+                "type": "http",
+                "url": "http://localhost:5006/AGENT_ID/mcp"
+            }
+        }
+    }
+    ```
+
+    Esta configuración usa una URL limpia. Si el cliente admite OAuth de MCP, abrirá automáticamente el flujo de inicio de sesión en el navegador.
+
+    **Configuración de VS Code con Token in Header**
+
+    Añada a la configuración de VS Code:
+
+    ```json
+    "mcp": {
+        "servers": {
+            "etendoAgent": {
+                "type": "http",
+                "url": "http://localhost:5006/AGENT_ID/mcp",
+                "headers": {
+                    "etendo-token": "Bearer your-token-here"
+                }
+            }
+        }
+    }
+    ```
+
+    **Configuración de VS Code con Token in URL**
+
+    ```json
+    "mcp": {
+        "servers": {
+            "etendoAgent": {
+                "type": "http",
+                "url": "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"
+            }
+        }
+    }
+    ```
+
+    **Configuración de Gemini CLI con Token in Header**
+
+    Cree o actualice su configuración de Gemini CLI:
+
+    ```json
+    {
+        "mcpServers": {
+            "etendoAgent": {
+                "type": "http",
+                "httpUrl": "http://localhost:5006/AGENT_ID/mcp/",
+                "headers": {
+                    "etendo-token": "Bearer your-token-here"
+                }
+            }
+        }
+    }
+    ```
+
+    **Configuración de Gemini CLI con Token in URL**
+
+    ```json
+    {
+        "mcpServers": {
+            "etendoAgent": {
+                "type": "http",
+                "httpUrl": "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"
+            }
+        }
+    }
+    ```
+
+    **Configuración de Claude Desktop con MCP-remote y OAuth 2.1**
+
+    Añada a su configuración de Claude Desktop:
+
+    ```json
+    {
+        "mcpServers": {
+            "etendoAgent": {
+                "command": "npx",
+                "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp"]
+            }
+        }
+    }
+    ```
+
+    **Configuración de Claude Desktop con MCP-remote y Token in Header**
+
+    Añada a su configuración de Claude Desktop:
+
+    ```json
+    {
+        "mcpServers": {
+            "etendoAgent": {
+                "command": "npx",
+                "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp", "--header", "Authorization: Bearer your-token-here"]
+            }
+        }
+    }
+    ```
+
+    **Configuración de Claude Desktop con MCP-remote y Token in URL**
+
+    ```json
+    {
+        "mcpServers": {
+            "etendoAgent": {
+                "command": "npx",
+                "args": ["mcp-remote", "http://localhost:5006/AGENT_ID/mcp?token=your-token-here"]
+            }
+        }
+    }
+    ```
+</code></pre></div>
 </div>
 </li>
 </ol>
@@ -15604,40 +15770,59 @@
 <p><strong>Inicie su cliente MCP</strong> <a href="https://code.visualstudio.com/docs/copilot/customization/mcp-servers" target="_blank">VS Code</a>, <a href="https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server" target="_blank">Gemini CLI</a>, <a href="https://modelcontextprotocol.io/docs/develop/connect-local-servers" target="_blank">Claude Desktop</a>, etc.</p>
 </li>
 <li>
-<p><strong>Pruebe la conectividad básica</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Use the ping tool to test connection
-</span></code></pre></div>
+<p><strong>Confirme que el servidor está disponible</strong>: En la lista de herramientas o inspector del cliente, verifique que aparezca al menos una herramienta — por ejemplo, <code>ask_agent</code> en Modo Simple, o las herramientas propias del agente en Modo Directo. Si no aparece ninguna herramienta, vaya a la sección de Resolución de problemas.</p>
 </li>
 <li>
 <p><strong>Pruebe la interacción con el agente</strong>:</p>
 <p><strong>Modo Simple</strong>:
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Ask the agent: "What can you help me with?"
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Pregunta al agente: "¿Con qué puedes ayudarme?"
 </span></code></pre></div><p></p>
-<p><strong>Modo Directo</strong>:
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Use get_agent_prompt to see agent capabilities
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Execute specific tools directly
-</span></code></pre></div><p></p>
+<p><strong>Modo Directo</strong>: En la lista de herramientas del cliente, invoque <code>get_agent_prompt</code> sin parámetros. Revise la salida devuelta para comprender las herramientas disponibles del agente y las entradas esperadas. Después invoque cualquier herramienta de la lista directamente — por ejemplo, una herramienta <code>search_customers</code> con <code>{"query": "test", "limit": 1}</code>.</p>
+</li>
+<li>
+<p><strong>Si seleccionó OAuth 2.1</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Completa el flujo de inicio de sesión en el navegador cuando el cliente solicite autenticación
+</span></code></pre></div>
+<p>El flujo de inicio de sesión OAuth funciona de la siguiente manera:</p>
+<ol>
+<li>El cliente MCP abre la página de inicio de sesión de Etendo en el navegador.</li>
+<li>
+<p>El usuario introduce nombre de usuario y contraseña.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png" data-desc-position="bottom"><img alt="Página de inicio de sesión de Etendo mostrando los campos de nombre de usuario y contraseña con la casilla Usar organización y rol predeterminados" src="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-1.png"></a></p>
+</li>
+<li>
+<p>Si <strong>Usar organización y rol predeterminados</strong> está activado, Etendo completa la autenticación inmediatamente.</p>
+</li>
+<li>Si la casilla no está activada y las credenciales son válidas, Etendo abre una segunda página.</li>
+<li>
+<p>En la segunda página, el usuario selecciona un <strong>Rol</strong> y una <strong>Organización</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png" data-desc-position="bottom"><img alt="Página de selección de Rol y Organización en el flujo de inicio de sesión OAuth de Etendo" src="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server/mcp-oauth-2.png"></a></p>
+</li>
+<li>
+<p>Después de confirmar la selección, el flujo OAuth se completa y el cliente MCP continúa la conexión.</p>
+</li>
+</ol>
 </li>
 </ol>
 <h2 id="explicacion-de-los-modos-de-conexion">Explicación de los modos de conexión</h2>
 <h3 id="modo-simple">Modo Simple</h3>
 <ul>
 <li><strong>URL</strong>: <code>http://HOST:PORT/AGENT_ID/mcp</code></li>
-<li><strong>Herramientas</strong>: <code>ask_agent</code>, utilidades básicas.</li>
-<li><strong>Uso</strong>: conversación natural con el agente.</li>
 </ul>
 <h3 id="modo-directo">Modo Directo</h3>
 <ul>
 <li><strong>URL</strong>: <code>http://HOST:PORT/AGENT_ID/direct/mcp</code></li>
-<li><strong>Herramientas</strong>: todas las herramientas del agente + <code>get_agent_prompt</code>.</li>
-<li><strong>Uso</strong>: ejecución directa de herramientas y acceso al sistema.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>En <strong>Modo Directo</strong>, llame a <code>get_agent_prompt</code> antes de usar otras herramientas. El prompt explica el propósito del agente, sus capacidades y el uso esperado de las herramientas expuestas.</p>
+</div>
 <h2 id="casos-de-uso">Casos de uso</h2>
 <h3 id="interfaz-de-chat-simple">Interfaz de chat simple</h3>
 <ul>
-<li><strong>Usuario</strong>: <em>"What can you help me with?"</em></li>
+<li><strong>Usuario</strong>: <em>"¿Con qué puedes ayudarme?"</em></li>
 <li><strong>Agente</strong>: <em>"Puedo ayudarle con operaciones de Etendo, análisis de datos, informes y más. ¿Qué le gustaría saber?"</em></li>
-<li><strong>Usuario</strong>: <em>"Show me recent sales data"</em></li>
+<li><strong>Usuario</strong>: <em>"Muéstrame los datos de ventas recientes"</em></li>
 <li>
 <p><strong>Agente</strong>: </p>
 <p>[Usa herramientas internas] </p>
@@ -15666,25 +15851,45 @@
 <h3 id="problemas-comunes">Problemas comunes</h3>
 <p><strong>Falla la conexión:</strong></p>
 <ul>
-<li>Verifique que el token de Etendo sea válido.</li>
+<li>Verifique que el tipo de autenticación seleccionado coincida con las capacidades de su cliente.</li>
+<li>Si usa <code>Token in Header</code>, verifique que el token de Etendo sea válido.</li>
 <li>Compruebe que el ID del agente sea correcto.</li>
 <li>Asegúrese de que el servicio de Copilot esté en ejecución.</li>
+</ul>
+<p><strong>El inicio de sesión OAuth no arranca:</strong></p>
+<ul>
+<li>Confirme que su cliente MCP admite OAuth 2.1 para servidores MCP.</li>
+<li>Verifique que la URL generada no incluya un token si seleccionó <code>OAuth 2.1</code>.</li>
+<li>Asegúrese de que el navegador pueda acceder a la página de inicio de sesión de Etendo expuesta por el servidor MCP.</li>
+</ul>
+<p><strong>OAuth login stops after credentials:</strong></p>
+<ul>
+<li>Si <strong>Usar organización y rol predeterminados</strong> está desactivado, espere una segunda página que solicite <strong>Rol</strong> y <strong>Organización</strong>.</li>
+<li>Si esa segunda página no aparece, verifique que el usuario tenga asignaciones válidas de rol y organización en Etendo.</li>
+<li>Si <strong>Usar organización y rol predeterminados</strong> está activado pero la autenticación aún no continúa, verifique que el usuario tenga configurados un rol y una organización predeterminados válidos.</li>
+</ul>
+<p><strong>El cliente no puede enviar cabeceras:</strong></p>
+<ul>
+<li>Use <code>Token in URL</code> en lugar de <code>Token in Header</code>.</li>
+<li>Si es necesario, active el <strong>Modo de compatibilidad con MCP-remote</strong> y regenere la configuración.</li>
 </ul>
 <p><strong>Herramientas no disponibles:</strong></p>
 <ul>
 <li>Compruebe los permisos del usuario en Etendo.</li>
 <li>Verifique que la configuración del agente incluya las herramientas necesarias.</li>
 <li>Confirme que el modo de conexión coincide con sus necesidades.</li>
+<li>En <strong>Modo Directo</strong>, llame primero a <code>get_agent_prompt</code> para entender cómo debe usarse el conjunto de herramientas.</li>
 </ul>
 <p><strong>Errores de autenticación:</strong></p>
 <ul>
-<li>Regenere el token SWS mediante <code>/sws/login</code>.</li>
-<li>Compruebe que el formato del token incluya el prefijo "Bearer ".</li>
-<li>Verifique que el usuario tenga permisos de acceso al agente.</li>
+<li>Regenere el token SWS mediante <code>/sws/login</code> si está usando autenticación basada en token.</li>
+<li>Compruebe que el formato del token incluya el prefijo <code>Bearer</code> cuando lo envíe en una cabecera.</li>
+<li>Verifique que el usuario tenga acceso al agente seleccionado.</li>
+<li>Si usa <code>Token in URL</code>, confirme que el endpoint generado siga incluyendo el parámetro de consulta <code>token</code>.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Nota de seguridad</p>
-<p>Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos.</p>
+<p>Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera <strong>OAuth 2.1</strong> o <strong>Token in Header</strong> frente a <strong>Token in URL</strong> siempre que el cliente los admita.</p>
 </div>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L.</a>.</p>
