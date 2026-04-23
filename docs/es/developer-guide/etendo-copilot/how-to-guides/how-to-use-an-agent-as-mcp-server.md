@@ -14,7 +14,7 @@ tags:
 
 ## Visión general
 
-!!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
+!!! example  "Beta Version — Important Notice"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
 
 Esta guía muestra cómo conectarse a agentes de Etendo Copilot usando el [Model Context Protocol (MCP)](../concepts/model-context-protocol.md). Cada agente expone automáticamente un servidor MCP al que puede conectarse desde varios clientes compatibles con MCP como Claude Desktop, VS Code, Gemini CLI y aplicaciones personalizadas.
@@ -411,7 +411,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 **Errores de autenticación:**
 
-- Regenere el token SWS mediante `/sws/login` si está usando autenticación basada en token.
+- Si está utilizando autenticación basada en token y recibe un error 401, regenere el token de sesión de Etendo llamando a `/sws/login` con credenciales válidas de Etendo (este es el endpoint de inicio de sesión de servicios web de Etendo). Actualice el token en la configuración del cliente después.
 - Compruebe que el formato del token incluya el prefijo `Bearer ` cuando lo envíe en una cabecera.
 - Verifique que el usuario tenga acceso al agente seleccionado.
 - Si usa `Token in URL`, confirme que el endpoint generado siga incluyendo el parámetro de consulta `token`.
