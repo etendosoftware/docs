@@ -12,6 +12,151 @@ tags:
 
 #
 
+## March 2026
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Release: Version 26.1 — Email Overhaul and a Modernized Tech Stack**
+
+    ---
+
+    Version [26.1.0](./release-notes/etendo-classic/release-notes.md) marks the start of the new **Etendo 26** generation. **All supported modules** have been updated to ensure full compatibility.
+
+    **Revamped email configuration and sending**
+
+    Outbound email in Etendo has been completely reworked. You can now set up a sending address at three levels — for individual **users**, for each **organization**, or for the whole **company** — and Etendo automatically picks the most specific address available, preferring the user's own address over the company-wide default. No more hard-coded defaults. The [email popup](../getting-started/user-interface/navigation.md#email) also gains **assisted recipient selection**: the system pre-selects recipients according to configurable rules, reducing manual input and the risk of sending to the wrong address. Sent messages are now traceable in the system logs.
+
+    - Documentation: [How to Configure Email](../user-guide/etendo-classic/how-to-guides/how-to-configure-email.md)
+
+    **Infrastructure update: action required before upgrading**
+
+    This version requires an updated server environment (Java 17). This is an infrastructure change that your **IT team or Etendo implementation partner** must handle before upgrading. No action is needed from business users. If your organization manages its own servers, contact your IT team to confirm readiness before upgrading.
+
+    **PostgreSQL 17 supported**
+
+    PostgreSQL 17 is now officially supported. Existing databases on earlier supported versions require no changes; upgrading the database engine is optional.
+
+    - IT upgrade guide: [API Changes](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Platform Extensions 3.17.0: Task Management Upgrades and UI 0.11.2**
+
+    ---
+
+    Version [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the **Platform Extensions** bundle brings meaningful improvements to the Task Management module and the Etendo Main UI.
+
+    **Task module: sequences and scheduling**
+
+    Each task created through the [Task Management](../developer-guide/etendo-classic/bundles/platform/task.md) module now automatically receives a **unique reference number per task category** — for example, all delivery tasks are numbered independently from approval tasks. This makes it easy to find, sort, and discuss specific tasks without reference numbers overlapping between categories. Tasks also gain **start date and due date** fields, enabling scheduling and deadline tracking directly in Etendo.
+
+    **Main UI 0.11.2: Process and form improvements**
+
+    The Etendo Main UI reaches version [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, with fixes and additions across key workflows:
+
+    - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
+    - **Purchase Invoice automation**: automated workflows now bridge Purchase Invoices with Financial Transactions.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed the Process Definition error in the Payment In window.
+    - **Grid navigation**: new redirection system within grids improves cross-window navigation.
+    - **Color support**: custom color configurations are now available system-wide in the interface.
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse Extensions 3.8.0: Nested Logistic Units and Mobile Stock Validation**
+
+    ---
+
+    Version [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the **Warehouse Extensions** bundle improves how warehouse teams receive goods and control stock using the Etendo mobile app. Two specific improvements address complex goods intake and stock over-allocation.
+
+    **Receiving pallets with inner containers (Logistic Unit nesting)**
+
+    The mobile [Reception Tasks](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) screen now supports receiving **Logistic Units (LU) contained inside other Logistic Units** — for example, a pallet that holds several labelled inner boxes. Previously, only a single container level could be registered at reception. GS1-128 barcode data is now displayed in plain text alongside the scanned code, making it easier for operators to verify what was received.
+
+    **Stock reservation check in the mobile app**
+
+    The mobile warehouse app now checks whether stock is already committed to a sales order or reservation before allowing a warehouse movement. If a transaction would use stock that is already set aside for another order, the system blocks the action and alerts the operator — preventing stock shortages and fulfillment conflicts without requiring manual cross-checking.
+
+    - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+## February 2026
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Financial Extensions Update: Smarter Account Validation and Cleaner Budget Exports**
+
+    ---
+
+    With versions [3.10.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) and [3.11.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the **Financial Extensions** bundle, two meaningful improvements land for accounting teams managing chart of accounts and financial planning.
+
+    **New module: Account Structure Validation ⚡**
+
+    The new [Account Structure Validation](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md) module prevents configuration errors when creating or modifying subaccounts in the Account Tree — a common source of hard-to-detect imbalances in the Balance Sheet and Income Statement.
+
+    When enabled (active by default), the system validates:
+
+    - The account has a parent at the **Breakdown** level.
+    - The **Search Key** length is consistent with sibling accounts.
+    - The **Account Type** and **Sign** match those of the parent account.
+
+    If any validation fails, the account is not saved. Individual accounts can be excluded from validation when needed.
+
+    **Budget Export to Excel: no more stuck popups**
+
+    The **Export Budget to Excel** process has been migrated to a **Process Definition**, replacing a legacy servlet implementation. The result: the export runs cleanly and the popup no longer stays open after the download completes. Behavior is now consistent across Etendo 24 and Etendo 25.
+
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Main UI Beta 0.11.0: Attachments, Aggregations and Packaging**
+
+    ---
+
+    The **Platform Extensions** bundle version [3.15.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) ships the next iteration of the **Etendo Main UI**, now at Beta [0.11.0](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.0){target="_blank"}.
+
+    - **Attachments button**: records can now have files attached directly from the new UI toolbar.
+    - **Aggregate functions auto-refresh**: aggregate values in grids update automatically, keeping totals and summaries in sync without manual refresh.
+    - **Packaging process**: the Packaging process is now available and executable from the new UI.
+    - **Improved save flow**: the Save Changes button state is now accurate across all form interactions, eliminating cases where it appeared enabled or disabled incorrectly.
+    - **Security**: the UI no longer redirects users to windows they are not authorized to access.
+
+    - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
+
+</div>
+
+### Etendo BI
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Etendo BI: Base queries refactored — BI process no longer blocks on errors**
+
+    ---
+
+    In version [3.4.0](./release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md) of the **Etendo BI Extensions** bundle, a critical issue affecting the BI data pipeline has been resolved.
+
+    Several base queries in `com.etendoerp.powerbi.queries` referenced columns and tables that no longer exist. Because queries run sequentially, a single failing query blocked all subsequent ones — meaning a misconfigured query could silently prevent large portions of the BI data from being processed.
+
+    All affected queries have been updated or replaced with functional versions compatible with both **Etendo 24** and **Etendo 25**, ensuring the full pipeline runs to completion.
+
+</div>
+
 ## January 2026
 
 ### Warehouse Extensions
