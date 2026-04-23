@@ -584,8 +584,8 @@ plugins:
                   - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
                   - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
                   - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
                  
               - Etendo Mobile:
@@ -1491,8 +1491,8 @@ nav:
         - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
        
     - Etendo Mobile:
