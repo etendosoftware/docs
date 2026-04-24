@@ -1940,13 +1940,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector/</loc>
-        <lastmod>2026-04-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/crm-connector/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started/</loc>
         <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
@@ -4805,13 +4798,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/crm-connector/</loc>
-        <lastmod>2026-04-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/crm-connector/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/general-setup/getting-started/</loc>
