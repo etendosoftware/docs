@@ -265,7 +265,9 @@ plugins:
                       - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
                       - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
                     - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-                    - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                    - Sales Extensions Bundle:
+                      - Overview: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                      - CRM Lead Management: user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md
                     - Spanish Localization Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
                       - Antifraude: user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md
@@ -674,6 +676,7 @@ plugins:
             Business Partner Setup: Configuración de terceros
             Business Partner Tax Category: Categoría de Impuestos de Terceros
             Client: Entidad
+            CRM Lead Management: Gestión de Leads CRM
             Client Side Development and API: Desarrollo del Lado del Cliente y API
             Cluster Development Guidelines: Directrices de Desarrollo en Clúster
             Code Review Process: Proceso de Revisión de Código
