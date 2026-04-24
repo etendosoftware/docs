@@ -150,7 +150,6 @@ plugins:
                       - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
                     - Client:
                       - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-                    - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
                     - Enterprise Model:
                       - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
                       - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
@@ -693,7 +692,6 @@ plugins:
             Create New Subapplication: Crear Nueva Sub-aplicación
             Create Sequences: Crear Secuencias
             Creating a New Microservice: Creación de un Nuevo Microservicio
-            CRM Connector: Conector CRM
             Currency: Moneda
             Data Access Layer: Capa de Acceso a Datos
             Data Model: Modelo de Datos
@@ -1069,7 +1067,6 @@ nav:
             - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Client:
             - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-          - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
           - Enterprise Model:
             - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
             - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
