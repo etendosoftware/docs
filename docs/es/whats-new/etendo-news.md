@@ -46,25 +46,31 @@ tags:
 
 <div class="grid cards" markdown>
 
-- :material-chart-bar: **Platform Extensions 3.17.0: Mejoras en gestión de tareas e interfaz UI 0.11.2**
+- :material-chart-bar: **Platform Extensions 3.16.0 – 3.17.0: Gestión de tareas, mejoras de interfaz y descarga de documentos en PDF**
 
     ---
 
-    La versión [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle **Platform Extensions** incorpora mejoras relevantes en el módulo de gestión de tareas y en la interfaz principal de Etendo.
+    Las versiones [3.16.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) y [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle **Platform Extensions** incorporan mejoras en la gestión de tareas, la interfaz de Etendo y el manejo de documentos.
 
     **Módulo de tareas: numeración y planificación**
 
     Cada tarea creada a través del módulo de [Gestión de Tareas](../developer-guide/etendo-classic/bundles/platform/task.md) recibe ahora automáticamente un **número de referencia único por categoría de tarea** — por ejemplo, todas las tareas de entrega se numeran de forma independiente a las de aprobación. Esto facilita encontrar, ordenar y referenciar tareas específicas sin que los números se solapen entre categorías. Las tareas también incorporan campos de **fecha de inicio y fecha de vencimiento**, lo que permite la planificación y el seguimiento de plazos directamente en Etendo.
 
-    **Main UI 0.11.2: Mejoras en procesos y formularios**
+    **Mejoras de interfaz (versión 0.11.2)**
 
     La interfaz principal de Etendo alcanza la versión [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, con correcciones y mejoras en flujos de trabajo clave:
 
     - **[Proceso de remesas](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resueltos problemas en el flujo de datos que impedían su correcta ejecución.
-    - **Automatización de facturas de compra**: los flujos automatizados conectan ahora las facturas de compra con las transacciones financieras.
-    - **[Cobros](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Añadir detalles**: corregido el error en la ventana de Cobros al usar la definición de proceso.
-    - **Navegación en grillas**: nuevo sistema de redirección dentro de las grillas que mejora la navegación entre ventanas.
+    - **Automatización de facturas de compra**: los flujos automatizados crean ahora la transacción financiera correspondiente al procesar una factura de compra, eliminando pasos manuales.
+    - **[Cobros](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Añadir detalles**: corregido el error que impedía añadir detalles en la ventana de Cobros.
+    - **Navegación entre ventanas**: nuevo sistema de redirección dentro de las grillas que mejora la navegación entre ventanas.
     - **Soporte de colores**: las configuraciones de color personalizadas están ahora disponibles en toda la interfaz.
+
+    **Descarga de documentos en PDF**
+
+    El popup de impresión incluye ahora una opción **Descargar** que genera el documento como PDF y lo descarga directamente en el navegador, sin necesidad de impresora física ni proveedor de impresión configurado. Si no se selecciona ningún proveedor, el proceso funciona en **modo solo descarga**: los registros seleccionados se fusionan en un único PDF, y los que fallen en la generación no impiden la descarga de los que sí se generen, mostrando un aviso.
+
+    - Documentación: [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
 
 </div>
 
@@ -72,21 +78,95 @@ tags:
 
 <div class="grid cards" markdown>
 
-- :material-warehouse: **Warehouse Extensions 3.8.0: Unidades Logísticas anidadas y validación de stock en la app móvil**
+- :material-warehouse: **Warehouse Extensions 3.7.0 – 3.8.0: Recepción multinivel de contenedores, validación de stock móvil y planificación de tareas de almacén**
 
     ---
 
-    La versión [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle **Warehouse Extensions** mejora la recepción de mercancía y el control de stock usando la app móvil de Etendo. Dos mejoras específicas abordan la recepción de embalajes complejos y la sobreasignación de stock.
+    Las versiones [3.7.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) y [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle **Warehouse Extensions** aportan tres mejoras para los equipos de almacén.
 
-    **Recepción de palés con contenedores internos (anidamiento de Unidades Logísticas)**
+    **Recepción de palés con contenedores internos**
 
-    La pantalla de [Tareas de Recepción](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) en la app móvil ya soporta la recepción de **Unidades Logísticas (LU) contenidas dentro de otras Unidades Logísticas** — por ejemplo, un palé que contiene varias cajas etiquetadas en su interior. Anteriormente, solo podía registrarse un único nivel de contenedor en la recepción. Los datos del código de barras GS1-128 ahora se muestran en texto legible junto al código escaneado, facilitando la verificación de lo recibido por parte de los operarios.
+    La pantalla de [Tareas de Recepción](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) en la app móvil ya soporta la recepción de contenedores dentro de otros contenedores — por ejemplo, un palé que contiene varias cajas etiquetadas individualmente en su interior. Anteriormente, solo podía registrarse un único nivel de contenedor en la recepción. Los datos del código de barras ahora se muestran en texto legible junto al código escaneado, facilitando la verificación de lo recibido por parte de los operarios.
 
     **Validación de reservas de stock en la app móvil**
 
     La app móvil de almacén comprueba ahora si el stock ya está comprometido con un pedido de venta o una reserva antes de permitir un movimiento de almacén. Si una transacción utilizaría stock que ya está apartado para otro pedido, el sistema bloquea la acción y alerta al operario — evitando roturas de stock y conflictos en la preparación de pedidos sin necesidad de comprobaciones manuales.
 
+    **Planificación de tareas de almacén**
+
+    Las tareas del módulo [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) incorporan ahora **fechas de inicio y vencimiento** y **números de secuencia por tipo de tarea**. No se requieren módulos adicionales — funciona con la instalación estándar de Warehouse Extensions.
+
     - Documentación: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+### Sales Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Sales Extensions 4.0.0: CRM Lead Management — gestión nativa de leads en Etendo** ⚡
+
+    ---
+
+    La versión [4.0.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) del bundle **Sales Extensions** introduce el módulo **CRM Lead Management** — un CRM nativo integrado directamente en Etendo ERP que permite a los equipos comerciales gestionar el ciclo de vida completo de los prospectos sin salir del sistema.
+
+    **Pipeline de leads**
+
+    Cada prospecto se registra como un **Lead** que avanza por etapas configurables del pipeline: *Nuevo → Contactado → Cualificado → Convertido → Descartado*. Cada cambio de estado queda registrado automáticamente en la pestaña **Historial de estados**, ofreciendo trazabilidad completa del ciclo comercial. Dos métricas se actualizan automáticamente en cada guardado: **Probabilidad de éxito** (0–100%, calculada a partir del estado, la actividad en tareas y las cotizaciones vinculadas) y **Valor estimado** (suma de cotizaciones activas en estado *En evaluación* u *Orden creada*).
+
+    **Tareas de seguimiento e integración con ventas**
+
+    El botón **Generar tarea** crea actividades de seguimiento (llamada, correo, reunión, etc.) vinculadas al lead. Cuando el lead está listo, cambiar su estado a *Convertido* crea automáticamente un **Business Partner** — con ubicación, contacto, tarifa y condiciones de pago — disponible de inmediato en el flujo de ventas (cotizaciones → pedidos → facturas). Las cotizaciones pueden vincularse directamente a un lead: los cambios de estado en la cotización actualizan la probabilidad y el valor estimado del lead, y alcanzar *Orden creada* establece automáticamente el **Estado de oportunidad** del lead como *Ganada*.
+
+    **App móvil y Agente CRM**
+
+    El módulo incluye una **sub-aplicación móvil** para equipos de ventas en campo: las tareas se listan por prioridad y fecha de vencimiento, los datos del lead y el estado pueden actualizarse desde cualquier dispositivo, y completar una tarea mejora la puntuación de probabilidad. Un **Agente CRM** (Copilot) permite consultar todo el pipeline en lenguaje natural — leads por estado, tareas vencidas, nuevos clientes, tasas de conversión, tiempo medio de cierre y ranking de rendimiento comercial — sin necesidad de escribir ninguna consulta.
+
+    - Documentación: [CRM Lead Management](../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot Extensions 4.0.0: Agentes destacados y conexiones externas seguras** ⚡
+
+    ---
+
+    Las versiones [3.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) y [4.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle **Copilot Extensions** incorporan mejoras que facilitan la visibilidad y la conexión de los agentes desde herramientas externas.
+
+    **Agentes destacados**
+
+    Los agentes pueden marcarse como **Destacados**. Los agentes destacados aparecen al inicio de la lista en el chat de Copilot y se muestran por defecto al abrir el chat. Un botón de estrella (⭐) en el chat permite al usuario alternar entre la vista de destacados y la lista completa de agentes. Si no hay ningún agente marcado como destacado, se muestran todos con normalidad.
+
+    **Conexiones seguras con herramientas externas de IA**
+
+    Los agentes de Copilot pueden conectarse ahora con aplicaciones externas de IA mediante el **Model Context Protocol (MCP)** — un estándar abierto que permite a herramientas externas interactuar con los agentes de Copilot sin gestión manual de tokens. La conexión incorpora autenticación **OAuth 2.1**: los usuarios inician sesión a través de la página estándar de Etendo y la aplicación externa recibe la autorización automáticamente, sin necesidad de copiar ni pegar tokens.
+
+    - Documentación: [Configuración y uso](../user-guide/etendo-copilot/setup-and-usage.md) · [Cómo usar un agente como servidor MCP](../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md)
+
+</div>
+
+### Localization Spain Extensions
+
+<div class="grid cards" markdown>
+
+- :material-map-marker: **Localization Spain Extensions 3.12.0: Estado Listo en VeriFactu y modelo AEAT 190 para 2025**
+
+    ---
+
+    La versión [3.12.0](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) del bundle **Localization Spain Extensions** incluye dos mejoras para el cumplimiento fiscal en España.
+
+    **VeriFactu: marcar organizaciones como Listas**
+
+    VeriFactu es el sistema de la AEAT para el registro y envío de facturas en tiempo real a Hacienda. Las organizaciones pueden establecerse ahora en estado **Lista** desde la configuración de VeriFactu. Marcar una organización como Lista la añade a la relación de organizaciones cuyas facturas se envían a VeriFactu a partir de ese momento. Esto hace que el proceso de puesta en marcha sea más controlado: las organizaciones se incorporan de forma explícita, en lugar de ser incluidas automáticamente.
+
+    **Modelo AEAT 190 — ejercicio 2025**
+
+    La declaración AEAT 190 (resumen anual de retenciones) ha sido actualizada con los nuevos registros requeridos para el ejercicio fiscal 2025, manteniendo el bundle en cumplimiento con las últimas especificaciones de la Agencia Tributaria.
+
+    - Documentación: [Veri*Factu](../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md) · [Modelo 190](../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
 
 </div>
 

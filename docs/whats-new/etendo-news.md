@@ -46,25 +46,31 @@ tags:
 
 <div class="grid cards" markdown>
 
-- :material-chart-bar: **Platform Extensions 3.17.0: Task Management Upgrades and UI 0.11.2**
+- :material-chart-bar: **Platform Extensions 3.16.0 – 3.17.0: Task Management, updated interface and PDF download**
 
     ---
 
-    Version [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the **Platform Extensions** bundle brings meaningful improvements to the Task Management module and the Etendo Main UI.
+    Versions [3.16.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the **Platform Extensions** bundle bring improvements to task management, the Etendo interface, and document handling.
 
     **Task module: sequences and scheduling**
 
     Each task created through the [Task Management](../developer-guide/etendo-classic/bundles/platform/task.md) module now automatically receives a **unique reference number per task category** — for example, all delivery tasks are numbered independently from approval tasks. This makes it easy to find, sort, and discuss specific tasks without reference numbers overlapping between categories. Tasks also gain **start date and due date** fields, enabling scheduling and deadline tracking directly in Etendo.
 
-    **Main UI 0.11.2: Process and form improvements**
+    **Interface improvements (version 0.11.2)**
 
     The Etendo Main UI reaches version [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, with fixes and additions across key workflows:
 
     - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
-    - **Purchase Invoice automation**: automated workflows now bridge Purchase Invoices with Financial Transactions.
-    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed the Process Definition error in the Payment In window.
-    - **Grid navigation**: new redirection system within grids improves cross-window navigation.
+    - **Purchase Invoice automation**: automated workflows now create the corresponding financial transaction when a purchase invoice is processed, eliminating manual steps.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed an error that prevented adding details in the Payment In window.
+    - **Navigation between windows**: a new redirection system within grids improves cross-window navigation.
     - **Color support**: custom color configurations are now available system-wide in the interface.
+
+    **PDF download in Print Provider**
+
+    The print pop-up now includes a **Download** option that generates the document as a PDF and downloads it directly to the browser — without requiring a physical printer or a configured print provider. When no provider is selected, the process runs in **download-only mode**: multiple selected records are merged into a single PDF, and any records that fail to generate still allow the successfully generated ones to be downloaded with a warning.
+
+    - Documentation: [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
 
 </div>
 
@@ -72,21 +78,73 @@ tags:
 
 <div class="grid cards" markdown>
 
-- :material-warehouse: **Warehouse Extensions 3.8.0: Nested Logistic Units and Mobile Stock Validation**
+- :material-warehouse: **Warehouse Extensions 3.7.0 – 3.8.0: Multi-level container receiving, mobile stock validation and warehouse task scheduling**
 
     ---
 
-    Version [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the **Warehouse Extensions** bundle improves how warehouse teams receive goods and control stock using the Etendo mobile app. Two specific improvements address complex goods intake and stock over-allocation.
+    Versions [3.7.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) and [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the **Warehouse Extensions** bundle deliver three improvements for warehouse teams.
 
-    **Receiving pallets with inner containers (Logistic Unit nesting)**
+    **Receiving pallets with inner containers**
 
-    The mobile [Reception Tasks](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) screen now supports receiving **Logistic Units (LU) contained inside other Logistic Units** — for example, a pallet that holds several labelled inner boxes. Previously, only a single container level could be registered at reception. GS1-128 barcode data is now displayed in plain text alongside the scanned code, making it easier for operators to verify what was received.
+    The mobile [Reception Tasks](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) screen now supports receiving containers inside other containers — for example, a pallet that holds several individually labelled inner boxes. Previously, only a single container level could be registered at reception. Barcode data is now displayed in plain text alongside the scanned code, making it easier for operators to verify what was received.
 
     **Stock reservation check in the mobile app**
 
     The mobile warehouse app now checks whether stock is already committed to a sales order or reservation before allowing a warehouse movement. If a transaction would use stock that is already set aside for another order, the system blocks the action and alerts the operator — preventing stock shortages and fulfillment conflicts without requiring manual cross-checking.
 
+    **Warehouse task scheduling**
+
+    Warehouse tasks in the [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) module now support **start and due dates** and **sequence numbers per task type**. No additional modules are required — this works with the standard Warehouse Extensions installation.
+
     - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+### Sales Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Sales Extensions 4.0.0: CRM Lead Management — native lead tracking inside Etendo** ⚡
+
+    ---
+
+    Version [4.0.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) of the **Sales Extensions** bundle introduces the **CRM Lead Management** module — a native CRM built directly into Etendo ERP that lets commercial teams manage the full prospect lifecycle without leaving the system.
+
+    **Lead pipeline**
+
+    Each prospect is tracked as a **Lead** record that moves through configurable pipeline stages: *New → Contacted → Qualified → Converted → Dead*. Every status change is automatically logged in a **Status History** tab, giving full traceability of the commercial lifecycle. Two metrics update automatically on every save: **Success Probability** (0–100%, calculated from status, task activity, and linked quotations) and **Estimated Value** (sum of active quotations in *Under Evaluation* or *Order Created* status).
+
+    **Follow-up tasks and Sales integration**
+
+    The **Generate Task** button creates follow-up activities (call, email, meeting, etc.) linked to the lead. When the lead is ready, changing its status to *Converted* automatically creates a **Business Partner** — with location, contact, price list, and payment terms — and makes it immediately available in the Sales flow (quotations → orders → invoices). Quotations can be linked directly to a lead: status changes on the quotation update the lead's probability and estimated value, and reaching *Order Created* automatically sets the lead's **Opportunity Status** to *Won*.
+
+    **Mobile app and CRM Agent**
+
+    The module ships a **mobile sub-app** for field sales teams: tasks are listed by priority and due date, lead data and status can be updated on the go, and completing a task boosts the lead's probability score. A **CRM Agent** (Copilot) allows querying the full pipeline in natural language — leads by status, overdue tasks, new customers, conversion rates, average closing time, and sales performance rankings — without writing any query.
+
+    - Documentation: [CRM Lead Management](../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot Extensions 4.0.0: Featured Agents and secure external connections** ⚡
+
+    ---
+
+    Versions [3.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [4.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the **Copilot Extensions** bundle deliver a set of improvements that make agents easier to discover and connect to from external tools.
+
+    **Featured Agents**
+
+    Agents can now be marked as **Featured**. Featured agents appear at the top of the Copilot chat list and are shown by default when the chat opens. A star button (⭐) in the chat lets users switch between the featured view and the full agent list. If no agents are marked as Featured, all agents are displayed as usual.
+
+    **Secure connections to external AI tools**
+
+    Copilot agents can now be connected to external AI applications using the **Model Context Protocol (MCP)** — an open standard that lets external tools interact with Copilot agents without manual token handling. The connection now supports **OAuth 2.1 authentication**: users log in through the standard Etendo login page and the external application receives authorization automatically, with no need to copy or paste tokens.
+
+    - Documentation: [Setup and Usage](../user-guide/etendo-copilot/setup-and-usage.md) · [How to Use an Agent as MCP Server](../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md)
 
 </div>
 
