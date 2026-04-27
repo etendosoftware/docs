@@ -207,6 +207,9 @@ public class StandardProcessActionHandler extends BaseProcessActionHandler {
 
 El `ActionHandler` devuelve un `JSONObject` con las acciones que se deben realizar tras la ejecución.
 
+!!!info
+    Para más información sobre cómo crear acciones, visite [Desarrollo del lado del cliente y API](../concepts/client-side-development-and-api.md#obutilitiesaction---actions-execution-related-utilities)
+
 ##### Validaciones
 
 Es posible realizar validaciones en el backend antes de ejecutar el proceso real; cuando estas validaciones no se satisfacen, se puede mostrar un mensaje en la UI para permitir que el usuario corrija los valores problemáticos.
