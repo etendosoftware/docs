@@ -11370,6 +11370,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Visión general">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -15184,6 +15199,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Visión general">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -15364,12 +15394,23 @@
 
 <h1 id="proyecciones-y-mapeos">Proyecciones y mapeos</h1>
 <h2 id="vision-general">Visión general</h2>
-<p>Al utilizar Spring Data JPA para implementar la capa de persistencia, el repositorio normalmente devuelve una o más instancias de la clase raíz. Sin embargo, en la mayoría de los casos, no necesitamos todas las propiedades de los objetos devueltos.</p>
+<p>Cuando Etendo recupera datos de la base de datos, a menudo devuelve más campos de los que una integración determinada necesita. Las proyecciones permiten definir exactamente qué campos se incluyen, reduciendo la cantidad de datos transferidos y mejorando el rendimiento. (Detalle técnico: esto se implementa mediante proyecciones de Spring Data JPA en la capa de persistencia.)</p>
 <p>En estos casos, puede que queramos recuperar los datos como objetos de tipos personalizados. Estos tipos reflejan vistas parciales de la clase raíz, conteniendo solo las propiedades necesarias. Aquí es donde las proyecciones son útiles.</p>
+<h3 id="casos-de-uso">Casos de uso</h3>
+<p>Las proyecciones y los mapeos se utilizan para controlar qué campos de datos de Etendo se comparten con un sistema externo —como una plataforma de comercio electrónico o un marketplace— o se reciben de él. La conexión entre Etendo y ese sistema externo se realiza a través de una API (un canal de comunicación estándar entre aplicaciones de software). Dos escenarios habituales son:</p>
+<ul>
+<li><strong>Exponer datos de Etendo a un sistema externo</strong>: una plataforma de comercio electrónico lee datos de productos o pedidos de Etendo a través de una conexión API de solo lectura generada por el servicio DAS.</li>
+<li><strong>Importar datos de un sistema externo a Etendo</strong>: los datos de clientes o pedidos de un marketplace se envían a Etendo Classic a través de una conexión API de escritura.</li>
+</ul>
+<p>Utilice proyecciones para controlar exactamente qué campos se exponen o se consumen, manteniendo la superficie de integración mínima y explícita.</p>
 <h2 id="ventana-proyecciones-y-mapeos">Ventana Proyecciones y mapeos</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Etendo RX</code> &gt; <code>Proyecciones y mapeos</code></p>
 <p>Una <strong>proyección</strong> es un conjunto de campos específicos de una entidad o campos combinados de múltiples entidades. Las proyecciones son útiles cuando necesitamos recuperar solo un subconjunto de datos, ya que reduce la cantidad de datos que necesitamos recuperar de la base de datos, lo que conlleva una mejora del rendimiento.</p>
-<p>Esta ventana permite la creación de endpoints de lectura y escritura de datos en Etendo, utilizando el servicio DAS. Este servicio, en base a las configuraciones de esta ventana, genera dinámicamente los endpoints al iniciarse.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Esta ventana es el lugar central para crear endpoints de lectura y escritura de datos en Etendo.</strong></p>
+</div>
+<p>Esta ventana utiliza el <a href="../../getting-started/">servicio DAS</a> (Data Access Service — un servicio en segundo plano de Etendo RX que lee la configuración que usted define aquí y crea automáticamente los puntos de conexión de la API utilizados para intercambiar datos con sistemas externos). El servicio DAS lee la configuración definida aquí y genera los endpoints correspondientes cuando se inicia.</p>
 <p>Para crear una nueva proyección en Etendo, es necesario completar los campos en la cabecera de la ventana <strong>Proyecciones y mapeos</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-rx/concepts/projections/projection-and-mappings.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-rx/concepts/projections/projection-and-mappings.png"></a></p>
 <ul>
@@ -15382,9 +15423,9 @@
 <h3 id="solapa-entidades-proyectadas">Solapa Entidades proyectadas</h3>
 <p>En esta solapa, se pueden definir las entidades a proyectar. Pueden tener dos tipos de proyecciones: Lectura y Escritura. Esto significa que, al interactuar con un sistema externo, es posible leer la información en la base de datos de Etendo Classic para exponerla al otro sistema. La otra opción es escribir información en la base de datos de Etendo Classic, es decir, extraer información del sistema externo para utilizarla en Etendo.</p>
 <p>Al referirse a una entidad a proyectar, esta entidad está relacionada con una tabla específica.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Recuerde que siempre es necesario crear ambos registros, uno de tipo escritura y otro de tipo lectura, para que los endpoints generados funcionen correctamente.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Si necesita uno o ambos tipos de proyección depende de la dirección de su integración: cree un tipo <strong>Lectura</strong> para exponer datos de Etendo a un sistema externo, un tipo <strong>Escritura</strong> para importar datos externos a Etendo, o ambos si necesita integración bidireccional.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-rx/concepts/projections/projected-entities.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-rx/concepts/projections/projected-entities.png"></a></p>
 <p>Campos a tener en cuenta:</p>
@@ -15497,8 +15538,8 @@
 <p>En esta ventana, es posible definir búsquedas asociadas a tablas. Estas son filtros personalizados con consultas HQL.</p>
 <p>Esta ventana también permite la creación de endpoints de búsqueda, utilizando el servicio DAS. Este servicio, en base a las configuraciones de esta ventana, genera dinámicamente los endpoints al iniciarse.</p>
 <h3 id="solapa-repositorio">Solapa Repositorio</h3>
-<p>En Spring Data, un repositorio es una abstracción que proporciona las operaciones relativas a una clase de dominio para interactuar con un almacén de datos.
-Para crear el repositorio para nuestro propósito, necesitamos ir a Tablas y columnas, seleccionar una tabla y, en la solapa <em>Repositorio</em>, crear un nuevo registro definiendo el módulo en desarrollo donde se exportan las configuraciones.</p>
+<p>La solapa Repositorio se utiliza para registrar una tabla de modo que el servicio DAS pueda generar conexiones de búsqueda filtradas para ella — por ejemplo, recuperar únicamente los pedidos pertenecientes a un tercero específico. Registrar un repositorio aquí permite al <a href="../../getting-started/">servicio DAS</a> (Data Access Service — un servicio en segundo plano de Etendo RX que lee la configuración que usted define aquí y crea automáticamente los puntos de conexión de la API utilizados para intercambiar datos con sistemas externos) generar conexiones de búsqueda filtradas personalizadas — más allá de las operaciones estándar de creación, lectura, actualización y eliminación — para la tabla seleccionada. Utilice la solapa Repositorio cuando necesite consultas filtradas (por ejemplo, "obtener todos los pedidos de un tercero específico") que no estén cubiertas por las conexiones predeterminadas.</p>
+<p>Para registrar un repositorio, vaya a Tablas y columnas, seleccione una tabla y, en la solapa <em>Repositorio</em>, cree un nuevo registro definiendo el módulo en desarrollo donde se exportan las configuraciones.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-rx/concepts/projections/repository-tab.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-rx/concepts/projections/repository-tab.png"></a></p>
 <h4 id="subsolapa-busqueda">Subsolapa Búsqueda</h4>
 <p>A continuación, podemos definir búsquedas para obtener datos filtrados de la tabla seleccionada.</p>
