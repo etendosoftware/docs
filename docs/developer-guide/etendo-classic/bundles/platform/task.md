@@ -21,16 +21,33 @@ The system processes tasks in response to events that occur within Etendo, such 
 
 ## Initial Configuration
 
-### PostgreSQL Configuration for Connect (Debezium) Use
+### Configure PostgreSQL for Debezium Change Capture
+
+Debezium is a change-data-capture tool that monitors your database for row-level changes and forwards them to Kafka. The two SQL commands below enable that monitoring on the Etendo database.
+
+The database name is the value of `bbdd.sid` in `gradle.properties` (typically `etendo`), and the connection must use the PostgreSQL system user defined by `bbdd.systemUser` (typically `postgres`).
+
+Choose the connection command that matches how your PostgreSQL instance is configured:
+
+- If PostgreSQL requires a password, run:
+    ```bash title="Terminal"
+    psql -U postgres etendo
+    ```
+- If you are on Linux and PostgreSQL uses peer (OS-level) authentication, run:
+    ```bash title="Terminal"
+    sudo -u postgres psql -d etendo
+    ```
+
+Once connected, run the following SQL commands:
+
+!!! warning "**PostgreSQL service must be restarted** after applying this change"
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
 ALTER TABLE etask_task REPLICA IDENTITY FULL;
 ```
 
-These commands prepare the PostgreSQL database to work with **Debezium**, a tool for capturing changes in tables.
-
-!!! warning "**PostgreSQL service must be restarted** after applying this change" 
+These commands prepare the PostgreSQL database to work with **Debezium**, a tool for capturing changes in tables. 
 
 | Command                 | Description                                                                                                                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +56,13 @@ These commands prepare the PostgreSQL database to work with **Debezium**, a tool
 
 These commands are **mandatory prerequisites** for Debezium to detect and propagate events to Kafka, which in turn triggers task processing in Etendo.
 
+!!! info
+    If you skip this manual configuration, the `./gradlew kafkaConnectSetup --info` task can detect missing settings and apply them automatically. However, doing so forces a PostgreSQL restart during the setup run. Apply the SQL commands manually first if a mid-setup database restart is not acceptable in your environment.
+
 ### Start RX Services
+
+!!! warning
+    Add these variables only after you have completed the base Etendo installation (the initial `./gradlew install` and first Tomcat startup). Do not include them during that initial install. Adding them before the base installation is complete will cause the base install itself to fail.
 
 1. Configure the following variables in `Gradle.properties` to enable and start the required services:
 
@@ -77,12 +100,22 @@ These commands are **mandatory prerequisites** for Debezium to detect and propag
 
 4. Create the connection between Connect and Kafka by running:
 
+    !!! info
+        This command calls the Kafka Connect REST API, which runs on port 8083 inside the Docker network by default. If Kafka Connect has not fully started after `resources.up`, the command will fail. Wait until all Docker services are healthy before running it (you can check with `docker ps` or your Docker dashboard).
+
+        Only Kafka Connect needs to be healthy for this step. The other dockerized RX services (config, auth, DAS, edge) start automatically and do not require any manual ERP configuration at this point — you will configure them in the **Initialize RX Services** section below.
+
     ```bash title="Terminal"
     ./gradlew kafkaConnectSetup --info
     ```
 
 ### Compile the Environment and Start Tomcat
 
+!!! warning
+    **Tomcat must not be running** when this command executes, because `update.database` modifies the database schema and will fail or produce inconsistent data if Tomcat is active.
+
+    - **Docker-managed Tomcat** (`docker_com.etendoerp.tomcat=true` in `gradle.properties`): Stop the Tomcat container before running the command (e.g., `docker stop etendo-tomcat-1`). `smartbuild` will restart Tomcat automatically when the build completes.
+    - **Locally installed Tomcat** (Tomcat started manually on your machine, not through Docker): Stop the Tomcat process before running the command, then start it again manually once the build completes.
 
 ```bash title="Terminal"
 ./gradlew update.database compile.complete smartbuild --info
@@ -90,6 +123,9 @@ These commands are **mandatory prerequisites** for Debezium to detect and propag
 
 ### Initialize RX Services
 :material-menu: `Application` > `Etendo RX` > `RX Config`
+
+!!! warning
+    This step is mandatory. Without it, the Task module cannot function. The **Initialize RX Services** process populates the default configuration variables — including service endpoints and parameters — that the RX services need to communicate with Etendo Classic. Skipping this step causes task processing to fail silently — no error is shown and no tasks are created or processed.
 
 Once the environment is compiled and Tomcat is running, as `System Administrator` role, navigate to **RX Config** window, run the **Initialize RX Services** process from the toolbar. This step registers the access data required for the interaction between Etendo RX services. For more details, see [Etendo RX Configurations](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
 
@@ -122,7 +158,7 @@ A developer, with the `System Administrator` role, must define the task types, s
 In this tab you specify the observed table and the event (insert or update) that will trigger the creation of the task.
 In addition, optional filters (JEXL) associated to the table fields or even advanced filters defined as actions can be defined. 
 
-!!!warning
+!!! warning
     In case multiple tables or filters are defined, it must be ensured that they are mutually exclusive because more than one task could be created per event occurred.
 
 **Fields to note:**
@@ -153,7 +189,7 @@ This tab defines asynchronous jobs that are automatically executed when the task
 
 - **Module**: The module where this component will be exported.
 - **Line No.**: It determines the queuing order, although as they are asynchronous processes they can be executed in parallel.
-- **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [Async Jobs]() documentation.
+- **Job**: Reference to the job to be executed (should be set up as asynchronous), for more information visit [How to Create Jobs and Actions](../../how-to-guides/how-to-create-jobs-and-actions.md) documentation.
 - **Active**: Checkbox to enable or disable this event.
 
 ### Task No. Sequence Configuration
@@ -244,6 +280,7 @@ Now we will go through the settings:
 
 !!! info
     In the [Task - User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/task.md) section you can see how tasks are automatically created, assigned users and how to change their status from the window with the same name.
+
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.

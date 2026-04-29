@@ -968,17 +968,13 @@ plugins:
             ✨Getting Started: ✨Primeros Pasos
             
   - search:
-      indexing: full
-      prebuild_index: true
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
-      exact_phrase: true
-      index_all_content: true  
       pipeline:
         - stemmer
         - stopWordFilter
-        - trimmer    
+        - trimmer
 
   - tags
   - glightbox
