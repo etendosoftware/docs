@@ -150,7 +150,6 @@ plugins:
                       - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
                     - Client:
                       - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-                    - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
                     - Enterprise Model:
                       - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
                       - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
@@ -246,8 +245,9 @@ plugins:
                     - Etendo BI Extensions Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
                       - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
-                    - Financial Extensions Bundle: 
+                    - Financial Extensions Bundle:
                       - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+                      - Accounting Template Module: user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module.md
                       - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
                       - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
                       - Automated Remittance: user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md
@@ -265,7 +265,9 @@ plugins:
                       - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
                       - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
                     - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-                    - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                    - Sales Extensions Bundle:
+                      - Overview: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                      - CRM Lead Management: user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md
                     - Spanish Localization Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
                       - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
@@ -582,8 +584,8 @@ plugins:
                   - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
                   - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
                   - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
                  
               - Etendo Mobile:
@@ -646,6 +648,7 @@ plugins:
             Account Tree: Árbol de cuentas
             Accounting: Contabilidad
             Accounting Process: Proceso Contable
+            Accounting Template Module: Módulo de Plantillas de Contabilidad
             Accounting Templates: Plantillas de Contabilidad
             Adjust Invoice Tax: Ajustar Impuesto de Factura
             Advanced Bank Account Management: Gestión Avanzada de Cuentas Bancarias
@@ -672,6 +675,7 @@ plugins:
             Business Partner Setup: Configuración de terceros
             Business Partner Tax Category: Categoría de Impuestos de Terceros
             Client: Entidad
+            CRM Lead Management: Gestión de Leads CRM
             Client Side Development and API: Desarrollo del Lado del Cliente y API
             Cluster Development Guidelines: Directrices de Desarrollo en Clúster
             Code Review Process: Proceso de Revisión de Código
@@ -690,7 +694,6 @@ plugins:
             Create New Subapplication: Crear Nueva Sub-aplicación
             Create Sequences: Crear Secuencias
             Creating a New Microservice: Creación de un Nuevo Microservicio
-            CRM Connector: Conector CRM
             Currency: Moneda
             Data Access Layer: Capa de Acceso a Datos
             Data Model: Modelo de Datos
@@ -1066,7 +1069,6 @@ nav:
             - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Client:
             - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-          - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
           - Enterprise Model:
             - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
             - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
@@ -1164,6 +1166,7 @@ nav:
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
           - Financial Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+            - Accounting Template Module: user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module.md
             - Account Structure Validation: user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md
             - Adjust Invoice Tax: user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md
             - Advanced Bank Account Management: user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md
@@ -1487,8 +1490,8 @@ nav:
         - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
        
     - Etendo Mobile:

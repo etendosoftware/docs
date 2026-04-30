@@ -12,6 +12,230 @@ tags:
 
 #
 
+## Marzo 2026
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Nueva versión de Etendo: 26.1 — Renovación del correo electrónico y modernización del stack tecnológico**
+
+    ---
+
+    La versión [26.1.0](./release-notes/etendo-classic/release-notes.md) marca el inicio de la nueva generación **Etendo 26**. **Todos los módulos compatibles** han sido actualizados para garantizar la plena integración.
+
+    **Configuración y envío de correo electrónico renovados**
+
+    El envío de correo en Etendo ha sido completamente rediseñado. Ahora es posible configurar la dirección de envío en tres niveles: para **usuarios** individuales, para cada **organización** o para toda la **empresa**. Etendo selecciona automáticamente la dirección más específica disponible, dando prioridad a la dirección del propio usuario frente al valor por defecto de la empresa. El [popup de correo](../getting-started/user-interface/navigation.md#email) también incorpora **selección asistida de destinatarios**: el sistema preselecciona destinatarios según reglas configurables, reduciendo la entrada manual y el riesgo de envíos incorrectos. Los mensajes enviados quedan registrados en los logs del sistema.
+
+    - Documentación: [Cómo configurar el correo electrónico](../user-guide/etendo-classic/how-to-guides/how-to-configure-email.md)
+
+    **Actualización de infraestructura: acción requerida antes de actualizar**
+
+    Esta versión requiere un entorno de servidor actualizado (Java 17). Se trata de un cambio de infraestructura que debe gestionar el **equipo de IT o el partner de implementación de Etendo** antes de realizar la actualización. Los usuarios de negocio no necesitan realizar ninguna acción. Si la organización gestiona sus propios servidores, contacte con el equipo de IT para confirmar la disponibilidad antes de actualizar.
+
+    **PostgreSQL 17 compatible**
+
+    PostgreSQL 17 está ahora oficialmente soportado. Las bases de datos existentes en versiones anteriores compatibles no requieren cambios; la actualización del motor de base de datos es opcional.
+
+    - Guía de actualización técnica: [Documentación de cambios de API](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Platform Extensions 3.16.0 – 3.17.0: Gestión de tareas, mejoras de interfaz y descarga de documentos en PDF**
+
+    ---
+
+    Las versiones [3.16.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) y [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle **Platform Extensions** incorporan mejoras en la gestión de tareas, la interfaz de Etendo y el manejo de documentos.
+
+    **Módulo de tareas: numeración y planificación**
+
+    Cada tarea creada a través del módulo de [Gestión de Tareas](../developer-guide/etendo-classic/bundles/platform/task.md) recibe ahora automáticamente un **número de referencia único por categoría de tarea** — por ejemplo, todas las tareas de entrega se numeran de forma independiente a las de aprobación. Esto facilita encontrar, ordenar y referenciar tareas específicas sin que los números se solapen entre categorías. Las tareas también incorporan campos de **fecha de inicio y fecha de vencimiento**, lo que permite la planificación y el seguimiento de plazos directamente en Etendo.
+
+    **Mejoras de interfaz (versión 0.11.2)**
+
+    La interfaz principal de Etendo alcanza la versión [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, con correcciones y mejoras en flujos de trabajo clave:
+
+    - **[Proceso de remesas](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resueltos problemas en el flujo de datos que impedían su correcta ejecución.
+    - **Automatización de facturas de compra**: los flujos automatizados crean ahora la transacción financiera correspondiente al procesar una factura de compra, eliminando pasos manuales.
+    - **[Cobros](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Añadir detalles**: corregido el error que impedía añadir detalles en la ventana de Cobros.
+    - **Navegación entre ventanas**: nuevo sistema de redirección dentro de las grillas que mejora la navegación entre ventanas.
+    - **Soporte de colores**: las configuraciones de color personalizadas están ahora disponibles en toda la interfaz.
+
+    **Descarga de documentos en PDF**
+
+    El popup de impresión incluye ahora una opción **Descargar** que genera el documento como PDF y lo descarga directamente en el navegador, sin necesidad de impresora física ni proveedor de impresión configurado. Si no se selecciona ningún proveedor, el proceso funciona en **modo solo descarga**: los registros seleccionados se fusionan en un único PDF, y los que fallen en la generación no impiden la descarga de los que sí se generen, mostrando un aviso.
+
+    - Documentación: [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse Extensions 3.7.0 – 3.8.0: Recepción multinivel de contenedores, validación de stock móvil y planificación de tareas de almacén**
+
+    ---
+
+    Las versiones [3.7.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) y [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle **Warehouse Extensions** aportan tres mejoras para los equipos de almacén.
+
+    **Recepción de palés con contenedores internos**
+
+    La pantalla de [Tareas de Recepción](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) en la app móvil ya soporta la recepción de contenedores dentro de otros contenedores — por ejemplo, un palé que contiene varias cajas etiquetadas individualmente en su interior. Anteriormente, solo podía registrarse un único nivel de contenedor en la recepción. Los datos del código de barras ahora se muestran en texto legible junto al código escaneado, facilitando la verificación de lo recibido por parte de los operarios.
+
+    **Validación de reservas de stock en la app móvil**
+
+    La app móvil de almacén comprueba ahora si el stock ya está comprometido con un pedido de venta o una reserva antes de permitir un movimiento de almacén. Si una transacción utilizaría stock que ya está apartado para otro pedido, el sistema bloquea la acción y alerta al operario — evitando roturas de stock y conflictos en la preparación de pedidos sin necesidad de comprobaciones manuales.
+
+    **Planificación de tareas de almacén**
+
+    Las tareas del módulo [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) incorporan ahora **fechas de inicio y vencimiento** y **números de secuencia por tipo de tarea**. No se requieren módulos adicionales — funciona con la instalación estándar de Warehouse Extensions.
+
+    - Documentación: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+### Sales Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Sales Extensions 4.0.0: CRM Lead Management — gestión nativa de leads en Etendo** ⚡
+
+    ---
+
+    La versión [4.0.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) del bundle **Sales Extensions** introduce el módulo **CRM Lead Management** — un CRM nativo integrado directamente en Etendo ERP que permite a los equipos comerciales gestionar el ciclo de vida completo de los prospectos sin salir del sistema.
+
+    **Pipeline de leads**
+
+    Cada prospecto se registra como un **Lead** que avanza por etapas configurables del pipeline: *Nuevo → Contactado → Cualificado → Convertido → Descartado*. Cada cambio de estado queda registrado automáticamente en la pestaña **Historial de estados**, ofreciendo trazabilidad completa del ciclo comercial. Dos métricas se actualizan automáticamente en cada guardado: **Probabilidad de éxito** (0–100%, calculada a partir del estado, la actividad en tareas y las cotizaciones vinculadas) y **Valor estimado** (suma de cotizaciones activas en estado *En evaluación* u *Orden creada*).
+
+    **Tareas de seguimiento e integración con ventas**
+
+    El botón **Generar tarea** crea actividades de seguimiento (llamada, correo, reunión, etc.) vinculadas al lead. Cuando el lead está listo, cambiar su estado a *Convertido* crea automáticamente un **Business Partner** — con ubicación, contacto, tarifa y condiciones de pago — disponible de inmediato en el flujo de ventas (cotizaciones → pedidos → facturas). Las cotizaciones pueden vincularse directamente a un lead: los cambios de estado en la cotización actualizan la probabilidad y el valor estimado del lead, y alcanzar *Orden creada* establece automáticamente el **Estado de oportunidad** del lead como *Ganada*.
+
+    **App móvil y Agente CRM**
+
+    El módulo incluye una **sub-aplicación móvil** para equipos de ventas en campo: las tareas se listan por prioridad y fecha de vencimiento, los datos del lead y el estado pueden actualizarse desde cualquier dispositivo, y completar una tarea mejora la puntuación de probabilidad. Un **Agente CRM** (Copilot) permite consultar todo el pipeline en lenguaje natural — leads por estado, tareas vencidas, nuevos clientes, tasas de conversión, tiempo medio de cierre y ranking de rendimiento comercial — sin necesidad de escribir ninguna consulta.
+
+    - Documentación: [CRM Lead Management](../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot Extensions 4.0.0: Agentes destacados y conexiones externas seguras** ⚡
+
+    ---
+
+    Las versiones [3.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) y [4.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle **Copilot Extensions** incorporan mejoras que facilitan la visibilidad y la conexión de los agentes desde herramientas externas.
+
+    **Agentes destacados**
+
+    Los agentes pueden marcarse como **Destacados**. Los agentes destacados aparecen al inicio de la lista en el chat de Copilot y se muestran por defecto al abrir el chat. Un botón de estrella (⭐) en el chat permite al usuario alternar entre la vista de destacados y la lista completa de agentes. Si no hay ningún agente marcado como destacado, se muestran todos con normalidad.
+
+    **Conexiones seguras con herramientas externas de IA**
+
+    Los agentes de Copilot pueden conectarse ahora con aplicaciones externas de IA mediante el **Model Context Protocol (MCP)** — un estándar abierto que permite a herramientas externas interactuar con los agentes de Copilot sin gestión manual de tokens. La conexión incorpora autenticación **OAuth 2.1**: los usuarios inician sesión a través de la página estándar de Etendo y la aplicación externa recibe la autorización automáticamente, sin necesidad de copiar ni pegar tokens.
+
+    - Documentación: [Configuración y uso](../user-guide/etendo-copilot/setup-and-usage.md) · [Cómo usar un agente como servidor MCP](../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md)
+
+</div>
+
+### Localization Spain Extensions
+
+<div class="grid cards" markdown>
+
+- :material-map-marker: **Localization Spain Extensions 3.12.0: Estado Listo en VeriFactu y modelo AEAT 190 para 2025**
+
+    ---
+
+    La versión [3.12.0](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) del bundle **Localization Spain Extensions** incluye dos mejoras para el cumplimiento fiscal en España.
+
+    **VeriFactu: marcar organizaciones como Listas**
+
+    VeriFactu es el sistema de la AEAT para el registro y envío de facturas en tiempo real a Hacienda. Las organizaciones pueden establecerse ahora en estado **Lista** desde la configuración de VeriFactu. Marcar una organización como Lista la añade a la relación de organizaciones cuyas facturas se envían a VeriFactu a partir de ese momento. Esto hace que el proceso de puesta en marcha sea más controlado: las organizaciones se incorporan de forma explícita, en lugar de ser incluidas automáticamente.
+
+    **Modelo AEAT 190 — ejercicio 2025**
+
+    La declaración AEAT 190 (resumen anual de retenciones) ha sido actualizada con los nuevos registros requeridos para el ejercicio fiscal 2025, manteniendo el bundle en cumplimiento con las últimas especificaciones de la Agencia Tributaria.
+
+    - Documentación: [Veri*Factu](../user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md) · [Modelo 190](../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
+
+</div>
+
+## Febrero 2026
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Actualización de Financial Extensions: Validación de cuentas más inteligente y exportación de presupuestos más limpia**
+
+    ---
+
+    Con las versiones [3.10.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) y [3.11.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle **Financial Extensions**, los equipos de contabilidad que gestionan el plan de cuentas y la planificación financiera reciben dos mejoras relevantes.
+
+    **Nuevo módulo: Account Structure Validation ⚡**
+
+    El nuevo módulo [Account Structure Validation](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md) previene errores de configuración al crear o modificar subcuentas en el árbol de cuentas — una fuente habitual de desequilibrios difíciles de detectar en el Balance y la Cuenta de Resultados.
+
+    Cuando está activo (activado por defecto), el sistema valida:
+
+    - Que la cuenta tenga un padre en el nivel **Desglose**.
+    - Que la longitud de la **Clave de Búsqueda** sea coherente con las cuentas hermanas.
+    - Que el **Tipo de Cuenta** y el **Signo** coincidan con los de la cuenta padre.
+
+    Si alguna validación falla, la cuenta no se guarda. Las cuentas individuales pueden excluirse de la validación cuando sea necesario.
+
+    **Exportación de presupuesto a Excel: sin más popups bloqueados**
+
+    El proceso **Exportar Presupuesto a Excel** ha sido migrado a una **Definición de Proceso**, sustituyendo la implementación anterior basada en servlet. El resultado: la exportación se ejecuta correctamente y el popup ya no permanece abierto tras completarse la descarga. El comportamiento es ahora consistente en Etendo 24 y Etendo 25.
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Main UI Beta 0.11.0: Adjuntos, agregaciones y empaquetado**
+
+    ---
+
+    El bundle **Platform Extensions** versión [3.15.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) incorpora la siguiente iteración de la **Etendo Main UI**, ahora en Beta [0.11.0](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.0){target="_blank"}.
+
+    - **Botón de adjuntos**: los registros pueden tener archivos adjuntos directamente desde la barra de herramientas de la nueva interfaz.
+    - **Actualización automática de funciones de agregación**: los valores agregados en las grillas se actualizan automáticamente, manteniendo totales y resúmenes sincronizados sin necesidad de actualización manual.
+    - **Proceso de empaquetado**: el proceso de Empaquetado ya está disponible y puede ejecutarse desde la nueva interfaz.
+    - **Flujo de guardado mejorado**: el estado del botón Guardar cambios es ahora preciso en todas las interacciones del formulario, eliminando los casos en que aparecía habilitado o deshabilitado incorrectamente.
+    - **Seguridad**: la interfaz ya no redirige a los usuarios a ventanas a las que no tienen acceso autorizado.
+
+    - Documentación: [Mejoras de interfaz](../user-guide/new-ui/ui-improvements.md)
+
+</div>
+
+### Etendo BI
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Etendo BI: Consultas base refactorizadas — el proceso de BI ya no se bloquea por errores**
+
+    ---
+
+    En la versión [3.4.0](./release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md) del bundle **Etendo BI Extensions**, se ha resuelto un problema crítico que afectaba al pipeline de datos de BI.
+
+    Varias consultas base en `com.etendoerp.powerbi.queries` referenciaban columnas y tablas que ya no existen. Dado que las consultas se ejecutan de forma secuencial, una sola consulta fallida bloqueaba todas las siguientes — lo que significaba que una consulta mal configurada podía impedir silenciosamente que grandes partes de los datos de BI fueran procesados.
+
+    Todas las consultas afectadas han sido actualizadas o reemplazadas por versiones funcionales compatibles con **Etendo 24** y **Etendo 25**, garantizando que el pipeline completo se ejecute hasta el final.
+
+</div>
+
 ## Enero 2026
 
 ### Warehouse Extensions
@@ -46,7 +270,7 @@ tags:
     
     **Etendo Main UI – Beta 0.10.0**
 
-    - **Mejoras en filtros de rejillas y tablas**: mejoras en los selectores de tipo de filtro y en el desplegable de filtros de tabla, restaurando un filtrado fiable en rejillas de alto volumen.
+    - **Mejoras en filtros de grillas y tablas**: mejoras en los selectores de tipo de filtro y en el desplegable de filtros de tabla, restaurando un filtrado fiable en grillas de alto volumen.
     - **Mejora de usabilidad de Copilot**: se añadió **soporte de entrada multilínea**, facilitando la redacción de prompts más largos y solicitudes estructuradas.
     - **Entrada de datos más rápida**: se incorporó un botón **Nuevo registro** directamente en los formularios.
     - **Procesos desde el menú**: ejecute **procesos e informes** directamente desde el menú, abriéndose los procesos manuales en una **nueva pestaña**.
@@ -182,10 +406,10 @@ tags:
 
     **Nueva UI de Etendo – Beta 0.9.0**  
     
-    La Workspace UI continúa evolucionando con mejoras orientadas a la usabilidad en *filtros, rejillas y navegación*, ofreciendo una experiencia de usuario más limpia, rápida e intuitiva.
+    La Workspace UI continúa evolucionando con mejoras orientadas a la usabilidad en *filtros, grillas y navegación*, ofreciendo una experiencia de usuario más limpia, rápida e intuitiva.
         
     - Documentación: [Mejoras de UI](../user-guide/new-ui/ui-improvements.md)
-    - Blog: [Nueva interfaz de Etendo: mejoras beta para filtros y rejillas](https://etendo.software/en/blog/etendo-new-interface-beta-improvements-filters-grids/)
+    - Blog: [Nueva interfaz de Etendo: mejoras beta para filtros y grillas](https://etendo.software/en/blog/etendo-new-interface-beta-improvements-filters-grids/)
 
     **Gestión de tareas más potente con prioridades**  
     
@@ -391,7 +615,7 @@ tags:
     En la versión [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions compatible con **Etendo 25**, la ventana **Not Posted Documents**, parte del módulo **Bulk Posting**, introduce una forma más inteligente y eficiente de gestionar los registros contables. Ahora los usuarios pueden:  
 
     - **Filtrar por múltiples tipos de documento** para acotar exactamente lo que necesitan.  
-    - **Navegar rápidamente** directamente a cualquier documento no contabilizado desde la cuadrícula de resultados.  
+    - **Navegar rápidamente** directamente a cualquier documento no contabilizado desde la grilla de resultados.  
     - **Ejecutar acciones de contabilización masiva** para un procesamiento más rápido y consistente.  
     - **Refinar búsquedas** con filtros avanzados como organización, fecha contable y estado contable.
     --- 
@@ -542,7 +766,7 @@ tags:
     - **Herramientas más inteligentes**: nuevas herramientas como [Excel OCR](../developer-guide/etendo-copilot/available-tools/xls-ocr-tool.md) (leer datos desde imágenes de hojas de cálculo) y [Memory Tool](../developer-guide/etendo-copilot/available-tools/memory-tool.md) le ayudan a trabajar más rápido con datos complejos.  
     - **Mejores integraciones**: el nuevo soporte de MCP Server le permite conectar y gestionar herramientas externas y APIs de forma sencilla.
     ---
-
+    
     - Documentación: [Cómo configurar servidores MCP en agentes](../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md)
     - Blog: [¿Cansado de integraciones lentas y caras? Descubra cómo MCP está cambiando las reglas del juego](https://etendo.software/en/blog/discover-how-mcp-is-changing-the-game/){target="_blank"}
     - Blog: [Gmail al alcance de su mano con Etendo Copilot: productividad sin fricciones](https://etendo.software/en/blog/gmail-at-your-fingertips-with-etendo-copilot-seamless-productivity/){target="_blank"}
@@ -729,6 +953,7 @@ tags:
 
 
 </div>
+
 ## Marzo 2025
 
 ### Etendo Mobile

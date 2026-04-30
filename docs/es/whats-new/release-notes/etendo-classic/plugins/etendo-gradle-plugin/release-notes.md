@@ -11,7 +11,7 @@ tags:
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado |
 | --- | --- | --- | --- | --- |
-| [2.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.3.0){target="_blank"} | 25/03/2026 | 25.1.0 | 26.4.X | CS |
+| [2.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.3.0){target="_blank"} | 25/03/2026 | 26.1.0 | 26.4.X | CS |
 | [2.2.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.2.1){target="_blank"} | 28/11/2025 | 25.1.0 | 25.4.x | CS |
 | [2.2.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.2.0){target="_blank"} | 29/09/2025 | 25.1.0 | 25.4.x | C |
 | [2.1.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.1.0){target="_blank"} | 12/08/2025 | 25.1.0 | 25.4.x | C |
@@ -19,7 +19,7 @@ tags:
 | [2.0.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.3){target="_blank"} | 01/07/2025 | 25.1.0 | 25.4.x | C |
 | [2.0.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.1){target="_blank"} | 20/05/2025 | 25.1.0 | 25.4.x | C |
 | [2.0.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/2.0.0){target="_blank"} | 26/03/2025 | 25.1.0 | 25.4.x | C |
-| [1.5.4](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.4){target="_blank"} | 04/04/2025 | 22.1.0 | 24.4.x | CS |
+| [1.5.4](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.4){target="_blank"} | 04/04/2025 | 22.1.0 | 24.4.x | C |
 | [1.5.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.3){target="_blank"} | 26/03/2025 | 22.1.0 | 24.4.x | C |
 | [1.5.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.2){target="_blank"} | 21/03/2025 | 22.1.0 | 24.4.x | C |
 | [1.5.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.5.1){target="_blank"} | 12/11/2024 | 22.1.0 | 24.4.x | C |

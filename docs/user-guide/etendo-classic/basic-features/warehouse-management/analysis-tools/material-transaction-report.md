@@ -1,22 +1,27 @@
 ---
 title: Material Transaction Report
+tags:
+    - Material Transaction
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Material Transaction Report
+# Material Transaction Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Material Transaction Report`
 
 Material Transaction Report lists all documents (outgoing shipments and incoming receipts) grouped by Business Partner and document. For each document number data, product, warehouse, bin and quantity are shown.
 
-### Window Parameters
+## Parameters Window
 
 Information on this report can be filtered using movement date, business partner, warehouse and project. Reports can be generated on HTML and PDF format.
 
-![Material Transaction Report](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
+![Material Transaction Report parameters window](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
 
-### Sample Report Output
+## Sample Report Output
 
-![Material Transaction Report](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+![Material Transaction Report output](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
 
 ---
 

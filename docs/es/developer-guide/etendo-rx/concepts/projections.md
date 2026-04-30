@@ -13,9 +13,18 @@ tags:
 
 ## Visión general
 
-Al utilizar Spring Data JPA para implementar la capa de persistencia, el repositorio normalmente devuelve una o más instancias de la clase raíz. Sin embargo, en la mayoría de los casos, no necesitamos todas las propiedades de los objetos devueltos.
+Cuando Etendo recupera datos de la base de datos, a menudo devuelve más campos de los que una integración determinada necesita. Las proyecciones permiten definir exactamente qué campos se incluyen, reduciendo la cantidad de datos transferidos y mejorando el rendimiento. (Detalle técnico: esto se implementa mediante proyecciones de Spring Data JPA en la capa de persistencia.)
 
 En estos casos, puede que queramos recuperar los datos como objetos de tipos personalizados. Estos tipos reflejan vistas parciales de la clase raíz, conteniendo solo las propiedades necesarias. Aquí es donde las proyecciones son útiles.
+
+### Casos de uso
+
+Las proyecciones y los mapeos se utilizan para controlar qué campos de datos de Etendo se comparten con un sistema externo —como una plataforma de comercio electrónico o un marketplace— o se reciben de él. La conexión entre Etendo y ese sistema externo se realiza a través de una API (un canal de comunicación estándar entre aplicaciones de software). Dos escenarios habituales son:
+
+- **Exponer datos de Etendo a un sistema externo**: una plataforma de comercio electrónico lee datos de productos o pedidos de Etendo a través de una conexión API de solo lectura generada por el servicio DAS.
+- **Importar datos de un sistema externo a Etendo**: los datos de clientes o pedidos de un marketplace se envían a Etendo Classic a través de una conexión API de escritura.
+
+Utilice proyecciones para controlar exactamente qué campos se exponen o se consumen, manteniendo la superficie de integración mínima y explícita.
 
 ## Ventana Proyecciones y mapeos
 
@@ -23,7 +32,10 @@ En estos casos, puede que queramos recuperar los datos como objetos de tipos per
 
 Una **proyección** es un conjunto de campos específicos de una entidad o campos combinados de múltiples entidades. Las proyecciones son útiles cuando necesitamos recuperar solo un subconjunto de datos, ya que reduce la cantidad de datos que necesitamos recuperar de la base de datos, lo que conlleva una mejora del rendimiento.
 
-Esta ventana permite la creación de endpoints de lectura y escritura de datos en Etendo, utilizando el servicio DAS. Este servicio, en base a las configuraciones de esta ventana, genera dinámicamente los endpoints al iniciarse.
+!!!info
+    **Esta ventana es el lugar central para crear endpoints de lectura y escritura de datos en Etendo.**
+
+Esta ventana utiliza el [servicio DAS](../getting-started.md) (Data Access Service — un servicio en segundo plano de Etendo RX que lee la configuración que usted define aquí y crea automáticamente los puntos de conexión de la API utilizados para intercambiar datos con sistemas externos). El servicio DAS lee la configuración definida aquí y genera los endpoints correspondientes cuando se inicia.
 
 Para crear una nueva proyección en Etendo, es necesario completar los campos en la cabecera de la ventana **Proyecciones y mapeos**.
 
@@ -41,8 +53,8 @@ En esta solapa, se pueden definir las entidades a proyectar. Pueden tener dos ti
 
 Al referirse a una entidad a proyectar, esta entidad está relacionada con una tabla específica.
 
-!!!warning
-    Recuerde que siempre es necesario crear ambos registros, uno de tipo escritura y otro de tipo lectura, para que los endpoints generados funcionen correctamente.
+!!!info
+    Si necesita uno o ambos tipos de proyección depende de la dirección de su integración: cree un tipo **Lectura** para exponer datos de Etendo a un sistema externo, un tipo **Escritura** para importar datos externos a Etendo, o ambos si necesita integración bidireccional.
 
 ![](../../../assets/developer-guide/etendo-rx/concepts/projections/projected-entities.png)
 
@@ -160,8 +172,9 @@ Esta ventana también permite la creación de endpoints de búsqueda, utilizando
 
 ### Solapa Repositorio
 
-En Spring Data, un repositorio es una abstracción que proporciona las operaciones relativas a una clase de dominio para interactuar con un almacén de datos.
-Para crear el repositorio para nuestro propósito, necesitamos ir a Tablas y columnas, seleccionar una tabla y, en la solapa *Repositorio*, crear un nuevo registro definiendo el módulo en desarrollo donde se exportan las configuraciones.
+La solapa Repositorio se utiliza para registrar una tabla de modo que el servicio DAS pueda generar conexiones de búsqueda filtradas para ella — por ejemplo, recuperar únicamente los pedidos pertenecientes a un tercero específico. Registrar un repositorio aquí permite al [servicio DAS](../getting-started.md) (Data Access Service — un servicio en segundo plano de Etendo RX que lee la configuración que usted define aquí y crea automáticamente los puntos de conexión de la API utilizados para intercambiar datos con sistemas externos) generar conexiones de búsqueda filtradas personalizadas — más allá de las operaciones estándar de creación, lectura, actualización y eliminación — para la tabla seleccionada. Utilice la solapa Repositorio cuando necesite consultas filtradas (por ejemplo, "obtener todos los pedidos de un tercero específico") que no estén cubiertas por las conexiones predeterminadas.
+
+Para registrar un repositorio, vaya a Tablas y columnas, seleccione una tabla y, en la solapa *Repositorio*, cree un nuevo registro definiendo el módulo en desarrollo donde se exportan las configuraciones.
 
 ![](../../../assets/developer-guide/etendo-rx/concepts/projections/repository-tab.png)
 
