@@ -20,15 +20,6 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 ### Módulos funcionales
 
-#### Antifraude
-
-:octicons-package-16: Javapackage: `com.etendoerp.antifraud`
-
-Este módulo permite cumplir con la Ley Antifraude de España en Etendo, reforzando la integridad y trazabilidad del proceso de facturación. Incluye gestión de certificados digitales, firma de PDFs, copias de seguridad cifradas y restricciones para evitar modificaciones o eliminaciones que puedan comprometer la inalterabilidad de la información.
-
-!!! info
-    Para más información, visite la [Guía de usuario Antifraude](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md).
-
 #### Configuración de Impuestos para Libro de Facturas
 
 :octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
