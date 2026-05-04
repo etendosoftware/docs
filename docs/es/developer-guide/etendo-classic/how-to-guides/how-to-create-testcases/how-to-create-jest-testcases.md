@@ -11,7 +11,7 @@ tags:
 
 ## Visión general
 
-[Jest](https://jestjs.io/){target="_blank"} es un framework de pruebas creado por Facebook y actualmente utilizado como framework de pruebas predeterminado en [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. A diferencia de Mocha, es un ejecutor de pruebas con una filosofía definida y proporciona sus propios métodos de aserción y de mocking. La principal ventaja es que funciona listo para usar y tiene buena integración con tecnologías como React, Babel y TypeScript.
+[Jest](https://jestjs.io/){target="_blank"} es un framework de pruebas y actualmente utilizado como framework de pruebas predeterminado en [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. A diferencia de Mocha, es un ejecutor de pruebas con una filosofía definida y proporciona sus propios métodos de aserción y de mocking. La principal ventaja es que funciona listo para usar y tiene buena integración con tecnologías como React, Babel y TypeScript.
 
 ## Instalación
 
@@ -326,10 +326,5 @@ Para ejecutar las pruebas y generar un informe de cobertura, ejecute:
 npm run coverage
 ```
 
-## Artículos relacionados
-
-[:material-file-document-outline: Cómo crear casos de prueba con JUnit](./how-to-create-junit-testcases.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Convenciones de codificación JavaScript](../../concepts/javascript-coding-conventions.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Desarrollo del lado del cliente y API](../../concepts/client-side-development-and-api.md){ .md-button .md-button--primary }
-
+---
 Este trabajo es una obra derivada de [How to Create Jest testcases](https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
