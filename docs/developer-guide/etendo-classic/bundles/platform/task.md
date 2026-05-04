@@ -40,7 +40,7 @@ Choose the connection command that matches how your PostgreSQL instance is confi
 
 Once connected, run the following SQL commands:
 
-!!! warning "**PostgreSQL service must be restarted** after applying this change"
+!!! warning "PostgreSQL service must be restarted after applying this change"
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
