@@ -4,19 +4,104 @@ tags:
   - oAuth
   - SSO Login
   - Middleware
+  - Architecture
+  - Services
+  - Getting Started
+title: Etendo RX
 ---
 
-# Etendo RX 
+# Etendo RX
 :octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
-## Etendo SSO Login
+## Overview
+
+Etendo RX is a set of microservices that extends Etendo Classic with REST APIs, OAuth 2.0 authentication, and event-driven integrations. It streams database changes in real time to external systems and runs background processes without blocking the main application.
+
+Etendo RX runs as a set of independent services deployed as Docker containers. Each service has a dedicated responsibility. Together they form the integration backbone for connecting Etendo Classic with external systems, custom microservices, and event-driven workflows.
+
+## Architecture and Services
+
+The following table describes each core service, its default port, and its responsibility.
+
+| Service | Default Port | Responsibility |
+|---|---|---|
+| **Config Service** | `8888` | Centralised configuration server. Reads settings from `src-rx/rxconfig/` YAML files and distributes them to all other RX services when they start. |
+| **Auth Service** | `8094` | Issues and validates OAuth 2.0 tokens. Acts as the authentication authority for all API calls routed through the Edge Service. |
+| **Edge Service** | `8096` | API gateway that routes incoming requests to the correct downstream service and applies security and resilience filters. Acts as the single entry point for all external API calls. |
+| **DAS (Data Access Service)** | `8092` | Reads [Projections and Mappings](../../../etendo-rx/concepts/projections.md) defined in the Application Dictionary and auto-generates REST endpoints for reading and writing Etendo data. |
+| **Async Service** | `8099` | Handles long-running background processes asynchronously, decoupling them from the main request cycle. |
+| **Debezium** | — | Streams real-time database change events (Change Data Capture) to Kafka, enabling event-driven integrations with external systems. |
+
+!!! info
+    All services except Debezium read their configuration from the Config Service on startup. Restart a service after changing its YAML file in `src-rx/rxconfig/` to apply new values.
+
+## Key Capabilities
+
+- Automatic REST API generation via Projections and Mappings (DAS service)
+- Asynchronous process execution without blocking the main application (Async service)
+- Real-time database change streaming via Debezium to Kafka (requires a running Kafka instance)
+- OAuth 2.0 token issuance and validation (Auth service)
+- Centralised, environment-aware configuration management (Config Service)
+
+## Getting Started
+
+Follow these steps to initialise and run Etendo RX.
+
+**1. Enable the RX Docker module**
+
+Add the following property to `gradle.properties`:
+
+```groovy title="gradle.properties"
+docker_com.etendoerp.etendorx=true
+```
+
+**2. Generate RX entities**
+
+Run the following command from the project root:
+
+```bash title="Terminal"
+./gradlew rx:generate.entities
+```
+
+Use this task to generate the RX entities required by the platform before running the services.
+
+**3. Generate configuration files**
+
+Run the following command to create the initial configuration files for each service:
+
+```bash title="Terminal"
+./gradlew setup
+```
+
+This creates `application.yaml`, `das.yaml`, `auth.yaml`, and `edge.yaml` inside `src-rx/rxconfig/`. Open these files to review or update settings before starting the services.
+
+**4. Run the RX services**
+
+Start the services with:
+
+```bash title="Terminal"
+./gradlew rx:rx
+```
+
+If you are using the Dockerised deployment described in the full guide, you can also start the containers with `./gradlew resources.up`.
+
+**Further reading**
+
+- [Etendo RX Getting Started](../../../etendo-rx/getting-started.md) — full setup guide including requirements, RX Config window initialisation, and Docker-based startup
+- [Projections and Mappings](../../../etendo-rx/concepts/projections.md) — how to define REST endpoints using the Application Dictionary
+
+## Authentication
+
+This section covers OAuth token management and SSO login configuration for Etendo RX.
+
+### Etendo SSO Login
 
 Etendo allows you to authenticate using these external provider accounts: **Google**, **Microsoft**, **LinkedIn**, **GitHub** and **Facebook**. Using the Single Sign-On (SSO) protocol is possible due to the integration through:
 
 - [EtendoAuth Middleware Service](#set-up-etendo-to-login-with-etendoauth-middleware-service-recommended)
 - [Auth0 Custom Implementation](#how-to-integrate-your-own-auth0-login-provider-with-etendo)
 
-### Set up Etendo to Login with EtendoAuth Middleware Service (Recommended)
+#### Set up Etendo to Login with EtendoAuth Middleware Service (Recommended)
 
 To enable login to **Etendo** using external providers (Google, Microsoft, LinkedIn, GitHub or Facebook), you need to perform two main steps:
 
@@ -25,7 +110,7 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
 ---
 
-1. #### Enable the SSO Login Preference
+1. ##### Enable the SSO Login Preference
 
     1. Log in as **System Administrator**
     2. Go to the **Preferences** window
@@ -37,7 +122,7 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
         ![SSO Preference](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewSSOPreference.png)
 
-2. #### Configure EtendoAuth Middleware Integration
+2. ##### Configure EtendoAuth Middleware Integration
 
     - **Interactive Setup**
 
@@ -94,19 +179,19 @@ To enable login to **Etendo** using external providers (Google, Microsoft, Linke
 
                 ![Misconfigured SSO](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/MissconfigError.png){width=400 align=right }
             
-                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message:           
+                If any of the steps above are omitted, attempting to log in using an external provider will display the following error message.           
 
                 To resolve this issue, ensure that both the SSO preference and the corresponding entry in `gradle.properties` are correctly configured and consistent with each other.
 
     !!! info
         For more information about the use of the SSO Login functionality, visit [SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
-### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
+#### How to Integrate your own Auth0 Login Provider with Etendo (Optional)
 
 This option is recommended only if you need to implement your own authentication service and cannot use the EtendoAuth Middleware service. Follow this guide to configure an Auth0 application and enable social login in Etendo.
 
 
-1. #### Create a New Auth0 Application
+1. ##### Create a New Auth0 Application
 
     1. Go to the Auth0 Dashboard:
     [https://manage.auth0.com/dashboard](https://manage.auth0.com/dashboard)
@@ -119,7 +204,7 @@ This option is recommended only if you need to implement your own authentication
         - Choose a name and select **Regular Web Application**.
 
 
-2. #### Choose the Technology Stack
+2. ##### Choose the Technology Stack
 
     1. After creating the application, choose the technology used in the project. For Etendo, select **Java**.
 
@@ -130,7 +215,7 @@ This option is recommended only if you need to implement your own authentication
         ![App Quick Start](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AppQuickStart.png)
 
 
-3. #### Configure Social Login Providers
+3. ##### Configure Social Login Providers
 
     1. In the left-hand menu, go to **Authentication** → **Social**.
 
@@ -153,7 +238,7 @@ This option is recommended only if you need to implement your own authentication
     6. Repeat this process for every provider you want to enable.
 
 
-4. #### Retrieve and Set Credentials
+4. ##### Retrieve and Set Credentials
 
     1. Return to the application and go to the **Settings** tab.
 
@@ -178,7 +263,7 @@ This option is recommended only if you need to implement your own authentication
             This module cannot be configured together with [Etendo Advanced Security](overview.md#etendo-advanced-security) because both use the `authentication.class` property.
 
 
-5. #### Configure Callback and Logout URLs
+5. ##### Configure Callback and Logout URLs
 
     In the **Settings** tab, configure the following allowed URLs:
 
@@ -203,10 +288,10 @@ This option is recommended only if you need to implement your own authentication
         ![Application URIs](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/AllowedURIs.png)
 
     !!!note
-        During development, you can use `localhost`. However, for production, set your actual domain in **Application Login URI**. If you're still in development, you may leave it blank.
+        During development, you can use `localhost`. However, for production, set your actual domain in **Application Login URI**. If you are still in development, you may leave it blank.
 
 
-6. #### Set the Callback URL
+6. ##### Set the Callback URL
 
     Add the callback URL to the `gradle.properties`:
 
@@ -214,7 +299,7 @@ This option is recommended only if you need to implement your own authentication
     sso.callback.url=http://localhost:8080/etendo/secureApp/LoginHandler.html
     ```
 
-7. #### Compile the Project
+7. ##### Compile the Project
 
     Once all properties are configured, compile the project:
 
@@ -222,7 +307,7 @@ This option is recommended only if you need to implement your own authentication
     ./gradlew setup smartbuild
     ```
 
-8. #### Log In via External Providers
+8. ##### Log In via External Providers
     
    
     1. Start the Tomcat server.
@@ -237,9 +322,9 @@ This option is recommended only if you need to implement your own authentication
 !!! info
     For more information about the use of the SSO Login functionality, visit [the SSO Login User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
-## OAuth Provider
+### OAuth Provider
 
-### Overview
+#### Overview
 
 This section describes the **OAuth Authentication** service included in `Etendo RX` module.
 
@@ -247,7 +332,7 @@ The OAuth authentication process facilitates the **provider type configuration**
 
 OAuth enables an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resources on behalf of their owner. This authentication allows **Etendo** to retrieve the necessary information to access **third-party applications**.
 
-### OAuth Provider Window
+#### OAuth Provider Window
 
 :material-menu: `Application`> `Etendo RX`> `OAuth Provider`.
 
@@ -269,9 +354,9 @@ You can choose between two methods:
 
 
 
-### Etendo Middleware Setup (Recommended)
+#### Etendo Middleware Setup (Recommended)
 
-#### Configuration Variables
+##### Configuration Variables
 
 Add the following properties to the `gradle.properties` file:
 
@@ -283,7 +368,7 @@ sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.h
 !!!note
     During development, you can use `localhost`. However, for production, set your actual domain.
 
-#### Compile Environment
+##### Compile Environment
 
 Run the following command to compile and set up the environment:
 
@@ -291,7 +376,7 @@ Run the following command to compile and set up the environment:
 ./gradlew setup smartbuild
 ```
 
-#### Create the Connection with Etendo Middleware
+##### Create the Connection with Etendo Middleware
 
 - Log in as **admin**.
 - Open the **oAuth Provider** window.
@@ -303,7 +388,7 @@ Run the following command to compile and set up the environment:
 
     ![Etendo Middleware Provider](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/EtendoMiddlewareConfigs.png)
 
-#### Get Access Token
+##### Get Access Token
 
 - Select the newly created middleware.
 - Click on **Get Middleware Token**.
@@ -326,17 +411,17 @@ Run the following command to compile and set up the environment:
 
     - **Google Drive – Read Only Access Level**
 
-        Grants the app permission to **read existing files** in the user’s account (including files not created by Etendo).  
+        Grants the app permission to **read existing files** in the user's account (including files not created by Etendo).  
         No modifications are allowed — only reading file information or content.
 
         !!! warning 
             Only files with **Read Only** access level will be accessible.
 
-- Accept Google’s consent screen.
+- Accept Google's consent screen.
 
     ![Provider Consent](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
 
-#### Token Created in the Token Info Tab
+##### Token Created in the Token Info Tab
 
 Once the flow is completed, an **access token** will be generated and can be viewed in the **Token Info** tab.
 
@@ -347,7 +432,7 @@ Once the flow is completed, an **access token** will be generated and can be vie
 
 ![New Middleware Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png)
 
-### Manually Configure a Provider (Optional)
+#### Manually Configure a Provider (Optional)
 
 This method is intended for users who prefer to register a custom OAuth provider without using EtendoMiddleware. It provides full control over registration, authorization, and token handling parameters.
 
@@ -358,15 +443,15 @@ This method is intended for users who prefer to register a custom OAuth provider
 
 ![OAuth Provider Window](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/oAuthProviderWindow.png)
 
-#### Header
+##### Header
 
 Fields to note:
 
 - **Organization**: Defines the organization scope for this provider.
-- **oAuth API URL**:  Base URL of the external OAuth API provider. It is used as the primary endpoint for communication with the provider’s authentication and token services. (optional)
+- **oAuth API URL**:  Base URL of the external OAuth API provider. It is used as the primary endpoint for communication with the provider's authentication and token services. (optional)
 - **Active**: Checkbox to enable or disable this provider configuration.
 
-#### Section: Registration
+##### Section: Registration
 
 This section defines how your application is registered with the OAuth provider. It includes credentials, the authorization flow, requested scopes, and essential URLs for completing the authentication.
 
@@ -383,7 +468,7 @@ Fields to note:
 - **Client Authentication Method:** Method to send client credentials (e.g., client_secret_post, client_secret_basic).
 - **Token URI:** Endpoint to exchange authorization code for tokens (access_token and optional refresh_token).
 
-#### Section: Provider
+##### Section: Provider
 
 This section defines the OAuth provider's endpoints required for your app to connect and validate tokens properly.
 
@@ -394,7 +479,7 @@ This section defines the OAuth provider's endpoints required for your app to con
 - **JWK Set URI:** URL where the provider publishes public keys to verify signed JWTs.
 
 
-### Token Info tab
+#### Token Info tab
 
 This tab stores the tokens generated through the ERP. While full tokens are not displayed for security reasons, the following information is available:
 
@@ -406,7 +491,7 @@ This tab stores the tokens generated through the ERP. While full tokens are not 
 - **Valid Until:** Token expiration date and time.
 
 
-### Buttons
+#### Buttons
 
 - **Refresh Config**
     
