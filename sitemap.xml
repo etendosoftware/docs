@@ -4530,29 +4530,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/es/getting-started/installation/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/installation/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/getting-started/interactive-installation/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/interactive-installation/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/es/getting-started/overview/</loc>
         <lastmod>2026-05-04</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/overview/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/getting-started/overview/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/getting-started/requirements/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/getting-started/requirements/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/getting-started/user-interface/grid-and-forms/</loc>
@@ -5101,12 +5083,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/setup/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/</loc>
         <lastmod>2026-05-04</lastmod>
         <changefreq>daily</changefreq>
@@ -5140,6 +5116,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/"/>
+    </url>
+    <url>
+        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/</loc>
@@ -5790,12 +5773,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/"/>
     </url>
 </urlset>
