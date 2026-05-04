@@ -11,7 +11,7 @@ tags:
   
 ## Overview
 
-[Jest](https://jestjs.io/){target="_blank"} is a testing framework and currently used as the default testing framework in [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel, and TypeScript.
+[Jest](https://jestjs.io/){target="_blank"} is a testing framework and is currently used as the default testing framework in [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel, and TypeScript.
 
 ## Installation
 
