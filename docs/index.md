@@ -76,7 +76,9 @@ Etendo is a highly adaptable and scalable software platform designed for non-ret
 
     Learn how to install, extend and customize Etendo.
     
-    - [Install Etendo](./getting-started/installation.md)
+    - [Requirements](./developer-guide/etendo-classic/getting-started/installation/requirements.md)
+    - [Install Etendo - Local Development](./developer-guide/etendo-classic/getting-started/installation/local-development.md)
+    - [Install Etendo - Production Server](./developer-guide/etendo-classic/getting-started/installation/production-server.md)
     - [Install Modules in Etendo](./developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md)
     - [How to Guides](./developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md)
     - [Etendo Concepts](./developer-guide/etendo-classic/concepts/alerts.md)
