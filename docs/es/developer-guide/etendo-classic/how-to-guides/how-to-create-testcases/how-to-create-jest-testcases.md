@@ -85,7 +85,7 @@ Jest proporciona cuatro hooks de ciclo de vida que ejecutan código antes o desp
 | `beforeAll` | Una vez antes de todas las pruebas en el bloque `describe` actual |
 | `afterAll` | Una vez después de todas las pruebas en el bloque `describe` actual |
 
-Use `beforeEach` y `afterEach` cuando cada prueba necesite una instancia nueva e independiente del elemento bajo prueba. Use `beforeAll` y `afterAll` cuando la configuración o el desmontaje sea costoso y pueda compartirse de forma segura entre todas las pruebas; por ejemplo, al abrir y cerrar una conexión a base de datos.
+Use `beforeEach` y `afterEach` cuando cada prueba necesite una instancia nueva e independiente del elemento bajo prueba. Use `beforeAll` y `afterAll` cuando la configuración o el desmontaje sean costosos y puedan compartirse de forma segura entre todas las pruebas; por ejemplo, al abrir y cerrar una conexión a base de datos.
 
 El siguiente ejemplo está adaptado de `NpmDependenciesValidator.test.js`. Usa `beforeEach` para crear una instancia nueva del validador e inyectar dependencias simuladas antes de cada prueba.
 
