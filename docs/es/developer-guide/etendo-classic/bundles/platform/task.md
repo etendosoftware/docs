@@ -40,7 +40,7 @@ Elija el comando de conexión que corresponda a la configuración de su instanci
 
 Una vez conectado, ejecute los siguientes comandos SQL:
 
-!!! warning "**El servicio de PostgreSQL debe reiniciarse** después de aplicar este cambio"
+!!! warning "El servicio de PostgreSQL debe reiniciarse después de aplicar este cambio"
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
