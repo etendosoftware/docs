@@ -294,7 +294,7 @@ describe('login', () => {
 ```
 
 !!! warning
-    Siempre use `await` en la llamada bajo prueba antes de realizar las aserciones. Sin `await`, las aserciones se ejecutan antes de que la promesa se resuelva y la prueba pasa independientemente del resultado real.
+    Siempre use `await` en la llamada bajo prueba antes de realizar las aserciones. Sin `await`, la prueba finaliza antes de que la promesa se resuelva, lo que puede generar falsos positivos o pruebas inestables por rechazos no manejados.
 
 Si la prueba espera que una promesa sea rechazada, use `expect(...).rejects.toThrow()`:
 

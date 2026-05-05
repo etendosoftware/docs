@@ -294,7 +294,7 @@ describe('login', () => {
 ```
 
 !!! warning
-    Always `await` the call under test before asserting. Without `await`, the assertions run before the promise resolves and the test passes regardless of the actual outcome.
+    Always `await` the call under test before asserting. Without `await`, the test finishes before the promise settles, which can produce false positives or flaky failures due to unhandled rejections.
 
 If the test expects a promise to reject, use `expect(...).rejects.toThrow()`:
 
