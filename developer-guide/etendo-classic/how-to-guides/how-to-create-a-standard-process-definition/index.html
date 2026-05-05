@@ -15614,7 +15614,7 @@
 <li>Open <strong>Process Definition</strong> window </li>
 <li>Create a new record </li>
 <li>Define the UI pattern: <strong>Standard (Parameters defined in Dictionary)</strong></li>
-<li>Set the Handler: <code>org.openbravo.client.application.examples.StandardProcessActionHandler</code>. This is the Java class implementing the process that will be invoked when user clicks on the action button. </li>
+<li>Set the Handler: <code>com.etendoerp.client.application.examples.StandardProcessActionHandler</code>. This is the Java class implementing the process that will be invoked when user clicks on the action button. </li>
 <li>Save </li>
 </ul>
 <h3 id="adding-parameters">Adding Parameters</h3>
@@ -15631,11 +15631,11 @@
 </ul>
 </li>
 <li>Follow similar steps to create <strong>Max Qty</strong> field </li>
-<li><strong>Orders</strong> multi selector <ul>
-<li>Create a  Multi Order  selector </li>
-<li>Create a new parameter </li>
-<li>Reference: <code>OBUISEL_Multi Selector Reference</code> </li>
-<li>Reference Search Key: Multi Order Selector </li>
+<li><strong>Orders</strong> multi selector<ul>
+<li>Create a new Multi Order selector following the steps described in <a href="../how-to-create-a-multi-selector/">How to Create a Multi Selector</a></li>
+<li>Create a new parameter</li>
+<li>Reference: <code>OBUISEL_Multi Selector Reference</code></li>
+<li>Reference Search Key: Multi Order Selector</li>
 </ul>
 </li>
 <li>Business Partner parameter has <code>OBUISEL_Selector Reference</code> as Reference and <strong>Business Partner not filtered by default by customer/vendor</strong> as Reference Search Key </li>
@@ -15667,7 +15667,7 @@
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cm">  * Contributor(s):  ______________________________________.</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cm">  ************************************************************************</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cm">  */</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.openbravo.client.application.examples</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.etendoerp.client.application.examples</span><span class="p">;</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">&nbsp;</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span><span class="p">;</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
@@ -15769,6 +15769,10 @@
 </span></code></pre></div>
 <h4 id="response">Response</h4>
 <p><code>ActionHandler</code> return a <code>JSONObject</code> with the actions to be performed after execution.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about how to create actions, visit <a href="../../concepts/client-side-development-and-api/#obutilitiesaction---actions-execution-related-utilities">Client Side Development and API</a></p>
+</div>
 <h5 id="validations">Validations</h5>
 <p>It is possible to do validations in the backend before executing the actual process, when these validations are not satisfied, a message can be shown in the UI to allow the user to fix the problematic values.</p>
 <p>When validations are not satisfied <code>"retryExecution": true</code> property is included in the response. This allows the user to fix data and resubmit again.
@@ -15833,8 +15837,8 @@ Additionally, a message can be added to show more information about the issue.</
 </li>
 <li><code>refreshGrid</code>. Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the <code>refreshGrid</code> to the list of response actions to see the updated data in the grid. </li>
 <li><code>refreshGridParameter</code>. Refreshes the <strong>grid parameter</strong> with name <code>gridName</code> present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the <strong>action handler</strong> (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. </li>
-<li><code>getResponseBuilder()</code> method is available for classes extending <code>BaseProcessActionHandler</code>. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:</li>
-</ul>
+<li>
+<p><code>getResponseBuilder()</code> method is available for classes extending <code>BaseProcessActionHandler</code>. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@Override</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">protected</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="p">...</span>
@@ -15844,28 +15848,30 @@ Additionally, a message can be added to show more information about the issue.</
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="p">.</span><span class="na">openDirectTab</span><span class="p">(</span><span class="s">"220"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
 </span></code></pre></div>
+</li>
+</ul>
 <h2 id="testing-the-process">Testing the Process</h2>
-<p>Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding paramters).</p>
+<p>Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding parameters).</p>
 <p>After compile and deploy, there will be a new entry in the menu: <strong>Example Param Process</strong>, this entry opens the parameter window where all defined parameters are shown and a <strong>Done</strong> button is presented to submit values set for them. When the process is executed:</p>
 <ul>
-<li>If <code>Max Qty</code> is greater the <code>Min Qty</code>, a message is shown and the process can be submited again. </li>
+<li>If <code>Max Qty</code> is greater than <code>Min Qty</code>, a message is shown and the process can be submitted again. </li>
 <li>A message in the parameter window is shown summing the amounts of all selected orders. </li>
 <li>If a business partner is selected, it is opened in a new tab displaying a message on it. </li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/standard-process-definition-1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/standard-process-definition-1.png"></a></p>
 <h2 id="advanced-topics">Advanced Topics</h2>
 <h3 id="invoke-the-process-from-a-tab">Invoke the Process from a Tab</h3>
-<p>Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. </p>
+<p>Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>More details about this process visit <a href="../how-to-create-a-pick-and-execute-process/">How to create a Pick and Execute Process</a>. </p>
+<p>For the full step-by-step configuration of the column, button, and process binding, see <a href="../how-to-create-a-pick-and-execute-process/">How to Create a Pick and Execute Process</a>.</p>
 </div>
 <h3 id="read-only-and-display-logic">Read Only and Display Logic</h3>
 <p>Parameters in Process Definition support display and read only logic. This allows to show or hide and to make editable or read only parameters based on values entered for other parameters.</p>
 <h3 id="subordinated-combos">Subordinated Combos</h3>
-<p>The data that can be selected within a combo (selector) can be restricted based on values other parameters take using <strong>Validation Rules</strong>. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being posible to use <code>OBBindings</code>, in the same way default value is written.</p>
+<p>The data that can be selected within a combo (selector) can be restricted based on values other parameters take using <strong>Validation Rules</strong>. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being possible to use <code>OBBindings</code>, in the same way default value is written.</p>
 <h3 id="parameter-grouping">Parameter Grouping</h3>
-<p>It is possible to do groups of parameters in the UI, by using the <strong>Field Group</strong> property when defining the paramter.</p>
+<p>It is possible to do groups of parameters in the UI, by using the <strong>Field Group</strong> property when defining the parameter.</p>
 <h3 id="showing-results-in-the-process-window-itself">Showing results in the process window itself</h3>
 <p>It is possible to show the result of a process directly in the process window itself. This makes sense if the parameter section is small and you want to display directly.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/standard-process-definition-2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/standard-process-definition-2.png"></a></p>
@@ -15894,7 +15900,7 @@ Additionally, a message can be added to show more information about the issue.</
 <p>The <strong>Client Side Validation</strong> field of the Process Definition tab allows defining a function that will be executed before the request to the action handler is done. This function can be used to do <strong>client side validations</strong>.</p>
 <p>This function must accept 3 parameters:</p>
 <ul>
-<li>the parameter window object. i.e., if you name this parameter <strong>view</strong>, then the form of the parameter window will be accessible via <code>view.theForm</code>. The value of a particular parameter can be retreived using <code>view.theForm.getItem(parameter_name).getValue()</code></li>
+<li>the parameter window object. i.e., if you name this parameter <strong>view</strong>, then the form of the parameter window will be accessible via <code>view.theForm</code>. The value of a particular parameter can be retrieved using <code>view.theForm.getItem(parameter_name).getValue()</code></li>
 <li>a validation success callback. If the current values of the form passes the validation, this callback must be invoked</li>
 <li>a validation failure callback. If form values do not satisfy the validation, invoke this callback. </li>
 </ul>
@@ -15909,6 +15915,7 @@ Additionally, a message can be added to show more information about the issue.</
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nx">failureCallback</span><span class="p">();</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">};</span>
 </span></code></pre></div>
 <p>In addition, client side validation functions support a fourth parameter that contains additional information, like the pressed button:  </p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nx">TestClientSideValidation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">view</span><span class="p">,</span><span class="w"> </span><span class="nx">actionHandlerCall</span><span class="p">,</span><span class="w"> </span><span class="nx">failureCallback</span><span class="p">,</span><span class="w"> </span><span class="nx">additionalInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -15917,6 +15924,7 @@ Additionally, a message can be added to show more information about the issue.</
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="c1">// do another validations</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">};</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -15929,9 +15937,10 @@ Additionally, a message can be added to show more information about the issue.</
 <p>The <strong>On Change Function</strong> field of the Parameter tab allows defining a function that will be executed when a non-grid parameter is updated, after the parameter loses its focus. This function can be used to do validations or to implement <strong>client side callouts</strong>, among other things.</p>
 <p>The function must accept four parameters:</p>
 <ul>
-<li>item: the item that has been modified </li>
-<li>view: the parameter window object </li>
-<li>form: the form that contains the item </li>
+<li>item: the item that has been modified</li>
+<li>view: the parameter window object</li>
+<li>form: the form that contains the item</li>
+<li>grid: the grid context (present when the function is invoked from a grid parameter; <code>null</code> otherwise)</li>
 </ul>
 <h3 id="how-to-set-the-value-of-non-grid-parameters-programmatically">How to set the value of non-grid parameters programmatically</h3>
 <p>It is possible to execute an <strong>On Change Function</strong>, besides when the parameter loses its focus, when setting the parameter value programmatically.</p>
@@ -15982,7 +15991,7 @@ Additionally, a message can be added to show more information about the issue.</
 <h3 id="specifying-a-default-value-for-the-filter-of-a-parameter-grid-field">Specifying a default value for the filter of a parameter grid field</h3>
 <p>The <strong>Default Filter Expression</strong> field of the Field tab allows to define a default value for the filter of a field. This default value can be a constant, dependent from another parameter or use <code>OBBindings</code>.</p>
 <h3 id="hiding-the-parameter-name-of-a-grid-parameter">Hiding the parameter name of a grid parameter</h3>
-<p>Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unckecking the flag <strong>Show Title</strong> in the Parameter tab.</p>
+<p>Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unchecking the flag <strong>Show Title</strong> in the Parameter tab.</p>
 <h3 id="adding-new-buttons">Adding new buttons</h3>
 <p>By default, process definitions have a single <strong>Done</strong> button (and a <strong>Cancel</strong> one in case they are shown in a popup from a standard window). It is possible to change that button or to add new ones.</p>
 <p>To do it:</p>
@@ -15995,7 +16004,38 @@ Additionally, a message can be added to show more information about the issue.</
 <p>There should be, at most, only one parameter of <strong>Button List</strong> type. </p>
 </div>
 <h3 id="multi-record-process">Multi Record Process</h3>
-<p>A standard process can be defined as multi record process to be able to execute it for more than one record.</p>
+<p>A standard process can be defined as a <strong>Multi Record</strong> process, allowing it to be executed over multiple records selected at once from a grid.</p>
+<p><strong>Enabling it:</strong> In the <strong>Process Definition</strong> window, check the <strong>Multi Record</strong> flag.</p>
+<p><strong>Behavior:</strong> When the process is invoked from a tab, the user can select one or more rows in the grid before clicking the process button. All selected record IDs are collected client-side and sent to the action handler as a <code>recordIds</code> array.</p>
+<p><strong>What the handler receives:</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">"recordIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"A1B2C3..."</span><span class="p">,</span><span class="w"> </span><span class="s2">"D4E5F6..."</span><span class="p">,</span><span class="w"> </span><span class="s2">"G7H8I9..."</span><span class="p">],</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">"_params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Java implementation example:</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nd">@Override</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">protected</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="nf">doExecute</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">recordIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"recordIds"</span><span class="p">);</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">recordIds</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">recordId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recordIds</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">      </span><span class="c1">// Process each selected record</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">      </span><span class="n">MyEntity</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">MyEntity</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">recordId</span><span class="p">);</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">      </span><span class="c1">// ... business logic</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="c1">// build response actions</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">JSONException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">"Error in multi-record process"</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="p">}</span>
+</span></code></pre></div>
 <h3 id="uploading-files">Uploading Files</h3>
 <p>The <strong>File reference</strong> enhances the Etendo capabilities by enabling file uploads directly within process definitions. </p>
 <p>This functionality can be used in <strong>process definitions</strong>, introducing an <strong>intuitive file upload element</strong> in the process form. Users can upload a <strong>single file</strong> for processing, which is then handled by the process logic as specified in the process definition.</p>
@@ -16088,15 +16128,15 @@ Additionally, a message can be added to show more information about the issue.</
 <li>If the process has a (grid) parameter, the <code>JSON</code> that <code>doExecute</code> method receives changes these are the required modifications:</li>
 </ul>
 <p>Example:</p>
-<p></p><div class="language-java highlight"><span class="filename">Old Code</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">gridInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridSelection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_selection"</span><span class="p">);</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridAllRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_allRows"</span><span class="p">);</span>
+<p></p><div class="language-java highlight"><span class="filename">Old Code</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">gridInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridSelection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_selection"</span><span class="p">);</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridAllRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_allRows"</span><span class="p">);</span>
 </span></code></pre></div>
-<div class="language-java highlight"><span class="filename">New code</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="na">getJSONObject</span><span class="p">(</span><span class="s">"_params"</span><span class="p">);</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1">// Replace here gridColumnName with the actual DB Column Name for your grid parameter</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">gridInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="p">.</span><span class="na">getJSONObject</span><span class="p">(</span><span class="s">"gridColumnName"</span><span class="p">);</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridSelection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_selection"</span><span class="p">);</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridAllRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_allRows"</span><span class="p">);</span><span class="w">  </span>
+<div class="language-java highlight"><span class="filename">New code</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">content</span><span class="p">).</span><span class="na">getJSONObject</span><span class="p">(</span><span class="s">"_params"</span><span class="p">);</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1">// Replace here gridColumnName with the actual DB Column Name for your grid parameter</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">JSONObject</span><span class="w"> </span><span class="n">gridInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">params</span><span class="p">.</span><span class="na">getJSONObject</span><span class="p">(</span><span class="s">"gridColumnName"</span><span class="p">);</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridSelection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_selection"</span><span class="p">);</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">JSONArray</span><span class="w"> </span><span class="n">gridAllRows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gridInfo</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">"_allRows"</span><span class="p">);</span><span class="w">  </span>
 </span></code></pre></div><p></p>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Standard_Process_Definition" target="_blank">How to Create a Standard Process Definition</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
