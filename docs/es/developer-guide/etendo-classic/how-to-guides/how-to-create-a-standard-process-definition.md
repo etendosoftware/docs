@@ -49,7 +49,7 @@ Cuando se hace clic en el botón **Hecho**, se ejecuta el proceso:
 - Abra la ventana **Definición del Proceso** 
 - Cree un nuevo registro 
 - Defina el patrón de UI: **Estándar (Parámetros definidos en el Diccionario)**
-- Establezca el Handler: `org.openbravo.client.application.examples.StandardProcessActionHandler`. Esta es la clase Java que implementa el proceso y que se invocará cuando el usuario haga clic en el botón de acción. 
+- Establezca el Handler: `com.etendoerp.client.application.examples.StandardProcessActionHandler`. Esta es la clase Java que implementa el proceso y que se invocará cuando el usuario haga clic en el botón de acción. 
 - Guarde 
 
 ### Añadir Parámetros
@@ -65,7 +65,7 @@ Cuando se hace clic en el botón **Hecho**, se ejecuta el proceso:
     - Valor por defecto: 0. Es el valor que tomará el parámetro por defecto. Es una expresión JavaScript evaluada en el lado servidor, como las Expresiones de filtrado por defecto usadas en los selectores. 
 - Siga pasos similares para crear el campo **Max Qty** 
 - Multiselector **Parte** 
-    - Cree un selector de múltiples partes 
+    - Cree un nuevo selector Multi Order siguiendo los pasos descritos en [Cómo crear un selector múltiple](how-to-create-a-multi-selector.md)
     - Cree un nuevo parámetro 
     - Referencia: `OBUISEL_Multi Selector Reference` 
     - Referencia clave: Multi Order Selector 
@@ -102,7 +102,7 @@ En el caso de un handler de acción de Definición del Proceso, extienda de `Bas
   * Contributor(s):  ______________________________________.
   ************************************************************************
   */
-package org.openbravo.client.application.examples;
+package com.etendoerp.client.application.examples;
  
 import java.math.BigDecimal;
 import java.util.Map;
@@ -280,17 +280,17 @@ La respuesta debería ser similar a:
 - `refreshGrid`. Actualiza el grid donde está definido el botón del proceso. Los grids no se actualizan automáticamente tras invocar un proceso estándar; solo se actualiza el registro seleccionado. Si el proceso añade o elimina registros de ese grid, entonces debe añadir `refreshGrid` a la lista de acciones de respuesta para ver los datos actualizados en el grid. 
 - `refreshGridParameter`. Actualiza el **parámetro de grid** con nombre `gridName` presente en la ventana de parámetros del proceso estándar. Este tipo de respuesta es especialmente útil para aquellas ventanas de parámetros que no se cierran tras la ejecución del **handler de acción** (los parámetros permanecen visibles tras la ejecución del proceso), por ejemplo, aquellas definiciones de proceso que se abren directamente desde el menú. 
 - El método `getResponseBuilder()` está disponible para las clases que extienden `BaseProcessActionHandler`. Este método devuelve un asistente que puede utilizarse para construir el resultado del proceso con las acciones de respuesta estándar deseadas de forma sencilla. Por ejemplo:
-    
-```java
-@Override
-protected JSONObject doExecute(Map<String, Object> parameters, String content) {
-  ...
-  ...
-  return getResponseBuilder()
-      .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
-      .openDirectTab("220", false).build();
-}
-```
+
+    ```java
+    @Override
+    protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+      ...
+      ...
+      return getResponseBuilder()
+          .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
+          .openDirectTab("220", false).build();
+    }
+    ```
 ## Prueba del Proceso
 
 Ahora es necesario compilar y desplegar (porque se ha añadido una nueva clase Java; tenga en cuenta que esto no es necesario en caso de solo editar/añadir parámetros).
@@ -309,7 +309,7 @@ Después de compilar y desplegar, habrá una nueva entrada en el menú: **Proces
 Los procesos de **Definición del Proceso** estándar pueden abrirse como una solapa desde el menú o como un popup modal desde un botón en una solapa. Esta segunda opción puede lograrse añadiendo una columna adicional a la tabla utilizada en la solapa. 
 
 !!!info
-    Para más detalles sobre este proceso, visite [Cómo crear un proceso Pick and Execute](how-to-create-a-pick-and-execute-process.md). 
+    Para obtener la configuración completa paso a paso de la columna, el botón y la vinculación del proceso, consulte [Cómo crear un proceso Pick and Execute](how-to-create-a-pick-and-execute-process.md).
 
 ### Solo lectura y lógica de visualización
 
@@ -383,6 +383,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     failureCallback();
   }
+};
 ```
 
 Además, las funciones de validación de lado del cliente soportan un cuarto parámetro que contiene información adicional, como el botón pulsado:  
@@ -394,6 +395,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     // do another validations
   }
+};
 ```
 
 !!!info
@@ -415,6 +417,7 @@ La función debe aceptar cuatro parámetros:
 - item: el elemento que se ha modificado 
 - view: el objeto de la ventana de parámetros 
 - form: el formulario que contiene el elemento 
+- grid: el contexto de la grilla (presente cuando la función se invoca desde un parámetro de grilla; `null` en caso contrario)
 
 ### Cómo establecer el valor de parámetros que no son de grid de forma programática
 
@@ -505,7 +508,46 @@ Para hacerlo:
 
 ### Proceso multi-registro
 
-Un proceso estándar puede definirse como proceso multi-registro para poder ejecutarlo para más de un registro.
+Un proceso estándar puede definirse como proceso **Multi-Registro**, lo que permite ejecutarlo sobre múltiples registros seleccionados a la vez desde una grilla.
+
+**Habilitarlo:** En la ventana **Definición del Proceso**, marque el indicador **Multi-Registro**.
+
+**Comportamiento:** Cuando el proceso se invoca desde una solapa, el usuario puede seleccionar una o más filas en la grilla antes de hacer clic en el botón del proceso. Todos los IDs de los registros seleccionados se recopilan en el lado del cliente y se envían al handler de acción como un array `recordIds`.
+
+**Lo que recibe el handler:**
+
+```json
+{
+  "recordIds": ["A1B2C3...", "D4E5F6...", "G7H8I9..."],
+  "_params": { ... }
+}
+```
+
+**Ejemplo de implementación Java:**
+
+```java
+@Override
+protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+  try {
+    JSONObject request = new JSONObject(content);
+    JSONArray recordIds = request.getJSONArray("recordIds");
+
+    for (int i = 0; i < recordIds.length(); i++) {
+      String recordId = recordIds.getString(i);
+      // Process each selected record
+      MyEntity entity = OBDal.getInstance().get(MyEntity.class, recordId);
+      // ... business logic
+    }
+
+    JSONObject result = new JSONObject();
+    // build response actions
+    return result;
+  } catch (JSONException e) {
+    log.error("Error in multi-record process", e);
+    return new JSONObject();
+  }
+}
+```
 
 ### Subida de archivos
 
