@@ -44,11 +44,14 @@ Estas son las funciones clave para construir un archivo de test Jest:
 - `toBe(expected)` — verifica la igualdad estricta (`===`). Úselo para valores primitivos como cadenas, números y booleanos.
 - `toEqual(expected)` — verifica la igualdad profunda. Úselo para objetos y arrays.
 
+Para la lista completa de matchers disponibles, consulte la [referencia de expect de Jest](https://jestjs.io/docs/expect){target="_blank"}.
+
 ### Archivo de test de ejemplo
 
 El siguiente ejemplo está tomado de `org.openbravo.client.application`. Muestra los bloques fundamentales de un archivo de test Jest.
 
 ```javascript title="org.openbravo.client.application/web-test/ob-utilities-date.test.js"
+// This require loads the module without assigning it — it registers OB.Utilities on the global scope
 require('../web/org.openbravo.client.application/js/utilities/ob-utilities-date');
  
 describe('org.openbravo.client.application - OB.Utilities.Date', () => {
