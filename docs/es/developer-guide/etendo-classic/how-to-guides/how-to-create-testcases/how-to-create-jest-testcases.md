@@ -1,53 +1,57 @@
 ---
-title: Cómo crear casos de prueba con Jest
+title: Cómo crear tests con Jest
 tags:
   - Cómo hacer
   - Jest
-  - Prueba
-  - Casos de prueba
+  - Test
+  - Tests
 ---
 
-# Cómo crear casos de prueba con Jest
+# Cómo crear tests con Jest
 
 ## Visión general
 
-[Jest](https://jestjs.io/){target="_blank"} es un framework de pruebas y actualmente utilizado como framework de pruebas predeterminado en [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. A diferencia de Mocha, es un ejecutor de pruebas con una filosofía definida y proporciona sus propios métodos de aserción y de mocking. La principal ventaja es que funciona listo para usar y tiene buena integración con tecnologías como React, Babel y TypeScript.
+[Jest](https://jestjs.io/){target="_blank"} es un framework de testing actualmente utilizado como predeterminado en [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. Proporciona sus propios métodos de aserción y de mocking, y funciona listo para usar con buena integración con React, Babel y TypeScript.
 
 ## Instalación
 
-Instale todas las dependencias ejecutando:
+Desde el directorio del módulo que contiene el `package.json`, instale todas las dependencias ejecutando:
 
 ```bash
 npm install
 ```
 
-## Creación de un caso de prueba
+## Escritura de un test
+
+### Ubicación del archivo
 
 !!! info
-    Las pruebas deben colocarse en la carpeta `web-test`. Los archivos deben tener el sufijo `.test.js` para JavaScript o `.test.ts` para TypeScript.
+    Los tests deben colocarse en la carpeta `web-test`. Los archivos deben tener el sufijo `.test.js` para JavaScript o `.test.ts` para TypeScript.
 
-    Esta es una ruta válida para un archivo de prueba:
+    Esta es una ruta válida para un archivo de test:
 
     `modules/com.etendoerp.mymodule/web-test/mycomponent.test.js`
 
-Incluya mediante `require` el elemento bajo prueba y comience a crear casos de prueba. Consulte la [documentación de Jest](https://jestjs.io/docs/getting-started){target="_blank"} como referencia.
+Consulte la [documentación de Jest](https://jestjs.io/docs/getting-started){target="_blank"} como referencia completa.
 
-### Archivo de prueba de ejemplo
+### Funciones principales
 
-El siguiente ejemplo está tomado de `org.openbravo.client.application`. Muestra los bloques fundamentales de un archivo de prueba Jest.
+Estas son las funciones clave para construir un archivo de test Jest:
+
+- `describe(name, fn)` — agrupa tests relacionados bajo una etiqueta común. Los bloques pueden anidarse para reflejar la jerarquía del elemento bajo test.
+- `it(name, fn)` — define un test individual. El nombre describe el comportamiento esperado.
+- `expect(value)` — envuelve el valor real producido por el código bajo test.
+- `toBe(expected)` — verifica la igualdad estricta (`===`). Úselo para valores primitivos como cadenas, números y booleanos.
+- `toEqual(expected)` — verifica la igualdad profunda. Úselo para objetos y arrays.
+
+### Archivo de test de ejemplo
+
+El siguiente ejemplo está tomado de `org.openbravo.client.application`. Muestra los bloques fundamentales de un archivo de test Jest.
 
 ```javascript title="org.openbravo.client.application/web-test/ob-utilities-date.test.js"
 require('../web/org.openbravo.client.application/js/utilities/ob-utilities-date');
  
 describe('org.openbravo.client.application - OB.Utilities.Date', () => {
-  beforeEach(() => {
-    // Execute this before each test
-  });
- 
-  afterEach(() => {
-    // Execute this after each test
-  });
- 
   it('The year where we should change century in 2 digits year format is 50', () => {
     expect(OB.Utilities.Date.centuryReference).toEqual(50);
   });
@@ -67,27 +71,20 @@ describe('org.openbravo.client.application - OB.Utilities.Date', () => {
 });
 ```
 
-Las funciones clave utilizadas en este archivo son:
-
-- `describe(name, fn)` — agrupa pruebas relacionadas bajo una etiqueta común. Los bloques pueden anidarse para reflejar la jerarquía del elemento bajo prueba.
-- `it(name, fn)` — define un caso de prueba individual. El nombre describe el comportamiento esperado.
-- `expect(value)` — envuelve el valor real producido por el código bajo prueba.
-- `toEqual(expected)` — verifica que el valor real coincide con el valor esperado mediante igualdad profunda.
-
 ## Configuración y desmontaje
 
-Jest proporciona cuatro hooks de ciclo de vida que ejecutan código antes o después de las pruebas. Úselos para preparar el estado compartido y limpiarlo.
+Jest proporciona cuatro hooks de ciclo de vida que ejecutan código antes o después de los tests. Úselos para preparar el estado compartido y limpiarlo.
 
 | Hook | Se ejecuta |
 |------|------|
-| `beforeEach` | Antes de cada prueba en el bloque `describe` actual |
-| `afterEach` | Después de cada prueba en el bloque `describe` actual |
-| `beforeAll` | Una vez antes de todas las pruebas en el bloque `describe` actual |
-| `afterAll` | Una vez después de todas las pruebas en el bloque `describe` actual |
+| `beforeEach` | Antes de cada test en el bloque `describe` actual |
+| `afterEach` | Después de cada test en el bloque `describe` actual |
+| `beforeAll` | Una vez antes de todos los tests en el bloque `describe` actual |
+| `afterAll` | Una vez después de todos los tests en el bloque `describe` actual |
 
-Use `beforeEach` y `afterEach` cuando cada prueba necesite una instancia nueva e independiente del elemento bajo prueba. Use `beforeAll` y `afterAll` cuando la configuración o el desmontaje sean costosos y puedan compartirse de forma segura entre todas las pruebas; por ejemplo, al abrir y cerrar una conexión a base de datos.
+Use `beforeEach` y `afterEach` cuando cada test necesite una instancia nueva e independiente del elemento bajo test. Use `beforeAll` y `afterAll` cuando la configuración o el desmontaje sean costosos y puedan compartirse de forma segura entre todos los tests; por ejemplo, al abrir y cerrar una conexión a base de datos.
 
-El siguiente ejemplo está adaptado de `NpmDependenciesValidator.test.js`. Usa `beforeEach` para crear una instancia nueva del validador e inyectar dependencias simuladas antes de cada prueba.
+El siguiente ejemplo está adaptado de `NpmDependenciesValidator.test.js`. Usa `beforeEach` para crear una instancia nueva del validador e inyectar dependencias simuladas antes de cada test.
 
 ```javascript title="NpmDependenciesValidator.test.js"
 const { NpmDependenciesValidator } = require('./NpmDependenciesValidator');
@@ -101,7 +98,7 @@ describe('NpmDependenciesValidator', () => {
     validator.getPackageJsonPath = jest.fn(module => `${module}/package.json`);
   });
 
-  it('does not return warnings or errors if dependency is not shared between modules', async () => {
+  it('does not return warnings or errors if dependency is not shared between modules', () => {
     validator.readPackageJson = jest.fn(path => {
       if (path === 'module1/package.json') {
         return { dependencies: { lodash: '4.17.15' } };
@@ -139,11 +136,11 @@ describe('Database integration', () => {
 });
 ```
 
-Aquí `openDatabaseConnection` se ejecuta una sola vez para toda la suite en lugar de antes de cada prueba individual, lo que reduce el tiempo de ejecución cuando la operación es costosa.
+Aquí `openDatabaseConnection` se ejecuta una sola vez para toda la suite en lugar de antes de cada test individual, lo que reduce el tiempo de ejecución cuando la operación es costosa.
 
 ## Mocking
 
-El mocking reemplaza implementaciones reales con sustitutos controlados para que las pruebas sigan siendo rápidas y aisladas. Jest proporciona tres herramientas principales de mocking.
+El mocking reemplaza implementaciones reales con sustitutos controlados para que los tests sigan siendo rápidos y aislados. Jest proporciona tres herramientas principales de mocking.
 
 ### jest.mock()
 
@@ -182,7 +179,7 @@ describe('User Store', () => {
 });
 ```
 
-`jest.clearAllMocks()` en `beforeEach` restablece los contadores de llamadas y los valores de retorno entre pruebas para que una prueba no afecte las aserciones de otra.
+`jest.clearAllMocks()` en `beforeEach` restablece los contadores de llamadas y los valores de retorno entre tests para que un test no afecte las aserciones de otro.
 
 ### jest.fn()
 
@@ -204,58 +201,30 @@ expect(fetchUser).toHaveReturnedWith({ id: 1, name: 'Ana' });
 ```javascript
 const { NpmDependenciesValidator } = require('./NpmDependenciesValidator');
 
-const validator = new NpmDependenciesValidator();
-const spy = jest.spyOn(validator, 'validate');
+describe('NpmDependenciesValidator - spy', () => {
+  let validator, spy;
 
-validator.validate();
+  beforeEach(() => {
+    validator = new NpmDependenciesValidator();
+    spy = jest.spyOn(validator, 'validate');
+  });
 
-expect(spy).toHaveBeenCalledTimes(1);
+  afterEach(() => {
+    spy.mockRestore(); // restores the original method and prevents the spy from persisting across tests
+  });
 
-spy.mockRestore(); // restores the original method
-```
-
-Llame a `spy.mockRestore()` en `afterEach` para evitar que el spy persista entre pruebas.
-
-## Pruebas parametrizadas
-
-`it.each` ejecuta la misma lógica de prueba con múltiples pares de entrada/salida. Esto elimina código de prueba duplicado y hace que la intención quede explícita en el nombre de la prueba.
-
-El siguiente ejemplo está tomado de `ob-utilities-number.test.js`. Verifica que las cadenas en notación científica se conviertan correctamente a notación decimal.
-
-```javascript title="org.openbravo.client.application/web-test/ob-utilities-number.test.js"
-describe('OB.Utilities.Number.ScientificToDecimal', () => {
-  const decimalSeparator = '.';
-  it.each`
-    number       | expected
-    ${'-5E-4'}   | ${'-0.0005'}
-    ${'-5E4'}    | ${'-50000'}
-    ${'5E7'}     | ${'50000000'}
-  `('converts $number to $expected', ({ number, expected }) => {
-    expect(OB.Utilities.Number.ScientificToDecimal(number, decimalSeparator)).toEqual(expected);
+  it('calls validate once', () => {
+    validator.validate();
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
 ```
 
-La sintaxis de plantilla literal define una tabla. La primera fila es el encabezado de columna. Cada fila siguiente es una ejecución de prueba. Jest interpola `$number` y `$expected` en el nombre de la prueba para que cada caso sea distinguible en la salida.
+## Tests asíncronos
 
-`it.each` también acepta un array de arrays cuando no se requieren encabezados de columna:
+Jest maneja `async`/`await` de forma nativa. Marque el callback del test como `async` y use `await` en las promesas. Jest espera a que la promesa devuelta se resuelva antes de evaluar las aserciones.
 
-```javascript
-const decimalSeparator = '.';
-it.each([
-  ['-5E-4', '-0.0005'],
-  ['-5E4',  '-50000'],
-  ['5E7',   '50000000'],
-])('converts %s to %s', (number, expected) => {
-  expect(OB.Utilities.Number.ScientificToDecimal(number, decimalSeparator)).toEqual(expected);
-});
-```
-
-## Pruebas asíncronas
-
-Jest maneja `async`/`await` de forma nativa. Marque el callback de la prueba como `async` y use `await` en las promesas. Jest espera a que la promesa devuelta se resuelva antes de evaluar las aserciones.
-
-El siguiente ejemplo está adaptado de `User.test.ts`. Verifica que una llamada de inicio de sesión rellena el store con los datos del usuario y un token.
+El siguiente ejemplo está adaptado de `User.test.ts`. Verifica que una llamada de inicio de sesión rellena el store con los datos del usuario y un token. El mock de `etrest` simula la respuesta del servidor: `getUserId` devuelve el ID de usuario utilizado internamente por el store, mientras que el valor del token es establecido por la propia lógica de inicio de sesión del store tras resolver la llamada simulada.
 
 ```typescript title="User.test.ts"
 jest.mock('etrest', () => ({
@@ -281,50 +250,96 @@ describe('login', () => {
   });
 
   it('logs in the user and sets up store data', async () => {
-    const mockUser = 'testUser';
-    const mockPass = 'testPass';
+    const username = 'testUser';
+    const password = 'testPass';
 
-    await userStore.login(mockUser, mockPass);
+    await userStore.login(username, password);
 
-    expect(OBRest.loginWithUserAndPassword).toHaveBeenCalledWith(mockUser, mockPass);
+    expect(OBRest.loginWithUserAndPassword).toHaveBeenCalledWith(username, password);
     expect(userStore.token).toBe('testToken');
-    expect(userStore.user).toBe(mockUser);
+    expect(userStore.user).toBe(username);
   });
 });
 ```
 
 !!! warning
-    Siempre use `await` en la llamada bajo prueba antes de realizar las aserciones. Sin `await`, la prueba finaliza antes de que la promesa se resuelva, lo que puede generar falsos positivos o pruebas inestables por rechazos no manejados.
+    Siempre use `await` en la llamada bajo test antes de realizar las aserciones. Sin `await`, el test finaliza antes de que la promesa se resuelva, lo que puede generar falsos positivos o tests inestables por rechazos no manejados.
 
-Si la prueba espera que una promesa sea rechazada, use `expect(...).rejects.toThrow()`:
-
-En el siguiente ejemplo, `userStore` es la misma instancia configurada en `beforeEach`.
+Si el test espera que una promesa sea rechazada, use `expect(...).rejects.toThrow()`:
 
 ```javascript
-it('throws on invalid credentials', async () => {
-  await expect(userStore.login('', '')).rejects.toThrow('Invalid credentials');
+const User = require('./User');
+
+describe('login - invalid credentials', () => {
+  let userStore;
+
+  beforeEach(() => {
+    userStore = new User();
+    jest.clearAllMocks();
+  });
+
+  it('throws on invalid credentials', async () => {
+    await expect(userStore.login('', '')).rejects.toThrow('Invalid credentials');
+  });
 });
 ```
 
-## Ejecutar pruebas y cobertura
+## Tests parametrizados
 
-Para ejecutar todas las pruebas unitarias en una instancia de Etendo (tanto Core como todos los módulos instalados), ejecute:
+`it.each` ejecuta la misma lógica de test con múltiples pares de entrada/salida. Esto elimina código de test duplicado y hace que la intención quede explícita en el nombre del test.
+
+El siguiente ejemplo está tomado de `ob-utilities-number.test.js`. Verifica que las cadenas en notación científica se conviertan correctamente a notación decimal.
+
+```javascript title="org.openbravo.client.application/web-test/ob-utilities-number.test.js"
+describe('OB.Utilities.Number.ScientificToDecimal', () => {
+  const decimalSeparator = '.';
+  it.each`
+    number       | expected
+    ${'-5E-4'}   | ${'-0.0005'}
+    ${'-5E4'}    | ${'-50000'}
+    ${'5E7'}     | ${'50000000'}
+  `('converts $number to $expected', ({ number, expected }) => {
+    expect(OB.Utilities.Number.ScientificToDecimal(number, decimalSeparator)).toEqual(expected);
+  });
+});
+```
+
+La sintaxis de plantilla literal define una tabla. La primera fila es el encabezado de columna. Cada fila siguiente es una ejecución de test. Jest interpola `$number` y `$expected` en el nombre del test para que cada caso sea distinguible en la salida.
+
+`it.each` también acepta un array de arrays cuando no se requieren encabezados de columna:
+
+```javascript
+const decimalSeparator = '.';
+it.each([
+  ['-5E-4', '-0.0005'],
+  ['-5E4',  '-50000'],
+  ['5E7',   '50000000'],
+])('converts %s to %s', (number, expected) => {
+  expect(OB.Utilities.Number.ScientificToDecimal(number, decimalSeparator)).toEqual(expected);
+});
+```
+
+## Ejecutar tests y cobertura
+
+Desde el directorio del módulo, ejecute todos los tests:
 
 ```bash
 npm test
 ```
 
-Limite las pruebas a un módulo concreto añadiendo la ruta al final del comando:
+Para ejecutar un único archivo de test:
 
 ```bash
-npm test modules/com.etendoerp.mymodule/
+npm test -- web-test/mycomponent.test.js
 ```
 
-Para ejecutar las pruebas y generar un informe de cobertura, ejecute:
+Para ejecutar los tests y generar un informe de cobertura, ejecute:
 
 ```bash
 npm run coverage
 ```
 
----
+El informe de cobertura se genera en el directorio `coverage/`. Abra `coverage/lcov-report/index.html` en un navegador para ver un desglose detallado por archivo, incluyendo cobertura de líneas, sentencias, ramas y funciones.
+
+
 Este trabajo es una obra derivada de [How to Create Jest testcases](https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.

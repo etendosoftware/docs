@@ -11,17 +11,19 @@ tags:
   
 ## Overview
 
-[Jest](https://jestjs.io/){target="_blank"} is a testing framework and is currently used as the default testing framework in [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel, and TypeScript.
+[Jest](https://jestjs.io/){target="_blank"} is a testing framework currently used as the default in [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. It provides its own assertion and mocking methods and runs out-of-the-box with good integration with React, Babel, and TypeScript.
 
 ## Installation
 
-Install all dependencies by running:
+From the directory of the module that contains the `package.json`, install all dependencies by running:
 
 ```bash
 npm install
 ```
 
-## Creating a Test Case
+## Writing a Test
+
+### File Placement
 
 !!! info
     Tests should be placed in the `web-test` folder. Files must have the suffix `.test.js` for JavaScript or `.test.ts` for TypeScript.
@@ -30,9 +32,19 @@ npm install
 
     `modules/com.etendoerp.mymodule/web-test/mycomponent.test.js`
 
-Require the subject under test and start creating test cases. See the [Jest documentation](https://jestjs.io/docs/getting-started){target="_blank"} for reference.
+See the [Jest documentation](https://jestjs.io/docs/getting-started){target="_blank"} for full reference.
 
-### Sample test file
+### Core Functions
+
+These are the key functions used to build a Jest test file:
+
+- `describe(name, fn)` — groups related tests under a shared label. Blocks can be nested to reflect a hierarchy of the subject under test.
+- `it(name, fn)` — defines a single test case. The name describes the expected behaviour.
+- `expect(value)` — wraps the actual value produced by the code under test.
+- `toBe(expected)` — asserts strict equality (`===`). Use for primitive values such as strings, numbers, and booleans.
+- `toEqual(expected)` — asserts deep equality. Use for objects and arrays.
+
+### Sample Test File
 
 The following example is taken from `org.openbravo.client.application`. It demonstrates the core building blocks of a Jest test file.
 
@@ -40,14 +52,6 @@ The following example is taken from `org.openbravo.client.application`. It demon
 require('../web/org.openbravo.client.application/js/utilities/ob-utilities-date');
  
 describe('org.openbravo.client.application - OB.Utilities.Date', () => {
-  beforeEach(() => {
-    // Execute this before each test
-  });
- 
-  afterEach(() => {
-    // Execute this after each test
-  });
- 
   it('The year where we should change century in 2 digits year format is 50', () => {
     expect(OB.Utilities.Date.centuryReference).toEqual(50);
   });
@@ -66,13 +70,6 @@ describe('org.openbravo.client.application - OB.Utilities.Date', () => {
   });
 });
 ```
-
-The key functions used in this file are:
-
-- `describe(name, fn)` — groups related tests under a shared label. Blocks can be nested to reflect a hierarchy of the subject under test.
-- `it(name, fn)` — defines a single test case. The name describes the expected behaviour.
-- `expect(value)` — wraps the actual value produced by the code under test.
-- `toEqual(expected)` — asserts that the actual value matches the expected value using deep equality.
 
 ## Setup and Teardown
 
@@ -101,7 +98,7 @@ describe('NpmDependenciesValidator', () => {
     validator.getPackageJsonPath = jest.fn(module => `${module}/package.json`);
   });
 
-  it('does not return warnings or errors if dependency is not shared between modules', async () => {
+  it('does not return warnings or errors if dependency is not shared between modules', () => {
     validator.readPackageJson = jest.fn(path => {
       if (path === 'module1/package.json') {
         return { dependencies: { lodash: '4.17.15' } };
@@ -204,17 +201,88 @@ expect(fetchUser).toHaveReturnedWith({ id: 1, name: 'Ana' });
 ```javascript
 const { NpmDependenciesValidator } = require('./NpmDependenciesValidator');
 
-const validator = new NpmDependenciesValidator();
-const spy = jest.spyOn(validator, 'validate');
+describe('NpmDependenciesValidator - spy', () => {
+  let validator, spy;
 
-validator.validate();
+  beforeEach(() => {
+    validator = new NpmDependenciesValidator();
+    spy = jest.spyOn(validator, 'validate');
+  });
 
-expect(spy).toHaveBeenCalledTimes(1);
+  afterEach(() => {
+    spy.mockRestore(); // restores the original method and prevents the spy from persisting across tests
+  });
 
-spy.mockRestore(); // restores the original method
+  it('calls validate once', () => {
+    validator.validate();
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+});
 ```
 
-Call `spy.mockRestore()` in `afterEach` to prevent the spy from persisting across tests.
+## Asynchronous Tests
+
+Jest handles `async`/`await` natively. Mark the test callback as `async` and `await` any promises. Jest waits for the returned promise to settle before evaluating assertions.
+
+The following example is adapted from `User.test.ts`. It verifies that a login call populates the store with user data and a token. The `etrest` mock simulates the server response — `getUserId` returns the user ID used internally by the store, while the token value is set by the store's own login logic after the mocked call resolves.
+
+```typescript title="User.test.ts"
+jest.mock('etrest', () => ({
+  OBRest: {
+    loginWithUserAndPassword: jest.fn(),
+    getInstance: jest.fn(() => ({
+      getOBContext: jest.fn(() => ({
+        getUserId: () => 'testUserId',
+      })),
+    })),
+  },
+}));
+
+const { OBRest } = require('etrest');
+const User = require('./User');
+
+describe('login', () => {
+  let userStore;
+
+  beforeEach(() => {
+    userStore = new User();
+    jest.clearAllMocks();
+  });
+
+  it('logs in the user and sets up store data', async () => {
+    const username = 'testUser';
+    const password = 'testPass';
+
+    await userStore.login(username, password);
+
+    expect(OBRest.loginWithUserAndPassword).toHaveBeenCalledWith(username, password);
+    expect(userStore.token).toBe('testToken');
+    expect(userStore.user).toBe(username);
+  });
+});
+```
+
+!!! warning
+    Always `await` the call under test before asserting. Without `await`, the test finishes before the promise settles, which can produce false positives or flaky failures due to unhandled rejections.
+
+If the test expects a promise to reject, use `expect(...).rejects.toThrow()`:
+
+```javascript
+const User = require('./User');
+
+describe('login - invalid credentials', () => {
+  let userStore;
+
+  beforeEach(() => {
+    userStore = new User();
+    jest.clearAllMocks();
+  });
+
+  it('throws on invalid credentials', async () => {
+    await expect(userStore.login('', '')).rejects.toThrow('Invalid credentials');
+  });
+});
+```
 
 ## Parameterized Tests
 
@@ -251,73 +319,18 @@ it.each([
 });
 ```
 
-## Asynchronous Tests
-
-Jest handles `async`/`await` natively. Mark the test callback as `async` and `await` any promises. Jest waits for the returned promise to settle before evaluating assertions.
-
-The following example is adapted from `User.test.ts`. It verifies that a login call populates the store with user data and a token.
-
-```typescript title="User.test.ts"
-jest.mock('etrest', () => ({
-  OBRest: {
-    loginWithUserAndPassword: jest.fn(),
-    getInstance: jest.fn(() => ({
-      getOBContext: jest.fn(() => ({
-        getUserId: () => 'testUserId',
-      })),
-    })),
-  },
-}));
-
-const { OBRest } = require('etrest');
-const User = require('./User');
-
-describe('login', () => {
-  let userStore;
-
-  beforeEach(() => {
-    userStore = new User();
-    jest.clearAllMocks();
-  });
-
-  it('logs in the user and sets up store data', async () => {
-    const mockUser = 'testUser';
-    const mockPass = 'testPass';
-
-    await userStore.login(mockUser, mockPass);
-
-    expect(OBRest.loginWithUserAndPassword).toHaveBeenCalledWith(mockUser, mockPass);
-    expect(userStore.token).toBe('testToken');
-    expect(userStore.user).toBe(mockUser);
-  });
-});
-```
-
-!!! warning
-    Always `await` the call under test before asserting. Without `await`, the test finishes before the promise settles, which can produce false positives or flaky failures due to unhandled rejections.
-
-If the test expects a promise to reject, use `expect(...).rejects.toThrow()`:
-
-In the following example, `userStore` is the same instance set up in `beforeEach`.
-
-```javascript
-it('throws on invalid credentials', async () => {
-  await expect(userStore.login('', '')).rejects.toThrow('Invalid credentials');
-});
-```
-
 ## Run Tests and Coverage
 
-To run all unit tests in an Etendo instance (both Core and all installed modules), run:
+From the module directory, run all tests:
 
 ```bash
 npm test
 ```
 
-Limit testing to a particular module by adding the path at the end of the command:
+To run a single test file:
 
 ```bash
-npm test modules/com.etendoerp.mymodule/
+npm test -- web-test/mycomponent.test.js
 ```
 
 To run tests and generate a coverage report, run:
@@ -325,6 +338,8 @@ To run tests and generate a coverage report, run:
 ```bash
 npm run coverage
 ```
+
+The coverage report is generated in the `coverage/` directory. Open `coverage/lcov-report/index.html` in a browser to view a detailed breakdown by file, including line, statement, branch, and function coverage.
 
 
 This work is a derivative of [How to Create Jest testcases](https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
