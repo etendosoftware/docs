@@ -22,7 +22,7 @@
     
     
       
-        <title>Cómo crear casos de prueba con Jest - Documentación de Etendo</title>
+        <title>Cómo crear tests con Jest - Documentación de Etendo</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-casos-de-prueba-con-jest" class="md-skip">
+        <a href="#como-crear-tests-con-jest" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cómo crear casos de prueba con Jest
+              Cómo crear tests con Jest
             
           </span>
         </div>
@@ -9616,19 +9616,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-un-caso-de-prueba" class="md-nav__link">
+  <a href="#escritura-de-un-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Creación de un caso de prueba
+      Escritura de un test
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Creación de un caso de prueba">
+    <nav class="md-nav" aria-label="Escritura de un test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#archivo-de-prueba-de-ejemplo" class="md-nav__link">
+  <a href="#ubicacion-del-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Archivo de prueba de ejemplo
+      Ubicación del archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-de-test-de-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de test de ejemplo
     </span>
   </a>
   
@@ -9640,9 +9658,78 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejecutar-pruebascobertura" class="md-nav__link">
+  <a href="#configuracion-y-desmontaje" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejecutar pruebas/cobertura
+      Configuración y desmontaje
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mocking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mocking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mocking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jestmock" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.mock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jestfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.fn()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jestspyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.spyOn()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-asincronos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests asíncronos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-parametrizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests parametrizados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-tests-y-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutar tests y cobertura
     </span>
   </a>
   
@@ -15099,19 +15186,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-un-caso-de-prueba" class="md-nav__link">
+  <a href="#escritura-de-un-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Creación de un caso de prueba
+      Escritura de un test
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Creación de un caso de prueba">
+    <nav class="md-nav" aria-label="Escritura de un test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#archivo-de-prueba-de-ejemplo" class="md-nav__link">
+  <a href="#ubicacion-del-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Archivo de prueba de ejemplo
+      Ubicación del archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-de-test-de-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo de test de ejemplo
     </span>
   </a>
   
@@ -15123,9 +15228,78 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejecutar-pruebascobertura" class="md-nav__link">
+  <a href="#configuracion-y-desmontaje" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejecutar pruebas/cobertura
+      Configuración y desmontaje
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mocking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mocking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mocking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jestmock" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.mock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jestfn" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.fn()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jestspyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      jest.spyOn()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-asincronos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests asíncronos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-parametrizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests parametrizados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar-tests-y-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutar tests y cobertura
     </span>
   </a>
   
@@ -15150,12 +15324,6 @@
       
       
       
-        <span class="md-tag">Casos de prueba</span>
-      
-    
-      
-      
-      
         <span class="md-tag">Cómo hacer</span>
       
     
@@ -15168,7 +15336,13 @@
       
       
       
-        <span class="md-tag">Prueba</span>
+        <span class="md-tag">Test</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Tests</span>
       
     
   </nav>
@@ -15178,62 +15352,293 @@
   
 
 
-<h1 id="como-crear-casos-de-prueba-con-jest">Cómo crear casos de prueba con Jest</h1>
+<h1 id="como-crear-tests-con-jest">Cómo crear tests con Jest</h1>
 <h2 id="vision-general">Visión general</h2>
-<p><a href="https://jestjs.io/" target="_blank">Jest</a> es un framework de pruebas creado por Facebook y actualmente utilizado como framework de pruebas predeterminado en <a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a>. A diferencia de Mocha, es un ejecutor de pruebas con una filosofía definida y proporciona sus propios métodos de aserción y de mocking. La principal ventaja es que funciona listo para usar y tiene buena integración con tecnologías como React, Babel o Typescript.</p>
+<p><a href="https://jestjs.io/" target="_blank">Jest</a> es un framework de testing actualmente utilizado como predeterminado en <a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a>. Proporciona sus propios métodos de aserción y de mocking, y funciona listo para usar con buena integración con React, Babel y TypeScript.</p>
 <h2 id="instalacion">Instalación</h2>
-<p>Todas las dependencias se pueden instalar simplemente ejecutando:</p>
-<div class="language-text highlight"><pre><span></span><code>npm install
-</code></pre></div>
-<h2 id="creacion-de-un-caso-de-prueba">Creación de un caso de prueba</h2>
+<p>Desde el directorio del módulo que contiene el <code>package.json</code>, instale todas las dependencias ejecutando:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install
+</span></code></pre></div>
+<h2 id="escritura-de-un-test">Escritura de un test</h2>
+<h3 id="ubicacion-del-archivo">Ubicación del archivo</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Las pruebas deben colocarse en la carpeta <code>web-test</code>, y los archivos deben tener el sufijo <code>.test.js</code>.</p>
-<p>Esta es una ruta válida para una clase de prueba:</p>
-<p><code>modules/com.etendoerp.mymodule/web-test/mycomponent.test.js</code>  </p>
+<p>Los tests deben colocarse en la carpeta <code>web-test</code>. Los archivos deben tener el sufijo <code>.test.js</code> para JavaScript o <code>.test.ts</code> para TypeScript.</p>
+<p>Esta es una ruta válida para un archivo de test:</p>
+<p><code>modules/com.etendoerp.mymodule/web-test/mycomponent.test.js</code></p>
 </div>
-<p>Ahora puede usar require() para incluir el elemento bajo prueba y empezar a crear casos de prueba. Consulte la <a href="https://jestjs.io/docs/getting-started" target="_blank">documentación de Jest</a> como referencia.</p>
-<h4 id="archivo-de-prueba-de-ejemplo">Archivo de prueba de ejemplo</h4>
-<div class="language-javascript highlight"><span class="filename">org.openbravo.client.application/web-test/ob-utilities-date.test.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">require</span><span class="p">(</span><span class="s1">'../web/org.openbravo.client.application/js/utilities/ob-utilities-date'</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">&nbsp;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'org.openbravo.client.application - OB.Utilities.Date'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Execute this before each test</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">});</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">&nbsp;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nx">afterEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">// Execute this after each test</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">});</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">&nbsp;</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'The year where we should change century in 2 digits year format is 50'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">centuryReference</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">});</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">&nbsp;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="c1">// Describe blocks can be nested to group test cases</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">'OB.Utilities.Date.normalizeDisplayFormat'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">'function works'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">'DD-MM-YYYY'</span><span class="p">);</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'%d-%m-%Y'</span><span class="p">);</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">});</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">&nbsp;</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">'function works with other input'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">'DD-MM-YY'</span><span class="p">);</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'%d-%m-%y'</span><span class="p">);</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="p">});</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="p">});</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">});</span>
+<p>Consulte la <a href="https://jestjs.io/docs/getting-started" target="_blank">documentación de Jest</a> como referencia completa.</p>
+<h3 id="funciones-principales">Funciones principales</h3>
+<p>Estas son las funciones clave para construir un archivo de test Jest:</p>
+<ul>
+<li><code>describe(name, fn)</code> — agrupa tests relacionados bajo una etiqueta común. Los bloques pueden anidarse para reflejar la jerarquía del elemento bajo test.</li>
+<li><code>it(name, fn)</code> — define un test individual. El nombre describe el comportamiento esperado.</li>
+<li><code>expect(value)</code> — envuelve el valor real producido por el código bajo test.</li>
+<li><code>toBe(expected)</code> — verifica la igualdad estricta (<code>===</code>). Úselo para valores primitivos como cadenas, números y booleanos.</li>
+<li><code>toEqual(expected)</code> — verifica la igualdad profunda. Úselo para objetos y arrays.</li>
+</ul>
+<p>Para la lista completa de matchers disponibles, consulte la <a href="https://jestjs.io/docs/expect" target="_blank">referencia de expect de Jest</a>.</p>
+<h3 id="archivo-de-test-de-ejemplo">Archivo de test de ejemplo</h3>
+<p>El siguiente ejemplo está tomado de <code>org.openbravo.client.application</code>. Muestra los bloques fundamentales de un archivo de test Jest.</p>
+<div class="language-javascript highlight"><span class="filename">org.openbravo.client.application/web-test/ob-utilities-date.test.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// This require loads the module without assigning it — it registers OB.Utilities on the global scope</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">require</span><span class="p">(</span><span class="s1">'../web/org.openbravo.client.application/js/utilities/ob-utilities-date'</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'org.openbravo.client.application - OB.Utilities.Date'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'The year where we should change century in 2 digits year format is 50'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">centuryReference</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="c1">// Describe blocks can be nested to group test cases</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">'OB.Utilities.Date.normalizeDisplayFormat'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">'function works'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">'DD-MM-YYYY'</span><span class="p">);</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'%d-%m-%Y'</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">'function works with other input'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">'DD-MM-YY'</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'%d-%m-%y'</span><span class="p">);</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">});</span>
 </span></code></pre></div>
-<h2 id="ejecutar-pruebascobertura">Ejecutar pruebas/cobertura</h2>
-<p>Para ejecutar todas las pruebas unitarias disponibles en una instancia de Etendo (tanto Core como todos los módulos instalados), ejecute el siguiente comando:</p>
-<div class="language-text highlight"><pre><span></span><code>npm test
-</code></pre></div>
-<p>Las pruebas se pueden limitar a un módulo concreto añadiendo la ruta al final del comando:    </p>
-<div class="language-text highlight"><pre><span></span><code>npm test modules/com.etendoerp.mymodule/
-</code></pre></div>
-<p>Si, junto con la prueba, desea ver un informe de cobertura, ejecute:</p>
-<div class="language-text highlight"><pre><span></span><code>npm run coverage
-</code></pre></div>
-<p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases" target="_blank">Cómo crear casos de prueba con Jest</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<h2 id="configuracion-y-desmontaje">Configuración y desmontaje</h2>
+<p>Jest proporciona cuatro hooks de ciclo de vida que ejecutan código antes o después de los tests. Úselos para preparar el estado compartido y limpiarlo.</p>
+<table>
+<thead>
+<tr>
+<th>Hook</th>
+<th>Se ejecuta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beforeEach</code></td>
+<td>Antes de cada test en el bloque <code>describe</code> actual</td>
+</tr>
+<tr>
+<td><code>afterEach</code></td>
+<td>Después de cada test en el bloque <code>describe</code> actual</td>
+</tr>
+<tr>
+<td><code>beforeAll</code></td>
+<td>Una vez antes de todos los tests en el bloque <code>describe</code> actual</td>
+</tr>
+<tr>
+<td><code>afterAll</code></td>
+<td>Una vez después de todos los tests en el bloque <code>describe</code> actual</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>beforeEach</code> y <code>afterEach</code> cuando cada test necesite una instancia nueva e independiente del elemento bajo test. Use <code>beforeAll</code> y <code>afterAll</code> cuando la configuración o el desmontaje sean costosos y puedan compartirse de forma segura entre todos los tests; por ejemplo, al abrir y cerrar una conexión a base de datos.</p>
+<p>El siguiente ejemplo está adaptado de <code>NpmDependenciesValidator.test.js</code>. Usa <code>beforeEach</code> para crear una instancia nueva del validador e inyectar dependencias simuladas antes de cada test.</p>
+<div class="language-javascript highlight"><span class="filename">NpmDependenciesValidator.test.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NpmDependenciesValidator</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./NpmDependenciesValidator'</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'NpmDependenciesValidator'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">validator</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nx">validator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NpmDependenciesValidator</span><span class="p">();</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nx">validator</span><span class="p">.</span><span class="nx">getModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="s1">'module1'</span><span class="p">,</span><span class="w"> </span><span class="s1">'module2'</span><span class="p">]);</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nx">validator</span><span class="p">.</span><span class="nx">getPackageJsonPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="nx">module</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">module</span><span class="si">}</span><span class="sb">/package.json`</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'does not return warnings or errors if dependency is not shared between modules'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nx">validator</span><span class="p">.</span><span class="nx">readPackageJson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">(</span><span class="nx">path</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">path</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'module1/package.json'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dependencies</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lodash</span><span class="o">:</span><span class="w"> </span><span class="s1">'4.17.15'</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">path</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'module2/package.json'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dependencies</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">jest</span><span class="o">:</span><span class="w"> </span><span class="s1">'26.6.0'</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">warnings</span><span class="p">,</span><span class="w"> </span><span class="nx">errors</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">validator</span><span class="p">.</span><span class="nx">validate</span><span class="p">();</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">warnings</span><span class="p">).</span><span class="nx">toHaveLength</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">errors</span><span class="p">).</span><span class="nx">toHaveLength</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>El siguiente ejemplo muestra la estructura de un par <code>beforeAll</code> / <code>afterAll</code>:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'Database integration'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">connection</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nx">beforeAll</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">openDatabaseConnection</span><span class="p">();</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nx">afterAll</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nx">connection</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'reads a record'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">record</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">connection</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">record</span><span class="p">).</span><span class="nx">not</span><span class="p">.</span><span class="nx">toBeNull</span><span class="p">();</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Aquí <code>openDatabaseConnection</code> se ejecuta una sola vez para toda la suite en lugar de antes de cada test individual, lo que reduce el tiempo de ejecución cuando la operación es costosa.</p>
+<h2 id="mocking">Mocking</h2>
+<p>El mocking reemplaza implementaciones reales con sustitutos controlados para que los tests sigan siendo rápidos y aislados. Jest proporciona tres herramientas principales de mocking.</p>
+<h3 id="jestmock">jest.mock()</h3>
+<p><code>jest.mock(modulePath, factory)</code> reemplaza un módulo completo. Jest intercepta la llamada <code>require</code> o <code>import</code> y devuelve el resultado de la función factory en lugar del módulo real.</p>
+<p>El siguiente ejemplo está adaptado de <code>User.test.ts</code>. Reemplaza <code>@react-native-async-storage/async-storage</code> con un objeto de funciones rastreadas.</p>
+<div class="language-typescript highlight"><span class="filename">User.test.ts</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">jest</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">'@react-native-async-storage/async-storage'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">setItem</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(),</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">getItem</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(),</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">removeItem</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(),</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}));</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">AsyncStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'@react-native-async-storage/async-storage'</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kd">const</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./User'</span><span class="p">);</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'User Store'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">userStore</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nx">userStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">User</span><span class="p">();</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nx">jest</span><span class="p">.</span><span class="nx">clearAllMocks</span><span class="p">();</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'clears user data and removes stored tokens on logout'</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nx">userStore</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'testToken'</span><span class="p">;</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="nx">userStore</span><span class="p">.</span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'testUser'</span><span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">userStore</span><span class="p">.</span><span class="nx">logout</span><span class="p">();</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s1">'token'</span><span class="p">);</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">AsyncStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s1">'user'</span><span class="p">);</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">userStore</span><span class="p">.</span><span class="nx">token</span><span class="p">).</span><span class="nx">toBeUndefined</span><span class="p">();</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="p">});</span>
+</span></code></pre></div>
+<p><code>jest.clearAllMocks()</code> en <code>beforeEach</code> restablece los contadores de llamadas y los valores de retorno entre tests para que un test no afecte las aserciones de otro.</p>
+<h3 id="jestfn">jest.fn()</h3>
+<p><code>jest.fn()</code> crea una función simulada independiente. Registra cada llamada que recibe y los argumentos que se le pasan. Asigne un valor de retorno con <code>.mockReturnValue(value)</code> o un valor de retorno de uso único con <code>.mockReturnValueOnce(value)</code>.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fetchUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">().</span><span class="nx">mockReturnValue</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'Ana'</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">fetchUser</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">expect</span><span class="p">(</span><span class="nx">fetchUser</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nx">expect</span><span class="p">(</span><span class="nx">fetchUser</span><span class="p">).</span><span class="nx">toHaveReturnedWith</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'Ana'</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<h3 id="jestspyon">jest.spyOn()</h3>
+<p><code>jest.spyOn(object, methodName)</code> envuelve un método existente sin reemplazarlo. La implementación original sigue ejecutándose a menos que se encadene <code>.mockImplementation()</code>. Úselo cuando se necesita el comportamiento real del método pero también se requiere el seguimiento de llamadas.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NpmDependenciesValidator</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./NpmDependenciesValidator'</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'NpmDependenciesValidator - spy'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">validator</span><span class="p">,</span><span class="w"> </span><span class="nx">spy</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nx">validator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NpmDependenciesValidator</span><span class="p">();</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nx">spy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jest</span><span class="p">.</span><span class="nx">spyOn</span><span class="p">(</span><span class="nx">validator</span><span class="p">,</span><span class="w"> </span><span class="s1">'validate'</span><span class="p">);</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="nx">afterEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="nx">spy</span><span class="p">.</span><span class="nx">mockRestore</span><span class="p">();</span><span class="w"> </span><span class="c1">// restores the original method and prevents the spy from persisting across tests</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'calls validate once'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="nx">validator</span><span class="p">.</span><span class="nx">validate</span><span class="p">();</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">spy</span><span class="p">).</span><span class="nx">toHaveBeenCalledTimes</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">});</span>
+</span></code></pre></div>
+<h2 id="tests-asincronos">Tests asíncronos</h2>
+<p>Jest maneja <code>async</code>/<code>await</code> de forma nativa. Marque el callback del test como <code>async</code> y use <code>await</code> en las promesas. Jest espera a que la promesa devuelta se resuelva antes de evaluar las aserciones.</p>
+<p>El siguiente ejemplo está adaptado de <code>User.test.ts</code>. Verifica que una llamada de inicio de sesión rellena el store con los datos del usuario y un token. El mock de <code>etrest</code> simula la respuesta del servidor: <code>getUserId</code> devuelve el ID de usuario utilizado internamente por el store, mientras que el valor del token es establecido por la propia lógica de inicio de sesión del store tras resolver la llamada simulada.</p>
+<div class="language-typescript highlight"><span class="filename">User.test.ts</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">jest</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">'etrest'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nx">OBRest</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nx">loginWithUserAndPassword</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(),</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nx">getInstance</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nx">getOBContext</span><span class="o">:</span><span class="w"> </span><span class="kt">jest.fn</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="nx">getUserId</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s1">'testUserId'</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="p">})),</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="p">})),</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}));</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">OBRest</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'etrest'</span><span class="p">);</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./User'</span><span class="p">);</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">userStore</span><span class="p">;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="nx">userStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">User</span><span class="p">();</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="nx">jest</span><span class="p">.</span><span class="nx">clearAllMocks</span><span class="p">();</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'logs in the user and sets up store data'</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'testUser'</span><span class="p">;</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'testPass'</span><span class="p">;</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">userStore</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">);</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OBRest</span><span class="p">.</span><span class="nx">loginWithUserAndPassword</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">);</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">userStore</span><span class="p">.</span><span class="nx">token</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s1">'testToken'</span><span class="p">);</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">userStore</span><span class="p">.</span><span class="nx">user</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="nx">username</span><span class="p">);</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="p">});</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Siempre use <code>await</code> en la llamada bajo test antes de realizar las aserciones. Sin <code>await</code>, el test finaliza antes de que la promesa se resuelva, lo que puede generar falsos positivos o tests inestables por rechazos no manejados.</p>
+</div>
+<p>Si el test espera que una promesa sea rechazada, use <code>expect(...).rejects.toThrow()</code>:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./User'</span><span class="p">);</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'login - invalid credentials'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">userStore</span><span class="p">;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nx">userStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">User</span><span class="p">();</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nx">jest</span><span class="p">.</span><span class="nx">clearAllMocks</span><span class="p">();</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">'throws on invalid credentials'</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">userStore</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="w"> </span><span class="s1">''</span><span class="p">)).</span><span class="nx">rejects</span><span class="p">.</span><span class="nx">toThrow</span><span class="p">(</span><span class="s1">'Invalid credentials'</span><span class="p">);</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">});</span>
+</span></code></pre></div>
+<h2 id="tests-parametrizados">Tests parametrizados</h2>
+<p><code>it.each</code> ejecuta la misma lógica de test con múltiples pares de entrada/salida. Esto elimina código de test duplicado y hace que la intención quede explícita en el nombre del test.</p>
+<p>El siguiente ejemplo está tomado de <code>ob-utilities-number.test.js</code>. Verifica que las cadenas en notación científica se conviertan correctamente a notación decimal.</p>
+<div class="language-javascript highlight"><span class="filename">org.openbravo.client.application/web-test/ob-utilities-number.test.js</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">'OB.Utilities.Number.ScientificToDecimal'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">decimalSeparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'.'</span><span class="p">;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nx">it</span><span class="p">.</span><span class="nx">each</span><span class="sb">`</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="sb">    number       | expected</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="sb">    </span><span class="si">${</span><span class="s1">'-5E-4'</span><span class="si">}</span><span class="sb">   | </span><span class="si">${</span><span class="s1">'-0.0005'</span><span class="si">}</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="sb">    </span><span class="si">${</span><span class="s1">'-5E4'</span><span class="si">}</span><span class="sb">    | </span><span class="si">${</span><span class="s1">'-50000'</span><span class="si">}</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="sb">    </span><span class="si">${</span><span class="s1">'5E7'</span><span class="si">}</span><span class="sb">     | </span><span class="si">${</span><span class="s1">'50000000'</span><span class="si">}</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="sb">  `</span><span class="p">(</span><span class="s1">'converts $number to $expected'</span><span class="p">,</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Number</span><span class="p">.</span><span class="nx">ScientificToDecimal</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">decimalSeparator</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">expected</span><span class="p">);</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>La sintaxis de plantilla literal define una tabla. La primera fila es el encabezado de columna. Cada fila siguiente es una ejecución de test. Jest interpola <code>$number</code> y <code>$expected</code> en el nombre del test para que cada caso sea distinguible en la salida.</p>
+<p><code>it.each</code> también acepta un array de arrays cuando no se requieren encabezados de columna:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">decimalSeparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'.'</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nx">it</span><span class="p">.</span><span class="nx">each</span><span class="p">([</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="p">[</span><span class="s1">'-5E-4'</span><span class="p">,</span><span class="w"> </span><span class="s1">'-0.0005'</span><span class="p">],</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="p">[</span><span class="s1">'-5E4'</span><span class="p">,</span><span class="w">  </span><span class="s1">'-50000'</span><span class="p">],</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="p">[</span><span class="s1">'5E7'</span><span class="p">,</span><span class="w">   </span><span class="s1">'50000000'</span><span class="p">],</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">])(</span><span class="s1">'converts %s to %s'</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">expected</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Number</span><span class="p">.</span><span class="nx">ScientificToDecimal</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">decimalSeparator</span><span class="p">)).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">expected</span><span class="p">);</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">});</span>
+</span></code></pre></div>
+<h2 id="ejecutar-tests-y-cobertura">Ejecutar tests y cobertura</h2>
+<p>Desde el directorio del módulo, ejecute todos los tests:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div>
+<p>Para ejecutar un único archivo de test:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--<span class="w"> </span>web-test/mycomponent.test.js
+</span></code></pre></div>
+<p>Para ejecutar los tests y generar un informe de cobertura, ejecute:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npm<span class="w"> </span>run<span class="w"> </span>coverage
+</span></code></pre></div>
+<p>El informe de cobertura se genera en el directorio <code>coverage/</code>. Abra <code>coverage/lcov-report/index.html</code> en un navegador para ver un desglose detallado por archivo, incluyendo cobertura de líneas, sentencias, ramas y funciones.</p>
+<p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases" target="_blank">How to Create Jest testcases</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
