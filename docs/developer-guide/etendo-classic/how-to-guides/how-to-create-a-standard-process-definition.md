@@ -215,7 +215,6 @@ public class StandardProcessActionHandler extends BaseProcessActionHandler {
 !!!info
     For more information about how to create actions, visit [Client Side Development and API](../concepts/client-side-development-and-api.md#obutilitiesaction---actions-execution-related-utilities)
 
-
 ##### Validations
 
 It is possible to do validations in the backend before executing the actual process, when these validations are not satisfied, a message can be shown in the UI to allow the user to fix the problematic values.
