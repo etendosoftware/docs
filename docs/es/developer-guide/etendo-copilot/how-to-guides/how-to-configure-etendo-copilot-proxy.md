@@ -39,9 +39,9 @@ Una opción conveniente es **LiteLLM Proxy**, que simplifica la gestión de dist
 2.  **Crear el archivo `.env`**: Almacene de forma segura en este archivo las claves API del proveedor. Sustituya los placeholders por sus claves reales:
 
     ```bash
-    OPENAI_API_KEY=sk-proj-XXXXXXX
-    ANTHROPIC_API_KEY=sk-ant-XXXXXXXXXX
-    GOOGLE_API_KEY=
+    openai.api.key=sk-proj-XXXXXXX
+    anthropic.api.key=sk-ant-XXXXXXXXXX
+    google.api.key=
     ```
 
 3.  **Ejecutar el proxy con Docker**: Coloque `litellm_config.yaml` y `.env` en el mismo directorio y ejecute:

@@ -52,7 +52,7 @@ Los agentes deben exportarse como un conjunto de datos, en caso de que se requie
     ```
     - **Habilidades/Herramientas:** Tabla `etcop_app_tool`
     ```sql title="Where Clause"
-    `copilotApp.id in ('<AssistantID>')
+    copilotApp.id in ('<AssistantID>')
     ```
     - **Miembros del Equipo:** Tabla `ETCOP_Team_Member`
     ```sql title="Where Clause"
@@ -99,7 +99,7 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 
     - Inicie sesión como Administrador del Sistema.
     - Configure el agente y sus solapas, asegurándose de seleccionar el módulo (en desarrollo) en el campo **Módulo**.
-    - Si el agente debe restringirse para uso exclusivo del Administrador del Sistema, marque la casilla **Aplicación del Sistema**. En caso contrario, déjela sin marcar para permitir la ejecución en todos los niveles de acceso a datos.
+    - Use el campo **Agent Scope** para controlar quién puede acceder al agente. Establézcalo en **Sistema** para restringir el agente únicamente al Administrador del Sistema a nivel de plataforma. Establézcalo en **Cliente + Sistema** para permitir que el agente se use también en todos los niveles de acceso a datos. Este campo reemplaza la antigua casilla **System App**. Para una descripción completa de cada opción, consulte [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
     <figure markdown="span">
     ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png)
@@ -123,3 +123,5 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---

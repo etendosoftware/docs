@@ -6,7 +6,7 @@ hide:
 
 
 
-![Banner de bienvenida a Etendo](./assets/home/index/banner.png){ width=200 align="right"}
+![Banner de bienvenida a Etendo](../assets/home/index/banner.png){ width=200 align="right"}
 
 # Bienvenido a la Documentación de Etendo
 
@@ -76,7 +76,9 @@ Etendo es una plataforma de software altamente adaptable y escalable, diseñada 
 
     Aprenda a instalar, ampliar y personalizar Etendo.
     
-    - [Instalar Etendo](./getting-started/installation.md)
+    - [Requerimientos](./developer-guide/etendo-classic/getting-started/installation/requirements.md)
+    - [Instalar Etendo - Entorno de Desarrollo Local](./developer-guide/etendo-classic/getting-started/installation/local-development.md)
+    - [Instalar Etendo - Servidor de Producción](./developer-guide/etendo-classic/getting-started/installation/production-server.md)
     - [Instalar módulos en Etendo](./developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md)
     - [Guías prácticas](./developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md)
     - [Conceptos de Etendo](./developer-guide/etendo-classic/concepts/alerts.md)

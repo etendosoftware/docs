@@ -150,7 +150,6 @@ plugins:
                       - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
                     - Client:
                       - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-                    - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
                     - Enterprise Model:
                       - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
                       - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
@@ -273,10 +272,11 @@ plugins:
                       - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
                       - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
                     - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
-                    - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                    - Sales Extensions Bundle:
+                      - Overview: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+                      - CRM Lead Management: user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md
                     - Spanish Localization Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
-                      - Antifraude: user-guide/etendo-classic/optional-features/bundles/spain-localization/antifraude.md
                       - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
                       - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
                       - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
@@ -591,8 +591,8 @@ plugins:
                   - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
                   - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
                   - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+                  - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
                   - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
                  
               - Etendo Mobile:
@@ -682,6 +682,7 @@ plugins:
             Business Partner Setup: Configuración de terceros
             Business Partner Tax Category: Categoría de Impuestos de Terceros
             Client: Entidad
+            CRM Lead Management: Gestión de Leads CRM
             Client Side Development and API: Desarrollo del Lado del Cliente y API
             Cluster Development Guidelines: Directrices de Desarrollo en Clúster
             Code Review Process: Proceso de Revisión de Código
@@ -700,7 +701,6 @@ plugins:
             Create New Subapplication: Crear Nueva Sub-aplicación
             Create Sequences: Crear Secuencias
             Creating a New Microservice: Creación de un Nuevo Microservicio
-            CRM Connector: Conector CRM
             Currency: Moneda
             Data Access Layer: Capa de Acceso a Datos
             Data Model: Modelo de Datos
@@ -1076,7 +1076,6 @@ nav:
             - Alert: user-guide/etendo-classic/basic-features/general-setup/application/alert.md
           - Client:
             - Client: user-guide/etendo-classic/basic-features/general-setup/client/client.md
-          - CRM Connector: user-guide/etendo-classic/basic-features/general-setup/crm-connector.md
           - Enterprise Model:
             - Initial Organization Setup: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md
             - Enterprise Module Management: user-guide/etendo-classic/basic-features/general-setup/enterprise-model/enterprise-module-management.md
@@ -1548,8 +1547,8 @@ nav:
         - How to Improve OCR Recognition: developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md
         - How to Integrate Copilot with Jira via MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-copilot-with-jira-mcp.md
         - How to Integrate a Sales Assistant with Shopify MCP: developer-guide/etendo-copilot/how-to-guides/how-to-integrate-sales-assistant-with-shopify-mcp.md
-        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Run Self-Hosted Models with Ollama: developer-guide/etendo-copilot/how-to-guides/how-to-use-run-self-hosted-models-with-ollama.md
+        - How to Use an Agent as MCP Server: developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md
         - How to Use Context Features: developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features.md
        
     - Etendo Mobile:

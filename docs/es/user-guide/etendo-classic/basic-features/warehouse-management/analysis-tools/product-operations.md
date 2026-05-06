@@ -1,8 +1,14 @@
 ---
 title: Operaciones de Producto
+tags:
+    - Operaciones de Producto
+    - Inventory
+    - Warehouse Management
+    - Warehouse Extensions
+    - Inventory Analysis
 ---
 
-## Operaciones de Producto
+# Operaciones de Producto
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Operaciones de Producto`
 

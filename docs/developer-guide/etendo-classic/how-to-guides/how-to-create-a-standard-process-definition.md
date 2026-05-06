@@ -54,7 +54,7 @@ When **Done** button is clicked the process is executed:
 - Open **Process Definition** window 
 - Create a new record 
 - Define the UI pattern: **Standard (Parameters defined in Dictionary)**
-- Set the Handler: `org.openbravo.client.application.examples.StandardProcessActionHandler`. This is the Java class implementing the process that will be invoked when user clicks on the action button. 
+- Set the Handler: `com.etendoerp.client.application.examples.StandardProcessActionHandler`. This is the Java class implementing the process that will be invoked when user clicks on the action button. 
 - Save 
 
 ### Adding Parameters
@@ -69,11 +69,11 @@ When **Done** button is clicked the process is executed:
     - Mandatory: true. Will force the parameter to have a value before allowing to submit the info to the process. 
     - Default value: 0. It is the value that will take the parameter by default. It is a javascript expression evaluated in the server side, like  Default Filter Expressions  used in selectors. 
 - Follow similar steps to create **Max Qty** field 
-- **Orders** multi selector 
-    - Create a  Multi Order  selector 
-    - Create a new parameter 
-    - Reference: `OBUISEL_Multi Selector Reference` 
-    - Reference Search Key: Multi Order Selector 
+- **Orders** multi selector
+    - Create a new Multi Order selector following the steps described in [How to Create a Multi Selector](how-to-create-a-multi-selector.md)
+    - Create a new parameter
+    - Reference: `OBUISEL_Multi Selector Reference`
+    - Reference Search Key: Multi Order Selector
 - Business Partner parameter has `OBUISEL_Selector Reference` as Reference and **Business Partner not filtered by default by customer/vendor** as Reference Search Key 
 
 ### Adding it to the Menu
@@ -107,7 +107,7 @@ In the case of a Process Definition action handler, extend from `BaseProcessActi
   * Contributor(s):  ______________________________________.
   ************************************************************************
   */
-package org.openbravo.client.application.examples;
+package com.etendoerp.client.application.examples;
  
 import java.math.BigDecimal;
 import java.util.Map;
@@ -212,6 +212,9 @@ public class StandardProcessActionHandler extends BaseProcessActionHandler {
 
 `ActionHandler` return a `JSONObject` with the actions to be performed after execution.
 
+!!!info
+    For more information about how to create actions, visit [Client Side Development and API](../concepts/client-side-development-and-api.md#obutilitiesaction---actions-execution-related-utilities)
+
 ##### Validations
 
 It is possible to do validations in the backend before executing the actual process, when these validations are not satisfied, a message can be shown in the UI to allow the user to fix the problematic values.
@@ -282,25 +285,25 @@ The response should look like:
 - `refreshGrid`. Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the `refreshGrid` to the list of response actions to see the updated data in the grid. 
 - `refreshGridParameter`. Refreshes the **grid parameter** with name `gridName` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
 - `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
-    
-```java
-@Override
-protected JSONObject doExecute(Map<String, Object> parameters, String content) {
-  ...
-  ...
-  return getResponseBuilder()
-      .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
-      .openDirectTab("220", false).build();
-}
-```
+
+    ```java
+    @Override
+    protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+      ...
+      ...
+      return getResponseBuilder()
+          .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
+          .openDirectTab("220", false).build();
+    }
+    ```
 
 ## Testing the Process
 
-Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding paramters).
+Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding parameters).
 
 After compile and deploy, there will be a new entry in the menu: **Example Param Process**, this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
 
-- If `Max Qty` is greater the `Min Qty`, a message is shown and the process can be submited again. 
+- If `Max Qty` is greater than `Min Qty`, a message is shown and the process can be submitted again. 
 - A message in the parameter window is shown summing the amounts of all selected orders. 
 - If a business partner is selected, it is opened in a new tab displaying a message on it. 
 
@@ -310,10 +313,10 @@ After compile and deploy, there will be a new entry in the menu: **Example Param
 
 ### Invoke the Process from a Tab
 
-Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. 
+Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab.
 
 !!!info
-    More details about this process visit [How to create a Pick and Execute Process](how-to-create-a-pick-and-execute-process.md). 
+    For the full step-by-step configuration of the column, button, and process binding, see [How to Create a Pick and Execute Process](how-to-create-a-pick-and-execute-process.md).
 
 ### Read Only and Display Logic
 
@@ -321,11 +324,11 @@ Parameters in Process Definition support display and read only logic. This allow
 
 ### Subordinated Combos
   
-The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being posible to use `OBBindings`, in the same way default value is written.
+The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being possible to use `OBBindings`, in the same way default value is written.
 
 ### Parameter Grouping
   
-It is possible to do groups of parameters in the UI, by using the **Field Group** property when defining the paramter.
+It is possible to do groups of parameters in the UI, by using the **Field Group** property when defining the parameter.
 
 ### Showing results in the process window itself
 
@@ -370,7 +373,7 @@ The **Client Side Validation** field of the Process Definition tab allows defini
 
 This function must accept 3 parameters:
 
-- the parameter window object. i.e., if you name this parameter **view**, then the form of the parameter window will be accessible via `view.theForm`. The value of a particular parameter can be retreived using `view.theForm.getItem(parameter_name).getValue() `
+- the parameter window object. i.e., if you name this parameter **view**, then the form of the parameter window will be accessible via `view.theForm`. The value of a particular parameter can be retrieved using `view.theForm.getItem(parameter_name).getValue() `
 - a validation success callback. If the current values of the form passes the validation, this callback must be invoked
 - a validation failure callback. If form values do not satisfy the validation, invoke this callback. 
 
@@ -387,6 +390,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     failureCallback();
   }
+};
 ```
 
 In addition, client side validation functions support a fourth parameter that contains additional information, like the pressed button:  
@@ -398,6 +402,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     // do another validations
   }
+};
 ```
 
 !!!info
@@ -416,9 +421,10 @@ The **On Change Function** field of the Parameter tab allows defining a function
 
 The function must accept four parameters:
 
-- item: the item that has been modified 
-- view: the parameter window object 
-- form: the form that contains the item 
+- item: the item that has been modified
+- view: the parameter window object
+- form: the form that contains the item
+- grid: the grid context (present when the function is invoked from a grid parameter; `null` otherwise)
 
 ### How to set the value of non-grid parameters programmatically
 
@@ -492,7 +498,7 @@ The **Default Filter Expression** field of the Field tab allows to define a defa
 
 ### Hiding the parameter name of a grid parameter
 
-Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unckecking the flag **Show Title** in the Parameter tab.
+Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unchecking the flag **Show Title** in the Parameter tab.
 
 ### Adding new buttons
 
@@ -509,7 +515,46 @@ To do it:
 
 ### Multi Record Process
 
-A standard process can be defined as multi record process to be able to execute it for more than one record.
+A standard process can be defined as a **Multi Record** process, allowing it to be executed over multiple records selected at once from a grid.
+
+**Enabling it:** In the **Process Definition** window, check the **Multi Record** flag.
+
+**Behavior:** When the process is invoked from a tab, the user can select one or more rows in the grid before clicking the process button. All selected record IDs are collected client-side and sent to the action handler as a `recordIds` array.
+
+**What the handler receives:**
+
+```json
+{
+  "recordIds": ["A1B2C3...", "D4E5F6...", "G7H8I9..."],
+  "_params": { ... }
+}
+```
+
+**Java implementation example:**
+
+```java
+@Override
+protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+  try {
+    JSONObject request = new JSONObject(content);
+    JSONArray recordIds = request.getJSONArray("recordIds");
+
+    for (int i = 0; i < recordIds.length(); i++) {
+      String recordId = recordIds.getString(i);
+      // Process each selected record
+      MyEntity entity = OBDal.getInstance().get(MyEntity.class, recordId);
+      // ... business logic
+    }
+
+    JSONObject result = new JSONObject();
+    // build response actions
+    return result;
+  } catch (JSONException e) {
+    log.error("Error in multi-record process", e);
+    return new JSONObject();
+  }
+}
+```
 
 ### Uploading Files
 
