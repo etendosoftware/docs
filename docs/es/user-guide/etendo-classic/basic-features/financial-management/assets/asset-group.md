@@ -19,7 +19,7 @@ Los activos pueden agruparse en diferentes categorías con el objetivo de facili
 
 La ventana Grupo de activos permite al usuario crear y configurar cada categoría de activo que la organización pueda necesitar.
 
-![](../../../../../assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-1.png)
 
 Como se muestra en la imagen anterior, la creación de una categoría de activo requiere que el usuario introduzca la siguiente información para cada categoría:
 
@@ -35,11 +35,11 @@ Como se muestra en la imagen anterior, la creación de una categoría de activo 
 
 La configuración de la depreciación se heredará de la categoría de activo al crear un nuevo activo desde la ventana Activos.
 
-## Pestaña Contabilidad
+## Solapa Contabilidad
 
 Cada categoría de activo permite al usuario configurar un conjunto de cuentas diferente para contabilizar la depreciación del activo.
 
-![](../../../../../assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-2.png)
 
 ---
 

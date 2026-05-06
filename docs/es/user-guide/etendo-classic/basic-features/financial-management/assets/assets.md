@@ -17,7 +17,7 @@ El usuario puede definir los activos de la empresa y configurar sus característ
 
 ## Ventana Activos
 
-![](../../../../../assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets-1.png)
 
 Campos a destacar:
 
@@ -52,15 +52,15 @@ Campos a destacar:
 
 ### Botones
 
-- **Crear amortización**: El botón Crear amortización rellena la pestaña Amortización del activo. Crea el plan de amortización basándose en la definición del activo.
+- **Crear amortización**: El botón Crear amortización rellena la solapa Amortización del activo. Crea el plan de amortización basándose en la definición del activo.
 
 - **Recalcular amortización**: El botón Recalcular amortización permite al usuario actualizar la información cuando sea necesario.
 
-## Pestaña Amortización del activo
+## Solapa Amortización del activo
 
-Las amortizaciones del activo seleccionado se añaden a esta pestaña.
+Las amortizaciones del activo seleccionado se añaden a esta solapa.
 
-![](../../../../../assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets-2.png)
 
 -   **Nº línea**: Una línea que indica la posición de esta solicitud en el documento.
 -   **Amortización**: La depreciación o reducción del valor de un producto a lo largo del tiempo.
@@ -68,7 +68,7 @@ Las amortizaciones del activo seleccionado se añaden a esta pestaña.
 -   **Importe de amortización**: Importe de la amortización.
 -   **Moneda**: Medio de intercambio monetario aceptado que puede variar según el país.
 
-La pestaña Amortización del activo muestra el plan de depreciación del activo en función de su vida útil y su valor, que es el importe a depreciar. El valor del activo se distribuye a lo largo de su vida útil (en meses o años), por lo que cada línea del plan de depreciación representa un porcentaje del importe total de depreciación del activo.
+La solapa Amortización del activo muestra el plan de depreciación del activo en función de su vida útil y su valor, que es el importe a depreciar. El valor del activo se distribuye a lo largo de su vida útil (en meses o años), por lo que cada línea del plan de depreciación representa un porcentaje del importe total de depreciación del activo.
 
 !!! note
     Es importante destacar que las líneas del plan de depreciación propuesto pueden eliminarse manualmente siempre que no estén procesadas ni contabilizadas. En ese caso, el proceso de creación de amortización puede ejecutarse de nuevo, recalculándose así el plan de depreciación. Esto resulta muy útil en aquellos casos en los que cambia el valor de un activo o su vida útil una vez iniciada la depreciación.
@@ -83,11 +83,11 @@ La línea de depreciación de febrero no puede eliminarse hasta que no se haya e
 
 El proceso asume que si existe la línea de depreciación de marzo, entonces existe la línea de depreciación de febrero.
 
-## Pestaña Contabilidad
+## Solapa Contabilidad
 
 El usuario puede crear y editar cuentas del libro mayor para utilizarlas en las transacciones que incluyan el activo seleccionado.
 
-![assets3](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+![assets3](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets-3.png)
 
 - **Contabilidad general**: El libro que contiene todas las transacciones financieras registradas para la entidad legal.
 - **Depreciación acumulada**: Cuenta de depreciación acumulada.
@@ -118,14 +118,14 @@ Las dimensiones que el usuario puede aplicar al proceso de creación de activos 
 !!! info
     Al crear o recalcular el plan de amortización de un activo, las dimensiones contables especificadas se transfieren a las líneas del plan de amortización.
 
-![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+![assets1](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets-4.png)
 
 !!! info
     Para más información sobre la configuración de dimensiones, visite [Dimensiones](../../../../etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 ### Botones
 
-- **Crear amortización**: El botón Crear amortización genera las líneas de amortización en la pestaña Amortización del activo relacionada con el activo seleccionado. Además, estas mismas líneas se añaden en la ventana Amortización, agrupándolas únicamente según el **período de depreciación** (mensual o anual) en el caso del tipo calculado (tiempo), e incluso anualmente para el tipo calculado (porcentaje).
+- **Crear amortización**: El botón Crear amortización genera las líneas de amortización en la solapa Amortización del activo relacionada con el activo seleccionado. Además, estas mismas líneas se añaden en la ventana Amortización, agrupándolas únicamente según el **período de depreciación** (mensual o anual) en el caso del tipo calculado (tiempo), e incluso anualmente para el tipo calculado (porcentaje).
 
 ---
 

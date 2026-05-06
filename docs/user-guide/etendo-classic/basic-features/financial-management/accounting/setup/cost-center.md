@@ -20,7 +20,7 @@ The Cost Center window is where all cost centers for an organization are managed
 
 Once created, cost centers are available as an accounting dimension in documents across the system — such as purchase invoices, sales invoices, and journal entries. After assigning cost centers to transactions, use accounting reports to classify and filter results by cost center.
 
-![Cost Center window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center.png)
+![Cost Center window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center-1.png)
 
 ### Creating a Cost Center
 

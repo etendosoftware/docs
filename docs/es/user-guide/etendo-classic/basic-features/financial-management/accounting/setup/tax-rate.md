@@ -69,7 +69,7 @@ Cuando un documento se procesa, el sistema calcula los importes finales de impue
 
 La cabecera define las características principales y el comportamiento del rango de impuesto.
 
-![Tax Rate header fields](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png)
+![Tax Rate header fields](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png)
 
 Campos a tener en cuenta: 
 
@@ -161,7 +161,7 @@ La pestaña Traducción permite al usuario traducir el **Nombre**, la **Descripc
 
 Cada fila de la rejilla representa un idioma disponible. Para traducir un rango de impuesto, selecciona la fila del idioma correspondiente e introduce los valores traducidos en los campos **Nombre** y **Descripción**. La columna **Traducción** indica si se ha proporcionado una traducción manual para ese idioma.
 
-![Tax Rate translation tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png)
+![Tax Rate translation tab](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png)
 
 ### Contabilidad
 
@@ -171,7 +171,7 @@ La pestaña Contabilidad permite al usuario configurar la cuenta que se utilizar
 - **Impuesto reclamado** es la cuenta utilizada al contabilizar importes de impuestos de compras.
 
 
-![Tax Rate accounting tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate2.png)
+![Tax Rate accounting tab](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate2.png)
 
 Una contabilización de factura de compra tiene este aspecto:
 

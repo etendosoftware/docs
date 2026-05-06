@@ -16,7 +16,7 @@ tags:
 
 In this window, the user can **view, create, and manage G/L Categories used to classify accounting entries in the General Ledger**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-1.png)
 
 G/L (General Ledger) Categories act as **classification identifiers that are later assigned to** [Document Types](./document-type.md). Once a G/L Category is linked to a Document Type, **all accounting entries generated from that document are automatically categorized during posting**, ensuring consistent classification without manual intervention.
 
@@ -34,7 +34,7 @@ Once created, G/L Categories are assigned in the **Document Type** window. From 
 
 ## Header
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-2.png)
 
 Fields to note:
 
@@ -54,11 +54,11 @@ Fields to note:
 
 Select the create new option, fill in the corresponding fields and save it.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category3.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-3.png)
 
 The created category is available to use in journal entries, imports, and document processing.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category4.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-4.png)
 
 
 ---

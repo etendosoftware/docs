@@ -26,8 +26,8 @@ En esta ventana, el usuario puede configurar las diferentes opciones que se util
  
 Vaya a la ventana Gestión de módulos de empresa y seleccione la organización necesaria para importar los datos por defecto. A continuación, marque el conjunto de datos denominado "Pool bancario" y haga clic en el botón OK. 
 
-![](../../../../../../assets/drive/1_nLnAqZWd8FEKdbpyTOeYnn9XwECgU6z.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/financial-type-1.png)
 
 Se muestra la información importada desde la ventana Tipo financiero. 
 
-![](../../../../../../assets/drive/1Xyc0F9xpyGMqp2Aq_MArXwdIGjdtgpw0.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/financial-type-2.png)

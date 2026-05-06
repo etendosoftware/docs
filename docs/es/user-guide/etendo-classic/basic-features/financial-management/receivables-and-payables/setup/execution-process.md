@@ -24,28 +24,28 @@ En términos generales, el proceso de ejecución es la definición de la(s) **ac
 
 ## Proceso
 
-La ventana del proceso de ejecución lista los procesos de ejecución disponibles.
+La ventana Proceso de Ejecución lista los procesos de ejecución disponibles.
 
 Etendo incluye por defecto los procesos de ejecución descritos a continuación:
 
--   **Simple Execution Process** - este proceso ejecuta una actividad del sistema que cambia el estado del pago de "En espera de ejecución" a "Cobro recibido"/"Pago realizado" (o "Depositado sin confirmar"/"Retirado sin confirmar")
+-   **Simple Execution Process** - este proceso ejecuta una actividad del sistema que cambia el estado del pago de "A Ejecutar" a "Cobrado"/"Pagado" (o "Cobro depositado"/"Pago reintegrado")
 -   **Print Check simple process** - este proceso abre una ventana que permite al usuario introducir un número de cheque durante el procesamiento del pago.
 -   **Leave as Credit** - este proceso utiliza la funcionalidad de Devolución de materiales y permite al usuario convertir un cobro/pago negativo en un crédito positivo para el tercero (cliente/proveedor).
 
-Los pagos que requieren la ejecución de una actividad separada deben configurarse para que funcionen correctamente; esto implica seleccionar la opción "**Automático**" en el campo "**Proceso de Ejecución**", de modo que se pueda seleccionar un proceso de ejecución de los listados anteriormente al configurar el método de pago.
+Los pagos que requieren la ejecución de una actividad separada deben configurarse para que funcionen correctamente; esto implica seleccionar la opción "**Automático**" en el campo "**Tipo de Ejecución**", de modo que se pueda seleccionar un Proceso de Ejecución de los listados anteriormente al configurar el método de pago.
 
 
 ## Parámetro
 
-La pestaña de parámetros permite al usuario configurar la actividad adicional que se ejecutará al completar un pago. Por ejemplo, para registrar un número de cheque.
+La pestaña Parámetro permite al usuario configurar la actividad adicional que se ejecutará al completar un pago. Por ejemplo, para registrar un número de cheque.
 
-![Parameter tab](../../../../../assets/drive/17seAr4S-i9aqgCgpcrr01lDo4hXD22Rn.png)
+![Parameter tab](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/execution-process/execution-process-1.png)
 
-Como se muestra en la imagen anterior, el "**Print Check Simple Process**" tiene un parámetro llamado "**Check Number**". Dicho parámetro es un "**Tipo de parámetro**" de tipo "**Entrada**" cuyo "**Tipo de entrada**" es "**Texto**".
+Como se muestra en la imagen anterior, el "**Print Check Simple Process**" tiene un parámetro llamado "**Nº de Cheque**". Dicho parámetro es un "**Tipo de parámetro**" de tipo "**In**" cuyo "**Tipo de entrada**" es "**Texto**".
 
 La configuración anterior significa que el número de cheque debe ser introducido como texto por el usuario.
 
-Un **tipo de parámetro "Entrada"** también puede ser una casilla de verificación; en ese caso, en lugar de introducir un texto, el usuario debe marcar o desmarcar la casilla. También es posible definir si el valor predeterminado de la casilla de verificación será "Sí" o "No".
+Un **tipo de parámetro "In"** también puede ser una casilla de verificación; en ese caso, en lugar de introducir un texto, el usuario debe marcar o desmarcar la casilla. También es posible definir si el valor predeterminado de la casilla de verificación será "Sí" o "No".
 
 Además, los tipos de parámetro también pueden ser una "**Constante**", por lo que se puede especificar el "**Valor de texto predeterminado**" de la constante.
 

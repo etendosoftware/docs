@@ -33,7 +33,7 @@ Este informe admite multi-moneda.
 ## Filtros
 
 -   **Organización** (Obligatorio).
--   **Contabilidad general** (Obligatorio). El usuario puede filtrar los resultados por la contabilidad general de la organización. Todos los importes se convertirán a la moneda de la contabilidad general.
+-   **Esquema contable** (Obligatorio). El usuario puede filtrar los resultados por el esquema contable de la organización. Todos los importes se convertirán a la moneda del esquema contable.
 -   **A fecha** (Obligatorio). Es la fecha a partir de la cual se procesará el informe. Las fechas de vencimiento pasadas y las fechas de pago se calcularán en función de esta fecha.
 -   **Terceros** (Opcional). El usuario puede seleccionar múltiples terceros para filtrar los resultados.
 -   **Número de días de vencimiento: Grupo Uno/Dos/Tres/Cuatro** (Obligatorio). Los resultados mostrados se agrupan según los rangos de días que el usuario debe introducir. El usuario puede introducir el día final de cada rango y la aplicación modificará automáticamente el día de inicio de los rangos siguientes. Por ejemplo: en el grupo Uno, el usuario introduce 30, por lo que el rango es 0-30; en el grupo Dos, el usuario introduce 60, por lo que el segundo rango es 31-60, y así sucesivamente.
@@ -41,7 +41,7 @@ Este informe admite multi-moneda.
 -   **Las facturas anuladas deben incluirse** (Solo disponible si la preferencia "Enable void documents filter in Aging Reports" está establecida en Y). Esta casilla de verificación ofrece al usuario la opción de incluir o excluir los documentos anulados del informe.
 -   **Los pagos revertidos deben incluirse** (Solo disponible si la preferencia "Enable reversed payment documents filter in Aging Reports" está establecida en Y). Esta casilla de verificación ofrece al usuario la opción de incluir o excluir los documentos de pago revertidos del informe.
 
-![](../../../../../assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/payables-aging-schedule-1.png)
 
 ## Salida en HTML/PDF/Excel
 
@@ -64,7 +64,7 @@ Debe mostrar una tabla con los siguientes datos:
 
 Si los créditos se contabilizan en la misma cuenta que las cuentas a pagar, el Neto coincidirá con el saldo del tercero. Si los créditos se contabilizan en una cuenta diferente, como los anticipos, el saldo del tercero coincidirá con el Total.
 
-![](../../../../../assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/payables-aging-schedule-1.png)
 
 ## Detalle de antigüedad de cuentas a pagar
 
@@ -83,7 +83,7 @@ Si los créditos se contabilizan en la misma cuenta que las cuentas a pagar, el 
 
 Además, existe una línea de resumen para todos los terceros.
 
-![](../../../../../assets/drive/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/payables-aging-schedule-2.png)
 
 ---
 

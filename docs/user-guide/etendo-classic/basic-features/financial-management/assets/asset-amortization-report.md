@@ -18,15 +18,15 @@ tags:
 
 The Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-1.png)
 
 This report allows filtering by organization, date, asset or any particular description, category and general ledger configuration.  
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/v044uU7hYLEk9gHyJ_rQT4PafeiO44KV81IWajtztUpPd9hLqZiPs9ivfPP69HxfwwK-35rPk_nzpLHsSXeXpUUfVDnFw7k4jsQ4AvDJIwDMCPWrsiRDyLPKgLCb0WDOB4GPZVU2urwKJ3sq1BhSXnA.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-2.png)
 
 Once the information is filtered, an excel sheet is downloaded as shown in the following image:
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/X4RYGKFzkl-VVrKXiztozXKKOQIFqIwXJMgUUeLzdGESddbVChKWbf6L2XnMO1aQg2wCfXit-Tw-w3TXDP_FLWBluY08K6JG6kHf_w2Mz5fRWBfzbbfV6edBbPzULPPPWxAALvtVBmxhKLtC_DwAzgg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-3.png)
 
 This report takes into account the amortization lines of each Asset. That is to say, the report will still be generated even if the amortization lines are not processed or posted. 
 

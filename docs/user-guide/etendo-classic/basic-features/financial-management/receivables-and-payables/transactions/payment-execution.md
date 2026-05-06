@@ -33,7 +33,7 @@ and some other available filters such as:
 
 Once the process button "**Search**" is pressed, the payments to execute are shown.
 
-![Payment Execution](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-execution/1fX1GLQHOzJHloXOAJSh9X2Y_3SfXqknL.png)
+![Payment Execution](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-execution/payment-execution-1.png)
 
 Once the process button **"Process"** is pressed, a new window is displayed to allow the user to enter the input parameters required such as the check number, for instance if the execution process selected in the payment method used was "Print Check simple process".
 

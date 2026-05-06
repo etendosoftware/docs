@@ -36,7 +36,7 @@ The steps to follow are:
 
 The payment proposal window allows the user to enter a set of selection criteria that help the user to make payments massively.
 
-![Payment Proposal Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Payment Proposal Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 The fields to note are:
 
@@ -51,7 +51,7 @@ The **Select Expected Payments** header button displays the documents that match
 !!! info
     Notice that the data shown in the grid is filtered using the previous criteria (implicit filter). In order to see pending invoices or orders of a different Payment Method for instance, it is necessary to clear the filters by clicking the funnel icon.
 
-![Select Expected Payments](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Select Expected Payments](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 Besides, the "Select Expected Payments" window allows the user to:
 
@@ -79,7 +79,7 @@ Once executed:
 
 The lines tab shows the transactions (orders and/or invoices) included in the payment proposal.
 
-![Payment Proposal Lines](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Payment Proposal Lines](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 A payment proposal can be "**Reactivated**" that means that the payment/s created are deleted and therefore removed from the Payment Out window.
 

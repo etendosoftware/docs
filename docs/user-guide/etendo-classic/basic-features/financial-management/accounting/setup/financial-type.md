@@ -28,8 +28,8 @@ In this window, the user can configure the different options to use in the Finan
  
 Go to the Enterprise Module Management window and select the organization needed to import the date by default. Then, check the dataset called "Banking Pool" and click the OK button. 
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/1_nLnAqZWd8FEKdbpyTOeYnn9XwECgU6z.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/financial-type-1.png)
 
 The information imported from the Financial Type window is shown. 
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/1Xyc0F9xpyGMqp2Aq_MArXwdIGjdtgpw0.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type/financial-type-2.png)

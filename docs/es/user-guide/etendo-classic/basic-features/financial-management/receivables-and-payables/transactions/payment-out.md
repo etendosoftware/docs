@@ -36,9 +36,9 @@ La creación de la transacción de retiro en la cuenta financiera puede realizar
 
 ## Cabecera
 
-La ventana Pago permite al usuario realizar y gestionar los pagos a proveedores para liquidar diferentes tipos de documentos como pedidos y facturas. Esta ventana también permite al usuario gestionar los pagos a proveedores ya realizados en la ventana de factura de compra, de la misma manera que los pagos de conceptos contables realizados en un Libro Diario.
+La ventana Pago permite al usuario realizar y gestionar los pagos a proveedores para liquidar diferentes tipos de documentos como pedidos y facturas. Esta ventana también permite al usuario gestionar los pagos a proveedores ya realizados en la ventana Factura (Proveedor), de la misma manera que los pagos de conceptos contables realizados en un Libro Diario.
 
-![](../../../../../../assets/drive/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-1.png)
 
 Solo hay unos pocos campos obligatorios a completar al realizar un pago en esta ventana:
 
@@ -59,7 +59,7 @@ Otros campos relevantes a destacar son:
 
 El botón **Agregar Detalles** abre la ventana **Agregar Pago**, donde pueden seleccionarse los documentos pendientes a pagar.
 
-![](../../../../../../assets/drive/1tsg4HMq519UXdo9UqGhV9-wOpqMPJRpy.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-2.png)
 
 La ventana **Agregar Pago** ya se explica en el artículo de pago de Factura de Compra.
 
@@ -72,7 +72,7 @@ Si no se ha seleccionado ningún proveedor en el campo "Pagado A", es posible pa
 
 El campo "Pago Real Pagado" mostrará entonces la suma de todos los valores de las transacciones que se están seleccionando para pagar.
 
-![](../../../../../../assets/drive/136-nlDAc31ndG9ibEJoUZk2oUgdZJNcS.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-3.png)
 
 Una vez procesado el pago, la pestaña de líneas lista todos los pedidos y facturas e incluso los conceptos contables incluidos en el pago, igual que el campo "**Descripción**" de la cabecera del pago.
 
@@ -119,7 +119,7 @@ No es posible generar crédito en un pago que no esté relacionado con un único
 
 La creación de un pago de crédito requiere no seleccionar ningún documento a pagar en la **ventana "Agregar Pago"** que se muestra tras pulsar el botón de proceso "**Agregar Detalles**", sino dejar el importe de crédito para usarlo posteriormente.
 
-![](../../../../../../assets/drive/1J2H_kxh0hRWO5fHEllfFKXZ1oTDQFqPn.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-4.png)
 
 Se crea un pago de crédito tras procesarlo. Este pago de crédito especifica el importe dejado como crédito en el campo "Descripción" de la cabecera del pago de crédito.
 
@@ -127,7 +127,7 @@ Posteriormente, el crédito disponible generado para ese proveedor puede usarse 
 
 - en la ventana "**Agregar Pago**" una vez que se crea un nuevo Pago para ese proveedor, seleccionando simplemente el crédito en la sección "Crédito a Usar".
 
-![](../../../../../../assets/drive/18mZnJqpLFZa55nXSpoC-qSAFbS1TKg5l.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-5.png)
 
 - o en la ventana "**Seleccionar Pagos de Crédito**" que se muestra **automáticamente** al completar una nueva factura del proveedor.
 
@@ -172,7 +172,7 @@ Si la casilla de verificación "Diferido" no está seleccionada, el paso adicion
 
 La pestaña Historial de Ejecución es una pestaña de solo lectura que muestra información sobre la ejecución del pago, como la fecha de ejecución, una vez que el pago ha sido ejecutado.
 
-![](../../../../../../assets/drive/1o3dY5UJs0fh3LC5ry7249VZ2DZGwE3BQ.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-6.png)
 
 ### Tipos de cambio
 
@@ -186,7 +186,7 @@ La creación de un pago de "Crédito" ya se explica en la sección Pagos de Cré
 
 Esta pestaña de solo lectura muestra el pago de crédito utilizado para pagar un documento (pedido, factura o concepto contable) del proveedor.
 
-![](../../../../../../assets/drive/1ZRyS-NTJD17sB_CAQbG9-XYa1-a0N3fq.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-7.png)
 
 ## Eliminación de Pagos
 
@@ -207,7 +207,7 @@ En ambos casos:
 !!! info
     Si el pago está contabilizado, el asiento contable se eliminará.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic6.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-8.png)
 
 ## Contabilización Masiva
 
@@ -219,9 +219,9 @@ La funcionalidad de Contabilización Masiva permite al usuario contabilizar o de
 Además, el Estado de Contabilización del/los registro/s se muestra en la barra de estado, en la vista de formulario, o en una columna, en la vista de grilla.
 
 !!! info
-    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Liquidación Avanzada de Tercero
+## Liquidación Avanzada de Terceros
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -230,24 +230,24 @@ Además, el Estado de Contabilización del/los registro/s se muestra en la barra
 Desde la ventana **Pago**, es posible crear una liquidación haciendo clic en el botón **Agregar Detalles**.
 En la ventana emergente, Etendo muestra una lista de facturas a liquidar, cada una con su número de factura correspondiente; aquí el usuario puede seleccionar la factura o facturas correspondientes a compensar. Se establece el **importe del Pago Real** a pagar y, luego, se selecciona la/s factura/s para crear una liquidación y se define el importe correspondiente a pagar de cada factura.
 
-![](../../../../../../assets/drive/1VXTbJvoG4le_x7dTVC9lqV3puMIqwh-N.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-9.png)
 
 Desde la **pestaña Factura de Compensación**, seleccione la/s factura/s de ventas que se utilizarán para pagar y establezca el importe necesario de la/s factura/s a compensar.
 
 A continuación, en la pestaña **Totales**, Etendo muestra los importes de referencia totales a compensar.
 
-![](../../../../../../assets/drive/1T-gLPqseFzIa5If1LX93VlhdYIaOz4-5.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-10.png)
 
 Tras hacer clic en el botón Aceptar, el sistema compensa las facturas y créditos del tercero correspondiente y crea un registro de liquidación.
 
-![](../../../../../../assets/drive/11XJzDLx3VkjhY3Q57pxpyrOGdvrRbXXz.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-11.png)
 
-El registro de liquidación queda registrado en la ventana **Liquidación de Tercero**, donde se mostrarán las líneas de la/s factura/s (de ventas y compras) utilizadas para compensar.
+El registro de liquidación queda registrado en la ventana **Liquidaciones de Terceros**, donde se mostrarán las líneas de la/s factura/s (de ventas y compras) utilizadas para compensar.
 
-![](../../../../../../assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/payment-out-12.png)
 
 !!! info
-    Para más información, visite la [Guía de Usuario del Módulo Liquidación de Tercero](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    Para más información, visite la [Guía de Usuario del Módulo Liquidaciones de Terceros](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
   
 ## Gestión Avanzada de Cuentas Bancarias
 
@@ -257,7 +257,7 @@ El registro de liquidación queda registrado en la ventana **Liquidación de Ter
 Este módulo incluye la columna Cuenta bancaria en la ventana emergente Agregar detalles para poder filtrar los posibles pagos por cuenta bancaria.
 
 !!! info
-    Para más información, visite la [guía de usuario de Gestión Avanzada de Cuentas Bancarias](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+    Para más información, visite la [guía de usuario de Gestión Avanzada de Cuentas Bancarias](../../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ---
 

@@ -7,36 +7,36 @@ tags:
   - Receivables and Payables
 ---
 
-# Deuda Dudosa
+# Dudoso cobro
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Deuda Dudosa`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Dudoso cobro`
 
 ## Visión General
 
-Las deudas dudosas son aquellas deudas que la empresa probablemente no podrá cobrar. Además, una deuda dudosa se convierte en deuda incobrable cuando ya no existe duda alguna de que la deuda es irrecuperable, por tanto:
+Los dudosos cobros son aquellas deudas que la empresa probablemente no podrá cobrar. Además, un dudoso cobro se convierte en deuda incobrable cuando ya no existe duda alguna de que la deuda es irrecuperable, por tanto:
 
-- **Deuda Dudosa**: crédito por cobrar que podría convertirse en deuda incobrable en algún momento en el futuro.
+- **Dudoso cobro**: crédito por cobrar que podría convertirse en deuda incobrable en algún momento en el futuro.
 - **Deuda Incobrable**: crédito por cobrar que ha sido claramente identificado como no cobrable.
 
-Las deudas dudosas son útiles para hacer provisiones ante posibles pérdidas con antelación.
+Los dudosos cobros son útiles para hacer provisiones ante posibles pérdidas con antelación.
 
 ### Ejemplo de Uso
 
-El siguiente ejemplo ilustra cómo Etendo gestiona la contabilización de Deudas Dudosas en el libro mayor.
+El siguiente ejemplo ilustra cómo Etendo gestiona la contabilización de Dudosos cobros en el libro mayor.
 
-El Tercero Healthy Food Supermarkets, Co., que debe a la empresa 1.000 EUR, atraviesa una situación difícil, por lo que su deuda se considera dudosa.
+El Tercero Healthy Food Supermarkets, Co., que debe a la empresa 1.000 EUR, atraviesa una situación difícil, por lo que su deuda se considera de dudoso cobro.
 
 |                       |       |        |
 | --------------------- | ----- | ------ |
 | Cuenta                | Debe  | Haber  |
-| Cuenta de Deuda Dudosa | 1000  |        |
+| Cuenta de Dudoso cobro | 1000  |        |
 | Créditos de Clientes  |       | 1000   |
 
 |                                          |       |        |
 | ---------------------------------------- | ----- | ------ |
 | Cuenta                                   | Debe  | Haber  |
 | Cuenta de Gastos por Deudas Incobrables  | 1000  |        |
-| Provisión para Deudas Dudosas            |       | 1000   |
+| Provisión para Deudas de Dudoso cobro    |       | 1000   |
 
 El Tercero Healthy Food Supermarkets, Co. realiza un Pago de 350 EUR:
 
@@ -44,12 +44,12 @@ El Tercero Healthy Food Supermarkets, Co. realiza un Pago de 350 EUR:
 | ------------------------------------- | ----- | ------ |
 | Cuenta                                | Debe  | Haber  |
 | Cuenta de Cobro en Tránsito           | 350   |        |
-| Cuenta de Deuda Dudosa                |       | 350    |
+| Cuenta de Dudoso cobro                |       | 350    |
 
 |                                          |       |        |
 | ---------------------------------------- | ----- | ------ |
 | Cuenta                                   | Debe  | Haber  |
-| Provisión para Deudas Dudosas            | 350   |        |
+| Provisión para Deudas de Dudoso cobro    | 350   |        |
 | Cuenta de Ingresos por Deudas Incobrables |       | 350    |
 
 Posteriormente, el tercero quiebra, por lo que su deuda se considera incobrable:
@@ -58,59 +58,59 @@ Posteriormente, el tercero quiebra, por lo que su deuda se considera incobrable:
 | ---------------------- | ----- | ------ |
 | Cuenta                 | Debe  | Haber  |
 | Cancelación            | 650   |        |
-| Cuenta de Deuda Dudosa |       | 650    |
+| Cuenta de Dudoso cobro |       | 650    |
 
 |                                          |       |        |
 | ---------------------------------------- | ----- | ------ |
 | Cuenta                                   | Debe  | Haber  |
-| Provisión para Deudas Dudosas            | 650   |        |
+| Provisión para Deudas de Dudoso cobro    | 650   |        |
 | Cuenta de Ingresos por Deudas Incobrables |       | 650    |
 
 ### Configuración
 
-Antes de comenzar a trabajar con Deudas Dudosas, se requieren algunos pasos de configuración previos:
+Antes de comenzar a trabajar con Dudosos cobros, se requieren algunos pasos de configuración previos:
 
-- Configurar la Contabilidad de Deudas Dudosas. Las cuentas que deben configurarse son:
-  - Cuenta de Deuda Dudosa
+- Configurar la Contabilidad de Dudosos cobros. Las cuentas que deben configurarse son:
+  - Cuenta de Dudoso cobro
   - Cuenta de Gastos por Deudas Incobrables
   - Cuenta de Ingresos por Deudas Incobrables
   - y Cuenta de Provisión para Deudas Incobrables.
 - Crear una Preferencia para poder ver el importe de una deuda que ha sido clasificada como dudosa al recibir un Pago.  
   Esta preferencia debe definirse para la Entidad y la Organización que necesite verla.  
   Esta preferencia es un Atributo 'Doubtful_Debt_Visibility' cuyo Valor debe ser 'Y'
-- Crear un Tipo de Documento para Deudas Dudosas.  
-  Este paso no es obligatorio, ya que ya existe un Tipo de Documento Estándar definido para Deudas Dudosas.
+- Crear un Tipo de Documento para Dudosos cobros.  
+  Este paso no es obligatorio, ya que ya existe un Tipo de Documento Estándar definido para Dudosos cobros.
 
-### Deuda Dudosa
+### Dudoso cobro
 
-Las Deudas Dudosas se definen en la ventana Ejecución de Deudas Dudosas. Una vez creadas, aparecerá un registro en la grilla de esta ventana.
+Los Dudosos cobros se definen en la ventana Procesado del dudoso cobro. Una vez creados, aparecerá un registro en la grilla de esta ventana.
 
 Campos a destacar:
 
-- **Ejecución de Deuda Dudosa:** Un enlace a la Ejecución de Deuda Dudosa que generó esta Deuda Dudosa.
-- **Plan de Pago de Factura:** Un enlace al Plan de Pago de la Factura a la que está relacionada esta Deuda Dudosa.
-- **Importe de Deuda Dudosa Pendiente:** Importe de Deuda Dudosa que permanece pendiente.
+- **Procesado del dudoso cobro:** Un enlace al Procesado del dudoso cobro que generó este Dudoso cobro.
+- **Plan de pago de Factura:** Un enlace al Plan de Pagos de la Factura a la que está relacionado este Dudoso cobro.
+- **Importe de Dudoso cobro Pendiente:** Importe de Dudoso cobro que permanece pendiente.
 
 Acciones posibles:
 
-- **Reactivar:** Una Deuda Dudosa puede ser Reactivada para ser modificada o eliminada posteriormente. Tenga en cuenta que, como cualquier otro documento, no puede ser Reactivada si está Contabilizada. En ese caso, es necesario Descontabilizarla primero.
-- **Contabilizar:** Una Deuda Dudosa puede ser contabilizada, creando un asiento en el Libro Mayor que debería verse así:
+- **Reactivar:** Un Dudoso cobro puede ser Reactivado para ser modificado o eliminado posteriormente. Tenga en cuenta que, como cualquier otro documento, no puede ser Reactivado si está Contabilizado. En ese caso, es necesario Descontabilizarlo primero.
+- **Contabilizar:** Un Dudoso cobro puede ser contabilizado, creando un asiento en el Libro Mayor que debería verse así:
 
 |                        |                          |                          |
 | ---------------------- | ------------------------ | ------------------------ |
 | Cuenta                 | Debe                     | Haber                    |
-| Cuenta de Deuda Dudosa | Importe de Deuda Dudosa  |                          |
-| Créditos de Clientes   |                          | Importe de Deuda Dudosa  |
+| Cuenta de Dudoso cobro | Importe de Dudoso cobro  |                          |
+| Créditos de Clientes   |                          | Importe de Dudoso cobro  |
 
 |                                         |                          |                          |
 | --------------------------------------- | ------------------------ | ------------------------ |
 | Cuenta                                  | Debe                     | Haber                    |
-| Cuenta de Gastos por Deudas Incobrables | Importe de Deuda Dudosa  |                          |
-| Provisión para Deudas Dudosas           |                          | Importe de Deuda Dudosa  |
+| Cuenta de Gastos por Deudas Incobrables | Importe de Dudoso cobro  |                          |
+| Provisión para Deudas de Dudoso cobro   |                          | Importe de Dudoso cobro  |
 
 ### Contabilidad
 
-Información contable relacionada con la deuda dudosa.
+Información contable relacionada con el dudoso cobro.
 
 ## Contabilización Masiva
 
@@ -119,10 +119,10 @@ Información contable relacionada con la deuda dudosa.
 
 La funcionalidad de Contabilización Masiva permite al usuario contabilizar o descontabilizar múltiples registros seleccionándolos y haciendo clic en el botón **Contabilización masiva**.
 
-Además, el Estado de Contabilización del/los registro/s se muestra en la barra de estado, en la vista de formulario, o en una columna, en la vista de grilla.
+Además, el Estado Contable del/los registro/s se muestra en la barra de estado, en la vista de formulario, o en una columna, en la vista de grilla.
 
 !!! info
-    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ---
 

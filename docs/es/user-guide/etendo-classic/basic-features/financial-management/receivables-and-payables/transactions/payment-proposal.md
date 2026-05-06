@@ -36,7 +36,7 @@ Los pasos a seguir son:
 
 La ventana de propuesta de pago permite al usuario introducir un conjunto de criterios de selección que le ayudan a realizar pagos de forma masiva.
 
-![Cabecera Propuesta de Pago](../../../../../../assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Cabecera Propuesta de Pago](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 Los campos a destacar son:
 
@@ -51,7 +51,7 @@ El botón de cabecera **Seleccionar Pagos Esperados** muestra los documentos que
 !!! info
     Tenga en cuenta que los datos mostrados en la grilla se filtran usando los criterios anteriores (filtro implícito). Para ver facturas o pedidos pendientes de un Método de Pago diferente, por ejemplo, es necesario limpiar los filtros haciendo clic en el icono de embudo.
 
-![Seleccionar Pagos Esperados](../../../../../../assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Seleccionar Pagos Esperados](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 Además, la ventana "Seleccionar Pagos Esperados" permite al usuario:
 
@@ -79,7 +79,7 @@ Una vez ejecutado:
 
 La pestaña de líneas muestra las transacciones (pedidos y/o facturas) incluidas en la propuesta de pago.
 
-![Líneas Propuesta de Pago](../../../../../../assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Líneas Propuesta de Pago](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal/payment-proposal-1.png)
 
 Una propuesta de pago puede ser "**Reactivada**", lo que significa que el/los pago/s creado/s se eliminan y, por tanto, se eliminan de la ventana Pago.
 

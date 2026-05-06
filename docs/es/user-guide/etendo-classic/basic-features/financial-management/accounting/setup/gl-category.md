@@ -16,7 +16,7 @@ tags:
 
 En esta ventana, el usuario puede **ver, crear y gestionar Categorías de LM utilizadas para clasificar los asientos contables en el Libro Mayor**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-1.png)
 
 Las Categorías de LM (Libro Mayor) actúan como **identificadores de clasificación que posteriormente se asignan a** [Tipo de documento](./document-type.md). Una vez que una Categoría de LM se vincula a un Tipo de documento, **todos los asientos contables generados a partir de ese documento se categorizan automáticamente durante la contabilización**, garantizando una clasificación coherente sin intervención manual.
 
@@ -34,7 +34,7 @@ Una vez creadas, las Categorías de LM se asignan en la ventana **Tipo de docume
 
 ## Cabecera
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-2.png)
 
 Campos a tener en cuenta:
 
@@ -54,11 +54,11 @@ Campos a tener en cuenta:
 
 Seleccione la opción de crear nuevo, rellene los campos correspondientes y guárdelo.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category3.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-3.png)
 
 La categoría creada está disponible para su uso en asientos de diario, importaciones y procesamiento de documentos.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category4.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-4.png)
 
 
 ---

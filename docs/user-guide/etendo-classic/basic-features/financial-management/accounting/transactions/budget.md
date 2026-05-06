@@ -26,11 +26,11 @@ It allows creating and managing budgets, both for income and expenditures, for r
 !!! example
     A budget can be defined, for example, by assigning an expected expenditure of EUR 400,000 in salaries and $2,000 in Internet services for the month of September 2025. 
     
-    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-header.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-1.png)
     
     At the end of the period, users can verify the actual value and analyze the difference with respect to the defined budget.
 
-    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-2.png)
 
 The actual values considered include both accounting entries and manual entries (G/L Item), ensuring a comprehensive view of budget execution.
 
@@ -49,7 +49,7 @@ The header defines the main data for each budget:
 
 In the Lines tab, the user can add budget lines. Each line can refer to a specific period, projecting and comparing expenses/income according to the selected accounting account. The accounting dimensions are available as filters, selectable one at a time, in the Dimensions section (business partner, product, etc.)
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-lines.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-3.png)
 
 Fields to note:
 
@@ -90,7 +90,7 @@ The fields presented in the report are:
 
 Example of report results:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/report-budget.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget/budget-2.png)
 
 ---
 

@@ -18,7 +18,7 @@ Una combinación de cuentas representa **una cuenta del Esquema contable tal y c
 
 El propósito principal de esta ventana es **ver y gestionar, de una sola vez, estas combinaciones válidas de dimensiones contables** para que Etendo sepa exactamente dónde y cómo contabilizar las transacciones financieras.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-1.png)
 
 
 !!!info
@@ -31,7 +31,7 @@ El propósito principal de esta ventana es **ver y gestionar, de una sola vez, e
 
 En esta ventana, el usuario puede ver todas las combinaciones de cuentas para el *Esquema contable* y la *Organización* seleccionados, filtrar y buscar combinaciones para encontrar cuentas específicas rápidamente.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-2.png)
 
 Campos a tener en cuenta:
 

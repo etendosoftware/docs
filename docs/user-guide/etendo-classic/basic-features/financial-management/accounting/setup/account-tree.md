@@ -94,7 +94,7 @@ Besides, it is well-known that every account, subaccount in Etendo terms, needs 
 -   **Expense** and **Revenue** account types need to be included in the Profit & Loss.
 
 !!! tip
-    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
+    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree/account-tree-1.png) which can be found in the toolbar once the user is in the Element Value tab.
 
 The Tree icon opens a new window which shows one **tree branch** per financial statement:
 

@@ -21,7 +21,7 @@ In order to explain the use of this process, it is necessary to understand the w
 
 This window allows the user to create or modify different Tax Report for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/1I29H6eckLq6K7WR7wzgmYPgjZ4PRcUiV.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-1.png)
 
 The window has some parameters to indicate the Tax Report created:
 
@@ -40,7 +40,7 @@ Once, the Tax Report has been set up, it will appear in the Create Tax Report fo
 
 This window allows printing Reports previously defined by the user. In order to print the Report, it is necessary to fill a few fields:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/174ocSJCYYPhTy_2AmynTHIQv93BlA4rB.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-2.png)
 
 - **From Date:** Starting Date of the Report.
 - **To Date:** Last Date of the Report.
@@ -49,7 +49,7 @@ This window allows printing Reports previously defined by the user. In order to 
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/1hDOABUzDouOzwfy4lBICVjVpUzKlnsB0.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-3.png)
 
 ---
 

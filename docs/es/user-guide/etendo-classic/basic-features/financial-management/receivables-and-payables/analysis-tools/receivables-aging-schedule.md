@@ -33,7 +33,7 @@ Este informe admite multi-moneda.
 ## Filtros
 
 -   **Organización** (Obligatorio).
--   **Contabilidad general** (Obligatorio). El usuario puede filtrar los resultados por la contabilidad general de la organización. Todos los importes se convertirán a la moneda de la contabilidad general.
+-   **Esquema contable** (Obligatorio). El usuario puede filtrar los resultados por el esquema contable de la organización. Todos los importes se convertirán a la moneda del esquema contable.
 -   **A fecha** (Obligatorio). Es la fecha a partir de la cual se procesará el informe. Las fechas de vencimiento pasadas y las fechas de pago se calcularán en función de esta fecha.
 -   **Terceros** (Opcional). El usuario puede seleccionar múltiples terceros para filtrar los resultados.
 -   **Número de días de vencimiento: Grupo Uno/Dos/Tres/Cuatro** (Obligatorio). Los resultados mostrados se agrupan según los rangos de días que el usuario debe introducir. El usuario puede introducir el día final de cada rango y la aplicación modificará automáticamente el día de inicio de los rangos siguientes. Por ejemplo: en el grupo Uno, el usuario introduce 30, por lo que el rango es 0-30; en el grupo Dos, el usuario introduce 60, por lo que el segundo rango es 31-60, y así sucesivamente.
@@ -42,7 +42,7 @@ Este informe admite multi-moneda.
 -   **Las facturas anuladas deben incluirse** (Solo disponible si la preferencia "Enable void documents filter in Aging Reports" está establecida en Y). Esta casilla de verificación ofrece al usuario la opción de incluir o excluir los documentos anulados del informe.
 -   **Los pagos revertidos deben incluirse** (Solo disponible si la preferencia "Enable reversed payment documents filter in Aging Reports" está establecida en Y). Esta casilla de verificación ofrece al usuario la opción de incluir o excluir los documentos de pago revertidos del informe.
 
-![](../../../../../assets/drive/1abmyBz-r9kRr3l7gNXmPgxwZrx-ca-AH.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/receivables-aging-schedule-1.png)
 
 ## Salida en HTML/PDF/Excel
 
@@ -72,7 +72,7 @@ Si la casilla de verificación **Mostrar deuda dudosa** está marcada, se muestr
 
 Asimismo, cuando se selecciona Mostrar deuda dudosa, el importe Total es la suma de todas las deudas que no son dudosas. Por tanto, el Neto es Total + Deuda dudosa - Créditos.
 
-![](../../../../../assets/drive/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/receivables-aging-schedule-2.png)
 
 ## Detalle de antigüedad de cuentas a cobrar
 
@@ -98,7 +98,7 @@ Si la casilla de verificación **Mostrar deuda dudosa** está marcada, se muestr
 
 Asimismo, cuando se selecciona Mostrar deuda dudosa, el importe Total es la suma de todas las deudas que no son dudosas. Por tanto, el Neto a cobrar es Total + Deuda dudosa - Créditos.
 
-![](../../../../../assets/drive/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/receivables-aging-schedule-3.png)
 
 ---
 

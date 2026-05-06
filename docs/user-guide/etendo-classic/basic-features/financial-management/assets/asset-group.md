@@ -19,7 +19,7 @@ Assets can be grouped into different categories with the aim of helping their de
 
 Asset Group window allows the user to create and configure every asset category your organization may need.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-1.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
@@ -39,7 +39,7 @@ Depreciation configuration will be inherited from the asset category when creati
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-2.png)
 
 ---
 

@@ -26,7 +26,7 @@ La contabilización directa en cuenta se refiere a:
 
 La ventana Concepto contable permite al usuario crear tantos elementos de cuenta como sean necesarios para una organización y un libro mayor.
 
-![](../../../../../../assets/drive/1hHiMTePnKxuaHcACgsqhmT3AxiD0MxKQ.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-1.png)
 
 Tal y como se muestra en la imagen anterior, se puede crear un concepto contable o elemento contable introduciendo la siguiente información básica:
 
@@ -39,7 +39,7 @@ Tal y como se muestra en la imagen anterior, se puede crear un concepto contable
 
 Los elementos de cuenta están directamente relacionados con las cuentas de debe y haber que se utilizarán al contabilizarlos.
 
-![](../../../../../../assets/drive/1Z4sfyfiCMHTj0jE2vxq9xtUb8zZyPzzk.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-2.png)
 
 Tal y como se muestra en la imagen anterior, la solapa de contabilidad permite al usuario introducir las cuentas de debe y haber para el concepto contable. Es posible introducir una cuenta de debe y una cuenta de haber para la configuración del libro mayor de cada organización.
 

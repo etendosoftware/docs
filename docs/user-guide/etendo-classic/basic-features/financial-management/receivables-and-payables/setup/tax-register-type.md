@@ -26,7 +26,7 @@ In other words, the "Tax Payment" process helps to calculate the amount of taxes
 
 The tax register type window allows the user to create tax register types.
 
-![Tax Register Type Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/1wwI271qWNtJQmMZxupMktzWI6S3ByU6w.png)
+![Tax Register Type Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-1.png)
 
 As shown in the image above, it is possible to create:
 
@@ -41,7 +41,7 @@ The ledger accounts defined for that G/L Item will be the ones to use while post
 
 The lines tab allows the user to associate tax rates to the tax register type.
 
-![Tax Register Type Lines](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/1O_4QacWfrELWWRoG5Ye2E73Fa8AIi8i1.png)
+![Tax Register Type Lines](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-2.png)
 
 As shown in the image above, each tax rate selected needs also to be linked to a document type.
 

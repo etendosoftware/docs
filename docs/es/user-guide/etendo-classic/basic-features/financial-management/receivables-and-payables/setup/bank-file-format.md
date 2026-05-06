@@ -7,9 +7,9 @@ tags:
   - Receivables and Payables
 ---
 
-# Formato de Fichero de Banco
+# Formato Fichero Banco
 
-:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Bank File Format`
+:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Formato Fichero Banco`
 
 ## Descripción general
 
@@ -27,13 +27,13 @@ Una vez que se importa un fichero de extracto bancario a la cuenta financiera de
 -   la información general, como el nombre del fichero y la fecha de importación, se guarda en la pestaña Extractos bancarios importados de la cuenta financiera
 -   y el contenido del fichero de extracto bancario se guarda línea por línea en la pestaña correspondiente Líneas de Extracto Bancario.
 
-## Formato de Fichero de Banco
+## Formato Fichero Banco
 
-La ventana de formato de fichero de banco lista los módulos de formato de fichero de banco instalados para una organización.
+La ventana Formato Fichero Banco lista los módulos de formato de fichero de banco instalados para una organización.
 
-![Bank File Format](../../../../../assets/drive/1m1UirW3EvMahtJQK5imtme5TZTf-Iy9w.png)
+![Bank File Format](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/bank-file-format/bank-file-format-1.png)
 
-Como se muestra en la imagen anterior, un formato de fichero de banco puede aplicarse a la organización en la ventana Gestión del módulo de Empresa tras ser instalado, por lo que está disponible para cualquier organización de la entidad.
+Como se muestra en la imagen anterior, un formato de fichero de banco puede aplicarse a la organización en la ventana Enterprise Module Management tras ser instalado, por lo que está disponible para cualquier organización de la entidad.
 
 ## Excepciones
 

@@ -23,7 +23,7 @@ Esta configuración se realiza una sola vez, durante la configuración inicial d
 
 La ventana muestra todas las categorías de impuestos de terceros existentes y permite crear nuevas. Es posible definir tantas categorías como requiera la estructura fiscal de la empresa.
 
-![Ventana Categoría de Impuestos de Terceros mostrando la lista de categorías y el formulario de cabecera](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category.png)
+![Ventana Categoría de Impuestos de Terceros mostrando la lista de categorías y el formulario de cabecera](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category-1.png)
 
 ### Campos
 

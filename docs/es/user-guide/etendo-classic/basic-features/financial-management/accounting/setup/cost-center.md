@@ -18,7 +18,7 @@ Un **Centro de costos** es una dimensión contable utilizada para clasificar y h
 
 La ventana Centro de costos sirve como registro maestro de todos los centros de costos dentro de una organización. Desde aquí, los usuarios pueden crear, ver y gestionar los centros de costos disponibles para su uso durante las transacciones contables.
 
-![Ventana Centro de costos](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center.png)
+![Ventana Centro de costos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center-1.png)
 
 ### Creación de un Centro de costos
 

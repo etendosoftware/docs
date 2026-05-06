@@ -7,18 +7,18 @@ tags:
   - Bulk Posting
 ---
 
-# Documentos No Contabilizados
+# Documentos no contabilizados
 
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Documents`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Documentos no contabilizados`
 
 !!!info
-    Para poder incluir esta funcionalidad, debe instalarse el paquete Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Visión General
+## Descripción general
 
-La ventana Documentos No Contabilizados, parte del módulo Contabilización Masiva, centraliza todos los documentos no contabilizados en un único lugar. Permite a los usuarios encontrar, revisar y contabilizar múltiples documentos a la vez de forma rápida. Los filtros ayudan a refinar las búsquedas y las acciones de contabilización masiva agilizan el procesamiento, haciendo la gestión de documentos más eficiente.
+La ventana Documentos no contabilizados, parte del módulo Contabilización masiva, centraliza todos los documentos no contabilizados en un único lugar. Permite a los usuarios encontrar, revisar y contabilizar múltiples documentos a la vez de forma rápida. Los filtros ayudan a refinar las búsquedas y las acciones de contabilización masiva agilizan el procesamiento, haciendo la gestión de documentos más eficiente.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
 
 ## Filtros
 
@@ -27,30 +27,30 @@ La ventana Documentos No Contabilizados, parte del módulo Contabilización Masi
 - **Documento**: (opcional) tipo de documento que el usuario está buscando. Las opciones disponibles son:
 
     - Amortización
-    - Extractos Bancarios
-    - Producción de Lista de Materiales
-    - Ajuste de Coste
-    - Deuda Dudosa
-    - Asiento de Diario
-    - Recepción de Mercancías
-    - Envío de Mercancías
-    - Consumo Interno
+    - Extracto bancario
+    - Producción LDM
+    - Ajuste de costes
+    - Dudoso cobro
+    - Asientos manuales
+    - Albarán (proveedor)
+    - Albarán (cliente)
+    - Consumo interno
     - Inventario
-    - Coste de Aterrizaje
-    - Coste de Coste de Aterrizaje
-    - Facturas de Compra Emparejadas
+    - Landed Cost
+    - Coste Landed Cost
+    - Facturas cuadradas
     - Movimientos
-    - Cobro
+    - Cobros
     - Pago
     - Factura (Proveedor)
-    - Conciliación
-    - Recepción de Devolución de Material
-    - Envío de Devolución a Proveedor
+    - Reconciliación
+    - Recibo devolución de material
+    - Devolución a albarán de proveedor
     - Factura (Cliente)
     - Transacción
-    - Esfuerzo de Trabajo
+    - Parte de trabajo
 
-- **Estado de Contabilización**: (obligatorio) muestra los posibles estados de los documentos contables. Permite selecciones múltiples. Esto es útil en casos en que el documento ya intentó contabilizarse pero falló y su estado no es **Sin Contabilizar** sino otro, como **Deshabilitado para Contabilización**.
+- **Estado de Contabilización**: (obligatorio) muestra los posibles estados de los documentos contables. Permite selecciones múltiples. Esto es útil en casos en que el documento ya intentó contabilizarse pero falló y su estado no es **No Contabilizado** sino otro, como **Deshabilitado Para Background**.
 
 - **Fecha Contable (Desde/Hasta)**: filtros para definir un período de búsqueda.
 
@@ -60,19 +60,19 @@ La ventana Documentos No Contabilizados, parte del módulo Contabilización Masi
 
 Al hacer clic en el botón Buscar se aplican los filtros seleccionados y se muestran los documentos coincidentes en la grilla de resultados. Desde los resultados se puede navegar a un documento haciendo clic en su Fecha Contable, inspeccionar detalles y seleccionar registros para la contabilización masiva.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
 
-### Botón Contabilización Masiva
+### Botón Contabilización masiva
 
-Una vez utilizados los campos para buscar los documentos no contabilizados, el usuario puede seleccionar masivamente los documentos necesarios y utilizar el botón **Contabilización Masiva** para contabilizar múltiples documentos a la vez, como se muestra a continuación.
+Una vez utilizados los campos para buscar los documentos no contabilizados, el usuario puede seleccionar masivamente los documentos necesarios y utilizar el botón **Contabilización masiva** para contabilizar múltiples documentos a la vez, como se muestra a continuación.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-1.png)
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-bulk-posting-2.png)
 
 Como puede observarse, este desarrollo facilita enormemente la gestión de los documentos a contabilizar, permitiendo a los usuarios no solo identificarlos rápidamente, sino también contabilizarlos de forma masiva y organizada directamente desde una única interfaz.
 
 !!! info
-    Para más información sobre la funcionalidad de Contabilización Masiva, visite [la guía del usuario de Contabilización Masiva](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información sobre la funcionalidad de Contabilización masiva, visite [la guía del usuario de Contabilización masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Filtrado en la grilla
 

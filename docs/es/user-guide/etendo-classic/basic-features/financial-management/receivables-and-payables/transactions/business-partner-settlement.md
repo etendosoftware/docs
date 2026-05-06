@@ -7,19 +7,19 @@ tags:
   - Receivables and Payables
 ---
 
-# Liquidación de Terceros
+# Liquidaciones de Terceros
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Liquidación de Terceros`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Liquidaciones de Terceros`
 
-## Visión general
+## Visión General
 
-Esta funcionalidad permite al usuario crear liquidaciones para facturas, tanto de ventas como de compras, desde las ventanas Cobros y Pagos. También es posible realizar una compensación creando una liquidación desde una conciliación bancaria para créditos entrantes/salientes desde la ventana Cuenta Financiera.
+Esta funcionalidad permite al usuario crear liquidaciones para facturas, tanto de venta como de compra, desde las ventanas **Cobros** y **Pago**. También es posible realizar una compensación creando una liquidación desde una reconciliación bancaria para cobros/pagos a crédito desde la ventana **Cuenta financiera**.
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 !!! note
-    Para más información, visite [Liquidación de Terceros](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md)
+    Para obtener más información, visite [Liquidaciones de Terceros](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md)
 
 ---
 

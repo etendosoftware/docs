@@ -31,7 +31,7 @@ Es importante remarcar que:
 
 La ventana de secuencia de documento (numeración) permite al usuario definir cómo se van a comportar las secuencias de documento.
 
-![](../../../../../../assets/drive/1cqBJ-LRNEyws3SX80mIMk8SbXVlAmEKI.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/document-sequence-1.png)
 
 Como se muestra en la imagen anterior, una secuencia de numeración de documentos puede configurarse como *"Numeración automática"*, lo que significa que el documento vinculado a esa secuencia obtendrá un número de documento generado automáticamente por la secuencia.
 
@@ -51,7 +51,7 @@ En estas nuevas secuencias, las máscaras pueden añadirse con fechas dinámicas
 
 El usuario puede filtrar la nueva secuencia según la organización, el tipo de documento y la máscara; la máscara es `#######` por defecto. Estas secuencias podrían crearse con el proceso `Create sequences` en la ventana `General Setup > Aplication > Create Sequences`.
 
-![Creación de secuencias](../../../../../../assets/drive/1PP0CkomMyGlx20kQe3l7D0hW5Jn__2q-.png)
+![Creación de secuencias](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/document-sequence-2.png)
 
 - Máscara: es una cadena para definir un formato de análisis, con la posibilidad de crear una fecha dinámica o una subcadena literal, además del número incremental formateado.
 

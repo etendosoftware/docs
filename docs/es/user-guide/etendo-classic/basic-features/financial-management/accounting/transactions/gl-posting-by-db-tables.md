@@ -7,17 +7,17 @@ tags:
   - Ledger Entries
 ---
 
-# Contabilización por Tablas de BD
+# Proceso contable
 
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `GL Posting by DB Tables`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Proceso contable`
 
-## Visión General
+## Descripción general
 
-La Contabilización por Tablas de BD permite al usuario contabilizar masivamente las transacciones relacionadas con una tabla transaccional determinada o con todas ellas.
+El Proceso contable permite al usuario contabilizar masivamente las transacciones relacionadas con una tabla transaccional determinada o con todas ellas.
 
-![](../../../../../../assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-1.png)
 
-Como se muestra en la imagen anterior, la funcionalidad **Contabilización por Tablas de BD** permite al usuario:
+Como se muestra en la imagen anterior, la funcionalidad **Proceso contable** permite al usuario:
 
 -   seleccionar una Organización o todas ellas si no se selecciona una organización concreta
 -   seleccionar una Tabla o todas ellas si no se selecciona una tabla concreta
@@ -25,12 +25,12 @@ Como se muestra en la imagen anterior, la funcionalidad **Contabilización por T
 
 Tras ejecutar el proceso, Etendo informa sobre el número de asientos del libro mayor registrados en el libro mayor para cada tabla, con el fin de contabilizar de nuevo la/s tabla/s transaccional/es en el libro mayor.
 
-![](../../../../../../assets/drive/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-2.png)
 
 Este proceso puede lanzarse cuando sea necesario:
 
 -   Puede ejecutarse si hay transacciones pendientes de contabilizar de forma masiva cuando el Proceso de Servidor de Contabilidad no está habilitado o no lo está para un conjunto determinado de tablas.
--   También puede ejecutarse tras ejecutar el proceso Restablecer Contabilidad, como forma de regenerar los asientos del libro mayor.
+-   También puede ejecutarse tras ejecutar el proceso Reinicializar cuentas, como forma de regenerar los asientos del libro mayor.
 
 ---
 

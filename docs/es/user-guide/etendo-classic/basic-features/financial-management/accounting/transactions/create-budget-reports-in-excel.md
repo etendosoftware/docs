@@ -7,15 +7,15 @@ tags:
   - Excel Reports
 ---
 
-# Crear Informes de Presupuesto en Excel
+# Generador Excel de Presupuestos
 
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Create Budget Reports in Excel`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Generador excel de presupuestos`
 
-## Visión General
+## Descripción general
 
 Utilizando los filtros necesarios, como tercero, producto, grupo de terceros, categoría de producto, etc., el usuario puede generar informes de presupuesto en Excel para utilizarlos con fines específicos.
 
-![](../../../../../../assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/create-budget-reports-in-excel/create-budget-reports-in-excel-1.png)
 
 ---
 

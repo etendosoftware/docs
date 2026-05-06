@@ -7,15 +7,15 @@ tags:
   - Receivables and Payables
 ---
 
-# Plan de Pago de Factura de Ventas
+# Plan de pago de facturas de venta
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Plan de Pago de Factura de Ventas`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Plan de pago de facturas de venta`
 
 ## Visión General
 
-La ventana Plan de Pago de Factura de Ventas muestra todos los planes de pago de facturas de ventas que no están totalmente pagados.
+La ventana Plan de pago de facturas de venta muestra todos los planes de pago de facturas de ventas que no están totalmente pagados.
 
-La ventana ofrece otra posibilidad de gestionar la misma información que se encuentra en la pestaña Plan de Pago de la ventana Factura de Ventas para una factura determinada.
+La ventana ofrece otra posibilidad de gestionar la misma información que se encuentra en la pestaña Plan de pagos de la ventana Factura (Cliente) para una factura determinada.
 
 La ventaja de esta ventana es que ofrece una vista más inmediata de todos los planes de pago de facturas de ventas que aún tienen un importe pendiente de cobrar.
 
@@ -25,7 +25,7 @@ La información del plan de pago de la factura de ventas se muestra agrupada en 
 
 La sección **Factura** muestra la siguiente información detallada:
 
-- **Factura**. Hay un enlace a la Factura de Ventas.
+- **Factura**. Hay un enlace a la Factura (Cliente).
 - **Nº de Documento**. Es el Número de Documento de la Factura.
 - **Tercero**. Es el Tercero contra quien se emite la Factura.
 - **Fecha de Factura**. Es la fecha de creación de la Factura.
@@ -40,7 +40,7 @@ La sección **Plan de Pago** muestra la siguiente información detallada:
 - **Fecha Esperada**. Es la Fecha en que se espera que se reciba el cobro. Cuando se crea el Plan de Pago, es la misma fecha que la "Fecha de Vencimiento", pero puede modificarse posteriormente.  
   Esta fecha refleja una revisión del Plan de Pago original en la que ha cambiado la "Fecha de Vencimiento".  
   Esta fecha se usa como "Fecha de Referencia" en algunos Informes, como el Informe de Pagos.  
-  Además, este campo es el único que puede modificarse en esta ventana. Si se modifica, ese cambio también se reflejará en la pestaña de plan de pago de la factura de compra correspondiente.
+  Además, este campo es el único que puede modificarse en esta ventana. Si se modifica, ese cambio también se reflejará en la pestaña Plan de pagos de la factura de venta correspondiente.
 
 **Días Vencidos**
 

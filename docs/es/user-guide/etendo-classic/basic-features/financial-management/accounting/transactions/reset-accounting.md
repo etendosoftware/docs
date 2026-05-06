@@ -7,13 +7,13 @@ tags:
   - Ledger Entries
 ---
 
-# Restablecer Contabilidad
+# Reinicializar cuentas
 
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Reset Accounting`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Reinicializar cuentas`
 
-## Visión General
+## Descripción general
 
-El proceso de restablecimiento de contabilidad permite al usuario eliminar total o parcialmente los asientos del libro mayor de una organización. Los asientos del libro mayor pueden recrearse de forma masiva utilizando el **Proceso de Servidor de Contabilidad** o el proceso **Contabilización por Tablas de BD**. Los cambios manuales realizados en la descripción de los asientos contables se perderán inevitablemente tras ejecutar este proceso.
+El proceso Reinicializar cuentas permite al usuario eliminar total o parcialmente los asientos del libro mayor de una organización. Los asientos del libro mayor pueden recrearse de forma masiva utilizando el **Proceso de Servidor de Contabilidad** o el proceso **Proceso contable**. Los cambios manuales realizados en la descripción de los asientos contables se perderán inevitablemente tras ejecutar este proceso.
 
 ---
 

@@ -70,7 +70,7 @@ This functionality is specifically useful for companies that have a month close,
 
 In order to use this functionality, in both "GL journal" and "Simple GL journal" windows, the user can click the button "Reverse Journal" in the toolbar when selecting an entry.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-1.png)
 
 In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. 
 > 
@@ -79,23 +79,23 @@ In this way, Etendo automatically creates a reverse entry that compensates the a
 
 As seen below, Etendo shows a success notification in green with the new GL Journal number.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-2.png)
 
 When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reversed.
 
 ##### Original GL journal
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-3.png)
 
 ##### Reverse GL Journal
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-4.png)
 
 ### Changing description option in the Simple GL Journal window
 
 If the GL Journal entry is created in the Simple GL Journal window, it is possible for the user to change the description of the GL journal, once it clicks on the "Reverse Journal" button, in the corresponding pop up window. 
  
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1Uec9_qgFGGKWDLNsWvN7CZDwuQXAjp0J.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-5.png)
 
 This is useful to distinguish between the original GL journal and the reverse one. 
 
@@ -120,11 +120,11 @@ With this functionality, the user is able to seamlessly clone a selected entry. 
 
 In order to do this, select the record to clone and click the copy record button in the toolbar.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/gljournalclone.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-6.png)
 
 In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/gljournalclone2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-7.png)
 
 This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
 

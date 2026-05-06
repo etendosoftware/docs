@@ -40,7 +40,7 @@ Cada registro creado en esta ventana representa un **informe financiero**. Al de
 - Lo mismo aplica en el caso de organizaciones que son de **Tipo de Organización** y que tienen otras organizaciones por debajo compartiendo la misma configuración de esquema contable y, por lo tanto, el mismo árbol de cuentas.
 - Si la organización seleccionada es una **organización genérica** que pertenece a una Legal con Contabilidad, la información financiera proporcionada por los informes será únicamente la información financiera de esa organización.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
 
 Campos a tener en cuenta en esta ventana:
 
@@ -56,13 +56,13 @@ Campos a tener en cuenta en esta ventana:
 
 La pestaña **Categoría de agrupación** permite a los usuarios definir secciones dentro del informe. Cada categoría de agrupación crea un salto de página, ayudando a organizar el informe en secciones claras.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
 
 #### Nodos
 
 Desde la subpestaña **Nodos** es posible definir la información mostrada en el informe.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
 
 Un nodo de informe se define por:
 

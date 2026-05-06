@@ -15,7 +15,7 @@ tags:
 
 The G/L Posting by DB Table allows the user to massively post the transactions related to a given transactional table or to all of them.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-1.png)
 
 As shown in the image above, the **G/L Posting by DB Tables** feature allows the user to:
 
@@ -25,7 +25,7 @@ As shown in the image above, the **G/L Posting by DB Tables** feature allows the
 
 After running the process, Etendo informs about the number of ledger entries posted to the ledger for each table in order to post once again the transactional table/s to the ledger.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-2.png)
 
 This process can be launched whenever it is required:
 

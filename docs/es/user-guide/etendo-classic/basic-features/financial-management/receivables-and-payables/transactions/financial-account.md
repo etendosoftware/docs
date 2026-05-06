@@ -17,7 +17,7 @@ Una Cuenta Financiera representa una cuenta en una institución financiera, como
 
 Etendo permite al usuario crear tantas Cuentas Financieras como requiera la organización en la ventana Cuenta Financiera, la cual se utiliza por tanto para registrar transacciones monetarias como pagos de facturas, comisiones bancarias, cargos de tarjeta de crédito, etc.
 
-Las obligaciones de pago y los importes pendientes de clientes se crean en las ventanas de Factura de Compra y de Venta. Sin embargo, los cobros de clientes y los pagos a proveedores por estas facturas se registran normalmente en la ventana Cuenta Financiera o en las ventanas Cobro y Pago.
+Las obligaciones de pago y los importes pendientes de clientes se crean en las ventanas Factura (Proveedor) y Factura (Cliente). Sin embargo, los cobros de clientes y los pagos a proveedores por estas facturas se registran normalmente en la ventana Cuenta Financiera o en las ventanas **Cobros** y **Pago**.
 
 !!! warning
     Es muy importante definir correctamente cada parámetro de cada Cuenta Financiera. Durante el proceso de configuración de la Cuenta Financiera, necesitará información como: los datos de la cuenta bancaria, los métodos de pago permitidos, la/s moneda/s de la cuenta bancaria, la información contable, etc.
@@ -26,7 +26,7 @@ Las obligaciones de pago y los importes pendientes de clientes se crean en las v
 
 La ventana Cuenta Financiera contiene información esencial, como el número de cuenta bancaria, y permite al usuario realizar un conjunto de procesos, como agregar transacciones de depósito o retiro a la cuenta financiera o importar y conciliar un archivo de extracto bancario.
 
-![Cuenta](../../../../../assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
+![Cuenta](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-1.png)
 
 La **información esencial de la cuenta financiera** que debe completarse en la sección superior de la ventana Cuenta Financiera es:
 
@@ -84,7 +84,7 @@ Los pagos mostrados para selección son aquellos con estado de pago igual a "Pag
 
 Por defecto, los pagos mostrados son los definidos originalmente para esta cuenta financiera. Sin embargo, el usuario puede eliminar este filtro para mostrar y seleccionar pagos de otras cuentas financieras.
 
-![Agregar múltiples pagos](../../../../../assets/drive/1WDuGJ8r3aCcAzVGC1bFj1pc87CkaEJxG.png)
+![Agregar múltiples pagos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-2.png)
 
 Las únicas acciones a realizar son introducir una "Fecha de Transacción" y seleccionar tantos pagos como se requieran a la vez.
 
@@ -116,7 +116,7 @@ Se puede introducir el saldo final o lo que indica el extracto y luego seleccion
 !!! info
     Es posible crear una transacción de "concepto contable" en caso de que existan pequeñas diferencias entre lo que indican los extractos y las transacciones registradas pendientes de conciliación.
 
-![Ventana de conciliación](../../../../../assets/drive/1N1L6_XETrXBZnbUB3YwVD_RJvVmd0G6V.png)
+![Ventana de conciliación](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-3.png)
 
 El botón de proceso "**Guardar**" guarda un "**Borrador**" de la conciliación en la pestaña Conciliaciones de la cuenta financiera y marca la/s transacción/es seleccionada/s como "Saldada" también en la pestaña de transacciones de la cuenta financiera.
 
@@ -151,7 +151,7 @@ Dependiendo del módulo instalado para este fin, será posible importar archivos
 
 El botón de proceso "Importar Extracto" abre la ventana "Importar Archivo Bancario".
 
-![Importar Extracto](../../../../../assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
+![Importar Extracto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-4.png)
 
 
 Esta ventana permite:
@@ -163,11 +163,11 @@ Esta ventana permite:
 
 Una vez importado un archivo de extracto bancario, el botón "Conciliar Extracto" abre una nueva ventana donde se muestran las líneas del extracto bancario importado y las transacciones financieras existentes. Por defecto, hay un filtro implícito que oculta las líneas del extracto bancario que ya están conciliadas.
 
-![Conciliar Extracto](../../../../../assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
+![Conciliar Extracto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-5.png)
 
 Antes de abrir la ventana, se muestra un pop-up que pregunta si el algoritmo debe ejecutarse contra las líneas del extracto bancario no conciliadas o no. En caso afirmativo, el algoritmo intentará encontrar una coincidencia para todas las líneas del extracto bancario no conciliadas. En caso negativo, se abrirá la ventana de conciliación y el usuario deberá realizar las conciliaciones manualmente.
 
-![Ejemplo 2](../../../../../assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
+![Ejemplo 2](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-6.png)
 
 Esta ventana tiene dos grupos de columnas divididos por la columna Conciliar.
 
@@ -199,23 +199,23 @@ Todos los criterios anteriores pueden seleccionarse o solo algunos de ellos.
 
 Tomemos como ejemplo la situación inicial que se muestra a continuación, donde hay tres líneas de extracto bancario que no coinciden:
 
-![Ejemplo 3](../../../../../assets/drive/1K31lmmG2WiS1k6bunMTXgghMHLw9Chw3.png)
+![Ejemplo 3](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-7.png)
 
 - El icono de "lupa" ayuda a buscar transacciones para conciliar, ya que abre una nueva ventana que muestra las transacciones de la cuenta financiera registradas el mismo día que la línea del extracto bancario o antes. Se pueden seleccionar varias transacciones a la vez para conciliar con una única línea del extracto bancario. En ese caso, el sistema divide automáticamente la línea original del extracto bancario tantas veces como transacciones se seleccionen.
 
-![Ejemplo 4](../../../../../assets/drive/1OL1GtOSH905zxVc9UjliNCM3UztnFK84.png)
+![Ejemplo 4](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-8.png)
 
 Volviendo a nuestro ejemplo, no hay ninguna transacción que coincida con la segunda transacción del archivo de extracto bancario (la que tiene un importe igual a 1.500,00). Si hubiera una coincidencia, podría seleccionarse también mediante el icono de "lupa".
 
 - El icono "+" ayuda a agregar transacciones a la cuenta financiera (e incluso crear un pago para depositar o retirar de la cuenta financiera), ya que abre la ventana "Agregar Transacción".
 
-![Ejemplo 5](../../../../../assets/drive/1MhRo1pZgSopD5v9S3avUHPR5HUWW_XdZ.png)
+![Ejemplo 5](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-9.png)
 
 La imagen anterior muestra que había una transacción "Recibido" pendiente de crear en la cuenta financiera. Una vez creada, queda conciliada.
 
 Volviendo a nuestro ejemplo, la situación actual se muestra en la imagen siguiente:
 
-![Ejemplo 6](../../../../../assets/drive/1YjafVYkcIa5yMvLoNCt5jBMZbdyqUsFo.png)
+![Ejemplo 6](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-10.png)
 
 Solo queda una transacción pendiente de conciliar. El icono de "lupa" ayuda de nuevo a buscar transacciones para conciliar.
 
@@ -224,7 +224,7 @@ Si se selecciona una transacción que casi coincide, Etendo muestra un mensaje q
 !!! info
     Esta última opción requerirá cerrar sesión e iniciar sesión nuevamente.
 
-![Ejemplo 7](../../../../../assets/drive/1U0DAE2Ad9SLeZF4HRRf6o_PkA8FPIk-w.png)
+![Ejemplo 7](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-11.png)
 
 Esta acción concilia la línea del extracto bancario y crea una nueva línea pendiente de conciliar por la diferencia.
 
@@ -241,7 +241,7 @@ Este no debe ser el procedimiento estándar, ya que debe realizarse una revisió
 
 La funcionalidad de Transferencia de Fondos en la ventana Cuenta Financiera permite el movimiento de dinero entre dos cuentas financieras diferentes dentro de una organización. Esta acción se utiliza normalmente para transferencias internas, como mover fondos de una cuenta bancaria a una caja chica, o entre cuentas en diferentes monedas.
 
-![Transferencia de fondos](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
+![Transferencia de fondos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-12.png)
 
 Campos a destacar:
 
@@ -280,7 +280,7 @@ Estos dos tipos de transacciones pueden crearse de tres formas:
 
 - o **Manualmente**, creando un nuevo registro en la pestaña de transacciones de la ventana Cuenta Financiera.
 
-![Pestaña de transacciones](../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
+![Pestaña de transacciones](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-13.png)
 
 - Campos a destacar en la pestaña de transacciones:
     - **Tipo de Transacción:** El Tipo de Transacción indica el tipo de transacción a procesar. La pestaña de transacciones también permite al usuario crear transacciones de "Depósito" o "Retiro" basadas en un tipo de transacción de "Concepto Contable" o en un "Pago".
@@ -302,14 +302,14 @@ Estos dos tipos de transacciones pueden crearse de tres formas:
             Es posible permitir al usuario **recibir o realizar pagos en múltiples monedas** (moneda extranjera), al configurar los métodos de pago asignados a una cuenta financiera determinada. Para más información sobre esta opción, visite [Método de Pago](../../financial-management/receivables-and-payables/setup/payment-method.md).
 
 
-![Comisión bancaria](../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
+![Comisión bancaria](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-14.png)
 
 1. Si es necesario crear una **Comisión Bancaria**, seleccione **Comisión Bancaria** en el desplegable Tipo de Transacción, introduzca una fecha de transacción y contable y el importe recibido o pagado.
 
 2. Luego guarde y procese la transacción.
 
 
-![Concepto Contable](../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
+![Concepto Contable](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-15.png)
 
 Para crear una nueva transacción de concepto contable, seleccione `Depósito de Tercero` o `Retiro de Tercero` en el tipo de transacción y seleccione el **Concepto Contable** en el desplegable de Concepto Contable, introduzca una fecha de transacción y contable, seleccione un Concepto Contable, introduzca el importe **recibido** o **pagado** y guarde y procese la transacción.
 
@@ -317,7 +317,7 @@ Si el usuario necesita crear una nueva transacción de pago, se permite seleccio
 
 - Si el pago está creado, el usuario debe elegir el pago en el selector de pagos.
 
-    ![Selector de pago](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
+    ![Selector de pago](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-16.png)
 
 Los campos de descripción e importe en la pestaña de transacciones se completarán automáticamente y para completar la transacción es necesario guardar y procesar.
 
@@ -334,7 +334,7 @@ Esta ventana permite:
 - y finalmente introducir un "Pago de Concepto Contable" si es necesario, agregando "Conceptos Contables" en una grilla de conceptos contables.  
   El último paso es procesar el pago recién creado y que quede depositado en la cuenta financiera.
 
-![Transacción de depósito de pago](../../../../../assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
+![Transacción de depósito de pago](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-17.png)
 
 Si es necesario crear una **transacción de retiro de pago**, el usuario debe hacer clic en el botón '+' en el selector de pago y se abrirá un pop-up de agregar pago. En el pop-up de agregar pago, debe seleccionarse la opción "**Pagado**" en el campo "Documento". Esta ventana permite al usuario:
 
@@ -347,15 +347,15 @@ Si es necesario crear una **transacción de retiro de pago**, el usuario debe ha
 - y finalmente introducir un "Pago de Concepto Contable" si es necesario, agregando "Conceptos Contables" en una grilla de conceptos contables.  
   El último paso es procesar el pago recién creado y que quede depositado en la cuenta financiera.
 
-![Retiro de pago](../../../../../assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
+![Retiro de pago](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-18.png)
 
 El selector de pago tiene aplicado un filtro explícito (cuenta financiera actual).
 
-![Pago filtrado](../../../../../assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
+![Pago filtrado](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-19.png)
 
 Es posible agregar pagos de cuentas financieras alternativas haciendo clic en el icono de embudo para limpiar los filtros.
 
-![Pago sin filtro](../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
+![Pago sin filtro](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-20.png)
 
 #### Tipos de Cambio
 
@@ -365,7 +365,7 @@ Esta subpestaña permite al usuario definir un tipo de cambio para usar al conta
 
 Esta subpestaña muestra el historial de contabilización de una transacción determinada.
 
-![Historial de contabilización](../../../../../assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
+![Historial de contabilización](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-21.png)
 
 Como se muestra en la imagen anterior, esta pestaña muestra los asientos del libro mayor creados al contabilizar/descontabilizar una transacción determinada.
 
@@ -373,7 +373,7 @@ Como se muestra en la imagen anterior, esta pestaña muestra los asientos del li
 
 La pestaña de configuración contable se utiliza para definir las cuentas de un Libro Mayor a usar al contabilizar transacciones como una comisión bancaria o un depósito.
 
-![Configuración contable](../../../../../assets/drive/1CYADTe8Ks-V7eoJVPSmVP8-8Ighure6S.png)
+![Configuración contable](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-22.png)
 
 Como se muestra en la imagen anterior, las cuentas que se detallan a continuación pueden configurarse para una cuenta financiera y un libro mayor.
 
@@ -424,7 +424,7 @@ En detalle:
 
 Sección **Cobro**:
 
-- **Cuenta de Pago en Tránsito**: Esta es la cuenta que se usará en el primer paso, cuando el recibo del pago se registra en la ventana "Cobro".  
+- **Cuenta de Pago en Tránsito**: Esta es la cuenta que se usará en el primer paso, cuando el recibo del pago se registra en la ventana "Cobros".  
   El Método de Pago utilizado debe tener el valor "Cuenta de Pago en Tránsito" definido en el campo "Al Recibir usar".
 - **Cuenta de Pago Depositado**: Esta es la cuenta que se usará para contabilizar la segunda fase, es decir, el "Depósito" del recibo en la Cuenta Financiera. El Método de Pago utilizado debe tener el valor "Cuenta de Pago Depositado" definido en el campo "Al Depositar usar".
 - **Cuenta de Pago Saldado**: Esta es la cuenta que se usará para contabilizar el tercer paso, es decir, la conciliación del depósito. El método de pago utilizado debe tener el valor "Cuenta de Pago Saldado" definido en el campo "Al Conciliar usar".
@@ -465,7 +465,7 @@ Este combo puede establecerse a nivel de método de pago (cobro y pago) en cada 
 
 La pestaña enumera los archivos de extracto bancario importados, así como los extractos bancarios creados manualmente.
 
-![Extractos bancarios importados](../../../../../assets/drive/1JYuyMUUrwVxlwti9FdfNcdz_t-DgIPY3.png)
+![Extractos bancarios importados](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-23.png)
 
 Campos clave a destacar:
 
@@ -518,7 +518,7 @@ La pestaña de conciliaciones muestra las conciliaciones creadas manualmente si 
 - Cada conciliación de este tipo, una vez guardada, se guarda también en esta pestaña en estado "**Borrador**" hasta que finalmente se concilia en la ventana "Conciliación mediante Líneas de Extracto Bancario Importadas", por lo que su estado cambia a "**Completada**".
 - Es posible "**Reactivar**" una conciliación de este tipo, por lo que puede modificarse en la ventana "**Conciliación mediante Líneas de Extracto Bancario Importadas**" y conciliarse desde esa ventana una vez más.
 
-![Conciliaciones](../../../../../assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
+![Conciliaciones](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-24.png)
 
 #### Contabilización de Conciliaciones
 
@@ -526,7 +526,7 @@ Una Conciliación de cualquier tipo puede contabilizarse si el Método de Pago u
 
 Una contabilización de "**Conciliación de Depósito**" se ve así:
 
-a. si el Pago Recibido NO fue contabilizado en la ventana **"Cobro"** y la Transacción de Depósito tampoco fue contabilizada en la ventana "**Cuenta Financiera**":
+a. si el Pago Recibido NO fue contabilizado en la ventana **"Cobros"** y la Transacción de Depósito tampoco fue contabilizada en la ventana "**Cuenta Financiera**":
 
 |                                                                     |                 |                 |
 | ------------------------------------------------------------------- | --------------- | --------------- |
@@ -534,7 +534,7 @@ a. si el Pago Recibido NO fue contabilizado en la ventana **"Cobro"** y la Trans
 | Al Conciliar usar la "Cuenta de Pago Saldado" (ej.)                 | Importe del pago |                 |
 | Créditos de Clientes                                                |                 | Importe del pago |
 
-b. si el Pago Recibido fue contabilizado en la ventana **"Cobro"** y la Transacción de Depósito NO fue contabilizada en la ventana "**Cuenta Financiera**":
+b. si el Pago Recibido fue contabilizado en la ventana **"Cobros"** y la Transacción de Depósito NO fue contabilizada en la ventana "**Cuenta Financiera**":
 
 |                                                                       |                 |                 |
 | --------------------------------------------------------------------- | --------------- | --------------- |
@@ -542,7 +542,7 @@ b. si el Pago Recibido fue contabilizado en la ventana **"Cobro"** y la Transacc
 | Al Conciliar usar la "Cuenta de Pago Saldado" (ej.)                   | Importe del pago |                 |
 | Al Recibir usar la "Cuenta de Pago en Tránsito Cobro" (ej.)           |                 | Importe del pago |
 
-c. si el Pago Recibido fue contabilizado o no en la ventana **"Cobro"** y la Transacción de Depósito fue contabilizada en la ventana "**Cuenta Financiera**":
+c. si el Pago Recibido fue contabilizado o no en la ventana **"Cobros"** y la Transacción de Depósito fue contabilizada en la ventana "**Cuenta Financiera**":
 
 |                                                                     |                 |                 |
 | ------------------------------------------------------------------- | --------------- | --------------- |
@@ -551,7 +551,7 @@ c. si el Pago Recibido fue contabilizado o no en la ventana **"Cobro"** y la Tra
 | Al Depositar usar la "Cuenta de Depósito" (ej.)                     |                 | Importe del pago |
 
 !!! info
-    Cada contabilización será diferente cuando el importe provenga parcial o totalmente de una deuda clasificada como dudosa. En ese caso, la contabilización se realizará como se explica en la página [_Ejecución de Deudas Dudosas_](./doubtful-debt-run.md).
+    Cada contabilización será diferente cuando el importe provenga parcial o totalmente de una deuda clasificada como dudosa. En ese caso, la contabilización se realizará como se explica en la página [_Procesado del dudoso cobro_](./doubtful-debt-run.md).
 
 Una contabilización de "**Conciliación de Retiro**" se ve así:
 
@@ -632,7 +632,7 @@ Considere los siguientes casos:
 - Si la conciliación está completada y el resto de las conciliaciones existentes están completadas, entonces la conciliación en cuestión se reabrirá para eliminar la línea de conciliación correspondiente y se cerrará de nuevo.
 - Si la conciliación está completada y hay una conciliación en estado Borrador, la conciliación en borrador se cerrará, la conciliación correspondiente se reactivará, la línea de conciliación correspondiente se eliminará, se cerrará de nuevo y la que estaba en estado Borrador se reactivará.
 
-![](../../../../../assets/drive/1M_IDKW70W9wRHEkPK6Uw9uLvfD03wyxx.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-25.png)
 
 ### Conciliaciones
 
@@ -644,7 +644,7 @@ Las siguientes situaciones son posibles:
 - Reactivar una conciliación en estado Completada. Las demás conciliaciones existentes también están en estado Completada: en este caso, la conciliación se reactiva y su estado vuelve a Borrador.
 - Reactivar una conciliación en estado Completada. Hay otra conciliación en estado Borrador: en este caso, la conciliación en estado Borrador se completa primero y la conciliación seleccionada se reactiva y su nuevo estado será: Borrador.
 
-![](../../../../../assets/drive/1ZyeE1vy7Gri5kslKF1fq1PzohDkwVPwK.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-26.png)
 
 ## Contabilización Masiva
 
@@ -656,9 +656,9 @@ La funcionalidad de Contabilización Masiva permite al usuario contabilizar o de
 Además, el Estado de Contabilización del/los registro/s se muestra en la barra de estado, en la vista de formulario, o en una columna, en la vista de grilla.
 
 !!! info
-    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Liquidación Avanzada de Tercero
+## Liquidación Avanzada de Terceros
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -666,26 +666,26 @@ Además, el Estado de Contabilización del/los registro/s se muestra en la barra
 Etendo permite realizar una liquidación desde una conciliación bancaria.
 Desde la ventana **Cuenta Financiera**, una vez que los extractos bancarios ya están importados y procesados, el usuario puede seleccionar el extracto bancario de la cuenta financiera y conciliarlo con la factura a pagar haciendo clic en el botón **Conciliar Extracto**.
 
-![](../../../../../assets/drive/11F6-j76ebOwud3SCfJNtfFhgfuAcjh5d.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-27.png)
 
 En la ventana emergente, Etendo muestra una lista de facturas a liquidar, cada una con su número de factura correspondiente; aquí el usuario puede seleccionar la factura correspondiente para compensar con su importe de **Pago Real** a pagar.
 
-![](../../../../../assets/drive/1GufQeDY76qDFzfshhuTzhogcH10T0zxb.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-28.png)
 
 Desde la pestaña **Factura de Compensación**, el usuario selecciona la factura que se utilizará para pagar (ya sea de ventas o de compras, dependiendo de la factura previamente seleccionada) y establece el importe necesario de la factura a compensar.
 
-![](../../../../../assets/drive/1nRmzMoT6EiyE2m0yvApx99cpJladJZkA.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-29.png)
 
 Tras hacer clic en el botón Aceptar, Etendo abre otra ventana emergente para mostrar la información de la nueva liquidación a crear, para que el usuario confirme los detalles haciendo clic en Aceptar.
 
-![](../../../../../assets/drive/1XvbDRrKkyoporgm2uVTBDg-72m2iOOaa.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-30.png)
 
-El registro de liquidación (cobro y pago) también queda registrado en la ventana **Liquidación de Tercero**, donde se mostrará una línea para la factura (de ventas y compras) utilizada para la compensación.
+El registro de liquidación (cobro y pago) también queda registrado en la ventana **Liquidaciones de Terceros**, donde se mostrará una línea para la factura (de ventas y compras) utilizada para la compensación.
 
-![](../../../../../assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-31.png)
 
 !!! info
-    Para más información, visite la [Guía de Usuario del Módulo Liquidación de Tercero](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    Para más información, visite la [Guía de Usuario del Módulo Liquidaciones de Terceros](../../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
 ---
 

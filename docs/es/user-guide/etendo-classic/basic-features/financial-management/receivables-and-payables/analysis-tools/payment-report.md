@@ -7,19 +7,19 @@ tags:
   - Financial Analysis
 ---
 
-# Informe de pagos
+# Informe de pagos y cobros
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payment Report`
 
 ## Descripción general
 
-El informe de pagos muestra información sobre cuentas a cobrar y/o a pagar, que puede filtrarse mediante un amplio conjunto de filtros disponibles.
+El Informe de pagos y cobros muestra información sobre cobros y/o pagos, que puede filtrarse mediante un amplio conjunto de filtros disponibles.
 
-La información de cuentas a cobrar y/o a pagar se muestra agrupada por el estado del pago; además, también pueden definirse criterios adicionales de agrupación y ordenación.
+La información de cobros y/o pagos se muestra agrupada por el estado del pago; además, también pueden definirse criterios adicionales de agrupación y ordenación.
 
-El informe de pagos es un informe dimensional de Etendo que contiene las siguientes opciones de filtrado específicas:
+El Informe de pagos y cobros es un informe dimensional de Etendo que contiene las siguientes opciones de filtrado específicas:
 
-![](../../../../../assets/drive/1PX-rtKZBix9j8-LmDamIE90SjBybrPpM.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report/payment-report-1.png)
 
 -   **Fechas**: introduzca una **Fecha desde** y una **Fecha hasta** para recuperar los datos del pago en relación con:
     -   la fecha de vencimiento del pago
@@ -35,11 +35,11 @@ El informe de pagos es un informe dimensional de Etendo que contiene las siguien
     -   Pendiente de ejecución
     -   Anulado
     -   Pago realizado
-    -   Pago recibido
-    -   Depositado sin liquidar
-    -   Retirado sin liquidar
-    -   Pago liquidado
--   El **Representante de ventas**. Mostrará solo los pagos relacionados con facturas emitidas para este representante de ventas.
+    -   Cobro recibido
+    -   Depositado no conciliado
+    -   Reintegrado no conciliado
+    -   Pago conciliado
+-   El **Agente comercial**. Mostrará solo los pagos relacionados con facturas emitidas para este agente comercial.
 -   El **Método de pago** y la **Cuenta financiera** del pago.
 -   La casilla de verificación **"Incluir pagos mediante crédito"** permite incluir dichos pagos.
 -   El campo **"Convertir a moneda"** permite al usuario seleccionar una moneda; de este modo, los "Importes de transacción" en una moneda distinta a la seleccionada se convierten a la moneda elegida y se muestran en el campo "Importe base".
@@ -55,23 +55,23 @@ El informe de pagos es un informe dimensional de Etendo que contiene las siguien
         -   Proyecto
         -   Categoría de tercero
         -   Moneda
-        -   Cuenta (Cuenta Financiera)
+        -   Cuenta (Cuenta financiera)
     -   **Criterios de ordenación** como:
         -   Fecha (Fecha de pago)
         -   Proyecto
         -   Categoría de tercero
         -   Moneda
         -   Fecha de vencimiento (Fecha de vencimiento del pago)
-        -   Cuenta (Cuenta Financiera)
+        -   Cuenta (Cuenta financiera)
         -   Tercero
 
 !!! warning
     Tenga en cuenta que si, por ejemplo, se selecciona "Tercero" como criterio de agrupación, se eliminará de la lista de criterios de ordenación, ya que la agrupación implica la ordenación.
 
 
-El informe de pagos se lanza pulsando el botón de proceso **"Buscar"**. A continuación se muestra un ejemplo del resultado del informe:
+El Informe de pagos y cobros se lanza pulsando el botón de proceso **"Buscar"**. A continuación se muestra un ejemplo del resultado del informe:
 
-![](../../../../../assets/drive/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report/payment-report-2.png)
 
 Algunos campos relevantes a destacar:
 

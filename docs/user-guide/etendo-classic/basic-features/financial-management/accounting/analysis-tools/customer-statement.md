@@ -50,7 +50,7 @@ The Customer Statement provides the following information for each transaction:
 
 ## Header
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-report-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-1.png)
 
 As shown in the image above, the following parameters can be configured:
 
@@ -80,7 +80,7 @@ In the toolbar, you can find the following buttons to generate the report:
 
 An example of the Customer Statement output:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-report-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-2.png)
 
 ---
 

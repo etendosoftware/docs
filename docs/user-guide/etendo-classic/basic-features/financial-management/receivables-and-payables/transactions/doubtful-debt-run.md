@@ -13,7 +13,7 @@ tags:
 
 **Doubtful Debt Run** window is used to define which debts, and in what percentage, are considered doubtful. These Doubtful Debts are shown in the Doubtful Debt Window afterwards.
 
-![Doubtful Debt Run window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/1O6LI7av2TJyYTZyW8aE3gjlakxldIxhy.png)
+![Doubtful Debt Run window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/doubtful-debt-run-1.png)
 
 Some fields to note:
 
@@ -23,7 +23,7 @@ Some fields to note:
 
 **Select Doubtful Debt**. After filling the necessary fields, the "Select Doubtful Debt" button is shown. By clicking it, a new pop-up is shown for selecting the debts that are going to be considered doubtful.
 
-![Select Doubtful Debt](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/14aXYdvA41Jd2AkO4x7yD3wesdB3q0LBG.png)
+![Select Doubtful Debt](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/doubtful-debt-run-2.png)
 
 All the pending debts are shown in this window pre-filtered by the previously set parameters. These filters can be removed by clicking the funnel icon.
 
@@ -43,9 +43,9 @@ Once created, it will be possible to post them or to reactivate them through the
 
 In this tab, the previously selected records are shown. Afterwards, it will be necessary to Process the Doubtful Debt in order for it to be available in the Doubtful Debt Window.
 
-![Doubtful Debt grid](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/1OkWrTJKB0GNeSzk3shtcONfIEuexLMPT.png)
+![Doubtful Debt grid](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/doubtful-debt-run-3.png)
 
-![Doubtful Debt edition](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/1LKCMe9ihePjTcHhheD6mvtYeUls6zzKj.png)
+![Doubtful Debt edition](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run/doubtful-debt-run-4.png)
 
 ---
 

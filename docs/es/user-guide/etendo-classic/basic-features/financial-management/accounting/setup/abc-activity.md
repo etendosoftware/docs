@@ -50,7 +50,7 @@ Mediante esta ventana, es posible:
 
 Esta estructura ayuda a las organizaciones a comprender cómo se distribuyen los costes entre distintas áreas operativas.
 
-![Ventana Actividad (ABC) mostrando los campos para definir actividades por organización](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png)
+![Ventana Actividad (ABC) mostrando los campos para definir actividades por organización](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity1.png)
 
 Algunos campos a tener en cuenta para crear tantas actividades como sea necesario:
 

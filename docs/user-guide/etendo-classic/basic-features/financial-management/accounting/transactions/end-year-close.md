@@ -65,12 +65,12 @@ This article describes the end-year closing process intentionally keeping the or
 
 The company in this example started its activity prior to 2019, therefore a G/L Journal set as **Opening** can be created to record the 2019 opening entry and get it posted to the ledger.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-1.png)
 
 
 To make it simple, the company in this example executed detailed **regular** activities which created the corresponding **regular** journal entries in the general ledger:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-2.png)
 
 Let us imagine that **F&B España** closes the standard periods as soon as each period is over and that is done even for the last standard period which is **December 2019**.
 
@@ -80,7 +80,7 @@ Once 2019 is over and ready to be closed, the company in this example can execut
 
 The process button **Year Close** runs the end-year close process for this sample organization.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-3.png)
 
 ##### Reverse Permanent Account Balances set to **Yes**
 
@@ -91,23 +91,23 @@ Etendo creates **closing entries** detailed below if the **Reverse Permanent Acc
 
 -   Dated on the latest day of the year below **P&L Closing Entry**.  
     This entry resets all **Revenue** and **Expense** account which is posted in the account defined as Income Summary.  
-    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-4.png)
  
 -   Dated on the latest day of the year below **Closing Entry**.
     This entry resets all **Asset**, **Liability** and **Owner's Equity** accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
-    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-5.png)
  
 -   Dated on the day of the following year (01-01-2022) below **Opening Entry**. This entry is the reversal entry of the above closing entry:
-    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-6.png)
     The organization in this example can launch the 2020 Balance Sheet and the 2021 Profit and Loss reports from the Balance Sheet and P&L structure window:
 
 2020 Balance Sheet:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1ttBuhupxE9YYwts1jvL2qSmu9tGwleUx.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-7.png)
 
 2021 Profit and Loss:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-8.png)
 
 
 ##### Reverse Permanent Account Balances set to **No**
@@ -119,10 +119,10 @@ Etendo creates below **closing** entries if the **Reverse Permanent Account Bala
 
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-4.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-9.png)
      
 
 The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the **Reverse Permanent Account Balances set to **Yes** scenario.
@@ -147,7 +147,7 @@ Once done, Etendo informs that the process has been completed successfully.
 
 All the Periods for that Year and that Organization will be permanently Closed. The way to Undo the Close of the Year is the same, but clicking Undo Close Year.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-3.png)
 
 As shown in the image above, the main fields in this window are:
 
@@ -175,7 +175,7 @@ In the **Accounting** Tab of the End Year Close Window, all the Accounting entri
 
 This way, it is easier to review the Accounting entries made in the Closing Year Process.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1SEPkTkQEu25sszL7ZUxhOnI9HK3-d6ON.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-10.png)
 
 As shown in the image above, the main fields in this window are:
 
@@ -194,15 +194,15 @@ Etendo creates below **closing entries** if the **Reverse Permanent Account Bala
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**.  
     This entry resets all **Revenue** and **Expense** accounts.
     
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-11.png)
      
 -   Dated on the latest day of the year (31-12-2019) below **Closing Entry**.  
     This entry resets all **Asset**, **Liability** and **Owner's Equity** accounts.
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-12.png)
      
 -   Dated on the day of the following year (01-01-2020) below **Opening Entry**.  
     This entry is the reversal entry of the above closing entry:
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1lZ1pLSan1bButlXguyX9126egixcQAqu.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-13.png)
      
 
 ##### Reverse Permanent Account Balances set to **No**
@@ -210,10 +210,10 @@ Etendo creates below **closing entries** if the **Reverse Permanent Account Bala
 Etendo creates below **closing** entries if the **Reverse Permanent Account Balances** checkbox of the Organization's general ledger is set to **No**:
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-14.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-15.png)
 
 ---
 

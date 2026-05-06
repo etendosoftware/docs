@@ -7,9 +7,9 @@ tags:
   - Receivables and Payables
 ---
 
-# Ejecución de Pagos
+# Ejecución de Pagos/Cobros
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Ejecución de Pagos`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Ejecución de Pagos/Cobros`
 
 ## Visión General
 
@@ -33,7 +33,7 @@ y otros filtros disponibles como:
 
 Una vez que se pulsa el botón de proceso "**Buscar**", se muestran los pagos a ejecutar.
 
-![Ejecución de Pagos](../../../../../assets/drive/1fX1GLQHOzJHloXOAJSh9X2Y_3SfXqknL.png)
+![Ejecución de Pagos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-execution/payment-execution-1.png)
 
 Una vez que se pulsa el botón de proceso **"Procesar"**, se muestra una nueva ventana para permitir al usuario introducir los parámetros de entrada requeridos, como el número de cheque, por ejemplo si el proceso de ejecución seleccionado en el método de pago utilizado era "Proceso simple de impresión de cheque".
 

@@ -7,20 +7,20 @@ tags:
   - Receivables and Payables
 ---
 
-# Pago de Impuestos
+# Pago del impuesto
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Pago de Impuestos`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Pago del impuesto`
 
 ## Visión General
 
-El proceso "Pago de Impuestos" ayuda a calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella.
+El proceso "Pago del impuesto" ayuda a calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella.
 
 Impuestos como el IVA se liquidan como la diferencia entre:
 
 - el IVA que cobra una organización y pagan sus clientes, es decir, el IVA Repercutido o IVA recaudado en Ventas
 - y el IVA que paga una organización a otras empresas por los suministros que recibe, es decir, el IVA Soportado o IVA pagado en Compras
 
-El proceso de pago de impuestos puede ejecutarse una vez realizada la configuración detallada a continuación:
+El proceso de pago del impuesto puede ejecutarse una vez realizada la configuración detallada a continuación:
 
 - Debe crearse un tercero como Autoridad Tributaria en la ventana de terceros. Este tercero debe configurarse tanto como "Cliente" como "Proveedor", porque a veces la organización tendrá que pagar a la autoridad tributaria y otras veces al contrario.
 - Debe crearse un Concepto Contable y luego vincularse a cada Tipo de Registro de Impuesto. El Concepto Contable se utilizará para contabilizar el pago de impuesto correspondiente en el libro mayor.
@@ -30,9 +30,9 @@ El proceso de pago de impuestos puede ejecutarse una vez realizada la configurac
 
 ## Cabecera
 
-La ventana de pago de impuestos permite al usuario calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella dentro de un período de tiempo determinado. También permite al usuario generar el pago correspondiente hacia/desde la autoridad tributaria.
+La ventana de pago del impuesto permite al usuario calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella dentro de un período de tiempo determinado. También permite al usuario generar el pago correspondiente hacia/desde la autoridad tributaria.
 
-![Cabecera Pago de Impuestos](../../../../../assets/drive/1YLUngAGz6MvriT9nplSWvYYnkY7pMnJt.png)
+![Cabecera Pago del impuesto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/tax-payment-1.png)
 
 Como se muestra en la imagen anterior, los campos a completar son:
 
@@ -50,7 +50,7 @@ Como se muestra en la imagen anterior, los campos a completar son:
 
 El botón **Crear Registros de IVA** ejecuta el proceso de pago de impuestos y consigue que el importe de impuesto de cada "Tipo de Registro de Impuesto" se rellene automáticamente en la pestaña "Cabecera del Registro de Impuesto".
 
-El botón **Procesar** procesa el pago de impuestos e incluye la contabilización de la liquidación de impuestos en un **Libro Diario** accesible desde el campo "**Asiento Contable**" de la ventana Pago de Impuestos.
+El botón **Procesar** procesa el pago de impuestos e incluye la contabilización de la liquidación de impuestos en un **Libro Diario** accesible desde el campo "**Asiento Contable**" de la ventana **Pago del impuesto**.
 
 El botón "**Desprocesar**" deshace el pago de impuestos y elimina el Libro Diario creado.
 
@@ -58,13 +58,13 @@ El botón "**Desprocesar**" deshace el pago de impuestos y elimina el Libro Diar
 
 La pestaña Cabecera del Registro de Impuesto permite al usuario ver el importe de impuesto calculado por cada "Tipo de Registro de Impuesto" configurado.
 
-![Cabecera del Registro de Impuesto](../../../../../assets/drive/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
+![Cabecera del Registro de Impuesto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/tax-payment-2.png)
 
 ## Líneas
 
 La pestaña de líneas es una pestaña de solo lectura que lista todas las transacciones de impuesto relacionadas con los tipos impositivos configurados como parte de un "Tipo de Registro de Impuesto".
 
-![Líneas del Registro de Impuesto](../../../../../assets/drive/1JAQeiows8-fzEHJq0r3TYYD6zWlzRLQ5.png)
+![Líneas del Registro de Impuesto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/tax-payment-3.png)
 
 Algunos campos relevantes a destacar son:
 

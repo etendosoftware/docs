@@ -15,7 +15,7 @@ tags:
 
 By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/create-budget-reports-in-excel/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/create-budget-reports-in-excel/create-budget-reports-in-excel-1.png)
 
 ---
 

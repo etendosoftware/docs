@@ -7,15 +7,15 @@ tags:
   - Receivables and Payables
 ---
 
-# Plan de Pago de Factura de Compra
+# Plan de pago de facturas de compra
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Plan de Pago de Factura de Compra`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Plan de pago de facturas de compra`
 
 ## Visión General
 
-La ventana Plan de Pago de Factura de Compra muestra todos los planes de pago de facturas de compra que no están totalmente pagados.
+La ventana Plan de pago de facturas de compra muestra todos los planes de pago de facturas de compra que no están totalmente pagados.
 
-Esta ventana ofrece otra posibilidad de gestionar la misma información que se encuentra en la pestaña Plan de Pago de la ventana Factura de Compra para una factura determinada.
+Esta ventana ofrece otra posibilidad de gestionar la misma información que se encuentra en la pestaña Plan de pagos de la ventana Factura (Proveedor) para una factura determinada.
 
 La ventaja de esta ventana es que ofrece una vista más inmediata de todos los planes de pago de facturas de compra que aún tienen un importe pendiente de pagar.
 
@@ -25,7 +25,7 @@ La información del plan de pago de la factura de compra se muestra agrupada en 
 
 La sección **Factura** muestra la siguiente información detallada:
 
-- **Factura**. Hay un enlace a la Factura de Compra.
+- **Factura**. Hay un enlace a la Factura (Proveedor).
 - **Nº de Documento**. Es el Número de Documento de la Factura.
 - **Tercero**. Es el Tercero contra quien se emite la Factura.
 - **Fecha de Factura**. Es la fecha de creación de la Factura.
@@ -42,7 +42,7 @@ La sección **Plan de Pago** muestra la siguiente información detallada:
   Esta fecha se usa como "Fecha de Referencia" en algunos Informes, como el Informe de Pagos.
 
 !!! info
-    Este campo es el único que puede modificarse en esta ventana. Si se modifica, ese cambio también se reflejará en la pestaña de plan de pago de la factura de compra correspondiente.
+    Este campo es el único que puede modificarse en esta ventana. Si se modifica, ese cambio también se reflejará en la pestaña Plan de pagos de la factura de compra correspondiente.
 
 - **Días Vencidos**. Es el número de días desde la fecha esperada hasta el día actual.
 

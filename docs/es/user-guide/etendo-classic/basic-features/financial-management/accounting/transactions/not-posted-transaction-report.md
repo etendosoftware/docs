@@ -7,29 +7,29 @@ tags:
   - Accounting Reports
 ---
 
-# Informe de Transacciones No Contabilizadas
+# Documentos no contabilizados
 
-:material-menu: `Application` > `Financial Management` > `Accounting` > `Transactions` > `Not Posted Transaction Report`
+:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Documentos no contabilizados`
 
-## Visión General
+## Descripción general
 
-El Informe de Transacciones No Contabilizadas lista las transacciones y/o documentos en estado **Completo** que no han sido contabilizados todavía.
+El informe Documentos no contabilizados lista las transacciones y/o documentos en estado **Completo** que no han sido contabilizados todavía.
 
 Este informe puede utilizarse para asegurarse de que no hay documentos pendientes de contabilizar:
 
 -   al cerrar un período contable o un ejercicio fiscal, ya que una vez cerrado un período no es posible contabilizar dentro de ese período
 -   al ejecutar informes financieros, ya que las transacciones o documentos no contabilizados no se tendrán en cuenta en los informes financieros
 
-![](../../../../../../assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-transaction-report/not-posted-transaction-report-1.png)
 
 Las transacciones y/o documentos no contabilizados mostrados están divididos por tipo, por ejemplo:
 
--   Asiento de Diario
+-   Asientos manuales
 -   Factura de Proveedor
 -   Factura o factura de cliente
 -   Pago a Proveedor
 -   Transacción Financiera
--   Cobro o pago recibido
+-   Cobros o pago recibido
 -   etc.
 
 y es posible navegar al documento no contabilizado y, por tanto, contabilizarlo haciendo clic en el campo **Fecha** junto al documento o transacción.
