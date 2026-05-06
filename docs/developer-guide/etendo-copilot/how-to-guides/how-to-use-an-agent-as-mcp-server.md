@@ -170,6 +170,18 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
         context.url.copilot.mcp=https://your-external-host:5006
         ```
 
+    !!! warning "Port Exposure Required for Production"
+        Port `5006` is the default Copilot MCP port. In production or remote deployments, this port must be reachable from the client machine.
+
+        Depending on the infrastructure:
+
+        - **Firewall**: open port `5006` for inbound TCP traffic.
+        - **Docker**: add `-p 5006:5006` to the container run command.
+        - **Cloud security group**: add an inbound rule allowing TCP on port `5006`.
+        - **Reverse proxy (Apache/Nginx)**: configure the proxy to forward traffic to Copilot on port `5006`. In this case, the port does not need to be publicly exposed directly.
+
+        The port can be changed via the `copilot.port.mcp` property in `gradle.properties`.
+
     !!! info "Example Configurations" 
 
                 Choose the example that matches the selected **Authentication Type**.
@@ -378,6 +390,12 @@ Etendo Copilot supports two kinds of agents, each with two connection modes. The
 ## Troubleshooting
 
 ### Common Issues
+
+**Port not reachable:**
+
+- The client times out or cannot connect despite a correct configuration.
+- Likely cause: port `5006` is not open on the server.
+- Fix: open the port in the firewall, add a Docker port mapping (`-p 5006:5006`), or configure a reverse proxy to forward traffic to Copilot. See the **Port Exposure Required for Production** note above.
 
 **Connection fails:**
 

@@ -12,7 +12,7 @@ tags:
 
 # Cómo usar un Agente como servidor MCP
 
-## Visión general
+## Descripción general
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -46,8 +46,8 @@ El diálogo de configuración de MCP ahora le permite elegir cómo se autentica 
 | Tipo de autenticación | Cómo funciona | Mejor para |
 |----------------------|--------------|----------|
 | **OAuth 2.1** | Usa una URL MCP limpia y permite que el cliente complete la autenticación mediante un flujo de inicio de sesión en el navegador | Clientes con compatibilidad nativa con OAuth de MCP |
-| **Token in Header** | Envía el token de Etendo en la cabecera HTTP personalizada `etendo-token` | Clientes que admiten cabeceras personalizadas |
-| **Token in URL** | Añade el token como `?token=...` en la URL del endpoint MCP | Clientes que no pueden enviar cabeceras personalizadas |
+| **Token en encabezado** | Envía el token de Etendo en el encabezado HTTP personalizado `etendo-token` | Clientes que admiten encabezados personalizados |
+| **Token en URL** | Añade el token como `?token=...` en la URL del endpoint MCP | Clientes que no pueden enviar encabezados personalizados |
 
 ### Arquitectura del servidor MCP en Etendo Copilot
 
@@ -112,23 +112,23 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
         **OAuth 2.1**
 
-        - Genera una URL MCP limpia sin incrustar el token.
+        - Genera una URL MCP limpia sin insertar el token.
         - El cliente MCP gestiona la autenticación y abre un flujo de inicio de sesión en el navegador cuando es necesario.
         - La interfaz de inicio de sesión solicita primero nombre de usuario y contraseña.
         - Si **Usar organización y rol predeterminados** está activado, la autenticación finaliza inmediatamente después de un inicio de sesión correcto.
         - Si la casilla no está activada, el flujo continúa a una segunda página donde el usuario selecciona la organización y el rol.
         - Recomendado cuando su cliente MCP admite OAuth 2.1 para servidores MCP.
 
-        **Token in Header**
+        **Token en encabezado**
 
-        - Envía el token a través de la cabecera `etendo-token`.
+        - Envía el token a través del encabezado `etendo-token`.
         - Esta es la opción predeterminada.
-        - Recomendado para clientes que admiten cabeceras HTTP personalizadas.
+        - Recomendado para clientes que admiten encabezados HTTP personalizados.
 
-        **Token in URL**
+        **Token en URL**
 
         - Añade el token como `?token=...` en la URL MCP generada.
-        - Útil para clientes que no pueden enviar cabeceras personalizadas.
+        - Útil para clientes que no pueden enviar encabezados personalizados.
         - Úselo solo en entornos de confianza porque el token pasa a formar parte de la URL.
     
     !!! info "Modo de compatibilidad con MCP-remote"
@@ -155,7 +155,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
         Si ve este mensaje: *"The MCP URL begins with `http://localhost`, which only works in development environments"*
         
         - **Qué significa**: el endpoint MCP generado usa `localhost`, por lo que solo los clientes que se ejecuten en la misma máquina pueden conectarse a él.
-        - **Cuándo se notará más**: esta advertencia es especialmente relevante para las configuraciones **Token in Header** y **Token in URL**, porque esos modos generan un endpoint concreto al que el cliente debe llamar directamente.
+        - **Cuándo se notará más**: esta advertencia es especialmente relevante para las configuraciones **Token en encabezado** y **Token en URL**, porque esos modos generan un endpoint concreto al que el cliente debe llamar directamente.
         - **Dónde se configura**: `context.url.copilot.mcp` se lee desde `gradle.properties`, no desde el servidor web ni desde la configuración de Apache.
         - **Qué hace `context.url.copilot.mcp`**: esta propiedad define la URL base pública que Etendo usa al generar fragmentos de configuración MCP y metadatos OAuth.
         - **Orden de resolución**: Etendo usa primero el campo **URL personalizada** del popup si se proporcionó, después `context.url.copilot.mcp` de `gradle.properties` y, por último, recurre a `http://localhost:<copilot.port.mcp>`, donde el puerto MCP predeterminado es `5006`.
@@ -168,6 +168,18 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
         ```properties
         context.url.copilot.mcp=https://your-external-host:5006
         ```
+
+    !!! warning "Exposición del puerto requerida para producción"
+        El puerto `5006` es el puerto MCP predeterminado de Copilot. En entornos de producción o despliegues remotos, este puerto debe ser accesible desde la máquina del cliente.
+
+        Según la infraestructura:
+
+        - **Firewall**: abra el puerto `5006` para tráfico TCP de entrada.
+        - **Docker**: añada `-p 5006:5006` al comando de ejecución del contenedor.
+        - **Grupo de seguridad en la nube**: añada una regla de entrada que permita TCP en el puerto `5006`.
+        - **Proxy inverso (Apache/Nginx)**: configure el proxy para redirigir el tráfico a Copilot en el puerto `5006`. En este caso, el puerto no necesita estar expuesto públicamente de forma directa.
+
+        El puerto puede modificarse mediante la propiedad `copilot.port.mcp` en `gradle.properties`.
 
     !!! info "Configuraciones de ejemplo" 
 
@@ -193,7 +205,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
                 Esta configuración usa una URL limpia. Si el cliente admite OAuth de MCP, abrirá automáticamente el flujo de inicio de sesión en el navegador.
 
-                **Configuración de VS Code con Token in Header**
+                **Configuración de VS Code con Token en encabezado**
 
                 Añada a la configuración de VS Code:
 
@@ -211,7 +223,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
                 }
                 ```
 
-                **Configuración de VS Code con Token in URL**
+                **Configuración de VS Code con Token en URL**
 
                 ```json
                 "mcp": {
@@ -224,7 +236,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
                 }
                 ```
 
-                **Configuración de Gemini CLI con Token in Header**
+                **Configuración de Gemini CLI con Token en encabezado**
 
                 Cree o actualice su configuración de Gemini CLI:
 
@@ -242,7 +254,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
                 }
                 ```
 
-                **Configuración de Gemini CLI con Token in URL**
+                **Configuración de Gemini CLI con Token en URL**
 
                 ```json
                 {
@@ -270,7 +282,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
                 }
                 ```
 
-                **Configuración de Claude Desktop con MCP-remote y Token in Header**
+                **Configuración de Claude Desktop con MCP-remote y Token en encabezado**
 
                 Añada a su configuración de Claude Desktop:
 
@@ -285,7 +297,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
                 }
                 ```
 
-                **Configuración de Claude Desktop con MCP-remote y Token in URL**
+                **Configuración de Claude Desktop con MCP-remote y Token en URL**
 
                 ```json
                 {
@@ -378,6 +390,12 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 
 ### Problemas comunes
 
+**Puerto no accesible:**
+
+- El cliente agota el tiempo de espera o no puede conectarse pese a una configuración correcta.
+- Causa probable: el puerto `5006` no está abierto en el servidor.
+- Solución: abra el puerto en el firewall, añada un mapeo de puertos de Docker (`-p 5006:5006`) o configure un proxy inverso para redirigir el tráfico a Copilot. Consulte la nota **Exposición del puerto requerida para producción** más arriba.
+
 **Falla la conexión:**
 
 - Verifique que el tipo de autenticación seleccionado coincida con las capacidades de su cliente.
@@ -397,7 +415,7 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 - Si esa segunda página no aparece, verifique que el usuario tenga asignaciones válidas de rol y organización en Etendo.
 - Si **Usar organización y rol predeterminados** está activado pero la autenticación aún no continúa, verifique que el usuario tenga configurados un rol y una organización predeterminados válidos.
 
-**El cliente no puede enviar cabeceras:**
+**El cliente no puede enviar encabezados:**
 
 - Use `Token in URL` en lugar de `Token in Header`.
 - Si es necesario, active el **Modo de compatibilidad con MCP-remote** y regenere la configuración.
@@ -412,12 +430,12 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 **Errores de autenticación:**
 
 - Regenere el token SWS mediante `/sws/login` si está usando autenticación basada en token.
-- Compruebe que el formato del token incluya el prefijo `Bearer ` cuando lo envíe en una cabecera.
+- Compruebe que el formato del token incluya el prefijo `Bearer ` cuando lo envíe en un encabezado.
 - Verifique que el usuario tenga acceso al agente seleccionado.
 - Si usa `Token in URL`, confirme que el endpoint generado siga incluyendo el parámetro de consulta `token`.
 
 !!! warning "Nota de seguridad"
-    Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera **OAuth 2.1** o **Token in Header** frente a **Token in URL** siempre que el cliente los admita.
+    Use siempre HTTPS en entornos de producción. Mantenga sus tokens SWS seguros y nunca los exponga en código del lado del cliente o repositorios públicos. Prefiera **OAuth 2.1** o **Token en encabezado** frente a **Token en URL** siempre que el cliente los admita.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
