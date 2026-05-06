@@ -47,7 +47,7 @@ To better understand the configuration of a **Payment Method**, it is necessary 
 
 In the image below, a Simple Payment Workflow is shown:
 
-![](../../../../../assets/drive/1MwU8f0EaeyCjJveISM3RGAnFAfSHfq4N.png)
+![](../../../../../../assets/drive/1MwU8f0EaeyCjJveISM3RGAnFAfSHfq4N.png)
 
 
 The way to create each payment stage in Etendo is described below:
@@ -111,7 +111,7 @@ In the following explanation and diagram below, the different Payment Statuses a
 -   **Deposited/Withdrawn not Cleared:** This status appears when the Receipt/Payment has been added to the Financial Account screen, therefore the corresponding Deposit/Withdrawal transaction has been created in the Financial Account.
 -   **Payment Cleared:** This status appears when the Deposit/Withdrawal reconciliation has been executed.
 
-![](../../../../../assets/drive/1Ol1gtQAffG_S_bYKW6zAKbUK-Ez2qNRX.png)
+![](../../../../../../assets/drive/1Ol1gtQAffG_S_bYKW6zAKbUK-Ez2qNRX.png)
 
 
 In more detail, the way those payment status change within the payables and receivables payment cycle is:
@@ -136,7 +136,7 @@ The image below shows the Payment Method window. That is the window where paymen
 
 However, payment methods are assigned to financial accounts, therefore, a different configuration of a given payment method can also be defined in the payment method tab of the financial account window.
 
-![](../../../../../assets/drive/10h0Lmw3yZ6rITkSq7q4nijmHlH_6jg5-.png)
+![](../../../../../../assets/drive/10h0Lmw3yZ6rITkSq7q4nijmHlH_6jg5-.png)
 
 As a consequence, the same method of payment can have different configuration "versions" depending on the financial account it has been assigned to.
 
@@ -238,7 +238,7 @@ Payment Methods can be configured as explained below in detail:
 One of the key features allowed by the payment method configuration is to get that two of the three payment cycle stages can be automated:
 
 
-![](../../../../../assets/drive/1V8vW4qdKyJxH9BGNX5xWZaRmXNJvbSkr.png)
+![](../../../../../../assets/drive/1V8vW4qdKyJxH9BGNX5xWZaRmXNJvbSkr.png)
 
 
 As shown in the image above, if the **Automatic Receipt/Payment and Automatic Deposit/Withdrawn are selected**, the manual actions to execute are:
@@ -270,7 +270,7 @@ Analogue situation happens while making a payment to a vendor:
 -   Step 2 - the "Withdrawal" of the payment from the Financial Account
 -   Step 3 - and finally the "Reconciliation" of the Withdrawal once the bank statement has been received.
 
-![](../../../../../assets/drive/1dugshR9aHhF3ahlQd03ILe6xTAPKVg0a.png)
+![](../../../../../../assets/drive/1dugshR9aHhF3ahlQd03ILe6xTAPKVg0a.png)
 
 For each step, it is possible to specify the default account for the receivables and payables cycles independently.
 

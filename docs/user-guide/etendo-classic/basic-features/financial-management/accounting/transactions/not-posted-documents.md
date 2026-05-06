@@ -72,7 +72,7 @@ Once the fields are used to search for not posted documents, the user can massiv
 As you can see, this development greatly facilitates the management of documents to be posted, allowing users not only to identify them quickly, but also to post them in a massive and organized manner directly from a single interface.
 
 !!! info
-    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../optional-features/bundles/financial-extensions/bulk-posting.md).
+    For more information about the Bulk posting functionality, visit [the Bulk Posting user guide](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Grid filtering
 

@@ -23,7 +23,7 @@ It is possible to check the status and result of the payment run as well as the 
 
 The execution date and the execution status of each payment run is shown in this window among other relevant data such as the source of the execution.
 
-![](../../../../../assets/drive/1-_lia6e8AfC9M7ON-PzhrWoRitQW9sSs.png)
+![](../../../../../../assets/drive/1-_lia6e8AfC9M7ON-PzhrWoRitQW9sSs.png)
 
 The Payment Run window only shows the payments received or made which required an additional execution step, therefore an Automatic Execution Type is configured for the payment method used while making/receiving those payments.
 
@@ -52,7 +52,7 @@ There are three "Status" available:
 
 The payment tab lists the payments executed in a payment run.
 
-![](../../../../../assets/drive/1porA4UfbmvSes9QKVmxrwr6b8zRav5vK.png)
+![](../../../../../../assets/drive/1porA4UfbmvSes9QKVmxrwr6b8zRav5vK.png)
 
 ## Parameters
 
@@ -62,7 +62,7 @@ An Execution Process can have a set of parameters defined.
 
 For instance, the "Print Check simple process" execution process delivered by Etendo only requires the check number upon execution of the payment.
 
-![](../../../../../assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
+![](../../../../../../assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
 
 ---
 

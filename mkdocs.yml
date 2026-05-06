@@ -209,8 +209,25 @@ plugins:
                   - Financial Management:
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
                     - Receivables and Payables:
-                      - Transactions: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md
-                      - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md
+                      - Transactions:
+                        - Purchase Invoice Payment Plan: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/purchase-invoice-payment-plan.md
+                        - Payment Out: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out.md
+                        - Payment Proposal: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-proposal.md
+                        - Sales Invoice Payment Plan: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/sales-invoice-payment-plan.md
+                        - Payment In: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md
+                        - Financial Account: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account.md
+                        - Payment Execution: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-execution.md
+                        - Business Partner Settlement: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/business-partner-settlement.md
+                        - Tax Payment: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment.md
+                        - Remittance: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance.md
+                        - Doubtful Debt: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt.md
+                        - Doubtful Debt Run: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt-run.md
+                      - Analysis Tools:
+                        - Cashflow Forecast Report: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/cashflow-forecast-report.md
+                        - Receivables Aging Schedule: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule.md
+                        - Payables Aging Schedule: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule.md
+                        - Payment Report: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md
+                        - Payment Run: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-run.md
                       - Setup:
                         - Tax Register Type: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type.md
                         - Payment Method: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/payment-method.md
@@ -220,8 +237,30 @@ plugins:
                         - Remittance Type: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type.md
                         - Doubtful Debt Method: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/doubtful-debt-method.md
                     - Accounting:
-                      - Transactions: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md
-                      - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md
+                      - Transactions:
+                        - Simple G/L Journal: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal.md
+                        - G/L Journal: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal.md
+                        - End Year Close: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close.md
+                        - Financial Type Configuration: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration.md
+                        - G/L Posting by DB Tables: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables.md
+                        - Budget: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget.md
+                        - Create Budget Reports in Excel: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/create-budget-reports-in-excel.md
+                        - Not Posted Transaction Report: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-transaction-report.md
+                        - VAT Regularization: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization.md
+                        - Not Posted Documents: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.md
+                        - Reset Accounting: user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/reset-accounting.md
+                      - Analysis Tools:
+                        - Accounting Transaction Details: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/accounting-transaction-details.md
+                        - Balance Sheet and P&L Structure: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure.md
+                        - Balance Sheet and P&L Structure Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md
+                        - Trial Balance: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance.md
+                        - General Ledger Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report.md
+                        - General Ledger Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced.md
+                        - Journal Entries Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report.md
+                        - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
+                        - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
+                        - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
+                        - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
                       - Setup:
                         - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
                         - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
@@ -242,7 +281,11 @@ plugins:
                         - ABC Activity: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/abc-activity.md
                         - Accounting Templates: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates.md
                         - Balance Sheet and P/L Structure Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup.md
-                    - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
+                    - Assets:
+                      - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/assets.md
+                      - Asset Group: user-guide/etendo-classic/basic-features/financial-management/assets/asset-group.md
+                      - Amortization: user-guide/etendo-classic/basic-features/financial-management/assets/amortization.md
+                      - Asset Amortization Report (Excel): user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report.md
                 - Optional Features:
                   - Bundles:
                     - Essentials Extensions Bundle: 
@@ -657,6 +700,7 @@ plugins:
             Accounting Process: Proceso Contable
             Accounting Template Module: Módulo de Plantillas de Contabilidad
             Accounting Templates: Plantillas de Contabilidad
+            Accounting Transaction Details: Datos de contabilidad
             Adjust Invoice Tax: Ajustar Impuesto de Factura
             Advanced Bank Account Management: Gestión Avanzada de Cuentas Bancarias
             Advanced Business Partner: Tercero Avanzado
@@ -667,14 +711,20 @@ plugins:
             API Changes: Cambios de API
             Application: Aplicación
             Application Menu: Menú de Aplicación
+            Amortization: Amortización
+            Asset Amortization Report (Excel): Informe de Activos - Amortización
+            Asset Group: Categoría de Activos
             Assets: Activos
             Attachments: Adjuntos
             Attachments Configuration: Configuración de Adjuntos
             Audit Trail: Histórico de auditoría
             Authentication: Autenticación
             Automated Remittance: Remesa Automatizada
+            Balance Sheet and P&L Structure: Cuadros plan general contable
+            Balance Sheet and P&L Structure Advanced: Cuadros plan general contable avanzado
             Balance Sheet and P/L Structure Setup: Configuración de Estructura de Balance y P/G
             Basic Features: Funcionalidades Básicas
+            Budget: Presupuesto
             Bulk Completion: Completado Masivo
             Bulk Posting: Contabilización Masiva
             Bundles: Paquetes
@@ -682,7 +732,11 @@ plugins:
             Business Partner Setup: Configuración de terceros
             Business Partner Tax Category: Categoría de Impuestos de Terceros
             Client: Entidad
+            Cashflow Forecast Report: Informe de previsión de tesorería
+            Create Budget Reports in Excel: Generador excel de presupuestos
+            Create Tax Report: Creación de informes de impuestos
             CRM Lead Management: Gestión de Leads CRM
+            Customer Statement: Extracto de cuenta de Cliente
             Client Side Development and API: Desarrollo del Lado del Cliente y API
             Cluster Development Guidelines: Directrices de Desarrollo en Clúster
             Code Review Process: Proceso de Revisión de Código
@@ -716,21 +770,30 @@ plugins:
             Dockerized Tomcat Service: Servicio Tomcat en Docker
             Document Sequence: Secuencia de documento (numeración)
             Document Type: Tipo de documento
+            Doubtful Debt: Dudoso cobro
+            Doubtful Debt Run: Procesado del dudoso cobro
             Dynamic App: Aplicación Dinámica
             Dynamic Expressions: Expresiones Dinámicas
             Edge Server: Servidor Edge
             Element and Synchronize Terminology: Elemento y Sincronización de Terminología
+            End Year Close: Cierre de año
             Enterprise Model: Organización
             Enterprise Module Management: Gestión del módulo de Empresa
             Etendo BI Inclusion/Exclusion Module Configuration: Configuración del Módulo de Inclusión/Exclusión de Etendo BI
             Etendo Release Cycle: Ciclo de Lanzamientos de Etendo
+            Financial Account: Cuenta Financiera
             Financial Management: Gestión Financiera
             Financial Type: Tipo Financiero
+            Financial Type Configuration: Configuración de tipo de financiación
             Fiscal Calendar: Calendario anual y periodos
             Format xml: Formato xml
             General Ledger Configuration: Esquema contable
             General Setup: Configuración General
             Getting Started: Primeros Pasos
+            G/L Journal: Asientos manuales
+            G/L Posting by DB Tables: Proceso contable
+            General Ledger Report: Libro mayor
+            General Ledger Report Advanced: Libro mayor avanzado
             GL Category: Categoría Contable
             GL Item: Concepto contable
             Grid and Forms: Grillas y Formularios
@@ -885,6 +948,8 @@ plugins:
             ISO image: Imagen ISO
             Java Coding Conventions: Convenciones de Código Java
             JavaScript Coding Conventions: Convenciones de Código JavaScript
+            Journal Entries Report: Diario asientos
+            Journal Entries Report Advanced: Diario asientos avanzado
             JSON REST Web Services: Servicios Web JSON REST
             Known Issues: Problemas Conocidos
             Live Builds: Live Builds
@@ -902,6 +967,8 @@ plugins:
             Multi-Client and Multi-Org: Multi-Entidad y Multi-Organización
             Naming Guideliness for Modules: Directrices de Nomenclatura para Módulos
             Navigation: Navegación
+            Not Posted Documents: Documentos no contabilizados
+            Not Posted Transaction Report: Informe de documentos no contabilizados
             New UI: Nueva Interfaz
             Open/Close Period Control: Abrir/Cerrar periodos
             Optional Features: Funcionalidades Opcionales
@@ -909,6 +976,13 @@ plugins:
             Organization Type: Tipo de Organización
             Overview: Visión General
             Packing: Empaquetado
+            Payables Aging Schedule: Listado de saldos a pagar por antigüedad
+            Payment Execution: Ejecución de Pagos
+            Payment In: Cobro
+            Payment Out: Pago
+            Payment Proposal: Propuesta de pago
+            Payment Report: Efectos
+            Payment Run: Ejecución de Pagos
             Period Control Log: Abrir/Cerrar Periodos
             Picking List: Lista de Preparación
             Plugins: Plugins
@@ -927,14 +1001,20 @@ plugins:
             Production Management: Gestión de Producción
             Project and Service Management: Gestión de Proyectos y Servicios
             Projections and Mappings: Proyecciones y Mapeos
+            Purchase Invoice Payment Plan: Plan de pago de facturas de compra
             Purchase Invoice Validation: Validación de Factura de Compra
+            Receivables Aging Schedule: Listado de saldos a cobrar por antigüedad
             Receivables and Payables: Gestión de Cobros y Pagos
+            Remittance: Remesa
+            Reset Accounting: Reinicializar cuentas
             Release Notes: Notas de la Versión
             Requirements: Requisitos
             Resolving Dependencies on GitHub: Resolver Dependencias en GitHub
             Role: Rol
             Role Access: Rol permisos
+            Sales Invoice Payment Plan: Plan de pago de facturas de venta
             Sales Management: Gestión de Ventas
+            Simple G/L Journal: Asientos manuales simplificados
             Security: Seguridad
             Security Model: Modelo de Seguridad
             Selectors: Selectores
@@ -950,6 +1030,9 @@ plugins:
             Task: Tarea
             Task Management for Supervisors: Gestión de Tareas para Supervisores
             Tax Category: Categoría de Impuesto
+            Tax Payment: Pago de impuestos
+            Tax Report Setup: Informes de impuestos
+            Trial Balance: Balance sumas y saldos
             Tax Rate: Rango impuesto
             Tax Report Launcher: Lanzador de Informes Fiscales
             Tools: Herramientas
@@ -964,6 +1047,7 @@ plugins:
             User Guide: Guía del Usuario
             User interface: Interfaz de Usuario
             User Interface Improvements: Mejoras de Interfaz de Usuario
+            VAT Regularization: Regularización del IVA
             Warehouse Management: Gestión de Almacén
             "What's New": "Novedades"
             Window Personalization: Personalización de Ventana

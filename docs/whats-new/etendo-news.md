@@ -62,7 +62,7 @@ tags:
 
     - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
     - **Purchase Invoice automation**: automated workflows now create the corresponding financial transaction when a purchase invoice is processed, eliminating manual steps.
-    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed an error that prevented adding details in the Payment In window.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md) / Add Details**: fixed an error that prevented adding details in the Payment In window.
     - **Navigation between windows**: a new redirection system within grids improves cross-window navigation.
     - **Color support**: custom color configurations are now available system-wide in the interface.
 

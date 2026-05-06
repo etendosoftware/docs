@@ -39,7 +39,7 @@ The creation of the deposit transaction in the financial account can be done:
 
 The Payment In window allows the user to record and manage customer's payments received against different types of documents issued by the organization, such as orders and invoices. This window also allows the user to manage the customer's payments already recorded in the sales invoice window, in the same way as the G/L item payments received in a G/L Journal.
 
-![](../../../../../../assets/drive/1fpeZSZHjXcKDr4wXaXJWREQHqKdD_B1c.png)
+![](../../../../../../../assets/drive/1fpeZSZHjXcKDr4wXaXJWREQHqKdD_B1c.png)
 
 There are just a few mandatory fields to fill in while recording a payment in this window:
 
@@ -61,10 +61,10 @@ Other relevant fields to note are:
 
 The **Add Details** button opens the **Add Payment** window, where the documents being paid can be selected.
 
-![](../../../../../../assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
+![](../../../../../../../assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
 
 !!! info
-    The "Add Payment" window is already explained in the [Sales Invoice Payment article](../../sales-management/transactions.md#payment).
+    The "Add Payment" window is already explained in the [Sales Invoice Payment article](../../../sales-management/transactions.md#payment).
 
 ### Payment of several document types from different customers
 
@@ -75,7 +75,7 @@ If no customer has been selected in the field "Received From", it is possible to
 
 The **Actual Payment** amount entered is automatically spread among the pending debts (invoices or orders pending to be paid). It is possible to avoid this automatic distribution by setting the Preference _Add Payment: Automatically distribute amounts_ to 'N'
 
-![](../../../../../../assets/drive/1mt_1DYKUPLmroqfwaT8dTs-QjPhH8wQp.png)
+![](../../../../../../../assets/drive/1mt_1DYKUPLmroqfwaT8dTs-QjPhH8wQp.png)
 
 The user can check or uncheck the transactions as required, and can also modify the amounts shown in the "Amount" field.
 
@@ -163,7 +163,7 @@ It is not possible to generate credit on a payment which is not related to a sin
 
 The creation of a credit payment requires not to select any document to pay in the "Add Payment" window which is shown after pressing the process button "Add Details", but to leave the amount to be used later.
 
-![](../../../../../../assets/drive/1SK4SF6ntwYbSpP5JZMwZNObD5ceJ1I1q.png)
+![](../../../../../../../assets/drive/1SK4SF6ntwYbSpP5JZMwZNObD5ceJ1I1q.png)
 
 A credit payment is going to be available for the customer after processing a payment as above.
 
@@ -173,7 +173,7 @@ Later on, the available credit generated for that customer can be used for furth
 
 - in the "Add Payment" window, once a new payment is created for that customer in the payment in window by just selecting a line and setting the amount in **credit to use grid.**
 
-![](../../../../../../assets/drive/15yfpM_16EYf7RNcNfI5IJTHrg8Xd-1lx.png)
+![](../../../../../../../assets/drive/15yfpM_16EYf7RNcNfI5IJTHrg8Xd-1lx.png)
 
 - or in the "Select Credit Payments" window which is automatically shown upon completion of a new customer's invoice.
 
@@ -217,7 +217,7 @@ If the checkbox "Deferred" is not selected, the additional step is still require
 
 The Execution History tab is a read-only tab which shows information about the execution of the payment such as the execution date, obviously once the payment has been executed.
 
-![](../../../../../../assets/drive/1iYYhQ7YfTWNOlhN5amCRAUoKV297gvq7.png)
+![](../../../../../../../assets/drive/1iYYhQ7YfTWNOlhN5amCRAUoKV297gvq7.png)
 
 ### Exchange rates
 
@@ -231,7 +231,7 @@ The creation of a "Credit" payment is already explained in the Credit Payments s
 
 This read-only tab shows the credit payment used to pay a customer's document (order, invoice or G/L item) payment.
 
-![](../../../../../../assets/drive/1OazvwkBhV5J6jSKEJwYlyyK5PfyYrnQr.png)
+![](../../../../../../../assets/drive/1OazvwkBhV5J6jSKEJwYlyyK5PfyYrnQr.png)
 
 ## Payment Removal
 
@@ -252,7 +252,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic5.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic5.png)
 
 ## Bulk Posting
 
@@ -264,7 +264,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    For more information, visit [the Bulk Posting module user guide](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Advanced Business Partner Settlement
 
@@ -273,24 +273,24 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 From the **Payment In** window, it is possible to create a settlement by clicking on the **Add Details** button. In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. First, set the **Actual Payment amount** to be paid and then, select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
-![](../../../../../../assets/drive/14Hd8Odyebc7szAzDDE-i6QimctGQGmAZ.png)
+![](../../../../../../../assets/drive/14Hd8Odyebc7szAzDDE-i6QimctGQGmAZ.png)
 
 From the **Invoice From Compensation tab**, select the purchase invoice/s that will be used to pay and set the needed amount from the invoice/s to be netted.
 
 Below that, in the **Totals** tab, Etendo shows the total reference amounts to be netted.
 
-![](../../../../../../assets/drive/18JZjM6yNh6hBTBbFDk-130_eYzTmI2As.png)
+![](../../../../../../../assets/drive/18JZjM6yNh6hBTBbFDk-130_eYzTmI2As.png)
 
 After clicking the button Done, the system nets the invoices and credits for the corresponding business partner and creates a settlement record.
 
-![](../../../../../../assets/drive/1f8SDqKDjiTO59I2Hxzlb3XosxMHDsQFQ.png)
+![](../../../../../../../assets/drive/1f8SDqKDjiTO59I2Hxzlb3XosxMHDsQFQ.png)
 
 The settlement record is registered in the **Business Partner Settlement** window where the lines for the invoice/s (sales and purchase) used to net will be shown.
 
-![](../../../../../../assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
+![](../../../../../../../assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
 
 !!! info
-    For more information, visit the [Business Partner Settlement Module - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    For more information, visit the [Business Partner Settlement Module - User Guide](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
 ## Advanced Bank Account Management
 
@@ -300,7 +300,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 This module includes the Bank account column to the Add details pop-up window to be able to filter possible payments by bank account.
 
 !!! info
-    For more information, visit the [Advanced Bank Account Management user guide](../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
+    For more information, visit the [Advanced Bank Account Management user guide](../../../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
 
 ---
 

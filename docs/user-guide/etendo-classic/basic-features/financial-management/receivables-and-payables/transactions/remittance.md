@@ -30,25 +30,25 @@ To be able to use this functionality, it is necessary to configure some aspects 
 
     For this, go to the *Enterprise Module Management* window and select the corresponding dataset as shown below.
 
-    ![emm.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/enterprise-module-management.png)
+    ![emm.png](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/enterprise-module-management.png)
 
     !!! info
-        For more information, visit [Enterprise Module Management](../../general-setup/enterprise-model/enterprise-module-management.md).
+        For more information, visit [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md).
 
 - Remittance Type: It is necessary to define a remittance type with a certain payment method in the *Remittance Type* window.
 
     !!! info
-        For more information, visit [Remittance Type window](../../financial-management/receivables-and-payables/setup/remittance-type.md).
+        For more information, visit [Remittance Type window](../setup/remittance-type.md).
 
 - Business Partner default bank account: For each business partner, it is possible to   define a bank account that is selected by default each time creating a remittance is necessary.
 
     !!! info
-        To read more, visit [Bank Account](../../master-data-management/master-data.md#remittance) in the Business Partner section.
+        To read more, visit [Bank Account](../../../master-data-management/master-data.md#remittance) in the Business Partner section.
 
 
 ## Remittance window
 
-![Remittance window](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png)
+![Remittance window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance-window.png)
 
 
 As shown in the image above, it is necessary to fill in the fields in the window and different buttons appear so as to continue with the process.
@@ -65,14 +65,14 @@ Using this button, the user is able to select a payment to be included in the re
 Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. 
 
 !!! info
-    If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+    If the Automated Remittance module in the Financial Extensions Bundle is installed, this process includes the date setting and the settlement of the remittance.  For more information, visit [the Automated Remittance user guide](../../../../optional-features/bundles/financial-extensions/automated-remittance.md).
    
 
 **Select Invoices and Orders**
 
 In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
 
-![filter.png](../../../../../assets/legacy/filter.png)
+![filter.png](../../../../../../assets/legacy/filter.png)
 
 **Protest Remittance**
 
@@ -82,7 +82,7 @@ In the Remittance window, the *select invoices and orders* button is shown. With
 The Protest Remittance button allows the automatic protest of remittances. This function facilitates the management of protests and the re-settlement of future remittances.
 
 !!! info
-    For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+    For more information, visit [the Automated Remittance user guide](../../../../optional-features/bundles/financial-extensions/automated-remittance.md).
 
 ## Types of Remittances
 
@@ -103,26 +103,26 @@ There are two types of remittances:
 
     1. Add a new remittance to the Remittance window and select "printable Remittance" as remittance type since it indicates it is a non-discount remittance.
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va.png)
 
     2. By clicking the "Select Invoices and Orders" button, the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
         By checking this checkbox, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va2.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va2.png)
 
         So the system inserts the selected lines:
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va3.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va3.png)
 
     3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
 
         !!! warning
             When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
 
-        ![error.png](../../../../../assets/legacy/error.png)
+        ![error.png](../../../../../../assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](../../procurement-management/transactions.md#remittance_1) and [sales](../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../procurement-management/transactions.md#remittance) and [sales](../../sales-management/transactions.md#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](../../../procurement-management/transactions.md#remittance_1) and [sales](../../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../../procurement-management/transactions.md#remittance) and [sales](../../../sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:
@@ -136,18 +136,18 @@ There are two types of remittances:
         - Group by order and due date: generates a payment for each order and due date.
 
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va7.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va7.png)
 
     **Example**
 
     As an example, let us create the payment by selecting the Group by business partner option.  
     When processing, the 3 payments have been created for the 3 lines included in the remittance due to the fact that all of them correspond to the same business partner.
 
-    ![](../../../../../assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
+    ![](../../../../../../assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
 
     When navigating to the payment, it can be observed that the status of the payments created is "Remitted".
 
-    ![](../../../../../assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
+    ![](../../../../../../assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
 
     When the remittance is posted, an accounting entry is obtained, according to the accounts defined.
 
@@ -158,11 +158,11 @@ There are two types of remittances:
     !!! info
         The selected date is the posting date of the created document.
 
-    ![](../../../../../assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
+    ![](../../../../../../assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
 
     By settling the first line, it is observed that the line has been added to the settled tab of the corresponding remittance.
 
-    ![](../../../../../assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
+    ![](../../../../../../assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
 
     Once the remittance is posted, the accounting entry is obtained according to the indicated configuration. The posting should be line by line of the settled transactions.
     The returned remittance lines will appear in the returned tab.
@@ -176,7 +176,7 @@ There are two types of remittances:
 
     If one of the payments has been returned, the status of the document is set to "Awaiting Execution".
 
-    ![](../../../../../assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
+    ![](../../../../../../assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
 
     !!! info
         It is possible to print the Non-discount remittances as well as the Remittances for Discount from the printer in the toolbar.
@@ -186,13 +186,13 @@ There are two types of remittances:
     !!! info
         After the settlement, the system has automatically transferred these payments to the financial account indicated in the payments.
 
-    ![](../../../../../assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
+    ![](../../../../../../assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
 
     ##### Reconcile Payments
 
     The Reconcile Payments option in any remittance process refers to the action of comparing and adjusting financial records to ensure that payments are accurately and properly recorded. By using the *reconcile* button in the *financial account* window, it is possible to access the window shown below.
 
-    ![](../../../../../assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
+    ![](../../../../../../assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
 
 === "Remittance for Discount"
 
@@ -200,26 +200,26 @@ There are two types of remittances:
 
     1. Create a remittance from the Remittances window. Select as type of remittance "Remittances for Discount". Once the header has been   created, add the lines, either invoices, orders or payments, that are to be included in this remittance.
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va4.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va4.png)
 
     2. By clicking "Select Invoices and Orders" the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
         By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va5.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va5.png)
 
         The system inserts the selected lines:
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va6.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va6.png)
 
     3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
 
         !!! warning
             When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
 
-        ![error.png](../../../../../assets/legacy/error.png)
+        ![error.png](../../../../../../assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](../../procurement-management/transactions.md#remittance_1) and [sales](../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../procurement-management/transactions.md#remittance) and [sales](../../sales-management/transactions.md#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](../../../procurement-management/transactions.md#remittance_1) and [sales](../../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../../procurement-management/transactions.md#remittance) and [sales](../../../sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:
@@ -233,13 +233,13 @@ There are two types of remittances:
 
         In this case, it is recommended to select the option "No grouping", since as many payments as operations of the remittance will be generated and a payment sum of all the operations which is the one that the bank will advance. The rest of the payments will be settled as known.
 
-        ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va7.png)
+        ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/new-va7.png)
 
     5. The next step is to take to the bank the sum payment of the remittance transactions, as in these cases the bank advances the money. From the financial account window, add the payment to the transaction and reconcile it with the bank statement.
-      ![](../../../../../assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
+      ![](../../../../../../assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
 
     6. Finally, settle the executed payments and/or return the necessary ones.
-      ![](../../../../../assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
+      ![](../../../../../../assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
       The status of the settled collections changed to Settled in Remittance and the status of the total payments of the remittance operations changed to Payment cleared.
 
 ---

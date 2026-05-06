@@ -122,7 +122,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    For more information, visit [the Bulk Posting module user guide](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ---
 

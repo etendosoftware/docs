@@ -26,7 +26,7 @@ Payment obligations and amounts due from customers are created in the Purchase a
 
 The Financial Account window contains essential information such as the bank account number and allows the user to perform a set of processes such as to add deposit or withdrawal transactions to the financial account or to import and match a bank statement file.
 
-![Account](../../../../../assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
+![Account](../../../../../../assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
 
 The **essential financial account information** to be filled in the top section of the financial account window is:
 
@@ -84,7 +84,7 @@ The payments shown for selection are the ones having a payment status equal to "
 
 By default, the payments shown are the ones originally defined for this financial account. However, the user can remove this filter to show and select payments from other financial accounts.
 
-![Add multiple payments](../../../../../assets/drive/1WDuGJ8r3aCcAzVGC1bFj1pc87CkaEJxG.png)
+![Add multiple payments](../../../../../../assets/drive/1WDuGJ8r3aCcAzVGC1bFj1pc87CkaEJxG.png)
 
 Only actions to take are entering a "Transaction Date" and selecting as many payments as required at once.
 
@@ -116,7 +116,7 @@ You can either enter the ending balance or what the statement says and then sele
 !!! info
     It is possible to create a "G/L item" transaction in case there are some minor differences between what the statements say and the recorded transactions pending to be reconciled.
 
-![Reconciliation window](../../../../../assets/drive/1N1L6_XETrXBZnbUB3YwVD_RJvVmd0G6V.png)
+![Reconciliation window](../../../../../../assets/drive/1N1L6_XETrXBZnbUB3YwVD_RJvVmd0G6V.png)
 
 The "**Save**" process button saves a "**Draft**" of the reconciliation in the Reconciliations tab of the financial account and marks the transaction/s selected as "Cleared" as also "Cleared" in the financial account, transaction tab.
 
@@ -151,7 +151,7 @@ Depending on the module installed for this purpose, it will be possible to impor
 
 The "Import Statement" process button opens the "Import Bank File" window.
 
-![Import Statement](../../../../../assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
+![Import Statement](../../../../../../assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
 
 
 This window allows to:
@@ -163,11 +163,11 @@ This window allows to:
 
 Once a bank statement file has been imported, the button "Match Statement" opens a new window where the imported bank statement lines and the existing financial transactions are displayed. By default, there is an implicit filter which hides the bank statement lines that are already matched.
 
-![Match Statement](../../../../../assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
+![Match Statement](../../../../../../assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
 
 Before opening the window, a pop up is shown, asking whether the algorithm should run against unmatched bank statement lines or not. If so, the algorithm will try to find a match for all the unmatched bank statement lines. If not, the matching window will open and the user should do the matches manually.
 
-![Example 2](../../../../../assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
+![Example 2](../../../../../../assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
 
 This window has two column groups divided by the Match column.
 
@@ -199,23 +199,23 @@ All the criteria above can be selected, or just some of them.
 
 Let us take for instance the starting situation shown below where there are three bank statement lines which do not match:
 
-![Example 3](../../../../../assets/drive/1K31lmmG2WiS1k6bunMTXgghMHLw9Chw3.png)
+![Example 3](../../../../../../assets/drive/1K31lmmG2WiS1k6bunMTXgghMHLw9Chw3.png)
 
 - the "magnifying glass" icon helps to search transactions to match as it opens a new window which shows the financial account transactions registered the same day as the bank statement line or before. Several transactions can be selected at the same time to match with a single bank statement line. In that case, the system automatically splits the original bank statement line as many times as transactions are selected.
 
-![Example 4](../../../../../assets/drive/1OL1GtOSH905zxVc9UjliNCM3UztnFK84.png)
+![Example 4](../../../../../../assets/drive/1OL1GtOSH905zxVc9UjliNCM3UztnFK84.png)
 
 Back to our example, there is no transaction which matches the second transaction of the bank statement file (the one with an amount equal to 1.500,00). If there was a match, it could be selected by using as well the "magnifying glass" icon.
 
 - the "+" icon helps to add transactions to the financial account (and even create a payment to deposit or withdraw from the financial account) as it opens the "Add Transaction" window.
 
-![Example 5](../../../../../assets/drive/1MhRo1pZgSopD5v9S3avUHPR5HUWW_XdZ.png)
+![Example 5](../../../../../../assets/drive/1MhRo1pZgSopD5v9S3avUHPR5HUWW_XdZ.png)
 
 The image above shows that there was a "Received In" transaction pending to be created in the financial account. Once created it is matched.
 
 Back to our example the current situation is shown in the image below:
 
-![Example 6](../../../../../assets/drive/1YjafVYkcIa5yMvLoNCt5jBMZbdyqUsFo.png)
+![Example 6](../../../../../../assets/drive/1YjafVYkcIa5yMvLoNCt5jBMZbdyqUsFo.png)
 
 There is only one transaction pending to be matched. The "magnifying glass" icon helps again to search for transactions to match.
 
@@ -224,7 +224,7 @@ If a transaction that almost matches is selected, Etendo shows a message which i
 !!! info
     This last option will require to log out and log in.
 
-![Example 7](../../../../../assets/drive/1U0DAE2Ad9SLeZF4HRRf6o_PkA8FPIk-w.png)
+![Example 7](../../../../../../assets/drive/1U0DAE2Ad9SLeZF4HRRf6o_PkA8FPIk-w.png)
 
 This action matches the bank statement line and creates a new line pending to be matched for the difference.
 
@@ -241,7 +241,7 @@ This should not be the standard procedure, as there should be an exercise of rev
 
 The Funds Transfer functionality in the Financial Account window enables the movement of money between two different financial accounts within an organization. This action is typically used for internal transfers, such as moving funds from a bank account to a petty cash account, or between different currency accounts.
 
-![Funds transfer](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
+![Funds transfer](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/funds-transfer.png)
 
 Fields to note:
 
@@ -254,7 +254,7 @@ Fields to note:
 - **Multiple Rate By**: The conversion rate from one currency to another:
     - It is null by default
     - It is shown just when currencies are different
-    - In case the user leaves this value as null the system uses the [conversion rate](../../general-setup/application/conversion-rates.md) configured in the system for that date. If there is nothing defined then an error is shown.
+    - In case the user leaves this value as null the system uses the [conversion rate](../../../general-setup/application/conversion-rates.md) configured in the system for that date. If there is nothing defined then an error is shown.
 - **Bank fee**: The fee charged by the bank from/to where the transaction originated/was received. Not marked by default. When checked, two more fields are shown:
     - Bank fee from: To enter the corresponding fee amount.
     - Bank fee to: To enter the corresponding fee amount.
@@ -280,7 +280,7 @@ Those two transaction types can be created in three ways:
 
 - or **manually**, by creating a new record in the transaction tab of the financial account window.
 
-![Transaction tab](../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
+![Transaction tab](../../../../../../assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
 
 - Fields to note in the transaction tab:
     - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
@@ -299,17 +299,17 @@ Those two transaction types can be created in three ways:
     - **Foreign Currency**: Only shown in grid view. This column is populated if the payment was received or made in a currency different from the financial account currency.
 
         !!! info
-            It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account. For more information about this option, visit [Payment Method](../../financial-management/receivables-and-payables/setup/payment-method.md).
+            It is possible to allow the user **either to receive or make payments in multiple currencies** (foreign currency), while configuring the payment methods assigned to a given financial account. For more information about this option, visit [Payment Method](../setup/payment-method.md).
 
 
-![Bank fee](../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
+![Bank fee](../../../../../../assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
 
 1. If creating a **Bank Fee** is necessary, select **Bank Fee** in Transaction Type dropdown, enter a transaction and accounting date and the amount either received in or paid out.
 
 2. Then save and process the transaction.
 
 
-![GL Item](../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
+![GL Item](../../../../../../assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
 
 To create a new G/L item transaction, select `BP Deposit` or `BP Withdrawal` in transaction type and select the **G/L Item** in the G/L item dropdown, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
 
@@ -317,7 +317,7 @@ If the user needs to create a new payment transaction, it is allowed to select a
 
 - If the payment is created, the user should choose the payment in the payment selector.
 
-    ![Payment selector](../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
+    ![Payment selector](../../../../../../assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
 
 Description and amount fields in the transaction tab will be automatically filled and to complete the transaction it is necessary to save and process.
 
@@ -334,7 +334,7 @@ This window allows to:
 - and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
   Last step is to process the just created payment and get it deposited in the financial account.
 
-![Payment deposit transaction](../../../../../assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
+![Payment deposit transaction](../../../../../../assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
 
 If creating a **payment withdrawal transaction** is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. In the add payment popup, the option "**Paid Out**" needs to be selected in the field "Document". This window allows the user to:
 
@@ -347,15 +347,15 @@ If creating a **payment withdrawal transaction** is necessary, the user should c
 - and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
   Last step is to process the just created payment and get it deposited in the financial account.
 
-![Payment withdrawal](../../../../../assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
+![Payment withdrawal](../../../../../../assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
 
 Payment selector has applied an explicit filter (current financial account)
 
-![Payment filtered](../../../../../assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
+![Payment filtered](../../../../../../assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
 
 It is possible to add payments for alternative financial accounts by clicking the funnel icon to clear the filters.
 
-![Payment without filter](../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
+![Payment without filter](../../../../../../assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
 
 #### Exchange Rates
 
@@ -365,7 +365,7 @@ This subtab allows the user to define an exchange rate to use while posting the 
 
 This subtab shows the accounting history of a given transaction.
 
-![Accounting history](../../../../../assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
+![Accounting history](../../../../../../assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
 
 As shown in the image above, this tab shows the general ledger entries created while posting/unposting a given transaction to the ledger.
 
@@ -373,7 +373,7 @@ As shown in the image above, this tab shows the general ledger entries created w
 
 The accounting configuration tab is used to define the accounts of a General Ledger to use while posting transactions such as a bank fee or a deposit.
 
-![Accounting configuration](../../../../../assets/drive/1CYADTe8Ks-V7eoJVPSmVP8-8Ighure6S.png)
+![Accounting configuration](../../../../../../assets/drive/1CYADTe8Ks-V7eoJVPSmVP8-8Ighure6S.png)
 
 As shown in the image above, the accounts listed below can be configured for a financial account and general ledger.
 
@@ -459,13 +459,13 @@ In this tab, there is the advanced feature (hidden by default) called **invoice 
 This combo can be set at payment method level (payment in and payment out) in each financial account. By default this combo is set as **payment received** or **payment made**, therefore we get the usual behavior of Etendo.
 
 !!! info
-    For additional information about payment method configuration, visit the [_Payment Method_](../../financial-management/receivables-and-payables/setup/payment-method.md) article.
+    For additional information about payment method configuration, visit the [_Payment Method_](../setup/payment-method.md) article.
 
 ### Imported Bank Statements
 
 The tab lists the imported bank statement files as well as the bank statements created manually.
 
-![Imported bank statements](../../../../../assets/drive/1JYuyMUUrwVxlwti9FdfNcdz_t-DgIPY3.png)
+![Imported bank statements](../../../../../../assets/drive/1JYuyMUUrwVxlwti9FdfNcdz_t-DgIPY3.png)
 
 There are key fields to note:
 
@@ -518,7 +518,7 @@ The reconciliation tab shows the reconciliations created manually if no matching
 - Each reconciliation of that type once saved is also saved in this tab in "**Draft**" status until it is finally reconciled in the "Match using imported Bank Statement Lines" window therefore, its status changes to "**Completed**".
 - It is possible to "**Reactivate**" a reconciliation of that type, therefore it can be changed in the "**Match using imported Bank Statement Lines**" window and be reconciled from that window once more.
 
-![Reconciliations](../../../../../assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
+![Reconciliations](../../../../../../assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
 
 #### Reconciliations Posting
 
@@ -632,7 +632,7 @@ Consider the following cases:
 - If the reconciliation is completed and the rest of the existing reconciliations are completed, then the reconciliation in question will be reopened to delete the relevant reconciliation line and closed again.
 - If the reconciliation is completed and there is a reconciliation in Draft status, the draft reconciliation is closed, the corresponding reconciliation is reactivated, the corresponding reconciliation line is deleted, it will be closed again and the one in Draft status will be reactivated.
 
-![](../../../../../assets/drive/1M_IDKW70W9wRHEkPK6Uw9uLvfD03wyxx.png)
+![](../../../../../../assets/drive/1M_IDKW70W9wRHEkPK6Uw9uLvfD03wyxx.png)
 
 ### Reconciliations
 
@@ -644,7 +644,7 @@ The following situations can be possible:
 - Reactivate a reconciliation in Completed status. The other existing reconciliations are also in Completed status: in this case the reconciliation is reactivated and its status returned to Draft.
 - Reactivate a reconciliation in Completed status. There is another reconciliation in Draft status: in this case, the reconciliation in Draft status is completed first and the selected reconciliation is reactivated and its new status will be : Draft.
 
-![](../../../../../assets/drive/1ZyeE1vy7Gri5kslKF1fq1PzohDkwVPwK.png)
+![](../../../../../../assets/drive/1ZyeE1vy7Gri5kslKF1fq1PzohDkwVPwK.png)
 
 ## Bulk Posting
 
@@ -656,7 +656,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    For more information, visit [the Bulk Posting module user guide](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ## Advanced Business Partner Settlement
 
@@ -666,26 +666,26 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 Etendo allows performing a settlement from a bank reconciliation.
 From the **Financial Account** window, once the bank statements are already imported and processed, the user is able to select the bank statement from the financial account and match it with the invoice to be paid by clicking on the **Match Statement** button.
 
-![](../../../../../assets/drive/11F6-j76ebOwud3SCfJNtfFhgfuAcjh5d.png)
+![](../../../../../../assets/drive/11F6-j76ebOwud3SCfJNtfFhgfuAcjh5d.png)
 
 In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice to net with its **Actual Payment** amount to be paid.
 
-![](../../../../../assets/drive/1GufQeDY76qDFzfshhuTzhogcH10T0zxb.png)
+![](../../../../../../assets/drive/1GufQeDY76qDFzfshhuTzhogcH10T0zxb.png)
 
 From the **Invoice From Compensation** tab, the user selects the invoice that will be used to pay (either sales or purchase, depending on the invoice previously chosen) and sets the needed amount from the invoice to be netted.
 
-![](../../../../../assets/drive/1nRmzMoT6EiyE2m0yvApx99cpJladJZkA.png)
+![](../../../../../../assets/drive/1nRmzMoT6EiyE2m0yvApx99cpJladJZkA.png)
 
 After clicking the Done button, Etendo opens another pop-up window to show the information for the new settlement to be created for the user to confirm the details by clicking Done.
 
-![](../../../../../assets/drive/1XvbDRrKkyoporgm2uVTBDg-72m2iOOaa.png)
+![](../../../../../../assets/drive/1XvbDRrKkyoporgm2uVTBDg-72m2iOOaa.png)
 
 The settlement record (payment in and payment out) is also registered in the **Business Partner Settlement** window where a line for the invoice (sales and purchase) used to net will be shown.
 
-![](../../../../../assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
+![](../../../../../../assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
 
 !!! info
-    For more information, visit the [Business Partner Settlement Module - User Guide](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
+    For more information, visit the [Business Partner Settlement Module - User Guide](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
 ---
 

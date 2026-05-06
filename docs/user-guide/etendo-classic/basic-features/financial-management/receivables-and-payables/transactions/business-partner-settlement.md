@@ -19,7 +19,7 @@ This functionality allows the user to create settlements for invoices, both sale
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 !!! note
-    For more information, visit [Business Partner Settlement](../../../optional-features/bundles/financial-extensions/business-partner-settlement.md)
+    For more information, visit [Business Partner Settlement](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md)
 
 ---
 
