@@ -19,7 +19,7 @@ Receivables and/or Payables information is shown grouped by the payment status, 
 
 The Payment Report is an Etendo dimensional report which contains below specific filtering options:
 
-![](../../../../../../assets/drive/1PX-rtKZBix9j8-LmDamIE90SjBybrPpM.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report/1PX-rtKZBix9j8-LmDamIE90SjBybrPpM.png)
 
 -   **Dates**: enter a **Date From** and a **Date To** to be used while retrieving the payment's data, in relation to:
     -   the payment due date
@@ -71,7 +71,7 @@ The Payment Report is an Etendo dimensional report which contains below specific
 
 The Payment Report is launched by pressing the process button "**Search**". An example of the output of the report is shown in the image below:
 
-![](../../../../../../assets/drive/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
 
 Some relevant fields to note are:
 

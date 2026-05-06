@@ -36,7 +36,7 @@ Esta estructura permite una gestión fiscal flexible manteniendo la consistencia
 
 Puede crear tantas categorías de impuesto como necesite para organizar distintos tratamientos fiscales en su sistema. Cada categoría se vinculará a tipos impositivos específicos y se asignará a productos. La solapa Cabecera define la información principal de la categoría de impuesto.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category1.png)
 
 **Campos a tener en cuenta:**
 

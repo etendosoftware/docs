@@ -31,7 +31,7 @@ Once a bank statement file is imported to an organization's financial account:
 
 The bank file format window lists the bank file format modules installed for an organization.
 
-![Bank File Format](../../../../../../assets/drive/1m1UirW3EvMahtJQK5imtme5TZTf-Iy9w.png)
+![Bank File Format](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/bank-file-format/1m1UirW3EvMahtJQK5imtme5TZTf-Iy9w.png)
 
 As shown in the image above, a bank file format can be applied to the organization in the Enterprise Module Management window after being installed, therefore it is available for any organization of the client.
 

@@ -41,7 +41,7 @@ This report supports multi-currency.
 -   **Voided invoices need to be included** (Only available if Preference "Enable void documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude voided documents from the report
 -   **Reversed payments need to be included** (Only available if Preference "Enable reversed payment documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude reversed payment documents from the report
 
-![](../../../../../../assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
 
 ## HTML/PDF/Excel output
 
@@ -64,7 +64,7 @@ It should Display a table showing the following data:
 
 If the credits are posted in the same account as the Payables, then the Net would match the balance of the Business Partner. If the credits are posted in a different account, such as prepayments, then the balance of the Business Partner would match with the Total.
 
-![](../../../../../../assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
 
 ## Payables Aging Schedule Details
 
@@ -83,7 +83,7 @@ If the credits are posted in the same account as the Payables, then the total Ne
 
 Plus, there is a summary line for all the Business Partners.
 
-![](../../../../../../assets/drive/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payables-aging-schedule/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
 
 ---
 

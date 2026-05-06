@@ -29,7 +29,7 @@ Etendo allows the user to post transactions to the ledger only if the financial 
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/acct-transaction-details-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/accounting-transaction-details/acct-transaction-details-1.png)
 
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 

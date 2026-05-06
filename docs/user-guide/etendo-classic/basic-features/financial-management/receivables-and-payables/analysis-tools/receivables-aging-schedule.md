@@ -42,7 +42,7 @@ This report supports multi-currency.
 -   **Voided invoices need to be included** (Only available if Preference "Enable void documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude voided documents from the report.
 -   **Reversed payments need to be included** (Only available if Preference "Enable reversed payment documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude reversed payment documents from the report.
 
-![](../../../../../../assets/drive/1abmyBz-r9kRr3l7gNXmPgxwZrx-ca-AH.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/1abmyBz-r9kRr3l7gNXmPgxwZrx-ca-AH.png)
 
 ## HTML/PDF/Excel output
 
@@ -72,7 +72,7 @@ If the **Show Doubtful Debt** check is selected, two more fields are shown.
 
 Also, when Show Doubtful Debt is selected, the Total amount is the sum of all the debts that are not doubtful. Therefore, the Net is Total + Doubtful - Credits
 
-![](../../../../../../assets/drive/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
 
 ## Receivables Aging Schedule Details
 
@@ -98,7 +98,7 @@ If the **Show Doubtful Debt** check is selected, two more fields are shown.
 
 Also, when Show Doubtful Debt is selected, the Total amount is the sum of all the debts that are not doubtful. Therefore, the Net Due is Total + Doubtful - Credits
 
-![](../../../../../../assets/drive/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
 
 ---
 

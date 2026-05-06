@@ -16,7 +16,7 @@ Antes de configurar un libro mayor, se recomienda crear primero el [Árbol de cu
 
 Desde la ventana **Esquema contable**, el proceso de configuración implica:
 
-![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration6.png)
+![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration6.png)
 
 -   Seleccionar la **Organización** para la cual el libro mayor va a estar disponible.
 -   Introducir el **Nombre de la configuración del Esquema contable**, por ejemplo, Libro mayor general EUR.  

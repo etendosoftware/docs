@@ -20,7 +20,7 @@ This report can be used to make sure that there are no documents pending to be p
 -   while closing an accounting period or a fiscal year as once a period is closed it is not possible to post within that period
 -   while running financial reports, as not posted transaction or document will not be taken into account in the financial reports
 
-![](../../../../../../assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-transaction-report/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png)
 
 Not posted transactions and/or documents shown are split by type, for instance:
 

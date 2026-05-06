@@ -354,14 +354,14 @@ Sin embargo, las cuentas temporales por defecto deben crearse en el árbol de cu
 
 Por lo tanto, debe crearse un nuevo elemento de **Encabezado** y **Resumen** en la pestaña **Nivel del elemento**; ese elemento puede denominarse **Cuentas temporales**.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-6.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-6.png)
 
 Una vez creado, las cuentas siguientes (subcuentas) pueden crearse y moverse debajo de él:
 
 -   cuenta Cuenta de asiento no cuadrado
 -   cuenta de error de Cuenta de asiento no cuadrado
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-7.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-7.png)
 
 ---
 

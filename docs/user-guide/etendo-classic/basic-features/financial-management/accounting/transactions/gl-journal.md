@@ -35,7 +35,7 @@ This feature is also very useful while posting employee payroll, for instance.
 
 A G/L journal batch allows the user to group G/L journals of similar characteristics which can all be processed at the same time.
 
-![](../../../../../../assets/drive/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png)
 
 As shown in the image above, a *G/L Journal batch* can contain below data:
 
@@ -57,13 +57,13 @@ As already mentioned, a G/L Journal and therefore its content can be configured 
 
 **2.** Create a **new G/L journal** to account the employee payroll corresponding to the period of January 2022. Enter an **Accounting Date** and a **Period**:
 
-![](../../../../../../assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png)
 
 **3.** Press the **Copy Details** process button.
 
 A new window is shown containing all the templates available:
 
-![](../../../../../../assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png)
 
 !!! info
     Note that it is possible to search for a template by using the G/L journal document number set as template and the description fields. 
@@ -78,7 +78,7 @@ The last step is to post the G/L Journal, therefore the corresponding journal en
 
 A G/L journal header can include journals, which can contain several journal lines.
 
-![](../../../../../../assets/drive/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png)
 
 A G/L Journal header contains the following data:
 
@@ -126,16 +126,16 @@ The process to create a journal entry from the beginning and duplicate it later 
 
 1- Enter the "G/L Journal" window and create a header:
 
-![](../../../../../../assets/drive/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png)
 
 2- Create a new record:
 
-![](../../../../../../assets/drive/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png)
 
 3- Create the lines (to be recorded) and complete the entry. Once these three steps are done, the "Create Deferred Plan" button will be shown in the upper right margin. 
 
 
-![](../../../../../../assets/drive/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png)
 
 4 - Click the button and a pop-up with three fields will be shown:
 • Expense Plan Type: copies regularity.
@@ -143,20 +143,20 @@ The process to create a journal entry from the beginning and duplicate it later 
     • Period: period in which the first copy will be made.
 
 
-![](../../../../../../assets/drive/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png)
 
 5 - Once this information is entered, click the "Done" button and as many records will be generated as the number of copies indicated.
 
-![](../../../../../../assets/drive/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png)
 
 
 By default, this functionality is only available for the "GL Journal" window, since the record copies are grouped under only one header. It is also possible to duplicate these entries in the "Simple GL Journal" only if there is a preference configured in the "Preference" window with the property "Display Create Deferred Plan Button" and the value "Y".
 
-![](../../../../../../assets/drive/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png)
 
 Once this preference is configured, the button will be enabled in "Simple GL Journal". The flow is the same but the duplicated copies will not be created under a header. That is, this information will not be shown in the "GL Journal" window, except the information to be copied is already in it, in which case it will be shown.
 
-![](../../../../../../assets/drive/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png)
 
 ## GL Journal Reverse 
 
@@ -167,7 +167,7 @@ This functionality is specifically useful for companies that have a month close,
 
 In order to use this functionality, in both "GL journal" and "Simple GL journal" windows, the user can click the button "Reverse Journal" in the toolbar when selecting an entry.
 
-![](../../../../../../assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
 
 In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. 
 > 
@@ -176,17 +176,17 @@ In this way, Etendo automatically creates a reverse entry that compensates the a
 
 As seen below, Etendo shows a success notification in green with the new GL Journal number.
 
-![](../../../../../../assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
 
 When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reverse.
 
 ##### Original GL journal
 
-![](../../../../../../assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
 
 ##### Reverse GL Journal
 
-![](../../../../../../assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
 
 
 This is useful to distinguish between the original GL journal and the reverse one. 

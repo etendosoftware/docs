@@ -15,7 +15,7 @@ tags:
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report/general-ledger-report-1.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
@@ -51,7 +51,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
     - This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report/general-ledger-report-2.png)
 
 ---
 

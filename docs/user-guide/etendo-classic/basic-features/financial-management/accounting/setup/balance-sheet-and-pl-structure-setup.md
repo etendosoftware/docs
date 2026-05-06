@@ -41,7 +41,7 @@ Each record created in this window represents one **financial report**. When def
 - The same applies in the case of organizations which are **Organization type** which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.
 - If the organization selected is a **Generic organization** which belongs to a Legal with Accounting one, the financial information provided by the reports will be just the financial information of that organization.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
 
 Fields to note in this window:
 
@@ -57,13 +57,13 @@ Fields to note in this window:
 
 The **Grouping Category** tab allows users to define sections within the report. Each grouping category creates a page break, helping organize the report into clear sections.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
 
 #### Node
 
 From the **Node** sub-tab it is possible to define the information shown in the report.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
 
 A report node is defined by:
 

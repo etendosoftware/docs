@@ -23,7 +23,7 @@ When a Period is Open or Closed through the Open/Close Period Control Window, or
 
 For example, this screenshot shows the Period Control Log for an Organization that has opened all of its Periods for the Year 2019:
 
-![](../../../../../../assets/drive/1ZQv4ciDH8NuE6aOQLnWmztUUVg2PxZuN.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/period-control-log/1ZQv4ciDH8NuE6aOQLnWmztUUVg2PxZuN.png)
 
 As shown in the image above, the main fields in this Window are:
 

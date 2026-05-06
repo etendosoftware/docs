@@ -39,7 +39,7 @@ The payments that require a separate activity to be executed need to be configur
 
 The parameter tab allows the user to configure the additional activity to execute upon completion of a payment. For instance, to record a check number.
 
-![Parameter tab](../../../../../../assets/drive/17seAr4S-i9aqgCgpcrr01lDo4hXD22Rn.png)
+![Parameter tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/execution-process/17seAr4S-i9aqgCgpcrr01lDo4hXD22Rn.png)
 
 As shown in the image above, the "**Print Check Simple Process**" has one parameter named "**Check Number**". That parameter is an "**In**" "**Parameter Type**" which "**Input Type**" is "**Text**".
 

@@ -38,7 +38,7 @@ The creation of the withdrawal transaction in the financial account can be done:
 
 The Payment Out window allows the user to make and manage supplier's payments done to settle different types of documents such as orders and invoices. This window also allows the user to manage the supplier's payments already made in the purchase invoice window, the same way as the G/L item payments made in a G/L Journal.
 
-![](../../../../../../../assets/drive/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
 
 There are just a few mandatory fields to fill in while making a payment in this window:
 
@@ -59,7 +59,7 @@ Other relevant fields to note are:
 
 The **Add Details** button opens the **Add Payment** window, where outstanding documents to be paid can be selected.
 
-![](../../../../../../../assets/drive/1tsg4HMq519UXdo9UqGhV9-wOpqMPJRpy.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1tsg4HMq519UXdo9UqGhV9-wOpqMPJRpy.png)
 
 The **Add Payment** window is already explained in the Purchase Invoice payment article.
 
@@ -72,7 +72,7 @@ If no vendor has been selected in the field "Paying To", it is possible to pay d
 
 The "Actual Payment Out" field will then show the sum up value of all the transactions being selected to be paid.
 
-![](../../../../../../../assets/drive/136-nlDAc31ndG9ibEJoUZk2oUgdZJNcS.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/136-nlDAc31ndG9ibEJoUZk2oUgdZJNcS.png)
 
 Once the payment is processed, the lines tab lists all the orders and invoices and even G/L items included in the payment, same as the "**Description**" field of the payment header.
 
@@ -119,7 +119,7 @@ It is not possible to generate credit on a payment which is not related to a sin
 
 The creation of a credit payment requires not to select any document to pay in the **"Add Payment" window** which is shown after pressing the process button "**Add Details**", but to leave the credit amount to be used later.
 
-![](../../../../../../../assets/drive/1J2H_kxh0hRWO5fHEllfFKXZ1oTDQFqPn.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1J2H_kxh0hRWO5fHEllfFKXZ1oTDQFqPn.png)
 
 A credit payment is created after processing. This credit payment specifies the amount left as credit in the "Description" field of the credit payment header.
 
@@ -127,7 +127,7 @@ Later on, the available credit generated for that vendor can be used to pay the 
 
 - in the "**Add Payment**" window once a new Payment Out is created for that vendor by just selecting the credit in the section "Credit to Use".
 
-![](../../../../../../../assets/drive/18mZnJqpLFZa55nXSpoC-qSAFbS1TKg5l.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/18mZnJqpLFZa55nXSpoC-qSAFbS1TKg5l.png)
 
 - or in the "**Select Credit Payments**" window which is **automatically shown** upon completion of a new vendor's invoice.
 
@@ -172,7 +172,7 @@ If the checkbox "Deferred" is not selected, the additional step is still require
 
 The Execution History tab is a read-only tab which shows information about the execution of the payment such as the execution date, just once the payment has been executed.
 
-![](../../../../../../../assets/drive/1o3dY5UJs0fh3LC5ry7249VZ2DZGwE3BQ.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1o3dY5UJs0fh3LC5ry7249VZ2DZGwE3BQ.png)
 
 ### Exchange rates
 
@@ -186,7 +186,7 @@ The creation of a "Credit" payment is already explained in the Credit Payments s
 
 This read-only tab shows the credit payment used to pay a vendor document (order, invoice or G/L item) payment.
 
-![](../../../../../../../assets/drive/1ZRyS-NTJD17sB_CAQbG9-XYa1-a0N3fq.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1ZRyS-NTJD17sB_CAQbG9-XYa1-a0N3fq.png)
 
 ## Payment Removal
 
@@ -207,7 +207,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic6.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/PRpic6.png)
 
 ## Bulk Posting
 
@@ -230,21 +230,21 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 From the **Payment Out** window, it is possible to create a settlement by clicking on the **Add Details** button.
 In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. The **Actual Payment amount** to pay is set, then select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
-![](../../../../../../../assets/drive/1VXTbJvoG4le_x7dTVC9lqV3puMIqwh-N.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1VXTbJvoG4le_x7dTVC9lqV3puMIqwh-N.png)
 
 From the **Invoice From Compensation** tab, select the sales invoice/s that will be used to pay and set the needed amount from the invoice/s to be netted.
 
 Below that, in the **Totals** tab, Etendo shows the total reference amounts to be netted.
 
-![](../../../../../../../assets/drive/1T-gLPqseFzIa5If1LX93VlhdYIaOz4-5.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1T-gLPqseFzIa5If1LX93VlhdYIaOz4-5.png)
 
 After clicking the button Done, the system nets the invoices and credits for the corresponding business partner and creates a settlement record.
 
-![](../../../../../../../assets/drive/11XJzDLx3VkjhY3Q57pxpyrOGdvrRbXXz.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/11XJzDLx3VkjhY3Q57pxpyrOGdvrRbXXz.png)
 
 The settlement record is registered in the **Business Partner Settlement** window where the lines for the invoice/s (sales and purchase) used to net will be shown.
 
-![](../../../../../../../assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
 
 !!! info
     For more information, visit the [Business Partner Settlement Module - User Guide](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).

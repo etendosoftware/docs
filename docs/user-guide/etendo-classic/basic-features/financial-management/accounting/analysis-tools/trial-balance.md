@@ -37,7 +37,7 @@ At the bottom of the report, the **total debits must equal the total credits**.
 
 ## Header
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-window-1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance/trial-balance-window-1.png)
 
 Key fields to note:
 
@@ -102,12 +102,12 @@ These dimensions are recorded when transactions are posted to the ledger. Transa
     - Or, if the report is grouped by Business Partner, by clicking the partner's name to access their General Ledger view.
 
     <figure markdown="span">
-        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-report-1.png)
+        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance/trial-balance-report-1.png)
         <figcaption>Example of the report output not gruped</figcaption>
     </figure>
 
     <figure markdown="span">
-        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance-report-2.png)
+        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance/trial-balance-report-2.png)
         <figcaption> Example of the report grouped by Business Partner</figcaption>
     </figure>
 

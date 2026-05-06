@@ -32,7 +32,7 @@ Tax payment process can be run after below detailed configuration is done:
 
 The tax payment window allows the user to calculate the amount of taxes to be paid to or received from the tax authority within a given period of time. It also allows the user to generate the corresponding payment to/from the tax authority.
 
-![Tax Payment Header](../../../../../../assets/drive/1YLUngAGz6MvriT9nplSWvYYnkY7pMnJt.png)
+![Tax Payment Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/1YLUngAGz6MvriT9nplSWvYYnkY7pMnJt.png)
 
 As shown in the image above, the fields to fill in are:
 
@@ -58,13 +58,13 @@ The "**Unprocess**" button undoes the tax payment and deletes the G/L Journal cr
 
 Tax Register Header tab allows the user to see the calculated tax amount per each configured "Tax Register Type".
 
-![Tax Register Header](../../../../../../assets/drive/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
+![Tax Register Header](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
 
 ## Lines
 
 The lines tab is a read-only tab which lists all the tax transactions related to the tax rates configured as part of a "Tax Register Type".
 
-![Tax Register Lines](../../../../../../assets/drive/1JAQeiows8-fzEHJq0r3TYYD6zWlzRLQ5.png)
+![Tax Register Lines](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/1JAQeiows8-fzEHJq0r3TYYD6zWlzRLQ5.png)
 
 Some relevant fields to note are:
 

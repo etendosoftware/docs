@@ -20,7 +20,7 @@ tags:
 
 This **Journal Entries Advanced** report is an enhanced version of the previous [Journal Entries Report](./journal-entries-report.md). Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced/journal-entries-report-adv-1.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
@@ -37,7 +37,7 @@ In addition to the previous basic filters: Date from, Date to, Organization, Gen
 
 The new **Show Dimensional Entities** field enables the selection of accounting dimensions to be included in the report.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced/journal-entries-report-adv-2.png)
 
 After using the available fields and checkboxes, the report filters the transactions included in the selected dimensions, for the selected organization and general ledger and for a determined period, if necessary. In each filter, more than one option can be selected.
 
@@ -45,14 +45,14 @@ After using the available fields and checkboxes, the report filters the transact
 
 In the upper bar, you can find the buttons **View**, **Export to PDF** and **Export to Excel** to generate the report. In the case of the View option, a new window is opened with the corresponding report. In the other cases, the report is exported in PDF or Excel format.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-3.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced/journal-entries-report-adv-3.png)
 
 !!!warning
     If the View or Export to PDF options are chosen, the limit of dimensions to be included is 4 to avoid visualization issues. This is not the case with Export to Excel, in which case you can choose any number of dimensions.
 
 Also, with this functionality you can navigate to the related transaction directly from the entry number of reports. This improves traceability and streamlines accounting analysis. 
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-adv-4.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced/journal-entries-report-adv-4.png)
 
 ---
 

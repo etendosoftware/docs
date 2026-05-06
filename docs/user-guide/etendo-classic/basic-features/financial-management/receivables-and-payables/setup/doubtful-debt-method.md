@@ -17,7 +17,7 @@ Through this window, it is possible to define a Doubtful Debt Method, which will
 
 ## Doubtful Debt Method
 
-![Doubtful Debt Method](../../../../../../assets/drive/1aJifeptvA2B8lIiaFEBtvNIbXUcJpRxO.png)
+![Doubtful Debt Method](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/doubtful-debt-method/1aJifeptvA2B8lIiaFEBtvNIbXUcJpRxO.png)
 
 Fields to note:
 

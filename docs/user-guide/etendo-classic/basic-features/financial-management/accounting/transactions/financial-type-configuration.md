@@ -68,7 +68,7 @@ The main header has the following fields:
 - **Project**: drop-down list of the "Multiphase Project" window.   
 - **Cost Center**: drop-down list of the "Cost Center" window.
 
-![](../../../../../../assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png)
 
 ## Lines
  
@@ -89,20 +89,20 @@ Lines contain the following fields:
 - **Project:** drop-down list of the "Multiphase Project" window.
 - **Cost Center**: drop-down list of the "Cost Center" window.
  
-![](../../../../../../assets/drive/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png)
  
 ## Accounting 
  
  There are three sections: "Amortization/Renting", "Interest" and "Commission". There are six fields in total where three of them represent the product and the other three, the accounting concept. The 2 fields (product and accounting concept) cannot be filled in the same section. In each of these related fields, the product must be indicated from the **Products** window or **Accounting Concept** if the **Available in Financial Invoices** check box needed to assign to each column is activated. In the case of the type of financing **Loan**, it is obligatory to fill in the part of accounting concepts.
  
- ![](../../../../../../assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png)
  
 
 ## Loan, Leasing or Renting calculation in the lines tab
 
 Fill the necessary fields of the header according to the description of each of them indicated at the top of the document. Such information allows the automatic creation of the finance plan, which is created by clicking the "Update Finance plan" button at the upper right margin of the window.
  
-![](../../../../../../assets/drive/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png)
  
 ### Loan: 
 - **Installment No**: It starts with the installment number 0 and the "pending amortization" field has the value indicated in the "granted amount" field, and the "date" field has the indicated date in the header field "date". The rest of the installments are correlative, adding 1 by 1.
@@ -118,9 +118,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](../../../../../../assets/drive/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png)
  
- ![](../../../../../../assets/drive/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png)
  
 ### Leasing:
 - **Installment No**: It starts with the installment number 0 and the "pending amortization" field has the value indicated in the "granted amount" field, and the "date" field has the indicated date in the … The rest of the installments are correlative, adding 1 by 1.
@@ -137,9 +137,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](../../../../../../assets/drive/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png)
  
- ![](../../../../../../assets/drive/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png)
  
 ### Renting
 - **Installment No**: It starts with the installment number 0 and the rest of the installments are correlative, adding 1 by 1.
@@ -153,9 +153,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](../../../../../../assets/drive/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png)
  
- ![](../../../../../../assets/drive/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png)
  
 #### Generating payments or invoices
 
@@ -165,34 +165,34 @@ In order to do this, select the required line/s and click the "Create payment" (
  
 **Loan**:
  
- ![](../../../../../../assets/drive/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png)
  
 **Leasing**:
  
  
- ![](../../../../../../assets/drive/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png)
 
  
 **Renting**:
 
- ![](../../../../../../assets/drive/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png)
+ ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png)
 
  
 ##### Credit account and credit cards reported in financial accounts.
  
 The Credit account and Credit card information is automatically entered. To do this, create a new header and indicate the finance method, "Credit account" or "Credit card". Then, the button "Add Financial Account" is enabled in the upper right margin. 
  
-![](../../../../../../assets/drive/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png)
  
 When clicking the button, a pop up is shown and it is possible to select a financial account (only those with the "Add to bank pool" flag checked are shown).
  
-![](../../../../../../assets/drive/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png)
 
-![](../../../../../../assets/drive/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png)
 
 Once this credit account/credit card is created in the financings and its information has to be updated, click the "Update Financial Account" button in the upper right margin.
  
-![](../../../../../../assets/drive/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png)
  
 The fields to be copied from the account or credit card are the equivalent ones in the "Financial Account" field, the amount of residual value to be indicated in the "Amount Available" field and the "Credit Limit" amount to be indicated in the "Amount Granted" field. All other fields in the header are editable to include the rest of the information.
 

@@ -19,7 +19,7 @@ In the  Amortization window, assets depreciations are recorded, grouped by date.
 
 From the header, amortizations are created for particular periods.
 
-![assets4](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets4.png)
+![assets4](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/assets4.png)
 
 
 Fields to note: 
@@ -37,7 +37,7 @@ Fields to note:
 
 Each line shows the amortized assets and details of amortization.
 
-![assets5](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/Assets5.png)
+![assets5](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/Assets5.png)
 
 
 Fields to note: 
@@ -60,7 +60,7 @@ Fields to note:
 - **Debit**: The Account Debit Amount indicates the transaction amount converted to this organization's accounting currency.
 - **Credit**: The Account Credit Amount indicates the transaction amount converted to this organization's accounting currency.
 
-![assets6](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets6.png)
+![assets6](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/assets6.png)
 
 !!!info 
     For more information about Financial Account functionality visit [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md).
@@ -76,7 +76,7 @@ Fields to note:
 This module allows that in the Amortization window, unlike the standard operation in which asset depreciations were grouped according to specific dates, to group the depreciation records **only per periods** (monthly or yearly) in case of calculated type (time) and even yearly for calculated type (percentage). Also in the grouping the dimensions are not considered.
 In addition, the accounting dimensions are maintained in the amortization lines to be used in the generation of accounting entries.
 
-![assets2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets2.png)
+![assets2](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/assets2.png)
 
 
 ## Bulk Posting
@@ -98,7 +98,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](../../../../../assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
 
 ---
 

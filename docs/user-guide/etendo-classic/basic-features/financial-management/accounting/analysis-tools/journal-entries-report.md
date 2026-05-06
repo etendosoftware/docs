@@ -17,7 +17,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report/journal-entries-report-1.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -48,7 +48,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 - *HTML* format. An example of the HTML output:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report/journal-entries-report-2.png)
 
 - *PDF* format by using the "Print Record" action button of the Toolbar
 - or *XML* format by using the "Export to Excel" action button of the Toolbar.

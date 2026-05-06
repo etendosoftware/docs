@@ -17,7 +17,7 @@ The user can define company-owned assets and configure their amortization charac
 
 ## Assets window
 
-![](../../../../../assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
 Fields to note:
 
@@ -60,7 +60,7 @@ Fields to note:
 
 Asset amortizations for a selected asset are added to this tab. 
 
-![](../../../../../assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
 -   **Line No.** : A line stating the position of this request in the document.
 -   **Amortization** : The depreciation or reduction of a product value over time.
@@ -87,7 +87,7 @@ The process assumes that if the March depreciation line exists, then the Februar
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![assets3](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets3.png)
+![assets3](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets3.png)
 
 - **General Ledger**: The book containing all financial transactions recorded for the legal entity.
 - **Accumulated Depreciation**: Accumulated Depreciation Account. 
@@ -119,7 +119,7 @@ The dimensions the user can apply to the asset creation process are the followin
 !!! info
     When creating or recalculating the amortization schedule for an asset, the specified accounting dimensions are transferred to the lines of the amortization schedule.
 
-![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets1.png)
+![assets1](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets1.png)
 
 !!! info
     For more information about Dimensions configuration visit [Dimensions](../../../../etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
