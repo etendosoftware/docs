@@ -21,7 +21,26 @@ El sistema procesa los mantenimientos en respuesta a eventos que ocurren dentro 
 
 ## Configuración inicial
 
-### Configuración de PostgreSQL para el uso de Connect (Debezium)
+### Configuración de PostgreSQL para la captura de cambios con Debezium
+
+Debezium es una herramienta de captura de datos de cambios (change-data-capture) que monitoriza la base de datos en busca de cambios a nivel de fila y los reenvía a Kafka. Los dos comandos SQL que se muestran a continuación habilitan dicha monitorización en la base de datos de Etendo.
+
+El nombre de la base de datos es el valor de `bbdd.sid` en `gradle.properties` (normalmente `etendo`), y la conexión debe realizarse con el usuario del sistema PostgreSQL definido por `bbdd.systemUser` (normalmente `postgres`).
+
+Elija el comando de conexión que corresponda a la configuración de su instancia de PostgreSQL:
+
+- Si PostgreSQL requiere contraseña, ejecute:
+    ```bash title="Terminal"
+    psql -U postgres etendo
+    ```
+- Si está en Linux y PostgreSQL utiliza autenticación peer (a nivel de sistema operativo), ejecute:
+    ```bash title="Terminal"
+    sudo -u postgres psql -d etendo
+    ```
+
+Una vez conectado, ejecute los siguientes comandos SQL:
+
+!!! warning "El servicio de PostgreSQL debe reiniciarse después de aplicar este cambio"
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
@@ -30,8 +49,6 @@ ALTER TABLE etask_task REPLICA IDENTITY FULL;
 
 Estos comandos preparan la base de datos PostgreSQL para trabajar con **Debezium**, una herramienta para capturar cambios en tablas.
 
-!!! warning "**El servicio de PostgreSQL debe reiniciarse** después de aplicar este cambio" 
-
 | Comando                 | Descripción                                                                                                                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | `wal_level = logical`   | Establece el nivel de Write-Ahead Logging (WAL) en `logical`. Esto es necesario para que Debezium transmita cambios lógicos desde la base de datos. |
@@ -39,7 +56,13 @@ Estos comandos preparan la base de datos PostgreSQL para trabajar con **Debezium
 
 Estos comandos son **requisitos previos obligatorios** para que Debezium detecte y propague eventos a Kafka, que a su vez desencadena el procesamiento de mantenimientos en Etendo.
 
+!!! info
+    Si omite esta configuración manual, la tarea `./gradlew kafkaConnectSetup --info` puede detectar los ajustes faltantes y aplicarlos automáticamente. Sin embargo, hacerlo obliga a reiniciar PostgreSQL durante la ejecución del proceso de configuración. Aplique los comandos SQL manualmente si un reinicio de la base de datos a mitad de la configuración no es aceptable en su entorno.
+
 ### Iniciar servicios RX
+
+!!! warning
+    Agregue estas variables únicamente después de haber completado la instalación base de Etendo (el `./gradlew install` inicial y el primer arranque de Tomcat). No las incluya durante esa instalación inicial. Agregarlas antes de que la instalación base esté completa provocará que la propia instalación base falle.
 
 1. Configure las siguientes variables en `Gradle.properties` para habilitar e iniciar los servicios requeridos:
 
@@ -77,12 +100,22 @@ Estos comandos son **requisitos previos obligatorios** para que Debezium detecte
 
 4. Cree la conexión entre Connect y Kafka ejecutando:
 
+    !!! info
+        Este comando llama a la REST API de Kafka Connect, que se ejecuta en el puerto 8083 dentro de la red Docker de forma predeterminada. Si Kafka Connect no ha terminado de iniciarse tras `resources.up`, el comando fallará. Espere hasta que todos los servicios Docker estén en estado healthy antes de ejecutarlo (puede verificarlo con `docker ps` o desde su panel de Docker).
+
+        Solo es necesario que Kafka Connect esté en estado healthy para este paso. Los demás servicios RX dockerizados (config, auth, DAS, edge) se inician automáticamente y no requieren ninguna configuración manual en el ERP en este momento — los configurará en la sección **Inicializar servicios RX** que se describe a continuación.
+
     ```bash title="Terminal"
     ./gradlew kafkaConnectSetup --info
     ```
 
 ### Compilar el entorno e iniciar Tomcat
 
+!!! warning
+    **Tomcat no debe estar en ejecución** cuando se ejecute este comando, ya que `update.database` modifica el esquema de la base de datos y fallará o producirá datos inconsistentes si Tomcat está activo.
+
+    - **Tomcat gestionado por Docker** (`docker_com.etendoerp.tomcat=true` en `gradle.properties`): Detenga el contenedor de Tomcat antes de ejecutar el comando (p. ej., `docker stop etendo-tomcat-1`). `smartbuild` reiniciará Tomcat automáticamente cuando finalice la compilación.
+    - **Tomcat instalado localmente** (Tomcat iniciado manualmente en su máquina, no a través de Docker): Detenga el proceso de Tomcat antes de ejecutar el comando y, una vez finalizada la compilación, inícielo de nuevo manualmente.
 
 ```bash title="Terminal"
 ./gradlew update.database compile.complete smartbuild --info
@@ -90,6 +123,9 @@ Estos comandos son **requisitos previos obligatorios** para que Debezium detecte
 
 ### Inicializar servicios RX
 :material-menu: `Aplicación` > `Etendo RX` > `RX Config`
+
+!!! warning
+    Este paso es obligatorio. Sin él, el módulo de mantenimiento no puede funcionar. El proceso **Inicializar servicios RX** rellena las variables de configuración predeterminadas — incluyendo los puntos de conexión de los servicios y parámetros — que los servicios RX necesitan para comunicarse con Etendo Classic. Omitir este paso provoca que el procesamiento de mantenimientos falle silenciosamente — no se muestra ningún error y no se crea ni procesa ningún mantenimiento.
 
 Una vez que el entorno esté compilado y Tomcat esté en ejecución, con el rol `System Administrator`, navegar a la ventana **RX Config** y ejecutar el proceso **Initialize RX Services** desde la barra de herramientas. Este paso registra los datos de acceso necesarios para la interacción entre los servicios de Etendo RX. Para más detalles, consultar [Configuraciones de Etendo RX](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
 
@@ -122,7 +158,7 @@ Un desarrollador, con el rol `System Administrator`, debe definir los tipos de m
 En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento.
 Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de la tabla o incluso filtros avanzados definidos como acciones. 
 
-!!!warning
+!!! warning
     En caso de que se definan múltiples tablas o filtros, debe asegurarse que sean mutuamente excluyentes, ya que podría crearse más de un mantenimiento por evento ocurrido.
 
 **Campos a tener en cuenta:**
@@ -153,7 +189,7 @@ Esta solapa define jobs asíncronos que se ejecutan automáticamente cuando el m
 
 - **Módulo**: El módulo donde se exportará este componente.
 - **Nivel**: Determina el orden de encolado, aunque al ser procesos asíncronos pueden ejecutarse en paralelo.
-- **Job**: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de [Jobs asíncronos]().
+- **Job**: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de [Cómo crear Jobs y Acciones](../../how-to-guides/how-to-create-jobs-and-actions.md).
 - **Activo**: Casilla para habilitar o deshabilitar este evento.
 
 ### Configuración de la secuencia del Nº de mantenimiento
