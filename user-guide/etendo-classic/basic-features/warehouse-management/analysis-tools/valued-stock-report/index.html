@@ -2248,6 +2248,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16110,6 +16119,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16169,7 +16187,7 @@
 <p>Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.</p>
 <p>The cost is calculated as a sum of the cost of each material transaction of the product in the warehouse. The cost of the product transactions is calculated by the Costing Server process.</p>
 <h2 id="parameters-window">Parameters Window</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png" data-desc-position="bottom"><img alt="Valued Stock Report Parameters Window" src="../../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png" data-desc-position="bottom"><img alt="Valued Stock Report Parameters Window" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png"></a></p>
 <ul>
 <li><strong>Organization</strong>: This field allows the user to select among  Organizations of type "Legal with Accounting" and "Generic".</li>
 <li><strong>Warehouse</strong>: If the selected organization is "Generic", then lists all warehouses that belong to it, else if the organization is "Legal with accounting" then no warehouse is displayed to be selected.</li>
@@ -16183,7 +16201,7 @@
 <p>Please note that Conversion Rate to the report Currency should be specified for the report to work.</p>
 </div>
 <h2 id="output-window">Output Window</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png" data-desc-position="bottom"><img alt="Valued Stock Report Output" src="../../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png" data-desc-position="bottom"><img alt="Valued Stock Report Output" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png"></a></p>
 <ul>
 <li><strong>Product</strong>: Name of the Product.</li>
 <li><strong>Quantity</strong>: Stock of the Product on the selected date.</li>
@@ -16201,13 +16219,18 @@
 <p class="admonition-title">Info</p>
 <p>In order to use this functionality it is necessary to schedule the Background Process named <em>Generate Aggregated Data Background</em>. This can be done through the <em>Process Request</em> Window.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png" data-desc-position="bottom"><img alt="Valued Stock Report Process Request" src="../../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png" data-desc-position="bottom"><img alt="Valued Stock Report Process Request" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.</p>
 </div>
 <h2 id="limitations">Limitations</h2>
 <p>By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information will be converted at the Period's Closing Date. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.</p>
+<h2 id="related-articles">Related Articles</h2>
+<p><a class="md-button md-button--primary" href="../pareto-product-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Pareto Product Report</a>
+<a class="md-button md-button--primary" href="../stock-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Stock Report</a>
+<a class="md-button md-button--primary" href="../material-transaction-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Material Transaction Report</a>
+<a class="md-button md-button--primary" href="../../getting-started/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Warehouse Management Getting Started</a></p>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 

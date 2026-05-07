@@ -2074,7 +2074,7 @@
   
   
   <span class="md-ellipsis">
-    Pareto Product Report
+    Informe Pareto de Productos
     
   </span>
   
@@ -2087,7 +2087,7 @@
   
   
   <span class="md-ellipsis">
-    Pareto Product Report
+    Informe Pareto de Productos
     
   </span>
   
@@ -2112,36 +2112,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#descripcion-general" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Descripción general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#parametros" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Parámetros
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-report-output" class="md-nav__link">
+  <a href="#resultado-del-informe" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Report Output
+      Resultado del informe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultado del informe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referencia-de-columnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia de columnas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizar-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizar ABC
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#uso-de-datos-pre-agregados" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
+      Uso de datos pre-agregados
     </span>
   </a>
   
@@ -16386,36 +16410,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#descripcion-general" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Descripción general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#parametros" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Parámetros
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-report-output" class="md-nav__link">
+  <a href="#resultado-del-informe" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Report Output
+      Resultado del informe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultado del informe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referencia-de-columnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia de columnas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizar-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizar ABC
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#uso-de-datos-pre-agregados" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
+      Uso de datos pre-agregados
     </span>
   </a>
   
@@ -16440,31 +16488,31 @@
       
       
       
-        <span class="md-tag">Inventory</span>
+        <span class="md-tag">Clasificación ABC</span>
       
     
       
       
       
-        <span class="md-tag">Inventory Analysis</span>
+        <span class="md-tag">Gestión de Almacén</span>
       
     
       
       
       
-        <span class="md-tag">Pareto</span>
+        <span class="md-tag">Herramientas de análisis</span>
       
     
       
       
       
-        <span class="md-tag">Reports</span>
+        <span class="md-tag">Informe Pareto de Productos</span>
       
     
       
       
       
-        <span class="md-tag">Warehouse Management</span>
+        <span class="md-tag">Inventario</span>
       
     
   </nav>
@@ -16476,34 +16524,143 @@
 
 <h1 id="informe-pareto-de-productos">Informe Pareto de Productos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Informe Pareto de Productos</code></p>
-<h2 id="overview">Overview</h2>
-<p>El Informe Pareto de Productos distribuye los productos en tres clases (A, B o C) según el valor del costo que tiene el inventario de cada producto en el almacén. En función de esta clasificación se puede decidir la frecuencia del ciclo de conteo (por ejemplo, los productos A se cuentan semanalmente, los B mensualmente y los C anualmente).</p>
-<p>Se utiliza la siguiente distribución: los productos A representan el 80% del valor del almacén, los B el 15% y los C el 5%.</p>
+<h2 id="descripcion-general">Descripción general</h2>
+<p>El Informe Pareto de Productos clasifica los productos en tres categorías — A, B y C — según la proporción del valor total del almacén que representa cada producto. Esta técnica se conoce comúnmente como <strong>análisis ABC</strong> y ayuda a las organizaciones a enfocar los esfuerzos de gestión de inventario donde más importan.</p>
+<p>Por ejemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Participación en el valor del almacén</th>
+<th>Acción típica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>~80 %</td>
+<td>Ciclo de conteo semanal, negociar condiciones con proveedores, mantener stock de seguridad ajustado</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>~15 %</td>
+<td>Ciclo de conteo mensual, reglas de reabastecimiento estándar</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>~5 %</td>
+<td>Ciclo de conteo anual, considerar consolidación o discontinuación</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>La clasificación se basa en el costo del producto. Por eso es necesario tener una Regla de Costeo validada y los costos de las transacciones de material del producto calculados y actualizados.</p>
+<p class="admonition-title">Requisitos previos</p>
+<p>La clasificación se basa en el costo de cada producto. Antes de ejecutar el informe, asegúrese de que lo siguiente esté configurado:</p>
+<ul>
+<li>Una <a href="../../setup/#costing-rules">Regla de cálculo de costes</a> validada para la organización.</li>
+<li>Costos de <strong>Transacción de Material</strong> actualizados (disponibles en <code>Gestión de Almacén</code> &gt; <code>Transacciones</code> &gt; <code>Transacción de Material</code>) — estas son las entradas de costo registradas cada vez que el stock entra o sale.</li>
+</ul>
+<p>Si alguno de estos elementos falta, el informe puede devolver valores en cero o resultados incompletos.</p>
 </div>
-<h2 id="parameters-window">Parameters Window</h2>
-<p>El campo <strong>Moneda</strong> define la moneda en la que se muestran todos los valores monetarios (como <strong>Costo</strong>, <strong>Valor</strong>) del informe. El campo toma por defecto la moneda del sistema.</p>
+<h2 id="parametros">Parámetros</h2>
+<p>Antes de generar el informe, configure los siguientes filtros:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organización</strong></td>
+<td>Filtra el informe por la organización seleccionada.</td>
+</tr>
+<tr>
+<td><strong>Moneda</strong></td>
+<td>Define la moneda en la que se muestran todos los valores monetarios (Costo, Valor). Por defecto toma la moneda del sistema.</td>
+</tr>
+<tr>
+<td><strong>Almacén</strong></td>
+<td>Restringe el informe a un almacén específico dentro de la organización seleccionada.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Tenga en cuenta que se debe especificar el <strong>Ratio de conversión</strong> a la <strong>Moneda</strong> del informe para que este funcione.</p>
+<p>Debe definirse un <strong>Ratio de conversión</strong> a la moneda seleccionada para que el informe funcione correctamente. Verifique esto en <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Rangos de conversión</code> antes de ejecutar el informe.</p>
 </div>
-<p>El botón <strong>Update ABC</strong> completa el campo <strong>ABC</strong> (actualiza el valor si el registro existe o crea un nuevo registro en caso contrario) de la pestaña Org. Specific de la ventana <strong>Producto</strong> para las organizaciones de la salida del informe.</p>
-<h2 id="sample-report-output">Sample Report Output</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png" data-desc-position="bottom"><img alt="Informe Pareto de Productos" src="../../../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png"></a></p>
-<p>Columnas a tener en cuenta:</p>
+<p>Después de configurar los filtros, elija una de las dos acciones:</p>
 <ul>
-<li><strong>Cantidad:</strong> es el stock actual del producto (Quantity on Hand) en el almacén seleccionado.</li>
-<li><strong>Valor:</strong> es la suma de todos los costos de las transacciones de material del producto.</li>
-<li><strong>Costo:</strong> este costo se calcula como la relación entre el valor del producto y la cantidad del producto indicada arriba.</li>
-<li><strong>Porcentaje:</strong> este porcentaje es la relación entre el valor del producto y el Valor Total del almacén (que es la suma de todas las líneas del informe).</li>
+<li><strong>Buscar</strong> — Muestra los resultados en la misma ventana.</li>
+<li><strong>Ver resultados</strong> — Abre el informe en una vista separada, lo cual puede ser útil para imprimir o comparar en paralelo.</li>
 </ul>
-<h2 id="persisted-information">Persisted Information</h2>
-<p>Se puede utilizar la información agregada calculada para el Valued Stock. Consulte la documentación del Valued Stock Report para obtener más detalles sobre cómo generar la información agregada.</p>
+<h2 id="resultado-del-informe">Resultado del informe</h2>
+<p>El informe lista todos los productos del almacén seleccionado, ordenados por valor descendente, y asigna a cada producto su categoría ABC.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png" data-desc-position="bottom"><img alt="Pareto Product Report output" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png"></a></p>
+<h3 id="referencia-de-columnas">Referencia de columnas</h3>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identificador</strong></td>
+<td>El código identificador único del producto.</td>
+</tr>
+<tr>
+<td><strong>Nombre</strong></td>
+<td>El nombre descriptivo del producto.</td>
+</tr>
+<tr>
+<td><strong>Cantidad</strong></td>
+<td>El stock actual (cantidad disponible) del producto en el almacén seleccionado.</td>
+</tr>
+<tr>
+<td><strong>Unidad</strong></td>
+<td>La unidad de medida del producto.</td>
+</tr>
+<tr>
+<td><strong>Costo</strong></td>
+<td>El costo unitario del producto (Valor total dividido por la Cantidad).</td>
+</tr>
+<tr>
+<td><strong>Valor</strong></td>
+<td>El valor total del inventario del producto, calculado como la suma de todos sus costos de transacciones de material.</td>
+</tr>
+<tr>
+<td><strong>Porcentaje</strong></td>
+<td>La relación entre el Valor del producto y el valor total del almacén (la suma de todas las líneas del informe).</td>
+</tr>
+<tr>
+<td><strong>Categoría</strong></td>
+<td>La clasificación ABC asignada al producto (A, B o C). Los productos cuyo valor acumulado alcanza hasta el 80 % del total se clasifican como A, los que se encuentran entre el 80 % y el 95 % como B, y el resto como C.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Lectura de los resultados</p>
+<p>Los productos al principio de la lista (Categoría A) tienen el mayor impacto individual en el valor del almacén. Enfoque primero los esfuerzos de revisión y control en estos artículos.</p>
+</div>
+<h2 id="actualizar-abc">Actualizar ABC</h2>
+<p>El botón <strong>Actualizar ABC</strong> en la parte inferior de la ventana escribe la clasificación de cada producto de vuelta al campo <strong>ABC</strong> en la pestaña <strong>Org. Specific</strong> de la ventana Producto.</p>
+<ul>
+<li>Si ya existe un registro para esa organización, el valor se <strong>actualiza</strong>.</li>
+<li>Si no existe ningún registro, se <strong>crea un nuevo registro</strong>.</li>
+</ul>
+<p>Una vez guardada, la categoría ABC queda disponible para filtrar e informar en otras áreas de la aplicación — por ejemplo, al definir reglas de reabastecimiento o generar informes de compras.</p>
+<div class="admonition tip">
+<p class="admonition-title">Cuándo actualizar</p>
+<p>Ejecute el informe y haga clic en <strong>Actualizar ABC</strong> periódicamente — por ejemplo, después de cada ciclo de valoración de inventario o cuando se hayan producido movimientos de stock significativos. Esto mantiene la clasificación alineada con las condiciones actuales del almacén.</p>
+</div>
+<h2 id="uso-de-datos-pre-agregados">Uso de datos pre-agregados</h2>
+<p>Para usar datos pre-agregados, ejecute primero el <a href="../valued-stock-report/">Informe Valoración de Stock</a>. Una vez generado ese informe, el Informe Pareto de Productos reutilizará automáticamente sus resultados, reduciendo el tiempo de carga. Si omite este paso, el informe se ejecutará igualmente pero puede ser más lento en entornos de alto volumen.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Exactamente igual que en el Valued Stock Report, el Informe Pareto de Productos también se puede ejecutar sin datos agregados. Sin embargo, esta función es especialmente útil en entornos de alto volumen cuando se experimentan problemas de rendimiento al ejecutar el informe.</p>
+<p>El Informe Pareto de Productos también puede ejecutarse sin datos agregados. Sin embargo, el uso de datos agregados es especialmente útil en entornos de alto volumen donde se experimentan problemas de rendimiento al iniciar el informe.</p>
 </div>
 <hr>
 <p>Este trabajo es una derivación de <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> por <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>

@@ -2121,27 +2121,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Parameters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-report-output" class="md-nav__link">
+  <a href="#report-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Report Output
+      Report Output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update ABC
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#using-pre-aggregated-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
+      Using Pre-Aggregated Data
     </span>
   </a>
   
@@ -16066,27 +16090,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Parameters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-report-output" class="md-nav__link">
+  <a href="#report-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Report Output
+      Report Output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#column-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update ABC
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#using-pre-aggregated-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
+      Using Pre-Aggregated Data
     </span>
   </a>
   
@@ -16111,25 +16159,25 @@
       
       
       
+        <span class="md-tag">ABC Classification</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">Analysis Tools</span>
+      
+    
+      
+      
+      
         <span class="md-tag">Inventory</span>
       
     
       
       
       
-        <span class="md-tag">Inventory Analysis</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Pareto</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Reports</span>
+        <span class="md-tag">Pareto Product Report</span>
       
     
       
@@ -16148,33 +16196,142 @@
 <h1 id="pareto-product-report">Pareto Product Report</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Analysis Tools</code> &gt; <code>Pareto Product Report</code></p>
 <h2 id="overview">Overview</h2>
-<p>The Pareto Product Report distributes products into three classes (A, B or C) according to the cost value that each product inventory has in the warehouse. Based on this classification the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).</p>
-<p>Following distribution is used: A products represent 80% value of the warehouse, B - 15% and C - 5%.</p>
+<p>The Pareto Product Report classifies products into three categories — A, B and C — based on the proportion of total warehouse value each product represents. This technique is commonly known as <strong>ABC analysis</strong>, and it helps organizations focus inventory management efforts where they matter most.</p>
+<p>For example:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Share of warehouse value</th>
+<th>Typical action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>~80 %</td>
+<td>Cycle-count weekly, negotiate supplier terms, keep safety stock tight</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>~15 %</td>
+<td>Cycle-count monthly, standard reorder rules</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>~5 %</td>
+<td>Cycle-count yearly, consider consolidation or discontinuation</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The classification is based on the cost of the product. That is why it is needed to have a Costing Rule validated and the Material Transaction costs of the product calculated up to date.</p>
+<p class="admonition-title">Prerequisites</p>
+<p>The classification is based on the cost of each product. Before running the report, make sure the following are in place:</p>
+<ul>
+<li>A validated <a href="../../setup/#costing-rules">Costing Rule</a> for the organization.</li>
+<li>Up-to-date <strong>Material Transaction</strong> costs (found under <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Material Transaction</code>) — these are the cost entries recorded each time stock moves in or out.</li>
+</ul>
+<p>If either is missing, the report may return zero values or incomplete results.</p>
 </div>
-<h2 id="parameters-window">Parameters Window</h2>
-<p>The <strong>Currency</strong> field defines the currency in which all monetary values (like <strong>Cost</strong>, <strong>Value</strong>) of the report are shown. The field is defaulted to the system currency.</p>
+<h2 id="parameters">Parameters</h2>
+<p>Before generating the report, configure the following filters:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization</strong></td>
+<td>Filters the report by the selected organization.</td>
+</tr>
+<tr>
+<td><strong>Currency</strong></td>
+<td>Defines the currency in which all monetary values (Cost, Value) are displayed. Defaults to the system currency.</td>
+</tr>
+<tr>
+<td><strong>Warehouse</strong></td>
+<td>Restricts the report to a specific warehouse within the selected organization.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Please note that <strong>Conversion Rate</strong> to the report <strong>Currency</strong> should be specified for the report to work.</p>
+<p>A <strong>Conversion Rate</strong> to the selected currency must be defined for the report to work correctly. Verify this under <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Conversion Rates</code> before running the report.</p>
 </div>
-<p>The <strong>Update ABC</strong> button fills in the <strong>ABC</strong> field (updates the value if the record exists or creates a new record otherwise) of the Org. Specific tab of the <strong>Product</strong> window for the organizations of the report output.</p>
-<h2 id="sample-report-output">Sample Report Output</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png" data-desc-position="bottom"><img alt="Pareto Product Report" src="../../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png"></a></p>
-<p>Columns to note:</p>
+<p>After setting the filters, choose one of the two actions:</p>
 <ul>
-<li><strong>Quantity:</strong> is the current stock of the product (Quantity on Hand) in the warehouse selected.</li>
-<li><strong>Value:</strong> is the sum of all the material transaction costs of the product.</li>
-<li><strong>Cost:</strong> this cost is calculated as the ratio between the product value and the product quantity above.</li>
-<li><strong>Percentage:</strong> this percentage is the ratio between the product value and the Total Value of the warehouse (which is the sum of all report lines).</li>
+<li><strong>Search</strong> — Displays the results in the same window.</li>
+<li><strong>View Results</strong> — Opens the report in a separate view, which can be useful for printing or side-by-side comparison.</li>
 </ul>
-<h2 id="persisted-information">Persisted Information</h2>
-<p>Aggregated information calculated for the Valued Stock can be used. Please refer to the  Valued Stock Report documentation for more details about how to generate the aggregated information.</p>
+<h2 id="report-output">Report Output</h2>
+<p>The report lists every product in the selected warehouse, sorted by descending value, and assigns each product its ABC category.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png" data-desc-position="bottom"><img alt="Pareto Product Report output" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png"></a></p>
+<h3 id="column-reference">Column Reference</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Search Key</strong></td>
+<td>The unique identifier code of the product.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>The descriptive name of the product.</td>
+</tr>
+<tr>
+<td><strong>Quantity</strong></td>
+<td>The current stock (quantity on hand) of the product in the selected warehouse.</td>
+</tr>
+<tr>
+<td><strong>Unit</strong></td>
+<td>The unit of measure for the product.</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>The unit cost of the product (total Value divided by Quantity).</td>
+</tr>
+<tr>
+<td><strong>Value</strong></td>
+<td>The total inventory value of the product, calculated as the sum of all its material transaction costs.</td>
+</tr>
+<tr>
+<td><strong>Percentage</strong></td>
+<td>The ratio between the product Value and the total value of the warehouse (the sum of all report lines).</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td>The ABC classification assigned to the product (A, B or C). Products whose cumulative value reaches up to 80 % of the total are classified as A, those between 80 % and 95 % as B, and the remainder as C.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Reading the results</p>
+<p>Products at the top of the list (Category A) have the highest individual impact on warehouse value. Focus review and control efforts on these items first.</p>
+</div>
+<h2 id="update-abc">Update ABC</h2>
+<p>The <strong>Update ABC</strong> button at the bottom of the window writes each product's classification back to the <strong>ABC</strong> field in the <strong>Org. Specific</strong> tab of the Product window.</p>
+<ul>
+<li>If a record already exists for that organization, the value is <strong>updated</strong>.</li>
+<li>If no record exists, a <strong>new record is created</strong>.</li>
+</ul>
+<p>Once persisted, the ABC category becomes available for filtering and reporting in other areas of the application — for instance, when defining reorder rules or generating purchasing reports.</p>
+<div class="admonition tip">
+<p class="admonition-title">When to update</p>
+<p>Run the report and click <strong>Update ABC</strong> periodically — for example, after each inventory valuation cycle or whenever significant stock movements have occurred. This keeps the classification aligned with current warehouse conditions.</p>
+</div>
+<h2 id="using-pre-aggregated-data">Using Pre-Aggregated Data</h2>
+<p>To use pre-aggregated data, run the <a href="../valued-stock-report/">Valued Stock Report</a> first. Once that report has been generated, the Pareto Product Report will automatically reuse its results, reducing load time. If you skip this step, the report will still run but may be slower in high-volume environments.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Exactly as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However, this feature is specially useful in high volume environments when you experience performance issues launching the report.</p>
+<p>The Pareto Product Report can also run without aggregated data. However, using aggregated data is especially useful in high-volume environments where you experience performance issues when launching the report.</p>
 </div>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
