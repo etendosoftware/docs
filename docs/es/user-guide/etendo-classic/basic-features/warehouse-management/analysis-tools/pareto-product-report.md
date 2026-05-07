@@ -84,7 +84,7 @@ Una vez guardada, la categoría ABC queda disponible para filtrar e informar en 
 
 ## Uso de datos pre-agregados
 
-Para mejorar el rendimiento en entornos de alto volumen, este informe puede reutilizar datos agregados generados previamente por el [Informe Valoración de Stock](valued-stock-report.md).
+Para usar datos pre-agregados, ejecute primero el [Informe Valoración de Stock](valued-stock-report.md). Una vez generado ese informe, el Informe Pareto de Productos reutilizará automáticamente sus resultados, reduciendo el tiempo de carga. Si omite este paso, el informe se ejecutará igualmente pero puede ser más lento en entornos de alto volumen.
 
 !!! note
     El Informe Pareto de Productos también puede ejecutarse sin datos agregados. Sin embargo, el uso de datos agregados es especialmente útil en entornos de alto volumen donde se experimentan problemas de rendimiento al iniciar el informe.
