@@ -8,6 +8,8 @@ tags:
  - Herramientas de análisis
 ---
 
+# Informe Pareto de Productos
+
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Pareto de Productos`
 
 ## Descripción general

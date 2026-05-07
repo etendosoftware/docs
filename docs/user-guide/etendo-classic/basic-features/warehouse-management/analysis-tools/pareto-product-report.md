@@ -8,6 +8,8 @@ tags:
  - Analysis Tools
 ---
 
+# Pareto Product Report
+
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Pareto Product Report`
 
 ## Overview
