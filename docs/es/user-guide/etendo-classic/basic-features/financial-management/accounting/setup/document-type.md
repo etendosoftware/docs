@@ -67,7 +67,7 @@ La lista completa de tipos de documento estándar es la siguiente:
 
 La ventana Tipo de documento permite a los usuarios avanzados configurar cómo se va a comportar cada tipo de documento en términos de contabilidad y secuenciación, entre otros.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-1.png)
 
 Campos a tener en cuenta:
 
@@ -166,13 +166,13 @@ Si es necesario, **las plantillas de informe se pueden personalizar** e incluso 
 !!! warning
     Aunque esta opción está disponible en esta solapa funcional, esta configuración debe ser realizada por un desarrollador.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-2.png)
 
 #### Definiciones del correo electrónico
 
 La solapa Definiciones del correo electrónico permite la creación de tantas plantillas de correo electrónico como sea necesario, dependiendo del idioma que se vaya a utilizar para enviar los documentos por correo electrónico. Los documentos pueden enviarse por correo electrónico utilizando el botón de acción **Correo electrónico**, que se puede encontrar en la barra de herramientas correspondiente.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-3.png)
 
 Tal y como se muestra en la imagen anterior, es posible definir:
 
@@ -200,7 +200,7 @@ Esta es la lista de etiquetas posibles:
 
 En esta solapa, los tipos de documento pueden traducirse a cualquier idioma requerido. Para ello, cree un nuevo registro y rellene los campos correspondientes, tal y como se muestra a continuación.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-4.png)
 
 ---
 Este trabajo es una obra derivada de [Document Type](https://wiki.openbravo.com/wiki/Document_Type){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.

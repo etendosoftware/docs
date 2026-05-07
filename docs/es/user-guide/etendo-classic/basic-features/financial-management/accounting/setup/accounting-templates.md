@@ -28,7 +28,7 @@ Un administrador del sistema registra la plantilla en esta ventana. Un desarroll
 
 La ventana **Plantillas de Contabilidad** se utiliza para registrar la clase Java que implementa la lógica de contabilización personalizada. Cada plantilla requiere un nombre, el nombre completo de la clase Java (dentro del paquete Java del módulo) y la tabla de base de datos que corresponde al tipo de documento a personalizar; por ejemplo, `C_Invoice` para facturas o `M_InOut` para albaranes de entrada y salida de mercancías.
 
-![Ventana de Plantillas de Contabilidad mostrando un registro de plantilla configurado](../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png)
+![Ventana de Plantillas de Contabilidad mostrando un registro de plantilla configurado](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-1.png)
 
 Cada plantilla se asocia posteriormente con tablas activas o tipos de documento específicos. Puede definir una única plantilla que cubra todos los documentos de un tipo dado (por ejemplo, todas las facturas), o crear plantillas separadas que se dirijan solo a [categorías de documento](document-type.md) específicas (por ejemplo, solo facturas de compra), manteniendo el comportamiento predeterminado para el resto.
 
@@ -58,7 +58,7 @@ Siga estas directrices al definir el conjunto de datos:
 - Dentro de la pestaña **Tabla**, incluya la tabla `AD_CreateFact_template` (la tabla de base de datos que almacena los registros de Plantillas de Contabilidad; cada fila de la ventana Plantillas de Contabilidad corresponde a una fila de esta tabla).
 - La **Cláusula Where HQL/SQL** filtra qué filas de la tabla se incluyen en el conjunto de datos exportado (HQL y SQL son lenguajes de consulta utilizados para seleccionar registros específicos de la base de datos). Normalmente, esta cláusula selecciona todos los registros cuyo nombre de clase Java se encuentra dentro del paquete Java del módulo, de modo que solo se exporten las plantillas pertenecientes a este módulo.
 
-![Ventana de definición del conjunto de datos](../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png)
+![Ventana de definición del conjunto de datos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-2.png)
 
 Una vez completada la definición del conjunto de datos, expórtelo pulsando el botón **Exportar Datos de Referencia**. Este proceso consulta las tablas configuradas, recupera todos los registros que coinciden con la Cláusula Where HQL/SQL y genera un archivo XML en el directorio `referencedata/standard` del módulo.
 
@@ -69,7 +69,7 @@ Una vez completada la definición del conjunto de datos, expórtelo pulsando el 
 
 La forma recomendada de verificar que el conjunto de datos es correcto es crear un nuevo cliente dentro de la instancia de desarrollo mediante el proceso [Crear entidad](../../../general-setup/getting-started.md#initial-client-setup), seleccionando durante la configuración el nuevo conjunto de datos de plantilla de contabilidad.
 
-![Selección de datos de referencia de Configuración Inicial del Cliente](../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png)
+![Selección de datos de referencia de Configuración Inicial del Cliente](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-3.png)
 
 !!!info
     Si los datos dentro del conjunto de datos son consistentes, el proceso de Crear entidad debería completarse correctamente. De lo contrario, fallará con una descripción del error que indique qué ha ocurrido.

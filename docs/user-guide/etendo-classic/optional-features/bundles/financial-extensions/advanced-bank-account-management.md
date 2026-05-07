@@ -29,8 +29,8 @@ This functionality is available in the following windows:
 - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
 - [Sales Order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
 - [Purchase Order](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management)
-- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
-- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
+- [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-in.md#advanced-bank-account-management)
+- [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-out.md#advanced-bank-account-management)
 
 ## Business Partner - Bank Account
 :material-menu: `Application` > `Master Data Management` > `Business Partner`

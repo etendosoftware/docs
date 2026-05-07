@@ -8,7 +8,7 @@ tags:
     - Cierre de fin de año
 ---
 
-![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../../assets/getting-started/overview/cover-getting-started.png)
 # Gestión Financiera - Primeros pasos
 ## Visión general
 
@@ -62,7 +62,7 @@ Esta área de aplicación cubre el flujo de negocio [Cierre de periodo hasta inf
 
 La Gestión de pagos y cobros aborda los cobros de clientes y los pagos a proveedores, así como otros pagos no relacionados con facturas, sino con pedidos (anticipos) o con apuntes de mayor (G/L Items).
 
-![payment-workflow.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
+![payment-workflow.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
 
 ### Configuración
 
@@ -187,7 +187,7 @@ Por último, el personal de finanzas imprime los informes de conciliación (Deta
 
 El flujo de negocio *Cierre de periodo hasta informe financiero* gestiona la apertura y el cierre de periodos.
 
-![periodendclose-tofinancialreport.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
+![periodendclose-tofinancialreport.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
 
 #### Configuración
 
@@ -410,7 +410,7 @@ Y además:
 
 Gestiona el ciclo de vida global de los activos desde la adquisición hasta su baja, incluyendo la amortización y otras depreciaciones.
 
-![asset-acq-disp-business-process.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/asset-acq-disp-business-process.png)
+![asset-acq-disp-business-process.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/asset-acq-disp-business-process.png)
 ## Relación con otras áreas
 
 Gestión Financiera tiene conexión con otras áreas de la aplicación, ya que existen documentos o transacciones en esas áreas que pueden contabilizarse y, por tanto, formar parte de un diario del libro mayor para finalmente gestionarse dentro del área de aplicación de Gestión Financiera.

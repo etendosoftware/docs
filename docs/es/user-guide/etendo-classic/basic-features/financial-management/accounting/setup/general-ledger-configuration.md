@@ -42,7 +42,7 @@ Por último, es importante remarcar que la configuración del GL y el CoA están
 
 La ventana Esquema contable permite al usuario revisar y mantener las configuraciones del libro mayor creadas por defecto y crear nuevas si es necesario.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration1.png) 
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration1.png) 
 
 Campos a tener en cuenta:
 
@@ -91,7 +91,7 @@ Una configuración del libro mayor creada por **Valor por defecto** puede modifi
         !!!info
             Es posible desmarcar cualquiera de las casillas anteriores para mostrar cualquiera de los saldos como negativo.
 
-        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
+        ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration7.png)
 
     - **Centralizado**: cuando es NO, el campo **Naturaleza de la cuenta (crédito/débito)** no se oculta en la pestaña Valor del elemento de la ventana [Árbol de cuentas](#árbol-de-cuentas). Por lo tanto, la naturaleza de la cuenta de cada elemento del árbol de cuentas define cómo se mostrará el saldo de esa cuenta en los estados financieros.
 
@@ -111,7 +111,7 @@ Existen **dos dimensiones obligatorias** a nivel de configuración del libro may
 -   La **Cuenta**, ya que cualquier documento/transacción contabilizado en el libro mayor debe contabilizarse en una cuenta contable (o subcuenta en términos de Etendo) de un determinado árbol de cuentas o plan de cuentas.
 -   La **Organización**, ya que cualquier documento/transacción contabilizado en el libro mayor debe contabilizarse en el libro mayor de una organización.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration2.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration2.png)
 
 Además, si una organización pertenece a una entidad que centraliza las dimensiones contables, es posible añadir en esta pestaña otras dimensiones como las que se listan a continuación, que incluso pueden configurarse como **Obligatorio** para la organización:
 
@@ -178,13 +178,13 @@ Por ejemplo, los registros de la tabla **FinancialMgmtAmortization** son las tra
 
 La pestaña **Documentos** permite al usuario definir qué tipos de documento de una tabla permiten contabilización negativa y si utilizan un proceso contable diferente del proceso por defecto basado en una plantilla contable determinada.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration5.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration5.png)
 
 ### Pestaña Contabilidad general
 
 La pestaña **Contabilidad general** permite al usuario definir las cuentas que se utilizarán en los asientos de cuadratura y en el proceso de cierre de fin de año.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration3.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration3.png)
 
 Campos a tener en cuenta:
 
@@ -218,7 +218,7 @@ Las cuentas **Obligatorio Valor por defecto** se rellenan por defecto como parte
 !!!info
     Si no se selecciona un csv contable o datos de referencia al ejecutar los procesos [Crear entidad](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) y [Crear organización](../../../general-setup/enterprise-model/initial-organization-setup.md), estas cuentas obligatorias deben introducirse manualmente aquí una vez que se haya creado el [Árbol de cuentas](#árbol-de-cuentas) y, por tanto, las subcuentas correspondientes.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration4.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration4.png)
 
 El botón **Copiar cuentas** permite seleccionar cuentas asignadas por defecto a cada [Grupos de Terceros](../../../master-data-management/business-partner-setup.md#business-partner-category) o [Categoría del producto](../../../master-data-management/product-setup.md#product-category).
 

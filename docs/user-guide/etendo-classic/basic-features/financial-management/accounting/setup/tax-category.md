@@ -36,7 +36,7 @@ This structure allows for flexible tax management while maintaining consistency 
 
 You can create as many tax categories as needed to organize different tax treatments in your system. Each category will be linked to specific tax rates and assigned to products. The Header tab defines the main information of the tax category.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category1.png)
 
 **Fields to note:**
 
