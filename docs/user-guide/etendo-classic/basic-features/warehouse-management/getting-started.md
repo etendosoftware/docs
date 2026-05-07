@@ -55,7 +55,7 @@ In Warehouse Management, main Inventory Accuracy operations are executed as foll
 
 To get the *Physical Inventory*, Warehouse Staff:
 
-- Starts with the products classifications and runs [Pareto Product Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report) which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
+- Starts with the products classifications and runs [Pareto Product Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md) which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
 Based on the classification, the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
 The ABC classification is then populated to the [Manufacturing](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#manufacturing) tab of the Product window by clicking the Update ABC button.
     - Note that the ABC classification is based on the cost of the product's transactions. That is why a [Costing Rule](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) for the legal entity must be configured and validated and the [Costing Background Process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing) process has to be scheduled.
@@ -68,12 +68,12 @@ To execute *Goods Movement* Warehouse Staff:
 
 For *Goods Tracking* Warehouse Staff uses:
 
-- [Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report) that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.
+- [Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report.md) that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.
 - [Goods Transaction](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#goods-transaction) window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.
-- [Product Movements Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report) shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.
-- [Material Transaction Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report) lists all documents (shipments or receipts) grouped by Business Partner.
+- [Product Movements Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report.md) shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.
+- [Material Transaction Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md) lists all documents (shipments or receipts) grouped by Business Partner.
 
-*Inventory Valuation* is done with the help of the [Valued Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report).
+*Inventory Valuation* is done with the help of the [Valued Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report.md).
 This report shows the cost of the stock calculated by the Costing Server process.
 
 *Inventory Update* is done with the help of the [Inventory Amount Update](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#inventory-amount-update) window.

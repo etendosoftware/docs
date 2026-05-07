@@ -49,7 +49,7 @@ Todas las casillas de verificación están habilitadas por defecto. Desmarque cu
 
 Tras configurar los filtros deseados, haga clic en **Ver resultados** para generar el informe. El informe también puede exportarse mediante el botón **Formato HTML**.
 
-![Informe Movimiento de Productos](../../../../../assets/drive/1KCTc1ueZ2Z-w-saDYnPVYx-BUDlYq4Gl.png)
+![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-1.png)
 
 ### Resultado del informe
 
@@ -66,7 +66,7 @@ El resultado del informe muestra los movimientos agrupados primero por tipo de t
 -   **Salida**: Indica si el producto salió de la organización (Sí/No).
 -   **Cantidad**: El número de unidades movidas, junto con la unidad de medida.
 
-![Informe Movimiento de Productos](../../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-2.png)
 
 ---
 

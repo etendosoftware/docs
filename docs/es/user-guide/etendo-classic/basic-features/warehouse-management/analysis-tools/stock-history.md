@@ -26,7 +26,7 @@ La ventana Historial de existencias se rellena únicamente mediante el proceso e
 
 No se mostrarán datos en la ventana hasta que se apliquen filtros de búsqueda. Una vez aplicados los filtros, haga clic en el botón de la derecha para completar el proceso. 
 
-![Stock History filter fields](../../../../../assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
+![Stock History filter fields](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/stock-history-1.png)
 
 La ventana muestra los siguientes campos a partir de los cuales el usuario puede filtrar y obtener los datos necesarios: 
 - Fecha de stock 
@@ -39,7 +39,7 @@ La ventana muestra los siguientes campos a partir de los cuales el usuario puede
 - Cantidad asignada
 - Cantidad en transacción en borrador
  
-![Stock History results](../../../../../assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
+![Stock History results](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history/stock-history-2.png)
 
 Esta funcionalidad incluye un proceso para cerrar el stock y guardar la información histórica.
 
