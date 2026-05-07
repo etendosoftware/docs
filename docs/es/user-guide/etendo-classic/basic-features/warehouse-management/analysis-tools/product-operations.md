@@ -20,7 +20,7 @@ Esta funcionalidad **centraliza todas las transacciones** asociadas al producto 
 
 Esta centralización facilita el análisis y una comprensión completa del rendimiento de las operaciones del producto.
 
-![Ventana de Operaciones de Producto](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
+![Ventana de Operaciones de Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/product-operations-1.png)
 
 ---
 

@@ -18,7 +18,7 @@ El Informe Stock muestra el nivel de stock de todos los productos (que tienen un
 
 El resultado de este informe puede filtrarse utilizando la fecha de movimiento, la categoría de producto, el producto y los ubicadores de almacén.
 
-![Ventana de parámetros del Informe Stock](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
+![Ventana de parámetros del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-1.png)
 
 El resultado de este informe puede visualizarse en formato HTML y PDF.
 
@@ -26,7 +26,7 @@ Los campos **Estantería (x)**, **Columna (y)**, **Altura (z)** corresponden a *
 
 ## Sample Report Output
 
-![Salida de ejemplo del Informe Stock](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
+![Salida de ejemplo del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png)
 
 ---
 

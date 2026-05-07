@@ -20,7 +20,14 @@ This functionality **centralizes all the transactions** associated with the sele
 
 This centralization facilitates the analysis and a complete understanding of the product operation performance.
 
-![Product Operations window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
+![Product Operations window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/product-operations-1.png)
+
+## Related Articles
+
+[:material-file-document-outline: Stock History](stock-history.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Stock Report](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Valued Stock Report](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Extensions - Release Notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md){ .md-button .md-button--primary }
 
 ---
 

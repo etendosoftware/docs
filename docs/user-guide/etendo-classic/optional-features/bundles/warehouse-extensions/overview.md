@@ -71,7 +71,7 @@ In Etendo, the Picking functionality is designed to help warehouse staff manage 
 This module allows you to observe and analyze in detail all transactions associated with the selected product. 
 
 !!! info
-    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools/product-operations.md).
 
 
 ### Reactivate Warehouse Documents
@@ -99,7 +99,7 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 This module provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    For more information, visit [Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history.md) and [Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ### Stock Logistic Unit
 

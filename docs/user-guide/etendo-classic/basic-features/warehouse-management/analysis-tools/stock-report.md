@@ -18,7 +18,7 @@ Stock Report shows a stock level of all products (that have quantity on hand dif
 
 The outcome of this report can be filtered by using movement date, product category, product and warehouse locators.
 
-![Stock Report parameters window](../../../../../assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
+![Stock Report parameters window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-1.png)
 
 The outcome of this report can be viewed in HTML and PDF format.
 
@@ -26,7 +26,14 @@ The outcome of this report can be viewed in HTML and PDF format.
 
 ## Sample Report Output
 
-![Stock Report output](../../../../../assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
+![Stock Report output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png)
+
+## Related Articles
+
+[:material-file-document-outline: Valued Stock Report](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Material Transaction Report](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Pareto Product Report](pareto-product-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Management Getting Started](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

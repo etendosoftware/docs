@@ -17,11 +17,11 @@ El Informe Transacción de Material lista todos los documentos (envíos saliente
 
 La información de este informe puede filtrarse usando la fecha de movimiento, el tercero, el almacén y el proyecto. Los informes pueden generarse en formato HTML y PDF.
 
-![Ventana de parámetros del Informe Transacción de Material](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
+![Ventana de parámetros del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
 
 ## Ejemplo de salida del informe
 
-![Salida del Informe Transacción de Material](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+![Salida del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
 
 ---
 
