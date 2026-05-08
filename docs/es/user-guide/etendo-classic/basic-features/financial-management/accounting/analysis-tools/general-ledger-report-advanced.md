@@ -7,7 +7,7 @@ tags:
   - Financial Extensions
 ---
 
-# Libro mayor avanzado
+# Libro mayor avanzado { #general-ledger-report-advanced }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Libro mayor avanzado`
 
@@ -16,7 +16,7 @@ tags:
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Descripción general
+## Descripción general { #overview }
 
 Este informe **Libro mayor avanzado** es una versión mejorada del anterior [Libro mayor](./general-ledger-report.md). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables existentes en la tabla Datos de contabilidad.
 
@@ -50,7 +50,7 @@ Es posible seleccionar la dimensión contable deseada para la agrupación. Al ge
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-3.png)
 
-## Botones
+## Botones { #buttons }
 
 En la barra de herramientas, se encuentran los botones **Ver**, **Exportar a PDF** y **Exportar a Excel** para generar el informe. En el caso de la opción Ver, se abre una nueva ventana con el informe correspondiente. En los otros casos, el informe se exporta en formato PDF o Excel.
 

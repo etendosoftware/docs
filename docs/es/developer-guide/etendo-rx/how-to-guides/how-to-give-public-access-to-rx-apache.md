@@ -1,6 +1,6 @@
 Esta guía ofrece un enfoque integral para hacer que el Etendo RX Edge Service sea accesible públicamente, garantizando al mismo tiempo una comunicación segura mediante cifrado SSL. El proceso implica el uso de Apache2, un software de servidor web popular, como proxy inverso. Esta configuración no solo facilita el acceso público, sino que también añade una capa adicional de seguridad al cifrar la transferencia de datos entre los clientes y el servidor.
 
-### Requisitos previos
+### Requisitos previos { #prerequisites }
 
 - Lea la [Guía del servidor de configuración](../../../developer-guide/etendo-rx/concepts/config-server.md) y la [Guía de Edge](../../../developer-guide/etendo-rx/concepts/edge-server.md)
 - Etendo RX Edge Service configurado y en ejecución.
@@ -8,7 +8,7 @@ Esta guía ofrece un enfoque integral para hacer que el Etendo RX Edge Service s
 - Una configuración SSL válida
 - Acceso root o sudo al servidor.
 
-### Descargo de responsabilidad
+### Descargo de responsabilidad { #disclaimer }
 
 Esta guía para configurar el acceso público al Etendo RX Edge Service usando Apache2 SSL Proxy abarca temas complejos que pueden ir más allá de su alcance, requiriendo conocimientos o experiencia adicionales:
 
@@ -17,7 +17,7 @@ Esta guía para configurar el acceso público al Etendo RX Edge Service usando A
 * Seguridad de red y firewalls: implica ajustar la configuración del firewall para el tráfico HTTPS.
 * Configuración de proxy inverso: comprensión del funcionamiento y la configuración de los proxies inversos.
 
-### Paso 1: Configurar Apache2 como un proxy inverso
+### Paso 1: Configurar Apache2 como un proxy inverso { #step-1-configure-apache2-as-a-reverse-proxy }
 
 1. **Habilitar módulos de proxy**: habilite los módulos de proxy necesarios en Apache2.
 
@@ -47,17 +47,17 @@ Esta guía para configurar el acceso público al Etendo RX Edge Service usando A
    sudo systemctl restart apache2
    ```
 
-### Paso 2: Verificar la configuración
+### Paso 2: Verificar la configuración { #step-2-verify-configuration }
 
 1. **Prueba en el navegador**: abra un navegador web y navegue a `https://yourdomain.com`. Debería ver la interfaz de Etendo RX Edge Service, servida de forma segura a través de HTTPS.
 
 2. **Comprobar la configuración SSL**: utilice una herramienta de comprobación SSL en línea para verificar que su certificado SSL está correctamente instalado y es válido.
 
-### Paso 3: Configuración del firewall (opcional)
+### Paso 3: Configuración del firewall (opcional) { #step-3-firewall-configuration-optional }
 
 Si su servidor está protegido por un firewall, asegúrese de que el puerto 443 (HTTPS) esté abierto para las conexiones entrantes.
 
-### Conclusión
+### Conclusión { #conclusion }
 
 Su Etendo RX Edge Service ahora es accesible públicamente con seguridad SSL proporcionada por Apache2. Esta configuración garantiza que el tráfico entre los clientes y su Edge Service esté cifrado y sea seguro. Recuerde mantener sus certificados SSL y Apache2 actualizados para garantizar la seguridad y el rendimiento.
 

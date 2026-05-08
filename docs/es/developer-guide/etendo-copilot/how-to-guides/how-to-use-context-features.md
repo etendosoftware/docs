@@ -5,12 +5,12 @@ tags:
     - Copilot
 ---
 
-# Uso de las funcionalidades de contexto de Etendo Copilot
+# Uso de las funcionalidades de contexto de Etendo Copilot { #using-etendo-copilot-context-features }
 
-## Visión general
+## Visión general { #overview }
 Esta guía explica cómo utilizar las funcionalidades con reconocimiento de contexto de Etendo Copilot para mejorar las interacciones de usuario en Etendo Classic. Cubre cómo Copilot captura el contexto de ventana, registro y usuario, y cómo configurar prompts predeterminados para obtener respuestas personalizadas.
 
-## Activación de Copilot
+## Activación de Copilot { #activating-copilot }
 
 1. Abra cualquier ventana en Etendo (p. ej., Pedido de venta, Inventario).
 2. Localice el **Botón de Copilot** en la barra de herramientas en la parte superior de la ventana.
@@ -22,11 +22,11 @@ Esta guía explica cómo utilizar las funcionalidades con reconocimiento de cont
     
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-use-context-features/context.png)
 
-## Comprender el contexto en Copilot
+## Comprender el contexto en Copilot { #understanding-context-in-copilot }
 
 Copilot mejora sus respuestas capturando automáticamente el contexto en función de sus acciones en Etendo Classic. Admite tres tipos de contexto clave:
 
-### 1. Contexto de ventana activa
+### 1. Contexto de ventana activa { #1-active-window-context }
 
 Copilot identifica la ventana activa actualmente, como "Pedido de compra" o "Lista de productos", e incluye esta información en sus respuestas. Por ejemplo:
 
@@ -34,7 +34,7 @@ Copilot identifica la ventana activa actualmente, como "Pedido de compra" o "Lis
 - **Pregunta**: "¿Qué información puede darme sobre esta ventana?"
 - **Respuesta**: Copilot proporciona detalles relacionados con la ventana "Pedido de venta".
 
-### 2. Contexto de registro seleccionado
+### 2. Contexto de registro seleccionado { #2-selected-record-context }
 
 Cuando selecciona un registro en una lista o rejilla, Copilot captura sus detalles (p. ej., ID, nombre u otros campos relevantes) y utiliza estos datos para ayudarle. Por ejemplo:
 
@@ -42,7 +42,7 @@ Cuando selecciona un registro en una lista o rejilla, Copilot captura sus detall
 - **Pregunta**: "¿Qué información puede darme sobre este registro?"
 - **Respuesta**: Copilot devuelve información específica del producto seleccionado.
 
-### 3. Contexto de registro editado
+### 3. Contexto de registro editado { #3-edited-record-context }
 
 Si está editando un registro en un formulario, Copilot detecta el modo de edición del formulario y captura los valores de entrada actuales, incluidos los cambios no guardados. Por ejemplo:
 
@@ -54,7 +54,7 @@ Si está editando un registro en un formulario, Copilot detecta el modo de edici
     Asegúrese de que la ventana o el registro correctos estén activos antes de hacer una pregunta a Copilot para obtener la respuesta más precisa.
 
 
-## Configurar un prompt predeterminado
+## Configurar un prompt predeterminado { #setting-a-default-prompt }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias`
 
 Puede personalizar Copilot configurando un prompt predeterminado que adapte su comportamiento a sus necesidades. Esto se realiza en la sección de Preferencias de Etendo Classic.
@@ -85,29 +85,29 @@ You are working in the organization '@ORG_NAME@' (ID: @AD_ORG_ID@) under the cli
 !!! info 
     Su prompt personalizado persiste entre sesiones, garantizando una experiencia consistente.
 
-## Ejemplos de uso
+## Ejemplos de uso { #examples-of-use }
 
 A continuación se muestran ejemplos prácticos basados en escenarios reales:
 
-### 1. Comprobar los detalles de la ventana
+### 1. Comprobar los detalles de la ventana { #1-checking-window-details }
 
 - **Escenario**: Está en la ventana "Pedido de compra".
 - **Pasos**: Haga clic en el botón de Copilot y pregunte: "¿Qué información puede darme sobre esta ventana?"
 - **Resultado**: Copilot describe el propósito de la ventana "Pedido de compra" y sus campos clave.
 
-### 2. Analizar un registro seleccionado
+### 2. Analizar un registro seleccionado { #2-analyzing-a-selected-record }
 
 - **Escenario**: Selecciona un registro de cliente en la rejilla "Terceros".
 - **Pasos**: Haga clic en el botón de Copilot y pregunte: "¿Qué información puede darme sobre este registro?"
 - **Resultado**: Copilot proporciona el ID, el nombre y otros detalles del cliente.
 
-### 3. Revisar un registro editado
+### 3. Revisar un registro editado { #3-reviewing-an-edited-record }
 
 - **Escenario**: Está editando el precio de un producto en un formulario.
 - **Pasos**: Haga clic en el botón de Copilot y pregunte: "¿Qué información puede darme sobre este registro?"
 - **Resultado**: Copilot refleja el nuevo precio y otros campos editados.
 
-### 4. Confirmar el contexto de usuario
+### 4. Confirmar el contexto de usuario { #4-confirming-user-context }
 
 - **Escenario**: Quiere verificar su prompt configurado.
 - **Pasos**: Haga clic en el botón de Copilot y pregunte: "¿Cuál es mi contexto?"

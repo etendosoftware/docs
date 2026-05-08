@@ -7,14 +7,14 @@ tags:
     - LLM
 ---
 
-# Cómo crear un agente
+# Cómo crear un agente { #how-to-create-an-agent }
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo crear un nuevo agente en Etendo Copilot desde cero. El agente podrá interactuar con el usuario y proporcionar respuestas basadas en la entrada del usuario. Este artículo le guiará a través del proceso de creación de un nuevo agente, la adición de una base de conocimiento y la selección de un modelo.
 
 La explicación completa de las ventanas utilizadas en esta guía se puede encontrar en el artículo [Configuración y uso](../../../user-guide/etendo-copilot/setup-and-usage.md).
-## Creación de un agente de respuesta básica
+## Creación de un agente de respuesta básica { #creating-a-basic-response-agent }
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agent`
 
 La ventana **Agent** le permite definir y configurar agentes.
@@ -48,7 +48,7 @@ Algunos de los campos principales que deben completarse son:
 !!!info "Acceso automático en la sincronización"
     Cada vez que se sincroniza un agente (manualmente desde la ventana Agente o automáticamente al iniciar), el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no lo tenía. Esto garantiza que quien realice la sincronización tenga permiso para usar el agente de inmediato, sin necesidad de agregar manualmente una entrada en la ventana [Agent Access](../../../user-guide/etendo-copilot/setup-and-usage.md#agent-access-window).
 
-### Ejemplo de definición de agente
+### Ejemplo de definición de agente { #agent-definition-example }
 
 Por ejemplo, para crear un nuevo agente llamado **Task Definition Agent** para ayudar a los usuarios a definir una incidencia con el formato obligatorio para su equipo. El propósito del agente es recibir una descripción de la tarea y devolver la definición de la tarea con el formato obligatorio. Crearemos un nuevo agente con la siguiente información:
 
@@ -102,7 +102,7 @@ Después de guardar el agente, el sistema le concederá acceso automáticamente.
 
 !!! tip
     A partir del agente más básico, su comportamiento viene determinado por su prompt del sistema. Por lo tanto, en caso de un funcionamiento no deseado, es importante verificar que el fallo no se encuentre en un prompt incorrecto, ineficiente o poco claro. Es posible depurar llamadas a LLM con Langsmith. Lea el artículo [Cómo depurar un agente con Langsmith](./how-to-debug-an-agent-with-langsmith.md) para más información.
-## ¿Qué modelo debo elegir?
+## ¿Qué modelo debo elegir? { #which-model-should-i-choose }
 Actualmente, Copilot admite los siguientes proveedores:
 
 - **OpenAI**: este proveedor es el predeterminado y el más utilizado. Es el más versátil y ofrece el mejor rendimiento en la mayoría de los casos.
@@ -111,16 +111,16 @@ Actualmente, Copilot admite los siguientes proveedores:
 - **Deepseek**: este proveedor es para tareas generales como OpenAI, pero más económico.
 - **Ollama (modelos autoalojados)**: este proveedor es para usuarios que tienen sus propios modelos ejecutándose en su propia infraestructura. El soporte para este proveedor está en fase experimental. Para más información, visite la guía [Cómo usar y ejecutar modelos autoalojados con Ollama](how-to-use-run-self-hosted-models-with-ollama.md).
 
-### Modelo por defecto
+### Modelo por defecto { #default-model }
 El modelo por defecto de Etendo Copilot es `gpt-4.1` de **OpenAI**. Este modelo se selecciona automáticamente si el agente no tiene un modelo específico seleccionado.
 
-### Ventana de modelos de IA: ¿qué modelos están disponibles?
+### Ventana de modelos de IA: ¿qué modelos están disponibles? { #ai-models-window---what-model-are-available }
 Etendo Copilot proporciona una ventana donde puede ver los modelos disponibles y sus detalles. Esta ventana se completa al sincronizar los modelos. Además, si el proveedor ofrece modelos que no están presentes en esta lista, se pueden añadir manualmente.
 
 !!! info 
     Más información aquí: [Modelos de IA](../../../user-guide/etendo-copilot/setup-and-usage.md#ai-models)
 
-### Entrada de imagen
+### Entrada de imagen { #image-input }
 
 ![Entrada de imagen](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-11.png){align=right width=250}
 
@@ -129,7 +129,7 @@ Los modelos que admiten entradas de imagen pueden trabajar con imágenes adjunta
 Esta herramienta está disponible en el módulo [Etendo Copilot ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack). Puede que necesite **explicar** al agente cómo utilizarla en el prompt.
 
 <br clear="all">
-## Añadir una base de conocimiento
+## Añadir una base de conocimiento { #add-a-knowledge-base }
 Los LLM son el cerebro detrás del agente y, por defecto, vienen con conocimiento adquirido a partir del propio entrenamiento del modelo. Sin embargo, en muchos casos necesitamos que tengan información específica que no poseen, por lo que recurrimos al Archivo de base de conocimiento para conformar su base de conocimiento. Esto nos permitirá **entrenar** nuestro agente con determinada información.
 
 Lo más crucial es determinar:
@@ -137,7 +137,7 @@ Lo más crucial es determinar:
 - Tipo de archivo de base de conocimiento: básicamente es el origen o cómo Etendo puede obtener ese archivo. Esto se configura en la ventana `Knowledge Base File`.
 - Comportamiento del archivo de base de conocimiento: que es la forma en que este archivo se integra en el agente o en la conversación. Esto se configura en la pestaña `Knowledge` de la ventana `Agent`.
 
-### Tipo de archivo de base de conocimiento
+### Tipo de archivo de base de conocimiento { #knowledge-base-file-type }
 
 | Tipo | Cuándo usarlo | Información necesaria |
 |--|--|------|
@@ -160,14 +160,14 @@ Lo más crucial es determinar:
     - La Herramienta OCR busca automáticamente en esta base de datos para encontrar imágenes de referencia similares que guían la extracción de datos
     - Cada agente mantiene su propia base de datos de imágenes, independiente de su base de conocimiento de texto
 
-### Configuración avanzada
+### Configuración avanzada { #advanced-settings }
 En la ventana Archivo de base de conocimiento, existe una sección de configuración avanzada que le permite configurar las siguientes opciones en el algoritmo de división del contenido del archivo: 
 ![Funciones avanzadas](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-12.png)
 
 - **Omitir división**: recupera el documento completo como un único fragmento, lo cual es útil para archivos pequeños.
 - **Tamaño máx. de fragmento**: esta opción le permite establecer el tamaño máximo (en tokens) de los fragmentos que se crearán cuando el contenido se divida. Esto es útil para evitar fragmentos muy grandes que puedan causar problemas de rendimiento. Dependiendo de los tipos de archivo, el algoritmo de división comprueba los **separadores** para dividir el contenido de forma semántica. Por ejemplo, en archivos markdown, la división se realiza por encabezados, por lo que cada fragmento contendrá el contenido de un encabezado y sus subencabezados. O en el caso de archivos Java, la división se realiza por clases, por lo que cada fragmento contendrá el contenido de una clase y sus métodos. Cuando se alcanza el tamaño del fragmento, el contenido se divide en un nuevo fragmento en el siguiente separador encontrado. Esto es útil para evitar fragmentos muy grandes que puedan causar problemas con el límite de tokens del modelo.  
 - **Solapamiento de fragmentos**: esta opción le permite establecer el solapamiento entre fragmentos para evitar perder información al dividir. El solapamiento es el número de tokens repetidos en cada fragmento. Por ejemplo, si el tamaño del fragmento es 100 y el solapamiento es 10, cada fragmento contendrá 90 tokens únicos y 10 tokens repetidos del fragmento anterior. Puede ser 0 si no desea solapamiento entre fragmentos.
-## Añadir salidas estructuradas (JSON Schema)
+## Añadir salidas estructuradas (JSON Schema) { #add-structured-outputs-json-schema }
 
 A partir de la última versión, la ventana de configuración del Agente incluye un nuevo campo en la sección **Configuración avanzada** llamado **`JSON Schema for Structured Outputs`**. Este campo acepta un objeto JSON Schema que el agente utilizará para validar y dar formato a sus respuestas.
 
@@ -204,7 +204,7 @@ Casos de uso:
 - Garantizar que la extracción de tareas siga un esquema predecible para integraciones.
 - Producir objetos de eventos listos para su ingesta por sistemas posteriores.
 
-### Ejemplo: contenido multilingüe (agente Bastian)
+### Ejemplo: contenido multilingüe (agente Bastian) { #example-multilingual-content-bastian-agent }
 
 A continuación se muestra un ejemplo de JSON Schema utilizado en el agente `Bastian` (la wiki de Etendo indexada) para devolver contenido multilingüe y preguntas sugeridas.
 
@@ -239,7 +239,7 @@ A continuación se muestra un ejemplo de JSON Schema utilizado en el agente `Bas
 }
 ```
 
-#### Explicación de la estructura:
+#### Explicación de la estructura: { #explanation-of-the-structure }
 
 - **$schema / title / description**: Metadatos que documentan el esquema y el borrador utilizado.
 - **type: object**: La respuesta debe ser un objeto JSON.
@@ -268,7 +268,7 @@ Pregunta realizada a `Bastian` y respuesta JSON estructurada recibida:
 
 ![Captura de pantalla - Pregunta al agente y respuesta estructurada](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/agent-bastian-response.png)
 
-### Comportamiento del archivo de base de conocimiento
+### Comportamiento del archivo de base de conocimiento { #knowledge-base-file-behavior }
 
 | Comportamiento | Cuándo usarlo | Funcionalidad | Limitaciones |
 |--|--|------|--|
@@ -284,7 +284,7 @@ Pregunta realizada a `Bastian` y respuesta JSON estructurada recibida:
     - **Recuerde la sincronización**: Después de añadir/modificar/eliminar un archivo de base de conocimiento de un Agente, es necesario sincronizar el agente para aplicar los cambios. Esto no solo regenera/recarga el archivo de base de conocimiento, sino que también actualiza el Agente con los últimos cambios. Cualquier usuario con acceso a la ventana de Agente puede realizar la sincronización, independientemente de su rol. Los datos de la base de conocimiento se aíslan por cliente en la base de datos vectorial.
     - **División**: Cuando se realiza la indexación en el archivo de base de conocimiento, el contenido se divide en fragmentos dependiendo del tipo de archivo. Por ejemplo, si el archivo es un archivo markdown, el contenido se divide en fragmentos por los encabezados. Si los archivos no son grandes, es posible marcar `Skip Splitting` en la configuración del archivo de base de conocimiento. Esto evitará la división del contenido en fragmentos. Esto provoca que el contenido de los documentos se recupere como un único fragmento, lo cual puede ser útil en algunos casos.
 
-### Ejemplo de añadir una base de conocimiento
+### Ejemplo de añadir una base de conocimiento { #add-a-knowledge-base-example }
 
 El agente Copilot por defecto `Bastian` tiene un archivo de base de conocimiento basado en la documentación de Etendo desde su repositorio de GitHub. Copilot admite el formato `.zip` para el comportamiento del archivo de base de conocimiento, extrayéndolo automáticamente e indexando los archivos del interior.
 En este caso, el archivo `ZIP` contiene la documentación de Etendo en formato markdown. El agente tiene el archivo de base de conocimiento configurado como `Remote File` y el comportamiento como `Add to the agent as Knowledge Base`. El agente tiene la siguiente configuración:
@@ -328,13 +328,13 @@ En este caso, el archivo `ZIP` contiene la documentación de Etendo en formato m
 
 !!! tip
     Recuerde: explique en el prompt que el agente debe buscar en el archivo de base de conocimiento para encontrar la información. Esto ayudará al agente a saber cómo trabajar con el archivo de base de conocimiento.
-## Añadir herramientas
+## Añadir herramientas { #add-tools }
 Al crear un agente, es posible añadirle herramientas. Las herramientas son funcionalidades que permiten al agente realizar tareas específicas. Estas herramientas se pueden utilizar para interactuar con sistemas externos, manipular archivos o realizar otras acciones. Las herramientas se añaden en la solapa `Habilidades y herramientas` de la ventana `Agente`.
 
 !!! info "Herramientas disponibles"
     Las siguientes herramientas están disponibles en Etendo Copilot y se enumeran en la documentación del módulo [Etendo Copilot - ToolPack](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack). En el módulo **Etendo Copilot Toolpack** hay un conjunto de herramientas que se pueden utilizar para ayudar en múltiples casos.
 
-### Ejemplo de añadir una herramienta
+### Ejemplo de añadir una herramienta { #adding-a-tool-example }
 
 Para añadir una herramienta a un agente, siga estos pasos:
 
@@ -350,10 +350,10 @@ Después de añadir la herramienta, el agente tendrá la herramienta disponible 
 
 Podemos comprobar el archivo creado:
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-7.png)
-## ¿Cómo permitir que Copilot interactúe con una API o con Etendo?
+## ¿Cómo permitir que Copilot interactúe con una API o con Etendo? { #how-to-allow-copilot-to-interact-with-an-api-or-etendo }
 La funcionalidad más potente y útil de Etendo Copilot es la capacidad de interactuar con APIs (incluida la API de Etendo). Actualmente, el paradigma de los agentes de IA es automatizar y/o reutilizar lo que ya está **hecho**. En otras palabras, la utilidad surge del hecho de que los agentes de IA pueden usar toda la lógica de negocio que ya está disponible.
 
-### API externa
+### API externa { #external-api }
 La forma más habitual se basa en una combinación de una Especificación OpenAPI y una herramienta que permite realizar solicitudes a esa API. Para ello, se necesitan los siguientes pasos:
 - **Añadir la Especificación OpenAPI**: la Especificación OpenAPI es una forma estándar de describir una API. Esta especificación se añade como un archivo de Base de conocimiento. Y se configura como `[Agente] Añadir el contenido del archivo al prompt`. Esto permitirá que el agente conozca los endpoints y métodos de la API.
 - **Añadir la herramienta de llamada a API**: la herramienta de llamada a API es una herramienta que permite realizar solicitudes a una API. Esta herramienta se añade como una herramienta en el agente. El agente puede usar esta herramienta para realizar solicitudes a la API.
@@ -369,11 +369,11 @@ Los pasos para permitir que un agente interactúe con Etendo son:
 !!!warning
     Si el comportamiento del archivo de Base de conocimiento es `[Agente] Añadir al agente como base de conocimiento`, el agente no podrá usar la información del archivo de base de conocimiento para generar respuestas sin usar la herramienta `Knowledge base Search`. Por lo tanto, el agente necesita **buscar** en el archivo de base de conocimiento para encontrar la información. Esto no se recomienda debido al rendimiento del agente.
 
-### Generación automática de herramientas
+### Generación automática de herramientas { #auto-generation-of-tools }
 
 Cuando la Especificación OpenAPI se añade como un archivo de Base de conocimiento de tipo `Especificación de flujo OpenAPI`, el agente generará automáticamente herramientas para cada método y endpoint de la API. Estas herramientas se pueden usar para realizar solicitudes a la API sin necesidad de configurar la herramienta de llamada a API. El agente tendrá una herramienta para cada método y endpoint de la API. Esta funcionalidad se encuentra actualmente en fase experimental.
 
-### Ejemplo de interacción de Copilot con Etendo
+### Ejemplo de interacción de Copilot con Etendo { #example-of-copilot-interaction-with-etendo }
 Por ejemplo, crearemos un agente para crear Productos en Etendo, usando un flow ya definido con los endpoints necesarios para crear Productos, Categorías de producto y Precios.
 
 1. Primero, crearemos un nuevo archivo de Base de conocimiento de tipo `Especificación de flujo OpenAPI` y seleccionaremos el flow `Product Flow`.
@@ -395,7 +395,7 @@ Por ejemplo, crearemos un agente para crear Productos en Etendo, usando un flow 
 4. Puede empezar a interactuar con el agente. El agente tendrá la Especificación OpenAPI en el prompt y podrá usar la herramienta de llamada a API para realizar solicitudes a la API.
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent/how-to-create-an-agent-10.png)
-## Problemas comunes
+## Problemas comunes { #common-issues }
 
 1. **Registros huérfanos tras la desinstalación de un módulo**
 

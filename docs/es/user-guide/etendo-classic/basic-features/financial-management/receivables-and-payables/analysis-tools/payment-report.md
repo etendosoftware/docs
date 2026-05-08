@@ -7,11 +7,11 @@ tags:
   - Financial Analysis
 ---
 
-# Informe de pagos y cobros
+# Informe de pagos y cobros { #payment-report }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payment Report`
 
-## Descripción general
+## Descripción general { #overview }
 
 El Informe de pagos y cobros muestra información sobre cobros y/o pagos, que puede filtrarse mediante un amplio conjunto de filtros disponibles.
 

@@ -6,13 +6,13 @@ tags:
     - Configuración de Adjuntos
 ---
 
-# Migración a Etendo (desde Openbravo)
+# Migración a Etendo (desde Openbravo) { #migrating-to-etendo-from-openbravo }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía proporciona la información necesaria para migrar una instancia existente de Openbravo a una nueva instancia de Etendo (en su última versión). 
 
-### Requisitos
+### Requisitos { #requirements }
 
 Antes de que comience el proceso de migración, tanto si se realiza en Linux como en Windows, asegúrese de disponer de los siguientes elementos:
 
@@ -30,9 +30,9 @@ Antes de que comience el proceso de migración, tanto si se realiza en Linux com
 
 
 
-## Instrucciones para el proceso de migración
+## Instrucciones para el proceso de migración { #instructions-for-the-migration-process }
 
-### Antes de iniciar la migración
+### Antes de iniciar la migración { #before-starting-the-migration }
 Es necesario asegurarse de seguir los siguientes pasos:
 
 1.  Detenga el servidor Tomcat.
@@ -49,7 +49,7 @@ Es necesario asegurarse de seguir los siguientes pasos:
 2. Cree una copia de seguridad de su instancia.
 
 
-### Proceso de migración manual
+### Proceso de migración manual { #manual-migration-process }
 
 Estos son los pasos a seguir para la migración manual de OpenbravoERP a Etendo Classic:
 
@@ -131,9 +131,9 @@ Estos son los pasos a seguir para la migración manual de OpenbravoERP a Etendo 
 
 
 
-## Configuración posterior a la migración
+## Configuración posterior a la migración { #post-migration-configuration }
 
-### Eliminar el contexto desplegado de la instancia anterior
+### Eliminar el contexto desplegado de la instancia anterior { #remove-previous-instance-deployed-context }
 
 ``` bash title="Terminal"
 rm -r /var/lib/tomcat/webapps/openbravo
@@ -142,7 +142,7 @@ rm -r /var/lib/tomcat/webapps/openbravo
     Asegúrese de que este paso se realiza antes de iniciar Tomcat; de lo contrario, se arriesga a tener dos entornos ejecutándose al mismo tiempo, lo que puede causar problemas (especialmente cuando intervienen procesos en segundo plano).
 
 
-### Iniciar Tomcat
+### Iniciar Tomcat { #start-tomcat }
 
 !!! info
     Dependiendo de su servidor, puede ser necesario cambiar este comando.
@@ -155,7 +155,7 @@ sudo /etc/init.d/tomcat start
 
 
 
-### Configuración de Adjuntos
+### Configuración de Adjuntos { #attachments-configuration }
 
 !!! warning
     Antes de eliminar su instancia anterior, asegúrese de migrar sus archivos adjuntos.
@@ -181,7 +181,7 @@ mv /opt/OpenbravoERP/attachments /opt/EtendoERP/attachments
     Tenga cuidado al cambiar la configuración de adjuntos y asegúrese de disponer de una copia de seguridad reciente.
 
 
-### Personalizaciones en el Core
+### Personalizaciones en el Core { #customizations-to-core }
 
 Vuelva a aplicar los parches al core si es necesario y compile.
 
@@ -197,7 +197,7 @@ patch -p1 < customPatchToCore.patch
 sudo /etc/init.d/tomcat restart
 ```
 
-### Configuración de Apache
+### Configuración de Apache { #apache-configuration }
 
 1.  Si es necesario, cambie la configuración de Apache para usar jkmount en el contexto correcto ("openbravo" por defecto en la instalación antigua).  
     El archivo de configuración debería estar en `/etc/apache2/conf-enabled/openbravo.conf`, `/etc/apache2/conf-available/openbravo.conf`o `/etc/apache2/sites-available/000-default.conf` / `/etc/apache2/sites-available/000-default-le-ssl.conf`<br>
@@ -219,7 +219,7 @@ sudo /etc/init.d/tomcat restart
 sudo service apache2 restart
 ```
 
-### Activar su instancia
+### Activar su instancia { #activate-your-instance }
 
 1.  Inicie sesión como Administrador del sistema y utilice la ventana Activación de instancia para activar su instancia.
 2.  Utilice Actualizar en línea
@@ -229,7 +229,7 @@ sudo service apache2 restart
     ¡Su instancia está activada!
 
 
-### Cambiar el script de copia de seguridad y restauración
+### Cambiar el script de copia de seguridad y restauración { #change-backup-and-restore-script }
 
 1.  Asegúrese de que el script de copia de seguridad ahora obtiene sus datos del `Openbravo.properties` correcto, por ejemplo en la carpeta `/opt/EtendoERP/`  
         El script de copia de seguridad suele estar ubicado en `/usr/share/openbravo/backup/backup`. Debe cambiar las líneas para que apunten al archivo `Openbravo.properties` real. Por ejemplo:
@@ -342,7 +342,7 @@ La base de datos que debe eliminarse debería ser la base de datos de Etendo, pe
     El mismo aviso para las copias de seguridad aplica aquí. Tenga cuidado con lo que renombra. Si ve un error, por favor solicite soporte.
 
 
-### Cambiar el directorio inicial al iniciar sesión
+### Cambiar el directorio inicial al iniciar sesión { #change-initial-directory-on-login }
 
 Dentro de `~/.bashrc` puede tener un comando que le permite iniciar sesión directamente en la carpeta `/opt/OpenbravoERP`. Cámbielo para que apunte a la carpeta de su nueva instancia:
 
@@ -354,11 +354,11 @@ cd /opt/Openbravo
 cd /opt/EtendoERP
 ```
 
-### Cambiar el usuario del servidor
+### Cambiar el usuario del servidor { #change-server-user }
 
 Puede cambiar el usuario actual de Openbravo a Etendo, si lo desea. Esta guía no cubre cómo hacerlo.
 
-### Eliminar la instalación anterior
+### Eliminar la instalación anterior { #remove-previous-installation }
 
 1.  Elimine el contexto de Openbravo de la carpeta de Tomcat:
 
@@ -383,7 +383,7 @@ Puede cambiar el usuario actual de Openbravo a Etendo, si lo desea. Esta guía n
 !!! warning
     Asegúrese de que los comandos anteriores apuntan a las bases de datos, el usuario y el host correctos, y de que ha realizado una copia de seguridad antes de ejecutar el comando.
 
-### Aplicar correcciones de impuestos 303 e informe de impuestos
+### Aplicar correcciones de impuestos 303 e informe de impuestos { #apply-303-taxes-and-tax-report-fixes }
 
 Este paso solo es necesario si se dan las siguientes condiciones en su entorno:
 
@@ -394,7 +394,7 @@ Este paso solo es necesario si se dan las siguientes condiciones en su entorno:
 
 Para resolver los problemas con impuestos derivados de que estos módulos se migren de Openbravo a Etendo, consulte la [incidencia conocida](../../../../whats-new/release-notes/etendo-classic/known-issues.md/#ee-808-problem-when-trying-to-import-the-taxes-configuration-for-spain-dataset-if-the-environment-already-has-imported-the-dataset-related-to-the-303-temporary-taxes-of-openbravo) relacionada. 
 
-### Aplicar correcciones de impuestos 390 e informe de impuestos
+### Aplicar correcciones de impuestos 390 e informe de impuestos { #apply-390-taxes-and-tax-report-fixes }
 
 Este paso solo es necesario si se dan las siguientes condiciones en su entorno:
 
@@ -405,7 +405,7 @@ Este paso solo es necesario si se dan las siguientes condiciones en su entorno:
 
 Para resolver los problemas con impuestos derivados de que estos módulos se migren de Openbravo a Etendo, consulte la [incidencia conocida](../../../../whats-new/release-notes/etendo-classic/known-issues.md/#ee-856-390-tax-report-dataset-duplicates-data-for-2022-when-applied-on-a-server-migrated-from-ob-to-etendo-after-01-2023) relacionada. 
 
-## Conclusión
+## Conclusión { #conclusion }
 
 !!! info
     Con estos pasos, debería haber migrado correctamente sus datos de Openbravo a Etendo, tanto en un sistema Linux como en un sistema Windows. Si encuentra algún problema durante el proceso, póngase en contacto con el [equipo de soporte de Etendo](https://etendoproject.atlassian.net/servicedesk/customer/portals){target="_blank"} para obtener asistencia.

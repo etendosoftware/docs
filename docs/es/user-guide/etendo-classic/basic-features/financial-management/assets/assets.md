@@ -7,15 +7,15 @@ tags:
   - Depreciation
 ---
 
-# Activos
+# Activos { #assets }
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Assets`
 
-## Descripción general
+## Descripción general { #overview }
 
 El usuario puede definir los activos de la empresa y configurar sus características de amortización.
 
-## Ventana Activos
+## Ventana Activos { #assets-window }
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/assets/assets-1.png)
 
@@ -50,13 +50,13 @@ Campos a destacar:
 -   **Valor depreciado**: Valor depreciado.
 -   **Proyecto**: Identificador de un proyecto definido en el módulo de Gestión de Proyectos y Servicios.
 
-### Botones
+### Botones { #buttons }
 
 - **Crear amortización**: El botón Crear amortización rellena la solapa Amortización del activo. Crea el plan de amortización basándose en la definición del activo.
 
 - **Recalcular amortización**: El botón Recalcular amortización permite al usuario actualizar la información cuando sea necesario.
 
-## Solapa Amortización del activo
+## Solapa Amortización del activo { #asset-amortization-tab }
 
 Las amortizaciones del activo seleccionado se añaden a esta solapa.
 
@@ -83,7 +83,7 @@ La línea de depreciación de febrero no puede eliminarse hasta que no se haya e
 
 El proceso asume que si existe la línea de depreciación de marzo, entonces existe la línea de depreciación de febrero.
 
-## Solapa Contabilidad
+## Solapa Contabilidad { #accounting-tab }
 
 El usuario puede crear y editar cuentas del libro mayor para utilizarlas en las transacciones que incluyan el activo seleccionado.
 
@@ -95,7 +95,7 @@ El usuario puede crear y editar cuentas del libro mayor para utilizarlas en las 
 
 Las cuentas mostradas están configuradas por defecto y pueden modificarse.
 
-## Dimensiones Contables de Activos
+## Dimensiones Contables de Activos { #accounting-dimensions-assets }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle.
@@ -123,7 +123,7 @@ Las dimensiones que el usuario puede aplicar al proceso de creación de activos 
 !!! info
     Para más información sobre la configuración de dimensiones, visite [Dimensiones](../../../../etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
-### Botones
+### Botones { #buttons_1 }
 
 - **Crear amortización**: El botón Crear amortización genera las líneas de amortización en la solapa Amortización del activo relacionada con el activo seleccionado. Además, estas mismas líneas se añaden en la ventana Amortización, agrupándolas únicamente según el **período de depreciación** (mensual o anual) en el caso del tipo calculado (tiempo), e incluso anualmente para el tipo calculado (porcentaje).
 

@@ -6,13 +6,13 @@ tags:
     - Mantenimiento
 ---
 
-# Cómo crear y trabajar con tareas masivas para Copilot
+# Cómo crear y trabajar con tareas masivas para Copilot { #how-to-create-and-work-with-bulk-tasks-for-copilot }
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo crear y trabajar con tareas masivas para Copilot. Esto resulta útil cuando desea crear múltiples tareas a la vez y ejecutarlas en segundo plano con Copilot.
 
-### Concepto y casos de uso
+### Concepto y casos de uso { #concept-and-use-cases }
 Cuando necesita utilizar un agente de IA para realizar tareas con un alto volumen de iteraciones, estará limitado en la cantidad que puede manejar y en su velocidad. Entonces nace el concepto de tareas masivas, que consiste en almacenar solicitudes en una ventana del módulo `Mantenimiento`. 
 
 !!!warning
@@ -20,7 +20,7 @@ Cuando necesita utilizar un agente de IA para realizar tareas con un alto volume
 
 Estas solicitudes pueden ejecutarse manualmente o procesarse en un proceso en segundo plano ya incluido en el módulo Copilot.
 
-## Añadir tareas de Copilot
+## Añadir tareas de Copilot { #add-copilot-tasks }
 El módulo Etendo Copilot incluye:
 
 - **Botón Añadir tarea de Copilot**: Este botón en la ventana `Mantenimiento` le permite enviar un archivo CSV/XLSX/ZIP para crear tareas masivas.
@@ -43,7 +43,7 @@ En ambas opciones, los requisitos son los mismos:
     - **Sin agrupar por**: `BASE_TASK - [FILE_NAME/ROW DATA]`
     - **Con agrupar por**: `BASE_TASK - [JSON array with grouped rows]`
 
-### Ejemplo
+### Ejemplo { #example }
 Por ejemplo, si tiene un archivo CSV con los siguientes datos:
 
 ```csv title="products.csv"
@@ -59,7 +59,7 @@ SKU,Description,Category,Price
 
 Y el objetivo es insertar estos productos en Etendo. Para este ejemplo utilizaremos el agente `Data Initialization Supervisor` que contiene el agente `Product Generator` que puede crear productos en Etendo. Los pasos para crear las tareas masivas son:
 
-#### Usar el botón `Add Copilot Task`
+#### Usar el botón `Add Copilot Task` { #using-the-add-copilot-task-button }
 
 1. Vaya a la ventana **Mantenimiento**.
 2. Haga clic en el botón `Add Copilot Task`. Esto abrirá una ventana para establecer los parámetros de las tareas masivas.
@@ -75,7 +75,7 @@ Y el objetivo es insertar estos productos en Etendo. Para este ejemplo utilizare
     
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-1.png)
 
-#### Usar la `Task Creator Tool` en un agente
+#### Usar la `Task Creator Tool` en un agente { #using-the-task-creator-tool-in-an-agent }
 
 1. Vaya al agente que contiene la `Task Creator Tool`.
 2. Abra una conversación con el agente.
@@ -97,7 +97,7 @@ Y el objetivo es insertar estos productos en Etendo. Para este ejemplo utilizare
 
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-create-and-work-with-bulk-tasks-for-copilot/how-to-create-and-work-with-bulk-tasks-for-copilot-2.png)
 
-#### Usar el agente `Bulk Task Creator`
+#### Usar el agente `Bulk Task Creator` { #using-the-bulk-task-creator-agent }
 Este agente sabe cómo usar la `Task Creator Tool` estratégicamente, convirtiendo la solicitud en tareas singulares. Los pasos para crear las tareas masivas son:
 
 1. Añada el agente `Bulk Task Creator` a un agente supervisor. En este caso, utilizaremos el agente `Data Initialization Supervisor` que contiene el agente `Product Generator`.
@@ -113,11 +113,11 @@ Este agente sabe cómo usar la `Task Creator Tool` estratégicamente, convirtien
 
 5. El agente supervisor delegará la tarea al agente `Bulk Task Creator`, que creará las tareas basándose en los datos del archivo y luego las procesará.
 
-### Opciones avanzadas: agrupar datos relacionados
+### Opciones avanzadas: agrupar datos relacionados { #advanced-options-grouping-related-data }
 
 Cuando trabaje con datos que tienen relaciones entre filas (como líneas de pedido que pertenecen al mismo pedido, o líneas de factura para la misma factura), puede usar el parámetro `groupby` para crear una tarea por grupo en lugar de una tarea por fila.
 
-#### Cuándo usar Agrupar por
+#### Cuándo usar Agrupar por { #when-to-use-groupby }
 
 Use el parámetro `groupby` cuando:
 
@@ -125,7 +125,7 @@ Use el parámetro `groupby` cuando:
 - **Se necesita contexto de múltiples filas**: Cuando el agente de IA necesita ver todos los datos relacionados a la vez para tomar mejores decisiones.
 - **Reducir la sobrecarga de tareas**: En lugar de crear cientos de tareas individuales, puede crear menos tareas con datos agrupados.
 
-#### Ejemplo de Agrupar por: líneas de pedido
+#### Ejemplo de Agrupar por: líneas de pedido { #groupby-example-order-lines }
 
 Suponga que tiene un archivo Excel con datos de líneas de pedido:
 
@@ -156,7 +156,7 @@ Esto creará 2 tareas:
 
 Cada tarea ahora contiene un array JSON con todas las líneas de ese pedido específico, lo que permite al agente procesar el pedido completo en una única ejecución.
 
-#### Modo de vista previa
+#### Modo de vista previa { #preview-mode }
 
 Antes de crear un gran número de tareas, puede usar el parámetro `preview` para validar la estructura de la tarea:
 
@@ -169,7 +169,7 @@ Create bulk tasks for the attached file in preview mode.
 
 La herramienta devolverá una vista previa mostrando cuántas tareas se crearían y su estructura, sin crearlas realmente en la base de datos.
 
-## Cómo procesar tareas de Copilot
+## Cómo procesar tareas de Copilot { #how-to-process-copilot-tasks }
 Las tareas pueden procesarse de dos maneras:
 
 - **Procesamiento manual**: El usuario puede procesar las tareas manualmente en la ventana `Mantenimiento`. Seleccione las tareas a procesar y haga clic en el botón `EXECUTE TASK WITH COPILOT`. Después de que la tarea se procese, el estado se actualizará a `Completed` y el resultado se mostrará en el campo `Response`.
@@ -178,7 +178,7 @@ Las tareas pueden procesarse de dos maneras:
 
 Después de que la tarea se procese, el estado se actualizará a `Completed` y el resultado se mostrará en el campo `Response`. Además, la respuesta completa del agente se almacenará en el campo `RAW Response`, y el campo `Conversation ID` contendrá el identificador de la conversación con el agente.
 
-### Ejemplo
+### Ejemplo { #example_1 }
 
 Por ejemplo, procesaremos algunas tareas creadas en el ejemplo anterior, de forma manual.
 

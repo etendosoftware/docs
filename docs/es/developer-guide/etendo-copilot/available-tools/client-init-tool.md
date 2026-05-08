@@ -6,18 +6,18 @@ tags:
   - Configuración
 ---
 
-# Herramienta de configuración inicial del cliente
+# Herramienta de configuración inicial del cliente { #client-initial-setup-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.devassistant`
 
-## Visión general
+## Visión general { #overview }
 
 La **ClientInitTool** ayuda a inicializar un nuevo cliente en el sistema Etendo. Recopila de forma interactiva toda la información requerida, invoca la función de backend para aprovisionar el cliente y su administrador, y valida que la creación se haya realizado correctamente.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza el proceso de **aprovisionamiento de clientes** en Etendo mediante:
 
@@ -44,9 +44,9 @@ Esta herramienta automatiza el proceso de **aprovisionamiento de clientes** en E
     - Devuelve una respuesta JSON indicando éxito o fallo.  
     - En caso de éxito: incluye un mensaje de confirmación, el ID del nuevo cliente y el nombre de usuario del administrador.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Aprovisionamiento de un nuevo cliente
+### Aprovisionamiento de un nuevo cliente { #provisioning-a-new-client }
 
 **Entrada**
 ```json

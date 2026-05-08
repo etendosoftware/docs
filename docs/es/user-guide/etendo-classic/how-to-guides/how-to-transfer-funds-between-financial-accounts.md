@@ -7,7 +7,7 @@ tags:
     - Gestión de tesorería
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Existen muchas situaciones en las que una empresa necesita transferir fondos para modificar o ajustar el saldo de cuentas bancarias y/o de caja:
 
@@ -23,13 +23,13 @@ Existen varios tipos de transferencias de fondos en función del tipo de cuenta 
 - De una cuenta bancaria de una organización a una cuenta bancaria de otra organización.
 - Lo mismo aplica a las cuentas de caja.
 
-## Artículos recomendados
+## Artículos recomendados { #recomended-articles }
 
 La transferencia de fondos entre cuentas financieras requiere una comprensión clara de cómo crear un [Concepto contable](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md).
 
 También es muy recomendable comprender cómo funcionan en Etendo las [Cuenta financiera](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) y la [Combinación de cuentas](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination.md).
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 En Etendo, la empresa del ejemplo deberá retirar dinero de una cuenta bancaria o de caja y depositarlo en otra cuenta bancaria o de caja.
 En otras palabras, la empresa necesita modificar el saldo de las cuentas bancarias o de caja cuando sea necesario. Esa acción puede tener o no comisiones.
@@ -43,7 +43,7 @@ En cualquier caso, los pasos a seguir son:
         en la cuenta bancaria en la que se van a depositar los fondos.
 
 
-## Creación del Concepto contable
+## Creación del Concepto contable { #gl-item-creation }
 
 Un [Concepto contable](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md) es el elemento contable que se utiliza para contabilizar fondos en tránsito. Es clave configurar el concepto contable con las cuentas de débito y crédito correctas en el campo Solapa contabilidad. La forma de hacerlo es:
 
@@ -57,7 +57,7 @@ Por ejemplo, las combinaciones de cuentas de muestra que podrían utilizarse son
 - Configuración del libro mayor español:
         55500 - Partidas pendientes de aplicación
 
-## Creación de la transacción de retirada
+## Creación de la transacción de retirada { #creation-of-the-withdrawal-transaction }
 
 Debe crearse una transacción de retirada en la Cuenta financiera de la que se van a retirar los fondos. Este paso del proceso puede tener o no comisiones.
 
@@ -85,7 +85,7 @@ La contabilización tendrá el siguiente aspecto:
 | [Banco A - Cuenta de retirada](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Importe pagado |
 
 
-### Creación de la comisión bancaria
+### Creación de la comisión bancaria { #creation-of-the-bank-fee }
 
 La empresa de este ejemplo necesita crear la transacción de retirada tal y como se ha descrito anteriormente y una transacción adicional para reflejar la comisión bancaria. La forma de hacerlo es:
 
@@ -109,7 +109,7 @@ Las transacciones de comisión también pueden contabilizarse del mismo modo que
 | [Pago - Retirada](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Importe pagado |
 
 
-## Creación de la transacción de depósito
+## Creación de la transacción de depósito { #creation-of-the-deposit-transaction }
 
 El paso final es crear una transacción de depósito en la Cuenta financiera en la que deben depositarse los fondos.
 La empresa de este ejemplo necesita:
@@ -134,12 +134,12 @@ La contabilización tendrá el siguiente aspecto:
 | [Banco B - Cuenta de depósito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Importe recibido |        |
 | [Crédito del concepto contable](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)              |        | Importe recibido |
 
-## Transferencia de fondos entre cuentas de caja
+## Transferencia de fondos entre cuentas de caja { #transfer-of-funds-between-cash-accounts }
 
 La empresa de este ejemplo necesita seguir exactamente los mismos pasos de ejecución. La única diferencia es el *Tipo de cuenta financiera* a utilizar. En esta ocasión se utilizará un tipo de cuenta financiera *Caja* al crear la transacción de retirada y la transacción de depósito.
 Transferencia de fondos entre diferentes organizaciones
 
-## Transferencia de fondos entre diferentes organizaciones 
+## Transferencia de fondos entre diferentes organizaciones { #transfer-of-funds-between-different-organizations }
 
 La empresa de este ejemplo necesita seguir exactamente los mismos pasos de ejecución. La única diferencia es la *Organización* que se va a utilizar. En esta ocasión:
 
@@ -163,7 +163,7 @@ La contabilización de la transacción de depósito en Organización B tendrá e
 | [Banco B - Cuenta de depósito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Importe recibido |        |
 | [Crédito del concepto contable](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item.md#accounting)              |        | Importe recibido |
 
-## Resultado
+## Resultado { #result }
 
 Esto completa la transferencia de fondos entre cuentas financieras. Como resultado:
 

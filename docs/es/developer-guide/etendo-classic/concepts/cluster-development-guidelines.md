@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-#  Directrices de desarrollo en clúster
+# Directrices de desarrollo en clúster { #cluster-development-guidelines }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-##  Visión general
+## Visión general { #overview }
 
 La siguiente sección describe los elementos básicos que deben tenerse en cuenta para garantizar que los desarrollos sean compatibles en un entorno en clúster.
 
@@ -22,7 +22,7 @@ Para el alcance de este documento, consideramos que un **entorno en clúster** e
 
 Los entornos en clúster están pensados para mejorar el rendimiento, permitiendo atender más procesos de forma concurrente, así como para ofrecer alta disponibilidad, permitiendo que el sistema continúe funcionando incluso si algunos de los nodos del clúster están caídos.
 
-##  Cachés
+## Cachés { #caches }
 
 Una **caché** es un objeto destinado a almacenar elementos que son costosos de crear y se utilizan con frecuencia; de este modo, se crean una sola vez y se reutilizan muchas veces, ahorrando su cálculo en usos posteriores.
 
@@ -35,7 +35,7 @@ En ese caso, es obligatorio disponer de un mecanismo que permita refrescar el co
 !!! example
     Si actualmente tenemos una clase que extiende `EntityPersistenceEventObserver` (`@ApplicationScoped`) que se encarga de actualizar algún tipo de caché cuando detecta un cambio en la JVM donde se está ejecutando, esta implementación por sí sola no es suficiente para un entorno en clúster, ya que el resto de nodos no serán notificados del cambio.
 
-###  Cachés seguras
+### Cachés seguras { #safe-caches }
 
 En resumen, no necesitamos tener un cuidado especial con las cachés en los siguientes escenarios:
 
@@ -50,23 +50,23 @@ En resumen, no necesitamos tener un cuidado especial con las cachés en los sigu
     * Información basada únicamente en el Diccionario de Aplicación.
     * Información basada en la configuración de la aplicación: p. ej., información tomada del archivo `Openbravo.properties`. 
 
-###  Implementaciones de caché
+### Implementaciones de caché { #cache-implementations }
 
 Aunque una clase no esté diseñada para ser utilizada como caché, a efectos de esta discusión, cualquier clase que encaje en cualquiera de las siguientes categorías debe considerarse como caché y, por lo tanto, revisarse especialmente.
 
-####  Clases `@ApplicationScoped`
+#### Clases `@ApplicationScoped` { #applicationscoped-classes }
 
 `@ApplicationScoped` es una anotación CDI que permite definir una clase cuya instancia única por JVM está garantizada, por lo que, a todos los efectos, se comporta como clases Singleton.
 
 Las clases `@ApplicationScoped` pueden considerarse cachés siempre que tengan estado; es decir, que tengan campos de instancia. Esos campos de instancia son, en la práctica, elementos en caché.
 
-####  Clases Singleton
+#### Clases Singleton { #singleton-classes }
 
 Una [clase singleton](https://en.wikipedia.org/wiki/Singleton_pattern){target="\_blank"} garantiza que exista una única instancia por JVM de esa clase.
 
 Pueden considerarse como cachés con el mismo criterio que las clases `@ApplicationScoped`.
 
-####  Campos estáticos
+#### Campos estáticos { #static-fields }
 
 Cualquier campo estático puede considerarse una caché, ya que su ciclo de vida es de ámbito de aplicación; es decir, existe una única instancia de ese campo para toda la JVM.
 
@@ -75,7 +75,7 @@ Solo en los siguientes casos, un campo estático puede considerarse seguro en es
 * Es inmutable: es `final` y todos los campos dentro de él también son inmutables. 
 * Es privado y la clase que lo contiene garantiza una gestión adecuada del estado. 
 
-##  Sincronización en la JVM
+## Sincronización en la JVM { #synchronization-at-jvm }
 
 Los [bloques synchronized de Java](https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html){target="\_blank"} permiten definir fragmentos de código que se garantiza que no tendrán ejecuciones en paralelo. Pero esta sincronización ocurre a nivel de JVM, por lo que no podemos garantizar con un bloque synchronized que no haya ejecuciones en paralelo de este bloque entre diferentes nodos del clúster.
 
@@ -83,7 +83,7 @@ Por lo tanto, en un entorno en clúster, no deben utilizarse bloques synchronize
 
 Si necesitamos sincronizar algún tipo de tarea a nivel de sistema, entonces debemos usar otro tipo de mecanismo de sincronización, por ejemplo, utilizando la capa de base de datos.
 
-##  Archivos
+## Archivos { #files }
 
 También debemos tener cuidado al manejar archivos en un entorno en clúster. En general, debemos:
 

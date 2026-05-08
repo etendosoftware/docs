@@ -6,18 +6,18 @@ tags:
     - File
 ---
 
-# Herramienta de escritura de archivos
+# Herramienta de escritura de archivos { #write-file-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de escritura de archivos** es una herramienta para escribir y editar archivos. Permite especificar el archivo que desea escribir, el contenido a escribir y la opción de sobrescribir el archivo o no. También le permite especificar la línea exacta en la que desea escribir el contenido. Esta herramienta devuelve un mensaje indicando el resultado de la operación.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es útil en cualquier aplicación o sistema que necesite manipular archivos de texto mediante programación. Puede utilizarse para editar configuraciones, registrar datos, crear archivos de log, entre otras cosas. Esto facilita al usuario la gestión de:
 
@@ -59,7 +59,7 @@ El uso de esta herramienta consiste en las siguientes acciones:
     ```
     si no fue necesario crear una copia de seguridad.
 
-## Permisos de escritura
+## Permisos de escritura { #write-permissions }
 
 Para gestionar los permisos de archivos y carpetas, la Herramienta de escritura de archivos utiliza la variable de entorno `COPILOT_WRITE_RULE`. Añada esta variable al archivo `gradle.properties` si fuese necesario.
 
@@ -70,7 +70,7 @@ Esta variable le permite especificar los permisos de archivo (en formato octal) 
 
 El valor de `COPILOT_WRITE_RULE` debe ser una representación octal válida de los permisos de archivo (p. ej., `777` para acceso completo de lectura/escritura/ejecución).
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que queremos escribir *Hola Mundo* en el archivo `/tmp/test.txt`, sobrescribiendo su contenido, en la primera línea del archivo. Nuestra entrada podría ser:
 

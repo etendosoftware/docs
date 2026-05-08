@@ -8,7 +8,7 @@ tags:
     - Inventory Analysis
 ---
 
-# Operaciones de Producto
+# Operaciones de Producto { #product-operations }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Operaciones de Producto`
 
@@ -21,6 +21,13 @@ Esta funcionalidad **centraliza todas las transacciones** asociadas al producto 
 Esta centralización facilita el análisis y una comprensión completa del rendimiento de las operaciones del producto.
 
 ![Ventana de Operaciones de Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-operations/product-operations-1.png)
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Historial de existencias](stock-history.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md){ .md-button .md-button--primary }
 
 ---
 

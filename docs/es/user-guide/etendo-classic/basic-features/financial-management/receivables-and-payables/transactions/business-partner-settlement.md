@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Liquidaciones de Terceros
+# Liquidaciones de Terceros { #business-partner-settlement }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Liquidaciones de Terceros`
 
-## Visión General
+## Visión General { #overview }
 
 Esta funcionalidad permite al usuario crear liquidaciones para facturas, tanto de venta como de compra, desde las ventanas **Cobros** y **Pago**. También es posible realizar una compensación creando una liquidación desde una reconciliación bancaria para cobros/pagos a crédito desde la ventana **Cuenta financiera**.
 

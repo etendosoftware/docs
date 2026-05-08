@@ -7,9 +7,9 @@ tags:
     - Regla de alerta
 ---
 
-# Alertas
+# Alertas { #alert }
 
-## Visión general
+## Visión general { #overview }
 
 Las alertas son notificaciones que informan sobre eventos que ocurren siempre que se haya definido correctamente una regla de alerta para monitorizar dichos eventos.
 
@@ -26,7 +26,7 @@ El *número de instancias de alertas* que informan sobre eventos monitorizados q
 ![](../../../../../assets/drive/z341Sqx0_VIs2wSRDSm-6Jlq_2MmxWxxFa406LPjtgffjFTdFIds94ov5CwjlKGP7vDSEyxAdiYnVGN3m0AaIZjGIz2WkrZSmPlCagaI-KmACHhix0-qaazsTFjJ3D9sG0sTkbHv.png)
 
 
-## Vista de alertas
+## Vista de alertas { #alert-view }
 Las instancias de alertas pueden visualizarse y gestionarse en la ventana *Gestión de Alertas*, que se abre haciendo clic en la opción **Alertas** del menú de Navegación superior.
 
 ![](../../../../../assets/drive/-wFUIZt2K33Chbp-czLqJmO7f1hP5fcD2jkcZaI7CtnhlHHbdh7lk1_ayiFKbrcfx8slOlIXVjeiIe15gmt_CkcTwhWQGhAbfXXGCMaF6-ba5l_OGBnMsKpP8CkL23o7AwzywwMX.png)
@@ -40,7 +40,7 @@ Las alertas pueden tener 4 estados diferentes:
 
 La forma de gestionar las instancias de alertas es seleccionarlas manualmente y moverlas al estado siguiente o anterior una vez que se hayan reconocido, ignorado o resuelto manualmente.
 
-## Ventana Alertas
+## Ventana Alertas { #alert-window }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Alertas`
 
 La ventana Alertas permite la definición de reglas de alerta como consultas SQL que definen el evento a monitorizar y cómo se monitorizará.
@@ -54,11 +54,11 @@ Las alertas se definen introduciendo los siguientes datos:
 - y la *Solapa* donde la instancia de alerta puede corregirse o resolverse.
 
 
-### Traducción
+### Traducción { #translation }
 
 Las alertas pueden traducirse a cualquier idioma requerido.
 
-### Receptor de Alerta
+### Receptor de Alerta { #alert-recipient }
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/alert-recipient.png)
 
@@ -69,7 +69,7 @@ Las alertas pueden asignarse a usuarios o contactos específicos o a todos ellos
 
 Etendo admite la notificación de alertas a usuarios o roles por correo electrónico: para ello, es necesario configurar correctamente el servidor, la cuenta y la contraseña del **correo electrónico** para la entidad correspondiente en la cabecera de la ventana [Entidad](../client/client.md#email-configuration), sección *Configuración del correo electrónico*.
 
-### Alertas
+### Alertas { #alert_1 }
 
 La solapa Alertas lista los eventos que ocurren y que generan la alerta correspondiente.
 

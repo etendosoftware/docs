@@ -8,23 +8,23 @@ tags:
 status: beta
 ---
 
-#  Convenciones de codificación de JavaScript
+# Convenciones de codificación de JavaScript { #javascript-coding-conventions }
   
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 Este documento se basa en la Guía de estilo de JavaScript de Google y en [Convenciones de código para el lenguaje de programación JavaScript](https://www.crockford.com/code.html){target="\_blank"} de Douglas Crockford.
 
-##  Linting y formato
+## Linting y formato { #linting-and-formatting }
 
 !!!info
     Para utilizar estas nuevas herramientas, es necesario tener [nodejs/npm](https://nodejs.org/es/){target="\_blank"} instalado en su máquina.
   
 [ESLint](https://eslint.org/){target="\_blank"} y [Prettier](https://prettier.io/){target="\_blank"} son las herramientas utilizadas en Etendo para comprobar el formato del código JavaScript. Por comodidad, se han incluido algunos scripts para utilizar estas herramientas, tanto como scripts independientes como hooks de Mercurial para comprobar el código antes de realizar el commit.
 
-###  Scripts independientes
+### Scripts independientes { #standalone-scripts }
 
 - ESLint: 
 
@@ -67,7 +67,7 @@ Este documento se basa en la Guía de estilo de JavaScript de Google y en [Conve
     ./modules/org.openbravo.client.kernel/jsformatter/jsformatter modules/org.openbravo.client.application/web/org.openbravo.client.application/js/utilities/ob-utilities.js modules/org.openbravo.client.application/web/org.openbravo.client.application/js/utilities/ob-utilities-date.js
     ```
 
-###  Ejecutar el script de npm directamente
+### Ejecutar el script de npm directamente { #running-npm-script-directly }
 
 Tenga en cuenta que, si su IDE soporta npm, también puede utilizar lo siguiente para comprobar su código:
 
@@ -89,7 +89,7 @@ Tenga en cuenta que, si su IDE soporta npm, también puede utilizar lo siguiente
     npm run jsformat -- --check 'modules/org.openbravo.mobile.core/**/*.js'
     ```
 
-### Hooks de Git
+### Hooks de Git { #git-hooks }
 
 Para utilizar estas herramientas como hooks de Git, ejecute este comando desde dentro de un repositorio de Openbravo:
 
@@ -129,17 +129,17 @@ Si por cualquier motivo quiere eliminar esta configuración, ejecute lo siguient
 git config --global --unset core.hooksPath
 ```
 
-## Formato de código
+## Formato de código { #code-formatting }
 
 !!!info
     El código JavaScript se formatea usando [Prettier](https://prettier.io/){target="\_blank"}. Se aplican las siguientes convenciones, pero consulte [justificación de Prettier](https://prettier.io/docs/rationale.html){target="\_blank"} para algunas de las decisiones relativas al formato.  
   
 
-### Espacios en lugar de tabulaciones
+### Espacios en lugar de tabulaciones { #spaces-instead-of-tabs }
 
 Configure su editor para usar **2 espacios en lugar de tabulaciones**.
 
-### Llaves
+### Llaves { #curly-braces }
 
 Debido a la inserción implícita de punto y coma, comience siempre las llaves en la misma línea que aquello que abren. Por ejemplo:
 
@@ -151,7 +151,7 @@ if (something) {
 }
 ```
 
-### Declaración de variables
+### Declaración de variables { #variable-declaration }
 
 Se prefiere una única sentencia `var`. Todas las variables en una función **deben** declararse al principio de la función.
 
@@ -195,7 +195,7 @@ function s() {
 }
 ```
 
-### Inicializadores de arrays y objetos
+### Inicializadores de arrays y objetos { #array-and-object-initializers }
 
 Se permiten inicializadores de arrays y objetos en una sola línea cuando caben en una línea:
 
@@ -237,7 +237,7 @@ OB.ViewManager.openView('_140', {
 });
 ```
 
-### Comillas simples
+### Comillas simples { #single-quotes }
 
 Una cadena puede definirse con comillas simples o dobles. Por consistencia, se prefieren las comillas simples.
 
@@ -245,7 +245,7 @@ Una cadena puede definirse con comillas simples o dobles. Por consistencia, se p
 var s = 'Etendo is great!';
 ```
 
-### Declaración de funciones
+### Declaración de funciones { #function-declaration }
 
 Todas las funciones deben declararse antes de usarse. Las funciones internas deben ir después de la sentencia `var`. Esto ayuda a dejar claro qué variables se incluyen en su ámbito.
 
@@ -275,7 +275,7 @@ someObj = {
 };
 ```
 
-### Argumentos de función
+### Argumentos de función { #function-arguments }
 
 Cuando sea posible, todos los argumentos de una función deben listarse en la misma línea. Si hacerlo excediera el límite de 100 columnas, los argumentos deben partirse en líneas de forma legible. Para ahorrar espacio, puede partir lo más cerca posible de 100, o poner cada argumento en su propia línea para mejorar la legibilidad. La indentación puede ser de cuatro espacios, o alineada con el paréntesis.
 
@@ -315,7 +315,7 @@ function bar(veryDescriptiveArgumentNumberOne,
 }
 ```
 
-### Nombrar archivos
+### Nombrar archivos { #naming-files }
 
 Los nombres de archivo deben estar solo en minúsculas y usar guion para separar palabras. Algunos servidores no distinguen mayúsculas/minúsculas y los espacios son una mala idea.
 
@@ -325,7 +325,7 @@ Incorrecto: LoginModel.js, cashUpWIndow.js...
 
 Correcto: login-model.js, cashup-window.js...
 
-### Devolver objeto
+### Devolver objeto { #return-object }
 
 Las funciones que devuelven un objeto devolverán una variable en lugar del objeto. Devolver una variable con un nombre adecuado ayudará a entender mejor qué se devuelve (junto con el nombre de la función) y también será más legible. No es necesario crear una variable para devolver si no vamos a "trabajar" con ese objeto. Al programar, normalmente creamos una variable para devolver porque vamos a asignar algunos valores a ese objeto, pero si las funciones van a devolver un objeto nuevo, podemos hacerlo directamente; vea algunos ejemplos:
 
@@ -347,9 +347,9 @@ function myFunction (){
 }
 ```
 
-## Consejos y trucos
+## Consejos y trucos { #tips-and-tricks }
 
-### Expresiones booleanas true y false
+### Expresiones booleanas true y false { #true-and-false-boolean-expressions }
 
 Los siguientes valores son todos **false** en expresiones booleanas:
 
@@ -415,7 +415,7 @@ if (y) {
     {} != false
     ```
 
-### Operador condicional (ternario)
+### Operador condicional (ternario) { #conditional-ternary-operator }
 
 En lugar de esto:
 
@@ -433,7 +433,7 @@ puede escribir esto:
 return val ? foo() : bar();
 ```
 
-### Operadores AND y OR
+### Operadores AND y OR { #and-and-or-operators }
 
 Estos operadores booleanos binarios son de cortocircuito y evalúan hasta el último término evaluado. **||** se ha llamado el operador "por defecto", porque en lugar de escribir esto:
 

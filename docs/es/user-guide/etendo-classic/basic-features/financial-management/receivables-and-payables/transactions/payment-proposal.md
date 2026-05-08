@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Propuesta de Pago
+# Propuesta de Pago { #payment-proposal }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Propuesta de Pago`
 
-## Visión General
+## Visión General { #overview }
 
 La propuesta de pago es una herramienta que ayuda al usuario a realizar pagos seleccionando los documentos relacionados con un método de pago determinado o programados para pagarse antes de una fecha de vencimiento determinada. El sistema propone lo que debe pagarse en función de los criterios de selección proporcionados por el usuario.
 
@@ -32,7 +32,7 @@ Los pasos a seguir son:
   - un pago puede agrupar pedidos/facturas separados a pagar del mismo proveedor en un único pago.
   - o agrupar pedidos/facturas separados a pagar independientemente del proveedor en un único pago.
 
-### Cabecera
+### Cabecera { #header }
 
 La ventana de propuesta de pago permite al usuario introducir un conjunto de criterios de selección que le ayudan a realizar pagos de forma masiva.
 
@@ -75,7 +75,7 @@ Una vez ejecutado:
 - La información del Plan de Pago y del Monitor de Pagos de todos los documentos involucrados se actualiza.
 - Finalmente, el Estado del Pago cambia a _Pendiente de Ejecución_ cuando se define un Tipo de Ejecución _Automático_, o a _Pago Realizado_ si la ejecución es _Manual_. Si hay un proceso de ejecución definido, puede ejecutarse haciendo clic en el botón Ejecutar Pago.
 
-### Líneas
+### Líneas { #lines }
 
 La pestaña de líneas muestra las transacciones (pedidos y/o facturas) incluidas en la propuesta de pago.
 

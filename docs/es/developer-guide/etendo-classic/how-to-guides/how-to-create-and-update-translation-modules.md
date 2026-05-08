@@ -2,15 +2,15 @@
 title: Cómo crear y actualizar módulos de traducción
 ---
 
-# Cómo crear y actualizar módulos de traducción
+# Cómo crear y actualizar módulos de traducción { #how-to-create-and-update-translation-modules }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el proceso de creación y actualización de módulos de traducción en Etendo, incluido el módulo Core.
 
-## Crear un nuevo módulo de traducción desde cero
+## Crear un nuevo módulo de traducción desde cero { #creating-a-new-translation-module-from-scratch }
 
-### Crear la definición del módulo
+### Crear la definición del módulo { #create-module-definition }
 
 Lo primero que debe hacer es crear la definición del módulo de traducción en el Diccionario de aplicación.
 
@@ -24,7 +24,7 @@ En los módulos de traducción no se permite ningún otro contenido que no sean 
 
 Además de marcar que es un módulo de traducción y establecer el Idioma del módulo, necesitamos añadir una dependencia al módulo y a la versión que estamos traduciendo. En el ejemplo, nuestro módulo *User Interface Application Translation Spanish (Spain)* en la versión 1.0.0 depende del módulo *User Interface Application* versión 2.1.0.
 
-### Preparar las cadenas que se van a traducir
+### Preparar las cadenas que se van a traducir { #prepare-strings-to-be-translated }
 
 Con la sesión iniciada con el rol de *Administrador del sistema*, seleccione la ventana `General Setup`> `Application` > `Language` desde el menú de Aplicación. Busque el idioma en el que el usuario quiere crear el módulo de traducción y marque el campo de casilla de verificación Idioma del sistema. Esta casilla permite que este idioma pueda seleccionarse en la interfaz de usuario (ventana emergente Cambiar rol) en el siguiente inicio de sesión.
 
@@ -32,7 +32,7 @@ Con la sesión iniciada con el rol de *Administrador del sistema*, seleccione la
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-2.png)
 
-### Comprobar idiomas
+### Comprobar idiomas { #verify-languages }
 
 Cada vez que sea necesario crear una traducción para un nuevo idioma, es necesario preparar las cadenas que se van a traducir. Existe un proceso automático, llamado Comprobar idiomas (disponible también en la ventana Idioma), en el que el ERP crea las copias necesarias de las cadenas originales de todos los módulos disponibles en el sistema desde sus idiomas base al idioma de traducción correspondiente.
 
@@ -42,7 +42,7 @@ Al usar el botón Comprobar idiomas, la aplicación mostrará el número de regi
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-3.png)
 
-### Exportar la traducción
+### Exportar la traducción { #export-the-translation }
 
 La exportación de la traducción es un proceso automático disponible en la ventana `General Setup` > `Application` > `Import/Export Translations`.
 
@@ -56,11 +56,11 @@ Dentro de la carpeta attachments de Etendo, se encuentra un nuevo directorio lla
 
 Dentro de este directorio, el usuario puede encontrar los archivos de traducción para todos los módulos disponibles en la instancia. Los archivos de traducción del Core se almacenan directamente en el directorio raíz; el resto de módulos tienen su propia carpeta nombrada como sus paquetes Java. Por tanto, el usuario solo necesita encontrar la carpeta del *módulo original* que se va a traducir (*no el módulo de traducción*) y obtener sus archivos XML.
 
-### Traducir el módulo
+### Traducir el módulo { #translate-the-module }
 
 La traducción del módulo puede realizarse modificando manualmente los archivos XML exportados, lo cual es un método conveniente para módulos con pocas cadenas que traducir, o utilizando el asistente de Etendo Copilot, [Module Translation Creator](../../etendo-copilot/bundles/dev-assistant.md#module-translation-creator).
 
-#### Traducir directamente en los archivos XML
+#### Traducir directamente en los archivos XML { #translate-directly-into-the-xml-files }
 
 Si se elige este método, solo es necesario abrir cada archivo XML que esté dentro del directorio del módulo que se va a traducir y editarlo. Es muy importante abrir estos archivos con un editor de texto.
 
@@ -68,7 +68,7 @@ El texto que debe cambiarse para realizar una traducción es el contenido de cad
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/how-to-create-and-update-translation-modules-6.png)
 
-### Importar y exportar las traducciones
+### Importar y exportar las traducciones { #import-and-export-the-translations }
 
 Después de completar la traducción, o incluso en mitad de un proceso de traducción, es una buena práctica importar los archivos XML en el ERP para revisar la traducción en contexto.
 
@@ -84,9 +84,9 @@ Ahora, en la ventana `Import/Export Translations`, podemos seleccionar el idioma
 !!! info
     Durante este proceso, se recomienda encarecidamente mantener una copia de seguridad de sus archivos XML traducidos.
 
-### Información específica si está traduciendo Core
+### Información específica si está traduciendo Core { #specific-information-if-you-are-translating-core }
 
-#### Archivo buildstructure.xml
+#### Archivo buildstructure.xml { #buildstructurexml-file }
 
 El Core de Etendo proporciona un archivo adicional llamado `buildStructure.xml`. Este archivo contiene la información relacionada con los nombres de las diferentes etapas por las que pasa el proceso de construcción del sistema de Etendo, y los mensajes de error y advertencia que pueden mostrarse durante una reconstrucción. También es necesario traducir este archivo.
 
@@ -111,7 +111,7 @@ La estructura de este archivo es un poco diferente en comparación con los archi
 </BuildTranslation>
 ```
 
-#### Conjunto de datos Masterdata
+#### Conjunto de datos Masterdata { #masterdata-dataset }
 
 Todos los archivos XML exportados a través de la ventana *Import/Export Translation* y el archivo buildstructure.xml representan todas las cadenas disponibles de la interfaz de usuario en el ERP. Si traducimos todos estos archivos, tendremos una aplicación completamente traducida. Sin embargo, el ERP incluye algunas otras cadenas no relacionadas con la UI que también pueden traducirse. Dentro de este grupo, llamado Masterdata, incluimos: nombres de países, monedas, unidades de medida y nombres de meses. Todos estos datos no se exportan a los archivos XML; sin embargo, esto no significa que no podamos traducirlos.
 
@@ -137,13 +137,13 @@ La definición del conjunto de datos está lista, pero queda pendiente la traduc
 -   Exportar el conjunto de datos con las cadenas sin traducir y editar el archivo XML usando un editor de texto. El archivo XML del conjunto de datos se almacenará dentro del directorio referencedata/standard de su módulo de traducción.
  
 
-### Paquete de traducción
+### Paquete de traducción { #translation-bundle }
 
 Como probablemente sepa, Etendo es una distribución de módulos, incluido Core. Eso significa que, para tener una aplicación completamente traducida, debe traducir todos los módulos que forman parte de la distribución.
 
 Es una buena idea crear un paquete de traducción que cubra todos los módulos.
 
-#### Publicar el módulo de traducción
+#### Publicar el módulo de traducción { #publishing-the-translation-module }
 
 El proceso de publicación de un módulo de traducción es similar al proceso estándar de publicación con una única consideración importante: necesitamos copiar los archivos XML traducidos a la carpeta `referencedata/translation` del módulo correspondiente dentro de la carpeta de su módulo.
 
@@ -205,7 +205,7 @@ La estructura del directorio del módulo de traducción debería ser:
 
 4. Por último, recuerde publicar el módulo. Para más información, consulte [Publicar módulos en un repositorio de GitHub](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
-#### Actualizar módulos de traducción
+#### Actualizar módulos de traducción { #updating-translation-modules }
 
 Estas son las primeras consideraciones para actualizar un módulo de traducción:
 
@@ -221,11 +221,11 @@ Estas son las primeras consideraciones para actualizar un módulo de traducción
 
 Los pasos principales para actualizar un módulo de traducción son casi los mismos que al crear un nuevo módulo de traducción desde cero. La única diferencia es que no es necesario declarar el Idioma del sistema ni ejecutar el proceso Comprobar idiomas. El resto del proceso es exactamente el mismo, comenzando por la sección “Exportar la traducción”.
 
-### Consejos y trucos
+### Consejos y trucos { #tips-and-tricks }
 
 Esta sección intenta proporcionar un conjunto de consejos y trucos útiles de traducción. Tenga en cuenta que algunos de estos trucos pueden requerir conocimientos de desarrollo.
 
-#### Encontrar el contexto
+#### Encontrar el contexto { #finding-the-context }
 
 Hacer una buena traducción requiere conocer el contexto exacto donde aparece la cadena que estamos traduciendo. Desafortunadamente, el contexto en el archivo XML no es nada claro y, en ocasiones, es necesario profundizar en la aplicación para obtener el contexto exacto. Aquí tiene una lista de consejos para encontrarlo:
 

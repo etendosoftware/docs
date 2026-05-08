@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Ejecución de Pagos/Cobros
+# Ejecución de Pagos/Cobros { #payment-execution }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Ejecución de Pagos/Cobros`
 
-## Visión General
+## Visión General { #overview }
 
 El formulario Ejecución de Pagos permite al usuario ejecutar masivamente pagos diferidos en estado "Pendiente de Ejecución".
 

@@ -7,11 +7,11 @@ tags:
   - Financial Reports
 ---
 
-# Cuadros plan general contable
+# Cuadros plan general contable { #balance-sheet-and-pl-structure }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Cuadros plan general contable`
 
-## Descripción general
+## Descripción general { #overview }
 
 El motor de informes de Cuadros plan general contable permite al usuario generar el Balance de situación y el Estado de pérdidas y ganancias, los cuales deben configurarse previamente.
 
@@ -21,7 +21,7 @@ El informe de Pérdidas y ganancias muestra los ingresos, gastos y el beneficio 
 
 Estos informes deben configurarse antes de generarse en la ventana [Configuración de Cuadros plan general contable](../setup/balance-sheet-and-pl-structure-setup.md).
 
-## Cabecera
+## Cabecera { #header }
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure/balance-sheet-and-pl-structure-1.png)
 

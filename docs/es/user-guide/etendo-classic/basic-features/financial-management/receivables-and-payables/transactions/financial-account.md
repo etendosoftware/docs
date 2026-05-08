@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Cuenta Financiera
+# Cuenta Financiera { #financial-account }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Cuenta Financiera`
 
-## Visión General
+## Visión General { #overview }
 
 Una Cuenta Financiera representa una cuenta en una institución financiera, como una cuenta bancaria, una entidad emisora de tarjetas de crédito, un servicio de pago electrónico, así como una caja o caja chica.
 
@@ -22,7 +22,7 @@ Las obligaciones de pago y los importes pendientes de clientes se crean en las v
 !!! warning
     Es muy importante definir correctamente cada parámetro de cada Cuenta Financiera. Durante el proceso de configuración de la Cuenta Financiera, necesitará información como: los datos de la cuenta bancaria, los métodos de pago permitidos, la/s moneda/s de la cuenta bancaria, la información contable, etc.
 
-## Cuenta
+## Cuenta { #account }
 
 La ventana Cuenta Financiera contiene información esencial, como el número de cuenta bancaria, y permite al usuario realizar un conjunto de procesos, como agregar transacciones de depósito o retiro a la cuenta financiera o importar y conciliar un archivo de extracto bancario.
 
@@ -74,9 +74,9 @@ La sección **Más información** puede incluir información como:
 
     Lo mismo se aplica a los pagos a proveedores creados mediante la ventana Agregar Pago o la funcionalidad Propuesta de Pago.
 
-### Botones
+### Botones { #buttons }
 
-#### Agregar Múltiples Pagos
+#### Agregar Múltiples Pagos { #add-multiple-payments }
 
 El botón de proceso "Agregar Múltiples Pagos" permite al usuario crear y procesar transacciones de la cuenta financiera seleccionando varios pagos al mismo tiempo.
 
@@ -97,7 +97,7 @@ en la pestaña "Transacción" de la Cuenta Financiera.
 
 Todas estas nuevas transacciones se crean ya "procesadas", por lo que pueden ser "reactivadas" si es necesario o finalmente "contabilizadas" en el libro mayor si corresponde.
 
-#### Conciliar
+#### Conciliar { #reconcile }
 
 El botón de proceso de cabecera "**Conciliar**" se muestra para las cuentas financieras que no tienen asignado un algoritmo de conciliación.
 
@@ -129,7 +129,7 @@ El botón de proceso "**Conciliar**" concilia las transacciones marcadas como sa
 
 Finalmente, el botón de proceso "**Cancelar**" simplemente cierra la ventana de conciliación y elimina el saldo final introducido, si lo hubiera.
 
-#### Importar Extracto
+#### Importar Extracto { #import-statement }
 
 El botón de proceso de cabecera **Importar Extracto** se muestra para las cuentas financieras que tienen asignado un algoritmo de conciliación. Este botón de proceso permite al usuario importar un extracto bancario que, por tanto, se guarda en la pestaña Extractos Bancarios Importados de la cuenta financiera y en la subpestaña Líneas del Extracto Bancario.
 
@@ -159,7 +159,7 @@ Esta ventana permite:
 - seleccionar un **archivo de extracto bancario**
 - y seleccionar el **formato de archivo** del archivo de extracto bancario seleccionado para importar.
 
-#### Conciliar Extracto
+#### Conciliar Extracto { #match-statement }
 
 Una vez importado un archivo de extracto bancario, el botón "Conciliar Extracto" abre una nueva ventana donde se muestran las líneas del extracto bancario importado y las transacciones financieras existentes. Por defecto, hay un filtro implícito que oculta las líneas del extracto bancario que ya están conciliadas.
 
@@ -237,7 +237,7 @@ Este no debe ser el procedimiento estándar, ya que debe realizarse una revisió
 !!! info
     Este proceso afectará el saldo inicial y final de los documentos posteriores siempre que el saldo final cambie para la conciliación que se está editando.
 
-#### Transferencia de Fondos
+#### Transferencia de Fondos { #funds-transfer }
 
 La funcionalidad de Transferencia de Fondos en la ventana Cuenta Financiera permite el movimiento de dinero entre dos cuentas financieras diferentes dentro de una organización. Esta acción se utiliza normalmente para transferencias internas, como mover fondos de una cuenta bancaria a una caja chica, o entre cuentas en diferentes monedas.
 
@@ -260,9 +260,9 @@ Campos a destacar:
     - Comisión bancaria de destino: Para introducir el importe de la comisión correspondiente.
 - **Descripción**: La descripción se establece como **Transacción de Transferencia de Fondos** por defecto. El usuario puede sobrescribir la descripción si es necesario.
 
-## Pestañas
+## Pestañas { #tabs }
 
-### Transacción
+### Transacción { #transaction }
 
 Las transacciones de una cuenta financiera pueden ser de dos tipos:
 
@@ -357,11 +357,11 @@ Es posible agregar pagos de cuentas financieras alternativas haciendo clic en el
 
 ![Pago sin filtro](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-20.png)
 
-#### Tipos de Cambio
+#### Tipos de Cambio { #exchange-rates }
 
 Esta subpestaña permite al usuario definir un tipo de cambio para usar al contabilizar la transacción de la cuenta financiera en el libro mayor cuando la moneda de la cuenta financiera no es la misma que la moneda del libro mayor.
 
-#### Historial de Contabilización
+#### Historial de Contabilización { #accounting-history }
 
 Esta subpestaña muestra el historial de contabilización de una transacción determinada.
 
@@ -369,7 +369,7 @@ Esta subpestaña muestra el historial de contabilización de una transacción de
 
 Como se muestra en la imagen anterior, esta pestaña muestra los asientos del libro mayor creados al contabilizar/descontabilizar una transacción determinada.
 
-### Configuración Contable
+### Configuración Contable { #accounting-configuration }
 
 La pestaña de configuración contable se utiliza para definir las cuentas de un Libro Mayor a usar al contabilizar transacciones como una comisión bancaria o un depósito.
 
@@ -435,7 +435,7 @@ Sección **Pago**:
 - **Cuenta de Pago Retirado**: Esta es la cuenta que se usará para contabilizar la segunda fase, es decir, el "Retiro" del pago en la Cuenta Financiera. El Método de Pago utilizado debe tener el valor "Cuenta de Pago Retirado" definido en el campo "Al Retirar usar".
 - **Cuenta de Pago Saldado**: Esta es la cuenta que se usará para contabilizar el tercer paso, es decir, la conciliación del retiro. El Método de Pago utilizado debe tener el valor "Cuenta de Pago Saldado" definido en el campo "Al Conciliar usar".
 
-### Método de Pago
+### Método de Pago { #payment-method }
 
 Esta pestaña enumera todos los métodos de pago asignados a la cuenta financiera. Un pago puede depositarse en o retirarse de la cuenta financiera si el método de pago utilizado está asignado a la cuenta financiera.
 
@@ -461,7 +461,7 @@ Este combo puede establecerse a nivel de método de pago (cobro y pago) en cada 
 !!! info
     Para información adicional sobre la configuración del método de pago, visite el artículo [_Método de Pago_](../../financial-management/receivables-and-payables/setup/payment-method.md).
 
-### Extractos Bancarios Importados
+### Extractos Bancarios Importados { #imported-bank-statements }
 
 La pestaña enumera los archivos de extracto bancario importados, así como los extractos bancarios creados manualmente.
 
@@ -487,7 +487,7 @@ Un extracto bancario puede contabilizarse si esto está habilitado en la pestañ
 !!! info
     Si el usuario no puede importar un archivo de extracto bancario, también es posible crear extractos bancarios y líneas de extracto bancario manualmente.
 
-#### Líneas del Extracto Bancario
+#### Líneas del Extracto Bancario { #bank-statement-lines }
 
 Esta pestaña enumera todas las líneas de un extracto bancario.
 
@@ -502,17 +502,17 @@ Campos clave a destacar:
 - **Transacción de Cuenta Financiera:** es la transacción de la cuenta financiera una vez conciliada con la línea del extracto bancario; puede estar vacía cuando no se ha encontrado ninguna transacción coincidente.
 - **Tipo de conciliación:** puede ser "Manual" o "Automática" dependiendo de quién realizó la conciliación, ya sea el algoritmo de conciliación utilizado o el usuario.
 
-### Conciliaciones
+### Conciliaciones { #reconciliations }
 
 La pestaña de conciliaciones muestra las conciliaciones creadas manualmente si no hay ningún algoritmo de conciliación asignado a la cuenta financiera, así como las creadas al conciliar un archivo de extracto bancario importado en caso contrario.
 
-#### Conciliaciones Manuales
+#### Conciliaciones Manuales { #manual-reconciliations }
 
 - Como ya se explicó, el botón de proceso Conciliar permite al usuario conciliar manualmente las transacciones existentes de la cuenta financiera en la ventana "Conciliación".
 - Cada conciliación de este tipo, una vez guardada, se guarda también en esta pestaña en estado "**Borrador**" hasta que finalmente se concilia en la ventana "**Conciliación**", por lo que su estado cambia a "**Completada**".
 - Es posible "**Reactivar**" una conciliación de este tipo, por lo que puede modificarse en la ventana "**Conciliación**" y conciliarse desde esa ventana una vez más.
 
-#### Conciliaciones Automáticas
+#### Conciliaciones Automáticas { #automatic-reconciliations }
 
 - De igual forma, una vez importado un archivo de extracto bancario, las líneas del extracto bancario pueden conciliarse automáticamente en la ventana "**Conciliación mediante Líneas de Extracto Bancario Importadas**", accesible desde el botón de proceso Conciliar Extracto.
 - Cada conciliación de este tipo, una vez guardada, se guarda también en esta pestaña en estado "**Borrador**" hasta que finalmente se concilia en la ventana "Conciliación mediante Líneas de Extracto Bancario Importadas", por lo que su estado cambia a "**Completada**".
@@ -520,7 +520,7 @@ La pestaña de conciliaciones muestra las conciliaciones creadas manualmente si 
 
 ![Conciliaciones](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-24.png)
 
-#### Contabilización de Conciliaciones
+#### Contabilización de Conciliaciones { #reconciliations-posting }
 
 Una Conciliación de cualquier tipo puede contabilizarse si el Método de Pago utilizado al crear el pago a conciliar lo permite una vez asignado a la cuenta financiera. Si no es el caso, Etendo muestra una advertencia: "Documento deshabilitado para contabilidad".
 
@@ -579,14 +579,14 @@ c. si el Pago Realizado fue contabilizado o no en la ventana **"Pago"** y la tra
 | Al Retirar usar la "Cuenta de Retiro" (ej.)                             | Importe del pago |                 |
 | Al Conciliar usar la "Cuenta de Pago Saldado" (ej.)                     |                 | Importe del pago |
 
-#### Informes de Conciliaciones
+#### Informes de Conciliaciones { #reconciliations-reporting }
 
 Además, existen dos informes que muestran información sobre cada conciliación; estos informes pueden ejecutarse desde los botones de proceso:
 
 - Detalles de Conciliaciones
 - Resumen de Conciliación
 
-#### Elementos Saldados
+#### Elementos Saldados { #cleared-items }
 
 Esta pestaña muestra las transacciones saldadas o marcadas como conciliadas en una conciliación.
 
@@ -601,18 +601,18 @@ La subpestaña de elementos saldados permite ver la siguiente información:
 - la **descripción** de la transacción conciliada, por ejemplo "Factura Nº:..."
 - y el **Importe del Depósito** o el **Importe del Retiro** de la transacción saldada.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 La pestaña de contabilidad es una pestaña de solo lectura que muestra la contabilización de cada transacción de la cuenta financiera.
 
-## Eliminación de Pagos
+## Eliminación de Pagos { #payment-removal }
 
 El objetivo de esta funcionalidad es eliminar y reactivar pagos de forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Transacciones
+### Transacciones { #transactions }
 
 Desde esta ventana, es posible eliminar y reactivar las transacciones incluidas en una cuenta financiera.
 
@@ -634,7 +634,7 @@ Considere los siguientes casos:
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-25.png)
 
-### Conciliaciones
+### Conciliaciones { #reconciliations_1 }
 
 Es posible eliminar y reactivar conciliaciones bancarias.
 
@@ -646,7 +646,7 @@ Las siguientes situaciones son posibles:
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account/financial-account-26.png)
 
-## Contabilización Masiva
+## Contabilización Masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -658,7 +658,7 @@ Además, el Estado de Contabilización del/los registro/s se muestra en la barra
 !!! info
     Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Liquidación Avanzada de Terceros
+## Liquidación Avanzada de Terceros { #advanced-business-partner-settlement }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

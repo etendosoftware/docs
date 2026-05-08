@@ -7,7 +7,7 @@ tags:
   - Receivables and Payables
 ---
 
-# Remesa
+# Remesa { #remittance }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Remesa`
 
@@ -16,13 +16,13 @@ tags:
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Visión General
+## Visión General { #overview }
 
 En la ventana Remesa, el usuario puede crear remesas para gestionar cobros o pagos a clientes o proveedores.
 
 Una remesa es un grupo de pagos (de entrada/salida) o pedidos/facturas que pueden remitirse al banco para su pago. El banco gestionará entonces el cobro del dinero a los clientes o el pago a los proveedores/suministradores.
 
-## Configuración
+## Configuración { #configuration }
 
 Para poder usar esta funcionalidad, es necesario configurar algunos aspectos previamente.
 
@@ -46,7 +46,7 @@ Para poder usar esta funcionalidad, es necesario configurar algunos aspectos pre
         Para más información, visite [Cuenta Bancaria](../../master-data-management/master-data.md#remittance) en la sección Tercero.
 
 
-## Ventana Remesa
+## Ventana Remesa { #remittance-window }
 
 ![Ventana Remesa](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance/remittance-2.png)
 
@@ -54,7 +54,7 @@ Para poder usar esta funcionalidad, es necesario configurar algunos aspectos pre
 Como se muestra en la imagen anterior, es necesario completar los campos de la ventana y aparecen diferentes botones para continuar con el proceso.
 
 
-### Botones
+### Botones { #buttons }
 
 **Seleccionar Pagos**
 
@@ -84,7 +84,7 @@ El botón Protestar Remesa permite la protesta automática de remesas. Esta func
 !!! info
     Para más información, visite [la guía de usuario de Remesa Automatizada](../../../../optional-features/bundles/financial-extensions/automated-remittance.md).
 
-## Tipos de Remesas
+## Tipos de Remesas { #types-of-remittances }
 
 Existen dos tipos de remesas:
 

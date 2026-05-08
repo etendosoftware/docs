@@ -8,9 +8,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Compras - Primeros pasos
+# Gestión de Compras - Primeros pasos { #procurement-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="720" height="480"  src="https://www.youtube.com/embed/d33J6fTMEqM?si=NlHOoCq82bCJG3Rg" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -20,7 +20,7 @@ Esta área de aplicación de Etendo cubre las partes de Necesidad a Albarán (Pr
 
 Para la gestión de pagos de Procure To Pay, consulte el área de aplicación Gestión Financiera / Cuentas a cobrar y a pagar.
 
-## Flujo de negocio Procure to Pay
+## Flujo de negocio Procure to Pay { #procure-to-pay-business-flow }
 
 El flujo de trabajo *Procure to Pay* gestiona el ciclo de vida de un proceso de compras.
 
@@ -31,7 +31,7 @@ Debido a su complejidad y a los diferentes roles implicados, es conveniente divi
 
 ![procure-to-pay](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/procure-to-pay-business-flow.png)
 
-### Configuración
+### Configuración { #configuration }
 
 La siguiente configuración debe realizarse antes de ejecutar el proceso:
 
@@ -67,7 +67,7 @@ La configuración anterior forma parte del flujo general de configuración del n
     No es necesario realizar ninguna configuración adicional para el área de aplicación Gestión de Compras si va a explorarla basándose en el cliente de ejemplo Food & Beverage (F&B) que Etendo incluye por defecto.
     El conjunto de datos de ejemplo ya contiene los roles, terceros, productos, almacenes y precios preconfigurados.
 
-### Ejecución
+### Ejecución { #execution }
 
 En Gestión de Compras, el proceso de negocio Procure to Pay se ejecuta del siguiente modo:
 
@@ -143,7 +143,7 @@ Finalmente, el personal de finanzas se encarga de realizar y gestionar los pagos
 - Los pagos a proveedores pueden realizarse en la ventana Factura (Proveedor) utilizando el botón Añadir pago. También es posible realizar un prepago contra un Pedido de compra.
 La documentación detallada de la gestión de pagos está disponible en el área de aplicación Gestión Financiera / Cuentas a cobrar y a pagar y en la sección [Cómo gestionar facturas prepagadas en cuentas a pagar](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md).
 
-## Flujo de negocio de Devoluciones a proveedor
+## Flujo de negocio de Devoluciones a proveedor { #supplier-returns-business-flow }
 
 Este flujo de trabajo gestiona la devolución de bienes comprados al proveedor. Debido a las consecuencias de la devolución, es conveniente dividir las devoluciones a proveedor en dos subprocesos principales:
 
@@ -153,10 +153,10 @@ Este flujo de trabajo gestiona la devolución de bienes comprados al proveedor. 
 
 ![supplier-returns](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png)
 
-### Configuración
+### Configuración { #configuration_1 }
 La ventana [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) es la única que requiere configuración antes de ejecutar este proceso.
 
-### Ejecución
+### Ejecución { #execution_1 }
 
 En Gestión de Compras, el *flujo de negocio de Devolución a proveedor* se ejecuta del siguiente modo.
 
@@ -186,7 +186,7 @@ Personal de finanzas: para facturar estos documentos, vaya a la ventana [Factura
     - Dejarla como crédito para usarla más adelante mediante la ventana [Pago](../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out)
     - Una nueva factura de compra basada en el pedido de compra original puede consumir ese crédito
 
-## Relación con otras áreas de aplicación
+## Relación con otras áreas de aplicación { #relationship-with-other-application-areas }
 
 Gestión de Compras tiene relación con otras áreas de aplicación: 
 

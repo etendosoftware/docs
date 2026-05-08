@@ -8,11 +8,11 @@ tags:
 
 ---
 
-## Esquema de tarificación
+## Esquema de tarificación { #price-list-schema }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Tarifas` > `Esquema de tarificación`
 
-### Visión general
+### Visión general { #overview }
 
 Un esquema de tarificación es una plantilla utilizada para completar automáticamente una nueva versión de una tarifa.
 
@@ -50,7 +50,7 @@ La forma en que estos conceptos funcionan en Etendo se describe a continuación:
     2.  Las versiones de la(s) tarifa(s) creadas pueden vincularse a los terceros según sea necesario.  
         Para saber más, visite Terceros.
 
-### Cabecera
+### Cabecera { #header }
 
 La ventana de esquema de tarificación permite la creación de tantos esquemas de tarificación como sea necesario con el objetivo de obtener una gestión sencilla de las tarifas y de las versiones de tarifa.
 
@@ -60,7 +60,7 @@ Como se muestra en la imagen siguiente, la creación de un esquema de tarificaci
 
 El conjunto de reglas de precio y descuento que podrían aplicarse a un conjunto de categorías de producto o a productos específicos debe configurarse en la solapa "Líneas".
 
-### Líneas
+### Líneas { #lines }
 
 La solapa de líneas del esquema de tarificación permite definir un conjunto de reglas de precios, como aplicar un % de descuento al precio unitario neto de una categoría de producto determinada o de un producto específico.
 
@@ -145,11 +145,11 @@ Usando comportamiento no jerárquico:
 - se aplica un descuento del 5% sobre el precio unitario a los productos que pertenecen a la Categoría del producto X, excepto al Producto X.
 - se aplica un descuento del 10% sobre el precio unitario a los productos que pertenecen a la Categoría del producto Y.
 - se aplica un descuento del 15% sobre el precio unitario al Producto X.
-## Tarifa
+## Tarifa { #price-list }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Tarifas` > `Tarifa`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Una tarifa es un listado de precios para diferentes productos o servicios.
 
@@ -177,7 +177,7 @@ Creación de versión de tarifa:
 5.  Los documentos establecerán automáticamente como valor por defecto la versión más reciente de una tarifa.
 6.  No existe fecha de fin en las versiones de tarifa, pero las versiones antiguas pueden desactivarse.
 
-### Tarifa
+### Tarifa { #price-list_1 }
 
 La ventana Tarifa permite crear tarifas de compra y de venta para asignarlas a los terceros para su uso en transacciones de compra y venta, como pedidos y facturas.
 
@@ -216,7 +216,7 @@ Debido a esto (importe neto vs importe bruto), al utilizar precios que incluyen 
 - Cuando la tarifa no incluye impuestos, los campos _precio unitario bruto_ e _importe bruto de línea_ no se muestran y no se calculan en absoluto en la línea del documento. El importe bruto final del documento será el resultado de la suma de los importes netos de las líneas más los importes de impuestos.
 - La tarifa se define a nivel de documento (cabecera), por lo que no puede haber líneas en las que el precio incluya impuestos y otras en las que no. Esto es claro para los pedidos, pero para las facturas en las que los pedidos pueden agruparse en una única factura, la regla también se aplica. Una factura no puede tener pedidos en los que la tarifa incluya impuestos y pedidos en los que la tarifa no incluya impuestos.
 
-### Versión de tarifa
+### Versión de tarifa { #price-list-version }
 
 Puede haber tantas versiones de una tarifa existente como sea necesario; versiones que pueden ser válidas para un periodo de tiempo determinado y que pueden definirse según ciertas reglas comerciales.
 
@@ -235,7 +235,7 @@ El botón de proceso denominado **Crear lista de precios** debe utilizarse únic
 - si la versión base está en blanco, la aplicación calcula el precio estándar y el precio tarifa para todos los productos (excluyendo los productos con descuento) más el margen definido.
 - si se selecciona un valor de versión base, la aplicación calcula el precio estándar y el precio tarifa para todos los productos definidos en la tarifa base como coste más margen.
 
-### Tarifa de Precios
+### Tarifa de Precios { #product-price }
 
 La solapa **Tarifa de Precios** permite al usuario añadir o editar productos y sus precios para una tarifa seleccionada.
 
@@ -251,11 +251,11 @@ En general, esta solapa incluye dos campos principales:
 
 - el campo '_Precio tarifa_', como el precio utilizado como referencia en una tarifa o versión de tarifa determinada. Este precio puede ser el resultado de un descuento o de cualquier otra regla comercial aplicada por un **Esquema de tarificación**.
 - y el campo **Pr. estándar**, como el precio final utilizado en documentos como pedidos y facturas. Este precio puede ser el resultado de un descuento o de cualquier otra regla comercial aplicada por un **Esquema de tarificación**.
-## Actualizar tarifas
+## Actualizar tarifas { #create-all-price-lists }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Tarifas` > `Actualizar tarifas`
 
-### Visión general
+### Visión general { #overview_2 }
 
 En las ventas diarias, especialmente en el comercio minorista y la distribución, las tarifas son muy importantes. Por lo tanto, Etendo incluye abundante información para gestionar y actualizar las versiones de tarifa por tercero.
 
@@ -263,7 +263,7 @@ Esta funcionalidad incluye diferentes tarifas, versiones de tarifa para cada tar
 
 Etendo permite una estructura jerárquica de tarifas y esta jerarquía se basa en los esquemas de tarificación.
 
-#### Funcionalidad
+#### Funcionalidad { #functionality }
 
 Siga este ejemplo sobre para qué se utiliza *Actualizar tarifas*:
 
@@ -277,28 +277,28 @@ Usted utiliza una tarifa principal (con una versión de tarifa) que contiene un 
 - Crear una nueva versión para la tarifa principal, basada en el nuevo esquema de tarificación.
 - Regenerar automáticamente todas las tarifas basadas en la tarifa principal. Para este tercer paso, puede utilizar la funcionalidad **Actualizar tarifas**.
 
-#### Proceso
+#### Proceso { #process }
 
 **Actualizar tarifas** genera todas las tarifas pendientes a partir de la tarifa seleccionada. El proceso comprueba todas las tarifas hijas y, aplicando el esquema de tarificación definido, genera una nueva versión para cada tarifa.
 
 ![](../../../../assets/drive/1gcdIPde692fCVAn9cq0PEXTyJBTBR9vT.png)
 
 ![](../../../../assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
-## Ventana Modificación de precios
+## Ventana Modificación de precios { #discounts-and-promotions-window }
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Tarifas` > `Modificación de precios`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Modificación de precios es una funcionalidad flexible que le permite ajustar automáticamente los precios en las líneas de pedidos y facturas según reglas de negocio configurables. Puede definir cuándo y cómo se aplican las promociones usando filtros (como Terceros, Productos, Tarifas y Características), configurar el tipo de descuento (porcentaje, importe fijo o precio fijo) y controlar la disponibilidad de la promoción por día y hora. Se pueden aplicar múltiples promociones en una cascada priorizada. La configuración también permite traducir los nombres de las promociones y realizar el seguimiento de los descuentos aplicados en documentos procesados mediante una solapa opcional de solo lectura.
 
-### Cabecera
+### Cabecera { #header_1 }
 Define la configuración principal y las condiciones para aplicar Modificación de precios a pedidos y facturas.
 
 ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-add-promotions.png)
 
 Campos a tener en cuenta:
 
-#### Sección principal
+#### Sección principal { #main-section }
 
 - **Organización**: Organización para la que el descuento o la promoción estará disponible.
 - **Tipo de descuento/promoción**: Define el tipo de regla utilizada para ajustar precios. Por defecto, Etendo incluye el tipo _Ajuste de precios_, pero es posible ampliar y añadir tipos personalizados según las necesidades de la organización.
@@ -307,7 +307,7 @@ Campos a tener en cuenta:
 - **Descripción**: Texto corto opcional que describe la promoción (hasta 255 caracteres).
 - **Activo**: Habilita la promoción para su uso. Los registros inactivos se conservan para auditoría/informes.
 
-#### Opciones del Filtro
+#### Opciones del Filtro { #filter-options }
 
 - **Fecha de inicio**: Fecha en la que la promoción pasa a ser válida.
 - **Fecha final**: Fecha hasta la que la promoción permanece válida (inclusive).
@@ -348,7 +348,7 @@ Campos a tener en cuenta:
         | **Todos los valores definidos** | **(Valor por defecto)** El producto debe coincidir con **todas** las características definidas para que no se aplique la promoción. |
         | **Cualquiera de los definidos** | El producto debe coincidir con **cualquiera** de las características definidas para que no se aplique la promoción. |
 
-#### Definición
+#### Definición { #definition }
 
 - **% de descuento**: Porcentaje de descuento a aplicar al precio.
 - **Importe del descuento**: Importe fijo a restar del precio.
@@ -358,7 +358,7 @@ Campos a tener en cuenta:
 - **Es múltiple**: El descuento se aplica solo si la cantidad es múltiplo de un valor definido.
     - **Unidades por paquete**: Esta opción se muestra solo si _Es múltiple_ está habilitado. Define el número de unidades consideradas por paquete.
 
-#### Disponibilidad
+#### Disponibilidad { #availability }
 Esta sección define los días y horas en los que la promoción está activa. Si no se configura ninguna disponibilidad, la promoción se aplicará siempre.
 
 - **Toda la semana**: Indicador para habilitar la promoción durante toda la semana.
@@ -368,7 +368,7 @@ Esta sección define los días y horas en los que la promoción está activa. Si
     - **Comienzo**: Hora de inicio para el día de la semana especificado.
     - **Fin**: Hora de fin para el día de la semana especificado.
 
-### Solapa
+### Solapa { #tabs }
 
 - **Traducción**: Permite definir el idioma, así como el **Nombre** y el **Nombre impreso** traducidos correspondientes para cada idioma.
 - **Grupos de Terceros**: Permite incluir o excluir Grupos de Terceros de una promoción o descuento.
@@ -382,7 +382,7 @@ Esta sección define los días y horas en los que la promoción está activa. Si
 - **Excluir Características**: Permite seleccionar Características del producto a excluir de una promoción o descuento.
 - **Tercero Externo** Permite seleccionar Tercero Externo para incluir o excluir de una promoción o descuento.
 
-### Botones
+### Botones { #buttons }
 
 - **Añadir Organizaciones**: Añade registros de Organización en la solapa *Organización* para incluirlos o excluirlos de la promoción.
     ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/add-organizations.png)
@@ -391,7 +391,7 @@ Esta sección define los días y horas en los que la promoción está activa. Si
 - **Añadir Productos**: Añade registros de Producto en la solapa *Productos* para incluirlos o excluirlos de la promoción.
     ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/pricing/add-products.png)
 
-### ¿Cómo se definen las promociones?
+### ¿Cómo se definen las promociones? { #how-promotions-are-defined }
 
 El proceso para configurar una promoción es sencillo:
 
@@ -425,7 +425,7 @@ El proceso para configurar una promoción es sencillo:
     !!! tip
         Configurar la disponibilidad garantiza que las promociones se apliquen correctamente según el horario comercial, días especiales o estrategias de marketing basadas en el tiempo.
 
-### ¿Cómo se aplican las promociones?
+### ¿Cómo se aplican las promociones? { #how-promotions-are-applied }
 
 Las reglas de descuento y promoción se aplican automáticamente a las [Línea pedido de venta](../sales-management/transactions.md#lines-1) y a las [líneas de factura de venta](../sales-management/transactions.md#lines-5) en función de los filtros que configure. Por ejemplo, orientando la promoción a determinados Grupos de Terceros o a productos específicos durante un periodo de tiempo definido.
 
@@ -442,7 +442,7 @@ Los ajustes de precio son visibles inmediatamente al editar la línea; verá el 
 !!! info
     Aunque el descuento se muestra al instante, el registro de **Modificación de precios** solo se crea una vez que el documento se procesa. Consulte la sección [Configuración opcional](#configuración-opcional) para saber cómo mostrar esta información en la ventana del documento.
 
-### Configuración opcional
+### Configuración opcional { #optional-configuration }
 
 La solapa de solo lectura **Modificación de precios** puede añadirse a las siguientes ventanas para mostrar los descuentos aplicados a cada precio:
 
@@ -455,15 +455,15 @@ La solapa de solo lectura **Modificación de precios** puede añadirse a las sig
 !!! tip
     Para mostrar esta solapa en las ventanas mencionadas, simplemente marque la casilla **Activo** en la solapa correspondiente en la ventana **ventanas, solapas y campos**. 
     Esta acción debe ser realizada por un desarrollador, con rol de administrador del sistema, y usando una **Plantilla** de desarrollo para exportar la configuración y evitar que se pierdan los cambios.
-## Regla de Precio de Servicio
+## Regla de Precio de Servicio { #service-price-rule }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Tarifas` > `Regla de Precio de Servicio`
 
-### Visión general
+### Visión general { #overview_4 }
 
 En esta ventana se configurarán las Reglas de Precio asignadas a servicios basados en Regla de Precio. En lugar de tener un precio fijo, habrá reglas que determinarán el precio del Servicio.
 
-### Regla de Precio de Servicio
+### Regla de Precio de Servicio { #service-price-rule_1 }
 
 ![](../../../../assets/drive/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw.png)
 
@@ -477,7 +477,7 @@ Campos de configuración:
     - **Después de Descuentos**: Si se selecciona, el porcentaje se aplicará después de añadir los descuentos al ticket.
   - **Rangos**: Si se selecciona, se mostrará una nueva solapa Rangos que permitirá crear diferentes Rangos en función del importe de las líneas relacionadas.
 
-### Rangos
+### Rangos { #ranges }
 
 ![](../../../../assets/drive/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw.png)
 

@@ -7,13 +7,13 @@ tags:
   - ISO
 ---
 
-# Instalar Etendo - Instalación en servidor
+# Instalar Etendo - Instalación en servidor { #install-etendo---server-installation }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía cubre la instalación de Etendo en un servidor de producción utilizando la **ISO de Etendo**, que automatiza la configuración del sistema operativo y la configuración del entorno base. Copilot y la Interfaz principal (Main UI) se incluyen en la instalación base y se configuran como parte de este proceso.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - [Credenciales de GitHub](use-of-repositories-in-etendo.md)
 - **Clave de API de OpenAI** — necesaria para Copilot. Usa tu propia clave de [OpenAI](https://platform.openai.com/account/api-keys){target="_blank"} o contacta con [Etendo](https://etendo.software){target="_blank"} para obtener una. Para más detalles sobre proveedores compatibles, consulta la [guía de instalación de Copilot](../../../etendo-copilot/installation.md#configuration-variables).
@@ -21,13 +21,13 @@ Esta guía cubre la instalación de Etendo en un servidor de producción utiliza
 !!! info
     La ISO configura automáticamente el stack completo (SO, PostgreSQL, Docker, Tomcat). No se requiere ninguna configuración adicional del sistema.
 
-## Instalación
+## Instalación { #installation }
 
-### 1. Descargar la ISO
+### 1. Descargar la ISO { #1-download-the-iso }
 
 Descarga la última ISO de Etendo desde la página [Etendo ISO - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/iso.md).
 
-### 2. Aprovisionar el servidor
+### 2. Aprovisionar el servidor { #2-provision-the-server }
 
 Cómo uses la ISO depende de tu infraestructura:
 
@@ -38,7 +38,7 @@ Cómo uses la ISO depende de tu infraestructura:
 - **Otros proveedores cloud**: sube la ISO como una imagen personalizada y crea una nueva instancia a partir de ella. Consulta la documentación de tu proveedor para importar imágenes de SO personalizadas.
 - **Máquina virtual**: monta la ISO directamente en tu hipervisor. Se recomiendan [Qemu](https://www.qemu.org/download/){target="_blank"} con [Virt-Manager (Linux)](https://virt-manager.org/download.html){target="_blank"} o [UTM (macOS)](https://mac.getutm.app/){target="_blank"}.
 
-### 3. Arrancar e instalar el SO
+### 3. Arrancar e instalar el SO { #3-boot-and-install-the-os }
 
 Inicia el sistema desde la ISO. Sigue las indicaciones:
 
@@ -53,7 +53,7 @@ Tras el reinicio, la configuración final del servidor se ejecuta automáticamen
 !!! info "Instalación sin conexión a internet"
     Si no hay conexión a internet disponible durante la instalación, selecciona **Continuar sin internet** en el paso de configuración de red. Tras la instalación del SO y el reinicio, configura la red, conéctate a internet, inicia sesión como superusuario (`sudo su`) y ejecuta `etendo-install`.
 
-### 4. Añadir credenciales de GitHub
+### 4. Añadir credenciales de GitHub { #4-add-github-credentials }
 
 Una vez que el servidor esté listo, ve al directorio del proyecto y añade tus credenciales de GitHub en `gradle.properties`. Para generarlas, sigue la guía [Uso de repositorios en Etendo](use-of-repositories-in-etendo.md).
 
@@ -66,7 +66,7 @@ githubUser=<username>
 githubToken=<*******>
 ```
 
-### 5. Aplicar la plantilla de servidor
+### 5. Aplicar la plantilla de servidor { #5-apply-the-server-template }
 
 Ejecuta la siguiente tarea para configurar todas las variables necesarias para el entorno de servidor:
 
@@ -98,7 +98,7 @@ Cuando se solicite, proporciona:
     ```
     Para más detalles, consulta la guía [Cómo usar la configuración interactiva](../../how-to-guides/how-to-use-interactive-setup.md).
 
-### 6. Iniciar servicios Docker
+### 6. Iniciar servicios Docker { #6-start-docker-services }
 
 ```bash title="Terminal"
 ./gradlew resources.up
@@ -106,14 +106,14 @@ Cuando se solicite, proporciona:
 
 Esto inicia los contenedores de **Copilot** y de la **Interfaz principal (Main UI)**.
 
-### 7. Compilar y desplegar
+### 7. Compilar y desplegar { #7-compile-and-deploy }
 
 ```bash title="Terminal"
 ./gradlew install smartbuild --info
 ```
 Esto crea la base de datos, compila los fuentes y despliega en el directorio local de Tomcat.
 
-### 8. Configurar Apache
+### 8. Configurar Apache { #8-configure-apache }
 
 Desde el directorio `/opt/EtendoERP`, ejecuta el script de configuración de Apache:
 
@@ -124,13 +124,13 @@ sudo ./apache-config.sh <domain>
 
 Esto configura Apache como un proxy inverso para el servidor. Una vez completado, las URLs de la Interfaz principal (Main UI) y la Interfaz clásica (Classic UI) se establecen automáticamente en función del dominio proporcionado.
 
-### 9. Iniciar Tomcat
+### 9. Iniciar Tomcat { #9-start-tomcat }
 
 ```bash title="Terminal"
 sudo /etc/init.d/tomcat start
 ```
 
-## Acceder a la instalación
+## Acceder a la instalación { #access-the-installation }
 
 Una vez que todos los servicios estén en ejecución:
 

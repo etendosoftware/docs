@@ -6,11 +6,11 @@ tags:
     - Contraseña
 ---
 
-# Usuario
+# Usuario { #user }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Usuario`
 
-## Visión general
+## Visión general { #overview }
 
 Un **usuario** es una entidad que puede iniciar sesión en Etendo siempre que tenga una contraseña y al menos un rol asignado.
 
@@ -18,7 +18,7 @@ Un **usuario** es una entidad que puede iniciar sesión en Etendo siempre que te
 
 Tal y como se muestra en la imagen anterior, Etendo permite al usuario iniciar sesión introduciendo un nombre de usuario y una contraseña creados previamente en Etendo. El usuario asignado a ese nombre de usuario podrá iniciar sesión únicamente en caso de que tenga al menos un rol de usuario asignado.
 
-## Usuario
+## Usuario { #user_1 }
 
 La ventana Usuario permite al usuario crear tantos usuarios de Etendo como sea necesario. Cada persona que acceda a Etendo puede tener asignado un usuario diferente.
 
@@ -31,7 +31,7 @@ Tal y como se muestra en la imagen anterior, se puede crear un usuario introduci
 - y, en caso de ser un **Operarios**, los registros del tercero del empleado en el campo Tercero, dentro de la sección Más información.
 - la casilla de verificación **Contraseña Caducada**: si está marcada, la contraseña del usuario se establecerá como caducada y, cuando el usuario inicie sesión, se le obligará a cambiarla.
 
-### Roles del usuario
+### Roles del usuario { #user-roles }
 
 ![](../../../../../assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
 
@@ -46,6 +46,15 @@ Estos roles deberán configurarse para permitir el acceso a las ventanas, proces
 Siempre que haya un nuevo miembro en la organización, se podría crear un nuevo usuario y asignarlo a cualquiera de los roles existentes, en lugar de crear y configurar nuevos permisos de usuario cada vez.
 
 Puede haber un usuario que tenga un rol determinado configurado como **Administrador de Rol**; ese usuario podrá añadir nuevos usuarios a ese rol.
+
+### Configuración de correo electrónico { #email-configuration }
+
+La solapa **Configuración de correo electrónico** permite configurar credenciales SMTP individuales para un usuario. Esto tiene la máxima prioridad en la cascada de resolución: si el usuario tiene una configuración válida, siempre se utiliza independientemente de los ajustes de organización o entidad.
+
+![User Email Configuration](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/user/user-email-configuration.png)
+
+!!! info
+    Para consultar la referencia completa de campos e instrucciones de configuración paso a paso, consulte [Cómo configurar el correo electrónico](../../../how-to-guides/how-to-configure-email.md).
 
 ---
 

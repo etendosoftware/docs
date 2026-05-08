@@ -9,11 +9,11 @@ tags:
     - Contabilidad
 ---
 
-# Histórico de Control de Periodos
+# Histórico de Control de Periodos { #period-control-log }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Histórico de Control de Periodos`
 
-## Visión general
+## Visión general { #overview }
 
 Esta ventana muestra el histórico del control de periodos.
 

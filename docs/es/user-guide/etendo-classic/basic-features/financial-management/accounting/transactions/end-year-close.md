@@ -7,11 +7,11 @@ tags:
   - Accounting Transactions
 ---
 
-# Cierre de año
+# Cierre de año { #end-year-close }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Cierre de año`
 
-## Descripción general
+## Descripción general { #overview }
 
 El proceso **Crear asiento de regularización** permite al usuario cerrar un ejercicio fiscal. Este proceso también cierra de forma permanente todos los períodos del año (tanto los estándar como los de ajuste).
 
@@ -56,7 +56,7 @@ Este asiento traslada el saldo de la cuenta de Resumen de contabilidad a la cuen
 -   Este asiento se registra el primer día del primer período del año siguiente.
 -   Este asiento solo se crea si la casilla Invertir Saldos de Cuentas Permanentes está marcada como sí.
 
-##### Ejemplo del proceso de cierre de año
+##### Ejemplo del proceso de cierre de año { #end-year-close-process-example }
 
 Este ejemplo describe el proceso de **cierre del ejercicio 2019** de una organización legal de muestra con una organización contable.
 
@@ -81,7 +81,7 @@ El botón de proceso **Cierre del año** ejecuta el proceso de cierre de año pa
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-3.png)
 
-##### Invertir Saldos de Cuentas Permanentes configurado como **Sí**
+##### Invertir Saldos de Cuentas Permanentes configurado como **Sí** { #reverse-permanent-account-balances-set-to-yes }
 
 Etendo crea los **asientos de cierre** detallados a continuación si la casilla **Invertir Saldos de Cuentas Permanentes** del libro mayor general de la organización está configurada como **Sí** antes de ejecutar el proceso **Crear asiento de regularización**.
 
@@ -109,7 +109,7 @@ Pérdidas y Ganancias de 2021:
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-8.png)
 
 
-##### Invertir Saldos de Cuentas Permanentes configurado como **No**
+##### Invertir Saldos de Cuentas Permanentes configurado como **No** { #reverse-permanent-account-balances-set-to-no }
 
 Etendo crea los siguientes asientos de **cierre** si la casilla **Invertir Saldos de Cuentas Permanentes** del libro mayor general de la organización está configurada como **No** antes de ejecutar el proceso **Crear asiento de regularización**.
 
@@ -126,7 +126,7 @@ Etendo crea los siguientes asientos de **cierre** si la casilla **Invertir Saldo
 
 La organización de este ejemplo puede generar los informes de Balance de 2019 y de Cuenta de Resultados de 2019 desde la ventana de estructura Balance y PyG. Obtendrá el mismo Balance y la misma Cuenta de Resultados que los mostrados en el escenario **Invertir Saldos de Cuentas Permanentes configurado como Sí**.
 
-### Cierre de año
+### Cierre de año { #end-year-close_1 }
 
 En la ventana **Cierre de año**, se muestran todos los Años creados previamente en la ventana Calendario Fiscal. Dichos años pueden cerrarse en esta ventana.
 
@@ -154,7 +154,7 @@ Como se muestra en la imagen anterior, los campos principales de esta ventana so
 -   Calendario.
 -   Año.
 
-### Borrar asiento de regularización
+### Borrar asiento de regularización { #undo-close-year }
 
 Si un año (por ejemplo 2019) está cerrado, no será posible realizar ningún registro dentro de ese año a menos que se ejecute el proceso **Borrar asiento de regularización** para ese año.
 
@@ -162,7 +162,7 @@ Este proceso abre el año y todos los períodos del año. También revierte todo
 
 -   Estado: puede ser **Año No Cerrado** o **Año Cerrado**
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 En la pestaña **Contabilidad** de la ventana Cierre de año, se muestran todos los asientos contables generados cuando un Año se Cierra o se Abre, agrupados por Cuenta. Estos asientos de cuenta pueden ser:
 
@@ -186,7 +186,7 @@ Como se muestra en la imagen anterior, los campos principales de esta ventana so
 
 Para explicar esta pestaña, es preferible seguir el mismo ejemplo que en la sección de Introducción y mostrar cómo esta pestaña presenta los resultados.
 
-##### Invertir Saldos de Cuentas Permanentes configurado como **Sí**
+##### Invertir Saldos de Cuentas Permanentes configurado como **Sí** { #reverse-permanent-account-balances-set-to-yes_1 }
 
 Etendo crea los siguientes **asientos de cierre** si la casilla **Invertir Saldos de Cuentas Permanentes** del libro mayor general de la organización está configurada como **Sí**:
 
@@ -204,7 +204,7 @@ Etendo crea los siguientes **asientos de cierre** si la casilla **Invertir Saldo
  ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/end-year-close/end-year-close-13.png)
 
 
-##### Invertir Saldos de Cuentas Permanentes configurado como **No**
+##### Invertir Saldos de Cuentas Permanentes configurado como **No** { #reverse-permanent-account-balances-set-to-no_1 }
 
 Etendo crea los siguientes asientos de **cierre** si la casilla **Invertir Saldos de Cuentas Permanentes** del libro mayor general de la organización está configurada como **No**:
 

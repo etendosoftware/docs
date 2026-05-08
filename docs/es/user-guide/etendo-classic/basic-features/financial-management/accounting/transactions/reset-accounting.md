@@ -7,11 +7,11 @@ tags:
   - Ledger Entries
 ---
 
-# Reinicializar cuentas
+# Reinicializar cuentas { #reset-accounting }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Reinicializar cuentas`
 
-## Descripción general
+## Descripción general { #overview }
 
 El proceso Reinicializar cuentas permite al usuario eliminar total o parcialmente los asientos del libro mayor de una organización. Los asientos del libro mayor pueden recrearse de forma masiva utilizando el **Proceso de Servidor de Contabilidad** o el proceso **Proceso contable**. Los cambios manuales realizados en la descripción de los asientos contables se perderán inevitablemente tras ejecutar este proceso.
 

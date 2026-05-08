@@ -9,11 +9,11 @@ tags:
     - Análisis de Inventario
 ---
 
-# Informe Movimiento de Productos
+# Informe Movimiento de Productos { #product-movements-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Movimiento de Productos`
 
-## Descripción general
+## Descripción general { #overview }
 
 El **Informe Movimiento de Productos** proporciona una vista consolidada de todos los movimientos de productos que han tenido lugar en los almacenes. Abarca albaranes de proveedor, albaranes de cliente, movimientos de inventario, ajustes de inventario físico, transacciones de producción, consumos internos y devoluciones, todo agrupado por tipo de transacción y tercero.
 
@@ -27,7 +27,7 @@ Este informe ayuda a los responsables de almacén y coordinadores logísticos a 
 
 Para una comprensión más amplia de las operaciones de almacén, consulte [Introducción a Gestión de Almacén](../getting-started.md) y [Transacciones de Almacén](../transactions.md).
 
-## Ventana de Parámetros
+## Ventana de Parámetros { #parameters-window }
 
 Utilice la ventana de parámetros para filtrar el informe antes de generarlo. Los filtros disponibles son:
 
@@ -51,7 +51,7 @@ Tras configurar los filtros deseados, haga clic en **Ver resultados** para gener
 
 ![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-1.png)
 
-### Resultado del informe
+### Resultado del informe { #report-output }
 
 El resultado del informe muestra los movimientos agrupados primero por tipo de transacción (por ejemplo, Entradas/Salidas) y luego por tercero. Cada fila representa un único movimiento de producto con las siguientes columnas:
 
@@ -67,6 +67,13 @@ El resultado del informe muestra los movimientos agrupados primero por tipo de t
 -   **Cantidad**: El número de unidades movidas, junto con la unidad de medida.
 
 ![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-2.png)
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Informe Transacción de Material](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

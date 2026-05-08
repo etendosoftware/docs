@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados

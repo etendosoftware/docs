@@ -8,11 +8,11 @@ tags:
     - Infraestructura
 ---
 
-# Guía del desarrollador - Primeros pasos - Etendo Mobile
+# Guía del desarrollador - Primeros pasos - Etendo Mobile { #developer-guide---getting-started---etendo-mobile }
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 
-## Visión general
+## Visión general { #overview }
 
 *Etendo Mobile* es una plataforma de desarrollo de subaplicaciones que incluye la posibilidad de iniciar sesión en un servidor de *Etendo Classic* y configurar allí las subaplicaciones dinámicas disponibles según el rol.
 
@@ -22,14 +22,14 @@ A continuación se muestra un esquema de la infraestructura:
 
 En esta página, primero explicaremos el paso a paso para instalar y configurar por primera vez subaplicaciones en un cliente y, a continuación, cuáles son los requisitos para crear una subaplicación y las herramientas necesarias para desarrollar una nueva subaplicación.
 
-## Instalar subaplicaciones distribuidas en Etendo Classic
+## Instalar subaplicaciones distribuidas en Etendo Classic { #install-distributed-sub-applications-in-etendo-classic }
 
 Puede encontrar las subaplicaciones distribuidas por Etendo, disponibles para su instalación, y su documentación en la sección [Subaplicaciones disponibles para instalar](../../user-guide/etendo-mobile/getting-started.md#install-subapps-in-etendo-classic).
 
 Para instalar estos bundles, puede seguir la siguiente guía [Instalar módulos en Etendo Classic](../etendo-classic/getting-started/installation/install-modules-in-etendo.md)
 
-## Configuración del entorno de desarrollo
-### Requisitos
+## Configuración del entorno de desarrollo { #development-setup }
+### Requisitos { #requirements }
 
 - [Etendo Classic](../../developer-guide/etendo-rx/getting-started.md)
 - [Etendo Mobile](../../user-guide/etendo-mobile/getting-started.md) última versión disponible en PlayStore o Appstore.

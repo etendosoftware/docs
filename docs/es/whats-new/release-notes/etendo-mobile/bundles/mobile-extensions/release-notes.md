@@ -11,7 +11,7 @@ tags:
 :material-store: Etendo Marketplace: [Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}
 
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub|
 | --- | --- | --- | --- | :---: | :---: |

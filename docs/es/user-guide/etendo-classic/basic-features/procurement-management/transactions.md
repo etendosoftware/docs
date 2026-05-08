@@ -8,12 +8,12 @@ tags:
     - Pedido de compra
 ---
 
-## Visión general
+## Visión general { #overview }
 
 La gestión de compras se ocupa de todas las actividades relacionadas con la compra de bienes y servicios a proveedores externos y de los informes correspondientes.
 
 El proceso comienza con la creación y administración de necesidades de material y los pedidos de compra correspondientes, hasta el momento en que la mercancía se recibe en el almacén.
-## Necesidad de material
+## Necesidad de material { #requisition }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Necesidad de material`
 
@@ -23,7 +23,7 @@ El usuario puede crear necesidades de material y monitorizarlas en esta ventana:
 
 ![Ventana de necesidad de material](../../../../assets/drive/1ihaEseE5RnNH7INNbaRLyvZC0P2q-hTl.png)
 
-### Cabecera
+### Cabecera { #header }
 
 La cabecera de la necesidad de material permite introducir los siguientes datos:
 
@@ -42,7 +42,7 @@ Además, el sistema rellena los siguientes datos:
 
 A continuación, el solicitante puede pasar a la solapa "Líneas" para introducir datos adicionales.
 
-### Líneas
+### Líneas { #lines }
 
 Cada línea de necesidad de material muestra una demanda de producto para una fecha específica.
 
@@ -75,13 +75,13 @@ Es importante remarcar que las *Necesidades de material* no tienen ningún impac
 
 - La cantidad disponible de los artículos
 - El coste de los artículos
-## Administrar necesidades
+## Administrar necesidades { #manage-requisitions }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Administrar necesidades`
 
 La ventana Administrar necesidades está pensada para proporcionar una visión general de los artículos necesarios.
 
-### Cabecera
+### Cabecera { #header_1 }
 
 Esta ventana permite al usuario gestionar las necesidades de material independientemente de su estado actual; por lo tanto, puede modificar o cerrar una necesidad de material y crear pedidos de compra para esas demandas.
 
@@ -124,17 +124,17 @@ Cualquier **pedido de compra** creado a partir de una **Necesidad de material**:
   - Tarifa
   - Producto/s
 
-### Líneas
+### Líneas { #lines_1 }
 
 El usuario puede realizar un conjunto de acciones relacionadas con las líneas de necesidad de material. Es posible crear líneas o demandas de producto, o bien cancelarlas.
 
 - **Se pueden crear manualmente nuevas demandas de producto** dentro de una necesidad de material simplemente **añadiendo nuevas líneas de necesidad de material** antes de crear un pedido de compra.
 - **Las demandas de producto existentes o las líneas de necesidad de material se pueden cancelar**, si ya no son necesarias, utilizando el botón de cabecera "**Cambiar estado**".
 
-#### Líneas de pedido de compra (Pedido de compra) asociadas
+#### Líneas de pedido de compra (Pedido de compra) asociadas { #matched-po-purchase-order-lines }
 
 Esta solapa permite al usuario revisar la línea de pedido de compra vinculada automáticamente a una línea de necesidad de material o vincular manualmente una línea de pedido de compra existente a la línea de necesidad de material correspondiente.
-## Necesidad a Pedido
+## Necesidad a Pedido { #requisition-to-order }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Necesidad a Pedido`
 
@@ -155,7 +155,7 @@ De este modo, durante el tiempo en que las líneas de necesidad de material est�
 Una necesidad de material puede desbloquearse manualmente por el responsable de compras o por quien la bloqueó, moviéndola de nuevo a la parte superior de la pantalla **"Necesidad a Pedido"** mediante el botón **"Eliminar"**.
 
 Una vez que las demandas de producto estén claras y bloqueadas, el último paso a realizar en esta ventana es crear un pedido de compra para esas necesidades utilizando el botón de proceso **"Crear"**.
-## Pedido de compra
+## Pedido de compra { #purchase-order }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Pedido de compra`
 
@@ -167,7 +167,7 @@ Una vez registrado el documento, puede enviarse al proveedor externo y puede pag
 
 Los pedidos de compra pueden crearse y registrarse en la sección de cabecera de la ventana de pedido de compra.
 
-### Cabecera
+### Cabecera { #header_2 }
 
 La **cabecera del pedido de compra** permite introducir la siguiente información:
 
@@ -205,7 +205,7 @@ Es posible realizar hasta **tres acciones posibles respecto a un pedido de compr
 !!! info
     Si existen productos BOM no almacenables y no se han explotado, el botón Registrar los explota automáticamente.
 
-### Líneas
+### Líneas { #lines_2 }
 
 Una vez que la cabecera del pedido de compra se ha cumplimentado correctamente y se ha guardado, cada línea del pedido de compra puede crearse en esta solapa.
 
@@ -242,14 +242,14 @@ En la **Barra de estado** de cada línea, puede encontrar información sobre:
 - **Cant.entregada**: número de productos recibidos de la línea.
 - **Cant.facturada**: número de productos facturados de la línea.
 
-#### Botón Explotar
+#### Botón Explotar { #explode-button }
 
 El botón **Explotar** se muestra al seleccionar una línea con un producto BOM no almacenable y el producto aún no se ha explotado. Al explotar un producto, los componentes de la lista de materiales de los que se compone el producto seleccionado se muestran en el pedido.
 
 !!! info
     Una vez que lo haya explotado, no puede comprimirlo. Debe eliminar todas las líneas (primero los componentes de la lista de materiales y después el producto BOM) e insertar de nuevo el producto BOM no almacenable.
 
-#### Línea de impuesto
+#### Línea de impuesto { #line-tax }
 
 Para cada línea del pedido de compra, Etendo completa automáticamente en esta solapa la información relacionada con el impuesto de línea.
 
@@ -262,13 +262,13 @@ La solapa Línea de impuesto informa sobre cada línea del pedido de compra:
 !!! info
     No es posible crear manualmente una nueva línea ni modificar las existentes.
 
-#### Descuentos
+#### Descuentos { #basic-discounts }
 
 Lista información sobre los descuentos aplicados automáticamente en función de la configuración del proveedor y/o introducidos manualmente para el pedido de compra.
 
 ![Descuentos](../../../../assets/drive/1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-.png)
 
-#### Plan de pagos
+#### Plan de pagos { #payment-plan }
 
 Muestra el importe total previsto a pagar al registrar el pedido, así como el/los importe(s) pagado(s) por adelantado o pagado(s) contra la(s) factura(s) del pedido.
 
@@ -283,11 +283,11 @@ Por último, el plan de pagos de un pedido de compra se **eliminará**:
 - si el pedido de compra se **reactiva**
 - o si el pedido de compra se **anula**
 
-#### Detalles del pago
+#### Detalles del pago { #payment-details }
 
 Muestra los detalles de los pagos (pagos por adelantado o pagos regulares) realizados para el pedido o para la(s) factura(s) del pedido.
 
-### Cómo reactivar un pedido de compra cerrado
+### Cómo reactivar un pedido de compra cerrado { #how-to-reactivate-a-closed-purchase-order }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -304,7 +304,7 @@ Una vez finalizado el proceso, el estado del pedido de compra pasa a registrado.
 !!! info
     Consulte la documentación técnica sobre Advanced Financial Docs Processing para ampliar el proceso.
 
-### Eliminación de pagos
+### Eliminación de pagos { #payment-removal }
 
 El objetivo de esta funcionalidad es eliminar y reactivar pagos de forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
@@ -332,7 +332,7 @@ En caso de que el usuario tenga que crear pedidos o facturas entre dos o más or
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -353,13 +353,13 @@ Este módulo añade un nuevo campo a la cabecera de la ventana Pedido de compra:
 
 !!! info
     Para más información, visite la [guía de usuario de Advanced Bank Account Management](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-## Albarán (Proveedor)
+## Albarán (Proveedor) { #goods-receipts }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Albarán (Proveedor)`
 
 Un **Albarán (Proveedor)** es un documento emitido para reconocer la recepción de los artículos listados en él. En otras palabras, es un documento utilizado para registrar en Etendo los detalles de los artículos recibidos físicamente en el almacén.
 
-### Cabecera
+### Cabecera { #header_3 }
 
 Los **Albarán (Proveedor)** pueden emitirse y contabilizarse en la sección de cabecera de la ventana de albarán.
 
@@ -405,7 +405,7 @@ Esta acción implica un **vínculo entre el albarán y la factura de compra**, d
 !!! info
     Para saber más, visite [Factura (Proveedor)](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice).
 
-### Líneas
+### Líneas { #lines_3 }
 
 Una vez que la cabecera del albarán se haya completado correctamente y guardado, cada artículo recibido puede listarse como una línea de albarán independiente.
 
@@ -436,7 +436,7 @@ Finalmente:
 
 En la **barra de estado** de cada línea, puede encontrar información sobre la **Cant.facturada**, el número de productos facturados de la línea.
 
-#### Contabilidad
+#### Contabilidad { #accounting }
 
 Información contable relacionada con la recepción de material.
 
@@ -472,7 +472,7 @@ Esto funciona si la casilla *Registrar con precio de compra* está seleccionada 
 
 En este caso, es necesario que exista un **"Pedido de compra"** relacionado con el **"Albarán (Proveedor)"** contabilizado.
 
-#### Anulación
+#### Anulación { #voiding }
 
 Es posible anular totalmente un albarán usando el botón de cabecera **"Cerrar"** y seleccionando después la acción "**Anular**".
 
@@ -510,7 +510,7 @@ Algunos campos relevantes a tener en cuenta son:
 
 Una vez completados todos los elementos anteriores, incluida la línea de factura de compra de landed cost correspondiente, tanto el **Albarán (Proveedor)** como el *procesar asociación* de Landed Cost se ejecutan haciendo clic en el botón de proceso "**Completada**".
 
-### Cómo reactivar albaranes
+### Cómo reactivar albaranes { #how-to-reactivate-goods-receipts }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
@@ -524,7 +524,7 @@ Una vez que el albarán se reactiva correctamente, el estado del documento cambi
 !!! warning
     Nota: no es posible reactivar documentos que incluyan transacciones con cantidades que excedan la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando la configuración del hueco permite Over Issue. Para más información, visite [Hueco](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -536,7 +536,7 @@ Además, el estado contable del/de los registro/s se muestra en la barra de esta
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -545,7 +545,7 @@ La funcionalidad de **finalización masiva** permite al usuario completar, react
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-## Albaranes pendientes de recibir
+## Albaranes pendientes de recibir { #pending-goods-receipts }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Albaranes pendientes de recibir`
 
@@ -562,11 +562,11 @@ Esta ventana permite al usuario:
 - **Procesarlo** para crear los albaranes correspondientes.
 
 ![Ventana de albaranes pendientes de recibir](../../../../assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png)
-## Factura (Proveedor)
+## Factura (Proveedor) { #purchase-invoice }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`
 
-### Vista general
+### Vista general { #overview_1 }
 
 La ventana **Factura (Proveedor)** permite al usuario registrar y gestionar las facturas del proveedor.
 
@@ -579,7 +579,7 @@ Los proveedores podrían enviar la/s factura/s de compra correspondiente/s junto
 Los gastos de compra pueden reconocerse tan pronto como la factura de compra se contabilice; sin embargo, si se configura un plan de gasto postpuesto, es posible diferir el reconocimiento del gasto según sea necesario.
 
 Las facturas de proveedor pueden registrarse, contabilizarse y gestionarse en la sección de cabecera de la ventana **Factura (Proveedor)**.
-### Cabecera
+### Cabecera { #header_4 }
 
 **Cabecera** lista los principales términos y condiciones relacionados con la factura de proveedor.
 
@@ -615,7 +615,7 @@ Una vez completada, una factura de proveedor puede:
 - y **pagarse** utilizando el botón [Añadir pago](#add-payment).
 
 ![Ventana de factura de proveedor](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
-### Líneas
+### Líneas { #lines_4 }
 
 Una vez que la cabecera de la **Factura (Proveedor)** se ha completado correctamente y se ha guardado, las líneas de la factura de compra pueden registrarse en esta solapa.
 
@@ -655,12 +655,12 @@ En esta ventana solo se mostrarán documentos de Landed Cost procesados. Permite
 !!! warning
     Tenga en cuenta que, si la casilla de verificación "Procesar Asociación" no se selecciona aquí, la conciliación de landed cost deberá procesarse en la ventana de *Landed Cost* mediante el botón **Procesar Asociación**.
 
-#### Línea de impuesto
+#### Línea de impuesto { #line-tax_1 }
 
 La información de impuestos de línea se completa automáticamente para cada línea de factura de compra al completar la factura.
 
 La solapa de solo lectura **Línea de impuesto** detalla la información de impuestos para cada línea de una factura de compra en función de su solapa **Impuesto**, que se completa automáticamente según la configuración de impuestos.
-### Impuesto
+### Impuesto { #tax }
 
 Esta sección resume la información relacionada con los impuestos para toda la **Factura (Proveedor)**. Contiene tantos registros como tipos impositivos utilizados en la factura.
 
@@ -675,13 +675,13 @@ El campo **Importe del impuesto** refleja el valor del impuesto calculado autom�
     Para más información, visite: [Guía de usuario de Ajustar impuesto de factura](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
     
     Esta funcionalidad es compatible a partir de Etendo 23.
-### Botones
+### Botones { #buttons }
 
-#### Contabilizar/Descontabilizar
+#### Contabilizar/Descontabilizar { #postunpost }
 
 Una factura de proveedor puede contabilizarse en el libro mayor cuando sea necesario en una **Fecha contable** determinada mediante este botón de proceso. Una vez contabilizada, puede descontabilizarse con el mismo botón.
 
-#### Reactivar
+#### Reactivar { #reactivate }
 
 ![pop-up-reactivate](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/pop-up-reactivate.png)
 
@@ -729,11 +729,11 @@ Esta acción implica que:
     !!!note
         Recomendamos encarecidamente utilizar el tipo de documento **Factura Rectificativa** al anular parcialmente facturas de proveedor.
 
-#### Añadir pago
+#### Añadir pago { #add-payment }
 
 Se pueden realizar pagos contra una factura de proveedor mediante el botón **Añadir pago**, que abre la ventana emergente de Añadir pago.
 
-#### Contabilización masiva
+#### Contabilización masiva { #bulk-posting_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -745,7 +745,7 @@ Además, el estado de contabilización del/de los registro/s se muestra en la ba
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
-#### Finalización masiva
+#### Finalización masiva { #bulk-completion_2 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -759,7 +759,7 @@ La funcionalidad de **Finalización masiva** permite al usuario completar, react
     La opción de anulación masiva falla cuando está instalado el módulo [Validación de Factura (Proveedor)](../../optional-features/bundles/procurement-extensions/purchase-invoice-validation.md). Esto se debe a que el módulo incluye una preferencia predeterminada que impide la duplicación de facturas con el mismo tercero, ejercicio contable y referencia del proveedor. Dado que la anulación masiva intenta revertir facturas, se produce duplicación, ya que la referencia del proveedor para cada factura revertida no puede modificarse. Como resultado, el módulo impide que el proceso de anulación masiva funcione.
     ![popup-bulk-void](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/popup-bulk-void.png)
 
-#### Eliminar pago
+#### Eliminar pago { #remove-payment }
 
 El objetivo de la funcionalidad de **Eliminación de pagos** es eliminar y reactivar pagos de forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
@@ -777,7 +777,7 @@ Si el pago está conciliado mediante un método automático, entonces, además d
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
 
-#### Desanular
+#### Desanular { #unvoid }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -796,7 +796,7 @@ Una vez finalizado el proceso, el estado de la factura de ventas pasa a **Comple
 !!! info
     Consulte la documentación técnica sobre [Advanced Financial Docs Processing](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#advanced-financial-docs-processing) para ampliar el proceso.
 
-#### Modificar Plan de Pagos
+#### Modificar Plan de Pagos { #modify-payment-plan }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -816,7 +816,7 @@ En caso de que el usuario tenga que crear pedidos o facturas entre dos o más or
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-## Facturas cuadradas
+## Facturas cuadradas { #matched-purchase-invoices }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Facturas cuadradas`
 
@@ -831,7 +831,7 @@ En la ventana, hay un listado de todas las facturas que están asociadas a albar
 
 ![Ventana Facturas cuadradas](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/matched-purchase-invoices.png)
 
-#### Factura cuadrada
+#### Factura cuadrada { #matched-purchase-invoice }
 
 La solapa **Factura cuadrada** lista cada línea de factura contabilizada vinculada a las correspondientes líneas de albarán, que también podrían estar contabilizadas o no.
 
@@ -846,11 +846,11 @@ Un documento de *Factura de conciliación* puede contabilizarse si se ha calcula
 
 En el caso de productos de "Gasto" que no tengan seleccionada la casilla "Ventas", es posible utilizar el precio de compra del producto en lugar del coste del producto siempre que esté seleccionada la casilla *Registrar con precio de compra*. En este caso, es necesario que un "Pedido de compra" esté relacionado con el "Albarán (Proveedor)".
 
-#### Contabilidad
+#### Contabilidad { #accounting_1 }
 
 Información contable relacionada con las facturas cuadradas.
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_2 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -861,13 +861,13 @@ Además, el estado de contabilización del/de los registro/s se muestra en la ba
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Devolución a proveedor (RTV)
+## Devolución a proveedor (RTV) { #return-to-vendor-rtv }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Devolución a proveedor`
 
 Esta ventana permite al usuario crear un documento de Devolución de material en caso de que un producto determinado deba enviarse de vuelta, ya sea para su devolución con reembolso o sustitución, o para ser reparado.
 
-### Cabecera
+### Cabecera { #header_5 }
 
 El usuario puede crear un pedido de compra y procesarlo.
 
@@ -880,7 +880,7 @@ Solo los documentos *Registrados* pueden enviarse al proveedor.
 !!! warning
     Tenga en cuenta que el botón **Elegir/Editar lineas** desaparece cuando el documento de Devolución a proveedor está en estado *Registrado*.
 
-### Líneas
+### Líneas { #lines_5 }
 
 Añada productos para incluirlos en su pedido de compra. Cada producto se añade creando una línea.
 
@@ -917,7 +917,7 @@ Puede definir los Motivos de devolución a nivel de cabecera. En este caso, al s
 !!! info
     Para eliminar una línea debe desmarcar la línea y, a continuación, hacer clic en Hecho.
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion_3 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -926,13 +926,13 @@ La funcionalidad de Finalización masiva permite al usuario completar, reactivar
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-## Devolución a albarán de proveedor
+## Devolución a albarán de proveedor { #return-to-vendor-shipment }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Devolución a albarán de proveedor`
 
 Desde esta ventana, el usuario puede entregar al proveedor los bienes devueltos.
 
-### Cabecera
+### Cabecera { #header_6 }
 
 El usuario puede crear y editar un albarán.
 
@@ -958,7 +958,7 @@ Para facturar estos documentos debe usar la ventana **Factura (Proveedor)**. Se 
   - Dejarlo como crédito para usarlo más adelante mediante la ventana **Pago**.
   - Cuando cree la **Factura (Proveedor)** para el **Pedido de compra** original, puede consumir ese crédito.
 
-### Líneas
+### Líneas { #lines_6 }
 
 Añada productos que estén incluidos en su albarán. Cada producto se muestra en su propia línea.
 
@@ -997,11 +997,11 @@ La solapa Líneas no es editable, ya que las líneas siempre provienen de las l�
 
 Si no hay suficiente stock disponible para un producto en una línea seleccionada, será posible definir una cantidad a enviar y seleccionarla si existe al menos un hueco con estado de inventario de sobreemisión para el almacén de la **Devolución a albarán de proveedor**; en este caso, la nueva línea lo usará como hueco y se creará un stock negativo cuando se procese el documento.
 
-#### Contabilidad
+#### Contabilidad { #accounting_2 }
 
 El envío de RTV puede contabilizarse **si la tabla "MaterialMgmtShipmentInOut" está** activa para contabilidad **en la configuración del libro mayor correspondiente.**
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_3 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1074,7 +1074,7 @@ En resumen, la funcionalidad de landed cost sigue los siguientes pasos detallado
   - Una vez conciliados los landed costs, pueden contabilizarse; por lo tanto:
     - la contabilidad del inmovilizado del/de los producto(s) se ajusta una vez más si corresponde,
     - y la contabilización del landed cost obtiene la *Dimensión de contabilidad* de la factura de landed cost.
-### Cabecera
+### Cabecera { #header_7 }
 
 Un documento de **Landed Cost** puede crearse, procesarse y contabilizarse en esta ventana.
 
@@ -1131,7 +1131,7 @@ La contabilización de **Landed Cost** crea los siguientes asientos contables en
 | [*Inmovilizado del producto*] | Importe de Landed Cost "estimado".<br><br>(\*)Este apunte contable toma la **Dimensión de contabilidad** del albarán, como "Proveedor" o "Producto". Consulte el enlace "Detalle". |                                |
 | [*Concepto contable*]      |                                                                                                                                                           | Importe de Landed Cost "estimado" |
 
-##### Procesar Asociación
+##### Procesar Asociación { #process-matching }
 
 La asociación entre un landed cost "estimado" y un landed cost "facturado" puede procesarse en:
 
@@ -1186,7 +1186,7 @@ Este escenario crea automáticamente:
 - un ajuste de landed cost que ajusta el coste de cada producto incluido en el/los **Albarán (Proveedor)**.
 - las únicas acciones pendientes son contabilizar el documento de landed cost (cabecera) y contabilizar la asociación de landed cost.
 
-##### Contabilizar Asociación
+##### Contabilizar Asociación { #post-matching }
 
 Una asociación de landed cost puede contabilizarse después de ser procesada. Esta contabilización tendrá diferentes asientos contables dependiendo de los escenarios listados a continuación:
 
@@ -1274,7 +1274,7 @@ Esta última configuración ("Ajustar Asociación" = Sí) conlleva crear un ajus
 | [*Concepto contable*]      | Importe de Landed Cost de la diferencia (estimado<facturado) |                                                                                                                                                            |
 | [*Concepto contable*]      |                                                    | Importe de Landed Cost "facturado"<br><br>(\*)Este apunte contable toma la **Dimensión de contabilidad** de la factura de landed cost, como "Terceros". Consulte el enlace "Detalle". |
 
-##### Cancelar Asociación
+##### Cancelar Asociación { #cancel-matching }
 
 Una asociación de landed cost puede cancelarse usando el botón de proceso de cabecera "**Cancelar Asociación**". Antes de eso, la asociación de landed cost debe estar "Descontabilizada".
 
@@ -1283,16 +1283,16 @@ La acción de cancelar la asociación implica que:
 - Los importes asociados actuales no se eliminan de la solapa **Importe Asociado**.
 - Debe ejecutarse una nueva asociación en la(s) factura(s) de compra de landed cost correspondiente(s).
 - Los importes de asociación correctos se actualizarán entonces en la solapa **Importe Asociado**.
-#### Importe Asociado
+#### Importe Asociado { #matched-amount }
 
 La solapa **Importe Asociado** es una solapa de solo lectura que permite revisar las líneas de **Factura (Proveedor)** conciliadas con las líneas de **Landed Cost**.
 
-#### Contabilidad Coste
+#### Contabilidad Coste { #accounting-cost }
 
 Esta solapa proporciona información contable del documento **Landed Cost**.
 
 Como cualquier otra solapa de contabilidad, esta solapa muestra los asientos del libro mayor de la contabilización de **Landed Cost**.
-#### Entrega
+#### Entrega { #receipt }
 
 La solapa **Entrega** permite al usuario seleccionar el/los albarán/es o la/s línea/s de albarán a los que se van a asignar los tipos de landed cost registrados.
 
@@ -1306,16 +1306,16 @@ Algunos campos relevantes a tener en cuenta son:
 - **Línea de albarán**: sirve para seleccionar una línea de albarán específica.
 
 Tenga en cuenta que, en un registro, es necesario seleccionar un albarán o una línea de albarán.
-#### Importe de la Línea de Albarán
+#### Importe de la Línea de Albarán { #receipt-line-amount }
 
 **Importe de la Línea de Albarán** es una solapa de solo lectura que muestra información detallada sobre la línea de **Tipo de Landed Cost** asignada a cada línea de albarán, así como el importe de **Landed Cost** distribuido a cada línea de albarán.
 
 Es importante remarcar que el **Importe** distribuido se calcula teniendo en cuenta la precisión de **Costo** definida para la **Moneda**.
-#### Contabilidad
+#### Contabilidad { #accounting_3 }
 
 Esta solapa proporciona información contable de **Landed Cost Matching**.
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_4 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

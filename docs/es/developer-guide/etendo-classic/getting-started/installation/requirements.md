@@ -12,11 +12,11 @@ tags:
     - Etendo 26
     - Migrar a Etendo 26
 ---
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica la pila de herramientas y los requisitos para instalar Etendo.
 
-## Cliente: navegadores web
+## Cliente: navegadores web { #client-web-browsers }
 
 |     |     |     |     |
 | --- | --- | --- | --- |
@@ -26,7 +26,7 @@ Esta sección explica la pila de herramientas y los requisitos para instalar Ete
 | ![Firefox logo 2017.png](../../../../assets/drive/p3EzTz7im_NXkvyXHa5aIk29Va-vEN-96NUPsPr1BLqnWL7AA6CuewRnASM9EfEyMxRmaGmq3pNHPbAqNy2ZJL6xAuEUtM5q10QXfcadnvVJwW7-ISmAZ9xNgbOSs3XwSDsppY1P.png) | **Mozilla Firefox ESR** | 78  | **90 o superior** |
 | ![Microsoft Edge logo.png](../../../../assets/drive/acUA_bLGo6j1tRenMx_zSRQddDaf2N86N0iL2cT5o5Om5Gc96_YzQ0HOZ_CdZAitgs1m6M24Nbk5cbs1Et2I0MrUPB1a5sapBINQg_4Jzg8C_aoCmS3-CaKmn8BItB4O25SvFpy6.png) | **Microsoft Edge (basado en Chromium)** | 95  | **97 o superior** |
 
-## Cliente: conectividad de red
+## Cliente: conectividad de red { #client-network-connectivity }
 
 Aquí se muestran configuraciones de ejemplo, en función del número de usuarios concurrentes que se deban soportar. Estas asumen que el servidor está alojado con una conexión rápida, por lo que su red no es un factor limitante.
 
@@ -36,22 +36,22 @@ Aquí se muestran configuraciones de ejemplo, en función del número de usuario
 | 10MBit/s | <=20 |
 | 100MBit/s | <=100 |
 
-## Servidor: basado en Java = multiplataforma
+## Servidor: basado en Java = multiplataforma { #server-java-based-multiplatform }
 
 Etendo se ejecuta allí donde funcione el JDK de Java. Actualmente, esto significa:
 
-### Sistemas operativos:
+### Sistemas operativos: { #operating-systems }
 :material-microsoft-windows:  Windows <br>
 :simple-linux:  Distribución Linux <br>
 :simple-freebsd:  FreeBSD <br>
 :simple-macos:  Mac OSX <br>
 Solaris y más.  <br>
 
-### Arquitecturas:
+### Arquitecturas: { #architectures }
 x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
 PostgreSQL también debería estar soportado por tu sistema objetivo.
 
-## Pila de software
+## Pila de software { #software-stack }
 
 ### Etendo 26
 
@@ -76,7 +76,7 @@ PostgreSQL también debería estar soportado por tu sistema objetivo.
 | :simple-gradle:  Gradle | 8.12.1 | 8.12.1 | [Documentación de Gradle](https://docs.gradle.org/8.12.1){target="_blank"} |
 | :material-database:  Oracle | 19c (LTS) | 19c (LTS) |
 
-### Etendo 24 y anteriores (Deprecados)
+### Etendo 24 y anteriores (Deprecados) { #etendo-24-and-earlier-deprecated }
 
 !!!failure "Deprecados"
     Etendo 24 y anteriores ya no son compatibles. Actualiza a Etendo 25 o superior. Consulta la [Guía de actualización](../upgrade/upgrade-etendo-to-any-version.md) para obtener instrucciones.

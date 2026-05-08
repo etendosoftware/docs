@@ -9,9 +9,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Producción - Primeros pasos
+# Gestión de Producción - Primeros pasos { #production-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LujFoXYv-XA?si=i8cKV41eHUdipMHh" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -29,7 +29,7 @@ Los principales documentos para gestionar el proceso de producción son:
 
 ![](../../../../assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png)
 
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 
 Además de las [ventanas de configuración](./setup.md) del módulo de Producción, se requieren configuraciones adicionales.
 
@@ -64,7 +64,7 @@ Además de las [ventanas de configuración](./setup.md) del módulo de Producci�
 
 3. Los Partes de Trabajo se pueden contabilizar en el [Diario del libro mayor](../financial-management/accounting/transactions.md#gl-journal). Para facilitar la contabilización, se activa la tabla **MaterialMgmtProductionTransaction** en la solapa [Tablas a contabilizar](../financial-management/accounting/setup/general-ledger-configuration.md) de la configuración del libro mayor.
 
-## Ejecución
+## Ejecución { #execution }
 
 1. El personal de ventas introduce el **Pedido de venta** del producto con la cantidad requerida y la fecha en la que debe entregarse. Si el producto no está en stock, debe producirse. Asimismo, si el nivel de stock está por debajo del nivel de stock de seguridad, deben producirse productos.
 
@@ -93,7 +93,7 @@ Además de las [ventanas de configuración](./setup.md) del módulo de Producci�
 
 5. Al final de cada turno, los responsables de producción introducen la información de lo que se ha producido en las ventanas de [Parte de Fabricación](transactions.md#production-run-1).
 
-## Relación con otras áreas
+## Relación con otras áreas { #relationship-with-other-areas }
 
 Gestión de Producción interactúa con los siguientes módulos:
 

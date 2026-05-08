@@ -7,18 +7,18 @@ tags:
     - Planificación de compras
     - Configuración del Planificador
 ---
-## Visión general
+## Visión general { #overview }
 
 Para iniciar el proceso de Gestión de MRP (MRP), deben configurarse las secciones Método de planificación y Planificador:
 
 !!! info
     Para ello, se requieren configuraciones adicionales. Consulte la información en la [sección Visión general del módulo de MRP](../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md).
 
-## Método de planificación
+## Método de planificación { #planning-method }
 
 :material-menu: `Aplicación` > `Gestión de MRP` > `Configuración` > `Método de planificación`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Defina cómo se tratarán los tipos de transacción en la aplicación.
 
@@ -46,7 +46,7 @@ Por **valor por defecto**, MRP tiene en cuenta el **stock** y el **stock mín.**
 !!! info
     Para más detalles, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
 
-### Cabecera
+### Cabecera { #header }
 
 Utilice la cabecera para crear un método de planificación.
 
@@ -54,7 +54,7 @@ En esta solapa, se introducen la organización y el **nombre del método de plan
 
 ![](../../../../assets/drive/r-sIhmWnmoYNZsemrEKq3Il7LQsg1iDrcrq5K3H2HprddfyVZa7wiE5nmb6uaDHTpzSWHiHnvCetwhHQ_RBq1NJP3cIv17F96ZxBnqmyeWowc_zmB432U68KEEtdZbheLdRHdx9w00xaewhcEybYe4E.png)
 
-### Líneas
+### Líneas { #lines }
 
 Añada transacciones para incluirlas en su plan. Cada transacción se muestra en su propia línea.
 
@@ -67,17 +67,17 @@ Además, se configura un porcentaje de la cantidad a considerar por MRP con el *
 
 ![](../../../../assets/drive/r3xp-vXHNSPnrw9FA7ashqCDRgL0s5LE9i_8sNTRssgBQiOX5bDavCyyxMCmCXIUKzvbPdxvrp6wkfXKLFftUwcqNn3u57H56hpHgKp4z0YkfjBobN-fV1M_gGf09M7MyrjutIBaZzR40_IdhQn8fb0.png)
 
-## Planificador
+## Planificador { #planner }
 
 :material-menu: `Aplicación` > `Gestión de MRP` > `Configuración` > `Planificador`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Defina la entidad encargada de gestionar la compra o la producción de productos específicos.
 
 Un **filtro opcional tanto en la Planificación de la producción como en la Planificación de compras** es el planificador. La información que se introduce en esta pantalla no tiene relación con la configuración del tercero. Después de crear el planificador, la información del planificador se introduce en la solapa [Producto](../master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
 
-### Planificador
+### Planificador { #planner_1 }
 
 Defina el planificador encargado de gestionar la compra o la producción de productos específicos.
 

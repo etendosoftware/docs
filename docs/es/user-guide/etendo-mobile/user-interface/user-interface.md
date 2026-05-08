@@ -7,11 +7,11 @@ tags:
     - Gestión de subaplicaciones
 ---
 
-# Interfaz de Usuario
+# Interfaz de Usuario { #user-interface }
 
 ## Etendo Mobile
 
-### Pantalla de configuración
+### Pantalla de configuración { #settings-screen }
 
 En la ventana de la pantalla de configuración, el usuario puede establecer el **idioma** que se utilizará en la aplicación.
 
@@ -21,7 +21,7 @@ En la ventana de la pantalla de configuración, el usuario puede establecer el *
 ![alt text](../../../assets/user-guide/etendo-mobile/user-interface/user-interface-0.png)
 
 
-### Pantalla de inicio
+### Pantalla de inicio { #home-screen }
 
 Después de iniciar sesión, se le redirigirá a la pantalla de inicio.
 
@@ -40,7 +40,7 @@ Si se muestra el panel lateral, es posible navegar a la pantalla de inicio y tam
 
 ![alt text](../../../assets/user-guide/etendo-mobile/user-interface/user-interface-3.png)
 
-### Pantalla de perfil
+### Pantalla de perfil { #profile-screen }
 
 En esta sección, el usuario puede ver la información de la persona que ha iniciado sesión: **Nombre, Rol, Organización, Cliente y Almacén**.
 

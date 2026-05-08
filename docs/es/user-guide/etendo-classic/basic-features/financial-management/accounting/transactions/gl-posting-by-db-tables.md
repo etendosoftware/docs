@@ -7,11 +7,11 @@ tags:
   - Ledger Entries
 ---
 
-# Proceso contable
+# Proceso contable { #gl-posting-by-db-tables }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Proceso contable`
 
-## Descripción general
+## Descripción general { #overview }
 
 El Proceso contable permite al usuario contabilizar masivamente las transacciones relacionadas con una tabla transaccional determinada o con todas ellas.
 

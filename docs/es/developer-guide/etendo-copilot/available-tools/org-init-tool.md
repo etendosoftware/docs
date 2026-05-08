@@ -6,18 +6,18 @@ tags:
   - Configuración
 ---
 
-# Herramienta de configuración inicial de la organización
+# Herramienta de configuración inicial de la organización { #organization-initial-setup-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.devassistant`
 
-## Visión general
+## Visión general { #overview }
 
 La **OrgInitTool** ayuda a inicializar o crear una nueva organización en el sistema Etendo. Recopila de forma interactiva toda la información requerida, invoca la función de backend para aprovisionar la organización y su administrador, y valida que la creación se haya realizado correctamente.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza el proceso de **aprovisionamiento de la organización** en Etendo mediante:
 
@@ -41,9 +41,9 @@ Esta herramienta automatiza el proceso de **aprovisionamiento de la organizació
     - Devuelve una respuesta JSON indicando éxito o fallo.  
     - En caso de éxito: incluye un mensaje de confirmación, el ID de la nueva organización y el nombre de usuario del administrador.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Creación de una nueva organización
+### Creación de una nueva organización { #creating-a-new-organization }
 
 **Entrada**
 ```json

@@ -6,11 +6,11 @@ tags:
     - Cerrar
 ---
 
-# Finalización masiva
+# Finalización masiva { #bulk-completion }
 
 :octicons-package-16: Javapackage: `com.etendoerp.bulk.completion` 
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el módulo de Finalización masiva incluido en el bundle Essentials Extensions Bundle.
 
@@ -24,18 +24,18 @@ La funcionalidad de Finalización masiva permite al usuario completar, reactivar
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/salesinvoice1.png)
 
-## Completando
+## Completando { #completing }
 Como se muestra aquí, puede seleccionar múltiples registros al mismo tiempo, borradores en este caso, y hacer clic en el botón Finalización masiva para completarlos o contabilizarlos todos a la vez.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/salesinvoice2.png)
 
-## Reactivando
+## Reactivando { #reactivating }
 Una vez que los registros están completados o contabilizados, el usuario puede reactivar registros de forma masiva. Al reactivar, el registro pasa de estado Completado o Contabilizado a estado Borrador para que pueda modificarse. 
 
-## Anulando
+## Anulando { #voiding }
 En el caso de facturas, albaranes de proveedor y albaranes de cliente, el usuario puede seleccionar la opción Anular para generar masivamente los documentos revertidos correspondientes.
 
-## Cerrando
+## Cerrando { #closing }
 Para pedidos, presupuestos y documentos de devolución es posible cerrar múltiples documentos al mismo tiempo.
 
 Esta funcionalidad está disponible en las siguientes ventanas:

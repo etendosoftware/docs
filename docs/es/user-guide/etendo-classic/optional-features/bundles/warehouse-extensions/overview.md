@@ -14,16 +14,16 @@ tags:
 
 :material-store: Etendo Marketplace:  [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de gestión de almacenes en Etendo.
 
-## Traducción
+## Traducción { #translations }
 
 -  :material-translate: Español: [Warehouse Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}
 
-## Módulo
+## Módulo { #modules }
 
-### Gestión avanzada de almacenes
+### Gestión avanzada de almacenes { #advanced-warehouse-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.warehouse.management`
 
@@ -34,7 +34,7 @@ La gestión de códigos de barras incluye AIs GS1-128 (p. ej., GTIN, lote, caduc
 !!! info
     Para más información, visite [Gestión avanzada de almacenes](./advanced-warehouse-management.md).
 
-### Reserva automatizada de almacén
+### Reserva automatizada de almacén { #automated-warehouse-reservation }
 
 :octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
 
@@ -43,7 +43,7 @@ Este módulo añade la opción Automática - Solo almacén por defecto al campo 
 !!! info
     Para más información, visite [Pedido de venta](../../../basic-features/sales-management/transactions.md#stock-reservations) y [Reserva de existencias](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
 
-### Empaquetado 
+### Empaquetado { #packing }
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
@@ -53,7 +53,7 @@ Si ambos módulos, preparación de pedidos y empaquetado, están instalados, el 
 !!! info
     Para más información, visite [Empaquetado](packing.md). 
 
-### Preparación de pedidos 
+### Preparación de pedidos { #picking }
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
 
@@ -64,7 +64,7 @@ En Etendo, la funcionalidad de Preparación de pedidos está diseñada para ayud
 !!! info
     Para más información, visite [Preparación de pedidos](picking.md).
 
-### Operaciones de producto
+### Operaciones de producto { #product-operations }
 
 :octicons-package-16: Javapackage: `com.etendoerp.product.operations`
 
@@ -74,7 +74,7 @@ Este módulo le permite observar y analizar en detalle todas las transacciones a
     Para más información, visite la [Guía de usuario de Operaciones de producto](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 
-### Reactivar documentos de almacén
+### Reactivar documentos de almacén { #reactivate-warehouse-documents }
 
 :octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
@@ -92,7 +92,7 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
     - [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
-### Historial de existencias
+### Historial de existencias { #stock-history }
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
@@ -101,7 +101,7 @@ Este módulo proporciona información actualizada sobre el historial diario de e
 !!! info
     Para más información, visite la [Guía de usuario de Historial de existencias](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) y la [Guía del desarrollador de Historial de existencias](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
-### Unidad logística de existencias
+### Unidad logística de existencias { #stock-logistic-unit }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrP1iPmCk_U?si=Riy5plMo7lVDjVWS" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -113,7 +113,7 @@ Este módulo también mejora la lógica de reserva de existencias, priorizando u
 !!! info
     Para más información, visite la [Guía de usuario de Unidad logística de existencias](./stock-logistic-unit.md).
 
-### Reglas de gestión de materiales
+### Reglas de gestión de materiales { #material-management-rules }
 
 :octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.rules`
 
@@ -131,7 +131,7 @@ Cuando la preferencia se establece en **N**, los siguientes documentos estarán 
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/material-mgmt-rules-preference.png)
 
-## Desinstalar bundle
+## Desinstalar bundle { #uninstall-bundle }
 
 Para desinstalar el bundle y evitar problemas futuros con registros huérfanos, debe seguirse una secuencia de pasos:
 

@@ -7,18 +7,18 @@ tags:
     - Base64 Encoding
 ---
 
-# Herramienta Adjuntar archivo
+# Herramienta Adjuntar archivo { #attach-file-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
-## Visión general
+## Visión general { #overview }
 
 La **herramienta Adjuntar archivo** carga un archivo mediante el webhook `AttachFile` tras verificar su existencia y accesibilidad. Implica leer el archivo desde una ruta especificada, codificarlo en base64 y, a continuación, enviarlo a Etendo usando el webhook, junto con los identificadores necesarios y un token de acceso.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 El propósito principal de la herramienta Adjuntar archivo es facilitar el proceso de adjuntar archivos a registros en Etendo, garantizando que el archivo sea accesible y esté correctamente codificado antes de la carga. Es muy valiosa en procesos automatizados que requieren adjuntar archivos a registros. 
 
@@ -54,7 +54,7 @@ Este proceso consta de las siguientes acciones:
 
     Una vez completada la operación, la herramienta devuelve el resultado de la llamada a la API, que podría ser un mensaje de éxito o de error.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que existe un archivo en `/home/user/document.pdf` y que es necesario cargarlo en un registro específico identificado por su ID de solapa y su ID de registro. La herramienta se utiliza del siguiente modo:
 

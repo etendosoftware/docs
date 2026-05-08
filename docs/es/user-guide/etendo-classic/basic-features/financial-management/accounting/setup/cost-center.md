@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Centro de costos
+# Centro de costos { #cost-center }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Centro de costos`
 
-## Visión general
+## Visión general { #overview }
 
 Un **Centro de costos** es una dimensión contable utilizada para clasificar y hacer seguimiento de gastos o ingresos por unidad organizativa. Al contabilizar documentos en el libro mayor, los centros de costos permiten asignar transacciones a áreas específicas del negocio — como departamentos, equipos o proyectos —, lo que posibilita un análisis y una elaboración de informes financieros más detallados.
 
@@ -20,7 +20,7 @@ La ventana Centro de costos sirve como registro maestro de todos los centros de 
 
 ![Ventana Centro de costos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/cost-center/cost-center-1.png)
 
-### Creación de un Centro de costos
+### Creación de un Centro de costos { #creating-a-cost-center }
 
 Para crear un nuevo centro de costos:
 
@@ -35,13 +35,13 @@ Para crear un nuevo centro de costos:
 
 4. Guarda el registro.
 
-### Jerarquía de centros de costos
+### Jerarquía de centros de costos { #cost-center-hierarchy }
 
 Los centros de costos pueden organizarse en una estructura en árbol de padre-hijo utilizando la opción **Nivel agrupación**. Un centro de costos de resumen actúa como un nodo de agrupación y no registra transacciones directamente; se utiliza para agregar los resultados de sus centros de costos hijos en los informes.
 
 Esto es útil cuando quieres, por ejemplo, agrupar centros de costos de equipos individuales bajo un centro de costos departamental más amplio.
 
-## Configuración relacionada
+## Configuración relacionada { #related-setup }
 
 - [Esquema contable](../general-ledger-configuration/) – Configura cómo se utilizan en tu libro mayor las dimensiones contables como los centros de costos.
 - [Combinación de cuentas](../account-combination/) – Define cómo se combinan los centros de costos con cuentas y otras dimensiones.

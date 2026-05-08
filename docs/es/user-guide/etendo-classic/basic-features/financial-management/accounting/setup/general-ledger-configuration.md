@@ -9,11 +9,11 @@ tags:
     - Accounting
 ---
 
-# Esquema contable
+# Esquema contable { #general-ledger-configuration }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Esquema contable`
 
-## Visión general
+## Visión general { #overview }
 
 La **configuración del libro mayor (GL)** define cómo se contabilizan las transacciones financieras de una organización en el libro mayor.
 
@@ -38,7 +38,7 @@ Adicionalmente, una configuración del libro mayor también puede crearse **manu
 
 Por último, es importante remarcar que la configuración del GL y el CoA están vinculados, ya que **Cuenta** es una dimensión obligatoria del GL.
 
-### Ventana Esquema contable
+### Ventana Esquema contable { #general-ledger-configuration-window }
 
 La ventana Esquema contable permite al usuario revisar y mantener las configuraciones del libro mayor creadas por defecto y crear nuevas si es necesario.
 
@@ -98,7 +98,7 @@ Una configuración del libro mayor creada por **Valor por defecto** puede modifi
     !!!info
         Es importante remarcar que la casilla **Centralizado** **no está seleccionada por defecto** para los libros mayores creados por defecto, ya que los correspondientes archivos CSV contables o los datos de referencia importados tienen su propia configuración mediante la Naturaleza de la cuenta (crédito/débito).
 
-### Pestaña Dimensiones
+### Pestaña Dimensiones { #dimension-tab }
 
 La pestaña **Dimensiones** permite al usuario configurar las dimensiones del libro mayor de la organización o añadir dimensiones contables adicionales **no centralizadas** en la entidad.
 
@@ -137,7 +137,7 @@ La configuración anterior significa que cada vez que se contabiliza en el libro
 !!!note
     Algunas dimensiones aparecen en algunas transacciones y otras no. Eso depende del documento que se esté creando. Por ejemplo, la dimensión **Cuenta** siempre aparece en la pestaña Líneas de un diario de libro mayor; sin embargo, no aparece en la pestaña Líneas de una factura de compra, ya que esos datos se toman automáticamente de las cuentas (subcuentas) configuradas para el producto, para el tercero y para los impuestos, si los hubiera.
 
-### Pestaña Tablas a contabilizar
+### Pestaña Tablas a contabilizar { #active-tables-tab }
 
 La pestaña **Tablas a contabilizar** permite al usuario definir qué tablas y, por tanto, qué transacciones se van a contabilizar en el libro mayor y cuáles no.
 
@@ -174,13 +174,13 @@ Por ejemplo, los registros de la tabla **FinancialMgmtAmortization** son las tra
 !!! info
     Existe un indicador llamado **Desactivar para Background** junto a cada tabla anterior, que permite que una tabla determinada no sea tomada por el proceso de contabilización en segundo plano. En otras palabras, es posible configurar que las transacciones relacionadas con una determinada **Tabla**, por ejemplo la tabla Factura, no sean tomadas por ese proceso y, por tanto, no se contabilicen automáticamente.
 
-#### Subpestaña Documentos
+#### Subpestaña Documentos { #documents-subtab }
 
 La pestaña **Documentos** permite al usuario definir qué tipos de documento de una tabla permiten contabilización negativa y si utilizan un proceso contable diferente del proceso por defecto basado en una plantilla contable determinada.
 
 ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration5.png)
 
-### Pestaña Contabilidad general
+### Pestaña Contabilidad general { #general-accounts }
 
 La pestaña **Contabilidad general** permite al usuario definir las cuentas que se utilizarán en los asientos de cuadratura y en el proceso de cierre de fin de año.
 
@@ -209,7 +209,7 @@ Campos a tener en cuenta:
 
 - La casilla de verificación **Revertir Balance de Cuentas Permanentes** permite al usuario incluir o no un asiento para revertir los saldos de las cuentas de balance durante el proceso de cierre de fin de año.
 
-### Pestaña Valores por defecto
+### Pestaña Valores por defecto { #defaults-tab }
 
 La pestaña **Valores por defecto** permite al usuario mantener o añadir un conjunto de **cuentas por defecto** para utilizar al contabilizar un determinado tipo de transacciones.
 

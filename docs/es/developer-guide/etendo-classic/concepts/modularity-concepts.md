@@ -9,11 +9,11 @@ tags:
 status: beta
 ---
 
-# Conceptos de modularidad
+# Conceptos de modularidad { #modularity-concepts }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Visión general
+## Visión general { #overview }
 
 Etendo incorporó el nuevo concepto de **Modularidad**: la capacidad de que los desarrolladores creen, empaqueten y distribuyan **Módulos de Extensión** y de que los usuarios instalen, desinstalen y actualicen **Módulos de Extensión**.
 
@@ -26,11 +26,11 @@ Los objetivos de la modularidad son:
 - Acortar los ciclos de implantación permitiendo a los integradores de sistemas desarrollar plantillas microverticales.
 
 Este documento contiene una visión general del proceso de desarrollo de Módulos de Etendo.
-## Conceptos
+## Conceptos { #concepts }
 
 Antes de comenzar, es necesario comprender algunos conceptos. Estos conceptos se describen en detalle en las siguientes secciones.
 
-### Tipos de módulos de extensión
+### Tipos de módulos de extensión { #types-of-extension-modules }
 
 Existen tres tipos de **módulos de extensión**:
 
@@ -41,7 +41,7 @@ Existen tres tipos de **módulos de extensión**:
 !!! info
     Los tres se denominan genéricamente **Módulos**.
 
-### Artefactos en un módulo de extensión
+### Artefactos en un módulo de extensión { #artifacts-in-an-extension-module }
 
 Existen cuatro tipos de artefactos que se pueden incluir en un **módulo de extensión**:
 
@@ -52,7 +52,7 @@ Existen cuatro tipos de artefactos que se pueden incluir en un **módulo de exte
 
 La propia plataforma Etendo no se puede modificar mediante módulos. En particular, no está permitido modificar wad (código src-wad) en un módulo. No debería ser una limitación, ya que la plataforma está diseñada para ser extensible.
 
-### Empaquetado y archivos .zip y .jar
+### Empaquetado y archivos .zip y .jar { #packaging-and-zip-and-jar-files }
 
 Todo el contenido de un módulo (código, archivos de utilidad, datos) se contiene en una carpeta separada para cada módulo. Todo el contenido de esa carpeta está relacionado con, y solo con, ese módulo. Existe una carpeta dentro de la carpeta principal de Etendo llamada **modules** donde se encuentran todos los módulos que usted ha instalado o desarrollado. Para cada módulo existe una carpeta identificada por el paquete Java del módulo. En esa carpeta, la estructura del código fuente de Etendo (config, src, src-db, lib, etc.) se replica según sea necesario para almacenar el contenido del módulo.
 
@@ -61,13 +61,13 @@ Todo el contenido de un módulo (código, archivos de utilidad, datos) se contie
 
 ![alt text](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-0.png)
 
-### Repositorio de Etendo Software en GitHub
+### Repositorio de Etendo Software en GitHub { #etendo-software-github-repository }
 
 Los módulos soportados de Etendo se publican como paquetes bajo la organización Etendo Software en GitHub. Los desarrolladores con licencia y los partners con acceso pueden explorar y descargar cualquier paquete o repositorio disponible allí.
 
 !!!info
     Puede encontrar una descripción detallada sobre los repositorios de Etendo en las guías [Publicación de módulos](../how-to-guides/how-to-publish-modules-to-github-repository.md) y [Uso de repositorios en Etendo](../getting-started/installation/use-of-repositories-in-etendo.md).
-## Introducción al proceso de desarrollo de un Módulo
+## Introducción al proceso de desarrollo de un Módulo { #introduction-to-the-process-of-developing-a-module }
 
 El proceso de desarrollo de un Módulo tiene tres pasos principales:
 
@@ -79,7 +79,7 @@ Tenga en cuenta que, a partir de ahora, cada pieza de código de Etendo pertenec
 
 Las siguientes secciones describirán cada paso en detalle.
 
-### Registrar un Módulo
+### Registrar un Módulo { #register-a-module }
 
 Lo primero que debe hacer es crear una nueva entrada de Módulo en la ventana Módulo dentro de la carpeta de menú Diccionario de Aplicación.
 
@@ -125,11 +125,11 @@ Si su Módulo incluye cualquier objeto del esquema de base de datos (una tabla, 
 
 Una vez que haya completado la configuración de su módulo, es necesario asegurarse de que su `DB_Prefix` y su paquete java no estén ya registrados por otros Módulos, y es importante hacerlo incluso si no planea publicar su módulo.
 
-### Nombres
+### Nombres { #naming }
 
 Es de suma importancia utilizar nombres adecuados para los módulos, especialmente para **Paquete Java** y **Prefijo de Base de Datos**. Esta es la única garantía de que no habrá conflictos al instalar otros módulos. Puede encontrar algunas reglas de nombres [aquí](../concepts/naming-guidelines-for-modules.md).
 
-### Paquete Java
+### Paquete Java { #javapackage }
 
 **Paquete Java** debe ser un Paquete Java único y válido (véase arriba). Estas son instrucciones de [java.sun.com](https://docs.oracle.com/javase/specs/#40169){target="\_blank"}:
 
@@ -141,7 +141,7 @@ Usted forma un nombre de paquete único teniendo primero (o perteneciendo a una 
 !!!Note
     Tenga en cuenta que los paquetes java que comienzan por `com.etendoerp` o `com.smf` solo deberían ser utilizados por módulos distribuidos por Etendo.
 
-### Prefijo de Base de Datos
+### Prefijo de Base de Datos { #db-prefix }
 
 Es una buena práctica utilizar un prefijo corto para su empresa seguido de un prefijo para su módulo. Siguiendo el ejemplo anterior, todos sus prefijos de base de datos podrían comenzar por `FB`, y el del módulo de CRM podría ser `FBCRM`.
 
@@ -157,10 +157,10 @@ Si no aparece ningún módulo, entonces su Prefijo de Base de Datos no se ha uti
 
 !!!info "Acerca de los módulos de personalización"  
     Normalmente, los módulos de personalización no están pensados para publicarse en el Repositorio Central. En este caso, el Prefijo de Base de Datos debería comenzar por `CUST`. Los módulos con este tipo de prefijos de base de datos no se pueden registrar en el Repositorio Central, pero son seguros frente a colisiones porque ningún otro módulo en el Repositorio Central puede usar este prefijo de base de datos. Esta es una decisión importante que debe tomarse antes de comenzar el desarrollo del módulo: en caso de que exista alguna posibilidad de publicar el módulo en algún momento, debería seguir la regla estándar; si está absolutamente seguro de que no se publicará, puede usar `CUST`.
-## Desarrollo de artefactos del Módulo
+## Desarrollo de artefactos del Módulo { #development-of-module-artifacts }
 
 Tal y como se indica en la sección de Conceptos, existen cuatro tipos de artefactos: **Componentes del Diccionario de Aplicación**, **Recursos de software**, **Datos de Referencia** y **Script de configuración**. Los requisitos de su Módulo y su diseño técnico definirán los artefactos necesarios para construir su Módulo. Este documento explica, uno por uno, los detalles que debe tener en cuenta para cada tipo de artefacto, relacionados con la modularidad. No explica cómo utilizarlos conjuntamente para construir soluciones; esto se describe en la Guía del desarrollador de Etendo. Al final de este documento, hay una explicación de varios ejemplos sencillos de `Hello World` que cubren todos los diferentes tipos de soluciones.
-### Componentes del Diccionario de Aplicación (componentes AD)
+### Componentes del Diccionario de Aplicación (componentes AD) { #application-dictionary-components-ad-components }
 
 La mayoría de los componentes AD se pueden incluir en su módulo, pero existen algunas excepciones que se explican más adelante en esta sección. La regla general para describir cómo se incluyen los componentes del Diccionario de Aplicación en su módulo es simple: establezca el campo de **Módulo** de ese componente a su módulo. Si solo tiene un módulo en desarrollo o está trabajando en su módulo por defecto, el sistema lo hará automáticamente.
 
@@ -174,7 +174,7 @@ La información de acceso no se incluye en los módulos, por lo que puede olvida
   
 Existen algunos detalles por encima de la regla general que debe comprender para tener un mejor control del contenido de su módulo. Merece la pena revisar cada tipo de componente AD.
 
-#### Tabla y Columna
+#### Tabla y Columna { #table-and-column }
 
 El registro de tablas en el AD es la primera excepción a la regla general. Las tablas no se asignan directamente a un módulo, sino a un paquete de datos dentro de un módulo. Esto es necesario para que el DAL gestione correctamente el empaquetado de las entidades generadas y el nombrado de XML. Solo los paquetes de los módulos **En Desarrollo** están disponibles cuando edita una tabla. El módulo de una tabla es el módulo del paquete de la tabla.
 
@@ -182,7 +182,7 @@ Las columnas se asignan por defecto al módulo de su tabla. Pero puede querer a�
   
 ![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-4.png)
 
-#### Ventanas, Solapas y Campos
+#### Ventanas, Solapas y Campos { #windows-tabs-and-fields }
 
 Ventanas, Solapas y Campos siguen la regla general. Los tres están vinculados a un módulo. Por defecto, cuando añade una solapa a una ventana, quedará vinculada al módulo de su ventana y, cuando añade un campo a una solapa, quedará vinculado al módulo de su solapa. Esto es cierto, pero cuando los módulos de la ventana o de la solapa no están **En Desarrollo**, entonces se propondrá el módulo por defecto. El proceso `Create fields` tiene en cuenta todas estas reglas al crear campos a partir de columnas de tabla.
 
@@ -190,7 +190,7 @@ Al editar la secuencia de campos, el sistema garantizará que no cambie el núme
 
 La clase y el mapeo de la solapa se gestionan automáticamente por el sistema y no necesita ocuparse de ello. En una sección posterior se explica cómo se gestionan Clase y Mapeo y qué puede hacer para añadir entradas adicionales.
 
-#### Referencia
+#### Referencia { #reference }
 
 Existen cuatro tipos de referencias: tipo de dato, validación de lista, validación de búsqueda y validación de tabla. Solo las validaciones de lista y las validaciones de tabla se pueden incluir en un módulo distinto del core de Etendo. Los tipos de dato y las validaciones de búsqueda se soportarán en módulos en futuras versiones (actualmente requiere modificar Etendo WAD).
 
@@ -198,39 +198,39 @@ Todos los valores incluidos en una validación de lista se incluyen en el módul
   
 ![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-5.png)
 
-#### Informes y procesos
+#### Informes y procesos { #report-and-process }
 
 Los informes y procesos siguen la regla general. Puede declarar un nuevo proceso o informe en su módulo simplemente creando una nueva entrada en la ventana **Informes y procesos** y vinculando esa entrada a su módulo. Todos los parámetros de un informe o proceso se incluirán en el módulo donde se declare el informe o proceso.
 
 Para informes y procesos manuales es necesario definir el mapeo del proceso; este mapeo puede ser cualquier cosa dentro del paquete del módulo, por ejemplo `/org.mycompany.mymodule.report/MyReport.html`.
 
-#### Formulario
+#### Formulario { #form }
 
 Los formularios también siguen la regla general. Puede declarar un nuevo formulario en su módulo simplemente creando una nueva entrada en la ventana **Formulario** y vinculando esa entrada a su módulo.
 
 Para formularios es necesario definir el mapeo del formulario; este mapeo puede ser cualquier cosa dentro del paquete del módulo, por ejemplo `/org.mycompany.mymodule.form/MyForm.html`.
 
-#### Mensaje
+#### Mensaje { #message }
 
 Los mensajes siguen la regla general, pero con un detalle adicional que debe revisar. Puede declarar un nuevo mensaje en su módulo simplemente creando una nueva entrada en la ventana **Mensaje** y vinculando esa entrada a su módulo, y la clave de búsqueda del mensaje debe comenzar por el prefijo de base de datos de su módulo (para evitar colisiones entre mensajes de distintos módulos). Esto significa que no puede incluir en su módulo un mensaje con una clave de búsqueda numérica para ser lanzado por un objeto PL/SQL mediante la función RAISE_APPLICATION_ERROR. Para más información, visite [Mensaje](../concepts/messages.md).
 
-#### Texto interfaces
+#### Texto interfaces { #text-interfaces }
 
 La ventana **Texto interfaces** normalmente no se edita manualmente, sino que las entradas se generan automáticamente mediante el proceso de traducción cuando analiza los archivos a traducir. Este proceso tiene en cuenta el empaquetado del archivo que se está traduciendo y la entrada de interfaz de texto se asigna correctamente al módulo. Este proceso debería ser transparente para los desarrolladores, pero puede explorar las entradas que sus desarrollos manuales han creado y editarlas.
 
 Existe una descripción detallada del proceso de traducción en la sección [Traducción](#traducción).
 
-#### Elemento
+#### Elemento { #element }
 
 Los elementos normalmente se generan automáticamente mediante el proceso de sincronización de terminología cuando crea nuevas columnas. Este proceso tiene en cuenta el nombre de las columnas que ha incluido en su módulo y busca en su módulo y en los módulos de los que su módulo depende un elemento con ese nombre de columna. Si se encuentra, su columna quedará vinculada a ese elemento; si no, se creará un nuevo elemento en su módulo. Este proceso debería ser transparente para los desarrolladores, pero puede explorar los elementos incluidos en su módulo y editarlos.
 
-#### Categoría de campo, Entrada auxiliar, Callouts y Validaciones
+#### Categoría de campo, Entrada auxiliar, Callouts y Validaciones { #field-category-auxiliar-input-callouts-and-validations }
 
 Estos cuatro componentes del Diccionario de Aplicación también siguen la regla general. Puede declarar un nuevo componente de estos en su módulo simplemente creando una nueva entrada en la ventana correspondiente y vinculando esa entrada a su módulo.
 
 El nombre de la entrada auxiliar debe comenzar con el prefijo de base de datos del módulo.
 
-#### Mapeo Modelo - Implementación
+#### Mapeo Modelo - Implementación { #model---implementation-mapping }
 
 El mapeo Modelo - Implementación es una generalización del concepto Modelo-Objeto que estaba presente en versiones anteriores. Puede ver una descripción detallada en la explicación del [concepto Modelo - Implementación](#concepto-modelo---implementación).
 
@@ -239,7 +239,7 @@ A través de esta nueva ventana puede incluir en su módulo las entradas que nec
 ![](../../../assets/developer-guide/etendo-classic/concepts/modularity-concepts/modularity-concepts-6.png)
 
 Los mapeos Modelo - Implementación siguen la regla general. Puede declarar una nueva entrada en su módulo simplemente creando un nuevo registro en la ventana de mapeo Modelo - Implementación y vinculando esa entrada a su módulo. Todos los mapeos y parámetros asignados a ella se incluirán en el módulo donde se declare el mapeo Modelo - Implementación.
-### Recursos de software
+### Recursos de software { #software-resources }
 
 Para desarrollar su módulo puede necesitar incluir algunos recursos de software. Los recursos de software son componentes de Etendo que no se expresan como metadatos, como por ejemplo la definición en XML de un objeto del esquema de base de datos, clases Java, librerías JAR, archivos XML, etc. Todo lo que necesite añadir a su módulo debe empaquetarse dentro de `EtndoMainFolder/modules/yourModuleJavaName` (p. ej., para el módulo `com.etendoerp.examples.helloworld` el empaquetado es `/opt/EtendoERP/modules/com.etendoerp.examples.helloworld` en Linux). Dentro de esta carpeta, tiene las carpetas estándar de Etendo para alojar sus recursos de software (`src`, `src-db`, `lib`, etc.).
 
@@ -247,7 +247,7 @@ El proceso de build de Etendo tiene en cuenta la estructura del código fuente, 
 
 De forma similar a los componentes del Diccionario de Aplicación, aunque esta regla general de empaquetado se aplica a todos los recursos de software, existen algunos detalles para cada tipo de recurso de software (objetos del esquema de base de datos, clases Java, librerías JAR, contenido estático web, etc.) que debe tener en cuenta al desarrollar su módulo.
 
-#### Objetos del esquema de base de datos
+#### Objetos del esquema de base de datos { #database-schema-objects }
 
 El flujo típico para añadir un nuevo objeto del esquema de base de datos (tabla, columna, restricción, índice, trigger, vista, procedimiento almacenado, función) o modificarlo en Etendo es el siguiente:
 
@@ -286,7 +286,7 @@ Los Puntos de Extensión permiten al desarrollador adjuntar código de ejecució
 
 Puede encontrar más información sobre los Puntos de Extensión [aquí](../concepts/extensionpoints.md) y [aquí](../how-to-guides/how-to-use-an-extension-point.md).
 
-#### Clases Java, otros objetos MVC de Etendo y librerías JAR
+#### Clases Java, otros objetos MVC de Etendo y librerías JAR { #java-classes-other-etendo-mvc-objects-and-jar-libraries }
 
 Las clases Java, otros objetos MVC de Etendo (archivos HTML, XML y XSQL) y las librerías JAR siguen la regla general para añadir recursos de software en su módulo. Debe empaquetar este código dentro de la carpeta `src` ubicada en la carpeta de su módulo.
 
@@ -298,7 +298,7 @@ Al trabajar con Eclipse, si los módulos se añaden manualmente al workspace (es
 
 Después de la generación de código y el proceso de compilación, el proceso de build despliega todo el contenido en el contexto de Etendo en el contenedor de servlets. Hay dos modos de despliegue —class y war— que se explican más adelante en la sección de Conceptos avanzados.
 
-#### Contenido estático web (archivos css, imágenes, javaScript)
+#### Contenido estático web (archivos css, imágenes, javaScript) { #web-static-content-css-files-images-javascript }
 
 Si necesita añadir contenido estático web (css, imágenes y javaScript) a su módulo, debe colocar estos recursos en la carpeta `web` de su módulo, dentro de una carpeta nombrada como el paquete Java de su módulo para evitar colisiones de archivos al desplegar recursos de diferentes módulos.
 
@@ -314,14 +314,14 @@ En tiempo de ejecución, una vez que el contexto de openbravo está desplegado y
 
 También puede referenciar otros recursos de contenido estático web incluidos en el Core u otros módulos. En ese caso, recuerde declarar explícitamente la dependencia a ese módulo.
 
-##### Archivos de configuración
+##### Archivos de configuración { #config-files }
 
 También puede necesitar incluir algunos archivos de configuración en la carpeta `config` de su módulo. Estos archivos se copiarán a `WebContent/WEB-INF` cuando el sistema se construya y se despliegue en el contexto de Etendo.
 
 Por ejemplo, en el módulo HelloWorldService hay un archivo llamado `com.etendoerp.examples.webservice-provider-config.xml` dentro de la carpeta `config`. Este archivo se copia al contexto de Etendo y, por este medio, se declara la clase que implementa el servicio web.
 
 Para evitar colisiones de archivos desplegados por diferentes módulos, los archivos dentro de la carpeta `config` deberían estar prefijados con el PackageName del módulo.
-### Datos de Referencia
+### Datos de Referencia { #reference-data }
 
 La modularidad de Etendo admite **Datos de Referencia**: información de negocio a la que hacen referencia las transacciones y que tiende a no cambiar con frecuencia, como traducciones, planes contables, códigos de impuestos, Banco-Sucursal, Categorías de Productos, etc. Pueden definirse a nivel de sistema, cliente u organización y esto definirá cuándo se cargan en la instancia: la información de sistema se cargará en el momento de la instalación, mientras que la información de cliente y organización se cargará durante los procesos **Crear entidad** o **Gestión del módulo de Empresa**.
 
@@ -329,7 +329,7 @@ Los módulos de datos de referencia también se versionan y pueden publicar actu
 
 Se admiten tres tipos de datos de referencia: Traducción, Plan contable y Datos de Referencia estándar.
 
-#### Traducción
+#### Traducción { #translations }
 
 Los módulos de traducción son un tipo especial de módulo. Deben marcarse como **Es un módulo de traducción** en la ventana Módulo. No se permite ningún otro contenido que no sean traducciones en los módulos de traducción, y solo se permiten traducciones de un único módulo a un único idioma, el idioma nativo declarado para el módulo (por ejemplo, traducción del módulo core al español, traducción del módulo HR al francés). Los módulos de traducción solo dependen del módulo que traducen.
 
@@ -341,7 +341,7 @@ Después, todo lo que tiene que hacer es instalar el módulo que planea traducir
 
 La información de traducción siempre está a nivel de sistema. Cuando se instala un módulo de traducción, el proceso se encarga de todos los detalles para importar un paquete de traducción: marcará el Idioma como Idioma de Sistema si no lo era y cargará todas las traducciones en el Diccionario de Aplicación de Etendo.
 
-#### Plan contable (CoA)
+#### Plan contable (CoA) { #chart-of-accounts-coa }
 
 Normalmente debería añadir solo un plan contable en su módulo, aunque puede crear tantos módulos que incluyan CoA como desee y luego agruparlos en un pack si es necesario. Los planes contables se almacenan en un archivo .csv específico.
 
@@ -353,7 +353,7 @@ Ahora su módulo está listo para ser empaquetado. Ejecute la tarea ant `package
 
 Los planes contables siempre están a nivel Cliente/Organización, por lo que al instalar este tipo de módulos no ocurre nada más que el plan contable queda disponible para aplicarse a nuevos clientes (durante Crear organización), nuevas organizaciones (durante Crear organización) o a Cliente/Organizaciones existentes (mediante Gestión del módulo de Empresa).
 
-#### Datos de Referencia estándar
+#### Datos de Referencia estándar { #standard-reference-data }
 
 También puede incluir cualquier otro dato en su módulo mediante datos de referencia estándar usando conjuntos de datos.
 
@@ -401,7 +401,7 @@ Una vez que haya completado la definición de todos sus conjuntos de datos, debe
 
 Como se describió antes, también puede publicar nuevas versiones de sus módulos de datos de referencia. Tenga en cuenta que, para garantizar la consistencia de los datos, los datos de referencia no se eliminan de la instancia al aplicar una actualización/mejora en la que el nuevo conjunto de datos no incluya algunos registros incluidos originalmente. Por lo tanto, en lugar de eliminarlos del conjunto de datos, debería inactivarlos.
 
-#### Temas avanzados
+#### Temas avanzados { #advanced-topics }
 
 Hay casos especiales que deben tenerse en cuenta al incluir tablas y columnas en datos de referencia.
 
@@ -416,14 +416,14 @@ Las secuencias se utilizan, por ejemplo, por los documentos. Cada documento tien
 El usuario aplica el conjunto de datos y todo va bien: las secuencias se importan a la base de datos (por ejemplo, con `CurrentNext` ='1000000'). El usuario empieza a usar la secuencia, por lo que el valor `CurrentNext` se incrementa (digamos que ahora `CurrentNext` ='1000123'). Ahora se publica una nueva versión del conjunto de datos porque, por ejemplo, se incluyen algunas secuencias más. El usuario actualiza el módulo y actualiza el conjunto de datos en la ventana Gestión del módulo de Empresa. En esa acción, el valor `CurrentNext` de la secuencia original se restablece de '100123' a '1000000' de nuevo.
 
 ¿Qué se puede hacer para evitar este tipo de problemas? Simplemente no incluya ese valor en el conjunto de datos y establézcalo mediante el valor por defecto de la columna.
-### Scripts de Módulo y Validaciones de Compilación
+### Scripts de Módulo y Validaciones de Compilación { #module-scripts-and-build-validations }
 
 Es posible que su módulo necesite comprobar si el sistema cumple alguna regla específica antes de instalarlo. Si este es el caso, se puede utilizar una Validación de Compilación para verificarlo. Una Validación de Compilación es básicamente un proceso, definido como una clase Java, que puede conectarse a la base de datos y a las fuentes de Etendo, comprobar lo que el desarrollador desee y, finalmente, devolver un resultado de la validación. Si el resultado no es positivo, el módulo no se aplica en el sistema.
 
 Además, es posible que su módulo necesite realizar transformaciones específicas en el sistema durante la instalación. Estos cambios pueden ser de prácticamente cualquier tipo, como modificar algunos datos en el sistema o añadir algún objeto de base de datos que utilice sintaxis específica de Oracle o PostgreSQL, lo que hace que no sea posible añadirlo mediante nuestros archivos estándar dbsourcemanager+xml. Para ello, puede utilizar Scripts de Módulo que, al igual que las Validaciones de Compilación, se definen como una clase Java que puede conectarse a la base de datos y realizar cualquier tipo de modificaciones en los datos del cliente.
 
 Si desea saber más sobre cómo crear Validaciones de Compilación y Scripts de Módulo, puede consultar este [enlace](../how-to-guides/how-to-create-build-validations-and-module-scripts.md). Si tiene previsto utilizar un script de módulo para crear un objeto de base de datos que use algún tipo de sintaxis o funcionalidad específica de la base de datos, debe excluirlo del modelo estándar de dbsourcemanager. Para saber cómo hacerlo, lea [este documento](../how-to-guides/how-to-exclude-database-physical-objects-from-model.md).
-### Script de configuración
+### Script de configuración { #configuration-script }
 
 Hasta ahora hemos visto cómo ampliar Etendo mediante módulos. Como recordará, los módulos pueden añadir nuevos artefactos —componentes del Diccionario de Aplicación, recursos de software y datos de referencia—, pero no tienen permitido modificar otros módulos para evitar dependencias cruzadas entre ellos.
 
@@ -433,16 +433,16 @@ Crear un script de configuración es sencillo. No necesita editarlo manualmente,
 
 !!!info
     Si quiere saber más sobre cómo crear plantillas de industria y scripts de configuración, puede consultar este documento.
-### Tareas de desarrollo
+### Tareas de desarrollo { #development-tasks }
 
 Lea [Tareas de compilación de desarrollo](../developer-tools/etendo-gradle-plugin.md#build-tasks) para obtener una explicación completa de todas las tareas de desarrollo disponibles.
 
 
-## Conceptos avanzados
+## Conceptos avanzados { #advanced-concepts }
 
 Esta sección explica en detalle algunos conceptos avanzados de la modularidad de Etendo. No es estrictamente necesario que lea todos estos detalles, pero merece la pena hacerlo, ya que le ayudará a evitar errores al crear sus módulos.  
 
-### Números de versión y cómo se gestionan las dependencias y las inclusiones
+### Números de versión y cómo se gestionan las dependencias y las inclusiones { #version-numbers-and-how-dependencies-and-includes-are-managed }
 
 Las distintas versiones de un Módulo de Etendo se identifican mediante un **número de versión**. Un número de versión de Etendo es una cadena de hasta 10 caracteres de longitud que sigue el formato x.y.z, donde:
 
@@ -474,7 +474,7 @@ Para imponer este comportamiento, es de suma importancia indicar claramente qué
 
 Estas restricciones hacen que el ejercicio de corregir errores sea más difícil, pero son un factor clave para crear un ecosistema mantenible. Deben garantizarse durante la fase beta y de producción de cualquier versión de cualquier módulo. Durante la fase alpha —cuando la actividad de corrección de errores es alta— podría romper esta regla para obtener cierta flexibilidad, teniendo en cuenta que no debería haber ningún otro módulo que dependa de él.
 
-#### Tipos de dependencia
+#### Tipos de dependencia { #dependency-types }
 
 El tipo de dependencia se define mediante el campo **Obligación de dependencia**; los valores posibles que puede tomar son:
 
@@ -485,7 +485,7 @@ El tipo de dependencia se define mediante el campo **Obligación de dependencia*
 * **Versión menor** : En caso de que estén definidas tanto **Primera versión** como **Última versión**, la compatibilidad va desde la versión menor en **Primera versión** hasta la versión menor en **Última versión** (aunque pertenezcan a la misma versión mayor). Si **Última versión** está en blanco, la única versión compatible será la definida por **Primera versión**. 
 * **Ninguna** : No hay restricción entre versiones mayores; **Primera versión** define la primera versión menor compatible y la compatibilidad es para todas las versiones superiores a esta, incluyendo versiones mayores. Normalmente no debería usarse este tipo. 
 
-##### Obligación editable
+##### Obligación editable { #user-editable-enforcement }
 
 El propietario del módulo puede definir si la obligación puede ser sobrescrita por el usuario. Por defecto, no lo es.
 
@@ -493,7 +493,7 @@ En caso de que sea posible sobrescribir la obligación de la dependencia del mó
 
 Los usuarios pueden seleccionar la obligación para dependencias con **Obligación editable** desde la solapa **Settings** en la ventana **Gestión de Módulo**.
 
-### Concepto Modelo - Implementación
+### Concepto Modelo - Implementación { #model---implementation-concept }
 
 AD_Model_Object es una tabla en el Diccionario de Aplicación de Etendo para enlazar componentes del Diccionario de Aplicación y la clase (servlet) que implementa ese objeto. Por tanto, esta tabla es un mapeo entre el lado lógico (componentes AD) y el lado físico (clases). Es útil por dos motivos principales:
 
@@ -510,7 +510,7 @@ El módulo de una entrada de AD_Model_Object se calcula con la siguiente regla: 
 Con esta extensión, el archivo web.xml en el contexto de Etendo es extensible mediante módulos.
 
 Puede encontrar más información sobre el mapeo de objetos del modelo de Etendo [aquí](../concepts/model-object-mapping.md).
-## Ejemplo de cómo crear su módulo
+## Ejemplo de cómo crear su módulo { #example-on-how-to-create-your-module }
 
 Ahora es el momento de ponerlo en práctica. Puede seguir [esta sección](../how-to-guides/how-to-create-a-module.md) que le guiará paso a paso sobre cómo crear su primer módulo.
 

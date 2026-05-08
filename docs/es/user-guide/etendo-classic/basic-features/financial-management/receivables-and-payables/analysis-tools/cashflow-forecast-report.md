@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Informe de previsión de tesorería
+# Informe de previsión de tesorería { #cashflow-forecast-report }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Cashflow Forecast Report`
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe muestra la posición de una cuenta financiera en una fecha futura, teniendo en cuenta los elementos previstos para cobrar o pagar en dicha cuenta financiera.
 

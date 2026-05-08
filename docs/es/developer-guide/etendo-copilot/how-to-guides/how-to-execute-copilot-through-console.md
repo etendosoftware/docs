@@ -7,21 +7,21 @@ tags:
     - Terminal
 ---
 
-# Cómo ejecutar Copilot a través de la consola
+# Cómo ejecutar Copilot a través de la consola { #how-to-execute-copilot-through-the-console }
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo ejecutar Copilot a través de la consola. Esto es útil cuando desea probar una herramienta o un agente sin utilizar la interfaz de Etendo Classic.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 * Acceso al host de Etendo Classic.
 
-## Comando
+## Comando { #command }
 ```bash
 ./gradlew copilot.do -Phost='https://my.etendo.instance/etendo' -Papp_id="Module Creator" -Pusername=my-user -Ppassword=my-password -Pquestion="Can you create a Module called 'Test Module? "  --console=plain 
 ```
 
-## Parámetros
+## Parámetros { #parameters }
 
 * **-Phost**: La URL del host de Etendo Classic. Si no se proporciona, se utilizará el host por defecto http://localhost:8080/etendo.
 * **-Pusername**: El nombre de usuario de Etendo Classic, que ejecutará el comando. Este usuario debe tener los permisos necesarios para ejecutar el comando.

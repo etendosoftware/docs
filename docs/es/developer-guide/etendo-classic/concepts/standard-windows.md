@@ -8,9 +8,9 @@ tags:
   - Campo
 ---
 
-# Ventanas estándar
+# Ventanas estándar { #standard-windows }
 
-## Visión general
+## Visión general { #overview }
 
 Las **Ventanas estándar** son las ventanas definidas completamente en el **Diccionario de la Aplicación**. Permiten visualizar y editar registros en tablas.
 
@@ -20,7 +20,7 @@ Después de definir (o modificar) una ventana estándar, el sistema debe reconst
   * Desarrollo más rápido: como la creación de una ventana consiste únicamente en definirla en el Diccionario de la Aplicación, es más rápido que hacerlo manualmente.
   * Inclusión automática de nuevas funcionalidades y correcciones de errores: siempre que `WAD` corrige un error o añade una nueva funcionalidad, esto se propaga automáticamente a todas las ventanas estándar cuando se reconstruye el sistema, sin necesidad de recodificar o redefinir nada.
 
-## Estructura: Ventanas, Solapas y Campos
+## Estructura: Ventanas, Solapas y Campos { #structure-windows-tabs-and-fields }
 
 La estructura de las ventanas estándar consiste en `Ventana`, `Solapa` y `Campo`.
 
@@ -32,19 +32,19 @@ La estructura de las ventanas estándar consiste en `Ventana`, `Solapa` y `Campo
 
 Las siguientes secciones explican cómo se definen **Ventana**, **Solapa** y **Campo**. Se gestionan desde la ventana `Diccionario de la Aplicación` > `Windows, Tabs, and Fields`.
 
-## Ventana
+## Ventana { #windows }
 
 Las ventanas se generan automáticamente por `WAD` a partir de su definición en el Diccionario de la Aplicación; todas las ventanas tienen un diseño común.
 
-### Menú
+### Menú { #menu }
 
 Las ventanas se pueden añadir al [Menú de la aplicación](../concepts/application-menu.md).
 
-## Solapa
+## Solapa { #tabs }
 
 Las `Solapa` se incluyen dentro de `Ventana`. Cada solapa está limitada a una única `Table` del Diccionario de la Aplicación. Las siguientes subsecciones detallan algunos temas importantes que deben tenerse en cuenta al crear una solapa.
 
-### Jerarquía de solapas
+### Jerarquía de solapas { #tabs-hierarchy }
 
 Las `Solapa` se muestran jerárquicamente; se definen en forma de árbol. Esto significa que una solapa puede tener subsolapas (es la solapa padre de ellas); en consecuencia, una solapa también puede ser hija de otra, y es posible tener varias solapas al mismo nivel.
 
@@ -85,7 +85,7 @@ Existen tres formas posibles de establecer cuál es la columna maestra en la sol
   2. Por `name`. En caso de que la tabla en la subsolapa tenga una columna con el mismo nombre que la `primary key` de la tabla padre, el enlace se generará usándolas.
   3. Usando `AD_Tab.WhereClause`. En caso de que no sea posible usar #1 o #2, la relación debe establecerse en el campo `Where Clause` de la solapa hija. Para más información sobre esta cláusula, consulte el documento sobre [Expresiones dinámicas](../concepts/dynamic-expressions.md). En estos casos, es posible marcar el indicador `Disable Parent Key Property`; al hacerlo, solo se usará la cláusula where para crear la relación, sin añadir ningún otro criterio.
 
-#### Mecanismo de bloqueo
+#### Mecanismo de bloqueo { #locking-mechanism }
 
 Todas las solapas generadas por `WAD` implementan un mecanismo simple de [bloqueo optimista](https://en.wikipedia.org/wiki/Optimistic_concurrency_control){target="\_blank"}.
 
@@ -93,7 +93,7 @@ Cuando un registro se carga en modo edición, se almacena su `timestamp` de actu
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-1.png)
 
-##### Ventanas transaccionales
+##### Ventanas transaccionales { #transactional-windows }
 
 Las ventanas para documentos pueden configurarse como `Transactional`. Los documentos tienen un estado, que inicialmente es **Borrador**.
 Cuando se accede a una ventana transaccional, aparece filtrada por defecto. Esto se visualiza mediante un `message` y un pequeño icono de `embudo` en la parte superior derecha.
@@ -106,18 +106,18 @@ Para definir una ventana como transaccional, vaya a `Diccionario de la Aplicaci�
 
 Para definir el **Rango de transacciones**, vaya a `General Setup` > `Application` > `Session Preferences` y defina en `Transaction Range` el número máximo de días durante los cuales se mostrarán los documentos procesados.
 
-##### Tablas de alto volumen
+##### Tablas de alto volumen { #high-volume-tables }
 
 Cuando una tabla se define como `High Volume` (en `Diccionario de la Aplicación` > `Tables and Columns` > solapa `Table`) y la solapa que la muestra está configurada para mostrarse por defecto en modo edición (`Default Edit Mode` en `Diccionario de la Aplicación` > `Windows, Tabs, and Fields` > `Window` > solapa `tab`), al acceder a la solapa se muestra un filtro.
 
-##### Filtro en la solapa
+##### Filtro en la solapa { #filter-clause-in-tab }
 
 En `Diccionario de la Aplicación` > `Windows, Tabs, and Fields` > `Window` > solapa `tab` existe un campo **Filtro**, `HQL Filter Clause`. Este campo permite utilizar `HQL where clauses` como filtro por defecto para la solapa. Cuando se accede a la solapa, este filtro se aplica; para eliminarlo, simplemente haga clic en el icono de filtro `embudo`.
 
 !!!note
     Este campo es diferente de `HQL Where Clause`, que también acepta cláusulas where, pero esa cláusula es permanente y no puede ser eliminada por el usuario.
 
-## Campo
+## Campo { #fields }
 
 Los `Campo` están contenidos en las solapas; cada campo tiene asociada una `column` (de la misma `table` que la de la solapa). Muestra y permite editar el valor de la columna. La forma en que un campo se muestra dentro de la solapa viene determinada por la [referencia](../concepts/data-model.md#references) que tenga la columna asociada.
 

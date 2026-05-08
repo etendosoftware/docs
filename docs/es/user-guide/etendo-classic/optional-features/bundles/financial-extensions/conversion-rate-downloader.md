@@ -8,12 +8,12 @@ tags:
     - Monedas
 ---
 
-# Descargador de rangos de conversión
+# Descargador de rangos de conversión { #conversion-rate-downloader }
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`  
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
-## Visión general
+## Visión general { #overview }
 
 El módulo Descargador de rangos de conversión **automatiza la obtención** de tipos de cambio de moneda desde proveedores externos y los inserta en el sistema. Ayuda a mantener la precisión de las operaciones financieras al garantizar que siempre haya disponibles rangos de conversión actualizados, reduciendo el trabajo manual y minimizando errores.
 
@@ -28,9 +28,9 @@ Una vez completados estos pasos, el sistema recupera los rangos de conversión a
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Configuración inicial 
+## Configuración inicial { #initial-setup }
 
-### Convertidores de moneda
+### Convertidores de moneda { #currency-converters }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Convertidores de moneda`
 
@@ -57,7 +57,7 @@ Para configurar la conexión:
     - **Seleccionado**: Debe ser **True** para activar esta configuración para el proceso de descarga.
     - **Activo**: Debe ser **True** para que la configuración esté disponible.
 
-### Regla de descarga de rangos de conversión
+### Regla de descarga de rangos de conversión { #conversion-rate-download-rule }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Regla de descarga de rangos de conversión`
 
@@ -74,7 +74,7 @@ Campos a tener en cuenta:
 - **A Moneda**: Moneda de destino.  
 - **Tolerancia**: Diferencia máxima permitida entre el nuevo rango y el anterior. Esto evita insertar valores extremos durante periodos de volatilidad.
 
-### Procesamiento de Peticiones
+### Procesamiento de Peticiones { #process-request }
 
 :material-menu: `Aplicación` > `Configuración General` > `Planificador de procesos` > `Procesamiento de Peticiones`
 
@@ -89,9 +89,9 @@ Para planificar la descarga automática:
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rates-downloader/process-request.png)
 
-## Ejecución
+## Ejecución { #execution }
 
-### Rangos de conversión
+### Rangos de conversión { #conversion-rates }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Rangos de conversión`
 

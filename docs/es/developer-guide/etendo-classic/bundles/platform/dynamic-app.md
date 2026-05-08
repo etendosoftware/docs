@@ -4,13 +4,13 @@ tags:
   - Subaplicación
   - Etendo Mobile
 ---
-# Aplicación dinámica 
+# Aplicación dinámica { #dynamic-app }
 :octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
-## Visión general
+## Visión general { #overview }
 Esta página explica cómo configurar y exportar aplicaciones dinámicas en Etendo Classic, que se muestran dinámicamente en Etendo Mobile.
 
-### Ventana Aplicación dinámica
+### Ventana Aplicación dinámica { #dynamic-app-window }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Aplicación dinámica`
 
 Con el rol `System Administrator`, en la ventana **Aplicación dinámica**, especifique las rutas y versiones para cada subaplicación. Estos ajustes determinan cómo se muestran las subaplicaciones cuando los usuarios inician sesión en Etendo Mobile.
@@ -24,7 +24,7 @@ Campos a tener en cuenta:
 - **Ubicación del directorio**: La ruta donde se encuentra el bundle de la aplicación compilada. En desarrollo, la ruta debe estar vacía `/`, pero en producción, la ruta es `/<javapackage>/web/`.
 - **Activo**: Para seleccionar si esta aplicación está activa o no.
 
-### Solapa Versión de la aplicación dinámica 
+### Solapa Versión de la aplicación dinámica { #dynamic-app-version-tab }
 Permite versionar la aplicación, habilitando tanto versiones de desarrollo como de producción.
 
 Campos a tener en cuenta:

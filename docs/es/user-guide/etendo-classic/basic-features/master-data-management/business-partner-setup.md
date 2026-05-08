@@ -2,7 +2,7 @@
 title: Configuración de terceros
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Los terceros pueden agruparse en diferentes categorías con el objetivo de facilitar su gestión y análisis.
 
@@ -15,24 +15,24 @@ Todo lo anterior es posible debido a que el Grupo de Terceros es una dimensión 
 Para obtener más información, visite las herramientas de análisis de aprovisionamiento y las herramientas de análisis de ventas.
 
 Por último, también es importante que tenga en cuenta que cada grupo de terceros permite al usuario configurar un conjunto diferente de cuentas contables del libro mayor que se utilizarán al contabilizar transacciones como las cuentas a cobrar de clientes o las deudas con proveedores.
-## Conjunto de Terceros
+## Conjunto de Terceros { #business-partner-set }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Conjunto de Terceros`
 
-### Visión general
+### Visión general { #overview_1 }
 
 En esta ventana, el usuario puede definir listas de terceros para utilizarlas en otras funcionalidades.
 
-### Cabecera
+### Cabecera { #header }
 
 En la cabecera de Conjunto de Terceros, los campos a completar son la organización y el nombre de la lista de terceros. También es posible añadir una descripción cuando sea necesario.
 
-### Líneas
+### Líneas { #lines }
 
 La solapa Líneas permite al usuario añadir los terceros necesarios al conjunto de terceros correspondiente.
 
 ![](../../../../assets/drive/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78.png)
-## Grupos de Terceros
+## Grupos de Terceros { #business-partner-category }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Grupos de Terceros`
 
@@ -46,7 +46,7 @@ Tal y como se muestra en la imagen anterior, la creación de un grupo de tercero
 - un **Nombre**
 - y una **Descripción**
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Cada grupo de terceros permite al usuario configurar un conjunto diferente de cuentas contables.
 
@@ -87,15 +87,15 @@ El botón de acción **Copiar cuentas** permite al usuario copiar las cuentas es
 
 - la solapa **Contabilidad de cliente**
 - o la solapa **Contabilidad de proveedor**
-## Calendario de facturación
+## Calendario de facturación { #invoice-schedule }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Calendario de facturación`
 
-### Visión general
+### Visión general { #overview_2 }
 
 La ventana Calendario de facturación permite al usuario definir y configurar con qué frecuencia y hasta qué fecha una organización puede emitir facturas para enviarlas a los clientes.
 
-### Calendario de facturación
+### Calendario de facturación { #invoice-schedule_1 }
 
 Una organización puede acordar y, por lo tanto, definir calendarios específicos para la emisión de facturas, calendarios que luego deberán vincularse a los clientes correspondientes.
 
@@ -123,11 +123,11 @@ El proceso "**Facturar**" tiene en cuenta ambos:
 acordado y, por lo tanto, asignado a cada cliente.
 
 Para obtener más información sobre este proceso, visite "Gestión de Ventas // Transacciones".
-## Tratamientos
+## Tratamientos { #title }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Tratamientos`
 
-### Visión general
+### Visión general { #overview_3 }
 
 La ventana **Tratamientos** permite al usuario configurar tratamientos de terceros como Sr. o Sra. para utilizarlos al contactar con terceros.
 
@@ -135,7 +135,7 @@ Lo mismo aplica a cualquier tipo de **"Personas de contacto"** introducidas en E
 
 Esta es una **"Características avanzadas"**. Debe revisarse, ya que no se observa dónde pueden asignarse los tratamientos a terceros y personas de contacto.
 
-### Tratamientos
+### Tratamientos { #title_1 }
 
 Existen muchos tratamientos para utilizar al contactar con terceros de cualquier tipo, así como con personas de contacto.
 
@@ -143,7 +143,7 @@ Existen muchos tratamientos para utilizar al contactar con terceros de cualquier
 
 Una vez que los tratamientos requeridos se hayan introducido y configurado correctamente, puede vincularlos a la correspondiente **"Personas de contacto"** del tercero en la ventana de Terceros.
 
-### Traducción
+### Traducción { #translation }
 
 Los tratamientos de terceros pueden traducirse a cualquier idioma requerido.
 
@@ -151,11 +151,11 @@ La forma de hacerlo es tan sencilla como:
 
 - seleccione primero el idioma requerido
 - y luego introduzca el nombre del tratamiento traducido a ese idioma.
-## Condiciones de pago
+## Condiciones de pago { #payment-term }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Condiciones de pago`
 
-### Visión general
+### Visión general { #overview_4 }
 
 Una condición de pago especifica el periodo permitido para pagar un importe adeudado.
 
@@ -172,7 +172,7 @@ El funcionamiento es el siguiente:
 3.  Por último, cada vez que se contabilice una factura para ese tercero, se aplicará por defecto la configuración de condiciones de pago y, por tanto, se utilizará para la creación del correspondiente "Plan de pagos de entrada/salida" de la factura.  
     Un plan de pagos de entrada/salida lista tantos pagos programados contra una factura como fechas de vencimiento configuradas en la condición de pago asociada a esa factura.
 
-### Cabecera
+### Cabecera { #header_1 }
 
 La ventana Condiciones de pago permite al usuario crear y configurar las condiciones de pago que se vincularán a los terceros.
 
@@ -190,7 +190,7 @@ Es importante remarcar que, en el caso de definir una condición de pago dividid
 
 ![](../../../../assets/drive/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw.png)
 
-### Traducción
+### Traducción { #translation_1 }
 
 Las Condiciones de pago pueden traducirse al idioma requerido.
 
@@ -199,7 +199,7 @@ La forma de hacerlo es tan sencilla como:
 - seleccionar primero el idioma requerido
 - y después introducir el nombre de la condición de pago traducido a ese idioma.
 
-### Líneas
+### Líneas { #lines_1 }
 
 Es posible dividir las condiciones de pago en más de una línea de condición de pago.
 
@@ -220,15 +220,15 @@ La información que puede introducir para cada línea de condición de pago es:
   - esos impuestos se tendrán en cuenta en el último pago junto con el importe vencido restante, incluyendo impuestos.
 - **Día de la semana** - puede seleccionarse un día fijo de la semana para que las fechas de vencimiento calculadas coincidan exactamente con ese día de la semana.
 - **En día laboral** - permite establecer como fecha de pago no exactamente la fecha de vencimiento, sino el siguiente día laborable.
-## Motivos de devolución
+## Motivos de devolución { #return-reasons }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Motivos de devolución`
 
-### Visión general
+### Visión general { #overview_5 }
 
 En esta ventana puede configurar diferentes motivos por los que usted devuelve mercancía o el cliente devuelve mercancía. Por este motivo, estos valores se utilizan en las ventanas Devolución a proveedor y Devolución de cliente.
 
-### Motivos de devolución
+### Motivos de devolución { #return-reasons_1 }
 
 Esta ventana se encuentra en Aplicación||Gestión de Datos Maestros||Configuración de terceros||Motivos de devolución
 
@@ -238,17 +238,17 @@ Campos:
 
 - **Devolución de cliente**: Cuando este indicador está marcado, el valor estará disponible en la ventana Devolución de cliente
 - **Devolución a proveedor**: Cuando este indicador está marcado, el valor estará disponible en la ventana Devolución a proveedor
-## Rappels
+## Rappels { #volume-discount }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Rappels`
 
-### Visión general
+### Visión general { #overview_6 }
 
 Los rappels son descuentos que se aplican tras alcanzar un determinado volumen de ventas de productos específicos o de grupos de productos.
 
 Los rappels son incentivos destinados a fomentar la compra de bienes en mayores cantidades. Este incentivo se ofrece normalmente para trasladar parte de las eficiencias económicas obtenidas mediante pedidos más grandes, mejorar las relaciones con los clientes e incrementar el volumen total de ventas.
 
-### Rappels
+### Rappels { #volume-discounts }
 
 La ventana **Rappels** permite al usuario crear y configurar correctamente los rappels relacionados con productos específicos y/o grupos de productos, que posteriormente se asignan a los terceros seleccionados.
 
@@ -266,19 +266,19 @@ Tal y como se muestra en la imagen anterior, se puede crear un rappel introducie
   - o Todos excepto los definidos - lo que significa que se aplica a todos los grupos de productos excepto a los definidos en la solapa "Categoría del producto" inferior.
 - **Escalado** - Un rappel puede ser escalado, lo que significa que es posible definir un conjunto de rangos de importes con un descuento diferente. Para obtener más información, consulte la solapa "Escala" inferior.
 
-### Categoría del producto
+### Categoría del producto { #product-category }
 
 Un rappel puede configurarse para un conjunto de categorías de producto o puede configurarse para todas las categorías de producto excepto para un conjunto de ellas.
 
 Por lo tanto, y en función del criterio adoptado, aquí puede seleccionar las categorías de producto para incluirlas o excluirlas de un rappel determinado.
 
-### Producto
+### Producto { #product }
 
 Un rappel puede configurarse para un conjunto de productos o puede configurarse para todos los productos excepto para un conjunto de ellos.
 
 Por lo tanto, y en función del criterio adoptado, aquí puede seleccionar los productos para incluirlos o excluirlos de un rappel determinado.
 
-### Escala
+### Escala { #volume-discount-parameters }
 
 Los parámetros de un rappel son un % de descuento, así como el importe mínimo hasta el cual se aplica dicho % de descuento.
 
@@ -290,7 +290,7 @@ Por ejemplo, podría configurar un rappel que se aplique:
 - un 5% al rango de importes = 10.000,00 a 24.999,99
 - y un 10% a un importe mínimo a partir de 25.000,00
 
-### Terceros
+### Terceros { #business-partners }
 
 Los rappels pueden asignarse a terceros seleccionados dentro de un periodo de tiempo determinado.
 
@@ -300,13 +300,13 @@ Aunque el rappel tiene más sentido para la "Operación de venta", también es p
 
 - desmarcar el indicador "Operación de venta"
 - y eliminar el filtro "Cliente" al seleccionar terceros en el selector de terceros.
-## Descuentos
+## Descuentos { #basic-discount }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Descuentos`
 
 Un **Descuento** es una deducción del importe total de un pedido o de una factura.
 
-### Visión general
+### Visión general { #overview_7 }
 
 Los descuentos de este tipo implican una suma de los importes totales de descuento del pedido/factura, excluyendo los impuestos para cada tipo impositivo.
 
@@ -346,7 +346,7 @@ Descuento
     - **Cant.facturada** igual a _1_.
     - **Precio unitario** es igual al importe de descuento aplicable, que en nuestro ejemplo es _\-50_ (_5%_ del importe neto total para un tipo impositivo determinado _1,000.00_).
 
-### Descuentos
+### Descuentos { #basic-discount_1 }
 
 Se puede crear y configurar un descuento total introduciendo un nombre de descuento, un producto de descuento y un % de descuento.
 
@@ -355,11 +355,11 @@ Se puede crear y configurar un descuento total introduciendo un nombre de descue
 Campos a tener en cuenta:
 
 - **Producto** creado previamente, al que puede asignar el mismo nombre que el nombre del descuento. Ese producto es el que se debe informar en las nuevas líneas de pedido/factura para gestionar este tipo de descuentos (ver más arriba).
-## Categoría Salarial
+## Categoría Salarial { #salary-category }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Categoría Salarial`
 
-### Visión general
+### Visión general { #overview_8 }
 
 Cree categorías salariales para aplicarlas a sus empleados/trabajadores.
 
@@ -371,18 +371,18 @@ La categoría salarial y el costo relacionado también se utilizan en el módulo
 
 La configuración de la categoría salarial del empleado se realiza en la solapa \[Categoría Salarial de Costo\] debajo de la solapa \[Empleado\] del Tercero.
 
-### Categoría Salarial
+### Categoría Salarial { #salary-category_1 }
 
 Define costos y rangos de fechas para una categoría salarial especificada.
 
 Para el uso de la categoría salarial en el cálculo de costos en los módulos de **Producción** y **Gestión de Proyectos y Servicios**, se selecciona la casilla de verificación de costo aplicado.
 
-### Costo
+### Costo { #cost }
 
 Crea una categoría salarial.
 
 **Unidad de medida de costo**: para **Gestión de Proyectos y Servicios**, el salario se configura por hora, de modo que cuando se introducen los gastos de tiempo, el costo de ese tiempo pueda añadirse al informe de rentabilidad.
-## Configuraciones de Rappels
+## Configuraciones de Rappels { #rappel-configurations }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de terceros` > `Configuraciones de Rappels`
 
@@ -391,11 +391,11 @@ Crea una categoría salarial.
 
 Los rappels son descuentos basados en el volumen de consumo de un tercero en un periodo de tiempo determinado. Esta funcionalidad permite al usuario configurar y conceder rappels a terceros.
 
-### Requisitos
+### Requisitos { #requirements }
 
 Antes de que el usuario pueda utilizar esta funcionalidad, es necesario configurar una nueva secuencia de documento y un nuevo tipo de documento que se utilizarán para los Rappels.
 
-#### Secuencia de documento
+#### Secuencia de documento { #document-sequence }
 
 Es necesaria una secuencia de documento específica para los rappels para distinguirlos de otras transacciones.
 En esta ventana, cree un nuevo registro y complete los campos correspondientes:
@@ -415,7 +415,7 @@ Guarde el registro y la secuencia de documento para rappels estará disponible.
 !!! info
     Para más información, visite [Secuencia de documento (numeración)](../financial-management/accounting/setup/document-sequence.md)
 
-#### Tipo de documento
+#### Tipo de documento { #document-type }
 
 Es necesario un tipo de documento específico para los rappels.
 En esta ventana, cree un nuevo registro y complete los campos correspondientes:
@@ -443,13 +443,13 @@ Después de guardarlo, es necesario seleccionar “rappel” en el campo “Docu
 !!! info
     Para más información, visite [Tipo de documento](../financial-management/accounting/setup/document-type.md)
 
-### Configuraciones de Rappels
+### Configuraciones de Rappels { #rappel-configurations_1 }
 
 En esta ventana, el usuario puede configurar todos los aspectos necesarios para conceder rappels a determinados terceros.
 
 ![rappel_configuration_window_new.png](../../../../assets/legacy/rappel_configuration_window_new.png)
 
-#### Cabecera
+#### Cabecera { #header_2 }
 
 Esta ventana contiene los datos generales de la configuración. Los campos relevantes se describen a continuación:
 
@@ -465,7 +465,7 @@ Esta ventana contiene los datos generales de la configuración. Los campos relev
 
 Una vez completada esta información, el usuario puede guardar la configuración y utilizar los botones de la ventana para configurar aspectos específicos de cada rappel.
 
-#### Botones
+#### Botones { #buttons }
 
 En la parte superior de esta ventana se pueden encontrar cuatro botones diferentes.
 
@@ -474,7 +474,7 @@ En la parte superior de esta ventana se pueden encontrar cuatro botones diferent
 - **Añadir terceros**: Con este botón, el usuario puede añadir uno o más terceros al rappel, y se debe asignar una fecha desde y una fecha hasta para determinar el periodo de validez del rappel creado.
 - **Copiar rappel**: Con este botón, el usuario puede copiar las características de un rappel existente al rappel seleccionado.
 
-#### Solapa
+#### Solapa { #tabs }
 
 - **Categoría del producto**: En esta solapa se muestran las categorías de producto asignadas al Rappel. También es posible asignar nuevas categorías desde esta solapa.
 - **Producto**: En esta solapa se muestran los productos asignados al Rappel. También es posible asignar nuevos productos desde esta solapa.

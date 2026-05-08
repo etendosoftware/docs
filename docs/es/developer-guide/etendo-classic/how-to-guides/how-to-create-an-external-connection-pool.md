@@ -8,13 +8,13 @@ tags:
 status: beta
 ---
 
-# Cómo crear un pool de conexiones externo
+# Cómo crear un pool de conexiones externo { #how-to-create-an-external-connection-pool }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
   
-## Visión general
+## Visión general { #overview }
 
 Etendo utiliza **pools de conexiones** para reutilizar conexiones/consultas preparadas existentes, evitando el coste de iniciar una conexión, parsear SQL, etc. Por defecto, Etendo utiliza dos pools de conexiones diferentes:
 
@@ -24,7 +24,7 @@ Etendo utiliza **pools de conexiones** para reutilizar conexiones/consultas prep
 Etendo proporciona un módulo en `modules_core` que implementa el **Tomcat JDBC Connection Pool**, pero es posible que los
 desarrolladores publiquen un módulo e implementen su propio pool de conexiones.
 
-## Clase abstracta ExternalConnectionPool
+## Clase abstracta ExternalConnectionPool { #externalconnectionpool-abstract-class }
 
 Para implementar un pool de conexiones externo, es necesario crear una subclase de la clase abstracta `ExternalConnectionPool`. Esta clase tiene tres métodos:
 
@@ -64,7 +64,7 @@ public void loadInterceptors(List<PoolInterceptorProvider> interceptors)
 
 Este método debe ser sobrescrito si el pool de conexiones soporta interceptores y permite que se instancien interceptores personalizados usando inyección de dependencias. Se pasará como argumento una lista de `PoolInterceptorProvider`, que contiene el nombre completo de la clase de los interceptores.
 
-## Consideraciones de diseño
+## Consideraciones de diseño { #design-considerations }
 
 - Incluya un archivo de configuración para que los usuarios puedan personalizar el pool de conexiones externo para satisfacer sus necesidades.
 - Si el pool necesita ejecutar algún código de inicialización, colóquelo en el método `getConnection` y asegúrese de que solo se ejecute la primera vez que se invoque ese método. 

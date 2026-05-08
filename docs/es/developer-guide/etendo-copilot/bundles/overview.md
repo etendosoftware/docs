@@ -9,7 +9,7 @@ tags:
 ---
 
 
-# Extensiones de Copilot
+# Extensiones de Copilot { #copilot-extensions }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
 
@@ -18,11 +18,11 @@ tags:
 !!! warning
     Actualmente, estamos migrando la terminología de *Assistant* a *Agent*. Este cambio se reflejará en la documentación pronto. Donde vea *Assistant*, considérelo como *Agent* y viceversa.
 
-## Visión general
+## Visión general { #overview }
 
 El Bundle de Copilot Extensions incluye funcionalidades para desarrolladores para ayudarles a desarrollar agentes de AI que puedan asistir a los usuarios en sus tareas diarias.
 
-## Módulo (menu)
+## Módulo (menu) { #modules }
 
 ### Etendo Copilot
 

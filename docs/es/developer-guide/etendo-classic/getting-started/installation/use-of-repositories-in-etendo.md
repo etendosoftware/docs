@@ -6,9 +6,9 @@ tags:
     - Token de acceso
 ---
 
-# Uso de repositorios en Etendo
+# Uso de repositorios en Etendo { #use-of-repositories-in-etendo }
 
-## Visión general
+## Visión general { #overview }
 Etendo admite cualquier repositorio de paquetes Maven, pero esta guía se centra en configurar las credenciales para los repositorios estándar de Etendo.
 
 !!! tip
@@ -16,9 +16,9 @@ Etendo admite cualquier repositorio de paquetes Maven, pero esta guía se centra
 
 Para acceder a los repositorios de GitHub de Etendo y resolver dependencias, necesita las credenciales adecuadas. Esto implica usar un **Token de acceso personal**. Esta guía explica cómo configurar y utilizar estas credenciales.
 
-## Token de GitHub
+## Token de GitHub { #github-token }
 
-### Generación de un Token de acceso personal
+### Generación de un Token de acceso personal { #generating-a-personal-access-token }
 
 !!! info
     Como parte de su licencia de Etendo, recibirá una invitación por correo electrónico para unirse al **equipo de partners de Etendo** en GitHub. Debe crear o asociar una cuenta de GitHub con el correo electrónico invitado. Su usuario tendrá entonces acceso de lectura a todos los repositorios de Etendo.
@@ -45,7 +45,7 @@ Siga estos pasos para generar un Token de acceso personal:
     !!! warning
         No podrá volver a ver el token, así que asegúrese de copiarlo y almacenarlo de forma segura.
 
-### Configuración del Token de GitHub en proyectos de Etendo
+### Configuración del Token de GitHub en proyectos de Etendo { #configuring-the-github-token-in-etendo-projects }
 
 Después de generar un **Token de acceso personal**, configúrelo en su proyecto de Etendo siguiendo estos pasos:
 
@@ -64,7 +64,7 @@ Después de generar un **Token de acceso personal**, configúrelo en su proyecto
 
 3. Guarde el archivo `gradle.properties`.
 
-### Uso del Token de acceso personal en tareas de Gradle
+### Uso del Token de acceso personal en tareas de Gradle { #using-the-personal-access-token-in-gradle-tasks }
 
 Una vez configurado su **Token de GitHub**, las tareas de Gradle pueden interactuar sin problemas con los repositorios de GitHub de Etendo. Por ejemplo, al ejecutar el siguiente comando:
 
@@ -74,7 +74,7 @@ Una vez configurado su **Token de GitHub**, las tareas de Gradle pueden interact
 
 Gradle utilizará automáticamente su *Token de acceso personal* para autenticarse con GitHub y resolver dependencias de forma segura.
 
-### Revocación de un Token de acceso personal
+### Revocación de un Token de acceso personal { #revoking-a-personal-access-token }
 
 Si ya no necesita un token o sospecha que se ha visto comprometido, revóquelo inmediatamente siguiendo estos pasos:
 

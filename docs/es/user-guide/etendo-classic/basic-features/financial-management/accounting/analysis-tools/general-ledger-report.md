@@ -7,11 +7,11 @@ tags:
   - Financial Reports
 ---
 
-# Libro mayor
+# Libro mayor { #general-ledger-report }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Libro mayor`
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe Libro mayor lista cada "subcuenta" del libro mayor y sus asientos de débito y crédito dentro de un periodo de tiempo determinado.
    

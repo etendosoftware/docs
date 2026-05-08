@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Cobros
+# Cobros { #payment-in }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Cobros`
 
-## Visión General
+## Visión General { #overview }
 
 Los cobros y anticipos recibidos de clientes pueden registrarse y gestionarse en la ventana **Cobros**. Además, los pagos de conceptos contables no relacionados con pedidos/facturas también pueden gestionarse en esta ventana.
 
@@ -35,7 +35,7 @@ La creación de la transacción de depósito en la cuenta financiera puede reali
 - manualmente, usando el proceso Agregar Transacción de la cuenta financiera.
 - o automáticamente, si el método de pago utilizado está configurado para ello, lo que implica la selección de la casilla de verificación "Depósito Automático".
 
-## Cabecera
+## Cabecera { #header }
 
 La ventana Cobro permite al usuario registrar y gestionar los cobros de clientes recibidos contra diferentes tipos de documentos emitidos por la organización, como pedidos y facturas. Esta ventana también permite al usuario gestionar los cobros de clientes ya registrados en la ventana de factura de ventas, de la misma manera que los pagos de conceptos contables recibidos en un Libro Diario.
 
@@ -57,7 +57,7 @@ Otros campos relevantes a destacar son:
 - **Nº de Referencia**: este campo se utiliza para reflejar el número impreso en el documento justificante de pago recibido del cliente.
 - y la **Moneda**. Es posible seleccionar una moneda diferente a la moneda de la cuenta financiera al recibir un pago. Para ello, el método de pago utilizado y asignado a la cuenta financiera del pago debe estar configurado para recibir pagos en múltiples monedas.
 
-### Ventana Agregar Pago
+### Ventana Agregar Pago { #add-payment-window }
 
 El botón **Agregar Detalles** abre la ventana **Agregar Pago**, donde pueden seleccionarse los documentos que se están pagando.
 
@@ -66,7 +66,7 @@ El botón **Agregar Detalles** abre la ventana **Agregar Pago**, donde pueden se
 !!! info
     La ventana "Agregar Pago" ya se explica en el [artículo Plan de Pago de Factura de Ventas](../../sales-management/transactions.md#payment).
 
-### Pago de varios tipos de documentos de diferentes clientes
+### Pago de varios tipos de documentos de diferentes clientes { #payment-of-several-document-types-from-different-customers }
 
 Si no se ha seleccionado ningún cliente en el campo "Recibido De", es posible registrar el pago de diferentes clientes al mismo tiempo simplemente seleccionando las transacciones a pagar.
 
@@ -91,7 +91,7 @@ Es importante tener en cuenta que:
     - la contabilización de la factura en el libro mayor liquida el importe total de créditos de clientes
     - mientras que la contabilización del pago en el libro mayor usa la cuenta de Cancelaciones para contabilizar el importe cancelado.
 
-### Procesamiento de un pago
+### Procesamiento de un pago { #processing-a-payment }
 
 Existen dos opciones disponibles al **procesar** un cobro creado en esta ventana:
 
@@ -117,7 +117,7 @@ Tenga en cuenta que no es necesario procesar:
 - los cobros de clientes recibidos en la ventana Factura (Cliente), ya que estos se procesan allí mismo.
 - ni los pagos de conceptos contables recibidos en la ventana Libro Diario, ya que estos implican el procesamiento automático del cobro recibido.
 
-### Reactivación de un pago
+### Reactivación de un pago { #reactivating-a-payment }
 
 Un pago ya procesado con estado "Pago Recibido" o "Pendiente de Ejecución" puede ser Reactivado. Esta opción permite al usuario editar datos de pago incorrectos o eliminar un pago creado por error.
 
@@ -131,7 +131,7 @@ El botón "Reactivar" permite al usuario realizar lo explicado anteriormente, ya
 
 Un pago ya procesado y depositado con estado "Depositado no Saldado" también puede ser "Reactivado" como se describe anteriormente, pero una vez que la correspondiente transacción de depósito haya sido eliminada de la cuenta financiera.
 
-### Contabilización de un pago
+### Contabilización de un pago { #posting-a-payment }
 
 Un cobro recibido y procesado en la ventana **Cobros** puede contabilizarse si el método de pago utilizado al crear el pago lo permite una vez asignado a la cuenta financiera a través de la cual se recibe el pago. Si no es el caso, Etendo muestra una advertencia: "Documento deshabilitado para contabilidad".
 
@@ -145,7 +145,7 @@ Una contabilización de cobro recibido se ve así:
 
 La contabilización será diferente cuando el importe provenga parcial o totalmente de una deuda clasificada como dudosa.
 
-### Anulación de un pago
+### Anulación de un pago { #voiding-a-payment }
 
 Un pago ya procesado con estado "Pendiente de Ejecución" puede ser "**Anulado**". El botón de proceso "Reactivar" permite al usuario hacerlo, pero solo para pagos en estado "Pendiente de Ejecución".
 
@@ -154,7 +154,7 @@ Un pago ya procesado con estado "Pendiente de Ejecución" puede ser "**Anulado**
 
 La acción de Anular establece la/s línea/s del pago como "**Cancelada/s**", lo que significa que el documento (pedido o factura) en realidad no está pagado y, por tanto, se puede crear o agregar un nuevo pago.
 
-### Pagos de crédito
+### Pagos de crédito { #credit-payments }
 
 No es posible generar crédito en un pago que no esté relacionado con un único cliente; por tanto, la funcionalidad de generación de crédito requiere:
 
@@ -181,13 +181,13 @@ A continuación, el campo "Descripción" de la cabecera del pago de crédito tam
 
 La pestaña Origen de Crédito Utilizado de la ventana de Cobros muestra el pago de crédito utilizado para pagar un documento (pedido, factura o concepto contable) del cliente.
 
-### Pagos en múltiples monedas
+### Pagos en múltiples monedas { #payments-in-multiple-currencies }
 
 Etendo permite al usuario recibir pagos en una moneda diferente a la moneda de la cuenta financiera.
 
 Para ello, el método de pago asignado a la cuenta financiera utilizada para recibir el pago debe estar configurado para permitirlo, lo que implica seleccionar la casilla de verificación "Recibir Pagos en Múltiples Monedas".
 
-### Anticipos que superan el importe de la factura a pagar
+### Anticipos que superan el importe de la factura a pagar { #prepayments-exceeding-the-invoice-amount-to-pay }
 
 Etendo permite al usuario realizar anticipos agregando pagos a los pedidos. La factura de ventas creada a partir del pedido heredará el pago realizado por el pedido.
 
@@ -197,11 +197,11 @@ Puede ocurrir que el importe anticipado real supere el importe de la factura a p
 - o se crea un pago de crédito para usarse posteriormente al registrar el pago de otra factura de ventas del mismo cliente.  
   Este pago de crédito debe crearse como un nuevo cobro por un importe de 0,00 y relacionado con la factura de ventas con anticipo, de esa manera la factura con anticipo se establece como "Pago Completo" = "Sí".
 
-## Líneas
+## Líneas { #lines }
 
 La pestaña de líneas contiene una lista de los documentos pagados por el pago.
 
-### Historial de Ejecución
+### Historial de Ejecución { #execution-history }
 
 La pestaña de historial de ejecución muestra información sobre el historial de los intentos de ejecución del pago.
 
@@ -219,11 +219,11 @@ La pestaña Historial de Ejecución es una pestaña de solo lectura que muestra 
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in/payment-in-6.png)
 
-### Tipos de cambio
+### Tipos de cambio { #exchange-rates }
 
 La pestaña de tipos de cambio permite al usuario introducir un tipo de cambio entre la moneda del libro mayor de la organización y la moneda del cobro recibido, para usarlo al contabilizar el pago en el libro mayor.
 
-### Origen de crédito utilizado
+### Origen de crédito utilizado { #used-credit-source }
 
 Un pago de crédito puede usarse para liquidar más de un pago de documento. Esta tabla realiza un seguimiento de los documentos donde se ha utilizado un pago de crédito.
 
@@ -233,7 +233,7 @@ Esta pestaña de solo lectura muestra el pago de crédito utilizado para pagar u
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in/payment-in-7.png)
 
-## Eliminación de Pagos
+## Eliminación de Pagos { #payment-removal }
 
 El objetivo de esta funcionalidad es eliminar y reactivar pagos de forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
@@ -254,7 +254,7 @@ En ambos casos:
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in/payment-in-8.png)
 
-## Contabilización Masiva
+## Contabilización Masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -266,7 +266,7 @@ Además, el Estado de Contabilización del/los registro/s se muestra en la barra
 !!! info
     Para más información, visite [la guía de usuario del módulo Contabilización Masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Liquidación Avanzada de Terceros
+## Liquidación Avanzada de Terceros { #advanced-business-partner-settlement }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -292,7 +292,7 @@ El registro de liquidación queda registrado en la ventana **Liquidaciones de Te
 !!! info
     Para más información, visite la [Guía de Usuario del Módulo Liquidaciones de Terceros](../../../../optional-features/bundles/financial-extensions/business-partner-settlement.md).
 
-## Gestión Avanzada de Cuentas Bancarias
+## Gestión Avanzada de Cuentas Bancarias { #advanced-bank-account-management }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el módulo Gestión Avanzada de Cuentas Bancarias del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

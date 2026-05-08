@@ -8,9 +8,9 @@ tags:
   - Campo
 ---
 
-# Cómo crear una tabla basada en HQL
+# Cómo crear una tabla basada en HQL { #how-to-create-a-hql-based-table }
 
-## Introducción
+## Introducción { #introduction }
 
 Existen tres orígenes de datos disponibles en la definición de una tabla en el diccionario de aplicación:
 
@@ -22,9 +22,9 @@ El origen de datos _Tabla HQL_ permite definir una tabla sin necesidad de una ta
 
 Las tablas basadas en HQL deben definir una consulta `select` HQL, que se utilizará para obtener los registros adecuados cuando se realice una solicitud a su fuente de datos.
 
-## Definir una tabla basada en HQL en el diccionario de aplicación
+## Definir una tabla basada en HQL en el diccionario de aplicación { #defining-a-hql-based-table-in-the-application-dictionary }
 
-### Definición de tabla
+### Definición de tabla { #table-definition }
 
 Cuando se define una tabla basada en HQL en el diccionario de aplicación, no es necesario completar los campos _Nombre tabla BD_ y _Nombre de la clase Java_. Existen dos campos nuevos que deben configurarse para estas tablas:
 
@@ -40,7 +40,7 @@ Consideraciones de diseño para consultas HQL:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table-1.png)
 
-### Definición de columna
+### Definición de columna { #column-definition }
 
 El proceso _Crear columnas de la base de datos_ no aplica a tablas basadas en HQL, por lo que deben crearse manualmente.
 
@@ -53,18 +53,18 @@ Para incluir una clave externa en una columna de una tabla HQL, la columna debe 
 
 Por ejemplo, si `e` es el alias de la tabla Country y queremos incluir su moneda, debemos introducir `e.currency as countryCurrency` en la consulta HQL. A continuación, debemos seleccionar la referencia _Tabla_ en la definición de esa columna en el diccionario de aplicación y `c_currency` en el campo _Referencia clave_.
 
-## Definición de solapa y campos
+## Definición de solapa y campos { #tab-and-fields-definition }
 
 La solapa y los campos de una tabla basada en HQL se definen en el diccionario de aplicación del mismo modo que con las tablas estándar.
 La única restricción es que todas las solapas asociadas a tablas basadas en HQL serán de solo lectura.
 
-## Temas avanzados
+## Temas avanzados { #advanced-topics }
 
-### Insertadores HQL
+### Insertadores HQL { #hql-inserters }
 
 Los insertadores HQL permiten añadir código a una consulta HQL en un punto especificado en la consulta HQL definida en el diccionario de aplicación.
 
-#### Puntos de inserción HQL en la consulta HQL
+#### Puntos de inserción HQL en la consulta HQL { #hql-insertion-points-in-the-hql-query }
 
 Para definir un punto de inserción HQL en su consulta HQL necesita utilizar la cadena `@insertion_point#@`, siendo `#` el índice del punto de inserción. El
 índice del primer punto de inyección debe ser 0, el índice del segundo debe ser 1, etc. No puede haber huecos en los índices de los puntos de inserción.
@@ -90,7 +90,7 @@ AND
   @insertion_point_0@
 ```
 
-#### Definir un insertador HQL
+#### Definir un insertador HQL { #defining-a-hql-inserter }
 
 Los insertadores HQL personalizados deben extender la clase `HQLInserter`. Las subclases de la clase `HQLInserter` deben implementar este método:
 
@@ -133,7 +133,7 @@ public class AddPaymentCreditToUseInjector extends HqlInserter {
 }
 ```
 
-### Transformadores HQL
+### Transformadores HQL { #hql-transformers }
 
 Mientras que los insertadores HQL solo permiten añadir algún criterio en un punto predefinido por el usuario que creó la consulta HQL, los transformadores HQL permiten modificar toda la estructura de la consulta.
 

@@ -6,18 +6,18 @@ tags:
     - Zip
 ---
 
-# Herramienta de descompresión
+# Herramienta de descompresión { #uncompress-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de descompresión** es una utilidad diseñada para descomprimir varios tipos de archivos comprimidos y devolver las rutas de los archivos descomprimidos. Admite tipos de archivo comunes, incluidos `zip`, `gzip`, `bzip2` y `rar`.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 El propósito principal de esta herramienta es agilizar el proceso de extracción de archivos desde formatos comprimidos. Es especialmente útil en escenarios en los que se necesita una extracción automatizada de archivos, como canalizaciones de procesamiento de datos, restauración de copias de seguridad y sistemas de gestión de archivos. Al admitir múltiples formatos de compresión comunes y proporcionar una interfaz sencilla para la extracción de archivos, simplifica los flujos de trabajo que implican archivos comprimidos y garantiza un manejo eficiente de los archivos de datos.
 
@@ -52,7 +52,7 @@ Este proceso consta de las siguientes acciones.
 
     Tras descomprimir correctamente los archivos, la herramienta devuelve un objeto que contiene las rutas de los archivos descomprimidos.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si existe un archivo comprimido en `/home/user/archive.zip` y es necesario descomprimirlo, la herramienta se utilizaría de la siguiente manera:
 

@@ -2,7 +2,7 @@
 title: Gestión de Datos Maestros
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el proceso de Gestión de Datos Maestros. Uno de los pasos a realizar durante la configuración de Etendo es definir los datos maestros que se utilizarán en otras áreas de la aplicación Etendo.
 
@@ -12,7 +12,7 @@ Disponer de un único repositorio de datos evita la duplicación de datos, propo
 
 !!! info
     La creación de datos maestros es una parte del flujo general de Configuración del Negocio en Etendo y, como cualquier otra configuración, es necesaria antes de introducir transacciones.
-## Vista general de terceros
+## Vista general de terceros { #business-partner-general-view }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Vista general de terceros`
 
@@ -23,7 +23,7 @@ El módulo “Advanced Business Partner” permite al usuario disponer de una vi
 
 !!! info
     Para más información, visite [Advanced Business Partner](../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md) en la documentación del Essentials Extensions Bundle.
-## Convertidores de moneda
+## Convertidores de moneda { #currency-converters }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Convertidores de moneda`
 
@@ -31,16 +31,16 @@ El módulo “Advanced Business Partner” permite al usuario disponer de una vi
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 En esta ventana, puede configurar los ajustes de acceso para la configuración de la API de moneda. Para más información, visite: [Currency API Configuration - Guía del desarrollador](../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md#currency-api-configuration)
-## Terceros
+## Terceros { #business-partner }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Terceros`
 
-### Visión general
+### Visión general { #overview_1 }
 
 La ventana de datos maestros de terceros es el lugar donde el usuario puede organizar y centralizar fácilmente los datos de terceros.
 
 Etendo permite al usuario introducir la información de datos maestros de terceros cuando sea necesario a medida que se desarrolla la actividad empresarial; por lo tanto, el procedimiento descrito a continuación explica cómo configurar un único tercero de cualquier tipo.
-### Cabecera
+### Cabecera { #header }
 
 Aquí, el usuario puede definir y configurar terceros para utilizarlos posteriormente en transacciones.
 
@@ -67,7 +67,7 @@ Campos a tener en cuenta:
 
 - **Crédito límite**: Etendo informará cuando se supere el límite de crédito introducido en este campo para el tercero al contabilizar facturas de venta.
 - **Consentimiento para el Procesamiento de Datos del Cliente**: casilla de verificación en el modelo de datos de terceros, para reflejar si un contacto determinado consiente o no que sus datos puedan ser utilizados por la organización.
-### Botones
+### Botones { #buttons }
 
 **Establecer nueva moneda**
 
@@ -144,7 +144,7 @@ Este proceso crea automáticamente tres nuevos pagos, en caso de que el tercero 
     ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/credit-usd.png)
 
     En resumen, el proceso **Establecer nueva moneda** actualiza la moneda del tercero y convierte saldos y créditos a la nueva moneda utilizando el tipo elegido; los saldos existentes y el crédito disponible se recalculan para que todo coincida con la nueva moneda y las transacciones futuras, incluso si se crean en la moneda anterior (EUR), seguirán convirtiéndose correctamente y reflejándose en la nueva moneda del tercero (USD).
-### Solapas y subsolapas
+### Solapas y subsolapas { #tabs-and-subtabs }
 
 No es lo mismo dar de alta y configurar un cliente que un proveedor/acreedor o un operario; por esa razón, la ventana Terceros tiene tres solapas principales y, por tanto, subsolapas que le permiten configurar cada tipo principal de tercero por separado:
 
@@ -164,7 +164,7 @@ Las solapas y subsolapas mencionadas anteriormente se describen en los siguiente
     Ese es el caso de los bancos. Los bancos deben crearse en la cabecera de la ventana de terceros introduciendo únicamente la información básica de cabecera y sin datos en ninguna de las solapas de la ventana de terceros, salvo Direcciones y Personas de contacto. La razón de esto es que los terceros de tipo *Banco* son necesarios en el flujo financiero de [Remesas](../financial-management/receivables-and-payables/transactions.md#remittance).
 
     Para más información sobre este flujo, visite [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account).
-#### Cliente
+#### Cliente { #customer }
 
 !!! note
     Los datos relacionados con el cliente se pueden introducir y configurar una vez que se habilita la casilla **Cliente**.
@@ -264,7 +264,7 @@ Inicialmente, estas cuentas se heredan de las cuentas predeterminadas del libro 
 
 !!! important
     Es posible configurar la creación de nuevas cuentas correlativas para los terceros tal y como se describe en la solapa Libro mayor de la ventana [Organización](../general-setup/enterprise-model/organization.md).
-#### Proveedor/Acreedor
+#### Proveedor/Acreedor { #vendorcreditor }
 
 !!! note
     Los datos relacionados con el proveedor o acreedor se pueden introducir y configurar una vez que se habilita la casilla **Proveedor**.
@@ -345,7 +345,7 @@ Inicialmente, estas cuentas se heredan de las cuentas por defecto del Esquema co
 
 !!! important
     Es posible configurar la creación de nuevas cuentas correlativas para los terceros que se están creando, tal y como se describe en la solapa Org Schema de la ventana [Organización](../general-setup/enterprise-model/organization.md).
-#### Operarios
+#### Operarios { #employee }
 
 !!! note
     Un tercero puede configurarse como operario una vez que se habilita la casilla de verificación **Operarios**.
@@ -388,7 +388,7 @@ En cualquier caso, este es el lugar al que deberían apuntar los módulos o func
 En esta solapa, el usuario puede configurar la categoría salarial del operario seleccionando una de las opciones que se definieron previamente en la ventana [Categoría Salarial](../master-data-management/business-partner-setup.md#salary-category).
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/cost-salary-category.png)
-#### Cuenta bancaria
+#### Cuenta bancaria { #bank-account }
 
 La solapa **Cuenta bancaria** permite al usuario listar y configurar las cuentas bancarias de terceros.
 
@@ -434,7 +434,7 @@ Esta funcionalidad introduce la posibilidad de marcar una cuenta bancaria como *
 
 !!! warning
     Solo puede seleccionarse una cuenta bancaria como predeterminada para cada tercero.
-#### Tipo de documento
+#### Tipo de documento { #document-type }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8-MOprz-4FI?si=rc5geP_xaKmKvjsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -470,7 +470,7 @@ Campos a tener en cuenta:
 
 !!! warning
      Esta funcionalidad no está disponible para documentos creados mediante un proceso en segundo plano/botón como “Facturar desde albarán” en la ventana **Albarán (Cliente)**. En este caso, el tipo de documento que se utilizará es el definido a nivel de organización, en lugar del definido a nivel de la solapa **Tipo de documento**.
-#### Direcciones
+#### Direcciones { #locationaddress }
 
 Las ubicaciones de terceros y los detalles completos de la dirección pueden configurarse en esta solapa.
 
@@ -506,7 +506,7 @@ El campo Gestión avanzada de cuentas bancarias se introduce en la solapa Direcc
     En caso de tener tanto una cuenta bancaria por defecto como una ubicación con una cuenta bancaria definida, al generar un nuevo documento, la cuenta bancaria de la ubicación tiene prioridad sobre la cuenta por defecto.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address-abam.png)
-#### Personas de contacto
+#### Personas de contacto { #contact }
 
 La solapa **Personas de contacto** permite al usuario añadir y configurar los contactos del tercero con los que usted trabaja.
 
@@ -527,7 +527,7 @@ Campos a tener en cuenta:
 
     !!! info
         Solo un contacto por Terceros debería tener esta casilla seleccionada para garantizar una preselección determinista.
-#### Descuentos
+#### Descuentos { #basic-discount }
 
 La solapa **Descuentos** permite al usuario añadir y configurar los descuentos de terceros.
 
@@ -555,7 +555,7 @@ Es posible introducir tantos **Descuento** como se hayan acordado con sus tercer
         - 900 USD - 10% = 810 USD (aplicando el 2º descuento **En cascada**)
         - 10% de 810 USD = 81 USD. Por lo tanto, el tercer descuento será de -81 USD.
         - En total -100 -100 -81 = -281 USD para los tres descuentos (un descuento total del 28,1%)
-#### Configuración de Rappel
+#### Configuración de Rappel { #rappel-configuration }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Rappels del Sales Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Sales Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
@@ -585,42 +585,42 @@ Cada vez que se concede un rappel a un tercero, se genera automáticamente una n
 
 !!! info
     Para más información, visite [Factura (Cliente)](../sales-management/transactions.md#advanced-rappels).
-## Información de terceros
+## Información de terceros { #business-partner-info }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Información de terceros`
 
-#### Visión general
+#### Visión general { #overview_2 }
 
 En esta sección, el usuario puede ver información relacionada con los pedidos, albaranes/recepciones, facturas y activos de terceros.
 
-### Elegir tercero
+### Elegir tercero { #partner-selection }
 
 El usuario puede seleccionar un tercero para comenzar a ver las transacciones relacionadas.
 
 ![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
 
-#### Pedidos tercero
+#### Pedidos tercero { #partner-orders }
 
 El usuario puede ver los pedidos relacionados con un tercero específico.
 
 ![](../../../../assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
 
-### Albaranes tercero
+### Albaranes tercero { #partner-shipments }
 
 El usuario puede ver los albaranes relacionados con un tercero específico.
 
 ![](../../../../assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
 
-### Facturas tercero
+### Facturas tercero { #partner-invoices }
 
 El usuario puede ver las facturas relacionadas con un tercero específico.
 
 ![](../../../../assets/drive/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw.png)
-## Producto
+## Producto { #product }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
-#### Visión general
+#### Visión general { #overview_3 }
 
 La ventana de datos maestros de producto es el lugar donde puede organizar y centralizar fácilmente los datos clave de los artículos de cualquier tipo que pueda gestionar como parte de los procesos y/o actividades de la organización.
 
@@ -630,7 +630,7 @@ Es posible cargar información de **Producto** en Etendo de forma masiva usando 
 
 Esta sección describe cómo configurar **Productos** individualmente.
 
-#### Producto
+#### Producto { #product_1 }
 
 La ventana **Producto** permite la creación de artículos tales como productos, materias primas, recursos, servicios, etc.
 
@@ -726,7 +726,7 @@ Para saber más, visite el artículo Cómo gestionar ingresos y gastos diferidos
 !!! info
     **Nota**: Si **Almacenado** no está marcado y **Lista de materiales** está marcado, el precio del producto debería ser 0. Esto se debe a que, en ese caso especial, el precio del producto es la suma de los precios de los componentes de la lista de materiales de los que se compone. Si se desea crear una promoción, debe utilizarse «Descuentos y promociones».
 
-##### Variantes
+##### Variantes { #variants }
 
 El producto puede marcarse como **Es genérico**. Esto significa que se crearán variantes de este producto basadas en algunas características como color, talla, etc. La definición de estas características tiene lugar en el producto genérico, por lo que puede decirse que un producto genérico es como una plantilla en la que las nuevas variantes heredarán todos los atributos (impuestos, precios, imagen) de este producto. Debido a esto, un producto genérico no puede utilizarse en transacciones, sino sus variantes.
 
@@ -779,7 +779,7 @@ Existe una preferencia **Mostrar padres de características de producto**: los v
 
 Se pueden añadir nuevos valores de una característica existente. Por ejemplo, el color rojo cuando ya se dispone de Azul y Blanco. Cuando esto ocurre, este nuevo valor se añade automáticamente a todos los productos genéricos que ya tienen la característica Color. Este nuevo valor estará presente en la solapa de configuración, pero desactivado. Si el usuario quiere utilizarlo en un producto específico para crear nuevas variantes, puede simplemente activar el valor y usar el botón *Gestionar características*.
 
-##### Modificar Impuesto
+##### Modificar Impuesto { #modify-tax }
 
 - **Modificar Impuesto**: esta casilla permite que los servicios modifiquen los impuestos del producto al que están vinculados. Esto permite modificar el cálculo de impuestos de un producto en función de una condición del servicio. Por ejemplo, se vende un nuevo mueble de cocina a un cliente; los impuestos aplicados al mueble podrían cambiar si la instalación del mueble también la proporciona el vendedor del mueble. Además, esta funcionalidad solo aplica a los pedidos. Los documentos que se crean posteriormente tomarán la información del documento de pedido.
 
@@ -798,7 +798,7 @@ Para facilitar el proceso de configuración, se han añadido dos componentes:
 2.- Copiar configuración de Modificar Impuesto del servicio (Botón): ventana Seleccionar y ejecutar donde se muestran los servicios que modifican impuestos. El usuario puede seleccionar uno o varios servicios, y la configuración actual se asignará a los servicios seleccionados. Una vez ejecutado el proceso, la configuración antigua (si existe) se eliminará y se añadirá una nueva. Este proceso ayuda a desplegar la misma configuración en múltiples servicios.
 
 ![](../../../../assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
-### Precio
+### Precio { #price }
 
 Un producto puede formar parte de muchas Versiones de tarifa que son válidas para un periodo de tiempo determinado.
 
@@ -812,7 +812,7 @@ Hay dos formas en las que el usuario puede hacer que un producto forme parte de 
     Como consecuencia, la Tarifa, así como los valores de *Precio unitario* y *Precio tarifa*, se mostrarán automáticamente en la solapa *Tarifa* del producto.  
     Para obtener más información, visite Tarifa.
 
-#### Versión de Regla de Precio
+#### Versión de Regla de Precio { #price-rule-version }
 
 Esta solapa solo estará disponible cuando se seleccione el campo Is Price Rule Based. Esta solapa ofrece la posibilidad de añadir Reglas de Precio de Servicios al Servicio a partir de una fecha determinada.
 
@@ -827,7 +827,7 @@ Para servicios con regla de cantidad: Cantidad única, la cantidad de la línea 
 Para servicios con regla de cantidad: Según producto, la cantidad de la línea no es relevante; solo importa el precio del producto, ya que se añadirán tantos servicios como productos se seleccionen. Solo si los precios de todos los productos están dentro del tramo, se mostrará el servicio.
 
 Además, si una vez que se ha añadido un servicio (aún no entregado) al albarán, cambia el precio del producto relacionado, se activará una validación y, en caso de que el servicio ya no cumpla las reglas del tramo, se eliminará del albarán actual y se mostrará un pop-up indicándolo.
-### Contabilidad
+### Contabilidad { #accounting }
 
 La solapa Contabilidad permite al usuario configurar las cuentas contables que se utilizarán al contabilizar transacciones relacionadas con el producto, como la compra o la venta del producto, en el libro mayor.
 
@@ -872,7 +872,7 @@ Inicialmente, estas cuentas se heredan de las cuentas por defecto de la configur
 !!! info
     Además, es importante remarcar que es posible configurar la creación de nuevas cuentas correlativas para los productos, tal y como se describe en la solapa Libros mayores de la ventana Organización.
 
-#### Lista de materiales
+#### Lista de materiales { #bill-of-materials }
 
 Esta solapa permite editar los componentes de la lista de materiales de los que consta el producto seleccionado.
 
@@ -883,7 +883,7 @@ Esta solapa proporciona información de la lista de productos contenidos y su ca
 Si la Categoría de Impuesto del producto está marcada como **As per BOM**, esta solapa también proporciona información del precio de cada producto en la lista de la Lista de materiales. El precio y la cantidad de esta lista se utilizan para realizar la división del importe base para calcular los impuestos en función de los impuestos configurados para cada producto de la lista.
 
 ![](../../../../assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
-### Regla de cálculo de costes
+### Regla de cálculo de costes { #costing-rule }
 
 La solapa **Regla de cálculo de costes** permite al usuario revisar las reglas de cálculo de costes que se aplican al producto dentro de un rango de fechas determinado.
 
@@ -896,7 +896,7 @@ Las reglas de cálculo de costes se pueden crear y validar en la ventana **Regla
 La moneda utilizada por la regla de cálculo de costes es la moneda configurada para la organización.
 
 ![](../../../../assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
-### Costo
+### Costo { #costing }
 
 La solapa **Costo** recopila y resume la información relacionada con el coste del producto como resultado de cada transacción del producto. Los costes del producto son válidos durante un rango de fechas fijo y pueden calcularse utilizando un algoritmo de cálculo de costes *Average* o *Standard*.
 
@@ -956,7 +956,7 @@ Además:
 
 !!! warning
     Tenga en cuenta que no debe completar este campo si la Regla de cálculo de costes no tiene marcado el campo Dimensión de Almacén.
-### Transacciones
+### Transacciones { #transactions }
 
 La solapa **Transacciones** es una vista resumida de todas las transacciones de un producto.
 
@@ -1035,7 +1035,7 @@ Por ejemplo, el coste promedio de un producto cuyas transacciones se listan a co
 - albarán de cliente para una cantidad movida -50 con un coste total de 1000
 - albarán de proveedor para una cantidad movida 100 con un coste total de 2500
 
-##### Ajuste manual de coste
+##### Ajuste manual de coste { #manual-cost-adjustment }
 
 Adicionalmente, el coste de una transacción puede modificarse haciendo clic en el botón de proceso Ajuste manual de coste. Tras hacer clic en este botón, se abre un nuevo popup:
 
@@ -1060,7 +1060,7 @@ Este ajuste de coste puede revisarse y contabilizarse en el libro mayor en la ve
 
 Del mismo modo, este ajuste de coste también puede revisarse en la solapa **Costes Transacción**.
 
-#### Costes Transacción
+#### Costes Transacción { #transaction-costs }
 
 Los registros de **Costes Transacción** se crean automáticamente mediante el proceso en segundo plano de cálculo de costes y luego se listan para el producto en esta solapa.
 
@@ -1080,7 +1080,7 @@ Algunos campos relevantes a tener en cuenta son:
   En última instancia, el coste total de una transacción de producto es la suma de todos los costes listados en esta solapa, tanto los originales como los ajustados, que pueden formar parte del coste unitario o no (p. ej., landed costs).
 - **Coste Unitario**: este campo detalla si el coste calculado forma parte del coste unitario del producto o no.
 - **Fecha contable**: es la fecha contable en la que el coste ha sido calculado y contabilizado en el libro mayor (p. ej., la fecha contable de un albarán de proveedor contabilizado en el libro mayor)
-### Compras
+### Compras { #purchasing }
 
 La información de la solapa **Compras** se utiliza para productos que se planifican mediante el plan de compras.
 
@@ -1114,7 +1114,7 @@ Además, el proceso de solicitud utiliza la información de **Terceros** para la
 - **Fabricante**: campo solo informativo para indicar el fabricante del producto.
 - **Cantidad Std.**: cantidad que se tiene en cuenta en combinación con el **Tipo Cantidad** para el valor de cantidad del pedido de compra sugerido.
 - **Capacidad**: cantidad por día que el proveedor puede suministrar. En base a este campo y al tiempo de entrega, se calcula la fecha del pedido de compra. El número de días se calcula como el valor máximo entre el tiempo de entrega y la cantidad requerida / capacidad.
-### Producción
+### Producción { #manufacturing }
 
 La solapa Producción se utiliza para productos que se planifican mediante el plan de producción.
 
@@ -1142,7 +1142,7 @@ La información de esta solapa es utilizada principalmente por el MRP para proce
     2.  Si este parámetro no estuviera definido, funcionaría como de costumbre y crearía un pedido de compra de 120 unidades (200-80)
 
 - **ABC**: valor utilizado en la gestión de almacén para indicar una combinación del nivel de stock y el coste de una pieza. El valor se calcula ejecutando el Informe de Producto Pareto.
-### Traducción
+### Traducción { #translation }
 
 Los nombres de los productos se pueden traducir a cualquier idioma.
 
@@ -1151,7 +1151,7 @@ La forma de hacerlo es tan sencilla como:
 - seleccionar primero el idioma requerido
 - y luego introducir el nombre del producto traducido a ese idioma.
 
-#### Características
+#### Características { #characteristics }
 
 Relación de características asignadas al **Producto**.
 
@@ -1193,7 +1193,7 @@ Para cada hueco no vacío, también muestra información sobre:
 
 - la cantidad reservada
 - y la cantidad asignada
-### Coste Unitario
+### Coste Unitario { #unit-cost }
 
 La solapa **Coste Unitario** muestra información sobre el *Coste Unitario* (Coste Unitario) real del producto.
 
@@ -1212,7 +1212,7 @@ En esta solapa, va a existir un registro para:
 
 ![](../../../../assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAwWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
-#### Categorías de Productos
+#### Categorías de Productos { #product-categories }
 
 El usuario puede definir si un producto de una determinada categoría de producto puede relacionarse con un producto de tipo 'Servicios' creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto perteneciente a las categorías de producto incluidas/excluidas.
 
@@ -1230,9 +1230,9 @@ Esta solapa no es editable; no es posible añadir registros manualmente ni edita
 
 ![](../../../../assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
 
-#### Versión de Regla de Precio de Categoría
+#### Versión de Regla de Precio de Categoría { #category-price-rule-version }
 
-#### Productos
+#### Productos { #products }
 
 El usuario puede definir si un producto puede relacionarse con un producto de tipo 'Servicios' creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto incluido/excluido.
 
@@ -1253,8 +1253,8 @@ Esta solapa no es editable; no es posible añadir registros manualmente ni edita
 
 ![](../../../../assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
 
-#### Versión de Regla de Precio de Producto
-### Solapa de UOM alternativa
+#### Versión de Regla de Precio de Producto { #product-price-rule-version }
+### Solapa de UOM alternativa { #alternate-uom-tab }
 
 !!! info
     Para habilitar esta funcionalidad, el usuario debe definir la preferencia **Habilitar la gestión de UOM** en el campo Propiedad con valor Y.
@@ -1277,10 +1277,10 @@ Campos a tener en cuenta:
     - **No aplicable**: la AUM definida en esta solapa para el producto no estará disponible para su selección al crear Documentos para el flujo seleccionado.  
     Esta es la opción a seleccionar para *Logística*, ya que el uso de unidades de medida alternativas actualmente está implementado solo para ventas y compras. Las transacciones/documentos de inventario siempre hacen referencia a la unidad de medida del producto.
 
-#### Modificar Categorías de Impuestos
+#### Modificar Categorías de Impuestos { #modify-taxes-categories }
 
 Define la modificación de impuestos para productos vinculados a servicios. Los productos vinculados a este servicio que pertenezcan a la categoría configurada cambiarán la categoría de impuesto cuando se vinculen a este servicio.
-### Stock por unidad logística
+### Stock por unidad logística { #stock-by-logistic-unit }
 
 Permite visualizar el stock por unidades logísticas (inventario referenciado) de una forma más clara y organizada.
 

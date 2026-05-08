@@ -9,9 +9,9 @@ tags:
     - Etendo
 ---
 
-# Actualizar Etendo a cualquier versión
+# Actualizar Etendo a cualquier versión { #upgrade-etendo-to-any-version }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía explica cómo actualizar su entorno de Etendo a cualquier versión que desee. 
 
@@ -29,14 +29,14 @@ Esta guía explica cómo actualizar su entorno de Etendo a cualquier versión qu
 - [X] Compilar el entorno y resolver cualquier incidencia.
 
 
-### Copia de seguridad
+### Copia de seguridad { #backup }
 
 !!! warning "¡Es esencial crear una copia de seguridad antes de iniciar el proceso de actualización!"  
     
     - Una copia de seguridad completa de su entorno garantiza que pueda restaurar su sistema en caso de cualquier problema durante la actualización.  
     - Puede usar el [Plugin de Gradle de copia de seguridad y restauración de Etendo](../../developer-tools/etendo-backup-restore-tool.md) para crear y restaurar copias de seguridad de forma fácil y segura.
 
-### Actualización de la pila
+### Actualización de la pila { #stack-upgrade }
 
 **Actualización de Gradle**
     
@@ -68,11 +68,11 @@ La pila tecnológica requerida depende de la versión objetivo.
     !!!tip 
         La guía [Developer Changelog](../../developer-changelog/apichanges.md) proporciona detalles sobre la pila requerida y los posibles cambios necesarios en módulos personalizados.
 
-### Actualización de Etendo
+### Actualización de Etendo { #etendo-upgrade }
 
 Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El formato Source es el más común y permite modificar el código de la aplicación. El formato JAR es más eficiente, ya que utiliza clases precompiladas, pero no permite cambios de código.
 
-#### Etendo en formato Source (más utilizado)
+#### Etendo en formato Source (más utilizado) { #etendo-in-source-format-most-used }
     
 1. Verifique la versión del core de **Etendo** dentro de `build.gradle`; se recomienda establecer una versión fija. Puede encontrar la lista de versiones y sus estados en [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). Se recomienda actualizar siempre a la última versión *Confirmed Stable (CS)* disponible. 
 
@@ -143,7 +143,7 @@ Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El for
      
 
 
-#### Etendo en formato JAR (recomendado para entornos menos personalizados y dinámicos)
+#### Etendo en formato JAR (recomendado para entornos menos personalizados y dinámicos) { #etendo-in-jar-format-recommended-for-less-customized-and-dynamic-environments }
 
 1. Verifique la versión objetivo de **Etendo** dentro de `build.gradle`; se recomienda establecer una versión fija. Puede encontrar la lista de versiones y sus estados en [Etendo - Release Notes](../../../../whats-new/release-notes/etendo-classic/release-notes.md). Se recomienda actualizar siempre a la última versión *Confirmed Stable (CS)* disponible. 
 
@@ -202,7 +202,7 @@ Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El for
         ¡Su entorno de Etendo ya está actualizado!
 
 
-## Actualizar desde Etendo 21 a cualquier versión 
+## Actualizar desde Etendo 21 a cualquier versión { #upgrading-from-etendo-21-to-any-version }
 
 
 - En caso de actualizar el Core de Etendo desde **Etendo 21**, debe comprobar si existen y eliminar los siguientes módulos del directorio `/modules`, ya que se distribuyen dentro del Core de Etendo:
@@ -214,7 +214,7 @@ Etendo puede instalarse o actualizarse usando dos formatos: Source o JAR. El for
 - A partir de **Etendo 22**, las credenciales para acceder a paquetes en los repositorios de Etendo deben configurarse en el archivo `gradle.properties`, ya que Gradle resuelve y comprueba dependencias dinámicamente. Debe establecer `githubUser` y `githubToken`. Para más información, visite: [Uso de repositorios en Etendo](../installation/use-of-repositories-in-etendo.md)
 
 
-### Resolver el plugin de Gradle de Etendo por primera vez
+### Resolver el plugin de Gradle de Etendo por primera vez { #resolving-the-etendo-gradle-plugin-for-first-time }
 
 A partir de **Etendo 22**, Etendo utiliza un plugin estándar de Gradle para ejecutar todas las tareas de Gradle.
 Para trabajar con este plugin, necesita especificar en el proyecto raíz desde dónde se resolverá el plugin.

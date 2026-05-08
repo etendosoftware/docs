@@ -7,15 +7,15 @@ tags:
     - Unidad de Negocio
 ---
 
-# Tipo de Organización
+# Tipo de Organización { #organization-type }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Tipo de Organización`
 
-## Visión general
+## Visión general { #overview }
 
 Una **organización** puede ser una Entidad Legal, una Unidad de Negocio o ninguna de las dos. En esta ventana, también puede seleccionar si las transacciones están permitidas o no para este tipo de organización.
 
-## Ventana Tipo de Organización
+## Ventana Tipo de Organización { #organization-type-window }
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.png)
 

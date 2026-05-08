@@ -6,9 +6,9 @@ tags:
   - Reglas de validación
 --- 
 
-#  Cómo usar campos de propiedad
+# Cómo usar campos de propiedad { #how-to-use-property-fields }
 
-##  Visión general
+## Visión general { #overview }
 
 Un **campo de propiedad** le permite mostrar información derivada en una cuadrícula/formulario. Un campo de propiedad es muy similar a un campo normal en una solapa. La única diferencia es que, en lugar de la columna, se define una propiedad (ruta).
 
@@ -19,13 +19,13 @@ Los campos de propiedad permiten:
   * mostrar información del padre en una solapa hija y filtrar/ordenar por esta información del padre 
   * crear ventanas de Etendo que muestren una tabla hija en la raíz de la ventana, haciendo posible, por ejemplo, crear una única cuadrícula que muestre todas las líneas de factura de venta a través de múltiples facturas de venta y filtrar usando información tanto del padre como del hijo. 
 
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra ejemplos del código mostrado y comentado en esta sección.
 
 El código del módulo de ejemplo se puede descargar desde este repositorio: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
-##  Definición de campos de propiedad
+## Definición de campos de propiedad { #defining-property-fields }
 
 Los campos de propiedad se definen de la misma forma que un campo normal en una solapa de Etendo. La única diferencia es que, en lugar de seleccionar una columna, se establece una propiedad.
 
@@ -39,13 +39,13 @@ Los campos de propiedad no son editables en la interfaz de usuario; sin embargo,
       Los campos de propiedad están pensados para mostrar información derivada. No deben utilizarse para mostrar el contenido de una columna almacenada en la tabla asociada a la solapa donde se está definiendo el campo de propiedad.  
 
   
-###  Uso en reglas de validación
+### Uso en reglas de validación { #using-in-validation-rules }
 
 Los campos de propiedad pueden utilizarse en Validaciones. En este caso, el código de validación que referencia el campo de propiedad debe tener este aspecto: `@_propertyField_ _fieldName_ _columnname_@`, donde `fieldname` es el nombre de la propiedad del campo (en minúsculas y eliminando espacios en blanco) y `columnname` es el nombre de la columna referenciada.
 
 Como las propiedades de campo solo se calculan cuando el registro se guarda, pero no se vuelven a evaluar ante cambios de campo, en las validaciones solo deberían usarse en caso de que hagan referencia a una ruta que provenga de la cabecera del registro. Por ejemplo, en Línea de pedido podría usar cualquier campo de propiedad que tome los datos de su cabecera de pedido.
 
-##  Uso en lógica de visualización
+## Uso en lógica de visualización { #using-in-display-logic }
 
 Puede establecer una lógica de visualización que haga referencia a un campo de propiedad. La forma de establecer la lógica de visualización que referencia un campo de propiedad es la siguiente: `@inp_propertyField_NameOfThePropertyField_ColumnName@`. Por ejemplo:
 
@@ -53,7 +53,7 @@ Puede establecer una lógica de visualización que haga referencia a un campo de
   * Tiene otro campo *Campo A* que quiere mostrar solo cuando el campo de propiedad **Documento** tenga el estado **DR**. 
   * En la lógica de visualización del campo *Campo A*, debería escribir: `@inp_propertyField_Document_DocumentStatus@ = 'DR'`
 
-##  Caso de uso: mostrar información relacionada
+## Caso de uso: mostrar información relacionada { #use-case-show-related-information }
 
 El primer uso de un campo de propiedad es mostrar información relacionada en la interfaz de usuario. El ejemplo de la sección anterior mostró cómo definir un nuevo campo de categoría de tercero en la ventana/solapa de cabecera de factura de venta. Esto se visualiza de la siguiente manera en la interfaz de usuario:
 
@@ -70,7 +70,7 @@ Y también mostrarlo en el formulario:
 !!!note
       Tenga en cuenta que el enlace directo también funciona para campos derivados, por lo que en este ejemplo puede “saltar” directamente a la ventana de categoría de tercero para la categoría de tercero.
 
-##  Caso de uso: mostrar tabla hija en la parte superior de la ventana
+## Caso de uso: mostrar tabla hija en la parte superior de la ventana { #use-case-show-child-table-in-top-of-the-window }
 
 Un gran uso del concepto de campo de propiedad es mostrar registros hijos (por ejemplo: líneas de factura de venta) en la raíz de una ventana. Esto hace posible filtrar y ordenar los registros hijos a través de múltiples padres (por ejemplo: cabeceras de factura de venta).
 

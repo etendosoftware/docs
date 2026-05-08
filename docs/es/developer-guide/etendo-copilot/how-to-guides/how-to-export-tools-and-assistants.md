@@ -9,17 +9,17 @@ tags:
     - Distribuir Herramienta
 ---
 
-# Cómo exportar herramientas y agentes
+# Cómo exportar herramientas y agentes { #how-to-export-tools-and-agents }
 
-## Visión general
+## Visión general { #overview }
 
 Al desarrollar en Etendo Copilot, es posible exportar agentes y herramientas. Esta documentación detalla cómo exportarlos y cómo asegurarse de que, al instalar el módulo, las configuraciones estén listas para usar, permitiendo un proceso **listo para usar**.
 
-## Exportación de agentes
+## Exportación de agentes { #exporting-agents }
 
 Existen dos métodos principales para exportar agentes: exportarlos como un conjunto de datos donde los agentes configurados se exportan dentro de un conjunto de datos de Etendo Classic, o exportarlos como Administrador del Sistema, donde el/los agente(s) definidos con el rol Administrador del Sistema se exportan directamente junto con el módulo.
 
-### Exportación de agentes como conjuntos de datos
+### Exportación de agentes como conjuntos de datos { #exporting-agents-as-datasets }
 
 Los agentes deben exportarse como un conjunto de datos, en caso de que se requiera una instalación opcional y con nivel de acceso a datos `Cliente/Organización`.
 
@@ -91,7 +91,7 @@ Los agentes deben exportarse como un conjunto de datos, en caso de que se requie
     </figure>
 
 
-### Exportación de agentes como Administrador del Sistema
+### Exportación de agentes como Administrador del Sistema { #exporting-agents-as-system-administrator }
 
 Al exportar agentes que deben estar preconfigurados en una instalación de módulo, deben crearse con el rol Administrador del Sistema. Estos agentes solo serán editables por el Administrador del Sistema, pero pueden ejecutarse tanto por el `Administrador del Sistema` como por usuarios con niveles de acceso a datos `Cliente/Organización`.
 
@@ -109,7 +109,7 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 2. **Exportar la base de datos**.
     - Ejecute el comando `./gradlew export.database` para exportar el agente junto con el módulo.
 
-## Exportación de herramientas
+## Exportación de herramientas { #exporting-tools }
 
 **Configuración de la herramienta**: al definir una herramienta, seleccione el módulo (en desarrollo) en el campo **Módulo**, y ejecute el comando `./gradlew export.database` para exportar la herramienta junto con el módulo.
 

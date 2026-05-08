@@ -9,16 +9,16 @@ tags:
 status: beta
 ---
 
-# Cómo recuperar el nodo padre por nivel en un árbol
+# Cómo recuperar el nodo padre por nivel en un árbol { #how-to-retrieve-parents-node-by-level-in-a-tree }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo recuperar el nodo padre de un nodo en un árbol, en el nivel indicado.
 
-## Funciones
+## Funciones { #functions }
 
 Existen dos funciones de base de datos:
 
@@ -32,7 +32,7 @@ Existen dos funciones de base de datos:
     parámetros de entrada: `ad_tree_id (VARCHAR(32))`, `node_id (VARCHAR(32))`  salida: `level (NUMERIC)`  
     Devuelve el nivel del nodo en el árbol, donde el nivel 0 es el primer nodo del árbol, en el nivel 1 están los hijos de este primer nodo, etc...
 
-## Ejemplo:
+## Ejemplo: { #example }
 
     Los proyectos pueden gestionarse en un árbol. Por lo tanto, puede agrupar los proyectos en diferentes niveles, lo que permite obtener información por nivel. En este caso, los nodos en el primer nivel son los proyectos principales, y los proyectos en el segundo nivel son los proyectos secundarios. Los proyectos normales (nodos hoja) pertenecen a un proyecto principal y a un proyecto secundario. Los ingresos y gastos se informan al proyecto normal (nodos hoja), y puede obtener información en el nivel de los nodos padre. Un ejemplo se representa en la imagen siguiente.
 

@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Pago del impuesto
+# Pago del impuesto { #tax-payment }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Pago del impuesto`
 
-## Visión General
+## Visión General { #overview }
 
 El proceso "Pago del impuesto" ayuda a calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella.
 
@@ -28,7 +28,7 @@ El proceso de pago del impuesto puede ejecutarse una vez realizada la configurac
   - La "**Cuenta de Crédito del Concepto Contable**" es la cuenta a usar al contabilizar un pago de impuesto a realizar a la autoridad tributaria.
 - Tantos Tipos de Registro de Impuesto como sean necesarios se vinculan a los tipos impositivos de cada tipo a tener en cuenta para el cálculo del pago de impuestos.
 
-## Cabecera
+## Cabecera { #header }
 
 La ventana de pago del impuesto permite al usuario calcular el importe de los impuestos a pagar a la autoridad tributaria o a recibir de ella dentro de un período de tiempo determinado. También permite al usuario generar el pago correspondiente hacia/desde la autoridad tributaria.
 
@@ -54,13 +54,13 @@ El botón **Procesar** procesa el pago de impuestos e incluye la contabilizació
 
 El botón "**Desprocesar**" deshace el pago de impuestos y elimina el Libro Diario creado.
 
-## Cabecera del Registro de Impuesto
+## Cabecera del Registro de Impuesto { #tax-register-header }
 
 La pestaña Cabecera del Registro de Impuesto permite al usuario ver el importe de impuesto calculado por cada "Tipo de Registro de Impuesto" configurado.
 
 ![Cabecera del Registro de Impuesto](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/tax-payment/tax-payment-2.png)
 
-## Líneas
+## Líneas { #lines }
 
 La pestaña de líneas es una pestaña de solo lectura que lista todas las transacciones de impuesto relacionadas con los tipos impositivos configurados como parte de un "Tipo de Registro de Impuesto".
 

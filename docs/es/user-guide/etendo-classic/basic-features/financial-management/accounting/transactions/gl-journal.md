@@ -7,11 +7,11 @@ tags:
   - Accounting Transactions
 ---
 
-# Asientos manuales
+# Asientos manuales { #gl-journal }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Asientos manuales`
 
-## Descripción general
+## Descripción general { #overview }
 
 Un asiento de diario (Libro Mayor) permite al usuario registrar asientos en el libro mayor y crear pagos de conceptos contables.
 
@@ -31,7 +31,7 @@ Esta funcionalidad permite al usuario crear los mismos asientos que los contenid
 
 Esta funcionalidad también es muy útil al registrar la nómina de los empleados, por ejemplo.
 
-### Lote
+### Lote { #batch }
 
 Un lote de asientos manuales permite al usuario agrupar asientos de características similares que pueden procesarse todos al mismo tiempo.
 
@@ -49,7 +49,7 @@ Una vez creado y guardado un lote, es posible crear tantos asientos de Asientos 
 
 Un asiento de Asientos manuales y, por tanto, su contenido puede configurarse como **Plantilla**; esa plantilla puede utilizarse posteriormente al crear un nuevo asiento mediante el botón de proceso **Copiar detalles** tal como se describe en la siguiente sección.
 
-##### Asiento de Asientos manuales configurado como "Plantilla"
+##### Asiento de Asientos manuales configurado como "Plantilla" { #gl-journal-set-up-as-template }
 
 Como ya se ha mencionado, un asiento de Asientos manuales y, por tanto, su contenido puede configurarse como **Plantilla**. Para ello, es necesario seguir los pasos que se describen a continuación:
 
@@ -74,7 +74,7 @@ Puede ser necesario cambiar los importes de los asientos. Para ello, es posible 
 
 El último paso es contabilizar el asiento de Asientos manuales, de modo que los asientos correspondientes se registren en el libro mayor.
 
-## Cabecera
+## Cabecera { #header }
 
 Una cabecera de asiento de Asientos manuales puede incluir diarios, que pueden contener varias líneas de asiento.
 
@@ -105,16 +105,16 @@ Existe una **lista de acciones** que pueden ejecutarse desde la cabecera del asi
     El asiento se completará aunque falle la creación de alguno de los Pagos. En este caso, se muestra un mensaje de error indicando las Líneas que intentaron crear un Pago pero fallaron.
 
 
-## Líneas
+## Líneas { #lines }
 
 La pestaña de líneas permite al usuario introducir los asientos del diario, así como la información relacionada con el pago del concepto contable.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Información contable relacionada con el asiento de Asientos manuales.
 
-## Asientos manuales diferidos
-### Duplicar asientos manuales
+## Asientos manuales diferidos { #deferred-gl-journal }
+### Duplicar asientos manuales { #duplicate-journal-entries }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -158,7 +158,7 @@ Una vez configurada esta preferencia, el botón se habilitará en los "Asientos 
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-journal/gl-journal-11.png)
 
-## Anulación de asiento de Asientos manuales
+## Anulación de asiento de Asientos manuales { #gl-journal-reverse }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -180,18 +180,18 @@ Como se puede observar a continuación, Etendo muestra una notificación de éxi
 
 Al comparar el asiento de Asientos manuales original con el asiento de Asientos manuales de anulación, las columnas de debe y haber muestran la compensación, ya que los importes están invertidos.
 
-##### Asiento de Asientos manuales original
+##### Asiento de Asientos manuales original { #original-gl-journal }
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-3.png)
 
-##### Asiento de Asientos manuales de anulación
+##### Asiento de Asientos manuales de anulación { #reverse-gl-journal }
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-4.png)
 
 
 Esto resulta útil para distinguir entre el asiento de Asientos manuales original y el de anulación.
 
-## Contabilización masiva
+## Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

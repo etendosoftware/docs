@@ -14,7 +14,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Sales Extensions Bundle](../../bundles/sales-extensions/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con Sales Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

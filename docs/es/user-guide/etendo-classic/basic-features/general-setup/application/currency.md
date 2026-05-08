@@ -6,11 +6,11 @@ tags:
     - Configuración
 ---
 
-# Moneda
+# Moneda { #currency }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Moneda`
 
-### Visión general
+### Visión general { #overview }
 
 - Las monedas y los rangos de conversión son configuraciones básicas en Etendo.
 - Las monedas utilizadas en todo el mundo se crean automáticamente y se listan en la ventana de moneda una vez finalizada la instalación de Etendo.
@@ -18,7 +18,7 @@ tags:
     !!! info
         Todas estas monedas están vinculadas a la **organización del sistema (\*)**, lo que significa que esas monedas se compartirán entre todas las organizaciones del sistema.
 
-### Moneda
+### Moneda { #currency_1 }
 
 La ventana Moneda permite al usuario visualizar o crear y configurar las monedas que se utilizarán en transacciones monetarias.
 
@@ -40,7 +40,7 @@ Etendo permite al usuario configurar tres tipos de precisión de moneda:
     !!! warning
         Los cambios en la precisión de la moneda solo pueden realizarse a nivel de cliente; por lo tanto, es necesario utilizar el rol `System Admin`.
 
-#### Rangos de conversión
+#### Rangos de conversión { #conversion-rates }
 
 La solapa Rangos de conversión lista los rangos de conversión disponibles para una moneda determinada.
 
@@ -57,7 +57,7 @@ Esto implica que una única moneda podría tener varios rangos de conversión en
     - Los rangos de conversión de moneda también pueden crearse en la ventana [Rangos de conversión](./conversion-rates.md); por lo tanto, pueden revisarse en esta solapa.
     - Etendo recomienda que los rangos de conversión se configuren en la ventana **Rangos de conversión**, ya que es necesario definir tanto *Multiplicar por* (USD - €) como *Dividir por* (€ - USD) para definir correctamente el cambio entre dos monedas.
 
-#### Traducción
+#### Traducción { #translation }
 
 Las monedas pueden traducirse a cualquier idioma si es necesario.
 

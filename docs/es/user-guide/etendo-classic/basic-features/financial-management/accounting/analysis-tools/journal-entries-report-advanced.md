@@ -7,7 +7,7 @@ tags:
   - Financial Extensions
 ---
 
-# Diario asientos avanzado
+# Diario asientos avanzado { #journal-entries-report-advanced }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Diario asientos avanzado`
 
@@ -16,7 +16,7 @@ tags:
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Descripción general
+## Descripción general { #overview }
 
 Este informe **Diario asientos avanzado** es una versión mejorada del anterior [Diario asientos](./journal-entries-report.md). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables existentes en la tabla Datos de contabilidad.
 
@@ -41,7 +41,7 @@ El nuevo campo **Mostrar Entidades Dimensionales** permite seleccionar las dimen
 
 Tras utilizar los campos y casillas disponibles, el informe filtra las transacciones incluidas en las dimensiones seleccionadas, para la organización y el libro mayor seleccionados y para un periodo determinado, si es necesario. En cada filtro se puede seleccionar más de una opción.
 
-## Botones
+## Botones { #buttons }
 
 En la barra superior, se encuentran los botones **Ver**, **Exportar a PDF** y **Exportar a Excel** para generar el informe. En el caso de la opción Ver, se abre una nueva ventana con el informe correspondiente. En los otros casos, el informe se exporta en formato PDF o Excel.
 

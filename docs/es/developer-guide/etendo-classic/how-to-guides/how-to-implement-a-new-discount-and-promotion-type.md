@@ -8,12 +8,12 @@ tags:
 status: beta
 ---
 
-# Cómo implementar un nuevo tipo de descuento y promoción
+# Cómo implementar un nuevo tipo de descuento y promoción { #how-to-implement-a-new-discount-and-promotion-type }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Un tipo de descuento y promoción es una implementación de una regla para [Modificación de precios](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#discounts-and-promotions-window). Estas reglas definen la lógica que se aplicará para calcular el descuento cuando el descuento o la promoción puedan aplicarse.
 
@@ -21,17 +21,17 @@ Este procedimiento está dirigido a desarrolladores que deseen implementar este 
 
 Es posible definir tipos que se encarguen de una sola línea, como **descuento del X por ciento** en un único producto, y tipos que analicen todo el pedido o la factura para determinar si el descuento es aplicable, por ejemplo **comprando los productos X e Y, Z es gratis**.
 
-## Implementación
+## Implementación { #implementation }
 
 La implementación de un *Tipo de descuento y promoción* se realiza dentro de un módulo. Este procedimiento asume que ya existe un [módulo](how-to-create-a-module.md) creado.
 
-### Especificación del tipo
+### Especificación del tipo { #type-specification }
 
 Este documento explica cómo crear un tipo **Compre X pague Y del mismo producto**. Esta regla se aplica cuando hay al menos X unidades en una línea; en este caso, por cada grupo de X unidades, solo se pagan Y.
 
 Por ejemplo, si la regla puede aplicarse al producto A (cuyo precio es 10€), X es 4 e Y es 3. Un pedido que incluya 4 unidades de A tendría un descuento de 10€. Un pedido que incluya 9 unidades de A tendría un descuento de 20€.
 
-### Infraestructura
+### Infraestructura { #infrastructure }
 
 Lo primero que debe hacerse es ampliar la tabla que define Modificación de precios (`M_Offer`) en caso de que las columnas que tiene no soporten los requisitos de nuestro tipo de descuento. En este caso necesitamos las columnas X e Y.
 
@@ -47,7 +47,7 @@ Ahora deben crearse las columnas en el *Diccionario de la Aplicación* para la t
 
 Después, sus campos correspondientes en la ventana Modificación de precios: vaya a la ventana **Windows, Tabs and Fields**, busque la ventana **Modificación de precios**, la solapa **Modificación de precios** y haga clic en el botón **Crear campos**.
 
-### Definición del tipo de descuento y promoción
+### Definición del tipo de descuento y promoción { #discount-and-promotion-type-definition }
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-implement-a-new-discount-and-promotion-type/discount-promotion-type.png)
 
@@ -59,7 +59,7 @@ Una vez creado, este tipo estará disponible desde la ventana **Modificación de
 
 Tenga en cuenta que es una buena práctica, para mantener esta ventana disponible, mostrar los campos creados en la sección anterior por si este tipo se selecciona. Esto puede lograrse añadiéndoles una lógica de visualización que debería ser similar a `@M_Offer_Type_ID@='E08EE3C23EBA49358A881EF06C139D63'`, donde `'E08EE3C23EBA49358A881EF06C139D63'` es el UUID del registro que se acaba de crear en **Tipos de descuentos y promociones**.
 
-### Implementación PL/SQL
+### Implementación PL/SQL { #plsql-implementation }
 
 El código que implementa el tipo es:
 
@@ -148,7 +148,7 @@ END ; $BODY$
 
 Las siguientes secciones explican este código. Los números del título se refieren a los números en los comentarios anteriores.
 
-#### Parámetros
+#### Parámetros { #parameters }
 
 Cualquier función que implemente un tipo de descuento y promoción debe recibir los siguientes parámetros:
 
@@ -160,21 +160,21 @@ Cualquier función que implemente un tipo de descuento y promoción debe recibir
 - `p_user_id`: ID del usuario que ha invocado el proceso, utilizado al crear el descuento real con fines de auditoría.
 - `p_taxincluded`: Los valores posibles son Y o N. Indica si la [Tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list) aplicada al documento actual incluye (Y) o no (N) impuestos.
 
-#### 1. Obtener la configuración de la regla
+#### 1. Obtener la configuración de la regla { #1-get-rule-configuration }
 
 El descuento y promoción que se está comprobando normalmente tiene cierta configuración de instancia. En nuestro caso, valores para X e Y, y si otras promociones y descuentos pueden encadenarse a esta misma línea después de aplicar este.
 
-#### 2. Obtener la información de la línea
+#### 2. Obtener la información de la línea { #2-get-line-information }
 
 Debe recuperarse la información de la línea. Tenga en cuenta que la misma función se invoca para pedidos y facturas, determinado por p_type, por lo que ambos casos deben tenerse en cuenta.
 
-#### 3. Decidir si la regla puede aplicarse
+#### 3. Decidir si la regla puede aplicarse { #3-decide-whether-the-rule-can-be-applied }
 
 Este código se ejecuta para todas las promociones y descuentos que son candidatos a aplicarse a cada línea (consulte la [siguiente sección](#cuándo-se-ejecuta-este-código)). Dependiendo de las reglas que defina el tipo, es posible que esta regla candidata sea rechazada.
 
 En este caso, si la cantidad en la línea es inferior al valor de X, la regla se rechaza. Tenga en cuenta que, como la regla no se aplica, se devuelve Y; esto significa que siempre pueden aplicarse otros descuentos.
 
-#### 4. Calcular el descuento
+#### 4. Calcular el descuento { #4-calculate-the-discount }
 
 En este punto sabemos que el descuento debe aplicarse a esta línea. Es el momento de implementar realmente los importes a descontar.
 
@@ -182,11 +182,11 @@ Aquí es importante tener en cuenta las diferencias entre tarifas que incluyen i
 
 Finalmente, cuando todo está calculado, el descuento se inserta invocando la función `M_Promotion_Add`. Esta creará un nuevo registro en la tabla `C_OrderLine_Offer` o `C_InvoiceLine_Offer`.
 
-#### 5. Devolver
+#### 5. Devolver { #5-return }
 
 Se espera que estas funciones devuelvan un valor booleano (Y o N). Si se devuelve Y, el algoritmo continuará buscando descuentos y promociones adicionales para aplicar a esta línea; mientras que, en caso de N, el algoritmo se detendrá después de aplicar este.
 
-### Cuándo se ejecuta este código
+### Cuándo se ejecuta este código { #when-this-code-is-executed }
 
 El código que comprueba Modificación de precios (`M_Promotion_Calculate`) se ejecuta cuando *Pedidos y facturas* se **completan** o cuando se hace clic en el **botón** *Calcular promociones* en cualquiera de estas ventanas.
 

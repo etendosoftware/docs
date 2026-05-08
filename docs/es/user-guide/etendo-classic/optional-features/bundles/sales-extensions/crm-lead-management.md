@@ -11,7 +11,7 @@ tags:
     - Agente CRM
 ---
 
-# Gestión de Leads de CRM
+# Gestión de Leads de CRM { #crm-lead-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.crm`
 

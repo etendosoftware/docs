@@ -4,12 +4,12 @@ tags:
   - Validaciones de compilación
   - Scripts de módulo
 ---
-#  Cómo crear validaciones de compilación y scripts de módulo
+# Cómo crear validaciones de compilación y scripts de módulo { #how-to-create-build-validations-and-module-scripts }
 
-##  Visión general
+## Visión general { #overview }
 
 Esta sección proporciona información sobre cómo crear tanto una **Validación de compilación** como un **Script de módulo**. Ambos son conceptos muy similares y también se implementan de una forma muy parecida.
-## Validaciones de compilación
+## Validaciones de compilación { #build-validations }
 
 Una validación de compilación en Etendo es una clase Java que se **ejecuta al principio** de la tarea `update.database`.
 
@@ -22,7 +22,7 @@ Las validaciones de compilación son una pieza de código diferente en Etendo, y
 !!!note
       Las validaciones de compilación no deberían ser un caso habitual. Normalmente, solo deberían ser necesarias cuando hubo un error en una versión anterior del módulo o del Core. El resultado final de una validación es que, si detecta lo que estaba destinada a detectar, el usuario tendrá que realizar acciones manuales para corregir el problema, y esto debería evitarse si es posible por todos los desarrolladores.
 
-### Introducción a la implementación de validaciones de compilación
+### Introducción a la implementación de validaciones de compilación { #introduction-to-the-implementation-of-build-validations }
 
 Los pasos principales para crear una validación de compilación son:
 
@@ -34,7 +34,7 @@ Para crear una validación de compilación, primero cree una clase que extienda 
 
 Este método debe implementarse. La clase se cargará al principio de la tarea `update.database`, y se llamará a este método. Se debe devolver una **lista de cadenas**. Si la lista está vacía, la compilación continuará. Si la lista contiene al menos una cadena, se mostrará cada cadena al usuario y la compilación se detendrá. Se supone que cada cadena es un mensaje de error significativo, que muestra al usuario qué necesita corregir en su sistema para que la validación se supere.
 
-### Escritura de la validación de compilación
+### Escritura de la validación de compilación { #writing-the-build-validation }
 
 Como se acaba de explicar, una validación de compilación no es más que una clase que extiende la clase `org.openbravo.buildvalidation.BuildValidation`, e implementa el **método abstracto execute**. Veamos un ejemplo:
 
@@ -108,7 +108,7 @@ Esto necesita el siguiente archivo `xsql`:
 !!!info
       Los archivos fuente de la clase deben estar dentro de la carpeta del módulo, en: `src-util/buildvalidation/src`. Y deben seguir las reglas estándar de **paquetes Java**. La carpeta no existirá si es la primera validación, por lo que será necesario crearla.
 
-### Compilación de la validación de compilación
+### Compilación de la validación de compilación { #compiling-the-build-validation }
 
 Las validaciones de compilación deberían compilarse usando, como máximo, la última **versión de JDK** soportada.
   
@@ -123,7 +123,7 @@ Para compilar la validación de compilación, use el siguiente comando:
 
 Esta tarea compilará las clases Java y las copiará a la carpeta de **compilación** correcta en el módulo, o en `src-util/buildvalidation` del Core.
 
-### Ejecución de la validación de compilación
+### Ejecución de la validación de compilación { #executing-the-build-validation }
 
 Las validaciones de compilación se ejecutarán automáticamente en la tarea `update.database`, o en `update.database.mod` si se está aplicando el módulo.
 
@@ -136,11 +136,11 @@ Otro punto importante a remarcar es que las validaciones de compilación se ejec
       Al añadir una validación a Etendo Core, recuerde **incluir las clases binarias** contenidas en
       `src-util/buildvalidation/build/classes/` en el repositorio a medida que se añaden los archivos fuente. Si no, no se ejecutarán (porque las clases no se compilan por defecto en el proceso de compilación; solo se ejecutan si los archivos binarios están ahí).
 
-### Definición de los límites de ejecución de la validación de compilación
+### Definición de los límites de ejecución de la validación de compilación { #defining-the-build-validation-execution-limits }
   
 Las validaciones de compilación proporcionan por defecto un par de mecanismos que permiten controlar cuándo deben ejecutarse:
 
-#### Límites de versión de la validación de compilación
+#### Límites de versión de la validación de compilación { #build-validation-version-limits }
 
 Es posible definir una dependencia con dos versiones de un módulo concreto para identificar cuándo debe ejecutarse la validación de compilación:
 
@@ -162,7 +162,7 @@ protected ExecutionLimits getBuildValidationLimits() {
 
 Siguiendo este ejemplo de código, estamos estableciendo que nuestra validación de compilación solo debe ejecutarse al actualizar el módulo core (id = "0") desde una versión entre _3.0.28207_ (primera versión de ejecución) y _3.0.29495_ (última versión de ejecución). De este modo, evitamos la ejecución de la validación de compilación en aquellos casos en los que no aplica.
 
-#### Ejecutar solo una vez
+#### Ejecutar solo una vez { #executing-just-once }
 
 En caso de que sea necesario ejecutar la validación de compilación solo una vez, esto puede cubrirse estableciendo únicamente la **Última versión de ejecución**.
 
@@ -179,7 +179,7 @@ Donde `ad_module_id` es el **UUID** del módulo.
 
 De este modo, la validación de compilación se ejecutará al actualizar el módulo desde cualquier versión anterior a _1.7.0_ y no se volverá a ejecutar.
 
-#### Ejecutar en la instalación
+#### Ejecutar en la instalación { #execute-on-install }
 
 También es posible configurar si la validación de compilación debe ejecutarse al instalar el módulo dependiente definido con el método `getBuildValidationLimits()`. Por defecto, la validación de compilación se ejecutará al instalar el módulo dependiente.
 
@@ -191,7 +191,7 @@ protected boolean executeOnInstall() {
   return false;
 }
 ```
-## Scripts de módulo
+## Scripts de módulo { #module-scripts }
 
 Un **script de módulo** es una tarea que se ejecuta cuando se está aplicando un módulo en la **Base de datos**. Se supone que esta tarea realiza operaciones que deben hacerse en la base de datos y que no pueden realizarse de otra manera.
 
@@ -203,11 +203,11 @@ Los puntos principales de los scripts de módulo son los siguientes:
   * Al igual que con las validaciones de compilación, los scripts de módulo se ejecutarán cada vez que se invoque un `update.database` o `update.database.mod` para ese módulo en particular. Esto significa que **el script debe construirse de tal manera que pueda ejecutarse repetidamente sin problemas**, y esta es una consideración muy importante que el desarrollador debe tener en cuenta.
   * El script de módulo nunca debería fallar. Si falla, la compilación se detendrá, pero como ya se ha iniciado, **el sistema estará en un estado inconsistente** (por ejemplo, todas las claves foráneas y los triggers estarán desactivados). El desarrollador debe evitar esto a toda costa si es posible.
 
-### Introducción a la implementación de scripts de módulo
+### Introducción a la implementación de scripts de módulo { #introduction-to-the-implementation-of-module-scripts }
 
 Al igual que con las validaciones de compilación, un script de módulo es una clase Java que extiende la clase abstracta `org.openbravo.modulescript.ModuleScript` e implementa el método `execute()`. Este método `execute` será llamado por la tarea `update.database`. Este método incluirá la lógica del script de módulo; aquí se realizarán todas las operaciones.
 
-### Escritura del script de módulo
+### Escritura del script de módulo { #writing-the-module-script }
 
 A continuación se muestra un **script de módulo** muy sencillo, que simplemente establece el valor de alguna columna a un valor por defecto en caso de que el valor de la columna sea nulo:
 
@@ -236,7 +236,7 @@ Los dos puntos principales importantes a tener en cuenta al construir el script 
 !!!info
       Los propios archivos fuente de la clase deben estar dentro de la carpeta del módulo, en la carpeta: `src-util/modulescript/src`. Y deben seguir las reglas estándar de **paquetes Java**. La carpeta no existirá si es el primer script, por lo que será necesario crearla.
 
-### Compilación del script de módulo
+### Compilación del script de módulo { #compiling-the-module-script }
 
 Los scripts de módulo deben compilarse utilizando, como máximo, la última **versión de JDK** soportada.
 
@@ -251,7 +251,7 @@ Para compilar el script de módulo, utilice el siguiente comando:
 
 Esta tarea compilará las clases Java y las copiará a la carpeta de **compilación** correcta en el módulo, o en `src-util/modulescript` de Core.
 
-### Ejecución del script de módulo
+### Ejecución del script de módulo { #executing-the-module-script }
 
 Los **scripts de módulo** se ejecutarán automáticamente en la tarea `update.database`, o en `update.database.mod` si se está aplicando el módulo.
 
@@ -265,11 +265,11 @@ Y, como se explicó anteriormente, los scripts también deben diseñarse para pr
 !!!info
       Si está añadiendo un script de módulo a Etendo Core, recuerde que necesita **incluir las clases binarias** contenidas en `src-util/modulescript/build/classes/` en el repositorio, del mismo modo que se añaden los archivos fuente. Si no, no se ejecutarán (porque las clases no se compilan por defecto en el proceso de compilación; solo se ejecutan si los archivos binarios están ahí).
 
-### Definición de los límites de ejecución del script de módulo
+### Definición de los límites de ejecución del script de módulo { #defining-the-module-script-execution-limits }
 
 Los scripts de módulo proporcionan por defecto un par de mecanismos que permiten controlar cuándo deben ejecutarse:
 
-#### Límites de versión del módulo
+#### Límites de versión del módulo { #module-version-limits }
 
 Es posible definir una dependencia con dos versiones de un módulo en particular para identificar cuándo debe ejecutarse el script de módulo:
 
@@ -293,7 +293,7 @@ protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
 
 Siguiendo este ejemplo de código, estamos estableciendo que nuestro `modulescript` solo debe ejecutarse al actualizar el módulo core (id = "0") desde una versión entre _3.0.27029_ (primera versión de ejecución) y _3.0.27050_ (última versión de ejecución). De este modo, evitamos la ejecución de nuestro `modulescript` en aquellos casos en los que no aplica.
 
-#### Ejecutar solo una vez
+#### Ejecutar solo una vez { #executing-just-once_1 }
 
 Un caso típico de uso de `modulescripts` es rellenar los valores de una columna recién añadida. Por lo tanto, es necesario ejecutar el `modulescript` una vez. Esto puede cubrirse estableciendo solo la **Última versión de ejecución**.
 
@@ -311,7 +311,7 @@ Donde `ad_module_id` es el **UUID** del módulo.
 
 De este modo, el `modulescript` se ejecutará al actualizar el módulo desde cualquier versión anterior a _1.5.0_ y no se ejecutará más.
 
-#### Ejecutar en instalación
+#### Ejecutar en instalación { #execute-on-install_1 }
 
 También es posible configurar si el script de módulo debe ejecutarse al instalar el módulo dependiente definido con el método `getModuleScriptExecutionLimits()` o durante la tarea gradle `install`. Por defecto, el script de módulo se ejecutará en los siguientes casos:
 
@@ -327,7 +327,7 @@ protected boolean executeOnInstall() {
 }
 ```
 
-#### Ejecutar solo en `install`
+#### Ejecutar solo en `install` { #executing-just-on-install }
 
 En caso de que queramos configurar un `modulescript` para que se ejecute solo en cada `install`, **no** sobrescribimos el método `executeOnInstall()` y definimos los límites de ejecución de la siguiente manera:
 

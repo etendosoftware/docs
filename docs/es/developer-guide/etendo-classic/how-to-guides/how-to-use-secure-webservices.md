@@ -7,9 +7,9 @@ tags:
   - Servicios web
 ---
 
-# Cómo utilizar Servicios web seguros
+# Cómo utilizar Servicios web seguros { #how-to-use-secure-web-services }
 
-## Visión general
+## Visión general { #overview }
 
 Este módulo permite llamar a cualquier **servicio web de Etendo** estándar del mismo modo que al endpoint `/ws`, pero utilizando autenticación mediante token.
 
@@ -17,7 +17,7 @@ Este método de autenticación también permite definir el contexto de las llama
 
 Además de la implementación de autenticación, el módulo incluye utilidades para desarrolladores y servicios web útiles, como jsonDal (para acceder a la capa de acceso a datos de OB con json).
 
-## Configuración
+## Configuración { #setup }
 
 !!! Warning
     Se requiere un nombre de dominio válido y un certificado `SSL/TLS` para utilizar **Servicios web seguros**. Instale un certificado o contacte con su administrador para evitar errores en tiempo de ejecución al generar tokens en instancias de servidor.
@@ -25,7 +25,7 @@ Además de la implementación de autenticación, el módulo incluye utilidades p
 !!! Info
     De forma predeterminada, se utiliza el **algoritmo de cifrado ES256**. Para cambiar a un algoritmo heredado, cree una preferencia con la propiedad `Encryption Algorithm` y establezca su valor en `HS256`.
 
-### Configuración de token
+### Configuración de token { #token-configuration }
 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
@@ -52,7 +52,7 @@ El campo **Intervalo en Minutos** controla durante cuánto tiempo los tokens per
     Los tokens sin expiración representan un riesgo en producción: si un token es comprometido, permanece válido indefinidamente. Establezca un tiempo de expiración razonable y rote los tokens periódicamente.
 
 
-## Swagger de Servicios web seguros
+## Swagger de Servicios web seguros { #secure-web-services-swagger }
 
 !!! info
     Para más información, visite [Swagger de Servicios web seguros](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.

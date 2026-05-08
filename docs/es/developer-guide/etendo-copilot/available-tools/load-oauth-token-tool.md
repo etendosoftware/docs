@@ -6,16 +6,16 @@ tags:
     - Herramienta de carga de token OAuth
 ---
 
-# Herramienta de carga de token OAuth
+# Herramienta de carga de token OAuth { #load-oauth-token-tool }
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de carga de token OAuth** es una utilidad clave de seguridad y gestión de sesión. Su función principal es obtener de forma segura un **token OAuth** preconfigurado desde el backend de Etendo y cargarlo en la memoria de la conversación actual.
 
 Esta herramienta no ejecuta una acción por sí misma, sino que actúa como un primer paso necesario para cualquier flujo de trabajo que requiera **autenticación OAuth2** (p. ej., acceder a Google Drive o Google Sheets). Al cargar el token y devolver únicamente un `alias`, permite que otras herramientas utilicen la credencial sin exponer nunca el valor sensible del token al modelo de IA ni al usuario.
 
-## Flujo de trabajo previsto
+## Flujo de trabajo previsto { #intended-workflow }
 
 Esta herramienta está diseñada para ser la primera llamada en un proceso de varios pasos. El flujo de trabajo típico es el siguiente:
 
@@ -25,14 +25,14 @@ Esta herramienta está diseñada para ser la primera llamada en un proceso de va
 4.  A continuación, el agente llama a la herramienta requerida (p. ej., `GoogleDriveTool`) y pasa el `alias` que acaba de recibir.
 5.  `GoogleDriveTool` utiliza el `alias` para recuperar el token real desde la memoria de la conversación y completa la solicitud del usuario.
 
-## Parámetros
+## Parámetros { #parameters }
 
   - `al` (string, opcional): Un alias (un nombre personalizado) para el token OAuth.
       - Si se proporciona un alias, el token se cargará en memoria bajo ese nombre específico.
       - Si este parámetro **no se proporciona**, se generará automáticamente un alias único y aleatorio (p. ej., `TOKEN_1234abcd-....`).
       - En ambos casos, el alias utilizado se devuelve en el mensaje final de éxito.
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 La herramienta ejecuta los siguientes pasos:
 
@@ -41,9 +41,9 @@ La herramienta ejecuta los siguientes pasos:
 3.  **Almacena el token**: almacena el token obtenido en el contexto de la conversación actual (`ThreadContext`) en un diccionario, utilizando el alias como clave.
 4.  **Devuelve el alias**: devuelve un mensaje de éxito al agente, confirmando que el token está cargado y listo para su uso mediante el alias devuelto.
 
-## Ejemplos de uso
+## Ejemplos de uso { #usage-examples }
 
-### Ejemplo 1: Cargar un token con un alias generado
+### Ejemplo 1: Cargar un token con un alias generado { #example-1-loading-a-token-with-a-generated-alias }
 
 Cuando no necesita un nombre específico para el token, puede llamar a la herramienta sin parámetros.
 
@@ -59,7 +59,7 @@ Cuando no necesita un nombre específico para el token, puede llamar a la herram
 OAuth token loaded successfully with alias: TOKEN_a1b2c3d4-e5f6-7890-gh12-i3j4k5l6m7n8. You can now use this alias to access the token.
 ```
 
-### Ejemplo 2: Cargar un token con un alias personalizado
+### Ejemplo 2: Cargar un token con un alias personalizado { #example-2-loading-a-token-with-a-custom-alias }
 
 Esto es útil si desea referirse al token con un nombre fácil de recordar.
 
@@ -77,7 +77,7 @@ Esto es útil si desea referirse al token con un nombre fácil de recordar.
 OAuth token loaded successfully with alias: my_work_google_account. You can now use this alias to access the token.
 ```
 
-### Ejemplo 3: Flujo de trabajo conceptual en dos pasos
+### Ejemplo 3: Flujo de trabajo conceptual en dos pasos { #example-3-conceptual-two-step-workflow }
 
 A continuación se muestra cómo un agente utilizaría esta herramienta en la práctica para listar archivos de Google Drive.
 

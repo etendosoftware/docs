@@ -7,13 +7,13 @@ tags:
   - Financial Extensions
 ---
 
-# Presupuesto
+# Presupuesto { #budget }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Presupuesto`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2VFxpx8j8Sk?si=TuLZUdBGrOCSpXIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Descripción general
+## Descripción general { #overview }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -34,7 +34,7 @@ Permite crear y gestionar presupuestos, tanto de ingresos como de gastos, con fi
 
 Los valores reales considerados incluyen tanto asientos contables como asientos manuales (Elemento de libro mayor), lo que garantiza una visión completa de la ejecución presupuestaria.
 
-## Cabecera
+## Cabecera { #header }
 
 La cabecera define los datos principales de cada presupuesto:
 
@@ -45,7 +45,7 @@ La cabecera define los datos principales de cada presupuesto:
 - **Activo**: casilla de verificación que habilita o deshabilita el presupuesto.
 - **Exportar Datos Reales**: casilla de verificación que, cuando está marcada, exporta las cantidades reales a Excel además de las cantidades presupuestadas.
 
-## Líneas
+## Líneas { #lines }
 
 En la pestaña Líneas, el usuario puede añadir líneas de presupuesto. Cada línea puede hacer referencia a un período específico, proyectando y comparando gastos/ingresos según la cuenta contable seleccionada. Las dimensiones contables están disponibles como filtros, seleccionables de una en una, en la sección Dimensiones (tercero, producto, etc.)
 
@@ -65,13 +65,13 @@ Campos a destacar:
 - **Descripción**: información adicional sobre la línea.
 - **Activo**: casilla de verificación que habilita o deshabilita la línea.
 
-## Botones
+## Botones { #buttons }
 
 **Exportar presupuesto a excel**: genera un documento Excel como informe con la información del presupuesto.
 
 **Copiar Presupuesto**: duplica líneas de presupuestos creados anteriormente.
 
-## Informe
+## Informe { #report }
 
 El informe de presupuesto permite comparar los importes presupuestados y reales. Incluye una columna Diferencia, que muestra el resultado de restar el valor real al valor presupuestado, facilitando así el análisis de desviaciones.
 

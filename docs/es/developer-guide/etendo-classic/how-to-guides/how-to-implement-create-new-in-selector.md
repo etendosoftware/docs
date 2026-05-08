@@ -7,7 +7,7 @@ tags:
 status: beta
 ---
 
-# Cómo implementar Crear nuevo en el selector
+# Cómo implementar Crear nuevo en el selector { #how-to-implement-create-new-in-selector }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.

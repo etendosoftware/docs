@@ -13,19 +13,19 @@ tags:
 
 :material-store: Etendo Marketplace:  [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
-## Visión general 
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de Gestión de ventas en Etendo Classic.
 
 
-## Traducción
+## Traducción { #translations }
 
 -  :material-translate: Español: [Sales Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
 
 
-## Módulo
+## Módulo { #modules }
 
 
-### Rappels avanzados
+### Rappels avanzados { #advanced-rappels }
 
 :octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
 
@@ -52,7 +52,7 @@ Seguimiento y gestión nativos de leads para el equipo comercial. Permite regist
 !!! info
     Para más información, visite la [guía de usuario de CRM Lead Management](crm-lead-management.md).
 
-### Presupuesto de ventas
+### Presupuesto de ventas { #sales-quotation }
 
 :octicons-package-16: Javapackage: `com.etendoerp.quotation`
 

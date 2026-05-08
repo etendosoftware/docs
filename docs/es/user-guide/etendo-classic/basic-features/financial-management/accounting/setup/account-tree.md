@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Árbol de cuentas
+# Árbol de cuentas { #account-tree }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Árbol de cuentas`
 
-## Visión general  
+## Visión general { #overview }
 
 Un **árbol de cuentas** representa el **Plan de Cuentas (CoA)** de una organización. El CoA es la lista de cuentas utilizada en el libro mayor, incluyendo activos, pasivos, ingresos y gastos.  
 
@@ -23,7 +23,7 @@ La **ventana Árbol de cuentas** permite a los usuarios:
 - **Revisar y gestionar** un plan de cuentas importado desde un módulo de CoA.  
 - **Crear y personalizar** un nuevo plan de cuentas desde cero si es necesario.  
 
-## Configuración del Árbol de cuentas
+## Configuración del Árbol de cuentas { #account-tree-configuration }
 
 Etendo ofrece diferentes opciones para la configuración de los CoA: 
 
@@ -61,14 +61,14 @@ Etendo ofrece diferentes opciones para la configuración de los CoA:
         
         - Si se instala un módulo de Plan de Cuentas y luego se selecciona a **nivel de organización** mediante el proceso [Crear organización](../../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md), el plan de cuentas creado automáticamente queda vinculado a la organización que se está creando.
 
-## Ventana Árbol de cuentas
+## Ventana Árbol de cuentas { #account-tree-window }
 
 La cabecera principal de Árbol de cuentas permite crear el tipo de cuenta de la organización y, a continuación, definir el Plan de Cuentas. 
 
 ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree8.png)
 
 
-### Solapa Cuenta Contable
+### Solapa Cuenta Contable { #element-value-tab }
 
 La solapa **Cuenta Contable** lista todos los elementos del plan de cuentas, desde los encabezados del plan de cuentas hasta las subcuentas.
 
@@ -168,7 +168,7 @@ Adicionalmente, existen otros campos avanzados que también ayudan a configurar 
     El módulo **Account Structure Validation** proporciona funcionalidad para validar la estructura y configuración de las subcuentas cuando se crean o modifican, ayudando a evitar desajustes en los informes financieros. Para más información, visite [Account Structure Validation](link-to-documentation).
     Esta funcionalidad está disponible a partir de la versión **3.11.0** del Financial Extensions Bundle, compatible con **Etendo 25.1**. Para instalarlo, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Release notes](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Solapa Operando
+### Solapa Operando { #customized-elements-tab }
 
 La solapa **Operando** permite al usuario obtener un elemento del árbol de cuentas como una combinación de una lista dada de elementos existentes.
 
@@ -184,7 +184,7 @@ tal y como se muestra en la imagen siguiente.
 
 ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-4.png)
 
-### Solapa Traducción
+### Solapa Traducción { #translation-tab }
 
 En la solapa **Traducción**, los elementos de cuenta pueden traducirse a cualquier idioma requerido.
 

@@ -12,7 +12,7 @@ hide:
 ![help-and-support.png](../assets/help-and-support/overview/help-and-support.png)
 
 # 
-## ¡Bienvenido a nuestro Portal de Ayuda y Soporte!
+## ¡Bienvenido a nuestro Portal de Ayuda y Soporte! { #welcome-to-our-help-and-support-portal }
 
 Entendemos que su recorrido con Etendo a veces puede plantear preguntas o requerir asistencia. Por eso hemos creado este espacio como su recurso de referencia para todas sus consultas y necesidades.
 

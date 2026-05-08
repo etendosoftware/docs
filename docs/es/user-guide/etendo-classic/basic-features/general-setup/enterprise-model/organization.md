@@ -5,11 +5,11 @@ tags:
     - Cliente
 ---
 
-# Organización
+# Organización { #organization }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización`
 
-## Visión general
+## Visión general { #overview }
 
 Una **organización** es una empresa de un Cliente. Cada cliente debe tener al menos una organización creada ejecutando el proceso Crear organización. El proceso de creación de una organización finaliza después de establecerla como **Lista**.
 
@@ -18,7 +18,7 @@ En otras palabras, el proceso de creación de una organización finaliza despué
 !!!warning
     Una vez que una organización se establece como lista, ya no se pueden realizar cambios en la organización. Se pueden añadir nuevas organizaciones, pero no se pueden situar por encima de la organización actual. Se pueden añadir por debajo o al mismo nivel.
 
-## Organización
+## Organización { #organization_1 }
 
 La ventana **Organización** permite al usuario mantener las organizaciones creadas mediante el proceso Crear organización.
 
@@ -106,7 +106,7 @@ Una vez que una organización se establece como lista:
 - La organización recién creada no puede moverse hacia arriba o hacia abajo dentro del árbol empresarial y no puede eliminarse.
 - No es posible crear nuevas organizaciones por encima en el árbol, pero sí por debajo o al mismo nivel.
 
-### Información
+### Información { #information }
 
 La solapa **Información** permite al usuario añadir información relevante de una organización, como la ubicación y el número de identificación fiscal.
 
@@ -133,7 +133,7 @@ Este es el caso de organizaciones como las del Sector Público, para las cuales 
 
 El campo Tipo impositivo de ventas exento permite introducir un tipo impositivo de ventas exento por defecto que se utilizará en las facturas de venta de las organizaciones no deducibles fiscalmente.
 
-### Control de Periodos
+### Control de Periodos { #period-control }
 
 La solapa **Control de Periodos** es una solapa de solo lectura que lista el estado del periodo del calendario fiscal de una organización.
 
@@ -157,7 +157,7 @@ Como se muestra en la imagen siguiente, el periodo Feb-19 tiene un estado mixto,
 
 Para más información, consulte Control de Periodos de Apertura/Cierre.
 
-#### Documentos
+#### Documentos { #documents }
 
 La solapa **Documentos** es una solapa de solo lectura que lista el estado de la categoría de documento para un periodo seleccionado de una organización.
 
@@ -165,13 +165,13 @@ La solapa **Documentos** es una solapa de solo lectura que lista el estado de la
 
 Para más información, consulte Documentos en la ventana Control de Periodos de Apertura/Cierre.
 
-### Conjunto de datos
+### Conjunto de datos { #data-sets }
 
 La solapa **Conjunto de datos** permite ver los datos de referencia aplicados a la organización e informa en caso de que exista alguna actualización disponible de los datos de referencia aplicados.
 
 ![](../../../../../assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
-### Almacén
+### Almacén { #warehouse }
 
 Relación de almacenes con stock disponible priorizados de la Organización.
 
@@ -180,6 +180,15 @@ Relación de almacenes con stock disponible priorizados de la Organización.
 En esta solapa, es posible definir el/los almacén/es de la organización; de este modo, la cantidad disponible de una organización es la suma del stock disponible de su/s almacén/es.
 
 Es posible definir la prioridad de cada almacén de la organización; por lo tanto, Etendo propone primero los bienes del almacén con mayor prioridad.
+
+### Configuración de correo electrónico { #email-configuration }
+
+La solapa **Configuración de correo electrónico** permite configurar un servidor SMTP a nivel de organización. Cuando está presente, esta configuración sobrescribe los ajustes a nivel de entidad para todos los correos enviados por los usuarios de esa organización.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-email-configuration.png)
+
+!!! info
+    Para consultar la referencia completa de campos e instrucciones de configuración paso a paso, consulte [Cómo configurar el correo electrónico](../../../how-to-guides/how-to-configure-email.md).
 
 ---
 

@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Método de pago
+# Método de pago { #payment-method }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Payment Method`
 
-## Descripción general
+## Descripción general { #overview }
 
 Los **Métodos de pago** representan los medios de pago utilizados por la empresa o por un tercero, tales como:
 
@@ -34,7 +34,7 @@ Es posible asociar múltiples **Métodos de pago** a una única Cuenta financier
 
 Por ejemplo, tanto los pagos con cheque como los pagos electrónicos pueden asociarse a una única Cuenta financiera, ya que cada método de pago tiene su propia configuración.
 
-## Ciclo de Pago
+## Ciclo de Pago { #payment-cycle }
 
 Para comprender mejor la configuración de un **Método de pago**, es necesario entender el flujo de eventos dentro del ciclo de pago:
 
@@ -94,7 +94,7 @@ La etapa de pago anterior puede generar un **evento contable** según la configu
 
 -   Si está configurado para contabilizar en esta etapa, las Conciliaciones pueden contabilizarse en la pestaña Conciliación de la ventana Cuenta financiera utilizando el botón de proceso "Contabilizar" o ejecutando el proceso de contabilización en segundo plano.
 
-## Estado del Pago
+## Estado del Pago { #payment-status }
 
 Para comprender mejor la configuración del método de pago, también es necesario entender el **estado del pago** relacionado con los pasos del proceso.
 
@@ -130,7 +130,7 @@ y la **Retirada** del pago de la cuenta financiera cambia el estado del pago de 
 
 3\. La **Conciliación** o reconciliación de los pagos cambia el estado del pago de **"Cobro depositado"** o **"Pago reintegrado"** a **"Conciliado"**
 
-## Método de pago
+## Método de pago { #payment-method_1 }
 
 La imagen a continuación muestra la ventana Método de pago. Esta es la ventana donde se configuran los métodos de pago.
 
@@ -175,9 +175,9 @@ La configuración del Método de pago incluye las siguientes características:
 
 Los Métodos de pago pueden configurarse según se describe a continuación en detalle:
 
-## Configuración del Método de pago
+## Configuración del Método de pago { #payment-method-configuration }
 
-### Configuración de Cobros:
+### Configuración de Cobros: { #payment-in-configuration }
 
 -   **Cobros habilitados:** Si está marcado, el Método de pago está habilitado para recibir cobros.
 -   **Cobro automático:** Si está marcado, al completar una Factura (Cliente) el pago se recibe automáticamente.  
@@ -211,7 +211,7 @@ Los Métodos de pago pueden configurarse según se describe a continuación en d
     -   Normalmente se establecerá en la "Cuenta de reconciliación", pero podría dejarse en blanco si el Cobro del pago o el Depósito del pago ya se han contabilizado anteriormente en el proceso. Si se establece en "Cuenta de reconciliación":
         -   la Conciliación del pago se contabiliza en la "Cuenta de reconciliación" definida en la pestaña Configuración de Contabilidad de la ventana de cuenta financiera.
 
-### Configuración de Pagos:
+### Configuración de Pagos: { #payment-out-configuration }
 
 -   **Pagos habilitados:** Si está marcado, el Método de pago está habilitado para realizar pagos.
 -   **Pago Automático:** Si está marcado, al completar una Factura (Proveedor) el pago se recibe automáticamente.  
@@ -254,7 +254,7 @@ Si el **Cobro Automático/Pago Automático y el Depósito automático en cuenta/
 -   la creación del Cobro/Pago
 -   y la creación de la transacción de Depósito/Retirada en la cuenta financiera, a menos que se seleccionen las acciones "Procesar Pago(s) y Retirada" o "Procesar Cobro(s) y Depósito" durante el procesamiento del pago.
 
-## Flujo contable de pagos
+## Flujo contable de pagos { #accounting-payment-workflow }
 
 Etendo permite un proceso de contabilización de pagos flexible; esto significa que un pago asociado a un método de pago determinado puede contabilizarse o no en cualquiera de sus etapas del Ciclo de Pago.
 

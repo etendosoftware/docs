@@ -7,20 +7,20 @@ tags:
   - Financial Extensions
 ---
 
-# Cuadros plan general contable avanzado
+# Cuadros plan general contable avanzado { #balance-sheet-and-pl-structure-advanced }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Cuadros plan general contable avanzado`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_vyLPYVFycU?si=WXJE2bGLZ_TMr9JX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Descripción general
+## Descripción general { #overview }
 
 !!! info
     Esta funcionalidad está disponible a partir de la versión **3.4.0** del Financial Extensions Bundle, compatible con **Etendo 25.1**. Para instalarla, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 El informe **Cuadros plan general contable avanzado** es una versión mejorada del anterior [Cuadros plan general contable](./balance-sheet-and-pl-structure.md). Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables disponibles y la posibilidad de comparar múltiples años o periodos.
 
-## Cabecera
+## Cabecera { #header }
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced/balance-sheet-and-pl-structure-advanced-1.png)
 
@@ -70,7 +70,7 @@ Además, en adición a los **Filtros primarios** anteriores:
     - Además, se han añadido **nuevos campos** para permitir la selección de fechas y periodos específicos según las necesidades de cada informe, proporcionando mayor flexibilidad en el análisis.
  
 
-## Botones
+## Botones { #buttons }
 
 En este informe, los botones **Ver**, **Exportar a PDF** y **Exportar a Excel** se añaden a la barra superior, lo que permite visualizar la información directamente o exportarla en diferentes formatos según sea necesario.
 

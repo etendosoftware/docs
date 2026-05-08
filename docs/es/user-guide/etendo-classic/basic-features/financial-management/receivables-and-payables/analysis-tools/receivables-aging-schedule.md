@@ -7,15 +7,15 @@ tags:
   - Receivables and Payables
 ---
 
-# Antigüedad de cuentas a cobrar
+# Antigüedad de cuentas a cobrar { #receivables-aging-schedule }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Receivables Aging Schedule`
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe muestra las cuentas a cobrar vencidas a la fecha que el usuario seleccione.
 
-## Fuente de información
+## Fuente de información { #source-of-information }
 
 La fuente de información de este informe son las facturas como origen de las cuentas a cobrar y a pagar.
 
@@ -24,13 +24,13 @@ La fuente de información de este informe son las facturas como origen de las cu
     -   Si la factura tiene varias líneas del plan de pagos, cada línea tiene su propia fecha de vencimiento.
     -   Si existen pagos asociados a la factura, solo se tienen en cuenta para este informe aquellos que se encuentran en estado no confirmado a la fecha del filtro de fecha.
 
-## Multi-moneda
+## Multi-moneda { #multi-currency }
 
 Este informe admite multi-moneda.
 
 -   **Facturas**: Si existe el tipo de cambio a nivel de documento, el importe se calcula en función de ese valor; si no existe, el tipo se toma a nivel de entidad (ventana Tasas de conversión).
 
-## Filtros
+## Filtros { #filters }
 
 -   **Organización** (Obligatorio).
 -   **Esquema contable** (Obligatorio). El usuario puede filtrar los resultados por el esquema contable de la organización. Todos los importes se convertirán a la moneda del esquema contable.
@@ -44,11 +44,11 @@ Este informe admite multi-moneda.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/receivables-aging-schedule-1.png)
 
-## Salida en HTML/PDF/Excel
+## Salida en HTML/PDF/Excel { #htmlpdfexcel-output }
 
 El informe puede generarse en formato HTML, PDF y hoja de cálculo Excel.
 
-## Antigüedad de cuentas a cobrar
+## Antigüedad de cuentas a cobrar { #receivables-aging-schedule_1 }
 
 Debe mostrar una tabla con los siguientes datos:
 
@@ -74,7 +74,7 @@ Asimismo, cuando se selecciona Mostrar deuda dudosa, el importe Total es la suma
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/receivables-aging-schedule/receivables-aging-schedule-2.png)
 
-## Detalle de antigüedad de cuentas a cobrar
+## Detalle de antigüedad de cuentas a cobrar { #receivables-aging-schedule-details }
 
 Debe mostrar una tabla con los siguientes datos: Al hacer clic en el enlace PDF o XLS, se genera un archivo PDF o una hoja de cálculo, respectivamente.
 

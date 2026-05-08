@@ -9,11 +9,11 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.etendobi.extensions`
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección, el usuario puede encontrar información técnica sobre el bundle Etendo BI Extensions.
 
-## Conector de Etendo BI
+## Conector de Etendo BI { #etendo-bi-connector }
 
 :octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
 
@@ -23,7 +23,7 @@ Para este proceso, se requiere una configuración en segundo plano para crear ar
 
 La siguiente documentación trata sobre los pasos a considerar al configurar esta funcionalidad para crear los archivos CSV.
 
-### Requisitos
+### Requisitos { #requirements }
 
 Para asegurar el correcto funcionamiento del script, siga los pasos a continuación:
 
@@ -88,11 +88,11 @@ Para asegurar el correcto funcionamiento del script, siga los pasos a continuaci
     pip3 install requests
     ```
 
-### Configuración del módulo Etendo BI Connector
+### Configuración del módulo Etendo BI Connector { #etendo-bi-connector-module-configuration }
 
 Primero, realice las configuraciones adecuadas desde la **ventana Webhooks**. Esto permitirá posteriormente que los registros de BI se envíen a la **ventana BI Logs Monitor**.
 
-#### Ventana Webhooks
+#### Ventana Webhooks { #webhooks-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `WebHook Events` > `Webhooks`
 
@@ -128,7 +128,7 @@ En la **pestaña Params**, deben crearse cuatro registros con los nombres:
 !!! info
     Para más información sobre Webhooks, visite [Eventos de Webhooks](../bundles/platform/etendo-webhooks.md).
 
-#### Ventana User API Token
+#### Ventana User API Token { #user-api-token-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `WebHook Events` > `User API Token`
 
@@ -143,7 +143,7 @@ Luego, vuelva a la **ventana Webhooks** y cree un registro en la **pestaña Acce
 !!! success
     De este modo, el Webhook queda configurado. Ahora, es necesario configurar el módulo EtendoBI Connector.
 
-#### Ventana BI Connection
+#### Ventana BI Connection { #bi-connection-window }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Analysis` > `BI Connection`
 
@@ -201,7 +201,7 @@ Por ejemplo, supongamos que existe la Organización A, que tiene como organizaci
 
 Cuando se ejecuta el script, se creará una carpeta con el valor de la variable "Client" en la ventana BI Connection como nombre. Dentro de esa carpeta, se crearán subcarpetas para cada organización (en este caso, A\_logs y A\_output para la Organización A, y B\_logs y B\_output para la Organización B).
 
-#### Ventana Gestión del módulo de Empresa
+#### Ventana Gestión del módulo de Empresa { #enterprise-module-management-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Gestión del módulo de Empresa`
 
@@ -209,7 +209,7 @@ Para cargar las consultas base de Etendo, vaya a la **ventana Gestión del módu
 
 ![](../../../assets/developer-guide/etendo-classic/bundles/etendo-bi/etendo-bi-connector-6.png)
 
-#### Ventana BI Query
+#### Ventana BI Query { #bi-query-window }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Analysis` > `BI Query`
 
@@ -280,7 +280,7 @@ Todas las consultas base deben contener las columnas `ad_client_id` y `ad_org_id
 !!! warning
     Si una consulta no tiene estas columnas con sus alias, producirá un error y será ignorada.
 
-#### Ventana Procesamiento de Peticiones
+#### Ventana Procesamiento de Peticiones { #process-request-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `Planificador de procesos` > `Procesamiento de Peticiones`
 
@@ -299,7 +299,7 @@ El proceso nunca buscará una BI Connection en las organizaciones hijas de la qu
 
 En la pestaña **Monitor de Procesos**, se muestra el estado **Success** en el nuevo registro que aparece cuando se ejecuta el proceso. Es importante saber que este proceso ejecuta nuestro script de python, por lo que, si no hubo problemas hasta la ejecución del script de python, devolverá el estado success independientemente de si el script de python falla.
 
-#### Ventana BI Logs Monitor
+#### Ventana BI Logs Monitor { #bi-logs-monitor-window }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Analysis` > `BI Logs Monitor`
 
