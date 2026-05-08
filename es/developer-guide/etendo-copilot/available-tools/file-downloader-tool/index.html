@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-de-descarga-de-archivos" class="md-skip">
+        <a href="#file-downloader-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13613,7 +13613,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13622,7 +13622,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -13631,7 +13631,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16373,7 +16373,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16446,15 +16446,15 @@
   
 
 
-<h1 id="herramienta-de-descarga-de-archivos">Herramienta de descarga de archivos</h1>
+<h1 id="file-downloader-tool">Herramienta de descarga de archivos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>Herramienta de descarga de archivos</strong> está diseñada para recibir una URL y descargar el archivo correspondiente en un directorio temporal, devolviendo la ruta al archivo temporal. Esta herramienta es extremadamente valiosa para cualquier aplicación que necesite interactuar dinámicamente con archivos en la web. Le permite descargar archivos de forma eficiente y almacenarlos temporalmente, facilitando su uso y manipulación posteriores sin necesidad de preocuparse por la gestión de archivos en el sistema. Además, gestiona automáticamente distintos tipos de contenido (texto y binario), haciendo que la operación sea transparente y sencilla para el usuario.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Notas de la versión</a>.</p>
 </div>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>Esta herramienta es especialmente útil cuando necesita descargar archivos desde la web para su posterior procesamiento sin preocuparse por gestionar los archivos en el sistema local. Puede ser útil para tareas como:</p>
 <ul>
 <li>Descargar imágenes, documentos u otros archivos para su análisis y procesamiento.</li>
@@ -16496,7 +16496,7 @@
 <p>Si la URL no es válida o la descarga falla, devuelve un mensaje de error relevante.</p>
 </li>
 </ul>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <p>Si hay un archivo alojado en <code>https://example.com/file.txt</code> y es necesario descargarlo temporalmente:</p>
 <ul>
 <li><strong>Entrada</strong></li>
@@ -16761,7 +16761,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

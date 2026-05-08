@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vision-general" class="md-skip">
+        <a href="#overview" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -7886,7 +7886,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -7895,7 +7895,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-codigo" class="md-nav__link">
+  <a href="#code-formatting" class="md-nav__link">
     <span class="md-ellipsis">
       Formato de código
     </span>
@@ -16360,7 +16360,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16369,7 +16369,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-codigo" class="md-nav__link">
+  <a href="#code-formatting" class="md-nav__link">
     <span class="md-ellipsis">
       Formato de código
     </span>
@@ -16420,9 +16420,9 @@
 
   <h1>Formateo de Código en IntelliJ</h1>
 
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Este documento explica cómo IntelliJ IDEA es capaz de importar la configuración del formateador de código.</p>
-<h2 id="formato-de-codigo">Formato de código</h2>
+<h2 id="code-formatting">Formato de código</h2>
 <ol>
 <li>En primer lugar, descargue el siguiente <a download="etendo.xml" href="../../../../../../assets/developer-guide/etendo-classic/getting-started/instalation/code-formatting-style-in-intellij/etendo.xml">archivo de formato de IntelliJ</a>.</li>
 <li>Abra <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24V0zm3.723 3.111h5v1.834h-1.39v6.277h1.39v1.834h-5v-1.834h1.444V4.945H3.723zm11.055 0H17v6.5c0 .612-.055 1.111-.222 1.556-.167.444-.39.777-.723 1.11-.277.279-.666.557-1.11.668a3.9 3.9 0 0 1-1.445.278c-.778 0-1.444-.167-1.944-.445a4.8 4.8 0 0 1-1.279-1.056l1.39-1.555a3.2 3.2 0 0 0 .833.722c.277.167.611.278.945.278.389 0 .721-.111 1-.389.221-.278.333-.667.333-1.278zM2.222 19.5h9V21h-9z"></path></svg></span> Ajustes de IntelliJ IDEA</li>
@@ -16688,7 +16688,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

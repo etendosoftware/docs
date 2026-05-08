@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-un-arbol-personalizado" class="md-skip">
+        <a href="#how-to-create-a-custom-tree" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10033,7 +10033,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10042,7 +10042,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-treedatasourceservice" class="md-nav__link">
+  <a href="#treedatasourceservice-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase TreeDatasourceService
     </span>
@@ -10111,7 +10111,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-tabla-ad_tab" class="md-nav__link">
+  <a href="#example-ad-tab-table" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: tabla AD_TAB
     </span>
@@ -16440,7 +16440,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16449,7 +16449,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-treedatasourceservice" class="md-nav__link">
+  <a href="#treedatasourceservice-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase TreeDatasourceService
     </span>
@@ -16518,7 +16518,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-tabla-ad_tab" class="md-nav__link">
+  <a href="#example-ad-tab-table" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: tabla AD_TAB
     </span>
@@ -16573,15 +16573,15 @@
   
 
 
-<h1 id="como-crear-un-arbol-personalizado">Cómo crear un árbol personalizado</h1>
+<h1 id="how-to-create-a-custom-tree">Cómo crear un árbol personalizado</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Etendo proporciona soporte nativo para estructuras jerárquicas mediante los modelos <strong>ADTree y LinkToParent</strong>. Sin embargo, no todos los datos basados en árboles encajan en estas estructuras estándar. Para esos casos, Etendo permite a los desarrolladores definir <strong>datasources manuales</strong> que gestionan árboles almacenados en tablas personalizadas con su propia lógica de jerarquía.</p>
 <p>Esta sección explica cómo <strong>crear y configurar</strong> un datasource manual para trabajar con una tabla de árbol personalizada, habilitando la navegación completa del árbol, la carga y la interacción fuera de los frameworks ADTree y LinkToParent.</p>
-<h2 id="clase-treedatasourceservice">Clase TreeDatasourceService</h2>
+<h2 id="treedatasourceservice-class">Clase TreeDatasourceService</h2>
 <p>Todos los datasources de tablas personalizadas deben ser una subclase de <strong>TreeDatasourceService</strong>. Este datasource se utiliza en los siguientes eventos:</p>
 <ul>
 <li>Cuando un registro es <strong>Creado</strong> en una tabla de árbol, si esta categoría de árbol está configurada como Árbol principal. </li>
@@ -16666,7 +16666,7 @@ Este método se invoca cuando la vista de cuadrícula de árbol o el selector de
 <li><code>seqno</code>: si el árbol está ordenado, debe establecerse el número de secuencia del nodo. </li>
 <li><code>_hasChildren</code>: un booleano para especificar si el nodo tiene hijos por sí mismo.</li>
 </ul>
-<h2 id="ejemplo-tabla-ad_tab">Ejemplo: tabla AD_TAB</h2>
+<h2 id="example-ad-tab-table">Ejemplo: tabla AD_TAB</h2>
 <p>En esta sección se va a describir un <strong>datasource de árbol personalizado para la tabla ADTab</strong>.</p>
 <p>La tabla <strong>ADTab</strong> almacena solapas, que están estructuradas jerárquicamente en una ventana. Todas las ventanas tienen una solapa de cabecera, que puede tener subsolapas. Cada una de estas subsolapas puede tener subsolapas y también puede tener subsolapas propias, y así sucesivamente.</p>
 <p>La tabla ADTab <strong>construye la jerarquía</strong> de las solapas usando los campos Nivel de solapa y Número de secuencia de esta forma:</p>
@@ -16932,7 +16932,7 @@ Este método se invoca cuando la vista de cuadrícula de árbol o el selector de
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

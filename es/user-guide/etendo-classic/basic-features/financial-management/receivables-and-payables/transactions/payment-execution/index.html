@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejecucion-de-pagoscobros" class="md-skip">
+        <a href="#payment-execution" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3204,7 +3204,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión General
     </span>
@@ -16361,7 +16361,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión General
     </span>
@@ -16422,9 +16422,9 @@
   
 
 
-<h1 id="ejecucion-de-pagoscobros">Ejecución de Pagos/Cobros</h1>
+<h1 id="payment-execution">Ejecución de Pagos/Cobros</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Cobros y Pagos</code> &gt; <code>Transacciones</code> &gt; <code>Ejecución de Pagos/Cobros</code></p>
-<h2 id="vision-general">Visión General</h2>
+<h2 id="overview">Visión General</h2>
 <p>El formulario Ejecución de Pagos permite al usuario ejecutar masivamente pagos diferidos en estado "Pendiente de Ejecución".</p>
 <p>Lo mismo se aplica a los pagos que fallaron durante el proceso de ejecución debido a un atasco de papel o cualquier otro problema ocurrido por un fallo de conexión.</p>
 <p>Existen algunas opciones de filtrado obligatorias:</p>
@@ -16701,7 +16701,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

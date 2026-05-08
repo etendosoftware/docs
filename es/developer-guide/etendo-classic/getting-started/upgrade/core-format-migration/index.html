@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migracion-del-formato-core" class="md-skip">
+        <a href="#core-format-migration" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16352,7 +16352,7 @@
   
 
 
-<h1 id="migracion-del-formato-core">Migración del formato Core</h1>
+<h1 id="core-format-migration">Migración del formato Core</h1>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">De código fuente a JAR</label><label for="__tabbed_1_2">De JAR a código fuente</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -16680,7 +16680,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

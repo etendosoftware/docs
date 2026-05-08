@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-imprimir-informes-con-subinformes" class="md-skip">
+        <a href="#how-to-print-reports-with-subreports" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11468,7 +11468,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11477,7 +11477,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16371,7 +16371,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16380,7 +16380,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16429,14 +16429,14 @@
   
 
 
-<h1 id="como-imprimir-informes-con-subinformes">Cómo imprimir informes con subinformes</h1>
+<h1 id="how-to-print-reports-with-subreports">Cómo imprimir informes con subinformes</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>En esta sección se explica cómo imprimir informes que incluyen subinformes.</p>
-<h2 id="pasos-de-ejecucion">Pasos de ejecución</h2>
+<h2 id="execution-steps">Pasos de ejecución</h2>
 <p>Existen tres formas posibles de imprimir informes que incluyen subinformes:</p>
 <ol>
 <li>
@@ -16704,7 +16704,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

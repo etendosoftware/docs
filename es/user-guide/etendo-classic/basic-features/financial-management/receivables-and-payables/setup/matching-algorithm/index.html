@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algoritmo-de-reconciliacion" class="md-skip">
+        <a href="#matching-algorithm" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3605,7 +3605,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -3614,7 +3614,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algoritmo-de-reconciliacion_1" class="md-nav__link">
+  <a href="#matching-algorithm_1" class="md-nav__link">
     <span class="md-ellipsis">
       Algoritmo de Reconciliación
     </span>
@@ -16370,7 +16370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16379,7 +16379,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algoritmo-de-reconciliacion_1" class="md-nav__link">
+  <a href="#matching-algorithm_1" class="md-nav__link">
     <span class="md-ellipsis">
       Algoritmo de Reconciliación
     </span>
@@ -16440,9 +16440,9 @@
   
 
 
-<h1 id="algoritmo-de-reconciliacion">Algoritmo de Reconciliación</h1>
+<h1 id="matching-algorithm">Algoritmo de Reconciliación</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Matching Algorithm</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Etendo permite al usuario conciliar las transacciones de depósito y retirada de una cuenta financiera de dos maneras:</p>
 <ol>
 <li><strong>Automáticamente</strong>, asociando las líneas del extracto bancario (importadas o no) con las transacciones de la cuenta financiera.<br>
@@ -16451,7 +16451,7 @@
     Esta forma de conciliación no requiere un algoritmo de reconciliación.</li>
 </ol>
 <p>Etendo incluye de forma predeterminada el algoritmo de reconciliación "<strong>Estándar</strong>", que puede consultarse y configurarse en la ventana <strong>Algoritmo de Reconciliación</strong>.</p>
-<h2 id="algoritmo-de-reconciliacion_1">Algoritmo de Reconciliación</h2>
+<h2 id="matching-algorithm_1">Algoritmo de Reconciliación</h2>
 <p>La ventana Algoritmo de Reconciliación lista y permite al usuario configurar el/los algoritmo/s que se utilizarán al asociar las líneas del extracto bancario con las transacciones de la cuenta financiera.</p>
 <p>Como se muestra en la imagen anterior, el algoritmo de reconciliación "<strong>Estándar</strong>" dispone de tres casillas de verificación que permiten al usuario configurar el proceso de asociación de transacciones de la cuenta financiera:</p>
 <ul>
@@ -16716,7 +16716,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

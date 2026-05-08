@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipo-de-remesa" class="md-skip">
+        <a href="#remittance-type" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3674,7 +3674,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#remesas-sin-descuento" class="md-nav__link">
+  <a href="#non-discount-remittances" class="md-nav__link">
     <span class="md-ellipsis">
       Remesas sin descuento
     </span>
@@ -3683,7 +3683,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remesa-al-descuento" class="md-nav__link">
+  <a href="#remit-for-discount" class="md-nav__link">
     <span class="md-ellipsis">
       Remesa al Descuento
     </span>
@@ -16370,7 +16370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#remesas-sin-descuento" class="md-nav__link">
+  <a href="#non-discount-remittances" class="md-nav__link">
     <span class="md-ellipsis">
       Remesas sin descuento
     </span>
@@ -16379,7 +16379,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remesa-al-descuento" class="md-nav__link">
+  <a href="#remit-for-discount" class="md-nav__link">
     <span class="md-ellipsis">
       Remesa al Descuento
     </span>
@@ -16440,7 +16440,7 @@
   
 
 
-<h1 id="tipo-de-remesa">Tipo de Remesa</h1>
+<h1 id="remittance-type">Tipo de Remesa</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Remittance Type</code></p>
 <p>Para configurar el método de pago de remesas es necesario ejecutar previamente un conjunto de datos que haya creado este método de pago y el proceso de ejecución.</p>
 <div class="admonition info">
@@ -16464,7 +16464,7 @@ Es posible crear tantos tipos de remesa como cuentas financieras disponibles, de
 <p>Es importante que aquellos bancos desde los que se vayan a realizar transacciones de remesa tengan un tercero asociado.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-3.png"></a></p>
-<h2 id="remesas-sin-descuento">Remesas sin descuento</h2>
+<h2 id="non-discount-remittances">Remesas sin descuento</h2>
 <p>Para configurar Remesas sin descuento, defina este método de pago desde la ventana Método de pago.  </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-4.png"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-5.png"></a></p>
@@ -16472,7 +16472,7 @@ Es posible crear tantos tipos de remesa como cuentas financieras disponibles, de
 <p class="admonition-title">Info</p>
 <p>Para crear una remesa sin descuento, acceda a la <a href="../../transactions/remittance/">ventana Remesa</a>. </p>
 </div>
-<h2 id="remesa-al-descuento">Remesa al Descuento</h2>
+<h2 id="remit-for-discount">Remesa al Descuento</h2>
 <p>Para configurar Remesas al Descuento, defina el tipo desde la casilla de verificación Remesa al Descuento como se muestra en la imagen a continuación: </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-6.png"></a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-7.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-7.png"></a></p>
@@ -16733,7 +16733,7 @@ Es posible crear tantos tipos de remesa como cuentas financieras disponibles, de
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

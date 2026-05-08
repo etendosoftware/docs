@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#formato-fichero-banco" class="md-skip">
+        <a href="#bank-file-format" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3628,7 +3628,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -3637,7 +3637,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-fichero-banco_1" class="md-nav__link">
+  <a href="#bank-file-format_1" class="md-nav__link">
     <span class="md-ellipsis">
       Formato Fichero Banco
     </span>
@@ -3646,7 +3646,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excepciones" class="md-nav__link">
+  <a href="#exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       Excepciones
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16388,7 +16388,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-fichero-banco_1" class="md-nav__link">
+  <a href="#bank-file-format_1" class="md-nav__link">
     <span class="md-ellipsis">
       Formato Fichero Banco
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excepciones" class="md-nav__link">
+  <a href="#exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       Excepciones
     </span>
@@ -16458,9 +16458,9 @@
   
 
 
-<h1 id="formato-fichero-banco">Formato Fichero Banco</h1>
+<h1 id="bank-file-format">Formato Fichero Banco</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Formato Fichero Banco</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Etendo permite al usuario importar un fichero de extracto bancario a la cuenta financiera de una organización si se ha configurado un formato de fichero de banco para dicha organización.</p>
 <p>Etendo incluye algunos módulos que, una vez instalados, permiten al usuario importar ficheros de extracto bancario en Etendo en diferentes formatos:</p>
 <ul>
@@ -16474,11 +16474,11 @@
 <li>la información general, como el nombre del fichero y la fecha de importación, se guarda en la pestaña Extractos bancarios importados de la cuenta financiera</li>
 <li>y el contenido del fichero de extracto bancario se guarda línea por línea en la pestaña correspondiente Líneas de Extracto Bancario.</li>
 </ul>
-<h2 id="formato-fichero-banco_1">Formato Fichero Banco</h2>
+<h2 id="bank-file-format_1">Formato Fichero Banco</h2>
 <p>La ventana Formato Fichero Banco lista los módulos de formato de fichero de banco instalados para una organización.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/bank-file-format/bank-file-format-1.png" data-desc-position="bottom"><img alt="Bank File Format" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/bank-file-format/bank-file-format-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, un formato de fichero de banco puede aplicarse a la organización en la ventana Enterprise Module Management tras ser instalado, por lo que está disponible para cualquier organización de la entidad.</p>
-<h2 id="excepciones">Excepciones</h2>
+<h2 id="exceptions">Excepciones</h2>
 <p>Se pueden añadir excepciones a un formato de importación de fichero de banco, de modo que no sean tomadas en cuenta por el proceso de importación.
 Es posible definir el texto a excluir al asociar transacciones y líneas de extracto bancario en una cuenta financiera determinada o en todas ellas.</p>
 <hr>
@@ -16734,7 +16734,7 @@ Es posible definir el texto a excluir al asociar transacciones y líneas de extr
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

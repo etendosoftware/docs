@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validaciones-de-facturas-de-compra" class="md-skip">
+        <a href="#purchase-invoice-validations" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -5833,7 +5833,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -5842,7 +5842,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#criterios-de-duplicacion-de-facturas" class="md-nav__link">
+  <a href="#invoice-duplication-criteria" class="md-nav__link">
     <span class="md-ellipsis">
       Criterios de duplicación de facturas
     </span>
@@ -5851,7 +5851,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preferencias" class="md-nav__link">
+  <a href="#preference" class="md-nav__link">
     <span class="md-ellipsis">
       Preferencias
     </span>
@@ -5860,7 +5860,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validacion" class="md-nav__link">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
       Validación
     </span>
@@ -16386,7 +16386,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#criterios-de-duplicacion-de-facturas" class="md-nav__link">
+  <a href="#invoice-duplication-criteria" class="md-nav__link">
     <span class="md-ellipsis">
       Criterios de duplicación de facturas
     </span>
@@ -16404,7 +16404,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#preferencias" class="md-nav__link">
+  <a href="#preference" class="md-nav__link">
     <span class="md-ellipsis">
       Preferencias
     </span>
@@ -16413,7 +16413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validacion" class="md-nav__link">
+  <a href="#validation" class="md-nav__link">
     <span class="md-ellipsis">
       Validación
     </span>
@@ -16468,13 +16468,13 @@
   
 
 
-<h1 id="validaciones-de-facturas-de-compra">Validaciones de facturas de compra</h1>
+<h1 id="purchase-invoice-validations">Validaciones de facturas de compra</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.purchase.invoice.validations</code> </p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <p>Este módulo permite a los usuarios evitar la duplicación de facturas de compra dentro del sistema, siguiendo algunas reglas establecidas. Esta prevención se llevará a cabo mediante una validación que prohibirá el guardado de una factura de compra duplicada. La activación de esta validación estará determinada por una preferencia configurable.</p>
-<h2 id="criterios-de-duplicacion-de-facturas">Criterios de duplicación de facturas</h2>
+<h2 id="invoice-duplication-criteria">Criterios de duplicación de facturas</h2>
 <p>Etendo considerará una factura de compra como duplicada si ya existe otra factura de compra con los mismos datos clave, a saber:</p>
 <ul>
 <li>Tercero</li>
@@ -16483,7 +16483,7 @@
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png"></a></p>
 <p>Las facturas de compra en el sistema deben tener un número de referencia de proveedor único para cada tercero. Esto significa que si dos facturas de compra, para el mismo tercero, tienen el mismo número de referencia, se consideran duplicadas.</p>
-<h2 id="preferencias">Preferencias</h2>
+<h2 id="preference">Preferencias</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Preferencias</code></p>
 <p>Se utilizará una preferencia configurable del sistema para habilitar o deshabilitar la validación que evita la duplicación de facturas de compra. Esto permite al cliente decidir si utiliza esta funcionalidad o no. La versatilidad de las preferencias permite modificar su visibilidad, determinando si la validación estará activa para todos los usuarios, roles, organizaciones, etc.</p>
 <p>Desde la ventana Preferencias, el usuario puede crear una nueva preferencia, eligiendo la propiedad correspondiente, que para esta funcionalidad será Validar facturas de compra duplicadas. En el campo Valor, es necesario añadir Y para habilitar la preferencia o N para deshabilitarla.</p>
@@ -16492,7 +16492,7 @@
 <p>De forma predeterminada, existe una preferencia con la propiedad Validar facturas de compra duplicadas y el valor N, lo que significa que está deshabilitada. En caso de que el usuario quiera habilitar esta preferencia, es necesario crear una nueva y marcar la casilla de verificación seleccionada. Para más información, visite <a href="../../../../basic-features/general-setup/application/preference/">preferencias</a></p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png"></a></p>
-<h2 id="validacion">Validación</h2>
+<h2 id="validation">Validación</h2>
 <p>La validación evitará el guardado de una factura de compra que se considere duplicada según los criterios establecidos. Si el sistema detecta que la factura que se está guardando está duplicada, se informará al usuario mediante un mensaje que indicará la naturaleza de la duplicación, tal y como se muestra aquí:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png"></a></p>
 <hr>
@@ -16748,7 +16748,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

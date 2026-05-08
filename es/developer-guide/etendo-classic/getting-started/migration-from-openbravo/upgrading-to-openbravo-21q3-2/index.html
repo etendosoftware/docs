@@ -7987,7 +7987,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -7996,7 +7996,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-actualizar-a-openbravo-21q32" class="md-nav__link">
+  <a href="#how-to-upgrade-to-openbravo-21q32" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo actualizar a Openbravo 21Q3.2
     </span>
@@ -8006,7 +8006,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identificar-y-extraer-los-parches-personalizados-realizados-en-su-version-actual-de-openbravo" class="md-nav__link">
+  <a href="#identify-and-extract-custom-patches-made-to-your-current-version-of-openbravo" class="md-nav__link">
     <span class="md-ellipsis">
       Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo
     </span>
@@ -8015,7 +8015,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actualizar-a-openbravo-21q32" class="md-nav__link">
+  <a href="#upgrade-to-openbravo-21q32" class="md-nav__link">
     <span class="md-ellipsis">
       Actualizar a Openbravo 21Q3.2
     </span>
@@ -16390,7 +16390,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16399,7 +16399,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-actualizar-a-openbravo-21q32" class="md-nav__link">
+  <a href="#how-to-upgrade-to-openbravo-21q32" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo actualizar a Openbravo 21Q3.2
     </span>
@@ -16409,7 +16409,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identificar-y-extraer-los-parches-personalizados-realizados-en-su-version-actual-de-openbravo" class="md-nav__link">
+  <a href="#identify-and-extract-custom-patches-made-to-your-current-version-of-openbravo" class="md-nav__link">
     <span class="md-ellipsis">
       Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo
     </span>
@@ -16418,7 +16418,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actualizar-a-openbravo-21q32" class="md-nav__link">
+  <a href="#upgrade-to-openbravo-21q32" class="md-nav__link">
     <span class="md-ellipsis">
       Actualizar a Openbravo 21Q3.2
     </span>
@@ -16479,7 +16479,7 @@
 
 
 <h1 id="actualizacion-a-openbravo-21q32">Actualización a Openbravo 21Q3.2</h1>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta guía explica cómo actualizar su entorno actual de Openbravo a la versión 21Q3.2. Esto implica dos pasos principales:</p>
 <ul>
 <li>Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo</li>
@@ -16489,7 +16489,7 @@
 <p class="admonition-title">Info</p>
 <p>Esta actualización es necesaria para migrar Openbravo a Etendo.</p>
 </div>
-<h2 id="como-actualizar-a-openbravo-21q32">Cómo actualizar a Openbravo 21Q3.2</h2>
+<h2 id="how-to-upgrade-to-openbravo-21q32">Cómo actualizar a Openbravo 21Q3.2</h2>
 <div class="admonition info">
 <p class="admonition-title">Requisitos</p>
 <ul>
@@ -16497,7 +16497,7 @@
 <li>Una herramienta de comparación/fusión si es necesario generar parches</li>
 </ul>
 </div>
-<h3 id="identificar-y-extraer-los-parches-personalizados-realizados-en-su-version-actual-de-openbravo">Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo</h3>
+<h3 id="identify-and-extract-custom-patches-made-to-your-current-version-of-openbravo">Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo</h3>
 <ol>
 <li>
 <p>Clonar el repositorio core en la nueva versión</p>
@@ -16516,7 +16516,7 @@
 </li>
 <li>Extraiga los parches personalizados (evite generar parches para cambios que sean correcciones de errores, ya que deberían estar incluidos en la nueva versión).</li>
 </ol>
-<h3 id="actualizar-a-openbravo-21q32">Actualizar a Openbravo 21Q3.2</h3>
+<h3 id="upgrade-to-openbravo-21q32">Actualizar a Openbravo 21Q3.2</h3>
 <ol>
 <li>
 <p>Clonar el repositorio core en la nueva versión:</p>
@@ -16803,7 +16803,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-definir-la-logica-para-mostrar-para-solapas" class="md-skip">
+        <a href="#how-to-define-display-logic-for-tabs" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16350,8 +16350,8 @@
   
 
 
-<h1 id="como-definir-la-logica-para-mostrar-para-solapas">Cómo definir la Lógica para mostrar para solapas</h1>
-<h1 id="vision-general">Visión general</h1>
+<h1 id="how-to-define-display-logic-for-tabs">Cómo definir la Lógica para mostrar para solapas</h1>
+<h1 id="overview">Visión general</h1>
 <p>El objetivo de este procedimiento es mostrar cómo puede definir la lógica para mostrar para solapas, de modo que su visibilidad dependa del valor de los campos de sus solapas ancestro, de las preferencias y de las variables del sistema. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -16359,7 +16359,7 @@
 </div>
 <p>Para ello, se ha añadido un nuevo campo denominado <strong>Lógica para mostrar</strong> a la solapa <strong>Solapa</strong> en la ventana <strong>Ventanas, solapas y campos</strong>:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs/display-logic.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs/display-logic.png"></a></p>
-<h1 id="como-definir-la-logica-para-mostrar-de-la-solapa">Cómo definir la Lógica para mostrar de la solapa</h1>
+<h1 id="how-to-define-the-tab-display-logic">Cómo definir la Lógica para mostrar de la solapa</h1>
 <p>La sintaxis de la solapa <strong>Lógica para mostrar</strong> es la misma que la del campo Lógica para mostrar. Se pueden introducir valores booleanos (<code>true</code>, <code>false</code>), así como expresiones que se evalúen como un valor booleano.</p>
 <ul>
 <li>
@@ -16625,7 +16625,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

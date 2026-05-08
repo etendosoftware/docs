@@ -16520,7 +16520,7 @@ The API Call Tool will replace <code>@BASE64_filepath@</code> with the base64-en
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

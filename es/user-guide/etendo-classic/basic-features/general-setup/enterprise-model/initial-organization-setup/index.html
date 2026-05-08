@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crear-organizacion" class="md-skip">
+        <a href="#initial-organization-setup" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1346,7 +1346,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -1355,7 +1355,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#crear-organizacion_1" class="md-nav__link">
+  <a href="#initial-organization-setup_1" class="md-nav__link">
     <span class="md-ellipsis">
       Crear organización
     </span>
@@ -1364,7 +1364,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplos
     </span>
@@ -16377,7 +16377,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16386,7 +16386,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#crear-organizacion_1" class="md-nav__link">
+  <a href="#initial-organization-setup_1" class="md-nav__link">
     <span class="md-ellipsis">
       Crear organización
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplos
     </span>
@@ -16456,9 +16456,9 @@
   
 
 
-<h1 id="crear-organizacion">Crear organización</h1>
+<h1 id="initial-organization-setup">Crear organización</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Crear organización</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Una <strong>Organización</strong> es una empresa de una entidad. Una entidad puede tener al menos una o incluso más de una organización como forma de configurar diferentes tipos de modelos empresariales.</p>
 <p>En general, las organizaciones pueden ser:</p>
 <ul>
@@ -16502,7 +16502,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="crear-organizacion_1">Crear organización</h2>
+<h2 id="initial-organization-setup_1">Crear organización</h2>
 <p>Como ya se ha mencionado, las Organizaciones se crean ejecutando el proceso Crear organización y, además, una vez creada una organización debe establecerse como <strong>Lista</strong> en la ventana Organización.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png"></a></p>
 <p>Como se muestra en la imagen anterior, una organización puede crearse proporcionando los datos relevantes a continuación:</p>
@@ -16599,7 +16599,7 @@ Una vez más, las dimensiones seleccionadas aquí se listarán en la pestaña de
 </li>
 <li>No debería asignarse una configuración de libro mayor a la organización (*), porque entonces se compartirá con todas las organizaciones por debajo.</li>
 </ul>
-<h2 id="ejemplos">Ejemplos</h2>
+<h2 id="examples">Ejemplos</h2>
 <ol>
 <li>
 <p><strong>Datos de demostración de Etendo</strong>:</p>
@@ -16909,7 +16909,7 @@ Una vez más, las dimensiones seleccionadas aquí se listarán en la pestaña de
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

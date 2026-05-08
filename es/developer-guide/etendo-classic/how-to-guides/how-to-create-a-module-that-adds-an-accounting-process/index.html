@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10114,7 +10114,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introducción
     </span>
@@ -10123,7 +10123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-definicion-del-modulo" class="md-nav__link">
+  <a href="#creating-the-module-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la definición del módulo
     </span>
@@ -10132,7 +10132,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-configuracion-del-posproceso-contable" class="md-nav__link">
+  <a href="#creating-the-accounting-post-process-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la configuración del posproceso contable
     </span>
@@ -10142,7 +10142,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definicion-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del conjunto de datos
     </span>
@@ -16382,7 +16382,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introducción
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-definicion-del-modulo" class="md-nav__link">
+  <a href="#creating-the-module-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la definición del módulo
     </span>
@@ -16400,7 +16400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-configuracion-del-posproceso-contable" class="md-nav__link">
+  <a href="#creating-the-accounting-post-process-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la configuración del posproceso contable
     </span>
@@ -16410,7 +16410,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definicion-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del conjunto de datos
     </span>
@@ -16466,7 +16466,7 @@
 
   <h1>Cómo Crear un Módulo que Agrega un Proceso Contable</h1>
 
-<h2 id="introduccion">Introducción</h2>
+<h2 id="introduction">Introducción</h2>
 <p>Este módulo no sirve para cambiar los asientos contables generados por Etendo, sino para ejecutar cualquier proceso adicional que deba ejecutarse en el momento de contabilizar.</p>
 <p>Desde el punto de vista funcional, no existe ningún requisito especial para el desarrollo de este módulo. Solo se recomienda comprender el papel de los <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration/">Esquemas contables</a> en la configuración contable general de Etendo.</p>
 <p>Etendo permite ejecutar procesos justo después de la lógica de contabilización para cualquier documento que se haya completado correctamente. Este tipo de procesos se denominan posprocesos contables porque se ejecutan después del proceso contable normal.</p>
@@ -16475,7 +16475,7 @@
 <p class="admonition-title">Note</p>
 <p>Dependiendo de los requisitos del país, estos posprocesos contables pueden no ser necesarios. Este tipo de módulos no forman parte del núcleo de una localización, como las traducciones, el plan contable o los impuestos, y deben incluirse en una extensión de localización solo en caso de que realmente sean necesarios.</p>
 </div>
-<h2 id="creacion-de-la-definicion-del-modulo">Creación de la definición del módulo</h2>
+<h2 id="creating-the-module-definition">Creación de la definición del módulo</h2>
 <p>Cada vez que se desarrolla un nuevo módulo, el primer paso siempre debe ser crear la definición del módulo y registrarlo en el Repositorio Central.</p>
 <p>Estas son las consideraciones especiales para el módulo:</p>
 <ul>
@@ -16492,11 +16492,11 @@
 </div>
 <p>Finalmente, dentro del directorio del paquete java del posproceso contable del módulo, cree la carpeta src, donde se almacena la clase Java que implementa el código del posproceso contable.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png"></a></p>
-<h2 id="creacion-de-la-configuracion-del-posproceso-contable">Creación de la configuración del posproceso contable</h2>
+<h2 id="creating-the-accounting-post-process-configuration">Creación de la configuración del posproceso contable</h2>
 <p>La clase Java que implementa la lógica del posproceso contable se define en la ventana Accounting Process. La definición es bastante sencilla y solo requiere un nombre y el nombre de la clase Java, que debe estar dentro del paquete java del módulo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png"></a></p>
 <p>Este posproceso contable se asociará posteriormente a un esquema contable. Por lo tanto, en este paso es importante definir tantas clases Java como posprocesos contables queramos incluir en nuestro módulo, aunque normalmente se recomienda incluir solo un proceso por módulo para mantener la regla general de aislar funcionalidades en módulos separados.</p>
-<h3 id="definicion-del-conjunto-de-datos">Definición del conjunto de datos</h3>
+<h3 id="dataset-definition">Definición del conjunto de datos</h3>
 <p>La definición del conjunto de datos es un paso clave en este proceso. Una definición incorrecta del conjunto de datos puede echar a perder todo el trabajo anterior, por lo que es importante seguir todas estas consideraciones:</p>
 <ul>
 <li>El conjunto de datos debe pertenecer a su módulo de posproceso contable.</li>
@@ -16765,7 +16765,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

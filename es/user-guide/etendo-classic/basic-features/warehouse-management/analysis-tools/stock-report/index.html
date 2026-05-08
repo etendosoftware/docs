@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#informe-stock" class="md-skip">
+        <a href="#stock-report" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -2170,6 +2170,15 @@
   <a href="#sample-report-output" class="md-nav__link">
     <span class="md-ellipsis">
       Sample Report Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
     </span>
   </a>
   
@@ -16385,6 +16394,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -16438,7 +16456,7 @@
   
 
 
-<h1 id="informe-stock">Informe Stock</h1>
+<h1 id="stock-report">Informe Stock</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Informe Stock</code></p>
 <p>El Informe Stock muestra el nivel de stock de todos los productos (que tienen una cantidad en stock distinta de cero) y su ubicación (almacén y contenedor de almacenamiento) agrupados por categoría de producto. Para cada producto se muestran la fila, la cantidad, la unidad, el atributo, la estantería, la columna, la altura y el almacén.</p>
 <h2 id="parameters-window">Parameters Window</h2>
@@ -16448,6 +16466,11 @@
 <p>Los campos <strong>Estantería (x)</strong>, <strong>Columna (y)</strong>, <strong>Altura (z)</strong> corresponden a <strong>Estantería (X)</strong>, <strong>Columna (Y)</strong> y <strong>Altura (Z)</strong> del contenedor de almacenamiento.</p>
 <h2 id="sample-report-output">Sample Report Output</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png" data-desc-position="bottom"><img alt="Salida de ejemplo del Informe Stock" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png"></a></p>
+<h2 id="related-articles">Artículos relacionados</h2>
+<p><a class="md-button md-button--primary" href="../valued-stock-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe de Valuación de Existencias</a>
+<a class="md-button md-button--primary" href="../material-transaction-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe Transacción de Material</a>
+<a class="md-button md-button--primary" href="../pareto-product-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe Pareto de Productos</a>
+<a class="md-button md-button--primary" href="../../getting-started/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Introducción a Gestión de Almacén</a></p>
 <hr>
 <p>Este trabajo es un derivado de <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
@@ -16701,7 +16724,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

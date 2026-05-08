@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requisitos-previos" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -12990,7 +12990,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -12999,7 +12999,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#descargo-de-responsabilidad" class="md-nav__link">
+  <a href="#disclaimer" class="md-nav__link">
     <span class="md-ellipsis">
       Descargo de responsabilidad
     </span>
@@ -13008,7 +13008,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-1-configurar-apache2-como-un-proxy-inverso" class="md-nav__link">
+  <a href="#step-1-configure-apache2-as-a-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 1: Configurar Apache2 como un proxy inverso
     </span>
@@ -13017,7 +13017,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-2-verificar-la-configuracion" class="md-nav__link">
+  <a href="#step-2-verify-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 2: Verificar la configuración
     </span>
@@ -13026,7 +13026,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-configuracion-del-firewall-opcional" class="md-nav__link">
+  <a href="#step-3-firewall-configuration-optional" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 3: Configuración del firewall (opcional)
     </span>
@@ -16394,7 +16394,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -16403,7 +16403,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#descargo-de-responsabilidad" class="md-nav__link">
+  <a href="#disclaimer" class="md-nav__link">
     <span class="md-ellipsis">
       Descargo de responsabilidad
     </span>
@@ -16412,7 +16412,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-1-configurar-apache2-como-un-proxy-inverso" class="md-nav__link">
+  <a href="#step-1-configure-apache2-as-a-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 1: Configurar Apache2 como un proxy inverso
     </span>
@@ -16421,7 +16421,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-2-verificar-la-configuracion" class="md-nav__link">
+  <a href="#step-2-verify-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 2: Verificar la configuración
     </span>
@@ -16430,7 +16430,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-configuracion-del-firewall-opcional" class="md-nav__link">
+  <a href="#step-3-firewall-configuration-optional" class="md-nav__link">
     <span class="md-ellipsis">
       Paso 3: Configuración del firewall (opcional)
     </span>
@@ -16469,7 +16469,7 @@
   <h1>Cómo Dar Acceso Público a RX con Apache2</h1>
 
 <p>Esta guía ofrece un enfoque integral para hacer que el Etendo RX Edge Service sea accesible públicamente, garantizando al mismo tiempo una comunicación segura mediante cifrado SSL. El proceso implica el uso de Apache2, un software de servidor web popular, como proxy inverso. Esta configuración no solo facilita el acceso público, sino que también añade una capa adicional de seguridad al cifrar la transferencia de datos entre los clientes y el servidor.</p>
-<h3 id="requisitos-previos">Requisitos previos</h3>
+<h3 id="prerequisites">Requisitos previos</h3>
 <ul>
 <li>Lea la <a href="../../concepts/config-server/">Guía del servidor de configuración</a> y la <a href="../../concepts/edge-server/">Guía de Edge</a></li>
 <li>Etendo RX Edge Service configurado y en ejecución.</li>
@@ -16477,7 +16477,7 @@
 <li>Una configuración SSL válida</li>
 <li>Acceso root o sudo al servidor.</li>
 </ul>
-<h3 id="descargo-de-responsabilidad">Descargo de responsabilidad</h3>
+<h3 id="disclaimer">Descargo de responsabilidad</h3>
 <p>Esta guía para configurar el acceso público al Etendo RX Edge Service usando Apache2 SSL Proxy abarca temas complejos que pueden ir más allá de su alcance, requiriendo conocimientos o experiencia adicionales:</p>
 <ul>
 <li>Configuración del servidor web Apache2: requiere habilidades básicas de administración de servidores web, incluida la configuración de hosts virtuales y la configuración de SSL.</li>
@@ -16485,7 +16485,7 @@
 <li>Seguridad de red y firewalls: implica ajustar la configuración del firewall para el tráfico HTTPS.</li>
 <li>Configuración de proxy inverso: comprensión del funcionamiento y la configuración de los proxies inversos.</li>
 </ul>
-<h3 id="paso-1-configurar-apache2-como-un-proxy-inverso">Paso 1: Configurar Apache2 como un proxy inverso</h3>
+<h3 id="step-1-configure-apache2-as-a-reverse-proxy">Paso 1: Configurar Apache2 como un proxy inverso</h3>
 <ol>
 <li><strong>Habilitar módulos de proxy</strong>: habilite los módulos de proxy necesarios en Apache2.</li>
 </ol>
@@ -16514,7 +16514,7 @@
 </ul>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
 </span></code></pre></div>
-<h3 id="paso-2-verificar-la-configuracion">Paso 2: Verificar la configuración</h3>
+<h3 id="step-2-verify-configuration">Paso 2: Verificar la configuración</h3>
 <ol>
 <li>
 <p><strong>Prueba en el navegador</strong>: abra un navegador web y navegue a <code>https://yourdomain.com</code>. Debería ver la interfaz de Etendo RX Edge Service, servida de forma segura a través de HTTPS.</p>
@@ -16523,7 +16523,7 @@
 <p><strong>Comprobar la configuración SSL</strong>: utilice una herramienta de comprobación SSL en línea para verificar que su certificado SSL está correctamente instalado y es válido.</p>
 </li>
 </ol>
-<h3 id="paso-3-configuracion-del-firewall-opcional">Paso 3: Configuración del firewall (opcional)</h3>
+<h3 id="step-3-firewall-configuration-optional">Paso 3: Configuración del firewall (opcional)</h3>
 <p>Si su servidor está protegido por un firewall, asegúrese de que el puerto 443 (HTTPS) esté abierto para las conexiones entrantes.</p>
 <h3 id="conclusion">Conclusión</h3>
 <p>Su Etendo RX Edge Service ahora es accesible públicamente con seguridad SSL proporcionada por Apache2. Esta configuración garantiza que el tráfico entre los clientes y su Edge Service esté cifrado y sea seguro. Recuerde mantener sus certificados SSL y Apache2 actualizados para garantizar la seguridad y el rendimiento.</p>
@@ -16777,7 +16777,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-restringir-los-movimientos-de-nodos-en-un-arbol" class="md-skip">
+        <a href="#how-to-restrict-the-movements-of-nodes-in-a-tree" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11521,7 +11521,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11530,7 +11530,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-checktreeoperationmanager" class="md-nav__link">
+  <a href="#checktreeoperationmanager-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase CheckTreeOperationManager
     </span>
@@ -11540,7 +11540,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sobrescritura-del-metodo-checknodemovement" class="md-nav__link">
+  <a href="#overwriting-the-checknodemovement-method" class="md-nav__link">
     <span class="md-ellipsis">
       Sobrescritura del método checkNodeMovement
     </span>
@@ -11549,7 +11549,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#asociar-un-checktreeoperationmanager-con-un-arbol-en-particular" class="md-nav__link">
+  <a href="#associating-a-checktreeoperationmanager-with-a-particular-tree" class="md-nav__link">
     <span class="md-ellipsis">
       Asociar un CheckTreeOperationManager con un árbol en particular
     </span>
@@ -11563,7 +11563,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-arbol-de-organizacion" class="md-nav__link">
+  <a href="#example-organization-tree" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: Árbol de Organización
     </span>
@@ -16404,7 +16404,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16413,7 +16413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-checktreeoperationmanager" class="md-nav__link">
+  <a href="#checktreeoperationmanager-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase CheckTreeOperationManager
     </span>
@@ -16423,7 +16423,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sobrescritura-del-metodo-checknodemovement" class="md-nav__link">
+  <a href="#overwriting-the-checknodemovement-method" class="md-nav__link">
     <span class="md-ellipsis">
       Sobrescritura del método checkNodeMovement
     </span>
@@ -16432,7 +16432,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#asociar-un-checktreeoperationmanager-con-un-arbol-en-particular" class="md-nav__link">
+  <a href="#associating-a-checktreeoperationmanager-with-a-particular-tree" class="md-nav__link">
     <span class="md-ellipsis">
       Asociar un CheckTreeOperationManager con un árbol en particular
     </span>
@@ -16446,7 +16446,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-arbol-de-organizacion" class="md-nav__link">
+  <a href="#example-organization-tree" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: Árbol de Organización
     </span>
@@ -16501,17 +16501,17 @@
   
 
 
-<h1 id="como-restringir-los-movimientos-de-nodos-en-un-arbol">Cómo restringir los movimientos de nodos en un árbol</h1>
+<h1 id="how-to-restrict-the-movements-of-nodes-in-a-tree">Cómo restringir los movimientos de nodos en un árbol</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>vista de cuadrícula de árbol</strong> permite mover un nodo a otro padre o a otra posición dentro de su nodo padre actual.</p>
 <p>Algunos árboles pueden tener restricciones sobre cómo se puede mover un nodo a otra posición del árbol. Por ejemplo, el árbol de <strong>Organización</strong> no permite mover un nodo si pertenece a una organización que está lista, y el árbol de menú no permite mover un nodo si pertenece a un elemento de menú cuyo módulo no está en desarrollo.</p>
 <p>Los desarrolladores pueden restringir los movimientos de nodos de un árbol en particular mediante la creación de una subclase de la clase <code>CheckTreeOperationManager</code>.</p>
-<h2 id="clase-checktreeoperationmanager">Clase CheckTreeOperationManager</h2>
-<h3 id="sobrescritura-del-metodo-checknodemovement">Sobrescritura del método checkNodeMovement</h3>
+<h2 id="checktreeoperationmanager-class">Clase CheckTreeOperationManager</h2>
+<h3 id="overwriting-the-checknodemovement-method">Sobrescritura del método checkNodeMovement</h3>
 <p><code>CheckTreeOperationManager</code> es una clase abstracta que expone un método:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">ActionResponse</span><span class="w"> </span><span class="nf">checkNodeMovement</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nodeId</span><span class="p">,</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">newParentId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prevNodeId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nextNodeId</span><span class="p">);</span>
@@ -16531,13 +16531,13 @@
 <p>El atributo success representa si el movimiento del nodo es válido. Los atributos <code>messageType</code> y message pueden utilizarse para mostrar un mensaje en la barra de mensajes del cliente independientemente de la validez del movimiento del nodo.</p>
 <p>El método <code>checkNodeMovement</code> es ejecutado por <code>TreeDatasourceService</code> después de cada movimiento de nodo si se ha definido un <code>CheckTreeOperationManager</code> para el árbol al que pertenece el nodo. Si el método <code>checkNodeMovement</code> devuelve un <code>ActionResponse</code> con success = true, entonces el movimiento del nodo se confirmará y el nodo se mostrará en el lado del cliente en su posición actualizada. 
 Si devuelve un Action response con <code>success = false</code>, el movimiento del nodo se cancelará y el nodo volverá a su posición original en el lado del cliente.</p>
-<h3 id="asociar-un-checktreeoperationmanager-con-un-arbol-en-particular">Asociar un <code>CheckTreeOperationManager</code> con un árbol en particular</h3>
+<h3 id="associating-a-checktreeoperationmanager-with-a-particular-tree">Asociar un <code>CheckTreeOperationManager</code> con un árbol en particular</h3>
 <p>Los <code>CheckTreeOperationManagers</code> se instancian usando <a href="../../concepts/etendo-architecture/#introducing-weld-dependency-injection-and-more">inyección de dependencias</a>.</p>
 <p>Todas las implementaciones de <code>CheckTreeOperationManagers</code> deben tener alcance de aplicación y deben tener el nombre de la tabla asociada con el árbol como un calificador. Por ejemplo, el <code>CheckTreeOperationManager</code> utilizado para el árbol de menú tiene las siguientes anotaciones:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="nd">@ApplicationScoped</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">"ADMenu"</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="ejemplo-arbol-de-organizacion">Ejemplo: Árbol de Organización</h2>
+<h2 id="example-organization-tree">Ejemplo: Árbol de Organización</h2>
 <p>En el árbol definido para la tabla Organización, no se permite mover nodos si pertenecen a una organización que está marcada como lista.</p>
 <p>Esta es la implementación completa de su <code>CheckTreeOperationManager</code>:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.openbravo.service.datasource.treeChecks</span><span class="p">;</span>
@@ -16840,7 +16840,7 @@ Si un usuario intentara mover un nodo asociado a una organización marcada como 
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-docker" class="md-skip">
+        <a href="#docker-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13544,7 +13544,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13553,7 +13553,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -13563,7 +13563,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros
     </span>
@@ -13572,7 +13572,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-de-ejecucion" class="md-nav__link">
+  <a href="#execution-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       Flujo de ejecución
     </span>
@@ -13586,7 +13586,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16397,7 +16397,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16406,7 +16406,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16416,7 +16416,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros
     </span>
@@ -16425,7 +16425,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-de-ejecucion" class="md-nav__link">
+  <a href="#execution-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       Flujo de ejecución
     </span>
@@ -16439,7 +16439,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16500,23 +16500,23 @@
   
 
 
-<h1 id="herramienta-docker">Herramienta Docker</h1>
+<h1 id="docker-tool">Herramienta Docker</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>DockerTool</strong> es una herramienta que gestiona contenedores Docker para ejecutar código Python o Bash. Permite a los usuarios ejecutar comandos aislados, copiar archivos en contenedores y limpiar los contenedores automáticamente tras un periodo de inactividad.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para obtener instrucciones, visite el marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. Para obtener detalles sobre versiones, compatibilidad con el core y nuevas funcionalidades, consulte <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Notas de la versión</a>.</p>
 </div>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>Esta herramienta facilita la <strong>ejecución de código en entornos Docker aislados</strong>, dando soporte a flujos de trabajo de desarrollo, automatización y tareas del sistema. Las funcionalidades principales incluyen:</p>
-<h3 id="parametros">Parámetros</h3>
+<h3 id="parameters">Parámetros</h3>
 <ul>
 <li><strong>Executor</strong>: El tipo de ejecutor para el código (<code>python</code> o <code>bash</code>).</li>
 <li><strong>Código</strong>: El código que se ejecutará dentro del contenedor.</li>
 <li><strong>Archivos a copiar</strong>: Una lista opcional de rutas de archivo para copiar dentro del contenedor para su ejecución.</li>
 </ul>
-<h3 id="flujo-de-ejecucion">Flujo de ejecución</h3>
+<h3 id="execution-workflow">Flujo de ejecución</h3>
 <ol>
 <li>
 <p><strong>Creación del contenedor</strong>:</p>
@@ -16545,7 +16545,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <ul>
 <li><strong>Entrada de ejemplo</strong></li>
 </ul>
@@ -16819,7 +16819,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

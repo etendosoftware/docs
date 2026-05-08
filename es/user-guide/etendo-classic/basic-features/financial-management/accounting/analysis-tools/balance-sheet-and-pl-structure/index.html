@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cuadros-plan-general-contable" class="md-skip">
+        <a href="#balance-sheet-and-pl-structure" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4149,7 +4149,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -4158,7 +4158,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16370,7 +16370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16379,7 +16379,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16440,14 +16440,14 @@
   
 
 
-<h1 id="cuadros-plan-general-contable">Cuadros plan general contable</h1>
+<h1 id="balance-sheet-and-pl-structure">Cuadros plan general contable</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Cuadros plan general contable</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>El motor de informes de Cuadros plan general contable permite al usuario generar el Balance de situación y el Estado de pérdidas y ganancias, los cuales deben configurarse previamente.</p>
 <p>El informe de Balance de situación es un resumen cuantitativo de la situación financiera de una organización en un momento específico. Este informe muestra un resumen de los saldos de activos, pasivos y patrimonio neto.</p>
 <p>El informe de Pérdidas y ganancias muestra los ingresos, gastos y el beneficio neto de una organización.</p>
 <p>Estos informes deben configurarse antes de generarse en la ventana <a href="../../setup/balance-sheet-and-pl-structure-setup/">Configuración de Cuadros plan general contable</a>.</p>
-<h2 id="cabecera">Cabecera</h2>
+<h2 id="header">Cabecera</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure/balance-sheet-and-pl-structure-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure/balance-sheet-and-pl-structure-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, los datos a completar son:</p>
 <ul>
@@ -16751,7 +16751,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

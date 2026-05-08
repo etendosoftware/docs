@@ -8542,7 +8542,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -8551,7 +8551,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arquitectura" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       Arquitectura
     </span>
@@ -8560,7 +8560,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tareas-comunes" class="md-nav__link">
+  <a href="#common-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       Tareas comunes
     </span>
@@ -8569,7 +8569,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mas-informacion" class="md-nav__link">
+  <a href="#more-information" class="md-nav__link">
     <span class="md-ellipsis">
       Más información
     </span>
@@ -16389,7 +16389,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arquitectura" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       Arquitectura
     </span>
@@ -16407,7 +16407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tareas-comunes" class="md-nav__link">
+  <a href="#common-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       Tareas comunes
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mas-informacion" class="md-nav__link">
+  <a href="#more-information" class="md-nav__link">
     <span class="md-ellipsis">
       Más información
     </span>
@@ -16476,14 +16476,14 @@
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p><strong>DBSourceManager</strong> es una biblioteca Java que ayuda con tareas de base de datos relacionadas con el desarrollo. Su funcionalidad más importante es la independencia de la base de datos. Usted podrá centrarse en el desarrollo de funcionalidades de base de datos y dejar que DBSourceManager se encargue de los detalles de implementación de la base de datos.</p>
 <p>DBSourceManager se basa en <a href="https://db.apache.org/ddlutils/" target="_blank">DDLUtils</a> y el modelo de base de datos utilizado por DBSourceManager es una extensión del modelo utilizado por <strong>DDLUtils</strong>. DDLUtils soporta una amplia lista de motores de base de datos, pero todas las extensiones creadas en DBSourceManager solo funcionan para <strong>Oracle</strong> y <strong>PostgreSQL</strong>.</p>
 <p>El objetivo principal de DBSourceManager es ayudar al desarrollador en la creación y el mantenimiento de objetos físicos de base de datos y datos. La forma en que esto funciona es mediante un conjunto de archivos <code>XML</code> que representan objetos físicos de base de datos o registros de tablas. DBSourceManager contiene utilidades que permiten al desarrollador exportar sus objetos a estos archivos <code>XML</code>, y que permiten que las modificaciones realizadas en estos archivos <code>XML</code> se trasladen a la base de datos actualizándola.</p>
 <p>Por lo tanto, el desarrollador puede centrarse en crear y cambiar sus componentes (ya sea en la base de datos o en los archivos <code>XML</code>), y DBSourceManager puede trasladar automáticamente los cambios de un lugar al otro.</p>
-<h2 id="arquitectura">Arquitectura</h2>
+<h2 id="architecture">Arquitectura</h2>
 <p>Como se indicó anteriormente, <strong>DBSourceManager</strong> se basa en el proyecto Apache ddlutils. Internamente, su estructura puede describirse como una serie de clases para gestionar el modelo de base de datos y una serie de clases relacionadas con cómo los objetos y sus cambios se transforman en comandos específicos del RDBMS.</p>
-<h2 id="tareas-comunes">Tareas comunes</h2>
+<h2 id="common-tasks">Tareas comunes</h2>
 <p>Las principales tareas que DBSourceManager permite realizar al desarrollador son las siguientes:</p>
 <ul>
 <li><strong><code>export.database</code></strong> : esta tarea genera archivos <code>XML</code> correspondientes a los objetos físicos de base de datos y al contenido de las tablas del Diccionario de Aplicación. </li>
@@ -16491,7 +16491,7 @@
 <li><strong><code>export.config.script</code></strong> : esta tarea genera un script de configuración del sistema actual.</li>
 </ul>
 <p>Para más información sobre las tareas de compilación de Etendo, visite <a href="../../developer-tools/etendo-gradle-plugin/#build-tasks">Tareas de compilación de desarrollo</a>. Estas tareas están relacionadas con los <a href="../modularity-concepts/">conceptos de modularidad</a> en Etendo.</p>
-<h2 id="mas-informacion">Más información</h2>
+<h2 id="more-information">Más información</h2>
 <p>DBSourceManager utiliza un mecanismo denominado <strong>Filtros de modelo</strong>, para eliminar intencionadamente algunos objetos no deseados del modelo físico de base de datos. Estos filtros pueden ampliarse mediante módulos. Para saber cómo, puede leer <a href="../../how-to-guides/how-to-exclude-database-physical-objects-from-model/">Cómo excluir objetos físicos de base de datos del modelo</a>.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/DBSourceManager" target="_blank">DBSourceManager</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16746,7 +16746,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

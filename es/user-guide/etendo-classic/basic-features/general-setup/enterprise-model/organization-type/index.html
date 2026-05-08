@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipo-de-organizacion" class="md-skip">
+        <a href="#organization-type" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1392,7 +1392,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -1401,7 +1401,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-tipo-de-organizacion" class="md-nav__link">
+  <a href="#organization-type-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Tipo de Organización
     </span>
@@ -16368,7 +16368,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16377,7 +16377,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-tipo-de-organizacion" class="md-nav__link">
+  <a href="#organization-type-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Tipo de Organización
     </span>
@@ -16432,11 +16432,11 @@
   
 
 
-<h1 id="tipo-de-organizacion">Tipo de Organización</h1>
+<h1 id="organization-type">Tipo de Organización</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Tipo de Organización</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Una <strong>organización</strong> puede ser una Entidad Legal, una Unidad de Negocio o ninguna de las dos. En esta ventana, también puede seleccionar si las transacciones están permitidas o no para este tipo de organización.</p>
-<h2 id="ventana-tipo-de-organizacion">Ventana Tipo de Organización</h2>
+<h2 id="organization-type-window">Ventana Tipo de Organización</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization-type.png"></a></p>
 <p>Los tipos de Organización predeterminados de Etendo son:</p>
 <ul>
@@ -16739,7 +16739,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

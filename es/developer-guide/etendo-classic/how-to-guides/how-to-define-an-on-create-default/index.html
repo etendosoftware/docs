@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-definir-un-valor-por-defecto-al-crear" class="md-skip">
+        <a href="#how-to-define-an-on-create-default" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11005,7 +11005,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11014,7 +11014,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepto" class="md-nav__link">
+  <a href="#concept" class="md-nav__link">
     <span class="md-ellipsis">
       Concepto
     </span>
@@ -11023,7 +11023,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-desarrollo" class="md-nav__link">
+  <a href="#development-process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso de desarrollo
     </span>
@@ -11032,7 +11032,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-eliminar-correctamente-un-oncreatedefault" class="md-nav__link">
+  <a href="#how-to-correctly-remove-an-oncreatedefault" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo eliminar correctamente un onCreateDefault
     </span>
@@ -16389,7 +16389,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepto" class="md-nav__link">
+  <a href="#concept" class="md-nav__link">
     <span class="md-ellipsis">
       Concepto
     </span>
@@ -16407,7 +16407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-desarrollo" class="md-nav__link">
+  <a href="#development-process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso de desarrollo
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-eliminar-correctamente-un-oncreatedefault" class="md-nav__link">
+  <a href="#how-to-correctly-remove-an-oncreatedefault" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo eliminar correctamente un onCreateDefault
     </span>
@@ -16477,16 +16477,16 @@
   
 
 
-<h1 id="como-definir-un-valor-por-defecto-al-crear">Cómo definir un valor por defecto al crear</h1>
+<h1 id="how-to-define-an-on-create-default">Cómo definir un valor por defecto al crear</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>En esta sección se explica brevemente qué es un <strong>onCreateDefault</strong>, en qué situaciones es útil y cómo definirlo correctamente.</p>
-<h2 id="concepto">Concepto</h2>
+<h2 id="concept">Concepto</h2>
 <p>Los <code>OnCreateDefaults</code> son sentencias <code>SQL</code> que se ejecutan mediante la tarea <code>update.database</code> cuando se crea una columna en la base de datos. Normalmente se utilizan para insertar datos en una columna recién creada. Es importante tener en cuenta que solo se ejecutan cuando la columna se está creando. Si la columna ya existe en la base de datos, <code>update.database</code> no ejecutará la sentencia <code>onCreateDefault</code>. Para rellenar datos en una columna ya creada, puede utilizar un Script de módulo. Para más información sobre los Scripts de módulo, visite <a href="../how-to-create-build-validations-and-module-scripts/">Cómo crear validaciones de compilación y Scripts de módulo</a>.</p>
-<h2 id="proceso-de-desarrollo">Proceso de desarrollo</h2>
+<h2 id="development-process">Proceso de desarrollo</h2>
 <p>Las sentencias <code>onCreateDefault</code> se añaden directamente al archivo <code>XML</code> de la tabla. Esto significa que los pasos principales de desarrollo deberían ser:</p>
 <ul>
 <li>Añadir la nueva columna en la base de datos </li>
@@ -16513,7 +16513,7 @@
 </ul>
 </div>
 <p>Una limitación de la implementación actual de <code>onCreateDefaults</code> es que, debido a la necesidad de soportar los dos tipos diferentes de sintaxis <code>SQL</code>, no puede hacer referencia a una columna distinta de la tabla que está modificando. Esto significa que puede ser muy complicado diseñar un <code>onCreateDefault</code> correcto en situaciones en las que necesita crear un enlace a otra tabla. Para estas situaciones, podría utilizarse un <strong>Script de módulo</strong> en lugar de un <code>onCreateDefault</code>, y se puede lograr el mismo resultado de esta manera.</p>
-<h2 id="como-eliminar-correctamente-un-oncreatedefault">Cómo eliminar correctamente un <code>onCreateDefault</code></h2>
+<h2 id="how-to-correctly-remove-an-oncreatedefault">Cómo eliminar correctamente un <code>onCreateDefault</code></h2>
 <p>Los <code>onCreateDefaults</code> también se eliminan editando el archivo <code>XML</code>. La forma correcta de eliminarlo es borrar el contenido dentro de la etiqueta <oncreatedefault>, pero dejando la propia etiqueta. Si elimina todo, incluida la etiqueta, la próxima vez que exporte el módulo (o el Core, si está editando una columna del Core), habrá una inconsistencia, ya que <a href="../../concepts/dbsourcemanager/">DBSourceManager</a> creará un elemento <code>onCreateDefault</code> vacío. En un ejemplo práctico, la siguiente columna tiene un <code>onCreateDefault</code>:</oncreatedefault></p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">"MYCOLUMN"</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">"false"</span><span class="w"> </span><span class="na">required=</span><span class="s">"true"</span><span class="w"> </span><span class="na">type=</span><span class="s">"CHAR"</span><span class="w"> </span><span class="na">size=</span><span class="s">"1"</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">"false"</span><span class="nt">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;default&gt;</span><span class="cp">&lt;![CDATA[N]]&gt;</span><span class="nt">&lt;/default&gt;</span>
@@ -16779,7 +16779,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crear-secuencias" class="md-skip">
+        <a href="#create-sequences" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1037,7 +1037,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejecucion-de-procesos" class="md-nav__link">
+  <a href="#process-execution" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecución de Procesos
     </span>
@@ -1046,7 +1046,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secuencia-de-documento-numeracion" class="md-nav__link">
+  <a href="#document-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       Secuencia de documento (numeración)
     </span>
@@ -16368,7 +16368,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejecucion-de-procesos" class="md-nav__link">
+  <a href="#process-execution" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecución de Procesos
     </span>
@@ -16377,7 +16377,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secuencia-de-documento-numeracion" class="md-nav__link">
+  <a href="#document-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       Secuencia de documento (numeración)
     </span>
@@ -16426,9 +16426,9 @@
   
 
 
-<h1 id="crear-secuencias">Crear Secuencias</h1>
+<h1 id="create-sequences">Crear Secuencias</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Crear Secuencias</code></p>
-<h2 id="ejecucion-de-procesos">Ejecución de Procesos</h2>
+<h2 id="process-execution">Ejecución de Procesos</h2>
 <p>En esta ventana de proceso, se ejecuta el proceso <strong>Crear Secuencias</strong>.</p>
 <p>Al seleccionar la <strong>organización</strong> y ejecutar el proceso, Etendo crea las secuencias para el tipo de campos <code>Transactional Sequence</code> o <code>Non transactional Sequence</code>. La principal ventaja de estas <em>nuevas secuencias</em> es el enmascaramiento dinámico, que permite añadir fechas o cadenas dinámicas.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/12h763OVeuLSs-GkZq5-zTPZMMV0UzuV9.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/12h763OVeuLSs-GkZq5-zTPZMMV0UzuV9.png"></a></p>
@@ -16439,7 +16439,7 @@
 <li>Para más información sobre esta configuración, visite la documentación técnica sobre <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/">Secuencia</a>.</li>
 </ul>
 </div>
-<h2 id="secuencia-de-documento-numeracion">Secuencia de documento (numeración)</h2>
+<h2 id="document-sequence">Secuencia de documento (numeración)</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Gestión Financiera</code>&gt;<code>Contabilidad</code>&gt;<code>Configuración</code>&gt;<code>Secuencia de documento (numeración)</code></p>
 <p>Después de eso, en la ventana <a href="../../../financial-management/accounting/setup/document-sequence/">Secuencia de documento (numeración)</a> el usuario puede ver y editar las secuencias generadas.</p>
 <figure>
@@ -16700,7 +16700,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

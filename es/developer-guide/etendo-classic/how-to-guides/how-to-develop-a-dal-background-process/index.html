@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-desarrollar-un-proceso-en-segundo-plano-dal" class="md-skip">
+        <a href="#how-to-develop-a-dal-background-process" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11090,7 +11090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11099,7 +11099,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-dentro-del-diccionario-de-aplicacion" class="md-nav__link">
+  <a href="#definition-within-the-application-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
       Definición dentro del diccionario de aplicación
     </span>
@@ -11108,7 +11108,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-y-clase-dalbaseprocess" class="md-nav__link">
+  <a href="#process-and-dalbaseprocess" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso y clase DalBaseProcess
     </span>
@@ -11117,7 +11117,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación
     </span>
@@ -11126,7 +11126,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compilacion-de-la-aplicacion" class="md-nav__link">
+  <a href="#compiling-the-application" class="md-nav__link">
     <span class="md-ellipsis">
       Compilación de la aplicación
     </span>
@@ -11135,7 +11135,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programacion" class="md-nav__link">
+  <a href="#scheduling" class="md-nav__link">
     <span class="md-ellipsis">
       Programación
     </span>
@@ -11144,7 +11144,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitorizacion" class="md-nav__link">
+  <a href="#monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorización
     </span>
@@ -11153,7 +11153,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-resultado" class="md-nav__link">
+  <a href="#the-result" class="md-nav__link">
     <span class="md-ellipsis">
       El resultado
     </span>
@@ -16418,7 +16418,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16427,7 +16427,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-dentro-del-diccionario-de-aplicacion" class="md-nav__link">
+  <a href="#definition-within-the-application-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
       Definición dentro del diccionario de aplicación
     </span>
@@ -16436,7 +16436,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-y-clase-dalbaseprocess" class="md-nav__link">
+  <a href="#process-and-dalbaseprocess" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso y clase DalBaseProcess
     </span>
@@ -16445,7 +16445,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación
     </span>
@@ -16454,7 +16454,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compilacion-de-la-aplicacion" class="md-nav__link">
+  <a href="#compiling-the-application" class="md-nav__link">
     <span class="md-ellipsis">
       Compilación de la aplicación
     </span>
@@ -16463,7 +16463,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programacion" class="md-nav__link">
+  <a href="#scheduling" class="md-nav__link">
     <span class="md-ellipsis">
       Programación
     </span>
@@ -16472,7 +16472,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitorizacion" class="md-nav__link">
+  <a href="#monitoring" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorización
     </span>
@@ -16481,7 +16481,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-resultado" class="md-nav__link">
+  <a href="#the-result" class="md-nav__link">
     <span class="md-ellipsis">
       El resultado
     </span>
@@ -16554,8 +16554,8 @@
   
 
 
-<h1 id="como-desarrollar-un-proceso-en-segundo-plano-dal">Cómo desarrollar un proceso en segundo plano DAL</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-develop-a-dal-background-process">Cómo desarrollar un proceso en segundo plano DAL</h1>
+<h2 id="overview">Visión general</h2>
 <p>Un proceso en segundo plano es un proceso que se ejecuta a intervalos regulares. Para esta sección desarrollaremos un proceso en segundo plano para el siguiente escenario:</p>
 <p><em>Supongamos que nuestro cliente quiere tener información de ventas de los últimos 6 meses de cada producto en el campo descripción.</em></p>
 <p>Un proceso en segundo plano necesita (re)calcular los números de ventas de forma regular y guardarlos en el campo <strong>Descripción</strong> de cada producto que esté marcado como vendido. La solapa de nuestra ventana principal de Producto debería terminar siendo similar a:</p>
@@ -16566,7 +16566,7 @@
 <p class="admonition-title">Info</p>
 <p>Para una descripción genérica de los procesos Java, consulte <a href="../../concepts/processes/">Procesos</a>.</p>
 </div>
-<h2 id="definicion-dentro-del-diccionario-de-aplicacion">Definición dentro del diccionario de aplicación</h2>
+<h2 id="definition-within-the-application-dictionary">Definición dentro del diccionario de aplicación</h2>
 <p>Los procesos en segundo plano se definen dentro de la ventana <code>Application Dictionary</code> &gt; <code>Report and Process</code>. Utilice el rol de <strong>Administrador del sistema</strong> para crear un nuevo registro como se indica a continuación:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-1.png"></a></p>
 <p>Los siguientes campos son vitales para la definición de un proceso en segundo plano:</p>
@@ -16578,7 +16578,7 @@
 <li><strong>Es en segundo plano</strong> - Indica que este proceso es un proceso en segundo plano, lo que en consecuencia también muestra el campo <strong>Nombre de la clase Java</strong></li>
 <li><strong>Nombre de la clase Java</strong> - La especificación completa del nombre de la clase incluyendo el paquete (este paquete debe seguir la estructura de paquetes de su módulo especificado anteriormente): <code>com.etendoerp.client.application.examples.ProductRevenueCalculation</code></li>
 </ul>
-<h2 id="proceso-y-clase-dalbaseprocess">Proceso y clase DalBaseProcess</h2>
+<h2 id="process-and-dalbaseprocess">Proceso y clase DalBaseProcess</h2>
 <p>Antes de continuar, decida cómo realizará el proceso en segundo plano las operaciones de base de datos. Tenemos dos opciones:</p>
 <ul>
 <li>Usar el archivo XSQL que se convertirá en una clase Java por la librería core SQLC en tiempo de ejecución. Si se utiliza esta opción, su clase Java en segundo plano debería <em>implementar</em> la <strong>interfaz de Proceso</strong> e implementar el método <code>execute</code> para realizar nuestras tareas.</li>
@@ -16604,7 +16604,7 @@
 <p class="admonition-title">Info</p>
 <p>Para más información, lea el manual de referencia de <a href="../../concepts/data-access-layer/">Data Access Layer</a>.</p>
 </div>
-<h2 id="implementacion">Implementación</h2>
+<h2 id="implementation">Implementación</h2>
 <p>El módulo de ejemplo implementa el proceso en segundo plano en <code>modules/org.openbravo.client.application.examples/src/org.openbravo.client.application.examples.ProductRevenueCalculation.java</code></p>
 <div class="language-java highlight"><span class="filename">ProductRevenueCalculation.java</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// assign the background process to a package that belongs to the </span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// main package of the module this custom development belongs to  </span>
@@ -16702,9 +16702,9 @@
 </span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="compilacion-de-la-aplicacion">Compilación de la aplicación</h2>
+<h2 id="compiling-the-application">Compilación de la aplicación</h2>
 <p>Usando la compilación por línea de comandos, utilice <code>./gradlew smartbuild</code> para compilar el código manual de la aplicación y desplegarlo en el contexto de Tomcat. A continuación, reinicie Tomcat.</p>
-<h2 id="programacion">Programación</h2>
+<h2 id="scheduling">Programación</h2>
 <p>Para que un proceso en segundo plano se ejecute, primero necesita ser programado. Usando el rol <strong>Etendo Client Admin</strong> (por lo tanto, no el rol de Administrador del sistema) navegue a <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; ventana <code>Process Request</code> e introduzca un nuevo registro.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-2.png"></a></p>
 <p>Los siguientes campos son importantes:</p>
@@ -16720,10 +16720,10 @@
 <p class="admonition-title">Note</p>
 <p>Es necesario usar el rol de Administrador de Etendo para que el proceso en segundo plano tenga acceso a los productos de BigBazaar. El cliente del rol que introduce la solicitud del proceso en segundo plano se utiliza para determinar los privilegios de acceso.</p>
 </div>
-<h2 id="monitorizacion">Monitorización</h2>
+<h2 id="monitoring">Monitorización</h2>
 <p>Para ver las ejecuciones del proceso, el estado y el log que generó, use <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; ventana <code>Process Monitor</code>. Tras uno o dos minutos de programar el proceso, deberían verse entradas relacionadas con las ejecuciones del nuevo proceso.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-4.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-4.png"></a></p>
-<h2 id="el-resultado">El resultado</h2>
+<h2 id="the-result">El resultado</h2>
 <p>Para poder obtener resultados significativos, introduzca y complete un Pedido de venta (<code>Sales Management</code> &gt; <code>Transactions</code> &gt; <code>Sales Order</code>) ya que el proceso en segundo plano calcula los ingresos dentro de los últimos 6 meses y la base de datos de demostración puede contener registros más antiguos que eso. Por ejemplo, introduzca un nuevo Pedido de venta para un tercero, e introduzca una línea para un determinado producto, y luego complete el pedido de venta.</p>
 <p>A continuación, navegue a la ventana <code>Master Data Management</code> &gt; <code>Product</code> y encuentre el producto. Tras uno o dos minutos, cuando el proceso haya recalculado el campo <strong>Descripción</strong>, debería poder ver lo siguiente:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-5.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-5.png"></a></p>
@@ -16981,7 +16981,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

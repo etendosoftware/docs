@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fuentes-de-datos" class="md-skip">
+        <a href="#datasources" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -8505,7 +8505,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -8514,7 +8514,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#informacion-relacionada" class="md-nav__link">
+  <a href="#related-information" class="md-nav__link">
     <span class="md-ellipsis">
       Información relacionada
     </span>
@@ -8523,7 +8523,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-de-la-fuente-de-datos" class="md-nav__link">
+  <a href="#datasource-api" class="md-nav__link">
     <span class="md-ellipsis">
       API de la fuente de datos
     </span>
@@ -8532,7 +8532,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-la-fuente-de-datos" class="md-nav__link">
+  <a href="#datasource-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de la fuente de datos
     </span>
@@ -8541,7 +8541,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion-de-su-propia-fuente-de-datos-del-lado-del-cliente-avanzado" class="md-nav__link">
+  <a href="#implementing-your-own-client-side-datasource-advanced" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de su propia fuente de datos del lado del cliente (Avanzado)
     </span>
@@ -8550,7 +8550,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos-de-fuentes-de-datos" class="md-nav__link">
+  <a href="#datasource-examples" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplos de fuentes de datos
     </span>
@@ -16400,7 +16400,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#informacion-relacionada" class="md-nav__link">
+  <a href="#related-information" class="md-nav__link">
     <span class="md-ellipsis">
       Información relacionada
     </span>
@@ -16418,7 +16418,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-de-la-fuente-de-datos" class="md-nav__link">
+  <a href="#datasource-api" class="md-nav__link">
     <span class="md-ellipsis">
       API de la fuente de datos
     </span>
@@ -16427,7 +16427,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-la-fuente-de-datos" class="md-nav__link">
+  <a href="#datasource-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de la fuente de datos
     </span>
@@ -16436,7 +16436,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion-de-su-propia-fuente-de-datos-del-lado-del-cliente-avanzado" class="md-nav__link">
+  <a href="#implementing-your-own-client-side-datasource-advanced" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de su propia fuente de datos del lado del cliente (Avanzado)
     </span>
@@ -16445,7 +16445,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos-de-fuentes-de-datos" class="md-nav__link">
+  <a href="#datasource-examples" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplos de fuentes de datos
     </span>
@@ -16518,11 +16518,11 @@
   
 
 
-<h1 id="fuentes-de-datos">Fuentes de datos</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="datasources">Fuentes de datos</h1>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección describe cómo definir e implementar fuentes de datos basándose en la funcionalidad de Fuente de datos de Etendo. Una fuente de datos es el principal proveedor de datos en la interfaz de usuario de Etendo. La API de la fuente de datos contiene métodos para obtener datos, actualizar datos y para crear y eliminar datos en el servidor. Una fuente de datos tiene una representación tanto del lado del cliente como del lado del servidor.</p>
 <p>Esta sección describe cómo implementar una fuente de datos personalizada. Una fuente de datos personalizada puede utilizarse en componentes de la interfaz de usuario de Etendo Classic como el <a href="/developer-guide/etendo-classic/concepts/Selectors">Selector</a>.</p>
-<h2 id="informacion-relacionada">Información relacionada</h2>
+<h2 id="related-information">Información relacionada</h2>
 <p>Las funciones de Fuente de datos de Etendo hacen uso de y amplían la funcionalidad de <a href="/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services">JSON_REST_Web_Services</a>.</p>
 <p>La Fuente de datos de Etendo implementa y amplía el RESTDatasource de Smartclient de dos maneras:</p>
 <ul>
@@ -16534,7 +16534,7 @@
 <li>la implementación del lado del servidor de la fuente de datos en java </li>
 <li>la definición de la fuente de datos en el Diccionario de Aplicación </li>
 </ul>
-<h2 id="api-de-la-fuente-de-datos">API de la fuente de datos</h2>
+<h2 id="datasource-api">API de la fuente de datos</h2>
 <p>La API de la fuente de datos está definida por la interfaz <a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java" target="_blank">DataSourceService</a>. Esta interfaz define métodos que son necesarios para un funcionamiento correcto del lado del servidor. Es recomendable ampliar la clase <a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/BaseDataSourceService.java" target="_blank">BaseDataSourceService</a>, que se encarga de implementar la mayoría de los métodos.</p>
 <p>Tras ampliar la clase BaseDataSourceService, es necesario implementar los siguientes métodos:</p>
 <div class="language-text highlight"><pre><span></span><code>  /**
@@ -16591,7 +16591,7 @@
 <li>La definición de la fuente de datos en el Diccionario de Aplicación permite especificar una cláusula where. La fuente de datos añadirá esta cláusula where a la consulta antes de llamar a JSON Rest para ejecutar la consulta y devolver la cadena JSON. </li>
 </ul>
 <p>Al desarrollar su propia fuente de datos, tiene sentido estudiar y utilizar las <a href="/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services#JSON_Core_Classes">clases del núcleo</a> de la funcionalidad JSON REST.</p>
-<h2 id="definicion-de-la-fuente-de-datos">Definición de la fuente de datos</h2>
+<h2 id="datasource-definition">Definición de la fuente de datos</h2>
 <p>Tras la implementación del lado del servidor de la fuente de datos, el siguiente paso es definirla en el diccionario de aplicación. Esto hace posible utilizar la fuente de datos en componentes de la interfaz de usuario definidos en el diccionario de aplicación.</p>
 <p>La definición de la fuente de datos consta de dos partes:</p>
 <ul>
@@ -16619,7 +16619,7 @@
 <li>Referencia: la referencia define el tipo del campo. </li>
 <li>Tabla: si la referencia es una referencia de clave externa, entonces este campo puede utilizarse para especificar la tabla a la que se hace referencia. </li>
 </ul>
-<h2 id="implementacion-de-su-propia-fuente-de-datos-del-lado-del-cliente-avanzado">Implementación de su propia fuente de datos del lado del cliente (Avanzado)</h2>
+<h2 id="implementing-your-own-client-side-datasource-advanced">Implementación de su propia fuente de datos del lado del cliente (Avanzado)</h2>
 <p>La definición de la fuente de datos se convierte a código javascript utilizando una plantilla. La plantilla se selecciona en la definición de la fuente de datos (véase el paso anterior). Es posible que un módulo añada una nueva plantilla que pueda utilizarse para crear fuentes de datos del lado del cliente.</p>
 <p>La creación de una nueva plantilla debe realizarla un desarrollador con un buen conocimiento de Etendo. Para implementar una nueva plantilla, es necesario comprender el procesamiento de plantillas y la funcionalidad de gestión de plantillas utilizada por Etendo. La página <a href="/developer-guide/etendo-classic/concepts/Etendo_Architecture">Arquitectura de Etendo</a> proporciona información detallada. En ella se tratan tanto el procesamiento de plantillas, el almacenamiento en caché, i18n, como también se dan indicaciones sobre cómo implementar una plantilla personalizada.</p>
 <p>La plantilla utilizada para la fuente de datos puede encontrarse en el árbol de fuentes del paquete org.openbravo.service.datasource dentro del paquete org.openbravo.service.datasource.templates en el archivo datasource.ftl. La plantilla hace uso del lenguaje de plantillas freemarker.</p>
@@ -16632,7 +16632,7 @@
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="/assets/developer-guide/etendo-classic/concepts/Datasource4.png" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/concepts/Datasource4.png"></a></p>
 <p>A continuación, al definir fuentes de datos, se podrá seleccionar la plantilla personalizada.</p>
-<h2 id="ejemplos-de-fuentes-de-datos">Ejemplos de fuentes de datos</h2>
+<h2 id="datasource-examples">Ejemplos de fuentes de datos</h2>
 <p>El código fuente de la fuente de datos contiene 2 ejemplos de implementación de una fuente de datos:</p>
 <ul>
 <li><a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DefaultDataSourceService.java" target="_blank">DefaultDataSourceService</a>: esta es una implementación completa de la interfaz <a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java" target="_blank">DataSourceService</a>. Soporta la obtención con consulta y paginación, así como operaciones de actualización, alta y eliminación. Esta fuente de datos se utiliza ampliamente en la interfaz de usuario de Etendo Classic. </li>
@@ -16898,7 +16898,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

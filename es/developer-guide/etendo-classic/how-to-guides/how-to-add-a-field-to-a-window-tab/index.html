@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-anadir-un-campo-a-una-solapa-de-ventana" class="md-skip">
+        <a href="#how-to-add-a-field-to-a-window-tab" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9455,7 +9455,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9465,7 +9465,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-anadir-los-campos-a-la-ventana" class="md-nav__link">
+  <a href="#add-the-fields-to-the-window-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: añadir los campos a la ventana
     </span>
@@ -16370,7 +16370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16380,7 +16380,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-anadir-los-campos-a-la-ventana" class="md-nav__link">
+  <a href="#add-the-fields-to-the-window-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: añadir los campos a la ventana
     </span>
@@ -16452,13 +16452,13 @@
   
 
 
-<h1 id="como-anadir-un-campo-a-una-solapa-de-ventana">Cómo añadir un campo a una solapa de ventana</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-add-a-field-to-a-window-tab">Cómo añadir un campo a una solapa de ventana</h1>
+<h2 id="overview">Visión general</h2>
 <p>El objetivo de esta sección es mostrar cómo puede añadir un nuevo campo a una solapa en Etendo Classic.</p>
 <p>Está estrechamente relacionada con la sección anterior <a href="../how-to-add-columns-to-a-table/">Cómo añadir columnas a una tabla</a>.</p>
 <p>La tarea de añadir columnas a una ventana existente ahora es muy sencilla, ya que la mayor parte del trabajo (como definir referencias, elementos) ya se ha realizado al añadir las columnas a la tabla.</p>
 <p>En esta página mostraremos un ejemplo de cómo colocar el campo <code>example_column</code> en la ventana <code>Production Run</code> usando el botón <code>create fields</code>.</p>
-<h3 id="ejemplo-anadir-los-campos-a-la-ventana">Ejemplo: añadir los campos a la ventana</h3>
+<h3 id="add-the-fields-to-the-window-example">Ejemplo: añadir los campos a la ventana</h3>
 <p>El proceso para añadir nuevos campos a una ventana existente es el mismo que para añadir campos a una ventana nueva (vacía). Accediendo a <code>Application Dictionary</code> &gt; <code>Window, Tabs and Fields</code>, necesitamos buscar la ventana <code>Production Run</code>. A continuación, para esa ventana, marque su solapa <code>Incidence</code>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png"></a></p>
 <p>Ahora, usamos el proceso Create Fields en esta solapa para que añada todas las columnas
@@ -16723,7 +16723,7 @@ y colocará automáticamente el campo dentro del módulo.</p>
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

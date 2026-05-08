@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preferencias-sesion" class="md-skip">
+        <a href="#session-preferences" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16348,7 +16348,7 @@
   
 
 
-<h1 id="preferencias-sesion">Preferencias Sesión</h1>
+<h1 id="session-preferences">Preferencias Sesión</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Preferencias Sesión</code></p>
 <p>Las preferencias de sesión permiten mostrar u ocultar la Solapa contabilidad o las solapas de traducción para un <strong>usuario</strong>, <strong>rol</strong>, <strong>entidad</strong> y <strong>organización</strong> determinados.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/VAr7jhdNC8mm1JlSp-Jq-dBswsbSAMKpcuq_Tg6_Z3yKcxRbc3N8IgLn-gimlxHoPzGvtOl0i3k7wPCdqKKG8zO1xgcS5xvh-sC1T0yO2qeanxvBMqt-P8TUPDo9n-ASz4p2LjaL.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/VAr7jhdNC8mm1JlSp-Jq-dBswsbSAMKpcuq_Tg6_Z3yKcxRbc3N8IgLn-gimlxHoPzGvtOl0i3k7wPCdqKKG8zO1xgcS5xvh-sC1T0yO2qeanxvBMqt-P8TUPDo9n-ASz4p2LjaL.png"></a></p>
@@ -16708,7 +16708,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

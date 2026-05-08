@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plantillas-de-contabilidad" class="md-skip">
+        <a href="#accounting-templates" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4821,7 +4821,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -4830,7 +4830,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-configuracion-de-la-plantilla-de-contabilidad" class="md-nav__link">
+  <a href="#creating-the-accounting-template-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la configuración de la Plantilla de Contabilidad
     </span>
@@ -4840,7 +4840,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       Campos
     </span>
@@ -4854,7 +4854,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del conjunto de datos
     </span>
@@ -4863,7 +4863,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prueba-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-testing" class="md-nav__link">
     <span class="md-ellipsis">
       Prueba del conjunto de datos
     </span>
@@ -4872,7 +4872,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencia-tecnica" class="md-nav__link">
+  <a href="#technical-reference" class="md-nav__link">
     <span class="md-ellipsis">
       Referencia técnica
     </span>
@@ -16436,7 +16436,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16445,7 +16445,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-la-configuracion-de-la-plantilla-de-contabilidad" class="md-nav__link">
+  <a href="#creating-the-accounting-template-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de la configuración de la Plantilla de Contabilidad
     </span>
@@ -16455,7 +16455,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos" class="md-nav__link">
+  <a href="#fields" class="md-nav__link">
     <span class="md-ellipsis">
       Campos
     </span>
@@ -16469,7 +16469,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-definition" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del conjunto de datos
     </span>
@@ -16478,7 +16478,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prueba-del-conjunto-de-datos" class="md-nav__link">
+  <a href="#dataset-testing" class="md-nav__link">
     <span class="md-ellipsis">
       Prueba del conjunto de datos
     </span>
@@ -16487,7 +16487,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencia-tecnica" class="md-nav__link">
+  <a href="#technical-reference" class="md-nav__link">
     <span class="md-ellipsis">
       Referencia técnica
     </span>
@@ -16566,15 +16566,15 @@
   
 
 
-<h1 id="plantillas-de-contabilidad">Plantillas de Contabilidad</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="accounting-templates">Plantillas de Contabilidad</h1>
+<h2 id="overview">Visión general</h2>
 <p>Las Plantillas de Contabilidad permiten a las organizaciones personalizar cómo Etendo genera los asientos de diario para tipos de documento específicos, sin modificar la aplicación core. Esto suele ser necesario cuando las normas legales o de negocio locales exigen una lógica de contabilización distinta del comportamiento predeterminado; por ejemplo, un tratamiento fiscal específico por país para facturas o un método de devengo personalizado para entradas de mercancías.</p>
 <p>Un administrador del sistema registra la plantilla en esta ventana. Un desarrollador Java implementa y despliega previamente la clase correspondiente como parte de un módulo. Una vez configurada, la plantilla se aplica automáticamente cada vez que se contabiliza un documento coincidente; los usuarios finales no se ven afectados por el cambio.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Esta es una funcionalidad potente que debe utilizarse con precaución. La clase de contabilización personalizada debe probarse en profundidad antes de desplegarla en un entorno de producción.</p>
 </div>
-<h2 id="creacion-de-la-configuracion-de-la-plantilla-de-contabilidad">Creación de la configuración de la Plantilla de Contabilidad</h2>
+<h2 id="creating-the-accounting-template-configuration">Creación de la configuración de la Plantilla de Contabilidad</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Plantillas de Contabilidad</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -16583,7 +16583,7 @@
 <p>La ventana <strong>Plantillas de Contabilidad</strong> se utiliza para registrar la clase Java que implementa la lógica de contabilización personalizada. Cada plantilla requiere un nombre, el nombre completo de la clase Java (dentro del paquete Java del módulo) y la tabla de base de datos que corresponde al tipo de documento a personalizar; por ejemplo, <code>C_Invoice</code> para facturas o <code>M_InOut</code> para albaranes de entrada y salida de mercancías.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-1.png" data-desc-position="bottom"><img alt="Ventana de Plantillas de Contabilidad mostrando un registro de plantilla configurado" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-1.png"></a></p>
 <p>Cada plantilla se asocia posteriormente con tablas activas o tipos de documento específicos. Puede definir una única plantilla que cubra todos los documentos de un tipo dado (por ejemplo, todas las facturas), o crear plantillas separadas que se dirijan solo a <a href="../document-type/">categorías de documento</a> específicas (por ejemplo, solo facturas de compra), manteniendo el comportamiento predeterminado para el resto.</p>
-<h3 id="campos">Campos</h3>
+<h3 id="fields">Campos</h3>
 <ul>
 <li><strong>Nombre</strong>: Un identificador descriptivo para la plantilla de contabilidad. Use un nombre claro que refleje la regla de contabilización o el tipo de documento al que afecta.</li>
 <li><strong>Nombre de la clase Java</strong>: El identificador técnico de la lógica de contabilización personalizada. El desarrollador proporciona este valor; introdúzcalo exactamente como se indica.</li>
@@ -16592,7 +16592,7 @@
 <li><strong>Activo</strong>: Indica si esta plantilla está actualmente en uso. Desactivar una plantilla restaura el comportamiento de contabilización predeterminado para el tipo de documento asociado.</li>
 </ul>
 <p>Una vez configurada la plantilla, se asocia con las tablas activas o documentos correspondientes. Los asientos que genera aparecerán en los informes de <a href="../general-ledger-configuration/">Esquema contable</a> junto con los asientos estándar, siguiendo las reglas definidas en el <a href="../account-tree/">Árbol de cuentas</a>.</p>
-<h2 id="definicion-del-conjunto-de-datos">Definición del conjunto de datos</h2>
+<h2 id="dataset-definition">Definición del conjunto de datos</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Esta sección está pensada para equipos de desarrollo que necesitan empaquetar y distribuir una plantilla de contabilidad personalizada como un módulo instalable. Si es un administrador que registra una plantilla existente en la ventana Plantillas de Contabilidad, omita esta sección y la sección Prueba del conjunto de datos por completo; no se aplican a su flujo de trabajo.</p>
@@ -16613,7 +16613,7 @@
 <p class="admonition-title">Info</p>
 <p>Como comprobación rápida, abra el archivo XML generado con un editor de texto y verifique que contiene datos. Si el archivo está vacío, revise la definición del conjunto de datos, especialmente la Cláusula Where HQL/SQL de cada tabla.</p>
 </div>
-<h2 id="prueba-del-conjunto-de-datos">Prueba del conjunto de datos</h2>
+<h2 id="dataset-testing">Prueba del conjunto de datos</h2>
 <p>La forma recomendada de verificar que el conjunto de datos es correcto es crear un nuevo cliente dentro de la instancia de desarrollo mediante el proceso <a href="../../../../general-setup/getting-started/#initial-client-setup">Crear entidad</a>, seleccionando durante la configuración el nuevo conjunto de datos de plantilla de contabilidad.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-3.png" data-desc-position="bottom"><img alt="Selección de datos de referencia de Configuración Inicial del Cliente" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-3.png"></a></p>
 <div class="admonition info">
@@ -16621,7 +16621,7 @@
 <p>Si los datos dentro del conjunto de datos son consistentes, el proceso de Crear entidad debería completarse correctamente. De lo contrario, fallará con una descripción del error que indique qué ha ocurrido.</p>
 </div>
 <p>Tras una configuración correcta, inicie sesión en el nuevo cliente, vaya a la ventana <strong>Plantillas de Contabilidad</strong> y confirme que el registro de la plantilla está presente. A continuación, puede proceder a probar la contabilización creando documentos de ejemplo y verificando que se generan correctamente los asientos contables personalizados. Esta validación se aplica a cualquier entorno en el que se haya instalado la plantilla, no solo durante el desarrollo del módulo.</p>
-<h2 id="referencia-tecnica">Referencia técnica</h2>
+<h2 id="technical-reference">Referencia técnica</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Esta sección describe el diseño interno de las Plantillas de Contabilidad. Está pensada para desarrolladores y no es necesaria para la configuración diaria.</p>
@@ -16893,7 +16893,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

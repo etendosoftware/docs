@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#validacion-de-la-estructura-de-cuentas" class="md-skip">
+        <a href="#account-structure-validation" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16275,7 +16275,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16284,7 +16284,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validaciones-realizadas" class="md-nav__link">
+  <a href="#validations-performed" class="md-nav__link">
     <span class="md-ellipsis">
       Validaciones realizadas
     </span>
@@ -16294,7 +16294,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exclusion-de-la-validacion" class="md-nav__link">
+  <a href="#exclusion-from-validation" class="md-nav__link">
     <span class="md-ellipsis">
       Exclusión de la validación
     </span>
@@ -16348,12 +16348,12 @@
   
 
 
-<h1 id="validacion-de-la-estructura-de-cuentas">Validación de la estructura de cuentas</h1>
+<h1 id="account-structure-validation">Validación de la estructura de cuentas</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.account.structure.validation</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Este módulo ayuda a prevenir errores comunes de configuración al crear o modificar subcuentas en el Árbol de cuentas. Valida la estructura y la configuración para evitar discrepancias en informes financieros como la Cuenta de resultados o el Balance de situación.</p>
 <p>El módulo incluye la preferencia de sistema <strong>"Habilitar validaciones de subcuentas"</strong>, que está configurada como <code>SÍ</code> de forma predeterminada, garantizando que la validación esté activa desde el momento en que se instala el módulo.</p>
-<h2 id="validaciones-realizadas">Validaciones realizadas</h2>
+<h2 id="validations-performed">Validaciones realizadas</h2>
 <p>El módulo aplica las siguientes validaciones:</p>
 <ul>
 <li>Verifica que la cuenta tenga un padre a nivel de <strong>Separar</strong> o <strong>Cuenta</strong>.</li>
@@ -16362,7 +16362,7 @@
 </ul>
 <p>Si alguna validación falla, el sistema impide guardar la cuenta, evitando posibles errores en los informes financieros.</p>
 <p>Estas validaciones se activan no solo al crear o modificar cuentas, sino también al <strong>mover registros en la vista de árbol</strong>, garantizando la consistencia de los datos incluso al reorganizar la estructura de cuentas.</p>
-<h3 id="exclusion-de-la-validacion">Exclusión de la validación</h3>
+<h3 id="exclusion-from-validation">Exclusión de la validación</h3>
 <p>La casilla de verificación <strong>"Excluir de la validación de subcuentas"</strong> permite flexibilidad en la configuración de la estructura de cuentas. Al establecer este campo en <strong>SÍ</strong> para cuentas específicas, dichas cuentas quedarán excluidas de todas las validaciones mencionadas anteriormente. Esto resulta especialmente útil para cuentas que requieren una estructura o configuración diferente y que no necesitan seguir las reglas estándar de validación.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation/account-structure-validation.png" data-desc-position="bottom"><img alt="Pestaña Valor del elemento - Excluir de la validación de subcuentas" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation/account-structure-validation.png"></a></p>
 <div class="admonition info">
@@ -16623,7 +16623,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

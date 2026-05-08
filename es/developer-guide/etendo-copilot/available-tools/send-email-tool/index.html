@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-de-envio-de-correo-electronico" class="md-skip">
+        <a href="#send-email-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13866,7 +13866,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13875,7 +13875,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -13884,7 +13884,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -13893,7 +13893,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16382,7 +16382,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -16400,7 +16400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16476,9 +16476,9 @@
   
 
 
-<h1 id="herramienta-de-envio-de-correo-electronico">Herramienta de envío de correo electrónico</h1>
+<h1 id="send-email-tool">Herramienta de envío de correo electrónico</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.copilot.toolpack</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>Herramienta de envío de correo electrónico</strong> está diseñada para enviar correos electrónicos. Esta herramienta facilita el envío de correos de forma eficiente y estructurada. Acepta los siguientes parámetros de entrada: subject (el asunto del correo), mailto (la dirección de correo del destinatario) y html (el contenido HTML del correo). Como salida, devuelve un mensaje indicando el resultado del envío del correo.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16491,7 +16491,7 @@
 <li>Eficiencia: facilita la gestión de notificaciones y comunicaciones por correo electrónico, mejorando la eficiencia operativa.</li>
 </ul>
 <p>Esta herramienta es esencial para desarrolladores y administradores de sistemas que necesitan integrar fácilmente funcionalidades de correo electrónico en sus aplicaciones o servicios.</p>
-<h2 id="configuracion">Configuración</h2>
+<h2 id="setup">Configuración</h2>
 <p>Para utilizar esta herramienta, es necesario configurar la variable <code>MAIL_METHOD</code>:</p>
 <ul>
 <li>SMTP: utiliza el protocolo SMTP para enviar correo. Configura y envía correo utilizando un servidor SMTP como Gmail. SMTP es el valor por defecto para esta variable. Además, deben configurarse las credenciales: <code>MAIL_FROM</code> con el correo del remitente y <code>SMTP_PASSWORD</code> con la contraseña del remitente.</li>
@@ -16505,7 +16505,7 @@
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">MAIL_METHOD</span><span class="o">=</span><span class="n">resend</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">RESEND_API_KEY</span><span class="o">=******</span>
 </span></code></pre></div>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>Esta herramienta es útil en cualquier aplicación o servicio que necesite enviar correos electrónicos automáticamente. Puede utilizarse para notificaciones, actualizaciones, confirmaciones de pedidos, restablecimientos de contraseña, entre otras cosas.</p>
 <p>Este proceso consta de las siguientes acciones:</p>
 <ul>
@@ -16532,7 +16532,7 @@
 <p>si el método de envío no es compatible.</p>
 </li>
 </ul>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <p>Imagine que desea enviar un correo electrónico de notificación. Los parámetros de entrada para el agente serían:</p>
 <ul>
 <li><code>subject</code>: Actualización de cuenta</li>
@@ -16797,7 +16797,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

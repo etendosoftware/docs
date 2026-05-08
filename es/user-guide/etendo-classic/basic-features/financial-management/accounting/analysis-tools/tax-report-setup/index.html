@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracion-informes-de-impuestos" class="md-skip">
+        <a href="#tax-report-setup" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4356,7 +4356,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -4366,7 +4366,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuracion-informes-de-impuestos_1" class="md-nav__link">
+  <a href="#tax-report-setup_1" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración informes de impuestos
     </span>
@@ -4375,7 +4375,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-de-informes-de-impuestos" class="md-nav__link">
+  <a href="#create-tax-report" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de informes de impuestos
     </span>
@@ -16385,7 +16385,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16395,7 +16395,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuracion-informes-de-impuestos_1" class="md-nav__link">
+  <a href="#tax-report-setup_1" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración informes de impuestos
     </span>
@@ -16404,7 +16404,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-de-informes-de-impuestos" class="md-nav__link">
+  <a href="#create-tax-report" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de informes de impuestos
     </span>
@@ -16470,12 +16470,12 @@
   
 
 
-<h1 id="configuracion-informes-de-impuestos">Configuración informes de impuestos</h1>
+<h1 id="tax-report-setup">Configuración informes de impuestos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Configuración informes de impuestos</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Etendo permite al usuario crear diferentes informes de impuestos según sus necesidades específicas.</p>
 <p>Para explicar el uso de este proceso, es necesario comprender la ventana Configuración informes de impuestos.</p>
-<h5 id="configuracion-informes-de-impuestos_1">Configuración informes de impuestos</h5>
+<h5 id="tax-report-setup_1">Configuración informes de impuestos</h5>
 <p>Esta ventana permite al usuario crear o modificar diferentes informes de impuestos para los distintos impuestos existentes. A continuación, se explica cómo crear un nuevo informe de impuestos:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-1.png"></a></p>
 <p>La ventana contiene algunos parámetros para indicar el informe de impuestos creado:</p>
@@ -16490,7 +16490,7 @@
 <li><strong>Activo:</strong> Si es un informe de impuestos activo.</li>
 </ul>
 <p>Una vez configurado el informe de impuestos, aparecerá en el formulario Creación de informes de impuestos:</p>
-<h5 id="creacion-de-informes-de-impuestos"><strong>Creación de informes de impuestos</strong></h5>
+<h5 id="create-tax-report"><strong>Creación de informes de impuestos</strong></h5>
 <p>Esta ventana permite imprimir los informes definidos previamente por el usuario. Para imprimir el informe, es necesario completar algunos campos:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-2.png"></a></p>
 <ul>
@@ -16754,7 +16754,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

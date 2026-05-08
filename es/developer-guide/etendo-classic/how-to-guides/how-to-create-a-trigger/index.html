@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-un-trigger" class="md-skip">
+        <a href="#how-to-create-a-trigger" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10595,7 +10595,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10604,7 +10604,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modulo" class="md-nav__link">
+  <a href="#module" class="md-nav__link">
     <span class="md-ellipsis">
       Módulo
     </span>
@@ -10613,7 +10613,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-el-trigger-a-la-base-de-datos" class="md-nav__link">
+  <a href="#adding-the-trigger-to-database" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir el trigger a la base de datos
     </span>
@@ -10622,7 +10622,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-mensaje-traducible" class="md-nav__link">
+  <a href="#adding-translatable-message" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir mensaje traducible
     </span>
@@ -10640,7 +10640,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-triggers-como-parte-del-modulo" class="md-nav__link">
+  <a href="#exporting-triggers-as-part-of-the-module" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar triggers como parte del módulo
     </span>
@@ -16407,7 +16407,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modulo" class="md-nav__link">
+  <a href="#module" class="md-nav__link">
     <span class="md-ellipsis">
       Módulo
     </span>
@@ -16425,7 +16425,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-el-trigger-a-la-base-de-datos" class="md-nav__link">
+  <a href="#adding-the-trigger-to-database" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir el trigger a la base de datos
     </span>
@@ -16434,7 +16434,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-mensaje-traducible" class="md-nav__link">
+  <a href="#adding-translatable-message" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir mensaje traducible
     </span>
@@ -16452,7 +16452,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-triggers-como-parte-del-modulo" class="md-nav__link">
+  <a href="#exporting-triggers-as-part-of-the-module" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar triggers como parte del módulo
     </span>
@@ -16513,25 +16513,25 @@
   
 
 
-<h1 id="como-crear-un-trigger">Cómo crear un trigger</h1>
+<h1 id="how-to-create-a-trigger">Cómo crear un trigger</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección se basa en la tabla <code>HT_Salary</code> creada en la guía <a href="../how-to-create-a-table/">Cómo crear una tabla</a> y explica cómo aplicar una regla de negocio a nivel de base de datos: los registros de salario solo pueden asignarse a terceros marcados como empleados. Por lo tanto, el sistema debe impedir la introducción de información salarial para terceros definidos únicamente como clientes o proveedores.</p>
 <p>Dado que esta regla depende de consultar datos relacionados, no puede implementarse mediante una restricción estándar de comprobación (check constraint) de base de datos. En su lugar, se aplica mediante un <strong>trigger de base de datos</strong>, que es código que se ejecuta automáticamente cuando la tabla se modifica mediante operaciones <strong>INSERT, UPDATE o DELETE</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para más información sobre los triggers, visite <a href="../../concepts/constraints/">Restricciones</a>.</p>
 </div>
-<h2 id="modulo">Módulo</h2>
+<h2 id="module">Módulo</h2>
 <p>Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo <strong>core</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Siga la sección <a href="../how-to-create-a-module/">Cómo crear un módulo</a> para crear un nuevo módulo.</p>
 </div>
-<h2 id="anadir-el-trigger-a-la-base-de-datos">Añadir el trigger a la base de datos</h2>
+<h2 id="adding-the-trigger-to-database">Añadir el trigger a la base de datos</h2>
 <p>Los triggers no requieren ninguna descripción dentro del Diccionario de la Aplicación. Solo necesitan añadirse a la <strong>Base de datos</strong>, siguiendo la regla de <code>DB Prefix</code> que indica a qué módulo pertenecen.</p>
 <p>Primero añadamos el trigger a la base de datos y después lo comentaremos. Tenga en cuenta que el <strong>código SQL</strong> real varía en función del motor de base de datos utilizado, <strong>Postgres u Oracle</strong>. Aquí tiene un ejemplo para ambos:</p>
 <div class="language-SQL highlight"><span class="filename">Oracle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">ht_salary_trg</span>
@@ -16635,7 +16635,7 @@
 </div>
 </li>
 </ul>
-<h2 id="anadir-mensaje-traducible">Añadir mensaje traducible</h2>
+<h2 id="adding-translatable-message">Añadir mensaje traducible</h2>
 <p>En el trigger creado anteriormente, el texto del mensaje mostrado al usuario no está <strong>codificado de forma fija</strong>, sino que es simplemente el nombre de una entrada de Mensaje del <strong>Diccionario de la Aplicación</strong>. Definir el mensaje de esta forma permite añadir traducciones del mensaje para distintos idiomas.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16657,7 +16657,7 @@
 <li>El uso de las palabras reservadas <strong>NEW/OLD</strong> para referenciar el nuevo registro (que se está insertando o actualizando) o el antiguo (que se está eliminando o actualizando) es diferente (<code>:NEW</code> en Oracle frente a <code>NEW</code> en Postgres). </li>
 <li>La <strong>función de trigger de Postgres</strong> debe encargarse explícitamente de devolver el objeto trigger, también en función del tipo de trigger (p. ej., la última línea es <code>IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;</code>). </li>
 </ul>
-<h2 id="exportar-triggers-como-parte-del-modulo">Exportar triggers como parte del módulo</h2>
+<h2 id="exporting-triggers-as-part-of-the-module">Exportar triggers como parte del módulo</h2>
 <p>Siempre que se modifica el Diccionario de la Aplicación o la base de datos física, es posible <strong>exportar</strong> esa información a <strong>archivos xml</strong> pertenecientes al módulo específico. De este modo, es posible mantener los datos de la base de datos de Etendo como <strong>archivos XML de código fuente</strong> que luego pueden controlarse por versiones.</p>
 <p>Para ello, ejecute:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w">  </span>export.database
@@ -16920,7 +16920,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

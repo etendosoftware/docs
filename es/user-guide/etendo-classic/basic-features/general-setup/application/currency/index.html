@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#moneda" class="md-skip">
+        <a href="#currency" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1060,7 +1060,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -1069,7 +1069,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moneda_1" class="md-nav__link">
+  <a href="#currency_1" class="md-nav__link">
     <span class="md-ellipsis">
       Moneda
     </span>
@@ -1079,7 +1079,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rangos-de-conversion" class="md-nav__link">
+  <a href="#conversion-rates" class="md-nav__link">
     <span class="md-ellipsis">
       Rangos de conversión
     </span>
@@ -1088,7 +1088,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#traduccion" class="md-nav__link">
+  <a href="#translation" class="md-nav__link">
     <span class="md-ellipsis">
       Traducción
     </span>
@@ -16392,7 +16392,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16401,7 +16401,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moneda_1" class="md-nav__link">
+  <a href="#currency_1" class="md-nav__link">
     <span class="md-ellipsis">
       Moneda
     </span>
@@ -16411,7 +16411,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rangos-de-conversion" class="md-nav__link">
+  <a href="#conversion-rates" class="md-nav__link">
     <span class="md-ellipsis">
       Rangos de conversión
     </span>
@@ -16420,7 +16420,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#traduccion" class="md-nav__link">
+  <a href="#translation" class="md-nav__link">
     <span class="md-ellipsis">
       Traducción
     </span>
@@ -16474,9 +16474,9 @@
   
 
 
-<h1 id="moneda">Moneda</h1>
+<h1 id="currency">Moneda</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Moneda</code></p>
-<h3 id="vision-general">Visión general</h3>
+<h3 id="overview">Visión general</h3>
 <ul>
 <li>Las monedas y los rangos de conversión son configuraciones básicas en Etendo.</li>
 <li>
@@ -16487,7 +16487,7 @@
 </div>
 </li>
 </ul>
-<h3 id="moneda_1">Moneda</h3>
+<h3 id="currency_1">Moneda</h3>
 <p>La ventana Moneda permite al usuario visualizar o crear y configurar las monedas que se utilizarán en transacciones monetarias.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency.png"></a></p>
 <p>Como se muestra en la imagen anterior, los datos relevantes de la moneda son:</p>
@@ -16509,7 +16509,7 @@
 </div>
 </li>
 </ul>
-<h4 id="rangos-de-conversion">Rangos de conversión</h4>
+<h4 id="conversion-rates">Rangos de conversión</h4>
 <p>La solapa Rangos de conversión lista los rangos de conversión disponibles para una moneda determinada.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency-conversion-rates.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency-conversion-rates.png"></a></p>
 <p>Un rango de conversión es el tipo válido al que una moneda puede convertirse en otra dentro de un período de tiempo determinado.</p>
@@ -16525,7 +16525,7 @@
 <li>Etendo recomienda que los rangos de conversión se configuren en la ventana <strong>Rangos de conversión</strong>, ya que es necesario definir tanto <em>Multiplicar por</em> (USD - €) como <em>Dividir por</em> (€ - USD) para definir correctamente el cambio entre dos monedas.</li>
 </ul>
 </div>
-<h4 id="traduccion">Traducción</h4>
+<h4 id="translation">Traducción</h4>
 <p>Las monedas pueden traducirse a cualquier idioma si es necesario.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency-translation.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/currency-translation.png"></a></p>
 <hr>
@@ -16781,7 +16781,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estructura-de-subaplicaciones-en-etendo-mobile" class="md-skip">
+        <a href="#subapplications-structure-in-etendo-mobile" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14821,7 +14821,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14830,7 +14830,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-de-la-aplicacion" class="md-nav__link">
+  <a href="#app-file" class="md-nav__link">
     <span class="md-ellipsis">
       Archivo de la aplicación
     </span>
@@ -14840,7 +14840,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros-de-etendo-mobile" class="md-nav__link">
+  <a href="#params-from-etendo-mobile" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros de Etendo Mobile
     </span>
@@ -14849,7 +14849,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#idioma" class="md-nav__link">
+  <a href="#language" class="md-nav__link">
     <span class="md-ellipsis">
       Idioma
     </span>
@@ -14858,7 +14858,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pila-de-navegacion" class="md-nav__link">
+  <a href="#navigation-stack" class="md-nav__link">
     <span class="md-ellipsis">
       Pila de navegación
     </span>
@@ -16406,7 +16406,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivo-de-la-aplicacion" class="md-nav__link">
+  <a href="#app-file" class="md-nav__link">
     <span class="md-ellipsis">
       Archivo de la aplicación
     </span>
@@ -16425,7 +16425,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros-de-etendo-mobile" class="md-nav__link">
+  <a href="#params-from-etendo-mobile" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros de Etendo Mobile
     </span>
@@ -16434,7 +16434,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#idioma" class="md-nav__link">
+  <a href="#language" class="md-nav__link">
     <span class="md-ellipsis">
       Idioma
     </span>
@@ -16443,7 +16443,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pila-de-navegacion" class="md-nav__link">
+  <a href="#navigation-stack" class="md-nav__link">
     <span class="md-ellipsis">
       Pila de navegación
     </span>
@@ -16518,12 +16518,12 @@
   
 
 
-<h1 id="estructura-de-subaplicaciones-en-etendo-mobile">Estructura de subaplicaciones en Etendo Mobile</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="subapplications-structure-in-etendo-mobile">Estructura de subaplicaciones en Etendo Mobile</h1>
+<h2 id="overview">Visión general</h2>
 <p>Esta página proporciona una guía completa sobre la estructura de las subaplicaciones en Etendo Mobile. Explica conceptos clave como el archivo <code>App.tsx</code>, que sirve como el punto de entrada principal de las subaplicaciones, y detalla cómo se utilizan los parámetros de Etendo Mobile para la inicialización. Además, la guía cubre la gestión de idioma, la navegación entre pantallas mediante la pila de navegación y el uso de Etendo UI Library para un diseño y una funcionalidad coherentes en todas las subaplicaciones. Estos elementos constituyen la base para desarrollar subaplicaciones dinámicas y bien integradas dentro de Etendo Mobile.</p>
-<h2 id="archivo-de-la-aplicacion">Archivo de la aplicación</h2>
+<h2 id="app-file">Archivo de la aplicación</h2>
 <p>En <code>App.tsx</code>, se encuentra el archivo principal ubicado en la raíz de la subaplicación. En este archivo, definiremos las rutas y los componentes que se renderizarán en cada ruta. Además, este archivo es responsable de la inicialización de la subaplicación y obtiene los Parámetros de Etendo Mobile.</p>
-<h3 id="parametros-de-etendo-mobile">Parámetros de Etendo Mobile</h3>
+<h3 id="params-from-etendo-mobile">Parámetros de Etendo Mobile</h3>
 <p>Etendo Mobile <em>envía</em> Parámetros a la subaplicación y todos están listos para usarse; son:</p>
 <div class="admonition abstract">
 <p class="admonition-title">Parámetros</p>
@@ -16540,7 +16540,7 @@
 <li><em>sharedFiles</em>: array de IFile; si un archivo se comparte con Etendo Mobile desde una aplicación externa, al compartirlo y seleccionar una subaplicación se añadirá el archivo al array de archivos de la subaplicación correspondiente.</li>
 </ul>
 </div>
-<h3 id="idioma">Idioma</h3>
+<h3 id="language">Idioma</h3>
 <p>El Idioma es una cadena que sirve como representación del Idioma seleccionado por el usuario. Esta configuración de Idioma es configurable dentro de los ajustes de la aplicación Etendo Mobile y desempeña un papel crucial a la hora de determinar el Idioma en el que se presentan los textos dentro de la subaplicación. En este ejemplo, utilizaremos el parámetro <em>language</em> recibido como entrada para inicializar los aspectos restantes de la aplicación en el archivo <code>App.tsx</code>.</p>
 <div class="language-typescript highlight"><span class="filename">App.tsx</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nx">locale</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">locale</span><span class="p">.</span><span class="nx">setCurrentLanguage</span><span class="p">(</span><span class="nx">locale</span><span class="p">.</span><span class="nx">formatLanguageUnderscore</span><span class="p">(</span><span class="nx">language</span><span class="p">));</span>
@@ -16598,7 +16598,7 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p">},</span>
 </span></code></pre></div>
 <p>Luego, para utilizarlo, use la función <code>local.t</code>, por ejemplo: <code>locale.t('ScreenOne.LabelOne')</code></p>
-<h3 id="pila-de-navegacion">Pila de navegación</h3>
+<h3 id="navigation-stack">Pila de navegación</h3>
 <p>La parte de la pila de navegación de <code>App.tsx</code> nos permite navegar entre pantallas. Es un componente proporcionado por <code>@react-navigation/stack</code> en una aplicación React Native. Conceptualmente, una pila de navegación gestiona el flujo entre diferentes pantallas en la aplicación, permitiendo a los usuarios navegar hacia adelante y hacia atrás entre estas pantallas.</p>
 <p><strong>Conceptos clave</strong></p>
 <ol>
@@ -16885,7 +16885,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

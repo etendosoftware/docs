@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-implementar-crear-nuevo-en-el-selector" class="md-skip">
+        <a href="#how-to-implement-create-new-in-selector" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16344,7 +16344,7 @@
   
 
 
-<h1 id="como-implementar-crear-nuevo-en-el-selector">Cómo implementar Crear nuevo en el selector</h1>
+<h1 id="how-to-implement-create-new-in-selector">Cómo implementar Crear nuevo en el selector</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
@@ -16721,7 +16721,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

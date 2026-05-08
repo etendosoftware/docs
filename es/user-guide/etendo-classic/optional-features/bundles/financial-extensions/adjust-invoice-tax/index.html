@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ajustar-impuesto-de-factura" class="md-skip">
+        <a href="#adjust-invoice-tax" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -5432,7 +5432,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -5441,7 +5441,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#factura-proveedor" class="md-nav__link">
+  <a href="#purchase-invoice" class="md-nav__link">
     <span class="md-ellipsis">
       Factura (Proveedor)
     </span>
@@ -5450,7 +5450,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#factura-cliente" class="md-nav__link">
+  <a href="#sales-invoice" class="md-nav__link">
     <span class="md-ellipsis">
       Factura (Cliente)
     </span>
@@ -16377,7 +16377,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16386,7 +16386,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#factura-proveedor" class="md-nav__link">
+  <a href="#purchase-invoice" class="md-nav__link">
     <span class="md-ellipsis">
       Factura (Proveedor)
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#factura-cliente" class="md-nav__link">
+  <a href="#sales-invoice" class="md-nav__link">
     <span class="md-ellipsis">
       Factura (Cliente)
     </span>
@@ -16422,9 +16422,9 @@
   
 
 
-<h1 id="ajustar-impuesto-de-factura">Ajustar Impuesto de Factura</h1>
+<h1 id="adjust-invoice-tax">Ajustar Impuesto de Factura</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.adjust.invoice.tax</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Este módulo permite realizar ajustes controlados en los importes de impuestos de las facturas para conciliar pequeñas <strong>diferencias de redondeo</strong> con sistemas externos o cuando las facturas se presentan ante <strong>entidades gubernamentales</strong>. Es compatible tanto con facturas de <strong>Ventas</strong> como de <strong>Compra</strong>, ofrece <strong>ajustes manuales y automatizados</strong> para correcciones mínimas a nivel de céntimos y registra todos los cambios para garantizar la <strong>auditabilidad</strong>, asegurando que el total final de la factura coincida con requisitos externos, gubernamentales o regulatorios.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16435,11 +16435,11 @@
 <p class="admonition-title">Compatibilidad</p>
 <p>Esta funcionalidad es compatible desde Etendo 23.</p>
 </div>
-<h2 id="factura-proveedor">Factura (Proveedor)</h2>
+<h2 id="purchase-invoice">Factura (Proveedor)</h2>
 <p>En la solapa <strong>Impuesto</strong>, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de compra se encuentra en estado Borrador.</p>
 <p>El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el <strong>Impuestos</strong> calculado es cero, si la <strong>Base Impuesto</strong> es cero o si el ajuste supera el rango permitido de ±0.01. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-purchase-invoice-tax.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-purchase-invoice-tax.png"></a></p>
-<h2 id="factura-cliente">Factura (Cliente)</h2>
+<h2 id="sales-invoice">Factura (Cliente)</h2>
 <p>En la solapa <strong>Impuesto</strong>, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de ventas se encuentra en estado Borrador.</p>
 <p>El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el <strong>Impuestos</strong> calculado es cero, si la <strong>Base Impuesto</strong> es cero o si el ajuste supera el rango permitido de ±0.01. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-sales-invoice-tax.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-sales-invoice-tax.png"></a></p>
@@ -16697,7 +16697,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

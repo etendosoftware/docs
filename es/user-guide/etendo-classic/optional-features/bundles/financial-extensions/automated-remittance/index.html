@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remesas-automatizadas" class="md-skip">
+        <a href="#automated-remittance" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -5478,7 +5478,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -5487,7 +5487,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -5496,7 +5496,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-remesas-automatizadas" class="md-nav__link">
+  <a href="#automated-remittance-process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso de remesas automatizadas
     </span>
@@ -5505,7 +5505,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#protesto-de-remesas-automatizadas" class="md-nav__link">
+  <a href="#automated-remittance-protest" class="md-nav__link">
     <span class="md-ellipsis">
       Protesto de remesas automatizadas
     </span>
@@ -16386,7 +16386,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -16404,7 +16404,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso-de-remesas-automatizadas" class="md-nav__link">
+  <a href="#automated-remittance-process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso de remesas automatizadas
     </span>
@@ -16413,7 +16413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#protesto-de-remesas-automatizadas" class="md-nav__link">
+  <a href="#automated-remittance-protest" class="md-nav__link">
     <span class="md-ellipsis">
       Protesto de remesas automatizadas
     </span>
@@ -16468,9 +16468,9 @@
   
 
 
-<h1 id="remesas-automatizadas">Remesas automatizadas</h1>
+<h1 id="automated-remittance">Remesas automatizadas</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.automated.remittance</code> </p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección describe el módulo de Remesas automatizadas incluido en el bundle Etendo Financial Extensions.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16481,11 +16481,11 @@
 <p class="admonition-title">Important</p>
 <p>Esta funcionalidad depende del módulo <code>org.openbravo.module.remittance</code> en la versión <code>3.15.0</code> o superior. En caso de instalar el bundle Financial Extensions, las dependencias se gestionan automáticamente.</p>
 </div>
-<h2 id="configuracion">Configuración</h2>
+<h2 id="setup">Configuración</h2>
 <p>Para poder utilizar esta funcionalidad, es necesario instalar el conjunto de datos de Remesas automatizadas antes de utilizar la ventana Remesas.</p>
 <p>Para ello, vaya a la ventana <a href="../../../../basic-features/general-setup/enterprise-model/enterprise-module-management/">Gestión del módulo de Empresa</a> y seleccione el conjunto de datos correspondiente como se muestra a continuación. Esto incluye el método de pago necesario para utilizarse en la funcionalidad de protesto, explicada a continuación.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png"></a></p>
-<h2 id="proceso-de-remesas-automatizadas">Proceso de remesas automatizadas</h2>
+<h2 id="automated-remittance-process">Proceso de remesas automatizadas</h2>
 <p>Esta funcionalidad permite el procesamiento automático de remesas. Esta funcionalidad se activa seleccionando la casilla de verificación Procesar automáticamente en la cabecera de la ventana <a href="../../../basic-features/financial-management/receivables-and-payables/transactions.md#remittance">Remesas</a>.</p>
 <ol>
 <li>
@@ -16505,7 +16505,7 @@
 <p class="admonition-title">Note</p>
 <p>Los pasos de selección, agrupación y procesamiento de facturas ya existían; lo nuevo es la automatización del procesamiento de remesas mediante la selección de la casilla de verificación Procesar automáticamente.</p>
 </div>
-<h2 id="protesto-de-remesas-automatizadas">Protesto de remesas automatizadas</h2>
+<h2 id="automated-remittance-protest">Protesto de remesas automatizadas</h2>
 <p>El botón Protestar remesa permite el protesto automático de remesas. Esta función facilita la gestión de protestos y la reliquidación de remesas. Este protesto automático crea un pago negativo, por lo que no es necesario utilizar la ventana Liquidar/Protestar remesa ni añadir un pago manualmente.</p>
 <ol>
 <li>
@@ -16775,7 +16775,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

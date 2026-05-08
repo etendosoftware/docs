@@ -16613,7 +16613,7 @@ PostgreSQL as stable, it will be implemented as a standard function in Oracle ad
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

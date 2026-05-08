@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-una-regla-de-navegacion" class="md-skip">
+        <a href="#how-to-create-a-navigation-rule" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10254,7 +10254,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10263,7 +10263,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-reglas-a-nivel-de-campo" class="md-nav__link">
+  <a href="#rules-definition-at-field-level" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de reglas a nivel de campo
     </span>
@@ -10272,7 +10272,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-reglas-a-nivel-de-tabla" class="md-nav__link">
+  <a href="#rules-definition-at-table-level" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de reglas a nivel de tabla
     </span>
@@ -10281,7 +10281,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-reglas" class="md-nav__link">
+  <a href="#creating-rules" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de reglas
     </span>
@@ -16389,7 +16389,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-reglas-a-nivel-de-campo" class="md-nav__link">
+  <a href="#rules-definition-at-field-level" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de reglas a nivel de campo
     </span>
@@ -16407,7 +16407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-reglas-a-nivel-de-tabla" class="md-nav__link">
+  <a href="#rules-definition-at-table-level" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de reglas a nivel de tabla
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creacion-de-reglas" class="md-nav__link">
+  <a href="#creating-rules" class="md-nav__link">
     <span class="md-ellipsis">
       Creación de reglas
     </span>
@@ -16471,14 +16471,14 @@
   
 
 
-<h1 id="como-crear-una-regla-de-navegacion">Cómo crear una Regla de Navegación</h1>
+<h1 id="how-to-create-a-navigation-rule">Cómo crear una Regla de Navegación</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Las <strong>reglas de navegación</strong> permiten a Etendo dirigir dinámicamente a los usuarios a diferentes solapas en función de los datos visualizados. Estas reglas pueden definirse tanto a <strong>nivel de campo y a nivel de tabla</strong>, proporcionando a los administradores un control flexible sobre cómo se abren los registros. Cada regla puede especificar una solapa de destino, su prioridad y, cuando sea necesario, una condición de <strong>Lógica HQL</strong> que determina cuándo debe aplicarse la regla. Al combinar estos elementos, Etendo puede gestionar escenarios de navegación complejos, como abrir diferentes ventanas en función del tipo de documento o del registro al que se accede.</p>
-<h2 id="definicion-de-reglas-a-nivel-de-campo">Definición de reglas a nivel de campo</h2>
+<h2 id="rules-definition-at-field-level">Definición de reglas a nivel de campo</h2>
 <p>Estas reglas se definen en la solapa <strong>Reglas de Navegación</strong> de la ventana <strong>Windows, Tabs and Fields</strong>, debajo de la solapa <strong>Campo</strong>. El administrador del sistema puede añadir reglas a un campo para que navegue a una solapa personalizada.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule/how-to-create-a-navigation-rule-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule/how-to-create-a-navigation-rule-1.png"></a></p>
 <p>Los campos principales que deben configurarse son:</p>
@@ -16488,11 +16488,11 @@
 <li><strong>Navegación Directa</strong>: indicador que determina si se ejecuta la cláusula <code>HQL Logic</code> o si la regla se aplica siempre. </li>
 <li><strong>Lógica HQL</strong>: cláusula where HQL que debe cumplir el registro que se está abriendo para abrir la solapa especificada en la regla. </li>
 </ul>
-<h2 id="definicion-de-reglas-a-nivel-de-tabla">Definición de reglas a nivel de tabla</h2>
+<h2 id="rules-definition-at-table-level">Definición de reglas a nivel de tabla</h2>
 <p>Las reglas a nivel de tabla para el <strong>Modelo de Navegación Extendido</strong> se definen en una nueva solapa de la ventana <strong>Tablas y columnas</strong> llamada <strong>Reglas de Navegación</strong>. El administrador del sistema puede añadir nuevas reglas a una tabla para que los enlaces que tengan esa tabla como referencia naveguen a una solapa personalizada.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule/how-to-create-a-navigation-rule-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigation-rule/how-to-create-a-navigation-rule-2.png"></a></p>
 <p>Las reglas se definen siguiendo la misma lógica que las <em>Reglas a nivel de campo</em>.</p>
-<h2 id="creacion-de-reglas">Creación de reglas</h2>
+<h2 id="creating-rules">Creación de reglas</h2>
 <p>Para crear una regla que no sea de <strong>Navegación Directa</strong>, defina el campo <strong>Lógica HQL</strong> con una expresión de cláusula where. Esta expresión se añade a un HQL que se ejecuta sobre la tabla donde se almacena el registro que se está abriendo. El HQL también se filtra por el <strong>id</strong> del registro, de modo que solo pueda devolver ese registro. Si el HQL devuelve el registro, entonces la regla es válida y se abre en su <strong>solapa</strong>. Si no se devuelven resultados, se ejecuta la siguiente regla.</p>
 <p>La <code>Lógica HQL</code> debe ser una cláusula where HQL válida. El alias de la tabla principal es <code>e</code>; usándolo es posible acceder a las propiedades de esa tabla.</p>
 <p>Por ejemplo, la tabla <code>C_OrderLine</code> tiene diferentes tipos de pedido que se gestionan en distintas ventanas. Los pedidos de venta que no son pedidos de devolución deben abrirse en la ventana <strong>Pedido de venta</strong>. Es necesario crear una regla con una Lógica HQL que devuelva la línea de pedido solo en caso de que sea un Pedido de venta y no sea una Devolución. La Lógica HQL es:</p>
@@ -16751,7 +16751,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

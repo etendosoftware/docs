@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-usar-opentelemetry-beta" class="md-skip">
+        <a href="#how-to-use-opentelemetry-beta" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13084,7 +13084,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13094,7 +13094,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conceptos-clave" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Conceptos clave
     </span>
@@ -13103,7 +13103,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#envio-de-trazas-al-servicio-opentelemetry" class="md-nav__link">
+  <a href="#sending-traces-to-opentelemetry-service" class="md-nav__link">
     <span class="md-ellipsis">
       Envío de trazas al servicio OpenTelemetry
     </span>
@@ -13112,7 +13112,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jaeger-back-end-de-trazado-distribuido" class="md-nav__link">
+  <a href="#jaeger-distributed-tracing-back-end" class="md-nav__link">
     <span class="md-ellipsis">
       Jaeger: back end de trazado distribuido
     </span>
@@ -13126,7 +13126,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -13135,7 +13135,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-el-servicio-jaeger" class="md-nav__link">
+  <a href="#configure-jaeger-service" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar el servicio Jaeger
     </span>
@@ -16413,7 +16413,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16423,7 +16423,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conceptos-clave" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Conceptos clave
     </span>
@@ -16432,7 +16432,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#envio-de-trazas-al-servicio-opentelemetry" class="md-nav__link">
+  <a href="#sending-traces-to-opentelemetry-service" class="md-nav__link">
     <span class="md-ellipsis">
       Envío de trazas al servicio OpenTelemetry
     </span>
@@ -16441,7 +16441,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jaeger-back-end-de-trazado-distribuido" class="md-nav__link">
+  <a href="#jaeger-distributed-tracing-back-end" class="md-nav__link">
     <span class="md-ellipsis">
       Jaeger: back end de trazado distribuido
     </span>
@@ -16455,7 +16455,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -16464,7 +16464,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-el-servicio-jaeger" class="md-nav__link">
+  <a href="#configure-jaeger-service" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar el servicio Jaeger
     </span>
@@ -16531,7 +16531,7 @@
   
 
 
-<h1 id="como-usar-opentelemetry-beta">Cómo usar OpenTelemetry (BETA)</h1>
+<h1 id="how-to-use-opentelemetry-beta">Cómo usar OpenTelemetry (BETA)</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <ul>
@@ -16539,16 +16539,16 @@
 <li>Debe utilizarse con <strong>precaución</strong>, y siempre debe <strong>validar las copias de seguridad</strong> antes de ejecutar cualquier operación crítica.</li>
 </ul>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>OpenTelemetry es un framework de observabilidad de código abierto que define un conjunto de API, SDK y bibliotecas de instrumentación neutrales respecto al proveedor para generar, recopilar y exportar datos de telemetría; concretamente <strong>trazas</strong>, <strong>métricas</strong> y <strong>logs</strong>. Proporciona un modelo de programación coherente entre aplicaciones y servicios, lo que le permite capturar un comportamiento detallado en tiempo de ejecución sin acoplarse a ningún back end específico.</p>
 <p>OpenTelemetry y Jaeger, en conjunto, forman una potente pila de observabilidad para los microservicios de Etendo Rx. Al instrumentar sus canalizaciones reactivas con OpenTelemetry, captura spans y trazas detalladas a través de límites asíncronos. Exportar esta telemetría al collector y a la UI de Jaeger le ofrece visibilidad en tiempo real de los flujos de solicitudes, lo que permite identificar rápidamente errores, puntos críticos de latencia y dependencias entre servicios. Como resultado, los desarrolladores pueden acelerar la entrega de funcionalidades, mejorar la fiabilidad del sistema y solucionar de forma proactiva problemas de rendimiento en entornos distribuidos complejos.</p>
-<h3 id="conceptos-clave">Conceptos clave</h3>
+<h3 id="key-concepts">Conceptos clave</h3>
 <ul>
 <li><strong>Span</strong>: Una única unidad de trabajo u operación, como una consulta a base de datos o una solicitud HTTP.</li>
 <li><strong>Trace</strong>: Un árbol de spans que representa un flujo de solicitud de extremo a extremo a través de múltiples servicios.</li>
 <li><strong>Propagación de contexto</strong>: El mecanismo mediante el cual el contexto de la traza (ID de traza, ID de span, baggage) se transmite a lo largo de llamadas asíncronas o remotas.</li>
 </ul>
-<h3 id="envio-de-trazas-al-servicio-opentelemetry">Envío de trazas al servicio OpenTelemetry</h3>
+<h3 id="sending-traces-to-opentelemetry-service">Envío de trazas al servicio OpenTelemetry</h3>
 <ol>
 <li>
 <p><strong>Instrumente su código</strong></p>
@@ -16571,14 +16571,14 @@
 </ul>
 </li>
 </ol>
-<h3 id="jaeger-back-end-de-trazado-distribuido">Jaeger: back end de trazado distribuido</h3>
+<h3 id="jaeger-distributed-tracing-back-end">Jaeger: back end de trazado distribuido</h3>
 <p>Jaeger es un sistema de trazado distribuido de código abierto desarrollado originalmente por Uber. Proporciona:</p>
 <ul>
 <li><strong>Collector</strong>: Recibe spans de las aplicaciones instrumentadas.</li>
 <li><strong>Almacenamiento</strong>: Persiste los datos de trazas (p. ej., en Elasticsearch o Cassandra).</li>
 <li><strong>Servicio de consulta y UI</strong>: Permite a desarrolladores y operadores buscar, visualizar y analizar trazas en tiempo real.</li>
 </ul>
-<h2 id="requisitos-previos">Requisitos previos</h2>
+<h2 id="prerequisites">Requisitos previos</h2>
 <ol>
 <li>Instale Etendo Rx. Para ello, siga la <a href="../../getting-started/">guía de instalación de Etendo Rx</a>.</li>
 <li>Instale el <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank">Platform Extensions Bundle</a>.</li>
@@ -16593,7 +16593,7 @@
 <p>Evite instalar Docker mediante <a href="https://snapcraft.io" target="_blank">Snap</a>, ya que puede estar restringido por este sandbox y no tener acceso a directorios del host como <code>/opt/</code>, lo que puede impedir que los contenedores Docker de Etendo se inicien correctamente.</p>
 <p>Recomendación: instale Etendo utilizando la <a href="../../../../whats-new/release-notes/etendo-classic/iso/">última ISO</a> (que incluye Docker) o instale Docker siguiendo la guía de instalación oficial de su distribución.</p>
 </div>
-<h2 id="configurar-el-servicio-jaeger">Configurar el servicio Jaeger</h2>
+<h2 id="configure-jaeger-service">Configurar el servicio Jaeger</h2>
 </li>
 <li>
 <p><strong>Habilitar servicios Utils</strong>: habilite los módulos de servicios util necesarios. En el archivo <code>gradle.properties</code>, añada la siguiente variable:</p>
@@ -17397,7 +17397,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

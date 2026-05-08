@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-llamar-a-un-servicio-web-de-etendo-desde-java" class="md-skip">
+        <a href="#how-to-call-an-etendo-webservice-from-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9607,7 +9607,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9616,7 +9616,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -9626,7 +9626,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codigo-de-ejemplo" class="md-nav__link">
+  <a href="#example-code" class="md-nav__link">
     <span class="md-ellipsis">
       Código de ejemplo
     </span>
@@ -9635,7 +9635,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inicio-de-sesion-y-seguridad" class="md-nav__link">
+  <a href="#login-and-security" class="md-nav__link">
     <span class="md-ellipsis">
       Inicio de sesión y seguridad
     </span>
@@ -9644,7 +9644,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#autenticacion-basica" class="md-nav__link">
+  <a href="#basic-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       Autenticación básica:
     </span>
@@ -9653,7 +9653,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alta-frecuencia-sin-estado" class="md-nav__link">
+  <a href="#high-frequency---stateless" class="md-nav__link">
     <span class="md-ellipsis">
       Alta frecuencia - Sin estado
     </span>
@@ -16413,7 +16413,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16422,7 +16422,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16432,7 +16432,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codigo-de-ejemplo" class="md-nav__link">
+  <a href="#example-code" class="md-nav__link">
     <span class="md-ellipsis">
       Código de ejemplo
     </span>
@@ -16441,7 +16441,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#inicio-de-sesion-y-seguridad" class="md-nav__link">
+  <a href="#login-and-security" class="md-nav__link">
     <span class="md-ellipsis">
       Inicio de sesión y seguridad
     </span>
@@ -16450,7 +16450,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#autenticacion-basica" class="md-nav__link">
+  <a href="#basic-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       Autenticación básica:
     </span>
@@ -16459,7 +16459,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alta-frecuencia-sin-estado" class="md-nav__link">
+  <a href="#high-frequency---stateless" class="md-nav__link">
     <span class="md-ellipsis">
       Alta frecuencia - Sin estado
     </span>
@@ -16525,20 +16525,20 @@
   
 
 
-<h1 id="como-llamar-a-un-servicio-web-de-etendo-desde-java">Cómo llamar a un servicio web de Etendo desde Java</h1>
+<h1 id="how-to-call-an-etendo-webservice-from-java">Cómo llamar a un servicio web de Etendo desde Java</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección explica cómo preparar e implementar una <strong>Clase Java</strong> capaz de invocar servicios web de Etendo y qué <strong>API de Java</strong> se requieren para establecer conexiones HTTP, autenticar solicitudes y procesar respuestas, especialmente aquellas devueltas en formato XML por servicios web XML REST. Usando la propia clase <code>BaseWSTest.java</code> de Etendo como referencia, la guía muestra cómo construir y ampliar métodos para diferentes operaciones HTTP (GET, POST, PUT, DELETE), gestionar la autenticación de forma segura y administrar el comportamiento de sesión para integraciones de alta frecuencia o sin estado.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para más información, visite <a href="../../../developer-guide/etendo-classic/concepts/.XML_REST_Web_Services.md">Servicios web XML REST</a>. </p>
 </div>
-<h2 id="pasos-de-ejecucion">Pasos de ejecución</h2>
+<h2 id="execution-steps">Pasos de ejecución</h2>
 <p>Para llamar a un <strong>servicio web de Etendo</strong> desde una clase Java, utilice varias clases que proporcionan la API de Java adecuada para crear una conexión HTTP mediante la URL del servicio web y para usar clases del <code>java.iopackage</code> que permiten leer los flujos de datos. Además, de forma opcional, utilice algunas clases que facilitan el procesamiento de los resultados que se devuelven en <strong>formato XML</strong> en el caso de servicios web del tipo <strong>XML REST</strong>, ya que permiten obtener, analizar y validar un documento XML.</p>
-<h3 id="codigo-de-ejemplo">Código de ejemplo</h3>
+<h3 id="example-code">Código de ejemplo</h3>
 <p>Etendo dispone de una <strong>clase Java de prueba</strong> que ejemplifica lo anterior. Esta clase es <code>BaseWSTest.java</code> y se encuentra dentro del directorio <code>src-test/org/openbravo/test/webservice</code>. Para realizar una solicitud al servicio web, disponemos del método <strong>createConnection()</strong>, que utiliza la clase httpURLConnection para realizar una solicitud a un servicio web usando el parámetro de comando específico y especificando las credenciales (usuario/contraseña).</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">protected</span><span class="w"> </span><span class="n">HttpURLConnection</span><span class="w"> </span><span class="nf">createConnection</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">wsPart</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">method</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">Authenticator</span><span class="p">.</span><span class="na">setDefault</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Authenticator</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -16602,9 +16602,9 @@
 </span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Por lo tanto, es posible utilizar esta clase como base para el desarrollo e implementar las adaptaciones que se consideren necesarias. Usando esta clase, es posible implementar llamadas a los servicios web que usted elija simplemente especificando su ruta, que se formará con la URL de Etendo <code>getOpenbravoURL()</code> más la parte del servicio web <strong>wsPart</strong>.</p>
-<h3 id="inicio-de-sesion-y-seguridad">Inicio de sesión y seguridad</h3>
+<h3 id="login-and-security">Inicio de sesión y seguridad</h3>
 <p>Los servicios web generales de Etendo proporcionan el mismo control de inicio de sesión y seguridad que el servicio web XML REST.</p>
-<h3 id="autenticacion-basica">Autenticación básica:</h3>
+<h3 id="basic-authentication">Autenticación básica:</h3>
 <p>El siguiente código de ejemplo muestra una forma de implementar autenticación básica:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Authenticator</span><span class="p">.</span><span class="na">setDefault</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Authenticator</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nd">@Override</span>
@@ -16627,7 +16627,7 @@
 </span></code></pre></div>
 </li>
 </ul>
-<h3 id="alta-frecuencia-sin-estado">Alta frecuencia - Sin estado</h3>
+<h3 id="high-frequency---stateless">Alta frecuencia - Sin estado</h3>
 <p>El código del lado del cliente que llama a servicios web normalmente <strong>no mantiene</strong> la cookie de sesión del servidor. Esto significa que cada solicitud al servicio web puede crear una nueva sesión http en el servidor receptor. Esto no es recomendable para servicios web de alta frecuencia. El implementador del servicio web dentro del sistema Etendo puede <strong>forzar la llamada</strong> para que sea sin estado. Pero el llamador también puede lograrlo pasando un parámetro. </p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/How_To_Call_An_Openbravo_Webservice_From_Java" target="_blank">Cómo llamar a un servicio web de Openbravo desde Java</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Wiki de Openbravo</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16882,7 +16882,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

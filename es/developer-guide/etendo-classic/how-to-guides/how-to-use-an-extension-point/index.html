@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-usar-un-punto-de-extension" class="md-skip">
+        <a href="#how-to-use-an-extension-point" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11703,7 +11703,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11713,7 +11713,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procedimientos" class="md-nav__link">
+  <a href="#procedures" class="md-nav__link">
     <span class="md-ellipsis">
       Procedimientos
     </span>
@@ -16377,7 +16377,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16387,7 +16387,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procedimientos" class="md-nav__link">
+  <a href="#procedures" class="md-nav__link">
     <span class="md-ellipsis">
       Procedimientos
     </span>
@@ -16447,16 +16447,16 @@
   
 
 
-<h1 id="como-usar-un-punto-de-extension">Cómo usar un Punto de Extensión</h1>
+<h1 id="how-to-use-an-extension-point">Cómo usar un Punto de Extensión</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Los Puntos de Extensión son puntos de ejecución que se pueden establecer en cualquier <strong>Procedimiento PL/SQL</strong> y que pueden llamar a otros Procedimientos PL/SQL incluidos en cualquier módulo. Esto es útil para ampliar la funcionalidad de procedimientos existentes que contienen dicho punto de extensión. Por ejemplo, usando el Punto de Extensión <em>C_Invoice_Post - Finish Process</em>. Es posible que cualquier módulo añada un procedimiento PL/SQL para que se ejecute cada vez que se procese una factura. Esto se ha utilizado en el módulo Advanced Payables and Receivables para generar el calendario de pagos de la factura procesada.</p>
 <p>Los Puntos de Extensión se gestionan en la ventana <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; <code>Puntos de Extensión</code> . Aquí se pueden definir nuevos puntos de extensión y nuevos procedimientos PL/SQL asociados a Puntos de Extensión existentes. </p>
 <p>Existe una lista completa de puntos de extensión disponibles y de los parámetros utilizados en el documento <a href="../../concepts/extensionpoints/">Puntos de Extensión</a>.</p>
-<h3 id="procedimientos">Procedimientos</h3>
+<h3 id="procedures">Procedimientos</h3>
 <p>Para asociar un procedimiento PL/SQL a un Punto de Extensión existente, debe crear un nuevo registro en la solapa <strong>Procedimientos</strong> y completar el campo <strong>Procedimiento</strong> con el nombre del procedimiento PL/SQL que desea que se invoque en el Punto de Extensión seleccionado.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-an-extension-point/extensionpoints.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-an-extension-point/extensionpoints.png"></a></p>
 <p>Finalmente, defina el procedimiento PL/SQL con el mismo nombre definido en el campo <strong>Procedimiento</strong> y con un único parámetro <strong>character varying</strong> que hará referencia al registro <code>AD_EP_INSTANCE</code> que contiene todos los valores de parámetros utilizados para invocar el procedimiento PL/SQL. Por ejemplo, todos los procedimientos PL/SQL asociados al Punto de Extensión <strong>C_Invoice_Post - Finish Process</strong> se invocan con los siguientes parámetros: <code>Record_ID</code>, <code>DocAction</code>, <code>User</code>, <code>Message</code> y <code>Result</code>. La definición del PL/SQL y cómo se leen los parámetros puede verse en el siguiente ejemplo:
@@ -16755,7 +16755,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

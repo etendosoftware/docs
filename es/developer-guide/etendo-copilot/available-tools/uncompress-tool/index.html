@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-de-descompresion" class="md-skip">
+        <a href="#uncompress-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14004,7 +14004,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14013,7 +14013,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -14022,7 +14022,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16373,7 +16373,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16446,15 +16446,15 @@
   
 
 
-<h1 id="herramienta-de-descompresion">Herramienta de descompresión</h1>
+<h1 id="uncompress-tool">Herramienta de descompresión</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.copilot.toolpack</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>Herramienta de descompresión</strong> es una utilidad diseñada para descomprimir varios tipos de archivos comprimidos y devolver las rutas de los archivos descomprimidos. Admite tipos de archivo comunes, incluidos <code>zip</code>, <code>gzip</code>, <code>bzip2</code> y <code>rar</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Notas de la versión</a>.</p>
 </div>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>El propósito principal de esta herramienta es agilizar el proceso de extracción de archivos desde formatos comprimidos. Es especialmente útil en escenarios en los que se necesita una extracción automatizada de archivos, como canalizaciones de procesamiento de datos, restauración de copias de seguridad y sistemas de gestión de archivos. Al admitir múltiples formatos de compresión comunes y proporcionar una interfaz sencilla para la extracción de archivos, simplifica los flujos de trabajo que implican archivos comprimidos y garantiza un manejo eficiente de los archivos de datos.</p>
 <p>Este proceso consta de las siguientes acciones.</p>
 <ul>
@@ -16494,7 +16494,7 @@
 <p>Tras descomprimir correctamente los archivos, la herramienta devuelve un objeto que contiene las rutas de los archivos descomprimidos.</p>
 </li>
 </ul>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <p>Si existe un archivo comprimido en <code>/home/user/archive.zip</code> y es necesario descomprimirlo, la herramienta se utilizaría de la siguiente manera:</p>
 <ul>
 <li><strong>Entrada</strong>:</li>
@@ -16759,7 +16759,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

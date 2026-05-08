@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adjuntos" class="md-skip">
+        <a href="#attachments" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -8247,7 +8247,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -8256,7 +8256,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-para-obtener-adjuntos" class="md-nav__link">
+  <a href="#api-for-fetching-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener adjuntos
     </span>
@@ -8266,7 +8266,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#api-para-obtener-adjuntos-existentes" class="md-nav__link">
+  <a href="#api-for-fetching-existing-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener adjuntos existentes
     </span>
@@ -8275,7 +8275,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-para-obtener-el-directorio-para-guardar-nuevos-adjuntos" class="md-nav__link">
+  <a href="#api-to-fetch-directory-to-save-new-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener el directorio para guardar nuevos adjuntos
     </span>
@@ -8289,7 +8289,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migracion-de-adjuntos-del-modelo-anterior-al-modelo-mejorado" class="md-nav__link">
+  <a href="#migrating-attachments-from-earlier-model-to-improved-model" class="md-nav__link">
     <span class="md-ellipsis">
       Migración de adjuntos del modelo anterior al modelo mejorado
     </span>
@@ -16404,7 +16404,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16413,7 +16413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-para-obtener-adjuntos" class="md-nav__link">
+  <a href="#api-for-fetching-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener adjuntos
     </span>
@@ -16423,7 +16423,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#api-para-obtener-adjuntos-existentes" class="md-nav__link">
+  <a href="#api-for-fetching-existing-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener adjuntos existentes
     </span>
@@ -16432,7 +16432,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-para-obtener-el-directorio-para-guardar-nuevos-adjuntos" class="md-nav__link">
+  <a href="#api-to-fetch-directory-to-save-new-attachments" class="md-nav__link">
     <span class="md-ellipsis">
       API para obtener el directorio para guardar nuevos adjuntos
     </span>
@@ -16446,7 +16446,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migracion-de-adjuntos-del-modelo-anterior-al-modelo-mejorado" class="md-nav__link">
+  <a href="#migrating-attachments-from-earlier-model-to-improved-model" class="md-nav__link">
     <span class="md-ellipsis">
       Migración de adjuntos del modelo anterior al modelo mejorado
     </span>
@@ -16495,16 +16495,16 @@
   
 
 
-<h1 id="adjuntos">Adjuntos</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="attachments">Adjuntos</h1>
+<h2 id="overview">Visión general</h2>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
 <p>Etendo tiene un modelo de adjuntos integrado en el que puede adjuntar cualquier número de registros a un registro en particular, como Pedido de venta, Remito, Facturas, etc. Todos los adjuntos pueden descargarse o eliminarse desde el propio registro.</p>
-<h2 id="api-para-obtener-adjuntos">API para obtener adjuntos</h2>
+<h2 id="api-for-fetching-attachments">API para obtener adjuntos</h2>
 <p>Hay 2 API que obtienen el directorio de un adjunto y también obtienen el directorio donde debe almacenarse un nuevo adjunto.</p>
-<h3 id="api-para-obtener-adjuntos-existentes">API para obtener adjuntos existentes</h3>
+<h3 id="api-for-fetching-existing-attachments">API para obtener adjuntos existentes</h3>
 <p>El adjunto puede obtenerse mediante un método de API en TabAttachments. El método <strong>TabAttachments.getAttachmentDirectory</strong> puede utilizarse para obtener un adjunto en particular. Los argumentos que deben pasarse son:</p>
 <ul>
 <li>UUID de la ad_table </li>
@@ -16516,14 +16516,14 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>String attachmentDirectory = TabAttachments.getAttachmentDirectory("259","0F3A10E019754BACA5844387FB37B0D5","test.txt");
 </span></code></pre></div>
 <p>La API también gestiona el caso en el que el adjunto se almacena usando el modelo anterior de <code>tableId</code>- <code>recordId</code>.</p>
-<h3 id="api-para-obtener-el-directorio-para-guardar-nuevos-adjuntos">API para obtener el directorio para guardar nuevos adjuntos</h3>
+<h3 id="api-to-fetch-directory-to-save-new-attachments">API para obtener el directorio para guardar nuevos adjuntos</h3>
 <p>Al guardar nuevos adjuntos, el método <strong>TabAttachments.getAttachmentDirectoryForNewAttachments</strong> puede utilizarse para obtener el directorio en el que debe almacenarse el adjunto. Los argumentos que deben pasarse son:</p>
 <ul>
 <li><code>tableId</code> </li>
 <li><code>recordId</code> </li>
 </ul>
 <p>El valor devuelto es el directorio para guardar el <code>record.Note</code> que el directorio devuelto es relativo al directorio de adjuntos de Etendo.</p>
-<h2 id="migracion-de-adjuntos-del-modelo-anterior-al-modelo-mejorado">Migración de adjuntos del modelo anterior al modelo mejorado</h2>
+<h2 id="migrating-attachments-from-earlier-model-to-improved-model">Migración de adjuntos del modelo anterior al modelo mejorado</h2>
 <p>Los adjuntos existentes que siguen el modelo anterior pueden migrarse al último modelo mejorado usando una tarea ant <code>migrate.attachments</code>.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Attachments" target="_blank">Adjuntos</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16778,7 +16778,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

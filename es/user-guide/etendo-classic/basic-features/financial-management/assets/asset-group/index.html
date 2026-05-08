@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grupo-de-activos" class="md-skip">
+        <a href="#asset-group" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4947,7 +4947,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -4956,7 +4956,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-grupo-de-activos" class="md-nav__link">
+  <a href="#asset-group-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Grupo de activos
     </span>
@@ -4965,7 +4965,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#solapa-contabilidad" class="md-nav__link">
+  <a href="#accounting-tab" class="md-nav__link">
     <span class="md-ellipsis">
       Solapa Contabilidad
     </span>
@@ -16377,7 +16377,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16386,7 +16386,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-grupo-de-activos" class="md-nav__link">
+  <a href="#asset-group-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Grupo de activos
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#solapa-contabilidad" class="md-nav__link">
+  <a href="#accounting-tab" class="md-nav__link">
     <span class="md-ellipsis">
       Solapa Contabilidad
     </span>
@@ -16456,11 +16456,11 @@
   
 
 
-<h1 id="grupo-de-activos">Grupo de activos</h1>
+<h1 id="asset-group">Grupo de activos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Assets</code> &gt; <code>Asset Group</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Los activos pueden agruparse en diferentes categorías con el objetivo de facilitar su gestión y análisis de depreciación.</p>
-<h2 id="ventana-grupo-de-activos">Ventana Grupo de activos</h2>
+<h2 id="asset-group-window">Ventana Grupo de activos</h2>
 <p>La ventana Grupo de activos permite al usuario crear y configurar cada categoría de activo que la organización pueda necesitar.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, la creación de una categoría de activo requiere que el usuario introduzca la siguiente información para cada categoría:</p>
@@ -16476,7 +16476,7 @@
 <li><strong>Vida útil - Años</strong>: Meses de vida útil del activo.</li>
 </ul>
 <p>La configuración de la depreciación se heredará de la categoría de activo al crear un nuevo activo desde la ventana Activos.</p>
-<h2 id="solapa-contabilidad">Solapa Contabilidad</h2>
+<h2 id="accounting-tab">Solapa Contabilidad</h2>
 <p>Cada categoría de activo permite al usuario configurar un conjunto de cuentas diferente para contabilizar la depreciación del activo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-group/asset-group-2.png"></a></p>
 <hr>
@@ -16732,7 +16732,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

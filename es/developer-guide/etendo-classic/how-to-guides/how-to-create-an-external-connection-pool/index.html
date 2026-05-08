@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-un-pool-de-conexiones-externo" class="md-skip">
+        <a href="#how-to-create-an-external-connection-pool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10694,7 +10694,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10703,7 +10703,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-abstracta-externalconnectionpool" class="md-nav__link">
+  <a href="#externalconnectionpool-abstract-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase abstracta ExternalConnectionPool
     </span>
@@ -10712,7 +10712,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consideraciones-de-diseno" class="md-nav__link">
+  <a href="#design-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Consideraciones de diseño
     </span>
@@ -16380,7 +16380,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-abstracta-externalconnectionpool" class="md-nav__link">
+  <a href="#externalconnectionpool-abstract-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase abstracta ExternalConnectionPool
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consideraciones-de-diseno" class="md-nav__link">
+  <a href="#design-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Consideraciones de diseño
     </span>
@@ -16453,12 +16453,12 @@
   
 
 
-<h1 id="como-crear-un-pool-de-conexiones-externo">Cómo crear un pool de conexiones externo</h1>
+<h1 id="how-to-create-an-external-connection-pool">Cómo crear un pool de conexiones externo</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Etendo utiliza <strong>pools de conexiones</strong> para reutilizar conexiones/consultas preparadas existentes, evitando el coste de iniciar una conexión, parsear SQL, etc. Por defecto, Etendo utiliza dos pools de conexiones diferentes:</p>
 <ul>
 <li>Pool de conexiones por defecto de <strong>Hibernate</strong> para consultas relacionadas con el DAL </li>
@@ -16466,7 +16466,7 @@
 </ul>
 <p>Etendo proporciona un módulo en <code>modules_core</code> que implementa el <strong>Tomcat JDBC Connection Pool</strong>, pero es posible que los
 desarrolladores publiquen un módulo e implementen su propio pool de conexiones.</p>
-<h2 id="clase-abstracta-externalconnectionpool">Clase abstracta ExternalConnectionPool</h2>
+<h2 id="externalconnectionpool-abstract-class">Clase abstracta ExternalConnectionPool</h2>
 <p>Para implementar un pool de conexiones externo, es necesario crear una subclase de la clase abstracta <code>ExternalConnectionPool</code>. Esta clase tiene tres métodos:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/**</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">     * </span>
@@ -16494,7 +16494,7 @@ desarrolladores publiquen un módulo e implementen su propio pool de conexiones.
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">loadInterceptors</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">PoolInterceptorProvider</span><span class="o">&gt;</span><span class="w"> </span><span class="n">interceptors</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Este método debe ser sobrescrito si el pool de conexiones soporta interceptores y permite que se instancien interceptores personalizados usando inyección de dependencias. Se pasará como argumento una lista de <code>PoolInterceptorProvider</code>, que contiene el nombre completo de la clase de los interceptores.</p>
-<h2 id="consideraciones-de-diseno">Consideraciones de diseño</h2>
+<h2 id="design-considerations">Consideraciones de diseño</h2>
 <ul>
 <li>Incluya un archivo de configuración para que los usuarios puedan personalizar el pool de conexiones externo para satisfacer sus necesidades.</li>
 <li>Si el pool necesita ejecutar algún código de inicialización, colóquelo en el método <code>getConnection</code> y asegúrese de que solo se ejecute la primera vez que se invoque ese método. </li>
@@ -16762,7 +16762,7 @@ desarrolladores publiquen un módulo e implementen su propio pool de conexiones.
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

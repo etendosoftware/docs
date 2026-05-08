@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plantilla-para-informar-de-errores" class="md-skip">
+        <a href="#template-to-report-bugs" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16280,7 +16280,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plantilla-para-informar-de-errores" class="md-nav__link">
+  <a href="#template-to-report-bugs" class="md-nav__link">
     <span class="md-ellipsis">
       Plantilla para informar de errores
     </span>
@@ -16331,7 +16331,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plantilla-para-informar-de-errores" class="md-nav__link">
+  <a href="#template-to-report-bugs" class="md-nav__link">
     <span class="md-ellipsis">
       Plantilla para informar de errores
     </span>
@@ -16388,7 +16388,7 @@
 
   <h1>Cómo Reportar Errores</h1>
 
-<h2 id="plantilla-para-informar-de-errores">Plantilla para informar de errores</h2>
+<h2 id="template-to-report-bugs">Plantilla para informar de errores</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><em>Esta estructura debe respetarse siempre para informar de un error en el <a href="https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132" target="_blank">Centro de ayuda de Etendo</a> .</em></p>
@@ -16699,7 +16699,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

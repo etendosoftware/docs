@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mantenimiento" class="md-skip">
+        <a href="#task" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -5736,7 +5736,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -5745,7 +5745,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-de-mantenimiento" class="md-nav__link">
+  <a href="#task-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana de Mantenimiento
     </span>
@@ -5755,7 +5755,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solapa-registros" class="md-nav__link">
+  <a href="#logs-tab" class="md-nav__link">
     <span class="md-ellipsis">
       Solapa Registros
     </span>
@@ -16383,7 +16383,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16392,7 +16392,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-de-mantenimiento" class="md-nav__link">
+  <a href="#task-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana de Mantenimiento
     </span>
@@ -16402,7 +16402,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solapa-registros" class="md-nav__link">
+  <a href="#logs-tab" class="md-nav__link">
     <span class="md-ellipsis">
       Solapa Registros
     </span>
@@ -16450,15 +16450,15 @@
   
 
 
-<h1 id="mantenimiento">Mantenimiento</h1>
+<h1 id="task">Mantenimiento</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.task</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La infraestructura de mantenimiento en Etendo permite la creación, asignación y gestión automáticas de tareas basadas en eventos de base de datos, como la inserción o actualización de registros. Está diseñada para ayudar a las organizaciones a automatizar procesos de negocio mediante la definición de tipos de tarea, algoritmos de asignación y acciones automatizadas que se activan cuando ocurren eventos específicos. Esta funcionalidad es útil para casos en los que se requiere un seguimiento consistente, validación o acciones del usuario, como la gestión de pedidos, el seguimiento de incidencias o las actualizaciones del estado del cliente.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Para poder utilizar esta infraestructura de mantenimiento es necesario definir tipos de tarea, algoritmos de asignación y automatizaciones, así como la configuración inicial de la infraestructura. Puede encontrar más información en la <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/task/">Guía del desarrollador - Mantenimiento</a></p>
 </div>
-<h2 id="ventana-de-mantenimiento">Ventana de Mantenimiento</h2>
+<h2 id="task-window">Ventana de Mantenimiento</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Gestión de tareas</code> &gt; <code>Mantenimiento</code></p>
 <p>Esta ventana muestra todos los <strong>Mantenimiento</strong> creados por triggers definidos en la definición de <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/task/#task-type-window">Tipo de tarea</a> y permite crear o gestionar tareas manualmente.
 En esta ventana puede gestionar tareas. Estas tareas son genéricas y, por lo tanto, representan un concepto al que cualquier entidad puede referirse o extender según corresponda.</p>
@@ -16480,7 +16480,7 @@ En esta ventana puede gestionar tareas. Estas tareas son genéricas y, por lo ta
 <p class="admonition-title">Note</p>
 <p>Módulos específicos pueden añadir campos contextuales a la ventana de mantenimiento.</p>
 </div>
-<h4 id="solapa-registros">Solapa Registros</h4>
+<h4 id="logs-tab">Solapa Registros</h4>
 <p>Esta solapa muestra un registro detallado de todos los procesos asíncronos que se han ejecutado como parte del flujo de trabajo de esta tarea. Cada entrada de registro representa una ejecución de proceso activada por transiciones de estado o eventos definidos en la configuración del tipo de tarea.</p>
 <p><strong>Campos a tener en cuenta:</strong></p>
 <ul>
@@ -16746,7 +16746,7 @@ En esta ventana puede gestionar tareas. Estas tareas son genéricas y, por lo ta
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

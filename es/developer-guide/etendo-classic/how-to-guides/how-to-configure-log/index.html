@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-configurar-el-log" class="md-skip">
+        <a href="#how-to-configure-log" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9782,7 +9782,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9791,7 +9791,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -9801,7 +9801,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#archivo" class="md-nav__link">
+  <a href="#file" class="md-nav__link">
     <span class="md-ellipsis">
       Archivo
     </span>
@@ -9810,7 +9810,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#logging-en-consola" class="md-nav__link">
+  <a href="#console-logging" class="md-nav__link">
     <span class="md-ellipsis">
       Logging en consola
     </span>
@@ -9819,7 +9819,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verbosidad-del-log" class="md-nav__link">
+  <a href="#log-verbosity" class="md-nav__link">
     <span class="md-ellipsis">
       Verbosidad del log
     </span>
@@ -9833,7 +9833,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rotacion" class="md-nav__link">
+  <a href="#rotation" class="md-nav__link">
     <span class="md-ellipsis">
       Rotación
     </span>
@@ -16406,7 +16406,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -16425,7 +16425,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#archivo" class="md-nav__link">
+  <a href="#file" class="md-nav__link">
     <span class="md-ellipsis">
       Archivo
     </span>
@@ -16434,7 +16434,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#logging-en-consola" class="md-nav__link">
+  <a href="#console-logging" class="md-nav__link">
     <span class="md-ellipsis">
       Logging en consola
     </span>
@@ -16443,7 +16443,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#verbosidad-del-log" class="md-nav__link">
+  <a href="#log-verbosity" class="md-nav__link">
     <span class="md-ellipsis">
       Verbosidad del log
     </span>
@@ -16457,7 +16457,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rotacion" class="md-nav__link">
+  <a href="#rotation" class="md-nav__link">
     <span class="md-ellipsis">
       Rotación
     </span>
@@ -16518,18 +16518,18 @@
   
 
 
-<h1 id="como-configurar-el-log">Cómo configurar el log</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-configure-log">Cómo configurar el log</h1>
+<h2 id="overview">Visión general</h2>
 <p>El logging permite a los desarrolladores <strong>registrar mensajes</strong> durante la ejecución del código. Utilice estos mensajes para diagnosticar problemas del backend como errores, advertencias y cuellos de botella de rendimiento.</p>
 <p>Para aprender a utilizar el logging en su código personalizado, consulte la guía <a href="../how-to-log-using-log4j/">Cómo registrar usando Log4j</a>.</p>
-<h2 id="configuracion">Configuración</h2>
+<h2 id="configuration">Configuración</h2>
 <p>El logging se configura mediante tres archivos principales de configuración, según el escenario:</p>
 <ul>
 <li><code>config/log4j2.xml</code>: Configuración para tareas de compilación por línea de comandos (p. ej., <code>./gradlew install</code>). </li>
 <li><code>config/log4j2-web.xml</code>: Configuración para la aplicación web ejecutándose en un contenedor como Tomcat. </li>
 <li><code>src-test/src/log4j2-test.xml</code>: Configuración utilizada específicamente para pruebas y suites JUnit. </li>
 </ul>
-<h3 id="archivo">Archivo</h3>
+<h3 id="file">Archivo</h3>
 <p>De forma predeterminada, la salida del log se redirige a un archivo. Esto se define mediante la etiqueta <code>&lt;RollingFile&gt;</code> dentro de la sección <code>&lt;Appenders&gt;</code>. Los valores predeterminados son:</p>
 <div class="language-XML highlight"><span class="filename">log4j2-web.xml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;RollingFile</span><span class="w"> </span><span class="na">name=</span><span class="s">"RollingFile"</span><span class="w"> </span><span class="na">fileName=</span><span class="s">"${logDir}/etendo.log"</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                </span><span class="na">filePattern=</span><span class="s">"${logDir}/etendo-%d{yyyyMMdd}-%i.log.gz"</span><span class="nt">&gt;</span>
@@ -16546,7 +16546,7 @@
 <p class="admonition-title">Tip</p>
 <p>Si está ejecutando Etendo desde la línea de comandos, <code>${logDir}</code> normalmente apunta al directorio <code>build/</code> o a la raíz del proyecto, dependiendo de la ejecución de la tarea.</p>
 </div>
-<h3 id="logging-en-consola">Logging en consola</h3>
+<h3 id="console-logging">Logging en consola</h3>
 <p>También puede ver los logs en la consola (salida estándar) utilizando el appender <code>&lt;AppenderRef ref="Console"/&gt;</code>. Esto es útil para desarrollo, para evitar tener que hacer tail continuamente de un archivo.</p>
 <div class="language-XML highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;Loggers&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;Root</span><span class="w"> </span><span class="na">level=</span><span class="s">"info"</span><span class="nt">&gt;</span>
@@ -16562,7 +16562,7 @@
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span>...
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nt">&lt;/Appenders&gt;</span>
 </span></code></pre></div>
-<h3 id="verbosidad-del-log">Verbosidad del log</h3>
+<h3 id="log-verbosity">Verbosidad del log</h3>
 <p>La verbosidad se controla mediante los niveles de log: <code>ALL</code>, <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>, <code>FATAL</code> y <code>OFF</code>.</p>
 <table>
 <thead>
@@ -16660,7 +16660,7 @@
 <p class="admonition-title">Info</p>
 <p>Los loggers de clases o paquetes aparecen en esta lista a medida que se ejecutan. Si falta un logger específico, ejecute la funcionalidad que lo utiliza para registrarlo en el sistema. Tenga en cuenta que reiniciar Tomcat limpia esta lista, y deberá volver a ejecutar las funcionalidades para ver los loggers de nuevo. Para depurar durante el arranque de la aplicación, configure el nivel de log directamente en <code>log4j2-web.xml</code>.</p>
 </div>
-<h2 id="rotacion">Rotación</h2>
+<h2 id="rotation">Rotación</h2>
 <p>Para evitar que los archivos de log crezcan indefinidamente, se configura la <strong>rotación</strong> para archivar logs antiguos.</p>
 <p>La configuración se gestiona en la sección <code>&lt;RollingFile&gt;</code>:</p>
 <div class="language-XML highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;Policies&gt;</span>
@@ -16929,7 +16929,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

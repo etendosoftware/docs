@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-excluir-objetos-fisicos-de-la-base-de-datos-del-modelo" class="md-skip">
+        <a href="#how-to-exclude-database-physical-objects-from-model" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11189,7 +11189,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11198,7 +11198,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excluir-objetos-en-modulos" class="md-nav__link">
+  <a href="#excluding-objects-in-modules" class="md-nav__link">
     <span class="md-ellipsis">
       Excluir objetos en módulos
     </span>
@@ -16364,7 +16364,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16373,7 +16373,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#excluir-objetos-en-modulos" class="md-nav__link">
+  <a href="#excluding-objects-in-modules" class="md-nav__link">
     <span class="md-ellipsis">
       Excluir objetos en módulos
     </span>
@@ -16440,12 +16440,12 @@
   
 
 
-<h1 id="como-excluir-objetos-fisicos-de-la-base-de-datos-del-modelo">Cómo excluir objetos físicos de la base de datos del modelo</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-exclude-database-physical-objects-from-model">Cómo excluir objetos físicos de la base de datos del modelo</h1>
+<h2 id="overview">Visión general</h2>
 <p>Etendo Classic realiza el seguimiento de los objetos físicos de la base de datos (como tablas, vistas, funciones, secuencias o triggers) mediante una utilidad llamada <code>dbsourcemanager</code>. Esta utilidad es capaz de exportar todas las definiciones de objetos del modelo de base de datos a archivos <code>XML</code>, que se almacenan en la carpeta <code>src-db/database/model</code> (tanto en Core como en los módulos).</p>
 <p>Esta herramienta está diseñada para funcionar en un entorno multiplataforma, compatible tanto con Oracle como con PostgreSQL. Esto significa que, en ocasiones, si se utiliza sintaxis o funcionalidades específicas de un Sistema de Gestión de Bases de Datos en particular, es posible que la herramienta no las soporte.</p>
 <p>En estos casos, un enfoque posible es crear estos objetos específicos utilizando un Script de Módulo (puede encontrar más información sobre ellos <a href="../how-to-create-build-validations-and-module-scripts/">aquí</a>) y, a continuación, excluirlos del modelo físico de base de datos de Etendo Classic.</p>
-<h2 id="excluir-objetos-en-modulos">Excluir objetos en módulos</h2>
+<h2 id="excluding-objects-in-modules">Excluir objetos en módulos</h2>
 <p>Los objetos se excluyen mediante un archivo llamado <code>excludeFilter.xml</code>. Este archivo debe ubicarse dentro de la carpeta <code>src-db/database/model/</code> del módulo (si no existe, deberá crearlo) y sigue un formato XML muy sencillo. A continuación se muestra un ejemplo:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="nt">&lt;vector&gt;</span>
@@ -16713,7 +16713,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-cambiar-una-ventana-existente" class="md-skip">
+        <a href="#how-to-change-an-existing-window" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9653,7 +9653,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9662,7 +9662,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo
     </span>
@@ -9671,7 +9671,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-la-ventana" class="md-nav__link">
+  <a href="#changing-the-window" class="md-nav__link">
     <span class="md-ellipsis">
       Cambiar la ventana
     </span>
@@ -9680,7 +9680,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-los-cambios" class="md-nav__link">
+  <a href="#exporting-the-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar los cambios
     </span>
@@ -16382,7 +16382,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo
     </span>
@@ -16400,7 +16400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-la-ventana" class="md-nav__link">
+  <a href="#changing-the-window" class="md-nav__link">
     <span class="md-ellipsis">
       Cambiar la ventana
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-los-cambios" class="md-nav__link">
+  <a href="#exporting-the-changes" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar los cambios
     </span>
@@ -16470,15 +16470,15 @@
   
 
 
-<h1 id="como-cambiar-una-ventana-existente">Cómo cambiar una ventana existente</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-change-an-existing-window">Cómo cambiar una ventana existente</h1>
+<h2 id="overview">Visión general</h2>
 <p>Los elementos de la aplicación (<a href="../../concepts/modularity-concepts/#windows-tabs-and-fields.md">ventanas, solapas y campos</a>) son susceptibles de cambiar repetidamente durante las fases de desarrollo o mantenimiento de un proyecto.
 Etendo es capaz de gestionar estos cambios porque su arquitectura está adaptada al desarrollo iterativo. Las definiciones de todas las ventanas, solapas y campos generados se almacenan como metadatos en el Diccionario de aplicación (AD).</p>
 <p>Cambiar la ventana de una aplicación existente es un proceso sencillo de modificar la definición del AD.</p>
 <p>Al utilizar la UI de Etendo, los cambios se pueden ver inmediatamente al cambiar de rol y, a continuación, al volver a abrir la ventana modificada.</p>
 <p>Al utilizar la ventana clásica, es necesario un paso de compilación.  </p>
 <p>Este procedimiento explica cómo modificar elementos existentes de una ventana. Si solo se deben añadir nuevos elementos (como nuevos campos) a una ventana, no es necesario utilizar una Plantilla. En su lugar, esos nuevos elementos pueden añadirse usando un módulo normal, tal y como se explica en el otro procedimiento sobre <a href="../how-to-add-a-field-to-a-window-tab/">Cómo añadir un campo a una solapa de una ventana</a>. </p>
-<h2 id="objetivo">Objetivo</h2>
+<h2 id="objective">Objetivo</h2>
 <p>El objetivo de este procedimiento es ilustrar cómo realizar cambios en ventanas generadas existentes en términos de apariencia y comportamiento. La ventana utilizada en el ejemplo es la ventana de Inventario físico y los cambios que se muestran serán:</p>
 <ul>
 <li>Ocultar un campo </li>
@@ -16498,7 +16498,7 @@ Consta de:</p>
 <p>Para personalizar estas ventanas en un contexto de modularidad, se necesita un nuevo módulo de tipo
 <em>Plantilla</em>.</p>
 </div>
-<h2 id="cambiar-la-ventana">Cambiar la ventana</h2>
+<h2 id="changing-the-window">Cambiar la ventana</h2>
 <p>Vaya a la ventana <code>Diccionario de aplicación</code> &gt; <code>Ventanas, solapas y campos</code> y seleccione el registro de <em>Inventario físico</em>.</p>
 <p>En la solapa <em>Campo</em> ahora podemos realizar los cambios necesarios para adaptar el diseño según se desee:</p>
 <ul>
@@ -16509,7 +16509,7 @@ Consta de:</p>
 podemos ver el diseño modificado de forma inmediata, tal y como se muestra a continuación:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png"></a></p>
 <p>Para aplicar los mismos cambios de diseño a la ventana en <em>modo UI clásico</em>, es necesario recompilar las ventanas, desplegar los cambios en Tomcat y reiniciar Tomcat. El paso de compilación y despliegue puede realizarse usando <code>./gradlew smartbuild</code>, que recompilará todas las ventanas modificadas y desplegará los cambios.</p>
-<h2 id="exportar-los-cambios">Exportar los cambios</h2>
+<h2 id="exporting-the-changes">Exportar los cambios</h2>
 <p>El paso final es exportar los cambios al módulo para que queden persistidos.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -16773,7 +16773,7 @@ podemos ver el diseño modificado de forma inmediata, tal y como se muestra a co
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

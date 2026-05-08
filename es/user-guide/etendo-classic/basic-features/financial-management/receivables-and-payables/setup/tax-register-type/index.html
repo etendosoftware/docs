@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tipo-de-registro-de-impuesto" class="md-skip">
+        <a href="#tax-register-type" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3559,7 +3559,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -3568,7 +3568,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -3577,7 +3577,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lineas" class="md-nav__link">
+  <a href="#lines" class="md-nav__link">
     <span class="md-ellipsis">
       Líneas
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16388,7 +16388,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lineas" class="md-nav__link">
+  <a href="#lines" class="md-nav__link">
     <span class="md-ellipsis">
       Líneas
     </span>
@@ -16458,9 +16458,9 @@
   
 
 
-<h1 id="tipo-de-registro-de-impuesto">Tipo de registro de impuesto</h1>
+<h1 id="tax-register-type">Tipo de registro de impuesto</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Tax Register Type</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Un tipo de registro de impuesto se utiliza para recopilar todos los tipos impositivos de un tipo y tenerlos en cuenta al calcular el importe total de impuestos de un tipo de registro de impuesto determinado dentro de un período de tiempo.</p>
 <p>Los tipos de registro de impuesto son una variable clave del proceso de Pago del impuesto, ya que es este proceso el que calcula el importe total de impuestos de cada tipo de registro de impuesto creado y configurado.</p>
 <p>En otras palabras, el proceso "Pago del impuesto" ayuda a calcular el importe de impuestos a pagar a la autoridad tributaria correspondiente o a recibir de ella, como la diferencia entre:</p>
@@ -16468,7 +16468,7 @@
 <li>los tipos de registro de impuesto de "Ventas" o el importe total de impuestos que cobra una organización y que pagan sus clientes</li>
 <li>y los tipos de registro de impuesto de "Compras" o el importe total de impuestos que paga una organización a otras empresas por los suministros que recibe.</li>
 </ul>
-<h2 id="cabecera">Cabecera</h2>
+<h2 id="header">Cabecera</h2>
 <p>La ventana Tipo de registro de impuesto permite al usuario crear tipos de registro de impuesto.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-1.png" data-desc-position="bottom"><img alt="Tax Register Type Header" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, es posible crear:</p>
@@ -16478,7 +16478,7 @@
 </ul>
 <p>Además, cada tipo de registro de impuesto debe estar vinculado a un Concepto contable.</p>
 <p>Las cuentas contables definidas para ese Concepto contable serán las que se utilicen al contabilizar el pago de impuestos calculado como la diferencia entre el tipo de registro de impuesto de "Ventas" y el de "Compras".</p>
-<h2 id="lineas">Líneas</h2>
+<h2 id="lines">Líneas</h2>
 <p>La pestaña Líneas permite al usuario asociar tipos impositivos al tipo de registro de impuesto.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-2.png" data-desc-position="bottom"><img alt="Tax Register Type Lines" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/tax-register-type/tax-register-type-2.png"></a></p>
 <p>Como se muestra en la imagen anterior, cada tipo impositivo seleccionado también debe estar vinculado a un tipo de documento.</p>
@@ -16749,7 +16749,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

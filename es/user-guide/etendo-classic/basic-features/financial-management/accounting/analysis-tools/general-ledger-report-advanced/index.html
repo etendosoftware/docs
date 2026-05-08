@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#libro-mayor-avanzado" class="md-skip">
+        <a href="#general-ledger-report-advanced" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4241,7 +4241,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -4250,7 +4250,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botones" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Botones
     </span>
@@ -16370,7 +16370,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16379,7 +16379,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botones" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Botones
     </span>
@@ -16440,7 +16440,7 @@
   
 
 
-<h1 id="libro-mayor-avanzado">Libro mayor avanzado</h1>
+<h1 id="general-ledger-report-advanced">Libro mayor avanzado</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Libro mayor avanzado</code></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o5V3Op_qYtE?si=DnTJ77x6zSMZ5KrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -16448,7 +16448,7 @@
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite <a href="../../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Notas de versión</a>.</p>
 </div>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Este informe <strong>Libro mayor avanzado</strong> es una versión mejorada del anterior <a href="../general-ledger-report/">Libro mayor</a>. Su propósito es ampliar los criterios de filtrado, incluyendo todas las dimensiones contables existentes en la tabla Datos de contabilidad.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-1.png"></a></p>
 <p>Además de los filtros básicos anteriores: Fecha desde, Fecha hasta, Desde importe, Hasta importe, Organización, Libro mayor, Desde Cuenta, Hasta cuenta, y los filtros de dimensión anteriores: Tercero, Producto y Proyecto, se han añadido los siguientes:</p>
@@ -16474,7 +16474,7 @@
 </ul>
 <p>Es posible seleccionar la dimensión contable deseada para la agrupación. Al generar el informe, la dimensión seleccionada aparece en la cabecera, indicando el criterio de agrupación utilizado.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-3.png"></a></p>
-<h2 id="botones">Botones</h2>
+<h2 id="buttons">Botones</h2>
 <p>En la barra de herramientas, se encuentran los botones <strong>Ver</strong>, <strong>Exportar a PDF</strong> y <strong>Exportar a Excel</strong> para generar el informe. En el caso de la opción Ver, se abre una nueva ventana con el informe correspondiente. En los otros casos, el informe se exporta en formato PDF o Excel.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/general-ledger-report-advanced/general-ledger-report-advanced-4.png"></a></p>
 <div class="admonition warning">
@@ -16736,7 +16736,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

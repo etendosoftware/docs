@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#diario-asientos" class="md-skip">
+        <a href="#journal-entries-report" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4264,7 +4264,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16361,7 +16361,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16422,9 +16422,9 @@
   
 
 
-<h1 id="diario-asientos">Diario asientos</h1>
+<h1 id="journal-entries-report">Diario asientos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Diario asientos</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>El informe Diario asientos es una lista de todos los vouchers de diario de una organización y libro mayor, mostrados en orden cronológico.</p>
 <p>Un asiento contable es el registro de datos financieros en un voucher de diario, de modo que el débito sea igual al crédito y los débitos se introduzcan antes que los créditos.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report/journal-entries-report-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report/journal-entries-report-1.png"></a></p>
@@ -16725,7 +16725,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

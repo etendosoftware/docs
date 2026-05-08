@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rango-impuesto" class="md-skip">
+        <a href="#tax-rate" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4770,7 +4770,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -4780,7 +4780,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zona-de-impuesto" class="md-nav__link">
+  <a href="#tax-zone" class="md-nav__link">
     <span class="md-ellipsis">
       Zona de Impuesto
     </span>
@@ -4789,7 +4789,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#traduccion" class="md-nav__link">
+  <a href="#translation" class="md-nav__link">
     <span class="md-ellipsis">
       Traducción
     </span>
@@ -4798,7 +4798,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contabilidad" class="md-nav__link">
+  <a href="#accounting" class="md-nav__link">
     <span class="md-ellipsis">
       Contabilidad
     </span>
@@ -16439,7 +16439,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16449,7 +16449,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zona-de-impuesto" class="md-nav__link">
+  <a href="#tax-zone" class="md-nav__link">
     <span class="md-ellipsis">
       Zona de Impuesto
     </span>
@@ -16458,7 +16458,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#traduccion" class="md-nav__link">
+  <a href="#translation" class="md-nav__link">
     <span class="md-ellipsis">
       Traducción
     </span>
@@ -16467,7 +16467,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contabilidad" class="md-nav__link">
+  <a href="#accounting" class="md-nav__link">
     <span class="md-ellipsis">
       Contabilidad
     </span>
@@ -16542,7 +16542,7 @@
   
 
 
-<h1 id="rango-impuesto">Rango impuesto</h1>
+<h1 id="tax-rate">Rango impuesto</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Rango impuesto</code></p>
 <h2 id="overview">Overview</h2>
 <p>La ventana de Rango impuesto es donde se definen los impuestos que Etendo aplica automáticamente a los documentos de ventas y compras, como pedidos y facturas. Cada rango de impuesto especifica el porcentaje a cobrar, a qué transacciones se aplica y cómo se calcula y registra el importe del impuesto en tus cuentas. Configurar correctamente los rangos de impuesto garantiza que cada documento lleve el impuesto adecuado sin trabajo manual y que tu empresa cumpla con sus obligaciones de declaración fiscal.</p>
@@ -16589,7 +16589,7 @@
 <li>Para cada impuesto distinto aplicado a las líneas del documento, el sistema crea una entrada de impuesto y calcula el importe en función de las bases imponibles de las líneas asociadas (cada línea tiene solo un impuesto).</li>
 <li>Para los impuestos definidos como <strong>summary</strong>, el sistema expande el padre en sus rangos de impuesto hijo y calcula cada importe hijo por separado, teniendo en cuenta si los hijos están configurados como cascade.</li>
 </ol>
-<h2 id="cabecera">Cabecera</h2>
+<h2 id="header">Cabecera</h2>
 <p>La cabecera define las características principales y el comportamiento del rango de impuesto.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png" data-desc-position="bottom"><img alt="Tax Rate header fields" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png"></a></p>
 <p>Campos a tener en cuenta: </p>
@@ -16743,15 +16743,15 @@
 <p class="admonition-title">Info</p>
 <p>Para más información, visita <a href="../../../../../optional-features/bundles/financial-extensions/accounting-template-module/">Accounting Template Module user guide</a>. </p>
 </div>
-<h3 id="zona-de-impuesto">Zona de Impuesto</h3>
+<h3 id="tax-zone">Zona de Impuesto</h3>
 <p>La zona de impuesto define el país/región de origen y el país/región de destino donde se aplica un determinado rango de impuesto, para aquellos casos en los que no basta con definir solo un <strong>Origen</strong> país/región y solo un <strong>Destination</strong> país/región a nivel de cabecera.</p>
 <p>Por ejemplo, un rango de impuesto de <strong>Export</strong> debe detallar como País/Región de origen la ubicación de la organización del almacén y como País/Región de destino el resto de países y regiones a los que es posible exportar las mercancías. Este rango de impuesto se aplica a transacciones de ventas en las que el vendedor es tu propia empresa (el origen) y el comprador está ubicado en otro país (el destino). El país y la región de origen en esta pestaña deben coincidir con la dirección configurada para tu entidad legal en Etendo.</p>
 <p>Lo mismo se aplicaría a un rango de impuesto de <strong>Import</strong>; en este caso, País/Región de origen serían todos los países desde los que se pueden importar mercancías y País/Región de destino sería la ubicación propia de la organización.</p>
-<h3 id="traduccion">Traducción</h3>
+<h3 id="translation">Traducción</h3>
 <p>La pestaña Traducción permite al usuario traducir el <strong>Nombre</strong>, la <strong>Descripción</strong> y el <strong>Identificador de impuestos</strong> del rango de impuesto a cualquier idioma habilitado en el sistema. Esto garantiza que la información del rango de impuesto se muestre en el idioma adecuado cuando los usuarios trabajan con Etendo en una configuración regional distinta de la predeterminada.</p>
 <p>Cada fila de la rejilla representa un idioma disponible. Para traducir un rango de impuesto, selecciona la fila del idioma correspondiente e introduce los valores traducidos en los campos <strong>Nombre</strong> y <strong>Descripción</strong>. La columna <strong>Traducción</strong> indica si se ha proporcionado una traducción manual para ese idioma.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png" data-desc-position="bottom"><img alt="Tax Rate translation tab" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png"></a></p>
-<h3 id="contabilidad">Contabilidad</h3>
+<h3 id="accounting">Contabilidad</h3>
 <p>La pestaña Contabilidad permite al usuario configurar la cuenta que se utilizará al contabilizar transacciones de rango de impuesto en el libro mayor.</p>
 <ul>
 <li><strong>Impuesto repercutido</strong> es la cuenta utilizada al contabilizar importes de impuestos de ventas.</li>
@@ -17162,7 +17162,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

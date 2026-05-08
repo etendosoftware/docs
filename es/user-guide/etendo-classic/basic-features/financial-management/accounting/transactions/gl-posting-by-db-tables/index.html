@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proceso-contable" class="md-skip">
+        <a href="#gl-posting-by-db-tables" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3914,7 +3914,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16361,7 +16361,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16422,9 +16422,9 @@
   
 
 
-<h1 id="proceso-contable">Proceso contable</h1>
+<h1 id="gl-posting-by-db-tables">Proceso contable</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Transacciones</code> &gt; <code>Proceso contable</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>El Proceso contable permite al usuario contabilizar masivamente las transacciones relacionadas con una tabla transaccional determinada o con todas ellas.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gl-posting-by-db-tables/gl-posting-by-db-tables-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, la funcionalidad <strong>Proceso contable</strong> permite al usuario:</p>
@@ -16693,7 +16693,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

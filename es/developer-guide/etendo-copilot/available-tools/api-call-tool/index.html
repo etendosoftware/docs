@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-de-llamadas-a-api" class="md-skip">
+        <a href="#api-call-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13429,7 +13429,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13438,7 +13438,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -13447,7 +13447,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -13457,7 +13457,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-etendo_token" class="md-nav__link">
+  <a href="#using-etendo-token" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de ETENDO_TOKEN
     </span>
@@ -13471,7 +13471,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16397,7 +16397,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16406,7 +16406,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16425,7 +16425,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-etendo_token" class="md-nav__link">
+  <a href="#using-etendo-token" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de ETENDO_TOKEN
     </span>
@@ -16439,7 +16439,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16500,9 +16500,9 @@
   
 
 
-<h1 id="herramienta-de-llamadas-a-api">Herramienta de llamadas a API</h1>
+<h1 id="api-call-tool">Herramienta de llamadas a API</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot.toolpack</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>Herramienta de llamadas a API</strong> está diseñada para ejecutar solicitudes HTTP a APIs externas. Permite a los desarrolladores conectar sus aplicaciones con servicios externos utilizando métodos REST. La herramienta acepta parámetros de entrada como la URL de la API, el endpoint, el método HTTP, los parámetros de consulta, el contenido del cuerpo y un token de autorización opcional. Como salida, devuelve el cuerpo de la respuesta y el código de estado de la llamada a la API.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16515,10 +16515,10 @@
 <li>Automatización: facilita la interacción con sistemas externos desde Etendo Copilot.</li>
 </ul>
 <p>Esta herramienta es ideal para desarrolladores que integran servicios de terceros, APIs internas o microservicios.</p>
-<h2 id="configuracion">Configuración</h2>
+<h2 id="setup">Configuración</h2>
 <p>No se requieren variables de entorno específicas para utilizar esta herramienta. Sin embargo, si se necesita un bearer token para la autorización, puede pasarse en la entrada como el parámetro <code>token</code>.</p>
 <p>Adicionalmente, si utiliza el valor de token especial <code>ETENDO_TOKEN</code>, la herramienta obtendrá el token usando la utilidad de gestión de tokens de Etendo.</p>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>Esta herramienta permite la ejecución de solicitudes REST mediante los siguientes pasos:</p>
 <ul>
 <li>
@@ -16536,7 +16536,7 @@
 <p>Si se proporcionan, los parámetros de consulta se añaden al endpoint con la codificación de URL adecuada.</p>
 </li>
 </ul>
-<h3 id="uso-de-etendo_token">Uso de ETENDO_TOKEN</h3>
+<h3 id="using-etendo-token">Uso de ETENDO_TOKEN</h3>
 <p>Si establece el parámetro <code>token</code> con el valor especial <code>ETENDO_TOKEN</code>, Copilot lo sustituirá automáticamente por un token seguro recuperado del entorno de Etendo. Este enfoque garantiza que el token <strong>no se expone al modelo de lenguaje</strong> y permanece seguro durante la ejecución.</p>
 <p>Ejemplo:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -16581,7 +16581,7 @@ La Herramienta de llamadas a API sustituirá <code>@BASE64_filepath@</code> por 
 </span></code></pre></div>
 </li>
 </ul>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <p>Imagine que desea enviar una solicitud POST a una API externa para crear un nuevo usuario. Los parámetros de entrada para el agente serían:</p>
 <ul>
 <li><code>url</code>: https://api.example.com</li>
@@ -16849,7 +16849,7 @@ La Herramienta de llamadas a API sustituirá <code>@BASE64_filepath@</code> por 
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

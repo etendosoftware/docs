@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-y-actualizar-entidades-de-negocio-mediante-servicios-web" class="md-skip">
+        <a href="#how-to-create-and-update-business-entities-using-web-services" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10710,7 +10710,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10719,7 +10719,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -10738,7 +10738,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#servicios-web-seguros" class="md-nav__link">
+  <a href="#secure-web-services" class="md-nav__link">
     <span class="md-ellipsis">
       Servicios web seguros
     </span>
@@ -16388,7 +16388,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16416,7 +16416,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#servicios-web-seguros" class="md-nav__link">
+  <a href="#secure-web-services" class="md-nav__link">
     <span class="md-ellipsis">
       Servicios web seguros
     </span>
@@ -16488,15 +16488,15 @@
   
 
 
-<h1 id="como-crear-y-actualizar-entidades-de-negocio-mediante-servicios-web">Cómo crear y actualizar entidades de negocio mediante servicios web</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-create-and-update-business-entities-using-web-services">Cómo crear y actualizar entidades de negocio mediante servicios web</h1>
+<h2 id="overview">Visión general</h2>
 <p>El objetivo de esta sección es mostrar cómo utilizar algunos de los <strong>servicios web disponibles de Etendo</strong> para crear entidades de negocio y/o actualizarlas.</p>
 <p>Por lo tanto, estas funcionalidades de servicios web se explicarán en detalle:</p>
 <ul>
 <li><strong>JSON REST</strong></li>
 <li><strong>Servicios web seguros</strong></li>
 </ul>
-<h2 id="pasos-de-ejecucion">Pasos de ejecución</h2>
+<h2 id="execution-steps">Pasos de ejecución</h2>
 <p>Para añadir o actualizar entidades, utilice comandos <code>HTTP</code>. Para ejecutar cualquier <code>comando HTTP</code>, se podría crear una <a href="../how-to-call-an-etendo-webservice-from-java/"><strong>Clase Java</strong></a> y utilizar las clases disponibles relacionadas con el protocolo HTTP.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -16546,7 +16546,7 @@
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p">}</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="servicios-web-seguros">Servicios web seguros</h3>
+<h3 id="secure-web-services">Servicios web seguros</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Para saber más sobre cómo Etendo introduce sus propios Servicios web seguros con funcionalidades únicas, visite <a href="../how-to-use-secure-webservices/">Cómo usar servicios web seguros</a>.</p>
@@ -16804,7 +16804,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

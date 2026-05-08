@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-se-calculan-los-precios-con-impuestos-incluidos" class="md-skip">
+        <a href="#how-price-including-taxes-are-calculated" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9363,7 +9363,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9372,7 +9372,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculo-del-importe-neto" class="md-nav__link">
+  <a href="#net-amount-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Cálculo del importe neto
     </span>
@@ -9381,7 +9381,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculo-de-impuestos" class="md-nav__link">
+  <a href="#taxes-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Cálculo de impuestos
     </span>
@@ -16380,7 +16380,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculo-del-importe-neto" class="md-nav__link">
+  <a href="#net-amount-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Cálculo del importe neto
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculo-de-impuestos" class="md-nav__link">
+  <a href="#taxes-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Cálculo de impuestos
     </span>
@@ -16459,19 +16459,19 @@
   
 
 
-<h1 id="como-se-calculan-los-precios-con-impuestos-incluidos">Cómo se calculan los precios con impuestos incluidos</h1>
+<h1 id="how-price-including-taxes-are-calculated">Cómo se calculan los precios con impuestos incluidos</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Desde la disponibilidad de la funcionalidad <strong>Tarifas con impuestos incluidos</strong>, han surgido algunas dudas sobre cómo se calculan los precios/importes netos y los importes de impuestos.</p>
 <p>El cálculo puede dividirse en dos pasos:</p>
 <ol>
 <li>Calcular el <strong>Importe neto</strong> a partir de un <strong>Importe bruto</strong> dado y, a continuación, el <strong>Rango impuesto</strong> correspondiente.</li>
 <li>Calcular los <strong>Impuestos</strong> a partir del <strong>Importe neto</strong> recién calculado, que luego debe ajustarse para que el <strong>Importe neto</strong> más los <strong>Impuestos</strong> sea igual al <strong>Importe bruto</strong>. </li>
 </ol>
-<h2 id="calculo-del-importe-neto">Cálculo del importe neto</h2>
+<h2 id="net-amount-calculation">Cálculo del importe neto</h2>
 <p>Cuando se está calculando el <strong>Importe neto</strong>, puede que no exista un único rango con el que trabajar, sino una relación de <strong>diferentes rangos de impuestos</strong>.</p>
 <p>Los <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate/">Impuestos en cascada</a> hacen que el cálculo de un importe neto a partir de un importe bruto dado sea algo más difícil. Normalmente, el importe bruto se dividiría por el rango para obtener el importe neto, pero el rango puede no ser único; en otras palabras, puede no estar disponible y, por lo tanto, <strong>tiene que calcularse</strong>.</p>
 <p>Para calcular el rango de impuesto, es necesario calcular el importe de impuesto que corresponde al precio bruto. Si el importe de impuesto se divide por el precio bruto, se obtiene el rango de impuesto:</p>
@@ -16496,7 +16496,7 @@
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    net price = gross amount * ( ------------------------------------------- ) / quantity
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                                  gross amount + tax amount of gross amount
 </span></code></pre></div>
-<h2 id="calculo-de-impuestos">Cálculo de impuestos</h2>
+<h2 id="taxes-calculation">Cálculo de impuestos</h2>
 <p>Una vez calculado el importe neto, es el momento de calcular el <strong>importe final de impuestos</strong> del Pedido o de la Factura.</p>
 <p>Cuando se calculan los impuestos, es importante considerar diferentes configuraciones posibles. Los importes de impuestos pueden redondearse a nivel de <strong>línea o documento</strong>.</p>
 <p>Además, una única línea puede tener importes de impuestos de diferentes rangos de impuestos, si se están utilizando rangos de impuestos en cascada. Por ello, restar el importe neto al importe bruto no es una opción válida.</p>
@@ -16819,7 +16819,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

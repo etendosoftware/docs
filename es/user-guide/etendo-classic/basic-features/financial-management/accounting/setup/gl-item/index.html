@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#concepto-contable" class="md-skip">
+        <a href="#gl-item" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4614,7 +4614,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -4624,7 +4624,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concepto-contable_1" class="md-nav__link">
+  <a href="#gl-item_1" class="md-nav__link">
     <span class="md-ellipsis">
       Concepto contable
     </span>
@@ -4633,7 +4633,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contabilidad" class="md-nav__link">
+  <a href="#accounting" class="md-nav__link">
     <span class="md-ellipsis">
       Contabilidad
     </span>
@@ -16385,7 +16385,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16395,7 +16395,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concepto-contable_1" class="md-nav__link">
+  <a href="#gl-item_1" class="md-nav__link">
     <span class="md-ellipsis">
       Concepto contable
     </span>
@@ -16404,7 +16404,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contabilidad" class="md-nav__link">
+  <a href="#accounting" class="md-nav__link">
     <span class="md-ellipsis">
       Contabilidad
     </span>
@@ -16470,9 +16470,9 @@
   
 
 
-<h1 id="concepto-contable">Concepto contable</h1>
+<h1 id="gl-item">Concepto contable</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Concepto contable</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Un concepto contable es un elemento de cuenta que se utilizará para la contabilización directa en cuenta.</p>
 <p>La contabilización directa en cuenta se refiere a:</p>
 <ul>
@@ -16480,7 +16480,7 @@
 <li>crear y contabilizar facturas financieras como, por ejemplo, facturas financieras de compra; lo mismo aplica a las de venta.</li>
 <li>o crear y contabilizar pagos de conceptos contables en un diario de G/L.</li>
 </ul>
-<h3 id="concepto-contable_1">Concepto contable</h3>
+<h3 id="gl-item_1">Concepto contable</h3>
 <p>La ventana Concepto contable permite al usuario crear tantos elementos de cuenta como sean necesarios para una organización y un libro mayor.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-1.png"></a></p>
 <p>Tal y como se muestra en la imagen anterior, se puede crear un concepto contable o elemento contable introduciendo la siguiente información básica:</p>
@@ -16492,7 +16492,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="contabilidad">Contabilidad</h3>
+<h3 id="accounting">Contabilidad</h3>
 <p>Los elementos de cuenta están directamente relacionados con las cuentas de debe y haber que se utilizarán al contabilizarlos.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-2.png"></a></p>
 <p>Tal y como se muestra en la imagen anterior, la solapa de contabilidad permite al usuario introducir las cuentas de debe y haber para el concepto contable. Es posible introducir una cuenta de debe y una cuenta de haber para la configuración del libro mayor de cada organización.</p>
@@ -16749,7 +16749,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

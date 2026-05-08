@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#personalizacion-de-ventana" class="md-skip">
+        <a href="#window-personalization" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16348,7 +16348,7 @@
   
 
 
-<h1 id="personalizacion-de-ventana">Personalización de Ventana</h1>
+<h1 id="window-personalization">Personalización de Ventana</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Aplicación</code> &gt; <code>Personalización de Ventana</code></p>
 <p>Etendo permite la personalización de las vistas de cuadrícula y de formulario. Las ventanas personalizadas y las vistas de formulario se almacenan una vez guardadas en la ventana <strong>Personalización de Ventana</strong>. Las ventanas de Etendo pueden mostrarse en <em>Vista de formulario</em> y en <em>Vista de cuadrícula</em>; ambas formas pueden personalizarse según sea necesario.</p>
 <p><strong>Personalización de Ventana</strong> lista y mantiene las vistas de formulario personalizadas.</p>
@@ -16607,7 +16607,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

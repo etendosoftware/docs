@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extensiones-de-copilot" class="md-skip">
+        <a href="#copilot-extensions" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13309,7 +13309,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13318,7 +13318,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modulo-menu" class="md-nav__link">
+  <a href="#modules" class="md-nav__link">
     <span class="md-ellipsis">
       Módulo (menu)
     </span>
@@ -16406,7 +16406,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modulo-menu" class="md-nav__link">
+  <a href="#modules" class="md-nav__link">
     <span class="md-ellipsis">
       Módulo (menu)
     </span>
@@ -16518,16 +16518,16 @@
   
 
 
-<h1 id="extensiones-de-copilot">Extensiones de Copilot</h1>
+<h1 id="copilot-extensions">Extensiones de Copilot</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot.extensions</code></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16z"></path></svg></span> Etendo Marketplace:  <a href="https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Bundle de Copilot Extensions</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Actualmente, estamos migrando la terminología de <em>Assistant</em> a <em>Agent</em>. Este cambio se reflejará en la documentación pronto. Donde vea <em>Assistant</em>, considérelo como <em>Agent</em> y viceversa.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>El Bundle de Copilot Extensions incluye funcionalidades para desarrolladores para ayudarles a desarrollar agentes de AI que puedan asistir a los usuarios en sus tareas diarias.</p>
-<h2 id="modulo-menu">Módulo (menu)</h2>
+<h2 id="modules">Módulo (menu)</h2>
 <h3 id="etendo-copilot">Etendo Copilot</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.copilot</code></p>
 <p>El módulo Etendo Copilot incluye un conjunto de ventanas donde puede crear, gestionar e interactuar con Agentes impulsados por AI. Por defecto, el módulo incluye <strong>Bastian</strong>, que es un agente con la documentación de Etendo indexada como base de conocimiento.</p>
@@ -16845,7 +16845,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

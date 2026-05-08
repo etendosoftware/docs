@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-implementar-el-hook-jsondataserviceextraactions" class="md-skip">
+        <a href="#how-to-implement-jsondataserviceextraactions-hook" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11341,7 +11341,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11350,7 +11350,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion-del-hook" class="md-nav__link">
+  <a href="#hook-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación del hook
     </span>
@@ -11359,7 +11359,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16373,7 +16373,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacion-del-hook" class="md-nav__link">
+  <a href="#hook-implementation" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación del hook
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16440,10 +16440,10 @@
   
 
 
-<h1 id="como-implementar-el-hook-jsondataserviceextraactions">Cómo implementar el hook JsonDataServiceExtraActions</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-implement-jsondataserviceextraactions-hook">Cómo implementar el hook JsonDataServiceExtraActions</h1>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección explica cómo implementar el hook <strong>JsonDataServiceExtraActions</strong>. Este hook se invoca antes y después de cada operación de la clase <code>DefaultJSONDataService</code>.</p>
-<h2 id="implementacion-del-hook">Implementación del hook</h2>
+<h2 id="hook-implementation">Implementación del hook</h2>
 <p>El hook se implementa extendiendo la clase <code>JsonDataServiceExtraActions</code>. Esta clase tiene dos métodos que implementar:</p>
 <ul>
 <li>
@@ -16464,7 +16464,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="ejemplo">Ejemplo</h2>
+<h2 id="example">Ejemplo</h2>
 <p>Este ejemplo registra una línea cada vez que se carga una ventana. Puede encontrar el código descrito a continuación en el módulo <a href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.platform.features.zip">org.openbravo.platform.features</a>.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JsonDataServiceExtraActionsExample</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">JsonDataServiceExtraActions</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoggerFactory</span>
@@ -16734,7 +16734,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

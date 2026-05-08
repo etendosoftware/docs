@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#centro-de-ayuda" class="md-skip">
+        <a href="#help-center" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16259,7 +16259,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centro-de-ayuda" class="md-nav__link">
+  <a href="#help-center" class="md-nav__link">
     <span class="md-ellipsis">
       Centro de ayuda
     </span>
@@ -16268,7 +16268,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contacto" class="md-nav__link">
+  <a href="#get-in-touch" class="md-nav__link">
     <span class="md-ellipsis">
       Contacto
     </span>
@@ -16342,7 +16342,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centro-de-ayuda" class="md-nav__link">
+  <a href="#help-center" class="md-nav__link">
     <span class="md-ellipsis">
       Centro de ayuda
     </span>
@@ -16351,7 +16351,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contacto" class="md-nav__link">
+  <a href="#get-in-touch" class="md-nav__link">
     <span class="md-ellipsis">
       Contacto
     </span>
@@ -16414,7 +16414,7 @@
 
   <h1>Servicio de Soporte</h1>
 
-<h2 id="centro-de-ayuda">Centro de ayuda</h2>
+<h2 id="help-center">Centro de ayuda</h2>
 <p>Etendo proporciona soporte a partners y usuarios a través de nuestro <a href="http://support.etendo.software" target="_blank">Centro de ayuda de Etendo</a>&nbsp;</p>
 <p>Aquí, el usuario puede realizar preguntas o enviar información en estas secciones:</p>
 <ul>
@@ -16427,7 +16427,7 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"></path></svg></span>  <strong>Sugerir una nueva funcionalidad</strong></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 6a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V19a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6 6 0 0 1 6-6m2 15v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1zm6-10h3v2h-3zM1 11h3v2H1zM13 1v3h-2V1zM4.92 3.5l2.13 2.14-1.42 1.41L3.5 4.93zm12.03 2.13 2.12-2.13 1.43 1.43-2.13 2.12z"></path></svg></span>  <strong>Sugerir una mejora</strong></li>
 </ul>
-<h2 id="contacto">Contacto</h2>
+<h2 id="get-in-touch">Contacto</h2>
 <p>Si tiene consultas comerciales, o si todavía no es partner o cliente, puede visitar la sección <a href="https://etendo.software/en/contact-us/" target="_blank">Contacte con nosotros</a> en el sitio web de Etendo.</p>
 
 
@@ -16680,7 +16680,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

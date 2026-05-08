@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracion-de-postgresql" class="md-skip">
+        <a href="#postgresql-configuration" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -7798,7 +7798,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -7807,7 +7807,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-usuario-del-sistema" class="md-nav__link">
+  <a href="#system-user-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del usuario del sistema
     </span>
@@ -7816,7 +7816,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-usuario-de-etendo-classic" class="md-nav__link">
+  <a href="#etendo-classic-user-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del usuario de Etendo Classic
     </span>
@@ -7825,7 +7825,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-requerida" class="md-nav__link">
+  <a href="#required-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración requerida
     </span>
@@ -7835,7 +7835,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#extensiones-de-postgresql-requeridas" class="md-nav__link">
+  <a href="#required-postgresql-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       Extensiones de PostgreSQL requeridas
     </span>
@@ -16399,7 +16399,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16408,7 +16408,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-usuario-del-sistema" class="md-nav__link">
+  <a href="#system-user-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del usuario del sistema
     </span>
@@ -16417,7 +16417,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-usuario-de-etendo-classic" class="md-nav__link">
+  <a href="#etendo-classic-user-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del usuario de Etendo Classic
     </span>
@@ -16426,7 +16426,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-requerida" class="md-nav__link">
+  <a href="#required-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración requerida
     </span>
@@ -16436,7 +16436,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#extensiones-de-postgresql-requeridas" class="md-nav__link">
+  <a href="#required-postgresql-extensions" class="md-nav__link">
     <span class="md-ellipsis">
       Extensiones de PostgreSQL requeridas
     </span>
@@ -16496,10 +16496,10 @@
   
 
 
-<h1 id="configuracion-de-postgresql">Configuración de PostgreSQL</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="postgresql-configuration">Configuración de PostgreSQL</h1>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección explica cómo configurar postgres para que funcione correctamente con Etendo Classic. Una vez que haya instalado postgres, debe asegurarse de que la configuración esté establecida correctamente.</p>
-<h2 id="configuracion-del-usuario-del-sistema">Configuración del usuario del sistema</h2>
+<h2 id="system-user-configuration">Configuración del usuario del sistema</h2>
 <p>Cuando <a href="https://www.postgresql.org/download/" target="_blank">instala postgres</a>, se crea un usuario del sistema llamado <code>postgres</code>. Si no ha configurado una contraseña para este usuario, puede hacerlo ejecutando el siguiente comando</p>
 <p></p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql
 </span></code></pre></div>
@@ -16510,7 +16510,7 @@ Entrará inmediatamente en la shell de postgresql; a continuación, puede config
 <p class="admonition-title">Info</p>
 <p>Etendo Classic tiene <code>syspass</code> preconfigurado como contraseña predeterminada para el usuario postgres. En caso de cambiar la contraseña del sistema, esta variable de configuración debe modificarse siguiendo la <a href="../../../../getting-started/installation.md">guía de instalación</a> de Etendo Classic.</p>
 </div>
-<h2 id="configuracion-del-usuario-de-etendo-classic">Configuración del usuario de Etendo Classic</h2>
+<h2 id="etendo-classic-user-configuration">Configuración del usuario de Etendo Classic</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>En caso de instalar Etendo desde cero ejecutando el comando <code>./gradlew install</code>, el proceso de instalación crea automáticamente el usuario y la contraseña predeterminados <code>tad</code>, y ya están incluidos preconfigurados. En caso de que no necesite cambiar el usuario <code>tad</code>, puede omitir esta sección.</p>
@@ -16525,12 +16525,12 @@ Entrará inmediatamente en la shell de postgresql; a continuación, puede config
 <p class="admonition-title">Note</p>
 <p>El usuario y la contraseña creados pueden configurarse en el archivo <code>gradle.properties</code>, tal y como puede verse en la <a href="../../../../getting-started/installation.md#install-etendo">guía de instalación</a> de Etendo Classic.</p>
 </div>
-<h2 id="configuracion-requerida">Configuración requerida</h2>
+<h2 id="required-configuration">Configuración requerida</h2>
 <p>Asegúrese de tener la siguiente configuración de PostgreSQL en su <code>postgresql.conf</code>. Este archivo se encuentra en la ubicación donde tenga instalado postgresql</p>
 <div class="language-text highlight"><span class="filename">postgresql.conf</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>lc_numeric = 'en_US.UTF-8'
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>max_locks_per_transaction = 128
 </span></code></pre></div>
-<h3 id="extensiones-de-postgresql-requeridas">Extensiones de PostgreSQL requeridas</h3>
+<h3 id="required-postgresql-extensions">Extensiones de PostgreSQL requeridas</h3>
 <p>Actualmente, Etendo Classic requiere que estén disponibles dos extensiones de PostgreSQL:</p>
 <p><strong>uuid-ossp</strong> para generar UUID
 <strong>pg_trgm</strong> para disponer de soporte de índices para búsquedas rápidas de tipo "contiene"</p>
@@ -16792,7 +16792,7 @@ Entrará inmediatamente en la shell de postgresql; a continuación, puede config
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

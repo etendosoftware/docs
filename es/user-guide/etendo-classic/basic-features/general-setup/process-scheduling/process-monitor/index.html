@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monitor-de-procesos" class="md-skip">
+        <a href="#process-monitor" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1655,7 +1655,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -1664,7 +1664,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-monitor-de-procesos" class="md-nav__link">
+  <a href="#process-monitor-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Monitor de Procesos
     </span>
@@ -1674,7 +1674,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procesos-en-grupo" class="md-nav__link">
+  <a href="#processes-in-group" class="md-nav__link">
     <span class="md-ellipsis">
       Procesos en Grupo
     </span>
@@ -16383,7 +16383,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16392,7 +16392,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-monitor-de-procesos" class="md-nav__link">
+  <a href="#process-monitor-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Monitor de Procesos
     </span>
@@ -16402,7 +16402,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procesos-en-grupo" class="md-nav__link">
+  <a href="#processes-in-group" class="md-nav__link">
     <span class="md-ellipsis">
       Procesos en Grupo
     </span>
@@ -16456,9 +16456,9 @@
   
 
 
-<h1 id="monitor-de-procesos">Monitor de Procesos</h1>
+<h1 id="process-monitor">Monitor de Procesos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Planificador de procesos</code> &gt; <code>Monitor de Procesos</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La ventana Monitor de Procesos permite <strong>revisar el estado de los procesos</strong> ejecutados por un usuario, así como los programados en la ventana de solicitud de proceso.</p>
 <p>En otras palabras, hay dos tipos de procesos que se pueden monitorizar en esta ventana:</p>
 <ul>
@@ -16467,7 +16467,7 @@
 </ul>
 <p>En cualquier caso, solo los usuarios que tengan un rol con acceso a un proceso/procesos determinado(s) podrán monitorizarlo(s) en esta ventana.</p>
 <p>Además, y tal y como ya se ha explicado, la definición de <strong>Seguridad basada en el Rol</strong> a nivel de solicitud de proceso permitirá definir los usuarios que podrán monitorizar un proceso en segundo plano determinado en esta ventana.</p>
-<h2 id="ventana-monitor-de-procesos">Ventana Monitor de Procesos</h2>
+<h2 id="process-monitor-window">Ventana Monitor de Procesos</h2>
 <p>La ventana Monitor de Procesos muestra información de solo lectura sobre la ejecución individual de procesos.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png"></a></p>
 <p>Tal y como se muestra en la imagen anterior, la ventana Monitor de Procesos proporciona la siguiente información por cada proceso ejecutado:</p>
@@ -16485,7 +16485,7 @@
 </li>
 <li>Registro del proceso</li>
 </ul>
-<h3 id="procesos-en-grupo">Procesos en Grupo</h3>
+<h3 id="processes-in-group">Procesos en Grupo</h3>
 <p>En caso de que el proceso ejecutado sea un grupo de procesos, aquí encontrará la información sobre las ejecuciones de los procesos del grupo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png"></a></p>
 <hr>
@@ -16741,7 +16741,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

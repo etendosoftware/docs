@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gestion-del-modulo-de-empresa" class="md-skip">
+        <a href="#enterprise-module-management" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16360,7 +16360,7 @@
   
 
 
-<h1 id="gestion-del-modulo-de-empresa">Gestión del módulo de Empresa</h1>
+<h1 id="enterprise-module-management">Gestión del módulo de Empresa</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Gestión del módulo de Empresa</code></p>
 <p>Los conjuntos de datos permiten al usuario definir datos de referencia, como datos maestros o datos de configuración, para módulos o incluso para el núcleo de Etendo.</p>
 <p>Los datos de referencia se pueden importar o aplicar a organizaciones en la ventana <strong>Gestión del módulo de Empresa</strong> simplemente seleccionando la organización para la cual se deben aplicar los datos de referencia y los datos de referencia que se van a aplicar o a importar.</p>
@@ -16623,7 +16623,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

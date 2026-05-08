@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-un-nuevo-metodo-de-adjuntos" class="md-skip">
+        <a href="#how-to-create-a-new-attachment-method" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10314,7 +10314,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10323,7 +10323,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-metodo-de-adjuntos" class="md-nav__link">
+  <a href="#attachment-method-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Método de adjuntos
     </span>
@@ -10332,7 +10332,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-attachimplementation" class="md-nav__link">
+  <a href="#attachimplementation-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase AttachImplementation
     </span>
@@ -16380,7 +16380,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-metodo-de-adjuntos" class="md-nav__link">
+  <a href="#attachment-method-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Método de adjuntos
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-attachimplementation" class="md-nav__link">
+  <a href="#attachimplementation-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase AttachImplementation
     </span>
@@ -16447,16 +16447,16 @@
   
 
 
-<h1 id="como-crear-un-nuevo-metodo-de-adjuntos">Cómo crear un nuevo método de adjuntos</h1>
+<h1 id="how-to-create-a-new-attachment-method">Cómo crear un nuevo método de adjuntos</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección explica cómo crear un <strong>método de adjuntos personalizado</strong> en Etendo para integrar sistemas externos de <strong>CMS o ECM</strong>. Describe cómo registrar el nuevo método de adjuntos en la aplicación, implementar la clase Java requerida extendiendo <code>AttachImplementation</code> y definir las operaciones principales para subir, descargar, actualizar y eliminar adjuntos. Este enfoque permite a Etendo gestionar archivos utilizando almacenamiento alternativo o <strong>soluciones de gestión de contenidos</strong> más allá del mecanismo de adjuntos por defecto.</p>
-<h2 id="ventana-metodo-de-adjuntos">Ventana Método de adjuntos</h2>
+<h2 id="attachment-method-window">Ventana Método de adjuntos</h2>
 <p>Como <strong>Administrador del sistema</strong>, el nuevo Método de adjuntos debe crearse en esa ventana. El <strong>Identificador</strong> se utiliza para identificar la clase Java que implementa el método.</p>
-<h2 id="clase-attachimplementation">Clase <code>AttachImplementation</code></h2>
+<h2 id="attachimplementation-class">Clase <code>AttachImplementation</code></h2>
 <p>La <strong>clase</strong> que implementa el método de adjuntos debe implementar la clase abstracta <code>AttachImplementation</code>. Esta clase define algunos métodos que deben implementarse para disponer de un método de adjuntos completamente funcional.</p>
 <p>La clase debe tener un calificador para identificarla. El nombre debe ser el identificador configurado en la ventana Método de adjuntos. Debe seguir esta estructura:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">     </span><span class="nd">@ComponentProvider.Qualifier</span><span class="p">(</span><span class="s">"CMSSearchKey"</span><span class="p">)</span>
@@ -16796,7 +16796,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

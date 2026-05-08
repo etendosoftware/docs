@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#categoria-de-lm" class="md-skip">
+        <a href="#gl-category" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4637,7 +4637,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -4646,7 +4646,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -4655,7 +4655,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16388,7 +16388,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16458,9 +16458,9 @@
   
 
 
-<h1 id="categoria-de-lm">Categoría de LM</h1>
+<h1 id="gl-category">Categoría de LM</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Categoría de LM</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>En esta ventana, el usuario puede <strong>ver, crear y gestionar Categorías de LM utilizadas para clasificar los asientos contables en el Libro Mayor</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-1.png"></a></p>
 <p>Las Categorías de LM (Libro Mayor) actúan como <strong>identificadores de clasificación que posteriormente se asignan a</strong> <a href="../document-type/">Tipo de documento</a>. Una vez que una Categoría de LM se vincula a un Tipo de documento, <strong>todos los asientos contables generados a partir de ese documento se categorizan automáticamente durante la contabilización</strong>, garantizando una clasificación coherente sin intervención manual.</p>
@@ -16473,7 +16473,7 @@
 <li>Los diarios importados o creados manualmente deben estar <strong>claramente identificados por su origen o propósito empresarial</strong>.</li>
 </ul>
 <p>Una vez creadas, las Categorías de LM se asignan en la ventana <strong>Tipo de documento</strong>. A partir de ese momento, cada documento contabilizado usando ese Tipo de documento aplicará automáticamente la Categoría de LM correspondiente a sus asientos contables. Se desaconseja crear categorías innecesarias o excesivamente granulares, ya que las categorías están pensadas para representar <strong>clasificaciones estables y de alto nivel</strong> en lugar de detalles transaccionales.</p>
-<h2 id="cabecera">Cabecera</h2>
+<h2 id="header">Cabecera</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-2.png"></a></p>
 <p>Campos a tener en cuenta:</p>
 <ul>
@@ -16493,7 +16493,7 @@
 </li>
 <li><strong>Valor por defecto</strong>: Cuando está marcado, esta categoría se selecciona por defecto para los nuevos registros que utilicen esta categoría. Esta opción acelera la introducción de datos cuando sea necesario.</li>
 </ul>
-<h2 id="ejemplo">Ejemplo</h2>
+<h2 id="example">Ejemplo</h2>
 <p>Seleccione la opción de crear nuevo, rellene los campos correspondientes y guárdelo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-3.png"></a></p>
 <p>La categoría creada está disponible para su uso en asientos de diario, importaciones y procesamiento de documentos.</p>
@@ -16751,7 +16751,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

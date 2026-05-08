@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uso-de-repositorios-en-etendo" class="md-skip">
+        <a href="#use-of-repositories-in-etendo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -7821,7 +7821,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -7830,7 +7830,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#token-de-github" class="md-nav__link">
+  <a href="#github-token" class="md-nav__link">
     <span class="md-ellipsis">
       Token de GitHub
     </span>
@@ -7840,7 +7840,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generacion-de-un-token-de-acceso-personal" class="md-nav__link">
+  <a href="#generating-a-personal-access-token" class="md-nav__link">
     <span class="md-ellipsis">
       Generación de un Token de acceso personal
     </span>
@@ -7849,7 +7849,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuracion-del-token-de-github-en-proyectos-de-etendo" class="md-nav__link">
+  <a href="#configuring-the-github-token-in-etendo-projects" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del Token de GitHub en proyectos de Etendo
     </span>
@@ -7858,7 +7858,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uso-del-token-de-acceso-personal-en-tareas-de-gradle" class="md-nav__link">
+  <a href="#using-the-personal-access-token-in-gradle-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       Uso del Token de acceso personal en tareas de Gradle
     </span>
@@ -7867,7 +7867,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#revocacion-de-un-token-de-acceso-personal" class="md-nav__link">
+  <a href="#revoking-a-personal-access-token" class="md-nav__link">
     <span class="md-ellipsis">
       Revocación de un Token de acceso personal
     </span>
@@ -16408,7 +16408,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16417,7 +16417,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#token-de-github" class="md-nav__link">
+  <a href="#github-token" class="md-nav__link">
     <span class="md-ellipsis">
       Token de GitHub
     </span>
@@ -16427,7 +16427,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generacion-de-un-token-de-acceso-personal" class="md-nav__link">
+  <a href="#generating-a-personal-access-token" class="md-nav__link">
     <span class="md-ellipsis">
       Generación de un Token de acceso personal
     </span>
@@ -16436,7 +16436,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuracion-del-token-de-github-en-proyectos-de-etendo" class="md-nav__link">
+  <a href="#configuring-the-github-token-in-etendo-projects" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del Token de GitHub en proyectos de Etendo
     </span>
@@ -16445,7 +16445,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uso-del-token-de-acceso-personal-en-tareas-de-gradle" class="md-nav__link">
+  <a href="#using-the-personal-access-token-in-gradle-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       Uso del Token de acceso personal en tareas de Gradle
     </span>
@@ -16454,7 +16454,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#revocacion-de-un-token-de-acceso-personal" class="md-nav__link">
+  <a href="#revoking-a-personal-access-token" class="md-nav__link">
     <span class="md-ellipsis">
       Revocación de un Token de acceso personal
     </span>
@@ -16508,16 +16508,16 @@
   
 
 
-<h1 id="uso-de-repositorios-en-etendo">Uso de repositorios en Etendo</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="use-of-repositories-in-etendo">Uso de repositorios en Etendo</h1>
+<h2 id="overview">Visión general</h2>
 <p>Etendo admite cualquier repositorio de paquetes Maven, pero esta guía se centra en configurar las credenciales para los repositorios estándar de Etendo.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>De forma predeterminada, Etendo Classic y los bundles de extensiones se descargan desde los <a href="https://github.com/etendosoftware" target="_isblank">repositorios de GitHub de Etendo</a>.</p>
 </div>
 <p>Para acceder a los repositorios de GitHub de Etendo y resolver dependencias, necesita las credenciales adecuadas. Esto implica usar un <strong>Token de acceso personal</strong>. Esta guía explica cómo configurar y utilizar estas credenciales.</p>
-<h2 id="token-de-github">Token de GitHub</h2>
-<h3 id="generacion-de-un-token-de-acceso-personal">Generación de un Token de acceso personal</h3>
+<h2 id="github-token">Token de GitHub</h2>
+<h3 id="generating-a-personal-access-token">Generación de un Token de acceso personal</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Como parte de su licencia de Etendo, recibirá una invitación por correo electrónico para unirse al <strong>equipo de partners de Etendo</strong> en GitHub. Debe crear o asociar una cuenta de GitHub con el correo electrónico invitado. Su usuario tendrá entonces acceso de lectura a todos los repositorios de Etendo.</p>
@@ -16549,7 +16549,7 @@
 </div>
 </li>
 </ol>
-<h3 id="configuracion-del-token-de-github-en-proyectos-de-etendo">Configuración del Token de GitHub en proyectos de Etendo</h3>
+<h3 id="configuring-the-github-token-in-etendo-projects">Configuración del Token de GitHub en proyectos de Etendo</h3>
 <p>Después de generar un <strong>Token de acceso personal</strong>, configúrelo en su proyecto de Etendo siguiendo estos pasos:</p>
 <ol>
 <li>Abra el archivo <code>gradle.properties</code> en su proyecto.</li>
@@ -16568,12 +16568,12 @@
 <p>Guarde el archivo <code>gradle.properties</code>.</p>
 </li>
 </ol>
-<h3 id="uso-del-token-de-acceso-personal-en-tareas-de-gradle">Uso del Token de acceso personal en tareas de Gradle</h3>
+<h3 id="using-the-personal-access-token-in-gradle-tasks">Uso del Token de acceso personal en tareas de Gradle</h3>
 <p>Una vez configurado su <strong>Token de GitHub</strong>, las tareas de Gradle pueden interactuar sin problemas con los repositorios de GitHub de Etendo. Por ejemplo, al ejecutar el siguiente comando:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>dependencies
 </span></code></pre></div>
 <p>Gradle utilizará automáticamente su <em>Token de acceso personal</em> para autenticarse con GitHub y resolver dependencias de forma segura.</p>
-<h3 id="revocacion-de-un-token-de-acceso-personal">Revocación de un Token de acceso personal</h3>
+<h3 id="revoking-a-personal-access-token">Revocación de un Token de acceso personal</h3>
 <p>Si ya no necesita un token o sospecha que se ha visto comprometido, revóquelo inmediatamente siguiendo estos pasos:</p>
 <ol>
 <li>Vaya a su página de <strong>Configuración</strong> en GitHub.</li>
@@ -16836,7 +16836,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

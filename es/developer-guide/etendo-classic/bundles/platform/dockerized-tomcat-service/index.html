@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-tomcat-dockerizado" class="md-skip">
+        <a href="#dockerized-tomcat-service" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -12140,7 +12140,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -12149,7 +12149,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-configuracion" class="md-nav__link">
+  <a href="#configuration-variables" class="md-nav__link">
     <span class="md-ellipsis">
       Variables de configuración
     </span>
@@ -12158,7 +12158,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compilar-el-entorno" class="md-nav__link">
+  <a href="#compile-the-environment" class="md-nav__link">
     <span class="md-ellipsis">
       Compilar el entorno
     </span>
@@ -12167,7 +12167,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-adicional-para-usar-tomcat-dockerizado-con-una-base-de-datos-del-host-en-entornos-linux" class="md-nav__link">
+  <a href="#extra-configuration-to-use-tomcat-dockerized-with-a-host-database-in-linux-environments" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux
     </span>
@@ -16384,7 +16384,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16393,7 +16393,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-configuracion" class="md-nav__link">
+  <a href="#configuration-variables" class="md-nav__link">
     <span class="md-ellipsis">
       Variables de configuración
     </span>
@@ -16402,7 +16402,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compilar-el-entorno" class="md-nav__link">
+  <a href="#compile-the-environment" class="md-nav__link">
     <span class="md-ellipsis">
       Compilar el entorno
     </span>
@@ -16411,7 +16411,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-adicional-para-usar-tomcat-dockerizado-con-una-base-de-datos-del-host-en-entornos-linux" class="md-nav__link">
+  <a href="#extra-configuration-to-use-tomcat-dockerized-with-a-host-database-in-linux-environments" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux
     </span>
@@ -16466,15 +16466,15 @@
   
 
 
-<h1 id="servicio-tomcat-dockerizado">Servicio Tomcat dockerizado</h1>
+<h1 id="dockerized-tomcat-service">Servicio Tomcat dockerizado</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.tomcat</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>El módulo <code>com.etendoerp.tomcat</code> permite la dockerización de Tomcat dentro de Etendo Classic. Este módulo modifica las tareas de Gradle para desplegar automáticamente el archivo <code>WAR</code> en el contenedor al ejecutar la tarea <code>smartbuild</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, debe estar instalado el Platform Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_isblank">Platform Extensions Bundle</a>. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/">Platform Extensions - Notas de la versión</a>.</p>
 </div>
-<h2 id="variables-de-configuracion">Variables de configuración</h2>
+<h2 id="configuration-variables">Variables de configuración</h2>
 <p>Para habilitar y configurar el servicio de Tomcat, están disponibles las siguientes variables de configuración:</p>
 <ul>
 <li>
@@ -16504,7 +16504,7 @@ Esta variable establece el puerto de depuración para el servicio de Tomcat. El 
 <p>Ejecute el siguiente comando para aplicar los cambios de configuración:</p>
 <div class="language-groovy highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">./</span><span class="n">gradlew</span><span class="w"> </span><span class="n">setup</span>
 </span></code></pre></div>
-<h2 id="compilar-el-entorno">Compilar el entorno</h2>
+<h2 id="compile-the-environment">Compilar el entorno</h2>
 <ul>
 <li>
 <p>La primera vez que se utiliza Tomcat dentro de un entorno Docker, debe compilarse la configuración ejecutando:</p>
@@ -16522,7 +16522,7 @@ Esta variable establece el puerto de depuración para el servicio de Tomcat. El 
 <p>Consulte la página <a href="../docker-management/">Gestión de Docker</a> para más información sobre la gestión de contenedores.</p>
 </li>
 </ul>
-<h2 id="configuracion-adicional-para-usar-tomcat-dockerizado-con-una-base-de-datos-del-host-en-entornos-linux">Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux</h2>
+<h2 id="extra-configuration-to-use-tomcat-dockerized-with-a-host-database-in-linux-environments">Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux</h2>
 <ol>
 <li>
 <p>Escuchar en la red de Docker</p>
@@ -16804,7 +16804,7 @@ Esta variable establece el puerto de depuración para el servicio de Tomcat. El 
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-anadir-una-restriccion" class="md-skip">
+        <a href="#how-to-add-a-constraint" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9439,7 +9439,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9448,7 +9448,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modularidad" class="md-nav__link">
+  <a href="#modularity" class="md-nav__link">
     <span class="md-ellipsis">
       Modularidad
     </span>
@@ -9457,7 +9457,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-restriccion-a-la-base-de-datos" class="md-nav__link">
+  <a href="#add-constraint-to-database" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir restricción a la base de datos
     </span>
@@ -9466,7 +9466,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-un-mensaje-adecuado" class="md-nav__link">
+  <a href="#adding-a-proper-message" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir un mensaje adecuado
     </span>
@@ -9475,7 +9475,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-base-de-datos" class="md-nav__link">
+  <a href="#export-database" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar base de datos
     </span>
@@ -16398,7 +16398,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16407,7 +16407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modularidad" class="md-nav__link">
+  <a href="#modularity" class="md-nav__link">
     <span class="md-ellipsis">
       Modularidad
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-restriccion-a-la-base-de-datos" class="md-nav__link">
+  <a href="#add-constraint-to-database" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir restricción a la base de datos
     </span>
@@ -16425,7 +16425,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-un-mensaje-adecuado" class="md-nav__link">
+  <a href="#adding-a-proper-message" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir un mensaje adecuado
     </span>
@@ -16434,7 +16434,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportar-base-de-datos" class="md-nav__link">
+  <a href="#export-database" class="md-nav__link">
     <span class="md-ellipsis">
       Exportar base de datos
     </span>
@@ -16489,25 +16489,25 @@
   
 
 
-<h1 id="como-anadir-una-restriccion">Cómo añadir una restricción</h1>
+<h1 id="how-to-add-a-constraint">Cómo añadir una restricción</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Al añadir nuevas columnas a una tabla como la <strong>fecha Válido hasta</strong> en la <strong>tabla ht_salary</strong>, a menudo es necesario aplicar reglas lógicas para que los datos se mantengan consistentes. En este caso, la fecha Válido hasta debe ser siempre igual o posterior a la fecha Válido desde. Esta regla puede aplicarse añadiendo una <strong>restricción de base de datos</strong>, que es una <code>SQL-Expression</code>, que comprueba la validez de los datos cada vez que se insertan o actualizan filas.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para más información, visite <a href="../how-to-add-columns-to-a-table/">Cómo añadir columnas a una tabla</a>.</p>
 </div>
-<h2 id="modularidad">Modularidad</h2>
+<h2 id="modularity">Modularidad</h2>
 <p>Como la restricción se colocará en el módulo con dbprefix <code>HT2</code> pero la tabla <strong>ht_salary</strong> está definida en otro módulo <code>HT</code>, el nombre de la restricción debe seguir la regla habitual y comenzar con <code>EM_HT2</code>.</p>
 <p>Si la restricción se añadiera en el mismo módulo que su tabla, entonces no sería necesaria esta <code>regla de nomenclatura EM_</code>. Sin embargo, la mejor práctica es que, en ese caso, comience con el <strong>nombre completo de la tabla</strong> para garantizar que su nombre sea único en toda la base de datos.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Recuerde que, en todos los casos, el nombre completo de la restricción (como cualquier otro nombre de <code>db-object</code>) no puede tener más de 30 caracteres.  </p>
 </div>
-<h2 id="anadir-restriccion-a-la-base-de-datos">Añadir restricción a la base de datos</h2>
+<h2 id="add-constraint-to-database">Añadir restricción a la base de datos</h2>
 <p>Para añadir la restricción, ejecute la siguiente cláusula en la base de datos:</p>
 <div class="language-SQL highlight"><span class="filename">PostgreSQL</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ht_salary</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">constraint</span><span class="w"> </span><span class="n">em_ht2_ht_salary_date_chk</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">em_ht2_validto</span><span class="o">&gt;=</span><span class="n">validfrom</span><span class="p">);</span>
 </span></code></pre></div>
@@ -16517,7 +16517,7 @@
 <p class="admonition-title">Note</p>
 <p>Añadir una <strong>restricción única</strong> a un módulo existente se considera un cambio de API y podría afectar a entornos existentes ya poblados. Antes de añadirla, evalúe el riesgo y considere crear una buildvalidation para comprobar si los datos existentes cumplen. Si no lo hacen, la buildvalidation puede detener el proceso de actualización y mostrar un mensaje adecuado.  </p>
 </div>
-<h2 id="anadir-un-mensaje-adecuado">Añadir un mensaje adecuado</h2>
+<h2 id="adding-a-proper-message">Añadir un mensaje adecuado</h2>
 <p>Ahora, al editar datos en la pestaña <code>Employee Salary &gt; Salary</code> e intentar usar una fecha <strong>Válido hasta</strong> anterior a la fecha <strong>Válido desde</strong>, obtenemos un mensaje de error como se muestra a continuación.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-2.png"></a></p>
 <p>Sin embargo, este mensaje de error todavía no es demasiado útil para el usuario, ya que no indica en absoluto por qué no se realizó la acción de guardado.</p>
@@ -16537,7 +16537,7 @@ Esto se hace añadiendo un nuevo Mensaje. Esto aprovecha el sistema de traduccio
 </ul>
 <p>Entonces, tendremos un mensaje como:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-3.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-3.png"></a></p>
-<h2 id="exportar-base-de-datos">Exportar base de datos</h2>
+<h2 id="export-database">Exportar base de datos</h2>
 <p>Siempre que se modifique el Diccionario de Aplicación o la base de datos física, es posible exportar esa información a archivos <code>XML</code>; esta es la forma en que Etendo mantiene los datos de base de datos como parte de sus archivos de código fuente. 
 Para hacerlo, simplemente ejecute:</p>
 <div class="language-groovy highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">./</span><span class="n">gradlew</span><span class="w"> </span><span class="n">export</span><span class="o">.</span><span class="na">database</span>
@@ -16798,7 +16798,7 @@ Para hacerlo, simplemente ejecute:</p>
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

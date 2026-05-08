@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-una-tabla" class="md-skip">
+        <a href="#how-to-create-a-table" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10528,7 +10528,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-crear-una-nueva-tabla" class="md-nav__link">
+  <a href="#how-to-create-a-new-table" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo crear una nueva tabla
     </span>
@@ -10538,7 +10538,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo
     </span>
@@ -10547,7 +10547,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#modularidad" class="md-nav__link">
+  <a href="#modularity" class="md-nav__link">
     <span class="md-ellipsis">
       Modularidad
     </span>
@@ -10556,7 +10556,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#crear-nuevas-tablas-en-la-base-de-datos" class="md-nav__link">
+  <a href="#create-new-tables-in-the-database" class="md-nav__link">
     <span class="md-ellipsis">
       Crear nuevas tablas en la base de datos
     </span>
@@ -10565,7 +10565,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registrar-la-tabla-en-el-diccionario-de-aplicacion" class="md-nav__link">
+  <a href="#registering-the-table-within-the-application-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
       Registrar la tabla en el Diccionario de Aplicación
     </span>
@@ -10574,7 +10574,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reconstruccion-del-sistema" class="md-nav__link">
+  <a href="#rebuilding-the-system" class="md-nav__link">
     <span class="md-ellipsis">
       Reconstrucción del sistema
     </span>
@@ -16406,7 +16406,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-crear-una-nueva-tabla" class="md-nav__link">
+  <a href="#how-to-create-a-new-table" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo crear una nueva tabla
     </span>
@@ -16416,7 +16416,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivo
     </span>
@@ -16425,7 +16425,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#modularidad" class="md-nav__link">
+  <a href="#modularity" class="md-nav__link">
     <span class="md-ellipsis">
       Modularidad
     </span>
@@ -16434,7 +16434,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#crear-nuevas-tablas-en-la-base-de-datos" class="md-nav__link">
+  <a href="#create-new-tables-in-the-database" class="md-nav__link">
     <span class="md-ellipsis">
       Crear nuevas tablas en la base de datos
     </span>
@@ -16443,7 +16443,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#registrar-la-tabla-en-el-diccionario-de-aplicacion" class="md-nav__link">
+  <a href="#registering-the-table-within-the-application-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
       Registrar la tabla en el Diccionario de Aplicación
     </span>
@@ -16452,7 +16452,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reconstruccion-del-sistema" class="md-nav__link">
+  <a href="#rebuilding-the-system" class="md-nav__link">
     <span class="md-ellipsis">
       Reconstrucción del sistema
     </span>
@@ -16524,17 +16524,17 @@
   
 
 
-<h1 id="como-crear-una-tabla">Cómo crear una tabla</h1>
-<h2 id="como-crear-una-nueva-tabla">Cómo crear una nueva tabla</h2>
+<h1 id="how-to-create-a-table">Cómo crear una tabla</h1>
+<h2 id="how-to-create-a-new-table">Cómo crear una nueva tabla</h2>
 <p>Puede encontrar documentación más genérica sobre las tablas y sus características en Etendo en la página <a href="../../concepts/tables/">Tabla</a>. Esa página explica las columnas comunes necesarias para todas las tablas en Etendo, las reglas de nomenclatura y otra información importante.</p>
 <p>En primer lugar, es necesario crear las estructuras subyacentes de la base de datos que contendrán los datos. En otras palabras, utilizando una herramienta de administración de bases de datos (p. ej., <a href="https://www.pgadmin.org/" target="_blank">pgAdmin 4</a> o <a href="https://github.com/phppgadmin/phppgadmin" target="_blank">phpPgAdmin</a> para PostgreSQL y <a href="https://www.oracle.com/database/sqldeveloper/" target="_blank">Oracle SQL Developer</a>) primero se debe ejecutar <code>CREATE TABLE</code> para crear la tabla que se utilizará para almacenar los datos de la nueva ventana/solapas.</p>
-<h3 id="objetivo">Objetivo</h3>
+<h3 id="objective">Objetivo</h3>
 <p>Imagine que estamos desarrollando un módulo de RR. HH. y necesitamos una ventana que permita al usuario introducir los salarios de los empleados. También necesitamos realizar el seguimiento del salario del empleado, por lo que es necesario conservar los registros históricos. Cada registro de salario debe tener un campo Fecha de vigencia desde (Valid From Date) que indique cuándo entró en vigor un salario determinado. El registro perteneciente a un empleado concreto con la Fecha de vigencia desde más reciente es el salario que es válido hoy. Tenga en cuenta que los empleados ya están dentro del sistema, contenidos en la tabla de base de datos <code>C_BPARTNER</code> e indicados por la columna <code>C_BPARTNER ISEMPLOYEE</code>. Por lo tanto, solo necesitamos crear una tabla de base de datos que contenga los salarios reales.</p>
-<h3 id="modularidad">Modularidad</h3>
+<h3 id="modularity">Modularidad</h3>
 <p>Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo <em>core</em>. Siga la sección <a href="../how-to-create-a-module/">Cómo crear un módulo</a> del Manual del desarrollador de Modularidad para crear un nuevo módulo.</p>
 <p>Una vez que haya registrado el módulo, debe decidir el prefijo de base de datos que indicará los elementos de BD que pertenecen a este módulo. Esto se hace añadiendo prefijo(s) de base de datos al módulo. De esta forma, cualquier artefacto de base de datos (tabla, trigger, procedimiento almacenado) que pertenezca a ese módulo deberá tener el nombre con dicho prefijo. En nuestro caso, añada el <em>Prefijo de Base de Datos</em> <code>HT</code>.</p>
 <p>Por último, el paquete de datos debe introducirse en la solapa <em>Paquete de Datos</em> de la ventana <em>Módulo</em>. Introduzca allí un nuevo registro con HR Data como <em>Nombre</em> y <em>{modulePackage}.data</em> (tenga en cuenta que este paquete debe ser un subpaquete del que introdujo a nivel de módulo), por ejemplo com.etendoerp.howtos.data en caso de que com.etendoerp.howtos sea el paquete del módulo.</p>
-<h3 id="crear-nuevas-tablas-en-la-base-de-datos">Crear nuevas tablas en la base de datos</h3>
+<h3 id="create-new-tables-in-the-database">Crear nuevas tablas en la base de datos</h3>
 <p>Vamos a introducir una nueva tabla de base de datos llamada <code>ht_salary</code> que contendrá los datos requeridos. Observe el prefijo <code>HT</code> del nombre de la tabla, que indica el módulo al que pertenece esta tabla.</p>
 <p>La nueva tabla <code>ht_salary</code> debe incluir los campos <code>AD_Client_ID</code>, <code>AD_Org_ID</code>, <code>IsActive</code>, <code>Created</code>, <code>CreatedBy</code>, <code>Updated</code> y <code>UpdatedBy</code>, que son <code>mandatory</code> y necesarios por motivos de seguridad y auditoría de la aplicación.</p>
 <table>
@@ -16648,7 +16648,7 @@
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">ht_salary_c_currency</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">C_CURRENCY_ID</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">C_CURRENCY</span><span class="w"> </span><span class="p">(</span><span class="n">c_currency_id</span><span class="p">)</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">);</span>
 </span></code></pre></div>
-<h3 id="registrar-la-tabla-en-el-diccionario-de-aplicacion">Registrar la tabla en el Diccionario de Aplicación</h3>
+<h3 id="registering-the-table-within-the-application-dictionary">Registrar la tabla en el Diccionario de Aplicación</h3>
 <p>Los siguientes pasos registran la tabla recién creada dentro del Diccionario de Aplicación de Etendo Classic.</p>
 <p>Para ello, primero inicie sesión en Etendo Classic utilizando un nombre de usuario con acceso a <code>Administrador del sistema</code> &gt; <code>Rol</code>. Vaya a <code>Diccionario de Aplicación</code> &gt; <code>Tablas y Columnas</code> y cree un nuevo registro como se muestra en la captura de pantalla siguiente:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-1.png"></a></p>
@@ -16700,7 +16700,7 @@
 <li><em>Importe</em> : Identificador = <em>Y</em></li>
 </ul>
 <p>Etendo Classic ahora conoce la nueva tabla de base de datos HT_SALARY y cómo tratarla en términos de su definición y de la representación al usuario.</p>
-<h3 id="reconstruccion-del-sistema">Reconstrucción del sistema</h3>
+<h3 id="rebuilding-the-system">Reconstrucción del sistema</h3>
 <p>Por último, para que la tabla recién añadida esté disponible en tiempo de ejecución, es necesario ejecutar <code>./gradlew generate.entities</code> y desplegar los cambios en Tomcat. Estos dos pasos pueden realizarse conjuntamente ejecutando <code>./gradlew smartbuild</code>. Después de eso, debe reiniciarse Tomcat para refrescar el modelo en memoria de DAL, de modo que conozca las columnas recién añadidas.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Table" target="_blank">Cómo crear una tabla</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16957,7 +16957,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

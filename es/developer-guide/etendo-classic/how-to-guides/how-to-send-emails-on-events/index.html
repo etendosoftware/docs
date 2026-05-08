@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-enviar-correos-electronicos-en-eventos" class="md-skip">
+        <a href="#how-to-send-emails-on-events" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11604,7 +11604,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11613,7 +11613,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disparo-de-eventos-de-correo-electronico" class="md-nav__link">
+  <a href="#triggering-email-events" class="md-nav__link">
     <span class="md-ellipsis">
       Disparo de eventos de correo electrónico
     </span>
@@ -11622,7 +11622,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#escucha-de-eventos-de-correo-electronico" class="md-nav__link">
+  <a href="#listening-to-email-events" class="md-nav__link">
     <span class="md-ellipsis">
       Escucha de eventos de correo electrónico
     </span>
@@ -16380,7 +16380,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disparo-de-eventos-de-correo-electronico" class="md-nav__link">
+  <a href="#triggering-email-events" class="md-nav__link">
     <span class="md-ellipsis">
       Disparo de eventos de correo electrónico
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#escucha-de-eventos-de-correo-electronico" class="md-nav__link">
+  <a href="#listening-to-email-events" class="md-nav__link">
     <span class="md-ellipsis">
       Escucha de eventos de correo electrónico
     </span>
@@ -16453,16 +16453,16 @@
   
 
 
-<h1 id="como-enviar-correos-electronicos-en-eventos">Cómo enviar correos electrónicos en eventos</h1>
+<h1 id="how-to-send-emails-on-events">Cómo enviar correos electrónicos en eventos</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Etendo proporciona un mecanismo que permite generar eventos de forma programática para enviar correos electrónicos. El disparo de eventos y la implementación del correo electrónico están desacoplados, siendo posible lanzar eventos genéricos, que son escuchados por otros módulos que implementan el contenido del correo electrónico.</p>
 <p>Este procedimiento explica ambas cosas: cómo disparar los eventos y cómo escucharlos para generar el evento.</p>
 <p>El servidor de correo electrónico está <a href="../../../../user-guide/etendo-classic/basic-features/general-setup/client/client/#email-configuration">configurado</a> a nivel de cliente.</p>
-<h2 id="disparo-de-eventos-de-correo-electronico">Disparo de eventos de correo electrónico</h2>
+<h2 id="triggering-email-events">Disparo de eventos de correo electrónico</h2>
 <p>Un evento se identifica simplemente mediante un <code>String</code>.</p>
 <p>Los eventos se disparan de forma programática desde cualquier parte del código, como <a href="../how-to-create-a-standard-process-definition/">Procesos</a> o <a href="../how-to-implement-a-business-event-handler/">Manejadores de eventos de negocio</a>.</p>
 <p>Para disparar un evento necesita:</p>
@@ -16485,7 +16485,7 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>El primer parámetro es el <code>nombre del evento</code> que identifica el evento. El segundo es la lista de destinatarios, separada por punto y coma (;) si hay más de uno. Y, por último, cualquier <code>Object</code> con los datos que se utilizarán para generar el evento. Tenga en cuenta que, aunque estos datos sean algo genérico (<code>Object</code>), el tipo real que el listener esperará puede variar dependiendo del evento.</p>
-<h2 id="escucha-de-eventos-de-correo-electronico">Escucha de eventos de correo electrónico</h2>
+<h2 id="listening-to-email-events">Escucha de eventos de correo electrónico</h2>
 <p>Los eventos de correo electrónico son escuchados por clases que implementan <code>EmailEventContentGenerator</code>.</p>
 <p>Para escuchar un evento, necesita crear una clase de <code>EmailEventContentGenerator</code>:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyEmailGenerator</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">EmailEventContentGenerator</span><span class="w"> </span><span class="p">{</span>
@@ -16780,7 +16780,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

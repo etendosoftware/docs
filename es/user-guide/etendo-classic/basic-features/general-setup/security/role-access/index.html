@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rol-permisos" class="md-skip">
+        <a href="#role-access" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1535,7 +1535,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -1544,7 +1544,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-rol-permisos" class="md-nav__link">
+  <a href="#role-access-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Rol permisos
     </span>
@@ -1554,7 +1554,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permiso-tablas" class="md-nav__link">
+  <a href="#table-access" class="md-nav__link">
     <span class="md-ellipsis">
       Permiso tablas
     </span>
@@ -16383,7 +16383,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16392,7 +16392,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ventana-rol-permisos" class="md-nav__link">
+  <a href="#role-access-window" class="md-nav__link">
     <span class="md-ellipsis">
       Ventana Rol permisos
     </span>
@@ -16402,7 +16402,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permiso-tablas" class="md-nav__link">
+  <a href="#table-access" class="md-nav__link">
     <span class="md-ellipsis">
       Permiso tablas
     </span>
@@ -16456,14 +16456,14 @@
   
 
 
-<h1 id="rol-permisos">Rol permisos</h1>
+<h1 id="role-access">Rol permisos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Seguridad</code> &gt; <code>Rol permisos</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta ventana define el acceso a las tablas y columnas de la base de datos para los roles seleccionados.<br>
 Aquí, el usuario puede editar un rol para conceder o denegar el acceso necesario a las tablas y columnas.</p>
-<h2 id="ventana-rol-permisos">Ventana Rol permisos</h2>
+<h2 id="role-access-window">Ventana Rol permisos</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png"></a></p>
-<h3 id="permiso-tablas">Permiso tablas</h3>
+<h3 id="table-access">Permiso tablas</h3>
 <p>Es posible crear o editar el acceso a las tablas de la base de datos para un rol seleccionado. El usuario puede conceder acceso a la información necesaria seleccionando las opciones mostradas en la solapa de tablas.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/General_Setup" target="_blank">Configuración General</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Wiki de Openbravo</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16718,7 +16718,7 @@ Aquí, el usuario puede editar un rol para conceder o denegar el acceso necesari
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

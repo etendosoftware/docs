@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#herramienta-codbar" class="md-skip">
+        <a href="#codbar-tool" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -13521,7 +13521,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -13530,7 +13530,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -13539,7 +13539,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16373,7 +16373,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidad" class="md-nav__link">
+  <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Funcionalidad
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-uso" class="md-nav__link">
+  <a href="#usage-example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de uso
     </span>
@@ -16446,15 +16446,15 @@
   
 
 
-<h1 id="herramienta-codbar">Herramienta Codbar</h1>
+<h1 id="codbar-tool">Herramienta Codbar</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Paquete Java: <code>com.etendoerp.copilot.ocrtool</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La <strong>CodbarTool</strong> es una herramienta que lee códigos de barras de archivos de imagen. Acepta un array de rutas de archivo como entrada y devuelve un array de códigos de barras encontrados en esas imágenes.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05" target="_blank">Copilot Extensions Bundle</a>. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite <a href="../../../../whats-new/release-notes/etendo-copilot/bundles/release-notes/">Copilot Extensions - Notas de la versión</a>.</p>
 </div>
-<h2 id="funcionalidad">Funcionalidad</h2>
+<h2 id="functionality">Funcionalidad</h2>
 <p>Esta herramienta permite a los agentes <strong>leer códigos de barras de múltiples imágenes</strong>, que posteriormente pueden aplicarse en la gestión de inventario, el seguimiento de productos y el procesamiento de documentos, entre otras áreas.</p>
 <p>El uso de esta herramienta consiste en las siguientes acciones: </p>
 <ul>
@@ -16494,7 +16494,7 @@
 <p class="admonition-title">Note</p>
 <p>La <strong>librería pyzbar</strong> se utiliza para decodificar códigos de barras de la imagen. Si no se encuentra ningún código de barras, devuelve None para esa imagen. Si se encuentran códigos de barras, decodifica los datos de cada código de barras.</p>
 </div>
-<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<h2 id="usage-example">Ejemplo de uso</h2>
 <ul>
 <li>Suponga que existe una imagen en <code>/tmp/goods-receipt.png</code> y desea extraer el código de barras relacionado con la información de la recepción de mercancía:</li>
 </ul>
@@ -16770,7 +16770,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

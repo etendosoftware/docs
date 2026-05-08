@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuracion-de-adjuntos" class="md-skip">
+        <a href="#attachments-configuration" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -969,7 +969,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -979,7 +979,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16372,7 +16372,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16436,12 +16436,12 @@
   
 
 
-<h1 id="configuracion-de-adjuntos">Configuración de Adjuntos</h1>
+<h1 id="attachments-configuration">Configuración de Adjuntos</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Configuración de Adjuntos</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Configuración del cliente del <strong>Método de Adjuntos</strong> que se va a utilizar. Cada método de adjuntos puede incluir sus propios campos adicionales para completar la configuración del método de adjuntos. Solo es posible tener una configuración activa en cada cliente.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/attachment-configuration/attachments-configuration.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/attachment-configuration/attachments-configuration.png"></a></p>
-<h3 id="cabecera">Cabecera</h3>
+<h3 id="header">Cabecera</h3>
 <p>Muestra toda la configuración relacionada con el método de adjuntos utilizado para guardar adjuntos. Cada Método de Adjuntos puede incluir sus propios campos de configuración específicos como: URL del servidor, usuario, contraseña, idioma, etc.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16700,7 +16700,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

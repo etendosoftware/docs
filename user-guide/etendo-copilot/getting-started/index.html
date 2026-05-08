@@ -16684,7 +16684,7 @@ Copilot's interface can also be minimized. In this case, a Copilot bubble will b
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-mejorar-el-reconocimiento-ocr" class="md-skip">
+        <a href="#how-to-improve-ocr-recognition" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14534,7 +14534,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#uso-de-un-modelo-especifico" class="md-nav__link">
+  <a href="#using-a-specific-model" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de un modelo específico
     </span>
@@ -14543,7 +14543,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uso-de-un-prompt-fijo" class="md-nav__link">
+  <a href="#using-a-fixed-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de un prompt fijo
     </span>
@@ -14552,7 +14552,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aumentar-los-dpi" class="md-nav__link">
+  <a href="#increasing-dpi" class="md-nav__link">
     <span class="md-ellipsis">
       Aumentar los DPI
     </span>
@@ -14561,7 +14561,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uso-de-salida-estructurada" class="md-nav__link">
+  <a href="#using-structured-output" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de salida estructurada
     </span>
@@ -14571,7 +14571,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-crear-un-esquema-mail" class="md-nav__link">
+  <a href="#example-creating-a-mail-schema" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: crear un esquema "Mail"
     </span>
@@ -14585,7 +14585,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-datos-de-referencia" class="md-nav__link">
+  <a href="#adding-reference-data" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir datos de referencia
     </span>
@@ -16406,7 +16406,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#uso-de-un-modelo-especifico" class="md-nav__link">
+  <a href="#using-a-specific-model" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de un modelo específico
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uso-de-un-prompt-fijo" class="md-nav__link">
+  <a href="#using-a-fixed-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de un prompt fijo
     </span>
@@ -16424,7 +16424,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aumentar-los-dpi" class="md-nav__link">
+  <a href="#increasing-dpi" class="md-nav__link">
     <span class="md-ellipsis">
       Aumentar los DPI
     </span>
@@ -16433,7 +16433,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uso-de-salida-estructurada" class="md-nav__link">
+  <a href="#using-structured-output" class="md-nav__link">
     <span class="md-ellipsis">
       Uso de salida estructurada
     </span>
@@ -16443,7 +16443,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-crear-un-esquema-mail" class="md-nav__link">
+  <a href="#example-creating-a-mail-schema" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo: crear un esquema "Mail"
     </span>
@@ -16457,7 +16457,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-datos-de-referencia" class="md-nav__link">
+  <a href="#adding-reference-data" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir datos de referencia
     </span>
@@ -16512,7 +16512,7 @@
   
 
 
-<h1 id="como-mejorar-el-reconocimiento-ocr">Cómo mejorar el reconocimiento OCR</h1>
+<h1 id="how-to-improve-ocr-recognition">Cómo mejorar el reconocimiento OCR</h1>
 <p>En términos sencillos, la herramienta OCR realiza una llamada a un modelo para detectar información de un documento o imagen. Sin embargo, no es infalible. Existen diferentes métodos para aumentar su fiabilidad y eficiencia.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-2.png" data-desc-position="bottom"><img alt="Ejemplo de factura" src="../../../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool-2.png"></a></p>
 <p>La herramienta sigue estos pasos:</p>
@@ -16521,7 +16521,7 @@
 <li><strong>Búsqueda de referencias</strong>: Busca imágenes de referencia en la base de conocimiento del agente (si hay alguna configurada).</li>
 <li><strong>Llamada al LLM</strong>: Llama a un modelo LLM usando un prompt (el parámetro <code>question</code> de la herramienta OCR), que especifica exactamente qué debe reconocer y extraer el modelo.</li>
 </ol>
-<h2 id="uso-de-un-modelo-especifico">Uso de un modelo específico</h2>
+<h2 id="using-a-specific-model">Uso de un modelo específico</h2>
 <p>Por defecto, la herramienta utiliza un modelo configurado en el archivo <code>gradle.properties</code>. Sin embargo, se recomienda encarecidamente configurar un modelo específico para el agente que utilizará la herramienta, para garantizar el mejor rendimiento en tareas visuales.</p>
 <p>En la ventana <strong>Agente</strong>, en la pestaña <strong>Habilidades y herramientas</strong>, puede especificar un <strong>Modelo</strong> para la herramienta OCR. Este campo le permite sobrescribir el modelo por defecto para esa herramienta específica en ese agente.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/ocr-skills-and-tools-model.png" data-desc-position="bottom"><img alt="Modelo de habilidades y herramientas OCR" src="../../../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition/ocr-skills-and-tools-model.png"></a></p>
@@ -16533,21 +16533,21 @@
 <p class="admonition-title">Info</p>
 <p>El campo <strong>Modelo</strong> solo aparece en la pestaña <strong>Habilidades y herramientas</strong> si la herramienta tiene habilitada la casilla <strong>Usar modelo</strong> en la ventana <strong>Habilidad/Herramienta</strong>.</p>
 </div>
-<h2 id="uso-de-un-prompt-fijo">Uso de un prompt fijo</h2>
+<h2 id="using-a-fixed-prompt">Uso de un prompt fijo</h2>
 <p>En general, cuando el agente llama a la herramienta OCR, envía una <code>question</code> (prompt) sobre lo que necesita reconocer. El agente construye esta pregunta de forma dinámica en función del contexto y las necesidades actuales. Sin embargo, generar esta pregunta cada vez puede provocar inconsistencias entre ejecuciones.</p>
 <p>Para evitarlo, puede "fijar" el prompt para la herramienta OCR indicando al agente exactamente qué pregunta debe usar.</p>
 <ul>
 <li><strong>Cómo hacerlo</strong>: En el prompt del agente, especifique las instrucciones exactas para la herramienta OCR. Por ejemplo: <em>"Al llamar a la herramienta OCR, use esta pregunta: 'Lea el nombre del producto, las cantidades, el impuesto utilizado y el importe total del recibo'"</em>.</li>
 <li><strong>Beneficio</strong>: Al fijar la pregunta, se asegura de que la herramienta OCR reciba siempre las mismas instrucciones, haciendo que el proceso de extracción sea más predecible. Además, cualquier mejora realizada en esta pregunta fija impactará positivamente en todas las ejecuciones.</li>
 </ul>
-<h2 id="aumentar-los-dpi">Aumentar los DPI</h2>
+<h2 id="increasing-dpi">Aumentar los DPI</h2>
 <p>Cuando el archivo de entrada es un PDF, la herramienta OCR debe renderizarlo en una imagen antes de procesarlo. Esta calidad de conversión está controlada por un parámetro llamado <code>scale</code>.</p>
 <ul>
 <li><strong>Lógica del valor por defecto</strong>: La escala por defecto es <code>3.0</code>, lo que corresponde aproximadamente a <strong>300 DPI</strong>.</li>
 <li><strong>Cómo aumentarlo</strong>: Para mejorar el reconocimiento de texto muy pequeño o diseños extremadamente complejos, puede aumentar la calidad de renderizado indicando al agente en su prompt. Por ejemplo, puede añadir: <em>"Use una escala de 4.0 al usar OCRTool"</em> para lograr <strong>400 DPI</strong>.</li>
 </ul>
 <p>Los valores de escala más altos proporcionan mejor calidad y una extracción más precisa, pero también dan como resultado tamaños de imagen mayores y tiempos de procesamiento más lentos.</p>
-<h2 id="uso-de-salida-estructurada">Uso de salida estructurada</h2>
+<h2 id="using-structured-output">Uso de salida estructurada</h2>
 <p>OCRTool admite <strong>salida estructurada</strong>, lo que le permite definir un esquema JSON específico que el modelo debe seguir al extraer información. Esto garantiza que la salida sea siempre consistente y fácil de procesar por otras herramientas o sistemas.</p>
 <p>Para usar salida estructurada, debe:</p>
 <ol>
@@ -16555,7 +16555,7 @@
 <li><strong>Implementar el modelo Pydantic</strong>: Dentro del archivo, defina una clase que herede de <code>pydantic.BaseModel</code>. El nombre de la clase debe seguir el patrón <code>&lt;SchemaName&gt;Schema</code> (p. ej., <code>class MailSchema(BaseModel):</code>).</li>
 <li><strong>Invocar la herramienta</strong>: Especifique el nombre del esquema en el parámetro <code>structured_output</code> al llamar a OCRTool.</li>
 </ol>
-<h3 id="ejemplo-crear-un-esquema-mail">Ejemplo: crear un esquema "Mail"</h3>
+<h3 id="example-creating-a-mail-schema">Ejemplo: crear un esquema "Mail"</h3>
 <p>Suponga que quiere extraer información de correos electrónicos o cartas escaneadas. Puede crear un esquema llamado <code>Mail</code>:</p>
 <p><strong>Archivo</strong>: <code>tools/schemas/mail.py</code></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
@@ -16582,7 +16582,7 @@
 </ul>
 <p>La herramienta carga dinámicamente el esquema desde el archivo. Convierte el valor de <code>structured_output</code> (p. ej., <code>Mail</code>) a minúsculas para encontrar el archivo (<code>mail.py</code>) y luego busca la clase <code>MailSchema</code>.</p>
 <p>La extracción resultante seguirá la estructura exacta de su <code>MailSchema</code>, lo que la hace altamente fiable para flujos de trabajo automatizados.</p>
-<h2 id="anadir-datos-de-referencia">Añadir datos de referencia</h2>
+<h2 id="adding-reference-data">Añadir datos de referencia</h2>
 <p>La herramienta OCR incluye un sistema de referencias inteligente que busca automáticamente plantillas de documentos similares en la base de conocimiento del agente. Cuando se encuentra una referencia similar, guía el proceso de extracción indicando qué campos de datos extraer mediante marcadores visuales.</p>
 <p>Para añadir datos de referencia:</p>
 <ol>
@@ -16855,7 +16855,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

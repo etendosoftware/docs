@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-una-alerta" class="md-skip">
+        <a href="#how-to-create-an-alert" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10657,7 +10657,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10666,7 +10666,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-la-alerta" class="md-nav__link">
+  <a href="#defining-the-alert" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de la alerta
     </span>
@@ -10675,7 +10675,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-receptores" class="md-nav__link">
+  <a href="#defining-recipients" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de receptores
     </span>
@@ -10684,7 +10684,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programacion-del-proceso-en-segundo-plano-de-alertas" class="md-nav__link">
+  <a href="#scheduling-the-alerting-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Programación del proceso en segundo plano de alertas
     </span>
@@ -10693,7 +10693,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-resultado" class="md-nav__link">
+  <a href="#the-result" class="md-nav__link">
     <span class="md-ellipsis">
       El resultado
     </span>
@@ -10702,7 +10702,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicacion-del-codigo-sql" class="md-nav__link">
+  <a href="#sql-code-explained" class="md-nav__link">
     <span class="md-ellipsis">
       Explicación del código SQL
     </span>
@@ -16400,7 +16400,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-la-alerta" class="md-nav__link">
+  <a href="#defining-the-alert" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de la alerta
     </span>
@@ -16418,7 +16418,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-de-receptores" class="md-nav__link">
+  <a href="#defining-recipients" class="md-nav__link">
     <span class="md-ellipsis">
       Definición de receptores
     </span>
@@ -16427,7 +16427,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programacion-del-proceso-en-segundo-plano-de-alertas" class="md-nav__link">
+  <a href="#scheduling-the-alerting-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Programación del proceso en segundo plano de alertas
     </span>
@@ -16436,7 +16436,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-resultado" class="md-nav__link">
+  <a href="#the-result" class="md-nav__link">
     <span class="md-ellipsis">
       El resultado
     </span>
@@ -16445,7 +16445,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicacion-del-codigo-sql" class="md-nav__link">
+  <a href="#sql-code-explained" class="md-nav__link">
     <span class="md-ellipsis">
       Explicación del código SQL
     </span>
@@ -16500,8 +16500,8 @@
   
 
 
-<h1 id="como-crear-una-alerta">Cómo crear una alerta</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-create-an-alert">Cómo crear una alerta</h1>
+<h2 id="overview">Visión general</h2>
 <p>El objetivo de este procedimiento es ilustrar cómo puede añadir nuevas alertas a
 Etendo. Las alertas son mensajes informativos no intrusivos para usuarios
 individuales o grupos (roles) sobre cualquier aspecto dentro del sistema. Se
@@ -16514,7 +16514,7 @@ fines informativos, recordatorios, etc.</p>
 <li>Notificaciones sobre situaciones críticas (p. ej., pagos vencidos)‏</li>
 </ul>
 <p>y muchos más.</p>
-<h2 id="definicion-de-la-alerta">Definición de la alerta</h2>
+<h2 id="defining-the-alert">Definición de la alerta</h2>
 <p>En primer lugar, es necesario definir la condición bajo la cual aparece la
 alerta. Esto se realiza mediante una sentencia SQL que debe seguir ciertas
 convenciones.</p>
@@ -16550,7 +16550,7 @@ continuación:</p>
 <li><em>SQL</em> son las sentencias SQL reales cuyos resultados (registros individuales) serán los elementos sobre los que se alertará</li>
 <li><em>Pestaña</em> es una pestaña de una ventana específica a la que se debe llevar al usuario para mostrarle el elemento en cuestión generado por la sentencia SQL</li>
 </ul>
-<h2 id="definicion-de-receptores">Definición de receptores</h2>
+<h2 id="defining-recipients">Definición de receptores</h2>
 <p>Cambie al rol <em><em>Administrador del sistema</em></em> (o su rol de "administrador"
 definido), navegue a <em><code>Configuración general</code> &gt; <code>Aplicación</code> &gt; <code>Alerta</code></em>,
 seleccione la alerta <em>Clientes con crédito excedido</em> y cambie a la pestaña
@@ -16561,19 +16561,19 @@ seleccione la alerta <em>Clientes con crédito excedido</em> y cambie a la pesta
 <p>Tenga en cuenta que se puede añadir un rol (que incluye a varios usuarios) o
 un usuario específico.</p>
 </div>
-<h2 id="programacion-del-proceso-en-segundo-plano-de-alertas">Programación del proceso en segundo plano de alertas</h2>
+<h2 id="scheduling-the-alerting-background-process">Programación del proceso en segundo plano de alertas</h2>
 <p>Para que las alertas se evalúen y se disparen, es necesario programar el
 proceso en segundo plano. Usando el rol <em><em>Administrador del sistema</em></em> (o su rol
 de "administrador" definido) navegue a <em><code>Configuración general</code> &gt; <code>Programación de procesos</code> &gt; <code>Solicitud de proceso</code></em> e introduzca un nuevo registro:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png"></a></p>
-<h2 id="el-resultado">El resultado</h2>
+<h2 id="the-result">El resultado</h2>
 <p>Por último, cierre sesión y vuelva a iniciarla y seleccione el rol
 <em><em>Administrador del sistema</em></em> (o su rol de administrador definido). Debería
 poder ver una alerta en la barra de navegación. Al hacer clic sobre ella, se le
 llevará automáticamente a la ventana <em><em>Gestión de Alertas</em></em> que debería verse
 más o menos así:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png"></a></p>
-<h2 id="explicacion-del-codigo-sql">Explicación del código SQL</h2>
+<h2 id="sql-code-explained">Explicación del código SQL</h2>
 <p>Para escribir cualquier tipo de alerta, el enfoque es muy similar. Volvamos a
 ver el código SQL que describe la condición:</p>
 <div class="language-text highlight"><pre><span></span><code>&nbsp;
@@ -16869,7 +16869,7 @@ definirse como una alerta.</p>
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

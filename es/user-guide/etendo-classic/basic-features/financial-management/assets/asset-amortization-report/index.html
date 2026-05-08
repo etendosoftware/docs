@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#informe-de-amortizacion-de-activos-excel" class="md-skip">
+        <a href="#asset-amortization-report-excel" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4993,7 +4993,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16359,7 +16359,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16420,13 +16420,13 @@
   
 
 
-<h1 id="informe-de-amortizacion-de-activos-excel">Informe de amortización de activos (Excel)</h1>
+<h1 id="asset-amortization-report-excel">Informe de amortización de activos (Excel)</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Assets</code> &gt; <code>Asset Amortization Report (Excel)</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Notas de versión</a>.</p>
 </div>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>El informe de amortización permite descargar informes en formato Excel. El informe se encuentra en Gestión Financiera &gt; Activos &gt; Herramientas de análisis &gt; Informe de amortización de activos.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-1.png"></a></p>
 <p>Este informe permite filtrar por organización, fecha, activo o cualquier descripción particular, categoría y configuración contable.</p>
@@ -16697,7 +16697,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

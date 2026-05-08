@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-rellenar-automaticamente-los-identificadores" class="md-skip">
+        <a href="#how-to-automatically-populate-search-keys" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9570,7 +9570,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9579,7 +9579,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16364,7 +16364,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16373,7 +16373,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-ejecucion" class="md-nav__link">
+  <a href="#execution-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de ejecución
     </span>
@@ -16428,14 +16428,14 @@
   
 
 
-<h1 id="como-rellenar-automaticamente-los-identificadores">Cómo rellenar automáticamente los Identificadores</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-automatically-populate-search-keys">Cómo rellenar automáticamente los Identificadores</h1>
+<h2 id="overview">Visión general</h2>
 <p>Los <strong>Identificadores</strong> son identificadores o códigos definidos por el usuario que permiten recuperar fácilmente <strong>datos de referencia</strong> como clientes, proveedores, productos, condiciones de pago, etc. Por ejemplo, al introducir una factura, el cliente podría seleccionarse abriendo la ventana del selector y buscándolo o, si usted conociera el identificador del <strong>Cliente</strong> que está buscando, podría introducirlo y pulsar <strong>INTRO</strong>; el sistema buscaría entonces el cliente correcto en base a ese identificador y sustituiría el identificador introducido por el nombre del cliente.</p>
 <p>Al comenzar a escribir el <strong>nombre del cliente</strong> en la factura, el sistema sugiere automáticamente los clientes que coinciden con esa entrada a medida que usted escribe; una vez que haya escrito suficientes caracteres para tener una coincidencia única, la selección puede confirmarse simplemente pulsando <strong>INTRO o TAB</strong> y pasando al siguiente campo.</p>
 <p>Esta funcionalidad hace que los identificadores ya no sean necesarios para la mayoría de las entidades. Usted puede reutilizar el identificador en el producto para almacenar códigos de producto, si se utilizan códigos de producto, o para almacenar números de cliente en los clientes. </p>
 <p>Los usuarios normalmente acaban introduciendo el mismo valor en el identificador que el que introducen en el nombre.</p>
 <p>Esta sección explica cómo configurar Etendo para rellenar automáticamente los <strong>campos de Identificador</strong> y ahorrar tiempo a los usuarios.</p>
-<h2 id="pasos-de-ejecucion">Pasos de ejecución</h2>
+<h2 id="execution-steps">Pasos de ejecución</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Secuencia</strong> son campos específicos y deben obedecer una convención de nomenclatura específica (la columna debe llamarse DocumentNo), por lo que una secuencia normal no era una opción en este caso.</p>
@@ -16736,7 +16736,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

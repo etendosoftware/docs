@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vision-general" class="md-skip">
+        <a href="#overview" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10844,7 +10844,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10853,7 +10853,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-del-proceso-de-escaneo-en-etendo" class="md-nav__link">
+  <a href="#scanning-process-definition-in-etendo" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del proceso de escaneo en Etendo
     </span>
@@ -16358,7 +16358,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16367,7 +16367,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definicion-del-proceso-de-escaneo-en-etendo" class="md-nav__link">
+  <a href="#scanning-process-definition-in-etendo" class="md-nav__link">
     <span class="md-ellipsis">
       Definición del proceso de escaneo en Etendo
     </span>
@@ -16418,7 +16418,7 @@
 
   <h1>Cómo Crear un Proceso de Escaneo</h1>
 
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Este documento explica cómo definir un proceso de escaneo que pueda ejecutarse desde la aplicación móvil para escanear códigos utilizando la cámara del móvil.</p>
 <p>Es importante tener en cuenta que cualquier proceso de escaneo <strong>debe tener</strong> estos pasos específicos:</p>
 <ul>
@@ -16429,7 +16429,7 @@
 <ul>
 <li>Cantidad: Es posible especificar la cantidad de los elementos escaneados.</li>
 </ul>
-<h2 id="definicion-del-proceso-de-escaneo-en-etendo">Definición del proceso de escaneo en Etendo</h2>
+<h2 id="scanning-process-definition-in-etendo">Definición del proceso de escaneo en Etendo</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>El entorno debe tener al menos un módulo en desarrollo, y el identificador del proceso debe incluir el prefijo de ese módulo.</p>
@@ -16739,7 +16739,7 @@ Un ejemplo de esta clase Java es <code>InventoryScan</code>, que puede encontrar
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

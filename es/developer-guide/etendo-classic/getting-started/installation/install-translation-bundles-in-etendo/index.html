@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalar-bundles-de-traduccion-en-etendo-classic" class="md-skip">
+        <a href="#install-translation-bundles-in-etendo-classic" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -7867,7 +7867,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -7876,7 +7876,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-instalacion" class="md-nav__link">
+  <a href="#installation-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de instalación
     </span>
@@ -7885,7 +7885,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compatibilidad-de-bundles" class="md-nav__link">
+  <a href="#bundle-compatibility" class="md-nav__link">
     <span class="md-ellipsis">
       Compatibilidad de bundles
     </span>
@@ -7894,7 +7894,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolucion-de-problemas" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Resolución de problemas
     </span>
@@ -16384,7 +16384,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16393,7 +16393,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pasos-de-instalacion" class="md-nav__link">
+  <a href="#installation-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos de instalación
     </span>
@@ -16402,7 +16402,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compatibilidad-de-bundles" class="md-nav__link">
+  <a href="#bundle-compatibility" class="md-nav__link">
     <span class="md-ellipsis">
       Compatibilidad de bundles
     </span>
@@ -16411,7 +16411,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolucion-de-problemas" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Resolución de problemas
     </span>
@@ -16460,10 +16460,10 @@
   
 
 
-<h1 id="instalar-bundles-de-traduccion-en-etendo-classic">Instalar bundles de traducción en Etendo Classic</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="install-translation-bundles-in-etendo-classic">Instalar bundles de traducción en Etendo Classic</h1>
+<h2 id="overview">Visión general</h2>
 <p>Esta página explica cómo instalar bundles de traducción en Etendo Classic, lo cual es ligeramente diferente de la instalación estándar de módulos.</p>
-<h2 id="pasos-de-instalacion">Pasos de instalación</h2>
+<h2 id="installation-steps">Pasos de instalación</h2>
 <p>Siga la guía estándar de <a href="../install-modules-in-etendo/">instalación de módulos</a>, pero asegúrese de incluir tanto el bundle original como su bundle de traducción correspondiente, copiando la línea de instalación desde <a href="https://marketplace.etendo.cloud/#/modules?page=1&amp;category=0821B7B067004CD0BAD7A583B2BA9FD2" target="_blank">Etendo Marketplace</a>; puede filtrar la categoría <strong>Traducción</strong> para encontrar todas las traducciones disponibles.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -16489,9 +16489,9 @@
 </div>
 </div>
 </div>
-<h2 id="compatibilidad-de-bundles">Compatibilidad de bundles</h2>
+<h2 id="bundle-compatibility">Compatibilidad de bundles</h2>
 <p>Para comprobar la compatibilidad entre un módulo y su bundle de traducción. Por ejemplo, las <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes/">Warehouse Extensions ES - Notas de la versión</a>.</p>
-<h2 id="resolucion-de-problemas">Resolución de problemas</h2>
+<h2 id="troubleshooting">Resolución de problemas</h2>
 <ol>
 <li>
 <p>De forma predeterminada, las traducciones se aplican cuando actualiza la base de datos. Si no se aplican, o si actualiza la versión del módulo, ejecute:</p>
@@ -16763,7 +16763,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

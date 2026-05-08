@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#puede-filtrar-cualquier-solicitud-por-filas-activas-o-todas-las-filas" class="md-skip">
+        <a href="#you-can-filter-any-request-by-active-or-all-rows" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -12967,7 +12967,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#puede-filtrar-cualquier-solicitud-por-filas-activas-o-todas-las-filas" class="md-nav__link">
+  <a href="#you-can-filter-any-request-by-active-or-all-rows" class="md-nav__link">
     <span class="md-ellipsis">
       Puede filtrar cualquier solicitud por filas activas o todas las filas
     </span>
@@ -12976,7 +12976,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-solicitud-get-para-todos-los-registros" class="md-nav__link">
+  <a href="#example-of-get-request-for-all-records" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de solicitud GET para todos los registros
     </span>
@@ -12985,7 +12985,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-solicitud-get-solo-para-registros-activos" class="md-nav__link">
+  <a href="#example-of-get-request-only-for-active-records" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de solicitud GET solo para registros activos
     </span>
@@ -16367,7 +16367,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#puede-filtrar-cualquier-solicitud-por-filas-activas-o-todas-las-filas" class="md-nav__link">
+  <a href="#you-can-filter-any-request-by-active-or-all-rows" class="md-nav__link">
     <span class="md-ellipsis">
       Puede filtrar cualquier solicitud por filas activas o todas las filas
     </span>
@@ -16376,7 +16376,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-solicitud-get-para-todos-los-registros" class="md-nav__link">
+  <a href="#example-of-get-request-for-all-records" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de solicitud GET para todos los registros
     </span>
@@ -16385,7 +16385,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-solicitud-get-solo-para-registros-activos" class="md-nav__link">
+  <a href="#example-of-get-request-only-for-active-records" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de solicitud GET solo para registros activos
     </span>
@@ -16414,10 +16414,10 @@
 
   <h1>Cómo Filtrar Solicitudes por Registros Activos o Todos</h1>
 
-<h2 id="puede-filtrar-cualquier-solicitud-por-filas-activas-o-todas-las-filas">Puede filtrar cualquier solicitud por filas activas o todas las filas</h2>
+<h2 id="you-can-filter-any-request-by-active-or-all-rows">Puede filtrar cualquier solicitud por filas activas o todas las filas</h2>
 <p>El parámetro <code>_noActiveFilter</code> puede utilizarse en cualquier método de solicitud para filtrar registros activos o todos los registros (activos e inactivos). De este modo, permite un mayor control al obtener los resultados.</p>
 <hr>
-<h2 id="ejemplo-de-solicitud-get-para-todos-los-registros">Ejemplo de solicitud GET para todos los registros</h2>
+<h2 id="example-of-get-request-for-all-records">Ejemplo de solicitud GET para todos los registros</h2>
 <p>Abra Postman y realizaremos una solicitud GET.</p>
 <div class="language-text highlight"><pre><span></span><code>Verbose: GET
 
@@ -16428,7 +16428,7 @@ Body: empty
 Return: un objeto JSON con todos los businessPartners activos o inactivos
 </code></pre></div>
 <hr>
-<h2 id="ejemplo-de-solicitud-get-solo-para-registros-activos">Ejemplo de solicitud GET solo para registros activos</h2>
+<h2 id="example-of-get-request-only-for-active-records">Ejemplo de solicitud GET solo para registros activos</h2>
 <p>Abra Postman y realizaremos una solicitud GET.</p>
 <div class="language-text highlight"><pre><span></span><code>Verbose: GET
 
@@ -16690,7 +16690,7 @@ Return: un objeto JSON con todas las filas activas de BusinessPartner
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

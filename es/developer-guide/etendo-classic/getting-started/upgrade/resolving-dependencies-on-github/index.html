@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migracion-y-resolucion-de-dependencias-de-bundles-y-modulos-en-github" class="md-skip">
+        <a href="#migrating-and-resolving-dependencies-of-bundles-and-modules-on-github" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -8103,7 +8103,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migracion-y-resolucion-de-dependencias-de-bundles-y-modulos-en-github" class="md-nav__link">
+  <a href="#migrating-and-resolving-dependencies-of-bundles-and-modules-on-github" class="md-nav__link">
     <span class="md-ellipsis">
       🔄 Migración y resolución de dependencias de bundles y módulos en GitHub
     </span>
@@ -8122,7 +8122,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bundles-migrados" class="md-nav__link">
+  <a href="#migrated-bundles" class="md-nav__link">
     <span class="md-ellipsis">
       📦 Bundles migrados
     </span>
@@ -8131,7 +8131,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proceso-de-migracion" class="md-nav__link">
+  <a href="#migration-process" class="md-nav__link">
     <span class="md-ellipsis">
       🚀 Proceso de migración
     </span>
@@ -8140,7 +8140,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
+  <a href="#considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Consideraciones
     </span>
@@ -16393,7 +16393,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migracion-y-resolucion-de-dependencias-de-bundles-y-modulos-en-github" class="md-nav__link">
+  <a href="#migrating-and-resolving-dependencies-of-bundles-and-modules-on-github" class="md-nav__link">
     <span class="md-ellipsis">
       🔄 Migración y resolución de dependencias de bundles y módulos en GitHub
     </span>
@@ -16412,7 +16412,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bundles-migrados" class="md-nav__link">
+  <a href="#migrated-bundles" class="md-nav__link">
     <span class="md-ellipsis">
       📦 Bundles migrados
     </span>
@@ -16421,7 +16421,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proceso-de-migracion" class="md-nav__link">
+  <a href="#migration-process" class="md-nav__link">
     <span class="md-ellipsis">
       🚀 Proceso de migración
     </span>
@@ -16430,7 +16430,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
+  <a href="#considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Consideraciones
     </span>
@@ -16492,13 +16492,13 @@
 
   <h1>Resolver Dependencias en GitHub</h1>
 
-<h2 id="migracion-y-resolucion-de-dependencias-de-bundles-y-modulos-en-github">🔄 Migración y resolución de dependencias de bundles y módulos en GitHub</h2>
+<h2 id="migrating-and-resolving-dependencies-of-bundles-and-modules-on-github">🔄 Migración y resolución de dependencias de bundles y módulos en GitHub</h2>
 <p>Hola, Partner de Etendo 👋. Hemos migrado los bundles y módulos desde Nexus a GitHub. Esto nos permite aprovechar la estabilidad de GitHub y tener los paquetes asociados a cada bundle y las versiones en el mismo repositorio. Aquí le proporcionamos una guía paso a paso para ayudarle a realizar la transición.</p>
 <h3 id="tutorial">📝 Tutorial</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OhiV6ObyGG4" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <hr>
-<h3 id="bundles-migrados">📦 Bundles migrados</h3>
+<h3 id="migrated-bundles">📦 Bundles migrados</h3>
 <p>Los siguientes bundles se han migrado a GitHub, junto con todas sus versiones. Compruebe la compatibilidad con Etendo Core; en caso de que tenga una versión antigua de Etendo, debe actualizar antes.
 Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas versiones soportadas.</p>
 <table>
@@ -16605,7 +16605,7 @@ Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas
 </tr>
 </tbody>
 </table>
-<h3 id="proceso-de-migracion">🚀 Proceso de migración</h3>
+<h3 id="migration-process">🚀 Proceso de migración</h3>
 <ol>
 <li>
 <p><strong>Actualizar el archivo <code>settings.gradle</code></strong>: deberá actualizar su archivo <code>settings.gradle</code> para añadir el nuevo repositorio de GitHub.</p>
@@ -16671,7 +16671,7 @@ Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas
 <p><strong>Resolver nuevas dependencias</strong></p>
 </li>
 </ol>
-<h3 id="consideraciones">Consideraciones</h3>
+<h3 id="considerations">Consideraciones</h3>
 <p>Una restricción que tiene GitHub es que los paquetes publicados deben tener el <code>javapackage</code> en minúsculas, por lo que tuvimos que refactorizar los módulos de traducción, que anteriormente terminaban con el sufijo "_ES". Ahora, todos los paquetes, incluidas las traducciones de bundles, tienen su artefacto en minúsculas.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -17126,7 +17126,7 @@ Esta es una buena oportunidad para migrar.</p>
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

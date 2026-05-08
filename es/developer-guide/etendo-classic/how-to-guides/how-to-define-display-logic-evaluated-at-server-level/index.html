@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-definir-la-logica-de-visualizacion-evaluada-a-nivel-de-servidor" class="md-skip">
+        <a href="#how-to-define-display-logic-evaluated-at-server-level" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11021,7 +11021,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11031,7 +11031,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Uso
     </span>
@@ -11040,7 +11040,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitaciones" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitaciones
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Uso
     </span>
@@ -16398,7 +16398,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limitaciones" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitaciones
     </span>
@@ -16464,19 +16464,19 @@
   
 
 
-<h1 id="como-definir-la-logica-de-visualizacion-evaluada-a-nivel-de-servidor">Cómo definir la lógica de visualización evaluada a nivel de servidor</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-define-display-logic-evaluated-at-server-level">Cómo definir la lógica de visualización evaluada a nivel de servidor</h1>
+<h2 id="overview">Visión general</h2>
 <p>Con la introducción de esta funcionalidad, es posible definir en Openbravo lógicas de visualización que se van a evaluar a nivel de servidor.</p>
 <p>Esto significa que la expresión para esta lógica de visualización en particular se va a evaluar mientras se genera el código para la ventana final, en lugar de evaluarse cuando se carga la ventana.</p>
 <p>Al hacerlo, es posible evitar campos en blanco cuando el campo no debería mostrarse. En su lugar, los campos se reorganizan y la ventana se ve más limpia.</p>
-<h3 id="uso">Uso</h3>
+<h3 id="usage">Uso</h3>
 <p>En la ventana <strong>Ventanas, Pestañas y Campos</strong>, hay un nuevo campo llamado <em>Mostrar Lógica Evaluada en el Servidor</em>.</p>
 <p>En este campo, es posible definir una expresión que se evaluará para decidir si ese campo en particular debe mostrarse o no.</p>
 <p>Esta expresión debe seguir las mismas reglas sintácticas que se utilizan en la lógica de visualización normal. La expresión puede evaluar Preferencias, pero solo aquellas definidas a nivel de sistema.</p>
 <p>Un ejemplo de una expresión sería:
 <code>@uomManagement@ = 'Y' &amp; @enableNegativeStockCorrections@ = 'Y'</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png"></a></p>
-<h3 id="limitaciones">Limitaciones</h3>
+<h3 id="limitations">Limitaciones</h3>
 <p>Dado que esta funcionalidad se va a evaluar a nivel de sistema (la visibilidad de los campos va a ser la misma para todos los clientes, organizaciones y usuarios), es posible usar Preferencias, pero solo aquellas que se hayan definido a nivel de sistema.</p>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/How_to_define_Display_Logic_Evaluated_at_Server_Level" target="_blank">Cómo definir la lógica de visualización evaluada a nivel de servidor</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Wiki de Openbravo</a>, usado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
@@ -16730,7 +16730,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

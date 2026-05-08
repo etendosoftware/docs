@@ -16545,7 +16545,7 @@ Others directories like <strong><em>src-db</em></strong>, <strong><em>src-util</
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

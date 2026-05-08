@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cambio-del-formato-de-fecha-y-la-zona-horaria-en-una-solicitud" class="md-skip">
+        <a href="#changing-date-format-and-time-zone-in-a-request" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -12925,7 +12925,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -12934,7 +12934,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -12943,7 +12943,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-parametros-de-formato-de-fecha-y-zona-horaria" class="md-nav__link">
+  <a href="#adding-date-format-and-time-zone-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir parámetros de Formato de fecha y Zona horaria
     </span>
@@ -12953,7 +12953,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#formato-de-fecha" class="md-nav__link">
+  <a href="#date-format" class="md-nav__link">
     <span class="md-ellipsis">
       Formato de fecha
     </span>
@@ -12962,7 +12962,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zona-horaria" class="md-nav__link">
+  <a href="#time-zone" class="md-nav__link">
     <span class="md-ellipsis">
       Zona horaria
     </span>
@@ -16397,7 +16397,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16406,7 +16406,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -16415,7 +16415,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anadir-parametros-de-formato-de-fecha-y-zona-horaria" class="md-nav__link">
+  <a href="#adding-date-format-and-time-zone-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Añadir parámetros de Formato de fecha y Zona horaria
     </span>
@@ -16425,7 +16425,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#formato-de-fecha" class="md-nav__link">
+  <a href="#date-format" class="md-nav__link">
     <span class="md-ellipsis">
       Formato de fecha
     </span>
@@ -16434,7 +16434,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zona-horaria" class="md-nav__link">
+  <a href="#time-zone" class="md-nav__link">
     <span class="md-ellipsis">
       Zona horaria
     </span>
@@ -16466,22 +16466,22 @@
   
 
 
-<h1 id="cambio-del-formato-de-fecha-y-la-zona-horaria-en-una-solicitud">Cambio del Formato de fecha y la Zona horaria en una solicitud</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="changing-date-format-and-time-zone-in-a-request">Cambio del Formato de fecha y la Zona horaria en una solicitud</h1>
+<h2 id="overview">Visión general</h2>
 <p>Este documento describe los pasos para que los desarrolladores cambien el formato de fecha y la zona horaria al realizar una solicitud HTTP a la aplicación. Estas funcionalidades son útiles para garantizar que los valores de fecha y hora se interpreten correctamente según la configuración regional del usuario o requisitos específicos.</p>
-<h2 id="requisitos-previos">Requisitos previos</h2>
+<h2 id="prerequisites">Requisitos previos</h2>
 <ul>
 <li>Familiaridad con solicitudes HTTP y APIs REST.</li>
 <li>Acceso a la documentación de la API de la aplicación para obtener detalles de los endpoints.</li>
 </ul>
-<h2 id="anadir-parametros-de-formato-de-fecha-y-zona-horaria">Añadir parámetros de Formato de fecha y Zona horaria</h2>
-<h3 id="formato-de-fecha">Formato de fecha</h3>
+<h2 id="adding-date-format-and-time-zone-parameters">Añadir parámetros de Formato de fecha y Zona horaria</h2>
+<h3 id="date-format">Formato de fecha</h3>
 <p>Para especificar un formato de fecha personalizado, añada un parámetro <code>_dateFormat</code> a su solicitud HTTP. El valor debe ser una cadena que represente el formato de fecha deseado, siguiendo las convenciones de Java <code>SimpleDateFormat</code>.</p>
 <p><strong>Ejemplo:</strong></p>
 <div class="language-http highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">GET /OBMAPBusinessPartner/2C4C71BC828B47A0AF2A79855FD3BA7A?_dateFormat=yyyy-MM-dd</span>
 </span></code></pre></div>
 <p>En este ejemplo, el Formato de fecha se establece en <code>"yyyy-MM-dd"</code>, lo que formateará las fechas como <code>"2023-08-29"</code>.</p>
-<h3 id="zona-horaria">Zona horaria</h3>
+<h3 id="time-zone">Zona horaria</h3>
 <p>Para especificar una zona horaria personalizada, añada un parámetro <code>_timeZone</code> a su solicitud HTTP. El valor debe ser una cadena que represente la zona horaria deseada, siguiendo las convenciones de Java <code>TimeZone</code>. Este parámetro requiere disponer de <code>_dateFormat</code> y no puede utilizarse como parámetro único.</p>
 <p><strong>Ejemplo:</strong></p>
 <div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">GET /OBMAPBusinessPartner/2C4C71BC828B47A0AF2A79855FD3BA7A?_dateFormat=yyyy-MM-dd&amp;_timeZone=America/New_York</span>
@@ -16737,7 +16737,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

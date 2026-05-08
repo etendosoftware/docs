@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#actividad-abc" class="md-skip">
+        <a href="#abc-activity" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16524,7 +16524,7 @@
   
 
 
-<h1 id="actividad-abc">Actividad (ABC)</h1>
+<h1 id="abc-activity">Actividad (ABC)</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Configuración</code> &gt; <code>Actividad (ABC)</code></p>
 <h2 id="overview">Overview</h2>
 <p>La Actividad (ABC) forma parte de la funcionalidad de <strong>Costeo Basado en Actividades (ABC) de Etendo</strong>. Es una <a href="../general-ledger-configuration/#dimension-tab"><strong>dimensión de contabilidad</strong></a> que puede configurarse para una determinada configuración del libro mayor, permitiendo a las organizaciones analizar los costes en función de las actividades que los generan, en lugar de depender únicamente de las dimensiones contables tradicionales.</p>
@@ -16858,7 +16858,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

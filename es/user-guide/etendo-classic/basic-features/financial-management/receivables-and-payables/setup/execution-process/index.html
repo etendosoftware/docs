@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proceso-de-ejecucion" class="md-skip">
+        <a href="#execution-process" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3651,7 +3651,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -3660,7 +3660,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso" class="md-nav__link">
+  <a href="#process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso
     </span>
@@ -3669,7 +3669,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametro" class="md-nav__link">
+  <a href="#parameter" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetro
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16388,7 +16388,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso" class="md-nav__link">
+  <a href="#process" class="md-nav__link">
     <span class="md-ellipsis">
       Proceso
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametro" class="md-nav__link">
+  <a href="#parameter" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetro
     </span>
@@ -16458,9 +16458,9 @@
   
 
 
-<h1 id="proceso-de-ejecucion">Proceso de Ejecución</h1>
+<h1 id="execution-process">Proceso de Ejecución</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Execution Process</code></p>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>Algunos tipos de pago requieren que se ejecute una actividad adicional al completar el pago.</p>
 <p>Por ejemplo, un pago con cheque puede requerir el registro del número de cheque y la impresión del mismo.</p>
 <p>En términos generales, el proceso de ejecución es la definición de la(s) <strong>actividad/es</strong> que el sistema o el usuario debe ejecutar para que un pago quede finalmente registrado como:</p>
@@ -16468,7 +16468,7 @@
 <li><strong>realizado/retirado de la cuenta financiera</strong></li>
 <li>o <strong>recibido/depositado en la cuenta financiera</strong>.</li>
 </ul>
-<h2 id="proceso">Proceso</h2>
+<h2 id="process">Proceso</h2>
 <p>La ventana Proceso de Ejecución lista los procesos de ejecución disponibles.</p>
 <p>Etendo incluye por defecto los procesos de ejecución descritos a continuación:</p>
 <ul>
@@ -16477,7 +16477,7 @@
 <li><strong>Leave as Credit</strong> - este proceso utiliza la funcionalidad de Devolución de materiales y permite al usuario convertir un cobro/pago negativo en un crédito positivo para el tercero (cliente/proveedor).</li>
 </ul>
 <p>Los pagos que requieren la ejecución de una actividad separada deben configurarse para que funcionen correctamente; esto implica seleccionar la opción "<strong>Automático</strong>" en el campo "<strong>Tipo de Ejecución</strong>", de modo que se pueda seleccionar un Proceso de Ejecución de los listados anteriormente al configurar el método de pago.</p>
-<h2 id="parametro">Parámetro</h2>
+<h2 id="parameter">Parámetro</h2>
 <p>La pestaña Parámetro permite al usuario configurar la actividad adicional que se ejecutará al completar un pago. Por ejemplo, para registrar un número de cheque.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/execution-process/execution-process-1.png" data-desc-position="bottom"><img alt="Parameter tab" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/execution-process/execution-process-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, el "<strong>Print Check Simple Process</strong>" tiene un parámetro llamado "<strong>Nº de Cheque</strong>". Dicho parámetro es un "<strong>Tipo de parámetro</strong>" de tipo "<strong>In</strong>" cuyo "<strong>Tipo de entrada</strong>" es "<strong>Texto</strong>".</p>
@@ -16741,7 +16741,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

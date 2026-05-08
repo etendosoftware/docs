@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entornos-de-prueba-de-etendo" class="md-skip">
+        <a href="#etendo-test-environments" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -16347,7 +16347,7 @@
   
 
 
-<h1 id="entornos-de-prueba-de-etendo">Entornos de prueba de Etendo</h1>
+<h1 id="etendo-test-environments">Entornos de prueba de Etendo</h1>
 <p>Esta página proporciona acceso rápido a entornos de prueba en vivo de Etendo que se mantienen siempre actualizados, lo que los hace ideales para probar nuevas funcionalidades de forma segura y reproducir incidencias sin afectar a producción.</p>
 <div class="grid cards">
 <ul>
@@ -16643,7 +16643,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

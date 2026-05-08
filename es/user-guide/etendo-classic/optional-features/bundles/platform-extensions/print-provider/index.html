@@ -5713,7 +5713,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -5722,7 +5722,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-inicial" class="md-nav__link">
+  <a href="#initial-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración inicial
     </span>
@@ -5732,7 +5732,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instalar-el-conjunto-de-datos-del-proveedor-y-de-plantillas-de-impresion" class="md-nav__link">
+  <a href="#install-provider-and-print-template-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar el conjunto de datos del proveedor y de plantillas de impresión
     </span>
@@ -5797,7 +5797,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generar-imprimibles" class="md-nav__link">
+  <a href="#generate-printables" class="md-nav__link">
     <span class="md-ellipsis">
       Generar imprimibles
     </span>
@@ -16476,7 +16476,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16485,7 +16485,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-inicial" class="md-nav__link">
+  <a href="#initial-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración inicial
     </span>
@@ -16495,7 +16495,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instalar-el-conjunto-de-datos-del-proveedor-y-de-plantillas-de-impresion" class="md-nav__link">
+  <a href="#install-provider-and-print-template-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar el conjunto de datos del proveedor y de plantillas de impresión
     </span>
@@ -16560,7 +16560,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generar-imprimibles" class="md-nav__link">
+  <a href="#generate-printables" class="md-nav__link">
     <span class="md-ellipsis">
       Generar imprimibles
     </span>
@@ -16656,7 +16656,7 @@
 
 <h1 id="print-provider">Print Provider</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.print.provider</code></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>El módulo <strong>Print Provider</strong> conecta Etendo con plataformas de impresión, ofreciendo una solución unificada para generar imprimibles directamente desde diferentes áreas del sistema.</p>
 <p>Permite que cada organización configure su proveedor de impresión, gestione y sincronice el catálogo de impresoras disponibles, administre plantillas de impresión y ejecute impresiones bajo demanda desde ventanas específicas.</p>
 <div class="admonition info">
@@ -16667,7 +16667,7 @@
 <p class="admonition-title">Tip</p>
 <p>Además, este módulo permite la implementación de proveedores de impresión personalizados, expone servicios de back-end reutilizables que pueden ser consumidos por diferentes módulos, y una API pública para imprimir desde desarrollos personalizados. Para más información, visite: <a href="../../../../../../developer-guide/etendo-classic/bundles/platform/print-provider/">Print Provider - Developer Guide</a></p>
 </div>
-<h2 id="configuracion-inicial">Configuración inicial</h2>
+<h2 id="initial-setup">Configuración inicial</h2>
 <p>Antes de utilizar el módulo <strong>Print Provider</strong>, debe completarse una configuración inicial para establecer la conexión entre Etendo y el servicio de impresión seleccionado.</p>
 <p>El siguiente ejemplo integra el servicio <strong>PrintNode</strong> con Etendo. Este proveedor está incluido con el módulo, pero su uso es opcional.</p>
 <p>La integración con PrintNode requiere seguir la <a href="https://www.printnode.com/docs" target="_blank">official documentation</a>. En términos generales, debe crear una cuenta, instalar el software de gestión en el dispositivo responsable de imprimir y generar una clave de API que luego utilizaremos desde Etendo para conectarnos al servicio.</p>
@@ -16679,7 +16679,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> Buscar y sincronizar las impresoras disponibles.</li>
 </ul>
 <p>Una vez completados estos pasos, el sistema estará listo para ejecutar impresiones de forma centralizada y segura.</p>
-<h3 id="instalar-el-conjunto-de-datos-del-proveedor-y-de-plantillas-de-impresion">Instalar el conjunto de datos del proveedor y de plantillas de impresión</h3>
+<h3 id="install-provider-and-print-template-dataset">Instalar el conjunto de datos del proveedor y de plantillas de impresión</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code>&gt;<code>Configuración General</code> &gt; <code>Organización</code> &gt; <code>Gestión del módulo de Empresa</code></p>
 <p>Abra la ventana <strong>Gestión del módulo de Empresa</strong> e instale los datos de referencia <strong>Etendo Print Provider</strong> incluidos en el módulo; esto configurará las configuraciones con el proveedor PrintNode y las plantillas de impresión de ejemplo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/install-dataset.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider/install-dataset.png"></a></p>
@@ -16734,7 +16734,7 @@
 <li><strong>Nombre</strong>: Nombre de la plantilla de impresión.</li>
 <li><strong>Template Line</strong>: Ubicación de la plantilla.</li>
 </ul>
-<h2 id="generar-imprimibles">Generar imprimibles</h2>
+<h2 id="generate-printables">Generar imprimibles</h2>
 <p>Este <strong>button</strong> es un componente reutilizable del módulo de proveedor de impresión que puede configurarse en ventanas de Etendo según las necesidades del negocio. Permite la selección múltiple de registros y, al pulsarlo, abre una ventana emergente donde el usuario puede seleccionar opcionalmente un proveedor y una impresora, especificar el número de copias y elegir si desea descargar el archivo generado.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -17026,7 +17026,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

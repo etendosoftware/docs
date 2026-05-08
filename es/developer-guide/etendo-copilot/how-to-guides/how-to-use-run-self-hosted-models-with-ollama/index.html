@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-ejecutar-modelos-autoalojados-con-ollama" class="md-skip">
+        <a href="#how-to-run-self-hosted-models-with-ollama" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14617,7 +14617,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14627,7 +14627,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejecutar-ollama-como-un-contenedor-docker" class="md-nav__link">
+  <a href="#running-ollama-as-a-docker-container" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar Ollama como un contenedor Docker.
     </span>
@@ -14636,7 +14636,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#instalar-un-modelo" class="md-nav__link">
+  <a href="#installing-a-model" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar un modelo
     </span>
@@ -14645,7 +14645,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-el-modelo-en-copilot" class="md-nav__link">
+  <a href="#using-the-model-in-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       Usar el modelo en Copilot
     </span>
@@ -16388,7 +16388,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16398,7 +16398,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejecutar-ollama-como-un-contenedor-docker" class="md-nav__link">
+  <a href="#running-ollama-as-a-docker-container" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar Ollama como un contenedor Docker.
     </span>
@@ -16407,7 +16407,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#instalar-un-modelo" class="md-nav__link">
+  <a href="#installing-a-model" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar un modelo
     </span>
@@ -16416,7 +16416,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-el-modelo-en-copilot" class="md-nav__link">
+  <a href="#using-the-model-in-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       Usar el modelo en Copilot
     </span>
@@ -16476,10 +16476,10 @@
   
 
 
-<h1 id="como-ejecutar-modelos-autoalojados-con-ollama">Cómo ejecutar modelos autoalojados con Ollama</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-run-self-hosted-models-with-ollama">Cómo ejecutar modelos autoalojados con Ollama</h1>
+<h2 id="overview">Visión general</h2>
 <p>Este artículo explica cómo ejecutar y utilizar modelos autoalojados con Ollama en Copilot. Copilot utiliza por defecto modelos LLM alojados por proveedores cloud. Sin embargo, puede utilizar sus propios modelos alojándolos en sus propios servidores. Esto puede ser útil por motivos de privacidad o para utilizar modelos que no están disponibles en OpenAI. Ollama permite ejecutar modelos autoalojados en un contenedor Docker.</p>
-<h3 id="ejecutar-ollama-como-un-contenedor-docker">Ejecutar Ollama como un contenedor Docker.</h3>
+<h3 id="running-ollama-as-a-docker-container">Ejecutar Ollama como un contenedor Docker.</h3>
 <p>Copilot incluye un archivo Docker Compose que permite ejecutar Ollama con las tareas de Gradle del módulo Docker. Para ver más información sobre el módulo Docker, visite la documentación de <a href="../../../etendo-classic/bundles/platform/docker-management/">Gestión de Docker</a>.</p>
 <p>Para habilitar el archivo compose para Ollama, es necesario añadir la siguiente línea en el archivo <code>gradle.properties</code>:</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">docker_com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">copilot</span><span class="o">.</span><span class="na">ollama</span><span class="o">=</span><span class="kc">true</span>
@@ -16487,7 +16487,7 @@
 <p>Después de eso, puede ejecutar el siguiente comando para iniciar el contenedor de Ollama:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>resources.up<span class="w"> </span>--info
 </span></code></pre></div>
-<h3 id="instalar-un-modelo">Instalar un modelo</h3>
+<h3 id="installing-a-model">Instalar un modelo</h3>
 <p>Los <a href="https://ollama.com/search" target="_isblank">modelos disponibles en Ollama</a> deben instalarse para poder utilizarse. Esto se realiza solo una vez porque la configuración del contenedor permite que los modelos se persistan, por lo que reiniciar el contenedor no afectará a la disponibilidad de los modelos una vez instalados.</p>
 <p>Para instalar los modelos, es necesario entrar en el contenedor de Ollama y ejecutar el siguiente comando:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>etendo-ollama-1<span class="w"> </span>bash
@@ -16500,7 +16500,7 @@
 <li>Proveedor: "ollama"</li>
 <li>Modelo: "llama3.2:3b"</li>
 </ul>
-<h3 id="usar-el-modelo-en-copilot">Usar el modelo en Copilot</h3>
+<h3 id="using-the-model-in-copilot">Usar el modelo en Copilot</h3>
 <ul>
 <li>Finalmente, puede usar el modelo en Copilot seleccionando el registro creado en el selector de modelos en la ventana <a href="../../../../user-guide/etendo-copilot/setup-and-usage/#agent-window">Agente</a>.</li>
 </ul>
@@ -16757,7 +16757,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

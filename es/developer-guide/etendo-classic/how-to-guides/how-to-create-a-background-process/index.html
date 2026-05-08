@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-crear-un-proceso-en-segundo-plano" class="md-skip">
+        <a href="#how-to-create-a-background-process" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9851,7 +9851,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -9860,7 +9860,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definir-un-proceso-en-segundo-plano" class="md-nav__link">
+  <a href="#defining-a-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Definir un Proceso en segundo plano
     </span>
@@ -9870,7 +9870,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejecutar-inmediatamente" class="md-nav__link">
+  <a href="#run-immediately" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar inmediatamente
     </span>
@@ -9879,7 +9879,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejecutar-mas-tarde" class="md-nav__link">
+  <a href="#run-later" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar más tarde
     </span>
@@ -9888,7 +9888,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#programar" class="md-nav__link">
+  <a href="#schedule" class="md-nav__link">
     <span class="md-ellipsis">
       Programar
     </span>
@@ -9897,7 +9897,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#programar-y-desprogramar-un-proceso-en-segundo-plano" class="md-nav__link">
+  <a href="#schedule-and-unschedule-a-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Programar y desprogramar un Proceso en segundo plano
     </span>
@@ -9906,7 +9906,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitorizacion-de-ejecuciones-de-procesos-en-segundo-plano" class="md-nav__link">
+  <a href="#monitoring-executions-of-background-processes" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorización de ejecuciones de Procesos en segundo plano
     </span>
@@ -16415,7 +16415,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16424,7 +16424,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definir-un-proceso-en-segundo-plano" class="md-nav__link">
+  <a href="#defining-a-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Definir un Proceso en segundo plano
     </span>
@@ -16434,7 +16434,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejecutar-inmediatamente" class="md-nav__link">
+  <a href="#run-immediately" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar inmediatamente
     </span>
@@ -16443,7 +16443,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejecutar-mas-tarde" class="md-nav__link">
+  <a href="#run-later" class="md-nav__link">
     <span class="md-ellipsis">
       Ejecutar más tarde
     </span>
@@ -16452,7 +16452,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#programar" class="md-nav__link">
+  <a href="#schedule" class="md-nav__link">
     <span class="md-ellipsis">
       Programar
     </span>
@@ -16461,7 +16461,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#programar-y-desprogramar-un-proceso-en-segundo-plano" class="md-nav__link">
+  <a href="#schedule-and-unschedule-a-background-process" class="md-nav__link">
     <span class="md-ellipsis">
       Programar y desprogramar un Proceso en segundo plano
     </span>
@@ -16470,7 +16470,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitorizacion-de-ejecuciones-de-procesos-en-segundo-plano" class="md-nav__link">
+  <a href="#monitoring-executions-of-background-processes" class="md-nav__link">
     <span class="md-ellipsis">
       Monitorización de ejecuciones de Procesos en segundo plano
     </span>
@@ -16536,31 +16536,31 @@
   
 
 
-<h1 id="como-crear-un-proceso-en-segundo-plano">Cómo crear un Proceso en segundo plano</h1>
-<h2 id="descripcion-general">Descripción general</h2>
+<h1 id="how-to-create-a-background-process">Cómo crear un Proceso en segundo plano</h1>
+<h2 id="overview">Descripción general</h2>
 <p>Los Procesos en segundo plano son <a href="../../concepts/processes/">Procesos</a> que se ejecutan sin la acción directa del usuario. Se pueden establecer diferentes reglas para programar cuándo se ejecuta el proceso.</p>
 <p>Este documento trata sobre la infraestructura de Etendo para los Procesos en segundo plano: cómo definir, programar y monitorizar los Procesos en segundo plano.</p>
-<h2 id="definir-un-proceso-en-segundo-plano">Definir un Proceso en segundo plano</h2>
+<h2 id="defining-a-background-process">Definir un Proceso en segundo plano</h2>
 <p>Los Procesos en segundo plano se definen en la ventana <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; <code>Process Request</code>. Primero, en el campo <em>Proceso</em> seleccione el proceso a ejecutar y, en el campo <em>Programado</em>, cuándo se ejecutará.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png"></a>
 Dependiendo del <em>Programado</em> seleccionado, es necesario definir más campos para definir esta programación:</p>
-<h3 id="ejecutar-inmediatamente">Ejecutar inmediatamente</h3>
+<h3 id="run-immediately">Ejecutar inmediatamente</h3>
 <p>Esta opción de programación ejecutará el Proceso en segundo plano solo una vez en el momento en que se pulse el botón para programar el proceso. Después de ser programado, se puede reprogramar tantas veces como sea necesario.</p>
 <p>Esta opción es muy similar a ejecutar un proceso desde una opción de menú. La diferencia es que, al programar un Proceso en segundo plano de <em>Ejecutar inmediatamente</em>, no habrá ninguna ventana emergente que indique cuándo finalizó la ejecución y, en su lugar, su ejecución se registrará en el <em>Monitor de Procesos</em>.</p>
-<h3 id="ejecutar-mas-tarde">Ejecutar más tarde</h3>
+<h3 id="run-later">Ejecutar más tarde</h3>
 <p>Esta opción es similar a la opción anterior. En este caso, el Proceso en segundo plano se ejecutará solo una vez en un momento futuro.</p>
 <p>El momento en el que se ejecutará el Proceso en segundo plano se define en los campos <em>Fecha inicio</em> y <em>Fecha fin</em>.</p>
-<h3 id="programar">Programar</h3>
+<h3 id="schedule">Programar</h3>
 <p>Esta es la opción más versátil, ya que permite ejecutar un Proceso en segundo plano de forma periódica. Estos son los campos utilizados para definir el plan de programación de un Proceso en segundo plano:</p>
 <ul>
 <li><em>Fecha inicio</em> y <em>Hora inicio</em>: define el momento en el que comenzará el plan de programación para este Proceso en segundo plano. </li>
 <li><em>Frecuencia</em>: define la frecuencia con la que se ejecutará el Proceso en segundo plano. Puede ser <em>Cada n segundos</em>, <em>Cada n minutos</em>, <em>Cada hora</em>, <em>Diario</em>, <em>Semanal</em>, <em>Mensual</em> o <em>Expresión cron</em>. Dependiendo de la opción seleccionada, puede definir los detalles específicos para cada opción de frecuencia. </li>
 <li><em>Fecha fin</em> y <em>Hora fin</em>: estos campos solo se pueden definir cuando se selecciona la opción <em>Finalizado</em>. Y define cuándo detener el plan de programación para este Proceso en segundo plano. </li>
 </ul>
-<h3 id="programar-y-desprogramar-un-proceso-en-segundo-plano">Programar y desprogramar un Proceso en segundo plano</h3>
+<h3 id="schedule-and-unschedule-a-background-process">Programar y desprogramar un Proceso en segundo plano</h3>
 <p>Después de que el Proceso en segundo plano se haya definido completamente, se puede programar pulsando el botón <em>Programar Proceso</em>. Cuando un proceso está programado, se ejecutará según las opciones de <em>Programado</em> seleccionadas, y cada ejecución se registrará en el Monitor de Procesos.</p>
 <p>Para detener futuras ejecuciones de un Proceso en segundo plano, simplemente pulse el botón <em>Desprogramar Proceso</em>. Después de que un Proceso en segundo plano haya sido desprogramado, se puede programar de nuevo en cualquier momento pulsando el botón <em>Reprogramar Proceso</em>.</p>
-<h3 id="monitorizacion-de-ejecuciones-de-procesos-en-segundo-plano">Monitorización de ejecuciones de Procesos en segundo plano</h3>
+<h3 id="monitoring-executions-of-background-processes">Monitorización de ejecuciones de Procesos en segundo plano</h3>
 <p>Todas las ejecuciones de Procesos en segundo plano se pueden monitorizar en <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; <code>Process Monitor</code>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png"></a></p>
 <p>En esta ventana, hay una entrada por cada ejecución de Proceso en segundo plano y la información de cada ejecución. Los campos más importantes son:</p>
@@ -16824,7 +16824,7 @@ Dependiendo del <em>Programado</em> seleccionado, es necesario definir más camp
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

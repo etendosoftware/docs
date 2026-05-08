@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-exportar-datos-de-ejemplo" class="md-skip">
+        <a href="#how-to-export-sample-data" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11212,7 +11212,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11221,7 +11221,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conjunto-de-datos-de-datos-de-ejemplo" class="md-nav__link">
+  <a href="#sample-data-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       Conjunto de datos de datos de ejemplo
     </span>
@@ -11230,7 +11230,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportacion-de-los-datos-de-ejemplo" class="md-nav__link">
+  <a href="#exporting-the-sample-data" class="md-nav__link">
     <span class="md-ellipsis">
       Exportación de los datos de ejemplo
     </span>
@@ -16373,7 +16373,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16382,7 +16382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conjunto-de-datos-de-datos-de-ejemplo" class="md-nav__link">
+  <a href="#sample-data-dataset" class="md-nav__link">
     <span class="md-ellipsis">
       Conjunto de datos de datos de ejemplo
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exportacion-de-los-datos-de-ejemplo" class="md-nav__link">
+  <a href="#exporting-the-sample-data" class="md-nav__link">
     <span class="md-ellipsis">
       Exportación de los datos de ejemplo
     </span>
@@ -16446,16 +16446,16 @@
   
 
 
-<h1 id="como-exportar-datos-de-ejemplo">Cómo exportar datos de ejemplo</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-export-sample-data">Cómo exportar datos de ejemplo</h1>
+<h2 id="overview">Visión general</h2>
 <p>El objetivo de este documento es explicar cómo se exportan los datos de ejemplo de Etendo utilizando la tarea <code>export.sample.data</code>.</p>
-<h2 id="conjunto-de-datos-de-datos-de-ejemplo">Conjunto de datos de datos de ejemplo</h2>
+<h2 id="sample-data-dataset">Conjunto de datos de datos de ejemplo</h2>
 <p>Las tablas que se exportarán cuando se ejecute la tarea <code>export.sample.data</code> están incluidas en el conjunto de datos Definición de cliente. Puede leer más sobre los conjuntos de datos en <a href="../../concepts/datasets/">Conjunto de datos</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La forma en que funciona actualmente la tarea <code>export.sample.data</code>, la cláusula SQL Where definida en las tablas del conjunto de datos del conjunto de datos Definición de cliente se ignorará y se reemplazará por un filtro de cliente.</p>
 </div>
-<h2 id="exportacion-de-los-datos-de-ejemplo">Exportación de los datos de ejemplo</h2>
+<h2 id="exporting-the-sample-data">Exportación de los datos de ejemplo</h2>
 <p>Para exportar los datos de ejemplo de un cliente determinado, debe ejecutarse esta tarea de gradle <code>export.sample.data</code>, disponible desde la carpeta raíz de Etendo. Tiene los siguientes parámetros:</p>
 <ul>
 <li>Cliente: El nombre del cliente cuyos datos de ejemplo se exportarán.</li>
@@ -16719,7 +16719,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

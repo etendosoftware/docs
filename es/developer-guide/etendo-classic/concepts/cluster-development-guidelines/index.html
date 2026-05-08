@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#directrices-de-desarrollo-en-cluster" class="md-skip">
+        <a href="#cluster-development-guidelines" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -8307,7 +8307,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -8326,7 +8326,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caches-seguras" class="md-nav__link">
+  <a href="#safe-caches" class="md-nav__link">
     <span class="md-ellipsis">
       Cachés seguras
     </span>
@@ -8335,7 +8335,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementaciones-de-cache" class="md-nav__link">
+  <a href="#cache-implementations" class="md-nav__link">
     <span class="md-ellipsis">
       Implementaciones de caché
     </span>
@@ -8345,7 +8345,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clases-applicationscoped" class="md-nav__link">
+  <a href="#applicationscoped-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Clases @ApplicationScoped
     </span>
@@ -8354,7 +8354,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#clases-singleton" class="md-nav__link">
+  <a href="#singleton-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Clases Singleton
     </span>
@@ -8363,7 +8363,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#campos-estaticos" class="md-nav__link">
+  <a href="#static-fields" class="md-nav__link">
     <span class="md-ellipsis">
       Campos estáticos
     </span>
@@ -8382,7 +8382,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sincronizacion-en-la-jvm" class="md-nav__link">
+  <a href="#synchronization-at-jvm" class="md-nav__link">
     <span class="md-ellipsis">
       Sincronización en la JVM
     </span>
@@ -8391,7 +8391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos" class="md-nav__link">
+  <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
       Archivos
     </span>
@@ -16446,7 +16446,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16465,7 +16465,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caches-seguras" class="md-nav__link">
+  <a href="#safe-caches" class="md-nav__link">
     <span class="md-ellipsis">
       Cachés seguras
     </span>
@@ -16474,7 +16474,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementaciones-de-cache" class="md-nav__link">
+  <a href="#cache-implementations" class="md-nav__link">
     <span class="md-ellipsis">
       Implementaciones de caché
     </span>
@@ -16484,7 +16484,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clases-applicationscoped" class="md-nav__link">
+  <a href="#applicationscoped-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Clases @ApplicationScoped
     </span>
@@ -16493,7 +16493,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#clases-singleton" class="md-nav__link">
+  <a href="#singleton-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Clases Singleton
     </span>
@@ -16502,7 +16502,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#campos-estaticos" class="md-nav__link">
+  <a href="#static-fields" class="md-nav__link">
     <span class="md-ellipsis">
       Campos estáticos
     </span>
@@ -16521,7 +16521,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sincronizacion-en-la-jvm" class="md-nav__link">
+  <a href="#synchronization-at-jvm" class="md-nav__link">
     <span class="md-ellipsis">
       Sincronización en la JVM
     </span>
@@ -16530,7 +16530,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archivos" class="md-nav__link">
+  <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
       Archivos
     </span>
@@ -16585,12 +16585,12 @@
   
 
 
-<h1 id="directrices-de-desarrollo-en-cluster">Directrices de desarrollo en clúster</h1>
+<h1 id="cluster-development-guidelines">Directrices de desarrollo en clúster</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>La siguiente sección describe los elementos básicos que deben tenerse en cuenta para garantizar que los desarrollos sean compatibles en un entorno en clúster.</p>
 <p>Para el alcance de este documento, consideramos que un <strong>entorno en clúster</strong> es una aplicación de Etendo distribuida en múltiples JVM.</p>
 <p>Los entornos en clúster están pensados para mejorar el rendimiento, permitiendo atender más procesos de forma concurrente, así como para ofrecer alta disponibilidad, permitiendo que el sistema continúe funcionando incluso si algunos de los nodos del clúster están caídos.</p>
@@ -16603,7 +16603,7 @@
 <p class="admonition-title">Example</p>
 <p>Si actualmente tenemos una clase que extiende <code>EntityPersistenceEventObserver</code> (<code>@ApplicationScoped</code>) que se encarga de actualizar algún tipo de caché cuando detecta un cambio en la JVM donde se está ejecutando, esta implementación por sí sola no es suficiente para un entorno en clúster, ya que el resto de nodos no serán notificados del cambio.</p>
 </div>
-<h3 id="caches-seguras">Cachés seguras</h3>
+<h3 id="safe-caches">Cachés seguras</h3>
 <p>En resumen, no necesitamos tener un cuidado especial con las cachés en los siguientes escenarios:</p>
 <ul>
 <li>
@@ -16624,26 +16624,26 @@
 </ul>
 </li>
 </ul>
-<h3 id="implementaciones-de-cache">Implementaciones de caché</h3>
+<h3 id="cache-implementations">Implementaciones de caché</h3>
 <p>Aunque una clase no esté diseñada para ser utilizada como caché, a efectos de esta discusión, cualquier clase que encaje en cualquiera de las siguientes categorías debe considerarse como caché y, por lo tanto, revisarse especialmente.</p>
-<h4 id="clases-applicationscoped">Clases <code>@ApplicationScoped</code></h4>
+<h4 id="applicationscoped-classes">Clases <code>@ApplicationScoped</code></h4>
 <p><code>@ApplicationScoped</code> es una anotación CDI que permite definir una clase cuya instancia única por JVM está garantizada, por lo que, a todos los efectos, se comporta como clases Singleton.</p>
 <p>Las clases <code>@ApplicationScoped</code> pueden considerarse cachés siempre que tengan estado; es decir, que tengan campos de instancia. Esos campos de instancia son, en la práctica, elementos en caché.</p>
-<h4 id="clases-singleton">Clases Singleton</h4>
+<h4 id="singleton-classes">Clases Singleton</h4>
 <p>Una <a href="https://en.wikipedia.org/wiki/Singleton_pattern" target="_blank">clase singleton</a> garantiza que exista una única instancia por JVM de esa clase.</p>
 <p>Pueden considerarse como cachés con el mismo criterio que las clases <code>@ApplicationScoped</code>.</p>
-<h4 id="campos-estaticos">Campos estáticos</h4>
+<h4 id="static-fields">Campos estáticos</h4>
 <p>Cualquier campo estático puede considerarse una caché, ya que su ciclo de vida es de ámbito de aplicación; es decir, existe una única instancia de ese campo para toda la JVM.</p>
 <p>Solo en los siguientes casos, un campo estático puede considerarse seguro en este sentido:</p>
 <ul>
 <li>Es inmutable: es <code>final</code> y todos los campos dentro de él también son inmutables. </li>
 <li>Es privado y la clase que lo contiene garantiza una gestión adecuada del estado. </li>
 </ul>
-<h2 id="sincronizacion-en-la-jvm">Sincronización en la JVM</h2>
+<h2 id="synchronization-at-jvm">Sincronización en la JVM</h2>
 <p>Los <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html" target="_blank">bloques synchronized de Java</a> permiten definir fragmentos de código que se garantiza que no tendrán ejecuciones en paralelo. Pero esta sincronización ocurre a nivel de JVM, por lo que no podemos garantizar con un bloque synchronized que no haya ejecuciones en paralelo de este bloque entre diferentes nodos del clúster.</p>
 <p>Por lo tanto, en un entorno en clúster, no deben utilizarse bloques synchronized para sincronizar utilidades destinadas a ejecutarse de forma sincronizada a nivel de sistema.</p>
 <p>Si necesitamos sincronizar algún tipo de tarea a nivel de sistema, entonces debemos usar otro tipo de mecanismo de sincronización, por ejemplo, utilizando la capa de base de datos.</p>
-<h2 id="archivos">Archivos</h2>
+<h2 id="files">Archivos</h2>
 <p>También debemos tener cuidado al manejar archivos en un entorno en clúster. En general, debemos:</p>
 <ul>
 <li>Evitar escribir/leer archivos desde la ruta del código fuente: los nodos del clúster no deberían requerir acceso a directorios de código fuente. </li>
@@ -16903,7 +16903,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

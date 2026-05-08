@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-ejecutar-copilot-a-traves-de-la-consola" class="md-skip">
+        <a href="#how-to-execute-copilot-through-the-console" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14458,7 +14458,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14467,7 +14467,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -14476,7 +14476,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comando" class="md-nav__link">
+  <a href="#command" class="md-nav__link">
     <span class="md-ellipsis">
       Comando
     </span>
@@ -14485,7 +14485,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros
     </span>
@@ -16382,7 +16382,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos previos
     </span>
@@ -16400,7 +16400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comando" class="md-nav__link">
+  <a href="#command" class="md-nav__link">
     <span class="md-ellipsis">
       Comando
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parámetros
     </span>
@@ -16470,17 +16470,17 @@
   
 
 
-<h1 id="como-ejecutar-copilot-a-traves-de-la-consola">Cómo ejecutar Copilot a través de la consola</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-execute-copilot-through-the-console">Cómo ejecutar Copilot a través de la consola</h1>
+<h2 id="overview">Visión general</h2>
 <p>Este artículo explica cómo ejecutar Copilot a través de la consola. Esto es útil cuando desea probar una herramienta o un agente sin utilizar la interfaz de Etendo Classic.</p>
-<h2 id="requisitos-previos">Requisitos previos</h2>
+<h2 id="prerequisites">Requisitos previos</h2>
 <ul>
 <li>Acceso al host de Etendo Classic.</li>
 </ul>
-<h2 id="comando">Comando</h2>
+<h2 id="command">Comando</h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Phost<span class="o">=</span><span class="s1">'https://my.etendo.instance/etendo'</span><span class="w"> </span>-Papp_id<span class="o">=</span><span class="s2">"Module Creator"</span><span class="w"> </span>-Pusername<span class="o">=</span>my-user<span class="w"> </span>-Ppassword<span class="o">=</span>my-password<span class="w"> </span>-Pquestion<span class="o">=</span><span class="s2">"Can you create a Module called 'Test Module? "</span><span class="w">  </span>--console<span class="o">=</span>plain<span class="w"> </span>
 </span></code></pre></div>
-<h2 id="parametros">Parámetros</h2>
+<h2 id="parameters">Parámetros</h2>
 <ul>
 <li><strong>-Phost</strong>: La URL del host de Etendo Classic. Si no se proporciona, se utilizará el host por defecto http://localhost:8080/etendo.</li>
 <li><strong>-Pusername</strong>: El nombre de usuario de Etendo Classic, que ejecutará el comando. Este usuario debe tener los permisos necesarios para ejecutar el comando.</li>
@@ -16754,7 +16754,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interfaz-de-usuario" class="md-skip">
+        <a href="#user-interface" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -6950,7 +6950,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-configuracion" class="md-nav__link">
+  <a href="#settings-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de configuración
     </span>
@@ -6959,7 +6959,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-inicio" class="md-nav__link">
+  <a href="#home-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de inicio
     </span>
@@ -6968,7 +6968,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-perfil" class="md-nav__link">
+  <a href="#profile-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de perfil
     </span>
@@ -16396,7 +16396,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-configuracion" class="md-nav__link">
+  <a href="#settings-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de configuración
     </span>
@@ -16405,7 +16405,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-inicio" class="md-nav__link">
+  <a href="#home-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de inicio
     </span>
@@ -16414,7 +16414,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pantalla-de-perfil" class="md-nav__link">
+  <a href="#profile-screen" class="md-nav__link">
     <span class="md-ellipsis">
       Pantalla de perfil
     </span>
@@ -16480,16 +16480,16 @@
   
 
 
-<h1 id="interfaz-de-usuario">Interfaz de Usuario</h1>
+<h1 id="user-interface">Interfaz de Usuario</h1>
 <h2 id="etendo-mobile">Etendo Mobile</h2>
-<h3 id="pantalla-de-configuracion">Pantalla de configuración</h3>
+<h3 id="settings-screen">Pantalla de configuración</h3>
 <p>En la ventana de la pantalla de configuración, el usuario puede establecer el <strong>idioma</strong> que se utilizará en la aplicación.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Recuerde que, en cuanto se descarga la aplicación, se debe configurar la URL del servidor. </p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-0.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-0.png"></a></p>
-<h3 id="pantalla-de-inicio">Pantalla de inicio</h3>
+<h3 id="home-screen">Pantalla de inicio</h3>
 <p>Después de iniciar sesión, se le redirigirá a la pantalla de inicio.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-1.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-1.png"></a></p>
 <p>Aquí, al seleccionar la imagen de perfil, es posible navegar a las pantallas de <strong>Configuración</strong> y <strong>Perfil</strong>.</p>
@@ -16501,7 +16501,7 @@
 Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite <a href="../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes/">Mobile Extensions Bundle - Notas de la versión</a>.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-3.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-3.png"></a></p>
-<h3 id="pantalla-de-perfil">Pantalla de perfil</h3>
+<h3 id="profile-screen">Pantalla de perfil</h3>
 <p>En esta sección, el usuario puede ver la información de la persona que ha iniciado sesión: <strong>Nombre, Rol, Organización, Cliente y Almacén</strong>.</p>
 <p>En caso de que el usuario tenga una imagen, se mostrará tanto en esta ventana como en la sección superior del menú de navegación en Etendo. </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-4.png" data-desc-position="bottom"><img alt="alt text" src="../../../../../assets/user-guide/etendo-mobile/user-interface/user-interface-4.png"></a></p>
@@ -16762,7 +16762,7 @@ Para más información sobre las versiones disponibles, la compatibilidad con el
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

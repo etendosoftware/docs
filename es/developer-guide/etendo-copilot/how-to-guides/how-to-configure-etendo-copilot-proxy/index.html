@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-configurar-etendo-copilot-para-usar-un-proxy" class="md-skip">
+        <a href="#how-to-configure-etendo-copilot-to-use-a-proxy" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14214,7 +14214,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14223,7 +14223,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-el-servidor-proxy" class="md-nav__link">
+  <a href="#set-up-the-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar el servidor proxy
     </span>
@@ -14232,7 +14232,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-etendo-copilot" class="md-nav__link">
+  <a href="#configure-etendo-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar Etendo Copilot
     </span>
@@ -14241,7 +14241,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aplicar-los-cambios-y-reiniciar-el-servicio" class="md-nav__link">
+  <a href="#apply-the-changes-and-restart-the-service" class="md-nav__link">
     <span class="md-ellipsis">
       Aplicar los cambios y reiniciar el servicio
     </span>
@@ -16389,7 +16389,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-el-servidor-proxy" class="md-nav__link">
+  <a href="#set-up-the-proxy-server" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar el servidor proxy
     </span>
@@ -16407,7 +16407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-etendo-copilot" class="md-nav__link">
+  <a href="#configure-etendo-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       Configurar Etendo Copilot
     </span>
@@ -16416,7 +16416,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aplicar-los-cambios-y-reiniciar-el-servicio" class="md-nav__link">
+  <a href="#apply-the-changes-and-restart-the-service" class="md-nav__link">
     <span class="md-ellipsis">
       Aplicar los cambios y reiniciar el servicio
     </span>
@@ -16471,8 +16471,8 @@
   
 
 
-<h1 id="como-configurar-etendo-copilot-para-usar-un-proxy">Cómo configurar Etendo Copilot para usar un proxy</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-configure-etendo-copilot-to-use-a-proxy">Cómo configurar Etendo Copilot para usar un proxy</h1>
+<h2 id="overview">Visión general</h2>
 <p><strong>Etendo Copilot</strong> puede configurarse para enrutar su tráfico de la API de LLM a través de un proxy por varios motivos operativos:</p>
 <ul>
 <li>Aislamiento de red (servidores sin acceso directo a internet)</li>
@@ -16481,7 +16481,7 @@
 </ul>
 <p>Un proxy delante de los <strong>proveedores de LLM</strong> actúa como intermediario que reenvía las solicitudes desde Copilot a proveedores como <em>OpenAI</em>, <em>Anthropic</em> o <em>Google</em>.</p>
 <p>Esta guía muestra una configuración habitual usando <a href="https://docs.litellm.ai/docs/simple_proxy" target="_blank">LiteLLM Proxy</a> y explica cómo apuntar <strong>Etendo Copilot</strong> a ese proxy. El caso de <em>sin acceso directo a internet</em> es un escenario típico, pero la misma configuración aplica cuando necesita enrutamiento centralizado, aplicación de políticas o una mejor observabilidad de las solicitudes a LLM.</p>
-<h2 id="configurar-el-servidor-proxy">Configurar el servidor proxy</h2>
+<h2 id="set-up-the-proxy-server">Configurar el servidor proxy</h2>
 <p>Una opción conveniente es <strong>LiteLLM Proxy</strong>, que simplifica la gestión de distintos proveedores de LLM detrás de un único endpoint. El siguiente ejemplo muestra una configuración básica con Docker:</p>
 <ol>
 <li>
@@ -16516,7 +16516,7 @@
 </div>
 </li>
 </ol>
-<h2 id="configurar-etendo-copilot">Configurar Etendo Copilot</h2>
+<h2 id="configure-etendo-copilot">Configurar Etendo Copilot</h2>
 <p>Una vez que el proxy esté en ejecución, configure Etendo Copilot para enviar sus <strong>solicitudes a LLM</strong> a través de la URL del proxy.</p>
 <ol>
 <li>
@@ -16528,7 +16528,7 @@
 </span></code></pre></div>
 </li>
 </ol>
-<h2 id="aplicar-los-cambios-y-reiniciar-el-servicio">Aplicar los cambios y reiniciar el servicio</h2>
+<h2 id="apply-the-changes-and-restart-the-service">Aplicar los cambios y reiniciar el servicio</h2>
 <p>Para que la configuración sea efectiva, debe recompilar, desplegar la configuración en Etendo y reiniciar los servicios relevantes. Realice los pasos en el orden indicado a continuación:</p>
 <ol>
 <li>
@@ -16801,7 +16801,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

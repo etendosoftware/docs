@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-cambiar-las-fuentes-en-los-informes-de-etendo" class="md-skip">
+        <a href="#how-to-change-fonts-in-etendo-reports" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9690,7 +9690,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -9699,7 +9699,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-la-fuente-en-informe-jasper" class="md-nav__link">
+  <a href="#changing-the-font-in-jasper-reports" class="md-nav__link">
     <span class="md-ellipsis">
       Cambiar la fuente en Informe Jasper
     </span>
@@ -9708,7 +9708,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado" class="md-nav__link">
+  <a href="#result" class="md-nav__link">
     <span class="md-ellipsis">
       Resultado
     </span>
@@ -16380,7 +16380,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16389,7 +16389,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cambiar-la-fuente-en-informe-jasper" class="md-nav__link">
+  <a href="#changing-the-font-in-jasper-reports" class="md-nav__link">
     <span class="md-ellipsis">
       Cambiar la fuente en Informe Jasper
     </span>
@@ -16398,7 +16398,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado" class="md-nav__link">
+  <a href="#result" class="md-nav__link">
     <span class="md-ellipsis">
       Resultado
     </span>
@@ -16453,19 +16453,19 @@
   
 
 
-<h1 id="como-cambiar-las-fuentes-en-los-informes-de-etendo">Cómo cambiar las fuentes en los informes de Etendo</h1>
+<h1 id="how-to-change-fonts-in-etendo-reports">Cómo cambiar las fuentes en los informes de Etendo</h1>
 <div class="admonition example">
 <p class="admonition-title">IMPORTANTE: ESTA ES UNA VERSIÓN BETA</p>
 <p>Está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úselo <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Esta sección explica cómo <strong>cambiar las fuentes</strong> utilizadas en los informes de Etendo. Actualizar las fuentes predeterminadas puede ser útil en dos escenarios principales: mejorar la apariencia visual de los informes con una <strong>tipografía</strong> más legible o alineada con la marca, o garantizar la correcta visualización de <strong>Idioma</strong> cuyos caracteres no están soportados por el conjunto de fuentes estándar, como japonés, árabe o vietnamita. Sustituir las fuentes predeterminadas por otras que soporten los conjuntos de caracteres requeridos permite que los informes se rendericen correctamente en distintos idiomas.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Para más información, visite <a href="../how-to-create-a-module/">Cómo crear un módulo</a> y <a href="../how-to-create-a-report/">Cómo crear un informe</a>. </p>
 </div>
 <p>Etendo utiliza la herramienta <strong>Informe Jasper</strong> para crear informes:</p>
-<h2 id="cambiar-la-fuente-en-informe-jasper">Cambiar la fuente en Informe Jasper</h2>
+<h2 id="changing-the-font-in-jasper-reports">Cambiar la fuente en Informe Jasper</h2>
 <p>Al cambiar la fuente en <strong>Informe Jasper</strong>, el software <a href="https://community.jaspersoft.com/download-jaspersoft/" target="_blank">Jaspersoft Studio</a> será de gran ayuda.</p>
 <p>En el enlace anterior, encontrará un tutorial detallado que describe <strong>cómo gestionar</strong> fuentes personalizadas en Jaspersoft Studio. En resumen, estos son los pasos a realizar:</p>
 <ol>
@@ -16491,7 +16491,7 @@
 <li>Ejecute <code>./gradlew smartbuild</code></li>
 <li>Reinicie tomcat. </li>
 </ol>
-<h2 id="resultado">Resultado</h2>
+<h2 id="result">Resultado</h2>
 <p>Las siguientes capturas de pantalla muestran los resultados tras realizar correctamente los pasos mencionados anteriormente:</p>
 <p><strong>Informe Jasper</strong> en el que la fuente del título ha sido sustituida por otra fuente:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports/how-to-change-fonts-in-Etendo-reports-2.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-change-fonts-in-etendo-reports/how-to-change-fonts-in-Etendo-reports-2.png"></a></p>
@@ -16748,7 +16748,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

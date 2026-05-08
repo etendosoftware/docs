@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vision-general" class="md-skip">
+        <a href="#overview" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -10821,7 +10821,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -10830,7 +10830,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#crear-una-accion" class="md-nav__link">
+  <a href="#create-an-action" class="md-nav__link">
     <span class="md-ellipsis">
       Crear una acción
     </span>
@@ -10840,7 +10840,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ampliar-y-ejecutar-acciones" class="md-nav__link">
+  <a href="#extend-and-execute-actions" class="md-nav__link">
     <span class="md-ellipsis">
       Ampliar y ejecutar acciones
     </span>
@@ -10854,7 +10854,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-ampliar-una-accion-usando-hooks-preaction-y-postaction" class="md-nav__link">
+  <a href="#how-to-extend-an-action-using-preaction-and-postaction-hooks" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo ampliar una acción usando hooks preAction y postAction
     </span>
@@ -10864,7 +10864,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-una-accion" class="md-nav__link">
+  <a href="#example-of-an-action" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de una acción
     </span>
@@ -10873,7 +10873,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementacion-de-preactionhook" class="md-nav__link">
+  <a href="#implementing-the-preactionhook" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de PreActionHook
     </span>
@@ -10882,7 +10882,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementacion-de-postactionhook" class="md-nav__link">
+  <a href="#implementing-the-postactionhook" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de PostActionHook
     </span>
@@ -16415,7 +16415,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16424,7 +16424,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#crear-una-accion" class="md-nav__link">
+  <a href="#create-an-action" class="md-nav__link">
     <span class="md-ellipsis">
       Crear una acción
     </span>
@@ -16434,7 +16434,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ampliar-y-ejecutar-acciones" class="md-nav__link">
+  <a href="#extend-and-execute-actions" class="md-nav__link">
     <span class="md-ellipsis">
       Ampliar y ejecutar acciones
     </span>
@@ -16448,7 +16448,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-ampliar-una-accion-usando-hooks-preaction-y-postaction" class="md-nav__link">
+  <a href="#how-to-extend-an-action-using-preaction-and-postaction-hooks" class="md-nav__link">
     <span class="md-ellipsis">
       Cómo ampliar una acción usando hooks preAction y postAction
     </span>
@@ -16458,7 +16458,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-una-accion" class="md-nav__link">
+  <a href="#example-of-an-action" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de una acción
     </span>
@@ -16467,7 +16467,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementacion-de-preactionhook" class="md-nav__link">
+  <a href="#implementing-the-preactionhook" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de PreActionHook
     </span>
@@ -16476,7 +16476,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementacion-de-postactionhook" class="md-nav__link">
+  <a href="#implementing-the-postactionhook" class="md-nav__link">
     <span class="md-ellipsis">
       Implementación de PostActionHook
     </span>
@@ -16532,13 +16532,13 @@
 
   <h1>Cómo Crear Jobs y Acciones</h1>
 
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p>Etendo introduce el concepto de Trabajos, que consiste en una o más Acciones ejecutadas en secuencia. Estas Acciones son procesos estándar que permiten al usuario crear y almacenar Trabajos para su uso posterior. Las automatizaciones de Jira y los Atajos de iOS son conceptos similares.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La GUI para crear y ejecutar trabajos llegará pronto en una versión más reciente de Etendo. En la actualidad, solo es posible definir Acciones que actúan como procesos estándar disponibles en la UI existente; no obstante, también serán compatibles con la nueva UI cuando se publique.</p>
 </div>
-<h2 id="crear-una-accion">Crear una acción</h2>
+<h2 id="create-an-action">Crear una acción</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Las Acciones se basan en la arquitectura existente de Proceso estándar.</p>
@@ -16702,7 +16702,7 @@ Por ejemplo:</p>
 </span><span id="__span-4-113"><a id="__codelineno-4-113" name="__codelineno-4-113" href="#__codelineno-4-113"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-4-114"><a id="__codelineno-4-114" name="__codelineno-4-114" href="#__codelineno-4-114"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="ampliar-y-ejecutar-acciones">Ampliar y ejecutar acciones</h3>
+<h3 id="extend-and-execute-actions">Ampliar y ejecutar acciones</h3>
 <p>También es posible ampliar acciones añadiendo nueva funcionalidad.<br>
 A continuación se muestra un ejemplo de ampliación de la clase <code>com.smf.jobs.defaults.ProcessOrders</code> que se encuentra dentro de las acciones estándar distribuidas con Etendo.</p>
 <div class="language-Java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtendProcessOrder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">smf</span><span class="p">.</span><span class="na">jobs</span><span class="p">.</span><span class="na">defaults</span><span class="p">.</span><span class="na">ProcessOrders</span><span class="w"> </span><span class="p">{</span>
@@ -16741,10 +16741,10 @@ A continuación se muestra un ejemplo de ampliación de la clase <code>com.smf.j
 </span></code></pre></div>
 <p>Es necesario implementar un método que obtenga y ejecute la acción actual; en nuestro ejemplo implementamos <code>executeProcessOrderAction(Order order)</code>, que obtiene dinámicamente una instancia de la clase <code>ExtendProcessOrder</code> y la ejecuta.
 También es posible añadir validaciones y sobrescribir los métodos originales.</p>
-<h2 id="como-ampliar-una-accion-usando-hooks-preaction-y-postaction">Cómo ampliar una acción usando hooks preAction y postAction</h2>
+<h2 id="how-to-extend-an-action-using-preaction-and-postaction-hooks">Cómo ampliar una acción usando hooks preAction y postAction</h2>
 <p>Existe una forma de ampliar una Acción sin modificarla. Esto se realiza implementando los hooks pre y post que están disponibles en la clase <code>com.smf.jobs.Action</code>.</p>
 <p>Cuando se ejecuta una Acción, todas las implementaciones de PreActionHook se ejecutan antes del método run de la Acción, y se ejecutan todas las implementaciones de PostActionHook. Esto permite ampliar la Acción sin modificar el código original, para añadir validaciones o ejecutar lógica adicional.</p>
-<h3 id="ejemplo-de-una-accion">Ejemplo de una acción</h3>
+<h3 id="example-of-an-action">Ejemplo de una acción</h3>
 <p>A continuación se muestra un ejemplo de una Acción que introduce información en una clase Singleton.</p>
 <div class="language-Java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.smf.jobs</span><span class="p">;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
@@ -16774,7 +16774,7 @@ También es posible añadir validaciones y sobrescribir los métodos originales.
 </span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="implementacion-de-preactionhook">Implementación de PreActionHook</h3>
+<h3 id="implementing-the-preactionhook">Implementación de PreActionHook</h3>
 <p>A continuación se muestra un ejemplo de un PreActionHook que introduce una lógica antes de que se ejecute la Acción.</p>
 <div class="language-Java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.smf.jobs</span><span class="p">;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -16833,7 +16833,7 @@ También es posible añadir validaciones y sobrescribir los métodos originales.
 </span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="implementacion-de-postactionhook">Implementación de PostActionHook</h3>
+<h3 id="implementing-the-postactionhook">Implementación de PostActionHook</h3>
 <p>A continuación se muestra un ejemplo de un PostActionHook que introduce una lógica después de que se ejecute la Acción. Es bastante similar al PreActionHook.</p>
 <p></p><div class="language-Java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.smf.jobs</span><span class="p">;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
@@ -17150,7 +17150,7 @@ Después de ejecutar la Acción, la instancia SingletonToTestHooks tendrá las p
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

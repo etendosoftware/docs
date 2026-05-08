@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-definir-el-tiempo-de-espera-de-una-consulta" class="md-skip">
+        <a href="#how-to-define-the-timeout-of-a-query" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -11067,7 +11067,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -11076,7 +11076,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-querytimeoututil" class="md-nav__link">
+  <a href="#querytimeoututil-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase QueryTimeOutUtil
     </span>
@@ -11085,7 +11085,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#perfiles-de-tiempo-de-espera" class="md-nav__link">
+  <a href="#timeout-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       Perfiles de tiempo de espera
     </span>
@@ -11094,7 +11094,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16382,7 +16382,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16391,7 +16391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clase-querytimeoututil" class="md-nav__link">
+  <a href="#querytimeoututil-class" class="md-nav__link">
     <span class="md-ellipsis">
       Clase QueryTimeOutUtil
     </span>
@@ -16400,7 +16400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#perfiles-de-tiempo-de-espera" class="md-nav__link">
+  <a href="#timeout-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       Perfiles de tiempo de espera
     </span>
@@ -16409,7 +16409,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo
     </span>
@@ -16464,10 +16464,10 @@
   
 
 
-<h1 id="como-definir-el-tiempo-de-espera-de-una-consulta">Cómo definir el tiempo de espera de una consulta</h1>
-<h2 id="vision-general">Visión general</h2>
+<h1 id="how-to-define-the-timeout-of-a-query">Cómo definir el tiempo de espera de una consulta</h1>
+<h2 id="overview">Visión general</h2>
 <p>Definir el tiempo de espera de una consulta permite cancelar su ejecución una vez que ha transcurrido una determinada <strong>cantidad de tiempo desde que se inició</strong>. Esto ayuda a proteger la base de datos evitando que las consultas queden bloqueadas.</p>
-<h2 id="clase-querytimeoututil">Clase <code>QueryTimeOutUtil</code></h2>
+<h2 id="querytimeoututil-class">Clase <code>QueryTimeOutUtil</code></h2>
 <p>La clase <code>QueryTimeOutUtil</code> proporciona métodos <code>setQueryTimeOut</code> que definen el tiempo de espera de:</p>
 <ul>
 <li>Sentencias SQL.</li>
@@ -16476,7 +16476,7 @@
 </ul>
 <p>El primer argumento del método <code>setQueryTimeOut</code> es el objeto cuyo tiempo de espera de consulta se va a establecer. El segundo argumento es una cadena que representa un perfil de tiempo de espera (consulte la siguiente sección).</p>
 <p>Esta clase también proporciona métodos <code>resetQueryTimeOut</code> para restablecer el tiempo de espera a 0.</p>
-<h2 id="perfiles-de-tiempo-de-espera">Perfiles de tiempo de espera</h2>
+<h2 id="timeout-profiles">Perfiles de tiempo de espera</h2>
 <p>Los tiempos de espera de las consultas se definen mediante perfiles de tiempo de espera. Un perfil de tiempo de espera representa una actividad del lado del servidor. Por ejemplo, el perfil de tiempo de espera GRID, definido en el core, es utilizado por <code>DefaultJsonDataService</code> en las consultas que se realizan para recuperar los registros que se mostrarán en la cuadrícula.</p>
 <p>Los tiempos de espera de las consultas se declaran en el archivo <code>gradle.properties</code>, usando <code>db.queryTimeout.&lt;profile_name&gt;=#profile_timeout_in_seconds</code>.</p>
 <p>Por ejemplo, para definir un nuevo perfil llamado <code>MY_PROCESS</code> con un tiempo de espera de consulta de 5 segundos, debe añadirse la siguiente línea a <code>gradle.properties</code>: </p>
@@ -16495,7 +16495,7 @@
 <li><strong><code>db.queryTimeout.manualProcess*</code></strong>: consultas ejecutadas en procesos manuales.</li>
 </ul>
 <p>Si usted crea un proceso y no establece un perfil de consulta para sus consultas, se utilizará de forma predeterminada <code>db.queryTimeout.scheduledProcess</code> o <code>db.queryTimeout.manualProcess</code>. Puede sobrescribir estos perfiles predeterminados ejecutando <code>QueryTimeOutUtil.getInstance().setQueryTimeOut</code> sobre su consulta.</p>
-<h2 id="ejemplo">Ejemplo</h2>
+<h2 id="example">Ejemplo</h2>
 <p>Supongamos que un desarrollador está utilizando una consulta que previsiblemente consumirá mucho tiempo, por lo que quiere permitir especificar un límite en su tiempo de ejecución. El desarrollador puede reutilizar un perfil de consulta existente o crear uno nuevo. En este caso, ninguno de los perfiles de consulta existentes aplica, por lo que utiliza uno nuevo al que llama <code>MY_TIME_CONSUMING_QUERY</code>.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">String</span><span class="w"> </span><span class="n">hql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"update ..."</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Query</span><span class="w"> </span><span class="n">qry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getSession</span><span class="p">().</span><span class="na">createQuery</span><span class="p">(</span><span class="n">hql</span><span class="p">);</span>
@@ -16765,7 +16765,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

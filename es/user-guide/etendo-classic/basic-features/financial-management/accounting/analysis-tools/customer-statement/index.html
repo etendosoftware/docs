@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extracto-de-cuenta-de-cliente" class="md-skip">
+        <a href="#customer-statement" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4333,7 +4333,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -4342,7 +4342,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -4351,7 +4351,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botones" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Botones
     </span>
@@ -16379,7 +16379,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción general
     </span>
@@ -16388,7 +16388,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cabecera" class="md-nav__link">
+  <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
     </span>
@@ -16397,7 +16397,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#botones" class="md-nav__link">
+  <a href="#buttons" class="md-nav__link">
     <span class="md-ellipsis">
       Botones
     </span>
@@ -16458,7 +16458,7 @@
   
 
 
-<h1 id="extracto-de-cuenta-de-cliente">Extracto de cuenta de Cliente</h1>
+<h1 id="customer-statement">Extracto de cuenta de Cliente</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Contabilidad</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Extracto de cuenta de Cliente</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -16468,7 +16468,7 @@
 <p class="admonition-title">Warning</p>
 <p>Si no dispone del <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>, el informe permanecerá en una versión heredada con funcionalidad limitada.</p>
 </div>
-<h2 id="descripcion-general">Descripción general</h2>
+<h2 id="overview">Descripción general</h2>
 <p>El <strong>Extracto de cuenta de Cliente</strong> es un informe consolidado que muestra todas las transacciones de un tercero contabilizadas en el libro mayor durante un periodo determinado. Este informe proporciona un historial financiero completo de la relación comercial, mostrando los débitos, créditos y saldos acumulados de cada transacción.</p>
 <p>Este informe puede generarse para terceros configurados como:</p>
 <ul>
@@ -16499,7 +16499,7 @@
 <p class="admonition-title">Note</p>
 <p>Los importes negativos se destacan mediante el uso de paréntesis ( ).</p>
 </div>
-<h2 id="cabecera">Cabecera</h2>
+<h2 id="header">Cabecera</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-1.png"></a></p>
 <p>Como se muestra en la imagen anterior, se pueden configurar los siguientes parámetros:</p>
 <ul>
@@ -16525,7 +16525,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="botones">Botones</h2>
+<h2 id="buttons">Botones</h2>
 <p>En la barra de herramientas, se encuentran los siguientes botones para generar el informe:</p>
 <ul>
 <li><strong>Ver</strong>: Abre los resultados del informe en una nueva ventana para su visualización inmediata.</li>
@@ -16787,7 +16787,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

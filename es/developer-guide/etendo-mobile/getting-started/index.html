@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guia-del-desarrollador-primeros-pasos-etendo-mobile" class="md-skip">
+        <a href="#developer-guide---getting-started---etendo-mobile" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -14753,7 +14753,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -14762,7 +14762,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalar-subaplicaciones-distribuidas-en-etendo-classic" class="md-nav__link">
+  <a href="#install-distributed-sub-applications-in-etendo-classic" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar subaplicaciones distribuidas en Etendo Classic
     </span>
@@ -14771,7 +14771,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-entorno-de-desarrollo" class="md-nav__link">
+  <a href="#development-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del entorno de desarrollo
     </span>
@@ -14781,7 +14781,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requisitos" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos
     </span>
@@ -16386,7 +16386,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión general
     </span>
@@ -16395,7 +16395,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalar-subaplicaciones-distribuidas-en-etendo-classic" class="md-nav__link">
+  <a href="#install-distributed-sub-applications-in-etendo-classic" class="md-nav__link">
     <span class="md-ellipsis">
       Instalar subaplicaciones distribuidas en Etendo Classic
     </span>
@@ -16404,7 +16404,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-del-entorno-de-desarrollo" class="md-nav__link">
+  <a href="#development-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Configuración del entorno de desarrollo
     </span>
@@ -16414,7 +16414,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#requisitos" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos
     </span>
@@ -16480,18 +16480,18 @@
   
 
 
-<h1 id="guia-del-desarrollador-primeros-pasos-etendo-mobile">Guía del desarrollador - Primeros pasos - Etendo Mobile</h1>
+<h1 id="developer-guide---getting-started---etendo-mobile">Guía del desarrollador - Primeros pasos - Etendo Mobile</h1>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/getting-started/overview/cover-getting-started.png" data-desc-position="bottom"><img alt="cover-getting-started.png" src="../../../../assets/getting-started/overview/cover-getting-started.png"></a></p>
-<h2 id="vision-general">Visión general</h2>
+<h2 id="overview">Visión general</h2>
 <p><em>Etendo Mobile</em> es una plataforma de desarrollo de subaplicaciones que incluye la posibilidad de iniciar sesión en un servidor de <em>Etendo Classic</em> y configurar allí las subaplicaciones dinámicas disponibles según el rol.</p>
 <p>A continuación se muestra un esquema de la infraestructura:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png" data-desc-position="bottom"><img alt="etendo-mobile-infrastructure.png" src="../../../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png"></a></p>
 <p>En esta página, primero explicaremos el paso a paso para instalar y configurar por primera vez subaplicaciones en un cliente y, a continuación, cuáles son los requisitos para crear una subaplicación y las herramientas necesarias para desarrollar una nueva subaplicación.</p>
-<h2 id="instalar-subaplicaciones-distribuidas-en-etendo-classic">Instalar subaplicaciones distribuidas en Etendo Classic</h2>
+<h2 id="install-distributed-sub-applications-in-etendo-classic">Instalar subaplicaciones distribuidas en Etendo Classic</h2>
 <p>Puede encontrar las subaplicaciones distribuidas por Etendo, disponibles para su instalación, y su documentación en la sección <a href="../../../user-guide/etendo-mobile/getting-started/#install-subapps-in-etendo-classic">Subaplicaciones disponibles para instalar</a>.</p>
 <p>Para instalar estos bundles, puede seguir la siguiente guía <a href="../../etendo-classic/getting-started/installation/install-modules-in-etendo/">Instalar módulos en Etendo Classic</a></p>
-<h2 id="configuracion-del-entorno-de-desarrollo">Configuración del entorno de desarrollo</h2>
-<h3 id="requisitos">Requisitos</h3>
+<h2 id="development-setup">Configuración del entorno de desarrollo</h2>
+<h3 id="requirements">Requisitos</h3>
 <ul>
 <li><a href="../../etendo-rx/getting-started/">Etendo Classic</a></li>
 <li><a href="../../../user-guide/etendo-mobile/getting-started/">Etendo Mobile</a> última versión disponible en PlayStore o Appstore.</li>
@@ -16756,7 +16756,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

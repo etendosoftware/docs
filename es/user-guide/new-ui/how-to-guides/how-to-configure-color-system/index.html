@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-usar-el-sistema-de-colores-en-workspace-ui" class="md-skip">
+        <a href="#how-to-use-the-color-system-in-workspace-ui" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -7502,7 +7502,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión General
     </span>
@@ -16398,7 +16398,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vision-general" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Visión General
     </span>
@@ -16483,8 +16483,8 @@
   
 
 
-<h1 id="como-usar-el-sistema-de-colores-en-workspace-ui">Cómo Usar el Sistema de Colores en Workspace UI</h1>
-<h2 id="vision-general">Visión General</h2>
+<h1 id="how-to-use-the-color-system-in-workspace-ui">Cómo Usar el Sistema de Colores en Workspace UI</h1>
+<h2 id="overview">Visión General</h2>
 <p>El sistema de colores permite asignar una pastilla de color visual a los registros en una ventana maestra. Una vez asignado un color, cada grilla en Workspace UI que referencie esa ventana mostrará automáticamente una etiqueta coloreada en lugar de texto plano, facilitando el escaneo e identificación de registros de un vistazo.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/user-guide/newui/how-to-guides/color-system/overview-color-badges-grid.png" data-desc-position="bottom"><img alt="Visión general de pastillas de color en una grilla" src="../../../../../assets/user-guide/newui/how-to-guides/color-system/overview-color-badges-grid.png"></a></p>
 <div class="admonition info">
@@ -16778,7 +16778,7 @@
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 

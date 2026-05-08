@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -9939,7 +9939,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introducción
     </span>
@@ -9948,7 +9948,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-crear-un-hook-de-clonacion" class="md-nav__link">
+  <a href="#how-to-create-a-clone-hook" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Cómo crear un Hook de clonación?
     </span>
@@ -9957,7 +9957,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-del-hook-de-clonacion" class="md-nav__link">
+  <a href="#clone-hook-api" class="md-nav__link">
     <span class="md-ellipsis">
       API del Hook de clonación
     </span>
@@ -10026,7 +10026,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-ampliar-un-hook-de-clonacion-ya-existente" class="md-nav__link">
+  <a href="#how-to-extend-an-already-existing-clone-hook" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Cómo ampliar un Hook de clonación ya existente?
     </span>
@@ -16436,7 +16436,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introducción
     </span>
@@ -16445,7 +16445,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-crear-un-hook-de-clonacion" class="md-nav__link">
+  <a href="#how-to-create-a-clone-hook" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Cómo crear un Hook de clonación?
     </span>
@@ -16454,7 +16454,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-del-hook-de-clonacion" class="md-nav__link">
+  <a href="#clone-hook-api" class="md-nav__link">
     <span class="md-ellipsis">
       API del Hook de clonación
     </span>
@@ -16523,7 +16523,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-ampliar-un-hook-de-clonacion-ya-existente" class="md-nav__link">
+  <a href="#how-to-extend-an-already-existing-clone-hook" class="md-nav__link">
     <span class="md-ellipsis">
       ¿Cómo ampliar un Hook de clonación ya existente?
     </span>
@@ -16574,10 +16574,10 @@
 
   <h1>Cómo Crear un Hook de Clonación</h1>
 
-<h2 id="introduccion">Introducción</h2>
+<h2 id="introduction">Introducción</h2>
 <p>Etendo permite que cualquier ventana o solapa tenga un botón <strong>Clonar</strong>. Por defecto, utilizará el método <code>Dal.copy()</code>, pero esto puede sobrescribirse mediante hooks, para implementar una lógica de clonación personalizada para entidades específicas.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png"></a></p>
-<h2 id="como-crear-un-hook-de-clonacion">¿Cómo crear un Hook de clonación?</h2>
+<h2 id="how-to-create-a-clone-hook">¿Cómo crear un Hook de clonación?</h2>
 <p>Para crear un Hook de clonación, solo tiene que seguir unos pocos pasos:</p>
 <ol>
 <li>Crear una clase Java de tipo <code>CloneRecordHook</code></li>
@@ -16607,7 +16607,7 @@
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="api-del-hook-de-clonacion">API del Hook de clonación</h2>
+<h2 id="clone-hook-api">API del Hook de clonación</h2>
 <p>Para crear un Hook de clonación, solo tiene que seguir unos pocos pasos:</p>
 <ol>
 <li>
@@ -16640,7 +16640,7 @@ Por ejemplo, si el método <code>shouldCopyChildren</code> devuelve <code>false<
 Se seleccionará y ejecutará el hook con la prioridad más baja por entidad. Devuelve <code>100</code> por defecto.</p>
 </li>
 </ol>
-<h2 id="como-ampliar-un-hook-de-clonacion-ya-existente">¿Cómo ampliar un Hook de clonación ya existente?</h2>
+<h2 id="how-to-extend-an-already-existing-clone-hook">¿Cómo ampliar un Hook de clonación ya existente?</h2>
 <p>La acción de clonación es una acción particular que puede ampliarse creando un nuevo hook, para implementar una lógica personalizada para una entidad específica. Esto tiene la desventaja de que solo se puede usar un hook por entidad, pero existen mecanismos para ampliar esta funcionalidad. Estos son los <code>preActionHooks</code> y <code>postActionHooks</code>. Puede encontrar más información en la siguiente página: <a href="../how-to-create-jobs-and-actions/#how-to-extend-an-action-using-preaction-and-postaction-hooks">Cómo crear trabajos y acciones</a></p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/Category:HowTo" target="_blank">Guías prácticas</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -16895,7 +16895,7 @@ Se seleccionará y ejecutará el hook con la prioridad más baja por entidad. De
       var target = lang === 'es'
         ? (path.startsWith('/es/') ? path : '/es' + path)
         : (path.startsWith('/es/') ? path.slice(3) : path);
-      window.location.href = target;
+      window.location.href = target + window.location.hash;
     }, true);
   </script>
 
