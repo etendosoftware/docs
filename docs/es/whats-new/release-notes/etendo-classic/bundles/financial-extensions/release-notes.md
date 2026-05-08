@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados

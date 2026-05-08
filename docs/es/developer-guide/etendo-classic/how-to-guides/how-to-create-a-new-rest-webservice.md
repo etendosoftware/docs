@@ -10,13 +10,13 @@ tags:
 status: beta
 ---
 
-# Cómo crear un nuevo servicio web REST
+# Cómo crear un nuevo servicio web REST { #how-to-create-a-new-rest-webservice }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo crear un **nuevo servicio web** que devuelve todas las partes de venta para un producto específico. El enfoque está en la **lectura de datos** en lugar de actualizar la base de datos. Dado que la respuesta debe proporcionarse en formato XML, el artículo también describe cómo convertir objetos de base de datos a XML.
 
@@ -36,14 +36,14 @@ Ambos elementos se tratan en este documento.
 !!! info
     Para una introducción a Etendo REST, consulte [Conceptos de servicios web REST](../concepts/)
 
-##  Módulo
+## Módulo { #module }
 
 Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo **core**.
 
 !!! info
     Lea la sección [Cómo crear un módulo](../how-to-guides/how-to-create-a-module.md) para crear un nuevo módulo.
 
-##  Implementación de la lógica del servicio web
+## Implementación de la lógica del servicio web { #implementing-the-webservice-logic }
 
 El servicio web devolverá todas las partes de venta para un determinado producto. Este es el flujo de trabajo del servicio:
 
@@ -215,7 +215,7 @@ Después de añadir el archivo Java anterior, debería haber algo similar a la s
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice-1.png)
 
 
-##  Registro del servicio web
+## Registro del servicio web { #registering-the-webservice }
 
 Una vez escrito el servicio web, regístrelo para que Etendo lo conozca. Para ello, utilice un **archivo de configuración XML**. Este archivo debe crearse en la carpeta config dentro de la carpeta del módulo:
 
@@ -267,7 +267,7 @@ El contenido del archivo de configuración se utiliza para **mapear la URL del s
   
 
   
-##  Instalación del servicio web
+## Instalación del servicio web { #installing-the-webservice }
 
 El servicio web ya puede **compilarse, desplegarse y probarse**. Para ello, utilice la siguiente tarea estándar usada para compilar código manual:
     
@@ -281,7 +281,7 @@ Al instalar el servicio web como un módulo, utilice la ventana de la aplicació
 
 El archivo `org.openbravo.howtos-provider-config.xml` debería estar ahora presente en el directorio `WEB-INF`.
 
-##  Llamada al servicio web
+## Llamada al servicio web { #calling-the-webservice }
 
 (Re)inicie Etendo y pruebe el servicio web introduciendo esta URL en el navegador: `http://localhost:8080/etendo/ws/org.openbravo.howtos.doIt?product=1000001&stateless=true`
     
@@ -304,7 +304,7 @@ Debería ver el XML que muestra una parte de venta:
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice-7.png)
 
 
-##  Solicitudes de servicio web sin estado - Sesión HTTP
+## Solicitudes de servicio web sin estado - Sesión HTTP { #stateless-webservice-requests---http-session }
 
 Importante para llamadas al servicio web de **alta frecuencia**: por defecto, las solicitudes de servicio web de Etendo son **con estado**, lo que significa que cada llamada al servicio web creará y utilizará una **sesión HTTP** en el servidor Etendo. Dependiendo de cómo configure el cliente para llamar al servicio web, esto incluso puede significar que cada solicitud de servicio web crea una nueva sesión HTTP. Esto no es recomendable para solicitudes de servicio web de alta frecuencia. En caso de llamadas de alto volumen, puede tener sentido pasar a una **implementación sin estado**.
 
@@ -325,7 +325,7 @@ Al realizar solicitudes sin estado, la implementación del servicio web no debe 
 
 Aparte de eso, la mayor parte de la funcionalidad base del framework (como la capa de acceso a datos y el objeto OBContext) está disponible para la lógica.
 
-##  Añadir lógica para realizar actualizaciones
+## Añadir lógica para realizar actualizaciones { #adding-logic-to-do-updates }
 
 Hasta ahora, aquí se ha tratado la recuperación de información de la base de datos y su devolución como **XML**. La actualización de información debería implementarse oficialmente (según el principio REST) en el **método PUT**, pero es necesario elegir lo que sea práctico.
 

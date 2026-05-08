@@ -7,15 +7,15 @@ tags:
     - Funcionalidades del agente
 ---
 
-# Experto SQL
+# Experto SQL { #sql-expert }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 Este agente está diseñado para ayudar a los usuarios a leer información de la base de datos. Permite a los usuarios hacer preguntas en lenguaje natural y obtener la consulta SQL que recupera la información que necesitan. Utilice un webhook para obtener la información necesaria para generar la consulta SQL. El usuario puede hacer preguntas sobre la base de datos, y el agente determinará si debe devolver una consulta SQL o ejecutar la consulta y devolver el resultado obtenido.
 
-## Componentes
+## Componentes { #components }
 
 El agente Experto SQL se compone de los siguientes componentes:
 
@@ -23,7 +23,7 @@ El agente Experto SQL se compone de los siguientes componentes:
 
 - **DBQueryExec - Webhook**: este webhook permite al agente ejecutar consultas SQL en la base de datos. El agente llama al webhook para ejecutar la consulta en la base de datos y devuelve el resultado al agente. Esta es una forma segura de ejecutar consultas SQL en la base de datos, ya que Etendo gestiona la seguridad de la conexión a la base de datos y la ejecución de la consulta.
 
-## Configuración del agente 
+## Configuración del agente { #agent-setup }
 
 1. Este módulo está incluido en el Copilot Extensions Bundle
 
@@ -58,9 +58,9 @@ El agente Experto SQL se compone de los siguientes componentes:
         2. Debe concederse acceso al rol correspondiente en la ventana [WebHooks](../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles), en la pestaña **Rol**, para el WebHook **DBQueryExec**. Este webhook se añade automáticamente cuando se instala el módulo.
             ![](../../../assets/user-guide/etendo-copilot/bundles/sql-expert/webhook-setup.png)
 
-## Ejemplos
+## Ejemplos { #examples }
 
-### Ejemplos de preguntas para la recuperación de información
+### Ejemplos de preguntas para la recuperación de información { #examples-of-questions-for-information-retrieval }
 
 1. 
     <figure markdown>
@@ -84,7 +84,7 @@ El agente Experto SQL se compone de los siguientes componentes:
     **¿Puede ejecutar la suma de los pedidos en el último mes de 2016?**
     </figure>
 
-### Ejemplos de generación de consultas SQL
+### Ejemplos de generación de consultas SQL { #examples-of-sql-query-generation }
 
 1. 
     <figure markdown>

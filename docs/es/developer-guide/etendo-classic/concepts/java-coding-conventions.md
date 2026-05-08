@@ -8,19 +8,19 @@ tags:
 status: beta
 ---
 
-#  Convenciones de codificación Java
+# Convenciones de codificación Java { #java-coding-conventions }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-##  Visión general
+## Visión general { #overview }
 
 Este documento proporciona una descripción de los estándares de codificación y los principios de codificación utilizados en el desarrollo de Etendo.
 
 En Etendo utilizamos IntelliJ IDEA; para una descripción sobre cómo configurar IntelliJ, consulte este [Cómo hacerlo](../getting-started/installation/install-etendo-development-environment.md).
-##  Convenciones de código estándar
+## Convenciones de código estándar { #standard-code-conventions }
 
 Etendo utiliza las convenciones de codificación estándar definidas por Sun en [Convenciones de código para el lenguaje de programación JavaTM](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html){target="\_blank"}.
-## Código escaneable: fácil de leer, fácil de cambiar
+## Código escaneable: fácil de leer, fácil de cambiar { #skimmable-code-easy-to-read-easy-to-change }
 
 El código escaneable tiene una característica principal (además de ser legible y comprensible): es código en el que es posible leer y cambiar partes del código sin necesidad de comprender completamente toda la base de código (el resto del código). Por lo tanto, el código escaneable es naturalmente robusto y más fácil de mantener que el código no escaneable.
 
@@ -36,19 +36,19 @@ Otros principios que ayudan a crear código escaneable y, por tanto, mantenible 
 * Mantenga los métodos claros y enfocados. Deje que un método haga una sola cosa: recuperar un valor o cambiar un valor
 
 Estos son los principios principales que ayudan a la escaneabilidad; otros «qué hacer» tratados en este documento también facilitan el mantenimiento, la corrección, la calidad y la robustez.
-##  Principios principales de codificación
+## Principios principales de codificación { #main-coding-principles }
 
 Además de los facilitadores de legibilidad rápida y de las Convenciones de codificación estándar (más relacionadas con el formato), un programador de Etendo debe seguir estas directrices:
 
-###  Formato
+### Formato { #formatting }
 
-####  Utilice un IDE con formateo automático del código al guardar
+#### Utilice un IDE con formateo automático del código al guardar { #use-an-ide-with-automatic-code-formatting-at-save }
 
 Aunque se puede recomendar IntelliJ, hay otros IDE populares disponibles. En cualquier caso, el código fuente siempre debe formatearse automáticamente (cuando se guarda un archivo) utilizando las convenciones estándar de código Java de Sun, tal y como se definen arriba.
 
 Para habilitar el formateo del código al guardar y utilizar el estándar de formateo de código de Etendo, asegúrese de importar las preferencias proporcionadas en la carpeta `config/` en los proyectos de desarrollo. Este paso de importación se describe [aquí](../getting-started/installation/intellij-code-formatting.md).
 
-####  Copyright de Etendo sobre la propiedad intelectual de Etendo (obligatorio)
+#### Copyright de Etendo sobre la propiedad intelectual de Etendo (obligatorio) { #etendo-copyright-on-etendo-intellectual-property-must-do }
 
 Cada archivo que sea propiedad intelectual de Etendo debe tener el siguiente mensaje de copyright en la parte superior:
 
@@ -77,7 +77,7 @@ El año en la declaración de copyright es el año actual cuando el archivo es n
 * All portions are Copyright (C) 2020 - 2025  Futit Services S.L.
 ```
 
-####  Espaciado vertical
+#### Espaciado vertical { #vertical-spacing }
 
 Utilice el espaciado vertical para separar diferentes partes del código y hacer que el código sea menos denso de leer. Aquí tiene un ejemplo sin espaciado vertical:
 
@@ -130,7 +130,7 @@ try {
     throw new OBException(t);
 }
 ```
-###  Política de documentación del código
+### Política de documentación del código { #code-documentation-policy }
 
 Un código bien documentado y comentado es excelente y ayuda a comprender el significado del código, mejorando así la productividad y evitando errores futuros.
 
@@ -144,7 +144,7 @@ Los comentarios en línea se utilizan para aclarar el significado del código y 
 
 Tenga en cuenta que todos los comentarios y la documentación deben estar en inglés usando la notación de EE. UU. (por ejemplo: organization en lugar de organisation).
 
-####  Javadoc de clase (obligatorio)
+#### Javadoc de clase (obligatorio) { #class-javadoc-a-must-do }
 
 Cada clase debe tener una sección Javadoc bien formateada en la parte superior. El comentario de documentación de la clase debe describir la función general de la clase y su relación con otras clases. Los comentarios de documentación de la clase no pueden contener detalles de implementación, ya que pueden cambiar rápidamente con el riesgo de tener comentarios desactualizados. El Javadoc de la clase debe contener anotaciones `@author` con el nombre/login de los desarrolladores que han trabajado en esa clase.
 
@@ -167,7 +167,7 @@ A continuación se muestra un ejemplo de documentación de clase de la clase Ent
     */
 ```
 
-####  Javadoc de método (obligatorio)
+#### Javadoc de método (obligatorio) { #method-javadoc-a-must-do }
 
 Cada método público en la base de código de Etendo debe tener un comentario Javadoc.
 
@@ -215,19 +215,19 @@ public void validate(Object entityObject) {
 }
 ```
 
-####  Javadoc para miembros de clase
+#### Javadoc para miembros de clase { #javadoc-for-class-members }
 
 Los miembros no deberían tener Javadoc, ya que un miembro de clase siempre es privado.
 
-####  Javadoc para constantes
+#### Javadoc para constantes { #javadoc-for-constants }
 
 Las constantes public final static deben tener JavaDoc. Las constantes privadas no deberían tener Javadoc.
 
-####  Formato de Javadoc
+#### Formato de Javadoc { #javadoc-formatting }
 
 El JavaDoc debe usar construcciones estándar de documentación, como enlazar al Javadoc de otras clases, y utilizar el formato de Javadoc. Visite [esta página](https://www.oracle.com/java/technologies/){target="\_blank"} para más información.
 
-####  Comentarios en línea
+#### Comentarios en línea { #inline-commenting }
 
 Los comentarios en línea pueden ser cruciales para que un desarrollador comprenda el significado del código y esté informado sobre decisiones de implementación anteriores. Sin embargo, al comentar tenga en cuenta lo siguiente:
 
@@ -289,17 +289,17 @@ if (whereClause.trim().length() > 0) {
     }
 }
 ```
-###  Gestión de excepciones
+### Gestión de excepciones { #exception-handling }
 
-####  Crear únicamente excepciones que no necesiten ser capturadas (Runtime Exception)
+#### Crear únicamente excepciones que no necesiten ser capturadas (Runtime Exception) { #only-create-exceptions-which-do-not-need-to-be-caught-runtime-exception }
 
 A menudo puede utilizar la OBException estándar u otra excepción existente dentro del código base de Etendo. Sin embargo, cuando sabe que el código que llama va a querer capturar una excepción específica, entonces puede tener sentido crear una excepción propia para el módulo específico que se está desarrollando.
 
-####  Extender OBException
+#### Extender OBException { #extend-obexception }
 
 Al crear una nueva excepción, extienda siempre OBException. OBException se encarga del logging. Además, esta excepción es una excepción no comprobada (unchecked Exception). Todas las nuevas excepciones deberían ser excepciones no comprobadas.
 
-####  Añadir información de contexto a su excepción
+#### Añadir información de contexto a su excepción { #add-context-info-to-your-exception }
 
 Al lanzar una nueva excepción o al capturar, empaquetar y volver a lanzar una excepción, es vital que se añada información de contexto al mensaje de la excepción. Solo entonces es posible determinar para qué objeto de negocio o para qué situación falla un método.
 
@@ -328,7 +328,7 @@ if ((p = propertiesByName.get(propName)) == null) {
     ```
 
 Este lanzamiento de excepción fallará cuando el pedido sea null o el cliente del pedido sea null. Este NPE ocultará entonces la excepción real.
-### Usar construcciones de Java
+### Usar construcciones de Java { #use-java-constructs }
 
 Haga uso de las siguientes construcciones de Java:
 
@@ -368,7 +368,7 @@ Haga uso de las siguientes construcciones de Java:
     ``` 
 
 * Enumeraciones (cuando corresponda)
-### Implementar métodos coherentes
+### Implementar métodos coherentes { #implement-sensible-methods }
 
 Los métodos deben ser pequeños y estar enfocados; un método debe hacer una sola cosa y no tener efectos secundarios más allá de lo que revela el nombre. El nombre del método debe estar alineado con el nivel de abstracción de la clase y debe revelar la intención, ser descriptivo y fácil de leer.
 
@@ -377,7 +377,7 @@ Un método debe o bien responder a una pregunta, es decir, devolver un valor (ca
 Los métodos no deben tener más de uno, dos o tres parámetros. Un mayor número de parámetros debe encapsularse en un objeto.
 
 Los parámetros de un método deben tratarse como entrada y no deben ser modificados por el método.
-###  Nomenclatura
+### Nomenclatura { #naming }
 
 La nomenclatura es muy importante. Los buenos nombres hacen que los programas sean legibles, aumentan la productividad y evitan errores cuando los desarrolladores cambian código existente. A continuación se incluyen algunas directrices importantes al nombrar clases, métodos y miembros/parámetros en Etendo:
 
@@ -386,7 +386,7 @@ La nomenclatura es muy importante. Los buenos nombres hacen que los programas se
 - El nombre de una clase y de una interfaz debe ser un sustantivo, mientras que el nombre de un método siempre contiene un verbo 
 - Debe quedar claro para el lector qué significa el nombre: el nombre debe revelar la intención 
 - Un nombre debe consistir en las palabras/términos que correspondan al marco mental del lector
-###  Programación defensiva
+### Programación defensiva { #defensive-coding }
 
 La programación defensiva es un enfoque de desarrollo mediante el cual el desarrollador tiene explícitamente en cuenta que se producirán situaciones de error en la aplicación. Esto se hace explícito añadiendo en el código sentencias de comprobación de invariantes y de precondiciones/postcondiciones.
 
@@ -423,7 +423,7 @@ Pero gestione siempre la situación en la que se añade un caso nuevo sin que el
 El "Haga" anterior es un ejemplo de programación defensiva. Con la programación defensiva usted asume que se producirán condiciones ilegales y que las comprobará. Por tanto, un (muy) buen programador tendrá sentencias de comprobación de precondiciones y postcondiciones a lo largo de su código. Aunque Java proporciona la sentencia `assert`, es mejor utilizar una clase de utilidad específica de Etendo para esto: la clase `org.openbravo.base.util.Check`.
 
 Esta clase proporciona métodos para comprobar `false`, `true`, `null`, `instanceof`, etc.
-###  Usar variables intermedias para aumentar la legibilidad
+### Usar variables intermedias para aumentar la legibilidad { #use-intermediate-variables-to-increase-readability }
 
 ```
 // less readable
@@ -441,7 +441,7 @@ if (allowUpdate) {
     ...
 }
 ```
-### Uso de logging: cuando sea apropiado
+### Uso de logging: cuando sea apropiado { #use-logging---when-appropriate }
 
 El logging es especialmente apropiado cuando el sistema se está configurando o inicializando. De este modo, más adelante en el log, se puede validar que el sistema se inicializó correctamente.
 
@@ -469,12 +469,12 @@ public class MyClass {
     }    
     }
 ```
-### Código y nombre en un único nivel de abstracción/genericidad
+### Código y nombre en un único nivel de abstracción/genericidad { #code-and-name-at-one-level-of-abstractiongenericity }
 
 Se debe crear una clase/tipo para un nivel genérico/nivel de abstracción específico.
 
 Por ejemplo, considere una clase `Order` con dos subclases `SalesOrder` y `PurchaseOrder`. `Order` se define en un nivel genérico, lo que significa que los métodos de `Order` deben definirse en ese mismo nivel genérico. Un método `getPrice` sería, por ejemplo, un método extraño a nivel de `Order`, pero lógico a nivel de `SalesOrder`. Por otro lado, un método `getCost` sería lógico a nivel de `Order`, ya que tanto `SalesOrder` como `PurchaseOrder` tienen una característica de coste.
-###  Preferir ramificación por clase/tipo frente a ramificación por `if`
+### Preferir ramificación por clase/tipo frente a ramificación por `if` { #prefer-classtype-branching-over-if-branching }
 
 Cada sentencia `if-then-else` es un ejemplo de ramificación por `if`: en función de alguna condición, un método se comporta de una forma u otra. La ramificación por `if` es fácil y rápida de programar.
 
@@ -536,13 +536,13 @@ public class ReferenceProperty extends Property {
     ...
 }
 ```
-###  Use los prefijos is/has/can para los getters booleanos
+### Use los prefijos is/has/can para los getters booleanos { #use-ishascan-prefixes-for-boolean-getters }
 
 Los IDE generarán de forma estándar el getter correcto para un booleano. Sin embargo, al codificar manualmente getters, siempre se debe usar uno de los prefijos: is/has/can.
-### Implementar `toString` en casos específicos
+### Implementar `toString` en casos específicos { #implement-tostring-in-specific-cases }
 
 Al implementar un nuevo conjunto de objetos, considere implementar el método `toString` de estos objetos. Esto facilita mucho el uso de estos objetos en el registro (logging) y en los mensajes de excepciones.
-### No hacer en el manejo de excepciones
+### No hacer en el manejo de excepciones { #exception-handling-donts }
 
 **Evitar bloques Catch que no gestionan la excepción**
 
@@ -811,7 +811,7 @@ Para evitar problemas multihilo, ninguna clase servlet debería tener miembros s
 No use español u otras palabras o terminología que no sea inglés.
 
 No use codificación en los nombres: húngara o de miembro (el guion bajo inicial), no comience el nombre de una interfaz con una I mayúscula.
-##  Desarrollo guiado por pruebas
+## Desarrollo guiado por pruebas { #test-driven-development }
 
 Es crucial que, para la nueva funcionalidad, se creen uno o más casos de prueba en la suite de pruebas de Etendo. Tiene mucho sentido respaldar su desarrollo con casos de prueba:
 
@@ -823,22 +823,22 @@ Es crucial que, para la nueva funcionalidad, se creen uno o más casos de prueba
 Los casos de prueba de Etendo deben crearse en la carpeta `src-test` del proyecto de Etendo.
 
 Consulte este [Cómo hacerlo](../how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md) y este [Cómo hacerlo](../how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md) para obtener más información sobre cómo crear casos de prueba en Etendo.
-##  Calidad y convenciones
+## Calidad y convenciones { #quality-and-conventions }
 
 Para obtener información sobre este punto, visite [calidad y convenciones](http://www.slideshare.net/srikanthps/practices-for-becoming-a-better-programmer-presentation?src=related_normal&rel=1443810){target="\_blank"}.
-##  Tenga en cuenta
+## Tenga en cuenta { #be-aware-of }
 
 También existen algunos constructos estándar de Java que deben utilizarse con cierta precaución y con cierto entendimiento de los procesos subyacentes:
 
-###  ThreadLocal y la reutilización de objetos Thread en Tomcat
+### ThreadLocal y la reutilización de objetos Thread en Tomcat { #threadlocal-and-tomcats-re-use-of-thread-objects }
 
 Un ThreadLocal es un gran mecanismo para almacenar instancias singleton por thread y hacer que solo estén disponibles en ese thread. Sin embargo, al utilizar ThreadLocals es necesario entender que Tomcat reutiliza instancias de thread de una solicitud a otra (no al mismo tiempo). Esto significa que los datos almacenados en un ThreadLocal en un thread pueden reaparecer en otra solicitud (reutilizando ese mismo objeto Thread).
 
-###  Class.forName y la carga de clases
+### Class.forName y la carga de clases { #classforname-and-classloading }
 
 Cuando necesita cargar dinámicamente una clase, dispone de diferentes opciones de carga de clases. Dentro de Tomcat, el uso de Class.forName funciona. Sin embargo, es importante que entienda cómo funciona la carga de clases de Java cuando se utiliza un mecanismo de carga dinámica de clases. Para más contexto, consulte esto y sus referencias: [Clases Java y carga de clases](https://developer.ibm.com/languages/java/){target="\_blank"}.
 
-###  Bloques synchronized
+### Bloques synchronized { #synchronized-blocks }
 
 Los bloques synchronized no siempre son una forma segura de gestionar el acceso multihilo. Consulte aquí una descripción detallada de los procesos subyacentes y posibles soluciones: [Bloqueo con doble comprobación](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html){target="\_blank"}.
 

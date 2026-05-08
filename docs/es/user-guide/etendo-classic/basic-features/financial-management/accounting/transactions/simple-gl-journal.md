@@ -7,21 +7,21 @@ tags:
   - Accounting Transactions
 ---
 
-# Asientos Manuales Simplificados
+# Asientos Manuales Simplificados { #simple-gl-journal }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Asientos Manuales Simplificados`
 
-## Descripción general
+## Descripción general { #overview }
 
 En Etendo existe una ventana Asientos manuales que permite al usuario introducir manualmente asientos en el sistema. Esta ventana tiene tres pestañas (Lote, Cabecera y Líneas) y, en algunos casos, esto puede resultar complicado para el usuario, ya que podría ser suficiente con solo dos niveles (Cabecera y líneas). Otro inconveniente de esta ventana es que solo se pueden seleccionar esquemas contables, por lo que al contabilizar el asiento solo hay una entrada en la tabla fact\_Acct.
 
-##### Ventajas de los Asientos Manuales Simplificados
+##### Ventajas de los Asientos Manuales Simplificados { #benefits-of-the-simple-gl-journal }
 
 -   Es una ventana más sencilla, ya que no es necesario introducir un lote. Hay un nivel menos de entrada de datos.
 -   Es más sencillo buscar asientos. Sin el nivel de lote, es posible buscar directamente asientos específicos.
 -   En esta ventana es posible ver asientos que se han creado utilizando la ventana Asientos manuales, por lo que también es posible buscarlos en ella.
 
-## Cabecera
+## Cabecera { #header }
 
 Una cabecera de asiento puede incluir diarios que pueden contener varias líneas de asiento.
 
@@ -31,7 +31,7 @@ Campo importante a destacar:
     -   Si no está marcado, a partir de ese momento se muestra el campo Libro Mayor.
     -   Si está marcado, el sistema no mostrará el campo Libro Mayor y no se tendrá en cuenta para las siguientes operaciones.
 
-## Líneas
+## Líneas { #lines }
 
 La pestaña de líneas permite al usuario introducir los asientos del diario, así como la información relacionada con el pago del concepto contable.
 
@@ -43,7 +43,7 @@ Un campo a destacar:
     Si **Multi-libro mayor** no está marcado, en su lugar se muestra el campo Cuenta.
 
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Información contable relacionada con el asiento de Asientos manuales.
 
@@ -54,14 +54,14 @@ Al Contabilizar la Cabecera:
     -   No marcado: solo puede seleccionar cuentas que pertenezcan a un único esquema contable (definido en la cabecera), por lo que al contabilizar el documento habrá un único asiento de diario. Este comportamiento no cambiará. El proceso de contabilización es exactamente igual que en la ventana Asientos manuales.
     -   Marcado: el usuario selecciona Conceptos Contables y, dado que puede tener diferentes combinaciones válidas al contabilizar el documento, tendrá tantas entradas como cuentas distintas en las que esté definido el concepto contable y la organización definida en la cabecera.
 
-### Tipos de Cambio
+### Tipos de Cambio { #exchange-rates }
 
 La pestaña de tipos de cambio permite al usuario introducir un tipo de cambio entre la moneda del libro mayor general de la organización y la moneda del asiento de Asientos manuales, que se utilizará al contabilizar el asiento en el libro mayor.
 
 !!! info
     Esta pestaña solo se mostrará cuando Multi-Libro Mayor esté habilitado.
 
-## Anulación de asiento de Asientos manuales
+## Anulación de asiento de Asientos manuales { #gl-journal-reverse }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -83,15 +83,15 @@ Como se puede observar a continuación, Etendo muestra una notificación de éxi
 
 Al comparar el asiento de Asientos manuales original con el asiento de Asientos manuales de anulación, las columnas de debe y haber muestran la compensación, ya que los importes están invertidos.
 
-##### Asiento de Asientos manuales original
+##### Asiento de Asientos manuales original { #original-gl-journal }
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-3.png)
 
-##### Asiento de Asientos manuales de anulación
+##### Asiento de Asientos manuales de anulación { #reverse-gl-journal }
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal/simple-gl-journal-4.png)
 
-### Opción de cambio de descripción en la ventana Asientos Manuales Simplificados
+### Opción de cambio de descripción en la ventana Asientos Manuales Simplificados { #changing-description-option-in-the-simple-gl-journal-window }
 
 Si el asiento se crea en la ventana Asientos Manuales Simplificados, el usuario puede cambiar la descripción del asiento, una vez que hace clic en el botón "Anular Asiento", en la ventana emergente correspondiente.
 
@@ -99,7 +99,7 @@ Si el asiento se crea en la ventana Asientos Manuales Simplificados, el usuario 
 
 Esto resulta útil para distinguir entre el asiento original y el de anulación.
 
-## Contabilización masiva
+## Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -111,7 +111,7 @@ Además, el Estado de Contabilización del/los registro/s se muestra en la barra
 !!! info
     Para más información, visite [la guía del usuario del módulo Contabilización masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Clonado de asiento de Asientos manuales
+## Clonado de asiento de Asientos manuales { #gl-journal-clone }
 
 !!! info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

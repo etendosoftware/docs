@@ -7,7 +7,7 @@ tags:
   - Financial Extensions
 ---
 
-# Extracto de cuenta de Cliente
+# Extracto de cuenta de Cliente { #customer-statement }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Extracto de cuenta de Cliente`
 
@@ -17,7 +17,7 @@ tags:
 !!! warning
     Si no dispone del [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, el informe permanecerá en una versión heredada con funcionalidad limitada.
 
-## Descripción general
+## Descripción general { #overview }
 
 El **Extracto de cuenta de Cliente** es un informe consolidado que muestra todas las transacciones de un tercero contabilizadas en el libro mayor durante un periodo determinado. Este informe proporciona un historial financiero completo de la relación comercial, mostrando los débitos, créditos y saldos acumulados de cada transacción.
 
@@ -48,7 +48,7 @@ El Extracto de cuenta de Cliente proporciona la siguiente información para cada
 !!! note
     Los importes negativos se destacan mediante el uso de paréntesis ( ).
 
-## Cabecera
+## Cabecera { #header }
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement/customer-statement-1.png)
 
@@ -70,7 +70,7 @@ Como se muestra en la imagen anterior, se pueden configurar los siguientes pará
     - **Desmarcado** (por defecto): El informe muestra un saldo inicial al comienzo, luego lista cada transacción con su saldo neto. El saldo final equivale al saldo inicial más el saldo neto final.
     - **Marcado**: El saldo inicial se agrega al saldo neto de cada transacción, de modo que el saldo final equivale al último saldo neto mostrado.
 
-## Botones
+## Botones { #buttons }
 
 En la barra de herramientas, se encuentran los siguientes botones para generar el informe:
 

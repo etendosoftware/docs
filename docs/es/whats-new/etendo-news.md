@@ -12,7 +12,7 @@ tags:
 
 #
 
-## Marzo 2026
+## Marzo 2026 { #march-2026 }
 
 ### Etendo
 
@@ -170,7 +170,7 @@ tags:
 
 </div>
 
-## Febrero 2026
+## Febrero 2026 { #february-2026 }
 
 ### Financial Extensions
 
@@ -236,7 +236,7 @@ tags:
 
 </div>
 
-## Enero 2026
+## Enero 2026 { #january-2026 }
 
 ### Warehouse Extensions
 
@@ -279,7 +279,7 @@ tags:
 
 </div>
 
-### Producción
+### Producción { #production }
 
 
 <div class="grid cards" markdown>
@@ -304,7 +304,7 @@ tags:
     - Documentación: [Cómo reactivar consumo interno](../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-internal-consumption)
 
 </div>
-## Diciembre 2025
+## Diciembre 2025 { #december-2025 }
 
 ### Etendo
 
@@ -497,7 +497,7 @@ tags:
     - Documentación: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#customer-statement)      
 
 </div>
-## Noviembre 2025
+## Noviembre 2025 { #november-2025 }
 
 ### Financial Extensions
 
@@ -558,7 +558,7 @@ tags:
     - Documentación: [Cómo personalizar un agente con memorias del agente](../developer-guide/etendo-copilot/how-to-guides/how-to-customize-an-agent-with-agent-memories.md)
     
 </div>
-## Septiembre 2025
+## Septiembre 2025 { #september-2025 }
 
 ### Etendo
 
@@ -685,7 +685,7 @@ tags:
     - Documentación: [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md)
 
 </div>
-## Agosto 2025
+## Agosto 2025 { #august-2025 }
 
 ### Financial Extensions
 
@@ -782,7 +782,7 @@ tags:
     Optimice sus operaciones de almacén y entregue con rapidez y precisión — todo incluido en Etendo 25.
 
 </div>
-## Julio 2025
+## Julio 2025 { #july-2025 }
 
 ### Etendo
 
@@ -869,7 +869,7 @@ tags:
     - Blog: [Pedidos perfectos en minutos: el cambio que su almacén necesita se llama Etendo Mobile](https://etendo.software/en/blog/perfect-orders-in-minutes-the-change-your-warehouse-needs-is-called-etendo-mobile/){target="_blank"}
 
 </div>
-## Mayo 2025
+## Mayo 2025 { #may-2025 }
 
 ### Etendo
 
@@ -910,7 +910,7 @@ tags:
     Al anular una Factura (Proveedor), Etendo crea un documento inverso que ahora referencia el documento de anulación del proveedor. El proceso de [reactivación de factura](../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#reactivate) incluye un nuevo campo `Referencia del proveedor` para garantizar una trazabilidad clara y la alineación.
 
 </div>
-## Abril 2025
+## Abril 2025 { #april-2025 }
 
 ### Etendo
 
@@ -954,7 +954,7 @@ tags:
 
 </div>
 
-## Marzo 2025
+## Marzo 2025 { #march-2025 }
 
 ### Etendo Mobile
 
@@ -1009,7 +1009,7 @@ tags:
     *Consulte más detalles en la incidencia [#629](https://github.com/etendosoftware/etendo_core/issues/629)*.
 
 </div>
-## Febrero 2025
+## Febrero 2025 { #february-2025 }
 
 ### Etendo ISO
 
@@ -1073,7 +1073,7 @@ tags:
     Los usuarios pueden filtrar por rango de fechas y navegar directamente a documentos no contabilizados, incluidos asientos, facturas, pagos y transacciones financieras, entre otros, agilizando el proceso de contabilización.
 
 </div>
-## Enero 2025
+## Enero 2025 { #january-2025 }
 
 ### Copilot Extensions 
 
@@ -1116,7 +1116,7 @@ tags:
     Se ha añadido [XLS Tool](../developer-guide/etendo-copilot/available-tools/xls-tool.md) en las herramientas disponibles, lo que permite a los agentes leer y procesar datos directamente desde archivos Excel o CSV, facilitando la automatización y la integración de información estructurada.
 
 </div>
-## Diciembre 2024
+## Diciembre 2024 { #december-2024 }
 
 ### Etendo
 
@@ -1190,7 +1190,7 @@ tags:
     En la versión [1.9.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se ha añadido el tipo de asistente Multi-Model Assistant; estos agentes amplían el tipo `Langchain` con la particularidad de que puede utilizarse con modelos de varios proveedores como Anthropic o Gemini, además de los modelos OpenAI existentes.
     Además, se ha añadido la ventana AI Models, donde el usuario puede gestionar los modelos que utilizarán los distintos agentes.
 </div>
-## Noviembre 2024
+## Noviembre 2024 { #november-2024 }
 
 ### Copilot Extensions
 
@@ -1206,7 +1206,7 @@ Nueva versión del bundle Copilot Extensions [1.8.0](./release-notes/etendo-copi
 
     Equipado con capacidades avanzadas, el agente prioriza Python para la resolución de incidencias, gestiona dinámicamente las instalaciones de librerías, integra comandos Bash para operaciones flexibles y gestiona el procesamiento de archivos con precisión. Tanto si está resolviendo incidencias, automatizando tareas o probando scripts, esta herramienta garantiza eficiencia y seguridad. Transforme su flujo de trabajo de desarrollo con esta potente incorporación a Etendo.
 </div>
-## Octubre 2024
+## Octubre 2024 { #october-2024 }
 
 ### Copilot Extensions
 
@@ -1236,7 +1236,7 @@ Nueva versión del bundle Copilot Extensions [1.7.0](./release-notes/etendo-copi
 ![](../assets/whats-new/etendo-news/devassistant.png)
 
 El módulo [Dependency Manager](../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) permite a los usuarios acceder a todos los paquetes publicados en los repositorios de Etendo Software directamente desde la interfaz de Etendo. Con la ventana de Gestión de dependencias, puede explorar los bundles disponibles, comprobar los detalles de versión y las dependencias, e instalar nuevos paquetes fácilmente. El módulo también permite actualizar, eliminar y modificar los módulos instalados, ofreciéndole un control total sobre su entorno.
-## Septiembre 2024
+## Septiembre 2024 { #september-2024 }
 
 ### Etendo
 
@@ -1260,7 +1260,7 @@ Nueva versión del bundle Copilot Extensions [1.5.0](./release-notes/etendo-copi
     ¡Potencie las capacidades de su agente con esta potente nueva funcionalidad!
 
 </div>
-## Agosto 2024
+## Agosto 2024 { #august-2024 }
 
 ### Copilot Extensions
 
@@ -1313,7 +1313,7 @@ Estas actualizaciones hacen que Etendo Copilot sea más potente, seguro y fácil
 ![](../assets/whats-new/etendo-news/product-operation.png)
 
 En la versión [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, se ha incluido la funcionalidad **Operaciones de producto**. Este módulo le permite centralizar y controlar todos los movimientos de producto con Operaciones de producto. Visualice cada transacción, desde envíos y recepciones hasta costes y ubicación, en un único lugar. Simplifique el análisis y obtenga una visión clara del rendimiento de sus operaciones.
-## Julio 2024
+## Julio 2024 { #july-2024 }
 
 ### Copilot Extensions
 
@@ -1356,7 +1356,7 @@ En la versión [1.2.1](./release-notes/etendo-copilot/bundles/release-notes.md),
 En la versión [1.16.1](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) de este bundle, se ha incluido el módulo [Regularización de IVA](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md/#vat-regularization), que le permite **ajustar fácilmente las cuentas** para garantizar que **se ajuste el saldo de IVA**.
 
 ---
-## Junio 2024
+## Junio 2024 { #june-2024 }
 
 ### Etendo
 
@@ -1381,7 +1381,7 @@ A partir de la versión [1.2.0](./release-notes/etendo-copilot/bundles/release-n
 A partir de la versión [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) de este bundle, se incluye el módulo GL Journal Clone, que permite clonar el Asiento simple del libro mayor.
 
 ---
-## Mayo 2024
+## Mayo 2024 { #may-2024 }
 
 ### Copilot Extensions
 
@@ -1391,7 +1391,7 @@ En la versión [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) 
 Con este agente, se le permitirá **formular preguntas** en lenguaje natural, y el sistema generará automáticamente la consulta SQL necesaria para devolver los datos en código o en lenguaje natural.
 
 ---
-## Abril 2024
+## Abril 2024 { #april-2024 }
 
 ### Copilot Extensions
 
@@ -1400,7 +1400,7 @@ Con este agente, se le permitirá **formular preguntas** en lenguaje natural, y 
 En la versión [1.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se ha incluido el Agente Purchase Expert.
 Sus pedidos de compra se simplifican con el nuevo agente de Copilot. Interactúe mediante **texto o subiendo imágenes o PDFs** con los datos del pedido de compra, y el agente generará automáticamente un borrador.
 
-### Localización española
+### Localización española { #spanish-localization }
 
 :material-trending-up: **Optimizaciones**
 
@@ -1409,7 +1409,7 @@ A partir de la versión [1.9.4](./release-notes/etendo-classic/bundles/localizat
 Para aprovechar estas mejoras, al actualizar a la versión [1.9.4](./release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes.md) o superior, asegúrese de eliminar manualmente los módulos antiguos del directorio `/modules` para que la nueva compilación utilice las nuevas dependencias.
 
 ---
-## Marzo 2024
+## Marzo 2024 { #march-2024 }
 
 ### Etendo
 

@@ -7,11 +7,11 @@ tags:
   - Accounting Transactions
 ---
 
-# Configuración de Tipo de financiación
+# Configuración de Tipo de financiación { #financial-type-configuration }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Configuración de Tipo de financiación`
 
-## Descripción general
+## Descripción general { #overview }
 
 Esta funcionalidad permite introducir en el sistema todas las financiaciones que tiene la empresa. Es posible explotar la información a través del informe de pool bancario.
 Dependiendo del producto financiero utilizado en esta nueva ventana **Financiación**, Etendo genera planes de financiación de forma automática (Leasing, Renting y Préstamos) y también gestiona las facturas y pagos desde esta misma ventana.
@@ -35,7 +35,7 @@ Estos métodos de financiación se cargan en el sistema mediante un dataset.
     Para más información, visite [Tipo de financiación](../setup/financial-type.md).
 
 
-## Cabecera
+## Cabecera { #header }
 La cabecera principal contiene los siguientes campos:
 
 - **Organización**: lista desplegable de organizaciones.
@@ -70,7 +70,7 @@ La cabecera principal contiene los siguientes campos:
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-1.png)
 
-## Líneas
+## Líneas { #lines }
 
 Las líneas contienen los siguientes campos:
 
@@ -91,20 +91,20 @@ Las líneas contienen los siguientes campos:
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-2.png)
 
-## Contabilidad
+## Contabilidad { #accounting }
 
 Existen tres secciones: "Amortización/Renting", "Interés" y "Comisión". Hay seis campos en total, donde tres de ellos representan el producto y los otros tres el concepto contable. Los 2 campos (producto y concepto contable) no pueden rellenarse en la misma sección. En cada uno de estos campos relacionados, el producto debe indicarse desde la ventana **Productos** o el **Concepto Contable** si está activada la casilla de verificación **Disponible en Facturas Financieras** necesaria para asignar a cada columna. En el caso del tipo de financiación **Préstamo**, es obligatorio rellenar la parte de conceptos contables.
 
  ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-3.png)
 
 
-## Cálculo de Préstamo, Leasing o Renting en la pestaña de líneas
+## Cálculo de Préstamo, Leasing o Renting en la pestaña de líneas { #loan-leasing-or-renting-calculation-in-the-lines-tab }
 
 Rellene los campos necesarios de la cabecera según la descripción de cada uno de ellos indicada en la parte superior del documento. Dicha información permite la creación automática del plan de financiación, que se crea haciendo clic en el botón "Actualizar Plan de Financiación" en el margen superior derecho de la ventana.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-4.png)
 
-### Préstamo:
+### Préstamo: { #loan }
 - **Nº de Cuota**: comienza con el número de cuota 0 y el campo "amortización pendiente" tiene el valor indicado en el campo "importe concedido", mientras que el campo "fecha" tiene la fecha indicada en el campo "fecha" de la cabecera. El resto de las cuotas son correlativas, incrementándose de 1 en 1.
 - **Fecha de Amortización/Vencimiento**: para ver la fecha de la cuota número 1 del plan de financiación, se indica al hacer clic en el nuevo botón "Crear Plan de Financiación". Se muestra una ventana emergente para indicar la fecha. Haga clic en "Aceptar". El resto de las líneas se crean con la frecuencia indicada en el campo "Frecuencia", con la fecha de la última cuota creada y la fecha indicada en el campo "fecha de pago". Si se indica una carencia, la fecha indicada al hacer clic en "Crear Plan de Financiación" es la primera cuota de carencia; el resto de las cuotas, tanto de carencia como de amortización, se crean según la frecuencia indicada. Las cuotas de carencia se indican con el número de cuota 0.
 - **Cuota**: inicialmente, se calcula la misma cuota para todo el préstamo. Si el tipo de interés cambia durante el período del préstamo, la cuota cambia. Para ello, cambie el 1% del tipo de interés de la cabecera y haga clic en el nuevo botón de la cabecera "Actualizar Plan de Financiación". La información se actualiza desde la siguiente línea hasta la última línea con un pago asociado.
@@ -157,7 +157,7 @@ Rellene los campos necesarios de la cabecera según la descripción de cada uno 
 
  ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-10.png)
 
-#### Generación de pagos o facturas
+#### Generación de pagos o facturas { #generating-payments-or-invoices }
 
 Una vez creado el plan de amortización, se pueden generar pagos (préstamos) y facturas (leasing y renting) para cada línea. Esto es posible de forma individual (línea a línea) o en grupos (se pueden seleccionar 3 líneas y se generan 3 pagos/facturas diferentes).
 
@@ -178,7 +178,7 @@ Para ello, seleccione la/s línea/s necesaria/s y haga clic en los botones "Crea
  ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/financial-type-configuration/financial-type-configuration-13.png)
 
 
-##### Cuenta de crédito y tarjetas de crédito informadas en cuentas financieras.
+##### Cuenta de crédito y tarjetas de crédito informadas en cuentas financieras. { #credit-account-and-credit-cards-reported-in-financial-accounts }
 
 La información de cuenta de crédito y tarjeta de crédito se introduce automáticamente. Para ello, cree una nueva cabecera e indique el método de financiación, "Cuenta de crédito" o "Tarjeta de crédito". A continuación, se habilitará el botón "Añadir Cuenta financiera" en el margen superior derecho.
 

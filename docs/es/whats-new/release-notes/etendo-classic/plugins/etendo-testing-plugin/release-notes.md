@@ -8,7 +8,7 @@ tags:
     - Plugin
     - Testing
 ---
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Estado |
 | ------- | -------------------- | ------ |

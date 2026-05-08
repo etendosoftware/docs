@@ -7,11 +7,11 @@ tags:
   - Excel Reports
 ---
 
-# Generador Excel de Presupuestos
+# Generador Excel de Presupuestos { #create-budget-reports-in-excel }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Generador excel de presupuestos`
 
-## Descripción general
+## Descripción general { #overview }
 
 Utilizando los filtros necesarios, como tercero, producto, grupo de terceros, categoría de producto, etc., el usuario puede generar informes de presupuesto en Excel para utilizarlos con fines específicos.
 

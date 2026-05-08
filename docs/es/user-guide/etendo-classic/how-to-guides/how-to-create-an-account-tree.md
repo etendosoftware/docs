@@ -7,14 +7,14 @@ tags:
     - Gestión Financiera
 ---
 
-## Visión general
+## Visión general { #overview }
 
 En Etendo, un Árbol de cuentas define la estructura del Plan de cuentas (CoA) utilizado por una organización. Al crear un CoA desde cero, cada elemento debe crearse **individualmente** y, a continuación, organizarse en una **estructura jerárquica** que refleje los estados financieros de la organización.
 
 El proceso comienza definiendo los nodos principales para el Balance y la Cuenta de resultados, y después creando progresivamente subnodos (Activos, Pasivos, Patrimonio neto, Ingresos, Gastos, etc.) hasta construir la estructura completa. 
 
 
-#### Creación del Árbol de cuentas
+#### Creación del Árbol de cuentas { #account-tree-creation }
 
 La creación de un plan de cuentas desde cero implica crear cada elemento del plan de cuentas uno a uno:
 
@@ -57,7 +57,7 @@ Lo siguiente que debe hacerse en esta pestaña es crear un valor de elemento por
 -   Los nodos de Balance son **Activos**, **Pasivos** y **Patrimonio neto**
 -   Los nodos de Pérdidas y ganancias son **Ingresos** y **Coste de los bienes vendidos**, entre otros
 
-##### Elementos de Balance
+##### Elementos de Balance { #balance-sheet-elements }
 
 Centrémonos primero en explicar la creación de los nodos/elementos de un estado financiero de **Balance**.
 
@@ -288,7 +288,7 @@ Tomemos como ejemplo la creación del nodo de total de activos:
 -   introduzca **1** en el campo Signo
 -   seleccione la Cuenta **1500 - Activos a largo plazo**
 
-##### **Elementos de Cuenta de resultados**
+##### **Elementos de Cuenta de resultados** { #income-statement-elements }
 
 Ahora, expliquemos brevemente la creación de los nodos/elementos de una **Cuenta de resultados**.
 
@@ -328,7 +328,7 @@ Los nodos a crear, por ejemplo, pueden ser:
 -   y, por último, el nodo de **Resultado neto**:
     -   este nodo de Encabezado y tipo de cuenta Ingresos puede incluir un elemento personalizado del nodo de Resultado de explotación anterior y del nodo de Total de gastos no operativos anterior.
 
-##### **Elementos temporales**
+##### **Elementos temporales** { #temporary-elements }
 
 Como ya se ha explicado, existe una estrecha relación entre un **árbol de cuentas** y la configuración del Libro mayor en Etendo, ya que el Árbol de cuentas es una Dimensión del Libro mayor.
 

@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-# Cómo llamar a un servicio web de Etendo desde Java 
+# Cómo llamar a un servicio web de Etendo desde Java { #how-to-call-an-etendo-webservice-from-java }
   
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo preparar e implementar una **Clase Java** capaz de invocar servicios web de Etendo y qué **API de Java** se requieren para establecer conexiones HTTP, autenticar solicitudes y procesar respuestas, especialmente aquellas devueltas en formato XML por servicios web XML REST. Usando la propia clase `BaseWSTest.java` de Etendo como referencia, la guía muestra cómo construir y ampliar métodos para diferentes operaciones HTTP (GET, POST, PUT, DELETE), gestionar la autenticación de forma segura y administrar el comportamiento de sesión para integraciones de alta frecuencia o sin estado.
 
@@ -22,11 +22,11 @@ Esta sección explica cómo preparar e implementar una **Clase Java** capaz de i
     Para más información, visite [Servicios web XML REST](../../../developer-guide/etendo-classic/concepts/.XML_REST_Web_Services.md). 
 
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 Para llamar a un **servicio web de Etendo** desde una clase Java, utilice varias clases que proporcionan la API de Java adecuada para crear una conexión HTTP mediante la URL del servicio web y para usar clases del `java.iopackage` que permiten leer los flujos de datos. Además, de forma opcional, utilice algunas clases que facilitan el procesamiento de los resultados que se devuelven en **formato XML** en el caso de servicios web del tipo **XML REST**, ya que permiten obtener, analizar y validar un documento XML.
 
-### Código de ejemplo
+### Código de ejemplo { #example-code }
 
 Etendo dispone de una **clase Java de prueba** que ejemplifica lo anterior. Esta clase es `BaseWSTest.java` y se encuentra dentro del directorio `src-test/org/openbravo/test/webservice`. Para realizar una solicitud al servicio web, disponemos del método **createConnection()**, que utiliza la clase httpURLConnection para realizar una solicitud a un servicio web usando el parámetro de comando específico y especificando las credenciales (usuario/contraseña).
 
@@ -97,11 +97,11 @@ protected String doTestGetRequest(String wsPart, String testContent, int respons
 
 Por lo tanto, es posible utilizar esta clase como base para el desarrollo e implementar las adaptaciones que se consideren necesarias. Usando esta clase, es posible implementar llamadas a los servicios web que usted elija simplemente especificando su ruta, que se formará con la URL de Etendo `getOpenbravoURL()` más la parte del servicio web **wsPart**.
 
-### Inicio de sesión y seguridad
+### Inicio de sesión y seguridad { #login-and-security }
 
 Los servicios web generales de Etendo proporcionan el mismo control de inicio de sesión y seguridad que el servicio web XML REST.
 
-### Autenticación básica: 
+### Autenticación básica: { #basic-authentication }
 
 El siguiente código de ejemplo muestra una forma de implementar autenticación básica:
 
@@ -130,7 +130,7 @@ Este enfoque necesitará dos solicitudes:
     hc.setRequestProperty("Authorization", basicAuth);
     ```
 
-### Alta frecuencia - Sin estado
+### Alta frecuencia - Sin estado { #high-frequency---stateless }
 
 El código del lado del cliente que llama a servicios web normalmente **no mantiene** la cookie de sesión del servidor. Esto significa que cada solicitud al servicio web puede crear una nueva sesión http en el servidor receptor. Esto no es recomendable para servicios web de alta frecuencia. El implementador del servicio web dentro del sistema Etendo puede **forzar la llamada** para que sea sin estado. Pero el llamador también puede lograrlo pasando un parámetro. 
 

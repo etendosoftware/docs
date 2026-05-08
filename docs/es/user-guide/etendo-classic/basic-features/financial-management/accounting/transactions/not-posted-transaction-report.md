@@ -7,11 +7,11 @@ tags:
   - Accounting Reports
 ---
 
-# Documentos no contabilizados
+# Documentos no contabilizados { #not-posted-transaction-report }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Documentos no contabilizados`
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe Documentos no contabilizados lista las transacciones y/o documentos en estado **Completo** que no han sido contabilizados todavía.
 

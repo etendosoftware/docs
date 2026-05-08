@@ -9,11 +9,11 @@ tags:
 status: beta
 ---
 
-# Desarrollo del lado del cliente y API
+# Desarrollo del lado del cliente y API { #client-side-development-and-api }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Herramientas de desarrollo del lado del cliente
+## Herramientas de desarrollo del lado del cliente { #client-side-development-tools }
 
 El desarrollo del lado del cliente es una combinación de `javascript`, `css` y `html` muy limitado. La programación se realiza en `javascript`, que se carga en el navegador. El navegador es la principal plataforma cliente. Dentro del cliente utilizamos las siguientes herramientas de desarrollo:
 
@@ -21,7 +21,7 @@ El desarrollo del lado del cliente es una combinación de `javascript`, `css` y 
 - Firebug
 
 En esta página, mostraremos las **Herramientas para desarrolladores de Chrome**, ya que es la herramienta que utilizamos la mayor parte del tiempo.
-## Procesamiento de código javascript en Etendo
+## Procesamiento de código javascript en Etendo { #etendo-processing-of-javascript-code }
 
 Al desarrollar código del lado del cliente, es importante entender cómo Etendo preprocesa el código javascript antes de enviarlo al navegador. Es importante leer la sección de caché y compresión de la guía del desarrollador.
 
@@ -31,7 +31,7 @@ El código javascript se genera en un archivo que tiene un nombre basado en un G
 
 !!! Note
     El código fuente de Smartclient siempre se entrega minimizado y ofuscado. Consulte la siguiente sección para obtener información sobre cómo conseguir una versión de Smartclient no ofuscada.
-## El módulo smartclient.dev, la consola de smartclient y los fuentes
+## El módulo smartclient.dev, la consola de smartclient y los fuentes { #the-smartclientdev-module-smartclient-console-and-sources }
 
 Cuando trabaje con código del lado del cliente de Etendo, puede tener sentido instalar también el módulo con el código fuente de smartclient. Puede encontrarlo aquí. Para instalarlo, vaya al directorio de módulos en su proyecto de desarrollo y, en la consola, escriba lo siguiente:
 
@@ -52,11 +52,11 @@ Después de instalar el módulo de fuentes de smartclient, también puede usar l
 `javascript:isc.showConsole();`
 
 Dentro del módulo `smartclient.dev` puede encontrar el directorio docs, que contiene el manual de referencia y la guía de inicio rápido.
-## Obtener javascript no minimizado y no ofuscado
+## Obtener javascript no minimizado y no ofuscado { #getting-non-minimized-and-non-obfuscated-javascript }
 
 Tal y como se explicó anteriormente, Etendo intentará automáticamente minimizar el código javascript para obtener el mejor rendimiento de carga. Sin embargo, esto hace que la depuración en el lado del cliente sea muy difícil; por lo tanto, existe una forma sencilla de evitar la minimización del javascript.
 
-### Javascript de Etendo
+### Javascript de Etendo { #etendo-javascript }
 
 El javascript de los módulos se minimiza si el módulo no está en desarrollo. Por tanto, para evitar la minimización de su javascript, ponga su módulo en desarrollo. Los módulos más habituales que se tienen en desarrollo para Etendo son:
 
@@ -64,7 +64,7 @@ El javascript de los módulos se minimiza si el módulo no está en desarrollo. 
 - `org.openbravo.client.application`
 - `org.openbravo.userinterface.selector` 
 
-### Código de Smartclient
+### Código de Smartclient { #smartclient-code }
 
 La librería Smartclient normalmente está minimizada/ofuscada, ya que esto ofrece el mejor rendimiento al cargar las librerías. Sin embargo, para depurar y comprender el código fuente, resulta de gran ayuda tener cargado en el cliente el código no ofuscado. Para usar el código no ofuscado en el navegador, debe instalar el módulo `org.openbravo.userinterface.smartclient.dev` (y ejecutar `ant smartbuild -Dlocal=no` después de instalarlo).
 
@@ -73,7 +73,7 @@ A continuación, inicie la aplicación y ponga `org.openbravo.userinterface.smar
 Entonces, al depurar (consulte la siguiente sección), puede ver/usar el código fuente de Smartclient no minimizado:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-0.png)
-## Depuración de código del lado del cliente
+## Depuración de código del lado del cliente { #debugging-client-side-code }
 
 La depuración de código del lado del cliente se realiza mediante las Chrome Developers Tools. Tras abrir Etendo en una ventana del navegador, abra las Chrome Dev Tools. Haga clic en el botón **Scripts** en la parte superior y, en el desplegable justo debajo, busque el archivo que tiene un nombre similar a un GUID.
 
@@ -85,7 +85,7 @@ Este archivo js contiene el código javascript completo concatenado; algunas obs
 - si el javascript está minimizado, ponga uno de los módulos core, client application o client kernel en modo desarrollo y reinicie la aplicación
 - el código javascript de Smartclient no está incluido en este archivo
 
-### Crear un breakpoint
+### Crear un breakpoint { #create-a-breakpoint }
 
 Las herramientas de desarrollo de Chrome ofrecen varias formas de establecer breakpoints. Por ejemplo, pausar en excepción o pausar en excepciones no capturadas.
 
@@ -94,7 +94,7 @@ A continuación, haga clic a la izquierda, sobre el número de línea, para crea
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-2.png)
 
-### Búsqueda de componentes globales y de Smartclient
+### Búsqueda de componentes globales y de Smartclient { #finding-global-and-smartclient-components }
 
 Todos los componentes de Smartclient son accesibles globalmente:
 
@@ -105,12 +105,12 @@ Puede escribir las variables globales y los objetos directamente en la consola:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-3.png)
 
-### Búsqueda de errores de javascript en su propio código, deteniéndose en excepciones
+### Búsqueda de errores de javascript en su propio código, deteniéndose en excepciones { #finding-javascript-errors-in-your-own-code-stopping-on-exceptions }
 
 Cuando se produce una excepción en su código javascript y tiene abiertas las herramientas de desarrollo de Chrome, a menudo las herramientas de desarrollo de Chrome detendrán la ejecución del programa en código ofuscado de Smartclient.
 
 Para que el depurador se detenga en su propio código, permita que Chrome se detenga en excepción. Esto se describe con más detalle aquí: pausar en excepción o pausar en excepciones no capturadas.
-## Análisis de solicitudes cliente-servidor
+## Análisis de solicitudes cliente-servidor { #analyzing-client-server-requests }
 
 Mientras trabaja con Etendo, el sistema realizará varias solicitudes al sistema. Las solicitudes se realizan para imágenes, datos y definiciones de vistas. Las Chrome Developers Tools proporcionan la pestaña de red para ver qué solicitudes tienen lugar realmente. Las más interesantes son las solicitudes xhr.
 
@@ -129,7 +129,7 @@ Un resumen:
 - las otras solicitudes `org.openbravo.client.kernel` son llamadas al gestor de alertas; comprueba si hay alertas abiertas.
 
 Puede ver el contenido devuelto haciendo clic en la pestaña de contenido.
-## Añadir javascript a Etendo
+## Añadir javascript a Etendo { #adding-javascript-to-etendo }
 
 En Etendo, una parte significativa de la lógica se implementa en javascript (generado). Los proveedores de soluciones que implementan nueva funcionalidad también pueden añadir nueva funcionalidad en javascript. Etendo se encarga de comprobar, minimizar, cargar y cachear el javascript. Para hacer uso de esta funcionalidad del framework, el javascript debe añadirse a Etendo de la siguiente manera:
 
@@ -143,10 +143,10 @@ globalResources.add(createStaticResource(
 
 !!!info
     Al implementar sus propios componentes, a menudo tiene sentido ampliar componentes existentes. Asegúrese de que su módulo dependa entonces del módulo que proporciona los tipos base. Esto garantiza que el javascript se cargue en el orden correcto. **Debe** añadir una dependencia desde su módulo al módulo **Openbravo 3.0 Framework** _(org.openbravo.v3.framework)_.
-## Pruebas unitarias de código Javascript
+## Pruebas unitarias de código Javascript { #unit-testing-javascript-code }
 
 Hay disponible una infraestructura para realizar pruebas unitarias de código javascript usando Jest. Para más detalles, consulte [Cómo crear casos de prueba de Jest](../how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md)
-## Implementación de objetos javascript globales *singleton*
+## Implementación de objetos javascript globales *singleton* { #implementing-global-singleton-javascript-objects }
 
 Al crear objetos javascript globales *singleton*, es una buena práctica añadir estos objetos a un único objeto global para evitar la contaminación del espacio de nombres global.
 
@@ -158,7 +158,7 @@ OB.OBEXAPP.OnChangeFunctions = {};
 ```
 
 Por lo tanto, primero cree/añada un Objeto al objeto global de Etendo; el Objeto añadido debe nombrarse usando el prefijo de BD del módulo. A continuación, las Propiedades específicas de la aplicación pueden añadirse a este objeto global.
-## Componentes del lado del cliente de Etendo - API de Javascript
+## Componentes del lado del cliente de Etendo - API de Javascript { #etendo-client-side-components---javascript-api }
 
 Al añadir nuevas instancias y nuevas clases, Etendo sigue esta convención:
 
@@ -167,24 +167,24 @@ Al añadir nuevas instancias y nuevas clases, Etendo sigue esta convención:
 - todos los nombres de clase de Smartclient comienzan por Etendo
 
 En esta sección, se analiza el contenido del objeto principal de Etendo y las funciones de utilidad disponibles en él.
-### Arquitectura de la UI - Publicación del blog
+### Arquitectura de la UI - Publicación del blog { #ui-architecture---blog-post }
 
 Este blog contiene una imagen útil que muestra la arquitectura de la UI y vincula los componentes de la UI con los tipos/código de javascript.
 
-### OB.Application - información general de la aplicación
+### OB.Application - información general de la aplicación { #obapplication---general-application-information }
 
 El objeto `OB.Application` contiene datos sobre la aplicación del lado del servidor:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-7.png)
-### OB.User - el usuario actual
+### OB.User - el usuario actual { #obuser---the-current-user }
 
 El objeto `OB.User` contiene información relacionada con el usuario actualmente conectado:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-8.png)
-### OB.Constants - constantes comunes
+### OB.Constants - constantes comunes { #obconstants---common-constants }
 
 El objeto `OB.Constants` contiene constantes que se utilizan en toda la aplicación. Incluye nombres de constantes para parámetros que se utilizan en las solicitudes al servidor y para retardos.
-### OB.Datasource - obtención de fuentes de datos estándar y personalizadas
+### OB.Datasource - obtención de fuentes de datos estándar y personalizadas { #obdatasource---getting-standard-and-custom-data-sources }
 
 El objeto `OB.Datasource` proporciona dos métodos: create y get.
 
@@ -230,12 +230,12 @@ El método create no llama al servidor, sino que crea la fuente de datos directa
 ```
 
 El objeto `OB.Datasource` crea fuentes de datos utilizando la clase javascript `isc.OBRestDataSource`, que amplía la clase RestDataSource de Smartclient.
-### OB.Format - patrones de formato
+### OB.Format - patrones de formato { #obformat---format-patterns }
 
 El objeto `OB.Format` contiene la configuración global de formato del usuario actual en relación con las fechas y el formato de números. Tenga en cuenta que el formato de campos específicos está controlado por la definición de Format.xml y no por este objeto.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API-9.png)
-### OB.I18N - obtención de etiquetas
+### OB.I18N - obtención de etiquetas { #obi18n---getting-labels }
 
 El objeto `OB.I18N` proporciona un método `getLabel` que puede utilizarse para obtener una etiqueta traducida del sistema. El método `getLabel` tiene 4 parámetros:
 
@@ -247,7 +247,7 @@ El sistema precargará todos los registros de `AD_Message` que no formen parte d
 
 - inicialmente devolverá la clave y llamará al servidor para obtener la etiqueta (de forma asíncrona)
 - cuando se devuelve la etiqueta, entonces (tras la sustitución de parámetros) la etiqueta se asigna en el objeto usando la propiedad; si la propiedad es una función, entonces se invoca como función con la etiqueta como parámetro; si no es una función, entonces la etiqueta se asigna en el objeto usando la propiedad.
-### OB.PropertyStore - gestión de preferencias
+### OB.PropertyStore - gestión de preferencias { #obpropertystore---handling-preferences }
 
 Etendo dispone de una funcionalidad para definir preferencias en distintos niveles (sistema, cliente, organización, rol, usuario, ventana) y establecerlas y obtenerlas desde el sistema. Cuando un usuario carga la aplicación, todas las preferencias relevantes se precargan en el cliente.
 
@@ -272,7 +272,7 @@ El `OB.PropertyStore` dispone del concepto de **listener**, que permite registra
 - **identificador de Propiedad**: concatenación del nombre de la Propiedad y el id de la ventana, separados por un guion bajo.
 - **valor anterior**: el valor anterior de la Propiedad.
 - **Nuevo valor**: el nuevo valor de la Propiedad.
-### OB.RemoteCallManager - Llamar al servidor desde el cliente
+### OB.RemoteCallManager - Llamar al servidor desde el cliente { #obremotecallmanager---calling-the-server-from-the-client }
 
 El `RemoteCallManager` se utiliza para llamar a ActionHandlers en el servidor. Los ActionHandlers son clases Java que implementan la interfaz ActionHandler. Consulte el concepto de ActionHandler.
 
@@ -288,7 +288,7 @@ El `OB.RemoteCallManager` ofrece un método: **llamar** que tiene los siguientes
     - request: el objeto de solicitud original
 
 - `callerContext`: se devuelve en `request.clientContext` (consulte el tercer parámetro del callback)
-### OB.ViewManager - Apertura de vistas
+### OB.ViewManager - Apertura de vistas { #obviewmanager---opening-views }
 
 El `OB.ViewManager` es el punto central para gestionar qué vistas están abiertas en la interfaz principal de tipo Multi-Document-Interface (MDI). También lo utiliza el gestor de historial para dar soporte al botón Atrás y a la actualización de la página completa de la aplicación, manteniendo aun así parte del estado.
 
@@ -302,11 +302,11 @@ El ViewManager comprobará si `viewName` existe como clase en el cliente. Si no 
 Si la vista tiene una **Propiedad** `showsItSelf` establecida en `true`, entonces el `ViewManager` no abrirá la instancia de vista en una solapa del MDI, sino que en su lugar realizará una llamada a la función `show` de la instancia. Esto permite abrir ventanas emergentes a través del ViewManager.
 
 Si la instancia no tiene una **Propiedad** `showsItSelf`, o es `false`, entonces la instancia de vista se abre en una solapa del MDI.
-### OB.Utilities.Action - utilidades relacionadas con la ejecución de acciones
+### OB.Utilities.Action - utilidades relacionadas con la ejecución de acciones { #obutilitiesaction---actions-execution-related-utilities }
 
 Permite definir algunas acciones que se pueden llamar de forma secuencial. Ya existen algunas acciones definidas de serie en el core.
 
-### Cómo configurar/definir una acción
+### Cómo configurar/definir una acción { #how-to-setdefine-an-action }
 
 Se pueden definir nuevas acciones mediante código javascript (por lo que pueden definirse, gracias a la modularidad, dentro de un módulo simplemente con un nuevo archivo javascript para configurar la acción y un proveedor de componentes para cargar este nuevo archivo). La forma de definir una acción es la siguiente:
 
@@ -325,7 +325,7 @@ OB.Utilities.Action.set('showAlert', function (paramObj) {
     alert(paramObj.text);
 });
 ```
-### Cómo llamar/ejecutar una acción
+### Cómo llamar/ejecutar una acción { #how-to-callexecute-an-action }
 
 Hay dos formas de llamar/ejecutar una acción:
 
@@ -436,14 +436,14 @@ En este ejemplo, hay un hilo con tres acciones:
 2. **Diálogo de solicitud:** si introduce 0, el hilo continúa (`OB.Utilities.Action.resumeThread`), pero si introduce cualquier otra cosa, el hilo se pausa (`OB.Utilities.Action.pauseThread`) y se muestra el valor introducido previamente. Observe cómo la función se llama de forma recursiva hasta que se cumple una condición usando el parámetro 'delay' de la función 'execute' (100 en este caso). Esto es para evitar el bloqueo del navegador debido a una iteración constante en el tiempo.
 
 3. **Diálogo de alerta:** este es el último paso del hilo; simplemente se lo notifica.
-### OB.Utilities.Number - utilidades relacionadas con números
+### OB.Utilities.Number - utilidades relacionadas con números { #obutilitiesnumber---number-related-utilities }
 
 El objeto `OB.Utilities.Number` contiene varios métodos relacionados con el formato y el redondeo de números que se utilizan dentro de la aplicación:
 
 - `OB.Utilities.Number.roundJSNumber(num, dec)`: redondea un número a un número de decimales
 - `OB.Utilities.Number.OBMaskedToJS(numberStr, decSeparator, groupSeparator)`: convierte una cadena numérica que sigue el patrón numérico de OB a un número de javascript
 - `OB.Utilities.Number.JSToOBMasked(number, maskNumeric, decSeparator, groupSeparator, groupInterval)`: da formato a un número de javascript utilizando la máscara numérica de Etendo (definida en `format.xml`), el separador decimal, el separador de miles y el tamaño del intervalo de agrupación (normalmente 3)
-### OB.Utilities.Date - utilidades relacionadas con fechas
+### OB.Utilities.Date - utilidades relacionadas con fechas { #obutilitiesdate---date-related-utilities }
 
 El objeto `OB.Utilities.Date` contiene varios métodos de análisis y formateo de fechas:
 
@@ -452,7 +452,7 @@ El objeto `OB.Utilities.Date` contiene varios métodos de análisis y formateo d
 ### OBGrid
 
 El `OBGrid` es la clase principal de rejilla, utilizada por Etendo. Si desea implementar su propia rejilla, tiene sentido extender `OBGrid`, ya que esto garantizará que su rejilla siga los mismos ajustes de estilo que las demás rejillas.
-###  Componentes de ventana de Etendo
+### Componentes de ventana de Etendo { #etendo-window-components }
 
 Una ventana de Etendo consta de una jerarquía de solapas; cada solapa tiene una vista de cuadrícula y una vista de formulario. Además, cada solapa tiene una barra de herramientas y una barra de mensajes. Esta interfaz de usuario está representada por una estructura interna de objetos javascript. Esta sección explica la estructura interna y las principales propiedades y métodos.
 

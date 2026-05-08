@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Tipo de registro de impuesto
+# Tipo de registro de impuesto { #tax-register-type }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Tax Register Type`
 
-## Descripción general
+## Descripción general { #overview }
 
 Un tipo de registro de impuesto se utiliza para recopilar todos los tipos impositivos de un tipo y tenerlos en cuenta al calcular el importe total de impuestos de un tipo de registro de impuesto determinado dentro de un período de tiempo.
 
@@ -22,7 +22,7 @@ En otras palabras, el proceso "Pago del impuesto" ayuda a calcular el importe de
 -   los tipos de registro de impuesto de "Ventas" o el importe total de impuestos que cobra una organización y que pagan sus clientes
 -   y los tipos de registro de impuesto de "Compras" o el importe total de impuestos que paga una organización a otras empresas por los suministros que recibe.
 
-## Cabecera
+## Cabecera { #header }
 
 La ventana Tipo de registro de impuesto permite al usuario crear tipos de registro de impuesto.
 
@@ -37,7 +37,7 @@ Además, cada tipo de registro de impuesto debe estar vinculado a un Concepto co
 
 Las cuentas contables definidas para ese Concepto contable serán las que se utilicen al contabilizar el pago de impuestos calculado como la diferencia entre el tipo de registro de impuesto de "Ventas" y el de "Compras".
 
-## Líneas
+## Líneas { #lines }
 
 La pestaña Líneas permite al usuario asociar tipos impositivos al tipo de registro de impuesto.
 

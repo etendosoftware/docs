@@ -9,7 +9,7 @@ tags:
     - Perfil de usuario
 ---
 
-## Inicio de sesión 
+## Inicio de sesión { #login }
 
 Acceda a **Etendo** a través de un navegador web introduciendo la URL de Etendo en la barra de direcciones del navegador.
 
@@ -31,7 +31,7 @@ Introduzca su nombre de usuario y contraseña. El nombre de usuario y la contras
 Haga clic en **Continuar** y se mostrará la página de inicio de **Etendo**.
 
 
-## Página de bienvenida
+## Página de bienvenida { #welcome-page }
 
 La primera pestaña contiene el **espacio de trabajo de Etendo**, una página de inicio personalizada con estilo de portal. Aquí encontrará: 
 
@@ -45,7 +45,7 @@ La primera pestaña contiene el **espacio de trabajo de Etendo**, una página de
     Para añadir widgets, haga clic en el enlace **Añadir widget** en la columna izquierda del espacio de trabajo y seleccione desde la biblioteca.
 
 
-## Navegación superior
+## Navegación superior { #top-navigation }
 
 La barra de navegación superior ofrece los siguientes menús o funcionalidades:
 
@@ -63,7 +63,7 @@ La barra de navegación superior ofrece los siguientes menús o funcionalidades:
 
 Desde la barra de navegación superior, el usuario puede lanzar nuevos documentos mediante las funcionalidades del Menú rápido o saltar a documentos existentes mediante el menú de la Aplicación.
 
-### Menú rápido
+### Menú rápido { #quick-menu }
 
 **Crear nuevo:**  mediante una navegación más rápida, el usuario puede acceder a la creación de un nuevo documento, ahorrando tiempo y mejorando la experiencia de usuario. Al utilizar esta funcionalidad, se crea un nuevo documento de un tipo específico en una nueva pestaña en vista de formulario.
 
@@ -73,14 +73,14 @@ Desde la barra de navegación superior, el usuario puede lanzar nuevos documento
 
 ![Inicio rápido](../../assets/drive/11Rhg6Rbyz8Ri9rRRO_304t3c88N2OiYp.png)
 
-### Aplicación
+### Aplicación { #application }
 
 Lea más en la sección [Áreas de la Aplicación](navigation.md#application-areas).
 
 !!! info
     *El contenido del Menú de la Aplicación depende del rol del usuario. Por ejemplo, un usuario puede tener varios roles y ver cosas diferentes con cada uno.*
 
-### Alertas
+### Alertas { #alerts }
 
 Una alerta es una notificación que informa o advierte al usuario sobre una situación crítica o importante. En esta sección, puede ver y editar todas sus alertas activas.
 
@@ -91,13 +91,13 @@ El número de alertas nuevas se muestra en la navegación superior como Alertas 
 -   **Alertas ignoradas:** alertas que el usuario no quiere volver a ver. Al colocarlas en la sección Ignoradas, significa que ahora son excepciones a la regla de alertas.
 -   **Alertas resueltas:** las alertas se mueven automáticamente a la sección de resueltas cuando el sistema detecta que el umbral de alerta ha dejado de incumplirse. Tenga en cuenta que usted no puede marcar alertas como “Resueltas” por sí mismo.
 
-### Ayuda
+### Ayuda { #help }
 
 Se puede acceder a la ayuda contextual haciendo clic en el elemento Ayuda en la barra de navegación superior. Esta acción abre una nueva pestaña para proporcionar al usuario información específica sobre cualquier ventana seleccionada. 
 En esta sección, el usuario también puede encontrar información sobre el ERP.
 
 
-### Sección de usuario
+### Sección de usuario { #user-section }
 
 El nombre de esta sección varía según el nombre configurado por la entidad.
 
@@ -105,7 +105,7 @@ La sección de usuario se divide en dos pestañas: Perfil y Cambiar contraseña.
 
 ![Sección de usuario](../../assets/drive/14odPRGme02UvFhR_feYwFh_sJYcE_3ku.png)
 
-#### Perfil
+#### Perfil { #profile }
 
 En esta sección, puede:
 
@@ -121,11 +121,11 @@ En esta sección, puede:
     **Idioma:** el idioma en el que se muestra la información del sistema.
 
 
-#### Contraseña
+#### Contraseña { #password }
 
 En esta sección, el usuario puede cambiar la contraseña a través de esta pestaña escribiendo primero la contraseña actual y, a continuación, introduciendo la nueva contraseña. Después, haga clic en **Confirmar contraseña.**
 
-### Cerrar sesión
+### Cerrar sesión { #end-session }
 
 |     |     |
 | --- | --- |

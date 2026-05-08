@@ -7,7 +7,7 @@ tags:
   - Receivables and Payables
 ---
 
-# Tipo de Remesa
+# Tipo de Remesa { #remittance-type }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Remittance Type`
 
@@ -39,7 +39,7 @@ Para finalizar el proceso, se deben asociar los métodos de pago aplicables a ca
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/remittance-type/remittance-type-3.png)
 
 
-## Remesas sin descuento
+## Remesas sin descuento { #non-discount-remittances }
 
 Para configurar Remesas sin descuento, defina este método de pago desde la ventana Método de pago.  
 
@@ -51,7 +51,7 @@ Para configurar Remesas sin descuento, defina este método de pago desde la vent
 !!! info
     Para crear una remesa sin descuento, acceda a la [ventana Remesa](../transactions/remittance.md). 
 
-## Remesa al Descuento
+## Remesa al Descuento { #remit-for-discount }
 
 Para configurar Remesas al Descuento, defina el tipo desde la casilla de verificación Remesa al Descuento como se muestra en la imagen a continuación: 
 

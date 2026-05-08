@@ -10,15 +10,15 @@ tags:
   - JSON REST Web Services
 ---
 
-#  Fuentes de datos
+# Fuentes de datos { #datasources }
 
-##  Visión general
+## Visión general { #overview }
 
 Esta sección describe cómo definir e implementar fuentes de datos basándose en la funcionalidad de Fuente de datos de Etendo. Una fuente de datos es el principal proveedor de datos en la interfaz de usuario de Etendo. La API de la fuente de datos contiene métodos para obtener datos, actualizar datos y para crear y eliminar datos en el servidor. Una fuente de datos tiene una representación tanto del lado del cliente como del lado del servidor.
 
 Esta sección describe cómo implementar una fuente de datos personalizada. Una fuente de datos personalizada puede utilizarse en componentes de la interfaz de usuario de Etendo Classic como el [Selector](/developer-guide/etendo-classic/concepts/Selectors).
 
-##  Información relacionada
+## Información relacionada { #related-information }
 
 Las funciones de Fuente de datos de Etendo hacen uso de y amplían la funcionalidad de [JSON_REST_Web_Services](/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services).
 
@@ -32,7 +32,7 @@ La implementación de la fuente de datos consta de dos partes:
   * la implementación del lado del servidor de la fuente de datos en java 
   * la definición de la fuente de datos en el Diccionario de Aplicación 
 
-##  API de la fuente de datos
+## API de la fuente de datos { #datasource-api }
 
 La API de la fuente de datos está definida por la interfaz [DataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java){target="\_blank"}. Esta interfaz define métodos que son necesarios para un funcionamiento correcto del lado del servidor. Es recomendable ampliar la clase [BaseDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/BaseDataSourceService.java){target="\_blank"}, que se encarga de implementar la mayoría de los métodos.
 
@@ -97,7 +97,7 @@ Para su comportamiento en tiempo de ejecución, la fuente de datos hace un uso e
 
 Al desarrollar su propia fuente de datos, tiene sentido estudiar y utilizar las [clases del núcleo](/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services#JSON_Core_Classes) de la funcionalidad JSON REST.
 
-##  Definición de la fuente de datos
+## Definición de la fuente de datos { #datasource-definition }
 
 Tras la implementación del lado del servidor de la fuente de datos, el siguiente paso es definirla en el diccionario de aplicación. Esto hace posible utilizar la fuente de datos en componentes de la interfaz de usuario definidos en el diccionario de aplicación.
 
@@ -139,7 +139,7 @@ Descripción de los campos en la definición del campo de la fuente de datos:
   * Referencia: la referencia define el tipo del campo. 
   * Tabla: si la referencia es una referencia de clave externa, entonces este campo puede utilizarse para especificar la tabla a la que se hace referencia. 
 
-##  Implementación de su propia fuente de datos del lado del cliente (Avanzado)
+## Implementación de su propia fuente de datos del lado del cliente (Avanzado) { #implementing-your-own-client-side-datasource-advanced }
 
 La definición de la fuente de datos se convierte a código javascript utilizando una plantilla. La plantilla se selecciona en la definición de la fuente de datos (véase el paso anterior). Es posible que un módulo añada una nueva plantilla que pueda utilizarse para crear fuentes de datos del lado del cliente.
 
@@ -166,7 +166,7 @@ Los principales campos a configurar:
   
 A continuación, al definir fuentes de datos, se podrá seleccionar la plantilla personalizada.
 
-##  Ejemplos de fuentes de datos
+## Ejemplos de fuentes de datos { #datasource-examples }
 
 El código fuente de la fuente de datos contiene 2 ejemplos de implementación de una fuente de datos:
 

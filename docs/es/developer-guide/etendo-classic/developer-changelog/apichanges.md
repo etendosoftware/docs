@@ -9,9 +9,9 @@ tags:
     - Developer Changelog
 ---
 
-# Documentación de cambios de API
+# Documentación de cambios de API { #api-change-documentation }
 
-## Resumen
+## Resumen { #overview }
 
 Este documento proporciona información detallada sobre los cambios de API y de stack introducidos en las últimas versiones de Etendo.
 Sirve como referencia para desarrolladores y administradores de sistemas para entender qué componentes se han actualizado, quedado obsoletos o eliminado, y cómo estos cambios pueden afectar a los desarrollos personalizados.
@@ -24,7 +24,7 @@ Si estás planificando actualizar tu entorno, asegúrate de revisar también la 
 
 [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
 
-### Actualización de la pila de plataforma
+### Actualización de la pila de plataforma { #platform-stack-upgrade }
 
 **:material-language-java: Java SE**
 
@@ -74,7 +74,7 @@ PostgreSQL 17 es compatible a partir de esta versión. No es necesaria ninguna a
     - Mejora en el manejo de tablas particionadas durante la exportación de la base de datos.
     - Se han eliminado todos los JAR incluidos en `lib/`; ahora las dependencias se resuelven desde el classpath del proyecto.
 
-### Bibliotecas de terceros
+### Bibliotecas de terceros { #third-party-libraries }
 
 **Actualizado**
 
@@ -134,7 +134,7 @@ Las siguientes bibliotecas son nuevas incorporaciones al classpath de la platafo
 - `com.etendoerp:catalina-ant` `1.0.0`
 - `org.apache.poi:ooxml-schemas` `1.4`   
 
-### Cambios en el esquema de base de datos
+### Cambios en el esquema de base de datos { #database-schema-changes }
 
 Los siguientes cambios se aplican automáticamente durante `update.database`:
 
@@ -153,7 +153,7 @@ Los siguientes cambios se aplican automáticamente durante `update.database`:
 
 Consulta el [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} para ver todos los detalles sobre la eliminación del módulo CRM.
 
-### Clases Java eliminadas
+### Clases Java eliminadas { #removed-java-classes }
 
 Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event` han sido eliminadas como parte de la eliminación del conector CRM. Cualquier módulo personalizado que extienda, importe o invoque directamente estas clases debe eliminar esas referencias:
 
@@ -162,7 +162,7 @@ Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event
 - `ExternalBusinessPartnerConfigPropertyEventHandler`
 - `ExternalBusinessPartnerConfigurationEventHandler`
 
-### Otros cambios
+### Otros cambios { #other-changes }
 
 - **Generación de claves de Secure Web Services**: el objetivo de Ant `generate.sws.keys` ahora se ejecuta automáticamente durante `install.source`, reduciendo los pasos de configuración manual para los servicios web seguros.
 
@@ -175,7 +175,7 @@ Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event
 
 [Actualizar Etendo a cualquier versión](../getting-started/upgrade/upgrade-etendo-to-any-version.md)
 
-### Actualización de la pila de plataforma
+### Actualización de la pila de plataforma { #platform-stack-upgrade_1 }
 
 **:material-language-java: Java SE**
 
@@ -335,7 +335,7 @@ Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event
 
 
 
-### Bibliotecas de terceros
+### Bibliotecas de terceros { #third-party-libraries_1 }
 
 Todas las bibliotecas ubicadas anteriormente en `/lib/runtime` como archivos JAR se han actualizado a dependencias de Gradle, ahora definidas en el archivo `artifacts.list.COMPILATION.gradle` en la raíz del proyecto.
 
@@ -683,7 +683,7 @@ Todas las bibliotecas ubicadas anteriormente en `/lib/runtime` como archivos JAR
 
 ---
 
-### Cambios en el esquema de base de datos
+### Cambios en el esquema de base de datos { #database-schema-changes_1 }
 
 Los siguientes cambios se aplican automáticamente durante `update.database` como parte de las **versiones patch 25Q4 (marzo de 2026)**. Consulta el [PR #977](https://github.com/etendosoftware/etendo_core/pull/977){target="\_blank"} para ver todos los detalles.
 
@@ -707,7 +707,7 @@ Las siguientes tablas, junto con todas sus columnas, pestañas y entradas del Ap
 | `AD_Org` | `C_Extbp_Config_ID` | Referencia a la configuración del conector CRM |
 | `AD_ClientInfo` | `C_Extbp_Config_ID` | Referencia a la configuración del conector CRM |
 
-### Clases Java eliminadas
+### Clases Java eliminadas { #removed-java-classes_1 }
 
 Las siguientes clases de manejadores de eventos del paquete `org.openbravo.event` han sido eliminadas. Cualquier módulo personalizado que extienda, importe o invoque directamente estas clases debe eliminar esas referencias:
 

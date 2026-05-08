@@ -7,15 +7,15 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Almacén - Primeros pasos
+# Gestión de Almacén - Primeros pasos { #warehouse-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="720" height="480" src="https://www.youtube.com/embed/l7RMb0Oz7Wo?si=ngxYnwDkiDqwRkLO" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 En Etendo, la mayoría de los movimientos de almacén se crean automáticamente en función de las transacciones de los procesos de [Ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/getting-started.md) y [Gestión de Compras](../../../../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md). Sin embargo, la operativa de un almacén también implica varias actividades manuales, como el inventario físico, los movimientos de mercancía y su seguimiento, y la valoración del inventario. Estas actividades se ejecutan en el área de aplicación Gestión de Almacén y se agrupan en el flujo de negocio Precisión del inventario, que se describe a continuación.
 
-## Precisión del inventario
+## Precisión del inventario { #inventory-accuracy }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png)
 
@@ -35,7 +35,7 @@ Los principales subprocesos del flujo de negocio Precisión del inventario son:
 - *Actualización de inventario*: permite a una empresa cambiar el importe actual del inventario o el coste unitario actual de los productos en stock.
 - *Revisión de ajustes de costes*: permite a una empresa revisar los ajustes de coste de producto causados por cambios en los precios de compra, la asignación de landed costs o correcciones manuales / negativas de coste.
 
-### Configuración
+### Configuración { #configuration }
 
 Es necesario crear y configurar [Almacén y huecos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins) antes de ejecutar el flujo de negocio.
 Además, es necesario definir y validar una [Regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) para la entidad legal. Cada regla de cálculo de costes requiere una fecha de inicio a partir de la cual será válida, así como un [Algoritmo de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm) que será utilizado por el proceso [Costing Background Process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing), que debe planificarse.
@@ -49,7 +49,7 @@ Por último, pueden configurarse [Reglas de almacén](../../../../user-guide/ete
 
 La configuración anterior forma parte del flujo general de configuración del negocio dentro de la configuración de "Almacén".
 
-### Ejecución
+### Ejecución { #execution }
 
 En Gestión de Almacén, las principales operaciones de Precisión del inventario se ejecutan de la siguiente manera.
 
@@ -82,7 +82,7 @@ Esta ventana permite cambiar el valor total del inventario o el coste unitario d
 Para la *Revisión de ajustes de costes*, el personal de almacén utiliza la ventana [Ajuste de Costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#cost-adjustment).
 Esta ventana permite revisar diferentes tipos de orígenes de ajuste de costes junto con las transacciones del producto cuyos costes se están ajustando, así como los importes del ajuste.
 
-## Relación con otras áreas de aplicación
+## Relación con otras áreas de aplicación { #relationship-with-other-application-areas }
 
 Gestión de Almacén tiene conexión con otras áreas de aplicación:
 

@@ -6,10 +6,10 @@ tags:
     - Secuencias no transaccionales
 ---
 
-# Crear Secuencias
+# Crear Secuencias { #create-sequences }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Crear Secuencias`
 
-## Ejecución de Procesos
+## Ejecución de Procesos { #process-execution }
 En esta ventana de proceso, se ejecuta el proceso **Crear Secuencias**.
 
 Al seleccionar la **organización** y ejecutar el proceso, Etendo crea las secuencias para el tipo de campos `Transactional Sequence` o `Non transactional Sequence`. La principal ventaja de estas *nuevas secuencias* es el enmascaramiento dinámico, que permite añadir fechas o cadenas dinámicas.
@@ -20,7 +20,7 @@ Al seleccionar la **organización** y ejecutar el proceso, Etendo crea las secue
     - El usuario puede ejecutar este proceso solo después de que un desarrollador configure los campos de secuencia usando secuencias `transactional` o `non-transactional`.
     - Para más información sobre esta configuración, visite la documentación técnica sobre [Secuencia](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md).
 
-## Secuencia de documento (numeración)
+## Secuencia de documento (numeración) { #document-sequence }
 
 :material-menu: `Gestión Financiera`>`Contabilidad`>`Configuración`>`Secuencia de documento (numeración)`
 

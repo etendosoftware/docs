@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Dudoso cobro
+# Dudoso cobro { #doubtful-debt }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Dudoso cobro`
 
-## Visión General
+## Visión General { #overview }
 
 Los dudosos cobros son aquellas deudas que la empresa probablemente no podrá cobrar. Además, un dudoso cobro se convierte en deuda incobrable cuando ya no existe duda alguna de que la deuda es irrecuperable, por tanto:
 
@@ -20,7 +20,7 @@ Los dudosos cobros son aquellas deudas que la empresa probablemente no podrá co
 
 Los dudosos cobros son útiles para hacer provisiones ante posibles pérdidas con antelación.
 
-### Ejemplo de Uso
+### Ejemplo de Uso { #user-story }
 
 El siguiente ejemplo ilustra cómo Etendo gestiona la contabilización de Dudosos cobros en el libro mayor.
 
@@ -66,7 +66,7 @@ Posteriormente, el tercero quiebra, por lo que su deuda se considera incobrable:
 | Provisión para Deudas de Dudoso cobro    | 650   |        |
 | Cuenta de Ingresos por Deudas Incobrables |       | 650    |
 
-### Configuración
+### Configuración { #configuration }
 
 Antes de comenzar a trabajar con Dudosos cobros, se requieren algunos pasos de configuración previos:
 
@@ -81,7 +81,7 @@ Antes de comenzar a trabajar con Dudosos cobros, se requieren algunos pasos de c
 - Crear un Tipo de Documento para Dudosos cobros.  
   Este paso no es obligatorio, ya que ya existe un Tipo de Documento Estándar definido para Dudosos cobros.
 
-### Dudoso cobro
+### Dudoso cobro { #doubtful-debt_1 }
 
 Los Dudosos cobros se definen en la ventana Procesado del dudoso cobro. Una vez creados, aparecerá un registro en la grilla de esta ventana.
 
@@ -108,11 +108,11 @@ Acciones posibles:
 | Cuenta de Gastos por Deudas Incobrables | Importe de Dudoso cobro  |                          |
 | Provisión para Deudas de Dudoso cobro   |                          | Importe de Dudoso cobro  |
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Información contable relacionada con el dudoso cobro.
 
-## Contabilización Masiva
+## Contabilización Masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el núcleo y las nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

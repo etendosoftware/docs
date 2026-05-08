@@ -7,13 +7,13 @@ tags:
     - Base de datos
 ---
 
-# Conocimientos previos
+# Conocimientos previos { #prerequisite-knowledge }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección enumera las principales áreas de conocimiento que son relevantes al desarrollar en/con Etendo. El nivel exacto de conocimiento requerido depende en gran medida de la tarea que se necesite realizar. Algunas tareas de desarrollo consistirán principalmente en cambios a través de la interfaz de usuario de Etendo, que requieren muy poco conocimiento técnico profundo. Otras tareas pueden ser más complejas y requerir cambiar o ampliar Etendo. En este último caso, también se requiere una comprensión técnica del producto Etendo.
 
-## Conocimientos generales
+## Conocimientos generales { #general-knowledge }
 
 Para desarrollar en/con Etendo, se requiere como mínimo tener una comprensión básica de la siguiente tecnología:
 
@@ -25,7 +25,7 @@ Para desarrollar en/con Etendo, se requiere como mínimo tener una comprensión 
 * [HTML](https://en.wikipedia.org/wiki/HTML){target="\_blank"}: El lenguaje de marcado utilizado para renderizar la interfaz de usuario de Etendo en el navegador web utilizado por los usuarios de Etendo. 
 * [XML](https://en.wikipedia.org/wiki/XML){target="\_blank"}: El lenguaje de marcado utilizado para describir distintos documentos en Etendo, como servicios web REST, informes Jasper, archivos de configuración, archivos de plantilla, etc. 
 
-## Base de datos
+## Base de datos { #database }
 
 Si las tareas de desarrollo se centran principalmente en el área de base de datos, entonces un desarrollador también necesitará tener experiencia con:
 
@@ -33,21 +33,21 @@ Si las tareas de desarrollo se centran principalmente en el área de base de dat
 * Conceptos de esquema de base de datos como restricciones, clave foránea, triggers, índices... 
 * [PL/SQL](https://en.wikipedia.org/wiki/PL/SQL){target="\_blank"}: El lenguaje utilizado para desarrollar lógica de negocio del lado de la base de datos. 
 
-## UI / Código del lado del cliente
+## UI / Código del lado del cliente { #ui-client-side-code }
 
 Etendo requiere un navegador web como Internet Explorer, Firefox, Chrome o Safari para renderizar la interfaz de usuario. Para desarrollos centrados en la interfaz de usuario, se requerirá experiencia con:
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript){target="\_blank"}: Un lenguaje de scripting utilizado por los navegadores web para proporcionar acceso a las páginas de la interfaz de usuario. Los desarrolladores deben ser capaces de leer, escribir y depurar código JavaScript utilizando las herramientas de desarrollo proporcionadas por los navegadores web. 
 * [SmartClient](https://smartclient.com/){target="\_blank"}: El framework RIA en el que se basa Etendo; está basado en JavaScript e incluye una amplia colección de widgets y otras utilidades para el lado del cliente. 
 
-## Capa de acceso a datos
+## Capa de acceso a datos { #data-access-layer }
 
 Para desarrollos del lado del servidor en el lenguaje de programación Java que acceden a la base de datos, se utilizan las siguientes tecnologías:
 
 * [Capa de acceso a datos](../concepts/data-access-layer.md): El componente de Etendo utilizado para reforzar el desarrollo de lógica de negocio en Java. 
 * [Hibernate](https://hibernate.org/){target="\_blank"}: La biblioteca en la que se basa la Capa de acceso a datos, que proporciona mapeo objeto/relacional y permite a los desarrolladores utilizar un modelo de objetos para acceder a bases de datos relacionales. Para aprovechar al máximo la Capa de acceso a datos, es importante comprender sus conceptos principales para saber cómo crear consultas más avanzadas, especialmente el lenguaje de consultas de Hibernate ([HQL](https://docs.hibernate.org/core/3.6/reference/en-US/html/queryhql.html){target="\_blank"}) y la API de criterios de Hibernate. 
 
-## Servicios web
+## Servicios web { #web-services }
 
 Para consumir y ampliar los servicios web de Etendo, un desarrollador necesita tener conocimientos en las siguientes áreas:
 

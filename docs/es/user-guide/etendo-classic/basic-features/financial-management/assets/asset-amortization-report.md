@@ -7,14 +7,14 @@ tags:
   - Financial Extensions
 ---
 
-# Informe de amortización de activos (Excel)
+# Informe de amortización de activos (Excel) { #asset-amortization-report-excel }
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Asset Amortization Report (Excel)`
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe de amortización permite descargar informes en formato Excel. El informe se encuentra en Gestión Financiera > Activos > Herramientas de análisis > Informe de amortización de activos.
 

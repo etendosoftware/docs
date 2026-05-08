@@ -7,20 +7,20 @@ tags:
   - Bulk Posting
 ---
 
-# Documentos no contabilizados
+# Documentos no contabilizados { #not-posted-documents }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Documentos no contabilizados`
 
 !!!info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Descripción general
+## Descripción general { #overview }
 
 La ventana Documentos no contabilizados, parte del módulo Contabilización masiva, centraliza todos los documentos no contabilizados en un único lugar. Permite a los usuarios encontrar, revisar y contabilizar múltiples documentos a la vez de forma rápida. Los filtros ayudan a refinar las búsquedas y las acciones de contabilización masiva agilizan el procesamiento, haciendo la gestión de documentos más eficiente.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-1.png)
 
-## Filtros
+## Filtros { #filters }
 
 - **Organización**: filtra los documentos según la organización a la que pertenecen. Por defecto se establece la organización de la sesión.
 
@@ -54,15 +54,15 @@ La ventana Documentos no contabilizados, parte del módulo Contabilización masi
 
 - **Fecha Contable (Desde/Hasta)**: filtros para definir un período de búsqueda.
 
-## Botones
+## Botones { #buttons }
 
-### Botón Buscar
+### Botón Buscar { #search-button }
 
 Al hacer clic en el botón Buscar se aplican los filtros seleccionados y se muestran los documentos coincidentes en la grilla de resultados. Desde los resultados se puede navegar a un documento haciendo clic en su Fecha Contable, inspeccionar detalles y seleccionar registros para la contabilización masiva.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-docs/not-posted-window-2.png)
 
-### Botón Contabilización masiva
+### Botón Contabilización masiva { #bulk-posting-button }
 
 Una vez utilizados los campos para buscar los documentos no contabilizados, el usuario puede seleccionar masivamente los documentos necesarios y utilizar el botón **Contabilización masiva** para contabilizar múltiples documentos a la vez, como se muestra a continuación.
 
@@ -74,7 +74,7 @@ Como puede observarse, este desarrollo facilita enormemente la gestión de los d
 !!! info
     Para más información sobre la funcionalidad de Contabilización masiva, visite [la guía del usuario de Contabilización masiva](../../../../optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Filtrado en la grilla
+## Filtrado en la grilla { #grid-filtering }
 
 En la grilla donde se muestran los documentos tras la búsqueda, los usuarios pueden filtrarlos usando los siguientes criterios:
 

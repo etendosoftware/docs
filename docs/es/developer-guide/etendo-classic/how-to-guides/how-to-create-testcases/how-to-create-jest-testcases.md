@@ -7,13 +7,13 @@ tags:
   - Tests
 ---
 
-# Cómo crear tests con Jest
+# Cómo crear tests con Jest { #how-to-create-jest-test-cases }
 
-## Visión general
+## Visión general { #overview }
 
 [Jest](https://jestjs.io/){target="_blank"} es un framework de testing actualmente utilizado como predeterminado en [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}. Proporciona sus propios métodos de aserción y de mocking, y funciona listo para usar con buena integración con React, Babel y TypeScript.
 
-## Instalación
+## Instalación { #installation }
 
 Desde el directorio del módulo que contiene el `package.json`, instale todas las dependencias ejecutando:
 
@@ -21,9 +21,9 @@ Desde el directorio del módulo que contiene el `package.json`, instale todas la
 npm install
 ```
 
-## Escritura de un test
+## Escritura de un test { #writing-a-test }
 
-### Ubicación del archivo
+### Ubicación del archivo { #file-placement }
 
 !!! info
     Los tests deben colocarse en la carpeta `web-test`. Los archivos deben tener el sufijo `.test.js` para JavaScript o `.test.ts` para TypeScript.
@@ -34,7 +34,7 @@ npm install
 
 Consulte la [documentación de Jest](https://jestjs.io/docs/getting-started){target="_blank"} como referencia completa.
 
-### Funciones principales
+### Funciones principales { #core-functions }
 
 Estas son las funciones clave para construir un archivo de test Jest:
 
@@ -46,7 +46,7 @@ Estas son las funciones clave para construir un archivo de test Jest:
 
 Para la lista completa de matchers disponibles, consulte la [referencia de expect de Jest](https://jestjs.io/docs/expect){target="_blank"}.
 
-### Archivo de test de ejemplo
+### Archivo de test de ejemplo { #sample-test-file }
 
 El siguiente ejemplo está tomado de `org.openbravo.client.application`. Muestra los bloques fundamentales de un archivo de test Jest.
 
@@ -74,7 +74,7 @@ describe('org.openbravo.client.application - OB.Utilities.Date', () => {
 });
 ```
 
-## Configuración y desmontaje
+## Configuración y desmontaje { #setup-and-teardown }
 
 Jest proporciona cuatro hooks de ciclo de vida que ejecutan código antes o después de los tests. Úselos para preparar el estado compartido y limpiarlo.
 
@@ -223,7 +223,7 @@ describe('NpmDependenciesValidator - spy', () => {
 });
 ```
 
-## Tests asíncronos
+## Tests asíncronos { #asynchronous-tests }
 
 Jest maneja `async`/`await` de forma nativa. Marque el callback del test como `async` y use `await` en las promesas. Jest espera a que la promesa devuelta se resuelva antes de evaluar las aserciones.
 
@@ -287,7 +287,7 @@ describe('login - invalid credentials', () => {
 });
 ```
 
-## Tests parametrizados
+## Tests parametrizados { #parameterized-tests }
 
 `it.each` ejecuta la misma lógica de test con múltiples pares de entrada/salida. Esto elimina código de test duplicado y hace que la intención quede explícita en el nombre del test.
 
@@ -322,7 +322,7 @@ it.each([
 });
 ```
 
-## Ejecutar tests y cobertura
+## Ejecutar tests y cobertura { #run-tests-and-coverage }
 
 Desde el directorio del módulo, ejecute todos los tests:
 

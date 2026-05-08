@@ -7,28 +7,28 @@ tags:
   - Financial Extensions
 ---
 
-# Regularización del IVA
+# Regularización del IVA { #vat-regularization }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > `Proceso de regularización del IVA`
 
 !!!info
     Para poder incluir esta funcionalidad, es necesario instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Descripción general
+## Descripción general { #overview }
 
 El módulo de Regularización del IVA permite ajustar automáticamente las cuentas para garantizar que el saldo del IVA sea correcto. Esto implica verificar las cuentas en las que este proceso es necesario y crear el asiento de Asientos manuales correspondiente para regularizar el IVA. Este proceso es esencial para mantener registros financieros precisos y el cumplimiento de las normativas fiscales.
 
 A continuación se describen los pasos necesarios para llevarlo a cabo en un período de tiempo específico.
 
-## Proceso de regularización del IVA
+## Proceso de regularización del IVA { #vat-regularization-process }
 
-### Configuración de la cuenta
+### Configuración de la cuenta { #account-setup }
 
 Para habilitar una cuenta para que forme parte del proceso de regularización del IVA, es necesario acceder a la ventana Árbol de cuentas, seleccionar la organización a la que pertenece la cuenta y, en la pestaña Cuenta Contable, seleccionar la cuenta correspondiente y marcar la casilla Regularización del IVA como activa.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization/vat-regularization-1.png)
 
-### Proceso de regularización del IVA
+### Proceso de regularización del IVA { #vat-regularization-process_1 }
 
 1. Vaya a `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Transacciones` > ventana `Proceso de regularización del IVA`.
 2. Complete los siguientes campos obligatorios:
@@ -45,7 +45,7 @@ Para habilitar una cuenta para que forme parte del proceso de regularización de
 5. Seleccione una cuenta en el campo Cuenta deudora/acreedora del IVA para cuadrar las cuentas una vez generado el asiento de Asientos Manuales Simplificados.
 
 
-### Generación del asiento de Asientos manuales
+### Generación del asiento de Asientos manuales { #gl-journal-entry-generation }
 1. Haga clic en el botón **Procesar** para generar el asiento de Asientos Manuales Simplificados.
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization/vat-regularization-4.png)
 
@@ -56,7 +56,7 @@ Para habilitar una cuenta para que forme parte del proceso de regularización de
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization/vat-regularization-5.png)
 3. Aquí, verifique que la cabecera se ha creado con las líneas correspondientes.
 
-### Revisión y contabilización del asiento
+### Revisión y contabilización del asiento { #entry-review-and-posting }
 
 1. Compruebe que se ha creado una línea por cada cuenta a regularizar (en este caso, la cuenta 40000) y que el importe a regularizar (-1.377.222,00) se ha añadido en el campo Debe en positivo.
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/vat-regularization/vat-regularization-6.png)

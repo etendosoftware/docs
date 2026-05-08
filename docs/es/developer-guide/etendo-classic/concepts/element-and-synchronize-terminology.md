@@ -9,19 +9,19 @@ tags:
   - Sincronizar términos
 ---
 
-# Elemento y Sincronizar términos
+# Elemento y Sincronizar términos { #element-and-synchronize-terminology }
 
-## Elemento
+## Elemento { #element }
 
 Los elementos definen el texto de la etiqueta que se mostrará para cada campo en la aplicación, así como su ayuda relacionada. Cada columna en el Diccionario de Aplicación está vinculada a un elemento; tenga en cuenta que más de una columna puede estar vinculada a un único elemento. Esta es la forma de reutilizar el mismo texto para diferentes columnas (y, finalmente, campos) en la aplicación.
 
 Por ejemplo, `C_BPartner_ID` es el nombre de varias columnas en la aplicación; todas ellas son una referencia a un tercero y, por tanto, el texto que se mostrará, así como la ayuda para todas ellas, es el mismo. En lugar de mantener esa información de forma redundante en cada columna, todas estas columnas usan el mismo elemento.
 
-### Mantenimiento de Elemento
+### Mantenimiento de Elemento { #element-maintenance }
 
 Los elementos se pueden editar en la ventana `Application Dictionary` > `Setup` > `Elemento` (como *Administrador del sistema*); pero, normalmente, los elementos no se crean directamente usando esta ventana, sino mediante *Sincronizar términos*. Una vez creado el elemento, esta ventana se utiliza para editar su contenido.
 
-### Sincronizar términos
+### Sincronizar términos { #synchronize-terminology }
 
 Es el proceso que crea los elementos para las columnas que todavía no tienen uno asociado y copia la información de los elementos a las columnas y campos que están vinculados a ellos.
 
@@ -38,7 +38,7 @@ Todo esto se realiza teniendo en cuenta el módulo; por tanto, un elemento solo 
     Tenga en cuenta que, una vez creado el elemento, los cambios en los campos de la columna también se sobrescribirán en este proceso.
 
   
-#### En detalle
+#### En detalle { #in-detail }
 
 Estos son todos los pasos que ejecuta el proceso *Sincronizar términos*.
 
@@ -50,7 +50,7 @@ Estos son todos los pasos que ejecuta el proceso *Sincronizar términos*.
   6. Actualizar los nodos de flujo de trabajo con el nombre y la descripción de sus ventanas vinculadas.
   7. Actualizar las entradas de menú con el nombre y la descripción de sus ventanas, procesos, formularios o flujos de trabajo vinculados.
 
-###  Mantenimiento centralizado para campos
+### Mantenimiento centralizado para campos { #central-maintenance-for-fields }
 
 En la mayoría de los casos, el proceso definido anteriormente cubre todos los requisitos para las etiquetas de campo. Pero en algunas ocasiones se desea tener un campo con un conjunto diferente de etiqueta, ayuda y descripción que el resto de campos asociados a la misma columna.
 
@@ -63,7 +63,7 @@ Un nombre de columna muy común es `AD_Language`; estas columnas son una referen
 
 Los módulos tienen un idioma (que podría ser distinto del inglés) en el que tienen definida la UI. La etiqueta y la ayuda del campo `AD_Language` en `Application Dictionary` > `Módulo` son *Idioma del Módulo* y este idioma define el idioma utilizado como base para los elementos de la interfaz de usuario en el módulo. Esto se realiza configurando el campo de la columna `AD_Language` en la solapa *Traducción* como no mantenido centralizadamente y escribiendo directamente en el campo el nombre y la ayuda.
 
-### Traducción
+### Traducción { #translations }
 
 Como los elementos se utilizan para definir el texto que se mostrará en la UI, se pueden traducir a diferentes idiomas.
 
@@ -72,7 +72,7 @@ El texto del elemento debe escribirse en el idioma que define su módulo, y lueg
 !!!note
     La forma estándar de traducir es creando un nuevo módulo sin funcionalidad adicional, pero solo con traducciones para el módulo.
 
-### Asientos de compra
+### Asientos de compra { #purchase-entries }
 
 Si observa los campos en `Application Dictionary` > `Setup` > `Elemento`, notará que hay campos estándar (nombre, ayuda...) y otros similares, pero para compras.
 

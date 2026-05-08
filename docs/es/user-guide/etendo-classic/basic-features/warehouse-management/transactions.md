@@ -2,11 +2,11 @@
 title: Gestión de Almacén
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Gestión de Almacén se ocupa de todas las actividades relacionadas con las acciones de almacén necesarias para los procesos de ventas y aprovisionamiento.
 
-## Inventario físico
+## Inventario físico { #physical-inventory }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Inventario físico`
 
@@ -14,7 +14,7 @@ La ventana **Inventario físico** permite al usuario ejecutar el proceso de cont
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xqE_UnYO6cM" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Cabecera
+### Cabecera { #header }
 
 El proceso de conteo de mercancías requiere crear un conteo de inventario para comprobar o actualizar las cantidades de stock.
 
@@ -56,7 +56,7 @@ Los campos a tener en cuenta son:
     - La primera opción se utiliza para permitir al usuario introducir el conteo de cantidad "real" en el almacén y el hueco. Una vez procesado el conteo de inventario, la cantidad teórica mostrada por el sistema se actualizará a la cantidad contada introducida por el usuario.
 - **ABC:** informe de productos Pareto
 
-### Líneas
+### Líneas { #lines }
 
 La solapa Líneas permite al usuario añadir o editar productos individuales que se incluirán en la lista de conteo de inventario. Representa la lista de conteo de inventario de un almacén determinado.
 
@@ -73,7 +73,7 @@ Los botones de proceso son:
 - **Proceso de Conteo de Inventario** finaliza el proceso de conteo de Inventario físico después de que se hayan introducido todas las correcciones y actualiza el stock.
 - **Contabilizar** permite contabilizar el conteo de inventario una vez procesado.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Un inventario físico solo puede contabilizarse en el libro mayor en caso de que exista una diferencia entre "Cant.total" y "Cantidad teórica" para un producto. De lo contrario, no habrá nada que contabilizar en el libro mayor.
 
@@ -97,7 +97,7 @@ Ese inventario físico puede contabilizarse una vez procesado, si se ha calculad
 | Diferencias de almacén | (Cant.total - Cantidad teórica) \* Coste del producto |                                                             |
 | Inmovilizado del producto         |                                                             | (Cant.total - Cantidad teórica) \* Coste del producto |
 
-### Cómo reactivar inventarios físicos
+### Cómo reactivar inventarios físicos { #how-to-reactivate-physical-inventories }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
@@ -111,7 +111,7 @@ Una vez que el inventario se reactiva correctamente, el estado del documento cam
 !!! warning
     No es posible reactivar documentos que incluyan transacciones con cantidades que excedan la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando la configuración del hueco permite Over Issue. Para más información, visite [Hueco](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -122,7 +122,7 @@ Además, el Estado contable del/de los registro/s se muestra en la barra de esta
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Contabilización masiva](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Movimiento entre almacenes
+## Movimiento entre almacenes { #goods-movement }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Movimiento entre almacenes`
 
@@ -130,7 +130,7 @@ La ventana Movimiento entre almacenes permite al usuario realizar movimientos in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yW4Bv6bORk0" title="reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Cabecera
+### Cabecera { #header_1 }
 
 Los movimientos internos de inventario pueden realizarse añadiendo productos en la solapa Líneas o moviendo todos los artículos a la vez.
 
@@ -152,7 +152,7 @@ Como ya se ha mencionado, existen 2 formas de introducir líneas (o productos a 
 
 ![Cabecera](../../../../assets/drive/170LDHuomqrUcv0OHXssJuBjXJlyzg8H0.png)
 
-### Líneas
+### Líneas { #lines_1 }
 
 La solapa Líneas es una lista de los productos movidos entre almacenes y huecos.
 
@@ -171,9 +171,9 @@ Algunos campos a tener en cuenta:
 
 Una vez ejecutado el proceso **Procesar movimientos**, el stock se actualiza.
 
-### Botones
+### Botones { #buttons }
 
-#### Mover un hueco entero
+#### Mover un hueco entero { #move-a-storage-bin }
 
 Este botón le permite transferir rápidamente todos los productos ubicados en un Hueco A a otro Hueco B de destino.  
 Al hacer clic, el sistema muestra automáticamente en las líneas una lista de productos de la ubicación de origen seleccionada.  
@@ -181,7 +181,7 @@ Al procesar la transferencia, todos los productos se transfieren del origen al d
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/move-storage-bin-button-1.png)
 
-#### Generar tarea de reubicación
+#### Generar tarea de reubicación { #generate-relocation-task }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
@@ -191,13 +191,13 @@ Permite crear una tarea de reubicación desde el documento **Movimiento entre al
 !!! info
     Para más información, visite [Tarea de reubicación](../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
 
-#### Procesar movimiento
+#### Procesar movimiento { #process-movement }
 
 Este botón procesa el documento Movimiento entre almacenes. Al ejecutarlo, el sistema valida la información del movimiento y actualiza el stock en las ubicaciones correspondientes.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/process-movement-button-1.png)
 
-### Contabilidad
+### Contabilidad { #accounting_1 }
 
 !!! info
     Un Movimiento entre almacenes puede contabilizarse en el libro mayor si la tabla MaterialMgmtInternalMovement está configurada como Activa en la solapa Tablas activas de la configuración del libro mayor de la organización.
@@ -218,7 +218,7 @@ La contabilización de un _Movimiento entre almacenes_ implica tener su coste ca
 - Debe ejecutarse el proceso en segundo plano Proceso en segundo plano de cálculo de costes.
 - Una vez calculado el coste, el Movimiento entre almacenes puede contabilizarse.
 
-### Cómo reactivar movimientos entre almacenes
+### Cómo reactivar movimientos entre almacenes { #how-to-reactivate-goods-movements }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
@@ -232,7 +232,7 @@ Una vez que el movimiento se reactiva correctamente, el estado del documento cam
 !!! warning
     No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando la configuración del hueco permite la sobreemisión. Para más información, visite [Hueco](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -243,11 +243,11 @@ Además, el Estado contable del/de los registro(s) se muestra en la barra de est
 
 !!! info
     Para más información, visite [la guía de usuario del módulo de Contabilización masiva](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Producción LDM
+## Producción LDM { #bill-of-materials-production }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Producción LDM`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Cree y ejecute procesos de producción utilizando las listas de materiales definidas previamente.
 
@@ -258,11 +258,11 @@ La configuración de esta pantalla se combina con configuraciones en la pantalla
 - la casilla de verificación de lista de materiales está seleccionada para el producto
 - la pestaña de lista de materiales está cumplimentada
 
-### Cabecera
+### Cabecera { #bom-production }
 
 En esta sección se selecciona la organización, un nombre del empaquetado que se ejecutará, así como una fecha en la que tendrá lugar.
 
-### Plan de producción
+### Plan de producción { #production-plan }
 
 Añada listas de materiales a producir en un plan de producción especificado.
 
@@ -274,7 +274,7 @@ Tal y como se indica en la Visión general, el producto que se selecciona debe c
 - la pestaña de lista de materiales está cumplimentada con la información de los componentes que se combinan más la cantidad para cada componente
 - se ha hecho clic en el botón Verificar LDM para dejar el producto listo para su uso
 
-### Líneas
+### Líneas { #io-products }
 
 Cree y edite los productos que se van a utilizar en la producción.
 
@@ -289,7 +289,7 @@ En el popup, puede seleccionarse la casilla de verificación 'La cantidad del pr
 
 Existe una verificación denominada **Forzar el uso del almacén del hueco seleccionado.** Cuando está habilitada, se utilizará el mismo Almacén del Hueco seleccionado para obtener el stock que se va a consumir. Si no está habilitada, el proceso tendrá en cuenta todos los Almacenes disponibles para el establecido en la cabecera del Documento.
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_2 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -300,22 +300,22 @@ Además, el Estado contable del/de los registro/s se muestra en la barra de esta
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Operaciones de material
+## Operaciones de material { #goods-transaction }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Operaciones de material (uso indirecto)`
 
-### Visión general
+### Visión general { #overview_2 }
 
 La ventana **Operaciones de material** proporciona una vista de solo lectura con amplias capacidades de filtrado que muestra todas las transacciones de inventario.
 
 Todos los movimientos reales de almacén pueden verse en esta ventana: entradas, salidas, movimientos entre almacenes, inventarios físicos, etc.
 
 ![Operaciones de material](../../../../assets/drive/1rGnZndz2vH5AEMTbBc1xVao-TLFT1N_r.png)
-## Reserva de existencias
+## Reserva de existencias { #stock-reservation }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Reserva de existencias`
 
-### Visión general
+### Visión general { #overview_3 }
 
 En esta ventana, es posible revisar y gestionar las Reservas existentes.
 
@@ -346,7 +346,7 @@ Esta funcionalidad intenta cubrir varios flujos:
 2.  Compras
 3.  Plan de compras (MRP)
 
-### Flujo de ventas
+### Flujo de ventas { #sales-flow }
 
 Un pedido de venta puede reservarse cuando el documento está contabilizado y pendiente de entrega. La forma de realizar la reserva es:
 
@@ -361,17 +361,17 @@ Un pedido de venta puede reservarse cuando el documento está contabilizado y pe
 
 Para más información, visite [Pedido de venta](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
-### Flujo de compras
+### Flujo de compras { #procurement-flow }
 
 Las pre-reservas también pueden realizarse desde el **Pedido de compra**. Estando en la línea del pedido de compra, existe la posibilidad de seleccionar cualquier línea de pedido de venta pendiente de entrega que esté esperando recibir la mercancía en el almacén. Una vez que se reciben los artículos, la pre-reserva se convierte en reserva y las existencias quedan reservadas para esa línea de pedido de venta.
 
 Para más información, visite [Pedido de compra](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
 
-### Plan de compras (MRP)
+### Plan de compras (MRP) { #purchasing-plan-mrp }
 
 Al lanzar el plan de compras, ahora existe la posibilidad de realizar reservas para **Pedido de venta** y pre-reservas; es decir, crear pedidos de compra vinculados a pedidos de venta.
 
-### Consumo de reservas
+### Consumo de reservas { #reservation-consumption }
 
 Cuando se crea automáticamente un **Albarán (Cliente)** de un **Pedido de venta** reservado, consumirá el stock reservado. El proceso propondrá primero el posible stock asignado y, posteriormente, cualquier stock disponible basado en las reglas estándar de obtención de stock, incluyendo stock reservado pero NO asignado (incluso de otras reservas). Si el **Pedido de venta** relacionado no tiene ninguna reserva, solo se propone stock no reservado.
 
@@ -385,7 +385,7 @@ Cuando se procesa el **Albarán (Cliente)**, la reserva se actualiza para reflej
     - Si no se encuentra stock disponible, se muestra un error indicando que el stock no está disponible. El usuario debe cambiar el stock del **Albarán (Cliente)** o editar la otra reserva para buscar manualmente o liberar el stock en conflicto.
   - El stock está reservado y asignado en otra reserva. Se muestra un error indicando que el stock no está disponible. El usuario debe cambiar el stock del **Albarán (Cliente)** o editar la otra reserva para buscar manualmente o liberar el stock en conflicto.
 
-### Reserva
+### Reserva { #reservation }
 
 El producto que se desea reservar se define en la solapa principal.
 
@@ -439,7 +439,7 @@ La cantidad reservada.
 
 La cantidad que se ha liberado o entregado.
 
-### Gestionar stock
+### Gestionar stock { #manage-stock }
 
 Cuando la reserva está en estado _Borrador_ o _Completada_, es posible modificar el stock reservado mediante un proceso de _seleccionar y ejecutar_.
 
@@ -447,16 +447,16 @@ Cuando la reserva está en estado _Borrador_ o _Completada_, es posible modifica
 
 Esta ventana muestra todo el stock ya reservado, además de otro stock disponible y líneas de pedido de compra no recibidas que pueden utilizarse para satisfacer la reserva. El stock disponible se filtra por los almacenes disponibles de la organización de la reserva y por las dimensiones que puedan estar establecidas. Las líneas de pedido de compra también se filtran por estas dimensiones. Para cada línea seleccionada, debe establecerse la cantidad a reservar y si el stock está asignado o no. La cantidad debe ser inferior a la cantidad disponible, considerando también la cantidad que pueda estar reservada en otras reservas, y la suma de todas las líneas seleccionadas debe ser inferior a la cantidad que se desea reservar. Si la reserva ya tiene alguna cantidad liberada, la cantidad del stock liberado debe ser mayor o igual que la cantidad liberada.
 
-### Movimiento entre almacenes
+### Movimiento entre almacenes { #goods-movement_1 }
 
 Se permite mover un artículo que está reservado desde su hueco actual a otro. El botón _Movimiento entre almacenes_ muestra todos los huecos donde el producto está reservado, es decir, las líneas de stock, y también es posible editar la cantidad a mover y el nuevo hueco.
 
 ![Stock](../../../../assets/drive/1F6npvraIMx78-uaccl5Ibmqj8yY46wMX.png)
-## Ajuste de Valor del Inventario
+## Ajuste de Valor del Inventario { #inventory-amount-update }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Ajuste de Valor del Inventario`
 
-### Visión general
+### Visión general { #overview_4 }
 
 La ventana **Ajuste de Valor del Inventario** permite al usuario cambiar el **Valor del Inventario Actual** o el **Coste Unitario actual** de los productos en stock en una **Fecha de Referencia** determinada.
 
@@ -471,7 +471,7 @@ Siempre que se cree un ajuste de valor del inventario en el pasado, esos inventa
 
 Estas dos transacciones de inventario, inventario de apertura/cierre, pueden revisarse en la solapa **Transacción** de la ventana de producto y pueden contabilizarse en el libro mayor en la ventana **Inventario físico**.
 
-### Cabecera
+### Cabecera { #header_2 }
 
 Un **Ajuste de Valor del Inventario** puede crearse y procesarse en la sección de cabecera de la ventana **Ajuste de Valor del Inventario**.
 
@@ -485,7 +485,7 @@ Algunos campos a tener en cuenta son:
 - **Nº de documento**: es la secuencia del documento del ajuste de valor del inventario
 - **Fecha del documento**: es la fecha del ajuste de valor del inventario.
 
-### Líneas
+### Líneas { #lines_2 }
 
 Una vez que la cabecera del ajuste de valor del inventario se ha creado y guardado correctamente, pueden crearse líneas del ajuste de valor del inventario en esta solapa.
 
@@ -521,7 +521,7 @@ Una vez creado, un ajuste de valor del inventario puede procesarse usando el bot
 
 Esa acción crea una transacción de inventario de cierre y otra de apertura que pueden revisarse en la solapa **Inventarios**.
 
-### Inventarios
+### Inventarios { #inventories }
 
 Se crean un inventario de cierre y uno de apertura para cada producto cuyo coste unitario o valor de inventario haya sido modificado.
 
@@ -550,11 +550,11 @@ La contabilización del inventario de apertura crea los siguientes asientos cont
 | Cuenta                 | Debe                | Haber               |
 | _Inmovilizado del producto_         | Nuevo Valor del Inventario |                      |
 | _Diferencias de almacén_ |                      | Nuevo Valor del Inventario |
-## Ajuste de Costes
+## Ajuste de Costes { #cost-adjustment }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Ajuste de Costes`
 
-### Visión general
+### Visión general { #overview_5 }
 
 La ventana **Ajuste de Costes** permite al usuario revisar los ajustes de costes de las transacciones de producto provocados por cambios en los precios de compra, la asignación de **Landed Cost** o correcciones manuales/de coste negativo.
 
@@ -631,7 +631,7 @@ Ese cambio en el precio crea un ajuste de costes en la recepción de 2,00 = 12,0
 Ahora, este nuevo escenario implica un cambio en el coste medio a 14,00 €/unidad; este nuevo coste medio incluye un coste extra de 2,00 €/unidad.
 
 Como se ha mencionado brevemente, Etendo admite diferentes fuentes de ajustes de costes con el objetivo de cubrir distintos escenarios reales. Esos diferentes tipos de fuentes de ajustes de costes se explican en la siguiente sección.
-### Cabecera
+### Cabecera { #header_3 }
 
 Los documentos de ajuste de costes se crean automáticamente mediante el proceso **Costing Background** o el proceso **Price Correction Background**, según corresponda, en función del origen del ajuste.
 
@@ -651,7 +651,7 @@ Algunos campos relevantes a tener en cuenta son:
     - Corrección de diferencia de precio
 
 Todos ellos se explicarán en detalle en las siguientes secciones.
-### Transacción retroactiva
+### Transacción retroactiva { #backdated-transaction }
 
 El origen de este ajuste de costes es una transacción de producto (es decir, un **Albarán (Proveedor)**) que debería haberse contabilizado en una fecha anterior, pero no fue así.
 
@@ -683,7 +683,7 @@ Los ajustes de costes por transacción retroactiva se crean:
 De ambas formas, es posible introducir una fecha "Ajustar retroactivamente desde", que no debe formar parte de un período cerrado.
 
 Una vez que el proceso **Ajuste Retroactivo de Transacciones** está habilitado en la regla de coste correspondiente, los ajustes de costes por transacción retroactiva se calculan automáticamente mediante el proceso **Costing background** cuando aplique.
-### **Contabilización de ajustes retroactivos**
+### **Contabilización de ajustes retroactivos** { #backdated-adjustments-posting }
 
 Un ajuste de costes retroactivo puede contabilizarse en el libro mayor en esta ventana.
 
@@ -727,7 +727,7 @@ Tal y como se ha mencionado, el ajuste de *landed cost* no cambia el "Coste Unit
 
 - el coste unitario de cada transacción es el original (precio \* unidades)
 - y el coste total de cada transacción incluye los ajustes necesarios para obtener el coste promedio deseado del producto.
-### **Contabilización de ajustes de Landed Cost**
+### **Contabilización de ajustes de Landed Cost** { #landed-cost-adjustments-posting }
 
 Los ajustes de Landed Cost pueden contabilizarse en el libro mayor en la ventana **Landed Cost**, siempre que dichos ajustes se hayan creado para productos incluidos en una transacción de **Albarán (Proveedor)**.
 
@@ -737,7 +737,7 @@ Además, los ajustes de Landed Cost también pueden crearse para productos inclu
 
 - En este caso, la transacción de **Albarán (Cliente)** no es la fuente del ajuste, sino el **Albarán (Proveedor)**.
 - En este caso, los ajustes de Landed Cost deben contabilizarse en la ventana **Ajuste de Costes**.
-### **Corrección manual de costes**
+### **Corrección manual de costes** { #manual-cost-correction }
 
 El origen de este ajuste de costes es un cambio manual del coste de una transacción de producto específica.
 
@@ -784,7 +784,7 @@ Ajuste de la transacción **"Movimiento a"**:
 | Cuenta                                                                                          | Débito                                         | Crédito                                        |
 | [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Importe del ajuste de la transacción "Movimiento a" |                                                |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) |                                                | Importe del ajuste de la transacción "Movimiento a" |
-### **Corrección de stock negativo**
+### **Corrección de stock negativo** { #negative-stock-correction }
 
 El origen de este ajuste de costes es contabilizar una transacción, es decir, un albarán (cliente), que convierte el stock de un producto en una cantidad negativa. Este tipo de corrección solo está implementado para el cálculo de costes **"Promedio"**.
 
@@ -808,7 +808,7 @@ Hay dos acciones que debe realizar para obtener ajustes de costes de corrección
 
 - Configurar la preferencia **Permitir Correcciones de Stock Negativo** con Valor=Y en la ventana _Preferencias_
 - Planificar el **proceso de Costing Background** en la ventana _Procesamiento de Peticiones_
-### **Contabilización del Ajuste de Corrección de Stock Negativo**
+### **Contabilización del Ajuste de Corrección de Stock Negativo** { #negative-stock-correction-adjustment-posting }
 
 Este tipo de ajuste puede contabilizarse en el libro mayor en esta ventana.
 
@@ -821,7 +821,7 @@ Ese ajuste puede contabilizarse en el libro mayor. La contabilización se mostra
 | Cuenta                                                                                          | Debe              | Haber             |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) | Importe del Ajuste |                   |
 | [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                   | Importe del Ajuste |
-### **Corrección de diferencia de precio**
+### **Corrección de diferencia de precio** { #price-difference-correction }
 
 El origen de este ajuste de costes es un cambio en el precio de compra de un pedido o en el precio de compra de una factura después de recibir los bienes.
 
@@ -858,7 +858,7 @@ Adicionalmente, el Proceso en segundo plano de cálculo de costes también puede
 
 - la preferencia de propiedad "Habilitar correcciones automáticas de diferencia de precio" está establecida en "Y"
 - y el Proceso en segundo plano de cálculo de costes se ejecuta después de contabilizar el Pedido de compra, el Albarán (Proveedor) y la Factura de compra correspondientes, incluyendo la diferencia de precio.
-### **Contabilización del Ajuste de Corrección de Diferencia de Precio**
+### **Contabilización del Ajuste de Corrección de Diferencia de Precio** { #price-difference-correction-adjustment-posting }
 
 Este tipo de ajuste puede contabilizarse en el libro mayor en esta ventana.
 
@@ -882,7 +882,7 @@ Ese ajuste puede contabilizarse en el libro mayor. La contabilización se verá 
 | [_Cost of Goods Sold_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) | Importe del ajuste de Albarán (Cliente) |                                  |
 | [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      |                                  | Importe del ajuste de Albarán (Cliente) |
 
-#### **Línea**
+#### **Línea** { #line }
 
 Un documento de ajuste de costes puede tener tantas líneas de ajuste como productos incluidos en las recepciones a las que se hayan asignado costes adicionales.
 
@@ -923,7 +923,7 @@ Algunos campos relevantes a tener en cuenta son:
 - **Permitir Correcciones de Stock Negativo**: un ajuste de costes puede marcarse como corrección de stock negativo si aplica.  
   Por ejemplo, un ajuste de costes de una transacción retroactiva puede tener dos líneas: una que es la transacción retroactiva como fuente y otra que no es la fuente, pero sí una corrección de stock negativo.
 
-#### **Contabilidad**
+#### **Contabilidad** { #accounting_2 }
 
 Esta solapa proporciona información contable del **Ajuste de Costes**.
 
@@ -986,7 +986,7 @@ El coste del producto se reduce.
 | Cuenta                | Débito                 | Crédito                |
 | Inmovilizado del producto | Importe del ajuste de costes |                        |
 | Diferencias de almacén |                        | Importe del ajuste de costes |
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_3 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -997,11 +997,11 @@ Además, el Estado contable del/de los registro/s se muestra en la barra de esta
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Inventario Referenciado
+## Inventario Referenciado { #referenced-inventory }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Inventario Referenciado`
 
-### Visión general
+### Visión general { #overview_6 }
 
 En esta ventana, es posible definir los contenedores o cajas, lo cual incluye cualquier tipo de objeto que pueda contener mercancías.
 
@@ -1011,7 +1011,7 @@ El Inventario Referenciado es la funcionalidad que identifica uno o varios detal
 
 El Inventario Referenciado para Core incluye la funcionalidad más básica para Empaquetar/Desempaquetar stock.
 
-### Inventario Referenciado
+### Inventario Referenciado { #referenced-inventory_1 }
 
 Esta solapa muestra cualquier inventario referenciado, también conocido como caja, declarado en el sistema independientemente de si está vacío o tiene stock en su interior.
 
@@ -1025,7 +1025,7 @@ Es importante destacar que:
 
 Desde esta ventana es posible vincular/desvincular stock a/desde un Inventario Referenciado usando los botones Empaquetar y Desempaquetar respectivamente.
 
-### Empaquetar
+### Empaquetar { #box }
 
 Muestra un P&E con el stock aún no vinculado a ningún inventario referenciado (no es posible empaquetar un stock ya empaquetado).
 
@@ -1046,7 +1046,7 @@ Si el stock no tiene atributo, el inventario referenciado se mostrará igualment
 
 De este modo, la información sobre el inventario referenciado es claramente visible en cualquier lugar donde sea necesario, como el Informe de stock.
 
-### Desempaquetar
+### Desempaquetar { #unbox }
 
 Muestra un P&E con el stock actualmente vinculado al inventario referenciado seleccionado.
 
@@ -1057,25 +1057,25 @@ El usuario puede seleccionar uno o varios registros y especificar la cantidad a 
 !!! note
     A diferencia del proceso de empaquetado explicado anteriormente, en el desempaquetado se pueden seleccionar distintos huecos para cada registro.
 
-### Comportamiento de gestión de reservas
+### Comportamiento de gestión de reservas { #reservation-management-behavior }
 
 Al ejecutar un proceso de Empaquetar/Desempaquetar, el sistema siempre intentará trabajar primero con cantidades no reservadas. Ejemplo: si tenemos 10 unidades disponibles de un producto, de las cuales 2 están reservadas, e intentamos empaquetar/desempaquetar 1 unidad, el sistema intentará empaquetar/desempaquetar primero cualquiera de las 8 unidades no reservadas.
 
 Si el proceso de Empaquetar/Desempaquetar necesita trabajar con cantidades ya reservadas (en el ejemplo anterior, porque estamos empaquetando/desempaquetando 9 o 10 unidades), el sistema intentará reasignar al vuelo cualquier reserva o mostrará un error cuando la reasignación no sea posible. Esto último puede ocurrir, por ejemplo, porque la reserva está forzada a un hueco concreto y el proceso de Empaquetar/Desempaquetar intenta mover el stock a otro hueco.
 
-### Contenido
+### Contenido { #contents }
 
 Stock actualmente vinculado a este Inventario Referenciado.
 
 Tenga en cuenta que cualquier stock empaquetado tendrá un valor de atributos vinculado al inventario referenciado.
 
-### Transacciones Empaquetado
+### Transacciones Empaquetado { #box-transactions }
 
 Muestra cualquier transacción de empaquetado ejecutada en el pasado para este inventario referenciado.
 
 Este tipo de transacciones son en realidad Movimientos entre almacenes creados al vuelo al confirmar el empaquetado, a los cuales el usuario puede acceder en cualquier momento para ver los detalles.
 
-### Transacciones Desempaquetado
+### Transacciones Desempaquetado { #unbox-transactions }
 
 Muestra cualquier transacción de desempaquetado ejecutada en el pasado para este inventario referenciado.
 

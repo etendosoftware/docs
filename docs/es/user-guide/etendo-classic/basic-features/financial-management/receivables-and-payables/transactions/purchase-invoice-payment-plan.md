@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Plan de pago de facturas de compra
+# Plan de pago de facturas de compra { #purchase-invoice-payment-plan }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Plan de pago de facturas de compra`
 
-## Visión General
+## Visión General { #overview }
 
 La ventana Plan de pago de facturas de compra muestra todos los planes de pago de facturas de compra que no están totalmente pagados.
 
@@ -19,7 +19,7 @@ Esta ventana ofrece otra posibilidad de gestionar la misma información que se e
 
 La ventaja de esta ventana es que ofrece una vista más inmediata de todos los planes de pago de facturas de compra que aún tienen un importe pendiente de pagar.
 
-### Plan de Pago
+### Plan de Pago { #payment-plan }
 
 La información del plan de pago de la factura de compra se muestra agrupada en dos secciones.
 

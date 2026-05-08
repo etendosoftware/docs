@@ -8,16 +8,16 @@ tags:
 status: beta
 ---
 
-# Cómo imprimir informes con subinformes
+# Cómo imprimir informes con subinformes { #how-to-print-reports-with-subreports }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección se explica cómo imprimir informes que incluyen subinformes.
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 Existen tres formas posibles de imprimir informes que incluyen subinformes:
 

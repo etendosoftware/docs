@@ -12,16 +12,16 @@ tags:
 
 :material-store: Etendo Marketplace:  [Bundle de extensiones de producción](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de Gestión de producción en Etendo.
 
-## Traducción
+## Traducción { #translations }
 
 -  :material-translate: Español: [Bundle de extensiones de producción ES](https://marketplace.etendo.cloud/?#/product-details?module=0FFED1B8A5AE471AA1A672F4D7E1B1C4){target="_blank"}
 
-## Módulo
+## Módulo { #modules }
 
-### Esfuerzo de trabajo avanzado
+### Esfuerzo de trabajo avanzado { #advanced-work-effort }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.work.effort`
 
@@ -35,7 +35,7 @@ Este módulo proporciona capacidades avanzadas de gestión de documentos para lo
     - [Cómo reactivar esfuerzos de trabajo](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts)
     - [Cómo anular esfuerzos de trabajo](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-void-work-efforts)
 
-### Acciones de gestión de materiales
+### Acciones de gestión de materiales { #material-management-actions }
 
 :octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.actions`
 

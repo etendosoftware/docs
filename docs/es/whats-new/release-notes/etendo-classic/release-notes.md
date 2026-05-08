@@ -8,7 +8,7 @@ tags:
     - Etendo Core
 ---
 
-# Etendo Classic - Notas de la versión
+# Etendo Classic - Notas de la versión { #etendo-classic---release-notes }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.platform.etendo-core`
 

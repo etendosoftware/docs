@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Proceso Contable
+# Proceso Contable { #accounting-process }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Proceso Contable`
 
-## Visión general 
+## Visión general { #overview }
 
 En esta ventana, el usuario puede configurar los procesos contables necesarios.
 

@@ -7,11 +7,11 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de llamadas a API
+# Herramienta de llamadas a API { #api-call-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de llamadas a API** está diseñada para ejecutar solicitudes HTTP a APIs externas. Permite a los desarrolladores conectar sus aplicaciones con servicios externos utilizando métodos REST. La herramienta acepta parámetros de entrada como la URL de la API, el endpoint, el método HTTP, los parámetros de consulta, el contenido del cuerpo y un token de autorización opcional. Como salida, devuelve el cuerpo de la respuesta y el código de estado de la llamada a la API.
 
@@ -26,13 +26,13 @@ Esta herramienta proporciona al agente:
 
 Esta herramienta es ideal para desarrolladores que integran servicios de terceros, APIs internas o microservicios.
 
-## Configuración
+## Configuración { #setup }
 
 No se requieren variables de entorno específicas para utilizar esta herramienta. Sin embargo, si se necesita un bearer token para la autorización, puede pasarse en la entrada como el parámetro `token`.
 
 Adicionalmente, si utiliza el valor de token especial `ETENDO_TOKEN`, la herramienta obtendrá el token usando la utilidad de gestión de tokens de Etendo.
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta permite la ejecución de solicitudes REST mediante los siguientes pasos:
 
@@ -50,7 +50,7 @@ Esta herramienta permite la ejecución de solicitudes REST mediante los siguient
 
     Si se proporcionan, los parámetros de consulta se añaden al endpoint con la codificación de URL adecuada.
 
-### Uso de ETENDO_TOKEN
+### Uso de ETENDO_TOKEN { #using-etendo-token }
 
 Si establece el parámetro `token` con el valor especial `ETENDO_TOKEN`, Copilot lo sustituirá automáticamente por un token seguro recuperado del entorno de Etendo. Este enfoque garantiza que el token **no se expone al modelo de lenguaje** y permanece seguro durante la ejecución.
 
@@ -105,7 +105,7 @@ Ejemplo:
     }
     ```
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que desea enviar una solicitud POST a una API externa para crear un nuevo usuario. Los parámetros de entrada para el agente serían:
 

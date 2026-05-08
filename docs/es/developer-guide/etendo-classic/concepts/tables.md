@@ -8,17 +8,17 @@ tags:
   - Clave primaria
   - Convenciones de nomenclatura
 ---
-# Tabla
+# Tabla { #tables }
 
-## Visión general
+## Visión general { #overview }
 
 Las tablas físicas de la base de datos son la base sobre la que se construye el Modelo de Datos del Diccionario de Aplicación. Este documento analiza las particularidades que deben tener todas las tablas en Etendo ERP.
 
-## Columnas comunes
+## Columnas comunes { #common-columns }
 
 Todas las tablas en Etendo deben tener algunas columnas comunes. Todas estas columnas deben definirse como no nulas.
 
-### Clave primaria
+### Clave primaria { #primary-key }
 
 Todas las tablas en Etendo tienen una clave primaria de una sola columna. Esta columna se rellenará automáticamente con un UUID generado, por lo tanto el tipo para esta columna debe ser _VARCHAR2(32)_.
 
@@ -26,7 +26,7 @@ La columna de clave primaria debe nombrarse como su tabla con un sufijo ID. Por 
 
 Esta columna también debe establecerse como clave primaria en la base de datos; no es suficiente con definirla como ID en el Diccionario de Aplicación.
 
-### Cliente/Organización
+### Cliente/Organización { #clientorganization }
 
 Como Etendo ERP es una aplicación [multi cliente y multi organización](multi-client-and-multi-org.md), todos los datos pertenecen a un cliente y a una organización, por lo que todas las tablas deben tener estas dos columnas:  
 
@@ -35,7 +35,7 @@ Como Etendo ERP es una aplicación [multi cliente y multi organización](multi-c
 
 Estas columnas son una clave externa a las tablas *AD Client* y *AD Org*. Por lo tanto, sus tipos también deben ser *VARCHAR2(32)*, y debe existir una clave externa a estas tablas.
 
-### Información de auditoría
+### Información de auditoría { #audit-information }
 
 Por último, hay algunas columnas que almacenan información sobre si un registro está activo y cuándo y quién lo creó y lo modificó por última vez. Esta información se mantiene en las siguientes columnas:
 
@@ -45,11 +45,11 @@ Por último, hay algunas columnas que almacenan información sobre si un registr
   * _Upated_: Contiene la última fecha y hora en la que se modificó el registro (o se creó si no se realizó ninguna modificación posteriormente). Su tipo es _DATE_.
   * _UpdatedBy_: Indica el último usuario que actualizó el registro. Es una clave externa a *AD User*, por lo que su tipo es _VARCHAR2(32)_.
 
-## Convenciones de nomenclatura
+## Convenciones de nomenclatura { #naming-conventions }
 
 Al crear nuevas tablas es necesario prestar especial atención a los nombres asignados a tablas y columnas, particularmente en lo relativo a la modularidad.
 
-### Tabla
+### Tabla { #tables_1 }
 
 El único elemento a tener en cuenta es el DB Prefix del módulo. El nombre de la tabla debe comenzar con este DB Prefix seguido del carácter de subrayado (_).
 
@@ -81,9 +81,9 @@ OBUISEL  |  selector de interfaz de usuario
 OBUISC  |  Smartclient  
 FINPR  |  pedidos pendientes de entrega  
 
-### Columna
+### Columna { #columns }
 
-#### Modularidad
+#### Modularidad { #modularity }
 
 En caso de que la columna pertenezca al mismo módulo que su tabla, no debe seguirse ninguna regla especial para su nombre. Pero si la columna se va a añadir a una tabla que pertenece a un módulo diferente, el nombre de la columna debe comenzar con *EM más* el *DB Prefix* del módulo al que pertenece la columna. Por ejemplo, `EM_MYMODULEDBPREFIX_COLUMNNAME`.
 
@@ -95,18 +95,18 @@ En caso de que la columna pertenezca al mismo módulo que su tabla, no debe segu
 
 Esta restricción también se aplica a la nomenclatura de restricciones, triggers y funciones.
 
-#### Columna de clave primaria
+#### Columna de clave primaria { #primary-key-column }
 
 !!!info
     La nomenclatura de la columna de clave primaria se explica en la sección [Clave primaria](#clave-primaria) de este documento.
 
-#### Columnas de clave externa
+#### Columnas de clave externa { #foreign-key-columns }
 
 Es una buena práctica nombrar, si es posible, las columnas de clave externa de la misma manera que la columna de clave primaria de la tabla a la que enlazan. La razón de esto es que, en Oracle, los nombres de las claves externas (y del resto de las restricciones de base de datos) deben ser únicos a nivel de base de datos. Así, por ejemplo, si tenemos en nuestra tabla una columna que contiene un tercero, debería llamarse *C_BPartner_ID* porque es una clave externa a la columna *C_BPartner*.*C_BPartner_ID*. Esto no es posible cuando hay en la misma tabla más de una columna que enlaza a la misma tabla o cuando se añaden columnas en un módulo diferente al de la tabla.
 
 Seguir esta regla de nomenclatura permite definir referencias estándar como *TableDir* cuando la columna se define en el Diccionario de Aplicación.
 
-#### Nomenclatura de columnas y la Capa de Acceso a Datos
+#### Nomenclatura de columnas y la Capa de Acceso a Datos { #naming-of-columns-and-the-data-access-layer }
 
 En Etendo, se generan clases Java a partir de la definición de las tablas. Se genera una entidad DAL a partir de cada tabla definida en el Diccionario de Aplicación.
 
@@ -118,7 +118,7 @@ Es importante que tenga esto en cuenta al pensar en los nombres de sus columnas.
 !!!info
     Aquí puede encontrar una lista de las [palabras clave de Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html){target="\_blank"}.
 
-## Tipos de datos de columna soportados
+## Tipos de datos de columna soportados { #supported-column-data-types }
 
 `DBSourceManager`, la utilidad que Etendo utiliza para gestionar operaciones relacionadas con la base de datos, soporta un subconjunto de los tipos de datos que soportan las bases de datos Oracle y PostgreSQL. A continuación incluimos los tipos de datos soportados actualmente:
 

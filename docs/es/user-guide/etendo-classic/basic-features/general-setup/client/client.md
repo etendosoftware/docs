@@ -7,11 +7,11 @@ tags:
     - Configuración del correo electrónico
 ---
 
-# Entidad
+# Entidad { #client }
 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
-## Visión general
+## Visión general { #overview }
 
 Una **entidad** es una entidad independiente compuesta por al menos una organización. Una entidad puede incluir y gestionar datos maestros como Usuarios, Clientes y Proveedores. Esos datos maestros se comparten entre todas las organizaciones que pertenecen a esa entidad.
 
@@ -27,7 +27,7 @@ Las entidades se crean ejecutando el proceso [proceso de creación de entidad](.
 
 Las organizaciones se crean ejecutando el proceso de configuración inicial de la organización disponible para el rol de Administrador de la Entidad.
 
-## Entidad
+## Entidad { #client_1 }
 
 La ventana Entidad permite al usuario ver y mantener las entidades creadas al ejecutar el proceso **Crear entidad**.
 
@@ -86,7 +86,7 @@ Siempre es posible personalizar la configuración predeterminada; por ejemplo:
     - Marcar la casilla **Mostrar en líneas** para la dimensión Organización
     - y eliminar o modificar los registros vinculados a la dimensión contable Organización en la pestaña Dimensiones, ya que todos esos registros están predeterminados para no mostrar Organización en las líneas de ninguna categoría de documento.
 
-### Información
+### Información { #information }
 
 La pestaña Información permite al usuario añadir, editar y mantener información genérica de la entidad, como las unidades de medida predeterminadas e imágenes.
 
@@ -115,7 +115,7 @@ Información adicional que se permite especificar:
 
 - **Permitir stock negativo**; para ello, Etendo no comprueba el stock si no es necesario.
 
-### Configuración del correo electrónico
+### Configuración del correo electrónico { #email-configuration }
 
 La pestaña **Configuración del correo electrónico** permite configurar el servidor SMTP utilizado
 para enviar documentos por correo electrónico (p. ej., pedidos o facturas).
@@ -124,7 +124,9 @@ El correo electrónico puede configurarse en tres niveles: Entidad, Organizació
 Para la referencia completa de campos e instrucciones de configuración, consulte
 [Cómo configurar el correo electrónico](../../../how-to-guides/how-to-configure-email.md).
 
-### Dimensiones
+![Client Email Configuration](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/client/client-email-configuration.png)
+
+### Dimensiones { #dimensions }
 
 La pestaña Dimensiones permite al usuario configurar si una dimensión contable determinada va a estar disponible en la cabecera y/o en las líneas de una categoría de documento determinada.
 

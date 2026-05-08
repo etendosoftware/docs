@@ -8,12 +8,12 @@ hide:
 
 ![Banner de bienvenida a Etendo](../assets/home/index/banner.png){ width=200 align="right"}
 
-# Bienvenido a la Documentación de Etendo
+# Bienvenido a la Documentación de Etendo { #welcome-to-etendo-documentation }
 
 Etendo es una plataforma de software altamente adaptable y escalable, diseñada para empresas no minoristas. Nuestro producto combina una plataforma web con una interfaz fácil de usar y una aplicación móvil, lo que le permite gestionar su negocio de forma eficiente desde cualquier lugar.
 
 
-##  Explore la Documentación
+## Explore la Documentación { #explore-the-documentation }
 
 
 <div class="grid cards" markdown>

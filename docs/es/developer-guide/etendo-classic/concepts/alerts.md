@@ -9,10 +9,10 @@ tags:
   - user notifications
 ---
 
-# Alertas
+# Alertas { #alerts }
 
 
-##  Visión general
+## Visión general { #overview }
 
 Las alertas son la forma en que Etendo Classic puede informar a los usuarios sobre prácticamente cualquier evento
 que ocurra en el sistema (si se crea una regla de alerta adecuada). Puede ser
@@ -23,11 +23,11 @@ Estas notificaciones se muestran en la barra superior, justo al lado del menú d
 ![]( ../../../assets/developer-guide/etendo-classic/concepts/Alerts-0.png)
 
 
-##  Regla de alerta
+## Regla de alerta { #alert-rules }
 
 La definición de la _Regla de alerta_ se realiza en la ventana _Alertas_ (`General Setup` > `Application ` >`Alert`).
 
-##  Basadas en datos
+## Basadas en datos { #data-driven }
 
 El Administrador puede definir una consulta para comprobar un escenario concreto, por ejemplo: productos sin precio definido, productos por debajo del stock, clientes con el crédito excedido, etc.
 
@@ -40,7 +40,7 @@ El flujo de las alertas basadas en datos es el siguiente:
 !!!info
     Para más información, consulte [cómo crear una alerta](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-an-alert.md).
 
-###  Definición
+### Definición { #definition }
 
   * SQL: Ejemplo de la regla "Productos sin precio definido" 
 
@@ -112,7 +112,7 @@ El flujo de las alertas basadas en datos es el siguiente:
 
   * Cláusula de filtro: esta es una cláusula SQL WHERE no obligatoria que se utilizará para filtrar las alertas que se mostrarán al usuario. 
 
-###  Rendimiento
+### Rendimiento { #performance }
 
 Los comandos SQL definidos en las reglas de alerta se ejecutarán periódicamente en
 su sistema. Por lo tanto, es muy importante definirlos de forma eficiente en términos de rendimiento.
@@ -120,7 +120,7 @@ su sistema. Por lo tanto, es muy importante definirlos de forma eficiente en té
 Si no lo son, ralentizarán su sistema de forma notable.
 
 
-##  Receptor de Alerta
+## Receptor de Alerta { #alert-recipient }
 
 La solapa Receptor de Alerta gestiona la administración de los receptores de alertas. Puede
 definir el Rol que será notificado, o un usuario específico. También puede

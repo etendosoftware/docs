@@ -6,18 +6,18 @@ tags:
     - Base de datos
 ---
 
-# Rol permisos
+# Rol permisos { #role-access }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol permisos`
 
-## Visión general
+## Visión general { #overview }
 Esta ventana define el acceso a las tablas y columnas de la base de datos para los roles seleccionados.  
 Aquí, el usuario puede editar un rol para conceder o denegar el acceso necesario a las tablas y columnas.
 
-## Ventana Rol permisos
+## Ventana Rol permisos { #role-access-window }
 ![](../../../../../assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png)
 
-### Permiso tablas
+### Permiso tablas { #table-access }
 
 Es posible crear o editar el acceso a las tablas de la base de datos para un rol seleccionado. El usuario puede conceder acceso a la información necesaria seleccionando las opciones mostradas en la solapa de tablas.
 

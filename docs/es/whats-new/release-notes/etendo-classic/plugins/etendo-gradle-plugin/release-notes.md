@@ -7,7 +7,7 @@ tags:
     - Gradle
     - Plugin
 ---
-## Descripción general
+## Descripción general { #overview }
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado |
 | --- | --- | --- | --- | --- |

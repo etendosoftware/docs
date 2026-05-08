@@ -7,15 +7,15 @@ tags:
   - Depreciation
 ---
 
-# Grupo de activos
+# Grupo de activos { #asset-group }
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Asset Group`
 
-## Descripción general
+## Descripción general { #overview }
 
 Los activos pueden agruparse en diferentes categorías con el objetivo de facilitar su gestión y análisis de depreciación.
 
-## Ventana Grupo de activos
+## Ventana Grupo de activos { #asset-group-window }
 
 La ventana Grupo de activos permite al usuario crear y configurar cada categoría de activo que la organización pueda necesitar.
 
@@ -35,7 +35,7 @@ Como se muestra en la imagen anterior, la creación de una categoría de activo 
 
 La configuración de la depreciación se heredará de la categoría de activo al crear un nuevo activo desde la ventana Activos.
 
-## Solapa Contabilidad
+## Solapa Contabilidad { #accounting-tab }
 
 Cada categoría de activo permite al usuario configurar un conjunto de cuentas diferente para contabilizar la depreciación del activo.
 

@@ -3,19 +3,19 @@ title: Financial Extensions Bundle | Documentación técnica
 ---
 :octicons-package-16: Paquete Java: `com.etendoerp.financial.extensions`
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección, el usuario puede encontrar información técnica sobre el bundle Financial Extensions.
 
-## Pool bancario
+## Pool bancario { #banking-pool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.bankingpool`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Este documento cubre cómo crear un proceso que genere automáticamente un nuevo Plan financiero o actualice un Plan financiero desde la ventana Gestión financiera >> Contabilidad >> Transacciones >> Configuración de tipo financiero. También proporciona una estructura que debe considerarse al crear la clase Java responsable de ejecutar estos nuevos procesos.
 
-### Creación de la nueva clase Java
+### Creación de la nueva clase Java { #creating-the-new-java-class }
 
 La clase Java encargada de crear el plan de financiación debe extender la clase Java `FinanceTypeTemplate`. Esta proporciona algunos métodos abstractos que deben implementarse y otros métodos útiles al crear el nuevo proceso. La estructura básica que debe seguir la nueva clase Java es la siguiente:
 
@@ -84,7 +84,7 @@ La clase abstracta `FinanceTypeTemplate` tiene implementados varios métodos que
 
 Los métodos abstractos deben implementarse en la nueva clase Java y, si se requiere, se puede sobrescribir cualquiera de los métodos de la clase `FinanceTypeTemplate`.
 
-### Creación del nuevo tipo financiero
+### Creación del nuevo tipo financiero { #creating-the-new-financial-type }
 
 En la ventana Tipo financiero se crea un nuevo registro con el nuevo tipo financiero y en el campo Nombre de clase se introduce el paquete de la clase Java implementada seguido del nombre de la clase Java.
 
@@ -98,18 +98,18 @@ Con solo completar el campo Nombre de clase, serán visibles los botones Crear n
 
 No es necesario modificar ninguno de los 2 botones, ya que ejecutan automáticamente el método Exec de la clase Java especificada en el Tipo financiero.
 
-## Procesamiento avanzado de documentos financieros
+## Procesamiento avanzado de documentos financieros { #advanced-financial-docs-processing }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.advanced.financial.docs.processing`
 
 :octicons-package-16: Paquete Java: `com.etendoerp.advanced.financial.docs.processing.template`
 
-### Hooks para deshacer pedidos cerrados / rehabilitar facturas anuladas
+### Hooks para deshacer pedidos cerrados / rehabilitar facturas anuladas { #undo-closed-orders-unvoid-voided-invoices-hooks }
 
 Se han añadido nuevos hooks a los procesos "Deshacer cierre" y "Rehabilitar", desde los pedidos de venta/compra y las facturas, respectivamente.  
 Estos hooks permiten al desarrollador añadir nuevas validaciones antes y/o después de que se ejecute la acción y, de este modo, crear nuevas automatizaciones más fácilmente.
 
-### Cómo definir una instancia de UnvoidInvoiceHook
+### Cómo definir una instancia de UnvoidInvoiceHook { #how-to-define-an-unvoidinvoicehook-instance }
 - Defina la clase del hook, implementando la interfaz `UnvoidInvoiceHook`. Este hook se ejecuta cuando un usuario intenta rehabilitar una factura anulada:
 
 ```
@@ -128,7 +128,7 @@ public class UnvoidInvoiceImpl implements UnvoidInvoiceHook {
 }
 ```
 
-### Cómo definir una instancia de UndoCloseOrderHook
+### Cómo definir una instancia de UndoCloseOrderHook { #how-to-define-a-undocloseorderhook-instance }
 - Defina la clase del hook, implementando la interfaz UndoCloseOrderHook. Este hook se ejecuta cuando un usuario intenta deshacer un pedido cerrado:
 
 ```

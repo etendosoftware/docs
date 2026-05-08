@@ -8,15 +8,15 @@ tags:
     - Gestión de logs 
 ---
 
-# Cómo configurar el log
+# Cómo configurar el log { #how-to-configure-log }
 
-## Visión general
+## Visión general { #overview }
 
 El logging permite a los desarrolladores **registrar mensajes** durante la ejecución del código. Utilice estos mensajes para diagnosticar problemas del backend como errores, advertencias y cuellos de botella de rendimiento.
 
 Para aprender a utilizar el logging en su código personalizado, consulte la guía [Cómo registrar usando Log4j](how-to-log-using-log4j.md).
 
-## Configuración
+## Configuración { #configuration }
 
 El logging se configura mediante tres archivos principales de configuración, según el escenario:
 
@@ -24,7 +24,7 @@ El logging se configura mediante tres archivos principales de configuración, se
 - `config/log4j2-web.xml`: Configuración para la aplicación web ejecutándose en un contenedor como Tomcat. 
 - `src-test/src/log4j2-test.xml`: Configuración utilizada específicamente para pruebas y suites JUnit. 
 
-### Archivo
+### Archivo { #file }
 
 De forma predeterminada, la salida del log se redirige a un archivo. Esto se define mediante la etiqueta `<RollingFile>` dentro de la sección `<Appenders>`. Los valores predeterminados son:
 
@@ -45,7 +45,7 @@ Con esta configuración, el log principal se escribe en `etendo.log` dentro del 
 !!! tip
     Si está ejecutando Etendo desde la línea de comandos, `${logDir}` normalmente apunta al directorio `build/` o a la raíz del proyecto, dependiendo de la ejecución de la tarea.
 
-### Logging en consola
+### Logging en consola { #console-logging }
 
 También puede ver los logs en la consola (salida estándar) utilizando el appender `<AppenderRef ref="Console"/>`. Esto es útil para desarrollo, para evitar tener que hacer tail continuamente de un archivo.
 
@@ -65,7 +65,7 @@ También puede ver los logs en la consola (salida estándar) utilizando el appen
 </Appenders>
 ```
 
-### Verbosidad del log
+### Verbosidad del log { #log-verbosity }
 
 La verbosidad se controla mediante los niveles de log: `ALL`, `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL` y `OFF`.
 
@@ -127,7 +127,7 @@ Esto puede modificarse de dos formas:
 !!! info
     Los loggers de clases o paquetes aparecen en esta lista a medida que se ejecutan. Si falta un logger específico, ejecute la funcionalidad que lo utiliza para registrarlo en el sistema. Tenga en cuenta que reiniciar Tomcat limpia esta lista, y deberá volver a ejecutar las funcionalidades para ver los loggers de nuevo. Para depurar durante el arranque de la aplicación, configure el nivel de log directamente en `log4j2-web.xml`.
 
-## Rotación
+## Rotación { #rotation }
 
 Para evitar que los archivos de log crezcan indefinidamente, se configura la **rotación** para archivar logs antiguos.
 

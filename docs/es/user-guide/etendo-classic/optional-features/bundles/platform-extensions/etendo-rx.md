@@ -11,7 +11,7 @@ tags:
 # Etendo RX
 :octicons-package-16: Paquete Java: `com.etendoerp.etendorx`
 
-## Inicio de sesión SSO de Etendo
+## Inicio de sesión SSO de Etendo { #etendo-sso-login }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/S0bn2S7V07g?si=uK2sm_Nfn_W1RwxK" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -20,7 +20,7 @@ Etendo le permite autenticarse utilizando estas cuentas de proveedores externos:
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Platform Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Platform Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-### Configuración inicial
+### Configuración inicial { #initial-setup }
 
 Para utilizar esta funcionalidad, los desarrolladores deben seguir algunos pasos de configuración.
 
@@ -36,7 +36,7 @@ Para utilizar esta funcionalidad, los desarrolladores deben seguir algunos pasos
 
     Para detalles completos de configuración, consulte la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-rx.md#etendo-middleware-setup-recommended).
 
-### Iniciar sesión en Etendo con un proveedor externo
+### Iniciar sesión en Etendo con un proveedor externo { #logging-into-etendo-with-an-external-provider }
 
 Al acceder a la pantalla de inicio de sesión de Etendo, verá botones de los **proveedores disponibles** para autenticarse.
 
@@ -49,7 +49,7 @@ Al acceder a la pantalla de inicio de sesión de Etendo, verá botones de los **
 
     Esto significa que todavía no ha vinculado su cuenta de Etendo con su cuenta del proveedor externo.
 
-### Cómo vincular su cuenta de Etendo con una cuenta externa
+### Cómo vincular su cuenta de Etendo con una cuenta externa { #how-to-link-your-etendo-account-with-an-external-account }
 
 1. Inicie sesión en Etendo como de costumbre con su **nombre de usuario y contraseña**.  
 2. Vaya a su **perfil de usuario**, como se muestra a continuación.  
@@ -63,7 +63,7 @@ Al acceder a la pantalla de inicio de sesión de Etendo, verá botones de los **
 !!!info
     Puede vincular varios proveedores al mismo usuario.
 
-### Inicios de sesión futuros con una cuenta externa
+### Inicios de sesión futuros con una cuenta externa { #future-logins-with-an-external-account }
 
 La próxima vez que inicie sesión en Etendo:
 

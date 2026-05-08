@@ -14,7 +14,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Production Extensions Bundle](../../bundles/production-extensions/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con Production Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

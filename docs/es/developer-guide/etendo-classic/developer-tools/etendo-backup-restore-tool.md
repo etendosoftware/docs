@@ -7,11 +7,11 @@ tags:
   - Restauración
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo utilizar el plugin de copia de seguridad y restauración de Etendo en Etendo Classic. Este plugin le permite generar y restaurar copias de seguridad de Etendo de forma sencilla.
 
-## Instalar plugin
+## Instalar plugin { #install-plugin }
 
 Para utilizar la herramienta de copia de seguridad y restauración de Etendo, debe añadir el id del plugin en el archivo `build.gradle`, con la versión seleccionada.
 
@@ -44,7 +44,7 @@ pluginManagement {
 !!! warning
     Asegúrese de tener sus credenciales de Github (`githubUser` y `githubToken`) configuradas en el archivo `gradle.properties`.
 
-## Tarea de copia de seguridad
+## Tarea de copia de seguridad { #backup-task }
 
 Para ejecutar la copia de seguridad, ejecute
 
@@ -54,7 +54,7 @@ Para ejecutar la copia de seguridad, ejecute
 
 Donde el modo puede ser `manual` o `auto`. Si no se especifica el parámetro, el modo por defecto es `manual`.
 
-### Archivo de propiedades de copia de seguridad
+### Archivo de propiedades de copia de seguridad { #backup-properties-file }
 
 El archivo `backup.properties` se encuentra dentro de la carpeta `config` en la raíz del proyecto.
 Si no existe, ejecute `./gradlew setup` para generar los archivos faltantes.
@@ -89,7 +89,7 @@ Configura un indicador (`yes` o `no`) para incluir en la copia de seguridad los 
 * `ATTACH_IN_BKP`
 Configura un indicador (`yes` o `no`) para incluir en la copia de seguridad los adjuntos de origen.
 
-#### Propiedades de correo electrónico
+#### Propiedades de correo electrónico { #email-properties }
 
 Estas propiedades se utilizan cuando la copia de seguridad se ejecuta en modo `auto`.
 
@@ -140,7 +140,7 @@ Dependiendo del `STATE` final, se utilizan las siguientes propiedades para espec
     Para enviar el correo electrónico a múltiples cuentas, separe las direcciones con `;`.<br>
     Por ejemplo: `EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software`
 
-### Estados finales
+### Estados finales { #end-states }
 Los siguientes son los posibles estados al final de la tarea `backup`:
 
 !!! failure "Error" 
@@ -152,7 +152,7 @@ Los siguientes son los posibles estados al final de la tarea `backup`:
 !!! success
     La copia de seguridad finaliza sin advertencias ni errores. Si el indicador `SEND_EMAIL_ON_SUCCESS` está configurado en yes, se debe enviar un correo electrónico según las propiedades especificadas.
 
-## Tarea de restauración
+## Tarea de restauración { #restore-task }
 
 !!! warning
     El usuario que ejecute la restauración debe tener acceso `SUDO`.

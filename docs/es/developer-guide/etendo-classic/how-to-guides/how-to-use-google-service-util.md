@@ -5,15 +5,15 @@ tags:
   - Middleware
 ---
 
-# Cómo usar GoogleServiceUtil
+# Cómo usar GoogleServiceUtil { #how-to-use-google-service-util }
 
 :octicons-package-16: **Paquete**: `com.etendoerp.etendorx.utils`
 
-## Visión general
+## Visión general { #overview }
 
 `GoogleServiceUtil` es un asistente Java **sin estado** que centraliza el acceso autenticado a las APIs de [Google Sheets](https://developers.google.com/workspace/sheets/api/reference/rest){target="_blank"} y [Google Drive](https://developers.google.com/workspace/drive/api/guides/about-sdk){target="_blank"} usando un token **Bearer** de OAuth2 almacenado en `ETRXTokenInfo` y renovado a través de **Etendo Middleware**. Inyecta la cabecera `Authorization`, valida/renueva tokens y proporciona métodos de conveniencia para leer rangos/solapas en Sheets, listar archivos de Drive por tipo y crear archivos de Google Workspace.
 
-### Funcionalidades clave
+### Funcionalidades clave { #key-features }
 
 - Construir clientes autenticados de **Sheets** y **Drive**.
 - Leer rangos A1 y obtener nombres de solapas en Sheets.
@@ -27,9 +27,9 @@ tags:
     La clase es **estática y segura para la concurrencia**. Inyecta `Authorization: Bearer …` en cada solicitud.
 
 ---
-## Inicio rápido
+## Inicio rápido { #quickstart }
 
-### Requisitos previos
+### Requisitos previos { #prerequisites }
 
 !!!warning
     Para aprovechar al máximo este artículo, es útil si ya ha revisado el [flujo oAuth en Etendo ERP.](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-rx/#get-access-token)
@@ -45,7 +45,7 @@ tags:
         - Lectura/escritura: `https://www.googleapis.com/auth/drive` **o** `https://www.googleapis.com/auth/spreadsheets`
     - Opcional (listado solo de metadatos): `https://www.googleapis.com/auth/drive.metadata.readonly`
 - Propiedad **`sso.middleware.url`** configurada en **`gradle.properties`**.
-## Configuración
+## Configuración { #configuration }
 
 ```properties title="gradle.properties"
 sso.auth.type=Middleware
@@ -54,11 +54,11 @@ sso.middleware.redirectUri=http://your-domain/oauth/secureApp/LoginHandler.html
 ```
 
 ---
-## Uso
+## Uso { #usage }
 
-### Entidad
+### Entidad { #clients }
 
-#### Entidad autenticados
+#### Entidad autenticados { #authenticated-clients }
 
 - Métodos:
 
@@ -94,7 +94,7 @@ sso.middleware.redirectUri=http://your-domain/oauth/secureApp/LoginHandler.html
 
 ### Tokens
 
-#### Almacenamiento y recuperación de tokens
+#### Almacenamiento y recuperación de tokens { #token-storage-retrieval }
 
 ```java
 /**
@@ -126,7 +126,7 @@ ETRXTokenInfo getMiddlewareToken(ETRXoAuthProvider provider, String scope, User 
 
 Busca un token por `(provider / scope / user / org)` (el `scope` coincide con el **proveedor de middleware** sin distinguir mayúsculas/minúsculas), obtiene `accountId` desde `SystemInfo` (aviso si está vacío) y devuelve un token **válido** (refrescándolo si es necesario).
 
-#### Validación y actualización de tokens
+#### Validación y actualización de tokens { #token-validation-refresh }
 
 ```java
 /**
@@ -170,7 +170,7 @@ public static String refreshAccessToken(String accountId) throws OBException
 
 ### Sheets
 
-#### Leer un rango
+#### Leer un rango { #read-a-range }
 
 - Método:
 
@@ -217,7 +217,7 @@ public static String refreshAccessToken(String accountId) throws OBException
 
 - `range` en blanco/`null` → por defecto **`A1:Z1000`**.
 
-#### Actualizar celdas (RAW)
+#### Actualizar celdas (RAW) { #update-cells-raw }
 
 - Método:
 
@@ -260,7 +260,7 @@ public static String refreshAccessToken(String accountId) throws OBException
 
 - Usa `valueInputOption=RAW` para conservar los valores tal como se proporcionan.
 
-#### Leer el nombre de una pestaña por índice
+#### Leer el nombre de una pestaña por índice { #read-tab-name-by-index }
 
 - Método:
 
@@ -298,7 +298,7 @@ public static String refreshAccessToken(String accountId) throws OBException
 - Índice fuera de rango → `ETRX_WrongTabNumber` (localizado)
 - Los errores se registran; el método finalmente lanza `OBException`.
 
-#### Buscar una pestaña por nombre (sin distinguir mayúsculas/minúsculas) y leer sus filas
+#### Buscar una pestaña por nombre (sin distinguir mayúsculas/minúsculas) y leer sus filas { #find-a-tab-by-name-case-insensitive-and-read-its-rows }
 
 - Método:
 
@@ -344,7 +344,7 @@ public static String refreshAccessToken(String accountId) throws OBException
     - Si se encuentra, llama a `spreadsheets().values().get(sheetId, tabName)`.
     - Si la pestaña no tiene datos, devuelve `List.of()` y registra un **WARN**.
 
-#### Recuperar un valor de una hoja
+#### Recuperar un valor de una hoja { #retrieve-a-value-from-a-sheet }
 
 ```java
 /**
@@ -361,7 +361,7 @@ public static String getCellValue(List<Object> row, int index)
 
 ### Drive
 
-#### Listar archivos de Drive por tipo amigable (primeros 100)
+#### Listar archivos de Drive por tipo amigable (primeros 100) { #list-drive-files-by-friendly-type-first-100 }
 
 - Método:
 
@@ -418,7 +418,7 @@ public static String getCellValue(List<Object> row, int index)
     - Campos de respuesta: **`files(id,name,mimeType)`** (este método no expone `nextPageToken`).
     - Distinto de 200 → `ETRX_ErrorGettingAccessFiles` (localizado) con estado/mensaje HTTP.
 
-#### Crear un archivo de Google Workspace
+#### Crear un archivo de Google Workspace { #create-a-google-workspace-file }
 
 - Método:
 
@@ -477,9 +477,9 @@ public static String getCellValue(List<Object> row, int index)
     Solo se aceptan [**tipos MIME de Google Workspace**](https://developers.google.com/workspace/drive/api/guides/mime-types?hl=es-419) (`application/vnd.google-apps.*`).  
     Un MIME que no sea de Google (p. ej., `application/pdf`) requiere **carga de medios**, y este método lanza `OBException(ETRX_FailedToCreateFile)`.
 
-### Utilidades
+### Utilidades { #utilities }
 
-#### Extraer de forma segura el ID de archivo de Google Sheets
+#### Extraer de forma segura el ID de archivo de Google Sheets { #extract-a-google-sheets-file-id-safely }
 
 - Método:
 
@@ -506,7 +506,7 @@ public static String getCellValue(List<Object> row, int index)
 
     Admite una URL canónica como `docs.google.com/spreadsheets/d/...` (y la variante `a/<domain>/spreadsheets`) y `drive.google.com/open?id=...`.  
     Formatos no válidos → `OBException(ETRX_WrongSheetURL)`.
-## Referencia de API (superficie pública)
+## Referencia de API (superficie pública) { #api-reference-public-surface }
 
 - **Constantes (subconjunto)**
 
@@ -544,7 +544,7 @@ public static String getCellValue(List<Object> row, int index)
 
     !!!note
         Puede ver la implementación completa en el archivo del repositorio: [GoogleServiceUtil](https://github.com/etendosoftware/com.etendoerp.etendorx/blob/main/src/com/etendoerp/etendorx/utils/GoogleServiceUtil.java){target="_blank"}
-## Claves de mensajes I18N
+## Claves de mensajes I18N { #i18n-message-keys }
 
 - `ETRX_SheetHasNoTabs`
 - `ETRX_WrongTabNumber`
@@ -563,7 +563,7 @@ public static String getCellValue(List<Object> row, int index)
 !!!note
     - `getTabName` compone mensajes localizados para casos de índice fuera de rango/hoja vacía, y los errores finalmente se lanzan como `OBException`.
     - Otros métodos lanzan `OBException` o `IllegalArgumentException` localizadas, según se indica.
-## Resolución de problemas
+## Resolución de problemas { #troubleshooting }
 
 | Síntoma | Causa probable | Solución |
 | --- | --- | --- |
@@ -575,7 +575,7 @@ public static String getCellValue(List<Object> row, int index)
 | `ETRX_FailedToCreateFile` | MIME no Google o scope insuficiente | Use `application/vnd.google-apps.*` o implemente el flujo de carga de medios |
 
 ---
-## Notas de implementación
+## Notas de implementación { #implementation-notes }
 
 - **Cabecera de autenticación**: Añadida por `bearerTokenInitializer` para todas las solicitudes.
 - **Nombres de la aplicación**: `"Google Sheets Java Integration"` para `getSheetsService` / `getDriveService`; `"Etendo Google Picker Integration"` en `readSheet`.

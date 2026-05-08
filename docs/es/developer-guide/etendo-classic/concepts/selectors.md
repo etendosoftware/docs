@@ -6,9 +6,9 @@ tags:
   - Reference
 ---
 
-# Selectores
+# Selectores { #selectors }
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección se describe el proceso para definir selectores en el sistema Etendo.
 
@@ -19,7 +19,7 @@ Los selectores combinan un cuadro de sugerencias con una ventana emergente con c
   * El selector facilita enormemente mostrar información vinculada de una entidad seleccionada o buscar, ordenar y filtrar por información vinculada.
   * El cuadro de sugerencias del selector, así como el grid emergente, admiten paginación con anticipación (lookahead). Esto los hace adecuados también para conjuntos de datos grandes.
 
-## Concepto de selector
+## Concepto de selector { #selector-concept }
 
 Un selector se define dentro del Diccionario de Aplicación, como parte de la definición de una Referencia (un tipo de dominio) y se utiliza para representar referencias de clave foránea en la interfaz de usuario de Etendo.
 
@@ -29,7 +29,7 @@ Un selector consta de tres partes:
   * La cabecera del selector que define desde qué tabla seleccionar y la cláusula where a utilizar.
   * Los campos del selector que definen en qué columnas se busca y qué columnas se muestran en la ventana emergente.
 
-## Definir un selector
+## Definir un selector { #defining-a-selector }
 
 Para definir un nuevo selector, vaya a `Application Dictionary` > ventana `Reference`.
 Definir el selector es un procedimiento de tres pasos:
@@ -40,7 +40,7 @@ Definir el selector es un procedimiento de tres pasos:
 
 Esta sección le guía a través de los tres pasos.
 
-### Paso 1: Definir una referencia
+### Paso 1: Definir una referencia { #step-1-define-a-reference }
 
 La referencia se utiliza en la definición de la columna. La definición se muestra a continuación en la captura de pantalla.
 
@@ -53,7 +53,7 @@ Descripción de los campos:
   * Referencia padre **debe** establecerse a `OBUISEL_Selector_Reference`.
   * Model, WAD y Runtime UI Implementation pueden dejarse vacíos la mayor parte del tiempo.
 
-### Paso 2: Definir el selector
+### Paso 2: Definir el selector { #step-2-define-the-selector }
 
 Después de definir la referencia, puede introducirse la información del selector. Esto también se hace en la ventana de referencia. Asegúrese de que la ventana de referencia muestra la referencia que ha creado en el paso 1; a continuación, haga clic en **Selector Definido** en la parte superior derecha de la ventana y pulse el botón **nuevo**.
 
@@ -85,7 +85,7 @@ Descripción de los campos:
     * Un valor vacío (el valor por defecto) significa que los registros se ordenan por los valores del campo mostrado. Y en caso de que el campo mostrado tampoco esté definido, se utilizan las columnas identificadoras de la tabla referenciada para ordenar la información en el cuadro de sugerencias. Este valor por defecto suele ser una buena elección.
     * Inicialmente, al crear un selector, no es posible seleccionar aquí un campo ya que aún no se han definido campos de selector (véase la siguiente sección). Después de definir uno o más campos de selector, es posible elegir aquí uno de estos campos.
 
-### Paso 3: Definir campos del selector
+### Paso 3: Definir campos del selector { #step-3-defining-selector-fields }
 
 Después de definir la cabecera del selector, el siguiente paso es definir el campo del selector. Un campo del selector se utiliza para lo siguiente:
 
@@ -120,7 +120,7 @@ Descripción de los campos de Campo de Selector Definido:
     * Si ninguno de los campos del selector tiene **Mostrar en grid** marcado/establecido a sí, entonces no hay grid emergente disponible y no se muestra el icono de la lupa; el usuario solo puede seleccionar datos a través del cuadro de sugerencias.
     * Al establecer una columna como filtrable o permitir ordenar, es posible que se encuentre una disminución del rendimiento en una tabla con muchos miles de registros. Si esto ocurre, contacte con el administrador de la base de datos para optimizar la tabla añadiendo índices. Tenga en cuenta que estos nuevos índices deben exportarse a los metadatos de Etendo usando los procedimientos estándar `export.database`.
 
-### Rutas de propiedad, mostrar información vinculada
+### Rutas de propiedad, mostrar información vinculada { #property-paths-showing-linked-information }
 
 El selector tiene una funcionalidad muy potente que facilita mostrar información vinculada en el cuadro de sugerencias y en las ventanas emergentes.
 
@@ -137,7 +137,7 @@ Esto se muestra así:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Selectors-9.png)
 
-### Tabla y Fuente de datos
+### Tabla y Fuente de datos { #table-and-datasource }
 
 Un selector puede obtener su contenido de una tabla o de una Fuente de datos. Cuando en la definición del selector se define una tabla, entonces en el servidor Etendo creará una fuente de datos para esta tabla. Por tanto, internamente para Etendo no hay una diferencia real entre una tabla o una fuente de datos para el selector.
 
@@ -151,11 +151,11 @@ Una fuente de datos la implementa un desarrollador y luego se define en el Dicci
 !!!note
     Para más información sobre cómo implementar una fuente de datos, consulte su página de [Fuentes de datos](../concepts/datasources.md).
 
-### Información traducida
+### Información traducida { #translated-information }
 
 El Selector y los Campos del selector también le permiten especificar versiones traducidas de los nombres y títulos mostrados en la interfaz de usuario. Para usar nombres y títulos traducidos, vaya a las pestañas **Traducción del Selector Definido** y **Traducción de campo de selector definido**. Estas pestañas están disponibles en la parte superior de la ventana al editar un Selector o un Campo del selector.
 
-## Usar un selector
+## Usar un selector { #using-a-selector }
 
 El siguiente paso es hacer uso del selector en el modelo de datos. El selector es igual que cualquier otra Referencia en Etendo. La Referencia se utiliza en la definición de una Columna. Para usar el selector definido y establecerlo en una columna, vaya a `Application Dictionary` > `Tables and Columns`. A continuación, seleccione la tabla y la columna para la que desea establecer la referencia.
 
@@ -167,7 +167,7 @@ La columna puede utilizarse para definir un campo en la ventana de Etendo de for
 
 Después de establecer la referencia en la columna y usarla en una ventana específica, necesita reiniciar Etendo para verlo en funcionamiento.
 
-## Cambiar un selector en tiempo de ejecución
+## Cambiar un selector en tiempo de ejecución { #changing-a-selector-at-runtime }
 
 La propia definición del selector puede cambiarse en tiempo de ejecución sin recompilar el sistema. No hay límites reales sobre qué parte de la definición del selector puede cambiarse en tiempo de ejecución; una lista no exhaustiva:
 
@@ -179,7 +179,7 @@ La propia definición del selector puede cambiarse en tiempo de ejecución sin r
     Para cambiar un selector, el módulo al que pertenece debe estar en desarrollo.
     Si no, es posible que el javascript del lado cliente (que representa el selector) no se actualice automáticamente.
 
-## Definir campos de salida
+## Definir campos de salida { #defining-out-fields }
 
 Los valores de retorno habituales de un Selector son el registro **id** y el **identificador**. En algunos casos el desarrollador quiere devolver más campos y no solo estos dos. Puede marcar un Campo del selector como **Campo de salida** y formará parte del objeto devuelto en JavaScript.
 
@@ -188,11 +188,11 @@ Los valores de retorno habituales de un Selector son el registro **id** y el **i
 !!! note
     Por defecto, los campos **id** e **identifier** forman parte del objeto devuelto.
 
-### Usar campos de salida en código manual (avanzado)
+### Usar campos de salida en código manual (avanzado) { #using-out-fields-in-manual-code-advanced }
 
 Puede usar los nuevos selectores en código manual (no generado por WAD). Debe incluir todas las importaciones JS necesarias. Hay una función gancho vacía `onValueChanged` que puede sobrescribir en su ventana manual para realizar cualquier acción personalizada. Cuando el usuario selecciona una fila, esta función se ejecuta. Por defecto no hace nada.
 
-#### Ejemplo de función
+#### Ejemplo de función { #example-of-function }
 
 !!! note
     Para probar este código, debe tener un navegador con la consola habilitada, por ejemplo Firefox con Firebug.
@@ -218,7 +218,7 @@ También puede sobrescribir la función solo en una instancia concreta.
     };
 ```
 
-## Proporcionar una nueva plantilla de selector (avanzado)
+## Proporcionar una nueva plantilla de selector (avanzado) { #providing-a-new-selector-template-advanced }
 
 La definición del selector se convierte a código javascript usando una plantilla. La plantilla se selecciona en el selector (véase el paso 2 anterior). Es posible que un módulo añada una nueva plantilla que pueda utilizarse para crear selectores.
 La creación de una nueva plantilla debe realizarla un desarrollador con un buen conocimiento de Etendo.
@@ -240,13 +240,13 @@ Los principales campos a establecer:
 
 Al definir selectores, el usuario puede seleccionar la plantilla personalizada.
 
-## Personalizar el aspecto del selector
+## Personalizar el aspecto del selector { #customizing-the-look-and-feel-of-the-selector }
 
 El estilo del selector se deriva en su mayor parte automáticamente del estilo de otros componentes. Solo es necesario aplicar estilo al icono a la derecha del campo; consulte [esta página](../concepts/skins.md#selector) para más información.
 
-## Resolución de problemas
+## Resolución de problemas { #troubleshooting }
 
-### El cuadro de sugerencias no filtra
+### El cuadro de sugerencias no filtra { #the-suggestion-box-does-not-filter }
 
 **Síntoma** : Al escribir valores en el cuadro de selección, no filtra; se muestran todos los registros.
 
@@ -254,7 +254,7 @@ El estilo del selector se deriva en su mayor parte automáticamente del estilo d
 
 **Solución** : desmarque los campos **usados en el cuadro de sugerencias** para los campos booleanos/sí-no; la búsqueda en estos campos no está soportada por el selector en el cuadro de sugerencias.
 
-### El cuadro de sugerencias siempre está vacío
+### El cuadro de sugerencias siempre está vacío { #the-suggestion-box-is-always-empty }
 
 **Síntoma** : Al escribir valores en el campo de selección, el cuadro de sugerencias está vacío o muestra muchos menos resultados de los esperados; además, al seleccionar el desplegable directo se obtiene una lista vacía/más pequeña de lo esperado.
 
@@ -262,13 +262,13 @@ El estilo del selector se deriva en su mayor parte automáticamente del estilo d
 
 **Solución** : si el campo de selección de clave foránea es el único sobre el que se filtra, esto está bien; sin embargo, si hay múltiples campos de búsqueda, entonces la búsqueda sobre campos de clave foránea no obligatorios no está soportada por el selector.
 
-## Temas avanzados
+## Temas avanzados { #advanced-topics }
 
-### Transformadores HQL
+### Transformadores HQL { #hql-transformers }
 
 Es posible modificar completamente una consulta HQL mediante Java e inyección de dependencias usando transformadores. Para implementar la nueva funcionalidad, visite [Transformadores HQL](../how-to-guides/how-to-create-a-hql-based-table.md#hql-transformers).
 
-### Usar claves foráneas en consultas HQL personalizadas
+### Usar claves foráneas en consultas HQL personalizadas { #using-foreign-keys-in-hql-custom-queries }
 
 Para hacerlo, la cláusula select de HQL para esa propiedad debe apuntar a una entidad (es decir, `e.organization`, en lugar de `e.organization.name`). Luego, en la definición del campo del selector, tenemos que seleccionar una referencia de Tabla que apunte a la entidad destino.
 

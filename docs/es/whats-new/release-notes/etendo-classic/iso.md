@@ -7,7 +7,7 @@ tags:
     - ISO
 ---
 
-# Etendo  - Imagen ISO
+# Etendo  - Imagen ISO { #etendo---iso-image }
 
 :material-tools: Guía de instalación: [Guía de instalación de ISO](../../../getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
 

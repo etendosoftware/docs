@@ -11,12 +11,12 @@ status: beta
 ---
   
 
-# Cómo se calculan los precios con impuestos incluidos
+# Cómo se calculan los precios con impuestos incluidos { #how-price-including-taxes-are-calculated }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Desde la disponibilidad de la funcionalidad **Tarifas con impuestos incluidos**, han surgido algunas dudas sobre cómo se calculan los precios/importes netos y los importes de impuestos.
 
@@ -25,7 +25,7 @@ El cálculo puede dividirse en dos pasos:
 1. Calcular el **Importe neto** a partir de un **Importe bruto** dado y, a continuación, el **Rango impuesto** correspondiente.
 2. Calcular los **Impuestos** a partir del **Importe neto** recién calculado, que luego debe ajustarse para que el **Importe neto** más los **Impuestos** sea igual al **Importe bruto**. 
 
-## Cálculo del importe neto
+## Cálculo del importe neto { #net-amount-calculation }
 
 Cuando se está calculando el **Importe neto**, puede que no exista un único rango con el que trabajar, sino una relación de **diferentes rangos de impuestos**.
 
@@ -68,7 +68,7 @@ La fórmula utilizada es:
                                   gross amount + tax amount of gross amount
 ```    
 
-## Cálculo de impuestos
+## Cálculo de impuestos { #taxes-calculation }
 
 Una vez calculado el importe neto, es el momento de calcular el **importe final de impuestos** del Pedido o de la Factura.
 

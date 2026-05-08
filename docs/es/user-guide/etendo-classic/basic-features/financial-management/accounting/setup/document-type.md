@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Tipo de documento
+# Tipo de documento { #document-type }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de documento`
 
-## Visión general
+## Visión general { #overview }
 
 **Cada tipo de documento en Etendo hace referencia a una transacción empresarial** como pedidos de compra, albaranes o facturas de venta, entre otros. Etendo incluye un conjunto completo de Tipos de documento estándar necesarios para que la aplicación funcione correctamente.
 
@@ -61,9 +61,9 @@ La lista completa de tipos de documento estándar es la siguiente:
 !!! note "Importante"
     **Se podrían añadir nuevos tipos de documento a la lista anterior**. Si ese fuera el caso, Etendo proporcionará una versión actualizada de los Datos de referencia que contenga los nuevos tipos de documento en nuevas versiones. Esos Datos de referencia recién creados deberán aplicarse a la Organización correspondiente en la [Gestión del módulo de Empresa](../../../general-setup/enterprise-model/enterprise-module-management.md). También es posible **crear manualmente nuevos tipos de documento**, pero este proceso debe ser realizado por un usuario avanzado, tal y como se explica a continuación.
 
-## Guía avanzada de usuario
+## Guía avanzada de usuario { #advanced-user-guide }
 
-### Cabecera
+### Cabecera { #header }
 
 La ventana Tipo de documento permite a los usuarios avanzados configurar cómo se va a comportar cada tipo de documento en términos de contabilidad y secuenciación, entre otros.
 
@@ -150,7 +150,7 @@ Campos a tener en cuenta:
 - El campo **Tipo de Documento para Factura Simplificada** indica el tipo de documento que se utilizará cuando se genere una factura simplificada a partir de este documento de ventas.
 - **Tipo de Documento de Factura Agregada** indica el tipo de documento que se utilizará cuando se genere una factura agregada a partir de este documento de ventas.
 
-### Plantillas para Informes
+### Plantillas para Informes { #report-templates }
 
 La solapa **Plantillas para Informes** permite al usuario configurar un aspecto diferente para los **documentos imprimibles** relacionados con cada tipo de documento mediante la configuración de plantillas Jasper `.jrxml`.
 
@@ -168,7 +168,7 @@ Si es necesario, **las plantillas de informe se pueden personalizar** e incluso 
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-2.png)
 
-#### Definiciones del correo electrónico
+#### Definiciones del correo electrónico { #email-definitions }
 
 La solapa Definiciones del correo electrónico permite la creación de tantas plantillas de correo electrónico como sea necesario, dependiendo del idioma que se vaya a utilizar para enviar los documentos por correo electrónico. Los documentos pueden enviarse por correo electrónico utilizando el botón de acción **Correo electrónico**, que se puede encontrar en la barra de herramientas correspondiente.
 
@@ -196,7 +196,7 @@ Esta es la lista de etiquetas posibles:
 - `@doc_nextduedate@`: La siguiente fecha de vencimiento (si el documento tiene asociado algún plan de pagos).
 - `@doc_lastduedate@`: La última fecha de vencimiento (si el documento tiene asociado algún plan de pagos).
 
-### Traducción
+### Traducción { #translation }
 
 En esta solapa, los tipos de documento pueden traducirse a cualquier idioma requerido. Para ello, cree un nuevo registro y rellene los campos correspondientes, tal y como se muestra a continuación.
 

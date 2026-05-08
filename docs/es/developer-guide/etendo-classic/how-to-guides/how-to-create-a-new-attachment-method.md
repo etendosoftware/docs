@@ -7,21 +7,21 @@ tags:
 status: beta
 ---
 
-# Cómo crear un nuevo método de adjuntos
+# Cómo crear un nuevo método de adjuntos { #how-to-create-a-new-attachment-method }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo crear un **método de adjuntos personalizado** en Etendo para integrar sistemas externos de **CMS o ECM**. Describe cómo registrar el nuevo método de adjuntos en la aplicación, implementar la clase Java requerida extendiendo `AttachImplementation` y definir las operaciones principales para subir, descargar, actualizar y eliminar adjuntos. Este enfoque permite a Etendo gestionar archivos utilizando almacenamiento alternativo o **soluciones de gestión de contenidos** más allá del mecanismo de adjuntos por defecto.
 
-## Ventana Método de adjuntos
+## Ventana Método de adjuntos { #attachment-method-window }
 
 Como **Administrador del sistema**, el nuevo Método de adjuntos debe crearse en esa ventana. El **Identificador** se utiliza para identificar la clase Java que implementa el método.
 
-## Clase `AttachImplementation`
+## Clase `AttachImplementation` { #attachimplementation-class }
 
 La **clase** que implementa el método de adjuntos debe implementar la clase abstracta `AttachImplementation`. Esta clase define algunos métodos que deben implementarse para disponer de un método de adjuntos completamente funcional.
 

@@ -7,11 +7,11 @@ tags:
   - General Ledger
 ---
 
-# Datos de contabilidad
+# Datos de contabilidad { #accounting-transaction-details }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Datos de contabilidad`
 
-## Descripción general
+## Descripción general { #overview }
 
 La ventana de datos de contabilidad es una lista detallada de cada asiento contable de un libro mayor.
 
@@ -25,7 +25,7 @@ Etendo dispone de un sistema contable integrado que combina contabilidad financi
 
 Etendo permite al usuario contabilizar transacciones en el libro mayor solo si se especifican las dimensiones financieras y las dimensiones analíticas obligatorias, mientras que siempre existe la opción de especificar las opcionales.
 
-## Cabecera
+## Cabecera { #header }
 
 Este informe lista cada transacción contabilizada en el libro mayor mostrando cada dimensión contable especificada.
 

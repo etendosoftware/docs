@@ -7,15 +7,15 @@ tags:
   - Módulo
 ---
 
-# Cómo crear un módulo
+# Cómo crear un módulo { #how-to-create-a-module }
 
-## Visión general
+## Visión general { #overview }
 
 Etendo utiliza el concepto de modularidad. La modularidad proporciona a los desarrolladores los medios para poder desarrollar, publicar y distribuir su trabajo de una manera estructurada y controlada. Para los usuarios de Etendo Classic, la modularidad hace posible descargar, instalar y actualizar desarrollos personalizados.
 
 Esta sección describe cómo crear un módulo nuevo. Es de especial interés, ya que describe los primeros pasos que deben seguirse en todas las demás secciones de esta guía del desarrollador y, en general, en el desarrollo personalizado de Etendo Classic.
 
-## Introducción a la modularidad
+## Introducción a la modularidad { #introduction-to-modularity }
 
 Los objetivos de la modularidad son:
 
@@ -49,7 +49,7 @@ Un módulo puede distribuirse y descargarse por otros usuarios de Etendo Classic
 
 Las secciones siguientes tratan el tema principal de esta sección: crear y configurar un módulo, y [publicarlo para su distribución](how-to-publish-modules-to-github-repository.md).
 
-## Creación de un módulo
+## Creación de un módulo { #creating-a-module }
 
 El primer paso en el proceso de desarrollo es crear un módulo nuevo. En el menú Aplicación, seleccione `Application Dictionary` > `Module`.
 
@@ -103,7 +103,7 @@ Paquete de datos: las tablas se vinculan a un módulo a través del Paquete de d
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
 
 
-## Desarrolle sus artefactos de software
+## Desarrolle sus artefactos de software { #develop-your-software-artifacts }
 
 Ahora, veamos cómo desarrollar los artefactos de software necesarios para la funcionalidad del módulo. Durante el desarrollo, la relación con el módulo se mantiene de diferentes maneras:
 
@@ -113,7 +113,7 @@ Ahora, veamos cómo desarrollar los artefactos de software necesarios para la fu
 
 Cuando el desarrollo personalizado esté listo, el siguiente paso es exportar el módulo.
 
-## Exportación de un módulo
+## Exportación de un módulo { #exporting-a-module }
 
 La exportación de un módulo crea un directorio para su módulo bajo el directorio raíz de Etendo Classic y los archivos XML correspondientes para su inclusión en el módulo finalizado. Los módulos que no estén marcados como en desarrollo no se exportan.
 
@@ -147,7 +147,7 @@ Etendo Classic valida la base de datos y los artefactos del módulo cuando el m�
     Para una descripción detallada de esta tarea `export.database` y otras tareas de gradle relacionadas con módulos, consulte las [tareas de gradle de base de datos](../developer-tools/etendo-gradle-plugin.md#build-tasks)
 
 
-## Creación de un directorio de código fuente
+## Creación de un directorio de código fuente { #creating-a-source-directory }
 
 Para desarrollar código Java manual necesita un directorio _src_ dentro de su módulo específico:
 
@@ -165,13 +165,13 @@ modules
   
 El paquete Java en el directorio de código fuente debe comenzar con el paquete Java del módulo.
 
-## Publicación de un módulo
+## Publicación de un módulo { #publishing-a-module }
 
 Una vez que el módulo esté creado y documentado, el siguiente paso es publicarlo para que esté disponible.
 
 Para información detallada sobre este proceso, visite la [guía Cómo publicar módulos en un repositorio de Github](how-to-publish-modules-to-github-repository.md)
 
-## El resultado
+## El resultado { #the-result }
 
 El resultado de esta sección es un módulo configurado correctamente, que puede instalarse en una instancia de Etendo Classic que cumpla los requisitos del módulo.
 

@@ -7,9 +7,9 @@ tags:
     - Datos de referencia
 ---
 
-# Cómo rellenar automáticamente los Identificadores
+# Cómo rellenar automáticamente los Identificadores { #how-to-automatically-populate-search-keys }
   
-##  Visión general
+## Visión general { #overview }
 
 Los **Identificadores** son identificadores o códigos definidos por el usuario que permiten recuperar fácilmente **datos de referencia** como clientes, proveedores, productos, condiciones de pago, etc. Por ejemplo, al introducir una factura, el cliente podría seleccionarse abriendo la ventana del selector y buscándolo o, si usted conociera el identificador del **Cliente** que está buscando, podría introducirlo y pulsar **INTRO**; el sistema buscaría entonces el cliente correcto en base a ese identificador y sustituiría el identificador introducido por el nombre del cliente.
 
@@ -21,7 +21,7 @@ Los usuarios normalmente acaban introduciendo el mismo valor en el identificador
 
 Esta sección explica cómo configurar Etendo para rellenar automáticamente los **campos de Identificador** y ahorrar tiempo a los usuarios.
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 !!! warning 
     **Secuencia** son campos específicos y deben obedecer una convención de nomenclatura específica (la columna debe llamarse DocumentNo), por lo que una secuencia normal no era una opción en este caso.

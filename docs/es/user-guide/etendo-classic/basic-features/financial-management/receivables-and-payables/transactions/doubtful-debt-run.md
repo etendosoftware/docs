@@ -7,7 +7,7 @@ tags:
   - Receivables and Payables
 ---
 
-# Procesado del dudoso cobro
+# Procesado del dudoso cobro { #doubtful-debt-run }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Cobros y Pagos` > `Transacciones` > `Procesado del dudoso cobro`
 
@@ -39,7 +39,7 @@ Es necesario hacer clic en el botón Procesar después de seleccionar los regist
 
 Una vez creados, será posible contabilizarlos o reactivarlos a través de la ventana Dudoso cobro.
 
-## Dudoso cobro
+## Dudoso cobro { #doubtful-debt }
 
 En esta pestaña se muestran los registros seleccionados previamente. A continuación, será necesario Procesar el Dudoso cobro para que esté disponible en la ventana Dudoso cobro.
 

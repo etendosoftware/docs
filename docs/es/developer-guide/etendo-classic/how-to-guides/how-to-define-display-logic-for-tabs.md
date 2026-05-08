@@ -7,9 +7,9 @@ tags:
     - solapas
 ---
 
-# Cómo definir la Lógica para mostrar para solapas
+# Cómo definir la Lógica para mostrar para solapas { #how-to-define-display-logic-for-tabs }
 
-# Visión general
+# Visión general { #overview }
 
 El objetivo de este procedimiento es mostrar cómo puede definir la lógica para mostrar para solapas, de modo que su visibilidad dependa del valor de los campos de sus solapas ancestro, de las preferencias y de las variables del sistema. 
 
@@ -21,7 +21,7 @@ Para ello, se ha añadido un nuevo campo denominado **Lógica para mostrar** a l
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs/display-logic.png)
 
-# Cómo definir la Lógica para mostrar de la solapa
+# Cómo definir la Lógica para mostrar de la solapa { #how-to-define-the-tab-display-logic }
 
 La sintaxis de la solapa **Lógica para mostrar** es la misma que la del campo Lógica para mostrar. Se pueden introducir valores booleanos (`true`, `false`), así como expresiones que se evalúen como un valor booleano.
 

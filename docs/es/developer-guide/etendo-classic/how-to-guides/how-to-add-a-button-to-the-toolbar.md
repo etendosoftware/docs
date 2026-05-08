@@ -7,9 +7,9 @@ tags:
   - Capa de Acceso a Datos
 ---
 
-# Cómo añadir un botón a la barra de herramientas
+# Cómo añadir un botón a la barra de herramientas { #how-to-add-a-button-to-the-toolbar }
 
-##  Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo se puede añadir un botón a la barra de herramientas principal que se muestra en rejillas y formularios. La barra de herramientas contiene dos tipos de botones: los botones de la aplicación a la izquierda (visualizados mediante un icono) y los botones personalizados a la derecha (mostrados con una etiqueta). 
 
@@ -17,7 +17,7 @@ Esta sección describe cómo añadir un botón a la parte izquierda: los botones
   
 Para seguir esta sección, desarrolle JavaScript así como Java del lado del servidor y comprenda los conceptos de la [Capa de Acceso a Datos](../concepts/data-access-layer.md).
 
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra un ejemplo del código que se presenta y se comenta aquí.
 
@@ -27,7 +27,7 @@ Esta sección se apoya en un módulo de ejemplo que muestra un ejemplo del códi
     El módulo de ejemplo también contiene implementaciones de otras secciones.  
  
   
-##  Implementación de un botón de la barra de herramientas
+## Implementación de un botón de la barra de herramientas { #implementing-a-toolbar-button }
 
 !!! info
     Al implementar sus propios componentes, a menudo tiene sentido ampliar componentes existentes. Asegúrese de que su módulo dependa entonces del módulo que proporciona los tipos base. Esto garantiza que el JavaScript se cargue en el orden correcto.  
@@ -56,9 +56,9 @@ Estos pasos visualizarán el botón, pero todavía no harán nada. Los pasos pos
 
 Cada uno de estos pasos se describe con más detalle a continuación.
 
-##  Visualización del botón - Pasos de implementación
+## Visualización del botón - Pasos de implementación { #visualizing-the-button---implementation-steps }
 
-###  Definición del icono y un css
+### Definición del icono y un css { #defining-the-icon-and-a-css }
 
 El icono y su estilo relacionado se definen mediante un archivo de icono. 
 
@@ -117,7 +117,7 @@ Dentro del archivo `css` añada un estilo definido así:
     El nombre de la clase `css` es importante, debe comenzar con
     `ETToolbarIconButton_icon_`; la parte posterior (etexapp_sum) se utiliza más adelante en este tutorial. Tiene sentido usar el dbprefix del módulo en esta última parte para evitar colisiones de nombres con otros módulos.
 
-###  El JavaScript para crear y registrar el botón
+### El JavaScript para crear y registrar el botón { #the-javascript-to-create-and-register-the-button }
 
 El siguiente paso es implementar el JavaScript que define el botón y lo registra para que se muestre en las solapas. Comience creando un archivo JavaScript en esta ubicación: `web/com.etendoerp.client.application.examples/js/example-toolbar-button.js`.
 
@@ -213,7 +213,7 @@ Nota:
   * Para registrar un botón para varias solapas, llame a registerButton varias veces para distintas solapas 
 
 
-###  El ComponentProvider
+### El ComponentProvider { #the-componentprovider }
 
 Los pasos anteriores añadieron recursos estáticos (JavaScript y css) al sistema.
 
@@ -276,7 +276,7 @@ Una breve explicación:
     Para explicar cómo Etendo puede encontrar el ComponentProvider: Etendo/Weld analizará el classpath y encontrará todas las clases que tengan una anotación @ComponentProvider.
 
 
-###  El resultado
+### El resultado { #the-result }
 
 Para ver el resultado, reinicie Tomcat, borre la caché del navegador (a veces los estilos `css` no se recogen) y vuelva a la aplicación y, en concreto, a la ventana de pedido de venta. 
 
@@ -292,13 +292,13 @@ Debería ver esto:
 
   
 
-##  Añadir lógica del lado del servidor - Pasos de implementación
+## Añadir lógica del lado del servidor - Pasos de implementación { #adding-server-side-logic---implementation-steps }
 
 El siguiente paso en este procedimiento es añadir la lógica del lado del servidor y llamar a esta lógica desde el cliente. La lógica del lado del servidor se implementa usando el concepto de action handler. 
 El concepto de action handler le permite crear clases en
 el servidor que pueden ser llamadas desde el cliente. 
 
-###  Implementar el action handler del lado del servidor
+### Implementar el action handler del lado del servidor { #implement-the-server-side-action-handler }
 
 El action handler del lado del servidor (`SumOrderActionHandler.java`) recibe un array de números de pedido de los pedidos seleccionados. Sumará los importes de los pedidos y luego devolverá el total como una cadena JSON.
 
@@ -364,7 +364,7 @@ Notas:
   * la lógica itera sobre los ids de pedido y recupera el pedido usando la [Capa de Acceso a Datos](../concepts/data-access-layer.md). 
   * el resultado se devuelve de nuevo como JSON.
 
-###  Llamar al lado del servidor desde el cliente, mostrando el resultado
+### Llamar al lado del servidor desde el cliente, mostrando el resultado { #calling-the-server-side-from-the-client-displaying-the-result }
 
 A continuación, en el cliente, debe implementarse el método action del botón para llamar al servidor. Aquí está la implementación. 
 
@@ -407,7 +407,7 @@ Luego, cuando el servidor devuelve la respuesta, se llama al callback, que mostr
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
-###  El resultado
+### El resultado { #the-result_1 }
 
 El resultado muestra la suma de las 2 cabeceras de pedido seleccionadas:
 

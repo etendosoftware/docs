@@ -10,12 +10,12 @@ status: beta
 ---
 
 
-# Cómo usar un Punto de Extensión
+# Cómo usar un Punto de Extensión { #how-to-use-an-extension-point }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Los Puntos de Extensión son puntos de ejecución que se pueden establecer en cualquier **Procedimiento PL/SQL** y que pueden llamar a otros Procedimientos PL/SQL incluidos en cualquier módulo. Esto es útil para ampliar la funcionalidad de procedimientos existentes que contienen dicho punto de extensión. Por ejemplo, usando el Punto de Extensión *C_Invoice_Post - Finish Process*. Es posible que cualquier módulo añada un procedimiento PL/SQL para que se ejecute cada vez que se procese una factura. Esto se ha utilizado en el módulo Advanced Payables and Receivables para generar el calendario de pagos de la factura procesada.
 
@@ -23,7 +23,7 @@ Los Puntos de Extensión se gestionan en la ventana `Application Dictionary` > `
 
 Existe una lista completa de puntos de extensión disponibles y de los parámetros utilizados en el documento [Puntos de Extensión](../concepts/extensionpoints.md).
 
-### Procedimientos
+### Procedimientos { #procedures }
 
 Para asociar un procedimiento PL/SQL a un Punto de Extensión existente, debe crear un nuevo registro en la solapa **Procedimientos** y completar el campo **Procedimiento** con el nombre del procedimiento PL/SQL que desea que se invoque en el Punto de Extensión seleccionado.
 

@@ -8,16 +8,16 @@ tags:
 status: beta
 ---
 
-# Cómo crear un informe con iReport
+# Cómo crear un informe con iReport { #how-to-create-a-report-with-ireport }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-## Visión general
+## Visión general { #overview }
 
 El objetivo de esta sección es describir los pasos necesarios para crear un nuevo informe en Etendo. El ejemplo explicado es un informe sencillo con una lista de productos.
 
-## Configuración de iReport
+## Configuración de iReport { #setting-up-ireport }
 
 Debe descargar iReport, una herramienta gráfica que le permite crear y modificar plantillas de JasperReports (archivos .jrxml).
  
@@ -28,7 +28,7 @@ Debe descargar iReport, una herramienta gráfica que le permite crear y modifica
     ```
   - En Windows: descargue y ejecute el archivo `.exe` 
 
-### Configuración de iReport
+### Configuración de iReport { #configuring-ireport }
 
 Algunas propiedades de iReport deben modificarse para que funcione correctamente. Debe asegurarse de que:
 
@@ -36,7 +36,7 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 - **No** utilizar ninguna clase de **Scriptlet** 
 - Usar **Java** como lenguaje de expresiones predeterminado 
 
-### Configuración del Classpath
+### Configuración del Classpath { #setting-up-classpath }
 
 - Abra desde las opciones del menú: `Tools` > `Options`
 - Vaya a la pestaña **Classpath** 
@@ -46,7 +46,7 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-1.png)
 
-### Definición de una conexión a base de datos
+### Definición de una conexión a base de datos { #defining-a-database-connection }
 
 1. Haga clic en el icono de orígenes de datos del informe  ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-2.png)
 2. Haga clic en **New**
@@ -66,7 +66,7 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-3.png)
 
-## Creación de la plantilla
+## Creación de la plantilla { #creating-the-template }
 
 1. Vaya a **File** > **New**
 2. Seleccione **Report**
@@ -120,9 +120,9 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 !!! note
     Se recomienda utilizar fuentes *Dejavu* en los informes Jasper porque estas fuentes soportan la mayoría de los caracteres en casi todos los idiomas. Además, la tipografía Dejavu es la familia de fuentes que Etendo incluyó en la librería `jasperreports-fonts`.
   
-## Registro del informe en el Diccionario de Aplicación
+## Registro del informe en el Diccionario de Aplicación { #registering-the-report-in-application-dictionary }
 
-### Creación del informe
+### Creación del informe { #creating-the-report }
 
 1. Usando el quick-launch, bajo el rol de Administrador del sistema, abra la ventana **Informes y procesos** 
     - Puede encontrarla en el menú: `Application Dictionary` > `Informes y procesos` 
@@ -149,7 +149,7 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 
     ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-11.png)
 
-### Creación del registro de menú
+### Creación del registro de menú { #creating-the-menu-record }
 
 1. Usando el rol de Administrador del sistema, abra la ventana **Menú** 
 2. Cree un **nuevo registro** 
@@ -163,7 +163,7 @@ Algunas propiedades de iReport deben modificarse para que funcione correctamente
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-12.png)
 
-## Compilación
+## Compilación { #compiling }
 
 Después de haber registrado el informe y la entrada de menú en el Diccionario de Aplicación, debe compilar para generar el código necesario.
     
@@ -173,13 +173,13 @@ Después de haber registrado el informe y la entrada de menú en el Diccionario 
 
 Una vez finalizada la compilación, actualice su proyecto de Eclipse y reinicie su servidor Tomcat.
 
-## Prueba del informe
+## Prueba del informe { #testing-the-report }
 
 Si ha completado todos los pasos, debería poder abrir su informe Lista de productos desde el quick-launch o desde la entrada de menú.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-with-ireport/how-to-create-a-report-with-ireport-13.png)
 
-## Creación de un informe usando una definición de proceso
+## Creación de un informe usando una definición de proceso { #creating-a-report-using-a-process-definition }
   
 Es posible crear un informe usando una definición de proceso. Para más información, visite [Cómo crear un informe usando una definición de proceso](how-to-create-a-report-using-process-definition.md).
 

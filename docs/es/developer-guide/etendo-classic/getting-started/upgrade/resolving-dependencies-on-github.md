@@ -6,7 +6,7 @@ tags:
     - Módulos de Etendo
     - Guía de transición
 ---
-## 🔄 Migración y resolución de dependencias de bundles y módulos en GitHub
+## 🔄 Migración y resolución de dependencias de bundles y módulos en GitHub { #migrating-and-resolving-dependencies-of-bundles-and-modules-on-github }
 
 Hola, Partner de Etendo 👋. Hemos migrado los bundles y módulos desde Nexus a GitHub. Esto nos permite aprovechar la estabilidad de GitHub y tener los paquetes asociados a cada bundle y las versiones en el mismo repositorio. Aquí le proporcionamos una guía paso a paso para ayudarle a realizar la transición.
 ### 📝 Tutorial
@@ -15,7 +15,7 @@ Hola, Partner de Etendo 👋. Hemos migrado los bundles y módulos desde Nexus a
 
 ---
 
-### 📦 Bundles migrados
+### 📦 Bundles migrados { #migrated-bundles }
 
 Los siguientes bundles se han migrado a GitHub, junto con todas sus versiones. Compruebe la compatibilidad con Etendo Core; en caso de que tenga una versión antigua de Etendo, debe actualizar antes.
 Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas versiones soportadas.
@@ -36,7 +36,7 @@ Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas
 |Essential Extensions ES	|com.etendoerp.essentials.extensions.es_es		|1.0.0|23.1.4	|23.2.x	|
 |Localizacion Española		|com.etendoerp.localization.spain.extensions|1.4.0|22.4.3	|23.2.x	|
 
-### 🚀 Proceso de migración
+### 🚀 Proceso de migración { #migration-process }
  
 1. **Actualizar el archivo `settings.gradle`**: deberá actualizar su archivo `settings.gradle` para añadir el nuevo repositorio de GitHub.
 
@@ -102,7 +102,7 @@ Recomendamos migrar a Etendo 23.2.0 o superior y las dependencias a las últimas
 
 5. **Resolver nuevas dependencias**
 
-### Consideraciones
+### Consideraciones { #considerations }
 
 Una restricción que tiene GitHub es que los paquetes publicados deben tener el `javapackage` en minúsculas, por lo que tuvimos que refactorizar los módulos de traducción, que anteriormente terminaban con el sufijo "_ES". Ahora, todos los paquetes, incluidas las traducciones de bundles, tienen su artefacto en minúsculas.
 

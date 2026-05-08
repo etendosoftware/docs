@@ -7,13 +7,13 @@ tags:
     - Texto enriquecido
     - Base64
 ---
-## Cómo copiar y pegar imágenes en Etendo
+## Cómo copiar y pegar imágenes en Etendo { #copy-and-paste-images-in-etendo }
 
-### Visión general
+### Visión general { #overview }
 
 Esta sección explica cómo utilizar áreas de texto enriquecido para guardar imágenes en Etendo.
 
-### Cómo incluir imágenes con áreas de texto enriquecido
+### Cómo incluir imágenes con áreas de texto enriquecido { #how-to-include-images-with-rich-text-areas }
 
 En primer lugar, el usuario debe definir una columna en la base de datos donde se guarde la imagen correspondiente.
 

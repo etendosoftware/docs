@@ -2,7 +2,7 @@
 title: Configuración de Gestión de Producción
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe las pantallas necesarias para configurar los componentes utilizados en el proceso de producción en Etendo. Las ventanas correspondientes son:
 
@@ -31,32 +31,32 @@ Esta sección describe las pantallas necesarias para configurar los componentes 
 [:material-file-document-outline: Incidencia de Trabajo](#incidencia-de-trabajo){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Operación de Mantenimiento](#operación-de-mantenimiento){ .md-button .md-button--primary } <br>
-## Área
+## Área { #section }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Área`
 
-### Visión general
+### Visión general { #overview_1 }
 
 En esta ventana, el usuario puede editar el área de producción dividiéndola en múltiples áreas.
 
 Un área de fabricación puede dividirse en diferentes áreas para identificar cuál es la ubicación física donde se llevará a cabo un determinado proceso. Por ejemplo, la planta principal.
 
-### Área
+### Área { #section_1 }
 
 Aquí, el usuario puede crear un área de planta de producción para asignarle puestos de trabajo.
 
 ![](../../../../assets/drive/RPLgpPfChtqTHtSSZKE-p-j_Twgj_DyTnisFz2drbYBi0HUB_prEFVWw9nVDBaTr2IkghDI7f3CB3nzuZS8snebUJUGKnNaJ5GQovZccN1w12DNe1o49QYVl-UlqjkQnC4wNBAUAzJfDwGmDvaIc3X30IOfbOvr--kw_G7dgYmJRfahvxh1dwNlu2fBKMw.png)
-## Puesto Trabajo
+## Puesto Trabajo { #work-center }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Puesto Trabajo`
 
-### Visión general
+### Visión general { #overview_2 }
 
 En esta ventana, el usuario puede crear y añadir máquinas que se utilizarán en un puesto de trabajo.
 
 El puesto de trabajo es una agrupación lógica de máquinas, procesos o utillajes en un área determinada de la zona de producción.
 
-### Puesto Trabajo
+### Puesto Trabajo { #work-center_1 }
 
 Aquí, el usuario puede crear puestos de trabajo.
 
@@ -64,7 +64,7 @@ Aquí, el usuario puede crear puestos de trabajo.
 
 -   **Área**: para indicar dónde se encuentra situado el puesto de trabajo.
 
-#### **Máquina Puesto**
+#### **Máquina Puesto** { #machine-station }
 
 En esta solapa, el usuario puede añadir máquinas que se utilizarán en un puesto de trabajo seleccionado.
 
@@ -72,7 +72,7 @@ Aquí se introducen todas las máquinas relacionadas con el puesto de trabajo.
 
 ![](../../../../assets/drive/1bH2Nkpkjs2grvEa02A9sh0f9URwCciXD.png)
 
-#### **Proceso**
+#### **Proceso** { #activity }
 
 En esta solapa, el usuario puede ver el proceso relacionado con un puesto de trabajo seleccionado.
 
@@ -80,20 +80,20 @@ Aquí, todos los procesos que hacen referencia al puesto de trabajo se completan
 
 ![](../../../../assets/drive/22v5AKPwbBl1d5oJrrZ71qmt5Y3Vz4_d4IBU9MGKOa-AbT7Ag-53BAF2tLS0SbJT-fwq3qYWWi_9MfuHOZ3jZtvNIcCQ6HPydkjbnMvC7hSnb42_nz3hQX3FPSy7iIKKfh9l0i4iGVQLNDOz3A3QPycF0IGplEUnpsErwWqCHUG8T1QoJjDtcOUjXyutrQ.png)
 
-#### **Utillajes**
+#### **Utillajes** { #toolset }
 
 Aquí, el usuario puede ver los utillajes de un proceso seleccionado.
 
 Con la carga de la información del proceso en la solapa de proceso, todos los utillajes relacionados con estos procesos se completan en esta solapa.
-## Plan de Producción
+## Plan de Producción { #process-plan }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Plan de Producción`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Defina los pasos y procesos que deben completarse para un producto intermedio o terminado, teniendo en cuenta los recursos disponibles.
 
-### Plan de Producción
+### Plan de Producción { #process-plan_1 }
 
 En esta ventana, el usuario puede crear modelos de procesos de producción.
 
@@ -110,7 +110,7 @@ Un documento clave en la gestión de producción es el Plan de Producción. Cada
 -   Casilla de verificación **Incluir fases al insertar**: cuando la casilla está seleccionada, en el Requerimiento de Trabajo, al copiar la información del plan de producción, se incluyen las secuencias y los productos
 -   Botón **Copiar versión**: para copiar el contenido de otra versión del mismo plan de producción
 
-#### **Versión**
+#### **Versión** { #version }
 
 En esta solapa, el usuario puede crear planes de producción válidos para un período de tiempo especificado.
 
@@ -122,7 +122,7 @@ Cada versión tiene una fecha de inicio y una fecha de fin.
 
 El campo **Tiempo estimado** se completa con el valor de la acumulación del tiempo estimado de todas las secuencias del plan de producción. La información se actualiza por la aplicación cada vez que se introduce y guarda un tiempo estimado en una secuencia.
 
-#### **Secuencia**
+#### **Secuencia** { #operation }
 
 En esta solapa, el usuario puede añadir procesos a realizar para un plan de producción especificado.
 
@@ -155,7 +155,7 @@ Casilla de verificación **Crear estándares**: el plan de producción se utiliz
 !!! info
     El proceso Crear estándares solo se completa correctamente si hay stock suficiente para los productos utilizados (P-) de la secuencia. El stock debe estar en un almacén relacionado con la organización del Requerimiento de Trabajo.
 
-#### **Líneas**
+#### **Líneas** { #io-products }
 
 En esta solapa, el usuario puede definir productos de entrada y salida que participan en un proceso especificado.
 
@@ -200,7 +200,7 @@ Botón **Crear copia de producto**: tal como se indica en la configuración del 
 !!! info
     Cualquier cambio en el producto creado automáticamente, como la unidad de medida o el tipo de coste, puede actualizarse en la pantalla de Producto.
 
-#### **Copiar de atributo**
+#### **Copiar de atributo** { #copy-from-attribute }
 
 En esta solapa, el usuario puede definir la relación entre atributos que se van a copiar.
 
@@ -213,7 +213,7 @@ La solapa Copiar de atributo se utiliza para productos del tipo de producción P
 !!! info
     Cuando los atributos se copian a un producto diferente, el producto al que se copia el atributo debe estar configurado también con ese atributo.
 
-#### **Operarios**
+#### **Operarios** { #employee }
 
 En esta solapa, el usuario puede definir los empleados que pueden realizar un proceso especificado.
 
@@ -221,7 +221,7 @@ El proceso para generar el coste estándar (teórico) completa la información d
 
 ![](../../../../assets/drive/_TM91ctLLzY-kvMDwkeAXnsjXaTTWLmu6O6lpbdvHkVppxgcJxxTgczX8WTkoREEEM2rtbilAmnP77WAuzezDQkrZw7V94pweP9L1TFnXsc3xP6ljzT-Z6UIAAKqvh_Ga6ZrcViJNhB2SD0HE5bk2Z5WKOFqgl_YQ1epU93daoZFpzUbQTtG3CO7NaqdYA.png)
 
-#### **Máquina**
+#### **Máquina** { #machine }
 
 En esta solapa, el usuario puede definir máquinas que se utilizan para un proceso específico. En el ejemplo, no hay ninguna máquina definida.
 
@@ -229,24 +229,24 @@ El proceso para generar el coste estándar (teórico) completa la información d
 
 ![](../../../../assets/drive/5YE-jABPzRHKUP12eBMB7MbOIqTUNgzHxd2ME1FqiNLuUzfTA9vwH-4oVqSBWT-6HSlsrp-m8V0Dq8ZwlhnCbCYnXdhljrOy2h4JGGkjAD7gobebyea6R2BhH-dusTBknb5gdSKNkithzk5BETzXNA_1bKqO8TWDH-YgtLpZXaQA4ztz09WrHJlTn_xCwQ.png)
 
-#### **Costo Indirecto**
+#### **Costo Indirecto** { #indirect-cost }
 
 En esta solapa, el usuario puede definir costes indirectos relacionados con un proceso especificado.
 
 El proceso para generar el coste estándar (teórico) completa la información de costes en las solapas Operarios, Máquina y Costo Indirecto. Para más detalles, consulte la sección [Calcular costo estándar](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs). La información es necesaria para el cálculo del coste teórico del P+.
 
 ![](../../../../assets/drive/DN4ZfyHumPHB6J5C5N3CtmU6prJP2FSSwd2ppRQnHjdlP-yDPHMS439-Uz75x9_2rfEYJPxBClFSzJi0Oe6kC9pdP-Vlx1Az0paKbEJ9OrAiY7RFVgpTO1cNACgoMsHMrn_GfNMEYmxkjrnuEqcn64owZmB1ePyOd1YZ0PYEkcENwtiALXsjAoEls1z6Mw.png)
-## Proceso
+## Proceso { #activity_1 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Proceso`
 
-### Visión general
+### Visión general { #overview_4 }
 
 En esta ventana, el usuario puede definir los procesos (actividades) que se van a realizar como parte de un plan de producción y sus características.
 
 Un proceso es un determinado trabajo que se ejecuta durante el proceso de producción. Por ejemplo, en la industria de la confección, algunos ejemplos de procesos para la producción de camisas podrían ser el corte de telas, el teñido de telas, la costura de las camisas.
 
-### Proceso
+### Proceso { #activity_2 }
 
 El usuario puede crear procesos para ser utilizados en el proceso de producción.
 
@@ -254,24 +254,24 @@ Cada secuencia en el proceso de producción tiene uno o más procesos asociados.
 
 ![](../../../../assets/drive/KUuPDhaz07lXWvfhcafYZPafKqLjL5nCdUmBcmA2iURz3XESYO_lqvASNfXvNEPSCXjQFmUV-zx8cdls_cQHqJIYP95qtrWnX3wbQxCZ0t3E8RDHFdRf2WbgN1kBn1D3nTck54mg0SSDHwohv9KBVXS1dzTTS8EDWV-xQGJkA55c7liV_OhhBsZwMfV6Eg.png)
 
-#### **Utillajes**
+#### **Utillajes** { #toolset_1 }
 
 En esta solapa, el usuario puede añadir utillajes que se utilizarán para la finalización de un proceso especificado.
 
 ![](../../../../assets/drive/sNB2hJZZvIAutTbmSJVqV4dMPHIagxi4gPOd7nJg3DB0msSdRYzrwJxzbwbe_yrh81KmHur8YJn3ISvRPjrXdkjIwMBYduIhuQXAIdaC0yVgxmw8jtx-wiP7hmy3eDLjjFGw3KBcRdhafb_IORvbIc4POKa6YJUc2Tn_DAlspqu7RYAQnLE8sY8RxvkwUA.png)
 
 -   **Coef. Uso**: el número de veces que se utiliza el utillaje durante el proceso.
-## Utillajes
+## Utillajes { #toolset_2 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Utillajes`
 
-### Visión general
+### Visión general { #overview_5 }
 
 En esta solapa, el usuario puede definir herramientas y grupos de herramientas que se utilizarán en el proceso de producción.
 
 Además de las máquinas que se utilizan para la producción, también hay herramientas que se utilizan y deben configurarse. Todas las herramientas que se utilizan en producción se incluyen en la configuración del proceso.
 
-### Tipo Utillaje
+### Tipo Utillaje { #toolset-type }
 
 Aquí, el usuario puede crear tipos de utillaje para agrupar utillajes con características similares.
 
@@ -279,7 +279,7 @@ Aquí, el usuario puede crear tipos de utillaje para agrupar utillajes con carac
 
 -   **Vida útil**: número de años que se puede utilizar el utillaje
 
-#### Utillajes
+#### Utillajes { #toolset_3 }
 
 Aquí, el usuario puede definir árboles estructurales para ser utilizados en la aplicación.
 
@@ -288,23 +288,23 @@ Aquí, el usuario puede definir árboles estructurales para ser utilizados en la
 -   **Hueco**: ubicación del almacén donde se almacena el utillaje
 -   **Casilla de verificación Descartado**: indicación de que el utillaje ya no se utiliza. El campo se introduce manualmente y no genera ninguna transacción en la aplicación.
 -   **Número de usos**: cuando se introducen procesos, se introducen los utillajes asociados. Esto da como resultado un recuento automático de cuántas veces se utilizan los utillajes en producción, en función de los esfuerzos de trabajo validados.
-## Tipo de Máquina
+## Tipo de Máquina { #machine-category }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Tipo de Máquina`
 
-### Visión general
+### Visión general { #overview_6 }
 
 En esta ventana, el usuario puede crear tipos de máquina en función de las características deseadas.
 
 Una agrupación lógica de máquinas que puede utilizarse para categorizar las diferentes máquinas que se usan durante un proceso de producción.
 
-### Tipo de Máquina
+### Tipo de Máquina { #machine-category_1 }
 
 Aquí, el usuario puede definir tipos de máquina para agrupar máquinas con características similares.
 
 ![](../../../../assets/drive/rEcxGOkgMa3wUSoersWWLvaHUb_M9Wl3U1PApaqZ9GEQl5uvhfyYvavszcsnAjbrHhGH2pNkOGyWpFbwpHgaSu_UwBl1X464sCzd73qwLr_FkUtz8sqp0AyLORzp2oC1Mnsjycv287kGjSEktGZUdEhbROO9BtSDeFsXT6ashkHOVk-jrDF75Y06gPlJMg.png)
 
-#### Mantenimiento
+#### Mantenimiento { #maintenance }
 
 Aquí, el usuario puede definir categorías de mantenimiento necesarias para un tipo de máquina especificado.
 
@@ -321,7 +321,7 @@ Una vez configurada(s) la(s) operación(es) de mantenimiento, puede(n) añadirse
     -   correctivo (urgente)
 -   **tiempo planificado**: para indicar cuánto tiempo se tarda en ejecutar la operación de mantenimiento.
 
-#### **Periodicidad**
+#### **Periodicidad** { #periodicity }
 
 El usuario puede añadir intervalos de tiempo para planificar y completar un mantenimiento especificado.
 
@@ -337,17 +337,17 @@ Esta pestaña sirve para definir con qué frecuencia y durante qué turno está 
 -   **Mensual**: aparece el campo **Día del mes** para definir qué día del mes está programado el mantenimiento
 -   **Trimestral**: aparece el campo **Día de inicio** para definir cuándo está programado el primer mantenimiento
 -   **Semanal**: aparece el campo **Día de la semana** para definir qué día de la semana está programado el mantenimiento
-## Máquina
+## Máquina { #machine_1 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Máquina`
 
-### Visión general
+### Visión general { #overview_7 }
 
 En esta ventana, el usuario puede crear máquinas para utilizarlas en producción.
 
 En esta pantalla, se configuran todas las máquinas diferentes utilizadas en producción.
 
-### Máquina
+### Máquina { #machine_2 }
 
 Aquí, el usuario puede añadir máquinas para utilizarlas en procesos de producción.
 
@@ -357,7 +357,7 @@ Aquí, el usuario puede añadir máquinas para utilizarlas en procesos de produc
 -   **Año de compra**: la fecha de compra de la máquina
 -   **Vida útil**: el tiempo estimado durante el cual la máquina puede utilizarse para el proceso de producción
 
-#### **Costo**
+#### **Costo** { #cost }
 
 En esta solapa, el usuario puede establecer el costo completo de una máquina relacionada.
 
@@ -377,7 +377,7 @@ En la solapa Costo, se introduce toda la información de costos y amortización:
 -   **Tiempo inactivo/año**: número de horas en las que la máquina no está funcionando en un año, por ejemplo, porque está en mantenimiento.
 -   **Unidades de costo anuales**: campo completado en base al cálculo: (Días/año x Horas/día) - Tiempo inactivo/año.
 
-#### **Mantenimiento**
+#### **Mantenimiento** { #maintenance_1 }
 
 En esta solapa, el usuario puede definir los tipos de mantenimiento necesarios para una máquina específica.
 
@@ -391,7 +391,7 @@ En esta solapa se introduce cualquier información de mantenimiento requerida pa
     -   correctivo (urgente)
 -   **Tiempo planificado**: para indicar cuánto tiempo se tarda en ejecutar la tarea de mantenimiento.
 
-#### **Periodicidad**
+#### **Periodicidad** { #periodicity_1 }
 
 En esta solapa, el usuario puede añadir intervalos de tiempo para planificar y completar un mantenimiento especificado.
 
@@ -407,11 +407,11 @@ Esta solapa sirve para definir con qué frecuencia y durante qué turno está pr
     -   **Mensual**: aparece el campo Día del mes para definir qué día del mes está programado el mantenimiento
     -   **Trimestral**: aparece el campo Día de inicio para definir cuándo está programado el primer mantenimiento
     -   **Semanal**: aparece el campo Día de la semana para definir qué día de la semana está programado el mantenimiento
-## Centro de Costos
+## Centro de Costos { #manufacturing-cost-center }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Centro de Costos`
 
-### **Visión general**
+### **Visión general** { #overview_8 }
 
 El usuario puede crear y editar centros de costos relacionados con la producción para sumar los cargos asociados a una transacción específica.
 
@@ -423,7 +423,7 @@ Para configurar el centro de costos, primero debe configurarse la siguiente info
 -   Todas las máquinas que están relacionadas con el centro de costos
 -   Se definen todos los componentes de costo indirecto
 
-### **Centro de Costos**
+### **Centro de Costos** { #manufacturing-cost-center_1 }
 
 El usuario puede crear centros de costos para ser utilizados en procesos de producción.
 
@@ -434,7 +434,7 @@ En la solapa principal del formulario, se define el nombre del centro de costos:
 -   **Casilla de verificación Calculado**: cuando se selecciona, se completará un valor distinto de 0 en la solapa Production Run de la ventana Work Effort, en función del valor de la casilla de verificación «Por defecto». Cuando no se selecciona, el tiempo de uso del centro de costos en la solapa Production Run de la ventana Work Effort será 0.
 -   **Casilla de verificación Por defecto**: cuando se selecciona, al calcular el costo de producción, el tiempo de uso del centro de costos definido en Work Requirement se completará en la solapa Production Run de la ventana Work Effort. Cuando no se selecciona, al calcular el costo de producción, se tiene en cuenta la hora de inicio y fin del esfuerzo de trabajo para determinar el tiempo de uso del centro de costos.
 
-#### **Versión**
+#### **Versión** { #version_1 }
 
 En esta solapa, el usuario puede crear versiones del centro de costos para ser utilizadas con periodos de tiempo especificados.
 
@@ -445,7 +445,7 @@ Para el centro de costos, existe control de versiones, por lo que se pueden revi
 -   **Costo**: en base al costo de operarios, máquinas y costo indirecto, se introduce un costo para el centro de costos.
 -   **Unidad de medida de costo**: unidad de medida del costo introducido: por unidades producidas, por hora de producción, por kg (de productos producidos), porcentaje (de las unidades producidas)
 
-#### **Operarios**
+#### **Operarios** { #employee_1 }
 
 En la solapa Operarios, el usuario puede añadir operarios a una versión específica del centro de costos.
 
@@ -458,7 +458,7 @@ La información de esta solapa completa la información por defecto en la solapa
 !!! info
     La casilla de verificación de división se utiliza cuando hay múltiples líneas para operarios. Por ejemplo, si hay 5 líneas para operarios de producción con una cantidad de 1, si la casilla de verificación de división no está seleccionada, Work Effort mostrará una línea para el operario de producción con una cantidad de 5. Cuando la casilla de verificación de división está seleccionada, se muestran en Work Effort cinco líneas separadas para el operario de producción con cantidad 1 por línea.
 
-#### **Máquina**
+#### **Máquina** { #machine_3 }
 
 En la solapa Máquina, el usuario puede añadir recursos a una versión específica del centro de costos.
 
@@ -466,24 +466,24 @@ En esta solapa, se introducen todas las máquinas relacionadas con el centro de 
 
 ![](../../../../assets/drive/8djLPKLuMgD9aFBhFAqzG7oSx1EmD_TfN8cNLe_m1qb01N6eL4W6vEHeIVDl-SbHoPDUHtRQjmT3BgaBi-lTmdE3zkN_Go4JHyua2_DaLCQPDfAwCHb5-M3X-6zdYE8s2lLxmKVFLKEW7jqmVBFLxO0QIq-3_EoK8QP1yrXq81zJxScZIFnMkIJFJXUZeg.png)
 
-#### **Costo Indirecto**
+#### **Costo Indirecto** { #indirect-cost_1 }
 
 Aquí, es posible añadir costos indirectos a una versión específica del centro de costos.
 
 Cualquier costo indirecto para el centro de costos se introduce en esta solapa:
 
 ![](../../../../assets/drive/KtAOPYF3BSUihGoNd9Un4bVufHTBsyaTx3AugEPdWcwTUgTofzYBnlopAFnnMGeJMNj-fQpTtRMHQ0ni5HLSzqkd8l2C-jhiEUyyoqVvegwbKhez4ZUT_zT4bLmy-TZaVWBcQZMIBMWZx5dhr6choXCpAndJONkXcP4RPj8iWUU4IDq47_VfPhqBwcIBkQ.png)
-## Costo Indirecto
+## Costo Indirecto { #indirect-cost_2 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Costo Indirecto`
 
-### Visión general
+### Visión general { #overview_9 }
 
 En esta ventana, es posible crear y editar costos indirectos para ser utilizados en producción.
 
 Los costos indirectos son costos relacionados con los productos producidos que no están directamente relacionados con una ejecución de producción específica, pero se incluyen en el cálculo de costos de estos productos producidos. Algunos ejemplos son el costo de la electricidad, el costo del material de embalaje, el costo de marketing, etc.
 
-### Costo Indirecto
+### Costo Indirecto { #indirect-cost_3 }
 
 Aquí, el usuario puede crear un nuevo costo indirecto.
 
@@ -491,24 +491,24 @@ En la pantalla principal, se introduce el nombre del costo indirecto:
 
 ![](../../../../assets/drive/1D_53MJ6fnym8hHohasibeJStTVJvzYS3ADvUa95MnmK0PMffbdAopplXhMBdB4u3yLyEe4heRCy7fMqICbkCs4yxc2Ixxv_D3liJX0I3kPNZRAA8k8yVFjPJ1PYKgT0szrHe2jbmqKwspCVppzvdrZKjL6dJOVlVMz_PVLTGIlFFazVBtQ0A1TsK_Tkag.png)
 
-#### Costo
+#### Costo { #value }
 
 Aquí, el usuario puede crear y editar valores para este costo indirecto.
 
 En esta solapa, el costo indirecto para un determinado período de tiempo se introduce en el campo Total. Dado que la unidad de medida de costo es por unidades producidas, el costo se calcula al hacer clic en el botón Calcular costo indirecto, dividiendo el costo total entre el número de unidades en todos los esfuerzos de trabajo dentro del período de tiempo definido.
 
 ![](../../../../assets/drive/3ZvwogqECAmP8Ybk5L7gowmaSD-jUsYYxA9Nhs96BO2hQkDDGtoMBKwc_OnUeO06o3wQtRgZRef19H_fgePUvPmluD_u3pC1SXSj8FnTZUJMd03-mn3AJgel0G2u4LNWX8OJx6aJpSZeLVId224jUsoT5C9ig5rJAfUXdWEnOOoj2dw4FtLCAaHtYLrwAg.png)
-## Control Periódico
+## Control Periódico { #periodic-quality-control }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Control Periódico`
 
-### Visión general
+### Visión general { #overview_10 }
 
 En esta ventana, es posible definir puntos de control que se utilizarán para el control de calidad de un producto producido.
 
 El Control Periódico se configura para garantizar la calidad del producto final del proceso de producción. Por ejemplo, una comprobación para ver si el tamaño es correcto, el color es correcto o si todas las especificaciones del producto son correctas.
 
-### Control Periódico
+### Control Periódico { #periodic-quality-control_1 }
 
 Aquí, el usuario puede crear puntos de control que se utilizarán para el control de calidad de los productos producidos.
 
@@ -516,18 +516,18 @@ Otro ejemplo es comprobar si, para un producto, la etiqueta está en el idioma c
 
 ![](../../../../assets/drive/So4hmpqJcMDYp6sS7anMaZZQT36Tbx3IO5xDusq6biLJmR4RiLtWoq1iNbJn6ulou-DszbIHV3F8JWPQWlWHFz2Gs7XejPWw2YRzrIfSDMcSqH7aqBNzczm51EXr4gBSxPJy1BL8VwdHrUZ12zeR8wHxWGnvjRHCT1Kuoa33EKE3TdRm0bZm_R03Vwynhw.png)
 
-#### **Puntos**
+#### **Puntos** { #check-point }
 
 Aquí, el usuario puede añadir pruebas de calidad que se realizarán para un punto de control especificado.
 
 ![](../../../../assets/drive/zy0c871WIFJMLRXf0N8yriKdT1jxzUzll4l0UB8xSJTiYqRpKAfw06Gn4dD1VAmhyl2daZC-4G6pHZq_YIL-3uBl_YBUYeuJNC_vP8ZBD8acLtp8nwY50QsWPEvRerdHuxX1qULDbHobtLdOvoGjsPwbXbtMNUresOtv5143pINqITQNMHyMvDSrhvUuoA.png)
 
 -   **Periodo de espera**: tiempo (en días) que tardará la ejecución del control de calidad.
-## Punto de Control Crítico
+## Punto de Control Crítico { #quality-control-point }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Punto de Control Crítico`
 
-### Visión general
+### Visión general { #overview_11 }
 
 En esta ventana, es posible definir puntos de control de calidad que se utilizarán para comprobar la calidad del producto en cualquier punto del proceso de producción.
 
@@ -535,7 +535,7 @@ El Punto de Control Crítico es un punto o etapa de la fabricación en el que es
 
 Por ejemplo, comprobar la temperatura del aceite cada tres horas. Es posible establecer la frecuencia y listar las tareas requeridas y el personal responsable.
 
-### Grupos
+### Grupos { #check-point-set }
 
 Aquí, es posible crear grupos de puntos de control y definir las frecuencias de las pruebas.
 
@@ -543,7 +543,7 @@ Aquí, es posible crear grupos de puntos de control y definir las frecuencias de
 
 -   **Frecuencia**: el número de horas entre comprobaciones.
 
-#### **Puntos**
+#### **Puntos** { #check-point_1 }
 
 Aquí, es posible crear puntos de control para un grupo relacionado.
 
@@ -554,7 +554,7 @@ Aquí, es posible crear puntos de control para un grupo relacionado.
 -   **Costo**: el tipo de valor del resultado de la comprobación que se ejecuta.
 -   **Casilla Crítico**: campo solo informativo para indicar que una comprobación es crítica.
 
-#### **Turno**
+#### **Turno** { #shift }
 
 En esta solapa, el usuario puede definir los turnos en los que se realizarán las pruebas para un grupo relacionado.
 
@@ -564,11 +564,11 @@ La información de esta solapa se utiliza para la cumplimentación automática d
     La fecha de inicio en esta configuración se utiliza para la cumplimentación automática de la información de hora del Informe de Control de Calidad.
 
 ![](../../../../assets/drive/ewW9UA2U6qRvc28DBVo6wXaEzOFf6YrrXFawd_yTdFOCGxxeEb9TFeSFWoI6hiuoE3CYvRCYye4pzrh_PxzwlI2zOUNyAKLLatz8Lpm8wzuZZY70A-xvVfakn1dvBMh_hGmkCNGEP8vw70svo76qrT8T4H-R4xQjjbCIKbBpmaDuJeuIXZr0eDfMIUmgjg.png)
-## Incidencia de Trabajo
+## Incidencia de Trabajo { #work-incidence }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Incidencia de Trabajo`
 
-### Visión general
+### Visión general { #overview_12 }
 
 En esta ventana, es posible definir tipos de incidencias de trabajo que pueden ocurrir durante la producción.
 
@@ -578,18 +578,18 @@ Las incidencias de trabajo estándar se configuran para su posterior referencia 
     Si el mantenimiento de la máquina se gestiona en un sistema externo, vaya a la ventana [Consumo interno](transactions.md#internal-consumption) para mantener actualizado el stock de repuestos en Etendo, incluso cuando se utilice otro software.  
 
  
-### Incidencia de Trabajo
+### Incidencia de Trabajo { #work-incidence_1 }
 
 Aquí, el usuario puede crear tipos de incidencias de trabajo que pueden ocurrir durante la producción.
 
 ![](../../../../assets/drive/QQIXXAkFW0bSMp00E9wNhrLHJARz1U1uu3MrPmufZsjvDezpjwZHkSJmgbIfK8V1v94uCWmI3n8ob3flxjdYkZgGjATgKA0s5zDoKtlbYZNLFYgvRRBEz3_nYShqqSk61Ho8fRJSMN9uG-m4s2HF07_Li6v6OJ5FzoV0_r6AlLtDdZQYb6WnTVfolQrrrg.png)
 
 -   **Tiempo Standard**: el tiempo total de inactividad de la incidencia de trabajo. Esta información no se tiene en cuenta para ningún cálculo de costes, por lo que corresponde al usuario decidir la unidad de medida del campo (segundos, minutos, horas, etc.)
-## Operación de Mantenimiento
+## Operación de Mantenimiento { #maintenance-task }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Operación de Mantenimiento`
 
-### Visión general
+### Visión general { #overview_13 }
 
 En esta ventana, es posible definir una operación de mantenimiento programada para completarse durante el proceso de producción.
 
@@ -606,7 +606,7 @@ El proceso de mantenimiento es el siguiente:
 -   Si aplica, todos los consumos de productos utilizados durante la ejecución de la operación de mantenimiento se introducen en la pantalla de Consumo interno.
 -   La ejecución de las operaciones de mantenimiento se registra en la pantalla de Orden de Mantenimiento. Una vez añadida en esta pantalla, la operación de mantenimiento deja de aparecer en el Plan de Mantenimiento.
 
-### Operación de Mantenimiento
+### Operación de Mantenimiento { #maintenance-task_1 }
 
 Aquí, el usuario puede definir operaciones de mantenimiento generales para utilizarse en producción.
 

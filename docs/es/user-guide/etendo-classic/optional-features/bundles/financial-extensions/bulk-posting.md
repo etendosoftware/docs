@@ -5,10 +5,10 @@ tags:
 - Financiero
 ---
 
-# Contabilización masiva
+# Contabilización masiva { #bulk-posting }
 :octicons-package-16: Paquete Java: `com.etendoerp.bulk.posting` 
 
-## Visión general
+## Visión general { #overview }
 Esta sección describe el módulo de Contabilización masiva incluido en el bundle Financial Extensions de Etendo.
 
 !!! info
@@ -21,7 +21,7 @@ La funcionalidad de Contabilización masiva permite al usuario contabilizar o de
 
 ![](../../../../../assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 
-## Ventanas disponibles
+## Ventanas disponibles { #available-windows }
 
 Esta funcionalidad está disponible en las siguientes ventanas:
 
@@ -47,15 +47,15 @@ Esta funcionalidad está disponible en las siguientes ventanas:
 - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
 - [Inventario físico](../../../basic-features/warehouse-management/transactions.md#bulk-posting)
 
-### Columna Estado contable
+### Columna Estado contable { #accounting-status-column }
 
 Todos los registros existentes previamente a la instalación de esta nueva funcionalidad tienen un valor por defecto **pending refresh** en la columna **Estado contable**. Para establecer el valor correcto para esta columna, es necesario configurar la siguiente preferencia para indicar la cantidad de días que debe considerar el proceso para establecer los valores correctos de los registros anteriores.
 
-#### Configuración de preferencias
+#### Configuración de preferencias { #preference-configuration }
 
 Para configurar la preferencia, vaya a la ventana **Preferencias** y cree un nuevo registro con la propiedad **Amount of Days** y el valor por defecto **90**. Si fuera necesario, es posible crear otra preferencia introduciendo un nuevo valor y marcando la casilla **Seleccionado**.
 
-#### Proceso en segundo plano
+#### Proceso en segundo plano { #background-process }
 
 Es necesario ejecutar el proceso en segundo plano **Days Back to Refresh Accounting** para actualizar la columna de estado contable.
 

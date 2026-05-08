@@ -8,7 +8,7 @@ tags:
     - Inventory Analysis
 ---
 
-# Informe Stock
+# Informe Stock { #stock-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Stock`
 
@@ -27,6 +27,13 @@ Los campos **Estantería (x)**, **Columna (y)**, **Altura (z)** corresponden a *
 ## Sample Report Output
 
 ![Salida de ejemplo del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png)
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Transacción de Material](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Pareto de Productos](pareto-product-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

@@ -7,9 +7,9 @@ tags:
  - Crear facturas de gastos AP
 
 ---
-# Transacciones de Proyectos y Servicios
+# Transacciones de Proyectos y Servicios { #project-and-service-transactions }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe las diferentes ventanas que se utilizan para las transacciones incluidas en el proceso de Gestión de Proyectos y Servicios en Etendo. Estas son:
 
@@ -21,11 +21,11 @@ Esta sección describe las diferentes ventanas que se utilizan para las transacc
 
 [:material-file-document-outline: Crear facturas de gastos AP](#crear-facturas-de-gastos-ap){ .md-button .md-button--primary } <br>
 
-## Proyecto multifase 
+## Proyecto multifase { #multiphase-project }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Transacciones` > `Proyecto multifase`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Esta ventana se utiliza para gestionar un proyecto, sus fases y tareas relacionadas, y para completar las facturas de venta relacionadas. Para los proyectos se monitorizan los siguientes aspectos:
 
@@ -35,7 +35,7 @@ Esta ventana se utiliza para gestionar un proyecto, sus fases y tareas relaciona
 !!! important
     Desde la ventana de proyecto multifase, se generan pedidos de venta en estado borrador al final de cada fase completada. Esto se realiza con el botón [**Generar pedido de venta de la fase**](../project-and-service-management/transactions.md#process-button) a nivel de la solapa Fase del proyecto.
 
-### Cabecera
+### Cabecera { #header }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/multiphase-project.png)
 
@@ -79,7 +79,7 @@ En la sección Más información:
 - Moneda: moneda relacionada con el tercero.
 - Almacén: almacén utilizado para enviar al tercero.
 
-#### Botones de proceso
+#### Botones de proceso { #process-buttons }
 
 - Establecer el tipo de proyecto: para seleccionar un tipo de proyecto con el fin de copiar las fases y tareas de ese tipo de proyecto al proyecto multifase. En base a las duraciones de las fases y tareas en el tipo de proyecto, se sobrescriben la fecha de inicio y la fecha de fin en el proyecto multifase.
 - Cambiar estado del proyecto: para cambiar el estado del proyecto. Los estados del proyecto multifase son:
@@ -90,7 +90,7 @@ En la sección Más información:
         Para utilizar este botón, deben completarse los campos Tercero y Representante de ventas de la cabecera.
 - Copiar detalles: se copia la información de fase(s) del proyecto y tarea(s) del proyecto desde otro proyecto multifase.
 
-### Solapa Fase del proyecto
+### Solapa Fase del proyecto { #project-phase-tab }
 
 En esta solapa se pueden definir las fases individuales del proyecto.
 
@@ -125,14 +125,14 @@ En la sección Más información:
 - Fase estándar: fase del proyecto con información de rendimiento estándar con trabajo estándar.
 - Pedido de venta: identificador único y una referencia a un Pedido de venta originado a partir de la secuencia de documentos definida para este tipo de documento.
 
-#### Botón de proceso
+#### Botón de proceso { #process-button }
 
 - Generar pedido de venta de la fase: para crear un pedido de venta al completar una fase. A partir del pedido de venta, se crea una factura de venta para documentar que el cliente debe pagar por el trabajo ejecutado en el proyecto.
 
     !!!info
         El pedido de venta creado incluye todas las líneas de la fase y sus tareas relacionadas.
 
-### Subsolapa Tarea del proyecto
+### Subsolapa Tarea del proyecto { #project-task-subtab }
 
 En esta subsolapa se definen las tareas individuales necesarias para completar la fase del proyecto.
 
@@ -166,11 +166,11 @@ En la sección Más información:
 - Importe del contrato: el importe comprometido es independiente del importe planificado. Usted utilizaría el importe planificado para su estimación realista, que puede ser mayor o menor que el importe comprometido.
 - Descripción: una descripción está limitada a 255 caracteres.
 
-## Informe de gasto
+## Informe de gasto { #expense-sheet }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Transacciones` > `Informe de gasto`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Un Informe de gasto se utiliza para registrar partes de horas y gastos de artículos.
 
@@ -180,7 +180,7 @@ Para los gastos de artículos, se documenta el coste que los operarios han reali
 
 Tanto para partes de horas como para gastos de artículos, se puede indicar si al cliente relacionado con el proyecto se le facturan estos costes. El seguimiento de esto es que se crea un [Pedido de venta](../sales-management/transactions.md#sales-order) para crear una [Factura (Cliente)](../sales-management/transactions.md#sales-invoice).
 
-### Cabecera
+### Cabecera { #header_1 }
 
 En esta ventana, el usuario puede crear y procesar un informe de gasto.
 
@@ -199,7 +199,7 @@ Los campos de esta solapa son:
 
  ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/user.png)
 
-### Solapa Líneas
+### Solapa Líneas { #lines-tab }
 
 En esta solapa, el usuario puede añadir líneas de partes de horas y de gastos regulares al informe. Cada gasto se añade a una línea individual y puede o no facturarse a clientes.
 
@@ -223,11 +223,11 @@ Los campos a tener en cuenta en esta solapa son:
 - Fase del proyecto: fase del proyecto a la que se relaciona el gasto.
 - Tarea del proyecto: tarea del proyecto a la que se relaciona el gasto.
 
-### Botón de proceso
+### Botón de proceso { #process-button_1 }
 
 - Procesar/Desprocesar gastos: una vez introducida la información correspondiente del informe, puede procesar el gasto. Si el documento está procesado, es posible seleccionarlo y desprocesarlo para editarlo si es necesario.
 
-## Crear pedidos de venta según gastos
+## Crear pedidos de venta según gastos { #create-sales-orders-from-expenses }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Transacciones` > `Crear pedidos de venta según gastos`
 
@@ -242,7 +242,7 @@ El proceso crea un Pedido de venta de tipo Pedido de almacén con su correspondi
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/transactions/create-sales-orders-from-expenses.png)
 
-## Crear facturas de gastos AP
+## Crear facturas de gastos AP { #create-ap-expense-invoices }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Transacciones` > `Crear facturas de gastos AP`
 

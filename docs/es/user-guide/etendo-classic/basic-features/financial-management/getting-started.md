@@ -9,8 +9,8 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión Financiera - Primeros pasos
-## Visión general
+# Gestión Financiera - Primeros pasos { #financial-management---getting-started }
+## Visión general { #overview }
 
 Etendo genera automáticamente una representación contable de todas las transacciones dentro de la empresa que tienen relevancia económica.
 
@@ -56,7 +56,7 @@ Estas dimensiones quedan entonces disponibles solo para esa Organización.
 - Por otro lado, esas dimensiones no pueden mantenerse de forma centralizada en la [Entidad](../general-setup/client/client.md), sino mantenerse de forma independiente en el [Esquema contable de la Organización](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab).
 
 Esta área de aplicación cubre el flujo de negocio [Cierre de periodo hasta informe financiero](../financial-management/getting-started.md#period-end-close-to-financial-report) y el flujo de negocio [Gestión de cuentas a pagar y a cobrar](../financial-management/getting-started.md#payables-and-receivables-management).
-## Gestión de pagos y cobros
+## Gestión de pagos y cobros { #payables-and-receivables-management }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DmeLeQkg-cg?si=See53a-gprwcumPw" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -64,7 +64,7 @@ La Gestión de pagos y cobros aborda los cobros de clientes y los pagos a provee
 
 ![payment-workflow.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
 
-### Configuración
+### Configuración { #configuration }
 
 La siguiente configuración debe realizarse antes de ejecutar el proceso:
 
@@ -76,7 +76,7 @@ La siguiente configuración debe realizarse antes de ejecutar el proceso:
 !!!note
     No es necesario realizar ninguna configuración adicional para el proceso de negocio de Gestión de pagos y cobros si se va a utilizar la entidad de ejemplo Food & Beverage (F&B) que Etendo incluye por defecto para explorarlo. El conjunto de datos de ejemplo ya contiene los roles, almacenes, terceros, productos y precios preconfigurados.
 
-### Ejecución
+### Ejecución { #execution }
 
 En términos generales, el proceso de negocio de *Gestión de pagos y cobros* puede dividirse en los siguientes pasos:
 
@@ -88,7 +88,7 @@ En términos generales, el proceso de negocio de *Gestión de pagos y cobros* pu
 - el registro de las transacciones de la cuenta financiera
 - y la conciliación de las transacciones de la cuenta financiera
 
-#### Creación de los pedidos/facturas a pagar
+#### Creación de los pedidos/facturas a pagar { #creation-of-the-ordersinvoices-to-be-paid }
 
 En los procesos de negocio [Procure to Pay](../procurement-management/getting-started.md#procure-to-pay-business-flow) y [Order to Cash](../procurement-management/getting-started.md#procure-to-pay-business-flow) se ha visto cómo se han generado los pedidos y las facturas.
 
@@ -99,7 +99,7 @@ Un plan de pagos contiene el/los importe/s de pago esperados para el documento y
 !!!note
     La sección Payment Monitor permite realizar el seguimiento del estado de pago de las facturas de compra y de venta directamente desde la ventana de la factura. En esta sección es posible saber si una factura está totalmente pagada o no. Si la factura no se ha pagado completamente, entonces Payment Monitor informa al usuario de cuánto se ha recibido, cuánto está pendiente, la fecha de vencimiento del siguiente pago y el importe que se espera recibir en esa fecha. El estado se actualiza automáticamente cuando se produce cualquier acción de pago y mediante un proceso en segundo plano. La fecha en la que se calculó por última vez el estado del pago se muestra en el formulario. El filtrado de la rejilla permite filtrar facturas en función del criterio de totalmente pagada o no.
 
-#### Creación de pagos no relacionados con pedidos/facturas
+#### Creación de pagos no relacionados con pedidos/facturas { #creation-of-payments-do-not-related-to-ordersinvoices }
 
 En el proceso de negocio [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) se ha visto cómo se puede realizar o recibir un pago utilizando un [Asientos manuales](../financial-management/accounting/transactions.md#gl-journal); por tanto, no está relacionado con un pedido/factura, sino con un apunte de mayor (G/L Item).
 
@@ -113,7 +113,7 @@ El estado de este pago sería *Pago realizado* o *Pendiente de ejecución* o *Re
 
 El estado de este pago sería *Pago recibido* o *Pendiente de ejecución* o *Depositado no conciliado*, en función de la [configuración](../financial-management/receivables-and-payables/setup.md#payment-in-configuration) del método de pago utilizado y vinculado a la cuenta financiera en la que se va a depositar el dinero.
 
-#### Revisión del estado de los pagos pendientes
+#### Revisión del estado de los pagos pendientes { #review-of-the-status-of-the-pending-payments }
 
 De forma periódica, el personal de finanzas revisa el estado de los pagos pendientes de cobro / de pago consultando:
 
@@ -124,7 +124,7 @@ De forma periódica, el personal de finanzas revisa el estado de los pagos pendi
 
 - Además, las ventanas de Factura (Cliente) y Factura (Proveedor) en vista de rejilla están disponibles para buscar facturas abiertas estableciendo el campo Pago completado en No.
 
-#### Cobro de los pagos del cliente
+#### Cobro de los pagos del cliente { #receipt-of-the-customers-payments }
 
 Cuando se recibe un pago, el personal de finanzas puede registrarlo de diferentes maneras:
 
@@ -147,7 +147,7 @@ Si el cobro no se produce a tiempo:
 
 - El saldo pendiente de un cliente puede darse de baja total o parcialmente.
 
-#### Pago de las facturas del proveedor
+#### Pago de las facturas del proveedor { #payment-of-the-suppliers-invoices }
 
 Hay 3 formas de pagar las facturas del proveedor:
 
@@ -164,12 +164,12 @@ Hay 3 formas de pagar las facturas del proveedor:
 
 - También es posible automatizar la realización de un pago al completar una Factura (Proveedor) mediante la configuración del Método de pago.
 
-#### Registro de las transacciones de la cuenta financiera
+#### Registro de las transacciones de la cuenta financiera { #recording-of-the-financial-account-transactions }
 
 El personal de finanzas registra las retiradas y los depósitos como transacciones en la ventana [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account) pulsando el botón Add Transaction y seleccionando los pagos recibidos o realizados.
 Este paso del proceso también puede automatizarse completamente mediante la configuración del [Método de pago](../financial-management/receivables-and-payables/setup.md#payment-method-configuration), de modo que los pagos se retiren o depositen automáticamente cuando se completen.
 
-#### Conciliación de las transacciones de la cuenta financiera
+#### Conciliación de las transacciones de la cuenta financiera { #reconciliation-of-the-financial-account-transactions }
 
 El personal de finanzas recibe un extracto bancario (en papel o electrónico) y concilia las transacciones de la Cuenta financiera marcadas como Depositado / Retirado no conciliado con las transacciones reales del extracto bancario. Este proceso puede realizarse:
 
@@ -180,8 +180,8 @@ El personal de finanzas recibe un extracto bancario (en papel o electrónico) y 
 Además, cualquier transacción (cobros y pagos) que figure en el extracto bancario y no esté reflejada en la Cuenta financiera también debe introducirse en Etendo para poder conciliarla.
 
 Por último, el personal de finanzas imprime los informes de conciliación (Detalles de conciliación, Resumen de conciliaciones) que explican cualquier diferencia entre el saldo final mostrado para la Cuenta financiera en Etendo y el saldo final mostrado en el extracto bancario.
-## Contabilidad
-### Cierre de periodo hasta informe financiero
+## Contabilidad { #accounting }
+### Cierre de periodo hasta informe financiero { #period-end-close-to-financial-report }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8WAyKf16HmY?si=lHqZ4KLHM-9siwQ8" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -189,11 +189,11 @@ El flujo de negocio *Cierre de periodo hasta informe financiero* gestiona la ape
 
 ![periodendclose-tofinancialreport.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
 
-#### Configuración
+#### Configuración { #configuration_1 }
 
 Esta sección detalla la configuración contable básica y no tan básica necesaria antes de la ejecución del flujo de negocio *Cierre de periodo hasta informe financiero*.
 
-#### Configuración básica
+#### Configuración básica { #basic-configuration }
 
 Hay tres conceptos contables de Etendo que deben explicarse antes de describir la configuración contable básica:
 
@@ -244,7 +244,7 @@ La configuración de impuestos del país es otro elemento clave de la configurac
 Puede haber paquetes de localización que incluyan la configuración de los impuestos del país, mientras que puede haber otros que no la incluyan.
 El módulo de CoA genérico no incluye ninguna configuración de impuestos.
 
-#### Ejecución 
+#### Ejecución { #execution_1 }
 
 En general, el flujo de negocio Cierre de periodo hasta informe financiero puede dividirse en los siguientes pasos una vez que se ha abierto el periodo contable:
 
@@ -258,7 +258,7 @@ En general, el flujo de negocio Cierre de periodo hasta informe financiero puede
 - el cierre del año contable
 - y la impresión de la cuenta de resultados y el balance finales
 
-##### Apertura de la contabilidad
+##### Apertura de la contabilidad { #opening-of-the-accounting }
 
 Este primer paso implica inicializar el saldo de las cuentas del libro mayor y de las cuentas financieras o bancos. La forma de hacerlo en Etendo es:
 
@@ -266,7 +266,7 @@ Este primer paso implica inicializar el saldo de las cuentas del libro mayor y d
 Se puede crear una línea de asiento para cada cuenta y su saldo de apertura; una vez hecho, el asiento manual validará que el Débito total de todas las entradas sea igual al Crédito total.
 - El saldo de las cuentas financieras puede inicializarse en la ventana [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account), en el campo *Saldo Inicial*; por lo tanto, las cuentas financieras o bancos correspondientes deben crearse previamente.
 
-##### Revisión de las transacciones contables
+##### Revisión de las transacciones contables { #review-of-the-accounting-transactions }
 
 Como ya se ha mencionado, en Etendo la mayoría de los asientos contables se crean automáticamente al contabilizar documentos como una factura de proveedor o una factura de cliente.
 Por ejemplo, la contabilidad de una factura de proveedor tomará:
@@ -288,13 +288,13 @@ La forma de hacerlo es:
 - volver a contabilizar las transacciones utilizando la funcionalidad [Proceso contable](../financial-management/accounting/transactions.md#gl-posting-by-db-tables).
 Esta funcionalidad realiza una contabilización masiva de toda la contabilidad o solo de la contabilidad de una tabla, por ejemplo la tabla *C_Invoice* (tabla de Factura (Proveedor) y Factura (Cliente)).
 
-##### Creación de transacciones contables y pagos de elementos de libro mayor
+##### Creación de transacciones contables y pagos de elementos de libro mayor { #creation-of-accounting-transactions-and-gl-item-payments }
 
 Como ya se ha mencionado, los asientos contables no relacionados con documentos gestionados dentro de un área de aplicación determinada pueden crearse y contabilizarse en el libro mayor utilizando un [Asientos manuales](../financial-management/accounting/transactions.md#gl-journal).
 Un asiento manual también puede utilizarse para realizar y/o recibir pagos no relacionados con pedidos/facturas, sino con elementos de libro mayor.
 Los pagos de elementos de libro mayor también se gestionan dentro del área de [Gestión de pagos y cobros](../financial-management/getting-started.md#payables-and-receivables-management).
 
-##### Impresión del Balance sumas y saldos para comprobar que Débito=Crédito
+##### Impresión del Balance sumas y saldos para comprobar que Débito=Crédito { #printing-of-the-trial-balance-to-check-that-debitcredit }
 
 El [Balance sumas y saldos](../financial-management/accounting/analysis-tools.md#trial-balance) es una lista que indica los saldos de cada cuenta del libro mayor en un momento determinado.
 
@@ -304,7 +304,7 @@ Etendo no permite contabilizar asientos que no cuadren. Un asiento manual solo p
 
 En estas situaciones, la diferencia se contabiliza en una cuenta transitoria específica. Las cuentas [Transitoria](../financial-management/accounting/setup/general-ledger-configuration.md#general-accounts) se configuran en el Esquema contable.
 
-##### Ajustes necesarios antes del cálculo del resultado
+##### Ajustes necesarios antes del cálculo del resultado { #adjustments-required-prior-to-the-income-calculation }
 
 La cuenta de resultados de una organización muestra el rendimiento financiero de la organización durante un periodo de tiempo (normalmente un año) como la diferencia entre:
 
@@ -333,7 +333,7 @@ Los gastos operativos son los gastos relacionados con la operación normal del n
 
 Esto permite el cálculo del *Resultado operativo* como la diferencia entre el *Beneficio bruto* y el *Total de gastos operativos*.
 
-##### Ajustes necesarios antes del cierre del año contable
+##### Ajustes necesarios antes del cierre del año contable { #adjustments-required-prior-to-the-closing-of-the-accounting-year }
 
 Otros ajustes necesarios pueden ser:
 
@@ -346,7 +346,7 @@ Es importante remarcar que el saldo de las cuentas de IVA debe ser igual a 0 en 
    la cuenta de resultados, ya que la amortización es un gasto
    y al lado del débito del balance, ya que los activos se reducirán por el importe de la amortización del periodo.
 
-##### Impresión de la cuenta de resultados y el balance preliminares
+##### Impresión de la cuenta de resultados y el balance preliminares { #the-printing-of-the-preliminary-income-statement-and-balance-sheet }
 
 Una vez configurado, Etendo permite obtener e imprimir la cuenta de resultados y el balance siempre que sea necesario, ya que la estructura de estos informes se basa en el árbol del plan de cuentas.
 
@@ -357,7 +357,7 @@ Durante el ciclo contable hay otros informes que también pueden imprimirse:
 - el [Libro mayor](../financial-management/accounting/analysis-tools.md#general-ledger-report) lista todas las entradas de débito y todas las entradas de crédito de cada cuenta en T dentro de un periodo de tiempo determinado
 - el [Diario asientos](../financial-management/accounting/analysis-tools.md#journal-entries-report) lista en orden cronológico cada asiento contabilizado en el libro mayor.
 
-##### El cierre del año fiscal
+##### El cierre del año fiscal { #the-closing-of-the-fiscal-year }
 
 Etendo permite realizar las comprobaciones detalladas a continuación antes del cierre del año fiscal:
 
@@ -384,7 +384,7 @@ Etendo utiliza el periodo de ajuste (p. ej., 31 de diciembre) para contabilizar 
 !!!info
     Para más información, visite la ventana [Cierre de año](../financial-management/accounting/transactions.md#end-year-close).
 
-##### Impresión de la cuenta de resultados y el balance finales
+##### Impresión de la cuenta de resultados y el balance finales { #the-printing-of-the-final-income-statement-and-balance-sheet }
 
 Una vez que se ha cerrado un año, cada informe financiero contiene las transacciones de cierre y apertura correspondientes:
 
@@ -403,15 +403,15 @@ Y además:
     el asiento de saldo de apertura
     el asiento de saldo de cierre
     y el asiento de cierre de P&L
-## Activos 
-### Adquisición de activos hasta su baja
+## Activos { #assets }
+### Adquisición de activos hasta su baja { #asset-acquisition-to-dispose }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_PhqumhZr8U?si=KKUCdccNMHP6f0SV" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Gestiona el ciclo de vida global de los activos desde la adquisición hasta su baja, incluyendo la amortización y otras depreciaciones.
 
 ![asset-acq-disp-business-process.png](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/asset-acq-disp-business-process.png)
-## Relación con otras áreas
+## Relación con otras áreas { #relationship-with-other-areas }
 
 Gestión Financiera tiene conexión con otras áreas de la aplicación, ya que existen documentos o transacciones en esas áreas que pueden contabilizarse y, por tanto, formar parte de un diario del libro mayor para finalmente gestionarse dentro del área de aplicación de Gestión Financiera.
 

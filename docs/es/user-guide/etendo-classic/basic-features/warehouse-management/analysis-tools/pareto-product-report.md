@@ -8,11 +8,11 @@ tags:
  - Herramientas de análisis
 ---
 
-# Informe Pareto de Productos
+# Informe Pareto de Productos { #pareto-product-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Pareto de Productos`
 
-## Descripción general
+## Descripción general { #overview }
 
 El Informe Pareto de Productos clasifica los productos en tres categorías — A, B y C — según la proporción del valor total del almacén que representa cada producto. Esta técnica se conoce comúnmente como **análisis ABC** y ayuda a las organizaciones a enfocar los esfuerzos de gestión de inventario donde más importan.
 
@@ -32,7 +32,7 @@ Por ejemplo:
 
     Si alguno de estos elementos falta, el informe puede devolver valores en cero o resultados incompletos.
 
-## Parámetros
+## Parámetros { #parameters }
 
 Antes de generar el informe, configure los siguientes filtros:
 
@@ -50,13 +50,13 @@ Después de configurar los filtros, elija una de las dos acciones:
 - **Buscar** — Muestra los resultados en la misma ventana.
 - **Ver resultados** — Abre el informe en una vista separada, lo cual puede ser útil para imprimir o comparar en paralelo.
 
-## Resultado del informe
+## Resultado del informe { #report-output }
 
 El informe lista todos los productos del almacén seleccionado, ordenados por valor descendente, y asigna a cada producto su categoría ABC.
 
 ![Pareto Product Report output](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png)
 
-### Referencia de columnas
+### Referencia de columnas { #column-reference }
 
 | Columna | Descripción |
 |---------|-------------|
@@ -72,7 +72,7 @@ El informe lista todos los productos del almacén seleccionado, ordenados por va
 !!! tip "Lectura de los resultados"
     Los productos al principio de la lista (Categoría A) tienen el mayor impacto individual en el valor del almacén. Enfoque primero los esfuerzos de revisión y control en estos artículos.
 
-## Actualizar ABC
+## Actualizar ABC { #update-abc }
 
 El botón **Actualizar ABC** en la parte inferior de la ventana escribe la clasificación de cada producto de vuelta al campo **ABC** en la pestaña **Org. Specific** de la ventana Producto.
 
@@ -84,7 +84,7 @@ Una vez guardada, la categoría ABC queda disponible para filtrar e informar en 
 !!! tip "Cuándo actualizar"
     Ejecute el informe y haga clic en **Actualizar ABC** periódicamente — por ejemplo, después de cada ciclo de valoración de inventario o cuando se hayan producido movimientos de stock significativos. Esto mantiene la clasificación alineada con las condiciones actuales del almacén.
 
-## Uso de datos pre-agregados
+## Uso de datos pre-agregados { #using-pre-aggregated-data }
 
 Para usar datos pre-agregados, ejecute primero el [Informe Valoración de Stock](valued-stock-report.md). Una vez generado ese informe, el Informe Pareto de Productos reutilizará automáticamente sus resultados, reduciendo el tiempo de carga. Si omite este paso, el informe se ejecutará igualmente pero puede ser más lento en entornos de alto volumen.
 

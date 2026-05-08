@@ -6,10 +6,10 @@ tags:
     - Google Spreadsheets
 ---
 
-# Herramienta de Google Spreadsheets
+# Herramienta de Google Spreadsheets { #google-spreadsheets-tool }
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La herramienta **Google Spreadsheets** es una potente utilidad para interactuar directamente con Google Sheets. Permite al agente gestionar hojas de cálculo de forma programática a través de las **API de Google Drive y Google Sheets**.
 
@@ -21,20 +21,20 @@ La herramienta funciona mediante cinco modos distintos:
   - **`read`**: Lee datos de un rango de celdas especificado dentro de una hoja de cálculo.
   - **`download`**: Descarga el contenido de una hoja de cálculo a un archivo CSV local.
 
-## Configuración y autenticación
+## Configuración y autenticación { #setup-authentication }
 
 Esta herramienta requiere un token de **Google OAuth** preconfigurado identificado por un `alias`. Este `alias` debe proporcionarse en cada solicitud para autenticarse con los servicios de Google.
 
-## Parámetros
+## Parámetros { #parameters }
 
 La funcionalidad de la herramienta viene determinada por el parámetro `mode`. Los parámetros obligatorios y opcionales cambian en función del modo seleccionado.
 
-### Parámetros generales
+### Parámetros generales { #general-parameters }
 
   - `alias` (string, required): El alias del token OAuth preconfigurado.
   - `mode` (string, required): La acción a realizar. Valores admitidos: `list`, `create`, `upload`, `read`, `download`.
 
-### Parámetros específicos por modo
+### Parámetros específicos por modo { #mode-specific-parameters }
 
   - `name` (string): El nombre para una hoja de cálculo.
 
@@ -54,7 +54,7 @@ La funcionalidad de la herramienta viene determinada por el parámetro `mode`. L
 
       - Obligatorio para el modo `upload`.
 
-## Modos de funcionamiento
+## Modos de funcionamiento { #modes-of-operation }
 
 ### `list`
 

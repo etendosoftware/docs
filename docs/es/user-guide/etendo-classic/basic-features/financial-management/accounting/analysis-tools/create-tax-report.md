@@ -7,17 +7,17 @@ tags:
   - Financial Reports
 ---
 
-# Creación de informes de impuestos
+# Creación de informes de impuestos { #create-tax-report }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Creación de informes de impuestos`
 
-## Descripción general
+## Descripción general { #overview }
 
 Este formulario permite al usuario crear diferentes informes de impuestos según sus necesidades específicas.
 
 Para explicar el uso de este proceso, es necesario comprender la ventana Configuración informes de impuestos.
 
-##### Configuración informes de impuestos
+##### Configuración informes de impuestos { #tax-report-setup }
 
 Esta ventana permite al usuario crear o modificar diferentes informes de impuestos para los distintos impuestos existentes. A continuación, se explica cómo crear un nuevo informe de impuestos:
 
@@ -36,7 +36,7 @@ La ventana contiene algunos parámetros para indicar el informe de impuestos cre
 
 Una vez configurado el informe de impuestos, aparecerá en el formulario Creación de informes de impuestos:
 
-##### Creación de informes de impuestos
+##### Creación de informes de impuestos { #create-tax-report_1 }
 
 Esta ventana permite imprimir los informes definidos previamente por el usuario. Para imprimir el informe, es necesario completar algunos campos:
 

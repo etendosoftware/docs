@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Categoría de LM
+# Categoría de LM { #gl-category }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Categoría de LM`
 
-## Visión general
+## Visión general { #overview }
 
 En esta ventana, el usuario puede **ver, crear y gestionar Categorías de LM utilizadas para clasificar los asientos contables en el Libro Mayor**.
 
@@ -32,7 +32,7 @@ Las Categorías de LM se crean normalmente cuando:
 
 Una vez creadas, las Categorías de LM se asignan en la ventana **Tipo de documento**. A partir de ese momento, cada documento contabilizado usando ese Tipo de documento aplicará automáticamente la Categoría de LM correspondiente a sus asientos contables. Se desaconseja crear categorías innecesarias o excesivamente granulares, ya que las categorías están pensadas para representar **clasificaciones estables y de alto nivel** en lugar de detalles transaccionales.
 
-## Cabecera
+## Cabecera { #header }
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-category/gl-category-2.png)
 
@@ -50,7 +50,7 @@ Campos a tener en cuenta:
 - **Tipo de categoría**: Indica el origen del diario para esta categoría. Los diarios pueden generarse a partir de un documento, introducirse manualmente o importarse.
 - **Valor por defecto**: Cuando está marcado, esta categoría se selecciona por defecto para los nuevos registros que utilicen esta categoría. Esta opción acelera la introducción de datos cuando sea necesario.
 
-## Ejemplo
+## Ejemplo { #example }
 
 Seleccione la opción de crear nuevo, rellene los campos correspondientes y guárdelo.
 

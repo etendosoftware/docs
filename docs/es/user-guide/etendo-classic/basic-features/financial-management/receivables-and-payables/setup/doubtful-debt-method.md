@@ -7,15 +7,15 @@ tags:
   - Receivables and Payables
 ---
 
-# Método de dudoso cobro
+# Método de dudoso cobro { #doubtful-debt-method }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Doubtful Debt Method`
 
-## Descripción general
+## Descripción general { #overview }
 
 A través de esta ventana, es posible definir un Método de dudoso cobro, que estará disponible para utilizarse como plantilla al crear un nuevo Procesado del dudoso cobro.
 
-## Método de dudoso cobro
+## Método de dudoso cobro { #doubtful-debt-method_1 }
 
 ![Doubtful Debt Method](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/doubtful-debt-method/doubtful-debt-method-1.png)
 

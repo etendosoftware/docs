@@ -10,12 +10,12 @@ tags:
 status: beta
 ---
 
-# Cómo registrar usando Log4j
+# Cómo registrar usando Log4j { #how-to-log-using-log4j }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-## Visión general
+## Visión general { #overview }
 
 Esta sección proporciona algunas directrices sobre qué y cómo registrar.
 
@@ -29,7 +29,7 @@ Está pensado para ser consumido por personal técnico como administradores de s
 
 Para aprender a configurar los logs, lea [este documento](./how-to-configure-log.md) .
 
-## Cómo registrar
+## Cómo registrar { #how-to-log }
 
 !!!warning
     La salida estándar `System.out`, `System.err` o `printStackTrace` **nunca debe utilizarse**.
@@ -60,7 +60,7 @@ private void process(Invoice invoice) {
 }
 ```
 
-### Desglosando una línea de log
+### Desglosando una línea de log { #dissecting-a-line-of-log }
 
 El log producido por cualquiera de los dos fragmentos anteriores se verá como sigue (asumiendo que este código se ejecuta en Tomcat con la configuración por defecto. Las configuraciones de test y build pueden tener ligeras diferencias en el formato):
 
@@ -74,11 +74,11 @@ El log producido por cualquiera de los dos fragmentos anteriores se verá como s
             |-> Timestamp when the log was generated
 ```
 
-## Qué registrar
+## Qué registrar { #what-to-log }
 
 Los logs son una parte muy importante de la aplicación; por ello, es clave pensar cuidadosamente cuál es la información relevante que debe registrarse. Tenga en cuenta que, normalmente, los logs se van a leer tiempo después de que se creen, por lo que deben contener todo lo necesario para reproducir problemas en el futuro.
 
-### Nivel
+### Nivel { #level }
 
 El registro puede escribirse en diferentes niveles. Cuando un nivel de registro está habilitado, todos los mensajes escritos en ese nivel o en cualquier nivel superior se guardarán en el archivo de log. Por defecto, se escriben `INFO` y niveles superiores, omitiendo los niveles inferiores. Esto puede modificarse de forma permanente o en tiempo de ejecución a un nivel diferente para cada logger o para loggers específicos.
 
@@ -91,7 +91,7 @@ Los niveles disponibles, ordenados de mayor a menor prioridad, son:
 - **DEBUG**: en caso de áreas problemáticas, los mensajes en este nivel deben proporcionar información a los desarrolladores para reproducir el problema y entender de dónde proviene. 
 - **TRACE**: similar a DEBUG, se utiliza para complementar el nivel anterior con información mucho más detallada. 
 
-### Contexto
+### Contexto { #context }
 
 Dado que el log debe proporcionar suficiente información para saber qué está ocurriendo, es de suma importancia incluir el contexto relevante en cada línea de log. Este contexto dependerá de lo que esté haciendo el código; en general, debe incluir los valores de parámetros relevantes para permitir reproducir la ejecución.
 
@@ -116,7 +116,7 @@ porque indica la factura que falló, por lo que ayudaría a intentar reproducir 
 log.warn("Invoice {} could not be processed with action: {}", invoice.getId(), action);
 ```
 
-#### Advertencias
+#### Advertencias { #caveats }
 
 El registro puede generar sobrecarga de rendimiento; tenga cuidado al seleccionar qué registrar en cada nivel. Por ejemplo, si solo dispone de un ID de Tercero, puede ser preferible registrar únicamente ese ID en lugar de su nombre si es necesario recuperarlo de la base de datos.
 
@@ -125,7 +125,7 @@ Tenga cuidado al registrar el contexto para no crear nuevas excepciones. Por eje
 !!!note
     Por motivos de rendimiento, **log4j** evita usar varargs en llamadas de log con hasta 10 valores de placeholder. Al usar más de 10 parámetros, se utilizará la versión varargs de la llamada.
 
-### Trazas de pila
+### Trazas de pila { #stack-traces }
 
 Las trazas de pila muestran la pila de llamadas de un hilo en el momento en que se generaron; es decir, de forma recursiva, la línea de código que estaba en ejecución, así como la línea que invocó el método actual, la línea que invocó ese método y así sucesivamente.
 

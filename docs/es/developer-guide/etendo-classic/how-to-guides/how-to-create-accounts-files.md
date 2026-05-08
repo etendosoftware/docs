@@ -8,16 +8,16 @@ tags:
   - CSV
 ---
 
-# Cómo crear archivos de cuentas
+# Cómo crear archivos de cuentas { #how-to-create-accounts-files }
 
-## Visión general
+## Visión general { #overview }
 Etendo permite importar el Plan de cuentas mediante un archivo [CSV](https://en.wikipedia.org/wiki/Comma-separated_values){target="\_blank"} (valores separados por comas) con una estructura concreta. Este archivo CSV se incluye posteriormente en un módulo que puede distribuirse e instalarse desde [Etendo marketplace](https://marketplace.etendo.cloud/#/){target="\_blank"}.
 
 Para crear el archivo CSV, se recomienda utilizar cualquier software de hoja de cálculo que admita la exportación a CSV, como [LibreOffice Calc](https://www.libreoffice.org/){target="\_blank"}.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/CSVfile.png)
 
-## Estructura del archivo
+## Estructura del archivo { #file-structure }
 
 El archivo es un archivo de texto plano, con comas (,) como separador de campos, que define todas las cuentas. Para garantizar que su plan de cuentas se importe correctamente, el archivo debe estar codificado usando el conjunto de caracteres [UTF-8](https://en.wikipedia.org/wiki/UTF-8){target="\_blank"}.
 
@@ -41,11 +41,11 @@ Cada campo del archivo comprende una línea.
 | Mostrar Valor           | El usuario puede, opcionalmente, establecer aquí el valor para el campo "Mostrar Valor" de la solapa Element Value. | No | Positivo, Negativo, Algebraico (valor por defecto si la celda está vacía) |
 | Nodo de Título          | El usuario puede, opcionalmente, activar aquí el indicador "Nodo de Título" de la solapa Element Value. | No | Sí, No (valor por defecto si la celda está vacía) |
 
-## ¿Qué cuentas deben definirse?
+## ¿Qué cuentas deben definirse? { #which-accounts-must-be-defined }
 
 La forma en que defina su archivo de cuentas depende principalmente de si existen normas oficiales en su país. Por ejemplo, en países como Francia o España existen planes de cuentas estándar e informes contables generales. En este caso, debe definir un plan de cuentas con la estructura de los informes contables generales que incluya todas las cuentas. Otros países, como EE. UU., no tienen un plan definido, por lo que debe definir un plan general que se adapte a su empresa. La estructura del archivo debe incluir el Balance (con Activos, Pasivo y Patrimonio neto) y una cuenta de Pérdidas y Ganancias (con Gastos e Ingresos).
 
-## Jerarquía de cuentas
+## Jerarquía de cuentas { #accounts-hierarchy }
 
 El informe contable general tiene una estructura jerárquica. El Balance tiene dos lados, siguiendo la ecuación Activos = Pasivo + Patrimonio neto. El lado de Activos del balance está compuesto por diferentes tipos de activos: Activos corrientes y Activos a largo plazo, y cada uno puede tener diferentes subcuentas.
 
@@ -53,7 +53,7 @@ Los niveles de esta jerarquía pueden diferir de un árbol de cuentas a otro; el
 
 La columna *Parent_Value* del archivo de cuentas crea la relación jerárquica entre cuentas. Esta columna especifica qué cuenta es la cuenta padre de la cuenta.
 
-## Cuentas por defecto
+## Cuentas por defecto { #default-accounts }
 
 Etendo Classic realiza la mayoría de los asientos contables automáticamente. Para habilitar los asientos contables automáticos, es necesario definir las cuentas por defecto. Con esta información, Etendo Classic construye el asiento contable con el número de cuenta definido en el plan de cuentas.
 
@@ -97,7 +97,7 @@ Las cuentas por defecto obligatorias se definen en el archivo del plan de cuenta
 | W_INVENTORY_ACCT           | Activos        | Cuenta utilizada para registrar el valor de su inventario               | Cuenta de activo de inventario                                          |
 | WRITEOFF_ACCT              | Gasto          | Cuenta utilizada para importes incobrables                              | Deudas incobrables                                                        |
 
-## Exportación del Plan de cuentas al archivo CSV
+## Exportación del Plan de cuentas al archivo CSV { #exporting-the-chart-of-accounts-to-the-csv-file }
 
 Una vez que hemos introducido todas las cuentas en nuestra hoja de cálculo, es el momento de exportarla a un archivo CSV. Al exportar, el software le permitirá configurar el formato CSV concreto a utilizar. Es importante asegurarse de que se introducen los siguientes valores:
 
@@ -110,7 +110,7 @@ Una vez que hemos introducido todas las cuentas en nuestra hoja de cálculo, es 
 !!!note
     Si posteriormente desea editar este archivo CSV en su software de hoja de cálculo, recuerde utilizar esta configuración al abrirlo.
 
-## Plan de cuentas en Etendo Classic
+## Plan de cuentas en Etendo Classic { #chart-of-accounts-in-etendo-classic }
 
 Después del [proceso de configuración inicial del cliente](how-to-run-an-initial-client-setup-process.md), el usuario puede encontrar el Plan de cuentas correspondiente en la ventana *Árbol de cuentas* de Etendo Classic.
 

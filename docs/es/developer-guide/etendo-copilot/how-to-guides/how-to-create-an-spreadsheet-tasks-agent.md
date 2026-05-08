@@ -10,9 +10,9 @@ tags:
 ---
 
 
-# Cómo crear un agente de hojas de cálculo y tareas
+# Cómo crear un agente de hojas de cálculo y tareas { #how-to-create-a-spreadsheet-and-tasks-agent }
 
-## Visión general
+## Visión general { #overview }
 
 Basado en la guía oficial sobre [Cómo crear un agente](./how-to-create-an-agent.md), este documento proporciona una guía detallada para crear un agente que pueda aprovechar Google Drive, gestionar Google Sheets e incorporar la funcionalidad de creación de tareas de Etendo.
 

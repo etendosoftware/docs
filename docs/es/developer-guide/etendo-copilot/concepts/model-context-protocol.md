@@ -10,7 +10,7 @@ tags:
     - IA
 ---
 
-## Visión general
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -19,7 +19,7 @@ El **Model Context Protocol (MCP)** es un protocolo abierto desarrollado por Ant
 
 Esta guía ofrece una introducción completa a los conceptos y la arquitectura de MCP, así como a su implementación dentro del ecosistema de Etendo Copilot, ayudando a los desarrolladores a comprender cómo aprovechar este protocolo para crear integraciones de IA escalables y seguras.
 
-## ¿Qué es MCP?
+## ¿Qué es MCP? { #what-is-mcp }
 
 MCP es un protocolo que resuelve el problema de fragmentación en el ecosistema de IA, donde cada aplicación requería integraciones personalizadas para conectarse con diferentes fuentes de datos y herramientas. Con MCP, tanto los desarrolladores como las organizaciones pueden crear conectores reutilizables que funcionan en múltiples aplicaciones y plataformas. Entre sus características principales se incluyen:
 
@@ -29,11 +29,11 @@ MCP es un protocolo que resuelve el problema de fragmentación en el ecosistema 
 - **Seguridad**: controles de permisos y autenticación integrados
 - **Flexibilidad**: compatibilidad con múltiples tipos de transporte y formatos de datos
 
-## Arquitectura de MCP
+## Arquitectura de MCP { #mcp-architecture }
 
 MCP utiliza una arquitectura cliente-servidor que facilita la comunicación entre aplicaciones de IA y fuentes de datos externas.
 
-### Componentes principales
+### Componentes principales { #core-components }
 
 **Hosts**  
 Los hosts son las aplicaciones principales a través de las cuales los usuarios interactúan con el protocolo:
@@ -67,7 +67,7 @@ Los servidores MCP proporcionan acceso a herramientas, recursos y datos específ
     - Proporcionar información contextual.
     - Mantener el estado entre interacciones cuando sea necesario.
 
-### Flujo de información
+### Flujo de información { #information-flow }
 
 1. **Inicio de conexión**: el host establece una conexión con un servidor MCP
 2. **Negociación de capacidades**: el cliente y el servidor intercambian información sobre las funcionalidades compatibles
@@ -77,14 +77,14 @@ Los servidores MCP proporcionan acceso a herramientas, recursos y datos específ
 6. **Generación de respuesta**: el cliente integra las respuestas del servidor en la interacción del modelo
 7. **Presentación del resultado**: el host presenta la salida final al usuario
 
-## Funcionalidades técnicas
+## Funcionalidades técnicas { #technical-features }
 
-### Protocolo base
+### Protocolo base { #base-protocol }
 - **Formato de mensaje**: JSON-RPC 2.0 para una estructura consistente
 - **Conexiones con estado**: las sesiones MCP mantienen el estado a través de múltiples solicitudes
 - **Negociación de capacidades**: intercambio de información sobre funcionalidades compatibles durante la configuración
 
-### Funcionalidades del servidor
+### Funcionalidades del servidor { #server-features }
 
 **Recursos** representan datos contextuales y fuentes de información disponibles para los modelos:
 
@@ -106,7 +106,7 @@ Los servidores MCP proporcionan acceso a herramientas, recursos y datos específ
 Generate a product slogan based on the following {{product}} with the following {{keywords}}
 ```
 
-### Funcionalidades del cliente
+### Funcionalidades del cliente { #client-features }
 
 **Sampling** permite a los servidores iniciar comportamientos autónomos e interacciones recursivas con LLM, permitiendo:
 
@@ -114,7 +114,7 @@ Generate a product slogan based on the following {{product}} with the following 
 - Interacciones recursivas con LLM
 - Solicitudes de completados adicionales del modelo
 
-## Tipos de entrada MCP compatibles con Etendo Copilot
+## Tipos de entrada MCP compatibles con Etendo Copilot { #supported-mcp-input-types-for-etendo-copilot }
 
 Para adaptarse a configuraciones procedentes de diferentes editores/clientes (que a menudo utilizan estructuras y nombres de campo distintos), **Etendo Copilot** incluye un normalizador de configuración llamado **`MCPConfigNormalizer`**. Esta clase acepta *cualquier* `JSON` de servidor MCP, lo convierte en un **esquema unificado** y aplica valores por defecto razonables y validaciones ligeras para que las integraciones se mantengan consistentes y fiables.
 
@@ -215,7 +215,7 @@ Salida normalizada:
 - Los nombres se **conservan**, se aplican **valores por defecto** razonables y las entradas no válidas **no rompen** el resto.
 - Se validan parámetros básicos y los errores de “transporte no compatible” se mitigan mediante alias e inferencia.
 
-## Seguridad y autorización
+## Seguridad y autorización { #security-and-authorization }
 
 MCP incluye múltiples mecanismos de seguridad para garantizar interacciones seguras:
 
@@ -243,9 +243,9 @@ MCP incluye múltiples mecanismos de seguridad para garantizar interacciones seg
 - Límites aplicables por usuario, por sesión o de forma global.
 - Protección frente a ataques de denegación de servicio.
 
-## Casos de uso
+## Casos de uso { #use-cases }
 
-### En el contexto de Etendo Copilot
+### En el contexto de Etendo Copilot { #in-etendo-copilot-context }
 
 MCP en Etendo Copilot permite a los agentes acceder de forma estandarizada a:
 

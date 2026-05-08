@@ -7,20 +7,20 @@ tags:
     - Índice
 ---
 
-# Herramientas disponibles - Visión general
+# Herramientas disponibles - Visión general { #available-tools---overview }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 Este documento proporciona una lista completa de todas las herramientas disponibles en el ecosistema de **Etendo Copilot**. Cada herramienta está diseñada para ampliar las capacidades del asistente Copilot, permitiéndole realizar tareas específicas e interactuar con diversos sistemas y servicios.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Categorías de herramientas
+## Categorías de herramientas { #tools-categories }
 
-### Herramientas de integración de sistemas
+### Herramientas de integración de sistemas { #system-integration-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
@@ -30,7 +30,7 @@ Este documento proporciona una lista completa de todas las herramientas disponib
 | [Herramienta de carga de token OAuth](load-oauth-token-tool.md) | Obtener y gestionar de forma segura tokens OAuth | Gestión de tokens, autenticación segura | Usar para autenticación segura |
 | [Herramienta de inicialización de organización](org-init-tool.md) | Inicializar la configuración de la organización | Configuración de la organización, configuración |  |
 
-### Herramientas de gestión de archivos
+### Herramientas de gestión de archivos { #file-management-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
@@ -42,7 +42,7 @@ Este documento proporciona una lista completa de todas las herramientas disponib
 | [Herramienta de descompresión](uncompress-tool.md) | Extraer archivos comprimidos y archivos | Extracción de archivos, múltiples formatos |  |
 | [Herramienta de escritura de archivos](write-file-tool.md) | Escribir y editar archivos de texto | Creación de archivos, escritura de contenido, copias de seguridad | Usar al crear o modificar archivos |
 
-### Herramientas de IA y procesamiento de datos
+### Herramientas de IA y procesamiento de datos { #ai-data-processing-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
@@ -52,7 +52,7 @@ Este documento proporciona una lista completa de todas las herramientas disponib
 | [Herramienta de PDF a imágenes](pdf-to-images-tool.md) | Convertir páginas PDF a formatos de imagen | Procesamiento de PDF, conversión de imágenes |  |
 | [Herramienta de Tavily](tavily-tool.md) | Realizar búsquedas web usando el motor de búsqueda Tavily | Búsqueda en Internet, recuperación de información | Usar para búsqueda web y recopilación de información |
 
-### Herramientas de documentos y hojas de cálculo
+### Herramientas de documentos y hojas de cálculo { #document-spreadsheet-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
@@ -62,13 +62,13 @@ Este documento proporciona una lista completa de todas las herramientas disponib
 | [Herramienta de plantillas](template-tool.md) | Generar documentos a partir de plantillas | Procesamiento de plantillas, generación de documentos |  |
 | [Herramienta de XLS](xls-tool.md) | Gestionar archivos de hojas de cálculo de Excel | Procesamiento de Excel, extracción de datos |  |
 
-### Herramientas de comunicación
+### Herramientas de comunicación { #communication-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
 | [Herramienta de envío de correo electrónico](send-email-tool.md) | Enviar correos electrónicos mediante servicios configurados | Envío de correo, soporte de adjuntos | Usar para notificaciones y comunicación |
 
-### Herramientas de desarrollo y pruebas
+### Herramientas de desarrollo y pruebas { #development-testing-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|
@@ -78,7 +78,7 @@ Este documento proporciona una lista completa de todas las herramientas disponib
 | [Herramienta de gestión de tareas](task-management-tool.md) | Gestionar tareas y flujos de trabajo existentes | Operaciones de tareas, gestión de estados | Usar para automatización de flujos de trabajo |
 | [Herramienta de ejecución de pruebas](test-run-tool.md) | Ejecutar pruebas y procedimientos de validación | Ejecución de pruebas, informes de resultados | Usar para validación y pruebas |
 
-### Herramientas de traducción y localización
+### Herramientas de traducción y localización { #translation-localization-tools }
 
 | Nombre de la herramienta | Descripción | Funcionalidades clave | Cuándo usarla |
 |-----------|-------------|--------------|-------------|

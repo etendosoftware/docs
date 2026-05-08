@@ -7,11 +7,11 @@ tags:
     - Order
     - Invoice
 ---
-# Intercompañía
+# Intercompañía { #intercompany }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el módulo de Intercompañía incluido en el bundle **Financial Extensions**.
 
@@ -22,15 +22,15 @@ Por ejemplo, si la organización *A* realiza una transacción de venta a la orga
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Financial Extensions. Para ello, siga las instrucciones del marketplace: [Bundle Financial Extensions](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-## Configuración
+## Configuración { #set-up }
 
-### Ventana Organización
+### Ventana Organización { #organization-window }
 
 Es necesario que cada organización que utilice este módulo tenga un tercero asignado.
 
 ![](../../../../../assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png)
 
-### Ventana Tercero
+### Ventana Tercero { #business-partner-window }
 
 !!! info
     Al configurar un nuevo Tercero, tenga en cuenta que este tercero debe ser visible en la organización inversa. 
@@ -52,12 +52,12 @@ En la solapa Documentos de Intercompañía, es necesario seleccionar los tipos d
 !!! info
     La información tanto en el tercero origen como en el tercero destino debe ser la misma.
 
-## Facturas y pedidos
+## Facturas y pedidos { #invoices-and-orders }
 
 !!! info
     La siguiente información puede aplicarse no solo a facturas de venta y compra, sino también a pedidos de venta y compra.
 
-### Cabecera
+### Cabecera { #header }
 
 Los campos relevantes se describen a continuación:
 
@@ -67,7 +67,7 @@ Los campos relevantes se describen a continuación:
 
 ![](../../../../../assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png)
 
-### Líneas
+### Líneas { #lines }
 
 Los campos relevantes se describen a continuación:
 
@@ -76,7 +76,7 @@ Los campos relevantes se describen a continuación:
 
 ![](../../../../../assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png)
 
-#### Producto
+#### Producto { #product }
 
 Los campos relevantes se describen a continuación:
 
@@ -84,13 +84,13 @@ Los campos relevantes se describen a continuación:
 -   Moneda: la moneda debe ser la misma para ambas organizaciones.
 -   Impuesto: el impuesto en cada organización debe ser equivalente.
 
-### Completar o contabilizar documentos
+### Completar o contabilizar documentos { #complete-or-book-documents }
 
 Cuando **completa** facturas o **contabiliza** pedidos, estos procesos generan el documento inverso correspondiente y completan o contabilizan tanto los documentos origen como los documentos destino.
 
 ![](../../../../../assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png)
 
-#### Reactivar documentos
+#### Reactivar documentos { #reactivate-documents }
 
 Para reactivar documentos de intercompañía, ambos documentos no deben tener un pago asociado.
 

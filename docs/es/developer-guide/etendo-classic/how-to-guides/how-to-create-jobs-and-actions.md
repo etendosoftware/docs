@@ -6,14 +6,14 @@ tags:
     - Acciones
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Etendo introduce el concepto de Trabajos, que consiste en una o más Acciones ejecutadas en secuencia. Estas Acciones son procesos estándar que permiten al usuario crear y almacenar Trabajos para su uso posterior. Las automatizaciones de Jira y los Atajos de iOS son conceptos similares.
 
 !!! note
     La GUI para crear y ejecutar trabajos llegará pronto en una versión más reciente de Etendo. En la actualidad, solo es posible definir Acciones que actúan como procesos estándar disponibles en la UI existente; no obstante, también serán compatibles con la nueva UI cuando se publique.
 
-## Crear una acción
+## Crear una acción { #create-an-action }
 
 !!! info
     Las Acciones se basan en la arquitectura existente de Proceso estándar.
@@ -198,7 +198,7 @@ public class ProcessInvoices extends Action {
 }
 ```
 
-### Ampliar y ejecutar acciones
+### Ampliar y ejecutar acciones { #extend-and-execute-actions }
 
 También es posible ampliar acciones añadiendo nueva funcionalidad.  
 A continuación se muestra un ejemplo de ampliación de la clase `com.smf.jobs.defaults.ProcessOrders` que se encuentra dentro de las acciones estándar distribuidas con Etendo.
@@ -242,12 +242,12 @@ public static void executeProcessOrderAction(Order order) {
 Es necesario implementar un método que obtenga y ejecute la acción actual; en nuestro ejemplo implementamos `executeProcessOrderAction(Order order)`, que obtiene dinámicamente una instancia de la clase `ExtendProcessOrder` y la ejecuta.
 También es posible añadir validaciones y sobrescribir los métodos originales.
 
-## Cómo ampliar una acción usando hooks preAction y postAction
+## Cómo ampliar una acción usando hooks preAction y postAction { #how-to-extend-an-action-using-preaction-and-postaction-hooks }
 Existe una forma de ampliar una Acción sin modificarla. Esto se realiza implementando los hooks pre y post que están disponibles en la clase `com.smf.jobs.Action`.
 
 Cuando se ejecuta una Acción, todas las implementaciones de PreActionHook se ejecutan antes del método run de la Acción, y se ejecutan todas las implementaciones de PostActionHook. Esto permite ampliar la Acción sin modificar el código original, para añadir validaciones o ejecutar lógica adicional.
 
-### Ejemplo de una acción 
+### Ejemplo de una acción { #example-of-an-action }
 A continuación se muestra un ejemplo de una Acción que introduce información en una clase Singleton.
 
 ```Java
@@ -280,7 +280,7 @@ public class TestAction extends Action {
 }
 ```
 
-### Implementación de PreActionHook
+### Implementación de PreActionHook { #implementing-the-preactionhook }
 A continuación se muestra un ejemplo de un PreActionHook que introduce una lógica antes de que se ejecute la Acción.
 
 ```Java
@@ -342,7 +342,7 @@ public class TestActionPreHook implements PreActionHook {
 }
 ```
 
-### Implementación de PostActionHook
+### Implementación de PostActionHook { #implementing-the-postactionhook }
 A continuación se muestra un ejemplo de un PostActionHook que introduce una lógica después de que se ejecute la Acción. Es bastante similar al PreActionHook.
 
 ```Java

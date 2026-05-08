@@ -7,10 +7,10 @@ tags:
     - Entity Management
 ---
 
-# Configuración de inclusión/exclusión de Etendo BI
+# Configuración de inclusión/exclusión de Etendo BI { #etendo-bi-inclusionexclusion-configuration }
 :octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion` 
 
-## Visión general
+## Visión general { #overview }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Etendo BI. Para ello, siga las instrucciones de [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
@@ -19,11 +19,11 @@ Con el fin de permitir a los usuarios personalizar y configurar la información 
 
 A continuación, se proporciona una descripción detallada de la ventana de configuración y sus componentes.
 
-## Ventana **Configuración de inclusión/exclusión de Etendo BI**:
+## Ventana **Configuración de inclusión/exclusión de Etendo BI**: { #etendo-bi-inclusionexclusion-configuration-window }
 
 La ventana consta de dos solapas principales: "Cabecera" y "Líneas". Estas solapas se utilizan para definir y ajustar los filtros de los informes de PowerBI según los requisitos específicos del usuario.
 
-### _Cabecera_
+### _Cabecera_ { #header }
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/header-bi.png)
 
@@ -48,7 +48,7 @@ Las opciones son:
 
 **Tiene número, tiene cadena, tiene booleano:** estas casillas de verificación permiten al usuario habilitar campos adicionales de valor numérico, de cadena o de Sí/No en las líneas de configuración. Estos campos auxiliares se utilizan según sea necesario en los informes.
 
-### _Solapa Líneas_
+### _Solapa Líneas_ { #lines-tab }
 
 Esta solapa contiene las líneas de configuración asociadas a la cabecera. Cada línea representa un elemento que puede utilizarse para incluir o excluir entidades en los informes. A continuación se describen los campos de las líneas:
 
@@ -76,11 +76,11 @@ Esta solapa contiene las líneas de configuración asociadas a la cabecera. Cada
 
 **Sí/No:** verificación auxiliar de Sí/No. Se muestra solo si está marcada la casilla "Tiene Sí/No" en la cabecera.
 
-## **Ejemplos**
+## **Ejemplos** { #examples }
 
 Configuración de cuentas de Etendo para tomar los saldos y reflejarlos en los informes financieros en BI:
 
-### _Configuración en Etendo_
+### _Configuración en Etendo_ { #configuration-in-etendo }
 
 Categorías principales para la configuración de cuentas:
 
@@ -91,27 +91,27 @@ Categorías principales para la configuración de cuentas:
 - Ventas
 - Costes de ventas
 
-#### Configuración de cuentas de caja:
+#### Configuración de cuentas de caja: { #configuration-of-cash-accounts }
 
 ![cash.png](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/cashpng.png)
 
-#### Configuración de cuentas bancarias:
+#### Configuración de cuentas bancarias: { #configuration-of-bank-accounts }
 
 ![bank.png](../../../../../assets/legacy/bank.png)
 
-#### Configuración de cuentas de clientes:
+#### Configuración de cuentas de clientes: { #configuration-of-customer-accounts }
 
 ![customers.png](../../../../../assets/legacy/customers.png)
 
-#### Configuración de cuentas de proveedores:
+#### Configuración de cuentas de proveedores: { #configuration-of-supplier-accounts }
 
 ![suppliers.png](../../../../../assets/legacy/suppliers.png)
 
-#### Configuración de cuentas de ventas:
+#### Configuración de cuentas de ventas: { #configuration-of-sales-accounts }
 
 ![sales.png](../../../../../assets/legacy/sales.png)
 
-#### Configuración de cuentas de costes de ventas:
+#### Configuración de cuentas de costes de ventas: { #configuration-of-sales-costs-accounts }
 
 ![sales_cost.png](../../../../../assets/legacy/sales_cost.png)
 

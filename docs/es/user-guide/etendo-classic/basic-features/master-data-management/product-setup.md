@@ -2,11 +2,11 @@
 title: Configuración de productos
 ---
 
-## Característica de producto
+## Característica de producto { #product-characteristic }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Característica de producto`
 
-### Visión general
+### Visión general { #overview }
 
 La **Característica de producto** puede definirse para completar la definición de un producto utilizando variantes.
 
@@ -16,7 +16,7 @@ Una vez creada la definición de las características, estas pueden asignarse a 
 
 Por ejemplo, el producto genérico _Camisas Temporada de Verano 2013 de Mi Proveedor_ implementa las características _Talla_ y _Color_ como variantes. Este _Producto genérico_ tendrá como variante de producto cada combinación de Color y Talla.
 
-### Característica
+### Característica { #characteristic }
 
 **Definición de característica**
 
@@ -38,7 +38,7 @@ Se crearán cuatro variantes/productos y todos ellos con la característica Spor
 
 ![](../../../../assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png)
 
-### Costo
+### Costo { #value }
 
 Cada uno de los valores de una característica.
 
@@ -52,7 +52,7 @@ Campos a tener en cuenta:
 
 ![](../../../../assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png)
 
-#### Botón Añadir Productos
+#### Botón Añadir Productos { #button-add-products }
 
 El botón "Añadir Productos" se muestra cuando un valor de característica de producto NO es una "Variante", por lo tanto, puede asignarse a cualquier producto.
 
@@ -69,7 +69,7 @@ No actualiza los valores actuales. Por eso el botón solo muestra productos a lo
   - Una vez que se ha introducido una característica de producto en la solapa "Costo", se muestra un botón de proceso "Añadir Productos".
   - El botón "Añadir Productos" abre una ventana de selección/ejecución donde cualquier producto o conjunto de productos puede relacionarse con ese valor de característica de producto.
 
-### Subconjunto
+### Subconjunto { #subset }
 
 Un subconjunto es una colección de valores de una Característica de producto.
 
@@ -99,7 +99,7 @@ Pero finalmente tiene productos diferentes, por ejemplo camisetas y pantalones: 
 
 El objetivo de esta funcionalidad es evitar tener valores duplicados (azul, azul, verde, verde) debido a diferentes propósitos. Con este subconjunto, al seleccionar un producto que es un pantalón, por ejemplo, en lugar de seleccionar la característica _Color_ se selecciona el subconjunto _Pantalones_. De este modo, en lugar de recuperar siete valores, recuperará solo cuatro. Otra ventaja de hacer esto es que, al buscar variantes, en lugar de tener azul dos veces (y no sabría si el azul es para pantalones o camisetas), tendrá azul una sola vez. Así, al buscar variantes que tengan la característica _Azul_, el sistema recuperará pantalones y camisetas.
 
-### Valor de subconjunto
+### Valor de subconjunto { #subset-value }
 
 Cada uno de los valores de la característica de producto asignados al subconjunto.
 
@@ -109,7 +109,7 @@ Cada uno de los valores de la característica de producto asignados al subconjun
 - Nombre: Valor. Tenga en cuenta que solo pueden seleccionarse valores de la característica.
 - Código: si se informa, sobrescribirá el código configurado en la característica
 
-### Filtrado
+### Filtrado { #filtering }
 
 Los campos basados en columnas cuya referencia es Características de producto pueden filtrarse en la cuadrícula con ayuda de un popup donde se muestra el árbol de características disponibles.
 
@@ -118,13 +118,13 @@ Los campos basados en columnas cuya referencia es Características de producto p
 !!! info
     Las características disponibles en este popup se limitan a las aplicables a los datos filtrados en la cuadrícula donde se muestra, con los criterios de filtrado actuales para el resto de campos.
 
-### Configuración
+### Configuración { #configuration }
 
 Las Características de producto están listas para usarse de forma estándar.
 
 En cualquier caso, también pueden mostrarse algunas funcionalidades nuevas con opciones de configuración sencillas (estos cambios deben exportarse a la plantilla).
 
-#### Mejorar el selector de producto
+#### Mejorar el selector de producto { #improving-product-selector }
 
 Puede seleccionar entre las diferentes características de producto utilizando el selector de producto. Allí tiene una columna que muestra la descripción de las características de producto (ver imagen).
 
@@ -155,11 +155,11 @@ Siga estos sencillos pasos para habilitar esta configuración y, por favor, no o
 ![](../../../../assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png)
 
 - El último punto sería exportar estos cambios a la plantilla. Esto es realmente importante para evitar problemas en futuros procesos de actualización y para mantener estos cambios después de la actualización.
-## Actualizar descripción de las características de producto
+## Actualizar descripción de las características de producto { #update-product-characteristics-description }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Actualizar descripción de las características de producto`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Cada variante tiene su _Descripción de característica_ de producto y este campo se calcula automáticamente cuando:
 
@@ -176,11 +176,11 @@ Este proceso debe utilizarse únicamente en algunos casos especiales:
 
 - Cuando se cambia el nombre de la Característica, por ejemplo de Color a Tono
 - Cuando, a través de la base de datos, se modifican características o valores
-## Unidad de medida
+## Unidad de medida { #unit-of-measure }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Unidad de medida`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Una unidad de medida es una unidad estándar o una combinación de unidades que se utilizará junto con la cantidad de un producto.
 
@@ -200,7 +200,7 @@ A continuación, puede encontrar una lista de las unidades de medida que podría
 - **Paquete**
 - etc.
 
-### Unidad de medida
+### Unidad de medida { #unit-of-measure_1 }
 
 Los productos de cualquier tipo se gestionan en unidades de medida no monetarias.
 
@@ -214,7 +214,7 @@ Tal y como se muestra en la imagen anterior, se puede crear una unidad de medida
 - la **Precisión de los  costos** que se utilizará al redondear el coste calculado de los productos que tengan esa unidad de medida.
 - y el **Símbolo** o la abreviatura de unidad de medida de uso común
 
-### Traducción
+### Traducción { #translation }
 
 Las Unidades de Medida se pueden traducir a cualquier idioma requerido.
 
@@ -223,14 +223,14 @@ La forma de conseguirlo es tan sencilla como:
 - seleccionar primero el idioma requerido
 - y luego introducir la unidad de medida traducida a ese idioma.
 
-### Conversión
+### Conversión { #conversion }
 
 Edite la tasa de conversión de una unidad de medida a otra.
-## Categoría del producto
+## Categoría del producto { #product-category }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Categoría del producto`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Los productos similares pueden agruparse en diferentes categorías, que deben crearse con el objetivo de ayudar a su gestión y análisis.
 
@@ -240,7 +240,7 @@ Para obtener más información, visite Herramientas de análisis de aprovisionam
 
 Además, cada categoría del producto permite al usuario configurar un conjunto diferente de cuentas contables que se utilizarán al contabilizar transacciones relacionadas con el producto, como facturas de compra y de venta.
 
-### Categoría del producto
+### Categoría del producto { #product-category_1 }
 
 La ventana Categoría del producto permite al usuario crear y configurar cada grupo de productos que su empresa pueda necesitar.
 
@@ -255,7 +255,7 @@ Tal y como se muestra en la imagen anterior, la creación de una categoría del 
 
 Las categorías del producto pueden organizarse en una estructura jerárquica, que posteriormente puede ser explotada por otros informes o procesos. Para obtener más información sobre cómo trabajar con árboles, visite la sección Estructura de árbol.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Cada categoría del producto permite al usuario configurar un conjunto diferente de cuentas contables.
 
@@ -296,7 +296,7 @@ Esta cuenta suele ser una cuenta de activo.
 !!! info
     El botón de acción "Copiar cuentas" permite al usuario copiar las cuentas predeterminadas en esta ventana a la solapa Contabilidad del producto.
 
-### Productos asignados
+### Productos asignados { #assigned-products }
 
 Productos asignados es una vista de todos los productos que pertenecen a una categoría del producto.
 
@@ -304,14 +304,14 @@ Como nota adicional, los productos no reales, como los productos de descuento, d
 
 Para obtener más información sobre los productos de descuento, visite Descuento.
 
-### Traducción
+### Traducción { #translation_1 }
 
 Mantiene traducciones de las categorías del producto a diferentes idiomas.
-## Atributo
+## Atributo { #attribute }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Atributo`
 
-### Visión general
+### Visión general { #overview_4 }
 
 Los productos pueden tener un atributo o un conjunto de atributos que los hace diferentes del resto.
 
@@ -328,7 +328,7 @@ Etendo permite gestionar los atributos de producto siguiendo los pasos que se in
 3.  Configurar la relación entre el producto y el conjunto de atributos.  
     Para obtener más información, visite Producto
 
-### Atributo
+### Atributo { #attribute_1 }
 
 La ventana Atributo permite al usuario crear y editar atributos como el color o la talla para asignarlos a Conjunto atributos.
 
@@ -343,18 +343,18 @@ Tal y como se muestra en la imagen anterior, un atributo puede definirse fácilm
   Para obtener más información, visite Valor atributo.
 - El indicador **Obligatorio** define el atributo como obligatorio; por lo tanto, siempre debe especificarse para el producto.
 
-### Valor atributo
+### Valor atributo { #attribute-value }
 
 Un atributo puede tener varios valores o características individuales que se deben detallar para cada atributo.
 
 Lo anterior aplica a atributos como el color o la talla.
 
 La solapa Valor atributo permite la creación de tantos valores de atributo como sean necesarios para un atributo.
-## Conjunto atributos
+## Conjunto atributos { #attribute-set }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Conjunto atributos`
 
-### Visión general
+### Visión general { #overview_5 }
 
 Un conjunto de atributos puede definirse mediante un único atributo o mediante un conjunto de atributos para aplicar a productos específicos.
 
@@ -367,7 +367,7 @@ Los pasos a seguir son:
 - **Configurar la relación entre** la(s) **secuencia(s) de número de lote/serie** creada(s) previamente y el **Conjunto atributos**, en la ventana Conjunto atributos.  
   Para saber cómo, siga leyendo esta sección.
 
-### Conjunto atributos
+### Conjunto atributos { #attribute-set_1 }
 
 La ventana Conjunto atributos permite crear tantas combinaciones de atributos como sea necesario para definir productos con pocas o múltiples características.
 
@@ -385,7 +385,7 @@ Tal y como se muestra en la imagen anterior, un conjunto de atributos que se va 
   Si **la marca F. caducidad está seleccionada**, se muestra un nuevo campo denominado "**Días de garantía**" para que introduzca el número de días durante los cuales se puede garantizar un producto.
 - por último, la marca "**Se requiere por lo menos un valor**" implica que se requerirá al menos un valor del conjunto de atributos en las transacciones relacionadas con el producto.
 
-### Atributos asignados
+### Atributos asignados { #assigned-attribute }
 
 Un conjunto de atributos puede tener asignado un único atributo o un conjunto de atributos.
 
@@ -398,17 +398,17 @@ La forma de conseguirlo es simplemente seleccionar en esta solapa los atributos 
 Debe tener en cuenta que:
 
 - si uno de los atributos seleccionados es un atributo de tipo "Lote" o de tipo "Nº de serie", la secuencia de numeración correspondiente debe haberse configurado correctamente en la ventana Conjunto atributos.
-## Control lote
+## Control lote { #lot-number-sequence }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Control lote`
 
-### Visión general
+### Visión general { #overview_6 }
 
 Un atributo de producto puede ser un número de lote.
 
 Algunos productos requieren numeración de lotes para asegurar el cumplimiento con los requisitos de trazabilidad impuestos por la mayoría de las industrias, lo cual implica que una cantidad determinada de un producto siempre debe estar vinculada a un número de lote único.
 
-### Control lote
+### Control lote { #lot-control }
 
 Un número de lote es un número único asignado a una cantidad concreta de un producto, que puede definirse con un prefijo o un sufijo, entre otras características.
 
@@ -421,11 +421,11 @@ Una secuencia de números de lote puede configurarse:
 - definiendo cuál es el **Valor actual** que se utilizará. Etendo actualiza el valor del número asignado siguiente a medida que se asignan los números de lote.
 - introduciendo un **Prefijo** como **Lote N?/**, que ayuda a entender fácilmente que el número en cuestión es un número de lote.
 - introduciendo un **Sufijo** como **/2011**, que ayuda a proporcionar información adicional si es necesario.
-## Control nº serie
+## Control nº serie { #serial-number-sequence }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Control nº serie`
 
-### Visión general
+### Visión general { #overview_7 }
 
 Un atributo de producto puede ser un número de serie.
 
@@ -433,7 +433,7 @@ Algunos productos requieren numeración de serie para asegurar el cumplimiento c
 
 - cada unidad de un producto siempre debe estar vinculada a un número de serie único.
 
-### Nº serie
+### Nº serie { #number-control }
 
 Un número de serie es un número único asignado a cada unidad de un producto/artículo, que puede definirse con un prefijo o un sufijo, entre otras características.
 
@@ -447,16 +447,16 @@ Una secuencia de números de serie puede configurarse:
 - definiendo cuál es el **Valor actual** que se utilizará. Etendo actualiza el valor del siguiente número asignado a medida que se asignan los números de serie.
 - introduciendo un **Prefijo** como **Nº serie?/**, que ayuda a entender fácilmente que el número en cuestión es un número de serie.
 - introduciendo un **Sufijo** como **/2011**, que ayuda a proporcionar información adicional si fuese necesario.
-## Marca
+## Marca { #brand }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Marca`
 
-### Visión general
+### Visión general { #overview_8 }
 
 Esta ventana permite al usuario introducir marcas asociadas a un producto.
 Las marcas son fabricantes o nombres comerciales utilizados por los fabricantes para identificar una línea de producto.
 
-### Cabecera
+### Cabecera { #header }
 
 Para utilizar esta funcionalidad, seleccione una organización y añada una nueva marca en los campos correspondientes. También es posible introducir una descripción cuando sea necesario.
 

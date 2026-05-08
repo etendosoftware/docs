@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Algoritmo de Reconciliación
+# Algoritmo de Reconciliación { #matching-algorithm }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Matching Algorithm`
 
-## Descripción general
+## Descripción general { #overview }
 
 Etendo permite al usuario conciliar las transacciones de depósito y retirada de una cuenta financiera de dos maneras:
 
@@ -22,7 +22,7 @@ Etendo permite al usuario conciliar las transacciones de depósito y retirada de
 
 Etendo incluye de forma predeterminada el algoritmo de reconciliación "**Estándar**", que puede consultarse y configurarse en la ventana **Algoritmo de Reconciliación**.
 
-## Algoritmo de Reconciliación
+## Algoritmo de Reconciliación { #matching-algorithm_1 }
 
 La ventana Algoritmo de Reconciliación lista y permite al usuario configurar el/los algoritmo/s que se utilizarán al asociar las líneas del extracto bancario con las transacciones de la cuenta financiera.
 

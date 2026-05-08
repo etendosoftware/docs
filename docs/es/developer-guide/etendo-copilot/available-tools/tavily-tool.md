@@ -7,20 +7,20 @@ tags:
     - Herramienta
 ---
 
-# Herramienta Tavily
+# Herramienta Tavily { #tavily-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general 
+## Visión general { #overview }
 
 La **TavilySearchTool** es una herramienta personalizada diseñada para realizar búsquedas utilizando el motor de búsqueda Tavily, conocido por permitir a los usuarios buscar en Internet diversos tipos de información.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Configuración 
+## Configuración { #configuration }
 
-### Configuración de la clave API de Tavily
+### Configuración de la clave API de Tavily { #tavily-api-key-configuration }
 
 1. Visite el [sitio web de Tavily](https://tavily.com/){target="_blank"} y regístrese para obtener una cuenta.
 2. Una vez haya iniciado sesión, navegue hasta la sección de clave API de su cuenta.
@@ -38,7 +38,7 @@ La **TavilySearchTool** es una herramienta personalizada diseñada para realizar
     ```
 
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta se utiliza para interactuar con el motor de búsqueda Tavily y recuperar resultados de búsqueda para una consulta determinada.
 

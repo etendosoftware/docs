@@ -7,11 +7,11 @@ tags:
   - Financial Reports
 ---
 
-# Diario asientos
+# Diario asientos { #journal-entries-report }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Diario asientos`
 
-## Descripción general
+## Descripción general { #overview }
 
 El informe Diario asientos es una lista de todos los vouchers de diario de una organización y libro mayor, mostrados en orden cronológico.
 

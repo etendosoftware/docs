@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Histórico Ejecución de Pagos
+# Histórico Ejecución de Pagos { #payment-run }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Analysis Tools` > `Payment Run`
 
-## Descripción general
+## Descripción general { #overview }
 
 La ventana Histórico Ejecución de Pagos es una ventana de solo lectura que muestra información relevante de cada ejecución de pagos realizada dentro de una organización.
 
@@ -19,7 +19,7 @@ Una ejecución de pagos puede contener un único pago o varios pagos agrupados y
 
 Es posible consultar el estado y el resultado de la ejecución de pagos, así como el resultado y el mensaje de cada pago individual dentro de cada ejecución.
 
-## Histórico Ejecución de Pagos
+## Histórico Ejecución de Pagos { #payment-run_1 }
 
 En esta ventana se muestran la fecha de ejecución y el estado de ejecución de cada ejecución de pagos, junto con otros datos relevantes como el origen de la ejecución.
 
@@ -48,13 +48,13 @@ Hay tres estados disponibles:
 -   Ejecutado, lo que significa que la ejecución de pagos se ha completado. Los procesos de ejecución automática proporcionados actualmente por Etendo obtendrán todos el estado "Ejecutado".
 -   Y "Ejecutado parcialmente" y "Pendiente", que son estados que pueden ser utilizados por módulos como el módulo de Impresión de cheques para gestionar los casos en los que un pago no se ejecutó correctamente debido a algún problema derivado de un fallo de conexión.
 
-## Solapa Pagos
+## Solapa Pagos { #payments }
 
 La solapa Pagos enumera los pagos ejecutados en una ejecución de pagos.
 
 ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-run/payment-run-2.png)
 
-## Solapa Parámetros
+## Solapa Parámetros { #parameters }
 
 La solapa Parámetros muestra el valor del parámetro o parámetros del proceso de ejecución de pagos.
 

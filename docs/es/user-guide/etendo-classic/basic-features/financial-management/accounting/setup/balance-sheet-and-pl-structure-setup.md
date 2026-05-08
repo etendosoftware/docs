@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Configuración de la estructura del Balance y PyG
+# Configuración de la estructura del Balance y PyG { #balance-sheet-and-pl-structure-setup }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Configuración de la estructura del Balance y PyG`
 
-## Visión general
+## Visión general { #overview }
 
 La Configuración de la estructura del Balance y PyG permite a los usuarios definir cómo Etendo genera sus dos principales **informes financieros**:
 
@@ -32,7 +32,7 @@ La estructura del Balance y PyG depende completamente del Árbol de cuentas:
 - **Creados manualmente**:
     El usuario debe diseñar cuidadosamente la jerarquía, ya que la estructura del informe refleja directamente la forma en que las cuentas están organizadas en el árbol.
 
-## Cabecera
+## Cabecera { #header }
 
 Cada registro creado en esta ventana representa un **informe financiero**. Al definir un informe, el [tipo de organización](../../../general-setup/enterprise-model/organization-type.md) seleccionado es crucial porque determina el alcance de los datos financieros:
 
@@ -52,13 +52,13 @@ Campos a tener en cuenta en esta ventana:
 - **Cuadrado**: este indicador debe activarse siempre que el informe deba lanzarse solo para tipos de organización **Legal con Contabilidad**, ya que ese es el nivel empresarial en el que se garantiza el equilibrio contable.
 - **Activo**: este indicador debe marcarse como activo para el informe de Balance.
 
-### Categoría de agrupación
+### Categoría de agrupación { #grouping-category }
 
 La pestaña **Categoría de agrupación** permite a los usuarios definir secciones dentro del informe. Cada categoría de agrupación crea un salto de página, ayudando a organizar el informe en secciones claras.
 
 ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
 
-#### Nodos
+#### Nodos { #node }
 
 Desde la subpestaña **Nodos** es posible definir la información mostrada en el informe.
 
@@ -72,7 +72,7 @@ Un nodo de informe se define por:
     !!! info
         Los elementos de cuenta seleccionados aquí suelen ser **tipos de nivel de elemento de encabezado**, por lo tanto, el saldo calculado del nodo tendrá en cuenta y mostrará el saldo de todos los elementos de cuenta de otros tipos que estén por debajo de él.
 
-## Configuración de la estructura del Balance - Ejemplo
+## Configuración de la estructura del Balance - Ejemplo { #balance-sheet-structure-setup---example }
 
 Esta configuración define cómo Etendo genera un **Balance** mostrando la posición financiera de la empresa en una fecha específica.
 
@@ -88,7 +88,7 @@ Esta configuración define cómo Etendo genera un **Balance** mostrando la posic
 !!! note
     Etendo calcula cada nodo **sumando todas las cuentas** ubicadas bajo el encabezado correspondiente del árbol de cuentas. Un [Árbol de cuentas](./account-tree.md#element-value-tab) correctamente estructurado es esencial para obtener resultados precisos.
 
-## Configuración de la estructura de Pérdidas y Ganancias (PyG) - Ejemplo
+## Configuración de la estructura de Pérdidas y Ganancias (PyG) - Ejemplo { #profit-and-loss-pl-structure-setup---example }
 
 Esta configuración define cómo Etendo genera un **informe de Pérdidas y Ganancias** para un período seleccionado.
 

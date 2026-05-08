@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-# Cómo crear un trigger
+# Cómo crear un trigger { #how-to-create-a-trigger }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección se basa en la tabla `HT_Salary` creada en la guía [Cómo crear una tabla](../how-to-guides/how-to-create-a-table.md) y explica cómo aplicar una regla de negocio a nivel de base de datos: los registros de salario solo pueden asignarse a terceros marcados como empleados. Por lo tanto, el sistema debe impedir la introducción de información salarial para terceros definidos únicamente como clientes o proveedores.
 
@@ -23,7 +23,7 @@ Dado que esta regla depende de consultar datos relacionados, no puede implementa
 !!!info
     Para más información sobre los triggers, visite [Restricciones](../concepts/constraints.md).
 
-## Módulo
+## Módulo { #module }
 
 Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo **core**.
 
@@ -31,7 +31,7 @@ Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo
     Siga la sección [Cómo crear un módulo](../how-to-guides/how-to-create-a-module.md) para crear un nuevo módulo.
 
 
-## Añadir el trigger a la base de datos
+## Añadir el trigger a la base de datos { #adding-the-trigger-to-database }
 
 Los triggers no requieren ninguna descripción dentro del Diccionario de la Aplicación. Solo necesitan añadirse a la **Base de datos**, siguiendo la regla de `DB Prefix` que indica a qué módulo pertenecen.
 
@@ -157,7 +157,7 @@ Un desglose aproximado de la estructura de principio a fin es:
         Si se necesita establecer/cambiar los valores del registro que se está actualizando/insertando dentro del trigger, DEBE usarse la sentencia **BEFORE** INSERT OR UPDATE en lugar de **AFTER** INSERT OR UPDATE.  
  
     
-## Añadir mensaje traducible
+## Añadir mensaje traducible { #adding-translatable-message }
 
 En el trigger creado anteriormente, el texto del mensaje mostrado al usuario no está **codificado de forma fija**, sino que es simplemente el nombre de una entrada de Mensaje del **Diccionario de la Aplicación**. Definir el mensaje de esta forma permite añadir traducciones del mensaje para distintos idiomas.
 
@@ -185,7 +185,7 @@ Escribir triggers para **Postgres u Oracle** es algo diferente, así que describ
 
 
 
-## Exportar triggers como parte del módulo
+## Exportar triggers como parte del módulo { #exporting-triggers-as-part-of-the-module }
 
 Siempre que se modifica el Diccionario de la Aplicación o la base de datos física, es posible **exportar** esa información a **archivos xml** pertenecientes al módulo específico. De este modo, es posible mantener los datos de la base de datos de Etendo como **archivos XML de código fuente** que luego pueden controlarse por versiones.
 

@@ -7,7 +7,7 @@ tags:
   - Financial Extensions
 ---
 
-# Balance sumas y saldos
+# Balance sumas y saldos { #trial-balance }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Balance sumas y saldos`
 
@@ -19,7 +19,7 @@ tags:
 !!! warning
     Si no dispone del [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, el informe permanecerá en una versión heredada con funcionalidad limitada. No será posible navegar directamente al Libro mayor desde el Tercero cuando el informe esté agrupado por esta dimensión, y las mejoras de interfaz y las opciones mejoradas para exportar el informe a Excel y PDF no estarán disponibles.
 
-## Descripción general
+## Descripción general { #overview }
 
 El **Balance sumas y saldos** verifica que el total de débitos sea igual al total de créditos.
 
@@ -35,13 +35,13 @@ Para una **Organización** y un **Libro mayor** seleccionados, el informe muestr
 En la parte inferior del informe, el **total de débitos debe ser igual al total de créditos**.
 
 
-## Cabecera
+## Cabecera { #header }
 
 ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance/trial-balance-1.png)
 
 Campos clave a destacar:
 
-### Filtros primarios
+### Filtros primarios { #primary-filters }
 
 - **Fecha de inicio**: La fecha a partir de la cual se toma el saldo de la cuenta.
 - **Fecha de fin**: La fecha hasta la cual se calcula el saldo de la cuenta, utilizando la fórmula:  
@@ -52,7 +52,7 @@ Campos clave a destacar:
     - Entidades de tipo **Organización**, que pueden compartir un libro mayor entre múltiples organizaciones que les pertenecen. Aunque este tipo no puede contabilizar transacciones directamente, el Balance sumas y saldos resume la información contable de todas las organizaciones relacionadas que comparten el mismo libro mayor.
 - **Libro mayor**: El libro mayor asociado a la organización seleccionada.
 
-### Filtros avanzados
+### Filtros avanzados { #advanced-filters }
 
 Esta sección proporciona opciones adicionales para refinar el informe de Balance sumas y saldos:
 
@@ -78,7 +78,7 @@ Esta sección proporciona opciones adicionales para refinar el informe de Balanc
 
 - **De la Cuenta / A la Cuenta**: Permite especificar un rango de subcuentas a incluir en el informe (solo disponible cuando el nivel de cuenta está configurado como *Subcuenta*).
 
-### Dimensiones
+### Dimensiones { #dimensions }
 
 Es posible refinar el informe de Balance sumas y saldos seleccionando **Dimensiones** adicionales, como:
 
@@ -94,7 +94,7 @@ Estas dimensiones se registran cuando se contabilizan las transacciones en el li
 - **Incluir Importes a Cero**: Cuando está activado, el informe muestra todas las subcuentas, incluidas las que tienen saldos en cero.
 
 
-## Botones
+## Botones { #buttons }
 
 - **Ver**: Abre los resultados del informe en una nueva ventana. Desde allí, es posible navegar directamente al Libro mayor:
   

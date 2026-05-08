@@ -7,11 +7,11 @@ tags:
   - Receivables and Payables
 ---
 
-# Proceso de Ejecución
+# Proceso de Ejecución { #execution-process }
 
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Execution Process`
 
-## Descripción general
+## Descripción general { #overview }
 
 Algunos tipos de pago requieren que se ejecute una actividad adicional al completar el pago.
 
@@ -22,7 +22,7 @@ En términos generales, el proceso de ejecución es la definición de la(s) **ac
 -   **realizado/retirado de la cuenta financiera**
 -   o **recibido/depositado en la cuenta financiera**.
 
-## Proceso
+## Proceso { #process }
 
 La ventana Proceso de Ejecución lista los procesos de ejecución disponibles.
 
@@ -35,7 +35,7 @@ Etendo incluye por defecto los procesos de ejecución descritos a continuación:
 Los pagos que requieren la ejecución de una actividad separada deben configurarse para que funcionen correctamente; esto implica seleccionar la opción "**Automático**" en el campo "**Tipo de Ejecución**", de modo que se pueda seleccionar un Proceso de Ejecución de los listados anteriormente al configurar el método de pago.
 
 
-## Parámetro
+## Parámetro { #parameter }
 
 La pestaña Parámetro permite al usuario configurar la actividad adicional que se ejecutará al completar un pago. Por ejemplo, para registrar un número de cheque.
 

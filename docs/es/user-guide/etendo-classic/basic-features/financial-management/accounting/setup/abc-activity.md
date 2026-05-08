@@ -10,7 +10,7 @@ tags:
     - Setup
 ---
 
-# Actividad (ABC)
+# Actividad (ABC) { #abc-activity }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Actividad (ABC)`
 

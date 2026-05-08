@@ -7,15 +7,15 @@ tags:
   - Financial Extensions
 ---
 
-# Amortización
+# Amortización { #amortization }
 
 :material-menu: `Application` > `Financial Management` > `Assets` > `Amortization`
 
-## Descripción general
+## Descripción general { #overview }
 
 En la ventana Amortización se registran las amortizaciones de activos, agrupadas por fecha. Además, desde esta ventana dichos registros se procesan y se contabilizan en el libro mayor.
 
-## Ventana Amortización
+## Ventana Amortización { #amortization-window }
 
 Desde la cabecera se crean amortizaciones para períodos concretos.
 
@@ -33,7 +33,7 @@ Campos a destacar:
 - **Moneda**: Medio de intercambio monetario aceptado que puede variar según el país.
 - **Proyecto**: Identificador de un proyecto definido en el módulo de Gestión de Proyectos y Servicios.
 
-## Solapa Líneas
+## Solapa Líneas { #lines-tab }
 
 Cada línea muestra los activos amortizados y los detalles de la amortización.
 
@@ -49,7 +49,7 @@ Campos a destacar:
 - **Moneda**: Indica la moneda que se utilizará al procesar este documento.
 - **Proyecto**: Identificador de un proyecto definido en el módulo de Gestión de Proyectos y Servicios.
 
-## Solapa Contabilidad
+## Solapa Contabilidad { #accounting-tab }
 
 Información contable relacionada con la amortización una vez que el documento ha sido contabilizado.
 
@@ -65,7 +65,7 @@ Campos a destacar:
 !!!info 
     Para más información sobre la funcionalidad de Cuenta financiera, visite [Cuenta financiera](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md).
 
-## Dimensiones Contables de Activos
+## Dimensiones Contables de Activos { #accounting-dimensions-assets }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1a1UNCnNNcI?si=DbicgZnWjtmkScDh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -79,7 +79,7 @@ Además, las dimensiones contables se mantienen en las líneas de amortización 
 ![assets2](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/amortization/amortization-4.png)
 
 
-## Contabilización masiva
+## Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -91,7 +91,7 @@ Además, el Estado contable del registro o registros se muestra en la barra de e
 !!! info
     Para más información, visite [la guía de usuario del módulo de Contabilización masiva](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
-## Cómo reactivar amortizaciones
+## Cómo reactivar amortizaciones { #how-to-reactivate-amortizations }
 
 !!! info
     Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).

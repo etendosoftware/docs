@@ -6,10 +6,10 @@ tags:
     - Secuencia
 ---
 
-# Terceros avanzados
+# Terceros avanzados { #advanced-business-partner }
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner` 
 
-## Visión general
+## Visión general { #overview }
 Esta sección describe el módulo Terceros avanzados incluido en el bundle Etendo Essentials Extensions.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -20,7 +20,7 @@ Esta sección describe el módulo Terceros avanzados incluido en el bundle Etend
 El módulo **Terceros avanzados** permite al usuario tener una vista general de la información de terceros y asignar números de secuencia a los terceros.
 
 
-## Vista general de terceros
+## Vista general de terceros { #business-partner-general-view }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Vista general de terceros`
 
@@ -33,7 +33,7 @@ Este cambio implica que, en vista de cuadrícula, el usuario puede crear, modifi
 ![image_4.png](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-4.png)
 
 
-## Secuencia de documento (numeración)
+## Secuencia de documento (numeración) { #document-sequence }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de documento (numeración)`
 
@@ -43,19 +43,19 @@ En esta ventana, también es posible crear una **secuencia** para cada tercero e
 
 Para ello, primero debe establecer algunas *preferencias* y configurar la *secuencia*, tal y como se explica a continuación.
 
-### Preferencias
+### Preferencias { #preferences }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias`
 
 Para configurar una secuencia de terceros, deben habilitarse dos preferencias. Estas se pueden encontrar en la ventana **Preferencias**.
 
-#### Nº de documento automático de terceros
+#### Nº de documento automático de terceros { #auto-business-partner-document-no }
 
 Esta propiedad permite la generación automática de secuencias para terceros. El valor por defecto es *N* y, en caso de que sea necesario habilitar esta generación automática, **debe crearse una nueva preferencia**, pero con el valor `Y` y la opción `Selected` marcada. Cuando está deshabilitada, el campo *Nº de documento* se dejará en blanco.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-6.png)
 
-#### Permitir saltos en el Nº de documento de terceros
+#### Permitir saltos en el Nº de documento de terceros { #allow-jumps-in-business-partner-document-no }
 
 Esta propiedad permite saltar entre los diferentes números de documento. El valor por defecto es *N*, por lo que no se permite **eliminar terceros** ni **cambiar las categorías de terceros**.
 
@@ -63,7 +63,7 @@ Esta propiedad permite saltar entre los diferentes números de documento. El val
 
 Sin embargo, es posible **crear una nueva preferencia** con valor *Y* y la opción `Selected` marcada para habilitar esta opción. Cuando se cambia la categoría del tercero, el número de documento también se modifica de acuerdo con la secuencia de documento (numeración) correspondiente.
 
-### Cómo configurar la numeración de secuencias
+### Cómo configurar la numeración de secuencias { #how-to-configure-sequences-number }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de documento (numeración)`
 

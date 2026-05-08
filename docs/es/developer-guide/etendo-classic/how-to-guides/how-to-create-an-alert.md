@@ -7,9 +7,9 @@ tags:
   - Notificación del sistema
 ---
 
-#  Cómo crear una alerta
+# Cómo crear una alerta { #how-to-create-an-alert }
 
-##  Visión general
+## Visión general { #overview }
 
 El objetivo de este procedimiento es ilustrar cómo puede añadir nuevas alertas a
 Etendo. Las alertas son mensajes informativos no intrusivos para usuarios
@@ -25,7 +25,7 @@ Algunos ejemplos son:
 
 y muchos más.
 
-##  Definición de la alerta
+## Definición de la alerta { #defining-the-alert }
 
 En primer lugar, es necesario definir la condición bajo la cual aparece la
 alerta. Esto se realiza mediante una sentencia SQL que debe seguir ciertas
@@ -70,7 +70,7 @@ Los campos en cuestión aquí son:
   * *SQL* son las sentencias SQL reales cuyos resultados (registros individuales) serán los elementos sobre los que se alertará
   * *Pestaña* es una pestaña de una ventana específica a la que se debe llevar al usuario para mostrarle el elemento en cuestión generado por la sentencia SQL
 
-##  Definición de receptores
+## Definición de receptores { #defining-recipients }
 
 Cambie al rol _*Administrador del sistema*_ (o su rol de "administrador"
 definido), navegue a _`Configuración general` > `Aplicación` > `Alerta`_,
@@ -85,7 +85,7 @@ seleccione la alerta _Clientes con crédito excedido_ y cambie a la pestaña
     Tenga en cuenta que se puede añadir un rol (que incluye a varios usuarios) o
     un usuario específico.
 
-##  Programación del proceso en segundo plano de alertas
+## Programación del proceso en segundo plano de alertas { #scheduling-the-alerting-background-process }
 
 Para que las alertas se evalúen y se disparen, es necesario programar el
 proceso en segundo plano. Usando el rol _*Administrador del sistema*_ (o su rol
@@ -93,7 +93,7 @@ de "administrador" definido) navegue a _`Configuración general` > `Programació
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
 
-##  El resultado
+## El resultado { #the-result }
 
 Por último, cierre sesión y vuelva a iniciarla y seleccione el rol
 _*Administrador del sistema*_ (o su rol de administrador definido). Debería
@@ -107,7 +107,7 @@ más o menos así:
 
   
 
-##  Explicación del código SQL
+## Explicación del código SQL { #sql-code-explained }
 
 Para escribir cualquier tipo de alerta, el enfoque es muy similar. Volvamos a
 ver el código SQL que describe la condición:
