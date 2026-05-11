@@ -12,7 +12,7 @@ tags:
 
 # Cómo usar un Agente como servidor MCP { #how-to-use-an-agent-as-mcp-server }
 
-## Visión general { #overview }
+## Descripción general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
