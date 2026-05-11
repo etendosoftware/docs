@@ -9,16 +9,16 @@ tags:
 status: beta
 ---
 
-#  Estructura del proyecto de desarrollo
+# Estructura del proyecto de desarrollo { #development-project-structure }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 Esta sección describe la estructura de un proyecto de desarrollo de Etendo. Etendo tiene una estructura de directorios en árbol que divide lógicamente diferentes componentes del núcleo (`XmlEngine`, `SQLC`, `HttpBaseServlet`) y WAD (Wizard for Application Dictionary) del propio Etendo (formularios, informes, call-outs, combos, procesos, etc.).
 
-##  Estructura del proyecto
+## Estructura del proyecto { #project-structure }
 
 A continuación se muestra una instantánea de la estructura del proyecto de desarrollo de Etendo.
 
@@ -89,7 +89,7 @@ El directorio **lib** contiene todas las bibliotecas Java jar utilizadas en toda
 |-runtime
 ```
 
-###  Módulo
+### Módulo { #modules }
 
 El directorio **modules** es donde se ubican los módulos que usted haya instalado o desarrollado. Cada módulo tiene un directorio de nivel superior nombrado según el paquete Java especificado en su descripción del módulo y, por debajo, un diseño similar a la estructura de desarrollo del núcleo, que en sí misma es un módulo. Al desarrollar un módulo en el Diccionario de la aplicación, cuando el módulo se exporta, se exportará aquí, al directorio modules.
 

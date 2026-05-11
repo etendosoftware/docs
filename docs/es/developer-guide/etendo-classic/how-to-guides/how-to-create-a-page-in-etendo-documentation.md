@@ -7,17 +7,17 @@ tags:
   - Formato
 ---
 
-# Cómo crear una página en la documentación de Etendo
+# Cómo crear una página en la documentación de Etendo { #how-to-create-a-page-in-etendo-documentation }
 
-## Visión general
+## Visión general { #overview }
 Esta guía contiene reglas básicas, consejos y sugerencias para las personas que tengan la intención de desarrollar documentación para Etendo. Cuando diferentes documentos utilizan las mismas directrices, son más fáciles de usar, más consistentes y más simples de combinar y reutilizar. Por lo tanto, se recomienda encarecidamente a todos los colaboradores que sigan estas directrices en beneficio de los lectores.
 
 
-## Requisitos
+## Requisitos { #requirements }
 - Versión de Python ^3.11. Para instalarla, siga [la guía de instalación de Python](https://www.python.org/downloads/){target="\_blank"}.
 
 
-## Pasos
+## Pasos { #steps }
 
 1. Clone el repositorio [docs](https://github.com/etendosoftware/docs){target="\_blank"} 
 	
@@ -96,9 +96,9 @@ Esta guía contiene reglas básicas, consejos y sugerencias para las personas qu
 7. Una vez resueltos todos los comentarios y con dos aprobaciones, fusione la PR.
 8. Una nueva versión de la documentación se desplegará automáticamente en [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
 
-## Formato de página
+## Formato de página { #page-format }
 
-### Estructura de la página
+### Estructura de la página { #page-structure }
 
 ```
 ---
@@ -107,18 +107,18 @@ tags:
   - Ejemplo de etiqueta 2
 ---
  
-# Tratamientos
+# Tratamientos { #title }
   
-## Visión general
+## Visión general { #overview_1 }
 
 
 (Descripción general de la sección)
 
 
-## Tratamientos 1
+## Tratamientos 1 { #title-1 }
 
 
-### Subtítulo
+### Subtítulo { #subtitle }
 ```
 !!!note
     Añada la siguiente declaración de licencia como pie de página en todas las páginas de la documentación de Etendo producidas internamente:
@@ -129,9 +129,9 @@ tags:
 
     ```
 
-### Referencias útiles
+### Referencias útiles { #useful-references }
 
-#### Negrita
+#### Negrita { #bold }
 
 Úsela con moderación para dar énfasis o para resaltar nombres de opciones; por ejemplo:
 Desde la ventana **Pedido de venta**, seleccione **Nuevo**
@@ -142,7 +142,7 @@ Desde la ventana **Pedido de venta**, seleccione **Nuevo**
 
 Esto se muestra como: **Negrita**
 
-#### Cursiva 
+#### Cursiva { #italics }
 
 Úsela al citar un fragmento de texto de otra fuente, un fragmento de texto en otro idioma o para dar un ejemplo, como texto de muestra que se debe escribir en un campo de texto.
 
@@ -237,7 +237,7 @@ Esto se muestra como:
 
 Para más información, visite [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="\_blank"}.
 
-#### Pestañas de contenido
+#### Pestañas de contenido { #content-tabs }
 
 Al documentar una funcionalidad con diferentes opciones (JAR o Source, Windows o Linux, C o C++ por ejemplo), utilice las siguientes pestañas para incluir información relevante para cada opción. Los lectores pueden entonces elegir la pestaña correspondiente con la información necesaria y omitir la lectura de información no relevante.
 
@@ -288,7 +288,7 @@ Esto se muestra como:
     }
     ```
 
-#### Estructura de directorios
+#### Estructura de directorios { #directory-structure }
 
 Para la estructura de directorios, es necesario aplicar el siguiente formato:
 
@@ -302,7 +302,7 @@ modules
 ```
 
 
-#### Enlaces externos
+#### Enlaces externos { #external-links }
 
 Para incluir enlaces externos en la documentación, utilice el siguiente formato de ruta: 
 
@@ -312,7 +312,7 @@ Para incluir enlaces externos en la documentación, utilice el siguiente formato
 
 Esto se muestra como: [Google Example](https://google.com){target="_blank"} 
 
-#### Enlaces internos (Redirección)
+#### Enlaces internos (Redirección) { #internal-links-redirection }
 
 Para incluir enlaces internos, utilice las rutas relativas desde la página actual, como en el siguiente ejemplo:
 
@@ -330,7 +330,7 @@ También es posible referirse a una sección específica dentro de una página u
 
 Esto se muestra como: [Specific section](../../how-to-guides/example-page.md#specific-section)
 
-#### Lista
+#### Lista { #lists }
 
 Para incluir listas en la documentación, utilice los siguientes formatos:
 
@@ -372,7 +372,7 @@ Lista:
 !!!info
     Recuerde que respetar las tabulaciones es esencial para la continuidad de las listas; esto significa que el contenido de diferentes elementos debe estar tabulado.  
 
-#### Imagen
+#### Imagen { #images }
 
 Para incluir imágenes en la documentación, utilice las rutas relativas desde la página actual con el siguiente formato: 
 
@@ -393,13 +393,13 @@ Por ejemplo, si la ubicación de la imagen es `developer-guide`> `how-to-guides`
                 └── new-page
                     └── new-image.png
 ```
-#### Más referencias
+#### Más referencias { #more-references }
 
 Para más información sobre mkdocs, visite [Referencia de Mkdocs](https://squidfunk.github.io/mkdocs-material/reference){target="_blank"}.
 
-## Reglas de redacción
+## Reglas de redacción { #writing-rules }
 
-### Manténgalo simple
+### Manténgalo simple { #keep-it-simple }
 Utilice frases cortas y puntuación para mantener las ideas claras y simples. Introduzca una única idea, concepto o acción por frase.
 
 - **Incorrecto**<br>
@@ -409,7 +409,7 @@ Utilice frases cortas y puntuación para mantener las ideas claras y simples. In
 *El módulo de fabricación permite a los usuarios definir los planes de proceso, los requisitos de trabajo y los esfuerzos de trabajo. Esta sección describe cómo funcionan los procesos que producen bienes intermedios y finales.*
 
 
-### Tiempos verbales
+### Tiempos verbales { #tenses }
 Utilice siempre el tiempo presente. Evite los tiempos pasado o futuro si es posible.
 Además, intente abstenerse de usar must, have to, need to, will, should y formas similares.
 Tenga en cuenta que un manual describe procedimientos obligatorios que se deben seguir para completar una determinada tarea.
@@ -420,7 +420,7 @@ Tenga en cuenta que un manual describe procedimientos obligatorios que se deben 
 *Pulse Intro para reiniciar el sistema.*
 
 
-### Use la tercera persona
+### Use la tercera persona { #use-third-person }
 *Cuando sea posible, utilice el imperativo en tercera persona.* 
 
 - **Incorrecto**<br>
@@ -430,7 +430,7 @@ Tenga en cuenta que un manual describe procedimientos obligatorios que se deben 
 
 Sin embargo, siempre que no se abuse, se acepta dirigirse al usuario directamente usando *usted* si hace que la documentación sea más fácil de seguir o usar *el usuario* cuando sea necesario.
 
-### Evite la discriminación de género
+### Evite la discriminación de género { #avoid-gender-discrimination }
 Los lectores de documentación de software son hombres y mujeres. Evite usar expresiones que se refieran a formas de género específicas.
 Puede evitar las formas de género o usar *they*/*their* como pronombre genérico de tercera persona del singular para referirse a una persona cuyo género es desconocido o irrelevante para el contexto de uso.
 
@@ -442,7 +442,7 @@ Puede evitar las formas de género o usar *they*/*their* como pronombre genéric
 *Cada usuario tiene su directorio de inicio.*
 
 
-### Describa únicamente la funcionalidad actual
+### Describa únicamente la funcionalidad actual { #only-describe-current-functionality }
 Evite hablar sobre funcionalidades o planes futuros para un producto o una aplicación.
 
 - **Incorrecto**<br>
@@ -452,14 +452,14 @@ Evite hablar sobre funcionalidades o planes futuros para un producto o una aplic
 *Los gráficos se pueden guardar como una imagen GIF.*
 
 
-### Redacción para una audiencia global
+### Redacción para una audiencia global { #writing-for-a-global-audience }
 Tenga en cuenta que personas de todo el mundo pueden utilizar Etendo y su documentación relacionada.
 Algunas recomendaciones importantes:
 
 - Evite usar nombres de personas, direcciones y otra información de ejemplo que no sea común en el idioma inglés.
 - Recuerde que las monedas y los formatos para representar fechas y números no son los mismos en todas las partes del mundo.
 
-### Otras convenciones
+### Otras convenciones { #other-conventions }
 
 - Si tiene una lista de elementos (por ejemplo, una lista de archivos para descargar), ordénelos alfabéticamente a menos que exista un orden lógico más evidente.
 - No utilice contracciones (don't, you're, etc).

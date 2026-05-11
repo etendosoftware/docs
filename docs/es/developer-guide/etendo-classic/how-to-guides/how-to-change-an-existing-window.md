@@ -8,9 +8,9 @@ tags:
     - Desarrollo de módulos
 ---
 
-#  Cómo cambiar una ventana existente
+# Cómo cambiar una ventana existente { #how-to-change-an-existing-window }
 
-##  Visión general
+## Visión general { #overview }
 
 Los elementos de la aplicación ([ventanas, solapas y campos](../../../developer-guide/etendo-classic/concepts/modularity-concepts.md#windows-tabs-and-fields.md)) son susceptibles de cambiar repetidamente durante las fases de desarrollo o mantenimiento de un proyecto.
 Etendo es capaz de gestionar estos cambios porque su arquitectura está adaptada al desarrollo iterativo. Las definiciones de todas las ventanas, solapas y campos generados se almacenan como metadatos en el Diccionario de aplicación (AD).
@@ -25,7 +25,7 @@ Este procedimiento explica cómo modificar elementos existentes de una ventana. 
  
 
 
-##  Objetivo
+## Objetivo { #objective }
 
 El objetivo de este procedimiento es ilustrar cómo realizar cambios en ventanas generadas existentes en términos de apariencia y comportamiento. La ventana utilizada en el ejemplo es la ventana de Inventario físico y los cambios que se muestran serán:
 
@@ -51,7 +51,7 @@ Antes de realizar cualquier cambio, la solapa de cabecera tiene el siguiente asp
 
 
 
-##  Cambiar la ventana
+## Cambiar la ventana { #changing-the-window }
 
 Vaya a la ventana `Diccionario de aplicación` > `Ventanas, solapas y campos` y seleccione el registro de _Inventario físico_.
 
@@ -72,7 +72,7 @@ Para aplicar los mismos cambios de diseño a la ventana en *modo UI clásico*, e
 
   
 
-##  Exportar los cambios
+## Exportar los cambios { #exporting-the-changes }
 
 El paso final es exportar los cambios al módulo para que queden persistidos.
 

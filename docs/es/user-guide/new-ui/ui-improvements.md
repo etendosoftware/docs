@@ -6,15 +6,15 @@ tags:
 status: new
 ---
 
-# Mejoras de la interfaz de usuario
+# Mejoras de la interfaz de usuario { #user-interface-improvements }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección detalla las mejoras de la interfaz de usuario disponibles en la **Nueva UI de Etendo**.
 
-## Mejoras y ampliaciones de la UI de Etendo
+## Mejoras y ampliaciones de la UI de Etendo { #etendo-ui-improvements-and-enhancements }
 
-### Formato regional de fechas
+### Formato regional de fechas { #regional-date-formatting }
 
 Todas las fechas mostradas en la interfaz de usuario ahora se adaptan automáticamente a la configuración regional de su navegador. Esto proporciona una vista personalizada y localizada de la información de fechas, haciendo que la interfaz sea más intuitiva y fácil de leer para usuarios de distintas regiones.
 
@@ -41,11 +41,11 @@ Todas las fechas mostradas en la interfaz de usuario ahora se adaptan automátic
     <figcaption>UI de Etendo: en la UI de Etendo, la misma tabla muestra las fechas formateadas automáticamente. En este ejemplo se aplica `en-US` (Estados Unidos), por lo que las fechas aparecen en formato `MM/DD/YYYY`. </figcaption>
 </figure>
 
-### Gestión de adjuntos
+### Gestión de adjuntos { #attachment-management }
 
 La **UI de Etendo** introduce un sistema de gestión de adjuntos completamente rediseñado que proporciona una forma más ágil, visual e integral de gestionar archivos adjuntos, tanto desde la **vista de formulario** como directamente desde los **registros de la cuadrícula**.
 
-#### Sección de adjuntos en la vista de formulario
+#### Sección de adjuntos en la vista de formulario { #attachments-section-in-form-view }
 
 La sección de adjuntos se ha rediseñado para ser más intuitiva. Los archivos ahora se muestran como etiquetas o chips, lo que permite una identificación rápida.
 
@@ -64,7 +64,7 @@ Hay dos formas principales de cargar archivos dentro de un registro:
 
 2. **Explorador de archivos:** haga clic en la zona de carga (o en el icono de carga) para abrir el selector de archivos de su sistema operativo.
 
-#### Vista previa y edición rápida
+#### Vista previa y edición rápida { #preview-and-quick-edit }
 
 ![Modal de carga con archivo](../../assets/user-guide/newui/upload-modal-with-file-1.png){align=right width=300}
 
@@ -76,7 +76,7 @@ Al hacer clic en el nombre de cualquier adjunto cargado, se abrirá una ventana 
 - **Edición de la descripción:** puede modificar la descripción del archivo _in situ_. Haga clic en el icono de **lápiz**, edite el texto y guarde los cambios con el icono de **Comprobación**, todo sin salir de la vista previa.
 - **Gestión individual:** botones dedicados para **Descargar** o **Eliminar** el archivo que está visualizando.
 
-#### Acciones masivas de adjuntos
+#### Acciones masivas de adjuntos { #attachments-bulk-actions }
 
 ![Acciones masivas](../../assets/user-guide/newui/bulk-actions-1.png)
 
@@ -85,13 +85,13 @@ Para facilitar la gestión de múltiples archivos, se han incorporado botones de
 - **Descargar todo:** genera y descarga un archivo comprimido (`.zip`) que contiene todos los adjuntos asociados al registro.
 - **Eliminar todo:** permite eliminar todos los adjuntos del registro en un solo paso (requiere confirmación de seguridad).
 
-#### Carga rápida desde la cuadrícula (arrastrar y soltar en filas)
+#### Carga rápida desde la cuadrícula (arrastrar y soltar en filas) { #quick-upload-from-grid-drag-drop-on-rows }
 
 Es posible adjuntar archivos sin necesidad de entrar en cada registro. Desde la vista principal de la cuadrícula:
 
 ![](../../assets/user-guide/newui/drop-file-in-grid-1.gif)
 
-### Filtro Avanzado
+### Filtro Avanzado { #advanced-filters }
 
 ![](../../assets/user-guide/newui/advanced-filters-modal.png)
 
@@ -107,7 +107,7 @@ El modal de **Filtro Avanzado** es un componente de filtrado potente que permite
     - **Borrar todo:** restablezca todos los filtros para empezar de nuevo.
     - **Aplicar/validación:** solo se aplican condiciones válidas (con columna, operador y valor).
 
-#### Operadores compatibles por tipo de campo
+#### Operadores compatibles por tipo de campo { #supported-operators-by-field-type }
 
 | Tipo de campo | Operadores compatibles |
 |-----------|---------------------|
@@ -117,7 +117,7 @@ El modal de **Filtro Avanzado** es un componente de filtrado potente que permite
 | **Booleano** | sí<br>no |
 | **Selección (desplegable)** | `=` Igual<br>`≠` Distinto |
 
-#### Uso del Filtro Avanzado
+#### Uso del Filtro Avanzado { #using-the-advanced-filters }
 
 1. **Haga clic en el icono de filtro** en el encabezado de la cuadrícula para abrir el modal de Filtro Avanzado.
 2. **Seleccione una columna** en el desplegable de la primera fila de filtro.
@@ -129,7 +129,7 @@ El modal de **Filtro Avanzado** es un componente de filtrado potente que permite
 8. **Haga clic en el botón Aplicar filtros** para ejecutar la consulta.
 9. **Limpie los filtros** haciendo clic en el botón *Borrar todo* para restablecer y empezar de nuevo.
 
-#### Escenarios de ejemplo
+#### Escenarios de ejemplo { #example-scenarios }
 
 <figure markdown="span">
     ![Ejemplo 1 de Filtro Avanzado](../../assets/user-guide/newui/advanced-filters-modal-1-example.png)

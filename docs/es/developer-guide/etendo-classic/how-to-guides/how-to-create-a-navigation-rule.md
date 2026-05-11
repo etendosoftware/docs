@@ -8,18 +8,18 @@ tags:
 status: beta
 ---
 
-# Cómo crear una Regla de Navegación
+# Cómo crear una Regla de Navegación { #how-to-create-a-navigation-rule }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 
-## Visión general
+## Visión general { #overview }
 
 Las **reglas de navegación** permiten a Etendo dirigir dinámicamente a los usuarios a diferentes solapas en función de los datos visualizados. Estas reglas pueden definirse tanto a **nivel de campo y a nivel de tabla**, proporcionando a los administradores un control flexible sobre cómo se abren los registros. Cada regla puede especificar una solapa de destino, su prioridad y, cuando sea necesario, una condición de **Lógica HQL** que determina cuándo debe aplicarse la regla. Al combinar estos elementos, Etendo puede gestionar escenarios de navegación complejos, como abrir diferentes ventanas en función del tipo de documento o del registro al que se accede.
 
 
-## Definición de reglas a nivel de campo
+## Definición de reglas a nivel de campo { #rules-definition-at-field-level }
 
 Estas reglas se definen en la solapa **Reglas de Navegación** de la ventana **Windows, Tabs and Fields**, debajo de la solapa **Campo**. El administrador del sistema puede añadir reglas a un campo para que navegue a una solapa personalizada.
 
@@ -32,7 +32,7 @@ Los campos principales que deben configurarse son:
 - **Navegación Directa**: indicador que determina si se ejecuta la cláusula `HQL Logic` o si la regla se aplica siempre. 
 - **Lógica HQL**: cláusula where HQL que debe cumplir el registro que se está abriendo para abrir la solapa especificada en la regla. 
 
-## Definición de reglas a nivel de tabla
+## Definición de reglas a nivel de tabla { #rules-definition-at-table-level }
 
 Las reglas a nivel de tabla para el **Modelo de Navegación Extendido** se definen en una nueva solapa de la ventana **Tablas y columnas** llamada **Reglas de Navegación**. El administrador del sistema puede añadir nuevas reglas a una tabla para que los enlaces que tengan esa tabla como referencia naveguen a una solapa personalizada.
 
@@ -40,7 +40,7 @@ Las reglas a nivel de tabla para el **Modelo de Navegación Extendido** se defin
 
 Las reglas se definen siguiendo la misma lógica que las *Reglas a nivel de campo*.
 
-## Creación de reglas
+## Creación de reglas { #creating-rules }
 
 Para crear una regla que no sea de **Navegación Directa**, defina el campo **Lógica HQL** con una expresión de cláusula where. Esta expresión se añade a un HQL que se ejecuta sobre la tabla donde se almacena el registro que se está abriendo. El HQL también se filtra por el **id** del registro, de modo que solo pueda devolver ese registro. Si el HQL devuelve el registro, entonces la regla es válida y se abre en su **solapa**. Si no se devuelven resultados, se ejecuta la siguiente regla.
 

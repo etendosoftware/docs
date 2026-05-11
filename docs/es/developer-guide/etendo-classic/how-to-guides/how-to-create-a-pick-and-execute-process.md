@@ -8,9 +8,9 @@ tags:
   - Patrón estándar de UI
 ---
 
-# Cómo crear un proceso de Seleccionar y Ejecutar
+# Cómo crear un proceso de Seleccionar y Ejecutar { #how-to-create-a-pick-and-execute-process }
 
-## Visión general
+## Visión general { #overview }
 
 **Seleccionar y Ejecutar (P&E)** es un caso de **Definición del Proceso** con **patrón estándar de UI**.
 
@@ -24,15 +24,15 @@ Las siguientes páginas de conceptos proporcionan información de base sobre act
 - [Desarrollo del lado del cliente y API](../concepts/client-side-development-and-api.md)
 - [Convenciones de codificación JavaScript](../concepts/javascript-coding-conventions.md)
 
-## Pasos para implementar el proceso
+## Pasos para implementar el proceso { #steps-to-implement-the-process }
 
-### Visión general
+### Visión general { #overview_1 }
 
 Los procesos P&E aprovechan los mismos conceptos base en el Diccionario de la Aplicación. Se utilizarán **Ventana, Solapas y Campos** para definir el grid editable que se mostrará, una nueva **Referencia** para el parámetro del proceso; y después se implementará un **action handler** que se ejecutará cuando el usuario pulse el botón **Hecho**.
 
-### Implementación
+### Implementación { #implementation }
 
-#### Definir la ventana
+#### Definir la ventana { #defining-the-window }
 
 1. Cree una nueva ventana
 2. Rellene los campos obligatorios
@@ -59,7 +59,7 @@ Los procesos P&E aprovechan los mismos conceptos base en el Diccionario de la Ap
 
     ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-3.png)
 
-#### Definir la referencia
+#### Definir la referencia { #defining-the-reference }
 
 Después de definir la ventana, es necesario definir una nueva Referencia.
 
@@ -76,7 +76,7 @@ Después de definir la ventana, es necesario definir una nueva Referencia.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-5.png)
 
-#### Definir el proceso
+#### Definir el proceso { #defining-the-process }
 
 Existe una nueva ventana para procesos: **Definición del Proceso**
 
@@ -88,7 +88,7 @@ Existe una nueva ventana para procesos: **Definición del Proceso**
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-6.png)
 
-##### Parámetros
+##### Parámetros { #parameters }
 
 La Referencia de ventana es una implementación de un **parámetro enriquecido**.
 
@@ -101,9 +101,9 @@ La Referencia de ventana es una implementación de un **parámetro enriquecido**
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-7.png)
 
-#### Añadir un botón a Pedido de ventas
+#### Añadir un botón a Pedido de ventas { #adding-a-button-to-sales-order }
 
-##### Crear una columna
+##### Crear una columna { #create-a-column }
 
 Se requiere una nueva columna para asociarla a un botón.
 
@@ -127,7 +127,7 @@ Se requiere una nueva columna para asociarla a un botón.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-8.png)
 
-##### Crear un campo
+##### Crear un campo { #create-a-field }
 
 1. Vaya a Ventana, Solapas y Campos
 2. Busque Pedido de ventas
@@ -135,7 +135,7 @@ Se requiere una nueva columna para asociarla a un botón.
 
   ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-9.png)
 
-#### Implementación Java
+#### Implementación Java { #java-implementation }
 
 En el caso de un action handler de Seleccionar y Ejecutar, extienda de **BaseProcessActionHandler** e implemente el método **doExecute**.
 
@@ -208,7 +208,7 @@ public class PickExampleActionHandler extends BaseProcessActionHandler {
 }
 ```
 
-## Probar el proceso
+## Probar el proceso { #testing-the-process }
 
 Dado que la estructura de alguna entidad se ha modificado al añadir una nueva columna, es necesario reiniciar el servidor tomcat.
 
@@ -216,9 +216,9 @@ Dado que la estructura de alguna entidad se ha modificado al añadir una nueva c
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-10.png)
 
-## Temas avanzados
+## Temas avanzados { #advanced-topics }
 
-### Seleccionar por defecto
+### Seleccionar por defecto { #selecting-by-default }
 
 La fuente de datos (tabla o vista) definida en la solapa puede establecer qué filas se seleccionarán por defecto cuando el usuario lance el proceso. Solo es necesario crear una columna `c_ob_selected`, que se convertirá en una propiedad `obSelected` en la entidad generada. Cuando el valor de esta columna sea **Y**, la fila se seleccionará por defecto. Aquí tiene un ejemplo funcional:
 `M_RM_RECEIPT_PICK_EDIT.xml`.
@@ -226,7 +226,7 @@ La fuente de datos (tabla o vista) definida en la solapa puede establecer qué f
 !!!note
     Al registrar la columna en el Diccionario de la Aplicación debe utilizarse la referencia **Sí/No**.
 
-### Función de Validación
+### Función de Validación { #validation-function }
 
 Defina, a nivel de campo, una función de validación JavaScript. En un campo editable, cuando el usuario introduzca un valor, se ejecutará esta función.
 
@@ -236,7 +236,7 @@ Defina, a nivel de campo, una función de validación JavaScript. En un campo ed
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-11.png)
 
-#### Definición JavaScript
+#### Definición JavaScript { #javascript-definition }
 
 - El proveedor de componentes debe registrar un nuevo recurso global.
 - Si la función devuelve false, la celda se marcará con un error.
@@ -261,7 +261,7 @@ OB.OBHT.validate = function (item, validator, value, record) {
 };
 ```
 
-### Función de Selección
+### Función de Selección { #selection-function }
 
 Se puede definir una función de selección a nivel de solapa. Esta función se llamará cuando el usuario seleccione/deseleccione una fila.
 
@@ -284,7 +284,7 @@ Si desea cambiar cualquier valor del registro seleccionado, utilice la siguiente
 grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
 ```
 
-### Realizar varias acciones después de la ejecución
+### Realizar varias acciones después de la ejecución { #performing-several-actions-after-execution }
 
 Después de que el proceso se ejecute, se puede realizar una serie de acciones.
 

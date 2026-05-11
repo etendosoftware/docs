@@ -6,17 +6,17 @@ tags:
     - Accounting Setup
 ---
 
-## Visión general
+## Visión general { #overview }
 
 El **Esquema contable** en Etendo define cómo se registran y estructuran las transacciones financieras de una organización. Cada organización debe estar vinculada al menos a un libro mayor, aunque se pueden asignar varios libros si es necesario, por ejemplo, al utilizar diferentes monedas o al heredar un libro mayor de una organización padre.
 
 Antes de configurar un libro mayor, se recomienda crear primero el [Árbol de cuentas](../basic-features/financial-management/accounting/setup/account-tree.md) que se utilizará para contabilizar transacciones. Una vez hecho esto, se puede crear una nueva configuración de libro mayor y vincularla a la organización.
 
-## Esquema contable
+## Esquema contable { #general-ledger-configuration }
 
 Desde la ventana **Esquema contable**, el proceso de configuración implica:
 
-![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration6.png)
+![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration6.png)
 
 -   Seleccionar la **Organización** para la cual el libro mayor va a estar disponible.
 -   Introducir el **Nombre de la configuración del Esquema contable**, por ejemplo, Libro mayor general EUR.  

@@ -9,9 +9,9 @@ tags:
     - Arquitectura de desarrollo
 ---
 
-# Capa de Acceso a Datos
+# Capa de Acceso a Datos { #data-access-layer }
   
-##  Visión general
+## Visión general { #overview }
 
 El objetivo del desarrollo de la Capa de Acceso a Datos (DAL) de Etendo es reforzar la capa intermedia de la aplicación, es decir, implementar la lógica de negocio en Java. La DAL proporciona al desarrollador de la aplicación la siguiente funcionalidad:
 
@@ -24,7 +24,7 @@ El objetivo del desarrollo de la Capa de Acceso a Datos (DAL) de Etendo es refor
 - Genera clases Java de objetos de negocio (y sus asociaciones) sobre la base del modelo del Diccionario de Aplicación. 
 
 La DAL consta de una parte en tiempo de desarrollo y una parte en tiempo de ejecución. La parte en tiempo de desarrollo se encarga de generar las clases Java de objetos de negocio. La parte en tiempo de ejecución se encarga de mapear las clases Java a la base de datos y de proporcionar funcionalidad de soporte como la seguridad y la validación.
-## Un ejemplo de 'Hello World'
+## Un ejemplo de 'Hello World' { #a-hello-world-example }
 
 Como primer ejemplo sencillo, vamos a crear un nuevo grupo de terceros y guardarlo en la base de datos:
 ``` java
@@ -75,7 +75,7 @@ Este fragmento de código introdujo varios conceptos nuevos:
 - Tras cambiar el nombre del grupo de terceros, no necesita realizar un guardado explícito. En el momento del commit, Hibernate detectará automáticamente los objetos _dirty_ y los guardará.
 
 Esta fue una breve introducción que muestra cómo el DAL puede utilizarse para crear, almacenar y recuperar un objeto de negocio (simple). El resto de esta sección describirá la funcionalidad de la Data Access Layer con más detalle.
-## Arquitectura DAL
+## Arquitectura DAL { #dal-architecture }
 
 La imagen siguiente muestra la arquitectura prevista para la capa de acceso a datos en
 Etendo Classic.
@@ -93,7 +93,7 @@ Esta arquitectura se implementa:
 
 La arquitectura completa se ejecuta dentro de un contexto que proporciona seguridad y
 gestión de transacciones.
-## Objeto de negocio
+## Objeto de negocio { #business-object }
 
 Este documento utiliza el término objeto de negocio para denotar una entidad y su información dependiente. Un objeto de negocio puede ser una entidad simple, como una divisa, que solo tiene campos primitivos básicos. Por otro lado, también puede ser una estructura de entidades, por ejemplo, una cabecera de pedido con sus líneas de pedido.
 
@@ -107,7 +107,7 @@ Es posible no generar esas asociaciones de uno a muchos en la entidad padre. Est
     Las propiedades de uno a muchos generadas en la entidad padre cargan todos los hijos en memoria cuando se invocan, por lo que solo deberían generarse cuando la cantidad esperada de registros hijo sea baja; de lo contrario, podría provocar un `OutOfMemoryError`.
 
 Para mantener una API compatible con versiones anteriores, puede configurarse la preferencia `hb.generate.all.parent.child.properties=true` en etendo.propeties; de este modo, todas las columnas de clave foránea generarán una propiedad de uno a muchos en la entidad padre.
-##  Interfaces principales de DAL
+## Interfaces principales de DAL { #dal-main-interfaces }
 
 La DAL ofrece tres servicios principales para instanciar, crear y consultar objetos de negocio de Etendo Classic: OBDal, OBCriteria y OBProvider. Las clases de servicio se pueden encontrar en el paquete _org.openbravo.dal.service_.
 
@@ -235,7 +235,7 @@ Los objetos de negocio de Etendo no deben instanciarse directamente usando el op
      // The ENTITYNAME constant is created by the business object generation logic
      final BPGroup bpg = (BPGroup)OBProvider.getInstance().get(BPGroup.ENTITYNAME);
 ```
-##  Objetos de negocio de Etendo
+## Objetos de negocio de Etendo { #etendo-business-objects }
 
 La DAL genera, instancia y utiliza objetos de negocio de Etendo. Esta parte del manual de desarrollo describe su estructura y sus interfaces principales.
 
@@ -255,7 +255,7 @@ La sección sobre el modelo en tiempo de ejecución y la API dinámica a continu
 
 Como todos los objetos de negocio de Etendo Classic deben extender esta clase, es seguro convertir un objeto a esta clase cuando sea necesario.
 
-###  Clases de objetos de negocio generadas
+### Clases de objetos de negocio generadas { #generated-business-object-classes }
 
 En tiempo de desarrollo, la DAL generará clases de objetos de negocio para cada tabla definida en el diccionario de aplicación. Esto se realiza como parte de las tareas ant compile.complete o puede hacerse por separado mediante la tarea ant generate.entities. Estas clases generadas son las que normalmente utiliza un desarrollador porque ofrecen acceso tipado a propiedades comprobado en tiempo de compilación. Las clases generadas se crean en la carpeta _src-gen_ del proyecto de desarrollo de Etendo Classic y forman parte del paquete _org.openbravo.base.model_ y sus subpaquetes.
 
@@ -271,7 +271,7 @@ Las clases generadas extienden BaseOBObject y ofrecen getters y setters envoltor
 ```
 Además, las clases Java generadas establecen valores por defecto (en el constructor) y tienen una variable estática ENTITYNAME que debe utilizarse cuando sea necesario referirse directamente al nombre de una entidad.
 
-###  Nomenclatura de Entidad, Propiedad y Columna
+### Nomenclatura de Entidad, Propiedad y Columna { #entity-property-and-column-naming }
 
 La Data Access Layer utiliza los nombres definidos en el Diccionario de Aplicación para diferentes propósitos:
 
@@ -284,7 +284,7 @@ Históricamente, el diccionario de aplicación permite muchos tipos diferentes d
 
 Para un listado completo de todos los nombres de entidad y propiedad, consulte la sección [Referencia del modelo de datos](/developer-guide/etendo-classic/concepts/data-model).
 
-####  Nomenclatura de Entidad
+#### Nomenclatura de Entidad { #entity-naming }
 
 Una entidad (corresponde a una tabla en Etendo Classic) tiene diferentes nombres, relevantes para distintas situaciones:
 
@@ -297,7 +297,7 @@ Cada tabla (es decir, entidad) en Etendo Classic pertenece a un paquete de datos
 !!!warning
    `AD_Table.name` no debería contener espacios en blanco. Si el nombre de la tabla contiene espacios, el proceso de construcción del nombre de la entidad eliminará esos espacios; por ejemplo, `My Table` se convertirá en `MyTable`.  
   
-####  Nomenclatura de Propiedad
+#### Nomenclatura de Propiedad { #property-naming }
 
 Para la nomenclatura de propiedades, la lógica es ligeramente diferente. La lógica de nomenclatura de propiedades tiene dos pasos diferenciados: 
 
@@ -321,11 +321,11 @@ Para la nomenclatura de propiedades, la lógica es ligeramente diferente. La ló
     - Se eliminan los caracteres 'ilegales': solo se mantienen caracteres de la a a la z y de la A a la Z y números (no como prefijo), por lo que 'G/L Item' se traducirá a 'GLItem'. 
     - El primer carácter se pasa a minúscula: AccountingFact se convierte en accountingFact. 
 
-####  Nomenclatura de Propiedad e interfaces soportadas
+#### Nomenclatura de Propiedad e interfaces soportadas { #property-naming-and-supported-interfaces }
 
 La Data Access Layer detecta automáticamente que una entidad soporta una determinada interfaz analizando el nombre de las propiedades de esa entidad. Por lo tanto, es muy importante ser preciso en la nomenclatura de propiedades. La nomenclatura de propiedades y las interfaces soportadas por propiedades específicas se tratan en la siguiente sección.
 
-###  Interfaces importantes
+### Interfaces importantes { #important-interfaces }
 
 Las clases generadas implementan un conjunto de interfaces que pueden utilizarse para comprobar si una determinada instancia de una clase tiene disponible una funcionalidad específica:
 
@@ -350,7 +350,7 @@ Las clases generadas implementan un conjunto de interfaces que pueden utilizarse
     !!! note
         Etendo detecta automáticamente que una tabla (==Entidad) implementa esta interfaz si tiene las siguientes columnas (todas son obligatorias): creationDate, created, updated, updatedBy (establecidas en el campo ad_column.name). Observe específicamente el nombre de la propiedad de fecha de creación: debería ser: creationDate. Cuando esta interfaz se implementa/detecta, entonces la Data Access Layer establecerá automáticamente los campos de auditoría cuando un objeto se persista. 
 
-###  Cliente, organización e información de auditoría
+### Cliente, organización e información de auditoría { #client-and-organization-and-audit-information }
 
 Las interfaces anteriores son utilizadas por la DAL cuando un objeto se guarda por primera vez o se actualiza en la base de datos:
 
@@ -363,7 +363,7 @@ Por lo tanto, un desarrollador no necesita establecer explícitamente esta infor
 !!!note 
     Para que la Data Access Layer detecte que una tabla soporta las interfaces anteriores, los nombres de columna (AD_Column.name) deben ajustarse a estándares específicos; consulte [aquí](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#property-naming-and-supported-interfaces) para más información.
 
-###  Creación de una nueva instancia de un objeto de negocio
+### Creación de una nueva instancia de un objeto de negocio { #creating-a-new-instance-of-a-business-object }
 
 Un objeto de negocio nunca debe crearse utilizando el operador new de Java. Todos los objetos de negocio deben crearse utilizando la clase factoría [OBProvider](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java){target="\_blank"}:
 
@@ -377,7 +377,7 @@ Hibernate detectará que un objeto de negocio es nuevo cuando:
 - cuando el indicador newOBObject se establece explícitamente a true 
 
 Por lo tanto, si desea crear un nuevo objeto de negocio con un ID específico (llamando a setId(...)), entonces necesita llamar explícitamente a businessObject.setNewOBObject(true). De lo contrario, Hibernate lanzará una excepción ('count of batch update operation....').
-##  Contexto de usuario
+## Contexto de usuario { #user-context }
 
 La DAL opera dentro de un contexto de usuario. El contexto de usuario se implementa en la clase [OBContext](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/OBContext.java){target="\_blank"} en _org.openbravo.dal.core_. El OBContext se inicializa usando un userId. En base a este userId, el OBContext calcula el rol, los clientes, las organizaciones y las entidades accesibles. Esta información es utilizada por la DAL para la comprobación de seguridad y el filtrado automático por cliente y organización.
 
@@ -385,19 +385,19 @@ El OBContext se almacena como una variable ThreadLocal y la DAL siempre asume qu
 
 Normalmente, un desarrollador puede asumir que siempre hay un contexto de usuario disponible. Las siguientes secciones lo tratan en detalle.
 
-###  Contexto de usuario en una instancia de Etendo Classic en ejecución
+### Contexto de usuario en una instancia de Etendo Classic en ejecución { #user-context-in-a-running-etendo-classic-instance }
 
 Cuando el código se ejecuta dentro de una aplicación Etendo Classic, entonces el contexto de usuario siempre está establecido. Esto se realiza mediante un filtro de petición (el _DalRequestFilter_ en el paquete _org.openbravo.dal.core_). Este filtro de petición garantiza que el ThreadLocal de OBContext se establezca para el usuario actual (de Etendo), coloca el OBContext en la sesión http y limpia el OBContext cuando el hilo finaliza (ya que el hilo puede reutilizarse por otro usuario).
 
-###  Contexto de usuario en un entorno de pruebas
+### Contexto de usuario en un entorno de pruebas { #user-context-in-a-test-environment }
 
 La DAL utiliza una clase base para sus casos de prueba (consulte el tema Pruebas más abajo). Esta clase base se encarga de establecer el contexto de usuario al ejecutar pruebas.
 
-###  Contexto de usuario en una situación independiente
+### Contexto de usuario en una situación independiente { #user-context-in-a-standalone-situation }
 
 El contexto de usuario también puede establecerse llamando a _OBContext.setOBContext(userId)_ con un userId que exista en la tabla ad_user. Esto configurará un contexto de usuario y lo colocará en el miembro ThreadLocal de OBContext para que lo utilice la DAL.
 
-###  Modo administrador
+### Modo administrador { #administrator-mode }
 
 Como se acaba de mencionar, la DAL opera dentro de un contexto de usuario y proporciona mecanismos automáticos de comprobación de seguridad para evitar que el usuario acceda a datos a los que, según el Modelo de Seguridad de Etendo, no debería acceder.
 
@@ -428,7 +428,7 @@ En algunos casos, sin embargo, también es necesario evitar la comprobación de 
     desigual al número de llamadas a restorePreviousMode, entonces se muestra una advertencia:
     _Unbalanced calls to enableAsAdminContext and resetAsAdminContext_.
 
-####  Modo administrador de referencia cruzada de organización
+#### Modo administrador de referencia cruzada de organización { #cross-organization-reference-administrator-mode }
   
 La validación de la organización del objeto referenciado en columnas [que lo soportan](../../../developer-guide/etendo-classic/concepts/data-access-layer.md#cross-organization-references) puede
 omitirse usando un modo Administrador especial: `
@@ -446,7 +446,7 @@ las llamadas deben estar balanceadas para este modo, independientemente del modo
         OBContext.restorePreviousCrossOrgReferenceMode();
       }
 ```
-## Transacción y sesión
+## Transacción y sesión { #transaction-and-session }
 
 La DAL implementa el patrón denominado open-session-view [https://developer.jboss.org/docs/DOC-13954]. Con una ligera variación: la DAL creará automáticamente una sesión de Hibernate e iniciará una transacción cuando se produzca el primer acceso a datos (si no existía ninguna). Por tanto, no cuando comienza la solicitud HTTP. La sesión y la transacción se almacenan en un `ThreadLocal` y se reutilizan para acciones posteriores de acceso a datos en el mismo hilo.
 
@@ -460,14 +460,14 @@ Normalmente, un desarrollador no necesita confirmar (commit) o revertir (rollbac
 
 !!!warning
     SQLC y DAL: el acceso estándar a la base de datos de Etendo Classic (a través de ventanas) funciona fuera de la DAL. Esto significa que el acceso a la base de datos utiliza una conexión diferente a la de la DAL. Si ambas conexiones actualizan la base de datos, entonces es posible que se produzca una situación de interbloqueo (deadlock). Por tanto, al trabajar/actualizar tanto mediante la DAL como mediante SQLC, siempre se debe primero confirmar/cerrar explícitamente la conexión de la DAL antes de continuar con SQLC, o viceversa.
-##  Seguridad y Validación
+## Seguridad y Validación { #security-and-validation }
 
 La DAL realiza muchas comprobaciones diferentes de seguridad y validación, tanto en modo lectura como en modo escritura. Una violación de seguridad da como resultado una  [_SecurityException_](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/exception/OBSecurityException.java){target="\_blank"} , y un error de validación una  [_ValidationException_](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/validation/ValidationException.java){target="\_blank"}. Se lanzan diferentes excepciones en distintos puntos: algunas excepciones de seguridad se lanzan al leer un objeto de negocio (p. ej., violaciones de seguridad de lectura), otras se lanzan cuando la sesión hace commit o flush (violaciones de seguridad de escritura) o cuando se llama a un setter (ValidationException).
 
 Si necesita trabajar sin estas comprobaciones de seguridad, debe utilizar el Modo Administrador o el Modo Administrador restringido.
 Puede encontrar más información sobre ellos en [Modo Administrador](#modo-administrador).
 
-###  Acceso de escritura
+### Acceso de escritura { #write-access }
 
 Las comprobaciones de acceso de escritura se realizan cuando se llaman los métodos save o remove de OBDal o cuando un objeto de negocio es guardado por Hibernate (en flush/commit). Para el acceso de escritura, se realizan las siguientes comprobaciones:
 
@@ -477,7 +477,7 @@ Las comprobaciones de acceso de escritura se realizan cuando se llaman los méto
 
 Si falla cualquiera de las comprobaciones anteriores, se lanza una _SecurityException_.
 
-###  Acceso de lectura
+### Acceso de lectura { #read-access }
 
 Un usuario solo puede ver información de sus propios clientes y de las organizaciones accesibles. Esto lo garantiza la DAL añadiendo automáticamente criterios de filtro en el objeto OBCriteria.
 
@@ -493,7 +493,7 @@ El acceso de lectura directo y derivado se comprueba en distintos puntos:
 - El acceso de lectura directo se comprueba cuando se llama a un método en la instancia de OBDal. 
 - El acceso de lectura derivado se comprueba cuando se invoca un getter o se llama al método genérico get. 
 
-###  Comprobación de borrado
+### Comprobación de borrado { #delete-check }
 
 Un usuario puede eliminar un objeto de negocio si:
 
@@ -502,13 +502,13 @@ Un usuario puede eliminar un objeto de negocio si:
 
 Ambas comprobaciones de seguridad se realizan cuando la sesión hace commit o flush. Consulte la clase  [OBInterceptor](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/OBInterceptor.java){target="\_blank"} para más detalles.
 
-###  Validación de acceso a tabla
+### Validación de acceso a tabla { #table-access-validation }
 
 Diferentes tablas en Etendo Classic tienen distintos niveles de acceso. Algunas tablas solo permiten información del cliente 0 y la organización *. Otras tablas permiten objetos de cualquier organización.
 
 Cuando se guarda un objeto de negocio, se realiza una comprobación para verificar si el cliente y la organización de ese objeto de negocio son válidos para el nivel de acceso a tabla de la tabla. La comprobación se ha implementado en el AccessLevelChecker en `org.openbravo.base.validation`. Esta comprobación se realiza cuando la sesión hace commit o se hace flush.
 
-###  Validación
+### Validación { #validation }
 
 Los valores de las propiedades se validan cuando se llama al setter o cuando se llama al método genérico set en el BaseOBObject. Se realizan las siguientes comprobaciones:
 
@@ -519,21 +519,21 @@ Los valores de las propiedades se validan cuando se llama al setter o cuando se 
 
 La validación de propiedades la realizan las clases en `org.openbravo.base.validation`. La estructura de validación se inicializa cuando se crea el modelo en tiempo de ejecución. Para cada Propiedad se crea un PropertyValidator correspondiente. Diferentes tipos de propiedades tienen diferentes tipos de PropertyValidators.
 
-###  Validación de organización de entidad
+### Validación de organización de entidad { #entity-organization-validation }
 
 Un objeto de negocio solo puede referirse a otros objetos de negocio que pertenezcan al árbol natural de la organización del objeto de negocio. Esta validación se realiza cuando se guarda un objeto de negocio (es decir, cuando la sesión hace commit/flush).
 
-####  Referencias entre organizaciones
+#### Referencias entre organizaciones { #cross-organization-references }
   
 La validación de organización de entidad puede omitirse si se cumplen todas las condiciones siguientes:
 
 - La columna de clave externa que referencia al otro objeto está marcada como _Permitir Referencia de Organización Cruzada_ . Esto puede configurarse en Tablas y Columnas > solapa Columna. 
 - El contexto está en [Modo Administrador de Referencia entre Organizaciones](#modo-administrador-de-referencia-entre-organizaciones). 
 
-#####  Referencias entre organizaciones en la UI
+##### Referencias entre organizaciones en la UI { #cross-organization-references-in-ui }
 
 Las columnas que permiten referencias entre organizaciones permiten a los usuarios seleccionar registros de organizaciones no incluidas en el árbol del registro desde el que se referencian.
-## Soporte de DAL para Vistas de Base de Datos
+## Soporte de DAL para Vistas de Base de Datos { #dal-support-for-database-views }
 
 La DAL soporta las vistas prácticamente de la misma manera que las tablas normales definidas en el diccionario de aplicación. Esto significa que:
 
@@ -546,7 +546,7 @@ Hay una diferencia entre una vista de base de datos y una tabla de base de datos
 
 !!!note
     Para que la DAL considere una vista como un objeto de negocio, necesita tener una columna de clave primaria definida en el diccionario de aplicación. Esta columna no necesita ser una clave primaria real en la base de datos, pero debe contener valores únicos para cada registro de la vista.
-## Funciones SQL en HQL
+## Funciones SQL en HQL { #sql-functions-in-hql }
 
 Para usar funciones SQL en HQL, primero debe asegurarse de que Hibernate conozca su función. Por lo tanto, en su código Java tiene que registrar la función. Esto se hace creando una clase que implemente la interfaz **SQLFunctionRegister** y esté anotada como _@ApplicationScoped_.
 
@@ -575,7 +575,7 @@ Después de registrar la función, puede usarla directamente en un HQL como este
     final String qryStr = "select bc.id, ad_column_identifier_std('C_BP_Group', bc.id) from " + Category.ENTITY_NAME + " bc";
     final Query qry = session.createQuery(qryStr);
 ```
-## Ejecutar consultas SQL nativas
+## Ejecutar consultas SQL nativas { #executing-native-sql-queries }
 
 La DAL también permite la ejecución de consultas SQL nativas:
 
@@ -596,7 +596,7 @@ La DAL también permite la ejecución de consultas SQL nativas:
 ```
 !!!note
     El método _createNativeQuery_ acepta un segundo argumento donde se puede especificar el tipo de resultado devuelto. Pero esto NO está soportado debido a un error en Hibernate.
-## Modelo en tiempo de ejecución y la API dinámica
+## Modelo en tiempo de ejecución y la API dinámica { #runtime-model-and-the-dynamic-api }
 
 La DAL hace que el modelo (definido en el Diccionario de Aplicación) esté disponible en tiempo de ejecución. El modelo en tiempo de ejecución es especialmente útil en funcionalidades genéricas como la importación y exportación y la seguridad y validación.
 
@@ -707,12 +707,12 @@ Puede elegir ejecutar los casos de prueba para usuarios específicos; consulte l
 ```
 
 Para más información, visite [Cómo desarrollar casos de prueba](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md).
-##  Pruebe su HQL: la herramienta de consulta HQL
+## Pruebe su HQL: la herramienta de consulta HQL { #test-your-hql-the-hql-query-tool }
 
 Existe una herramienta de consulta HQL de Etendo que le permite probar una consulta HQL directamente en la interfaz de Etendo Classic. El módulo se puede encontrar en el [repositorio de Github](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool){target="\_blank"}. 
 
 Este módulo crea una ventana de Administrador del Sistema en la que puede introducir una consulta HQL y ver el resultado. Esta ventana incluye una lista de todas las entidades y sus propiedades. La herramienta de consulta HQL es una herramienta muy útil para probar consultas HQL y para ver el resultado de la consulta.
-## Llamada a procesos/procedimientos almacenados desde la DAL
+## Llamada a procesos/procedimientos almacenados desde la DAL { #calling-processesstored-procedures-from-the-dal }
 
 En ocasiones, tiene sentido llamar a un procedimiento almacenado desde la DAL utilizando la misma conexión a la base de datos que está usando la DAL. Para este propósito, la DAL incluye dos clases de utilidad que facilitan la llamada a procesos y procedimientos almacenados a través de la DAL:
 
@@ -724,7 +724,7 @@ Estas clases utilizan la misma conexión a la base de datos que la DAL; además,
 Ambas clases contienen javadoc con una descripción detallada de cómo utilizar la clase.
 
 Otra parte interesante al trabajar con actualizaciones directas en la base de datos (fuera de Hibernate) es la siguiente sección en la guía de troubleshooting: [cambios no visibles en la DAL después de llamar a un procedimiento almacenado](../concepts/common-issues-tips-and-tricks.md#dal-queries-do-not-return-or-do-not-see-changes-in-the-database).
-## El DalConnectionProvider
+## El DalConnectionProvider { #the-dalconnectionprovider }
 
 Para acceder y hacer uso del código clásico de Etendo, a menudo es necesario disponer de un objeto `ConnectionProvider`. Al combinar acciones del DAL con operaciones clásicas de Etendo, tiene sentido utilizar una única conexión global a la base de datos y confirmar todas las acciones en un solo paso.
 
@@ -743,7 +743,7 @@ Para aquellas consultas que quieran utilizar el pool de solo lectura, el proveed
     ConnectionProvider cp = DalConnectionProvider.getReadOnlyConnectionProvider();
 ```
 
-## Uso de la Data Access Layer en una tarea Ant
+## Uso de la Data Access Layer en una tarea Ant { #using-the-data-access-layer-in-an-ant-task }
 
 Para facilitar el uso de la DAL en Ant, la DAL ofrece una clase base de tarea Ant: la DalInitializingTask en el paquete _org.openbravo.dal.core_. Esta clase se encarga de inicializar la capa DAL y otros detalles (p. ej., usar el classloader correcto).
 
@@ -757,9 +757,9 @@ Para utilizar esta clase, es necesario realizar los siguientes cambios en la tar
     - userId="100". 
 
 La primera propiedad configura la ubicación donde se puede encontrar el archivo _Openbravo.properties_. La segunda propiedad establece el usuario bajo el cual se ejecuta la tarea.
-##  Información importante
+## Información importante { #important-information }
 
-###  Proxies de Hibernate
+### Proxies de Hibernate { #hibernate-proxies }
 
 Para mejorar el rendimiento de las asociaciones de un solo extremo, la DAL hace uso de la funcionalidad de proxies de Hibernate. La funcionalidad de proxies de Hibernate envuelve un objeto dentro de un objeto proxy de Hibernate. Esto se realiza en tiempo de ejecución usando cglib. El objeto proxy de Hibernate se encarga de cargar el objeto de negocio cuando realmente se accede a él. La ventaja de este enfoque es que, si nunca se accede a un objeto, entonces no se carga, ahorrando rendimiento.
 
@@ -767,19 +767,19 @@ Sin embargo, el proxy de Hibernate es muy visible cuando un desarrollador depura
 
 Para entender cuál es la consecuencia de usar proxies de Hibernate, es esencial que un desarrollador que use la DAL lea [esta parte](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html#performance-fetching-proxies){target="\_blank"} del manual de Hibernate.
 
-###  Rendimiento: obtener el ID de un BaseOBObject
+### Rendimiento: obtener el ID de un BaseOBObject { #performance-getting-the-id-of-a-baseobobject }
 
 La sección anterior trató el concepto de proxy de Hibernate. Un proxy de Hibernate cargará su objeto de negocio envuelto cuando se llame a uno de los métodos del objeto de negocio. En muchos casos, un desarrollador solo quiere acceder al ID o al nombre de entidad de un objeto. Para evitar la carga del objeto de negocio al recuperar únicamente esta información, la clase DalUtil en _org.openbravo.dal.core_ ofrece un método _getId_ y un método _getEntityName_. Estos métodos trabajan directamente con el objeto HibernateProxy y no cargan el objeto de negocio subyacente.
 
-###  Funcionamiento interno de Hibernate
+### Funcionamiento interno de Hibernate { #hibernate-inner-workings }
 
 Para entender cómo opera Hibernate internamente, se recomienda encarecidamente leer el capítulo 21 del manual de Hibernate: [Mejorar el rendimiento](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
 
-###  Carga de clases
+### Carga de clases { #classloading }
 
 La DAL carga clases al inicializar la DAL. La DAL, de forma predeterminada, utiliza el cargador de clases de contexto del hilo. En algunos casos, esto no funciona correctamente (por ejemplo, cuando se usa la DAL en Ant). La DAL utiliza la clase OBClassLoader para hacer que el cargador de clases sea configurable. Llamando a _OBClassLoader.setInstance_ con su propio OBClassLoader, puede controlar el cargador de clases utilizado por la DAL.
 
-###  Crear un nuevo objeto de negocio con un ID específico
+### Crear un nuevo objeto de negocio con un ID específico { #creating-a-new-business-object-with-a-specific-id }
 
 Hibernate detectará que un objeto de negocio es nuevo cuando:
 
@@ -787,11 +787,11 @@ Hibernate detectará que un objeto de negocio es nuevo cuando:
 - cuando el indicador newOBObject se establece explícitamente en true 
 
 Por lo tanto, si quiere crear un nuevo objeto de negocio con un ID específico (llamando a _setId(...)_), entonces necesita llamar explícitamente a _businessObject.setNewOBObject(true)_. De lo contrario, Hibernate no detectará el objeto de negocio como nuevo y lanzará una excepción ('count of batch update operation....').
-##  Prácticas de codificación al usar/ampliar la DAL
+## Prácticas de codificación al usar/ampliar la DAL { #coding-practices-when-usingextending-the-dal }
 
 Esta sección analiza una serie de prácticas de codificación esenciales que deben seguirse al usar o ampliar la DAL.
 
-###  Estructura de excepciones
+### Estructura de excepciones { #exception-structure }
 
 Todas las excepciones lanzadas por la DAL extienden la clase base OBException. La OBException es una _RuntimeException_, por lo que no se requieren sentencias explícitas de `catch` y `throw`.
 
@@ -799,13 +799,13 @@ La clase OBException se encarga de registrar la excepción de la forma correcta.
 
 Al crear su propia clase de excepción, es recomendable extender OBException para poder hacer uso de las capacidades estándar de registro en OBException (las capacidades de registro se ampliarán con el tiempo).
 
-###  Invariantes en tiempo de ejecución: la clase Check
+### Invariantes en tiempo de ejecución: la clase Check { #runtime-invariants-the-check-class }
 
 La Data Access Layer, en varias ubicaciones, realiza aserciones o comprobaciones de invariantes en tiempo de ejecución. Por ejemplo, para comprobar si los argumentos no son nulos o si se cumple una determinada condición. Implementar este tipo de comprobaciones ayuda a que su sistema sea mucho más robusto. Para que la implementación de este tipo de comprobaciones sea más conveniente, la Data Access Layer utiliza la clase Check, que se encuentra en el paquete _org.openbravo.base.util_. La clase Check ofrece métodos para comprobar _instanceof_, _isNull_, _isNotNull_, etc.
 
 El uso de una clase común para aserciones en todo su código hace que su código sea más legible y más fácil de entender (en comparación con implementar su propia comprobación de aserciones).
 
-###  Formato de código
+### Formato de código { #code-formatting }
 
 El código fuente, que forma parte de la Data Access Layer, está formateado utilizando una plantilla de formato. Es esencial que, al desarrollar código en la Data Access Layer o al utilizarla, se use esta misma plantilla de formato de código.
 
@@ -817,7 +817,7 @@ Un formato de código común tiene los siguientes beneficios:
 - Resolver conflictos de mercurial es más sencillo.
 
 La plantilla de formato de código y su configuración se pueden encontrar en el siguiente artículo: [Formato de código de IntelliJ](../../etendo-classic/getting-started/installation/intellij-code-formatting.md).
-## Consejos y trucos y solución de problemas
+## Consejos y trucos y solución de problemas { #tips-tricks-and-troubleshooting }
 
 !!!info
     Para consultar consejos y trucos e incidencias comunes (y sus soluciones) que puede encontrar, visite la sección de [solución de problemas](../../../developer-guide/etendo-classic/concepts/common-issues-tips-and-tricks.md#data-access-layer).

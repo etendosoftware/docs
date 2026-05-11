@@ -10,13 +10,13 @@ tags:
 
 ---
 
-# Lista de picking
+# Lista de picking { #picking-list }
 
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.structure`
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el módulo **Etendo Picking List** incluido en el bundle *Warehouse Extensions*.
 
@@ -34,7 +34,7 @@ En Etendo hay 2 tipos de listas de picking disponibles:
 - **Picking de salida** es un proceso dentro de la gestión de almacén que implica la preparación y el movimiento de productos desde sus huecos de almacenamiento en el almacén hasta una **ubicación de salida específica** para su posterior embalaje y envío al cliente.
 
 - **Lista de picking directa al cliente** es un proceso en el que los productos se envían sin pasar por un **hueco de salida intermedio**.
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 
 Para poder generar listas de picking, es necesaria cierta configuración:
 
@@ -70,7 +70,7 @@ Para poder generar listas de picking, es necesaria cierta configuración:
     Como Administrador de cliente, vaya a la [ventana Preferencia](../../../basic-features/general-setup/application/preference.md) y cree una nueva como se muestra a continuación:
 
     ![picking2](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking2.png)
-## Generación de la lista de picking
+## Generación de la lista de picking { #picking-list-generation }
 
 Las **listas de picking** se pueden generar mediante el **botón Generar lista de picking** disponible en la ventana [Pedido de venta](../../../basic-features/sales-management/transactions.md#sales-order) y/o crearse manualmente desde la ventana **Lista de picking de almacén**. En ambos casos, el usuario debe seleccionar los pedidos de venta que se incluirán en la lista de picking. El pedido de venta debe estar **reservado y pendiente de envío**, es decir, el estado de entrega debe ser inferior al 100%.
 
@@ -292,7 +292,7 @@ Las **listas de picking** se pueden generar mediante el **botón Generar lista d
 
             !!! info
                 Cuando la Cantidad verificada es la Cantidad, la Cantidad pendiente es cero y la línea se marca como verificada (color verde). Cuando todas las líneas están verificadas, la lista de picking puede procesarse. También procesa los albaranes relacionados.
-## Ventana Pedido de venta para picking
+## Ventana Pedido de venta para picking { #sales-order-for-picking-windows }
 
 La ventana Pedido de venta para picking permite **filtrar entre todos los pedidos de venta** que están en el sistema y que están listos para el picking.
 

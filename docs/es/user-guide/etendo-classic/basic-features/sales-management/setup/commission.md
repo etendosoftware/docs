@@ -8,13 +8,13 @@ tags:
     - Agente comercial
 ---
 
-# Comisión
+# Comisión { #commission }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Comisión`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vQGzo7cbCYQ?si=1CLcSz5b4iY_J4hy" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Visión general
+## Visión general { #overview }
 
 La funcionalidad de Comisión en Etendo comienza con la **ventana Comisión**, donde los usuarios configuran los ajustes generales para el cálculo de comisiones, lo que permite definir **cómo y cuándo se van a calcular las comisiones** y **a quién se le van a pagar**. Las comisiones pueden calcularse en base a las ventas definidas en dos documentos: **Pedidos de venta y Facturas de venta**. 
 
@@ -38,7 +38,7 @@ Antes de utilizar comisiones, es necesario realizar algunas **configuraciones**:
     - Crear un [Producto](../../../../etendo-classic/basic-features/master-data-management/master-data.md#product) e incluirlo en una **Tarifa** sin información de precios como parte del concepto requerido cuando se crea la factura de compra de la comisión. 
 
 
-## Cabecera 
+## Cabecera { #header }
 
 El usuario puede definir una comisión de ventas para ser utilizada en el proceso de ventas. La cabecera lista los términos principales que se utilizarán para calcular la comisión:
 
@@ -55,7 +55,7 @@ El usuario puede definir una comisión de ventas para ser utilizada en el proces
 -   **Lista de detalles**: Ver el resultado de la comisión agrupado o línea a línea. Cuando la comisión se calcula en base al margen, la lista de detalles siempre está marcada.
 -   **En cascada**: Permite gestionar comisiones complejas (excluir algunas líneas de factura/pedido, aplicar diferentes multiplicadores de cantidad/importe para algunas líneas de factura/pedido, excluir productos de categorías de producto ya definidas). Cuando este campo está marcado, el resultado de la comisión se agrupa línea a línea.
 
-### Opciones de Cantidad base
+### Opciones de Cantidad base { #basis-amount-options }
 
 Etendo admite dos métodos distintos de cálculo de comisiones mediante el campo **Cantidad base**, cada uno diseñado para diferentes escenarios de negocio:
 
@@ -91,7 +91,7 @@ Características clave:
     - **Margen**: Requiere un cálculo de costes de producto preciso, promueve la rentabilidad
     - La elección entre estos métodos debe alinearse con su estrategia de ventas y objetivos de negocio
 
-## Líneas
+## Líneas { #lines }
 
 El usuario puede editar el importe de comisión seleccionado.
 
@@ -110,15 +110,15 @@ La solapa Líneas permite al usuario definir en profundidad las condiciones de l
 -   **Imp.restado**: El importe neto total calculado en base a los criterios anteriores se reduce en este importe; por lo tanto, a partir de este número Etendo comienza a calcular la comisión.
 -   **Coeficiente**: coeficiente (porcentaje) que multiplica el resultado del importe anterior. 
 
-## Botones
+## Botones { #buttons }
 
 -   **Copiar líneas**: Permite copiar la configuración de otras comisiones.
 -   **Generar comisión**: En base a la cabecera y las líneas, se genera la comisión. Por ejemplo, si se define una frecuencia mensual y la fecha de inicio es 14/12/2025, solo se tendrán en cuenta los pedidos/facturas de marzo. <br><br>
     ![Ventana emergente de la comisión](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission-3.png)
 
-## Ejemplos
+## Ejemplos { #examples }
 
-### Ejemplos de Comisión por Importe neto
+### Ejemplos de Comisión por Importe neto { #net-amount-commission-examples }
 
 Los siguientes ejemplos muestran cálculos de comisión basados en el **importe neto de ventas**:
 
@@ -164,7 +164,7 @@ Quiero pagar diferentes tasas de comisión en función de las categorías de pro
     - **Coeficiente**: 0.05
 - **Resultado**: Las ventas de Alcoholic generan una comisión del 10%, las ventas de Fruit juice generan un 5%
 
-### Ejemplos de Comisión por Margen
+### Ejemplos de Comisión por Margen { #margin-commission-examples }
 
 Cuando **Cantidad base** se establece en "Margen", las comisiones se calculan en base a los márgenes de beneficio. Recuerde que esta opción solo está disponible cuando **Base de cálculo** se establece en *Factura*.
 
@@ -203,7 +203,7 @@ Quiero pagar una comisión del 18% sobre los márgenes de beneficio para todas l
 !!! info
     Tenga en cuenta que los campos de cantidad e importe pueden utilizarse en combinación para ambas opciones de Cantidad base.
 
-### Ejemplo de comisión compleja (Importe neto con En cascada)
+### Ejemplo de comisión compleja (Importe neto con En cascada) { #complex-commission-example-net-amount-with-cascade }
 
 Un ejemplo de comisión compleja utilizando la base **Importe neto** con la funcionalidad en cascada:
 

@@ -1,10 +1,10 @@
-## Puede filtrar cualquier solicitud por filas activas o todas las filas
+## Puede filtrar cualquier solicitud por filas activas o todas las filas { #you-can-filter-any-request-by-active-or-all-rows }
 
 El parámetro `_noActiveFilter` puede utilizarse en cualquier método de solicitud para filtrar registros activos o todos los registros (activos e inactivos). De este modo, permite un mayor control al obtener los resultados.
 
 ---
 
-## Ejemplo de solicitud GET para todos los registros
+## Ejemplo de solicitud GET para todos los registros { #example-of-get-request-for-all-records }
 
 Abra Postman y realizaremos una solicitud GET.
 
@@ -18,7 +18,7 @@ Abra Postman y realizaremos una solicitud GET.
 
 ---
 
-## Ejemplo de solicitud GET solo para registros activos
+## Ejemplo de solicitud GET solo para registros activos { #example-of-get-request-only-for-active-records }
 
 Abra Postman y realizaremos una solicitud GET.
 

@@ -1,8 +1,8 @@
-# Cómo iniciar RX como servicio desde el código fuente
+# Cómo iniciar RX como servicio desde el código fuente { #how-to-start-rx-as-a-service-from-source-code }
 
 Este documento le guía a través del proceso de iniciar el servicio RX desde el código fuente, incluyendo la generación de archivos JAR y el arranque de varios componentes.
 
-## 1. Generación de JARs
+## 1. Generación de JARs { #1-generating-jars }
 
 Asegúrese de haber construido los archivos JAR necesarios para los distintos componentes del servicio. Use estos comandos en su terminal:
 
@@ -13,7 +13,7 @@ Asegúrese de haber construido los archivos JAR necesarios para los distintos co
 ./gradlew com.etendorx.auth:build -x test
 ```
 
-## 2. Inicio del servidor de configuración
+## 2. Inicio del servidor de configuración { #2-starting-the-config-server }
 
 Antes de iniciar el servidor de configuración, confirme que sus archivos de configuración están correctamente configurados.
 
@@ -34,7 +34,7 @@ export SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=$(pwd)/rxconfig
 java -jar modules_core/com.etendorx.config/build/libs/com.etendorx.config-1.1.0.jar
 ```
 
-## 3. Inicio de DAS
+## 3. Inicio de DAS { #3-starting-das }
 
 Use este comando para iniciar el servicio DAS, asegurándose de que la ruta y la versión sean correctas para el JAR de entidades generado.
 
@@ -47,7 +47,7 @@ java -Dloader.path=modules_gen/com.etendorx.entities/build/libs/com.etendorx.ent
     - **Dependencias:** Verifique que todas las dependencias necesarias estén instaladas antes de ejecutar estos comandos.
     - **Pruebas:** Se recomienda probar cada paso en un entorno de desarrollo antes del despliegue en producción.
 
-## 4. Inicio de AUTH
+## 4. Inicio de AUTH { #4-starting-auth }
 
 Para iniciar el servicio AUTH, ejecute el siguiente comando, asegurándose de que la ruta y la versión del JAR de entidades generado sean correctas.
 
@@ -55,7 +55,7 @@ Para iniciar el servicio AUTH, ejecute el siguiente comando, asegurándose de qu
 java -jar modules_core/com.etendorx.auth/build/libs/com.etendorx.auth-1.1.0.jar
 ```
 
-## 5. Inicio de EDGE
+## 5. Inicio de EDGE { #5-starting-edge }
 
 Para iniciar el servicio EDGE, ejecute el siguiente comando, asegurándose de que la ruta y la versión del JAR de entidades generado sean correctas.
 
@@ -63,7 +63,7 @@ Para iniciar el servicio EDGE, ejecute el siguiente comando, asegurándose de qu
 java -jar modules_core/com.etendorx.edge/build/libs/com.etendorx.edge-1.1.0.jar
 ```
 
-### Descargo de responsabilidad: se requieren conocimientos avanzados
+### Descargo de responsabilidad: se requieren conocimientos avanzados { #disclaimer-advanced-knowledge-required }
 
 Esta guía asume una comprensión fundamental de los entornos de desarrollo Java, incluyendo familiaridad con los comandos de compilación de Gradle y el despliegue de aplicaciones Java. Está destinada a usuarios con habilidades técnicas intermedias a avanzadas en desarrollo de software y administración de sistemas. Los usuarios nuevos o aquellos que no estén familiarizados con los conceptos tratados pueden necesitar recursos adicionales o asistencia.
 

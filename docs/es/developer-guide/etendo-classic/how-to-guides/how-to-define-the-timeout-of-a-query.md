@@ -7,13 +7,13 @@ tags:
     - cómo
 ---
 
-# Cómo definir el tiempo de espera de una consulta
+# Cómo definir el tiempo de espera de una consulta { #how-to-define-the-timeout-of-a-query }
 
-## Visión general
+## Visión general { #overview }
 
 Definir el tiempo de espera de una consulta permite cancelar su ejecución una vez que ha transcurrido una determinada **cantidad de tiempo desde que se inició**. Esto ayuda a proteger la base de datos evitando que las consultas queden bloqueadas.
 
-## Clase `QueryTimeOutUtil`
+## Clase `QueryTimeOutUtil` { #querytimeoututil-class }
 
 La clase `QueryTimeOutUtil` proporciona métodos `setQueryTimeOut` que definen el tiempo de espera de:
 
@@ -25,7 +25,7 @@ El primer argumento del método `setQueryTimeOut` es el objeto cuyo tiempo de es
 
 Esta clase también proporciona métodos `resetQueryTimeOut` para restablecer el tiempo de espera a 0.
 
-## Perfiles de tiempo de espera
+## Perfiles de tiempo de espera { #timeout-profiles }
 
 Los tiempos de espera de las consultas se definen mediante perfiles de tiempo de espera. Un perfil de tiempo de espera representa una actividad del lado del servidor. Por ejemplo, el perfil de tiempo de espera GRID, definido en el core, es utilizado por `DefaultJsonDataService` en las consultas que se realizan para recuperar los registros que se mostrarán en la cuadrícula.
 
@@ -50,7 +50,7 @@ Etendo define en su core estos perfiles de tiempo de espera:
 
 Si usted crea un proceso y no establece un perfil de consulta para sus consultas, se utilizará de forma predeterminada `db.queryTimeout.scheduledProcess` o `db.queryTimeout.manualProcess`. Puede sobrescribir estos perfiles predeterminados ejecutando `QueryTimeOutUtil.getInstance().setQueryTimeOut` sobre su consulta.
 
-## Ejemplo
+## Ejemplo { #example }
 
 Supongamos que un desarrollador está utilizando una consulta que previsiblemente consumirá mucho tiempo, por lo que quiere permitir especificar un límite en su tiempo de ejecución. El desarrollador puede reutilizar un perfil de consulta existente o crear uno nuevo. En este caso, ninguno de los perfiles de consulta existentes aplica, por lo que utiliza uno nuevo al que llama `MY_TIME_CONSUMING_QUERY`.
 

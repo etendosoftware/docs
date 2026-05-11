@@ -22,7 +22,7 @@ This setup is performed once, during the initial tax configuration of the compan
 
 The window lists all existing business partner tax categories and allows new ones to be created. It is possible to define as many categories as the fiscal structure of the company requires.
 
-![Business Partner Tax Category window showing the list of categories and the header form](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category.png)
+![Business Partner Tax Category window showing the list of categories and the header form](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category-1.png)
 
 ### Fields
 

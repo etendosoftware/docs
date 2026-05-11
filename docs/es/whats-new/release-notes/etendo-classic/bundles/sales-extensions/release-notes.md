@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados

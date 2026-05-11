@@ -11,16 +11,16 @@ tags:
 status: beta
 ---
 
-#  Mensajes
+# Mensajes { #messages }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 Los mensajes se utilizan para mostrar información al usuario; normalmente se muestran cuando se completa un proceso o cuando ocurre un evento (por ejemplo, un error).
 
-##  Tipos de mensajes
+## Tipos de mensajes { #types-of-messages }
 
 Los diferentes tipos de mensajes que se pueden mostrar con Etendo son:
 
@@ -29,31 +29,31 @@ Los diferentes tipos de mensajes que se pueden mostrar con Etendo son:
 - Mensajes de advertencia 
 - Mensajes de información 
 
-###  Mensajes de éxito
+### Mensajes de éxito { #success-messages }
 
 Estos mensajes se mostrarán después de la ejecución de un proceso en caso de éxito.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/messages-0.png)
 
-###  Mensajes de fallo
+### Mensajes de fallo { #failure-messages }
 
 Estos mensajes se mostrarán después de la ejecución de un proceso en caso de error.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/messages-1.png)
 
-###  Mensajes de advertencia
+### Mensajes de advertencia { #warning-messages }
 
 Estos mensajes se mostrarán cuando el usuario deba tener en cuenta determinadas condiciones, como por ejemplo un mensaje que indique que todavía hay algunas acciones pendientes de procesar, etc.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/messages-2.png)
 
-###  Mensajes de información
+### Mensajes de información { #information-messages }
 
 Estos mensajes se mostrarán para comunicar cualquier información al usuario, como por ejemplo la funcionalidad de la ventana, etc.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/messages-3.png)
 
-##  Definición en el Diccionario de la Aplicación
+## Definición en el Diccionario de la Aplicación { #application-dictionary-definition }
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Mensaje`
 
 Todos los mensajes se mantienen en la ventana `Diccionario de la Aplicación` > `Mensaje` (tabla `AD_Message`). Básicamente, un mensaje consta de una `Clave de búsqueda` o valor, un `Tipo de mensaje` que establece el tipo de mensaje (la apariencia del mensaje mostrado —tal y como se describe en la sección anterior— depende de ello) y un `Texto del mensaje` que contiene el texto que se mostrará dentro del cuadro. Adicionalmente, los mensajes se pueden traducir a diferentes idiomas. Para añadir traducciones a un mensaje, utilice la solapa `Traducción`.
@@ -62,11 +62,11 @@ El campo `Clave de búsqueda` es un identificador único para el mensaje; no se 
 
 El campo Clave de búsqueda sigue las reglas de nomenclatura de modularidad. Por lo tanto, debe comenzar con el dbprefix del módulo, seguido de un "_". Por tanto, un valor correcto para un mensaje en el `módulo org.openbravo.client.application` sería `_OBUIAPP_MyMessage_`.
 
-##  Uso de mensajes
+## Uso de mensajes { #message-usage }
 
 Dependiendo del objeto que genere el mensaje, deben tenerse en cuenta algunas consideraciones diferentes.
 
-###  Procesos de base de datos
+### Procesos de base de datos { #database-processes }
 
 Tal y como se explica en la sección de procesos PL/SQL de esta guía, el resultado final, así como el mensaje que se mostrará al usuario desde un proceso PL, se almacena en el `registro AD_PInstance` que se utilizó para invocarlo.
 
@@ -97,7 +97,7 @@ Este mensaje concatenará el texto del mensaje con identificador `Success` con e
 
 Todas las excepciones generadas por los procesos deben capturarse para gestionarlas e insertar un mensaje adecuado en `PInstance`.
 
-####  Excepciones de base de datos
+#### Excepciones de base de datos { #database-exceptions }
 
 Las excepciones son especialmente útiles para los triggers. Cuando se lanza una excepción dentro de un trigger, la transacción actual se revierte. Esto permite realizar algunas comprobaciones antes de actualizar o insertar una fila en una tabla y, en caso de que algunas verificaciones no se satisfagan, se puede lanzar una excepción provocando que la fila no se inserte/actualice.
 
@@ -126,7 +126,7 @@ La única forma de identificar un mensaje que se mostrará al trabajar con Etend
 RAISE EXCEPTION '%', '@HR_MyErrorMessage@';
 ```
 
-####  Comprobaciones de base de datos y claves foráneas
+#### Comprobaciones de base de datos y claves foráneas { #database-checks-and-foreign-keys }
 
 Las restricciones de comprobación se definen en la base de datos para garantizar la integridad de los datos; definen alguna restricción que los datos deben cumplir. En caso de que, al insertar o actualizar datos en la base de datos, no se satisfaga una restricción, se genera un error.
 

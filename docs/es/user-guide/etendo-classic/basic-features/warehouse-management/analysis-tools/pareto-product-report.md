@@ -1,54 +1,95 @@
 ---
 title: Informe Pareto de Productos
 tags:
-    - Pareto
-    - Inventory
-    - Warehouse Management
-    - Reports
-    - Inventory Analysis
+ - Informe Pareto de Productos
+ - Gestión de Almacén
+ - Inventario
+ - Clasificación ABC
+ - Herramientas de análisis
 ---
 
-# Informe Pareto de Productos
+# Informe Pareto de Productos { #pareto-product-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Pareto de Productos`
 
-## Overview
+## Descripción general { #overview }
 
-El Informe Pareto de Productos distribuye los productos en tres clases (A, B o C) según el valor del costo que tiene el inventario de cada producto en el almacén. En función de esta clasificación se puede decidir la frecuencia del ciclo de conteo (por ejemplo, los productos A se cuentan semanalmente, los B mensualmente y los C anualmente).
+El Informe Pareto de Productos clasifica los productos en tres categorías — A, B y C — según la proporción del valor total del almacén que representa cada producto. Esta técnica se conoce comúnmente como **análisis ABC** y ayuda a las organizaciones a enfocar los esfuerzos de gestión de inventario donde más importan.
 
-Se utiliza la siguiente distribución: los productos A representan el 80% del valor del almacén, los B el 15% y los C el 5%.
+Por ejemplo:
 
-!!! info
-    La clasificación se basa en el costo del producto. Por eso es necesario tener una Regla de Costeo validada y los costos de las transacciones de material del producto calculados y actualizados.
+| Categoría | Participación en el valor del almacén | Acción típica |
+|-----------|---------------------------------------|---------------|
+| **A** | ~80 % | Ciclo de conteo semanal, negociar condiciones con proveedores, mantener stock de seguridad ajustado |
+| **B** | ~15 % | Ciclo de conteo mensual, reglas de reabastecimiento estándar |
+| **C** | ~5 %  | Ciclo de conteo anual, considerar consolidación o discontinuación |
 
+!!! info "Requisitos previos"
+    La clasificación se basa en el costo de cada producto. Antes de ejecutar el informe, asegúrese de que lo siguiente esté configurado:
 
-## Parameters Window
+    - Una [Regla de cálculo de costes](../setup.md#costing-rules) validada para la organización.
+    - Costos de **Transacción de Material** actualizados (disponibles en `Gestión de Almacén` > `Transacciones` > `Transacción de Material`) — estas son las entradas de costo registradas cada vez que el stock entra o sale.
 
-El campo **Moneda** define la moneda en la que se muestran todos los valores monetarios (como **Costo**, **Valor**) del informe. El campo toma por defecto la moneda del sistema.
+    Si alguno de estos elementos falta, el informe puede devolver valores en cero o resultados incompletos.
+
+## Parámetros { #parameters }
+
+Antes de generar el informe, configure los siguientes filtros:
+
+| Campo | Descripción |
+|-------|-------------|
+| **Organización** | Filtra el informe por la organización seleccionada. |
+| **Moneda** | Define la moneda en la que se muestran todos los valores monetarios (Costo, Valor). Por defecto toma la moneda del sistema. |
+| **Almacén** | Restringe el informe a un almacén específico dentro de la organización seleccionada. |
 
 !!! warning
-    Tenga en cuenta que se debe especificar el **Ratio de conversión** a la **Moneda** del informe para que este funcione.
+    Debe definirse un **Ratio de conversión** a la moneda seleccionada para que el informe funcione correctamente. Verifique esto en `Configuración General` > `Aplicación` > `Rangos de conversión` antes de ejecutar el informe.
 
-El botón **Update ABC** completa el campo **ABC** (actualiza el valor si el registro existe o crea un nuevo registro en caso contrario) de la pestaña Org. Specific de la ventana **Producto** para las organizaciones de la salida del informe.
+Después de configurar los filtros, elija una de las dos acciones:
 
-## Sample Report Output
+- **Buscar** — Muestra los resultados en la misma ventana.
+- **Ver resultados** — Abre el informe en una vista separada, lo cual puede ser útil para imprimir o comparar en paralelo.
 
-![Informe Pareto de Productos](../../../../../assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+## Resultado del informe { #report-output }
 
+El informe lista todos los productos del almacén seleccionado, ordenados por valor descendente, y asigna a cada producto su categoría ABC.
 
-Columnas a tener en cuenta:
+![Pareto Product Report output](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report/pareto-product-report-1.png)
 
--   **Cantidad:** es el stock actual del producto (Quantity on Hand) en el almacén seleccionado.
--   **Valor:** es la suma de todos los costos de las transacciones de material del producto.
--   **Costo:** este costo se calcula como la relación entre el valor del producto y la cantidad del producto indicada arriba.
--   **Porcentaje:** este porcentaje es la relación entre el valor del producto y el Valor Total del almacén (que es la suma de todas las líneas del informe).
+### Referencia de columnas { #column-reference }
 
-## Persisted Information
+| Columna | Descripción |
+|---------|-------------|
+| **Identificador** | El código identificador único del producto. |
+| **Nombre** | El nombre descriptivo del producto. |
+| **Cantidad** | El stock actual (cantidad disponible) del producto en el almacén seleccionado. |
+| **Unidad** | La unidad de medida del producto. |
+| **Costo** | El costo unitario del producto (Valor total dividido por la Cantidad). |
+| **Valor** | El valor total del inventario del producto, calculado como la suma de todos sus costos de transacciones de material. |
+| **Porcentaje** | La relación entre el Valor del producto y el valor total del almacén (la suma de todas las líneas del informe). |
+| **Categoría** | La clasificación ABC asignada al producto (A, B o C). Los productos cuyo valor acumulado alcanza hasta el 80 % del total se clasifican como A, los que se encuentran entre el 80 % y el 95 % como B, y el resto como C. |
 
-Se puede utilizar la información agregada calculada para el Valued Stock. Consulte la documentación del Valued Stock Report para obtener más detalles sobre cómo generar la información agregada.
+!!! tip "Lectura de los resultados"
+    Los productos al principio de la lista (Categoría A) tienen el mayor impacto individual en el valor del almacén. Enfoque primero los esfuerzos de revisión y control en estos artículos.
+
+## Actualizar ABC { #update-abc }
+
+El botón **Actualizar ABC** en la parte inferior de la ventana escribe la clasificación de cada producto de vuelta al campo **ABC** en la pestaña **Org. Specific** de la ventana Producto.
+
+- Si ya existe un registro para esa organización, el valor se **actualiza**.
+- Si no existe ningún registro, se **crea un nuevo registro**.
+
+Una vez guardada, la categoría ABC queda disponible para filtrar e informar en otras áreas de la aplicación — por ejemplo, al definir reglas de reabastecimiento o generar informes de compras.
+
+!!! tip "Cuándo actualizar"
+    Ejecute el informe y haga clic en **Actualizar ABC** periódicamente — por ejemplo, después de cada ciclo de valoración de inventario o cuando se hayan producido movimientos de stock significativos. Esto mantiene la clasificación alineada con las condiciones actuales del almacén.
+
+## Uso de datos pre-agregados { #using-pre-aggregated-data }
+
+Para usar datos pre-agregados, ejecute primero el [Informe Valoración de Stock](valued-stock-report.md). Una vez generado ese informe, el Informe Pareto de Productos reutilizará automáticamente sus resultados, reduciendo el tiempo de carga. Si omite este paso, el informe se ejecutará igualmente pero puede ser más lento en entornos de alto volumen.
 
 !!! note
-    Exactamente igual que en el Valued Stock Report, el Informe Pareto de Productos también se puede ejecutar sin datos agregados. Sin embargo, esta función es especialmente útil en entornos de alto volumen cuando se experimentan problemas de rendimiento al ejecutar el informe.
+    El Informe Pareto de Productos también puede ejecutarse sin datos agregados. Sin embargo, el uso de datos agregados es especialmente útil en entornos de alto volumen donde se experimentan problemas de rendimiento al iniciar el informe.
 
 ---
 

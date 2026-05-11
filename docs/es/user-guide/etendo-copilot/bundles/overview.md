@@ -11,18 +11,18 @@ tags:
 !!! warning
     Actualmente, estamos migrando la terminología de *Asistente* a *Agente*. Este cambio se reflejará en la documentación pronto. Donde vea *Asistente*, considérelo como *Agente* y viceversa.
 
-# Paquete de extensiones de Copilot
+# Paquete de extensiones de Copilot { #copilot-extensions-bundle }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
 
 :material-store: Etendo Marketplace:  [Paquete de extensiones de Copilot](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 El Paquete de extensiones de Copilot incluye funcionalidades que le ayudan a agilizar sus tareas diarias utilizando inteligencia artificial.
 
 
-## Módulo
+## Módulo { #modules }
 
 ### Etendo Copilot
 
@@ -35,22 +35,22 @@ Como módulo principal del Paquete de extensiones de Copilot, **Etendo Copilot**
     Para más información, visite [Etendo Copilot - Guía de usuario](../../../user-guide/etendo-copilot/setup-and-usage.md).
 
 
-#### Agentes
+#### Agentes { #agents }
 
 ##### Bastian
 
 Este módulo incluye **Bastian**, un agente equipado con la documentación de Etendo indexada como base de conocimiento. Bastian permite a los usuarios buscar información dentro de la documentación utilizando consultas en lenguaje natural, proporcionando respuestas rápidas y precisas a sus preguntas.
 
-### Agentes de Etendo Copilot
+### Agentes de Etendo Copilot { #etendo-copilot-agents }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.agents`
 
 El módulo **Agentes de Copilot** es una colección de agentes que pueden utilizarse para realizar tareas básicas interactuando con Etendo, pero el propósito principal es utilizarse como base (o plantilla) para crear nuevos agentes. Aprovechando la funcionalidad de clonación en los agentes y la base de conocimiento, pueden replicarse y crearse agentes personalizados muy fácilmente.
 
 
-#### Agentes
+#### Agentes { #agents_1 }
 
-##### Supervisor de inicialización de datos
+##### Supervisor de inicialización de datos { #data-initialization-supervisor }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cn__oNPH5X0?si=yPiVW3to9X7UOsG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -73,7 +73,7 @@ Este supervisor tiene los siguientes agentes:
     !!! info
         Para más información, puede leer [Cómo crear un agente de tareas de hoja de cálculo](../../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-spreadsheet-tasks-agent.md)
 
-##### Supervisor de facturas
+##### Supervisor de facturas { #invoice-supervisor }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/65PPI9PN7f4?si=G7tS_GO1HKWRztQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -104,7 +104,7 @@ Este supervisor tiene los siguientes agentes:
         Para mejorar la precisión de la extracción de datos, consulte la guía [Cómo mejorar el reconocimiento OCR](../../../developer-guide/etendo-copilot/how-to-guides/how-to-improve-ocr-recognition.md).
 
 
-##### Experto en pedidos
+##### Experto en pedidos { #order-expert }
 
 Este agente es un agente supervisor que delega y orquesta la creación de pedidos de compra y de venta. 
     
@@ -115,7 +115,7 @@ Este supervisor tiene los siguientes agentes:
 - **Experto en pedidos de compra**: Este agente crea pedidos de compra.
 - **Experto en pedidos de venta**: Este agente crea pedidos de venta.
 
-##### Lector de ZIP
+##### Lector de ZIP { #zip-reader }
 
 Este agente lee un archivo zip y devuelve las rutas de los archivos dentro del zip. Es útil para añadirlo a un agente supervisor para encadenar el resultado de descompresión con otros agentes.  
 
@@ -132,9 +132,9 @@ El **Etendo Copilot Toolpack** es una colección de herramientas que ayudan a lo
     Para más información, visite la [Toolpack - Guía del desarrollador](../../../developer-guide/etendo-copilot/bundles/overview.md#etendo-copilot-toolpack), donde encontrará una lista detallada de las herramientas disponibles, instrucciones sobre cómo utilizarlas y una guía para desarrollar nuevas herramientas.
 
 
-#### Agentes
+#### Agentes { #agents_2 }
 
-##### Experto en SQL
+##### Experto en SQL { #sql-expert }
 
 Este agente está diseñado para ayudar a los usuarios a leer información de la base de datos. Permite a los usuarios hacer preguntas en lenguaje natural y obtener la consulta SQL que recupera la información que necesitan. Para preservar la seguridad de la base de datos, la consulta se preprocesa con filtros para recuperar únicamente los datos accesibles por el usuario.
 
@@ -143,7 +143,7 @@ Este agente está diseñado para ayudar a los usuarios a leer información de la
 
 
 
-### Subapp de Etendo Copilot
+### Subapp de Etendo Copilot { #etendo-copilot-subapp }
 
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.copilot`
 
@@ -162,7 +162,7 @@ Con compatibilidad tanto para teléfonos móviles como para tabletas, esta subap
 
 
 
-### Asistente de desarrollo
+### Asistente de desarrollo { #dev-assistant }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.devassistant`
 

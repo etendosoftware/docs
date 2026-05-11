@@ -62,7 +62,7 @@ tags:
 
     - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
     - **Purchase Invoice automation**: automated workflows now create the corresponding financial transaction when a purchase invoice is processed, eliminating manual steps.
-    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed an error that prevented adding details in the Payment In window.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md) / Add Details**: fixed an error that prevented adding details in the Payment In window.
     - **Navigation between windows**: a new redirection system within grids improves cross-window navigation.
     - **Color support**: custom color configurations are now available system-wide in the interface.
 
@@ -474,7 +474,7 @@ tags:
     **Customer Statement Report migrated to process definition**
     The **Customer Statement Report** has been migrated to a process definition, aligning it with the standard reporting execution model and improving usability and future extensibility.
     
-    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#customer-statement)      
+    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md)      
 
 </div>
 
@@ -601,7 +601,7 @@ tags:
     - **Execute bulk posting actions** for faster and more consistent processing.  
     - **Refine searches** with advanced filters like organization, accounting date, and accounting status.
     --- 
-    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#not-posted-documents)
+    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.md)
     - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/blog/not-posted-documents-window-etendo/){target="_blank"}
 
 </div>
@@ -615,7 +615,7 @@ tags:
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Trial Balance** report gains new capabilities: Discover the revamped Trial Balance report, get instant, actionable insights with one-click navigation to General Ledger entries, full support for all accounting dimensions, and polished exports to Excel and PDF for sharing or audit. Faster analysis, clearer traceability, and professional output to power your financial workflows.
 
     ---
-    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#trial-balance)
+    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance.md)
     - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/blog/trial-balance-in-etendo/){target="_blank"}
 
 - :material-view-list: **Smarter Financial Planning with Budget (Projections)**
@@ -631,7 +631,7 @@ tags:
     - Analyze by multiple dimensions for deeper insights.  
     - Export, copy, and reuse budgets to accelerate financial planning. 
     ---
-    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
+    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget.md)
     - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/blog/budgets-in-etendo/){target="_blank"}
 
 </div>
@@ -687,7 +687,7 @@ tags:
 
     ---
 
-    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced)
+    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md)
     - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/blog/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
 
 
@@ -1378,7 +1378,7 @@ Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-not
 
 ### Financial Extensions
 
-[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal.md#g-l-journal-clone)
 
 Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 

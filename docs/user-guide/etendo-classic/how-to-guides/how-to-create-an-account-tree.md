@@ -354,14 +354,14 @@ However, temporary default accounts need to be created in the account tree under
 
 Therefore, a new **Heading** and **Summary** element needs to be created in the **Element Level** tab, that element can be named **Temporary Accounts**.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-6.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-6.png)
 
 Once created, the accounts below (subaccounts) can be created and move underneath it:
 
 -   Suspense Balancing account
 -   Suspense Error account
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-7.png)
+![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-7.png)
 
 ---
 

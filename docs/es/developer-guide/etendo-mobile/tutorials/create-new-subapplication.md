@@ -8,9 +8,9 @@ tags:
     - Crear subaplicación
 ---
 
-# Crear nueva subaplicación
+# Crear nueva subaplicación { #create-new-subapplication }
 
-## Visión general
+## Visión general { #overview }
 
 Este tutorial proporciona una guía paso a paso para crear una nueva subaplicación dentro de **Etendo Mobile**. Siguiendo estas instrucciones, aprenderá a utilizar plenamente las capacidades de **Etendo RX** y a aprovechar los componentes visuales disponibles en la **Etendo UI Library** para construir una subaplicación funcional.
 
@@ -18,9 +18,9 @@ El tutorial le guiará a través de la creación de la *Subapp de Producto*, una
 
 !!! info
     Antes de comenzar, asegúrese de que su entorno local cumple todos los requisitos necesarios revisando la sección [Primeros pasos](../getting-started.md) de Etendo Mobile.
-## Configuración del Módulo 
+## Configuración del Módulo { #module-setup }
 
-### Crear nuevo Módulo de Etendo Classic
+### Crear nuevo Módulo de Etendo Classic { #create-new-etendo-classic-module }
 
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Módulo`
 
@@ -39,7 +39,7 @@ El tutorial le guiará a través de la creación de la *Subapp de Producto*, una
         - En este caso, comience desde la versión del módulo `1.0.0` y establezca el prefijo de BD como `ETSAPPP`.
 
 
-### Configuración de Dynamic App
+### Configuración de Dynamic App { #dynamic-app-configuration }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Dynamic App`
 
@@ -72,7 +72,7 @@ Campos a tener en cuenta:
 !!! info
     Para más información, visite la guía del desarrollador de [Dynamic App](../../etendo-classic/bundles/platform/dynamic-app.md).
 
-### Configuración de Rol
+### Configuración de Rol { #role-configuration }
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol`
 
 Con la sesión iniciada como el rol **Group Admin** (que es el rol por defecto para acceder a Etendo Mobile), la configuración se aplica tal y como se especifica a continuación.
@@ -82,7 +82,7 @@ Con la sesión iniciada como el rol **Group Admin** (que es el rol por defecto p
 !!! warning "Importante"
     Mantenga esta dynamic app como _activa_.
 
-### Exportar el Módulo
+### Exportar el Módulo { #export-the-module }
 
 1. Después de guardar toda la configuración, debe exportar los cambios. Abra un terminal en la raíz de su proyecto **Etendo Classic** y ejecute el siguiente comando:
     
@@ -100,10 +100,10 @@ Con la sesión iniciada como el rol **Group Admin** (que es el rol por defecto p
     └── com.etendoerp.subapp.product
         └── src-db 
     ```
-## Servicios dockerizados
+## Servicios dockerizados { #dockerized-services }
 Antes de iniciar los servicios dockerizados, hay algunas configuraciones que deben realizarse en Etendo Classic.
 
-### Configuración de la Entidad 
+### Configuración de la Entidad { #client-setup }
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
 Se requiere un token de cifrado para la autenticación.
@@ -118,7 +118,7 @@ Para verificar o gestionar el token, abra la ventana Entidad con el rol de Admin
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 
-### Ventana RX Config
+### Ventana RX Config { #rx-config-window }
 :material-menu: `Aplicación` > `Etendo RX` > `RX Config`
 
 Esta ventana de configuración almacena los datos de acceso para los servicios de Etendo RX, que son cruciales para la interacción entre diferentes servicios. En este caso, es necesario crear algunos registros.  
@@ -149,7 +149,7 @@ Además, en el caso de los servicios **edge** y **auth** es necesario añadir la
 !!!info 
     Si utiliza Tomcat dockerizado, las URLs dentro de la red del contenedor son `http://auth:8094`, `http://config:8888`, `http://das:8092` y `http://edge:8096`.
 
-### Ejecutar servicios RX
+### Ejecutar servicios RX { #execute-rx-services }
 Antes de continuar, es necesario iniciar los servicios de **Etendo RX**. Estos servicios proporcionan una capa de seguridad (servicio Auth) y una capa de acceso a datos (servicio Das), que son esenciales para consumir o escribir datos en Etendo y el servicio Edge. Además, al seleccionar la casilla **isReact** en el módulo definido previamente, se generará automáticamente código React, lo que permitirá un acceso a datos más sencillo.
 
 Para lanzar todos los servicios, es necesario definir las siguientes variables de configuración en el archivo `gradle.properties`:
@@ -178,11 +178,11 @@ A continuación, para ejecutar los servicios de forma efectiva, es necesario **e
 Aquí pueden verse todos los servicios y sus respectivos logs en ejecución utilizando la herramienta [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
 
 ![Docker RX Services](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/rx-services.png)
-## Proyecciones y búsqueda
+## Proyecciones y búsqueda { #projections-and-search }
 
 Esta sección cubre la creación de proyecciones, mapeos y búsquedas, que permiten la generación de una API REST dinámica en el servicio RX DAS. Estas configuraciones permiten leer, escribir y filtrar datos. Las proyecciones se aplican a tablas de Etendo Classic, creando un subconjunto de datos con el que se puede interactuar a través de la API.
 
-### Crear una proyección
+### Crear una proyección { #create-a-projection }
 :material-menu: `Aplicación` > `Etendo RX` > `Projections and Mappings`
 
 1.  Como rol `System Administrator`, es necesario crear una proyección que refleje vistas parciales de la clase Product y contenga únicamente las propiedades necesarias.
@@ -196,7 +196,7 @@ Esta sección cubre la creación de proyecciones, mapeos y búsquedas, que permi
 	<figcaption>Ejemplo de configuración de Proyección y Projected Entities</figcaption>
 </figure>
 
-### Creación de campos de entidad
+### Creación de campos de entidad { #creating-entity-fields }
 
 1. Ahora, definimos qué campos queremos recuperar. Para ello, comenzamos seleccionando la proyección de lectura de datos `PRODSUBAPP - Product - Read` y ejecutamos el proceso `Create Projection Fields`; en la ventana emergente seleccionaremos los campos a proyectar. En nuestro caso de ejemplo:
 
@@ -255,7 +255,7 @@ Esta sección cubre la creación de proyecciones, mapeos y búsquedas, que permi
     <figcaption>Solapa de campos de entidad, ejemplo de definición de valores constantes</figcaption>
     </figure>
 
-### Crear una búsqueda en datos proyectados
+### Crear una búsqueda en datos proyectados { #create-a-search-in-projected-data }
 
 Ahora, al leer datos, es posible crear filtros; para ello debemos asociar estos filtros a una tabla y es posible exportar este filtro en el módulo en desarrollo.  
 Para ello, abrimos la ventana `Tables and Columns`; en nuestro ejemplo seleccione la tabla `M_Product`, vaya a la solapa `Repository` y cree un nuevo registro con el módulo en desarrollo. A continuación, cree un nuevo registro en la solapa `Search`.
@@ -265,7 +265,7 @@ Para ello, abrimos la ventana `Tables and Columns`; en nuestro ejemplo seleccion
     <figcaption>Ejemplo de creación de Repository</figcaption>
 </figure>
 
-### Crear una nueva búsqueda y parámetro de búsqueda
+### Crear una nueva búsqueda y parámetro de búsqueda { #create-a-new-search-and-search-parameter }
 
 A continuación, definiremos un método de búsqueda que se utilizará cuando queramos consumir los productos. Para crear este nuevo método de filtro/búsqueda, en la solapa Repository de la tabla `M_Product`, cree un nuevo registro con el nombre de método `getFilteredProducts` y el filtro de consulta hql.
 
@@ -282,7 +282,7 @@ Como podemos ver en la consulta, recibe el parámetro `:name` de tipo String, qu
     <figcaption>Ejemplo de creación de Search y Search Parameter</figcaption>
 </figure>
 
-### Reiniciar el servicio Etendo RX
+### Reiniciar el servicio Etendo RX { #restart-the-etendo-rx-service }
 
 Reinicie el servicio Das RX para que reconozca las proyecciones y los mapeos.
 
@@ -294,7 +294,7 @@ Reinicie el servicio Das RX para que reconozca las proyecciones y los mapeos.
     Accediendo a [http://localhost:8092/swagger-ui/index.html](http://localhost:8092/swagger-ui/index.html), se puede visualizar el Swagger del servicio RX DAS. Esta interfaz permite consultar los endpoints generados en base a las configuraciones realizadas previamente.
 
     ![Swagger del servicio RX DAS](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/das-api.png)
-## Creación de la subaplicación
+## Creación de la subaplicación { #creating-the-subapplication }
 
 1. Ahora, cree la subaplicación basada en una plantilla publicada en NPM, [Etendo Subapp Data Template Typescript](https://www.npmjs.com/package/etendo-subapp-data-template-typescript){target="_blank"}. Ejecute el comando de Gradle para crear automáticamente la subaplicación dentro del módulo en desarrollo.
 
@@ -323,13 +323,13 @@ Reinicie el servicio Das RX para que reconozca las proyecciones y los mapeos.
           └── src
           └── App.tsx
     ```
-## Ejemplo de Subapp de Producto
+## Ejemplo de Subapp de Producto { #product-subapp-example }
 Esta sección ofrece una visión general sobre las pantallas del ejemplo de subaplicación de producto y las partes principales de la subaplicación.
 
 !!! info "Consideración"
     Las aplicaciones deben desarrollarse para ambas plataformas: teléfono y tablet. 
    
-### Pantalla de Inicio 
+### Pantalla de Inicio { #home-screen }
  
 - Esta es la pantalla principal de la subaplicación. Mostrará una lista de productos. Además, permitirá editar y eliminar un producto, buscar un producto por nombre y navegar al detalle de un producto.
 
@@ -404,7 +404,7 @@ const Home = (props: TableListProps) => {
 export default Home;
 ```
 
-### Detalle de Producto
+### Detalle de Producto { #product-detail }
 
 ![product detail](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/product-detail.jpg){ width="300"}
 
@@ -500,7 +500,7 @@ export default ProductDetail;
 
 ```
     
-### Navegación 
+### Navegación { #navigation }
 
 Además, es necesario añadir la configuración de navegación en el archivo `app.tsx`, en la sentencia return. Esta configuración proporciona la infraestructura para navegar entre las diferentes pantallas de la aplicación.
 
@@ -530,7 +530,7 @@ Además, es necesario añadir la configuración de navegación en el archivo `ap
 !!! info 
     Para más información sobre los parámetros de la subaplicación, visite el concepto [Params from Etendo Mobile](../concepts/subapp-structure.md#params-from-etendo-mobile).
 
-### Ejecución de la Subaplicación
+### Ejecución de la Subaplicación { #running-the-sub-application }
 1. Una vez creada la subaplicación, debe generarse el código react-native, con tipos y funciones que interactúan con el servicio RX DAS. Para ello, ejecute el comando de Gradle: 
 
     !!! info
@@ -577,7 +577,7 @@ Además, es necesario añadir la configuración de navegación en el archivo `ap
         Por defecto, la aplicación se ejecuta en modo de desarrollo en `localhost` en el puerto `3000`. Además, los cambios en el directorio `/src` se escanean automáticamente, habilitando actualizaciones dinámicas de la aplicación durante el desarrollo. Esto garantiza que cualquier modificación se refleje en tiempo real sin reiniciar la aplicación.
 
 
-### Visualización de las subaplicaciones
+### Visualización de las subaplicaciones { #visualizing-the-subapplications }
 
 1. Abra la aplicación [Etendo Mobile](../../../user-guide/etendo-mobile/getting-started.md) en un dispositivo móvil. Puede utilizar un emulador o un dispositivo físico.
     
@@ -592,7 +592,7 @@ Además, es necesario añadir la configuración de navegación en el archivo `ap
     ![app-home.png](../../../assets/developer-guide/etendo-mobile/tutorials/create-new-subapplication/app-home.png)
 
 4. Ahora puede ver, filtrar, crear, editar y eliminar productos.
-## Recepción de archivos compartidos desde Etendo Mobile
+## Recepción de archivos compartidos desde Etendo Mobile { #receiving-shared-files-from-etendo-mobile }
 
 En esta sección, explicaremos cómo recibir archivos externos desde otra aplicación en **Etendo Mobile**, utilizando como ejemplo la subaplicación [Subapp Documents Manager](../../../user-guide/etendo-mobile/bundles/mobile-extensions/overview.md#documents-manager-subapp).
 
@@ -604,7 +604,7 @@ El parámetro `sharedFiles` se pasa a la subaplicación y se utiliza para proces
 
 !!! info 
     Para más información, visite el repositorio de [Subapp Documents Manager](https://github.com/etendosoftware/com.etendoerp.subapp.docsmanager){target=“_blank”}. Allí encontrará un ejemplo de subaplicación y la explicación de cómo implementar la funcionalidad de compartición de archivos en su propia aplicación.
-## Registro de depuración
+## Registro de depuración { #debug-log }
 
 Esta sección explica cómo registrar datos en una subaplicación utilizando la función de utilidad `logger`. Para registrar cualquier información, llame a la función `logger` con una clave y un valor:
 

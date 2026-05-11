@@ -49,7 +49,7 @@ All checkboxes are enabled by default. Uncheck any type to exclude it from the r
 
 After setting the desired filters, click **View Results** to generate the report. The report can also be exported using the **HTML Format** button.
 
-![Product Movements Report](../../../../../assets/drive/1KCTc1ueZ2Z-w-saDYnPVYx-BUDlYq4Gl.png)
+![Product Movements Report](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-1.png)
 
 ### Report Output
 
@@ -66,7 +66,14 @@ The report output displays movements grouped first by transaction type (for exam
 -   **Exit**: Indicates whether the product left the organization (Yes/No).
 -   **Quantity**: The number of units moved, along with the unit of measure.
 
-![Product Movements Report](../../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+![Product Movements Report](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-2.png)
+
+## Related Articles
+
+[:material-file-document-outline: Material Transaction Report](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Stock Report](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Valued Stock Report](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Management Getting Started](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

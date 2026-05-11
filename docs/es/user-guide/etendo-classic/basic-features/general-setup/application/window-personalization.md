@@ -6,7 +6,7 @@ tags:
     - Configuración
 ---
 
-# Personalización de Ventana
+# Personalización de Ventana { #window-personalization }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Personalización de Ventana`
 

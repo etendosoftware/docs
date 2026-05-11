@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
 
-## Descripción general
+## Descripción general { #overview }
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub|
 | --- | --- | --- | --- | :---: | :---: |

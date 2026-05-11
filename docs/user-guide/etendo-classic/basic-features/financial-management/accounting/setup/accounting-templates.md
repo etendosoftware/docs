@@ -28,7 +28,7 @@ A system administrator registers the template in this window. A Java developer i
 
 The **Accounting Templates** window is used to register the Java class that implements the custom posting logic. Each template requires a name, the fully qualified Java class name (within the module's Java package), and the database table that corresponds to the document type to customize — for example, `C_Invoice` for invoices or `M_InOut` for goods shipments and receipts.
 
-![Accounting Templates window showing a configured template record](../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png)
+![Accounting Templates window showing a configured template record](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-1.png)
 
 Each template is later associated with specific active tables or document types. You can define a single template that covers all documents of a given type (for example, all invoices), or create separate templates that target only specific [document categories](document-type.md) (for example, only purchase invoices), while leaving the default behavior for the rest.
 
@@ -58,7 +58,7 @@ Follow these guidelines when defining the dataset:
 - In the **Table** tab, include the `AD_CreateFact_template` table (the database table that stores Accounting Template records — each row in the Accounting Templates window corresponds to a row in this table).
 - The **HQL/SQL Where Clause** filters which rows from the table are included in the exported dataset (HQL and SQL are query languages used to select specific records from the database). Typically, this clause selects all records whose Java class name falls within the module's Java package, so that only the templates belonging to this module are exported.
 
-![Dataset definition window](../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png)
+![Dataset definition window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-2.png)
 
 Once the dataset definition is complete, export it by pressing the **Export Reference Data** button. This process queries the configured tables, retrieves all records matching the HQL/SQL Where Clause, and generates an XML file in the `referencedata/standard` directory of the module.
 
@@ -69,7 +69,7 @@ Once the dataset definition is complete, export it by pressing the **Export Refe
 
 The recommended way to verify that the dataset is correct is to create a new client within the development instance using the [Initial Client Setup](../../../general-setup/getting-started.md#initial-client-setup) process, selecting the new accounting template dataset during setup.
 
-![Initial Client Setup reference data selection](../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png)
+![Initial Client Setup reference data selection](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-3.png)
 
 !!!info
     If the data within the dataset is consistent, the Initial Client Setup process completes successfully. Otherwise, it fails with an error description indicating what went wrong.

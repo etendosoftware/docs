@@ -9,22 +9,22 @@ tags:
 status: beta
 ---
 
-# Cómo modularizar el Selector de ubicación
+# Cómo modularizar el Selector de ubicación { #how-to-modularize-the-location-selector }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección se explica cómo modificar y modularizar el **Selector de ubicación**.
 
-## Artículos recomendados
+## Artículos recomendados { #recommended-articles }
 
 Antes de leer esta guía, es necesario tener una comprensión adecuada del concepto de [Modularidad](../concepts/modularity-concepts.md) de Etendo y de [cómo crear un módulo](../how-to-guides/how-to-create-a-module.md), ya que en esta guía se da por supuesto el conocimiento de estos artículos.
 
 En caso de que trabaje con scripts de configuración o plantillas de forma habitual, el siguiente enlace a un artículo podría ser de su interés, ya que describe [cómo crear un script de configuración](../how-to-guides/how-to-create-a-configuration-script.md).
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 Los pasos necesarios para cambiar y modularizar el **Selector de ubicación** son los siguientes:
 

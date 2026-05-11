@@ -11,7 +11,7 @@ tags:
   - Análisis de vulnerabilidades y obsolescencia
 ---
 
-# Ciclo de versiones de Etendo
+# Ciclo de versiones de Etendo { #etendo-release-cycle }
 
 La fase de lanzamiento abarca todos los pasos necesarios para entregar una versión exitosa al mercado, incluyendo (entre otros):
 
@@ -27,7 +27,7 @@ Las soluciones de Etendo se publican de forma trimestral.
 
 Como se muestra en la imagen anterior, la duración de un ciclo de versión es de nueve meses. Por ejemplo, y en el caso de Etendo Y1Q4, las actividades de desarrollo comenzaron en julio y finalizarán con la publicación de la versión en marzo.
 
-## Fases de la versión
+## Fases de la versión { #release-phases }
 
 El proceso de publicación consta de las siguientes fases: 
 
@@ -45,7 +45,7 @@ En resumen, Etendo publicará versiones Confirmed Stable (CS) en marzo, junio, s
 !!! info
     Etendo dará soporte a las versiones del año en curso y del año anterior.
 
-### Pruebas de Early Adopters (programa de Innovadores)
+### Pruebas de Early Adopters (programa de Innovadores) { #early-adopters-testing-innovators-program }
 
 Como ya se ha mencionado, Etendo ha establecido un programa de innovadores basado en un ciclo de maduración para evolucionar las versiones de Etendo desde QAA hasta Confirmed Stable, en colaboración con un conjunto de clientes finales de Etendo.
 
@@ -57,7 +57,7 @@ Cuando alcanza la fase QAA, la versión todavía no está disponible para un pú
 
 Como parte del programa de Innovadores, los Partners interesados recibirán soporte en el proceso de actualización del entorno de producción de un cliente a la versión actual QA Approved.
 
-### Versiones de emergencia
+### Versiones de emergencia { #emergency-releases }
 
 Cuando sea necesario, existen versiones de emergencia fuera de calendario que se utilizan para la corrección dirigida de errores muy importantes. Estos errores pueden haber sido reportados por nuestros partners, miembros del equipo de desarrollo o simplemente errores encontrados por nuestras automatizaciones que prueban periódicamente nuestros productos.
 
@@ -69,11 +69,11 @@ Estas versiones pueden identificarse por su versión, que se construye de la sig
 
 y seguirán el mismo estado de madurez y proceso de publicación.
 
-## Aseguramiento de la calidad
+## Aseguramiento de la calidad { #quality-assurance }
 
 En Etendo, llevamos a cabo procesos constantes para garantizar la calidad y la seguridad de nuestro producto a lo largo de todo el ciclo de desarrollo. A continuación se indican los principales pasos de nuestro proceso de aseguramiento de la calidad.
 
-### Análisis de código
+### Análisis de código { #code-analysis }
 
 Cuando se realizan cambios o incorporaciones de código, este se somete a un análisis exhaustivo utilizando las siguientes herramientas:
 
@@ -83,7 +83,7 @@ Cuando se realizan cambios o incorporaciones de código, este se somete a un an�
 
 - **Revisor automático de código:** hemos desarrollado una herramienta llamada Auto Code Reviewer, que utiliza ChatGPT para analizar los cambios realizados en la Pull Request y hacer sugerencias. Esta herramienta complementa el análisis de Sonar y nos ayuda a mantener altos estándares de calidad en nuestro código y arquitectura.
 
-### Pruebas automatizadas
+### Pruebas automatizadas { #automated-testing }
 
 Una vez que se ha creado o actualizado una pull request, se ejecutan pruebas automatizadas utilizando Jenkins, nuestro sistema de integración continua. Mediante un job programado en Jenkins, se ejecutan los siguientes tipos de pruebas:
 
@@ -101,7 +101,7 @@ En línea con las pruebas automáticas que se realizan, disponemos de pruebas de
 - **Pruebas de estrés:** además de las pruebas automatizadas habituales, realizamos pruebas de estrés en nuestras aplicaciones de forma mensual. Estas pruebas nos ayudan a identificar posibles cuellos de botella, limitaciones de recursos y áreas que pueden causar degradación o fallos bajo cargas elevadas de usuarios. Al simular interacciones concurrentes de usuarios y generar alto tráfico, evaluamos la capacidad de respuesta del sistema, su escalabilidad y su robustez general. Realizar estas pruebas mensualmente garantiza que nuestras aplicaciones puedan gestionar el aumento de la demanda de usuarios y mantener un rendimiento óptimo.
 - **Pruebas de interfaz con Selenium:** para garantizar la funcionalidad y la experiencia de usuario de nuestras aplicaciones, realizamos pruebas mensuales de interfaz con Selenium. Selenium nos permite automatizar interacciones del navegador y ejecutar pruebas en distintos navegadores web, como Firefox y Google Chrome. Con Selenium, creamos scripts de prueba que simulan acciones de usuario, navegan por la interfaz de la aplicación y verifican que todos los elementos y funcionalidades funcionan según lo esperado. Esto garantiza la consistencia entre distintos navegadores y nos ayuda a identificar posibles problemas de compatibilidad que puedan surgir. Realizar estas pruebas mensualmente nos permite detectar posibles incidencias de interfaz y asegurar una experiencia de usuario fluida en diversas plataformas.
 
-### Análisis de vulnerabilidades y obsolescencia
+### Análisis de vulnerabilidades y obsolescencia { #vulnerability-analysis-and-deprecation }
 
 De forma trimestral, ejecutamos herramientas de Static Application Security Testing (SAST) y Software Composition Analysis (SCA) para detectar posibles vulnerabilidades u obsolescencias en las librerías y el stack que utilizamos. Este análisis nos permite mantener nuestra aplicación actualizada y segura. En función de los resultados de esta herramienta, iniciamos el proceso de actualización correspondiente, considerando el nivel de prioridad asignado a cada cambio identificado.
 
@@ -113,7 +113,7 @@ De forma trimestral, ejecutamos herramientas de Static Application Security Test
 
 ---
 
-#### Integración de Snyk en el análisis de vulnerabilidades
+#### Integración de Snyk en el análisis de vulnerabilidades { #integration-of-snyk-in-vulnerability-analysis }
 
 ![snyk-banner.png](../assets/whats-new/etendo-release-cycle/snyk-banner.png)
 En Etendo, estamos comprometidos a garantizar la seguridad de nuestras aplicaciones en todo momento. Por eso, una de las herramientas destacadas que utilizamos es _[Snyk](https://snyk.io/)_, una potente solución de Software Composition Analysis (SCA).
@@ -126,7 +126,7 @@ La integración con _Snyk_ nos proporciona información detallada sobre cada vul
 
 En función de los resultados del análisis de _Snyk_ y de otras herramientas de seguridad, iniciamos el proceso de actualización correspondiente, considerando el nivel de prioridad asignado a cada cambio identificado. Este enfoque nos permite gestionar eficazmente los riesgos de seguridad y mantener nuestra aplicación actualizada y segura para nuestros usuarios.
 
-## Notas de la versión de Etendo
+## Notas de la versión de Etendo { #etendo-release-notes }
 
 Cada vez que Etendo publica una nueva versión, todo lo que contiene se documenta en la página wiki correspondiente de Notas de la versión.  
 Es importante destacar que, dentro de la página wiki de notas de la versión de Etendo, existen enlaces directos a lo que incluye una versión determinada.  

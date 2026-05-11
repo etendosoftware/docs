@@ -10,15 +10,15 @@ tags:
 ---
 
 
-# Instalación: Conexión de Openbravo POS y Etendo
-## Visión general
+# Instalación: Conexión de Openbravo POS y Etendo { #installation-connecting-openbravo-pos-and-etendo }
+## Visión general { #overview }
 Esta guía proporciona instrucciones paso a paso para instalar y configurar la integración entre los entornos de Openbravo y Etendo. Esta configuración le permite generar documentos en el Terminal de Openbravo POS, almacenarlos en el entorno de Openbravo y sincronizarlos con Etendo utilizando Etendo RX como middleware.
 
 En esta guía partiremos de dos entornos limpios utilizando datos de prueba, lo que facilita la configuración y demuestra el potencial de esta integración.
 
 !!! info 
     Esta guía se basa en Openbravo 23Q4.2 y Etendo Classic 24.4.0
-## Software y herramientas necesarias
+## Software y herramientas necesarias { #required-software-and-tools }
 - [Eclipse IDE](https://eclipseide.org/){target="_blank"}
 - [Apache Tomcat](https://tomcat.apache.org/){target="_blank"}
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/){target="_blank"} o [lazydocker](https://github.com/jesseduffield/lazydocker#installation){target="_blank"}
@@ -29,7 +29,7 @@ En esta guía partiremos de dos entornos limpios utilizando datos de prueba, lo 
 ## Openbravo
 
 En primer lugar, siga la [Guía de instalación personalizada de Openbravo](https://wiki.openbravo.com/wiki/Installation/Custom){target="_blank"} e instale en un entorno local siguiendo [Cómo configurar Eclipse IDE](https://wiki.openbravo.com/wiki/How_to_setup_Eclipse_IDE){target="_blank"}.
-### Módulos a instalar en Openbravo
+### Módulos a instalar en Openbravo { #modules-to-install-on-openbravo }
 
 En el entorno de Openbravo es necesario instalar los módulos de Retail, EDL y Business API.
 
@@ -62,7 +62,7 @@ Además, debe clonar en la carpeta `/modules` los módulos de integración de Et
 git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.git --branch 1.0.0
 git clone git@github.com:etendosoftware/com.etendoerp.integration.openbravo.template.git --branch 1.0.0
 ```
-### Configurar el entorno de Openbravo
+### Configurar el entorno de Openbravo { #set-up-the-openbravo-environment }
 Ejecute los siguientes comandos para configurar el entorno de Openbravo:
 
 ```bash title="Terminal"
@@ -74,7 +74,7 @@ ant smartbuild
 
 !!! warning
     Configure Tomcat para que se ejecute en el puerto `8081`, ya que el puerto `8080` estará ocupado por Etendo; a continuación, reinicie Tomcat.
-### Configuración de datos maestros
+### Configuración de datos maestros { #master-data-configuration }
 
 A continuación, para simplificar las configuraciones, realizaremos algunas inserciones en la base de datos `openbravo`. Para ello, puede conectarse desde PGAdmin o por línea de comandos:
 
@@ -306,7 +306,7 @@ INSERT INTO public.ad_role_orgaccess(ad_role_orgaccess_id, ad_role_id, ad_org_id
 UPDATE public.ad_org SET em_obretco_dbp_orgid='D270A5AC50874F8BA67A88EE977F8E3B' WHERE ad_org_id='D270A5AC50874F8BA67A88EE977F8E3B';
 
 ```
-### Acceso a Openbravo
+### Acceso a Openbravo { #openbravo-access }
 
 Ahora, inicie Tomcat y acceda a Openbravo.
 
@@ -323,7 +323,7 @@ Ahora, inicie Tomcat y acceda a Openbravo.
 Siguiendo estos pasos, el POS debería estar correctamente configurado. Para más información, puede visitar [Retail:Guía de configuración](https://wiki.openbravo.com/wiki/Retail:Configuration_Guide){target="_blank"}
 ## Etendo 
 
-### Configurar el entorno de Etendo
+### Configurar el entorno de Etendo { #configure-etendo-environment }
 
 Siga los pasos de la guía de instalación de Etendo, en la solapa [Pasos para instalar Etendo con base de datos Postgres y Tomcat dockerizado](../../../../getting-started/installation.md#steps-to-install-etendo-with-postgres-database-and-tomcat-dockerized).
 
@@ -334,7 +334,7 @@ Siga los pasos de la guía de instalación de Etendo, en la solapa [Pasos para i
     No es necesario configurar Tomcat, ya que el servicio ya está dockerizado y preconfigurado.
 
 
-### Instalar módulos
+### Instalar módulos { #install-modules }
 Una vez que tenga el entorno de Etendo, debe instalar el bundle **Platform Extensions** y los módulos específicos del conector de Openbravo.
 
 Para ello, añada las dependencias en el archivo `build.gradle`:
@@ -402,7 +402,7 @@ Ahora, en una terminal en el proyecto de Etendo, ejecutamos los comandos:
 </figure>
 
 
-### Compilar y acceder a Etendo Classic 
+### Compilar y acceder a Etendo Classic { #compile-and-access-to-etendo-classic }
 
 El siguiente paso es compilar el entorno de Etendo y aplicar los datos de ejemplo.
 
@@ -420,11 +420,11 @@ Una vez compilado el entorno, el servicio de Tomcat se reinicia automáticamente
     - Contraseña: admin
 
 
-###  Configuraciones de Etendo RX
+### Configuraciones de Etendo RX { #etendo-rx-configurations }
 
 Tras iniciar los servicios dockerizados, hay algunas configuraciones que deben realizarse en Etendo Classic.
 
-### Configuración de la Entidad 
+### Configuración de la Entidad { #client-setup }
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
 Se requiere un token de cifrado para la autenticación.
@@ -440,7 +440,7 @@ Para verificar o gestionar el token, abra la ventana `Entidad` con el rol `Syste
 ![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
 
 
-### Ventana RX Config
+### Ventana RX Config { #rx-config-window }
 :material-menu: `Aplicación` > `Etendo RX` > `RX Config`
 
 Esta ventana de configuración almacena los datos de acceso para los servicios de Etendo RX, que son cruciales para la interacción entre diferentes servicios. Con el rol `System Administrator`, en esta ventana, ejecute el proceso `Initialize RX Services` en la barra de herramientas. 
@@ -454,7 +454,7 @@ Tras la ejecución de este proceso, se completan las variables de configuración
 
 ![default-rx-config.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/default-rx-config-connector.png)
 
-###  Scripts de configuración inicial
+### Scripts de configuración inicial { #initial-configuration-scripts }
 
 ```bash title="Terminal"
 cd modules/com.etendoerp.integration.to.openbravo/utils
@@ -463,7 +463,7 @@ make insert
 make setupconnector
 ```
 
-### Relanzar los servicios de RX
+### Relanzar los servicios de RX { #relunch-rx-services }
 
 A continuación, para ejecutar efectivamente todos los servicios, es necesario **ejecutar el comando** en la terminal: 
 
@@ -477,9 +477,9 @@ Aquí se pueden ver todos los servicios y sus respectivos logs en ejecución usa
     ![dockerized-services.png](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/dockerized-services-2.png)
     <figcaption> Como puede ver, todos los servicios requeridos para la integración de Openbravo con Etendo están en ejecución </figcaption>
 </figure>
-## Prueba de sincronización de datos entre entornos
+## Prueba de sincronización de datos entre entornos { #testing-data-synchronization-between-environments }
 
-###  Token de acceso de Etendo
+### Token de acceso de Etendo { #etendo-access-token }
 El último paso de configuración es generar un token de acceso para la comunicación desde Openbravo hacia Etendo. Para ello, debemos ejecutar la siguiente solicitud mediante un gestor de peticiones como Postman:
 
 - **Método HTTP**: `POST`
@@ -508,7 +508,7 @@ Después de realizar la solicitud, recibirá una respuesta JSON. Copie el valor 
 }
 ```
 
-### Sistema externo
+### Sistema externo { #external-system }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `External System`
 
 En el entorno de Openbravo, con sesión iniciada como `System Administrator`, es necesario acceder a la ventana `External System` y establecer el token generado en el campo token; este token se utiliza para autenticar las solicitudes desde Openbravo hacia Etendo.
@@ -516,7 +516,7 @@ En el entorno de Openbravo, con sesión iniciada como `System Administrator`, es
 ![](../../../../assets/developer-guide/etendo-rx/connectors/openbravo-connector/instalation/openbravo-external-system.png)
     
 
-### Prueba de la integración
+### Prueba de la integración { #testing-the-integration }
 
 1. Inicie sesión en el Terminal de Openbravo POS, con el usuario Valblanca:
 

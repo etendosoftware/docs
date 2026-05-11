@@ -8,9 +8,9 @@ tags:
   - Creación de módulos
 ---
 
-# Cómo crear un Módulo de plan contable
+# Cómo crear un Módulo de plan contable { #how-to-create-a-chart-of-accounts-module }
 
-## Visión general
+## Visión general { #overview }
 
 El plan contable (también llamado árbol de cuentas) es una lista de las cuentas disponibles para contabilizar asientos, que puede estructurarse de forma que permita obtener informes financieros significativos como el Balance de situación y la Cuenta de pérdidas y ganancias.
 
@@ -19,11 +19,11 @@ En algunos países, es obligatorio disponer de un plan contable específico para
 !!!important
     Un Módulo de plan contable para Etendo solo puede contener un único plan contable. Por tanto, si está trabajando en un proyecto de localización para un país en el que se puedan utilizar varios planes contables, debe crear módulos independientes que incluyan el archivo CSV de cada plan contable. Corresponderá al usuario instalar y aplicar el módulo de plan contable que se ajuste a sus necesidades particulares.
 
-## Creación del archivo CSV
+## Creación del archivo CSV { #creating-the-csv-file }
 
 El primer paso para crear un módulo de plan contable es escribir el archivo CSV con la lista de cuentas que queremos incluir. Toda la información puede encontrarse en [Cómo crear archivos de cuentas](how-to-create-accounts-files.md).
 
-## Prueba del archivo CSV
+## Prueba del archivo CSV { #testing-the-csv-file }
 
 Antes de crear el módulo de plan contable, primero debemos comprobar que el archivo CSV no tiene errores estructurales o lógicos. Esto puede hacerse fácilmente en dos pasos:
 
@@ -32,7 +32,7 @@ Antes de crear el módulo de plan contable, primero debemos comprobar que el arc
 2. La segunda comprobación puede ejecutarse directamente a través del ERP. Consiste simplemente en importar nuestro archivo CSV al ejecutar el proceso Initial Client Setup.
 Finalmente, también se recomienda crear algunos asientos contables para cada documento transaccional y asegurarse de que la información de los informes contables es correcta.
 
-## Creación del módulo de plan contable
+## Creación del módulo de plan contable { #creating-the-chart-of-accounts-module }
 
 El paso restante es claramente el más sencillo, que consiste únicamente en incluir el archivo CSV en nuestro módulo de plan contable.
 
@@ -69,7 +69,7 @@ Un módulo de plan contable es como cualquier otro módulo, pero tiene únicamen
 
     - Recordar añadir la *dependencia de Core*
 
-### Publicación del Módulo de plan contable
+### Publicación del Módulo de plan contable { #publishing-the-chart-of-accounts-module }
 
 La forma de empaquetar un módulo de plan contable es similar al proceso de [cómo publicar módulos en el repositorio de GitHub](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
@@ -93,7 +93,7 @@ El proceso resumido es:
   ./gradlew publishVersion -Ppkg=<module javapackage>
 ```
 
-## Traducción de un plan contable
+## Traducción de un plan contable { #translating-a-chart-of-accounts }
 
 En algunos países puede ser útil disponer del mismo plan contable traducido a varios idiomas. Desafortunadamente, Etendo todavía no soporta la traducción de planes contables.
 

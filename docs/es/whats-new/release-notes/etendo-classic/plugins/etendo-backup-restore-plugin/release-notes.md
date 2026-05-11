@@ -7,7 +7,7 @@ tags:
     - Copia de seguridad
     - Restauración
 ---
-## Descripción general
+## Descripción general { #overview }
 
 | Versión | Fecha de publicación | Estado | GitHub |
 | --- | --- | :---: | :---: |

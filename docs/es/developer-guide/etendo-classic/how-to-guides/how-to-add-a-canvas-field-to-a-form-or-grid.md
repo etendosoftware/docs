@@ -10,14 +10,14 @@ tags:
     - Eventos JavaScript
 ---
 
-# Cómo añadir un campo canvas a un Formulario o Cuadrícula
+# Cómo añadir un campo canvas a un Formulario o Cuadrícula { #how-to-add-a-canvas-field-to-a-form-or-grid }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía explica cómo integrar campos canvas en formularios y cuadrículas dentro de Etendo, permitiendo añadir componentes visuales personalizados como botones, enlaces y etiquetas calculadas.  
 Los campos canvas ofrecen una presentación e interacción dinámica de datos, aprovechando conocimientos de desarrollo JavaScript para su implementación.
 
-## Introducción
+## Introducción { #introduction }
 
 Un campo canvas permite al usuario añadir cualquier componente visual a un formulario o a una fila en una cuadrícula.  
 Este concepto puede utilizarse para añadir un campo calculado a un formulario y a una cuadrícula.  
@@ -36,20 +36,20 @@ También tiene sentido estudiar la siguiente página: [Arquitectura de Etendo](.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/canvas-field-to-a-form-or-grid-1.png)
 
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
 El código del módulo de ejemplo puede descargarse desde este repositorio: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}
 
-## Pasos principales de desarrollo para crear un nuevo campo canvas
+## Pasos principales de desarrollo para crear un nuevo campo canvas { #main-development-steps-for-creating-a-new-canvas-field }
 
 El desarrollo consta de 2 pasos:
 
 1. Implementar el propio canvas; normalmente esto se hace en JavaScript. 
 2. Especificar la clase JavaScript del canvas en la definición del campo de la solapa/ventana. 
 
-### Implementación de su canvas en JavaScript
+### Implementación de su canvas en JavaScript { #implementing-your-canvas-in-javascript }
 
 El primer paso es implementar su clase canvas en JavaScript. Esto se hace en 2 pasos:
 
@@ -143,7 +143,7 @@ public List<ComponentResource> getGlobalComponentResources() {
 .....
 ```
 
-### Definición del canvas en el Campo de solapa (ADField)
+### Definición del canvas en el Campo de solapa (ADField) { #defining-the-canvas-in-the-tab-field-adfield }
 
 El siguiente paso es crear un nuevo campo en la solapa y establecer su campo de clase de cliente:  
 
@@ -151,7 +151,7 @@ El siguiente paso es crear un nuevo campo en la solapa y establecer su campo de 
 
 También es posible añadir propiedades en línea en el campo `Clientclass`; por ejemplo, `OBEXAPP_SalesOrderActionButton {"title": "Mi botón de acción"}`
 
-### El resultado
+### El resultado { #the-result }
 
 El resultado se muestra tanto en la cuadrícula como en el formulario:
 
@@ -159,7 +159,7 @@ El resultado se muestra tanto en la cuadrícula como en el formulario:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-canvas-field-to-a-form-or-grid/canvas-field-to-a-form-or-grid-4.png)
 
-## Eventos JavaScript pasados al canvas
+## Eventos JavaScript pasados al canvas { #javascript-events-passed-to-the-canvas }
 
 Al implementar su canvas, debe tener en cuenta que el canvas se utiliza en 3 situaciones diferentes:
 
@@ -194,7 +194,7 @@ En modo de edición de formulario o edición de cuadrícula, se aplica lo siguie
     - `onItemChanged`: se llama cuando cambia un valor en el formulario 
     - `redrawingItem`: se llama justo antes de que el formulario se vuelva a dibujar 
 
-## Añadir acciones del lado del servidor
+## Añadir acciones del lado del servidor { #adding-server-side-actions }
 
 La implementación del botón puede ampliarse fácilmente con una acción del lado del servidor. Etendo soporta el [concepto de action handler](../concepts/etendo-architecture.md#implementing-server-side-actions-callable-from-the-client) para este propósito.
 

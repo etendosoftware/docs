@@ -8,9 +8,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Ventas - Primeros pasos
+# Gestión de Ventas - Primeros pasos { #sales-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="720" height="480"  src="https://www.youtube.com/embed/JxTGQIJ9JqQ" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -22,7 +22,7 @@ Esta área de aplicación de Etendo cubre las partes de Pedido a albarán e Invo
 !!! Info
     Para la gestión de pagos de Order to Cash, consulte el área de aplicación [Gestión Financiera](../../../../user-guide/etendo-classic/basic-features/financial-management/getting-started.md).
 
-## Flujo de negocio Order to Cash
+## Flujo de negocio Order to Cash { #order-to-cash-business-flow }
 
 El flujo de trabajo *Order to Cash* gestiona el ciclo de vida de un proceso de ventas.
 
@@ -36,7 +36,7 @@ Debido a su complejidad y a los diferentes roles implicados, resulta conveniente
 
 ![cust-inv-bus-proc](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cust-inv-bus-proc.png)
 
-### Configuración
+### Configuración { #configuration }
 
 La siguiente configuración debe realizarse antes de ejecutar el proceso:
 
@@ -64,7 +64,7 @@ Por último, el [tipo de documento](../../../../user-guide/etendo-classic/basic-
 !!!Note
     No es necesario realizar ninguna configuración adicional para el área de aplicación Gestión de Ventas si se va a utilizar el cliente de ejemplo Food & Beverage (F&B) que Etendo incluye por defecto para explorarlo. El conjunto de datos de ejemplo ya contiene los roles, almacenes, terceros, productos y precios preconfigurados.
 
-### Ejecución
+### Ejecución { #execution }
 
 En Gestión de Ventas, el proceso de negocio Order to Cash se ejecuta de la siguiente manera.
 
@@ -126,7 +126,7 @@ Por último, el personal de finanzas se encarga de registrar y gestionar los pag
 Para más información sobre la documentación de gestión de pagos, visite [Gestión Financiera](../../../../user-guide/etendo-classic/basic-features/financial-management/getting-started.md) y [Cómo gestionar facturas prepagadas en cuentas a cobrar](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md).
 
 
-## Flujo de negocio de devoluciones de cliente
+## Flujo de negocio de devoluciones de cliente { #customer-returns-business-flow }
 
 El flujo de trabajo de Devoluciones de cliente gestiona los procesos de negocio para devolver artículos desde los clientes, ya sea para abono
 
@@ -136,7 +136,7 @@ o para sustitución.
 
 ![cus-ret-replace-business-process](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cus-ret-replace-business-process.png)
 
-### Configuración
+### Configuración { #configuration_1 }
 
 En este proceso están disponibles las siguientes opciones de configuración:
 
@@ -144,7 +144,7 @@ En este proceso están disponibles las siguientes opciones de configuración:
 - [Estado del producto](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
 - Cuentas para [Coste de los bienes vendidos](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) para devoluciones e [Ingresos por devoluciones](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
 
-### Ejecución
+### Ejecución { #execution_1 }
 
 En Gestión de Ventas, el proceso de negocio de Devoluciones de cliente se ejecuta de la siguiente manera.  
 Los clientes pueden solicitar una [devolución de material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) por cualquier motivo.  
@@ -174,7 +174,7 @@ Para facturar estos documentos puede hacerlo desde varias ventanas / procesos:
 - Con la ventana [Factura (Cliente)](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice), creando una Factura de venta de devolución de material y asegurándose de que el importe de la factura sea negativo.
 
 
-## Relación con otras áreas de aplicación
+## Relación con otras áreas de aplicación { #relationship-with-other-application-areas }
 
 Gestión de Ventas tiene conexión con otras áreas de aplicación:
 

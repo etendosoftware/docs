@@ -7,11 +7,11 @@ tags:
  - Navegación de usuario
 ---
 
-# Subapp de Etendo Classic
+# Subapp de Etendo Classic { #etendo-classic-subapp }
 :octicons-package-16: Javapackage: `com.etendoerp.subapp.classic`   
 
 
-## Visión general 
+## Visión general { #overview }
 
 La **Subapp de Etendo Classic** proporciona a los usuarios una forma eficiente de acceder a la información clave de las ventanas del sistema en función de los roles de usuario, garantizando el acceso de lectura. Aunque se permite la edición de registros, se recomienda realizar la creación y gestión de datos principalmente en Etendo Classic.
 
@@ -22,9 +22,9 @@ La subaplicación de Etendo Classic permite a los usuarios acceder y gestionar l
     Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Mobile Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
 
-## Configuración inicial
+## Configuración inicial { #initial-setup }
 
-### Mostrar ventanas en móvil
+### Mostrar ventanas en móvil { #show-windows-in-mobile }
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol`
 
 Por defecto, no se mostrará ninguna ventana en la subapp. Para permitir que las ventanas de Etendo sean visibles: 
@@ -35,7 +35,7 @@ Por defecto, no se mostrará ninguna ventana en la subapp. Para permitir que las
 
 ![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/show-in-mobile.png)
 
-### Edición de identificadores en tarjetas y filtros 
+### Edición de identificadores en tarjetas y filtros { #editing-identifiers-in-cards-and-filters }
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Ventanas, pestañas y campos`
 
 ![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/cards.jpg){ align=right width="300" }
@@ -69,9 +69,9 @@ Añada 5 líneas: la primera como título será `Tercero`, y luego `Moneda`, `Es
  ![alt text](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/custom-view-cards.png)
 
 
-## Interfaz de Usuario
+## Interfaz de Usuario { #user-interface }
 
-### Menú de navegación
+### Menú de navegación { #navigation-menu }
 
 
 Al acceder a la subapp de **Etendo Classic**, en el inicio el usuario puede encontrar una opción de menú desde la cual puede:
@@ -83,7 +83,7 @@ Al acceder a la subapp de **Etendo Classic**, en el inicio el usuario puede enco
 ![](../../../../assets/user-guide/etendo-mobile/bundles/etendo-classic-subapp/home-nav.png)
 
 
-### Vista de tarjetas y formulario
+### Vista de tarjetas y formulario { #cards-and-form-view }
 
 ![](../../../../assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ align=right width="180" }
 
@@ -116,7 +116,7 @@ Algunas de las ventanas más comunes son: Producto, Tercero, Factura de venta, P
 
 - Para eliminar un registro, púlselo y arrástrelo hacia la izquierda o manténgalo pulsado, seleccione todos los registros deseados y luego el icono de eliminar. Cada vez que se elimina un registro en la App, el mismo registro se eliminará también en Etendo Classic.<br><br><br><br><br><br><br><br><br><br><br>
 
-### Botón Carpetas
+### Botón Carpetas { #folders-button }
 
 ![](../../../../assets/drive/Q0C8H4uO8zHgfmSaWfGMKR5tKMbWlVLOUwUMYG-_qpJBj471MxMFwx0is-MGR0WqleOE4QcqHhWhIhTfeo2xwIX-ftECC3QyeKdI-ygG7o2kGhHJ4CgAoWEgfc1KZnEHHXpaegHG.png){ align=right  width="180" }
 
@@ -129,19 +129,19 @@ Algunas de las ventanas más comunes son: Producto, Tercero, Factura de venta, P
 - Además, la **ruta o migas de pan** de qué registros y pestañas se están navegando puede mostrarse en la parte superior de la pantalla.<br><br><br><br><br><br>
 
 
-### Botón Acción
+### Botón Acción { #actions-button }
 
 A través de este botón, el usuario puede acceder a la lista de procesos disponibles correspondientes a la ventana que se está consultando y ejecutarlos.
 
-## Asistentes de escaneo de la App móvil
+## Asistentes de escaneo de la App móvil { #mobile-app-scanning-helpers }
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Los **Asistentes de escaneo de la App móvil** permiten usar la cámara para escanear códigos en la App de [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
 
-### Ejemplos de uso
+### Ejemplos de uso { #usage-examples }
 
  El módulo incluye por defecto el proceso Escaneo de inventario, que se encarga de escanear este código desde un móvil y, de este modo, cambiar valores de las líneas de Inventario físico.
 

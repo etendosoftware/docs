@@ -8,11 +8,11 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de envío de correo electrónico
+# Herramienta de envío de correo electrónico { #send-email-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de envío de correo electrónico** está diseñada para enviar correos electrónicos. Esta herramienta facilita el envío de correos de forma eficiente y estructurada. Acepta los siguientes parámetros de entrada: subject (el asunto del correo), mailto (la dirección de correo del destinatario) y html (el contenido HTML del correo). Como salida, devuelve un mensaje indicando el resultado del envío del correo.
 
@@ -27,7 +27,7 @@ Esta herramienta proporciona al agente:
 
 Esta herramienta es esencial para desarrolladores y administradores de sistemas que necesitan integrar fácilmente funcionalidades de correo electrónico en sus aplicaciones o servicios.
 
-## Configuración
+## Configuración { #setup }
 
 Para utilizar esta herramienta, es necesario configurar la variable `MAIL_METHOD`:
 
@@ -47,7 +47,7 @@ MAIL_METHOD=resend
 RESEND_API_KEY=******
 ```
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es útil en cualquier aplicación o servicio que necesite enviar correos electrónicos automáticamente. Puede utilizarse para notificaciones, actualizaciones, confirmaciones de pedidos, restablecimientos de contraseña, entre otras cosas.
 
@@ -81,7 +81,7 @@ Este proceso consta de las siguientes acciones:
     
     si el método de envío no es compatible.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que desea enviar un correo electrónico de notificación. Los parámetros de entrada para el agente serían:
 

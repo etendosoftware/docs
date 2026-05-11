@@ -6,7 +6,7 @@ tags:
     - Configuración
 ---
 
-# Preferencias Sesión
+# Preferencias Sesión { #session-preferences }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias Sesión`
 

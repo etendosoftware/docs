@@ -6,11 +6,11 @@ tags:
     - Monitor
 ---
 
-# Histórico de auditoría
+# Histórico de auditoría { #audit-trail }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Histórico de auditoría`
 
-## Visión general
+## Visión general { #overview }
 
 El Histórico de auditoría permite al usuario monitorizar cada cambio de datos realizado en cualquier tabla o entidad a través de la interfaz de usuario.
 
@@ -26,7 +26,7 @@ Una vez que se ha realizado un cambio en una tabla para la que se ha habilitado 
 
 ![](../../../../../assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
 
-## Histórico de auditoría
+## Histórico de auditoría { #audit-trail_1 }
 
 La vista de Histórico de auditoría muestra información de solo lectura sobre todos los cambios de datos registrados realizados en las tablas para las que se ha habilitado la funcionalidad de histórico de auditoría.
 
@@ -34,7 +34,7 @@ La vista de Histórico de auditoría muestra información de solo lectura sobre 
 
 Los cambios realizados en una tabla, columna y registro determinados se visualizan mostrando el ID de registro correspondiente o el UI de los registros en la base de datos.
 
-## Configuración
+## Configuración { #configuration }
 
 Para realizar el seguimiento de la información de auditoría, el administrador del sistema debe realizar dos tareas:
 
@@ -43,7 +43,7 @@ Para realizar el seguimiento de la información de auditoría, el administrador 
 
 En las siguientes secciones se proporciona una guía paso a paso con información más detallada.
 
-## Habilitar el histórico de auditoría para una tabla
+## Habilitar el histórico de auditoría para una tabla { #enabling-audit-trail-for-a-table }
 
 La habilitación/deshabilitación de la funcionalidad de histórico de auditoría para una tabla se realiza en la definición de la tabla en el Diccionario de la Aplicación.
 
@@ -53,7 +53,7 @@ La habilitación/deshabilitación de la funcionalidad de histórico de auditorí
 - Cambie a **Vista de edición**
 - Marque la casilla **Completamente auditado** y guarde
 
-### Inserciones en auditoría
+### Inserciones en auditoría { #audit-inserts }
 
 Cuando una tabla está marcada como **Completamente auditado**, los usuarios pueden decidir si desean auditar las inserciones realizadas en esa tabla.
 
@@ -63,13 +63,13 @@ Si el campo Inserciones en auditoría está marcado en una tabla, cuando se inse
 
 Normalmente, no es necesario almacenar esta información, porque el valor original de una columna podría obtenerse fácilmente utilizando los campos Valor anterior y Valor nuevo de la tabla de Histórico de auditoría que corresponden con esa columna. Si el campo Inserciones en auditoría se deja sin marcar, solo se insertará una fila en la tabla de Histórico de auditoría por cada registro insertado en la tabla auditada. Al menos este registro debe insertarse en la tabla de Histórico de auditoría para poder almacenar qué proceso se utilizó para crear el registro en la tabla auditada.
 
-### Excluir columnas
+### Excluir columnas { #excluding-columns }
 
 De forma predeterminada, cuando una tabla está auditada, se auditan las modificaciones en cualquiera de sus columnas. En algunos casos, tiene sentido no auditar los cambios de algunas de ellas. Esto se puede configurar estableciendo el indicador **Excluir Auditoría** en `Tablas y Columnas` > `Tabla` > pestaña `Columna`.
 
 ![](../../../../../assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
 
-## Ejecutar la compilación del sistema
+## Ejecutar la compilación del sistema { #running-the-system-compilation }
 
 El sistema de histórico de auditoría utiliza una serie de triggers generados (uno por tabla a auditar) para recopilar los datos de auditoría de todos los cambios.
 
@@ -78,7 +78,7 @@ Estos triggers deben regenerarse al ejecutar una compilación del sistema, una v
 - Se ha habilitado o deshabilitado la funcionalidad de Histórico de auditoría para una tabla
 - Ha habido algún cambio estructural en una tabla que está siendo auditada (p. ej., nuevas columnas, columnas modificadas)
 
-## El popup de Histórico de auditoría
+## El popup de Histórico de auditoría { #the-audit-trail-popup }
 
 Para el conjunto de tablas para las que se ha habilitado la funcionalidad de histórico de auditoría, se muestra el botón ![](../../../../../assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png) en la barra de herramientas de las ventanas correspondientes. Este da acceso al popup de Histórico de auditoría.
 
@@ -87,7 +87,7 @@ Este popup permite examinar el historial del registro que se muestra actualmente
 - **Historial del registro** de un único registro
 - **Registros eliminados** de una única pestaña
 
-## Vista de historial del registro
+## Vista de historial del registro { #record-history-view }
 
 Esta vista se muestra cuando el popup se abre desde un registro existente mediante el nuevo botón de la barra de herramientas.
 
@@ -106,11 +106,11 @@ Una fila en esta cuadrícula corresponde a un único campo modificado. Para camb
 
 Por último, un enlace justo encima de la cuadrícula permite cambiar a la vista de Registros eliminados. Al seguir ese enlace se mostrarán los registros eliminados de la pestaña desde la que se abrió el popup de Histórico de auditoría.
 
-### Deshabilitar el filtrado por usuario
+### Deshabilitar el filtrado por usuario { #disable-filtering-by-user }
 
 El filtro de Usuario puede eliminarse tanto de la vista **Historial del registro** como de la vista **Registros eliminados**. Esto puede ser interesante por razones de rendimiento cuando el número de usuarios disponibles es alto. Para ello, vaya a `Configuración General` > `Aplicación` > `Preferencia` y añada la siguiente preferencia: Show Audit Trail User filter con valor Y.
 
-## Vista de registros eliminados
+## Vista de registros eliminados { #deleted-records-view }
 
 Esta vista permite examinar registros que han sido eliminados de una pestaña y que, de otro modo, ya no son accesibles en la interfaz de usuario.
 
@@ -124,13 +124,13 @@ A continuación, una cuadrícula muestra todos los registros eliminados pertenec
 
 Esta vista ofrece varias **opciones de navegación** para ver información relacionada o más detallada.
 
-### Opciones de navegación
+### Opciones de navegación { #navigation-choices }
 
-#### Volver al historial
+#### Volver al historial { #back-to-history }
 
 La primera es Volver al historial. Al seguir este enlace, la vista simplemente vuelve a Historial del registro mostrando los mismos registros que se mostraban antes de ir a la vista de registros eliminados.
 
-#### Historial del registro seleccionado
+#### Historial del registro seleccionado { #history-of-selected-record }
 
 La siguiente, Ver historial del registro eliminado seleccionado a continuación, permite examinar el historial detallado de un registro eliminado, en lugar de la vista de resumen que se muestra aquí.
 
@@ -140,7 +140,7 @@ La siguiente captura de pantalla muestra un ejemplo de la vista de historial de 
 
 ![](../../../../../assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
 
-#### Pestañas hijas
+#### Pestañas hijas { #child-tabs }
 
 Como último método de navegación, el popup permite filtrar registros en función de un registro padre. Esto puede ser útil para buscar líneas eliminadas pertenecientes a un pedido de venta.
 
@@ -164,7 +164,7 @@ Si el registro padre (p. ej., un Pedido de venta) ya no existe, entonces se pued
 
 Entonces, la vista de registros eliminados mostrará las líneas eliminadas pertenecientes al Pedido de venta (eliminado) seleccionado.
 
-## Una ventana de Histórico de auditoría generada
+## Una ventana de Histórico de auditoría generada { #a-generated-audit-trail-window }
 
 La segunda interfaz para ver los datos de auditoría es una ventana normal generada que se basa en la entidad AuditTrail y permite explorar toda la información de auditoría filtrada por el cliente actualmente activo. Abra el menú Aplicación y navegue a Configuración General, Seguridad y seleccione Histórico de auditoría.
 
@@ -174,7 +174,7 @@ Simultáneamente, esta ventana permite un filtrado/búsqueda mucho más flexible
 
 ![](../../../../../assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
 
-## Limitaciones
+## Limitaciones { #limitations }
 
 La funcionalidad de histórico de auditoría registrará todos los cambios de datos (para la tabla para la que se ha habilitado) con las siguientes excepciones:
 

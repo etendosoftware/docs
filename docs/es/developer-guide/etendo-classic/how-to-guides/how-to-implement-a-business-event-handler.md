@@ -7,9 +7,9 @@ tags:
   - Método de evento
 ---
  
-# Cómo implementar un manejador de eventos de negocio
+# Cómo implementar un manejador de eventos de negocio { #how-to-implement-a-business-event-handler }
 
-## Visión general
+## Visión general { #overview }
 
 El evento de entidad de negocio le permite implementar lógica de negocio que reacciona a eventos específicos que se disparan cuando las entidades se actualizan, eliminan o insertan en la base de datos. 
 Los eventos de entidad de negocio se corresponden con triggers en la base de datos. 
@@ -35,13 +35,13 @@ En esta sección, implementaremos un manejador de eventos sobre la entidad Trata
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección está respaldada por un módulo de ejemplo que muestra un ejemplo del código mostrado y comentado aquí.
 
 El código del módulo de ejemplo puede descargarse desde este repositorio: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
   
-##  El manejador de eventos: una primera implementación
+## El manejador de eventos: una primera implementación { #the-event-handler---a-first-implementation }
 
 Un manejador de eventos se implementa como una clase Java normal en su módulo. La clave es crear métodos con una anotación en los parámetros. Aquí tiene un primer ejemplo sencillo de un manejador de eventos que escucha eventos sobre la entidad Tratamientos:
 
@@ -89,7 +89,7 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
 !!!info
     Las clases que extienden `_EntityPersistenceEventObserver_` se definen como `_@ApplicationScoped_` de forma predeterminada.
 
-###  Resultado
+### Resultado { #result }
 
 Cuando añada la clase anterior a su módulo, reinicie el sistema y, a continuación, vaya a la ventana de Tratamientos:
 [http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)
@@ -102,7 +102,7 @@ Greeting FF8081813097E041013097E805F4000F is being deleted
 Greeting Mr is being created
 ```
 
-###  Métodos de evento
+### Métodos de evento { #event-methods }
 
 El código fuente anterior ilustra cómo se implementan los métodos de evento:
      
@@ -135,7 +135,7 @@ public void onDelete(@Observes EntityDeleteEvent event) {
     * Cada método comienza con una comprobación de si el evento es válido; esto es necesario para filtrar solo los eventos relevantes; consulte la sección siguiente. 
     * Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte [aquí](../concepts/etendo-architecture.md#Event_Classes_and_API) para más información. 
 
-###  Filtrar solo los eventos relevantes
+### Filtrar solo los eventos relevantes { #filtering-only-relevant-events }
 
 Como se ha mencionado anteriormente, los métodos de evento se llaman para todas las entidades de todos los tipos. 
 En nuestro ejemplo, solo queremos gestionar eventos sobre la entidad Tratamientos.
@@ -163,7 +163,7 @@ if (!isValidEvent(event)) {
 Esta parte es necesaria porque los métodos de evento se llamarán para entidades de todos los tipos. 
 En este ejemplo, solo queremos escuchar cambios en la entidad Tratamientos.
 
-##  Añadir algo de lógica de negocio
+## Añadir algo de lógica de negocio { #adding-some-business-logic }
 
 En este siguiente paso, añadimos lógica al manejador de eventos:
 
@@ -175,7 +175,7 @@ En este siguiente paso, añadimos lógica al manejador de eventos:
     Para este ejemplo, añadiremos una traducción al neerlandés.
     
 
-###  Cambiar la entidad en actualización/inserción
+### Cambiar la entidad en actualización/inserción { #changing-the-entity-on-updateinsert }
 
 En este paso añadiremos una lógica sencilla a los eventos de actualización y guardado para añadir un punto al título si todavía no lo tiene.
 
@@ -248,7 +248,7 @@ A continuación, pruebe los cambios: vaya a la ventana ([http://localhost:8080/e
 Al guardar, verá que se añade un punto. 
 Intente actualizar el registro; tendrá el mismo comportamiento.
 
-###  Añadir una instancia hija
+### Añadir una instancia hija { #adding-a-child-instance }
 
 Como siguiente paso, añadiremos lógica al método `onSave` para crear una instancia hija adicional (una nueva traducción). 
 Esto es un poco más complejo. Añada el siguiente código al final del método onSave:
@@ -318,7 +318,7 @@ Cuando ahora introduzca una nueva entrada en la ventana, verá que se crea un re
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
 
-###  Interrumpir la acción de guardado
+### Interrumpir la acción de guardado { #interrupt-the-save-action }
 
 A veces necesita interrumpir la acción de guardado porque el usuario está haciendo algo incorrecto; esto puede hacerse lanzando una excepción.
 
@@ -338,7 +338,7 @@ EntityUpdateEvent event) {
 }
 ```
 
-##  Ejemplos de manejadores de eventos de entidad de negocio
+## Ejemplos de manejadores de eventos de entidad de negocio { #examples-of-business-entity-event-handlers }
 
 Etendo Classic utiliza manejadores de eventos de entidad de negocio para implementar lógica de negocio en
 varias ubicaciones; aquí tiene algunos ejemplos:

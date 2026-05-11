@@ -7,11 +7,11 @@ tags:
     - Configuración
 ---
 
-# Plantillas de Contabilidad 
+# Plantillas de Contabilidad { #accounting-templates }
 
 
 
-## Visión general
+## Visión general { #overview }
 
 Las Plantillas de Contabilidad permiten a las organizaciones personalizar cómo Etendo genera los asientos de diario para tipos de documento específicos, sin modificar la aplicación core. Esto suele ser necesario cuando las normas legales o de negocio locales exigen una lógica de contabilización distinta del comportamiento predeterminado; por ejemplo, un tratamiento fiscal específico por país para facturas o un método de devengo personalizado para entradas de mercancías.
 
@@ -20,7 +20,7 @@ Un administrador del sistema registra la plantilla en esta ventana. Un desarroll
 !!! warning
     Esta es una funcionalidad potente que debe utilizarse con precaución. La clase de contabilización personalizada debe probarse en profundidad antes de desplegarla en un entorno de producción.
 
-## Creación de la configuración de la Plantilla de Contabilidad
+## Creación de la configuración de la Plantilla de Contabilidad { #creating-the-accounting-template-configuration }
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Plantillas de Contabilidad`
 
 !!! warning
@@ -28,11 +28,11 @@ Un administrador del sistema registra la plantilla en esta ventana. Un desarroll
 
 La ventana **Plantillas de Contabilidad** se utiliza para registrar la clase Java que implementa la lógica de contabilización personalizada. Cada plantilla requiere un nombre, el nombre completo de la clase Java (dentro del paquete Java del módulo) y la tabla de base de datos que corresponde al tipo de documento a personalizar; por ejemplo, `C_Invoice` para facturas o `M_InOut` para albaranes de entrada y salida de mercancías.
 
-![Ventana de Plantillas de Contabilidad mostrando un registro de plantilla configurado](../../../../../../assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png)
+![Ventana de Plantillas de Contabilidad mostrando un registro de plantilla configurado](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-1.png)
 
 Cada plantilla se asocia posteriormente con tablas activas o tipos de documento específicos. Puede definir una única plantilla que cubra todos los documentos de un tipo dado (por ejemplo, todas las facturas), o crear plantillas separadas que se dirijan solo a [categorías de documento](document-type.md) específicas (por ejemplo, solo facturas de compra), manteniendo el comportamiento predeterminado para el resto.
 
-### Campos
+### Campos { #fields }
 
 - **Nombre**: Un identificador descriptivo para la plantilla de contabilidad. Use un nombre claro que refleje la regla de contabilización o el tipo de documento al que afecta.
 - **Nombre de la clase Java**: El identificador técnico de la lógica de contabilización personalizada. El desarrollador proporciona este valor; introdúzcalo exactamente como se indica.
@@ -42,7 +42,7 @@ Cada plantilla se asocia posteriormente con tablas activas o tipos de documento 
 
 Una vez configurada la plantilla, se asocia con las tablas activas o documentos correspondientes. Los asientos que genera aparecerán en los informes de [Esquema contable](general-ledger-configuration.md) junto con los asientos estándar, siguiendo las reglas definidas en el [Árbol de cuentas](account-tree.md).
 
-## Definición del conjunto de datos
+## Definición del conjunto de datos { #dataset-definition }
 
 !!!warning
     Esta sección está pensada para equipos de desarrollo que necesitan empaquetar y distribuir una plantilla de contabilidad personalizada como un módulo instalable. Si es un administrador que registra una plantilla existente en la ventana Plantillas de Contabilidad, omita esta sección y la sección Prueba del conjunto de datos por completo; no se aplican a su flujo de trabajo.
@@ -58,25 +58,25 @@ Siga estas directrices al definir el conjunto de datos:
 - Dentro de la pestaña **Tabla**, incluya la tabla `AD_CreateFact_template` (la tabla de base de datos que almacena los registros de Plantillas de Contabilidad; cada fila de la ventana Plantillas de Contabilidad corresponde a una fila de esta tabla).
 - La **Cláusula Where HQL/SQL** filtra qué filas de la tabla se incluyen en el conjunto de datos exportado (HQL y SQL son lenguajes de consulta utilizados para seleccionar registros específicos de la base de datos). Normalmente, esta cláusula selecciona todos los registros cuyo nombre de clase Java se encuentra dentro del paquete Java del módulo, de modo que solo se exporten las plantillas pertenecientes a este módulo.
 
-![Ventana de definición del conjunto de datos](../../../../../../assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png)
+![Ventana de definición del conjunto de datos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-2.png)
 
 Una vez completada la definición del conjunto de datos, expórtelo pulsando el botón **Exportar Datos de Referencia**. Este proceso consulta las tablas configuradas, recupera todos los registros que coinciden con la Cláusula Where HQL/SQL y genera un archivo XML en el directorio `referencedata/standard` del módulo.
 
 !!!info
     Como comprobación rápida, abra el archivo XML generado con un editor de texto y verifique que contiene datos. Si el archivo está vacío, revise la definición del conjunto de datos, especialmente la Cláusula Where HQL/SQL de cada tabla.
 
-## Prueba del conjunto de datos
+## Prueba del conjunto de datos { #dataset-testing }
 
 La forma recomendada de verificar que el conjunto de datos es correcto es crear un nuevo cliente dentro de la instancia de desarrollo mediante el proceso [Crear entidad](../../../general-setup/getting-started.md#initial-client-setup), seleccionando durante la configuración el nuevo conjunto de datos de plantilla de contabilidad.
 
-![Selección de datos de referencia de Configuración Inicial del Cliente](../../../../../../assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png)
+![Selección de datos de referencia de Configuración Inicial del Cliente](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-templates/accounting-templates-3.png)
 
 !!!info
     Si los datos dentro del conjunto de datos son consistentes, el proceso de Crear entidad debería completarse correctamente. De lo contrario, fallará con una descripción del error que indique qué ha ocurrido.
 
 Tras una configuración correcta, inicie sesión en el nuevo cliente, vaya a la ventana **Plantillas de Contabilidad** y confirme que el registro de la plantilla está presente. A continuación, puede proceder a probar la contabilización creando documentos de ejemplo y verificando que se generan correctamente los asientos contables personalizados. Esta validación se aplica a cualquier entorno en el que se haya instalado la plantilla, no solo durante el desarrollo del módulo.
 
-## Referencia técnica
+## Referencia técnica { #technical-reference }
 
 !!!info
     Esta sección describe el diseño interno de las Plantillas de Contabilidad. Está pensada para desarrolladores y no es necesaria para la configuración diaria.

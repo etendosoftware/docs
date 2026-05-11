@@ -9,23 +9,23 @@ tags:
 status: beta
 ---
 
-# Fusión de módulos
+# Fusión de módulos { #merging-modules }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de esta sección es explicar qué son las fusiones y cómo se pueden fusionar módulos.
 
-## Qué es la fusión
+## Qué es la fusión { #what-is-merging }
 
 Un módulo (**B**) puede fusionarse dentro de otro (**A**). Tras fusionar estos dos módulos, **B** deja de estar disponible porque queda incluido dentro de **A**.
 
 En caso de que una instancia tenga una versión antigua de **A** e intente instalar la nueva versión de **B** o actualizar a esta. El proceso de instalación/actualización desinstalará **A**; después de esto, el único módulo instalado será **B** y no será posible instalar en esa instancia ninguna otra versión de **A**.
 
 
-## Cuándo fusionar
+## Cuándo fusionar { #when-to-merge }
 
 La fusión de módulos debería realizarse solo en muy pocos casos; no debería convertirse en una práctica habitual.
 
@@ -35,13 +35,13 @@ La primera decisión que debe tomarse en esta situación es cuál es el módulo 
 
 Además, tenga en cuenta que será necesario publicar una nueva versión mayor del módulo que fusiona al otro. Esto ampliará las dependencias de todos los módulos que dependan de este. Asimismo, los módulos que dependan del módulo fusionado no serán compatibles con el nuevo módulo fusionado, por lo que estas dependencias deberán eliminarse, obligando a publicar una nueva versión mayor de dichos módulos.
 
-## Proceso de fusión
+## Proceso de fusión { #merge-process }
 
 Esta sección explica cuáles son los pasos que deben seguirse para fusionar dos módulos en uno.
 
-### Fusión del código
+### Fusión del código { #merging-the-code }
 
-#### Base de datos
+#### Base de datos { #database }
 
 El objetivo aquí es reasignar todos los artefactos de la base de datos que pertenecen al módulo fusionado (**B**) al módulo en el que se fusiona (**A**) sin regenerar todos esos artefactos.
 
@@ -62,7 +62,7 @@ De nuevo, este reempaquetado provocará un cambio en la API para todas las clase
 
 Debido al cambio de paquete para los artefactos de base de datos, también será necesario adaptar todas las partes en las que se utilizó DAL para ellos al nuevo paquete.
 
-### Definición de la fusión
+### Definición de la fusión { #merge-definition }
 
 El último paso es definir la fusión y publicar una nueva versión mayor de **B**.
   
@@ -73,7 +73,7 @@ La fusión se define en la solapa `Merges` de la ventana `Module`; aquí es nece
 
 ![alt text](../../../assets/developer-guide/etendo-classic/concepts/merging-modules.png)
 
-### Versión
+### Versión { #version }
 
 Todos estos cambios se empaquetarán como una nueva versión del módulo **A**. Es obligatorio que sea una nueva versión mayor, ya que esta nueva versión incluye cambios importantes en toda la API original de **B**.
 

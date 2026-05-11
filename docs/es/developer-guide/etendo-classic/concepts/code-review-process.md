@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-# Proceso de revisión de código
+# Proceso de revisión de código { #code-review-process }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 Este documento ofrece una descripción del proceso de revisión de código de Etendo y de la lista de verificación de revisión de código.
 
@@ -36,11 +36,11 @@ El proceso de revisión de código de Etendo debería estar respaldado por un co
 
 Pero antes de describir el proceso de revisión de código, destaquemos primero el papel del desarrollador en el proceso de desarrollo de software. Porque el código de alta calidad empieza y termina con el enfoque personal y la motivación de cada desarrollador.
 
-##  Objetivo de la revisión de código
+## Objetivo de la revisión de código { #code-review-goal }
 
 El objetivo de la revisión de código es intercambiar conocimiento, aumentar capacidades y apoyar a los desarrolladores para que tomen decisiones automáticas sobre estructuras estándar. Esto permite al desarrollador dedicar tiempo y esfuerzo a las cosas que son importantes: crear código que funcione, código que sea legible, elegante, fácil de leer, fácil de adaptar, eficiente y comprensible.
 
-##  Proceso de revisión de código de Etendo: revisión personal, revisión por pares y revisión de equipo
+## Proceso de revisión de código de Etendo: revisión personal, revisión por pares y revisión de equipo { #etendo-code-review-process-personal-peer-review-and-team-review }
 
 El proceso de revisión de código de Etendo consta de tres tipos de revisiones:
 
@@ -48,7 +48,7 @@ El proceso de revisión de código de Etendo consta de tres tipos de revisiones:
 2. Por pares y
 3. De equipo.
 
-###  Revisión personal
+### Revisión personal { #personal-review }
 
 El desarrollador debería seguir automáticamente las convenciones de codificación y otras buenas prácticas de codificación. Para validarlo, cada desarrollador debería revisar activamente su propio trabajo. El sistema de desarrollo debería ayudar al desarrollador a realizar esta tarea.
 
@@ -64,7 +64,7 @@ Se propone el siguiente proceso:
 
 La revisión personal no debería realizarse el mismo día en que se escribió el código. Un mayor tiempo entre el commit y la revisión personal dará como resultado una mirada más fresca sobre los cambios realizados por la propia persona.
 
-###  Revisión por pares
+### Revisión por pares { #peer-review }
 
 La revisión por pares es la revisión más importante, ya que opera sobre dos objetivos: prevención de incidencias y transferencia de conocimiento (del revisor al revisado).
 
@@ -101,14 +101,14 @@ El proceso de revisión por pares consta de los siguientes pasos:
 !!!note
     Todas las revisiones por pares deberían haberse realizado antes de que una rama pueda fusionarse con trunk. ?
 
-###  Revisión de equipo
+### Revisión de equipo { #team-review }
 
 Cada equipo scrum debería dedicar al menos 45 minutos a la semana ? a una revisión de equipo. En la revisión de equipo, se discute uno (o parte de un) archivo con todo el equipo en conjunto. El propósito principal de la revisión de equipo es compartir conocimiento sobre el código y las prácticas de codificación. El archivo a revisar es propuesto por el team lead.
 El team lead informa al resto del equipo qué archivo se discutirá y cada miembro del equipo dedica 15 minutos a realizar una revisión personal del archivo.
 
 En la reunión de revisión de equipo, el autor del archivo presenta el código y realiza un recorrido. La reunión de revisión debería ser un intercambio de ideas y una discusión de estrategias de implementación. El objetivo es compartir ideas y conocimiento y no tanto encontrar errores o no conformidades con los estándares.
 
-##  Qué revisar
+## Qué revisar { #what-to-review }
 
 Se revisan los siguientes archivos:
 
@@ -136,7 +136,7 @@ Diferentes tipos de archivos requerirán diferentes tipos de listas de verificac
 
 Las listas de verificación se tratan a continuación con más detalle.
 
-##  Estadísticas de revisión
+## Estadísticas de revisión { #review-statistics }
 
 Para fines de gestión, el sistema de revisión de código debería registrar y mostrar la siguiente información:
 
@@ -146,7 +146,7 @@ Para fines de gestión, el sistema de revisión de código debería registrar y 
 * Por committer: revisiones cerradas, abiertas y rechazadas, número de commits establecidos explícitamente como "No se requiere revisión".
 * Los 100 principales archivos que no se han revisado, los 100 archivos más revisados.
 
-##  Herramientas de revisión de código
+## Herramientas de revisión de código { #code-review-tools }
 
 Hay diferentes herramientas disponibles que pueden utilizarse y adaptarse al flujo descrito anteriormente. Si se decide utilizar una herramienta externa, entonces debe planificarse una prueba de concepto para probar una.
 
@@ -154,7 +154,7 @@ Otra opción puede ser implementar y soportar el flujo anterior con una aplicaci
 
 La ventaja de desarrollar nuestro propio conjunto de herramientas es que evita otra-herramienta-más en el entorno de desarrollo y gestión de sistemas.
 
-##  Revisiones automatizadas e identificación de errores
+## Revisiones automatizadas e identificación de errores { #automated-reviews-and-bug-identification }
 
 El proceso de revisión manual se apoya en las siguientes herramientas que realizan revisión de código automática:
 
@@ -163,17 +163,17 @@ El proceso de revisión manual se apoya en las siguientes herramientas que reali
 * CheckStyle
 * PMD
 
-##  Lista de verificación
+## Lista de verificación { #checklist }
 
 Hay diferentes listas de verificación para diferentes situaciones. Cada lista de verificación es corta para ser efectiva, remitiendo a documentos externos para más información.
 
-###  Lista de verificación corta (Java)
+### Lista de verificación corta (Java) { #short-checklist-java }
 
 * ¿Entiende qué cambios se han realizado y por qué se han realizado?
 * ¿Implementan los cambios correctamente la funcionalidad requerida?
 * ¿Cumple el código las [convenciones de codificación](../concepts/java-coding-conventions.md)?
 
-###  Lista de verificación completa (Java)
+### Lista de verificación completa (Java) { #full-checklist-java }
 
 * ¿Entiende qué cambios se han realizado y por qué se han realizado?
 * ¿Implementan los cambios correctamente la funcionalidad requerida?
@@ -188,23 +188,23 @@ Hay diferentes listas de verificación para diferentes situaciones. Cada lista d
     * ¿Contiene el commit una nueva biblioteca externa? Si es así, ¿ha revisado el asesor legal la licencia?
     * ¿Contiene el commit código de terceros? Si es así, ¿ha firmado el contribuidor tercero un acuerdo de contribución y se ha depositado en el Departamento Financiero de Etendo?
 
-###  Archivos de propiedades
+### Archivos de propiedades { #properties-files }
 
 * ¿Interfiere el cambio con otras partes del archivo de propiedades?
 * ¿Están documentadas las nuevas propiedades, se ha comunicado el cambio a otros desarrolladores?
 
-###  Lista de verificación del Diccionario de aplicación
+### Lista de verificación del Diccionario de aplicación { #application-dictionary-checklist }
 
 * ¿Es correcta la denominación de tablas y columnas, en inglés?
 * ¿Está configurado correctamente el javapackage de la tabla?
 * ¿Se han elegido los tipos correctos? ¿Se han configurado las claves foráneas?
 
 
-##  Tipos de pares
+## Tipos de pares { #peer-types }
 
 Las principales actividades de revisión se realizan como parte de la revisión por pares. Por lo tanto, una pregunta importante es quién es el par que revisará el código.
 
-###  Propietario
+### Propietario { #owner }
 
 El enfoque de par propietario significa que el código fuente de Etendo se divide en diferentes partes y cada parte se asigna a un propietario de ese código. El propietario de cada parte es responsable de revisar los cambios en el código realizados por otros desarrolladores.
 
@@ -221,7 +221,7 @@ Asimismo, la revisión de código forma más parte de las actividades estándar 
 
 El enfoque del team lead como par tiene como desventaja que podría sobrecargarse con actividades de revisión. Otra desventaja de un team lead como par es que podría sentir menos responsabilidad sobre los archivos fuente globales y posiblemente no pueda determinar si los cambios de código interfieren con otras partes (sin cambios) del código.
 
-###  Miembro del equipo
+### Miembro del equipo { #team-member }
 
 En este enfoque, el trabajo de un miembro de un equipo es revisado por otro miembro de ese equipo. La ventaja de este enfoque es que los miembros del equipo intercambian conocimiento y que los miembros del equipo crecen juntos en su nivel de experiencia y conocimiento. Hacer revisiones de código puede ayudar a desarrollar más rápidamente las habilidades de los desarrolladores. Otra ventaja es que el trabajo de revisión se reparte.
 

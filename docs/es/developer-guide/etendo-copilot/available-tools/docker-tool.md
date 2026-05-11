@@ -7,28 +7,28 @@ tags:
     - Bash
 ---
 
-# Herramienta Docker
+# Herramienta Docker { #docker-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **DockerTool** es una herramienta que gestiona contenedores Docker para ejecutar código Python o Bash. Permite a los usuarios ejecutar comandos aislados, copiar archivos en contenedores y limpiar los contenedores automáticamente tras un periodo de inactividad.
 
 !!!info
     Para incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para obtener instrucciones, visite el marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener detalles sobre versiones, compatibilidad con el core y nuevas funcionalidades, consulte [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta facilita la **ejecución de código en entornos Docker aislados**, dando soporte a flujos de trabajo de desarrollo, automatización y tareas del sistema. Las funcionalidades principales incluyen:
 
-### Parámetros
+### Parámetros { #parameters }
 
 - **Executor**: El tipo de ejecutor para el código (`python` o `bash`).
 - **Código**: El código que se ejecutará dentro del contenedor.
 - **Archivos a copiar**: Una lista opcional de rutas de archivo para copiar dentro del contenedor para su ejecución.
 
-### Flujo de ejecución
+### Flujo de ejecución { #execution-workflow }
 
 1. **Creación del contenedor**:
     - Se crea un contenedor Docker si aún no existe.
@@ -45,7 +45,7 @@ Esta herramienta facilita la **ejecución de código en entornos Docker aislados
     - Los contenedores se eliminan automáticamente tras 1 hora de inactividad.
 
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 - **Entrada de ejemplo**
 

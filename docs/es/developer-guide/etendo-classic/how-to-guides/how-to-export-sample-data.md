@@ -6,20 +6,20 @@ tags:
   - Etendo Classic
 ---
 
-# Cómo exportar datos de ejemplo
+# Cómo exportar datos de ejemplo { #how-to-export-sample-data }
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de este documento es explicar cómo se exportan los datos de ejemplo de Etendo utilizando la tarea `export.sample.data`.
 
-## Conjunto de datos de datos de ejemplo
+## Conjunto de datos de datos de ejemplo { #sample-data-dataset }
 
 Las tablas que se exportarán cuando se ejecute la tarea `export.sample.data` están incluidas en el conjunto de datos Definición de cliente. Puede leer más sobre los conjuntos de datos en [Conjunto de datos](../concepts/datasets.md).
 
 !!!note 
     La forma en que funciona actualmente la tarea `export.sample.data`, la cláusula SQL Where definida en las tablas del conjunto de datos del conjunto de datos Definición de cliente se ignorará y se reemplazará por un filtro de cliente.
 
-## Exportación de los datos de ejemplo
+## Exportación de los datos de ejemplo { #exporting-the-sample-data }
 
 Para exportar los datos de ejemplo de un cliente determinado, debe ejecutarse esta tarea de gradle `export.sample.data`, disponible desde la carpeta raíz de Etendo. Tiene los siguientes parámetros:
 

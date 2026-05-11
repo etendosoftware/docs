@@ -4,11 +4,11 @@ title: Bundle de extensiones de almacén | Documentación técnica
 
 :octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección, el usuario puede encontrar información técnica sobre el Bundle de extensiones de almacén.
 
-## Historial de stock
+## Historial de stock { #stock-history }
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
@@ -18,7 +18,7 @@ Toma todos los datos de stock de cada producto (presentes en la tabla `m_storage
 
 Si el usuario desea realizar cambios en la tabla y quiere que se tengan en cuenta en el proceso de carga de datos, puede hacerlo mediante la funcionalidad de hooks presente en el módulo. Simplemente cree una clase que implemente la interfaz StockHistoryHooks y extienda la clase abstracta StockHistoryPioritizer, e implemente la funcionalidad deseada en el método doExecute. Este método se ejecutará una vez por cada fila añadida a la tabla. Si se implementan múltiples instancias de la misma interfaz, el orden de ejecución puede decidirse mediante el método getPriority. La prioridad viene dada por lo cerca de 0 que esté el número devuelto por este método.
 
-### Cómo definir un hook de Historial de stock
+### Cómo definir un hook de Historial de stock { #how-to-define-a-stock-history-hook }
 
 - Defina la clase para el hook, extendiendo la clase abstracta StockHistoryHookPrioritizer e implementando la interfaz StockHistoryHook:
 
@@ -53,7 +53,7 @@ Si el usuario desea realizar cambios en la tabla y quiere que se tengan en cuent
     }
     ```
 
-### Desinstalar módulo
+### Desinstalar módulo { #uninstall-module }
 
 Para desinstalar el módulo y evitar problemas futuros con registros huérfanos, debe seguirse una secuencia de pasos:
 

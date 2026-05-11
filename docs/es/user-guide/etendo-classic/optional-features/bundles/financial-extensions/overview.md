@@ -12,12 +12,12 @@ tags:
 
 :material-store: Etendo Marketplace:  [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
-## Resumen
+## Resumen { #overview }
 Este paquete incluye mejoras para las funcionalidades de Gestión Financiera en Etendo.
 
-## Traducciones
+## Traducciones { #translations }
 -  :material-translate: Español: [Financial Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
-## Módulos
+## Módulos { #modules }
 
 ### Account Structure Validation
 

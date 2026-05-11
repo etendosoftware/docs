@@ -10,14 +10,14 @@ tags:
 
 ![alt text](../../assets/user-guide/etendo-mobile/getting-started/cover-getting-started-mobile.png)
 
-# Guía de usuario - Primeros pasos - Etendo Mobile
+# Guía de usuario - Primeros pasos - Etendo Mobile { #user-guide---getting-started---etendo-mobile }
 
-## Visión general
+## Visión general { #overview }
 
 Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder rápidamente a diferentes servidores de Etendo Classic y utilizar las subaplicaciones instaladas en cada instancia. Puede probar la aplicación inmediatamente usando el modo de demostración o realizar una configuración manual completa para conectarse a sus propios servidores y subaplicaciones.
 
 
-## Inicio rápido - Prueba de demostración 
+## Inicio rápido - Prueba de demostración { #quick-start---demo-try }
 
 **Lista de verificación**
  
@@ -53,7 +53,7 @@ Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder r
     ![](../../assets/user-guide/etendo-mobile/getting-started/demo-try.png)
 
 
-## Configuración del entorno de la entidad
+## Configuración del entorno de la entidad { #client-environment-setup }
 
 **Lista de verificación**
 
@@ -160,9 +160,9 @@ Etendo Mobile es una **aplicación móvil** que permite a los usuarios acceder r
 
 
 
-## Funcionalidades de Etendo Mobile
+## Funcionalidades de Etendo Mobile { #etendo-mobile-features }
 
-### Compartir archivos
+### Compartir archivos { #share-files }
 
 ![](../../assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }
 

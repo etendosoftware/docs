@@ -6,23 +6,23 @@ tags:
   - Etendo Classic
 ---
 
-#  Cómo crear acciones de Manejador de eventos del cliente
+# Cómo crear acciones de Manejador de eventos del cliente { #how-to-create-client-event-handler-actions }
   
-##  Visión general
+## Visión general { #overview }
 
   Esta sección explica cómo implementar funciones del lado del cliente que se ejecutan antes o después de que se dispare un evento en una ventana estándar de la Interfaz de Usuario.
   
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
   Esto se respalda con un módulo de ejemplo que muestra ejemplos del código presentado y comentado.
 
   El código de este módulo se puede descargar desde [este repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
 
-##  Definición de acciones del Manejador de eventos del cliente
+## Definición de acciones del Manejador de eventos del cliente { #defining-client-event-handler-actions }
 
   Un **Manejador de eventos del cliente es un componente que permite a los desarrolladores responder a eventos específicos en Etendo**, como la creación, actualización o eliminación de entidades. Estos manejadores son esenciales para implementar lógica de negocio personalizada que se ejecuta cuando se producen determinados cambios en la base de datos.
 
-##  Definición de la clase del Manejador de eventos
+## Definición de la clase del Manejador de eventos { #defining-the-event-handler-class }
   En este paso, se implementarán los métodos clave necesarios para gestionar las acciones de eventos:
 
   * `Method getObservedEntities()` : Este método define las entidades que serán observadas por el Manejador de eventos. Esta información es esencial para que el manejador de eventos sepa a qué tipo de entidades debe reaccionar.
@@ -33,7 +33,7 @@ tags:
 
   * `Method onDelete()` : Se ejecuta cuando se elimina una entidad observada.
 
-## Ejemplos
+## Ejemplos { #examples }
 
 ### `getObservedEntities()`
 Esta sección define las entidades que serán observadas por el Manejador de eventos. En este caso, se observa la entidad Greeting.

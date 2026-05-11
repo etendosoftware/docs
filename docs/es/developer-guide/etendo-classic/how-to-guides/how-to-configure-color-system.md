@@ -8,15 +8,15 @@ tags:
 status: beta
 ---
 
-# Cómo configurar el soporte del sistema de color en la UI
+# Cómo configurar el soporte del sistema de color en la UI { #how-to-configure-color-system-support-in-the-ui }
 
-## Visión general
+## Visión general { #overview }
 
 El sistema de color en Etendo permite asignar identificadores visuales (etiquetas de color) a registros dentro de una rejilla o formulario en la UI de Workspace, mejorando la experiencia de usuario al resaltar información clave. Esta funcionalidad utiliza el sistema de extensibilidad de Etendo y puede aplicarse sin modificar el código base de la interfaz gráfica.
 
 Un caso de uso común es aplicarlo a tablas maestras como **Categoría de producto** (`M_Product_Category`) o **Oferta grupo terceros** (`C_BP_Group`), ya que se referencian con frecuencia en rejillas principales como Productos o Clientes.
 
-## Cómo funciona el sistema de color
+## Cómo funciona el sistema de color { #how-the-color-system-works }
 
 Para que un color aparezca en la UI, el campo en la tabla principal debe referenciar una tabla maestra mediante una clave foránea (referencia **TableDir** o **Tabla**). La UI de Workspace y Etendo se coordinan mediante una interacción entre los metadatos y el frontend en React:
 
@@ -26,11 +26,11 @@ Para que un color aparezca en la UI, el campo en la tabla principal debe referen
 
 Esta arquitectura garantiza eficiencia sin modificar el payload estándar. Los valores de color se actualizan en tiempo real en la **Vista de formulario**, la **Vista principal de rejilla** y durante la **edición en línea**.
 
-## Paso a paso: configurar Color en Categoría de producto
+## Paso a paso: configurar Color en Categoría de producto { #step-by-step-configuring-color-in-product-category }
 
 El siguiente procedimiento usa `M_Product_Category` como ejemplo.
 
-### 1. Añadir la columna Color en el diccionario de datos
+### 1. Añadir la columna Color en el diccionario de datos { #1-add-the-color-column-in-the-data-dictionary }
 
 1. Accede al entorno Etendo ERP Classic con el rol **Administrador del sistema**.
 2. Navega a la ventana **Tablas y columnas**.
@@ -42,7 +42,7 @@ El siguiente procedimiento usa `M_Product_Category` como ejemplo.
 !!! note
     Usar el tipo de referencia **Color** permite al backend detectar el propósito de la columna independientemente de su nombre, integrándola de forma transparente en los metadatos leídos por el frontend.
 
-### 2. Aplicar cambios en base de datos y mostrar la columna
+### 2. Aplicar cambios en base de datos y mostrar la columna { #2-apply-database-changes-and-show-the-column }
 
 1. Aplica los cambios compilando el sistema:
 
@@ -54,7 +54,7 @@ El siguiente procedimiento usa `M_Product_Category` como ejemplo.
 3. Busca la ventana **Categoría de producto**.
 4. En la pestaña **Campo**, comprueba si la nueva columna ya aparece. Si no aparece, usa el proceso **Crear campos desde el Diccionario de Aplicación** (disponible en la barra de herramientas de la pestaña) para sincronizar los campos de la ventana con la definición de columna actualizada. Este paso hace que el campo sea visible en la interfaz del ERP Classic.
 
-### 3. Verificar la configuración
+### 3. Verificar la configuración { #3-verify-the-configuration }
 
 1. Abre la ventana **Categoría de producto** en Etendo Classic.
 2. Selecciona un registro existente (p. ej., la categoría *Standard*).
@@ -67,16 +67,16 @@ Si la configuración es correcta, el valor de **Categoría de producto** se rend
 !!! info
     Este comportamiento es agnóstico al módulo y agnóstico a la variable. Cualquier tabla maestra con una columna configurada con el tipo de referencia **Color** se soporta automáticamente en rejillas y formularios sin desarrollo adicional.
 
-## Alcance y restricciones
+## Alcance y restricciones { #scope-and-restrictions }
 
-### Campos afectados
+### Campos afectados { #affected-fields }
 
 El renderizado de insignias de color se aplica solo a **campos de clave foránea (TableDir / Tabla)** que referencian una tabla maestra con una columna de color configurada. Ejemplos:
 
 - `M_Product_Category_ID` en la tabla Productos — la referencia usada a lo largo de esta guía.
 - Cualquier otra columna de clave foránea que apunte a una tabla maestra que tenga una columna configurada con el tipo de referencia **Color**.
 
-### Campos no afectados
+### Campos no afectados { #fields-not-affected }
 
 Esta funcionalidad no afecta a:
 

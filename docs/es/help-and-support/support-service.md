@@ -8,7 +8,7 @@ tags:
     - Información de contacto
 ---
 
-## Centro de ayuda
+## Centro de ayuda { #help-center }
 
 Etendo proporciona soporte a partners y usuarios a través de nuestro [Centro de ayuda de Etendo](http://support.etendo.software){target="_blank"} 
 
@@ -23,6 +23,6 @@ Aquí, el usuario puede realizar preguntas o enviar información en estas seccio
 -   :material-lightbulb:  **Sugerir una nueva funcionalidad**
 -   :material-lightbulb-on:  **Sugerir una mejora**
 
-## Contacto
+## Contacto { #get-in-touch }
 
 Si tiene consultas comerciales, o si todavía no es partner o cliente, puede visitar la sección [Contacte con nosotros](https://etendo.software/en/contact-us/){target="_blank"} en el sitio web de Etendo.

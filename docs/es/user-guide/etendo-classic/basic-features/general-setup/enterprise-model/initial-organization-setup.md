@@ -8,11 +8,11 @@ tags:
     - Model
 ---
 
-# Crear organización
+# Crear organización { #initial-organization-setup }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Crear organización`
 
-## Visión general
+## Visión general { #overview }
 
 Una **Organización** es una empresa de una entidad. Una entidad puede tener al menos una o incluso más de una organización como forma de configurar diferentes tipos de modelos empresariales.
 
@@ -48,7 +48,7 @@ Todo lo anterior es posible debido a que existen diferentes [tipos de Organizaci
 - En el nivel más bajo del árbol, puede haber organización/es hija sin organizaciones por debajo.
     - Los datos maestros como terceros y productos creados a nivel de la organización hija no serán accesibles para el resto de organizaciones hija, si las hubiera.
 
-## Crear organización
+## Crear organización { #initial-organization-setup_1 }
 
 Como ya se ha mencionado, las Organizaciones se crean ejecutando el proceso Crear organización y, además, una vez creada una organización debe establecerse como **Lista** en la ventana Organización.
 
@@ -127,7 +127,7 @@ Por último, es importante remarcar que:
     - El resto de informes, como informes de ventas, compras y almacén, pueden lanzarse para cualquier tipo de organización.
 - No debería asignarse una configuración de libro mayor a la organización (\*), porque entonces se compartirá con todas las organizaciones por debajo.
 
-## Ejemplos
+## Ejemplos { #examples }
 
 1. **Datos de demostración de Etendo**:
 

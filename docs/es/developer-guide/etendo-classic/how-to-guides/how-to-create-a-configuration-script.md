@@ -8,12 +8,12 @@ tags:
 status: beta
 ---
   
-# Cómo crear un script de configuración
+# Cómo crear un script de configuración { #how-to-create-a-configuration-script }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Los módulos son una excelente forma de ampliar y personalizar una instancia de Etendo. Sin embargo, tienen una limitación principal: se pueden utilizar para **añadir** nuevos objetos (como nuevas ventanas, solapas, tablas o incluso columnas para tablas existentes y campos para solapas existentes), pero no se pueden utilizar para modificar objetos existentes (como campos existentes del Core), y en ocasiones esto no es suficiente. 
 
@@ -23,7 +23,7 @@ Esta sección describe qué es un script de configuración (el objeto más impor
 
 Es muy recomendable que esté familiarizado con el proceso de desarrollo de Etendo antes de leer este documento. En particular, es muy importante que esté familiarizado con el contenido del documento [Cómo crear un módulo](../how-to-guides/how-to-create-a-module.md).
 
-## Qué es un script de configuración
+## Qué es un script de configuración { #what-is-a-configuration-script }
 
 Un script de configuración es básicamente un archivo `XML` que contiene información sobre cambios realizados en valores de columnas de filas de tablas de base de datos.
 
@@ -38,7 +38,7 @@ Esto se explica fácilmente mediante un ejemplo. Esta sería la información que
 
 Si está familiarizado con el proceso de desarrollo de Etendo, probablemente ya pueda imaginar qué tipo de personalizaciones son posibles con los scripts de configuración. Ocultar campos existentes, cambiar la referencia de una columna concreta o cambiar el nombre de algún campo son solo algunos ejemplos.
 
-## ¿Cómo se generan los scripts de configuración?
+## ¿Cómo se generan los scripts de configuración? { #how-are-configuration-scripts-generated }
 
 Los scripts de configuración se generan automáticamente mediante una tarea de Gradle llamada `export.config.script`. Primero necesita crear un módulo de tipo **Plantilla** en Etendo y establecerlo como **En Desarrollo**. Después, realice los cambios que quiera (por ejemplo, cambiar las etiquetas de algunos campos u ocultarlos usando las ventanas del Diccionario de Aplicación). Por último, asegúrese de que no haya otros módulos en desarrollo en el sistema y ejecute las siguientes tareas:
  
@@ -51,7 +51,7 @@ La primera (que ya debería conocer por la documentación *How to* relacionada c
 
 Este script de configuración se crea comparando la información actual dentro de los archivos `XML` del Core de Etendo y de sus módulos instalados frente a la información de su base de datos. Cada cambio de datos de columna encontrado en el Diccionario de Aplicación se exporta al archivo `XML`, que se creará dentro de la carpeta `src-db/database` de su *Plantilla*, dentro de la carpeta de módulos de Etendo.
 
-## Instalar más de un script de configuración en el sistema
+## Instalar más de un script de configuración en el sistema { #installing-more-than-one-configuration-script-in-the-system }
 
 En ocasiones, puede ser interesante tener más de una Plantilla de industria (y, por tanto, más de un script de configuración) en el sistema. Por ejemplo, imagine que alguien ha desarrollado una Plantilla de industria para el sector de automoción. Esta plantilla podría incluir varios módulos adicionales y un script de configuración que adapta parte de la funcionalidad del Core para ajustarse mejor a las necesidades de ese sector. Puede que quiera usarla en su proyecto, pero también puede necesitar personalizar varios aspectos adicionales del Core o incluso de los módulos que incluye esa plantilla. Por tanto, sería necesaria una Plantilla de industria adicional (con su script correspondiente).
 
@@ -61,7 +61,7 @@ La razón de esta regla es fácil de explicar: los scripts de configuración se 
 
 Otra regla muy importante que debe cumplirse: **solo es posible desarrollar la plantilla que está en el extremo exterior de la cadena de dependencias**. En nuestro ejemplo anterior, usted podría desarrollar su propia plantilla de personalización (es decir, cambiar el script de configuración), pero no podría desarrollar la plantilla genérica de industria de automoción, porque ya existe una plantilla que depende de ella.
 
-## Procesos para alimentar scripts de configuración
+## Procesos para alimentar scripts de configuración { #processes-to-feed-configuration-scripts }
 
 En algunas situaciones, podría parecer una buena idea incluir un script de configuración dentro de un módulo normal. Por ejemplo, un módulo podría añadir un *callout* o una nueva referencia, pero el desarrollador también querría asociar el *callout* a un campo existente del Core o cambiar la referencia de una columna del Core a la nueva.
 
@@ -113,13 +113,13 @@ Una buena forma de hacerlo sería crear un proceso Java estándar de Etendo. Pue
 
 - Después de realizar los cambios, debería mostrar un mensaje claro al usuario indicándole que necesita exportar de nuevo su script de configuración (el desarrollador responsable de la instancia que tiene la plantilla de personalización deberá ejecutar `./gradlew  export.config.script` en este punto). 
 
-## Consideraciones adicionales relacionadas con los scripts de configuración
+## Consideraciones adicionales relacionadas con los scripts de configuración { #additional-considerations-related-to-configuration-scripts }
 
 Los scripts de configuración se utilizan principalmente para exportar cambios que usted no quiere exportar al propietario de los datos que está cambiando. En el ejemplo anterior, usted no quiere exportar la información modificada de la entrada `AD_Menu` a los archivos del Core, sino que quiere exportar el cambio a un script de configuración específico y localizado que pertenece a su Plantilla de industria de personalización. Por tanto, sería incoherente tener tanto el Core como su Plantilla de industria en desarrollo al mismo tiempo. Es más, si tuviera ambos en desarrollo al mismo tiempo, los cambios se exportarían a los archivos del Core mediante la tarea `export.database` y el script de configuración que obtendría estaría vacío.
 
 Lo mismo puede decirse cuando se utilizan scripts de configuración para modificar módulos existentes. No tiene sentido tener tanto el módulo como la plantilla en desarrollo al mismo tiempo. Hacerlo provocaría que los cambios se exportaran a los archivos del módulo y el script de configuración estaría vacío.
 
-## Cambios no deseados/inútiles dentro de los scripts de configuración
+## Cambios no deseados/inútiles dentro de los scripts de configuración { #unwanteduseless-changes-inside-configuration-scripts }
 
 En versiones anteriores de Etendo, era posible que, cuando los módulos instalados en la instancia se desarrollaron con un MP anterior al que está actualmente instalado en el sistema, se exportaran cambios innecesarios dentro del script de configuración. Esto incluía cambios como este:
 

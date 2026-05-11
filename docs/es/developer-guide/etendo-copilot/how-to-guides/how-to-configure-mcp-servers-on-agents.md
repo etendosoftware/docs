@@ -9,9 +9,9 @@ tags:
     - Configuración de agente
 ---
 
-# Cómo configurar servidores MCP en agentes de Etendo
+# Cómo configurar servidores MCP en agentes de Etendo { #how-to-configure-mcp-servers-on-etendo-agents }
 
-## Visión general
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -20,13 +20,13 @@ Esta guía proporciona instrucciones paso a paso para ayudarle a crear y configu
 
 Los servidores MCP amplían la funcionalidad del agente proporcionando herramientas y recursos externos que pueden cargarse dinámicamente y utilizarse durante las interacciones del agente.
 
-### ¿Qué es Model Context Protocol?
+### ¿Qué es Model Context Protocol? { #what-is-model-context-protocol }
 
 MCP es un protocolo de código abierto que permite una integración fluida entre modelos de lenguaje de gran tamaño (LLM) y herramientas externas, fuentes de datos y servicios. Puede encontrar más información en la página de concepto [Model Context Protocol (MCP)](../concepts/model-context-protocol.md).
 
-## Guía paso a paso
+## Guía paso a paso { #step-by-step-guide }
 
-### Crear configuración de servidor MCP
+### Crear configuración de servidor MCP { #create-mcp-server-configuration }
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Configuración de servidores MCP`
 
 1. Abra la ventana **Configuración de servidores MCP** (rol Administrador del sistema)
@@ -38,7 +38,7 @@ MCP es un protocolo de código abierto que permite una integración fluida entre
     - **Descripción**: Una breve descripción de lo que proporciona el servidor MCP.
     - **Estructura JSON**: El JSON de configuración del servidor MCP.
 
-### Configurar la estructura JSON
+### Configurar la estructura JSON { #configure-json-structure }
 
 El campo **Estructura JSON** contiene la configuración del servidor MCP. Puede pegar configuraciones MCP exactamente como aparecen en documentación y sitios web, incluidas configuraciones completas con claves envolventes.
 
@@ -83,7 +83,7 @@ El sistema normaliza automáticamente diferentes estructuras `JSON` y tipos de `
     - Cuando se definen varios servidores en una única configuración, cada servidor se tratará como una configuración MCP independiente.
     - El nombre del servidor de las estructuras anidadas se combinará con el nombre del registro MCP (p. ej., "MyMCP::filesystem").
 
-### Vincular servidor MCP al agente
+### Vincular servidor MCP al agente { #link-mcp-server-to-agent }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agent`
 
@@ -95,7 +95,7 @@ El sistema normaliza automáticamente diferentes estructuras `JSON` y tipos de `
    
     **Servidor MCP**: Seleccione el servidor MCP recién creado.
 
-### Probar la integración MCP
+### Probar la integración MCP { #test-mcp-integration }
 
 1. **Inicie una conversación** con su agente configurado
 
@@ -111,11 +111,11 @@ El sistema normaliza automáticamente diferentes estructuras `JSON` y tipos de `
     - Las herramientas MCP se invocarán cuando sea apropiado para la solicitud del usuario
     - Los resultados de la ejecución de herramientas se integrarán en la respuesta del agente
 
-## Ejemplo: servidor MCP de sistema de archivos
+## Ejemplo: servidor MCP de sistema de archivos { #example-filesystem-mcp-server }
 
 A continuación se muestra un ejemplo completo de configuración de un servidor MCP de sistema de archivos:
 
-### Configuración del servidor MCP
+### Configuración del servidor MCP { #mcp-server-configuration }
 
 - **Nombre**: `Filesystem MCP Server`
 - **Descripción**: `Node.js server implementing Model Context Protocol (MCP) for filesystem operations.`
@@ -129,13 +129,13 @@ A continuación se muestra un ejemplo completo de configuración de un servidor 
     }
     ```
 
-### Integración del agente
+### Integración del agente { #agent-integration }
 
 1. Vincule el servidor MCP de sistema de archivos a un agente.
 2. Sincronice la configuración del agente.
 3. Pruebe con operaciones del sistema de archivos.
 
-### Ejemplo de uso
+### Ejemplo de uso { #use-example }
 
 - **Usuario**: *"What files are in the working directory?"*
 - **Agente**: *"I'll check the files in the directory for you."* 

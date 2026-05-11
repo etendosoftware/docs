@@ -7,9 +7,9 @@ tags:
     - Administrador del sistema
 ---
 
-#  Cómo ejecutar un proceso de Crear entidad
+# Cómo ejecutar un proceso de Crear entidad { #how-to-run-an-initial-client-setup-process }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yGzPXU3nxpk?si=akTrp1_j8RAafSWx" title="reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -24,11 +24,11 @@ Este proceso permite:
 - Introducir la moneda base de la Entidad, que será la moneda de la Entidad independientemente de que una Organización que pertenezca a ella pueda tener una moneda diferente.
 - Incluir contabilidad para la Entidad.
 
-## Incluir esquema contable
+## Incluir esquema contable { #including-accounting-schema }
 
 Decida el *esquema contable* que utilizará la organización y configure la contabilidad usando la ventana **Crear entidad**.
 
-### Incluir contabilidad
+### Incluir contabilidad { #include-accounting }
 
 Para incluir estos datos, existe una casilla de verificación denominada *Incluir contabilidad* que obliga al usuario a introducir un plan de cuentas específico. Para ello, hay dos opciones:
 
@@ -57,7 +57,7 @@ El **Esquema contable** y el *Plan de cuentas* creados por defecto pueden person
 
 El **Esquema contable** está vinculado al **Árbol de cuentas**, ya que la **Cuenta** es una [Dimensiones](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab) obligatoria del esquema contable.
 
-### Archivo contable 
+### Archivo contable { #accounting-file }
 
 Etendo también permite seleccionar el archivo contable `CSV` con el plan de cuentas correspondiente ([Árbol de cuentas](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree.md)) para cargarlo en el sistema desde el campo *Archivo contable*. 
 
@@ -66,7 +66,7 @@ Etendo también permite seleccionar el archivo contable `CSV` con el plan de cue
 !!!info
     Para más información, consulte [Cómo crear archivos de cuentas](how-to-create-accounts-files.md) 
 
-## Configuración de módulos
+## Configuración de módulos { #module-configuration }
 
 Etendo distribuye archivos contables `CSV` como módulos que pueden aplicarse como datos de referencia. Este tipo de módulos forman parte de la localización de Etendo para un país determinado.
 

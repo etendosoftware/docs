@@ -8,13 +8,13 @@ tags:
     - Agentes
 ---
 
-# Instalación de Copilot
+# Instalación de Copilot { #copilot-installation }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía proporciona instrucciones detalladas sobre cómo empezar con Etendo Copilot, una API que permite la interacción con un bot capaz de seleccionar las herramientas adecuadas para responder a las consultas de los usuarios. Incluye los requisitos necesarios, instrucciones para añadir dependencias, configuraciones de variables de entorno y los pasos para ejecutar Copilot en un proyecto de Etendo. Además, cubre configuraciones opcionales para personalizar el comportamiento de Copilot y proporciona enlaces a guías de instalación detalladas del software requerido.
 
-## Requisitos
+## Requisitos { #requirements }
 
 1. Instale Etendo. Para ello, siga la [Guía de instalación de Etendo](../../getting-started/installation.md){target="_blank"}.
 2. Este proyecto depende de las siguientes herramientas:
@@ -29,17 +29,17 @@ Esta guía proporciona instrucciones detalladas sobre cómo empezar con Etendo C
 !!!info
     El módulo [Docker Management](../../developer-guide/etendo-classic/bundles/platform/docker-management.md), incluido como dependencia, permite la distribución de la infraestructura dentro de los módulos de Etendo, que incluyen contenedores Docker para cada servicio.
 
-## Instalación 
+## Instalación { #installation }
 Etendo Copilot se distribuye dentro del bundle [Copilot Extensions](./bundles/overview.md), que además de incluir la **Infraestructura de Copilot**, incluye **agentes predeterminados** y **herramientas** que pueden utilizarse directamente o componer su uso en nuevos agentes.  
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el bundle **Copilot Extensions**. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Ejecución de Etendo Copilot
+## Ejecución de Etendo Copilot { #running-etendo-copilot }
 
 La configuración más sencilla que vamos a seguir como ejemplo es montar **Copilot** dockerizado y **Tomcat** ejecutándose como un servicio local. Otras configuraciones se detallan en la sección [Configuraciones avanzadas](#configuraciones-avanzadas).
 
-### Copilot en Etendo 25 (recomendado)
+### Copilot en Etendo 25 (recomendado) { #copilot-in-etendo-25-recommended }
 Las últimas actualizaciones de Copilot siempre se desarrollan para la versión más reciente disponible de Etendo. Recomendamos mantener su entorno actualizado.
 
 1. Ejecute la [configuración interactiva](../../getting-started/interactive-installation.md): este comando le guiará a través de la configuración de Copilot. Hay dos opciones principales:
@@ -83,7 +83,7 @@ Las últimas actualizaciones de Copilot siempre se desarrollan para la versión 
         Para configurar un nuevo agente o utilizar uno predefinido, siga la guía [Configuración y uso de Copilot](../../user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
         
 
-### Copilot en Etendo 24
+### Copilot en Etendo 24 { #copilot-in-etendo-24 }
 
 1. Añada en `gradle.properties` la variable `docker_com.etendoerp.copilot=true` para habilitar el contenedor Docker de Copilot y al menos una `API_KEY`, dependiendo del proveedor de modelos que utilice.
     
@@ -144,7 +144,7 @@ Las últimas actualizaciones de Copilot siempre se desarrollan para la versión 
     !!!info
         Para configurar un nuevo agente o utilizar uno predefinido, siga la guía [Configuración y uso de Copilot](../../user-guide/etendo-copilot/setup-and-usage.md){target="_blank"}.
         
-### Variables de configuración
+### Variables de configuración { #configuration-variables }
 
 A continuación se enumeran todas las variables de configuración disponibles, que pueden configurarse manualmente.
 
@@ -169,7 +169,7 @@ A continuación se enumeran todas las variables de configuración disponibles, q
 | `COPILOT_IMAGE_TAG`              | `master`           | ❌ (Opcional)          | Tag de la imagen Docker a utilizar.                                                                               |
 | `copilot.port.debug`             | `5100`             | ❌ (Opcional)          | Puerto para depurar Copilot (si está habilitado).                                                                 |
 
-### Gestión del contenedor del servicio Copilot
+### Gestión del contenedor del servicio Copilot { #copilot-service-container-management }
 
 - Para iniciar la imagen Docker de Copilot, ejecute:
 
@@ -199,9 +199,9 @@ A continuación se enumeran todas las variables de configuración disponibles, q
     ```
     Esto utilizará la imagen Docker heredada con la dependencia `poetry` instalada, en lugar de la nueva con `uv` como gestor de paquetes instalado.
 
-## Configuraciones avanzadas 
+## Configuraciones avanzadas { #advanced-configurations }
 
-### Ejecutar Copilot localmente (solo para desarrollar Copilot)
+### Ejecutar Copilot localmente (solo para desarrollar Copilot) { #run-copilot-locally-for-developing-copilot-only }
 
 **Requisitos**
 
@@ -239,7 +239,7 @@ Recomendamos usar **PyCharm** para ejecutar Copilot localmente. Descárguelo e i
 
 6. Ejecute `Run.py` desde PyCharm
 
-### ¿Cómo depurar Etendo Copilot?
+### ¿Cómo depurar Etendo Copilot? { #how-to-debug-etendo-copilot }
 
 Hay dos formas principales de depurar Etendo Copilot, dependiendo de su configuración.
 

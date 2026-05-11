@@ -7,7 +7,7 @@ tags:
     - Gradle
     - Publicar módulos
 ---
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo publicar un módulo en GitHub Repositories.
 
@@ -27,14 +27,14 @@ Los partners tendrán acceso a los repositorios públicos y comerciales de Etend
 !!! success
     Se recomienda utilizar [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="_blank"} para gestionar el flujo de trabajo, las versiones y las etiquetas.
 
-## Despliegue
+## Despliegue { #deployment }
 
 !!! info
     
     La versión del módulo, el grupo y el artefacto que se desplegarán son los declarados en el archivo `src-db/database/sourcedata/AD_MODULE.xml`
 
 
-#### 1.  Crear el archivo build.gradle:
+#### 1.  Crear el archivo build.gradle: { #1-create-buildgradle-file }
 
 Para generar el `build.gradle` con toda la información necesaria para publicar, ejecute la siguiente tarea:
 
@@ -116,7 +116,7 @@ dependencies {
 
 ```
 
-#### 2.  En caso de añadir dependencias de un nuevo repositorio, declárelo en `build.gradle`
+#### 2.  En caso de añadir dependencias de un nuevo repositorio, declárelo en `build.gradle` { #2-in-case-of-adding-dependencies-of-a-new-repository-declare-it-in-buildgradle }
 
 ```groovy title="build.gradle"
 repositories {
@@ -132,7 +132,7 @@ repositories {
 
 
 
-#### 3. Si su módulo hace uso de inyección de dependencias, debe especificar la ubicación del archivo **'beans.xml'**
+#### 3. Si su módulo hace uso de inyección de dependencias, debe especificar la ubicación del archivo **'beans.xml'** { #3-if-your-module-makes-use-of-dependency-injection-you-need-to-specify-the-location-of-the-beansxml-file }
 
 Añada en el build.gradle la ubicación del beans.xml
 ``` groovy
@@ -162,7 +162,7 @@ Añada en el **beans.xml**
 </beans>
 ```
 
-#### 4.  Desplegar el nuevo módulo, ejecutando los comandos :
+#### 4.  Desplegar el nuevo módulo, ejecutando los comandos : { #4-deploy-the-new-module-running-the-commands }
 !!! info
     Antes de publicar un módulo, se compilará y se empaquetará en formato JAR.
 

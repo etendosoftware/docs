@@ -8,16 +8,16 @@ tags:
 
 status: beta
 ---
-#  Autenticación
+# Autenticación { #authentication }
   
-##  Visión general
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
     
 La **autenticación** es el acto de verificar la identidad de un usuario. Esto se puede hacer solicitando Nombre de usuario y Contraseña y verificándolo contra la tabla integrada `AD_User` o cualquier otro mecanismo.
 
-##  Cómo funciona la autenticación en Etendo
+## Cómo funciona la autenticación en Etendo { #how-authentication-works-in-etendo }
 
 Cuando un usuario quiere tener acceso a un recurso de Etendo, Etendo solicita al gestor de autenticación el Id de usuario de la aplicación del usuario que solicita acceso al recurso de Etendo. Si el usuario no ha sido autenticado previamente, el proveedor de autenticación tiene la responsabilidad de autenticar a este usuario.
 
@@ -38,24 +38,24 @@ A continuación se describe el flujo de eventos que ocurre al utilizar `DefaultA
 !!!Note
     Esto solo describe el flujo de eventos al utilizar `DefaultAuthenticationManager`. Cualquier otra implementación puede implementar esto de forma diferente, por ejemplo, no utilizando en absoluto la página de inicio de sesión estándar de Etendo o utilizando otro mecanismo para marcar la HTTP-Session como autenticada.
 
-##  Cómo configurar el gestor de autenticación en Etendo
+## Cómo configurar el gestor de autenticación en Etendo { #how-to-configure-the-authentication-manager-in-etendo }
 
 El gestor de autenticación utilizado en Etendo se define en el archivo de configuración `gradle.properties`. En la propiedad `authentication.class` tiene que escribir el nombre de la clase del proveedor de autenticación que Etendo utilizará para este propósito.
 
 Etendo incluye tres implementaciones de `AuthenticationManager`:
 
-###  Gestor de autenticación predeterminado
+### Gestor de autenticación predeterminado { #default-authentication-manager }
 
 Este es el gestor de autenticación predeterminado proporcionado por Etendo. Es el método de autenticación clásico que utiliza la página de inicio de sesión actual de Etendo para autenticar a los usuarios.
 
 Después de instalar Etendo, no necesita configurar nada si desea utilizar este gestor de autenticación, que es el método clásico con el que Etendo autentica a los usuarios de la aplicación.
 
-##  Obtener el gestor de autenticación
+## Obtener el gestor de autenticación { #getting-authentication-manager }
 
 !!!info
     Para obtener una instancia del Gestor de autenticación definido en `gradle.properties`, es posible utilizar el método `AuthenticationManager.getAuthenticationManager`.
 
-##  Desarrolle su propio gestor de autenticación
+## Desarrolle su propio gestor de autenticación { #develop-your-own-authentication-manager }
   
 También puede desarrollar su propio gestor de autenticación. Para ello, tiene que crear una nueva clase Java que extienda la clase abstracta `org.openbravo.authentication.AuthenticationManager`. Esta interfaz tiene los siguientes métodos:
 
@@ -105,7 +105,7 @@ El método **logout** se llama cuando el usuario solicita cerrar la sesión actu
 !!!Note
     Para la implementación: el método **authenticate** siempre se llama con DAL adminMode activo, por lo que el código dentro de él no necesita gestionar el adminMode por sí mismo.  
   
-###  Servicios web y conectores
+### Servicios web y conectores { #web-services-and-connectors }
 
 !!!info
     Todos los servicios externos autenticados **deben** hacer uso de la autenticación `webServiceAuthenticate`. Los **conectores** autorizados pueden usar `connectorAuthenticate`.  

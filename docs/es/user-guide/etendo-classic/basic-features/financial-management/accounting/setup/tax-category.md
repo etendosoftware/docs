@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Categoría de Impuesto
+# Categoría de Impuesto { #tax-category }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Categoría de Impuesto`
 
-## Visión general
+## Visión general { #overview }
 
 Una categoría de impuesto se utiliza para agrupar productos o servicios que comparten el mismo **tratamiento fiscal**. Dado que no todos los artículos tienen el mismo tipo impositivo (estándar, reducido o exento), las categorías de impuesto ayudan a organizar estas diferencias y garantizan que los impuestos se apliquen de forma automática y correcta durante las transacciones.
 
@@ -20,7 +20,7 @@ Cada producto o servicio debe asignarse a una categoría de impuesto en la venta
 
 Factores adicionales, como la [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) y la configuración del tipo impositivo, ayudan al sistema a determinar el **impuesto final aplicable**.
 
-### Cómo funcionan las categorías de impuesto
+### Cómo funcionan las categorías de impuesto { #how-tax-categories-work }
 
 El proceso de determinación de impuestos sigue esta lógica:
 
@@ -32,11 +32,11 @@ El proceso de determinación de impuestos sigue esta lógica:
 Esta estructura permite una gestión fiscal flexible manteniendo la consistencia en todo el sistema.
 
 
-## Cabecera
+## Cabecera { #header }
 
 Puede crear tantas categorías de impuesto como necesite para organizar distintos tratamientos fiscales en su sistema. Cada categoría se vinculará a tipos impositivos específicos y se asignará a productos. La solapa Cabecera define la información principal de la categoría de impuesto.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category1.png)
 
 **Campos a tener en cuenta:**
 
@@ -58,15 +58,15 @@ Puede crear tantas categorías de impuesto como necesite para organizar distinto
     3. **Asignarse opcionalmente a terceros** mediante [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) para restringir los impuestos aplicables a clientes o proveedores específicos
 
 
-## Traducción
+## Traducción { #translation }
 
 La solapa Traducción le permite proporcionar nombres y descripciones traducidos para las categorías de impuesto en varios idiomas. Esto resulta útil para organizaciones multinacionales en las que los usuarios trabajan en distintos idiomas.
 
 Cuando un usuario inicia sesión con una preferencia de idioma específica, verá los nombres de las categorías de impuesto en su idioma, lo que garantiza claridad y reduce la confusión al seleccionar categorías de impuesto durante la introducción de transacciones.
 
-## Casos de uso comunes
+## Casos de uso comunes { #common-use-cases }
 
-### Cuándo crear múltiples categorías de impuesto
+### Cuándo crear múltiples categorías de impuesto { #when-to-create-multiple-tax-categories }
 
 Debe crear diferentes categorías de impuesto cuando:
 
@@ -76,7 +76,7 @@ Debe crear diferentes categorías de impuesto cuando:
 - **Ventas transfronterizas**: productos nacionales vs. de exportación (sujetos a impuesto vs. tipo cero)
 - **Requisitos normativos**: separar artículos declarables vs. no declarables para las autoridades fiscales (p. ej., SII en España)
 
-### Dónde se utilizan las categorías de impuesto
+### Dónde se utilizan las categorías de impuesto { #where-tax-categories-are-used }
 
 Las categorías de impuesto aparecen en todo el sistema:
 
@@ -89,7 +89,7 @@ Las categorías de impuesto aparecen en todo el sistema:
 | Pedidos de compra/Facturas | Las categorías de impuesto filtran los impuestos aplicables en función de la configuración del producto y del proveedor |
 | [Concepto contable](../setup/gl-item.md) | Requerido al habilitar conceptos contables para facturas financieras con implicaciones fiscales |
 
-### Ejemplo
+### Ejemplo { #example }
 
 Una empresa vende distintos tipos de artículos con diferentes tipos impositivos:
 

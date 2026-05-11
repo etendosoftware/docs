@@ -8,13 +8,13 @@ tags:
   - Registrar un proveedor de impresión
 ---
 
-# Proveedor de impresión
+# Proveedor de impresión { #print-provider }
 
-## Registrar un nuevo Proveedor de impresión
+## Registrar un nuevo Proveedor de impresión { #register-a-new-print-provider }
 
 Esta guía explica cómo ampliar el módulo de Proveedor de impresión para integrar un proveedor de impresión externo (p. ej., PrintNode, Bartender, Hardware Manager, etc.). El objetivo es que cualquier módulo pueda registrar su propio conector sin duplicar la lógica común y solo crear botones que apunten a la Acción Enviar trabajo de impresión para enviar trabajos de impresión, lo que también resolverá automáticamente la lista de impresoras disponibles y la plantilla de impresión correspondiente.
 
-## Arquitectura
+## Arquitectura { #architecture }
 
 Los **componentes principales del módulo Proveedor de impresión** son:
 
@@ -27,7 +27,7 @@ Los **componentes principales del módulo Proveedor de impresión** son:
     - `sendToPrinter` (Proveedor, Impresora, copias, labelFile): String (jobId).
 
 
-### Implementación del proveedor
+### Implementación del proveedor { #provider-implementation }
 :material-menu: `Configuración General` > `Configuración del Proveedor de impresión` > `Implementación del proveedor`
 
 !!! info
@@ -67,7 +67,7 @@ Campos a tener en cuenta:
     - Template: cabecera de plantilla asociada a una tabla; agrupa sus líneas.
     - TemplateLine: variante de plantilla (ruta .jrxml/.jasper, “predeterminada”, orden/lineNo).
 
-## Cómo crear un nuevo proveedor
+## Cómo crear un nuevo proveedor { #how-to-create-a-new-supplier }
 
 1. **Crear la clase de estrategia**: cree una clase en el módulo que extienda `PrintProviderStrategy`. 
 
@@ -155,7 +155,7 @@ Campos a tener en cuenta:
         - Defina las claves (reutilice si aplica): printersurl, printjoburl, apikey, etc.
         - Guarde los valores (p. ej., sus URLs de API).
 
-## Cómo registrar etiquetas (Jasper)
+## Cómo registrar etiquetas (Jasper) { #how-to-register-labels-jasper }
 
 1. Cree un nuevo registro en la ventana **Plantillas de impresión**, indicando la tabla a la que aplica.
 
@@ -175,11 +175,11 @@ Campos a tener en cuenta:
     - DOCUMENT_ID = recordId
     - SUBREPORT_DIR = directorio de la plantilla (para subinformes)
 
-## Inyección de parámetros personalizados con hooks
+## Inyección de parámetros personalizados con hooks { #custom-parameter-injection-with-hooks }
 
 El módulo Proveedor de impresión soporta un mecanismo de hooks que permite a módulos externos inyectar parámetros personalizados de JasperReports durante la generación de etiquetas. Esta capacidad habilita escenarios avanzados de personalización en los que la lógica de negocio necesita añadir o modificar parámetros del informe antes de que el informe se renderice.
 
-### Interfaz de hook
+### Interfaz de hook { #hook-interface }
 
 Los módulos pueden implementar la interfaz `GenerateLabelHook` para personalizar parámetros de JasperReports. La ejecución del hook ocurre durante la fase `generateLabel`, antes de que el informe se rellene con datos.
 
@@ -190,7 +190,7 @@ Los módulos pueden implementar la interfaz `GenerateLabelHook` para personaliza
 - **Acceso completo al contexto**: los hooks reciben un objeto `GenerateLabelContext` que proporciona acceso a la configuración del proveedor, metadatos de la tabla, ID del registro, información de la plantilla y el mapa de parámetros.
 - **Integración CDI**: los hooks se descubren y gestionan automáticamente mediante CDI.
 
-### Implementación de un hook
+### Implementación de un hook { #implementing-a-hook }
 
 Para crear un hook personalizado:
 
@@ -201,7 +201,7 @@ Para crear un hook personalizado:
    - `tablesToWhichItApplies()`: devuelve la lista de IDs de tabla donde aplica este hook
    - `getPriority()` (opcional): devuelve la prioridad de ejecución (por defecto: 100)
 
-### Ejemplo: generación de códigos de barras personalizados
+### Ejemplo: generación de códigos de barras personalizados { #example-custom-barcode-generation }
 
 El siguiente ejemplo demuestra un hook que genera etiquetas de códigos de barras personalizadas para documentos de negocio. Este hook reemplaza la consulta por defecto a base de datos por una fuente de datos personalizada que contiene información de códigos de barras calculada.
 
@@ -287,7 +287,7 @@ public class CustomDocumentLabelHook implements GenerateLabelHook {
 }
 ```
 
-### API de contexto del hook
+### API de contexto del hook { #hook-context-api }
 
 `GenerateLabelContext` proporciona los siguientes métodos:
 
@@ -302,7 +302,7 @@ public class CustomDocumentLabelHook implements GenerateLabelHook {
 | `getTemplateLine()`                      | Obtiene la referencia de la línea de plantilla           |
 | `getJsonParameters()`                    | Obtiene los parámetros JSON de la solicitud  |
 
-### Fuentes de datos personalizadas
+### Fuentes de datos personalizadas { #custom-data-sources }
 
 Los hooks pueden proporcionar fuentes de datos personalizadas estableciendo el parámetro `REPORT_DATA_SOURCE`. Cuando este parámetro está presente, el Proveedor de impresión lo utilizará en lugar de la conexión por defecto a base de datos:
 
@@ -322,7 +322,7 @@ Esto es especialmente útil cuando:
 - La lógica de negocio requiere campos calculados que no están presentes en la base de datos
 - La optimización de rendimiento requiere datos preagregados
 
-### Buenas prácticas
+### Buenas prácticas { #best-practices }
 
 1. **Gestión de errores**: envuelva siempre la lógica de negocio en bloques try-catch y lance `PrintProviderException` con mensajes significativos.
 
@@ -350,7 +350,7 @@ Esto es especialmente útil cuando:
 
 5. **Rendimiento**: mantenga la ejecución del hook ligera. Evite consultas pesadas a base de datos o llamadas a APIs externas que puedan ralentizar la generación de etiquetas.
 
-### Actualización de impresoras
+### Actualización de impresoras { #printer-update }
 
 - El proceso llama a strategy.fetchPrinters(provider) y realiza un upsert sobre Printer:
 
@@ -363,12 +363,12 @@ Esto es especialmente útil cuando:
     !!!note "Recomendación"
         Si la API del proveedor no devuelve un único campo que pueda servir como clave estable, se puede componer una (p. ej.,  < accountId >:< remotePrinterId >).
 
-### Errores
+### Errores { #errors }
 
 - Use `PrintProviderException` para la gestión de excepciones.
 - Registre los mensajes que necesite en AD_MESSAGE. Puede acceder a estos mensajes usando las utilidades de formateo `String.format` y `OBMessageUtils.getI18NMessage`.
 
-## Flujo de trabajo y configuración
+## Flujo de trabajo y configuración { #workflow-and-configuration }
 
 !!! Note 
     Recuerde que la configuración inicial debe realizarse solo una vez, como administrador del sistema. Los parámetros del proveedor como printersurl y apikey deben definirse correctamente para evitar fallos de conexión o de sincronización de impresoras.
@@ -391,7 +391,7 @@ Esto es especialmente útil cuando:
 
     - `sendToPrinter` realiza la llamada HTTP/SDK necesaria y devuelve jobId (cuando esté disponible).
 
-### Ejemplo básico
+### Ejemplo básico { #basic-example }
 
 - En el módulo, cree `com.my.module.print.MyProviderStrategy` (extiende `PrintProviderStrategy`).
 

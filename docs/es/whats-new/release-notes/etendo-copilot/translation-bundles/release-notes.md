@@ -14,7 +14,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Bundle de extensiones de Copilot](../bundles/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con las extensiones de Copilot | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

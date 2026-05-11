@@ -18,7 +18,7 @@ An account combination represents **a General Ledger account as used by a specif
 
 The main purpose of this window is to **view and manage, all at once, these valid combinations of accounting dimensions** so Etendo knows exactly where and how to post financial transactions.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-1.png)
 
 
 !!!info
@@ -31,7 +31,7 @@ The main purpose of this window is to **view and manage, all at once, these vali
 
 In this window, the user is able to view all account combinations for the selected *General Ledger* and *Organization*, filter and search combinations to find specific accounts quickly.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-2.png)
 
 Fields to note:
 

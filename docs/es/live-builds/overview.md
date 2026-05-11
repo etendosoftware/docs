@@ -12,7 +12,7 @@ tags:
     - Environments
 ---
 
-# Entornos de prueba de Etendo
+# Entornos de prueba de Etendo { #etendo-test-environments }
 
 Esta página proporciona acceso rápido a entornos de prueba en vivo de Etendo que se mantienen siempre actualizados, lo que los hace ideales para probar nuevas funcionalidades de forma segura y reproducir incidencias sin afectar a producción.
 

@@ -6,18 +6,18 @@ tags:
     - Transcripción
 ---
 
-# Herramienta de audio
+# Herramienta de audio { #audio-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La Herramienta de audio es una herramienta que reconoce texto a partir de archivos de audio. Puede utilizarse en Agentes para extraer información de archivos de audio, como transcribir entrevistas, reuniones o podcasts. La herramienta acepta como entrada la ruta de un archivo de audio y devuelve el texto extraído del audio.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza el proceso de **extracción de texto a partir de archivos de audio**. Esto puede ser especialmente útil para tareas como transcribir conversaciones o discursos a partir de grabaciones de audio. La herramienta utiliza un modelo de conversión de voz a texto para convertir el contenido de audio en texto.
 
@@ -38,9 +38,9 @@ El uso de esta herramienta consta de las siguientes acciones:
     - La herramienta devuelve un objeto JSON que contiene el texto extraído del archivo de audio.
     - **Mensaje**: El texto extraído del archivo de audio.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Solicitud de reconocimiento de texto a partir de un archivo de audio
+### Solicitud de reconocimiento de texto a partir de un archivo de audio { #requesting-text-recognition-from-an-audio-file }
 
 Suponga que tiene un audio en `/home/user/request.mp3` y desea extraer texto relacionado con la información de una factura: 
 

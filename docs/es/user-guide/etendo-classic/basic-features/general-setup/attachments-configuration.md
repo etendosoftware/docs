@@ -6,17 +6,17 @@ tags:
     - Cliente
 ---
 
-# Configuración de Adjuntos
+# Configuración de Adjuntos { #attachments-configuration }
 
 :material-menu: `Aplicación` > `Configuración General` > `Configuración de Adjuntos`
 
-## Visión general
+## Visión general { #overview }
 
 Configuración del cliente del **Método de Adjuntos** que se va a utilizar. Cada método de adjuntos puede incluir sus propios campos adicionales para completar la configuración del método de adjuntos. Solo es posible tener una configuración activa en cada cliente.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/attachment-configuration/attachments-configuration.png)
 
-### Cabecera
+### Cabecera { #header }
 
 Muestra toda la configuración relacionada con el método de adjuntos utilizado para guardar adjuntos. Cada Método de Adjuntos puede incluir sus propios campos de configuración específicos como: URL del servidor, usuario, contraseña, idioma, etc.
 

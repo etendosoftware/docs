@@ -6,18 +6,18 @@ tags:
     - Personalización
 ---
 
-# Cómo personalizar un agente con memorias de agente
+# Cómo personalizar un agente con memorias de agente { #how-to-customize-an-agent-with-agent-memories }
 
-## Visión general
+## Visión general { #overview }
 Esta guía explica cómo capturar y reutilizar reglas y conocimiento adquiridos en cualquier agente de Copilot mediante las ventanas de **Memoria de agente** entregadas con el módulo Etendo Copilot. Cada memoria que registre está vinculada a un agente específico y se inyecta automáticamente en sus respuestas según el contexto de su organización, rol y usuario.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 - Módulo Etendo Copilot instalado y sincronizado.
 - Un agente de Copilot ya definido (consulte `Aplicación > Servicios > Copilot > Agente`).
 - Rol con acceso a la entrada de menú **Memoria de agente**.
 - Opcional: conocimiento de los roles de negocio que deberían recibir cada memoria.
 
-## Ventana Memoria de agente
+## Ventana Memoria de agente { #agent-memory-window }
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Memoria de agente`
 
 1. Abra la ruta de menú anterior. La ventana se divide en dos solapas: **Memoria de agente** (cabecera) y **Memoria** (detalle).
@@ -45,7 +45,7 @@ Campos a tener en cuenta:
     !!! tip
         Almacene afirmaciones cortas y orientadas a la acción ("Mencione siempre el SLA de entrega para la organización Norte") en lugar de párrafos largos. El gancho formatea cada memoria como una viñeta dentro de la sección `Use the following relevant previous information`, por lo que el texto conciso funciona mejor.
 
-## Crear una nueva entrada de memoria
+## Crear una nueva entrada de memoria { #creating-a-new-memory-entry }
 1. En la ventana **Memoria de agente**, seleccione el agente a personalizar.
 2. Vaya a la solapa **Memoria** y haga clic en **Nuevo**.
 3. Rellene los campos:
@@ -58,12 +58,12 @@ Campos a tener en cuenta:
 !!! info
 	Cuando coinciden múltiples memorias, Copilot las lista como viñetas bajo “Use the following relevant previous information.” Considere numerar procedimientos dentro del texto si el orden es importante.
 
-## Editar o eliminar memorias
+## Editar o eliminar memorias { #editing-or-deleting-memories }
 - **Editar**: cambie los campos de alcance (Organización, Usuario, Rol) para restringir o ampliar la aplicabilidad. Guarde para aplicar al instante.
 - **Desactivar**: cambie el estado de la casilla **Activo** para dejar de inyectar la memoria manteniendo un rastro de auditoría.
 - **Eliminar**: solo cuando esté seguro de que la instrucción no se reutilizará. 
 
-## Usar el atajo #MEMORY# desde el chat
+## Usar el atajo #MEMORY# desde el chat { #using-the-memory-shortcut-from-chat }
 Además de la ventana de back-office, los usuarios avanzados pueden enviar recordatorios rápidos directamente desde el pop-up del chat de Copilot:
 
 1. Abra cualquier conversación de Copilot.
@@ -87,7 +87,7 @@ Ejemplo:
 
 ![Respuesta resultante en italiano](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-customize-an-agent-with-agent-memories/how-to-customize-an-agent-with-agent-memories-4.png)
 
-## Buenas prácticas
+## Buenas prácticas { #best-practices }
 
 - Prefiera memorias más pequeñas y componibles frente a una única instrucción monolítica; el gancho puede devolver muchas filas, y las viñetas cortas mantienen los prompts bajo control.
 - Use **Usuario** para recordatorios personales y **Rol** para políticas departamentales. Las organizaciones pueden permanecer en **\*** para reglas de toda la empresa.

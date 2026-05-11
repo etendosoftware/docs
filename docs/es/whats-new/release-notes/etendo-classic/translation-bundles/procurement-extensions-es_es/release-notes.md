@@ -12,7 +12,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Procurement Extensions Bundle](../../bundles/procurement-extensions/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con Procurement Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

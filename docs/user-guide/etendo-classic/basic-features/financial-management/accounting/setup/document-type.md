@@ -46,13 +46,13 @@ The complete list of standard document types is the following:
 | POS Order | Sales Order | [Point of Sales Order](../../../sales-management/transactions.md#sales-invoice) |
 | Warehouse Order | Sales Order | [Warehouse Order](../../../sales-management/transactions.md#sales-invoice) |
 | Standard Order | Sales Order | [Sales Order](../../../sales-management/transactions.md#sales-invoice) |
-| AP Payment | AP Payment | [Payment Out](../../../financial-management/receivables-and-payables/transactions.md#payment-out) |
-| AR Receipt | AR Receipt | [Payment In](../../../financial-management/receivables-and-payables/transactions.md#payment-in) |
-| Financial Account Transaction | Financial Account Transaction | [Financial Account Transaction](../../../financial-management/receivables-and-payables/transactions.md#transaction) |
-| Bank Statement File | Bank Statement File | [Bank Statement](../../../financial-management/receivables-and-payables/transactions.md#imported-bank-statements) |
-| Payment Proposal | AP Payment Proposal | [Payment Proposal](../../../financial-management/receivables-and-payables/transactions.md#payment-proposal) |
-| Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
-| Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
+| AP Payment | AP Payment | [Payment Out](../../../financial-management/receivables-and-payables/transactions/payment-out.md) |
+| AR Receipt | AR Receipt | [Payment In](../../../financial-management/receivables-and-payables/transactions/payment-in.md) |
+| Financial Account Transaction | Financial Account Transaction | [Financial Account Transaction](../../../financial-management/receivables-and-payables/transactions/financial-account.md) |
+| Bank Statement File | Bank Statement File | [Bank Statement](../../../financial-management/receivables-and-payables/transactions/financial-account.md#import-statement) |
+| Payment Proposal | AP Payment Proposal | [Payment Proposal](../../../financial-management/receivables-and-payables/transactions/payment-proposal.md) |
+| Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions/financial-account.md#reconcile) |
+| Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions/doubtful-debt.md) |
 | Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions.md#cost-adjustment) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
 | Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions.md#header-7) |
@@ -67,7 +67,7 @@ The complete list of standard document types is the following:
 
 The Document Type window allows advanced users to configure how each document type is going to behave in terms of accounting and sequencing among others.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-1.png)
 
 Fields to note:
 
@@ -167,13 +167,13 @@ If necessary, **report templates can be customized** and even new ones can be cr
 !!! warning
     Even though this option is available in this functional tab, this configuration must be done by a developer.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-2.png)
 
 #### Email Definitions
 
 The Email Definitions tab supports the creation of as many email templates as required, depending on the language to be used for sending the documents by email. Documents can be sent by email by using the action button **Email** which can be found in the corresponding toolbar.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-3.png)
 
 As shown in the image above, it is possible to define:
 
@@ -201,7 +201,7 @@ Here is the list of possible tags:
 
 In this tab, document types can be translated to any language required. To do this, create a new record and fill the corresponding fields, as shown below.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-4.png)
 
 ---
 This work is a derivative of [Document Type](https://wiki.openbravo.com/wiki/Document_Type){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

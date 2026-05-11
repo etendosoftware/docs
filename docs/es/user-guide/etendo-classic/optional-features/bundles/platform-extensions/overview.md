@@ -12,15 +12,15 @@ tags:
 
 :material-store: Etendo Marketplace:  [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de la plataforma en Etendo.
 
-## Traducción
+## Traducción { #translations }
 -  :material-translate: Español: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
-## Módulo
+## Módulo { #modules }
 
-### Gestor de dependencias
+### Gestor de dependencias { #dependency-manager }
 
 :octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
@@ -29,7 +29,7 @@ El usuario puede acceder a todas las dependencias disponibles para añadirlas, c
 !!! info
     Para más información, visite la [Guía del desarrollador de Dependency Manager](../../../../../developer-guide/etendo-classic/bundles/platform/dependency-manager.md).
 
-### Gestión de Docker 
+### Gestión de Docker { #docker-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
 
@@ -38,7 +38,7 @@ Este módulo permite el uso de contenedores dockerizados en Etendo.
 !!!info
     Para más información, visite la [Guía del desarrollador de Docker Management](../../../../../developer-guide/etendo-classic/bundles/platform/docker-management.md). 
 
-### Servicio de Tomcat dockerizado
+### Servicio de Tomcat dockerizado { #dockerized-tomcat-service }
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
@@ -47,7 +47,7 @@ Este módulo permite la dockerización de Tomcat dentro de Etendo.
 !!!info
     Para más información, visite la [Guía del desarrollador de Dockerized Tomcat Service](../../../../../developer-guide/etendo-classic/bundles/platform/dockerized-tomcat-service.md).
 
-### Aplicación dinámica 
+### Aplicación dinámica { #dynamic-app }
 
 :octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
@@ -94,7 +94,7 @@ Este módulo garantiza un método de autenticación que permite a los usuarios a
     Para más información, visite la [Guía de usuario de Etendo RX](../platform-extensions/etendo-rx.md).
 
 
-### Número a palabra (inglés)
+### Número a palabra (inglés) { #number-to-word-english }
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
@@ -105,7 +105,7 @@ Proporciona la infraestructura para convertir un número en su equivalente en pa
 !!! info
     Para más información, visite la [Guía de usuario de Number To Word Converter](../../../../../user-guide/etendo-classic/basic-features/general-setup/application/number-to-word-converter.md) y la [Guía del desarrollador de Number To Word Converter](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
-### Servicio web de impresión de documentos
+### Servicio web de impresión de documentos { #print-document-web-service }
 
 :octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
@@ -117,7 +117,7 @@ Permite descargar un PDF de algunos documentos de transacción mediante un servi
     Para más información, visite la [Guía del desarrollador de Print Document Web Service](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 
-### Proveedor de impresión
+### Proveedor de impresión { #print-provider }
 :octicons-package-16: Javapackage: `com.etendoerp.print.provider`
 
 Conecta Etendo con plataformas de impresión externas para habilitar la generación e impresión centralizada de documentos con un solo clic en todo el sistema. Permite que cada organización configure su propio proveedor de impresión, gestione catálogos de impresoras y plantillas, y ejecute trabajos de impresión directa desde ventanas específicas. El módulo incluye una integración por defecto con PrintNode y admite proveedores personalizados mediante servicios de backend reutilizables y una API pública, garantizando una gestión de impresión flexible, segura y automatizada dentro de Etendo.
@@ -127,7 +127,7 @@ Conecta Etendo con plataformas de impresión externas para habilitar la generaci
     - Para más información, visite la [Guía del desarrollador de Print Provider](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md).
 
 
-### Gestión de caché de informes
+### Gestión de caché de informes { #report-cache-management }
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
@@ -136,7 +136,7 @@ Este módulo permite cambiar o actualizar un informe Jasper en un entorno Etendo
 !!! info
     Para más información, visite la [Guía del desarrollador de Clear Report Cache](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
-### Mantenimiento
+### Mantenimiento { #task }
 
 :octicons-package-16: Javapackage: `com.etendoerp.task`
 
@@ -145,7 +145,7 @@ El módulo **Mantenimiento** en Etendo proporciona un marco flexible para crear,
 !!! info
     Para más información, consulte la [Guía de usuario de Task](./task.md) para el uso funcional y la [Guía del desarrollador de Task](../../../../../developer-guide/etendo-classic/bundles/platform/task.md) para la configuración y personalización.
 
-### Eventos de webhook
+### Eventos de webhook { #webhook-events }
 
 :octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
 

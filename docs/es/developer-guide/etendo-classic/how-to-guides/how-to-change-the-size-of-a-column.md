@@ -6,13 +6,13 @@ tags:
   - Tamaño de columna
 ---
 
-# Cómo cambiar el tamaño de una columna
+# Cómo cambiar el tamaño de una columna { #how-to-change-the-size-of-a-column }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica **cómo cambiar el tamaño de una columna** dentro de la base de datos. Permite al usuario disponer de cierta flexibilidad dentro de la base de datos.
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 En Etendo, es posible **cambiar el tamaño de una columna**. Para lograrlo, deben seguirse estos pasos:
 

@@ -5,13 +5,13 @@ tags:
     - Modificar plan de pagos 
 ---
 
-# Gestión avanzada de cuentas bancarias
+# Gestión avanzada de cuentas bancarias { #advanced-bank-account-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management`
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bank.account.management.template`
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7AtGyQ62FHs?si=HisPbmd0KzblSq0O" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -32,14 +32,14 @@ Esta funcionalidad está disponible en las siguientes ventanas:
 - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management_1)
 - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions.md#advanced-bank-account-management)
 
-## Terceros - Cuenta bancaria
+## Terceros - Cuenta bancaria { #business-partner---bank-account }
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Terceros`
 
 Este módulo introduce la posibilidad de marcar una cuenta bancaria como **Predeterminada** dentro de la pestaña **Cuenta bancaria** de la ventana **Terceros**. Aquí, es posible marcar la casilla **Cuenta predeterminada** para establecer la cuenta que se utilizará en facturas y pedidos. Esta información determina la cuenta bancaria de cada pago.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba1.png)
 
-## Terceros - Ubicación/Dirección
+## Terceros - Ubicación/Dirección { #business-partner---locationaddress }
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Terceros` 
 
 El campo **Gestión avanzada de cuentas bancarias** se introduce en la pestaña **Ubicación/Dirección** de la ventana **Terceros** para asociar cuentas bancarias específicas a las diferentes ubicaciones.  
@@ -49,7 +49,7 @@ El campo **Gestión avanzada de cuentas bancarias** se introduce en la pestaña 
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba2.png)
 
-## Ventanas de Pedido de venta/Pedido de compra
+## Ventanas de Pedido de venta/Pedido de compra { #salespurchase-order-windows }
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Pedido de venta`
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacciones` > `Pedido de compra`
@@ -60,12 +60,12 @@ Este campo se rellena automáticamente en función de la dirección seleccionada
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba3.png)
 
-#### Botón Añadir pago
+#### Botón Añadir pago { #add-payment-button }
 
 Además, el botón **Añadir pago** se ha mejorado para incluir un campo **Cuenta bancaria**, lo que permite a los usuarios filtrar pagos por cuenta bancaria. Este botón está presente en las ventanas **Factura (Cliente)** y **Factura (Proveedor)**.
 
 
-## Ventanas de Factura (Cliente)/Factura (Proveedor)
+## Ventanas de Factura (Cliente)/Factura (Proveedor) { #salespurchase-invoice-windows }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`
 
@@ -81,14 +81,14 @@ El **Plan de pagos** en las ventanas **Factura (Cliente)** y **Factura (Proveedo
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba5.png)
 
-#### Botón Añadir pago
+#### Botón Añadir pago { #add-payment-button_1 }
 
 Además, el botón **Añadir pago** se ha mejorado para incluir un campo **Cuenta bancaria**, lo que permite a los usuarios filtrar pagos por cuenta bancaria. Este botón está presente en las ventanas **Factura (Cliente)** y **Factura (Proveedor)**.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba6.png)
 
 
-#### Botón Modificar plan de pagos
+#### Botón Modificar plan de pagos { #modify-payment-plan-button }
 
 En la pestaña **Plan de pagos** de las ventanas **Factura (Proveedor)** y **Factura (Cliente)** se encuentra el botón **Modificar plan de pagos**. Esta función permite a los usuarios modificar planes de pago ya creados, añadiendo o eliminando pagos, e incluso especificando la cuenta bancaria para cada registro del plan de pagos.
 
@@ -97,9 +97,9 @@ En la pestaña **Plan de pagos** de las ventanas **Factura (Proveedor)** y **Fac
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
-## Ventanas de Cobros/Pago
+## Ventanas de Cobros/Pago { #payment-in-payment-out-windows }
 :material-menu: `Aplicación` > `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Transacciones` > `Cobros / Pago` 
-### Botón Añadir detalles
+### Botón Añadir detalles { #add-details-button }
 
 
 Al igual que en el caso del botón **Añadir pago**, el botón **Añadir detalles** se ha mejorado para incluir un campo **Cuenta bancaria**, lo que permite a los usuarios filtrar pagos por cuenta bancaria. Este botón está presente en las ventanas **Cobros** y **Pago**.

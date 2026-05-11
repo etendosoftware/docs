@@ -9,11 +9,11 @@ tags:
 status: beta
 ---
 
-# Arquitectura de Etendo
+# Arquitectura de Etendo { #etendo-architecture }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Visión general
+## Visión general { #overview }
 
 En Etendo, el sistema se aleja de una arquitectura clásica de servlets para pasar a una arquitectura de **Rich Internet Application (RIA)**. Se trata de un cambio de paradigma radical que da como resultado una interfaz de usuario mucho más dinámica y versátil. En una arquitectura RIA, las solicitudes de datos y las solicitudes de la página/interfaz de usuario están separadas. La página/interfaz de usuario se carga en el cliente una vez y luego se reutiliza mientras el usuario trabaja en la aplicación. En cambio, las solicitudes de datos y acciones se ejecutan de forma continua.
 
@@ -31,7 +31,7 @@ La arquitectura de Etendo se implementa utilizando Etendo Core y varios módulos
 ![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture-1.png)
   
 Esta sección explica los conceptos implementados por estos módulos.
-##  Conceptos principales: Componente y Proveedor de componentes
+## Conceptos principales: Componente y Proveedor de componentes { #main-concepts-component-and-component-provider }
 
 Esta sección presenta conceptos centrales de la interfaz de usuario de Etendo. La interfaz de usuario de Etendo se implementa mediante los llamados **componentes**. Un **componente** es una parte específica de la interfaz de usuario. Puede ser un selector, un campo en un formulario, pero también un diseño completo, o un formulario o una cuadrícula.
 
@@ -60,7 +60,7 @@ El flujo general de solicitud y generación funciona de la siguiente manera:
 
 !!!note
     El módulo Client Kernel también se encarga del almacenamiento en caché de componentes y de las solicitudes de componente. Esto se trata con más detalle en una sección posterior de esta documentación.
-## Introducción a Weld: inyección de dependencias y más
+## Introducción a Weld: inyección de dependencias y más { #introducing-weld-dependency-injection-and-more }
 
 Weld implementa la [JSR-299](https://jcp.org/en/jsr/detail?id=299){target="\_blank"}: Contextos e Inyección de Dependencias de Java para la plataforma Java EE (CDI). CDI es el estándar de Java para la inyección de dependencias y la gestión contextual del ciclo de vida. Para información general sobre los conceptos de inyección de dependencias, visite [esta página](https://en.wikipedia.org/wiki/Dependency_injection){target="\_blank"}.
 
@@ -72,7 +72,7 @@ Las partes principales de la arquitectura de Etendo usan Weld para la inyección
     Etendo soporta **CDI 2.0** ya que Weld se actualizó a la versión **3.1.0**. CDI 2.0 es la especificación [JSR-365](https://jcp.org/en/jsr/detail?id=365){target="\_blank"}.
   
 
-### Definición de ámbito
+### Definición de ámbito { #scope-definition }
 
 Con Weld es posible definir componentes que están disponibles en distintos niveles: `ApplicationScoped`, `SessionScoped` y `RequestScoped`. Para cada uno de estos ámbitos se pueden encontrar ejemplos en el código fuente de Etendo. El ámbito se define usando una anotación:
     
@@ -90,7 +90,7 @@ Con Weld es posible definir componentes que están disponibles en distintos nive
 !!!note
     La anotación anterior para `ComponentProvider` es una anotación específica de Etendo utilizada para registrar `ComponentProvider` globalmente usando una cadena única. Consulte la sección sobre `ComponentProviders` para más información.
 
-### Herencia de ámbito
+### Herencia de ámbito { #scope-inheritance }
 
 En lo relativo a la herencia de anotaciones de ámbito, Weld sigue el comportamiento esperado descrito en la [especificación de CDI 2.0](https://docs.jboss.org/cdi/spec/2.0/cdi-spec.html#inheritance){target="\_blank"}.
 
@@ -100,7 +100,7 @@ Por lo tanto, como todas las anotaciones **`@ApplicationScoped`**, **`@SessionSc
 
 Este comportamiento no se aplica a aquellas clases que implementan una interfaz con un ámbito particular: si una interfaz declara un ámbito, no es heredado por las clases que implementan esa interfaz.
 
-### Inyección
+### Inyección { #injection }
 
 Los componentes definidos pueden inyectarse automáticamente en otros componentes usando **puntos de inyección**, que se definen mediante la anotación `@Inject`:
 
@@ -126,7 +126,7 @@ public class BaseGenerator {
 }
 ```
 
-### Instanciación de objetos habilitados para Weld
+### Instanciación de objetos habilitados para Weld { #instantiating-weld-enabled-objects }
 
 Weld necesita poder inyectar componentes en objetos recién instanciados. Esto significa que no es posible crear objetos usando la palabra clave `new` de Java. A menudo no necesita crear objetos directamente; deberían inyectarse. Pero, en algunos casos específicos, no es posible usar inyección porque su propio objeto se crea de una forma ajena a Weld. Para estos casos, Etendo dispone de un método de utilidad para ayudarle:
 
@@ -136,7 +136,7 @@ org.openbravo.base.weld.WeldUtils.getInstanceFromStaticBeanManager(Class<T> type
 
 La instancia creada se integrará con Weld y podrá hacer uso de sus capacidades de inyección de dependencias; además, se tiene en cuenta el ámbito definido para el componente. Por tanto, al invocar el método anterior para un componente `ApplicationScoped`, siempre se devuelve la misma instancia única.
 
-### Análisis del classpath
+### Análisis del classpath { #analyzing-the-classpath }
 
 Weld analizará el classpath para encontrar componentes que tengan anotaciones específicas.
 
@@ -144,18 +144,18 @@ De forma predeterminada, Weld busca en todos los archivos de clase en `WEB-INF/c
 
 Etendo Weld también excluirá clases específicas de `WEB-INF/classes`. Para evitar buscar en todas las clases, se han especificado filtros de exclusión concretos. Se pueden encontrar en el archivo `config/beans.xml` del módulo Weld. Las clases capturadas por el filtro de exclusión no se considerarán componentes y no serán encontradas por Etendo/Weld.
 
-### Módulo Weld para desarrolladores
+### Módulo Weld para desarrolladores { #weld-module-for-developers }
   
 El [**Modo de desarrollo de Weld**](https://docs.jboss.org/weld/reference/3.1.7.SP1/en-US/html_single/#devmode){target="\_blank"} es un modo especial que proporciona varias herramientas integradas adecuadas para fines de desarrollo y pruebas. De forma predeterminada, este modo está deshabilitado. [Probe](https://docs.jboss.org/weld/reference/3.1.7.SP1/en-US/html_single/#probe){target="\_blank"} de Weld es una de estas herramientas.
 
 El módulo `org.openbravo.base.weld.dev` puede utilizarse para habilitar el Modo de desarrollo. Este módulo **nunca** debe utilizarse en **entornos productivos** porque puede tener un impacto negativo en el rendimiento.
-##  ETags, caché y compresión
+## ETags, caché y compresión { #etags-caching-and-compressing }
 
 Para mejorar la experiencia de usuario y el rendimiento, es importante hacer uso de la funcionalidad de caché en el navegador, así como en el servidor. Para el uso de caché, se puede distinguir entre componentes y archivos js estáticos. Los componentes se generan en base a definiciones en la base de datos y pueden contener cadenas específicas de idioma. Los archivos js estáticos definen widgets de JavaScript que son reutilizados por los componentes.
 
 Etendo implementa varios tipos de caché en diferentes capas de la aplicación para optimizar la experiencia de usuario. Aprovecha la funcionalidad de modularidad, lo que significa que Etendo distingue entre una situación en la que un módulo está en desarrollo o no. Para un módulo en desarrollo, tiene sentido evitar la caché, ya que un consultor que cambia la interfaz de usuario quiere obtener feedback inmediato. Para un módulo que no está en desarrollo, tiene sentido maximizar la caché, ya que esto mejora la experiencia de usuario. Cuando un módulo no está en desarrollo, entonces se utiliza la versión del módulo para refrescar automáticamente la caché del cliente.
 
-###  Caché y refresco de archivos js estáticos
+### Caché y refresco de archivos js estáticos { #caching-and-refreshing-of-static-js-files }
 
 Un archivo js estático contiene una librería o un widget estándar que es utilizado por los componentes. El enlace a un archivo js estático se crea cuando la aplicación se inicia y se genera en la parte superior de la página.
 
@@ -166,7 +166,7 @@ Esto se implementa de la siguiente manera. Los archivos js estáticos (es decir,
 !!!note
     El archivo JavaScript concatenado no se comprimirá si los módulos core, `client.kernel` y `client.application` están en desarrollo. Esto facilita la depuración del lado del cliente.
 
-###  Caché y refresco de componentes
+### Caché y refresco de componentes { #caching-and-refreshing-of-components }
 
 Los componentes se consideran dinámicos y contienen datos de ejecución leídos de bases de datos. Los componentes se generan bajo demanda y se almacenan en caché en el servidor. El lado servidor puede validar si un componente ha cambiado desde la última solicitud. Esta validación no es posible en el cliente, ya que los datos en el servidor pueden haber cambiado.
 
@@ -182,14 +182,14 @@ La lógica de generación de ETag se puede sobrescribir en una implementación e
 !!!note
     Un Component puede contener otros componentes proporcionados por otros módulos. La generación del ETag solo tiene en cuenta el estado de en desarrollo del módulo del Component raíz.
 
-###  Compresión y comprobación de sintaxis
+### Compresión y comprobación de sintaxis { #compression-and-syntax-checking }
   
 La salida generada por un módulo se puede comprimir y comprobar sintácticamente. Para la compresión, se utiliza [jsmin](https://www.crockford.com/jsmin.html){target="\_blank"}. Para la comprobación de sintaxis, Etendo hace uso de [JSLint](https://www.jslint.com/){target="\_blank"} y [JSLint4Java](https://code.google.com/archive/p/jslint4java/){target="\_blank"}. La compresión/comprobación de sintaxis se realiza en función del estado en desarrollo de un módulo:
 
 * Si un módulo está en desarrollo, entonces la salida de sus componentes se comprueba sintácticamente, pero no se comprime (para mejorar la legibilidad para un desarrollador en el navegador).
 * Si un módulo no está en desarrollo, entonces la salida no se comprueba sintácticamente, pero sí se comprime (para mejorar el rendimiento para los usuarios finales).
 
-###  Información sobre la caché HTTP y los ETags
+### Información sobre la caché HTTP y los ETags { #information-regarding-http-caching-and-etags }
 
 * [http://www.infoq.com/articles/etags](http://www.infoq.com/articles/etags){target="\_blank"} 
 * [http://www.oreillynet.com/onjava/blog/2004/07/optimizing_http_downloads_in_j.html](http://www.oreillynet.com/onjava/blog/2004/07/optimizing_http_downloads_in_j.html){target="\_blank"} 
@@ -197,7 +197,7 @@ La salida generada por un módulo se puede comprimir y comprobar sintácticament
 * [http://bitworking.org/news/150/REST-Tip-Deep-etags-give-you-more-benefits](http://bitworking.org/news/150/REST-Tip-Deep-etags-give-you-more-benefits){target="\_blank"} 
 * [http://blogs.atlassian.com/developer/2007/12/cachecontrol_nostore_considere.html](http://blogs.atlassian.com/developer/2007/12/cachecontrol_nostore_considere.html){target="\_blank"}
 * [http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13](http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13){target="\_blank"}
-## Estructura estándar de un módulo
+## Estructura estándar de un módulo { #standard-structure-of-a-module }
 
 Un módulo que implemente funcionalidad en la arquitectura de Etendo debe seguir una estructura fija. La imagen siguiente refleja la estructura estándar:
 
@@ -209,7 +209,7 @@ Un módulo que implemente funcionalidad en la arquitectura de Etendo debe seguir
 Siguiendo esta estructura, los archivos se copiarán en la ubicación correcta durante los pasos principales de compilación.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/etendo-architecture-7.png)
-##  Proveedor de componentes
+## Proveedor de componentes { #component-provider }
 
 Cada módulo necesita implementar un proveedor de componentes. Un proveedor de componentes se encarga de las siguientes tareas:
 
@@ -283,7 +283,7 @@ El código anterior muestra cómo registrar recursos javascript y css. También 
 **Búsqueda de todos los proveedores de componentes**
 
 Etendo puede encontrar todos los `ComponentProviders` porque Weld analizará el classpath y recopilará todas las clases que tengan una anotación `@ComponentProvider`. Consulte la sección de Weld sobre el análisis del classpath indicada anteriormente.
-## Implementación de acciones del lado del servidor invocables desde el cliente
+## Implementación de acciones del lado del servidor invocables desde el cliente { #implementing-server-side-actions-callable-from-the-client }
 
 Etendo proporciona una solución práctica para ejecutar acciones en el servidor desde el cliente. Este es el denominado concepto `ActionHandler`. El concepto `ActionHandler` tiene una parte del lado del servidor y otra del lado del cliente.
 
@@ -342,7 +342,7 @@ OB.RemoteCallManager.call('org.openbravo.client.application.examples.MyActionHan
 
 !!! info
     Para más información, visite [Cómo añadir un botón a la barra de herramientas](../how-to-guides/how-to-add-a-button-to-the-toolbar.md#adding-server-side-logic---implementation-steps). Contiene un ejemplo de un `ActionHandler` del lado del servidor que se invoca desde el cliente.
-## Implementar lógica de inicialización de la aplicación
+## Implementar lógica de inicialización de la aplicación { #implement-application-initialization-logic }
 
 En los módulos, a veces tiene sentido inicializar algo cuando se inicia la aplicación. Etendo proporciona un mecanismo para implementar lógica de inicialización de la aplicación. Debe hacer lo siguiente:
 
@@ -365,7 +365,7 @@ Weld encontrará automáticamente su clase y Etendo la llamará al inicializar l
 
 !!!note
     Si no se está llamando a su código de aplicación, entonces consulte este [consejo](../concepts/common-issues-tips-and-tricks.md#my-component-is-not-found).
-##  Eventos de entidad de negocio
+## Eventos de entidad de negocio { #business-entity-events }
 
 La arquitectura de Etendo permite añadir fácilmente componentes que escuchan eventos de entidad de negocio. Los eventos de entidad de negocio son la creación, actualización y eliminación de entidades y los eventos de transacción. Etendo utiliza el framework de eventos de negocio para implementar lógica de negocio específica (por ejemplo, para generar/establecer números de documento en pedidos de venta).
 
@@ -377,7 +377,7 @@ Los eventos de entidad de negocio se emiten en el evento, es decir, antes de que
 !!! info
     Para más información, visite [cómo implementar un manejador de eventos de negocio](../how-to-guides/how-to-implement-a-business-event-handler.md). Ofrece una descripción detallada de cómo implementar su propio manejador de eventos que escuche eventos de entidad de negocio.
 
-###  Clases de eventos y API
+### Clases de eventos y API { #event-classes-and-api }
 
 Los eventos se implementan como clases Java; cuando se dispara un evento, se emite una instancia de esta clase y es recibida por los manejadores de eventos. Todas las instancias de evento heredan de la clase base `EntityPersistenceEvent`:
 
@@ -398,10 +398,10 @@ Las API más relevantes se tratan aquí:
 
 - `setCurrentState`(Property property, Object value) (disponible para todos los eventos, pero solo relevante para eventos de actualización/nuevo): establece un nuevo valor para la propiedad en la instancia objetivo; el nuevo valor se persistirá y, a continuación, se actualiza la instancia objetivo. La Property puede recuperarse desde la entidad de `targetInstance` (llame a `getEntity` en la instancia objetivo y luego a `getProperties` o `getProperty`). 
 - Object `getPreviousState`(Property property) (solo disponible en el evento de actualización): devuelve el valor anterior (actualmente establecido en la base de datos) para la propiedad en la entidad.
-## Implementación de una nueva vista
+## Implementación de una nueva vista { #implementing-a-new-view }
 
 Una vista corresponde al contenido de una solapa principal en la interfaz de usuario de Etendo; por ejemplo, la ventana de pedido de compra es una vista. La arquitectura de Etendo permite crear su propia vista completamente personalizada desde cero. Al crear una entrada de menú para su vista, puede integrar su vista personalizada en el menú de la aplicación, el inicio rápido y en las vistas recientes de su espacio de trabajo. La implementación de una nueva vista se explica en detalle en este [Cómo](../how-to-guides/how-to-implement-a-new-main-view.md).
-##  Programación del lado del cliente
+## Programación del lado del cliente { #client-side-coding }
 
 El uso de la tecnología Rich Internet Application (RIA) significa que parte de la programación se realiza del lado del cliente y en JavaScript. La programación y depuración en JavaScript es muy diferente de la programación y el desarrollo en Java del lado del servidor. Puede ser vital consultar los consejos de [programación del lado del cliente](../concepts/common-issues-tips-and-tricks.md#client-side-coding-javascript).
 

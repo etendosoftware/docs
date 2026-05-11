@@ -6,7 +6,7 @@ tags:
     - Definición del Proceso
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Este documento explica cómo definir un proceso de escaneo que pueda ejecutarse desde la aplicación móvil para escanear códigos utilizando la cámara del móvil.
 
@@ -19,7 +19,7 @@ Opcional:
 
 - Cantidad: Es posible especificar la cantidad de los elementos escaneados.
 
-## Definición del proceso de escaneo en Etendo
+## Definición del proceso de escaneo en Etendo { #scanning-process-definition-in-etendo }
 
 !!! warning
     El entorno debe tener al menos un módulo en desarrollo, y el identificador del proceso debe incluir el prefijo de ese módulo.

@@ -7,11 +7,11 @@ tags:
     - Propiedad
 ---
 
-# Preferencias
+# Preferencias { #preference }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias`
 
-## Visión general
+## Visión general { #overview }
 
 Una preferencia es un tipo de valor de sesión que puede ser un atributo o una propiedad.
 
@@ -35,11 +35,11 @@ Por ejemplo, existe un **Atributo** denominado *Autoguardado* que actualmente es
 
 - La preferencia anterior significa que todos los usuarios que inicien sesión en Etendo tendrán esa funcionalidad activa independientemente de su rol y usuario y de la entidad u organización en la que estén trabajando.
 
-## Preferencias
+## Preferencias { #preference_1 }
 
 La ventana Preferencias permite al usuario definir y mantener valores de sesión que pueden ser visibles y, por tanto, aplicarse a diferentes niveles como **Entidad**, **Organización**, **Usuario**, **Rol** y **Ventana**.
 
-### Definición de Preferencias
+### Definición de Preferencias { #preference-definition }
 
 ![](../../../../../assets/drive/ORFZT6LvzmxT-rOY-l1Xw07GvftHNxLMJU6RxtHo8LmMioTFNJMYUcITNJlA5xrvFyW8PMzRi2grIoMM-tFBiotCV4s3YNbUzC5G7UyavRacVSjEpYLuQQtdo9v_aTHWIgVHoM1w.png)
 
@@ -129,7 +129,7 @@ Como se muestra en la imagen anterior, existe un campo denominado *Lista de Prop
     - **"SaveAttachmentsOldWay"**  
     Este atributo define si los adjuntos deben guardarse utilizando el modelo antiguo de adjuntos.
 
-### Visibilidad de Preferencias
+### Visibilidad de Preferencias { #preferences-visibility }
 
 La sección de visibilidad de preferencias define el *Nivel* donde se va a utilizar una preferencia y, por tanto, se aplicará.
 
@@ -145,7 +145,7 @@ Los niveles disponibles son:
 - **Rol**: si este nivel se establece en un rol determinado, solo ese rol podrá ver esa preferencia.
 - **Ventana**: si este nivel se establece en una ventana determinada, solo esa ventana podrá ver esa preferencia.
 
-#### Prioridad de Preferencias
+#### Prioridad de Preferencias { #preference-priority }
 
 La sección Prioridad de Preferencias define la **Prioridad** de múltiples preferencias definidas para la misma Propiedad.
 
@@ -182,7 +182,7 @@ La Prioridad de Preferencias se aplicará al cargar las Preferencias por defecto
 
   - Si todos los niveles anteriores son iguales, entonces se considerará la preferencia con la columna **Seleccionado** marcada.
 
-#### Valores de Preferencias
+#### Valores de Preferencias { #preferences-values }
 
 Al iniciar sesión en Etendo o al entrar en el rol o la organización, las preferencias visibles para ese usuario, rol, entidad, organización o ventana se almacenan en la sesión de Etendo. Esos valores de sesión pueden obtenerse utilizando el método: `org.openbravo.erpCommon.utility.Utility.getContext`.
 

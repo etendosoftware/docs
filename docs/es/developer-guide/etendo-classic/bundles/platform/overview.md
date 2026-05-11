@@ -4,11 +4,11 @@ title: Bundle de extensiones de plataforma | Documentación técnica
 
 :octicons-package-16: Javapackage: `com.etendoerp.platform.extensions`
 
-## Visión general
+## Visión general { #overview }
 
 Este bundle incluye mejoras para funcionalidades de la plataforma en Etendo.
 
-## Gestión de Docker
+## Gestión de Docker { #docker-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.docker`
 
@@ -17,7 +17,7 @@ Este módulo permite el uso de contenedores dockerizados en Etendo Classic.
 !!!info
     Para más información, visite la [Guía del desarrollador de Gestión de Docker](../platform/docker-management.md).
 
-## Servicio Tomcat dockerizado
+## Servicio Tomcat dockerizado { #dockerized-tomcat-service }
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
@@ -26,7 +26,7 @@ Este módulo permite la dockerización de Tomcat dentro de Etendo Classic.
 !!!info
     Para más información, visite la [Guía del desarrollador de Servicio Tomcat dockerizado](../platform/dockerized-tomcat-service.md).
 
-## Aplicación dinámica 
+## Aplicación dinámica { #dynamic-app }
 
 :octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
@@ -37,7 +37,7 @@ Aplicación dinámica le permite crear subaplicaciones en Etendo Mobile.
 
 ## EAN 128
 
-### Aspectos técnicos
+### Aspectos técnicos { #technical-aspects }
 
 Es un módulo para la transmisión de información entre los agentes de la cadena de suministro bajo las especificaciones del código de barras Code 128. Esto proporciona utilidades genéricas para la definición y el parseo de EAN128.
 
@@ -83,7 +83,7 @@ Convierte el tipo EAN-128 a un objeto JSON y lo devuelve como respuesta.
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
-### Aspectos técnicos
+### Aspectos técnicos { #technical-aspects_1 }
 
 Este módulo permite personalizar varias funcionalidades de seguridad relacionadas con:
 
@@ -115,17 +115,17 @@ Permite ejecutar acciones mediante una llamada a una URL, proporcionando una for
 !!! info
     Para más información, visite la [Guía del desarrollador de Etendo Webhooks](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md).
 
-## Número a palabra
+## Número a palabra { #number-to-word }
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
 :octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Este módulo proporciona la infraestructura para convertir un número en su equivalente en palabras. Esta funcionalidad es especialmente útil al imprimir cheques.
 
-### Ventanas del conversor de número a palabra
+### Ventanas del conversor de número a palabra { #number-to-word-converter-windows }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Conversor de número a palabra`
 
@@ -141,7 +141,7 @@ Algunos campos a tener en cuenta son:
 
 El campo **Clase Java** es obligatorio, pero está vacío por defecto, a menos que se instale y se aplique correctamente a la entidad legal para la que se requiere imprimir cheques otro módulo como Número a palabra (español) o Número a palabra (inglés). Además, la **Clase Java** puede completarse manualmente.
 
-### Aspectos técnicos
+### Aspectos técnicos { #technical-aspects_2 }
 
 El módulo NumberToWord despliega una infraestructura para definir módulos de conversión de **Número a palabra**, de modo que puedan desplegarse lógicas diferentes para distintos idiomas.
 
@@ -258,13 +258,13 @@ Este módulo sirve como una capa de integración para documentar y exponer APIs 
 !!!info
     Para más información, visite [Cómo documentar un endpoint con OpenAPI](../../how-to-guides/how-to-document-an-endpoint-with-openapi.md). 
 
-## Servicio web de impresión de documentos
+## Servicio web de impresión de documentos { #print-document-web-service }
 
 :octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
 :octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
-### Aspectos técnicos
+### Aspectos técnicos { #technical-aspects_3 }
 
 Este módulo permite descargar un PDF de algunos documentos de transacción usando un servicio web llamado printDocument. Devuelve un PDF con el pedido, la factura o el albarán. Esto es útil para empresas que usan aplicaciones de terceros y requieren hacer accesibles los imprimibles desde esas aplicaciones.
 
@@ -298,13 +298,13 @@ Este es un servicio web RESTful que devuelve un archivo .PDF del documento usand
 
 Es obligatorio insertar el ID de la organización cuando se llama al servicio web porque filtra por organización.
 
-## Gestión de caché de informes
+## Gestión de caché de informes { #report-cache-management }
 
 :octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 Este módulo permite cambiar o actualizar un **Informe Jasper** en un entorno Etendo sin detener el servidor.
 
-### Aspectos técnicos
+### Aspectos técnicos { #technical-aspects_4 }
 
 Este módulo permite limpiar la caché de informes compilados en Tomcat. Los informes deben subirse a la carpeta correcta, por ejemplo: `/var/lib/tomcat/webapps/etendo/…`
 
