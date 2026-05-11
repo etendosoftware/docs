@@ -403,13 +403,13 @@ Etendo Copilot admite dos tipos de agentes, cada uno con dos modos de conexión.
 - Compruebe que el ID del agente sea correcto.
 - Asegúrese de que el servicio de Copilot esté en ejecución.
 
-**El inicio de sesión OAuth no arranca:**
+**El inicio de sesión OAuth no comienza:**
 
 - Confirme que su cliente MCP admite OAuth 2.1 para servidores MCP.
 - Verifique que la URL generada no incluya un token si seleccionó `OAuth 2.1`.
 - Asegúrese de que el navegador pueda acceder a la página de inicio de sesión de Etendo expuesta por el servidor MCP.
 
-**OAuth login stops after credentials:**
+**El inicio de sesión OAuth se interrumpe después de ingresar las credenciales:**
 
 - Si **Usar organización y rol predeterminados** está desactivado, espere una segunda página que solicite **Rol** y **Organización**.
 - Si esa segunda página no aparece, verifique que el usuario tenga asignaciones válidas de rol y organización en Etendo.
