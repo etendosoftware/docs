@@ -110,7 +110,7 @@ Campos a tener en cuenta:
             |     |     |     |     |
             | --- | --- | --- | --- |
             | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
             | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
             | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
 
@@ -127,14 +127,14 @@ Campos a tener en cuenta:
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) | (-) Imp. línea |     | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) | (-) Imp. línea |     | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Impuestos | Una por línea de impuesto |
         | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) |     | (-) Importe total | Una por factura |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
         | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
 

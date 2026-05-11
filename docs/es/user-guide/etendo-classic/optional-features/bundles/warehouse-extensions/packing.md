@@ -31,7 +31,7 @@ Este módulo agiliza y mejora la gestión de las **operaciones de empaquetado** 
 
 En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requieren algunas configuraciones previas en otras ventanas para poder calcular el peso de cada caja:
 
-- Ventana [**Producto**](../../../basic-features/master-data-management/master-data.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
+- Ventana [**Producto**](../../../basic-features/master-data-management/master-data/product.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
     

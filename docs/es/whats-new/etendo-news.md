@@ -574,7 +574,7 @@ tags:
     
     En esta última versión, se ha añadido una nueva funcionalidad: la posibilidad de configurar tipos de documento para facturas, pedidos y envíos/recepciones en función del tercero seleccionado: 
 
-    - Documentación: [Tipo de documento](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentación: [Tipo de documento](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [¿Sigue creando facturas manualmente? Descubra cómo Etendo 25.3 automatiza la selección del tipo de documento por cliente](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>

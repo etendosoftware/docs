@@ -48,18 +48,18 @@ Cada producto que se vaya a comprar debe tener un precio en la lista de precios 
 Del mismo modo, cada producto que se compra debe definirse en una unidad de medida (UdM) y, si es necesario, en una unidad de medida alternativa (UdMA).
 
 !!!info
-    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) para más información.
+    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) para más información.
 
 El coste de una transacción de entrada como un "Albarán (Proveedor)" puede calcularse utilizando el precio de compra del producto sin impuestos.
 
 Además, el coste de los productos incluidos en un Albarán (Proveedor) puede ajustarse como resultado de la imputación de diferentes tipos de [Landed Cost](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type) en el albarán.
 
 El proceso "Costing Server" es el proceso "Costing Engine" de Etendo que calcula y ajusta el coste de transacción de un producto.
-Este proceso requiere que la entidad legal/organización tenga una [regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#costing-rule) configurada y aplicada a los productos configurados como "Almacenado".
+Este proceso requiere que la entidad legal/organización tenga una [regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#costing-rule) configurada y aplicada a los productos configurados como "Almacenado".
 Los terceros deben configurarse antes de que una necesidad de material pueda convertirse automáticamente en un pedido de compra.
 
 !!!info
-    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 La configuración anterior forma parte del flujo general de configuración del negocio dentro de la configuración de "Gestión de Datos Maestros".
 
@@ -74,7 +74,7 @@ En Gestión de Compras, el proceso de negocio Procure to Pay se ejecuta del sigu
 Cualquier miembro de la organización autorizado puede emitir directamente una Necesidad de material como resultado de una necesidad de la organización o de una unidad de negocio.
 
 - El solicitante crea un nuevo documento en la ventana [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition), introduce una "Fecha de necesidad" y después busca el producto o servicio necesario.
-Si el producto no existe, puede introducirse en ese momento en la ventana [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Si el producto no existe, puede introducirse en ese momento en la ventana [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 - El solicitante continúa añadiendo, para cada producto necesario, una nueva línea con la fecha de necesidad, el producto, la cantidad, el precio si se conoce y, si es necesario, su atributo (talla y/o color, etc.).
 También puede añadirse un proveedor preferente si se conoce.
 - Una vez hecho, la necesidad de material se guarda en estado "Borrador", lo que permite que el usuario la modifique posteriormente si fuera necesario.
@@ -82,7 +82,7 @@ También puede añadirse un proveedor preferente si se conoce.
 Las necesidades de material notifican al personal de compras los productos a pedir, su cantidad y el plazo de entrega. El personal de compras se encarga entonces de gestionar las necesidades de material ya creadas o incluso de crear nuevas, si fuera necesario.
 
 - El personal de compras gestiona las necesidades en la ventana [Administrar necesidades](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions).
-- El personal de compras puede cambiar cualquier dato de las necesidades creadas en estado borrador y, además, puede buscar el proveedor que se utilizará en el campo Terceros. Si el tercero no existe, puede introducirse en ese momento en la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+- El personal de compras puede cambiar cualquier dato de las necesidades creadas en estado borrador y, además, puede buscar el proveedor que se utilizará en el campo Terceros. Si el tercero no existe, puede introducirse en ese momento en la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 - El personal de compras también puede introducir el precio neto unitario de compra y los descuentos, si los hubiera, una vez se conozcan.
 - Una vez que la necesidad está lista, se completa. El estado del documento de la necesidad cambia a Completado y entonces puede convertirse en un pedido de compra.
 

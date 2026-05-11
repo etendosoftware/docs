@@ -226,7 +226,7 @@ El botón **Copiar cuentas** permite seleccionar cuentas asignadas por defecto a
     Las cuentas asignadas por defecto a cada grupo de terceros, por ejemplo, también pueden asignarse por defecto a cada proveedor o cliente utilizando el botón de acción **Copiar cuentas**, esta vez desde la ventana [Grupos de Terceros](../../../master-data-management/business-partner-setup.md#business-partner-category).
 
 !!!note
-    Es posible sobrescribir estos valores por defecto a nivel de grupo de terceros, permitiendo que los pasivos de proveedor y los derechos de cobro de cliente de distintos terceros se contabilicen en cuentas diferentes. Este último cambio de configuración debe realizarse en las pestañas de proveedor y/o cliente de las ventanas de [Terceros](../../../master-data-management/master-data.md#business-partner).
+    Es posible sobrescribir estos valores por defecto a nivel de grupo de terceros, permitiendo que los pasivos de proveedor y los derechos de cobro de cliente de distintos terceros se contabilicen en cuentas diferentes. Este último cambio de configuración debe realizarse en las pestañas de proveedor y/o cliente de las ventanas de [Terceros](../../../master-data-management/master-data/business-partner.md#business-partner).
 
 Las cuentas por defecto son:
 

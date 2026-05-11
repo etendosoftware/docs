@@ -112,7 +112,7 @@ markdown_extensions:
 plugins:
   - i18n:
       docs_structure: folder
-      reconfigure_material: true
+      reconfigure_material: false
       reconfigure_search: true
       languages:
         - locale: en
@@ -165,8 +165,14 @@ plugins:
                       - Process Monitor: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-monitor.md
                       - Process Group: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.md
                   # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
-                  - Master Data Management: 
-                    - Master Data: user-guide/etendo-classic/basic-features/master-data-management/master-data.md
+                  - Master Data Management:
+                    - Master Data:
+                      - Overview: user-guide/etendo-classic/basic-features/master-data-management/master-data/overview.md
+                      - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
+                      - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
+                      - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
+                      - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
+                      - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
                     - Business Partner Setup: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md
                     - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
                     - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
@@ -1059,17 +1065,13 @@ plugins:
             ✨Getting Started: ✨Primeros Pasos
             
   - search:
-      indexing: full
-      prebuild_index: true
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       lang:
         - en
-      exact_phrase: true
-      index_all_content: true  
       pipeline:
         - stemmer
         - stopWordFilter
-        - trimmer    
+        - trimmer
 
   - tags
   - glightbox
@@ -1084,7 +1086,6 @@ plugins:
         as_update: 'false'
         datetime_format: "%Y-%m-%d %H:%M"
         default_timezone: 'Europe/Paris'
-        default_time: '09:30'
       enabled: true
       feed_ttl: 1440
       image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
@@ -1176,8 +1177,14 @@ nav:
             - Process Monitor: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-monitor.md
             - Process Group: user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.md
         # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
-        - Master Data Management: 
-          - Master Data: user-guide/etendo-classic/basic-features/master-data-management/master-data.md
+        - Master Data Management:
+          - Master Data:
+            - Overview: user-guide/etendo-classic/basic-features/master-data-management/master-data/overview.md
+            - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
+            - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
+            - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
+            - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
+            - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
           - Business Partner Setup: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md
           - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
           - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md

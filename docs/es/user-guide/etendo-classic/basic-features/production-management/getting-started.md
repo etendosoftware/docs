@@ -38,29 +38,29 @@ Además de las [ventanas de configuración](./setup.md) del módulo de Producci�
     - Materia prima utilizada en producción:
         - Se selecciona la casilla de verificación **producción** para indicar que el producto se utiliza para producción.
         - Se selecciona el plan de producción.
-        - El almacén por defecto utilizado para almacenar las materias primas utilizadas (P-), se define en la solapa [Producción](../master-data-management/master-data.md#manufacturing).
+        - El almacén por defecto utilizado para almacenar las materias primas utilizadas (P-), se define en la solapa [Producción](../master-data-management/master-data/product.md#manufacturing).
 
-    - Cualquier **producto semielaborado** se crea directamente en el plan de producción copiando la información de un producto de materia prima utilizado en la operación mediante el botón [Crear copia de producto](./setup.md#io-products). Una vez creado, el almacén por defecto se define en la solapa [Producción](../master-data-management/master-data.md#manufacturing).
+    - Cualquier **producto semielaborado** se crea directamente en el plan de producción copiando la información de un producto de materia prima utilizado en la operación mediante el botón [Crear copia de producto](./setup.md#io-products). Una vez creado, el almacén por defecto se define en la solapa [Producción](../master-data-management/master-data/product.md#manufacturing).
 
     - Productos terminados fabricados en producción:
         - Se selecciona la casilla de verificación **producción** para indicar que el producto se fabrica en producción.
         - Se selecciona el plan de producción.
-        - El almacén por defecto que se utiliza para los productos terminados (P+), se define en la solapa [Producción](../master-data-management/master-data.md#manufacturing).
+        - El almacén por defecto que se utiliza para los productos terminados (P+), se define en la solapa [Producción](../master-data-management/master-data/product.md#manufacturing).
         - En base a los [cálculos de costes](transactions.md#calculate-standard-costs), se puede determinar un coste estándar **teórico** para el producto terminado.
         - Se determina e introduce un nivel de stock de seguridad para el producto.
 
 
     !!! info
-        Para más información sobre la configuración de productos, consulte la sección [Producto](../master-data-management/master-data.md#product).
+        Para más información sobre la configuración de productos, consulte la sección [Producto](../master-data-management/master-data/product.md#product).
 
 
 2. Asimismo, se configuran Terceros para producción:
 
     - En la solapa Empleado, cualquier empleado que esté involucrado en el proceso de producción tiene seleccionada la casilla de verificación **operario**.
-    - La [Categoría Salarial](../master-data-management/master-data.md#salary-category) configurada para los empleados es muy importante, ya que se incluye en los cálculos de costes finales.
+    - La [Categoría Salarial](../master-data-management/business-partner-setup.md#salary-category) configurada para los empleados es muy importante, ya que se incluye en los cálculos de costes finales.
 
     !!! info
-        Para más información sobre la configuración de terceros, consulte la sección [Terceros](../master-data-management/master-data.md#business-partner).
+        Para más información sobre la configuración de terceros, consulte la sección [Terceros](../master-data-management/master-data/business-partner.md#business-partner).
 
 3. Los Partes de Trabajo se pueden contabilizar en el [Diario del libro mayor](../financial-management/accounting/transactions.md#gl-journal). Para facilitar la contabilización, se activa la tabla **MaterialMgmtProductionTransaction** en la solapa [Tablas a contabilizar](../financial-management/accounting/setup/general-ledger-configuration.md) de la configuración del libro mayor.
 

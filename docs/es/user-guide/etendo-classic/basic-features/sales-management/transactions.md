@@ -1324,7 +1324,7 @@ Al utilizar esta funcionalidad, en la ventana Factura (Cliente), el usuario pued
 Estas facturas de venta tienen un importe negativo que representa el descuento del rappel, pueden incluir un prefijo en su código para distinguirlas del resto y su estado es “borrador”.
 
 !!! info
-    Para más información, visite [Rappels avanzados](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
+    Para más información, visite [Rappels avanzados](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
 ### Finalización masiva { #bulk-completion_4 }
 
 !!! info
