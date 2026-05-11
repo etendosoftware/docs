@@ -14,14 +14,19 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
+!!!info "Before you begin"
+    This module requires the **Financial Extensions Bundle** to be installed in your Etendo environment. If you are unsure whether it is installed, contact your system administrator before proceeding. For installation instructions, visit the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For available versions and core compatibility, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+
 ## Overview
+
+This page explains how to connect your bank accounts to Etendo so that transactions are imported automatically and outgoing payments can be initiated directly from the system. It is intended for finance or accounting staff who manage bank reconciliation, and for administrators who perform the initial setup.
 
 This module provides **automatic bank integration** functionality for Etendo ERP through two main capabilities:
 
 - **AIS (Account Information Service)**: Securely connect your bank accounts and automatically download bank transactions.
 - **PIS (Payment Initiation Service)**: Initiate bank payments directly from Etendo, with authorization handled securely through your bank.
 
-The integration is powered by **Salt Edge**, a leading Open Banking platform that provides secure access to thousands of banks worldwide.
+The integration is powered by **Salt Edge**, a service that allows business software to securely connect to banks on your behalf — a practice regulated across Europe under the PSD2 directive.
 
 ### What is Salt Edge?
 
@@ -34,12 +39,7 @@ The integration is powered by **Salt Edge**, a leading Open Banking platform tha
 
 ### How Does It Work?
 
-The integration uses a **centralized middleware** developed by Etendo that serves as an intermediary layer between Etendo ERP and Salt Edge. This architecture provides:
-
-- **Simplified integration**: Etendo ERP doesn't need to handle the technical complexity of Open Banking
-- **Enhanced security**: The middleware manages all authentication and encryption
-- **Scalability**: Multiple Etendo instances can use the same middleware
-- **Maintainability**: Updates to banking APIs are handled at the middleware level
+Etendo manages the connection to Salt Edge on your behalf. You do not need to set up a direct account with Salt Edge or manage that connection yourself.
 
 ### Key Benefits
 
@@ -63,42 +63,19 @@ The integration uses a **centralized middleware** developed by Etendo that serve
 - **Audit trail**: Complete log of all synchronization and payment operations
 - **Connection management**: Monitor, sync, reconnect, and disconnect bank connections from within Etendo
 
-!!!info
-    To be able to include this functionality, the **Financial Extensions Bundle** must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
-
 ## Prerequisites
 
-Before using the Bank Integration functionality, ensure that:
+Confirm the following before using the Bank Integration functionality:
 
-1. **Gradle Properties Configuration**: The integration requires proper context configuration in your `gradle.properties` file. You must configure the following properties:
+1. **Server Configuration**: Your system administrator must configure the application URL in the Etendo server and run a setup process. Contact your IT team or implementation partner to confirm this is done.
 
-    ```properties
-    context.name=etendo
-    context.url=https://my-domain/
-    ```
+2. **Salt Edge API Key**: Your organization must have a Salt Edge API Key. Futit Services provides this key as part of the integration service.
 
-    - **context.name**: The name of your Etendo context (typically "etendo")
-    - **context.url**: The full URL where your Etendo instance is accessible, including the protocol and trailing slash
+3. **User Configuration**: Configure the API Key in your Etendo user profile (detailed in the setup section below).
 
-    After configuring these properties, you must run the setup command:
+4. **Financial Accounts**: Create the Financial Accounts in Etendo that will be linked to your bank accounts.
 
-    ```bash
-    ./gradlew setup
-    ```
-
-    !!!warning "Important"
-        Without proper `context.name` and `context.url` configuration, the integration will not function correctly. The context URL is used by Salt Edge to redirect users back to Etendo after bank authentication and to receive webhook notifications for payment status updates.
-
-2. **Salt Edge API Key**: Your organization must have a Salt Edge API Key. This key is provided by **Futit Services** and is required to access the integration middleware.
-
-3. **User Configuration**: The API Key must be configured in your Etendo user profile (detailed in the setup section below).
-
-4. **Financial Accounts**: You must have Financial Accounts created in Etendo that will be linked to your bank accounts.
-
-5. **Button Visibility**: The integration buttons and fields (such as **Connect Bank Account**, **Get Bank Statement**, **Generate Bank Payment**, etc.) are only visible in the interface when the logged-in user has a **PSD2 API Key** configured. Without the API Key, these elements will not appear.
-
-!!!warning
-    The Salt Edge API Key is provided by Futit Services as part of the integration service. Contact your Etendo administrator or Futit Services support to obtain your API Key.
+5. **Button Visibility**: The integration buttons and fields (such as **Connect Bank Account**, **Get Bank Statement**, **Generate Bank Payment**, etc.) are only visible when the logged-in user has a **PSD2 API Key** configured. Without the API Key, these elements do not appear.
 
 ## Setup
 
@@ -115,7 +92,7 @@ As an **Administrator** or user with appropriate permissions:
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/psd2-bank-integration-1.png)
 
 !!!info
-    Each user who will perform bank synchronization or payment initiation must have their own API Key configured. The API Key is user-specific and should be kept confidential.
+    Each user who will perform bank synchronization or payment initiation must have their own API Key configured. The API Key is user-specific and keep it confidential.
 
 !!!warning "Button and Field Visibility"
     All PSD2 integration buttons and fields are **only visible** when the logged-in user has a PSD2 API Key configured. This includes:
@@ -136,11 +113,11 @@ For each financial account you want to synchronize with a bank:
 In the **PSD2 Bank Integration** tab or section of the Financial Account:
 
 - **Import From Date**: Specifies the starting date for importing transactions. 
-    - If left empty, the system will use the date of the last imported bank statement
-    - Set this date to control how far back transactions should be retrieved
+    - If left empty, the system uses the date of the last imported bank statement
+    - Set this date to control how far back transactions are retrieved
 
 - **Import To Date**: Specifies the end date for importing transactions.
-    - If left empty, the system will use the current date
+    - If left empty, the system uses the current date
     - Useful for importing historical data up to a specific point
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/psd2-bank-integration-2.png)
@@ -149,27 +126,27 @@ In the **PSD2 Bank Integration** tab or section of the Financial Account:
     **Best Practice for Initial Setup:**
     - Set **Import From Date** to the date when you want to start tracking transactions (e.g., beginning of fiscal year)
     - Leave **Import To Date** empty to always import up to the current date
-    - After the first import, you can leave **Import From Date** empty to automatically continue from the last import
+    - After the first import, leave **Import From Date** empty to automatically continue from the last import
 
 !!!note
     **How Date Logic Works:**
     - The system automatically tracks the last import date for each account
-    - On subsequent imports, if **Import From Date** is empty, it will start from the last import date
+    - On subsequent imports, if **Import From Date** is empty, it starts from the last import date
     - This prevents importing the same transactions multiple times
 
 #### 2.2 Configure Bank Provider
 
-You can optionally assign a bank provider to each financial account. This configuration affects both the **Bank Connection (AIS)** and **Bank Payment Initiation (PIS)** flows:
+Optionally assign a bank provider to each financial account. This configuration affects both the **Bank Connection (AIS)** and **Bank Payment Initiation (PIS)** flows:
 
 - **Bank Provider**: Select the bank that corresponds to this financial account from the list of available providers.
-    - **When connecting to a bank (AIS):** The Salt Edge widget will **skip the bank selection step** and connect directly to the assigned bank.
-    - **When initiating payments (PIS):** The payment authorization widget will **skip the bank selection step** and go directly to the payment authorization screen.
-    - If left empty, the user will be prompted to select a bank each time.
+    - **When connecting to a bank (AIS):** The Salt Edge widget **skips the bank selection step** and connects directly to the assigned bank.
+    - **When initiating payments (PIS):** The payment authorization widget **skips the bank selection step** and goes directly to the payment authorization screen.
+    - If left empty, the user is prompted to select a bank each time.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/psd2-bank-integration-3.png)
 
 !!!tip
-    Assigning a bank provider is strongly recommended when the financial account is always associated with the same bank. This streamlines both the connection and payment processes for end users.
+    Assign a bank provider when the financial account is always associated with the same bank. This streamlines both the connection and payment processes for end users.
 
 !!!note
     The list of available bank providers must be synchronized first. See **Step 3: Synchronize Bank Providers** below.
@@ -189,27 +166,27 @@ The **Statement Frequency** field controls how imported transactions are grouped
     - Use **One per week** or **One per month** to keep bank statements more organized and reduce the total number of statements, especially when importing daily.
 
 !!!note
-    When using **One per week** or **One per month**, the system will add new transactions to an existing bank statement if one already exists for the current period. If the existing statement has been processed, the system will automatically reactivate it to add the new transactions.
+    When using **One per week** or **One per month**, the system adds new transactions to an existing bank statement if one already exists for the current period. If the existing statement has been processed, the system automatically reactivates it to add the new transactions.
 
 ### Step 3: Synchronize Bank Providers
 
-Before initiating bank payments or connecting to a bank, the system needs an updated list of bank providers. This is done by running the **Synchronize Bank Providers** process manually from the menu.
+Before initiating bank payments or connecting to a bank, update the list of bank providers by running the **Synchronize Bank Providers** process from the menu.
 
 :material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Synchronize Bank Providers`
 
 1. Navigate to the menu entry above and execute the process.
-2. The process will:
-    - Connect to Salt Edge through the middleware.
-    - Download all banks that support payment initiation (SEPA, FPS, or DOMESTIC templates).
-    - Create or update the provider list in Etendo.
+2. The process:
+    - Connects to Salt Edge through the middleware.
+    - Downloads all banks that support payment initiation (SEPA, FPS, or DOMESTIC templates).
+    - Creates or updates the provider list in Etendo.
 
 !!!info
-    This process should be run manually when needed — for example, when setting up the module for the first time, or periodically (e.g., once per week) to keep the provider list up to date. The list of supported banks does not change often.
+    Run this process manually when needed — for example, when setting up the module for the first time, or periodically (e.g., once per week) to keep the provider list up to date. The list of supported banks does not change often.
 
 !!!note
     The Synchronize Bank Providers process uses any available API Key from configured users. It does not require a specific user to execute.
 
-## Bank Connection Flow (AIS)
+## Bank Connection Flow (Account Information Service)
 
 ### Step 4: Connect Bank Account
 
@@ -273,7 +250,7 @@ Once your user has the API Key configured and the financial account dates are se
     - Links your Salt Edge accounts to your Etendo financial account
     - All connection details are stored in the **Bank Connections** tab
     
-    You won't need to manually run "Synchronize Bank Connections" after connecting - it's done automatically!
+    Running "Synchronize Bank Connections" manually after connecting is not required — it runs automatically.
 
 ## Importing Transactions
 
@@ -311,13 +288,10 @@ For regular, automated imports across all connected accounts:
 
 :material-menu: `General Setup` > `Process Scheduling` > `Process Request`
 
-1. Schedule the **Get Bank Statements** process
-2. Configure the frequency (e.g., daily, hourly)
-3. The process will automatically:
-    - Check all users with API Keys configured
-    - Process all financial accounts with active bank connections
-    - Import new transactions for each account
-    - Log the results
+1. Click **New** to create a new process request.
+2. In the **Process** field, select **Get Bank Statements**.
+3. Set the **Timing** field to the frequency you need (for example, Daily).
+4. Save the record. The process runs automatically at the chosen interval and imports new transactions for all connected accounts.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/psd2-bank-integration-9.png)
 
@@ -398,16 +372,16 @@ The **Synchronize Bank Connections** process allows you to manually refresh the 
 
 :material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Synchronize Bank Connections`
 
-The process will:
+The process:
 
-- Check the current status of all bank connections for the configured financial accounts.
-- Update connection statuses to reflect the real-time state from Salt Edge.
-- Refresh account information associated with each connection.
+- Checks the current status of all bank connections for the configured financial accounts.
+- Updates connection statuses to reflect the real-time state from Salt Edge.
+- Refreshes account information associated with each connection.
 
 A summary message will show the results.
 
 !!!tip
-    You typically don't need to run this process often. Bank connections are synchronized automatically when you first connect a bank. Use it only if you suspect a connection status is outdated or after making changes at your bank (e.g., adding new accounts).
+    Run this process only if you suspect a connection status is outdated or after making changes at your bank (e.g., adding new accounts). Bank connections are synchronized automatically when you first connect a bank.
 
 ### Disconnecting a Bank Connection
 
@@ -420,19 +394,19 @@ If you need to remove a bank connection:
 
     !!!warning
         **Important:**
-        - Disconnecting a connection will permanently remove it from both Etendo and Salt Edge
-        - You will need to reconnect if you want to use this bank connection again
+        - Disconnecting a connection permanently removes it from both Etendo and Salt Edge
+        - Reconnect if you want to use this bank connection again
         - This action cannot be undone
-        - Any pending transactions will not be affected, but no new transactions can be imported from this connection
+        - Pending transactions are not affected, but no new transactions can be imported from this connection
 
 5. After disconnection:
     - The connection is removed from the database
     - The connection is deleted from Salt Edge
-    - You can verify the disconnection was successful by checking the Bank Connections tab
+    - Verify the disconnection by checking the Bank Connections tab
 
 ### Reconnecting a Bank Connection
 
-If a bank connection has become **Inactive** or **Disabled** (for example, because the bank's authentication expired), you can reconnect it directly from Etendo:
+If a bank connection has become **Inactive** or **Disabled** (for example, because the bank's authentication expired), reconnect it directly from Etendo:
 
 1. Open the **Financial Account** window.
 2. Navigate to the **Bank Connections** tab.
@@ -456,16 +430,16 @@ If a bank connection has become **Inactive** or **Disabled** (for example, becau
 !!!note
     **What happens when connections fail during transaction import:**
     
-    When the **Get Bank Statements** process runs and encounters a connection issue, the system will automatically:
+    When the **Get Bank Statements** process runs and encounters a connection issue, the system automatically:
     
-    - Mark the failing connection as **Disabled**.
-    - Log a warning message.
-    - Try the next available connection for the same financial account.
-    - Continue until it finds a working connection or exhausts all available ones.
+    - Marks the failing connection as **Disabled**.
+    - Logs a warning message.
+    - Tries the next available connection for the same financial account.
+    - Continues until it finds a working connection or exhausts all available ones.
     
-    Failed connections will appear with **Disabled** status in the **Bank Connections** tab. Use the **Reconnect Connection** button to restore them.
+    Failed connections appear with **Disabled** status in the **Bank Connections** tab. Use the **Reconnect Connection** button to restore them.
 
-## Bank Payment Initiation (PIS)
+## Bank Payment Initiation (Payment Initiation Service)
 
 In addition to importing bank transactions (AIS), this module allows you to **initiate bank payments directly from Etendo**. When you create a Payment OUT record in Etendo, you can send it to your bank for authorization and execution — all without leaving the ERP.
 
@@ -473,11 +447,11 @@ In addition to importing bank transactions (AIS), this module allows you to **in
 
 The payment initiation flow works as follows:
 
-1. You create a **Payment OUT** record in Etendo as usual.
-2. From the payment record, you click the **Generate Bank Payment** button.
+1. Create a **Payment OUT** record in Etendo as usual.
+2. From the payment record, click the **Generate Bank Payment** button.
 3. A form appears with pre-filled values (amount, creditor, template, etc.).
 4. After reviewing and confirming, a **bank authorization popup** opens.
-5. You authorize the payment in your bank's secure environment.
+5. Authorize the payment in your bank's secure environment.
 6. The payment status is tracked automatically in Etendo.
 
 !!!info
@@ -500,7 +474,7 @@ The system supports three payment templates, which determine the format and requ
     - GBP → FPS
     - Any other currency → DOMESTIC
     
-    You can change the template manually in the form if needed.
+    Change the template manually in the form if needed.
 
 ### Generating a Bank Payment
 
@@ -536,7 +510,7 @@ The system supports three payment templates, which determine the format and requ
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/psd2-bank-integration-14.png)
 
     !!!warning
-        **Do not close the popup** until you have completed the authorization process with your bank. The payment cannot proceed without your authorization.
+        Do not close the popup until you have completed the authorization process with your bank. The payment cannot proceed without your authorization.
 
 6. After completing authorization, you will see a **confirmation page** indicating that the payment has been registered.
 
@@ -565,7 +539,7 @@ After initiating a bank payment, it goes through several status stages:
 | **Failed** | Payment has failed ❌ |
 
 !!!note
-    Once a payment reaches a **final status** (Executed, Settled, or Failed), it cannot be modified. If a payment fails, you can create a new payment attempt from the same Payment OUT record.
+    Once a payment reaches a **final status** (Executed, Settled, or Failed), it cannot be modified. If a payment fails, create a new payment attempt from the same Payment OUT record.
 
 ### Viewing Bank Payments
 
@@ -598,7 +572,7 @@ Payment status is updated automatically through two mechanisms:
 Salt Edge sends automatic status notifications to Etendo whenever the payment status changes at the bank. These updates are processed immediately and the payment record is updated in real-time.
 
 !!!info
-    Webhook updates happen automatically — no user action is required. When the bank processes your payment, the status in Etendo will be updated within seconds.
+    Webhook updates happen automatically — no user action is required. When the bank processes your payment, the status in Etendo is updated within seconds.
 
 #### Manual Refresh
 
@@ -619,11 +593,11 @@ If you want to check the latest status immediately:
 
 For additional reliability, the module includes a **pre-configured scheduled process** that automatically refreshes the status of pending payments. The **Refresh Pending Payments** process is imported as part of the module's system dataset and runs every **10 minutes** by default.
 
-The process will:
+The process:
 
-- Find all payments in non-final states (Initiated, Authorizing, Authorized, Processing).
-- Query Salt Edge for the latest status of each payment.
-- Update the payment records accordingly.
+- Finds all payments in non-final states (Initiated, Authorizing, Authorized, Processing).
+- Queries Salt Edge for the latest status of each payment.
+- Updates the payment records accordingly.
 
 !!!info
     The scheduled refresh process acts as a safety net complementing the webhook mechanism. It ensures that payment statuses are eventually updated even if a webhook notification is delayed or missed. The process respects API rate limits by only checking payments that have not been updated in the last 5 minutes.
@@ -631,7 +605,7 @@ The process will:
 !!!tip
     **Adjusting the refresh frequency:**
     
-    If you need a different frequency (e.g., every 5 minutes), you can create a new **Process Request** entry for the **Refresh Pending Payments** process with your preferred schedule. In that case, make sure to **unschedule the system-imported entry first** to avoid both running simultaneously.
+    If you need a different frequency (e.g., every 5 minutes), create a new **Process Request** entry for the **Refresh Pending Payments** process with your preferred schedule. In that case, unschedule the system-imported entry first to avoid both running simultaneously.
     
     :material-menu: `General Setup` > `Process Scheduling` > `Process Request`
 
@@ -665,8 +639,8 @@ The process will:
 
 - **Service temporarily unavailable**
     - Salt Edge or the middleware may be undergoing maintenance.
-    - These errors are transient and will resolve automatically.
-    - The system will retry automatically for scheduled processes.
+    - These errors are transient and resolve automatically.
+    - The system retries automatically for scheduled processes.
 
 - **Connection Status shows "Disabled"**
     - A connection may show as **Disabled** due to:
@@ -675,7 +649,7 @@ The process will:
         - Bank service temporary unavailability.
     - **Recommended resolution steps:**
         1. First, run the **Synchronize Bank Connections** process (from **Financial Management > Receivables and Payables > Setup > PSD2 > Synchronize Bank Connections**) to verify the current health of the connection and refresh its status.
-        2. Try executing **Get Bank Statements** again to see if the issue persists.
+        2. Execute **Get Bank Statements** again to see if the issue persists.
         3. If the connection still shows as **Disabled**, click the **Reconnect Connection** button in the **Bank Connections** tab to re-authenticate with your bank (see [Reconnecting a Bank Connection](#reconnecting-a-bank-connection)).
 
 #### Payment Initiation (PIS) Issues
@@ -702,7 +676,7 @@ The process will:
 
 - **Payment status stuck in "Initiated" or "Authorizing"**
     - The user may not have completed the authorization at the bank.
-    - Try clicking **Refresh Payment** to check the latest status.
+    - Click **Refresh Payment** to check the latest status.
     - If the issue persists, the bank may have rejected the payment — check the **Status Detail** field for more information.
 
 - **Bank authorization popup was blocked**
@@ -765,7 +739,7 @@ Each entry shows:
 | **Provider Name** | The display name of the bank as provided by Salt Edge. |
 
 !!! info "Keeping the provider list updated"
-    The provider list is populated and refreshed by the **Synchronize Bank Providers** process (available from the menu: **Financial Management > Receivables and Payables > Setup > PSD2 > Synchronize Bank Providers**). It is recommended to run this process periodically (e.g., weekly) to ensure new banks are available and deprecated providers are removed.
+    The provider list is populated and refreshed by the **Synchronize Bank Providers** process (available from the menu: **Financial Management > Receivables and Payables > Setup > PSD2 > Synchronize Bank Providers**). Run this process periodically (e.g., weekly) to ensure new banks are available and deprecated providers are removed.
 
 ## Best Practices
 
@@ -789,11 +763,11 @@ Each entry shows:
 5. **Multiple Banks**:
     - Configure each bank separately.
     - Use clear naming conventions for financial accounts.
-    - Each bank connection will automatically retrieve and link all available accounts.
+    - Each bank connection automatically retrieves and links all available accounts.
 
 6. **Security**:
     - Keep API Keys confidential.
-    - Don't share user credentials.
+    - Do not share user credentials.
     - Disconnect bank connections when no longer needed using the **Disconnect Connection** button.
     - Disconnecting removes the connection from both Etendo and Salt Edge permanently.
 
@@ -806,7 +780,7 @@ Each entry shows:
 
 8. **Bank Providers**:
     - Run the **Synchronize Bank Providers** process periodically (e.g., weekly) to keep the provider list updated.
-    - Only banks that support payment initiation (SEPA, FPS, or DOMESTIC) will appear in the provider list.
+    - Only banks that support payment initiation (SEPA, FPS, or DOMESTIC) appear in the provider list.
 
 9. **Monitoring**:
     - Review the **PSD2 Logs** window periodically to detect recurring issues.
