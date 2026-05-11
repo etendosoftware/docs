@@ -556,7 +556,7 @@ tags:
     
     In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
 
-    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>

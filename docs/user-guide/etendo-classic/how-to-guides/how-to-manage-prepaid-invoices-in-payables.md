@@ -90,7 +90,7 @@ The posting will look like:
 
 | Account                    | Debit | Credit |
 |----------------------------|-------|--------|
-| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)          | 50    |        |
+| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendor-accounting)          | 50    |        |
 | [In Transit Payment Out Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account.md) |       | 50     |
 
 
@@ -141,9 +141,9 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account              | Debit | Credit |
 |----------------------|-------|--------|
-| [Product Expense](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      | 110   |        |
-| [Vendor Liability](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)     |       | 60     |
-| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)    |       | 50     |
+| [Product Expense](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)      | 110   |        |
+| [Vendor Liability](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendor-accounting)     |       | 60     |
+| [Vendor Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendor-accounting)    |       | 50     |
 
 
 There is a report named [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md) which allows monitoring every payment received or made.

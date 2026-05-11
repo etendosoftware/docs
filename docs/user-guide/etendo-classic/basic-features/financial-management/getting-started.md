@@ -73,7 +73,7 @@ The following setup needs to be done before performing the process:
 - [Payables and Receivables Document Types](../financial-management/accounting/setup/document-type.md).
 - [Payment Methods](../financial-management/receivables-and-payables/setup/payment-method.md).
 - [Financial Accounts](../financial-management/receivables-and-payables/transactions/financial-account.md).
-- [Business Partners](../master-data-management/master-data.md#business-partner) to use above configured Payment Methods and Financial Accounts.
+- [Business Partners](../master-data-management/master-data/business-partner.md#business-partner) to use above configured Payment Methods and Financial Accounts.
 
 !!!note
     It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
@@ -277,8 +277,8 @@ A journal line can be created for each account and its opening balance, once don
 As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
 For instance the accounting of a purchase invoice will take:
 
-- the expense account setup for the product being purchased in the [Accounting](../master-data-management/master-data.md#accounting) tab of the *Product* window
-- the vendor liability account setup for the vendor in the [Vendor Accounting](../master-data-management/master-data.md#vendor-accounting) tab of the *Business Partner* window
+- the expense account setup for the product being purchased in the [Accounting](../master-data-management/master-data/product.md#accounting) tab of the *Product* window
+- the vendor liability account setup for the vendor in the [Vendor Accounting](../master-data-management/master-data/business-partner.md#vendor-accounting) tab of the *Business Partner* window
 - and the tax credit account setup in the [Accounting](../financial-management/accounting/setup/tax-rate.md#accounting) tab of the *Tax Rate* window.
 
 Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.

@@ -94,7 +94,7 @@ The posting will look like:
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
 | [In Transit Payment In Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account.md)   | 863.20 |        |
-| [Customer Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)              |        | 863.20 |
+| [Customer Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer-accounting)              |        | 863.20 |
 
 It is possible to check once more the Payment Plan of the sales order in this example.
 
@@ -139,7 +139,7 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account                | Debit   | Credit  |
 |------------------------|---------|---------|
-| [Customer Receivable](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)    | 630.80  |         |
+| [Customer Receivable](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer-accounting)    | 630.80  |         |
 | Customer Prepayment    |         | 863.20  |
 
 There is a report named [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md) which allows monitoring every payment received or made.

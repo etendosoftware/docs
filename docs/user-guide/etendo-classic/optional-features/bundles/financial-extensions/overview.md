@@ -76,7 +76,7 @@ This module enhances the bank account management enabling greater customization 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Business Partner](../../../basic-features/master-data-management/master-data/business-partner.md#advanced-bank-account-management_1)
     - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
     - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
     - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)

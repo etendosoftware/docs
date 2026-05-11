@@ -110,7 +110,7 @@ Fields to note:
             |     |     |     |     |
             | --- | --- | --- | --- |
             | **Account** | **Debit** | **Credit** | **Comments** |
-            | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
+            | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
             | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
             | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
 
@@ -127,14 +127,14 @@ Fields to note:
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Account** | **Debit** | **Credit** | **Comments** |
-        | [Customer Receivables](../../../master-data-management/master-data.md#customer) | (-) Line Net Amount |     | One per invoice line |
+        | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) | (-) Line Net Amount |     | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Tax Amount | One per tax line |
         | [Product Revenue](../../../master-data-management/product-setup.md#accounting) |     | (-) Total Gross Amount | One per invoice |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Account** | **Debit** | **Credit** | **Comments** |
-        | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
+        | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
         | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
 

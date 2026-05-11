@@ -48,18 +48,18 @@ Each product being purchased needs to have a price in the purchase price list in
 Same way, each product that is being purchased needs to be defined in a unit of measure (UOM), and in an alternative unit of measure (AUM) if required.
 
 !!!info
-    Please refer to [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) for more information.
+    Please refer to [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) for more information.
 
 The cost of an input transaction such as a "Goods Receipt" can be calculated by using the product's purchase price excluding taxes.
 
 Besides that, the cost of the products included in a Goods Receipt can be adjusted as a result of allocating different types of [Landed Costs](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type) in the receipt.
 
 The "Costing Server" process is the Etendo "Costing Engine" process that calculates and adjusts a product's transaction cost.
-This process requires that the legal entity/organization has a [costing rule](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#costing-rule) configured and applied to the products configured as "Stocked".
+This process requires that the legal entity/organization has a [costing rule](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#costing-rule) configured and applied to the products configured as "Stocked".
 Business Partners need to be configured prior to any purchase requisition can automatically turn into a purchase order.
 
 !!!info
-    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 Above configuration is part of the overall Business setup flow within the "Master Data Management" setup.
 
@@ -74,7 +74,7 @@ In Procurement Management, the Procure to Pay business process is executed as fo
 Any member of the organization allowed to do so can directly issue a Requisition as a result of an organization or business unit need.
 
 - The requestor creates a new document in the [Requisition](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) window, enters a "Need by date" and then looks for the product or service needed.
-If the product does not exist it can be entered at that time in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) window.
+If the product does not exist it can be entered at that time in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) window.
 - The requestor continues by adding for each product needed a new line with the need by date, the product, the quantity, the price if known and if needed its attribute (size and/or color, etc).
 A preferred supplier can also be added if known.
 - Once done, the requisition is saved in "Draft" status allowing it could be changed later on by the user if needed.
@@ -82,7 +82,7 @@ A preferred supplier can also be added if known.
 Requisitions notify the purchase staff of products to order, their quantity and the time frame for its delivery. Purchase staff is then in charge of managing already created purchase requisitions or even creating new ones, if required.
 
 - Purchase staff manages requisitions in the [Manage Requisitions](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions) window.
-- Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) window.
+- Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner) window.
 - Purchase staff can also enter the purchase net unit price and discounts if any, once known.
 - Once the requisition is ready, it is completed. The Document Status of the requisition changes to Completed and can then turn into a purchase order.
 

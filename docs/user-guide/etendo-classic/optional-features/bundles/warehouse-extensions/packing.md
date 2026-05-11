@@ -31,7 +31,7 @@ This module streamlines and enhances the management of **packing operations** wi
 
 In Etendo, it is possible to calculate the **weight of the packing**. To do this, some prior configurations from other windows are needed in order to calculate the weight for each box:
 
-- [**Product**](../../../basic-features/master-data-management/master-data.md#product) window: Here it is possible to define the weight and the unit of measure (UoM) for the product.
+- [**Product**](../../../basic-features/master-data-management/master-data/product.md#product) window: Here it is possible to define the weight and the unit of measure (UoM) for the product.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
     

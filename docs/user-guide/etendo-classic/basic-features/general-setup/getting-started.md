@@ -41,7 +41,7 @@ The setup of the taxes is also available for selection while running either the 
 
 A [Client](../general-setup/client/client.md) in Etendo is the top-most level of configuration and data within Etendo.
 
-Above means that certain configurations such as users, customers, vendors and other [master data](../master-data-management/master-data.md) can be managed in a client and therefore be available across all the organizations within the client.
+Above means that certain configurations such as users, customers, vendors and other [master data](../master-data-management/master-data/overview.md) can be managed in a client and therefore be available across all the organizations within the client.
 
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.

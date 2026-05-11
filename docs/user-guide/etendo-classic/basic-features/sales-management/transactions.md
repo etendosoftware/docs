@@ -1352,7 +1352,7 @@ When using this functionality, in the Sales Invoice window, the user can find th
 These sales invoices have a negative amount that represents the discount of the rappel, can include a prefix in its code to distinguish them from the rest and their status is “draft”.
 
 !!! info
-    For more information, visit [Advanced Rappels](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
+    For more information, visit [Advanced Rappels](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
 
 ### Bulk Completion
 
