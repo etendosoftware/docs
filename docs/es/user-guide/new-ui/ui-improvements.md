@@ -146,6 +146,192 @@ El modal de **Filtro Avanzado** es un componente de filtrado potente que permite
     <figcaption>Ejemplo 3: filtro complejo con una condición agrupada. El filtro principal comprueba si el estado del documento es contabilizado, Y el grupo comprueba si el importe bruto total es mayor que 10 Y menor que 100.</figcaption>
 </figure>
 
+### Vistas guardadas { #saved-views }
+
+Desde el toolbar de cualquier grilla o tabla, los usuarios pueden acceder al menú **Guardar vista** para persistir y gestionar configuraciones personalizadas de la grilla.
+
+![Vistas guardadas](../../assets/user-guide/newui/saved-views.png)
+
+!!! info "Funcionalidades clave"
+    - **Guardar vista actual:** captura el estado completo de la grilla — filtros aplicados, columnas visibles, orden de columnas y ordenamiento — con un nombre personalizado (máx. 100 caracteres). La configuración se persiste en el backend.
+    - **Aplicar vistas guardadas:** al abrir el menú se muestran todas las vistas disponibles para el tab actual. Un clic aplica instantáneamente toda la configuración guardada.
+    - **Marcar como predeterminada:** cualquier vista puede marcarse como predeterminada mediante el icono de estrella. La vista predeterminada se carga automáticamente cada vez que se abre ese tab. Solo se permite una vista predeterminada por tab.
+    - **Restablecer a estándar:** restaura el estado original de la grilla sin filtros ni configuración personalizada.
+    - **Eliminar vistas:** al pasar el cursor sobre una vista se muestra un botón de eliminar con confirmación.
+
+### Dashboard configurable con Widgets { #configurable-dashboard-with-widgets }
+
+La pantalla de inicio se ha rediseñado como un dashboard completamente configurable donde los usuarios pueden agregar, eliminar y reorganizar widgets.
+
+![Vista general del dashboard](../../assets/user-guide/newui/dashboard-overview.png)
+
+#### Gestión del dashboard { #dashboard-management }
+
+- Grilla responsiva de widgets con **arrastrar y soltar** para reposicionar.
+- Botón **Agregar Widget** que abre un diálogo con los tipos de widgets disponibles.
+- Cada widget tiene un botón de eliminar (**X**), y algunos incluyen una opción de **Editar parámetros** para personalizar sus datos.
+
+![Diálogo de agregar widget](../../assets/user-guide/newui/dashboard-add-widget.png)
+
+#### Tipos de widgets disponibles { #available-widget-types }
+
+| Widget | Descripción |
+|--------|-------------|
+| **KPI** | Muestra un valor numérico grande con unidad, etiqueta e indicador de tendencia (verde para positivo, rojo para negativo). |
+| **Calendario** | Interfaz de calendario con eventos programados. |
+| **Proceso** | Información sobre procesos y flujos de trabajo. |
+| **Lista de consulta** | Tabla con paginación, columnas ordenables y navegación click-through a la ventana relacionada. |
+| **HTML** | Contenido HTML personalizado. |
+| **URL** | Contenido externo embebido mediante iframe. |
+| **Alerta de stock** | Alertas de inventario con indicadores de estado. |
+| **Notificación** | Notificaciones y mensajes. |
+| **Favoritos** | Ventanas favoritas mostradas como chips clickeables (ver abajo). |
+| **Vistos recientemente** | Documentos vistos recientemente. |
+| **Documentos recientes** | Actividad reciente de documentos. |
+
+#### Widget de Favoritos { #favorites-widget }
+
+Un widget dedicado que muestra todas las ventanas favoritas del usuario como chips compactos y clickeables.
+
+![Widget de Favoritos](../../assets/user-guide/newui/dashboard-favorites-widget.png)
+
+- Al hacer clic en cualquier chip se abre esa ventana en un nuevo tab.
+- El widget se actualiza en tiempo real cuando el usuario marca o desmarca favoritos desde cualquier parte de la UI (icono de estrella en el sidebar).
+
+![Estrella de Favoritos](../../assets/user-guide/newui/dashboard-favorites-star.png)
+- Muestra un guion (**—**) como estado vacío si no hay favoritos configurados.
+
+!!! note
+    El concepto de widget de Favoritos no existe en Etendo Classic. Es una funcionalidad exclusiva de la UI de Etendo.
+
+### Email desde Toolbar { #email-from-toolbar }
+
+Un modal de envío de email accesible desde el toolbar, que permite a los usuarios componer y enviar correos electrónicos directamente desde el contexto del registro actual.
+
+![Modal de email](../../assets/user-guide/newui/email-modal.png)
+
+#### Campos del formulario { #form-fields }
+
+| Campo | Detalles |
+|-------|----------|
+| **Para** (obligatorio) | Dirección del destinatario, pre-cargada desde el contexto del registro actual. |
+| **CCO** | Copia oculta. |
+| **Responder a** | Dirección de respuesta. |
+| **CC** | Copia de carbón, disponible bajo **Mostrar más campos**. |
+| **Asunto** (obligatorio) | Línea de asunto del email. |
+| **Cuerpo** | Área de texto con un panel de referencia que muestra los tokens de plantilla disponibles. |
+
+#### Tokens de plantilla { #template-tokens }
+
+El campo de cuerpo proporciona un panel de referencia con los tokens disponibles que se reemplazan dinámicamente al enviar el email:
+
+`@cus_ref@`, `@our_ref@`, `@cus_nam@`, `@sal_nam@`, `@bp_nam@`, `@doc_date@`, `@doc_desc@`, `@doc_nextduedate@`, `@doc_lastduedate@`
+
+#### Plantillas { #templates }
+
+Un selector desplegable permite elegir plantillas predefinidas que auto-completan el cuerpo y otros campos.
+
+#### Adjuntos { #email-attachments }
+
+La sección de adjuntos muestra archivos de reporte, adjuntos del registro y archivos subidos en una tabla. Los usuarios pueden:
+
+- Agregar archivos locales desde su equipo.
+- Cargar adjuntos asociados al registro desde la base de datos.
+- Activar la casilla de **Archivar** en archivos de reporte.
+- Eliminar adjuntos individuales mediante el botón **X**.
+
+### Selector de imagen { #image-selector }
+
+Los campos de imagen en formularios ahora cuentan con un flujo completo de carga, vista previa y edición.
+
+![Campos de selector de imagen](../../assets/user-guide/newui/image-selector-fields.png)
+
+#### Carga { #image-upload }
+
+![Diálogo de carga de imagen](../../assets/user-guide/newui/image-upload-dialog.png)
+
+- Al hacer clic en un campo de imagen se abre un diálogo de carga.
+- Soporta **arrastrar y soltar** o selección de archivo.
+- Valida las dimensiones de la imagen contra las restricciones configuradas (mínimo/máximo).
+
+!!! warning "Validación de dimensiones"
+    - Si se violan restricciones obligatorias, se muestra un **error** con las dimensiones actuales vs. las requeridas.
+    - Si las restricciones son recomendadas, un **diálogo de confirmación** permite al usuario continuar o cancelar.
+    - Se puede aplicar un **redimensionamiento automático** opcional, con una confirmación que muestra las dimensiones original y final.
+
+#### Vista previa y edición { #image-preview-and-editing }
+
+![Modal de vista previa de imagen](../../assets/user-guide/newui/image-preview-modal.png)
+
+- La imagen cargada aparece como una **miniatura** en el formulario.
+- Al hacer clic en la miniatura se abre un **modal de vista previa a pantalla completa**.
+- En el modal de vista previa:
+    - **Zoom** con la rueda del mouse (0.5x a 5x).
+    - **Arrastrar** para panear por la imagen.
+    - Botón de **restablecer zoom** para volver a la vista predeterminada.
+    - **Re-cargar** para reemplazar la imagen actual.
+    - **Eliminar** con confirmación.
+
+### Atajos de teclado { #keyboard-shortcuts }
+
+Un sistema centralizado de atajos de teclado para acciones comunes en la UI de Etendo.
+
+| Atajo | Acción |
+|-------|--------|
+| `Arrow Up` / `Arrow Down` | Navegar entre filas de la tabla sin usar el mouse. |
+| `Ctrl + S` | Guardar el registro actual. |
+| `Ctrl + N` | Crear un nuevo registro. |
+
+!!! info "Detalles de comportamiento"
+    - Los atajos **no se activan** cuando el foco está en campos de entrada, áreas de texto o desplegables (salvo configuración explícita).
+    - Se **previene el comportamiento predeterminado** del navegador (ej: `Ctrl + S` no abre el diálogo "Guardar página" del navegador).
+    - Los atajos son **sensibles al contexto**: solo se disparan dentro de la región de UI apropiada.
+
+### Sistema de foco y guardado previo { #focus-system-and-prior-saving }
+
+Un sistema automático de gestión de estado que maneja los cambios no guardados al cambiar entre tabs o ventanas.
+
+![Sistema de foco](../../assets/user-guide/newui/focus-system.png)
+
+- Al cambiar de tab o ventana, los **cambios no guardados** del área previamente enfocada se **guardan automáticamente** (de forma asíncrona).
+- El sistema rastrea qué tab o ventana está activo actualmente.
+- Los tabs en segundo plano **mantienen su estado**, permitiendo cambios instantáneos sin pérdida de datos.
+- Los usuarios pueden navegar libremente entre tabs abiertos sin perder trabajo en curso; la navegación es fluida y los datos se mantienen consistentes.
+
+### Navegación con teclas de dirección en tablas { #arrow-key-navigation-in-tables }
+
+Navegación mejorada por teclado en las filas de tabla usando las teclas de dirección.
+
+- `Arrow Up`: mueve la selección a la fila anterior.
+- `Arrow Down`: mueve la selección a la fila siguiente.
+- La navegación **se detiene en los límites de la tabla** — no pasa de la primera ni la última fila.
+- Solo funciona cuando hay una **única fila seleccionada**.
+- Pulsaciones rápidas avanzan filas de forma fluida (con debounce para evitar lag).
+- **Deshabilitado en modo edición**.
+- El sistema distingue entre navegación por teclado y clic de mouse para optimizar el rendimiento.
+
+### Agentes destacados en Copilot { #featured-agents-in-copilot }
+
+En el selector de asistentes del Copilot:
+
+- Sección **Agentes destacados**: ciertos agentes aparecen resaltados en la parte superior de la lista, visualmente distinguidos con un badge o estilo especial que indica que son recomendados.
+- Sección **Agentes regulares**: los agentes no destacados aparecen debajo.
+- Esta organización ayuda a los usuarios a encontrar rápidamente los asistentes más útiles sin necesidad de recorrer toda la lista.
+
+### Mejoras en el chat de Copilot { #copilot-chat-improvements }
+
+La experiencia de chat del Copilot se ha mejorado con varias mejoras de usabilidad:
+
+!!! info "Funcionalidades clave"
+    - **Lista de conversaciones:** sidebar con el historial de conversaciones pasadas.
+    - **Archivar/eliminar:** las conversaciones se pueden archivar o eliminar.
+    - **Nueva conversación:** botón para iniciar una conversación nueva.
+    - **Buscar conversaciones:** búsqueda en el historial de conversaciones.
+    - **Renombrar conversaciones:** títulos editables para mejor organización.
+    - **UI mejorada:** mejor formateo de mensajes, espaciado y jerarquía visual.
+    - **Estados claros:** indicadores de estado vacío, carga y error.
+    - **Streaming:** las respuestas se muestran en tiempo real mientras el agente las genera.
+
 ---
 
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"} by [Futit Services S.L](https://etendo.software){target="\_blank"}.
