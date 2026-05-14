@@ -112,7 +112,7 @@ markdown_extensions:
 plugins:
   - i18n:
       docs_structure: folder
-      reconfigure_material: false
+      reconfigure_material: true
       reconfigure_search: true
       languages:
         - locale: en
@@ -167,15 +167,38 @@ plugins:
                   # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
                   - Master Data Management:
                     - Master Data:
-                      - Overview: user-guide/etendo-classic/basic-features/master-data-management/master-data/overview.md
                       - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
                       - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
                       - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
                       - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
                       - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
-                    - Business Partner Setup: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md
-                    - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
-                    - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
+                    - Business Partner Setup:
+                      - Basic Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/basic-discount.md
+                      - Business Partner Category: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md
+                      - Business Partner Set: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-set.md
+                      - Invoice Schedule: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/invoice-schedule.md
+                      - Payment Term: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md
+                      - Rappel Configurations: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/rappel-configurations.md
+                      - Return Reasons: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md
+                      - Salary Category: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/salary-category.md
+                      - Title: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/title.md
+                      - Volume Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/volume-discount.md
+                    - Product Setup:
+                      - Attribute: user-guide/etendo-classic/basic-features/master-data-management/product-setup/attribute.md
+                      - Attribute Set: user-guide/etendo-classic/basic-features/master-data-management/product-setup/attribute-set.md
+                      - Brand: user-guide/etendo-classic/basic-features/master-data-management/product-setup/brand.md
+                      - Lot Number Sequence: user-guide/etendo-classic/basic-features/master-data-management/product-setup/lot-number-sequence.md
+                      - Product Category: user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md
+                      - Product Characteristic: user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-characteristic.md
+                      - Serial Number Sequence: user-guide/etendo-classic/basic-features/master-data-management/product-setup/serial-number-sequence.md
+                      - Unit of Measure: user-guide/etendo-classic/basic-features/master-data-management/product-setup/unit-of-measure.md
+                      - Update Product Characteristics Description: user-guide/etendo-classic/basic-features/master-data-management/product-setup/update-product-characteristics-description.md
+                    - Pricing:
+                      - Create All Price Lists: user-guide/etendo-classic/basic-features/master-data-management/pricing/create-all-price-lists.md
+                      - Discounts and Promotions: user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md
+                      - Price List: user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md
+                      - Price List Schema: user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list-schema.md
+                      - Service Price Rule: user-guide/etendo-classic/basic-features/master-data-management/pricing/service-price-rule.md
                   - Procurement Management:
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
                     - Transactions: user-guide/etendo-classic/basic-features/procurement-management/transactions.md
@@ -1179,15 +1202,38 @@ nav:
         # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
         - Master Data Management:
           - Master Data:
-            - Overview: user-guide/etendo-classic/basic-features/master-data-management/master-data/overview.md
             - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
             - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
             - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
             - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
             - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
-          - Business Partner Setup: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md
-          - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
-          - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
+          - Business Partner Setup:
+            - Basic Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/basic-discount.md
+            - Business Partner Category: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md
+            - Business Partner Set: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-set.md
+            - Invoice Schedule: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/invoice-schedule.md
+            - Payment Term: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md
+            - Rappel Configurations: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/rappel-configurations.md
+            - Return Reasons: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md
+            - Salary Category: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/salary-category.md
+            - Title: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/title.md
+            - Volume Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/volume-discount.md
+          - Product Setup:
+            - Attribute: user-guide/etendo-classic/basic-features/master-data-management/product-setup/attribute.md
+            - Attribute Set: user-guide/etendo-classic/basic-features/master-data-management/product-setup/attribute-set.md
+            - Brand: user-guide/etendo-classic/basic-features/master-data-management/product-setup/brand.md
+            - Lot Number Sequence: user-guide/etendo-classic/basic-features/master-data-management/product-setup/lot-number-sequence.md
+            - Product Category: user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md
+            - Product Characteristic: user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-characteristic.md
+            - Serial Number Sequence: user-guide/etendo-classic/basic-features/master-data-management/product-setup/serial-number-sequence.md
+            - Unit of Measure: user-guide/etendo-classic/basic-features/master-data-management/product-setup/unit-of-measure.md
+            - Update Product Characteristics Description: user-guide/etendo-classic/basic-features/master-data-management/product-setup/update-product-characteristics-description.md
+          - Pricing:
+            - Create All Price Lists: user-guide/etendo-classic/basic-features/master-data-management/pricing/create-all-price-lists.md
+            - Discounts and Promotions: user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md
+            - Price List: user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md
+            - Price List Schema: user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list-schema.md
+            - Service Price Rule: user-guide/etendo-classic/basic-features/master-data-management/pricing/service-price-rule.md
         - Procurement Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/procurement-management/transactions.md

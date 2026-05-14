@@ -220,10 +220,10 @@ Las cuentas **Obligatorio Valor por defecto** se rellenan por defecto como parte
 
 ![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration4.png)
 
-El botón **Copiar cuentas** permite seleccionar cuentas asignadas por defecto a cada [Grupos de Terceros](../../../master-data-management/business-partner-setup.md#business-partner-category) o [Categoría del producto](../../../master-data-management/product-setup.md#product-category).
+El botón **Copiar cuentas** permite seleccionar cuentas asignadas por defecto a cada [Grupos de Terceros](../../../master-data-management/business-partner-setup/business-partner-category.md) o [Categoría del producto](../../../master-data-management/product-setup/product-category.md).
 
 !!!info
-    Las cuentas asignadas por defecto a cada grupo de terceros, por ejemplo, también pueden asignarse por defecto a cada proveedor o cliente utilizando el botón de acción **Copiar cuentas**, esta vez desde la ventana [Grupos de Terceros](../../../master-data-management/business-partner-setup.md#business-partner-category).
+    Las cuentas asignadas por defecto a cada grupo de terceros, por ejemplo, también pueden asignarse por defecto a cada proveedor o cliente utilizando el botón de acción **Copiar cuentas**, esta vez desde la ventana [Grupos de Terceros](../../../master-data-management/business-partner-setup/business-partner-category.md).
 
 !!!note
     Es posible sobrescribir estos valores por defecto a nivel de grupo de terceros, permitiendo que los pasivos de proveedor y los derechos de cobro de cliente de distintos terceros se contabilicen en cuentas diferentes. Este último cambio de configuración debe realizarse en las pestañas de proveedor y/o cliente de las ventanas de [Terceros](../../../master-data-management/master-data/business-partner.md#business-partner).

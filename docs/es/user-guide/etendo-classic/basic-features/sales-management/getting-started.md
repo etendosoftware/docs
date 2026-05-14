@@ -50,12 +50,12 @@ Cada producto que se venda debe tener un *precio* en la lista de precios de vent
 Del mismo modo, cada producto que se venda debe definirse en una *unidad de medida* ("UOM") y, si es necesario, en una *unidad de medida alternativa* (AUM).
 
 !!! Info
-    Para más información, visite [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md). 
+    Para más información, visite [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md). 
 
 Los Terceros (clientes) deben configurarse antes de que cualquier venta pueda convertirse automáticamente en un presupuesto de ventas o un pedido de venta. 
 
 !!! Info
-    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
+    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 La configuración anterior es una parte del flujo general de configuración del negocio dentro de la configuración de Gestión de datos maestros.
 
@@ -140,14 +140,14 @@ o para sustitución.
 
 En este proceso están disponibles las siguientes opciones de configuración:
 
-- [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
+- [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md)
 - [Estado del producto](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
 - Cuentas para [Coste de los bienes vendidos](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) (COGS) para devoluciones e [Ingresos por devoluciones](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)
 
 ### Ejecución { #execution_1 }
 
 En Gestión de Ventas, el proceso de negocio de Devoluciones de cliente se ejecuta de la siguiente manera.  
-Los clientes pueden solicitar una [devolución de material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) por cualquier motivo.  
+Los clientes pueden solicitar una [devolución de material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) por cualquier motivo.  
 El personal de ventas:
 
 - Crea un nuevo documento en la ventana [Devolución de cliente](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) y busca el nombre del cliente en el campo Terceros.

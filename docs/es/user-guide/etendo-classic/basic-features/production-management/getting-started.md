@@ -57,7 +57,7 @@ Además de las [ventanas de configuración](./setup.md) del módulo de Producci�
 2. Asimismo, se configuran Terceros para producción:
 
     - En la solapa Empleado, cualquier empleado que esté involucrado en el proceso de producción tiene seleccionada la casilla de verificación **operario**.
-    - La [Categoría Salarial](../master-data-management/business-partner-setup.md#salary-category) configurada para los empleados es muy importante, ya que se incluye en los cálculos de costes finales.
+    - La [Categoría Salarial](../master-data-management/business-partner-setup/salary-category.md) configurada para los empleados es muy importante, ya que se incluye en los cálculos de costes finales.
 
     !!! info
         Para más información sobre la configuración de terceros, consulte la sección [Terceros](../master-data-management/master-data/business-partner.md#business-partner).

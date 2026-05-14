@@ -22,7 +22,7 @@ In these situations, a particular payment term is agreed upon by the Company and
 
 Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) and a [Purchase Invoice](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) as well as how to register a [Vendor Payment](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out.md).
 
-It is recommended as well to understand how to set up a [Payment Term](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md).
+It is recommended as well to understand how to set up a [Payment Term](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) and how to launch the [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/payment-report.md).
 
 ## Order prepayment: execution steps
 

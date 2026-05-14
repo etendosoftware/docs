@@ -22,7 +22,7 @@ En estas situaciones, la empresa y el proveedor acuerdan unas condiciones de pag
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) y una [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice), así como de cómo registrar un [Pago a proveedor](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
-También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 

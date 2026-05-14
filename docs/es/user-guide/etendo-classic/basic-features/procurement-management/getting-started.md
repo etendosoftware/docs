@@ -48,7 +48,7 @@ Cada producto que se vaya a comprar debe tener un precio en la lista de precios 
 Del mismo modo, cada producto que se compra debe definirse en una unidad de medida (UdM) y, si es necesario, en una unidad de medida alternativa (UdMA).
 
 !!!info
-    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) para más información.
+    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md) para más información.
 
 El coste de una transacción de entrada como un "Albarán (Proveedor)" puede calcularse utilizando el precio de compra del producto sin impuestos.
 
@@ -59,7 +59,7 @@ Este proceso requiere que la entidad legal/organización tenga una [regla de cá
 Los terceros deben configurarse antes de que una necesidad de material pueda convertirse automáticamente en un pedido de compra.
 
 !!!info
-    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
+    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 La configuración anterior forma parte del flujo general de configuración del negocio dentro de la configuración de "Gestión de Datos Maestros".
 
@@ -154,7 +154,7 @@ Este flujo de trabajo gestiona la devolución de bienes comprados al proveedor. 
 ![supplier-returns](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png)
 
 ### Configuración { #configuration_1 }
-La ventana [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) es la única que requiere configuración antes de ejecutar este proceso.
+La ventana [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) es la única que requiere configuración antes de ejecutar este proceso.
 
 ### Ejecución { #execution_1 }
 

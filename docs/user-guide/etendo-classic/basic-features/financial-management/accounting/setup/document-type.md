@@ -112,7 +112,7 @@ Fields to note:
             | **Account** | **Debit** | **Credit** | **Comments** |
             | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
             | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
-            | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+            | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) | Total Gross Amount |     | One per invoice |
 
 - **Document Cancelled**, if any, is the document to use for voiding a given document type. 
 
@@ -129,14 +129,14 @@ Fields to note:
         | **Account** | **Debit** | **Credit** | **Comments** |
         | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) | (-) Line Net Amount |     | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Tax Amount | One per tax line |
-        | [Product Revenue](../../../master-data-management/product-setup.md#accounting) |     | (-) Total Gross Amount | One per invoice |
+        | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) |     | (-) Total Gross Amount | One per invoice |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Account** | **Debit** | **Credit** | **Comments** |
         | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
-        | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+        | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) | Total Gross Amount |     | One per invoice |
 
 - The **Active** checkbox can be used to activate or deactivate this document type.
 - The **Default** checkbox indicates if this record is to be used as a default value.

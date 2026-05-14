@@ -154,7 +154,7 @@ Es posible personalizar el stock que propone la gestión de stock de almacén.
 
 ### `M_PriceList_Create` - Finalización del proceso { #m-pricelist-create---finish-process }
 
-Este punto de extensión se llama al final de la función `M_Pricelist_Create`, la función que crea precios en base a los parámetros de la versión de tarifa. Consulte [Versión de tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list-version).
+Este punto de extensión se llama al final de la función `M_Pricelist_Create`, la función que crea precios en base a los parámetros de la versión de tarifa. Consulte [Versión de tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md#price-list-version).
 
 * Parámetros: 
     * `Record_ID` (`p_String` column of `AD_EP_Instance_Para`). `M_PriceList_Version_ID` de la versión de tarifa que se está procesando. 

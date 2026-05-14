@@ -39,7 +39,7 @@ In Etendo, it is possible to calculate the **weight of the packing**. To do this
         - Weight
         - UOM for Weigth: It only shows units of measures that are defined as `Is weight`
 
-- [**Unit of Measure**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) window: This module adds a new field **Is weight**. In this window, also it is possible to define the **Conversion** between UOM, that is, between the UOM of the product and the UOM of the box.
+- [**Unit of Measure**](../../../basic-features/master-data-management/product-setup/unit-of-measure.md) window: This module adds a new field **Is weight**. In this window, also it is possible to define the **Conversion** between UOM, that is, between the UOM of the product and the UOM of the box.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 

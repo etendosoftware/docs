@@ -23,7 +23,7 @@ Es importante señalar que una factura de venta creada a partir de un pedido de 
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de venta](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) y una [Factura (Cliente)](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice), así como de cómo registrar un [Cobro de cliente](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in).
 
-También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 

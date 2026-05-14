@@ -32,7 +32,7 @@ For a broader understanding of warehouse operations, see [Warehouse Management G
 Use the parameters window to filter the report before generating it. The available filters are:
 
 -   **From Date** / **To Date**: Define the date range for the movements to include. Only transactions within this period appear in the report.
--   **Product**: Filter by a specific [product](../../master-data-management/product-setup.md). Leave blank to include all products.
+-   **Product**: Filter by a specific [product](../../master-data-management/product-setup/product-category.md). Leave blank to include all products.
 -   **Attribute**: Filter by a product attribute (such as size, color, or lot). Leave blank to include all attributes.
 -   **Business Partner**: Filter by a specific business partner (customer or supplier). Leave blank to include all partners.
 

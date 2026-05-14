@@ -48,7 +48,7 @@ Each product being purchased needs to have a price in the purchase price list in
 Same way, each product that is being purchased needs to be defined in a unit of measure (UOM), and in an alternative unit of measure (AUM) if required.
 
 !!!info
-    Please refer to [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) for more information.
+    Please refer to [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md) for more information.
 
 The cost of an input transaction such as a "Goods Receipt" can be calculated by using the product's purchase price excluding taxes.
 
@@ -59,7 +59,7 @@ This process requires that the legal entity/organization has a [costing rule](..
 Business Partners need to be configured prior to any purchase requisition can automatically turn into a purchase order.
 
 !!!info
-    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
+    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 Above configuration is part of the overall Business setup flow within the "Master Data Management" setup.
 
@@ -154,7 +154,7 @@ This workflow manages the return of purchased goods back to the supplier. Due to
 ![supplier-returns](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png)
 
 ### Configuration
-The [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) window is the only one that requires configuration before performing this process.
+The [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) window is the only one that requires configuration before performing this process.
 
 ### Execution
 

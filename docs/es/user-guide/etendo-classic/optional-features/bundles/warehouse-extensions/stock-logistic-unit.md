@@ -18,7 +18,7 @@ tags:
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 
-El módulo **Unidad logística de stock** amplía la funcionalidad estándar de Etendo para gestionar unidades logísticas dentro de los procesos de inventario, recepción y reserva de stock. En concreto, este módulo añade las [unidades de medida](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) y los [tipos de inventario referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type) **Empaquetar** y **Pallet**.
+El módulo **Unidad logística de stock** amplía la funcionalidad estándar de Etendo para gestionar unidades logísticas dentro de los procesos de inventario, recepción y reserva de stock. En concreto, este módulo añade las [unidades de medida](../../../basic-features/master-data-management/product-setup/unit-of-measure.md) y los [tipos de inventario referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type) **Empaquetar** y **Pallet**.
 
 Su objetivo es integrar las **Unidades Alternativas (AUOM)** con el modelo de **Inventario Referenciado (RI)**, de modo que las unidades logísticas se reconozcan, registren y gestionen como entidades trazables en todas las operaciones de almacén.
 

@@ -57,7 +57,7 @@ Apart from the [setup windows](./setup.md) in the Production module, additional 
 2. Also, Business Partners are configured for production:
 
     - In the Employee tab, any employees that are involved in the production process have the **operator** checkbox selected.
-    - The [Salary category](../master-data-management/business-partner-setup.md#salary-category) configured for employees is very important since they are included in the final cost calculations.
+    - The [Salary category](../master-data-management/business-partner-setup/salary-category.md) configured for employees is very important since they are included in the final cost calculations.
 
     !!! info
         For more information about the configuration of business partners, please refer to the [Business Partner](../master-data-management/master-data/business-partner.md#business-partner) section.

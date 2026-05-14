@@ -45,7 +45,7 @@ Product types do not confer different accounting treatments. In other words, all
 
 All of them use the ledger accounts defined in the Accounting tab of the Product window.
 
-![](../../../../assets/drive/BP3_HION2Ye59yb2o2KNzsNK4o72pdd_v6DVNj5SsrL_3bZCZbH-OG4Snsia_DB_BItoQaJxuJf4vOe1jlrwPhZTswRuf1I8aUTCLlHP1s-NU-625ScthOFj8fgeIrknNz2MdE6kbDgecxTFSw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-1.png)
 
 Additional key data to fill in are:
 
@@ -109,11 +109,11 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 
 - **Returnable**:This flag is used to indicate if a product can be returned and, in the case that it is, a new field called. When trying to return a non-returnable product from the Return from Customer window, an error will be shown.
 
-![](../../../../assets/drive/8P_B_7zs64s6GpnSTeK9UQ6lBzvVnqGD9qOV3QR0WnAk_vPEZtjWJclvPzCvLx2HhU2oJuV4AjbxdhmspKkr3cWr20QacqX-VnigfqEjCIv9_blgPk1mEIloiZOBk5oCT6y41jQh9JI7HKA5vQ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-2.png)
 
 - **Overdue Return Days**:In this field, it is possible to configure the maximum amount of days before a product can not be returned. If the field is left blank, the product can be returned without time limitations. When trying to return a product whose period has expired, a warning message will appear.
 
-![](../../../../assets/drive/QyvN8QXk9YDUur102n0wpiAY2QPyWux7iOpGMyvUkSVWGsoatyBdBBoMx5sxfWxo7dLX--2yo9cchrXV5yDH9nwpLqtOKLW9bsm4j0XFN9rCTCuusTntdbtxsRzu9Pu5pUinLOQ17lH_GAOymA.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-3.png)
 
 !!! info
     **Note**: If stocked is not checked and BOM is checked, the product price should be 0. Because in that special case, the product price is the sum of the prices of the bill of materials components it consists of. If promotion wanted to create, 'Discounts and Promotions' should be used.
@@ -127,7 +127,7 @@ Product can be marked as **Is Generic**. This means that variants of this produc
 
 When this flag is marked, two buttons are shown:
 
-![](../../../../assets/drive/XpdGDkmZecBZmb-qxyiA42-f6IdA9oTfYqig24hQZtSRsKLgItWO3U5jf-8kuTgHlMfKrUU9BQBSPfay8YoWSPKaYr74W9TXIgzumMG6T2sjq1g1w7zA9N2e2xZHPlGCykvLXWfU-wyAyH_5cw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-4.png)
 
 - It shows all variants that have been created or not for that specific generic product. It is very useful when:
   - The user does not want to generate all variants but just some of them. The button allows the user to select the possible combinations
@@ -140,15 +140,15 @@ For example, imagine generic product T-Shirt Model A has the characteristics:
 
 But still variants have not been created. If you press the button, you can see all possible combinations:
 
-![](../../../../assets/drive/YysrJ-lndKNj6qUEzE5IIaNziDxMduILgMa9XP3Vde2NskD-oIug-d3Ce12C4gZSJCDuqDqyXcTXL0IPRSEkRP3ezOIsF321Zy1pizzXHcUKuWlzNUPivH7sfIyDZhFxOcZUzCprjCYdNRs3Ag.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-5.png)
 
 Then all combinations can be selected or just pick some of them. Once the selection takes place pressing Done, combinations will be created as Products. These new products will have the Generic Product field filled with the product that was marked as generic. We can say it is their parent product
 
-![](../../../../assets/drive/1aZDzwrJXxLjUZhwgGhhHarCA-AsNLDbdSpLvVj2LzAvReay3gMmfC33auIHYoELn1pSKNSYrBWIckgesfl75Lza6jjZVMfXeNw1236dsTpVUMp0Aqmm19kJjAzp0ZRElYQc4F9iujwJ1X-P0A.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-6.png)
 
 - It creates/explode all product variants, that is, all combinations based on the characteristics defined
 
-Another button that might appear is ![](../../../../assets/drive/ZBo4NfiZAG6XK2iCAGS7jK--_4wffCzZHmp5z-8S0KrHU0Qs1U2_HkeL6MWD6KRZAFaYzjui8tmsOW9NKMbp3OkOLM27pUoQXBMC0YcHdCSLzQojA3Twi5IWuQwHEAcwlmjD4bnRYlMJ915Gpg.png). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
+Another button that might appear is ![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-7.png). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
 
 1.  **Generic product**: This button allows entering the value of that characteristic.  
     Imagine the characteristic is Fashion Line that has three values: Sport, Vintage, Classic.  
@@ -159,11 +159,11 @@ Once a variant has been created, its characteristics and values can be viewed ei
 
 - Grid view: There is a new column **Characteristic Description**. This column is calculated and is not editable. It shows the characteristics with their values as a text. This column has a new search-selector in order to find product variants based on its characteristics
 
-![](../../../../assets/drive/uxKcLraqzQTO5YQDc1QPoXzbekSyMuKoCGy0FpkRmreW9hbxKJOcZm-4R2kHVRAf7h-VaVYDoMlqncOk-iCWOZv5d7Nyo6OJIjsJXdlA1e276uJ2iD7YbUTpyY3R8BMUphQJGPqHG9z8Q3oCRw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
-Press the button ![](../../../../assets/drive/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfgcF2VLemqd37yK-hJshznCtz8tSACOFULk0CaBBUOtxsLXq2rnyATymb5aOTZaihm1mdEJEopKzbefJYQnNLrA.png) and it opens a pop-up to select values:
+Press the button ![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-9.png) and it opens a pop-up to select values:
 
-![](../../../../assets/drive/Wtk1v4OXf3cYQZQRJVMZZu6bvKWAF94yM7GMeugxV3zLYTJez8HewpHMGgyqom8Xtn30PLliwlV8zGlfmMmqPg0yqLfFhLLvB7Mij9Ro9gs7SY4lz-zqhJXg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-10.png)
 
 - Form view: Product variants have a new section named _Characteristic Description_. This section contains as many fields as different characteristics the product has.
 
@@ -179,23 +179,23 @@ This tax modification is implemented through a service linked to the product. Th
 
 To configure it, go to the Product window and create a new service. A service is just a product with the field Product Type set to Service. It has to be activated also the field Linked To Product and the field Modify Tax. When this field is activated, a new tab named Modify taxes categories is visible. In this tab, it is defined the configuration of the tax categories of products this service will modify when linked and the new tax category to apply.
 
-![](../../../../assets/drive/260ftQHLj7KxqXuouydWqLebx8YSli0i-k7OQh7rvpv1tfbcFB7zqhatrWcMd2F8tFMwLJEA-7xbc9LAtOdi1MNYioVlWheErN2eiFnhvq77HU-oyLHyiUTvrE_T1ruWbkDwOAPwpytv6_sM5w.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-11.png)
 
 To ease the configuration process, two components have been added:
 
 1.- Modify Tax for Product Category (Button): Pick and Execute window to assign the product categories and tax categories in the same action.
 
-![](../../../../assets/drive/8ToxP9o606fpE3T0LM-yFPrDkN_UcfbtRPVfoZvh6Oa_riBLBhSKHPfMvurIv4ijKgDJWyVFo4Bqjxe9tP0uzGw_GUbOBHq5j_s26JnOYPHDpzmwnQnxrdWC4yeQJfjs9glD0TVmOro6OA1wDg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-12.png)
 
 2.- Copy Service Modify Tax Configuration (Button): Pick and Execute window where services which modify taxes are displayed. The user can select one or many services, and current configuration will be assigned to selected services. Once the process has been executed, the old configuration (if it exists) will be deleted and a new one will be added. This process helps in deploying the same configuration to multiple services.
 
-![](../../../../assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-13.png)
 
 ### Price
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
-![](../../../../assets/drive/djRxxYVfhjv8e71EzysdOeoAUbQHqZSVuQbECB5EJ88BVtBo7FJ5weuwe6rrpxjxcXMKUX8pZKFgAF_lj5WdhmABdxh0Q09e9wdLPK8VBKNf6jBK8E56qbc6oQRtDcmHgxnxclqBQGsbm2B_rg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-14.png)
 
 There are two ways in which the user can get a product to be part of a Price List:
 
@@ -209,7 +209,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
 
 This tab will only be available when field Is Price Rule Based is selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
-![](../../../../assets/drive/oKeZYS9ty3rxPOvfQd1nAc-VteGicSiOkI71kDF0mKBqomlsHjkbrtbMU3I36bDAbhM22cr0vlpMQ9FohG59E2YDtYddX5mFScwzgxcCvihP_y3C7SNdYqdnyIKewEei_gERVk0Nq-e4Gp_7Bg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-15.png)
 
 In this window it is also possible to define a maximum and minimum amounts that will be taken into account when showing services.
 
@@ -225,7 +225,7 @@ Also, if once a service (not yet delivered) has been added to the receipt, the p
 
 Accounting tab allows the user to configure the ledger accounts to be used while posting product related transactions such as product purchase or sales to the general ledger.
 
-![](../../../../assets/drive/bLlVeOrdKF3rI3NdVa69a-CAwtO63JpdbyF0fzkMEG1pdmZU8u7bOlhffyM-HCwVnYA_y0kd51iPvCELamYYdp5RA9a7wVithXN1EWh_T73K304xQYB-gApjFi0-6vcof5HZBzUyIUrkpT82JQ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-16.png)
 
 As shown in the screen above, you can configure for each product and general ledger some accounts to be used in the below listed transactions:
 
@@ -276,7 +276,7 @@ This tab provides information of the list of products contained and its quantity
 
 If the product Tax_Category is flagged as **As per BOM**, this tab also provides information for the price of each product in the Bill of Materials list. The price and quantity in this list is used to perform the division of the base amount to calculate the taxes based on the taxes configured for each product of the list.
 
-![](../../../../assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
 
 ### Costing Rule
 
@@ -290,7 +290,7 @@ Costing rules can be created and validated in the Costing Rules window related t
 
 Currency used by the costing rule is the currency set for the organization.
 
-![](../../../../assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-18.png)
 
 ### Costing
 
@@ -331,7 +331,7 @@ It is possible to recognize them by their cost type:
 - **Legacy Average**
 - and **Legacy Standard**.
 
-![](../../../../assets/drive/N1fWn0tV0yzS8dZULfJfiKeIOSvJzfYe-IBCo_TJSVqUavfD-zU4UlJlAhkg7CGNOV5uT__6-46NOHmWzyI3DBaYGwH_2TNdoblDMnC6VwDRzWILLf1k6YWZ8PRAPNWEjcMpSzqz81vqpObEBw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-19.png)
 
 The way to define the **Cost** of a product implies to enter below detailed information:
 
@@ -361,7 +361,7 @@ There is not a way for the user to directly create new product transactions in t
 
 Product transactions of any type are automatically saved and listed in this tab as they are booked in Etendo.
 
-![](../../../../assets/drive/20u-EUxoETZhWKS6geaudh3OZbjEc0CvxOFx_0njFvaHCzsro7CxBXExfQSPgKnKNX4eRyw4uvcYUIXZSBINAPMX-3nGhUoqA1K08zWlRefUU00gCNAQEvXbU-7RboBfWCxzGUK4OrStxUZ3kQ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-20.png)
 
 As shown in the image above, Etendo saves and informs us about below relevant data for each product transaction type:
 
@@ -436,7 +436,7 @@ For instance the average cost of a product which transactions are listed below i
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
-![](../../../../assets/drive/qDJuH3rx2ZvsvrA9Tjl0WZZjwJors5Xu2P2UgEjiBK_jhHX9vbYN3ZKcvH1mLIMWqUTNtrP4iKcFtp3VTDiwTHyLRpzsk4TUvxWl4QXo-ErSsQ4LbqtWnkCi2TWf1ftOhyL97RTpP5BbSEjL-Q.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-21.png)
 
 This pop-up allows entering below detailed data:
 
@@ -465,7 +465,7 @@ As soon as a product transaction gets its cost calculated, a new record is creat
 
 As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a *Cost Adjustment Line*.
 
-![](../../../../assets/drive/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-22.png)
 
 Some relevant fields to note are:
 
@@ -486,7 +486,7 @@ In this tab, the information that is required for the creation of the Purchasing
 
 Also, the Requisition process uses the Business Partner information for the automatic creation of Purchase Orders.
 
-![](../../../../assets/drive/jUizYPPOFt4WfdpL71z7Pxe8z7aMWc7Qnzz0rYE488WWt0fvBY9jKgswYbddRYo1rOzmYGsAmV0zOCGvwuo2BfwWDr4gG94qfwrNTjpfcA3XYq1sNH2wNg495KlwPCY52uGyT_FhGRQWxDzbMw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-23.png)
 
 - **Business Partner**, the vendor that will appear on the Purchase Order when created automatically from the Requisition or from the Purchasing Plan.
 - **Quality Rating**: quality rating of the vendor. Information only field that is not used by the MRP process.
@@ -612,7 +612,7 @@ In this Tab, there is going to be a record for:
 - each Organization that is a Legal Entity that has a Costing Rule defined
 - or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the *Legal Entity*.
 
-![](../../../../assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNR9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-24.png)
 
 #### Product Categories
 
@@ -620,7 +620,7 @@ The user can define if a product of a certain product category can be related to
 
 This tab will only be available when the field 'Included Product Categories' of the Service has a value. It contains all the product categories related to the service.
 
-![](../../../../assets/drive/PYJo6PQVwfGTLbk5f39Z5opQ3qM4D81lk9qWKX7k1Z-E9RzZC5ZnB9EK4fcWtb37L_ZP_fcJbcnAQdXMF1vLAzXuhseG993zL5eDG2xL-nt-jexrA3D-d4VupddMJEeKGixjbQZFXUBoayzGQQ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-25.png)
 
 The following information about related products is available in the tab:
 
@@ -630,7 +630,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the 'Relate Prod Categories' button (Visible only when the field 'Included Product Categories' has a value). This button will open a Pick & Edit displaying all product categories not related to the service.
 
-![](../../../../assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-26.png)
 
 #### Category Price Rule Version
 
@@ -640,7 +640,7 @@ The user can define if a product can be related to a product of 'Service' type b
 
 This tab will only be available when the field 'Included Products' of the Service has a value. It contains all the products related to the service.
 
-![](../../../../assets/drive/QhyN8Mqa2ybLbU9ny5se3_Z-JsGEIYGIAma4LQhBS4U4TUdZWUQTe3-Y3NP7bwlaQSxr6Fea2aB0K2g-slUF8XLmuN6aDN-3LCgqCjfSl0cl4uyn1c8YgL-w_AuZi8t4jXcDyF-cr2CpqKm-xg.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-27.png)
 
 The following information about related products is available in the tab:
 
@@ -653,7 +653,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the  'Relate Products' button (Visible only when the field 'Included Products' has a value). This button will open a Pick & Edit displaying all products not related to the service.
 
-![](../../../../assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbZbmRmbZbQqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqwm3eW0fNIFxw.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-28.png)
 
 #### Product Price Rule Version
 
@@ -662,11 +662,11 @@ This tab is not editable, it is not possible to add records manually or edit the
 !!! info
     To enable this functionality the user must define the preference **Enable UOM Management** in the Property field with value Y.
 
-![](../../../../assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
+![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-29.png)
 
 Fields to note:
 
-- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*. It is important to remark that any unit of measure needs to be created and configured in [Unit of Measure](../product-setup.md#unit-of-measure) window.
+- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*. It is important to remark that any unit of measure needs to be created and configured in [Unit of Measure](../product-setup/unit-of-measure.md) window.
 - **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure. For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
 - **Gtin**, that is the *Global Trade Item Number* for the product defined in the corresponding AUM
 - **Sales**, **Purchase** and **Logistics**, those fields allow defining the use of product's AUM within Sales, Purchase and Inventory flows.  

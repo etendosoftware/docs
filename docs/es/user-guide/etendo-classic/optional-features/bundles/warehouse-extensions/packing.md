@@ -39,7 +39,7 @@ En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requie
         - Peso
         - Unidad para peso: solo muestra unidades de medida que estén definidas como `Is weight`
 
-- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
+- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup/unit-of-measure.md): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 

@@ -15,11 +15,11 @@ Etendo permite al usuario introducir la información de datos maestros de tercer
 
 Aquí, el usuario puede definir y configurar terceros para utilizarlos posteriormente en transacciones.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bp-header.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-1.png)
 
 Campos a tener en cuenta:
 
-- **[Grupos de Terceros](../master-data-management/business-partner-setup.md#business-partner-category)**: Campo clave para que el usuario seleccione una categoría a la que va a pertenecer el tercero, bajo los siguientes tipos:
+- **[Grupos de Terceros](../business-partner-setup/business-partner-category.md)**: Campo clave para que el usuario seleccione una categoría a la que va a pertenecer el tercero, bajo los siguientes tipos:
 
     - Clientes
     - Proveedores
@@ -52,7 +52,7 @@ El proceso **Establecer nueva moneda** permite definir:
 - una nueva moneda para el tercero
 - así como el tipo de cambio de moneda que se utilizará para convertir el saldo del cliente a la nueva moneda.
 
-    ![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
+    ![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-2.png)
 
 Campos a tener en cuenta:
 
@@ -66,7 +66,7 @@ Campos a tener en cuenta:
 
 Adicionalmente, un tercero puede tener **crédito disponible en una moneda determinada**. Si ese es el caso, Etendo informa al usuario porque el crédito disponible del tercero deberá convertirse a la nueva moneda; por lo tanto, podrá consumirse en la nueva moneda.
 
-![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/set-new-currency.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-3.png)
 
 Este proceso crea automáticamente tres nuevos pagos, en caso de que el tercero tenga crédito disponible:
 
@@ -112,7 +112,7 @@ Este proceso crea automáticamente tres nuevos pagos, en caso de que el tercero 
 
     - Más adelante, usted crea otra factura de venta en USD por 100.00 USD. Al completarla, Etendo muestra que el tercero tiene crédito disponible en USD, convertido desde el crédito anterior en EUR: 100 EUR × 1.19 = 119.00 USD
 
-    ![alt text](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/credit-usd.png)
+    ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-4.png)
 
     En resumen, el proceso **Establecer nueva moneda** actualiza la moneda del tercero y convierte saldos y créditos a la nueva moneda utilizando el tipo elegido; los saldos existentes y el crédito disponible se recalculan para que todo coincida con la nueva moneda y las transacciones futuras, incluso si se crean en la moneda anterior (EUR), seguirán convirtiéndose correctamente y reflejándose en la nueva moneda del tercero (USD).
 ### Solapas y subsolapas { #tabs-and-subtabs }
@@ -140,7 +140,7 @@ Las solapas y subsolapas mencionadas anteriormente se describen en los siguiente
 !!! note
     Los datos relacionados con el cliente se pueden introducir y configurar una vez que se habilita la casilla **Cliente**.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 
 Como se muestra arriba, existe una lista de datos relevantes que se deben introducir para los clientes junto con la información del saldo actual del cliente. Puede seleccionar cualquier dato, como por ejemplo la **Tarifa**, desde una lista de valores creada previamente o, si es necesario, crearlo navegando a la ventana correspondiente y, a continuación, seleccionarlo.
 
@@ -149,7 +149,7 @@ Campos a tener en cuenta:
 - **Tarifa**: la seleccionada será la que se aplique al crear documentos de venta como pedidos de venta o facturas (Cliente) para ese cliente.  
 
     !!! info
-        Para más información, visite [Tarifa](../master-data-management/pricing.md#price-list).
+        Para más información, visite [Tarifa](../pricing/price-list.md).
 
     Las tarifas se definen en una moneda determinada, que puede ser la misma que la moneda del cliente o no.  
     En caso de que no lo sea, el saldo del cliente se calculará teniendo en cuenta el tipo de conversión definido en la ventana [Rangos de conversión](../general-setup/application/conversion-rates.md) o el introducido en el proceso **Establecer nueva moneda**, que se puede ejecutar para cambiar la moneda de un tercero.
@@ -163,7 +163,7 @@ Campos a tener en cuenta:
 - **Condiciones de pago**: la seleccionada será la que se utilice al gestionar el plan de pagos de las facturas (Cliente).
 
     !!! info
-        Para más información, visite [Condiciones de pago](../business-partner-setup.md#payment-term).
+        Para más información, visite [Condiciones de pago](../business-partner-setup/payment-term.md).
 
 - **Cuenta financiera**: la seleccionada será la que se utilice al cobrar y conciliar los pagos realizados por ese cliente. 
 
@@ -182,7 +182,7 @@ Campos a tener en cuenta:
     - **Calendario del cliente después de la entrega**: la factura se generará de acuerdo con el calendario acordado con el cliente y una vez que se hayan enviado los bienes pedidos. Si esta es la opción seleccionada, se muestra automáticamente un nuevo campo denominado *Calendario de facturación* para que seleccione el *Calendario de facturación* o calendario correspondiente.
 
         !!! info 
-            Para más información, visite [Calendario de facturación](../master-data-management/business-partner-setup.md#invoice-schedule).
+            Para más información, visite [Calendario de facturación](../business-partner-setup/invoice-schedule.md).
 
 - **Crédito límite**: si la suma de todos los pagos pendientes supera el límite de crédito especificado para un cliente, el sistema le avisará indicando que este cliente ha alcanzado el límite de crédito cada vez que se seleccione este tercero en un documento de venta (pedido, albarán o factura).
 
@@ -220,7 +220,7 @@ Sección **Más información**
 
 La solapa **Contabilidad cliente** permite al usuario configurar las cuentas contables que se utilizarán al contabilizar transacciones relacionadas con el cliente, como los cobros de clientes y los anticipos de clientes, en el libro mayor.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/customer-accounting-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-6.png)
 
 Como se muestra arriba, puede configurar, para cada cliente y libro mayor, las cuentas que se utilizarán en:
 
@@ -240,7 +240,7 @@ Inicialmente, estas cuentas se heredan de las cuentas predeterminadas del libro 
 !!! note
     Los datos relacionados con el proveedor o acreedor se pueden introducir y configurar una vez que se habilita la casilla **Proveedor**.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-7.png)
 
 Como se muestra en la imagen anterior, existe una lista de datos relevantes que deben introducirse para proveedores o acreedores, también conocidos como proveedores:
 
@@ -248,7 +248,7 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
     Si un Tercero ya ha generado Crédito, no será posible seleccionar una Tarifa en una Moneda diferente de la del Crédito generado. En ese caso, es posible convertir el Crédito a una Moneda diferente.  
     
     !!! info
-        Para más información, visite [Tarifa](../master-data-management/pricing.md#price-list).
+        Para más información, visite [Tarifa](../pricing/price-list.md).
 
 - **Método de pago**: el seleccionado será el que se aplique al crear y gestionar los pagos realizados a ese proveedor.  
     Si una cuenta financiera está vinculada al proveedor, el método de pago a seleccionar será un método de pago vinculado a esa cuenta financiera.  
@@ -259,7 +259,7 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
 - **Condiciones de pago**: la seleccionada será la que se utilice al gestionar los planes de pago de facturas de proveedor. 
 
     !!! info
-        Para más información, visite [Condiciones de pago](../master-data-management/business-partner-setup.md#payment-term).
+        Para más información, visite [Condiciones de pago](../master-data-manageme../business-partner-setup/payment-term.md).
 
 - **Día de vencimiento**: tal y como se indica en las Condiciones de pago, el Día de vencimiento de la OC se utiliza en combinación con la Fecha de vencimiento fija en las condiciones de pago, que debe establecerse en Y, y con el Día laborable siguiente establecido en N. La fecha de vencimiento del pago se basa en las condiciones de pago definidas en combinación con el Día de vencimiento de la OC.
     
@@ -298,7 +298,7 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
 
 La solapa Contabilidad proveedor permite al usuario configurar las cuentas contables que se utilizarán al contabilizar transacciones relacionadas con el proveedor, como pasivos del proveedor y pagos por adelantado del proveedor, en el libro mayor.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/vendor-accounting-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-8.png)
 
 El usuario puede configurar, para cada proveedor o acreedor y para el esquema contable disponible, las cuentas contables que se utilizarán en:
 
@@ -321,7 +321,7 @@ Inicialmente, estas cuentas se heredan de las cuentas por defecto del Esquema co
 !!! note
     Un tercero puede configurarse como operario una vez que se habilita la casilla de verificación **Operarios**.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-9.png)
 
 La solapa Operarios permite al usuario establecer cuáles de sus terceros son *Operarios*.
 
@@ -348,7 +348,7 @@ Un operario puede:
 
 En esta solapa, el usuario puede añadir las cuentas contables que se utilizarán al contabilizar transacciones relacionadas con operarios, como la contabilización de nóminas.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/employee-accounting-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-10.png)
 
 Como puede ver en la imagen anterior, actualmente no es necesario definir ninguna cuenta contable para la contabilidad de operarios. Esto se debe a que no existe ninguna transacción susceptible de contabilizarse para operarios.
 
@@ -356,9 +356,9 @@ En cualquier caso, este es el lugar al que deberían apuntar los módulos o func
 
 **Categoría salarial**
 
-En esta solapa, el usuario puede configurar la categoría salarial del operario seleccionando una de las opciones que se definieron previamente en la ventana [Categoría Salarial](../master-data-management/business-partner-setup.md#salary-category).
+En esta solapa, el usuario puede configurar la categoría salarial del operario seleccionando una de las opciones que se definieron previamente en la ventana [Categoría Salarial](../business-partner-setup/salary-category.md).
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/cost-salary-category.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-11.png)
 #### Cuenta bancaria { #bank-account }
 
 La solapa **Cuenta bancaria** permite al usuario listar y configurar las cuentas bancarias de terceros.
@@ -368,7 +368,7 @@ Es posible configurar y establecer correctamente las cuentas bancarias de tercer
 !!! important
     Se recomienda encarecidamente que el usuario configure correctamente las cuentas bancarias, ya que Etendo las utilizará según sea necesario dentro de los procesos de gestión de pagos de Etendo.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/bank-account-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-12.png)
 
 Campos a tener en cuenta:
 
@@ -398,7 +398,7 @@ Campos a tener en cuenta:
 
 Esta funcionalidad introduce la posibilidad de marcar una cuenta bancaria como **Valor por defecto** dentro de la solapa **Cuenta bancaria** de la ventana **Terceros**. Aquí es posible marcar la casilla **Cuenta por defecto** para establecer la cuenta que se utilizará en los documentos para diferentes transacciones.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/advanced-bank-account-tab.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-13.png)
 
 !!! note
     Si no se selecciona ninguna cuenta bancaria como predeterminada, se utiliza la última creada cuando no se selecciona ninguna cuenta bancaria en pedidos/facturas.
@@ -414,13 +414,13 @@ Esta funcionalidad introduce la posibilidad de marcar una cuenta bancaria como *
 
 Esta solapa introduce flexibilidad al personalizar las asignaciones de tipo de documento a facturas, pedidos, albaranes y recepciones, específicamente en función del tercero.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-14.png)
 
 Esta funcionalidad proporciona un control granular sobre la asignación de documentos transaccionales, sobrescribiendo el tipo de documento por defecto configurado a nivel de organización. Esto es útil, ya que cada país, región e incluso cada empresa puede utilizar diferentes tipos de documentos con sus respectivos números de secuencia imprimibles e incluso personalizados.
 
 Cuando se crea un documento de transacción (pedido, factura, albarán o recepción) y se vincula a un tercero, el sistema primero comprueba la solapa **Tipo de documento** para obtener la configuración correcta. Esta configuración puede mejorar significativamente la experiencia del usuario cuando los documentos se crean repetidamente.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/document-type2.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-15.png)
 
 Campos a tener en cuenta:
 
@@ -447,7 +447,7 @@ Las ubicaciones de terceros y los detalles completos de la dirección pueden con
 
 Los terceros pueden tener diferentes detalles de dirección en función de la dirección/ubicación utilizada, ya sea para fines de *Albaranes (Proveedor)/(Cliente)* o para fines de *Facturas*.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-16.png)
 
 Campos a tener en cuenta:
 
@@ -476,12 +476,12 @@ El campo Gestión avanzada de cuentas bancarias se introduce en la solapa Direcc
 !!! warning
     En caso de tener tanto una cuenta bancaria por defecto como una ubicación con una cuenta bancaria definida, al generar un nuevo documento, la cuenta bancaria de la ubicación tiene prioridad sobre la cuenta por defecto.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/location-address-abam.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-17.png)
 #### Personas de contacto { #contact }
 
 La solapa **Personas de contacto** permite al usuario añadir y configurar los contactos del tercero con los que usted trabaja.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/contact.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-18.png)
 
 Campos a tener en cuenta:
 
@@ -502,7 +502,7 @@ Campos a tener en cuenta:
 
 La solapa **Descuentos** permite al usuario añadir y configurar los descuentos de terceros.
 
-![](../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/basic-discount.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-19.png)
 
 Es posible introducir tantos **Descuento** como se hayan acordado con sus terceros, completando la siguiente información:
 
@@ -535,22 +535,22 @@ Los rappels son descuentos basados en el volumen de consumo de un tercero en un 
 
 Con esta funcionalidad, se muestra la solapa "Configuraciones de Rappel" en los terceros incluidos en las configuraciones de Rappel. Además, en la ventana Terceros, el usuario puede crear rappels mediante el botón **Crear Rappel**.
 
-![bp_window.png](../../../../assets/legacy/bp_window.png)
+![bp_window.png](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-20.png)
 
 Para poder hacerlo, es necesario configurar determinados aspectos en la ventana **Configuraciones de Rappel**.
 
 !!! info
-    Para más información, visite [Configuraciones de Rappel](../master-data-management/business-partner-setup.md#rappel-configurations).
+    Para más información, visite [Configuraciones de Rappel](../business-partner-setup/rappel-configurations.md).
 
 La solapa **Configuración de Rappel** se puede encontrar en la sección de solapas de la ventana Terceros. En esta solapa, el usuario puede encontrar los rappels configurados para cada tercero.
 
 Para crear un nuevo rappel, el usuario debe seleccionar una de las configuraciones disponibles en esta solapa y hacer clic en el botón **Crear Rappel**. Aparecerá una ventana emergente en la que el usuario puede seleccionar un tercero al que se asignará el Rappel, y también configurar un periodo de fechas en el que se tendrán en cuenta los consumos para calcular los descuentos, determinado por la información *fecha desde* y *fecha hasta*.
 
-![bp_pop_up_new.png](../../../../assets/legacy/bp_pop_up_new.png)
+![bp_pop_up_new.png](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-21.png)
 
 Cuando se crea el rappel, se crea automáticamente una factura de venta, como se muestra a continuación.
 
-![created_rappel.png](../../../../assets/legacy/created_rappel.png)
+![created_rappel.png](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-22.png)
 
 Cada vez que se concede un rappel a un tercero, se genera automáticamente una nueva factura de venta para mostrar el importe del descuento. Esta factura tiene una secuencia específica para distinguirla del resto, según las opciones introducidas al configurar la secuencia, y un importe negativo, ya que se trata de un descuento. Esta factura está en estado Borrador.
 

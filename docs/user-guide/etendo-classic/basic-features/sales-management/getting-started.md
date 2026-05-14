@@ -50,12 +50,12 @@ Each product that is being sold needs to have a *price* in the sales price list 
 Same way, each product that is being sold needs to be defined in a *unit of measure* ("UOM"), and in an *alternative unit of measure* (AUM) if required.
 
 !!! Info
-    For more information, visit [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md). 
+    For more information, visit [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md). 
 
 Business Partners (customers) need to be configured prior any sales can automatically turn into a sales quotation or sales order. 
 
 !!! Info
-    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
+    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 Above configuration is one part of the overall business setup flow within the Master Data Management setup.
 
@@ -140,14 +140,14 @@ or for replacement.
 
 The following configuration options are available in this process:
 
-- [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
+- [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md)
 - [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
 - Accounts for [Cost of Goods Sold](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) (COGS) for returns and [Revenue for returns](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)
 
 ### Execution
 
 In Sales Management the Customer Returns business process is executed as follows.
-Customers can request a [return material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) for whatever reason.
+Customers can request a [return material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) for whatever reason.
 Sales staff:
 
 - Creates a new document in the [Return from Customer](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) window and looks for the customer name in the Business Partner field.

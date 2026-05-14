@@ -226,10 +226,10 @@ The **mandatory Default** accounts are populated by default as part of the [gene
 
 ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration4.png)
 
-The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../../master-data-management/business-partner-setup.md#business-partner-category) or [Product Category](../../../master-data-management/product-setup.md#product-category).
+The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../../master-data-management/business-partner-setup/business-partner-category.md) or [Product Category](../../../master-data-management/product-setup/product-category.md).
 
 !!!info
-    The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../../master-data-management/business-partner-setup.md#business-partner-category) window.
+    The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../../master-data-management/business-partner-setup/business-partner-category.md) window.
 
 !!!note
     It is possible to override these defaults at business partner category level allowing vendor liabilities and customer receivables for different business partners to be posted to different accounts. This last configuration change needs to be done in the vendor and/or customer tabs from the [Business Partner](../../../master-data-management/master-data/business-partner.md#business-partner) windows.
