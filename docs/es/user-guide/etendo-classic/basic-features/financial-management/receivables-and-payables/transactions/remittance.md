@@ -43,7 +43,7 @@ Para poder usar esta funcionalidad, es necesario configurar algunos aspectos pre
 - Cuenta bancaria predeterminada del Tercero: Para cada tercero, es posible definir una cuenta bancaria que se seleccione por defecto cada vez que sea necesario crear una remesa.
 
     !!! info
-        Para más información, visite [Cuenta Bancaria](../../master-data-management/master-data.md#remittance) en la sección Tercero.
+        Para más información, visite [Cuenta Bancaria](../../master-data-management/master-data/business-partner.md#bank-account) en la sección Tercero.
 
 
 ## Ventana Remesa { #remittance-window }

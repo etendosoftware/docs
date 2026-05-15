@@ -24,14 +24,14 @@ Esta sección describe el módulo **Etendo Packing** incluido en el bundle *Ware
 Este módulo agiliza y mejora la gestión de las **operaciones de empaquetado** dentro del almacén. Una vez que se ha procesado un **albarán**, comienza el proceso de empaquetado. El empaquetado se realiza en base a cada documento individual de albarán. Para cada producto, el operario de almacén determina la unidad de manipulación adecuada (caja) en la que empaquetar el artículo. Solo los productos clasificados como **artículos** son aptos para el empaquetado.
 
 !!! warning
-    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing-tasks).
 
 
 ## Configuración inicial { #initial-configuration }
 
 En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requieren algunas configuraciones previas en otras ventanas para poder calcular el peso de cada caja:
 
-- Ventana [**Producto**](../../../basic-features/master-data-management/master-data.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
+- Ventana [**Producto**](../../../basic-features/master-data-management/master-data/product.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
     
@@ -39,7 +39,7 @@ En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requie
         - Peso
         - Unidad para peso: solo muestra unidades de medida que estén definidas como `Is weight`
 
-- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
+- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup/unit-of-measure.md): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 

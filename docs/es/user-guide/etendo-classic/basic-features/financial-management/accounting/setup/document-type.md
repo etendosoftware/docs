@@ -110,9 +110,9 @@ Campos a tener en cuenta:
             |     |     |     |     |
             | --- | --- | --- | --- |
             | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
             | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
-            | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
+            | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) | Importe total |     | Una por factura |
 
 - **Doc. anulacion**, si existe, es el documento que se utilizará para anular un tipo de documento determinado. 
 
@@ -127,16 +127,16 @@ Campos a tener en cuenta:
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) | (-) Imp. línea |     | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) | (-) Imp. línea |     | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Impuestos | Una por línea de impuesto |
-        | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) |     | (-) Importe total | Una por factura |
+        | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) |     | (-) Importe total | Una por factura |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
-        | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
+        | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) | Importe total |     | Una por factura |
 
 - La casilla **Activo** puede utilizarse para activar o desactivar este tipo de documento.
 - La casilla **Valor por defecto** indica si este registro se va a utilizar como valor por defecto.

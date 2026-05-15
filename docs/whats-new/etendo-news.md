@@ -516,7 +516,7 @@ tags:
     
     --- 
     - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
-    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md)
+    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md)
 
 </div>
 
@@ -556,7 +556,7 @@ tags:
     
     In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
 
-    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>
@@ -569,7 +569,7 @@ tags:
     
     Enjoy a brand-new interactive installation wizard that guides you through the Etendo setup—configure core system settings and module-specific variables for bundles with ease. Accelerate deployments, reduce configuration errors, and get up and running faster.
 
-    - Documentation: [Interactive Installation](../getting-started/interactive-installation.md)
+    - Documentation: [Interactive Installation](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md)
 
 </div>
 
@@ -715,7 +715,7 @@ tags:
     ---
 
     - Try in demo environment: [Livebuilds](../live-builds/overview.md)
-    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/blog/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 
 </div>
@@ -1047,7 +1047,7 @@ tags:
 
     ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
 
-    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/assets.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
@@ -1332,7 +1332,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
--   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+-   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/overview.md)
     
     ---   
 

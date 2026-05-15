@@ -24,7 +24,7 @@ Esta funcionalidad mejora la gestión de cuentas bancarias, permitiendo una mayo
 
 Esta funcionalidad está disponible en las siguientes ventanas: 
 
-- [Terceros](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management)
+- [Terceros](../../../basic-features/master-data-management/master-data/business-partner.md#bank-account)
 - [Factura (Cliente)](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
 - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
 - [Pedido de venta](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)

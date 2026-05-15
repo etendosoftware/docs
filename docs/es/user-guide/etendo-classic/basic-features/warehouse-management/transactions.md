@@ -775,14 +775,14 @@ Ajuste de la transacción **"Movimiento desde"**:
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Cuenta                                                                                          | Débito                                           | Crédito                                        |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) | Importe del ajuste de la transacción "Movimiento desde" |                                                |
-| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                                                  | Importe del ajuste de la transacción "Movimiento a" |
+| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)                            |                                                  | Importe del ajuste de la transacción "Movimiento a" |
 
 Ajuste de la transacción **"Movimiento a"**:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Cuenta                                                                                          | Débito                                         | Crédito                                        |
-| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Importe del ajuste de la transacción "Movimiento a" |                                                |
+| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)                            | Importe del ajuste de la transacción "Movimiento a" |                                                |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) |                                                | Importe del ajuste de la transacción "Movimiento a" |
 ### **Corrección de stock negativo** { #negative-stock-correction }
 
@@ -820,7 +820,7 @@ Ese ajuste puede contabilizarse en el libro mayor. La contabilización se mostra
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Cuenta                                                                                          | Debe              | Haber             |
 | [_Diferencias de almacén_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/general-ledger-configuration.md#defaults-tab) | Importe del Ajuste |                   |
-| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                   | Importe del Ajuste |
+| [_Inmovilizado del producto_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)                            |                   | Importe del Ajuste |
 ### **Corrección de diferencia de precio** { #price-difference-correction }
 
 El origen de este ajuste de costes es un cambio en el precio de compra de un pedido o en el precio de compra de una factura después de recibir los bienes.
@@ -871,16 +871,16 @@ Ese ajuste puede contabilizarse en el libro mayor. La contabilización se verá 
 |                                                                                 |                                 |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- | ------------------------------- |
 | Cuenta                                                                           | Débito                          | Crédito                         |
-| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)            | Importe del ajuste de Albarán (Proveedor) |                                 |
-| [_Invoice Price Difference_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) |                                 | Importe del ajuste de Albarán (Proveedor) |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)            | Importe del ajuste de Albarán (Proveedor) |                                 |
+| [_Invoice Price Difference_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) |                                 | Importe del ajuste de Albarán (Proveedor) |
 
 **Ajuste de Albarán (Cliente)**
 
 |                                                                           |                                  |                                  |
 | ------------------------------------------------------------------------- | -------------------------------- | -------------------------------- |
 | Cuenta                                                                     | Débito                            | Crédito                           |
-| [_Cost of Goods Sold_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) | Importe del ajuste de Albarán (Cliente) |                                  |
-| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      |                                  | Importe del ajuste de Albarán (Cliente) |
+| [_Cost of Goods Sold_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) | Importe del ajuste de Albarán (Cliente) |                                  |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)      |                                  | Importe del ajuste de Albarán (Cliente) |
 
 #### **Línea** { #line }
 

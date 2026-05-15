@@ -41,7 +41,7 @@ La configuración de los impuestos también está disponible para su selección 
 
 Una [Entidad](../general-setup/client.md) en Etendo es el nivel más alto de configuración y datos dentro de Etendo.
 
-Lo anterior significa que determinadas configuraciones como Usuario, clientes, proveedores y otros [datos maestros](../master-data-management/master-data.md) pueden gestionarse en una entidad y, por lo tanto, estar disponibles en todas las organizaciones dentro de la entidad.
+Lo anterior significa que determinadas configuraciones como Usuario, clientes, proveedores y otros [datos maestros](../master-data-management/master-data/business-partner.md) pueden gestionarse en una entidad y, por lo tanto, estar disponibles en todas las organizaciones dentro de la entidad.
 
 !!! info
     Cada entidad puede alojar al menos una o incluso más de una organización que puede utilizarse para modelar su empresa.

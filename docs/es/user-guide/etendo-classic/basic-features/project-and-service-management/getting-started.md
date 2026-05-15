@@ -29,7 +29,7 @@ Como se observa en este diagrama, tras configurar la información que se muestra
 
 Los conceptos clave de gestión de proyectos y servicios mencionados en este capítulo son:
 
-- [Terceros](../master-data-management/master-data.md#business-partner):
+- [Terceros](../master-data-management/master-data/business-partner.md#business-partner):
     - Proveedor: tercero que suministra bienes y/o servicios. En la gestión de proyectos y servicios, el proveedor es el vendedor de los bienes suministrados relacionados con el proyecto, la empresa de consultoría a la que se subcontrataron servicios de consultoría y el empleado al que se le reembolsan gastos relacionados con un proyecto.
     - Cliente: la parte a la que se venden bienes o servicios. En la gestión de proyectos y servicios, el cliente es a quien se le cargan los costes y gastos del proyecto.
     - Empleado: persona que trabaja en la empresa. En la gestión de proyectos y servicios, la información del empleado se utiliza para el cálculo del coste del proyecto, en base a los [Informe de tiempo](../project-and-service-management/transactions.md#expense-sheet).
@@ -48,11 +48,11 @@ A continuación se introduce en la aplicación para el módulo de gestión de pr
 
 - [**Dimensión proyecto**](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab): para poder seleccionar proyectos en pedidos y facturas, la dimensión de proyecto se crea como un nuevo registro con tipo Proyecto en la pestaña Dimensión de la ventana [Esquema contable](../financial-management/accounting/setup/general-ledger-configuration.md).
 
-- [**Producto**](../master-data-management/master-data.md#product):
+- [**Producto**](../master-data-management/master-data/product.md#product):
     - Tipos de producto **Servicios** y **Tipo de gasto**: para los productos del informe de gasto se configuran productos con tipo de producto Servicios (para tiempo) y tipo de producto Tipo de gasto (para gastos).
     - Tipo de producto **Artículo**: se utiliza el proceso estándar de [aprovisionamiento a pago](../procurement-management/getting-started.md#procure-to-pay-business-flow) para la compra de productos relacionados con el proyecto.
 
-- [**Terceros**](../master-data-management/master-data.md#business-partner):
+- [**Terceros**](../master-data-management/master-data/business-partner.md#business-partner):
     - Cliente: el tercero para el que se ejecuta el proyecto se configura como cliente.
     - Proveedor: el tercero que suministra productos relacionados con el proyecto se configura como proveedor.
     - Empleado:

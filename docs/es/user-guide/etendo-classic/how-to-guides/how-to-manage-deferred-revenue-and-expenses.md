@@ -106,7 +106,7 @@ Las cuentas seleccionadas en la ventana Esquema contable se establecen como valo
 
 Para diferir ingresos, necesita configurar correctamente los productos que generarán el diferimiento cuando se vendan. En Etendo, los productos se crean y mantienen en la ventana Producto.
 
-Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de ingresos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de ingresos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 
 Pestaña Cabecera:
 
@@ -152,7 +152,7 @@ Independientemente de cómo se cree la factura (manual o automáticamente), cuan
 
 Para diferir gastos, necesita configurar correctamente los productos que generarán el diferimiento cuando se compren. En Etendo, los productos se crean y mantienen en la ventana Producto.
 
-Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de gastos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de gastos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 
 Pestaña Cabecera:
 

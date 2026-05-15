@@ -50,12 +50,12 @@ Cada producto que se venda debe tener un *precio* en la lista de precios de vent
 Del mismo modo, cada producto que se venda debe definirse en una *unidad de medida* ("UOM") y, si es necesario, en una *unidad de medida alternativa* (AUM).
 
 !!! Info
-    Para más información, visite [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md). 
+    Para más información, visite [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md). 
 
 Los Terceros (clientes) deben configurarse antes de que cualquier venta pueda convertirse automáticamente en un presupuesto de ventas o un pedido de venta. 
 
 !!! Info
-    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 La configuración anterior es una parte del flujo general de configuración del negocio dentro de la configuración de Gestión de datos maestros.
 
@@ -70,7 +70,7 @@ En Gestión de Ventas, el proceso de negocio Order to Cash se ejecuta de la sigu
 
 Los clientes pueden solicitar directamente un Pedido de venta o pedir un Presupuesto. Si el Tercero solicita un presupuesto, el personal de ventas:
 
-- Crea un nuevo documento en la ventana [Presupuesto de ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md) y busca el nombre del cliente en el campo Terceros. Si el Tercero no existe, se introduce en la aplicación con la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+- Crea un nuevo documento en la ventana [Presupuesto de ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md) y busca el nombre del cliente en el campo Terceros. Si el Tercero no existe, se introduce en la aplicación con la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 - A continuación, el personal de ventas completa la ventana [Presupuesto de ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md). El documento de transacción se establece por defecto como Presupuesto. Y continúa añadiendo, para cada producto, una línea con el producto, la cantidad y, si es necesario, su atributo (talla y/o color y/o número de serie, etc.).
 - Una vez que el presupuesto está listo, se contabiliza. El Estado del documento del presupuesto cambia a En evaluación. El Presupuesto puede imprimirse y enviarse al Tercero por correo electrónico.
 - Cuando el Presupuesto es aceptado por el Tercero, puede crearse un pedido de venta basado en este presupuesto. Cuando esto se realiza, el estado del presupuesto cambia a *Cerrado - Pedido* creado y el Pedido de venta puede imprimirse y enviarse al Tercero por correo electrónico como confirmación.
@@ -117,7 +117,7 @@ En Etendo, en esta situación, el ingreso puede diferirse hasta un periodo de in
 
 Límite de crédito para terceros
 
-- Cada [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) puede configurarse con un Límite de línea de crédito. Cuando el saldo del cliente (importe pendiente de pago del cliente) es superior al límite de la línea de crédito, se muestra un mensaje informativo correspondiente cuando se selecciona un tercero durante la creación de un pedido de venta, una factura (cliente) o un albarán (cliente). De este modo, Etendo ayuda en el análisis de riesgos al realizar pedidos de clientes o ejecutar otros pasos del flujo de negocio Order to Cash.
+- Cada [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner) puede configurarse con un Límite de línea de crédito. Cuando el saldo del cliente (importe pendiente de pago del cliente) es superior al límite de la línea de crédito, se muestra un mensaje informativo correspondiente cuando se selecciona un tercero durante la creación de un pedido de venta, una factura (cliente) o un albarán (cliente). De este modo, Etendo ayuda en el análisis de riesgos al realizar pedidos de clientes o ejecutar otros pasos del flujo de negocio Order to Cash.
 
 
 Por último, el personal de finanzas se encarga de registrar y gestionar los pagos de los clientes:
@@ -140,14 +140,14 @@ o para sustitución.
 
 En este proceso están disponibles las siguientes opciones de configuración:
 
-- [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
+- [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md)
 - [Estado del producto](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
-- Cuentas para [Coste de los bienes vendidos](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) para devoluciones e [Ingresos por devoluciones](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
+- Cuentas para [Coste de los bienes vendidos](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) (COGS) para devoluciones e [Ingresos por devoluciones](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)
 
 ### Ejecución { #execution_1 }
 
 En Gestión de Ventas, el proceso de negocio de Devoluciones de cliente se ejecuta de la siguiente manera.  
-Los clientes pueden solicitar una [devolución de material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) por cualquier motivo.  
+Los clientes pueden solicitar una [devolución de material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) por cualquier motivo.  
 El personal de ventas:
 
 - Crea un nuevo documento en la ventana [Devolución de cliente](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) y busca el nombre del cliente en el campo Terceros.

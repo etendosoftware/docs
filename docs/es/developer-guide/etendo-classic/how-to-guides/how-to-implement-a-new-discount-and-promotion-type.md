@@ -15,9 +15,9 @@ status: beta
 
 ## Visión general { #overview }
 
-Un tipo de descuento y promoción es una implementación de una regla para [Modificación de precios](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#discounts-and-promotions-window). Estas reglas definen la lógica que se aplicará para calcular el descuento cuando el descuento o la promoción puedan aplicarse.
+Un tipo de descuento y promoción es una implementación de una regla para [Modificación de precios](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md). Estas reglas definen la lógica que se aplicará para calcular el descuento cuando el descuento o la promoción puedan aplicarse.
 
-Este procedimiento está dirigido a desarrolladores que deseen implementar este tipo de reglas. Los usuarios que necesiten configurar las existentes deberían leer [Modificación de precios](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#discounts-and-promotions-window) en su lugar.
+Este procedimiento está dirigido a desarrolladores que deseen implementar este tipo de reglas. Los usuarios que necesiten configurar las existentes deberían leer [Modificación de precios](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md) en su lugar.
 
 Es posible definir tipos que se encarguen de una sola línea, como **descuento del X por ciento** en un único producto, y tipos que analicen todo el pedido o la factura para determinar si el descuento es aplicable, por ejemplo **comprando los productos X e Y, Z es gratis**.
 
@@ -158,7 +158,7 @@ Cualquier función que implemente un tipo de descuento y promoción debe recibir
 - `p_priceprecision`: En función de la divisa del documento, la precisión que se utilizará al redondear precios.
 - `p_stdprecision`: En función de la divisa del documento, la precisión que se utilizará al redondear importes.
 - `p_user_id`: ID del usuario que ha invocado el proceso, utilizado al crear el descuento real con fines de auditoría.
-- `p_taxincluded`: Los valores posibles son Y o N. Indica si la [Tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list) aplicada al documento actual incluye (Y) o no (N) impuestos.
+- `p_taxincluded`: Los valores posibles son Y o N. Indica si la [Tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md) aplicada al documento actual incluye (Y) o no (N) impuestos.
 
 #### 1. Obtener la configuración de la regla { #1-get-rule-configuration }
 

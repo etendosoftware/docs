@@ -77,7 +77,7 @@ Also, a percentage of the quantity to be considered by MRP is configured with th
 
 Define the entity in charge of managing the purchase or production of specific products.
 
-An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](../master-data-management/master-data.md#product) tab in the Master Data Management section.
+An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](../master-data-management/master-data/product.md#product) tab in the Master Data Management section.
 
 ### Planner
 

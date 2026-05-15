@@ -47,7 +47,7 @@ Cree y edite un plan de fabricación.
 -   Nombre: nombre del plan de fabricación
 -   Horizonte temporal: número de días que se tienen en cuenta para el cálculo del plan de fabricación
 -   Plazo de seguridad: número de días que se añaden al desfase para el cálculo de la fecha de pedido planificada de las órdenes de fabricación y necesidades de material sugeridas. Por ejemplo, el plazo de fabricación se utiliza para indicar cuánto tiempo tardará un producto desde que se produce hasta que llega al almacén, y el plazo de seguridad se añade por el tiempo necesario para poner el producto en stock (debido a controles de calidad u otros procesos internos).
--   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
+-   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) en la sección de Gestión de datos maestros.
 -   Tercero: filtro para seleccionar solo productos pedidos por un determinado cliente
 -   Categoría de tercero: filtro para seleccionar solo terceros de una determinada categoría de tercero.
 -   Producto: filtro para seleccionar solo un determinado producto
@@ -133,7 +133,7 @@ Cree y edite un plan de compras.
 -   Nombre: nombre del plan de compras
 -   Horizonte temporal: número de días que se tienen en cuenta para el cálculo del plan de compras
 -   Plazo de seguridad: número de días que se añaden al desfase para el cálculo de la fecha de pedido planificada del pedido de compra sugerido. Por ejemplo, el plazo de compra se utiliza para indicar cuánto tiempo tardará un producto desde que se pide hasta que llega al almacén, y el plazo de seguridad se añade por el tiempo necesario para poner el producto en stock (debido a controles de calidad u otros procesos internos).
--   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
+-   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) en la sección de Gestión de datos maestros.
 -   Proveedor: filtro para seleccionar solo productos de un determinado proveedor según se configura en la pestaña **Compras** del producto.
 -   Producto: filtro para seleccionar solo un determinado producto
 -   Categoría de producto: filtro para seleccionar solo productos relacionados con una determinada categoría de producto

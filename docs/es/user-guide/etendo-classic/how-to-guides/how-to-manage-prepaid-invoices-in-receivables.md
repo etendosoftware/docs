@@ -23,7 +23,7 @@ Es importante señalar que una factura de venta creada a partir de un pedido de 
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de venta](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) y una [Factura (Cliente)](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice), así como de cómo registrar un [Cobro de cliente](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in).
 
-También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 
@@ -94,7 +94,7 @@ La contabilización tendrá este aspecto:
 | Cuenta                          | Debe   | Crédito contabilizado |
 |----------------------------------|--------|------------------------|
 | [Cuenta de pagos en tránsito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | 863.20 |                        |
-| [Prepago del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)              |        | 863.20                 |
+| [Prepago del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer)              |        | 863.20                 |
 
 Es posible comprobar una vez más el Plan de pagos del pedido de venta de este ejemplo.
 
@@ -139,7 +139,7 @@ La situación anterior también se refleja en contabilidad, ya que la contabiliz
 
 | Cuenta                | Debe   | Crédito  |
 |------------------------|---------|---------|
-| [Cuenta a cobrar del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)    | 630.80  |         |
+| [Cuenta a cobrar del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer)    | 630.80  |         |
 | Prepago del cliente    |         | 863.20  |
 
 Existe un informe denominado [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) que permite monitorizar cada cobro recibido o pago realizado.

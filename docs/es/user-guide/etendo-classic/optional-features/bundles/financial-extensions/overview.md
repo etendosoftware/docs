@@ -75,7 +75,7 @@ Este módulo mejora la gestión de cuentas bancarias, permitiendo una mayor pers
 !!! info
     Esta funcionalidad está disponible en las siguientes ventanas:
 
-    - [Tercero](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Tercero](../../../basic-features/master-data-management/master-data/business-partner.md#bank-account)
     - [Factura (Cliente)](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
     - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
     - [Pedido de venta](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)

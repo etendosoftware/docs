@@ -8,7 +8,7 @@ tags:
   - Versiones
 ---
 
-![](../assets/whats-new/etendo-news/etendo-news-0.png)
+![](../../assets/whats-new/etendo-news/etendo-news-0.png)
 
 #
 
@@ -246,7 +246,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
 
     Con **Warehouse Extensions** versión [3.6.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) (compatible desde **Etendo 25.4**), se añadió un módulo clave de control para ayudar a los equipos de almacén y contabilidad a **evitar costosos errores relacionados con fechas** en las operaciones diarias de almacén.
 
@@ -264,7 +264,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/new-ui-0.10.0.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/new-ui-0.10.0.png){ width=500 align="right"}
 
     El bundle **Platform Extensions** se ha actualizado a [3.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md), incorporando una ronda de mejoras de la plataforma orientadas a la usabilidad diaria y la estabilidad.
     
@@ -288,7 +288,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/production-void-reactivate.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/production-void-reactivate.png){ width=500 align="right"}
 
     Los equipos de producción a veces necesitan corregir lo que ya se ha procesado. Con **Production Extensions Bundle [3.4.0](./release-notes/etendo-classic/bundles/production-extensions/release-notes.md)**, dispone de dos controles de alto impacto que hacen que las correcciones de producción sean más rápidas, seguras y totalmente auditables.
 
@@ -314,7 +314,7 @@ tags:
     
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/etendo-25-4.png){ width=500 align="right"}
+    ![alt text](../../assets/whats-new/etendo-news/etendo-25-4.png){ width=500 align="right"}
 
     ¡Ya está aquí la última versión [25.4](./release-notes/etendo-classic/release-notes.md) de Etendo! **Todos los módulos soportados** se han actualizado completamente para garantizar una integración fluida y el máximo rendimiento.
 
@@ -346,7 +346,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/advanced-warehouse-management.png){ width=500 align="right"}
 
     Con la versión [3.5.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle **Warehouse Extensions**, se han introducido varias mejoras funcionales en las operaciones móviles de almacén, el control de calidad de inventario, el procesamiento de códigos de barras y la gestión de unidades logísticas.
 
@@ -400,7 +400,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/new-ui-0.9.0.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/new-ui-0.9.0.png){ width=500 align="right"}
 
     El bundle Platform Extensions, en la versión [3.13.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) compatible con **Etendo 25**, aporta compatibilidad total con **Etendo 25.4** e incorpora mejoras clave centradas en la usabilidad, la flexibilidad de informes y la eficiencia operativa, ayudando a los equipos a trabajar más rápido y con mayor control.
 
@@ -445,7 +445,7 @@ tags:
 - :material-robot: **Actualización de Copilot Extensions: mejoras funcionales y capacidades de IA ampliadas**
     
     
-    ![](../assets/whats-new/etendo-news/copilot-december.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/copilot-december.png){ width=500 align="right"}
 
     ---
 
@@ -479,7 +479,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/purchase-invoice-dimensional-report.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/purchase-invoice-dimensional-report.png){ width=500 align="right"}
 
     Con la versión [3.9.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle **Financial Extensions**, se han introducido varias mejoras en los informes financieros avanzados y en el procesamiento automatizado de remesas.
 
@@ -507,7 +507,7 @@ tags:
     
     ---
 
-    ![texto alternativo](../assets/whats-new/etendo-news/adjust-invoice-tax.png){ width=500 align="right"}
+    ![texto alternativo](../../assets/whats-new/etendo-news/adjust-invoice-tax.png){ width=500 align="right"}
 
     En la versión [3.6.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions compatible con **Etendo 25**, el nuevo módulo [Adjust Invoice Tax](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax.md) le permite corregir importes de impuestos de facturas por céntimos (± 0.01 en la divisa de la factura), tanto en facturas de venta como en facturas de compra, cuando todavía están en estado Borrador. Esto ayuda a conciliar diferencias de redondeo que a menudo provocan rechazos de facturas, desajustes fiscales o desequilibrios contables al integrarse con sistemas externos o autoridades fiscales. Beneficios clave:
 		
@@ -529,13 +529,13 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/new-ui-0.8.0.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/new-ui-0.8.0.png){ width=500 align="right"}
 
     En la versión [3.12.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle Platform Extensions compatible con **Etendo 25**, se publicó una nueva actualización: en noviembre se lanzó una beta de la nueva **UI del espacio de trabajo**, ofreciendo a los usuarios acceso anticipado a la interfaz renovada: mejor aspecto y experiencia, navegación más intuitiva y flujos de trabajo modernizados. 
     
     --- 
     - Documentación: [Mejoras de la UI](../user-guide/new-ui/ui-improvements.md)
-    - Documentación: [Nueva UI - Instalar Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md)
+    - Documentación: [Nueva UI - Instalar Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md)
 
 </div>
 
@@ -547,7 +547,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/ai-memory.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/ai-memory.png){ width=500 align="right"}
 
     En la versión [3.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions compatible con **Etendo 25**, esta versión introduce la herramienta Memory Tool, que habilita una “memoria del agente” persistente: ahora los agentes pueden almacenar, actualizar y recuperar contexto entre sesiones, gracias a un backend de base de datos vectorial (Chroma).💡 Qué significa esto para su flujo de trabajo:
 	
@@ -568,13 +568,13 @@ tags:
     
     ---
 
-    ![Tipo de documento](../assets/whats-new/etendo-news/document-type.png){ width=500 align="right"}
+    ![Tipo de documento](../../assets/whats-new/etendo-news/document-type.png){ width=500 align="right"}
 
     ¡Ya está aquí la última versión [25.3](./release-notes/etendo-classic/release-notes.md) de Etendo! Se han actualizado todos los módulos compatibles para una integración completa.
     
     En esta última versión, se ha añadido una nueva funcionalidad: la posibilidad de configurar tipos de documento para facturas, pedidos y envíos/recepciones en función del tercero seleccionado: 
 
-    - Documentación: [Tipo de documento](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentación: [Tipo de documento](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [¿Sigue creando facturas manualmente? Descubra cómo Etendo 25.3 automatiza la selección del tipo de documento por cliente](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>
@@ -587,7 +587,7 @@ tags:
     
     Disfrute de un nuevo asistente de instalación interactiva que le guía a través de la configuración de Etendo: configure con facilidad los ajustes del sistema central y las variables específicas de módulo para los bundles. Acelere los despliegues, reduzca los errores de configuración y póngase en marcha más rápido.
 
-    - Documentación: [Instalación interactiva](../getting-started/interactive-installation.md)
+    - Documentación: [Instalación interactiva](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md)
 
 </div>
 
@@ -610,7 +610,7 @@ tags:
 
     --- 
 
-    ![documentos-no-contabilizados](../assets/whats-new/etendo-news/not-posted-documents.png){ width=500 align="right"}
+    ![documentos-no-contabilizados](../../assets/whats-new/etendo-news/not-posted-documents.png){ width=500 align="right"}
 
     En la versión [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions compatible con **Etendo 25**, la ventana **Not Posted Documents**, parte del módulo **Bulk Posting**, introduce una forma más inteligente y eficiente de gestionar los registros contables. Ahora los usuarios pueden:  
 
@@ -628,7 +628,7 @@ tags:
 
 - :material-chart-bar: **Balance sumas y saldos avanzado: profundice en los asientos del libro mayor y exporte a PDF y Excel**
 
-    ![balance-sumas-y-saldos](../assets/whats-new/etendo-news/trial-balance.png)
+    ![balance-sumas-y-saldos](../../assets/whats-new/etendo-news/trial-balance.png)
 
     En la versión [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, el informe **Balance sumas y saldos** incorpora nuevas capacidades: descubra el informe de Balance sumas y saldos renovado, obtenga información inmediata y accionable con navegación en un clic a los asientos del libro mayor, compatibilidad completa con todas las dimensiones contables y exportaciones mejoradas a Excel y PDF para compartir o auditar. Análisis más rápido, trazabilidad más clara y una salida profesional para potenciar sus flujos financieros.
 
@@ -638,7 +638,7 @@ tags:
 
 - :material-view-list: **Planificación financiera más inteligente con Presupuesto (Proyecciones)**
 
-    ![presupuesto](../assets/whats-new/etendo-news/budget.png)
+    ![presupuesto](../../assets/whats-new/etendo-news/budget.png)
     
     En la versión [3.5.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) y [1.29.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions compatible con **Etendo 23** y superior, la ventana **Presupuesto**, parte del módulo **Financial Report Budget**, permite a las organizaciones planificar con antelación, controlar el gasto y tomar decisiones financieras basadas en datos, todo en un solo lugar.
 
@@ -695,7 +695,7 @@ tags:
 
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/balance-sheet-advanced.png){ width=500 align="right"}
+    ![alt text](../../assets/whats-new/etendo-news/balance-sheet-advanced.png){ width=500 align="right"}
 
     En la versión [3.3.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, el **Balance Sheet and P&L Report Advanced** incorpora nuevas capacidades:
 
@@ -718,7 +718,7 @@ tags:
 
     ---
 
-    ![new-ui](../assets/whats-new/etendo-news/new-ui.png){ width=500 align="right"}
+    ![new-ui](../../assets/whats-new/etendo-news/new-ui.png){ width=500 align="right"}
     
     En la versión [3.7.1](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle Platform Extensions, presentamos la versión Alpha de Etendo Main UI. Las primeras compilaciones incluyen 0.2.0, 0.4.0, 0.4.1 y 0.5.0.
 
@@ -732,7 +732,7 @@ tags:
     ---
 
     - Pruébelo en el entorno de demostración: [Livebuilds](../live-builds/overview.md)
-    - Documentación: [Instale Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) hoy y ayude a dar forma a la experiencia Etendo de próxima generación.
+    - Documentación: [Instale Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md) hoy y ayude a dar forma a la experiencia Etendo de próxima generación.
     - Blog: [Ya puede probar la nueva interfaz de Etendo: descubra la versión Alpha](https://etendo.software/en/blog/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 
 </div>
@@ -758,7 +758,7 @@ tags:
     
     ---
 
-    ![](../assets/whats-new/etendo-news/mcp.png){ width=500 align="right"}
+    ![](../../assets/whats-new/etendo-news/mcp.png){ width=500 align="right"}
 
     Con la versión [3.5.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, Copilot da un gran paso adelante. Estas son las novedades:
 
@@ -799,7 +799,7 @@ tags:
 
 - :material-robot: **Nuevo agente Invoice Supervisor: subir Factura (Proveedor) a Etendo nunca ha sido tan fácil**
 
-    ![alt text](../assets/whats-new/etendo-news/invoice-supervisor.png)
+    ![alt text](../../assets/whats-new/etendo-news/invoice-supervisor.png)
     
     En la versión [3.1.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se añade el agente **Invoice Supervisor** para crear automáticamente **Factura (Proveedor)** procesando múltiples PDF o imágenes empaquetadas en un ZIP. Gracias al OCR, extrae proveedor, número de factura, divisa, artículos, cantidades y totales, y luego los deja en borrador en Etendo para su revisión.
 
@@ -808,7 +808,7 @@ tags:
 
 - :material-robot: **Las cargas masivas de datos son cosa del pasado: integración con Google Drive y Sheets en Copilot**
 
-    ![alt text](../assets/whats-new/etendo-news/copilot-drive.png)
+    ![alt text](../../assets/whats-new/etendo-news/copilot-drive.png)
     En la versión [3.2.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se añade la nueva funcionalidad para conectar Copilot con **Google Drive** y **Google Sheets** y utilizar agentes para crear **productos** o **terceros** de forma masiva desde una hoja de cálculo mediante el módulo **Mantenimiento**. Ideal para importaciones de datos a gran escala.
 
     - Documentación: [Data Initialization Supervisor](../user-guide/etendo-copilot/bundles/overview.md#data-initialization-supervisor)
@@ -826,7 +826,7 @@ tags:
 
 - :octicons-package-16: **Etendo SSO: inicie sesión sin contraseñas** 
 
-    ![alt text](../assets/whats-new/etendo-news/sso-login.png)
+    ![alt text](../../assets/whats-new/etendo-news/sso-login.png)
     
     En la versión [2.14.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) y [3.2.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle Platform Extensions, se añadió **Etendo SSO Login**, que habilita la autenticación **Single Sign-On**, simplificando el inicio de sesión de los usuarios y mejorando la seguridad mediante proveedores de identidad externos, como Google, Microsoft, LinkedIn, GitHub y Facebook.
 
@@ -855,7 +855,7 @@ tags:
 
     ---
 
-    ![alt text](../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
+    ![alt text](../../assets/whats-new/etendo-news/packing.png){ width=500 align="right"}
 
     En la versión [1.12.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, desbloquee operaciones de almacén sin fricciones con el módulo [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md), una subaplicación móvil repleta de funcionalidades que se integra en profundidad con Etendo Mobile para ofrecer trazabilidad completa y operaciones de almacén automatizadas.
     
@@ -922,7 +922,7 @@ tags:
 
     Con **Etendo**, la gestión de las [comisiones de ventas](../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#commission) es más ágil y flexible. Las comisiones pueden calcularse en función de pedidos de venta o facturas, utilizando distintos criterios y filtros, como las cantidades vendidas o los importes facturados: 
 
-    ![Criterios de comisión](../assets/whats-new/etendo-news/commission-criteria.png)
+    ![Criterios de comisión](../../assets/whats-new/etendo-news/commission-criteria.png)
 
     Una vez calculadas, los pagos a los agentes de ventas pueden generarse automáticamente. 
     Puede configurar las comisiones para que se apliquen a todas las facturas o solo a las pagadas, y decidir si se incluyen las facturas sin un agente de ventas asignado.
@@ -941,7 +941,7 @@ tags:
 
     ---
 
-    ![texto alternativo](../assets/whats-new/etendo-news/multi-models-support.png)
+    ![texto alternativo](../../assets/whats-new/etendo-news/multi-models-support.png)
     
     - En la versión [1.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, Etendo Copilot amplía sus capacidades al admitir múltiples proveedores, entre ellos:
 
@@ -964,7 +964,7 @@ tags:
 
     ---
 
-    ![](../assets/whats-new/etendo-news/share-files-mobile.png)
+    ![](../../assets/whats-new/etendo-news/share-files-mobile.png)
 
     Se ha añadido una nueva funcionalidad a Etendo Mobile para agilizar la integración con aplicaciones externas. Con la nueva opción [Compartir archivos](../user-guide/etendo-mobile/), ahora puede recibir archivos desde aplicaciones externas y utilizarlos directamente en subaplicaciones como:
 
@@ -984,7 +984,7 @@ tags:
 - :material-chart-bar: **Ahora en los informes financieros avanzados puede ver dimensiones contables.**
     ---
 
-    ![texto alternativo](../assets/whats-new/etendo-news/financial-reports-advanced.png)
+    ![texto alternativo](../../assets/whats-new/etendo-news/financial-reports-advanced.png)
 
     En la versión [1.25.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, se incluyen mejoras en los informes financieros avanzados. En esta versión, el [General Ledger Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced) y el [Journal Entries Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report-advanced) le permitirán ver y filtrar por las dimensiones contables deseadas.
     Además, puede navegar a las entidades relacionadas en cada informe.
@@ -1030,7 +1030,7 @@ tags:
 
     ---
 
-    ![copilot-clone.png](../assets/whats-new/etendo-news/copilot-clone.png)
+    ![copilot-clone.png](../../assets/whats-new/etendo-news/copilot-clone.png)
     
     En la versión [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se añade la funcionalidad para [clonar agentes](../user-guide/etendo-copilot/setup-and-usage.md#buttons) y bases de conocimiento, lo que le permite modificar y personalizar los asistentes de los agentes según sus necesidades.
 
@@ -1044,7 +1044,7 @@ tags:
 
     En la versión [1.12.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se añaden nuevas capacidades:
 
-    ![knowledge-base-files-news.png](../assets/whats-new/etendo-news/knowledge-base-files-news.png)
+    ![knowledge-base-files-news.png](../../assets/whats-new/etendo-news/knowledge-base-files-news.png)
 
     Para más información, visite la documentación de la ventana [Archivo de base de conocimiento](../user-guide/etendo-copilot/setup-and-usage.md#knowledge-base-file-window).
 
@@ -1058,15 +1058,15 @@ tags:
 
     ---
 
-    ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
+    ![dimension.png](../../assets/whats-new/etendo-news/financial-dimension.png)
 
-    En la versión [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, el módulo [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) mejora la gestión de activos al permitir a los usuarios asignar dimensiones contables a los activos, como Terceros, Actividad y Centro de costos, entre otras. Estas dimensiones se transfieren a las líneas de amortización. Además, las amortizaciones ahora se agrupan por período (mensual o anual), mejorando la precisión de los informes financieros y garantizando un seguimiento coherente de la depreciación de activos.
+    En la versión [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, el módulo [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/assets.md#accounting-dimensions-assets) mejora la gestión de activos al permitir a los usuarios asignar dimensiones contables a los activos, como Terceros, Actividad y Centro de costos, entre otras. Estas dimensiones se transfieren a las líneas de amortización. Además, las amortizaciones ahora se agrupan por período (mensual o anual), mejorando la precisión de los informes financieros y garantizando un seguimiento coherente de la depreciación de activos.
 
 - :octicons-package-16: **Obtenga un mejor control con la ventana Documentos no contabilizados**
 
     ---
 
-    ![](../assets/whats-new/etendo-news/financial-not-posted.png)
+    ![](../../assets/whats-new/etendo-news/financial-not-posted.png)
 
     En la versión [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, con la última versión de [Contabilización masiva](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md#not-posted-documents-window), la ventana Documentos no contabilizados proporciona una vista completa de todas las transacciones financieras completadas que aún no se han contabilizado. Este informe garantiza que no se pasen por alto transacciones pendientes antes de cerrar un período contable o ejecutar informes financieros.
 
@@ -1083,7 +1083,7 @@ tags:
 
     ---
 
-    ![](../assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
+    ![](../../assets/whats-new/etendo-news/attach-multiple-files-copilot.png)
 
     En la versión [1.10.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se han añadido nuevas funcionalidades:
 
@@ -1138,7 +1138,7 @@ tags:
 
 - :octicons-package-16: **Gestionar documentos nunca había sido tan rápido y fácil**
 
-    ![](../assets/whats-new/etendo-news/bulk-completion.png)
+    ![](../../assets/whats-new/etendo-news/bulk-completion.png)
     
     En la versión [1.7.0](./release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md) del bundle Essentials Extensions, puede gestionar sin esfuerzo múltiples registros con la funcionalidad [Bulk Completion](../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/bulk-completion.md). Seleccione los registros que desea completar, reactivar o cerrar, y procéselos todos a la vez con un solo clic.
 </div>
@@ -1150,7 +1150,7 @@ tags:
 
 - :octicons-package-16: **Reserva automática de stock más precisa**
 
-    ![](../assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
+    ![](../../assets/whats-new/etendo-news/automatic-warehouse-reservation.png)
 
     En la versión [1.10.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, con el módulo [Automatic Warehouse Reservation](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation), las reservas de stock pueden limitarse únicamente al almacén especificado en la cabecera del pedido. De este modo, puede asegurarse de que sus pedidos utilicen siempre el almacén correcto.
 </div>
@@ -1163,7 +1163,7 @@ tags:
 
     ---
 
-    ![](../assets/whats-new/etendo-news/automated-remittances.png)
+    ![](../../assets/whats-new/etendo-news/automated-remittances.png)
 
     En la versión [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, con el módulo [Automated remittances](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md), al procesar remesas se crean instrucciones bancarias y se liquidan automáticamente con la fecha actual. 
 
@@ -1173,7 +1173,7 @@ tags:
     
     --- 
 
-    ![](../assets/whats-new/etendo-news/advanced-bank-account.png )
+    ![](../../assets/whats-new/etendo-news/advanced-bank-account.png )
 
     En la versión [1.21.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) del bundle Financial Extensions, con el módulo [Advanced Bank Account Management](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management.md), se ha añadido la posibilidad de establecer una cuenta bancaria por defecto en la configuración de terceros, así como de definir cuentas bancarias para cada ubicación. 
     También se ha añadido la posibilidad de seleccionar la cuenta bancaria al añadir pagos e incluso editar planes de pago con el botón Modify Payment.
@@ -1233,7 +1233,7 @@ Nueva versión del bundle Copilot Extensions [1.7.0](./release-notes/etendo-copi
 
 ### Dependency Manager
 :octicons-package-16: **Gestionar los módulos y dependencias de Etendo nunca ha sido tan fácil**
-![](../assets/whats-new/etendo-news/devassistant.png)
+![](../../assets/whats-new/etendo-news/devassistant.png)
 
 El módulo [Dependency Manager](../developer-guide/etendo-classic/getting-started/installation/dependency-manager.md) permite a los usuarios acceder a todos los paquetes publicados en los repositorios de Etendo Software directamente desde la interfaz de Etendo. Con la ventana de Gestión de dependencias, puede explorar los bundles disponibles, comprobar los detalles de versión y las dependencias, e instalar nuevos paquetes fácilmente. El módulo también permite actualizar, eliminar y modificar los módulos instalados, ofreciéndole un control total sobre su entorno.
 ## Septiembre 2024 { #september-2024 }
@@ -1253,7 +1253,7 @@ Nueva versión del bundle Copilot Extensions [1.5.0](./release-notes/etendo-copi
 <div class="grid cards" markdown>
 - **Nueva actualización de funcionalidad: compatibilidad con archivos Zip para agentes LangChain**
     
-    ![](../assets/whats-new/etendo-news/LangChain.png)
+    ![](../../assets/whats-new/etendo-news/LangChain.png)
 
     Nos complace anunciar una nueva funcionalidad en los agentes LangChain: la posibilidad de subir archivos `.zip` directamente a la base de conocimiento. Estos archivos `.zip` pueden contener una variedad de formatos, incluidos `.txt`, `.pdf`, `.md`, `.py`, `.java` y `.js`.
     Esta mejora permite a los desarrolladores entrenar agentes con código fuente de ejemplo.
@@ -1266,7 +1266,7 @@ Nueva versión del bundle Copilot Extensions [1.5.0](./release-notes/etendo-copi
 
 [:material-robot: **¡Nueva versión de Etendo Copilot disponible!**](../user-guide/etendo-copilot/getting-started.md): Aumente su productividad
 
-![](../assets/whats-new/etendo-news/copilot.png)
+![](../../assets/whats-new/etendo-news/copilot.png)
 
 La versión más reciente [1.4.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions incorpora las siguientes mejoras clave en Etendo Copilot:
 
@@ -1294,7 +1294,7 @@ Estas actualizaciones hacen que Etendo Copilot sea más potente, seguro y fácil
 
 [:simple-docker: **Gestión de Docker**](../developer-guide/etendo-classic/bundles/platform/docker-management.md)
 
-![](../assets/whats-new/etendo-news/docker.gif){align=right width=400}
+![](../../assets/whats-new/etendo-news/docker.gif){align=right width=400}
 
 - En la versión [1.18.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) del bundle Platform Extensions, se ha introducido el nuevo módulo **Gestión de Docker**.
 - Este módulo simplifica el despliegue de servicios al permitirle configurar toda la infraestructura que su servicio requiere mediante módulos de Etendo.
@@ -1310,7 +1310,7 @@ Estas actualizaciones hacen que Etendo Copilot sea más potente, seguro y fácil
 ### Warehouse Extensions
 [:octicons-package-16: **Operaciones de producto**](../user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md)
 
-![](../assets/whats-new/etendo-news/product-operation.png)
+![](../../assets/whats-new/etendo-news/product-operation.png)
 
 En la versión [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) del bundle Warehouse Extensions, se ha incluido la funcionalidad **Operaciones de producto**. Este módulo le permite centralizar y controlar todos los movimientos de producto con Operaciones de producto. Visualice cada transacción, desde envíos y recepciones hasta costes y ubicación, en un único lugar. Simplifique el análisis y obtenga una visión clara del rendimiento de sus operaciones.
 ## Julio 2024 { #july-2024 }
@@ -1331,7 +1331,7 @@ En la versión [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     Desde la versión [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) del bundle Copilot Extensions, se ha incluido la posibilidad de añadir un parámetro a la herramienta OCR Tool para especificar y detallar el análisis sobre imágenes, y se ha añadido la herramienta lectora Codbar a la herramienta capaz de leer códigos de barras en imágenes.
 
--   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+-   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/overview.md)
     
     ---   
 

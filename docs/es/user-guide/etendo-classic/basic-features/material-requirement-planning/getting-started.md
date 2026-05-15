@@ -36,23 +36,23 @@ Los **Método de planificación** se introducen para definir qué componentes de
     Para los productos que se planifican en el *Planificación de la producción*, se requieren las siguientes configuraciones:
 
 - el [Plan de Producción](../production-management/setup.md#process-plan) está configurado para el producto.
-- la *casilla de verificación de producción* y el nombre del Plan de Producción se seleccionan en la pantalla [Producto](../master-data-management/master-data.md#product).
-La solapa [Producción](../master-data-management/master-data.md#manufacturing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el plan de Planificación de la producción.
+- la *casilla de verificación de producción* y el nombre del Plan de Producción se seleccionan en la pantalla [Producto](../master-data-management/master-data/product.md#product).
+La solapa [Producción](../master-data-management/master-data/product.md#manufacturing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el plan de Planificación de la producción.
 
 Para los productos que se planifican en el *Planificación de compras*, se requieren las siguientes configuraciones:
 
-- la casilla de verificación de compra se selecciona en la pantalla [Producto](../master-data-management/master-data.md#product).
-- el [Precio](../master-data-management/master-data.md#price) del producto se define para la lista de precios del proveedor que se introduce en la solapa Compras.
-- la solapa [Compras](../master-data-management/master-data.md#purchasing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el Planificación de compras.
+- la casilla de verificación de compra se selecciona en la pantalla [Producto](../master-data-management/master-data/product.md#product).
+- el [Precio](../master-data-management/master-data/product.md#price) del producto se define para la lista de precios del proveedor que se introduce en la solapa Compras.
+- la solapa [Compras](../master-data-management/master-data/product.md#purchasing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el Planificación de compras.
 - el proveedor que se refleja como el Tercero en la solapa Compras mencionada anteriormente se completa en la pantalla de Tercero:
 
-    - solapa [Proveedor/Acreedor](../master-data-management/master-data.md#vendorcreditor) con, al menos, los siguientes campos completados:
+    - solapa [Proveedor/Acreedor](../master-data-management/master-data/business-partner.md#vendorcreditor) con, al menos, los siguientes campos completados:
         - Lista de precios de compra
         - Método de pago de pedido de compra
         - Condiciones de pago de pedido de compra
-    - solapa [Direcciones](../master-data-management/master-data.md#locationaddress)
+    - solapa [Direcciones](../master-data-management/master-data/business-partner.md#locationaddress)
 
-- La solapa [Producción](../master-data-management/master-data.md#manufacturing) en la pantalla de Producto se completa con la información de *Método de planificación* y *Planificador*.
+- La solapa [Producción](../master-data-management/master-data/product.md#manufacturing) en la pantalla de Producto se completa con la información de *Método de planificación* y *Planificador*.
 
 ### **Ejecución** { #execution }
 

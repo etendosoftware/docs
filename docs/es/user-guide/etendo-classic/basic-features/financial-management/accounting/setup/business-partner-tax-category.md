@@ -33,10 +33,10 @@ La ventana muestra todas las categorías de impuestos de terceros existentes y p
 
 ## Asignación de la categoría a un tercero { #assigning-the-category-to-a-business-partner }
 
-Una vez creadas las categorías, cada tercero que requiera un tratamiento fiscal específico debe vincularse a la categoría adecuada. Esto se hace en la ventana [**Tercero**](../../../master-data-management/master-data.md):
+Una vez creadas las categorías, cada tercero que requiera un tratamiento fiscal específico debe vincularse a la categoría adecuada. Esto se hace en la ventana [**Tercero**](../../../master-data-management/master-data/business-partner.md#business-partner):
 
-- Para clientes: abra la solapa [**Cliente**](../../../master-data-management/master-data.md#customer) del registro del tercero y establezca el campo **Categoría Imp. Tercero**.
-- Para proveedores y acreedores: abra la solapa [**Proveedor/Acreedor**](../../../master-data-management/master-data.md#vendorcreditor) y establezca el mismo campo.
+- Para clientes: abra la solapa [**Cliente**](../../../master-data-management/master-data/business-partner.md#customer) del registro del tercero y establezca el campo **Categoría Imp. Tercero**.
+- Para proveedores y acreedores: abra la solapa [**Proveedor/Acreedor**](../../../master-data-management/master-data/business-partner.md#vendorcreditor) y establezca el mismo campo.
 
 Un mismo tercero puede actuar tanto como cliente como proveedor. En ese caso, ambas solapas pueden tener asignada una categoría de impuestos, y cada una puede ser diferente si el tratamiento fiscal difiere entre compras y ventas.
 
