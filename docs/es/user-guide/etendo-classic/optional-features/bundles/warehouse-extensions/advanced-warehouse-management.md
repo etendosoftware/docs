@@ -212,7 +212,6 @@ Para empezar a utilizar este módulo correctamente, deben completarse los siguie
 
         Este método permite al sistema leer el código y compararlo exactamente con los códigos de los productos almacenados en el sistema. La comparación es directa y estricta, sin tener en cuenta ninguna estructura adicional en el código.    
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-direct-1.png)
 
 
 6. Infraestructura de **Mantenimiento**:

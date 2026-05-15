@@ -34,7 +34,7 @@ Campos a tener en cuenta:
 - **Días consumo**: información que se utilizará al crear pedidos de venta o pedidos de compra para ese tercero en particular, mediante un proceso denominado *Copiar líneas*.  
     
     !!! info
-        Para más información sobre este proceso, visite las secciones [Pedido de venta](../sales-management/transactions.md#sales-order) y [Pedido de compra](../procurement-management/transactions.md#purchase-order).
+        Para más información sobre este proceso, visite las secciones [Pedido de venta](../../sales-management/transactions.md#sales-order) y [Pedido de compra](../../procurement-management/transactions.md#purchase-order).
 
 - **Crédito límite**: Etendo informará cuando se supere el límite de crédito introducido en este campo para el tercero al contabilizar facturas de venta.
 - **Consentimiento para el Procesamiento de Datos del Cliente**: casilla de verificación en el modelo de datos de terceros, para reflejar si un contacto determinado consiente o no que sus datos puedan ser utilizados por la organización.
@@ -62,7 +62,7 @@ Campos a tener en cuenta:
 
 - **Importe en moneda extranjera**: solo se muestra si se selecciona la casilla **Establecer importe**. Aquí, Etendo permite al usuario introducir manualmente el importe equivalente en la nueva moneda que sustituirá o actualizará el saldo del tercero.
 
-- **Usar tipo de cambio por defecto**: casilla de verificación. Utiliza el tipo de cambio definido en la ventana [Rangos de conversión](../general-setup/application/conversion-rates.md) para recalcular el saldo del tercero de USD a EUR, en nuestro caso. Si esta casilla no está seleccionada, se muestra un nuevo campo *Índice* para permitir introducir un tipo de cambio específico.
+- **Usar tipo de cambio por defecto**: casilla de verificación. Utiliza el tipo de cambio definido en la ventana [Rangos de conversión](../../general-setup/application/conversion-rates.md) para recalcular el saldo del tercero de USD a EUR, en nuestro caso. Si esta casilla no está seleccionada, se muestra un nuevo campo *Índice* para permitir introducir un tipo de cambio específico.
 
 Adicionalmente, un tercero puede tener **crédito disponible en una moneda determinada**. Si ese es el caso, Etendo informa al usuario porque el crédito disponible del tercero deberá convertirse a la nueva moneda; por lo tanto, podrá consumirse en la nueva moneda.
 
@@ -132,9 +132,9 @@ Las solapas y subsolapas mencionadas anteriormente se describen en los siguiente
     
     Podría haber otros tipos de terceros que requieran ser dados de alta como terceros en esta ventana; terceros que no tienen nada que ver ni con un cliente, ni con un proveedor/acreedor ni con un operario.
 
-    Ese es el caso de los bancos. Los bancos deben crearse en la cabecera de la ventana de terceros introduciendo únicamente la información básica de cabecera y sin datos en ninguna de las solapas de la ventana de terceros, salvo Direcciones y Personas de contacto. La razón de esto es que los terceros de tipo *Banco* son necesarios en el flujo financiero de [Remesas](../financial-management/receivables-and-payables/transactions.md#remittance).
+    Ese es el caso de los bancos. Los bancos deben crearse en la cabecera de la ventana de terceros introduciendo únicamente la información básica de cabecera y sin datos en ninguna de las solapas de la ventana de terceros, salvo Direcciones y Personas de contacto. La razón de esto es que los terceros de tipo *Banco* son necesarios en el flujo financiero de [Remesas](../../financial-management/receivables-and-payables/transactions/remittance.md).
 
-    Para más información sobre este flujo, visite [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account).
+    Para más información sobre este flujo, visite [Cuenta financiera](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 #### Cliente { #customer }
 
 !!! note
@@ -152,13 +152,13 @@ Campos a tener en cuenta:
         Para más información, visite [Tarifa](../pricing/price-list.md).
 
     Las tarifas se definen en una moneda determinada, que puede ser la misma que la moneda del cliente o no.  
-    En caso de que no lo sea, el saldo del cliente se calculará teniendo en cuenta el tipo de conversión definido en la ventana [Rangos de conversión](../general-setup/application/conversion-rates.md) o el introducido en el proceso **Establecer nueva moneda**, que se puede ejecutar para cambiar la moneda de un tercero.
+    En caso de que no lo sea, el saldo del cliente se calculará teniendo en cuenta el tipo de conversión definido en la ventana [Rangos de conversión](../../general-setup/application/conversion-rates.md) o el introducido en el proceso **Establecer nueva moneda**, que se puede ejecutar para cambiar la moneda de un tercero.
 
 - **Método de pago**: el seleccionado será el que se aplique al crear y gestionar los cobros recibidos de ese cliente.  
     Si una **Cuenta financiera** está vinculada al cliente, el método de pago a seleccionar aquí será uno de los métodos de pago vinculados a la cuenta financiera.
 
     !!! info  
-        Para más información, visite [Método de pago](../financial-management/receivables-and-payables/transactions.md#payment-method).
+        Para más información, visite [Método de pago](../../financial-management/receivables-and-payables/setup/payment-method.md).
 
 - **Condiciones de pago**: la seleccionada será la que se utilice al gestionar el plan de pagos de las facturas (Cliente).
 
@@ -168,12 +168,12 @@ Campos a tener en cuenta:
 - **Cuenta financiera**: la seleccionada será la que se utilice al cobrar y conciliar los pagos realizados por ese cliente. 
 
     !!! info
-        Para más información, visite [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account).
+        Para más información, visite [Cuenta financiera](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 
 - **Facturación**: existen algunos términos de facturación que se pueden utilizar al generar facturas (Cliente).
 
     !!! info
-        Para más información, visite [Facturar](../sales-management/transactions.md#generate-invoices).
+        Para más información, visite [Facturar](../../sales-management/transactions.md#generate-invoices).
 
     - **Después de entregar el pedido**: la factura podría generarse automáticamente una vez que se hayan enviado todos los bienes del pedido de venta.
     - **Después de la entrega**: los bienes del pedido de venta se facturarán automáticamente a medida que se envíen, incluso si hay envíos parciales.
@@ -204,7 +204,7 @@ Sección **Más información**
     Puede utilizar una categoría de impuestos de terceros para conseguir que los documentos de venta creados para un cliente solo puedan tener un conjunto específico de tipos impositivos vinculados a esa categoría de impuestos.  
     
     !!! info
-        Para más información, visite [Categoría de Impuestos de Terceros](../financial-management/accounting/setup/business-partner-tax-category.md).
+        Para más información, visite [Categoría de Impuestos de Terceros](../../financial-management/accounting/setup/business-partner-tax-category.md).
 
 - **Día de vencimiento**: indica el día del mes, el primer vencimiento, en el que vencen las facturas.
 
@@ -227,14 +227,14 @@ Como se muestra arriba, puede configurar, para cada cliente y libro mayor, las c
 - las transacciones de **Cuentas a cobrar de clientes**, como la contabilización de facturas (Cliente).
 
     !!! info  
-        Para más información, visite [Factura (Cliente)](../sales-management/transactions.md#sales-invoice).
+        Para más información, visite [Factura (Cliente)](../../sales-management/transactions.md#sales-invoice).
 
 - las transacciones de **Prepago del cliente**, como aquellos casos en los que la empresa que envía los bienes requiere que el cliente adelante una parte o la totalidad del importe de la deuda.  
 
 Inicialmente, estas cuentas se heredan de las cuentas predeterminadas del libro mayor de la organización para el que se está creando el tercero. El usuario siempre puede cambiarlas.
 
 !!! important
-    Es posible configurar la creación de nuevas cuentas correlativas para los terceros tal y como se describe en la solapa Libro mayor de la ventana [Organización](../general-setup/enterprise-model/organization.md).
+    Es posible configurar la creación de nuevas cuentas correlativas para los terceros tal y como se describe en la solapa Libro mayor de la ventana [Organización](../../general-setup/enterprise-model/organization.md).
 #### Proveedor/Acreedor { #vendorcreditor }
 
 !!! note
@@ -254,12 +254,12 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
     Si una cuenta financiera está vinculada al proveedor, el método de pago a seleccionar será un método de pago vinculado a esa cuenta financiera.  
   
     !!! info
-        Para más información, visite [Método de pago](../financial-management/receivables-and-payables/transactions.md#payment-method).
+        Para más información, visite [Método de pago](../../financial-management/receivables-and-payables/setup/payment-method.md).
 
 - **Condiciones de pago**: la seleccionada será la que se utilice al gestionar los planes de pago de facturas de proveedor. 
 
     !!! info
-        Para más información, visite [Condiciones de pago](../master-data-manageme../business-partner-setup/payment-term.md).
+        Para más información, visite [Condiciones de pago](../business-partner-setup/payment-term.md).
 
 - **Día de vencimiento**: tal y como se indica en las Condiciones de pago, el Día de vencimiento de la OC se utiliza en combinación con la Fecha de vencimiento fija en las condiciones de pago, que debe establecerse en Y, y con el Día laborable siguiente establecido en N. La fecha de vencimiento del pago se basa en las condiciones de pago definidas en combinación con el Día de vencimiento de la OC.
     
@@ -276,12 +276,12 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
 - **Cuenta financiera**: la seleccionada será la que se utilice al retirar y conciliar los pagos realizados a un proveedor.
 
     !!! info
-        Para más información, visite [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account).
+        Para más información, visite [Cuenta financiera](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 
 - **Categoría de Impuesto**: puede utilizar una categoría de impuestos de terceros para conseguir que los documentos de compra registrados de un proveedor solo puedan tener un conjunto específico de tipos impositivos vinculados a esa categoría de impuestos.  
     
     !!! info
-        Para más información, visite [Categoría de Impuesto](../financial-management/accounting/setup/tax-category.md).
+        Para más información, visite [Categoría de Impuesto](../../financial-management/accounting/setup/tax-category.md).
 
 - **Bloqueo de proveedor**: esta casilla permite bloquear un proveedor, por lo que algunos documentos específicos no podrán completarse para él. Si está marcada, se muestra la sección Bloqueo de proveedor con la siguiente configuración, que puede modificarse según sea necesario:
 
@@ -305,17 +305,17 @@ El usuario puede configurar, para cada proveedor o acreedor y para el esquema co
 - las transacciones de **Pasivo del proveedor**, como la contabilización de facturas de compra.  
     
     !!! info
-        Para más información, visite [Factura (Proveedor)](../procurement-management/transactions.md#purchase-invoice).
+        Para más información, visite [Factura (Proveedor)](../../procurement-management/transactions.md#purchase-invoice).
 
 - las transacciones de **Pagos por adelantado del proveedor**, como aquellos casos en los que el proveedor de los bienes requiere que la empresa pague por adelantado una parte o la totalidad del importe de la deuda.  
     
     !!! info
-        Para más información, visite [Pagos por adelantado del proveedor](../financial-management/receivables-and-payables/transactions.md#payment-out).
+        Para más información, visite [Pagos por adelantado del proveedor](../../financial-management/receivables-and-payables/transactions/payment-out.md).
 
 Inicialmente, estas cuentas se heredan de las cuentas por defecto del Esquema contable asignado a la Organización para la que se está creando el tercero. El usuario siempre puede cambiarlas.
 
 !!! important
-    Es posible configurar la creación de nuevas cuentas correlativas para los terceros que se están creando, tal y como se describe en la solapa Org Schema de la ventana [Organización](../general-setup/enterprise-model/organization.md).
+    Es posible configurar la creación de nuevas cuentas correlativas para los terceros que se están creando, tal y como se describe en la solapa Org Schema de la ventana [Organización](../../general-setup/enterprise-model/organization.md).
 #### Operarios { #employee }
 
 !!! note
@@ -332,17 +332,17 @@ Un operario puede:
 - definirse como el **responsable de uno o varios proyectos de la empresa**.  
      
     !!! info
-        Para más información, visite [Projects and Services Management](../project-and-service-management/getting-started.md).
+        Para más información, visite [Projects and Services Management](../../project-and-service-management/getting-started.md).
 
 - asignarse a un **proceso de producción** como un recurso.  
      
     !!! info
-        Para más información, visite [Gestión de Producción](../production-management/getting-started.md).
+        Para más información, visite [Gestión de Producción](../../production-management/getting-started.md).
 
 - y puede **emitir informes de gasto** como parte de su participación en un proyecto de la empresa.  
      
     !!! info
-        Para más información, visite [Informe de gasto](../project-and-service-management/transactions.md#expense-sheet).
+        Para más información, visite [Informe de gasto](../../project-and-service-management/transactions.md#expense-sheet).
 
 **Contabilidad empleado**
 
@@ -394,7 +394,7 @@ Campos a tener en cuenta:
 **Gestión avanzada de cuentas bancarias**
 
 !!! info
-    Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Esta funcionalidad introduce la posibilidad de marcar una cuenta bancaria como **Valor por defecto** dentro de la solapa **Cuenta bancaria** de la ventana **Terceros**. Aquí es posible marcar la casilla **Cuenta por defecto** para establecer la cuenta que se utilizará en los documentos para diferentes transacciones.
 
@@ -469,7 +469,7 @@ Campos a tener en cuenta:
 **Gestión avanzada de cuentas bancarias**
 
 !!! info
-    Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 El campo Gestión avanzada de cuentas bancarias se introduce en la solapa Direcciones de la ventana Terceros para **asociar cuentas bancarias específicas** a las diferentes ubicaciones.
 
@@ -529,7 +529,7 @@ Es posible introducir tantos **Descuento** como se hayan acordado con sus tercer
 #### Configuración de Rappel { #rappel-configuration }
 
 !!! info
-    Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Rappels del Sales Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Sales Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Rappels del Sales Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Sales Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Los rappels son descuentos basados en el volumen de consumo de un tercero en un periodo de tiempo determinado. Esta funcionalidad permite al usuario configurar y conceder rappels a terceros.
 
@@ -555,4 +555,4 @@ Cuando se crea el rappel, se crea automáticamente una factura de venta, como se
 Cada vez que se concede un rappel a un tercero, se genera automáticamente una nueva factura de venta para mostrar el importe del descuento. Esta factura tiene una secuencia específica para distinguirla del resto, según las opciones introducidas al configurar la secuencia, y un importe negativo, ya que se trata de un descuento. Esta factura está en estado Borrador.
 
 !!! info
-    Para más información, visite [Factura (Cliente)](../sales-management/transactions.md#advanced-rappels).
+    Para más información, visite [Factura (Cliente)](../../sales-management/transactions.md#advanced-rappels).

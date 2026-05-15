@@ -55,7 +55,7 @@ Los datos clave adicionales a completar son:
 - La casilla **Almacenado** se selecciona si el producto forma parte del inventario; por lo tanto, se registran en Etendo las transacciones de movimientos de inventario correspondientes.  
   Este indicador ya no puede modificarse para un producto si dicho producto forma parte de cualquier documento relacionado con ventas, compras, inventario o producción, independientemente del estado del documento.
 - La casilla **Producción** se selecciona si el producto forma parte de un proceso de producción. Una vez seleccionada, aparece un campo adicional para seleccionar un *Plan de Producción*.  
-  Para saber más, visite [Plan de Producción](../production-management/setup.md#process-plan)
+  Para saber más, visite [Plan de Producción](../../production-management/setup.md#process-plan)
 - **Conjunto atributos**, un producto puede tener un grupo de características o un conjunto de atributos, como ***Color y talla***, a tener en cuenta al pedir o almacenar el producto.
   - Si aquí se selecciona un **Conjunto atributos**, Etendo muestra un nuevo campo llamado *Valor atributos*.  
     Para saber más, visite Conjunto atributos
@@ -155,9 +155,8 @@ Una vez creada una variante, sus características y valores pueden visualizarse 
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
-Pulse el botón ![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-9.png) y se abre una ventana emergente para seleccionar valores:
+Pulse el botón de actualización y se abre una ventana emergente para seleccionar valores:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-10.png)
 
 - Vista de formulario: las variantes de producto tienen una nueva sección llamada _Descripción de característica_. Esta sección contiene tantos campos como características diferentes tenga el producto.
 
@@ -188,7 +187,6 @@ Para facilitar el proceso de configuración, se han añadido dos componentes:
 
 Un producto puede formar parte de muchas Versiones de tarifa que son válidas para un periodo de tiempo determinado.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-14.png)
 
 Hay dos formas en las que el usuario puede hacer que un producto forme parte de una Tarifa:
 
@@ -454,7 +452,6 @@ En cuanto una transacción de producto tiene su coste calculado, se crea un nuev
 
 En cuanto una transacción de producto tiene su coste ajustado, se crea un nuevo registro en esta solapa haciendo referencia a una **Línea de Ajuste de Coste**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-22.png)
 
 Algunos campos relevantes a tener en cuenta son:
 
@@ -507,8 +504,8 @@ La solapa Producción se utiliza para productos que se planifican mediante el pl
 La información de esta solapa es utilizada principalmente por el MRP para procesar el Plan de Producción y el Plan de Compras. El campo Hueco se completa para los productos en producción para indicar el hueco por defecto en el que se almacenará el producto cuando salga de producción.
 
 - **Hueco**: ubicación por defecto del producto en el almacén.
-- **Método de planificación**: definición de los elementos de suministro y demanda que se tienen en cuenta y con qué porcentaje para la creación del Plan de Producción y del Plan de Compras. Para más detalles, consulte la sección [Método de planificación](../material-requirement-planning/setup.md#planning-method).
-- **Planificador**: la persona responsable de la ejecución del plan de MRP del producto. Para más detalles, consulte la sección [Planificador](../material-requirement-planning/setup.md#planner).
+- **Método de planificación**: definición de los elementos de suministro y demanda que se tienen en cuenta y con qué porcentaje para la creación del Plan de Producción y del Plan de Compras. Para más detalles, consulte la sección [Método de planificación](../../material-requirement-planning/setup.md#planning-method).
+- **Planificador**: la persona responsable de la ejecución del plan de MRP del producto. Para más detalles, consulte la sección [Planificador](../../material-requirement-planning/setup.md#planner).
 - **Capacidad**: capacidad de producción por día para el producto.
 - **Cantidad desde:** cantidad mínima que debe introducirse en un requerimiento de trabajo.
 - **Tipo Cantidad**:
@@ -596,7 +593,6 @@ En esta solapa, va a existir un registro para:
 - cada Organización que sea una Entidad Legal y que tenga definida una Regla de cálculo de costes
 - o para cada Organización y Almacén, siempre que la Dimensión de Almacén esté definida como una dimensión de coste de la Regla de cálculo de costes actual definida para la *Entidad Legal*.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-24.png)
 
 #### Categorías de Productos { #product-categories }
 
@@ -637,7 +633,6 @@ En la solapa está disponible la siguiente información sobre los productos rela
 
 Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón 'Relacionar productos' (visible solo cuando el campo 'Productos incluidos' tiene un valor). Este botón abrirá un Pick & Edit mostrando todos los productos no relacionados con el servicio.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-28.png)
 
 #### Versión de Regla de Precio de Producto { #product-price-rule-version }
 ### Solapa de UOM alternativa { #alternate-uom-tab }
@@ -671,10 +666,10 @@ Define la modificación de impuestos para productos vinculados a servicios. Los 
 Permite visualizar el stock por unidades logísticas (inventario referenciado) de una forma más clara y organizada.
 
 !!! info
-    Para más información, visite [Unidad logística de stock](../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
+    Para más información, visite [Unidad logística de stock](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
 
 !!! info
-    Para poder incluir esta funcionalidad, debe estar instalado el módulo **Unidad logística de stock**, parte de Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe estar instalado el módulo **Unidad logística de stock**, parte de Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 ---
 

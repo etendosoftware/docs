@@ -24,7 +24,7 @@ Esta sección describe el módulo **Etendo Packing** incluido en el bundle *Ware
 Este módulo agiliza y mejora la gestión de las **operaciones de empaquetado** dentro del almacén. Una vez que se ha procesado un **albarán**, comienza el proceso de empaquetado. El empaquetado se realiza en base a cada documento individual de albarán. Para cada producto, el operario de almacén determina la unidad de manipulación adecuada (caja) en la que empaquetar el artículo. Solo los productos clasificados como **artículos** son aptos para el empaquetado.
 
 !!! warning
-    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing-tasks).
 
 
 ## Configuración inicial { #initial-configuration }

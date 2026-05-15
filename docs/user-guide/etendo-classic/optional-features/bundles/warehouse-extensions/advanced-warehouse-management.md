@@ -214,7 +214,6 @@ To start using this module correctly, the following installation and configurati
 
         This method allows the system to read the code and compare it exactly with the codes of the products stored in the system. The comparison is direct and strict, without taking into account any additional structure in the code.    
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-direct-1.png)
 
 
 6. **Task** infrastructure:

@@ -32,7 +32,7 @@ The window lists all existing business partner tax categories and allows new one
 
 ## Assigning the Category to a Business Partner
 
-Once the categories are created, each business partner that requires a specific tax treatment must be linked to the appropriate category. Navigate to :material-menu: `Application` > `Master Data Management` > `Business Partner`. This is done in the [**Business Partner**](../../../master-data-management/master-data/overview.md) window:
+Once the categories are created, each business partner that requires a specific tax treatment must be linked to the appropriate category. Navigate to :material-menu: `Application` > `Master Data Management` > `Business Partner`. This is done in the [**Business Partner**](../../../master-data-management/master-data/business-partner.md) window:
 
 - For customers: open the [**Customer**](../../../master-data-management/master-data/business-partner.md#customer) tab of the business partner record and set the **Business Partner Tax Category** field.
 - For vendors and creditors: open the [**Vendor/Creditor**](../../../master-data-management/master-data/business-partner.md#vendorcreditor) tab and set the same field.

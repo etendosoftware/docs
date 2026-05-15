@@ -24,7 +24,7 @@ This section describes the  **Etendo Packing** module included in the *Warehouse
 This module streamlines and enhances the management of **packing operations** within the warehouse. Once a **goods shipment** has been processed, the packing process begins. Packing is carried out based on each individual goods shipment document. For every product, the warehouse worker determines the appropriate handling unit (box) in which to pack the item. Only products classified as **items** are eligible for packing.
 
 !!! warning
-    This module includes documentation on how to perform the **Packing** process from Etendo. For more information about configuration and managing packing tasks from **Etendo Mobile**, see the module documentation: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+    This module includes documentation on how to perform the **Packing** process from Etendo. For more information about configuration and managing packing tasks from **Etendo Mobile**, see the module documentation: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing-tasks).
 
 
 ## Initial Configuration

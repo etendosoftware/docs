@@ -61,7 +61,7 @@ Additional key data to fill in are:
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
-  To learn more, visit [Process Plan](../production-management/setup.md#process-plan)
+  To learn more, visit [Process Plan](../../production-management/setup.md#process-plan)
 - **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
     To learn more, visit Attribute Set
@@ -161,9 +161,8 @@ Once a variant has been created, its characteristics and values can be viewed ei
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
-Press the button ![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-9.png) and it opens a pop-up to select values:
+Press the update button and it opens a pop-up to select values:
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-10.png)
 
 - Form view: Product variants have a new section named _Characteristic Description_. This section contains as many fields as different characteristics the product has.
 
@@ -195,7 +194,6 @@ To ease the configuration process, two components have been added:
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-14.png)
 
 There are two ways in which the user can get a product to be part of a Price List:
 
@@ -465,7 +463,6 @@ As soon as a product transaction gets its cost calculated, a new record is creat
 
 As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a *Cost Adjustment Line*.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-22.png)
 
 Some relevant fields to note are:
 
@@ -520,8 +517,8 @@ Manufacturing tab is used for products that are planned by the manufacturing pla
 The information in this tab is mainly used by MRP to process the Manufacturing Plan and Purchasing Plan. The storage bin field is filled out for products in production to indicate the default storage bin the product will be stored in when coming out of production.
 
 - **Storage Bin**: default location in the warehouse of the product.
-- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](../material-requirement-planning/setup.md#planning-method) section.
-- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](../material-requirement-planning/setup.md#planner) section.
+- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](../../material-requirement-planning/setup.md#planning-method) section.
+- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](../../material-requirement-planning/setup.md#planner) section.
 - **Capacity**: production capacity per day for the product.
 - **Min. Quantity:** minimum quantity to be entered on a work requirement.
 - **Quantity Type**:
@@ -612,7 +609,6 @@ In this Tab, there is going to be a record for:
 - each Organization that is a Legal Entity that has a Costing Rule defined
 - or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the *Legal Entity*.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-24.png)
 
 #### Product Categories
 
@@ -653,7 +649,6 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the  'Relate Products' button (Visible only when the field 'Included Products' has a value). This button will open a Pick & Edit displaying all products not related to the service.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-28.png)
 
 #### Product Price Rule Version
 
@@ -689,11 +684,11 @@ It defines tax modification for products linked to service. Products linked to t
 It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way.
 
 !!! info
-    For more information, visit [Stock Logistic Unit](../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
+    For more information, visit [Stock Logistic Unit](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
 
 
 !!! info
-    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 ---
 
