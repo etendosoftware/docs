@@ -27,18 +27,18 @@ El módulo proporciona dos capacidades principales, ambas impulsadas por **[Salt
 
     ``` mermaid
     flowchart LR
-        A([Connect bank account]) --> B[Grant permissions]
-        B --> C[Download transactions]
-        C --> D([Bank statement ready\nfor reconciliation ✅])
+        A([Conectar cuenta bancaria]) --> B[Otorgar permisos]
+        B --> C[Descargar transacciones]
+        C --> D([Extracto listo<br/>para conciliación ✅])
     ```
 - **PIS (Payment Initiation Service)**: Inicie pagos a proveedores directamente desde Etendo, con la autorización gestionada a través del banco.
 
     ``` mermaid
     flowchart LR
-        A([Create Payment OUT]) --> B[Generate bank payment]
-        B --> C[Authorize at bank portal]
-        C --> D[Check payment status]
-        D --> E([Payment executed ✅])
+        A([Crear Pago]) --> B[Generar pago bancario]
+        B --> C[Autorizar en el portal del banco]
+        C --> D[Verificar estado del pago]
+        D --> E([Pago ejecutado ✅])
     ```
 
 | | AIS | PIS |
@@ -61,7 +61,7 @@ Confirme lo siguiente antes de utilizar la funcionalidad de Integración bancari
 
 ## Configuración { #setup }
 
-### 1. Configurar la clave API de Salt Edge { #configure-salt-edge-api-key }
+### 1. Configurar la clave API de Salt Edge { #1-configure-salt-edge-api-key }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Usuario`
 
@@ -84,7 +84,7 @@ Como **Administrador** o usuario con permisos adecuados:
     
     Si no ve estos elementos, verifique que el usuario actual tenga una clave API válida introducida en el campo **PSD2 API Key** de la ventana Usuario.
 
-### 2. Configurar Cuentas Financieras { #configure-financial-accounts }
+### 2. Configurar Cuentas Financieras { #2-configure-financial-accounts }
 
 :material-menu: `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Transacciones` > `Cuenta Financiera`
 
@@ -99,7 +99,7 @@ Para cada cuenta financiera que desee sincronizar con un banco, ábrala y comple
 | **Import To Date** | Fecha de fin para importar transacciones. Si se deja vacío, el sistema utiliza la fecha actual. Déjela vacía en la operación habitual. |
 | **Statement Frequency** | Controla cómo se agrupan las transacciones importadas en extractos bancarios: **One per run** (por defecto) crea un nuevo extracto en cada importación; **One per week** o **One per month** agrupa las transacciones en un único extracto por periodo, reactivándolo si ya ha sido procesado. Use la agrupación semanal o mensual al importar a diario para reducir el número total de extractos. |
 
-### 3. Sincronizar proveedores bancarios { #synchronize-bank-providers }
+### 3. Sincronizar proveedores bancarios { #3-synchronize-bank-providers }
 
 :material-menu: `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Configuración` > `PSD2` > `Synchronize Bank Providers`
 
@@ -127,7 +127,7 @@ Una vez que su usuario tenga la clave API configurada y las fechas de la cuenta 
     - Haga clic en su banco para continuar
     
     !!!info
-        Si ha asignado un **Bank Provider** a la Cuenta Financiera (consulte [Configuración - Paso 2](#configure-financial-accounts)), el paso de selección de banco se **omite automáticamente** y será llevado directamente a la página de autenticación de su banco.
+        Si ha asignado un **Bank Provider** a la Cuenta Financiera (consulte [Configuración - Paso 2](#2-configure-financial-accounts)), el paso de selección de banco se **omite automáticamente** y será llevado directamente a la página de autenticación de su banco.
 
 4. **Autorice la conexión**:
     
@@ -511,7 +511,7 @@ Lista todos los bancos disponibles a través de Salt Edge. Cada entrada muestra 
 
 - [Documentación de Salt Edge](https://docs.saltedge.com/){target="_blank"}
 - [Notas de la versión del Financial Extensions Bundle](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md)
-- [Guía de conciliación bancaria](../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
+- [Guía de conciliación bancaria](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
 
 *[AIS]: Servicio de Información de Cuentas
 *[PIS]: Servicio de Iniciación de Pagos

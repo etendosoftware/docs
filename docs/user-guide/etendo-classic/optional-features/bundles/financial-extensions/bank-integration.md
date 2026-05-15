@@ -29,7 +29,7 @@ The module provides two main capabilities, both powered by **[Salt Edge](https:/
     flowchart LR
         A([Connect bank account]) --> B[Grant permissions]
         B --> C[Download transactions]
-        C --> D([Bank statement ready\nfor reconciliation ✅])
+        C --> D([Bank statement ready<br/>for reconciliation ✅])
     ```
 - **PIS (Payment Initiation Service)**: Initiate vendor payments directly from Etendo, with authorization handled through the bank.
 
@@ -84,7 +84,7 @@ As an **Administrator** or user with appropriate permissions:
     
     If you do not see these elements, verify that the current user has a valid API Key entered in the **PSD2 API Key** field of the User window.
 
-### 2. Configure Financial Accounts
+### 2. Configure Financial Accounts { #step-2-configure-financial-accounts }
 
 :material-menu: `Financial Management` > `Receivables and Payables` > `Transactions` > `Financial Account`
 
@@ -143,7 +143,7 @@ Once your user has the API Key configured and the financial account dates are se
     **Log in with your bank credentials** (username, password, and any additional authentication required by your bank)
 
     !!!warning "Important Security Note"
-       
+
         - Your bank credentials are entered directly on your bank's website, not in Etendo
         - Salt Edge never stores your bank credentials
         - Etendo never has access to your bank username or password
@@ -510,7 +510,7 @@ Lists all banks available through Salt Edge. Each entry shows the **Provider Cod
 
 - [Salt Edge Documentation](https://docs.saltedge.com/){target="_blank"}
 - [Financial Extensions Bundle Release Notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md)
-- [Bank Reconciliation Guide](../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
+- [Bank Reconciliation Guide](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
 
 *[AIS]: Account Information Service
 *[PIS]: Payment Initiation Service
