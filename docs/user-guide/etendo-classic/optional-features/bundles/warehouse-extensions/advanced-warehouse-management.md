@@ -52,7 +52,7 @@ To start using this module correctly, the following installation and configurati
 
     :material-menu: `Application`>`General Setup` > `Enterprise Model` > `Enterprise Module Management`
     
-    From the [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model/enterprise-module-management.md) window is required for all roles that will use this functionality.
+    The datasets below must be installed from the [Enterprise Module Management](../../../basic-features/general-setup/enterprise-model/enterprise-module-management.md) window for all roles that will use this functionality.
 
     This reference data includes configurations necessary to use these modules. 
 
@@ -62,7 +62,10 @@ To start using this module correctly, the following installation and configurati
     - `Etendo Print Provider`
     - `Stock Logistic Unit`
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/dataset.png)
+    <figure markdown="span">
+      ![Enterprise Module Management window showing the datasets available for installation](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/dataset.png)
+      <figcaption>Datasets available for installation in the Enterprise Module Management window.</figcaption>
+    </figure>
 
 4. **Advanced Warehouse Configuration** Window
 
@@ -73,8 +76,11 @@ To start using this module correctly, the following installation and configurati
     !!! warning
         It is mandatory to create a configuration for the organization you are working with.
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-configuration.png)
-    
+    <figure markdown="span">
+      ![Advanced Warehouse Configuration window showing header fields for organization and warehouse setup](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-configuration.png)
+      <figcaption>Advanced Warehouse Configuration window.</figcaption>
+    </figure>
+
     Fields to note:
 
     **Header**
@@ -124,7 +130,10 @@ To start using this module correctly, the following installation and configurati
     !!! tip 
         The configurations shown below are predefined in the initial dataset, although they can be modified or new schemes or barcode types can be added.
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
+    <figure markdown="span">
+      ![Barcode Components Configuration window showing the list of configured barcode schemes](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-win-1.png)
+      <figcaption>Barcode Components Configuration window.</figcaption>
+    </figure>
 
     !!! note
 
@@ -199,8 +208,8 @@ To start using this module correctly, the following installation and configurati
             If a different interpretation is required, a developer can create a custom **barcode algorithm**.
 
         <figure markdown="span">
-            ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
-            <figcaption> Example: Custom Product Entity Configuration</figcaption>
+            ![Barcode Component Lines tab showing a custom product entity configuration with attribute identifiers](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-components-configuration-attr-2.png)
+            <figcaption>Example: Custom Product Entity Configuration.</figcaption>
         </figure>
     
         !!! info "Configuration Restrictions and Validations"
@@ -227,7 +236,10 @@ To start using this module correctly, the following installation and configurati
 
     When the Advanced Warehouse Management module is installed, the Task Types required for picking and packing from Etendo Mobile are included by default:
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/task-type.png)
+    <figure markdown="span">
+      ![Task Types window showing the picking and packing task types installed by the Advanced Warehouse Management module](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/task-type.png)
+      <figcaption>Task Types included by default with the Advanced Warehouse Management module.</figcaption>
+    </figure>
 
     **User Algorithm**
 
@@ -242,24 +254,24 @@ To start using this module correctly, the following installation and configurati
 
 ### Creating Inventory Statuses  
 
-`Application` > `Warehouse Management` > `Setup` > `Inventory Status`
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Inventory Status`
 
 Inventory statuses allow the user to classify and manage stock units according to their condition or operational availability. The system includes some predefined statuses (such as *Blocked*, *Damaged*, *In Quality Control*, etc.), but it is possible to create new custom statuses as `System Administrator` according to the client needs.
 
-!!!info
+!!! info
     For more information on how to setup inventory statuses, visit [Inventory Status](../../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
 The new status will be available in **Etendo Mobile** to be assigned to new or existing locators using the **Adjust** or **Relocate** task options. In the latter case, the rules defined in the `Movement Rules Configuration` window, described below, are used.
 
 ### Movement Rules Configuration Window
 
-`Application` > `Warehouse Management` > `Setup` > `Movement Rules Configuration`
+:material-menu: `Application` > `Warehouse Management` > `Setup` > `Movement Rules Configuration`
 
 Movement rules allow you to automate the relocation or status change of inventory based on the action being performed. The purpose of this functionality is to automate inventory movements when they change status, exclude certain locations from operations such as picking or reservations due to their status, avoid errors in product handling, manage special products (*Damaged*, *Blocked*, etc.), and automatically handle virtual locations when there is no defined destination.
 
 A **Virtual Storage Bin** is a location automatically generated by the system to correctly maintain inventory, even when no specific location has been defined for the status to which it is being moved. 
 
-!!! Example
+!!! example
     If the *Available* status does not have an associated storage bin, and a user marks a product as *Damaged*, then the system creates a virtual location in which to deposit the affected inventory. This virtual location inherits the properties of the storage bin where the product was located and is associated exclusively with the new status (e.g., *Available*).
 
 This allows the user to maintain inventory traceability and consistency, even if the team has not yet defined all physical locations. It also streamlines operations by avoiding errors or blockages when working with exceptional statuses.
@@ -270,7 +282,10 @@ The application of these rules can be seen from two features of Etendo Mobile:
 
 - From the **Adjust** tasks, when you select the new status, this will update the status and, depending on the configured rule, move the inventory to the defined location.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/movement-rules-config.png)
+<figure markdown="span">
+  ![Movement Rules Configuration window showing fields for From Locator, To Locator, and To State](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/movement-rules-config.png)
+  <figcaption>Movement Rules Configuration window.</figcaption>
+</figure>
 
 Fields to note: 
 
@@ -278,10 +293,10 @@ Fields to note:
 - **To Locator**: Destination location.
 - **To State**: State to which the inventory will be transferred when the movement is done.
 
-!!!Note
+!!! note
     If the **To State** field is filled in first, the **To Locator** field will be limited to the Storage Bins that have that state assigned.
 
-!!!Info
+!!! info
     Actions performed using movement rules impact both Etendo Mobile and Etendo's Stock Report, reflecting the location.
 
 ### Barcode
@@ -298,15 +313,24 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     1. Select the **Warehouse and Storage bin**.
     2. Click on **Generate Barcode** and confirm with Done.
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png)
+        <figure markdown="span">
+          ![Generate Barcode button in the Warehouse and Storage Bins window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png)
+          <figcaption>Generate Barcode button in the Warehouse and Storage Bins window.</figcaption>
+        </figure>
 
     3. The generated code is displayed in the storage bin in the **Barcode** field. It can also be loaded manually or modified.
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
-    
+        <figure markdown="span">
+          ![Barcode field in the storage bin showing the generated code](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
+          <figcaption>Generated barcode displayed in the Barcode field of the storage bin.</figcaption>
+        </figure>
+
     4. On the other hand, you can obtain a printout of the generated barcode by clicking on the Generate Printable button. You must select a supplier, the printer, and the number of copies.
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png)
+        <figure markdown="span">
+          ![Generate Printable pop-up for barcode printing in the Warehouse and Storage Bins window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-1.png)
+          <figcaption>Generate Printable pop-up for barcode printing.</figcaption>
+        </figure>
 
     !!! info
         To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
@@ -319,11 +343,17 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     
     3. The generated code is displayed in the header of the product window in the **UPC/EAN** field. It can also be loaded manually or modified.
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
-    
+        <figure markdown="span">
+          ![Product window header showing the generated barcode in the UPC/EAN field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
+          <figcaption>Generated barcode displayed in the UPC/EAN field of the product header.</figcaption>
+        </figure>
+
     4. You can obtain a printout of the generated barcode by clicking on the *Generate Printable* button. You must select a supplier, the printer, and the number of copies.
-    
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
+
+        <figure markdown="span">
+          ![Generate Printable pop-up for barcode printing in the Product window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-print-2.png)
+          <figcaption>Generate Printable pop-up for barcode printing from the Product window.</figcaption>
+        </figure>
 
         !!! info
             To use the print option, you must have the Print Provider module. For details, see [Print Provider](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
@@ -361,7 +391,10 @@ Receipts are always created from purchase orders, not manually. Order lines are 
 
 When AUOMs such as Pallet or Box are used, the system can automatically generate a Referenced Inventory (RI) record linked to the receipt line, representing the logistics unit and ensuring traceability.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png)
+<figure markdown="span">
+  ![Inbound Receipt window showing the header and Lines tab](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-0.png)
+  <figcaption>Inbound Receipt window.</figcaption>
+</figure>
 
 Fields to note:
 
@@ -378,7 +411,10 @@ Fields to note:
 
 The Lines Tab allows you to add and modify individual products from one or more purchase orders, adjusting their quantity and/or unit. It represents the list of products received, displaying the following fields in addition to the basic ones.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
+<figure markdown="span">
+  ![Inbound Receipt Lines tab showing product lines with operative quantity, alternative UOM, and attribute fields](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-window-1.png)
+  <figcaption>Inbound Receipt Lines tab.</figcaption>
+</figure>
 
 Fields to note:
 
@@ -401,19 +437,28 @@ Fields to note:
 
 Extracts product lines from purchase orders. When clicked, a pop-up shows all available products, even from multiple purchase orders. You can select one or more lines to add to the Lines tab. If a storage bin is defined, it will be assigned to all selected lines; otherwise, it can be set individually per line.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png)
+<figure markdown="span">
+  ![Create Lines From Order pop-up showing available purchase order lines for selection](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png)
+  <figcaption>Create Lines From Order pop-up.</figcaption>
+</figure>
 
 **Create Reference Inventory**
 
 This button appears when at least one line is selected. It allows multiple/mixed grouping into a single type of logistics unit (boxes, pallets, or other types defined in the system). Its function is to gather selected products from the Lines tab into a specific grouping, according to the type of grouping chosen.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
+<figure markdown="span">
+  ![Create Reference Inventory pop-up for grouping selected lines into a logistics unit](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-1.png)
+  <figcaption>Create Reference Inventory pop-up.</figcaption>
+</figure>
 
 The grouping is reflected in the Grouped by column of the selected lines (e.g., Box-1).
 
 When the selected elements already belong to logistics units, the button can create a parent logistics unit that contains the selected child logistics units. For example, it is possible to create a pallet that groups previously identified boxes during the reception process. The resulting hierarchy is then reflected in the generated Referenced Inventory, preserving the parent-child relationship and stock traceability.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
+<figure markdown="span">
+  ![Inbound Receipt Lines tab showing parent-child logistics unit hierarchy after grouping](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-button-group-2.png)
+  <figcaption>Parent-child logistics unit hierarchy reflected in the Lines tab.</figcaption>
+</figure>
 
 !!! info
     - Only lines from the same Sales Order can be grouped.
@@ -434,9 +479,12 @@ Allows managing operational receptions from the mobile app through the creation 
 By pressing the button, a task linked to the selected document is generated and becomes visible in the mobile app and in the Task window of the ERP. 
 In the pop-up window, you can assign a user or enable automatic assignment. If multiple records are selected, one task will be created for each record, all assigned to the same user or role defined in the pop-up.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+<figure markdown="span">
+  ![Generate Reception Task pop-up showing user assignment and priority options](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+  <figcaption>Generate Reception Task pop-up.</figcaption>
+</figure>
 
-!!!Info
+!!! info
     For more information, visit [Reception Tasks](#reception-tasks).
 
 **Complete Receipt**
@@ -456,39 +504,50 @@ Each label displays the **GS1-128 barcode** along with human-readable informatio
 
 This button is available **only when the Inbound Receipt is completed**.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png)
+<figure markdown="span">
+  ![Print Labels button in the Inbound Receipt header toolbar](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-1.png)
+  <figcaption>Print Labels button in the Inbound Receipt header toolbar.</figcaption>
+</figure>
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png)
+<figure markdown="span">
+  ![Barcode label generated for an Inbound Receipt line](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-2.png)
+  <figcaption>Example barcode label generated from the Inbound Receipt.</figcaption>
+</figure>
 
 ??? example "Print Inbound Receipt - Examples"
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
-
-    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Box**.*
-
-    ---
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
-
-    *Label for a **grouped logistics unit (Pallet)** that can contain multiple different products — no product name or attributes are shown, only the logistics unit reference.*
+    <figure markdown="span">
+      ![Barcode label for Ale Beer showing all attributes and Box logistics unit type](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-3.png){ width=600 }
+      <figcaption>Label for product <strong>Ale Beer</strong> with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type <strong>Box</strong>.</figcaption>
+    </figure>
 
     ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
-
-    *Label for product **Lager Beer** without attributes defined — displays "No attributes".*
-
-    ---
-
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
-
-    *Label for **loose units** of product **Ale Beer** with attributes (Lot, Expiration date, and Serial Number) — no logistics unit is assigned, so the LU line is not shown.*
+    <figure markdown="span">
+      ![Barcode label for a grouped Pallet logistics unit showing only the logistics unit reference](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-4.png){ width=600 }
+      <figcaption>Label for a <strong>grouped logistics unit (Pallet)</strong> — no product name or attributes are shown, only the logistics unit reference.</figcaption>
+    </figure>
 
     ---
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+    <figure markdown="span">
+      ![Barcode label for Lager Beer with no attributes defined, displaying "No attributes"](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-5.png){ width=600 }
+      <figcaption>Label for product <strong>Lager Beer</strong> without attributes defined — displays "No attributes".</figcaption>
+    </figure>
 
-    *Label for product **Ale Beer** with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type **Pallet**.*
+    ---
+
+    <figure markdown="span">
+      ![Barcode label for loose units of Ale Beer with attributes and no logistics unit assigned](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-6.png){ width=600 }
+      <figcaption>Label for <strong>loose units</strong> of product <strong>Ale Beer</strong> with attributes — no logistics unit is assigned, so the LU line is not shown.</figcaption>
+    </figure>
+
+    ---
+
+    <figure markdown="span">
+      ![Barcode label for Ale Beer with all attributes and Pallet logistics unit type](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-header-7.png){ width=600 }
+      <figcaption>Label for product <strong>Ale Beer</strong> with all attributes (Lot, Expiration date, and Serial Number) and logistics unit type <strong>Pallet</strong>.</figcaption>
+    </figure>
 
 **Print Line Label**
 
@@ -503,9 +562,15 @@ The label generation follows the same rules described above, applied **only to t
 
 This button is available **only when the Inbound Receipt is completed**.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png)
+<figure markdown="span">
+  ![Print Line Label button in the Inbound Receipt lines toolbar](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-1.png)
+  <figcaption>Print Line Label button in the Inbound Receipt lines toolbar.</figcaption>
+</figure>
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png)
+<figure markdown="span">
+  ![Barcode label generated for a selected Inbound Receipt line](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png)
+  <figcaption>Example barcode label generated for a selected line.</figcaption>
+</figure>
 
 ### Workflow
 
@@ -513,13 +578,19 @@ This button is available **only when the Inbound Receipt is completed**.
 
 1. In the receipt flow, the user has a **Purchase Order** that includes product lines configured with an Alternative Unit of Measure (AUOM) of the Box or Pallet type, with its equivalence previously defined in the product window (for example, 1 Pallet = 100 units). 
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-1.png)
+    <figure markdown="span">
+      ![Purchase Order with product lines configured with an Alternative Unit of Measure](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-1.png)
+      <figcaption>Purchase Order with product lines configured with an AUOM (e.g., Pallet = 100 units).</figcaption>
+    </figure>
 
 2. From the **Inbound Receipt** window, the user creates a new receipt record using the *Create Lines From Order* button, selecting the Purchase Order as the reference document. The system incorporates the order data, such as the product, quantity (in AUOM), attributes (batch, series), and other associated information. 
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-3.png)
+    <figure markdown="span">
+      ![Inbound Receipt window with lines loaded from the Purchase Order](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-3.png)
+      <figcaption>Inbound Receipt with lines loaded from the Purchase Order.</figcaption>
+    </figure>
 
-    !!!info "Two Ways to Complete the Receipt"
+    !!! info "Two Ways to Complete the Receipt"
         At this point, you can choose between two workflows to complete the inbound receipt:
         
         **Option 1: Complete from Etendo (ERP)**  
@@ -530,11 +601,17 @@ This button is available **only when the Inbound Receipt is completed**.
 
 3. When the Complete button is pressed, the system sequentially generates and completes the **Goods Receipt** and creates a record in **Referenced Inventory (RI)** for each logistics unit received (Box or Pallet), respecting the equivalencies defined in AUOM.
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-2.png)
+    <figure markdown="span">
+      ![Goods Receipt and Referenced Inventory records generated after completing the Inbound Receipt](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-2.png)
+      <figcaption>Goods Receipt and Referenced Inventory records generated upon completion.</figcaption>
+    </figure>
 
 4. The Referenced Inventory is linked to the quantity received, the product, and its corresponding attributes. As a result, the stock is updated in the inventory, increasing the number of units in the defined location and enabling traceability through the generated RI.
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-4.png)
+    <figure markdown="span">
+      ![Referenced Inventory record showing stock updated with product, quantity, and attributes](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-flow-4.png)
+      <figcaption>Referenced Inventory record with updated stock and full traceability.</figcaption>
+    </figure>
 
 **Partial Receipt Flow**
 
@@ -556,7 +633,10 @@ The **Inventory Quality Inspection** window enables comprehensive management and
 
 This window allows users to create and manage quality inspection records for inventory items. Inspections can be conducted on existing stock. The system tracks which products need inspection, their current status, location, and the quantities planned for review.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-window.png)
+<figure markdown="span">
+  ![Inventory Quality Inspection window showing the header and Lines tab](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-window.png)
+  <figcaption>Inventory Quality Inspection window.</figcaption>
+</figure>
 
 Fields to note:
 
@@ -572,7 +652,10 @@ Fields to note:
 
 The Lines tab lists the products to be inspected, including their current inventory status, location, and planned inspection quantities. Each line represents a product or batch that requires quality inspection.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-lines.png)
+<figure markdown="span">
+  ![Inventory Quality Inspection Lines tab showing products, storage bins, and inspection quantities](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-lines.png)
+  <figcaption>Inventory Quality Inspection Lines tab.</figcaption>
+</figure>
 
 Fields to note:
 
@@ -598,7 +681,10 @@ Creates a quality inspection task that is visible in both the **Task** window in
 
 When clicked, a pop-up window appears where you can assign the task to a specific user or enable automatic assignment based on role. If multiple inspection documents are selected, one task will be created for each, all assigned to the same user or role defined in the pop-up.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
+<figure markdown="span">
+  ![Generate Task pop-up showing user assignment options for a quality inspection task](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
+  <figcaption>Generate Task pop-up for quality inspection task assignment.</figcaption>
+</figure>
 
 ### Workflow
 
@@ -612,7 +698,7 @@ The Inventory Quality Inspection process begins in Etendo when a user creates a 
     - Book quantity (system inventory)
     - Any relevant descriptions or notes
 
-    !!!info "Two Ways to Complete the Inspection"
+    !!! info "Two Ways to Complete the Inspection"
         At this point, you can choose between two workflows to complete the quality inspection:
         
         **Option 1: Complete from Etendo (ERP)**  
@@ -637,7 +723,7 @@ The Inventory Quality Inspection process begins in Etendo when a user creates a 
 
 5. All changes are reflected in the system, maintaining full traceability of the quality inspection process.
 
-!!!warning "Movement Rules and Storage Bins"
+!!! warning "Movement Rules and Storage Bins"
     It is recommended to configure [Movement Rules](#movement-rules-configuration-window) for commonly used inspection statuses (e.g., *Damaged*, *Blocked*) to maintain proper warehouse organization.
 
 ## AUOM Stock Reservation
@@ -651,17 +737,25 @@ The option of stock reservations based on the unit defined in the sales order (A
 
 ### Reservation Flow
 
-1. The process starts when a **Sales Order** is created with product lines defined with an Alternative Unit of Measure (AUOM) (e.g., 1 Box = 24 Units).
+1. The process starts when a [**Sales Order**](../../../basic-features/sales-management/transactions.md#sales-order) is created with product lines defined with an Alternative Unit of Measure (AUOM) (e.g., 1 Box = 24 Units).
 2. In each line, the **Stock Reservation** field is set to *Automatic*, so the system attempts to reserve stock when the order is confirmed.
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation.png)
+
+    <figure markdown="span">
+      ![Sales Order line with Stock Reservation field set to Automatic](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation.png)
+      <figcaption>Sales Order line with Stock Reservation set to Automatic.</figcaption>
+    </figure>
+
 3. Reservation logic:
 
     - The system reserves stock in the unit specified in the order line.  
     - If there is enough stock, a full reservation is created.  
     - If not, it reserves the available quantity in that unit and supplements with other AUOMs or base units.  
     - If the total is covered, the reservation is complete; otherwise, it is partial.
-    
-    ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation-1.png)
+
+    <figure markdown="span">
+      ![Stock Reservation record showing reserved quantities and AUOM breakdown](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reservation-1.png)
+      <figcaption>Stock Reservation record showing reserved quantities.</figcaption>
+    </figure>
 
 **Examples**
 
@@ -677,9 +771,9 @@ During picking, when the code is scanned, the system interprets the structured i
 
 In packing, the same validation is used when packaging products. The system recognizes what product it is, in what presentation and with what attributes, and assigns it to the corresponding box. This ensures that the shipment reflects exactly what was picked, maintaining complete traceability.
 
-In this way, the Etendo ensures that a single scan comprehensively recognizes the product that is leaving or will leave, taking into account its alternative measurements and attributes, and avoiding errors throughout the chain from order to dispatch.
+In this way, Etendo ensures that a single scan comprehensively recognizes the product that is leaving or will leave, taking into account its alternative measurements and attributes, and avoiding errors throughout the chain from order to dispatch.
 
-!!! Example
+!!! example
     Example of barcode with attributes: **01** 95012345678930 **\x1D** **10**L101 **\x1D** **17** 260910 **91** Rn-0-0-0
 
     where:
@@ -696,9 +790,12 @@ In this way, the Etendo ensures that a single scan comprehensively recognizes th
 
 ## Using Etendo Mobile
 
-When logging in to Etendo Mobile, the warehouse operator will be presented with the applications and menus available according to his role.
+When logging in to Etendo Mobile, the warehouse operator will be presented with the applications and menus available according to their role.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management.png)
+<figure markdown="span">
+  ![Etendo Mobile home screen showing the Advanced Warehouse Management application menus](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/advanced-warehouse-management.png)
+  <figcaption>Etendo Mobile home screen with the Advanced Warehouse Management menus.</figcaption>
+</figure>
 
 As seen above, the Advanced Warehouse Management option includes the following menus:
 
@@ -717,17 +814,26 @@ It allows creating and controlling receipts directly from the mobile application
 
 The process begins by clicking the **Generate Receiving Task** button in the *Inbound Receipt* window of the ERP. There, the task is assigned to an operator, the priority is defined, and then it is reflected in the mobile application of the assigned operator.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+<figure markdown="span">
+  ![Generate Receiving Task pop-up in the Inbound Receipt window with user assignment options](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
+  <figcaption>Generate Receiving Task pop-up in the Inbound Receipt window.</figcaption>
+</figure>
 
 #### Access to Reception Tasks (Etendo Mobile)
 
 When accessing **Etendo Mobile** in the **Reception Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are displayed as *Pending* status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+<figure markdown="span">
+  ![Reception Tasks list in Etendo Mobile showing tasks organized by status](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-1.png)
+  <figcaption>Reception Tasks list in Etendo Mobile.</figcaption>
+</figure>
 
 **Reception Tasks**
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
+<figure markdown="span">
+  ![Reception task detail screen in Etendo Mobile with Start Receipt button](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-2.png)
+  <figcaption>Reception task detail screen in Etendo Mobile.</figcaption>
+</figure>
 
 To perform a **Reception**:
 
@@ -738,7 +844,10 @@ To perform a **Reception**:
 - **Scan** the products to stock them or **load** them manually.
 - If the product has an **Attribute Set** configured (such as batch number, serial number, expiration date or other custom attributes), a pop-up window will appear requesting this information. Complete the required fields and confirm to continue with the reception.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-3.png)
+    <figure markdown="span">
+      ![Attribute Set pop-up in Etendo Mobile requesting batch, serial number, and expiration date during reception](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/reception-mobile-3.png)
+      <figcaption>Attribute Set pop-up requesting product attributes during reception.</figcaption>
+    </figure>
 
 - If needed, the **storage bin (locator)** can be modified to change the destination location of the received products.
 - Confirm the task with the **End Reception** button.
@@ -747,25 +856,31 @@ To perform a **Reception**:
 
 ### Picking Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
+<figure markdown="span">
+  ![Picking Tasks section in Etendo Mobile showing the list of picking tasks](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
+  <figcaption>Picking Tasks section in Etendo Mobile.</figcaption>
+</figure>
 
 The picking process allows the operator to pick the products required for an order efficiently using Etendo Mobile. The complete process flow is detailed below. 
 
-!!!Info
+!!! info
     For more information about how to use this functionality in Etendo, visit [Picking](./picking.md).
 
 #### Process Start (Etendo)
 
-The process is started in Etendo when a [Picking List](picking.md#picking-list-generation) is created from a Sales Order. This can be done using the **Generate Picking List** button available in the Sales Order window, which creates a new **task** that will be assigned to a user for execution in Etendo Mobile.
+The process is started in Etendo when a [Picking List](picking.md#picking-list-generation) is created from a [Sales Order](../../../basic-features/sales-management/transactions.md#sales-order). This can be done using the **Generate Picking List** button available in the Sales Order window, which creates a new **task** that will be assigned to a user for execution in Etendo Mobile.
 
-!!!Important
+!!! warning
     Remember the only picking lists that are shown in Etendo Mobile are those marked as **Direct Picking List to Customer** type.
 
 When a picking list is generated, the system runs automatic background processes that vary depending on the configuration. In certain situations, some of these processes can fail without the user noticing immediately.
 
 In order to provide greater visibility, the system displays a **warning message** at different stages of the process, that includes a link to the Task window. From there, the user can check the details of each process executed and review the corresponding logs, ensuring better control over the correct completion of operations.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png)
+<figure markdown="span">
+  ![Warning message displayed after generating a Picking List, with a link to the Task window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-1.png)
+  <figcaption>Warning message displayed after Picking List generation.</figcaption>
+</figure>
 
 The processes that must be verified are as follows:
 
@@ -784,17 +899,26 @@ The processes that must be verified are as follows:
 
 Example of logs without errors:
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png)
+<figure markdown="span">
+  ![Task log view showing all picking list processes completed without errors](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list.png)
+  <figcaption>Task log showing successful Picking List process execution.</figcaption>
+</figure>
 
 Example of logs with errors:
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png)
+<figure markdown="span">
+  ![Task log view showing a failed process in the picking list generation with error details](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png)
+  <figcaption>Task log showing a failed process during Picking List generation.</figcaption>
+</figure>
 
 #### Access to Picking Tasks (Etendo Mobile)
 
 When accessing **Etendo Mobile** into the **Picking** section, all tasks and their corresponding statuses and priorities, belonging to the logged in user, will be displayed. By default, the tasks are shown in *Pending* status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png){align=right width=300}
+![Picking Tasks list in Etendo Mobile showing tasks with status, priority, and quick filters](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-2.png){align=right width=300}
+/// caption
+Picking Tasks list in Etendo Mobile.
+///
  
 This screen contains:
 
@@ -803,7 +927,7 @@ This screen contains:
 - Quick filters that limit between `Pending`, `In Process` or `Completed` tasks.
 - A list of cards with tasks. 
 
-!!! Note
+!!! note
     As explained above in the Preference tab section of [Initial Setup](#initial-setup), there is a preference to define the days to show tasks in `Completed` status: `Task From Date Completed Days`. This allows the user to define the number of days backwards, from the current date, to be used as a criterion for displaying tasks in Completed status.
 
 <br clear="all">
@@ -815,11 +939,18 @@ This screen contains:
 2. Once the task is selected, a window opens with the list of products to be picked.
 
 3. To start the process, click on the **Start Picking** button located at the top; once this is done, the task goes to the `In Progress` status.
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png)
+
+    <figure markdown="span">
+      ![Picking task detail screen showing the product list and Start Picking button](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-3.png)
+      <figcaption>Picking task detail screen with the Start Picking button.</figcaption>
+    </figure>
 
 4. Once picking is started, a new window opens with the following items:
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png){align=right width=300}
+    ![Active picking screen in Etendo Mobile showing barcode scanner, quantity field, and product cards](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-4.png){align=right width=300}
+    /// caption
+    Active picking screen with scan and quantity controls.
+    ///
 
 
     - **Scan Barcode:** activates the camera of the mobile device.
@@ -847,7 +978,7 @@ This screen contains:
 
 #### Picking Methods
 
-In the picking process, the operator has flexibility in both what to pick and how to do it. On the one hand, even if the system requests a specific code (for example, box BX100020), it is possible to replace it with another equivalent unit (such as BX100023) as long as the product and quantity match, or to adapt to stock availability (for example, delivering 10 individual units instead of a box of 10). These variations are automatically recorded in the reservation and on the goods sheepment.
+In the picking process, the operator has flexibility in both what to pick and how to do it. On the one hand, even if the system requests a specific code (for example, box BX100020), it is possible to replace it with another equivalent unit (such as BX100023) as long as the product and quantity match, or to adapt to stock availability (for example, delivering 10 individual units instead of a box of 10). These variations are automatically recorded in the reservation and on the goods shipment.
 
 On the other hand, the system also allows flexibility in the mode of operation through different selection methods:
 
@@ -864,9 +995,9 @@ On the other hand, the system also allows flexibility in the mode of operation t
     If a quantity other than the default quantity, e.g. 5, was previously entered in the Quantity field, and then the product is scanned, those 5 units will be added directly to the product card.
 
 
-!!! Warning
+!!! warning
     
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png){align=right width=200}
+    ![Picking error message displayed when an incorrect or over-quantity scan is attempted](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-5.png){align=right width=200}
 
     Possible error scenarios:
 
@@ -883,38 +1014,50 @@ Once at least one unit of any product is registered, the **End Picking** button 
 
 After confirmation, the task is marked as Completed.
 
-!!!warning
+!!! warning
     For partial picking, the task is closed, and no new task is automatically created for the missing products. Any remaining quantities must be handled manually.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png)
+<figure markdown="span">
+  ![End Picking confirmation screen showing summary of picked products](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-6.png)
+  <figcaption>End Picking confirmation screen.</figcaption>
+</figure>
 
 Once completed, the task will appear in the Completed Tasks section, where it is possible to review the validated products and quantities for that specific picking task.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
+<figure markdown="span">
+  ![Completed picking task in the Completed Tasks section showing validated products and quantities](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
+  <figcaption>Completed picking task in the Completed Tasks section.</figcaption>
+</figure>
 
 
 ### Packing Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
+<figure markdown="span">
+  ![Packing Tasks section in Etendo Mobile showing the list of packing tasks](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
+  <figcaption>Packing Tasks section in Etendo Mobile.</figcaption>
+</figure>
 
 The packing process allows the operator to pack the products efficiently using Etendo Mobile. The complete process flow is detailed below.
 
-!!!Info
+!!! info
     For more information about how to use this functionality in Etendo, visit [Packing](./packing.md).
 
 #### Process Start (Etendo)
 
-Packing tasks are linked to a record in the **Packing** window.  The creation of a packing task is triggered after:
+Packing tasks are linked to a record in the [**Packing**](./packing.md) window. The creation of a packing task is triggered after:
 
 - The completion of a picking task (when the Task Type `Picking and Packing` is active).
-- From the **Packing** window of Etendo when adding at least one sales order to a new Packing.
+- From the [**Packing**](./packing.md) window of Etendo when adding at least one sales order to a new Packing.
 
 #### Access to Packing Tasks (Etendo Mobile)
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.png){align=right width=300}
+![Packing Tasks main screen in Etendo Mobile showing available tasks with status and priority filters](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.png){align=right width=300}
+/// caption
+Packing Tasks main screen in Etendo Mobile.
+///
 
 
-When accessing Etendo Mobile and selecting the **Packing** menu, the packing main screen with the number of available `Packing` tasks to the current user. 
+When accessing Etendo Mobile and selecting the **Packing** menu, the packing main screen is displayed, showing the number of available `Packing` tasks for the current user. 
 
 This screen contains:
 
@@ -938,7 +1081,10 @@ This screen contains:
 
 3. When pressing **Start Packing**, the status of the task changes to `In Progress` in both Etendo Mobile and Etendo. 
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png)
+    <figure markdown="span">
+      ![Active packing screen in Etendo Mobile showing the Start Packing button and task status change](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-3.png)
+      <figcaption>Active packing screen after pressing Start Packing.</figcaption>
+    </figure>
 
 4. The window has the following elements:
 
@@ -972,7 +1118,10 @@ This screen contains:
         - Pack name (or number)
         - Products and their quantities
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png)
+    <figure markdown="span">
+      ![Packing screen in Etendo Mobile showing product cards and a list of packs with their contents](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-4.png)
+      <figcaption>Packing screen showing product and pack views.</figcaption>
+    </figure>
 
 
     The view selectors by **Product** or by **Pack** allow:
@@ -981,7 +1130,10 @@ This screen contains:
 
     - In the **Packs** view, when entering a pack, the detailed contents are displayed with the possibility of browsing pack by pack to check which products are contained in each pack.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png)
+    <figure markdown="span">
+      ![Product and Pack view selectors in Etendo Mobile packing screen showing quantity distribution](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-5.png)
+      <figcaption>Product and Pack view selectors in the packing screen.</figcaption>
+    </figure>
 
     !!! tip 
         In both views, it is possible to modify the quantities loaded and add packs if necessary. However, in order to be able to assign content to the added boxes, one of the following conditions must be met: 
@@ -993,10 +1145,13 @@ This screen contains:
     - Each packed product is registered under a specific pack.
     - You can switch between boxes to distribute products as needed.
 
-    !!!Info
+    !!! info
         Newly created packs cannot be deleted manually. However, if a pack is left empty (no products added), it will be automatically removed at the end of the process. Only packs with packed products will be saved and displayed.
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-6.png)
+    <figure markdown="span">
+      ![Packing screen in Etendo Mobile after scanning products and assigning them to packs](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-6.png)
+      <figcaption>Packing screen with products assigned to packs.</figcaption>
+    </figure>
 
 
 #### Packing Methods
@@ -1012,11 +1167,11 @@ In terms of how to perform packing, the system offers flexibility in operating m
 
 - Enter the quantity manually from the **Product** view or from the **Packs** view.
 
-!!! Warning
+!!! warning
 
     Possible error scenarios:
 
-    ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png){align=right width=200}
+    ![Packing error message displayed when an incorrect or over-quantity scan is attempted](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-7.png){align=right width=200}
 
     - If an incorrect code is scanned (does not match any product in the task), the barcode field is highlighted in red, shows a cross and does not add quantity to any product.
     - If an attempt is made to enter more than the required quantity, an error message is also displayed. If the quantity is manually loaded into the product card, the system allows loading the maximum quantity requested.
@@ -1035,31 +1190,40 @@ Once the products have been packed:
 
 - After confirmation, the task is marked as Completed.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png)
+<figure markdown="span">
+  ![Packing completion summary screen in Etendo Mobile showing packed products per pack](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-8.png)
+  <figcaption>Packing completion summary screen with the "Packing completed successfully" message.</figcaption>
+</figure>
 
 Once completed, the task will appear in the Completed Tasks section. From there, it is possible to review all validated information for that packing task, including:
 
 - In the Product view: which boxes each product was packed into.
 - In the Pack view: which products were packed into each pack.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
+<figure markdown="span">
+  ![Completed packing task in the Completed Tasks section showing product and pack distribution](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
+  <figcaption>Completed packing task showing the product and pack distribution.</figcaption>
+</figure>
 
 ### Relocation Tasks
 
 Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
 
-!!!Info
+!!! info
     For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
 
 #### Process Start (Etendo)
 
 :material-menu: `Application` > `Warehouse Management` > `Transactions` > `Goods Movement`
 
-The relocation process begins in the ERP from the **Generate Relocation Task** button in the Goods Movements window.
+The relocation process begins in the ERP from the **Generate Relocation Task** button in the [**Goods Movements**](../../../basic-features/warehouse-management/transactions.md#goods-movement) window.
 
 Allows the manager to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to the mobile application, where the operator can execute the movement from the corresponding sub-application. When pressed, a pop-up opens to assign the task manually or automatically and define its priority.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
+<figure markdown="span">
+  ![Generate Relocation Task pop-up in the Goods Movement window with assignment and priority options](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/generate-relocation-task.png)
+  <figcaption>Generate Relocation Task pop-up in the Goods Movement window.</figcaption>
+</figure>
 
 Use of the **Generate Relocation Task** button is subject to system validation that determines its availability. It is only displayed when the *Goods Movement* document has not been processed and does not have a task already assigned to it.
 
@@ -1067,7 +1231,10 @@ Use of the **Generate Relocation Task** button is subject to system validation t
 
 When accessing Etendo Mobile in the Relocation Tasks section, all tasks and their corresponding statuses and priorities belonging to the logged-in user will be displayed. By default, tasks are displayed as Pending.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
+<figure markdown="span">
+  ![Relocation Tasks list in Etendo Mobile showing tasks organized by status and priority](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-1.png)
+  <figcaption>Relocation Tasks list in Etendo Mobile.</figcaption>
+</figure>
 
 To perform a **relocation**:
 
@@ -1081,7 +1248,10 @@ To perform a **relocation**:
 - Confirm that you want to finish the task.
 - See Success message.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
+<figure markdown="span">
+  ![Relocation task detail screen in Etendo Mobile showing Counted Quantity and To Locator fields](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
+  <figcaption>Relocation task detail screen in Etendo Mobile.</figcaption>
+</figure>
 
 ### Adjustment Tasks
 
@@ -1089,7 +1259,7 @@ Inventory adjustment tasks allow warehouse operators to perform physical counts 
 
 This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
 
-!!!Info
+!!! info
     For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
 
 
@@ -1099,13 +1269,19 @@ This functionality corresponds to the same operation performed in Etendo's **Phy
 
 The process begins by creating tasks within Etendo using the **Physical Inventory** window. A new record is created with product lines for which stock verification and adjustment is desired. Once this is ready, the task must be generated using the **Generate Task** button.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
+<figure markdown="span">
+  ![Physical Inventory window in Etendo showing product lines and the Generate Task button](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
+  <figcaption>Physical Inventory window with the Generate Task button.</figcaption>
+</figure>
 
 #### Access to Adjustment Tasks (Etendo Mobile)
 
 When accessing Etendo Mobile into the Adjustment Tasks section, all tasks and their corresponding statuses and priorities, belonging to the logged in user, will be displayed. By default, the tasks are shown in *Pending* status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
+<figure markdown="span">
+  ![Adjustment Tasks list in Etendo Mobile showing tasks organized by status and priority](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-mobile.png)
+  <figcaption>Adjustment Tasks list in Etendo Mobile.</figcaption>
+</figure>
 
 To **Adjust** inventory
 
@@ -1118,26 +1294,35 @@ To **Adjust** inventory
 - Confirm the task by pressing the **End Adjustment** button.
 - Confirm that you want to complete the task.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
+<figure markdown="span">
+  ![Adjustment task detail screen in Etendo Mobile showing storage bin and quantity count fields](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
+  <figcaption>Adjustment task detail screen in Etendo Mobile.</figcaption>
+</figure>
 
 ### Quality Inspection Tasks
 
 Quality inspection tasks enable warehouse operators to perform product quality verification directly from Etendo Mobile. These tasks allow operators to inspect merchandise, record inspection results, and update inventory status based on product conditions, ensuring that only quality-approved items are available for sale or further processing.
 
-!!!Info
+!!! info
     For more information about how to use this functionality in Etendo, visit [Inventory Quality Inspection](#inventory-quality-inspection).
 
 #### Process Start (Etendo)
 
 The process begins in Etendo by creating tasks from the **Inventory Quality Inspection** window. After creating an inspection document with product lines requiring quality verification, use the **Generate Task** button to create a mobile task.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
+<figure markdown="span">
+  ![Generate Task pop-up in the Inventory Quality Inspection window for creating a mobile inspection task](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
+  <figcaption>Generate Task pop-up in the Inventory Quality Inspection window.</figcaption>
+</figure>
 
 #### Access to Quality Inspection Tasks (Etendo Mobile)
 
 When accessing Etendo Mobile in the **Quality Inspection Tasks** section, all tasks and their corresponding statuses belonging to the logged-in user will be displayed. By default, tasks are shown in *Pending* status.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-0.png)
+<figure markdown="span">
+  ![Quality Inspection Tasks list in Etendo Mobile showing tasks organized by status](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-0.png)
+  <figcaption>Quality Inspection Tasks list in Etendo Mobile.</figcaption>
+</figure>
 
 To perform a **quality inspection**:
 
@@ -1161,17 +1346,24 @@ To perform a **quality inspection**:
 
 8. A success message will be displayed, and the inspection results will be synchronized with Etendo.
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-1.png)
+<figure markdown="span">
+  ![Quality inspection task completed screen in Etendo Mobile showing synchronized results](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/quality-inspection-task-mobile-1.png)
+  <figcaption>Completed quality inspection task screen with synchronized results.</figcaption>
+</figure>
 
-!!!note
+!!! note
     When the inspection is completed, the system automatically updates inventory status and applies [Movement Rules](#movement-rules-configuration-window) if configured. Products marked with a different status will be relocated accordingly, or a virtual storage bin will be created if no specific location is defined for that status.
 
 ### All Tasks
 
-![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png)
+<figure markdown="span">
+  ![All Tasks section in Etendo Mobile consolidating picking, packing, relocation, adjustment, and quality inspection tasks](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png)
+  <figcaption>All Tasks section in Etendo Mobile.</figcaption>
+</figure>
 
-From this window you can view and work with all types of tasks, like Picking, Packing and Inventory Tasks.
+The **All Tasks** section consolidates all task types — [Picking](#picking-tasks), [Packing](#packing-tasks), [Relocation](#relocation-tasks), [Adjustment](#adjustment-tasks), and [Quality Inspection](#quality-inspection-tasks) — into a single view. Operators and supervisors can search, filter by status (*Pending*, *In Progress*, *Completed*), and manage any task regardless of its type from this screen.
 
 
 ---
+
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
