@@ -312,14 +312,14 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     2. Click on **Generate Barcode** and confirm with Done.
 
         <figure markdown="span">
-          ![Generate Barcode button in the Warehouse and Storage Bins window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode1.png)
+          ![Generate Barcode button in the Warehouse and Storage Bins window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-1.png)
           <figcaption>Generate Barcode button in the Warehouse and Storage Bins window.</figcaption>
         </figure>
 
     3. The generated code is displayed in the storage bin in the **Barcode** field. It can also be loaded manually or modified.
 
         <figure markdown="span">
-          ![Barcode field in the storage bin showing the generated code](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode2.png)
+          ![Barcode field in the storage bin showing the generated code](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-2.png)
           <figcaption>Generated barcode displayed in the Barcode field of the storage bin.</figcaption>
         </figure>
 
@@ -342,7 +342,7 @@ It is possible to generate these unique codes for storage bins in the **Warehous
     3. The generated code is displayed in the header of the product window in the **UPC/EAN** field. It can also be loaded manually or modified.
 
         <figure markdown="span">
-          ![Product window header showing the generated barcode in the UPC/EAN field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode4.png)
+          ![Product window header showing the generated barcode in the UPC/EAN field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/barcode-4.png)
           <figcaption>Generated barcode displayed in the UPC/EAN field of the product header.</figcaption>
         </figure>
 
@@ -436,7 +436,7 @@ Fields to note:
 Extracts product lines from purchase orders. When clicked, a pop-up shows all available products, even from multiple purchase orders. You can select one or more lines to add to the Lines tab. If a storage bin is defined, it will be assigned to all selected lines; otherwise, it can be set individually per line.
 
 <figure markdown="span">
-  ![Create Lines From Order pop-up showing available purchase order lines for selection](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-boton.png)
+  ![Create Lines From Order pop-up showing available purchase order lines for selection](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-create-line-button.png)
   <figcaption>Create Lines From Order pop-up.</figcaption>
 </figure>
 
