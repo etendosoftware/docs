@@ -5,7 +5,8 @@ tags:
   - Etendo Classic
   - Currency
   - Financial Extensions
-  - Bank Account Management
+  - Exchange Rates
+  - Currency Conversion
 ---
 
 # Currency Converters
@@ -31,22 +32,22 @@ Each record in this window represents one API integration. Only the record with 
 </figure>
 
 `Service Classname`
-:   Java class that handles the connection to the API. The default value for the APILayer integration is `com.smf.currency.apiconfig.CurrencyLayerConverter`.
+:   Pre-filled by the system. Do not change this value unless instructed by your system administrator.
 
 `Client`
-:   Client allowed to use this configuration.
+:   The company account in Etendo that this configuration belongs to. In most setups, this is filled in automatically when you log in.
 
 `Organization`
-:   Organization allowed to use this configuration. Enter `*` to allow all organizations.
+:   The organizational unit within Etendo that can use this configuration. To make it available across all units in your company, enter `*` (an asterisk). To restrict access to a specific department or branch, select that organization from the list.
 
 `Service Name`
 :   Identifier for this configuration record, for example `Currency Data API`.
 
 `Service URL`
-:   API endpoint used to retrieve exchange rate data. The default value for the APILayer integration is `https://api.apilayer.com/currency_data/`.
+:   Pre-filled by the system. Do not change this value unless instructed by your system administrator.
 
 `Token`
-:   Access token obtained from the API provider. Register at [APILayer](https://marketplace.apilayer.com/){target="_blank"} and subscribe to the **Currency Data API** to generate a token. The free plan provides 100 monthly requests, which is sufficient for multiple daily updates.
+:   Your API access key. To obtain it, register at [APILayer](https://marketplace.apilayer.com/){target="_blank"} and subscribe to the **Currency Data API**. Copy the token provided and paste it here. The free plan provides 100 requests per month. If you plan to run multiple downloads per day, confirm that your schedule stays within this limit before going live.
 
 `User` *(optional)*
 :   Authentication username. Not required for the default APILayer configuration.
@@ -55,10 +56,10 @@ Each record in this window represents one API integration. Only the record with 
 :   Authentication password. Not required for the default APILayer configuration.
 
 `Selected`
-:   Indicates which configuration the Conversion Rate Downloader uses. Set to **True** to activate this configuration for the download process. Only one record is active at a time.
+:   Set to **True** to use this configuration for the download process. Only one record can be selected at a time.
 
 `Active`
-:   Controls whether this record is available in the system. Set to **True** to make the configuration available.
+:   Set to **True** to make this configuration available in the system.
 
 ## Full Setup Workflow
 
