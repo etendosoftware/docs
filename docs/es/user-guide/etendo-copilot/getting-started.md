@@ -139,6 +139,13 @@ De forma predeterminada, Copilot funciona como una ventana pop-up, proporcionand
 Utilice el modo de pantalla completa para una experiencia más cómoda durante conversaciones largas cuando no sea necesario visualizar Etendo.
 
 Etendo Copilot ofrece gestión de conversaciones mediante un **selector de conversaciones** para revisar y cambiar entre interacciones anteriores, un botón de **Nueva conversación** para iniciar temas o tareas nuevas, y la **generación automática de títulos de conversación**, que crea títulos significativos para facilitar la identificación y organización de los diálogos.
+
+También puede mantener su historial de chats organizado con algunos controles adicionales en la barra lateral de conversaciones:
+
+- **Buscar conversaciones**: encuentre rápidamente chats anteriores escribiendo palabras clave en la barra de búsqueda.
+- **Renombrar**: asigne a cualquier conversación un título personalizado que refleje mejor su contenido.
+- **Eliminar**: elimine las conversaciones que ya no necesite; los elementos eliminados se trasladan a la sección **Archivados**.
+- **Conversaciones archivadas**: revise los chats eliminados previamente en una sección plegable, restáurelos o elimínelos definitivamente cuando ya no le resulten útiles.
 ![Chat a pantalla completa](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 </figure>
 
@@ -147,6 +154,14 @@ Etendo Copilot ofrece gestión de conversaciones mediante un **selector de conve
 **Minimizado** <br>
 La interfaz de Copilot también puede minimizarse. En este caso, una burbuja de Copilot estará activa en la parte inferior derecha de la pantalla.
 </figure>
+
+#### Selector de agentes y agentes destacados
+
+Desde cualquier modo de visualización, puede cambiar entre agentes utilizando el **selector de agentes** en la parte superior del chat. Para facilitar la búsqueda de los agentes más relevantes, Copilot resalta los **Agentes destacados**:
+
+- **Destacados primero**: los agentes marcados como destacados aparecen en la parte superior de la lista, de modo que los más útiles para su entorno estén siempre al alcance.
+- **Filtro de solo destacados**: de forma predeterminada, el selector solo muestra los agentes destacados para mantener la lista enfocada. Puede desactivar este filtro en cualquier momento para examinar el catálogo completo de agentes disponibles.
+- **Respaldo automático**: si no hay ningún agente marcado como destacado, el selector simplemente lista todos los agentes disponibles, de modo que nunca se encuentre con un selector vacío.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
