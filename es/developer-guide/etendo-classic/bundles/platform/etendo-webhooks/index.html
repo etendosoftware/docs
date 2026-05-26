@@ -13230,6 +13230,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#simsearch-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook SimSearch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook SimSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tokens-visibility" class="md-nav__link">
     <span class="md-ellipsis">
       Visibilidad de tokens
@@ -17613,6 +17637,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#simsearch-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook SimSearch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook SimSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tokens-visibility" class="md-nav__link">
     <span class="md-ellipsis">
       Visibilidad de tokens
@@ -17875,6 +17923,33 @@
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="use-cases">Casos de uso</h2>
+<h3 id="simsearch-webhook">Webhook SimSearch</h3>
+<p>El webhook SimSearch realiza búsquedas difusas sobre entidades de Etendo y devuelve los registros más cercanos para un término de búsqueda determinado. Se utiliza en flujos de Copilot donde texto extraído o ingresado por el usuario debe mapearse contra registros existentes, por ejemplo para relacionar resultados de OCR con terceros, productos o documentos.</p>
+<h4 id="performance-considerations">Consideraciones de rendimiento</h4>
+<p>Si SimSearch sigue siendo lento en su entorno, especialmente sobre tablas grandes, puede añadir un índice trigram de PostgreSQL sobre la columna identificadora utilizada por la búsqueda.</p>
+<div class="admonition info">
+<p class="admonition-title">Requisito previo</p>
+<p>Los índices trigram requieren que la extensión <code>pg_trgm</code> de PostgreSQL esté habilitada en la base de datos.</p>
+</div>
+<p>La expresión del índice debe coincidir con la expresión utilizada por la búsqueda. Por ejemplo, si la búsqueda se realiza sobre el número de documento de factura en mayúsculas, cree el índice sobre <code>upper(documentno::text)</code>:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">c_invoice_documentno_trgm</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">c_invoice</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">USING</span><span class="w"> </span><span class="n">gin</span><span class="w"> </span><span class="p">(</span><span class="k">upper</span><span class="p">(</span><span class="n">documentno</span><span class="p">::</span><span class="nb">text</span><span class="p">)</span><span class="w"> </span><span class="n">gin_trgm_ops</span><span class="p">);</span>
+</span></code></pre></div>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Búsquedas difusas más rápidas en tablas grandes.</li>
+<li>Mejor tiempo de respuesta en flujos guiados por OCR y otros escenarios de coincidencia masiva.</li>
+<li>Menor uso de CPU en la base de datos para búsquedas repetidas de similitud.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Mayor uso de disco porque el índice adicional debe almacenarse y mantenerse.</li>
+<li>Operaciones <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code> más lentas sobre la tabla indexada.</li>
+<li>La reindexación, el vacuum y la creación inicial del índice pueden ser costosos en conjuntos de datos grandes.</li>
+<li>El índice solo ayuda si coincide con la expresión real utilizada por la consulta.</li>
+</ul>
+<p>En entornos productivos, mida primero la consulta y añada índices trigram solo en las columnas que demuestren ser cuellos de botella.</p>
 <h3 id="tokens-visibility">Visibilidad de tokens</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

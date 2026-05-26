@@ -12843,6 +12843,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#simsearch-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      SimSearch webhook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SimSearch webhook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tokens-visibility" class="md-nav__link">
     <span class="md-ellipsis">
       Tokens Visibility
@@ -17284,6 +17308,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#simsearch-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      SimSearch webhook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SimSearch webhook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tokens-visibility" class="md-nav__link">
     <span class="md-ellipsis">
       Tokens Visibility
@@ -17546,6 +17594,33 @@
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="use-cases">Use Cases</h2>
+<h3 id="simsearch-webhook">SimSearch webhook</h3>
+<p>The SimSearch webhook performs fuzzy matching over Etendo entities and returns the closest records for a given search term. It is used in Copilot flows where extracted or user-provided text must be mapped to existing records, for example matching OCR results against Business Partners, products, or documents.</p>
+<h4 id="performance-considerations">Performance considerations</h4>
+<p>If SimSearch is still slow in your environment, especially on large tables, you can add a PostgreSQL trigram index to the identifier column used by the search.</p>
+<div class="admonition info">
+<p class="admonition-title">Prerequisite</p>
+<p>Trigram indexes require the <code>pg_trgm</code> PostgreSQL extension to be enabled in the database.</p>
+</div>
+<p>The index expression should match the expression used by the lookup. For example, if the search runs on the uppercase invoice document number, create the index on <code>upper(documentno::text)</code>:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">c_invoice_documentno_trgm</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">c_invoice</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">USING</span><span class="w"> </span><span class="n">gin</span><span class="w"> </span><span class="p">(</span><span class="k">upper</span><span class="p">(</span><span class="n">documentno</span><span class="p">::</span><span class="nb">text</span><span class="p">)</span><span class="w"> </span><span class="n">gin_trgm_ops</span><span class="p">);</span>
+</span></code></pre></div>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Faster fuzzy searches on large tables.</li>
+<li>Better response time in OCR-driven flows and other bulk matching scenarios.</li>
+<li>Lower database CPU usage for repeated similarity lookups.</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Higher disk usage because the extra index must be stored and maintained.</li>
+<li>Slower <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code> operations on the indexed table.</li>
+<li>Reindexing, vacuuming, and initial index creation can be expensive on large datasets.</li>
+<li>The index only helps when it matches the actual search expression used by the query.</li>
+</ul>
+<p>For production environments, benchmark the query first and add trigram indexes only to the columns that are proven bottlenecks.</p>
 <h3 id="tokens-visibility">Tokens Visibility</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
