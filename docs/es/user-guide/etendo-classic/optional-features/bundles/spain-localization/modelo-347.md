@@ -8,14 +8,14 @@ tags:
   - Herramientas de análisis
 ---
 
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es`
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es` <br>
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat347apr.es.es_es`
 
 ## Descripción general
 
-Este módulo permite generar la declaración `Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros` como un fichero de texto (`*.txt`) válido conforme a los requerimientos de la Hacienda Pública española. Es parte del bundle de [Localización Española](overview.md) de Etendo.
+Este módulo permite generar la declaración :material-menu:  `Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros` como un fichero de texto (`*.txt`) válido conforme a los requerimientos de la Hacienda Pública española. Es parte del bundle de [Localización Española](overview.md) de Etendo.
 
-El fichero se genera desde `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`.
+El fichero se genera desde :material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`.
 
 El fichero generado se carga directamente en la sede electrónica de la Agencia Tributaria para cumplir con la obligación de declaración anual.
 
@@ -24,12 +24,10 @@ El fichero generado se carga directamente en la sede electrónica de la Agencia 
 
 ### Obligados a presentar la declaración
 
-De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347:
+De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347, las personas físicas o jurídicas, de naturaleza pública o privada, que desarrollen actividades empresariales o profesionales y que hayan realizado operaciones con otra persona o entidad por un importe superior a 3.005,06€ durante el año natural al que se refiere la declaración.
 
-- las personas físicas o jurídicas, de naturaleza pública o privada, que desarrollen actividades empresariales o profesionales y que hayan realizado operaciones con otra persona o entidad por un importe superior a 3.005,06€ durante el año natural al que se refiere la declaración.
-
-    !!! info
-        Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
+!!! info
+    Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
 
 ### No obligados a presentar la declaración
 
@@ -41,13 +39,11 @@ De acuerdo con la normativa de la Hacienda Española, están obligados a present
 
 ### Operaciones declarables
 
-Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son las que se detallan a continuación:
-
-- Tanto las entregas de bienes y prestaciones de servicios realizadas por el declarante como sus adquisiciones de bienes y servicios, incluyéndose, en ambos casos, tanto las operaciones típicas y habituales como las ocasionales e incluso las operaciones inmobiliarias.
+Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son tanto las entregas de bienes y prestaciones de servicios realizadas por el declarante como sus adquisiciones de bienes y servicios, incluyéndose, en ambos casos, tanto las operaciones típicas y habituales como las ocasionales e incluso las operaciones inmobiliarias.
 
 Debe tenerse en cuenta que dichas operaciones se incluirán estén o no sujetas al IVA y, en el primer caso, también las exentas de dicho impuesto.
 
-#### Operaciones incluidas de forma específica
+**Operaciones incluidas de forma específica**
 
 Además, se incluyen de forma específica y aparte:
 
@@ -62,7 +58,7 @@ En los supuestos de operaciones sujetas y no exentas de IVA se añaden, por tant
 
 El modelo 347 incluye las operaciones realizadas por el declarante durante el año natural al que se refiere la declaración. La fecha que se utiliza para incluir una operación en el 347 es la fecha contable de la factura.
 
-#### Operaciones no declarables
+**Operaciones no declarables**
 
 Las operaciones que en ningún caso se incluirán en el 347 por ser no declarables son las que se detallan a continuación:
 
@@ -73,10 +69,9 @@ Las operaciones que en ningún caso se incluirán en el 347 por ser no declarabl
 - las importaciones y exportaciones de mercancías, así como las entregas y adquisiciones de bienes que supongan envíos entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla.
 - Todas aquellas que se incluyan en otros modelos de la Administración Tributaria como por ejemplo aquellas cuya contraprestación haya sido objeto de retención o ingreso a cuenta; las operaciones intracomunitarias de bienes y servicios que se declaran en el [modelo 349](modelo-349.md) o las operaciones incluidas en los libros registro que deben incluirse en el modelo 340.
 
-#### Operaciones no incluidas por el módulo
+**Operaciones no incluidas por el módulo**
 
-El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se detallan a continuación, aunque deberían incluirse en el modelo 347, ya que corresponden a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
-
+El módulo de generación del Modelo 347 no incluye las operaciones que se detallan a continuación, aunque deberían incluirse en el modelo 347, ya que corresponden a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
 - las subvenciones, auxilios o ayudas satisfechas por las entidades integradas en las distintas Administraciones Públicas
 - las operaciones de seguros realizadas por las entidades aseguradoras
 - las prestaciones de servicios realizadas por las agencias de viajes
@@ -92,7 +87,7 @@ El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se
 
 ### Requisitos previos
 
-Antes de instalar el módulo `Spain AEAT Modelo 347 for APR (módulo de presentación del Modelo 347)`, deben estar instalados y aplicados a la organización los siguientes módulos:
+Antes de instalar el módulo `Spain AEAT Modelo 347 for APR`, deben estar instalados y aplicados a la organización los siguientes módulos:
 
 - **Etendo** (versión compatible con el bundle de Localización Española).
 - **Bundle de Localización Española** (`com.etendoerp.localization.spain.extensions`), disponible en el [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}.
@@ -103,18 +98,12 @@ Antes de instalar el módulo `Spain AEAT Modelo 347 for APR (módulo de presenta
 
     Si no está seguro de si su empresa aplica este régimen, consulte con su asesor fiscal o el departamento de contabilidad.
 
-### Situaciones de partida
-
-Para la instalación del módulo `Modelo AEAT 347 - Declaración de operaciones con terceros` (`Spain AEAT Modelo 347 for APR`), el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
-
-- Instalación de la última versión disponible de Etendo.
-- Instalación del bundle de Localización Española.
-
-Es importante recalcar que el módulo del Modelo AEAT 347 incluye el conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347. Este conjunto de datos debe aplicarse a la organización para la cual se necesita obtener el 347, tal y como se explica en el siguiente apartado.
+!!! note
+    El módulo incluye un conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347. Este dataset debe aplicarse a la organización legal correspondiente, tal y como se explica en el apartado siguiente.
 
 ### Aplicación del módulo
 
-Una vez instalado el módulo del 347, el usuario debe aplicar su conjunto de datos a la organización legal con contabilidad correspondiente, desde `Configuración General` > `Organización` > `Gestión del módulo de Empresa`:
+Una vez instalado el módulo del 347, el usuario debe aplicar su conjunto de datos a la organización legal con contabilidad correspondiente, desde :material-menu: `Configuración General` > `Organización` > `Gestión del módulo de Empresa`:
 
 1. Seleccionar la **Organización** legal con contabilidad correspondiente. (Es la organización que representa a la entidad legal con obligaciones fiscales en España y que tiene configurada una contabilidad activa. Si no está seguro, consulte con el administrador del sistema.)
 2. En **Datos de referencia**, marcar el dataset del módulo `Modelo AEAT 347`.
@@ -126,13 +115,13 @@ Una vez instalado el módulo del 347, el usuario debe aplicar su conjunto de dat
 ![Gestión del módulo de Empresa](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/gestion-modulo-empresa.png)
 
 !!! info
-    El [módulo de impuestos para España](configuracion-de-impuestos-para-libro-de-facturas.md) es necesario para generar el modelo 347 y debe estar instalado previamente y aplicado a la organización (\*) o bien a la organización legal para la que se quiera obtener el 347.
+    El [módulo de impuestos para España](configuracion-de-impuestos-para-libro-de-facturas.md) es necesario para generar el modelo 347 y debe estar instalado y aplicado bien a la organización raíz del sistema (\*), o bien directamente a la organización legal para la que se quiere generar el 347.
 
 ## Configuración del módulo
 
 ### Configuración del modelo 347
 
-Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos` que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
+Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos` que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
 
 ![Declaración de Impuestos - Modelo 347](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/declaracion-de-impuestos.png)
 
@@ -169,7 +158,7 @@ Una vez aplicado el conjunto de datos, la configuración del Modelo 347 se crea 
             -   Servicios prestados - Clave B
             -   Transmisiones de inmuebles - Clave B
 
-En la ruta `Gestión Financiera` > `Contabilidad` > `Configuración` > `AEAT347 Tipo de documento`, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
+En la ruta :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `AEAT347 Tipo de documento`, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
 
 Si el usuario introduce algún tipo de documento, solo esos serán los que se tengan en cuenta.
 
@@ -189,7 +178,7 @@ La asignación de los tipos de IVA a los parámetros del Modelo 347 se realiza a
     - **Servicios prestados – Entregas `B`**
     - **Transmisiones de inmuebles – Entregas `B`**
 
-    El usuario puede comprobar en la ruta de aplicación: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango impuesto` - solapa `Parámetro de Impuesto` que los `tipos impositivos/impuestos` que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
+    El usuario puede comprobar en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango impuesto` - solapa `Parámetro de Impuesto` que los `tipos impositivos/impuestos` que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
 
     - Los tipos de IVA de compras/adquisiciones (nacional) incluyendo las adquisiciones de bienes inmuebles y bienes de inversión, se han asociado con el parámetro `Adquisiciones de bienes` que se corresponden con la clave de operación del 347 => `A`
     - Los tipos de IVA de ventas/entregas (nacional) (incluyendo Recargo de Equivalencia) se han asociado con el parámetro `Entregas de bienes` que corresponden con la clave de operación del 347 => `B`
@@ -205,7 +194,7 @@ En el modelo 347 se deben incluir los arrendamientos de locales de negocios, es 
 
 #### Datos requeridos
 
-De ser así, el usuario debe introducir en el sistema la información que se detalla a continuación, ya que es necesario incluirla en el modelo 347:
+Si el producto está marcado como local arrendado, es obligatorio completar los siguientes datos para que el módulo pueda incluirlo correctamente en el Modelo 347:
 
 -   **Situación**. El usuario debe elegir entre una de las siguientes opciones:
     -   Locales en el extranjero
@@ -251,8 +240,8 @@ El modelo 347 se genera desde la ruta de aplicación: `Gestión Financiera` > `C
 El usuario deberá introducir los siguientes datos para generar el modelo 347:
 
 - **Organización** para la cual quiere generar el Modelo 347. El sistema mostrará el calendario asociado a la organización en un campo no editable.
-- **Esquema contable**
-- **Declaración**. El usuario debería seleccionar aquí el modelo 347 del periodo impositivo que corresponda.
+- **Esquema contable**: plan de cuentas asociado a la organización seleccionada. En la mayoría de los casos se completa automáticamente al elegir la organización. Si no es así, consulte con el administrador del sistema.
+- **Declaración**. El usuario debe seleccionar aquí el modelo 347 del periodo impositivo que corresponda.
 - **Ejercicio**. El usuario puede introducir el año natural para el cual quiere generar el modelo 347
 - **Periodo**. El valor `Anual` debería mostrarse por defecto.
 
@@ -290,7 +279,7 @@ El fichero csv `XXXFacturas.csv` incluye las siguientes columnas:
 - **Impuesto**
     Impuestos del dataset de impuestos para España ligados al parámetro del Modelo 347 correspondiente.
 - **IVA de Caja**
-    Esta columna nos indica si la factura está o no sujeta a IVA de Caja.
+    Esta columna indica si la factura está o no sujeta a IVA de Caja.
 - **Cuota**
     Cuota ligada al tipo de impuesto incluido en la factura.
 - **Base Imponible**
@@ -327,6 +316,9 @@ Estos ficheros csv permiten saber, por ejemplo:
 -   cuáles son los cobros en efectivo cuya suma equivale al `Importe percibido en metálico` de un cliente concreto incluido en la declaración.
 
 ## Casos de usuario
+
+!!! note "Sobre el RECC"
+    Varias subsecciones hacen referencia al RECC (Régimen Especial de Criterio de Caja). Es un régimen fiscal opcional para empresas cuya facturación anual no supera los 2.000.000 €, que permite retrasar el devengo del IVA hasta el momento del cobro o pago efectivo. Si no sabe si su empresa aplica este régimen, consulte con su asesor fiscal.
 
 ### Operaciones de compra y venta
 
@@ -446,7 +438,7 @@ Además del importe anual de las operaciones y el importe anual devengado en cri
 
 ### Presentación del modelo 347 en formato electrónico
 
-La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
+La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tengan un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
 
 Si aún no dispone de un certificado digital reconocido por la AEAT, puede obtener más información en la web de la FNMT o a través de la sede electrónica de la Agencia Tributaria.
 
@@ -463,6 +455,20 @@ Para ello, el usuario deberá realizar en la aplicación los cambios en los dato
 -   el número de la declaración original que se sustituye
 
 ![Declaración sustitutiva](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/declaracion-sustitutiva.png)
+
+
+*[AEAT]: Agencia Estatal de Administración Tributaria
+*[IVA]: Impuesto sobre el Valor Añadido
+*[RECC]: Régimen Especial de Criterio de Caja
+*[NIF]: Número de Identificación Fiscal
+*[CIF]: Código de Identificación Fiscal
+*[TXT]: Fichero de texto plano con extensión .txt
+*[CSV]: Comma-Separated Values — fichero de valores separados por comas
+*[ZIP]: Fichero comprimido con extensión .zip
+*[INE]: Instituto Nacional de Estadística
+*[FNMT]: Fábrica Nacional de Moneda y Timbre
+*[UE]: Unión Europea
+*[APR]: Aplicación de Presentación de Registros (módulo de presentación de la AEAT)
 
 ---
 
