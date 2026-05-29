@@ -20,7 +20,7 @@ tags:
 
 La ventana **Conversores de Moneda** es donde se introducen las credenciales necesarias para que Etendo se conecte a un servicio externo que proporciona tipos de cambio diarios. Una vez configurado, el sistema puede descargar los tipos vigentes de forma automática, sin necesidad de introducirlos manualmente. El módulo [Descargador de Tasa de Conversión](../../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md) utiliza esta configuración para recuperar dichos tipos.
 
-Este módulo es compatible con distintos servicios de conversión de moneda. Una API es una conexión estandarizada que permite que dos sistemas de software intercambien datos de forma automática. Por defecto, se integra con [APILayer – Currency Data API](https://marketplace.apilayer.com/currency_data-api?utm_source=apilayermarketplace&utm_medium=featured){target="_blank"}.
+Este módulo es compatible con distintos servicios de conversión de moneda. Para conectarse a uno de estos servicios, el sistema utiliza una API — un canal estandarizado que permite que dos aplicaciones de software intercambien datos de forma automática, sin intervención manual. No es necesario comprender los detalles técnicos; solo debe registrarse en el proveedor del servicio y pegar aquí la clave de acceso (token) que le proporcione. Por defecto, se integra con [APILayer – Currency Data API](https://marketplace.apilayer.com/currency_data-api?utm_source=apilayermarketplace&utm_medium=featured){target="_blank"}.
 
 Cada registro de esta ventana representa una integración con una API. Solo el registro con **Seleccionado** en **Sí** está activo para el proceso de descarga.
 
@@ -29,7 +29,7 @@ Los tipos de cambio se utilizan en todo Etendo cada vez que se registra una tran
 ## Campos { #fields }
 
 <figure markdown="span">
-  ![Currency Converters window showing the configuration fields for the APILayer Currency Data API integration](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.png)
+  ![Ventana Conversores de Moneda con los campos de configuración para la integración con APILayer Currency Data API](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.png)
   <figcaption>Ventana Conversores de Moneda con una configuración de APILayer Currency Data API.</figcaption>
 </figure>
 

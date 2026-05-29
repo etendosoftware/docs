@@ -5,8 +5,8 @@ tags:
   - Etendo Classic
   - Currency
   - Financial Extensions
-  - Exchange Rates
-  - Currency Conversion
+  - Exchange rates
+  - Currency conversion
 ---
 
 # Currency Converters
@@ -20,7 +20,7 @@ tags:
 
 The **Currency Converters** window is where you enter the credentials needed for Etendo to connect to an external service that provides daily exchange rates. Once set up, the system can download current rates automatically instead of requiring you to enter them manually. The [Conversion Rate Downloader](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md) module uses this configuration to retrieve those rates.
 
-This module supports different currency-conversion services. An API is a standardized connection that lets two software systems exchange data automatically. By default, it integrates with [APILayer – Currency Data API](https://marketplace.apilayer.com/currency_data-api?utm_source=apilayermarketplace&utm_medium=featured){target="_blank"}.
+This module supports different currency-conversion services. To connect to one of these services, the system uses an API — a standardized channel that lets two software applications exchange data automatically without manual intervention. You do not need to understand the technical details; you only need to register with the service provider and paste the access key (token) it gives you into this window. By default, it integrates with [APILayer – Currency Data API](https://marketplace.apilayer.com/currency_data-api?utm_source=apilayermarketplace&utm_medium=featured){target="_blank"}.
 
 Each record in this window represents one API integration. Only the record with **Selected** set to **True** is active for the download process.
 
