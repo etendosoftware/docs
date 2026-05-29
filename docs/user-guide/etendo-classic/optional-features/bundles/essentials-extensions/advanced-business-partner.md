@@ -15,7 +15,7 @@ This section describes the Advanced Business Partner module included in the Eten
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
-    To be able to include this functionality, the Essentials Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}.
+    To be able to include this functionality, the Essentials Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}.
 
 The **Advanced Business Partner** module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
@@ -24,13 +24,15 @@ The **Advanced Business Partner** module allows the user to have a general view 
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner General View`
 
-In this window, it is possible to see all the business partner information of each record, grouped in the customer, vendor/creditor and employee sections of the header. In the original window **Business Partner**, this information is found in different tabs.
+The Business Partner General View centralizes all partner data — customer, vendor, and employee information — in a single window, eliminating the need to navigate between tabs to consult or update commercial conditions.
 
-![image_3.png](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-3.png)
+In this window, all business partner information is consolidated in a single form: the Customer, Vendor/Creditor, and Employee sections are visible directly in the main view, without switching between tabs as required in the standard Business Partner window.
 
-This change implies, in grid view, the user is able to create, modify and filter business partner information according to their needs.
+![Business Partner General View in form mode, showing Customer, Vendor/Creditor and Employee sections](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-3.png)
 
-![image_4.png](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-4.png)
+In grid view, fields from different tabs of the standard window — such as payment method, price list, and purchase pricelist — are available as columns. This allows filtering, comparing, and editing multiple business partners at once without opening each record individually.
+
+![Business Partner General View in grid mode with filter applied on Payment Method column](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/advanced-business-partner-4.png)
 
 
 ## Document Sequence

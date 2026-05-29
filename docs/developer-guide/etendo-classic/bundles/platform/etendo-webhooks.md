@@ -181,6 +181,40 @@ public class AdAlertWebhookService extends BaseWebhookService {
 
 ## Use Cases
 
+### SimSearch webhook
+
+The SimSearch webhook performs fuzzy matching over Etendo entities and returns the closest records for a given search term. It is used in Copilot flows where extracted or user-provided text must be mapped to existing records, for example matching OCR results against Business Partners, products, or documents.
+
+#### Performance considerations
+
+If SimSearch is still slow in your environment, especially on large tables, you can add a PostgreSQL trigram index to the identifier column used by the search.
+
+!!! info "Prerequisite"
+    Trigram indexes require the `pg_trgm` PostgreSQL extension to be enabled in the database.
+
+The index expression should match the expression used by the lookup. For example, if the search runs on the uppercase invoice document number, create the index on `upper(documentno::text)`:
+
+```sql
+CREATE INDEX IF NOT EXISTS c_invoice_documentno_trgm
+    ON c_invoice
+    USING gin (upper(documentno::text) gin_trgm_ops);
+```
+
+**Pros:**
+
+- Faster fuzzy searches on large tables.
+- Better response time in OCR-driven flows and other bulk matching scenarios.
+- Lower database CPU usage for repeated similarity lookups.
+
+**Cons:**
+
+- Higher disk usage because the extra index must be stored and maintained.
+- Slower `INSERT`, `UPDATE`, and `DELETE` operations on the indexed table.
+- Reindexing, vacuuming, and initial index creation can be expensive on large datasets.
+- The index only helps when it matches the actual search expression used by the query.
+
+For production environments, benchmark the query first and add trigram indexes only to the columns that are proven bottlenecks.
+
 ### Tokens Visibility
 
 !!! note
