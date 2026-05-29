@@ -81,7 +81,7 @@ El módulo de generación del Modelo 347 no incluye las operaciones que se detal
 !!! note
     El módulo no contempla el caso de Declaración Complementaria, es decir, aquellos casos en los que solo deben incluirse operaciones que debieron declararse en otra declaración del mismo ejercicio presentada con anterioridad y que no se incluyeron.
 
-    Estas operaciones deben ser incluidas manualmente por el usuario a través de la página de la AEAT (Agencia Estatal de Administración Tributaria), como se explica en la sección [Presentación de declaraciones sustitutivas](#presentación-de-declaraciones-sustitutivas).
+    Estas operaciones deben ser incluidas manualmente por el usuario a través de la página de la AEAT (Agencia Estatal de Administración Tributaria), como se explica en la sección [Presentación de declaraciones sustitutivas](#presentacion-de-declaraciones-sustitutivas).
 
 ## Instalación del módulo
 
@@ -115,7 +115,7 @@ Una vez instalado el módulo del 347, el usuario debe aplicar su conjunto de dat
 ![Gestión del módulo de Empresa](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/gestion-modulo-empresa.png)
 
 !!! info
-    El [módulo de impuestos para España](configuracion-de-impuestos-para-libro-de-facturas.md) es necesario para generar el modelo 347 y debe estar instalado y aplicado bien a la organización raíz del sistema (\*), o bien directamente a la organización legal para la que se quiere generar el 347.
+    El [módulo de impuestos para España](impuestos-para-españa.md) es necesario para generar el modelo 347 y debe estar instalado y aplicado bien a la organización raíz del sistema (\*), o bien directamente a la organización legal para la que se quiere generar el 347.
 
 ## Configuración del módulo
 
@@ -144,7 +144,7 @@ Una vez aplicado el conjunto de datos, la configuración del Modelo 347 se crea 
               
             -   Nombre y apellidos de la persona de contacto. Si siempre presenta la declaración la misma persona, puede cambiarse a tipo `constante` para no tener que introducirlo en cada generación.
             -   Nº Teléfono de la persona de contacto. Igual que el anterior, puede configurarse como `constante` si el teléfono de contacto no varía entre declaraciones.
-            -   Declaración substitutiva (si/no)
+            -   Declaración sustitutiva (si/no)
             -   Nº de la declaración a sustituir
             -   NIF del representante legal
 
@@ -229,7 +229,7 @@ El 347 refleja este tipo de operaciones de forma separada tal y como se explica 
 ## Generación del modelo 347
 
 !!! warning
-    El módulo no contempla el caso de **Declaración Complementaria**, es decir, aquellos casos en los que solo deben incluirse operaciones que debieron declararse en otra declaración del mismo ejercicio presentada con anterioridad y que no se incluyeron. Estas operaciones deben añadirse manualmente a través de la página de la AEAT. Consulte la sección [Presentación de declaraciones sustitutivas](#presentación-de-declaraciones-sustitutivas).
+    El módulo no contempla el caso de **Declaración Complementaria**, es decir, aquellos casos en los que solo deben incluirse operaciones que debieron declararse en otra declaración del mismo ejercicio presentada con anterioridad y que no se incluyeron. Estas operaciones deben añadirse manualmente a través de la página de la AEAT. Consulte la sección [Presentación de declaraciones sustitutivas](#presentacion-de-declaraciones-sustitutivas).
 
 El modelo 347 se genera desde la ruta de aplicación: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`.
 
@@ -291,7 +291,7 @@ El fichero csv `XXXFacturas.csv` incluye las siguientes columnas:
 
 ### Fichero `Metalico.csv`
 
-El fichero csv `XXXMetálico.csv` incluye las siguientes columnas:
+El fichero csv `XXXMetalico.csv` incluye las siguientes columnas:
 
 - **Cuenta Financiera**
     Cuentas financieras de tipo `Caja` de Etendo.
@@ -442,7 +442,7 @@ La presentación telemática del modelo 347 en formato electrónico requiere que
 
 Si aún no dispone de un certificado digital reconocido por la AEAT, puede obtener más información en la web de la FNMT o a través de la sede electrónica de la Agencia Tributaria.
 
-La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target=”_blank”}.
+La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
 
 
 #### Presentación de declaraciones sustitutivas
