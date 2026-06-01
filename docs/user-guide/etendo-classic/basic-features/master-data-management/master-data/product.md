@@ -69,19 +69,19 @@ Additional key data to fill in are:
 - **UOM**, that is the unit of measure to be used while purchasing, storing and selling a product, for instance *Units*.  
   A product can also have alternative UOM besides product's UOM.
 - **Product Category**, it is mandatory to select a product category to which the product is going to belong to.  
-  To learn more, visit [Product Category](../product-setup/product-category.md)
+  To learn more, visit [Product Category](../product-setup/product-category.md).
 - **Tax Category**, this category is key for managing the taxes related to the product. Taxes such as VAT depends on the type of product.  
-  To learn more, visit [Tax Category](../../financial-management/accounting/setup/tax-category.md)
+  To learn more, visit [Tax Category](../../financial-management/accounting/setup/tax-category.md).
 - **Purchase** checkbox can be selected to indicate that the product can be purchased to an external supplier. This checkbox is mainly an informative one, as it does not add any business logic behind but regarding MRP.  
   In that case, if selected, MRP will then purchase the product if needed, otherwise it will produce it.
 - **Sales** checkbox can be selected to indicate that the product is sold or can be sold to an external parties or customers. This checkbox is an informative one, as it does not add any business logic behind.
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
-  To learn more, visit [Process Plan](../../production-management/setup.md#process-plan)
+  To learn more, visit [Process Plan](../../production-management/setup.md#process-plan).
 - **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
-    To learn more, visit [Attribute Set](../product-setup/attribute-set.md)
+    To learn more, visit [Attribute Set](../product-setup/attribute-set.md).
 - **Attribute Set Value**, if an Attribute Set value such as *Blue and Large* is selected, Etendo displays a new field named *Use Attribute Set Value As*.
 - **Attribute Set Value As**, once an attribute set has been selected, that one could be used as described below depending on the criteria selected in this field:
   - **Default**: This means that the attribute set value defined will be defaulted in each of the transactions, but it is allowed to be changed.  
@@ -93,7 +93,7 @@ Additional key data to fill in are:
     - For instance, product Alcohol Free Beer is given the attribute set Alcoholic Proof and the attribute set value 0% in the Product window. This definition specifies completely the product: the Alcohol Free Beer is supposed to have a 0% alcoholic proof. But, in the production process, some deviations can happen, and this alcoholic proof can go to 0.01%. Using Overwrite Specification option, the production manager will be allowed to register this deviation in the Production process for Alcohol Free Beer product.
   - **Specification**: This means that the attribute set value will specify completely the product. The attribute set value will always have this value and no other value will be allowed for it.
     - For instance, product Large Blue Jeans is given the attribute set Size & Color with values Large and Blue. This defines the product and will not change. Transactions are done and completed with this product, without forcing to re-set the attribute set value. User can then query all products having Large size or Blue color without having to query the transactions but only the product definition.  
-      To learn more about attributes, visit How to Manage Attributes and Attribute Sets article.
+      To learn more about attributes, visit the [Attribute](../product-setup/attribute.md) and [Attribute Set](../product-setup/attribute-set.md) articles.
 - **UPC/EAN**, used to store bar-code information
 - **Bill of Materials** checkbox is selected when the product is a bundle of other products as listed in the Bill of Materials tab.
 - **Deferred Revenue**: this flag is visible only for products having the Sale flag checked and indicates that _by default_, revenues for sales of this product need to be deferred. When this flag is checked, the Revenue Plan field group becomes visible, allowing users to configure the next two fields.
@@ -218,7 +218,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
     As a consequence of that, the product being created will also be part of the Price List selected.
 2.  by **selecting the product** and entering both the *Net Unit Price* and the *Net List Price* values, while creating the *Price List*.  
     As a consequence of that, the Price List as well as both *Net Unit Price* and *Net List Price* values will be automatically shown in the *Price List* tab of the product.  
-    To learn more, visit Price List.
+    To learn more, visit [Price List](../pricing/price-list.md).
 
 #### Price Rule Version
 
@@ -447,7 +447,7 @@ For instance the average cost of a product which transactions are listed below i
 - goods shipment for Movement Qty -50 for a Total cost of 1000
 - goods receipt for Movement Qty 100 for a Total cost of 2500
 
-##### Manual Cost Adjustment
+#### Manual Cost Adjustment
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
@@ -563,7 +563,7 @@ The way to get that is as simple as:
 - select first the language required
 - and then enter the product name translated into that language.
 
-#### Characteristics
+### Characteristics
 
 Relation of characteristics assigned to the Product.
 
@@ -700,14 +700,14 @@ It defines tax modification for products linked to service. Products linked to t
 
 ### Stock By Logistic Unit
 
+!!! info
+    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+
 It allows viewing stock by logistics units (referenced inventory) in a clearer and more organized way.
 
 !!! info
-    For more information, visit [Stock Logistic Unit](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
+    For more information, visit [Stock Logistic Unit](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product-stock-by-logistic-unit).
 
-
-!!! info
-    To be able to include this functionality, the **Stock Logistic Unit** module, part of Warehouse Extensions Bundle, must be installed. To do that, follow the instructions from the marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 ---
 

@@ -1,12 +1,18 @@
 ---
 title: Producto
+tags:
+  - Gestión de datos maestros
+  - Etendo classic
+  - Producto
+  - Inventario
+  - Costes
 ---
 
 ## Producto { #product }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
-### Visión general { #overview_3 }
+### Descripción general { #overview }
 
 La ventana de datos maestros de producto es el lugar donde puede organizar y centralizar fácilmente los datos clave de los artículos de cualquier tipo que pueda gestionar como parte de los procesos y/o actividades de la organización.
 
@@ -16,7 +22,24 @@ Es posible cargar información de **Producto** en Etendo de forma masiva usando 
 
 Esta sección describe cómo configurar **Productos** individualmente.
 
-### Producto { #product_1 }
+La ventana Producto está organizada en las siguientes solapas:
+
+- **Producto**: Campos del encabezado principal: tipo de producto, unidad de medida, categoría, indicadores de precio, atributos y configuración de ingresos/gastos diferidos.
+- **Precio**: Versiones de tarifa a las que pertenece el producto, incluida la configuración de versión de regla de precio para servicios.
+- **Contabilidad**: Cuentas del libro mayor utilizadas al contabilizar transacciones relacionadas con el producto.
+- **Lista de materiales**: Componentes y cantidades para productos marcados como Lista de materiales.
+- **Regla de cálculo de costes**: Reglas de cálculo de costes que se aplican al producto dentro de un rango de fechas determinado.
+- **Costo**: Historial de costes del producto e introducción manual de costes.
+- **Operaciones**: Registro de solo lectura de todas las operaciones de inventario del producto.
+- **Compras**: Datos de proveedor y plan de compras para MRP.
+- **Producción**: Datos del plan de producción y hueco de almacenamiento por defecto.
+- **Traducción**: Traducciones del nombre del producto por idioma.
+- **Características**: Características de variante asignadas al producto.
+- **Coste Unitario**: Coste unitario calculado a partir del valor total del stock.
+- **Stock**: Stock disponible por hueco.
+- **Unidad Alternativa**: Unidades de medida alternativas para los flujos de ventas, compras y logística.
+
+### Ventana Producto { #product-window }
 
 La ventana **Producto** permite la creación de artículos tales como productos, materias primas, recursos, servicios, etc.
 
@@ -35,30 +58,30 @@ Hay cuatro tipos de producto disponibles:
   - El tipo Recurso puede utilizarse para configurar recursos como recursos financieros, legales o naturales utilizados por la organización.
   - El tipo Gasto puede utilizarse para configurar gastos como gastos de viaje que se usarán al informar los gastos de **Operarios**.
 
-Los tipos de producto no confieren tratamientos contables diferentes. En otras palabras, todos los tipos de producto contabilizan de la misma manera al comprarse, almacenarse o venderse.
+Los tipos de producto no afectan al modo en que las transacciones se contabilizan en el libro mayor. Todos los tipos de producto se contabilizan de la misma manera al comprarse, almacenarse o venderse.
 
 Todos ellos utilizan las cuentas del libro mayor definidas en la solapa **Contabilidad** de la ventana **Producto**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-1.png)
+![Campos del formulario de encabezado de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-1.png)
 
 Los datos clave adicionales a completar son:
 
 - **Unidad**, es decir, la unidad de medida que se utilizará al comprar, almacenar y vender un producto, por ejemplo *Unidades*.  
   Un producto también puede tener unidades alternativas además de la unidad del producto.
 - **Categoría del producto**, es obligatorio seleccionar una categoría del producto a la que pertenecerá el producto.  
-  Para saber más, visite Categoría del producto
+  Para saber más, visite [Categoría de producto](../product-setup/product-category.md).
 - **Categoría de Impuesto**, esta categoría es clave para gestionar los impuestos relacionados con el producto. Impuestos como el IVA dependen del tipo de producto.  
-  Para saber más, visite Categoría de Impuesto
+  Para saber más, visite [Categoría de Impuesto](../../financial-management/accounting/setup/tax-category.md).
 - La casilla **Compra** puede seleccionarse para indicar que el producto puede comprarse a un proveedor externo. Esta casilla es principalmente informativa, ya que no añade lógica de negocio por sí misma, salvo en lo relativo a MRP.  
   En ese caso, si está seleccionada, MRP comprará el producto si es necesario; en caso contrario, lo producirá.
 - La casilla **Ventas** puede seleccionarse para indicar que el producto se vende o puede venderse a terceros o clientes externos. Esta casilla es informativa, ya que no añade lógica de negocio por sí misma.
 - La casilla **Almacenado** se selecciona si el producto forma parte del inventario; por lo tanto, se registran en Etendo las transacciones de movimientos de inventario correspondientes.  
   Este indicador ya no puede modificarse para un producto si dicho producto forma parte de cualquier documento relacionado con ventas, compras, inventario o producción, independientemente del estado del documento.
 - La casilla **Producción** se selecciona si el producto forma parte de un proceso de producción. Una vez seleccionada, aparece un campo adicional para seleccionar un *Plan de Producción*.  
-  Para saber más, visite [Plan de Producción](../../production-management/setup.md#process-plan)
+  Para saber más, visite [Plan de Producción](../../production-management/setup.md#process-plan).
 - **Conjunto atributos**, un producto puede tener un grupo de características o un conjunto de atributos, como ***Color y talla***, a tener en cuenta al pedir o almacenar el producto.
   - Si aquí se selecciona un **Conjunto atributos**, Etendo muestra un nuevo campo llamado *Valor atributos*.  
-    Para saber más, visite Conjunto atributos
+    Para saber más, visite [Conjunto atributos](../product-setup/attribute-set.md).
 - **Valor atributos**, si se selecciona un valor del conjunto de atributos como *Azul y grande*, Etendo muestra un nuevo campo llamado *Usar conjunto de atributos como*.
 - **Usar conjunto de atributos como**, una vez seleccionado un conjunto de atributos, este puede utilizarse como se describe a continuación según el criterio seleccionado en este campo:
   - **Valor por defecto**: significa que el valor del conjunto de atributos definido se establecerá por defecto en cada transacción, pero se permite cambiarlo.  
@@ -66,11 +89,11 @@ Los datos clave adicionales a completar son:
     - Por ejemplo, puede configurarse para que el valor por defecto del atributo Talla de un producto sea Mediana (porque es el más utilizado).  
       De este modo, cada vez que se seleccione ese producto, su valor de conjunto de atributos se establecerá en Mediana (salvo que se seleccione desde stock, en cuyo caso el valor del conjunto de atributos se establece en el valor con el que el producto está almacenado).  
       Es posible sobrescribir este valor del conjunto de atributos, a Pequeña o Grande, por ejemplo.
-  - **Sobrescribir especificación**: significa que el valor del conjunto de atributos especificará completamente el producto; no obstante, el valor del conjunto de atributos puede cambiarse para este producto.
+  - **Sobrescribir especificación**: el valor del conjunto de atributos especifica completamente el producto, pero puede modificarse caso por caso (por ejemplo, para registrar una desviación en producción).
     - Por ejemplo, al producto Cerveza sin alcohol se le asigna el conjunto de atributos Graduación alcohólica y el valor del conjunto de atributos 0% en la ventana **Producto**. Esta definición especifica completamente el producto: se supone que la Cerveza sin alcohol tiene una graduación alcohólica del 0%. Pero, en el proceso de producción, pueden producirse desviaciones y esta graduación puede pasar a 0,01%. Usando la opción Sobrescribir especificación, el responsable de producción podrá registrar esta desviación en el proceso de **Producción** para el producto Cerveza sin alcohol.
   - **Especificación**: significa que el valor del conjunto de atributos especificará completamente el producto. El valor del conjunto de atributos siempre tendrá este valor y no se permitirá ningún otro valor.
     - Por ejemplo, al producto Vaqueros grandes azules se le asigna el conjunto de atributos Talla y Color con los valores Grande y Azul. Esto define el producto y no cambiará. Las transacciones se realizan y completan con este producto, sin obligar a volver a establecer el valor del conjunto de atributos. El usuario puede entonces consultar todos los productos que tengan talla Grande o color Azul sin tener que consultar las transacciones, sino únicamente la definición del producto.  
-      Para saber más sobre atributos, visite el artículo Cómo gestionar atributos y conjuntos de atributos.
+      Para saber más sobre atributos, visite los artículos [Atributo](../product-setup/attribute.md) y [Conjunto de atributos](../product-setup/attribute-set.md).
 - **UPC/EAN**, utilizado para almacenar información de código de barras
 - La casilla **Lista de materiales** se selecciona cuando el producto es un paquete de otros productos, tal como se lista en la solapa **Lista de materiales**.
 - **Ingreso postpuesto**: este indicador solo es visible para productos con el indicador **Ventas** marcado e indica que, _por defecto_, los ingresos por ventas de este producto deben diferirse. Cuando este indicador está marcado, se hace visible el grupo de campos Plan de ingresos, permitiendo a los usuarios configurar los dos campos siguientes.
@@ -92,7 +115,7 @@ Estos valores se utilizan cuando se crea una factura para un producto que tiene 
 
 Del mismo modo, estos valores también se utilizan cuando se crea una factura a partir de otro documento (por ejemplo: el proceso Facturar que crea facturas a partir de pedidos de venta). Del mismo modo, estos valores pueden modificarse transacción por transacción.
 
-Para saber más, visite el artículo Cómo gestionar ingresos y gastos diferidos.
+Para saber más, visite el artículo [Cómo gestionar ingresos y gastos diferidos](../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses.md).
 
 - **Registrar con precio de compra**: este indicador se utiliza al contabilizar un documento de **Albarán (Proveedor)** o una **Factura (Proveedor)** conciliada en el libro mayor.  
   Normalmente, se utiliza el coste del producto al contabilizar esas transacciones; sin embargo, esta casilla permite usar el precio de compra del producto en su lugar.  
@@ -101,31 +124,31 @@ Para saber más, visite el artículo Cómo gestionar ingresos y gastos diferidos
 !!! info
     Tenga en cuenta que, en este caso, es necesario que un **Pedido de compra** esté relacionado con el **Albarán (Proveedor)**; de lo contrario, se mostrará un mensaje de error, ya que se requiere el precio de compra del producto.
 
-- **Retornable**: este indicador se utiliza para indicar si un producto puede devolverse y, en caso de que lo sea, se muestra un nuevo campo. Al intentar devolver un producto no retornable desde la ventana Devolución de cliente, se mostrará un error.
+- **Retornable**: seleccione esta casilla para indicar que el producto puede ser devuelto por un cliente. Cuando se selecciona esta casilla, el campo **Días de Retraso en Devolución** queda disponible. Si intenta devolver un producto no retornable desde la ventana Devolución de cliente, Etendo mostrará un mensaje de error.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-2.png)
+![Campo Retornable en la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-2.png)
 
 - **Días de Retraso en Devolución**: en este campo, es posible configurar la cantidad máxima de días antes de que un producto ya no pueda devolverse. Si el campo se deja en blanco, el producto puede devolverse sin limitaciones de tiempo. Al intentar devolver un producto cuyo periodo ha expirado, aparecerá un mensaje de advertencia.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-3.png)
+![Mensaje de advertencia de Días de Retraso en Devolución](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-3.png)
 
 !!! info
-    **Nota**: Si **Almacenado** no está marcado y **Lista de materiales** está marcado, el precio del producto debería ser 0. Esto se debe a que, en ese caso especial, el precio del producto es la suma de los precios de los componentes de la lista de materiales de los que se compone. Si se desea crear una promoción, debe utilizarse «Descuentos y promociones».
+    Si la casilla **Almacenado** no está marcada y la casilla **Lista de materiales** está marcada, el precio del producto debe establecerse en 0. En este caso, el precio total se calcula automáticamente a partir de los precios de los componentes individuales listados en la solapa **Lista de materiales**. Para aplicar promociones o descuentos, use la funcionalidad Descuentos y promociones.
 
 #### Variantes { #variants }
 
 El producto puede marcarse como **Es genérico**. Esto significa que se crearán variantes de este producto basadas en algunas características como color, talla, etc. La definición de estas características tiene lugar en el producto genérico, por lo que puede decirse que un producto genérico es como una plantilla en la que las nuevas variantes heredarán todos los atributos (impuestos, precios, imagen) de este producto. Debido a esto, un producto genérico no puede utilizarse en transacciones, sino sus variantes.
 
 !!! info
-    Nota: Los productos marcados como genéricos no pueden utilizarse en operaciones de transacción como pedidos de venta, pedidos de compra, albaranes, etc.
+    Los productos marcados como genéricos no pueden utilizarse en operaciones de transacción como pedidos de venta, pedidos de compra, albaranes, etc.
 
 Cuando se marca este indicador, se muestran dos botones:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-4.png)
+![Botones Gestionar características y Crear variantes en un producto genérico](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-4.png)
 
-- Muestra todas las variantes que se han creado o no para ese producto genérico específico. Es muy útil cuando:
-  - El usuario no quiere generar todas las variantes, sino solo algunas. El botón permite al usuario seleccionar las combinaciones posibles.
-  - El usuario añade un valor más, por ejemplo, rojo cuando antes tenía verde y blanco y las variantes ya se crearon en el pasado. Mostrará las nuevas combinaciones.
+- El botón **Gestionar características** muestra todas las combinaciones de variantes posibles para el producto genérico, tanto las ya creadas como las que aún no se han creado. Es muy útil en dos situaciones:
+  - El usuario quiere crear solo algunas combinaciones, no todas. El botón permite revisar y seleccionar combinaciones específicas antes de crearlas.
+  - El usuario añade un nuevo valor de característica (por ejemplo, Rojo, cuando ya existían Azul y Blanco) y quiere ver qué nuevas combinaciones están ahora disponibles.
 
 Por ejemplo, imagine que el producto genérico Camiseta Modelo A tiene las características:
 
@@ -134,15 +157,15 @@ Por ejemplo, imagine que el producto genérico Camiseta Modelo A tiene las carac
 
 Pero todavía no se han creado variantes. Si pulsa el botón, puede ver todas las combinaciones posibles:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-5.png)
+![Todas las combinaciones de variantes posibles para un producto genérico](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-5.png)
 
 Entonces pueden seleccionarse todas las combinaciones o elegir solo algunas. Una vez realizada la selección pulsando Hecho, las combinaciones se crearán como **Productos**. Estos nuevos productos tendrán el campo **Producto genérico** completado con el producto que se marcó como genérico. Se puede decir que es su producto padre.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-6.png)
+![Variantes de producto creadas listadas en la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-6.png)
 
-- Crea/explota todas las variantes de producto, es decir, todas las combinaciones basadas en las características definidas.
+- Crea todas las variantes de producto, es decir, todas las combinaciones basadas en las características definidas.
 
-Otro botón que puede aparecer es ![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-7.png). Solo aparece cuando el producto genérico o la nueva variante de producto tiene relacionada una característica no variante. Dos escenarios:
+Otro botón que puede aparecer es ![Botón Establecer valor de característica](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-7.png). Solo aparece cuando el producto genérico o la nueva variante de producto tiene relacionada una característica no variante. Dos escenarios:
 
 1. **Producto genérico**: este botón permite introducir el valor de esa característica.  
    Imagine que la característica es Línea de moda, que tiene tres valores: Sport, Vintage, Classic.  
@@ -153,14 +176,14 @@ Una vez creada una variante, sus características y valores pueden visualizarse 
 
 - Vista de cuadrícula: hay una nueva columna **Descripción de característica**. Esta columna se calcula y no es editable. Muestra las características con sus valores como texto. Esta columna tiene un nuevo selector de búsqueda para encontrar variantes de producto en función de sus características.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
+![Columna Descripción de característica en la vista de cuadrícula del producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
 Pulse el botón de actualización y se abre una ventana emergente para seleccionar valores:
 
 
 - Vista de formulario: las variantes de producto tienen una nueva sección llamada _Descripción de característica_. Esta sección contiene tantos campos como características diferentes tenga el producto.
 
-Existe una preferencia **Mostrar padres de características de producto**: los valores pueden ser 1, 2, 3, 4, etc. El número indica cuántos niveles del árbol jerárquico quiere mostrar el usuario en la vista de formulario en la ventana **Producto**. Por ejemplo, si el árbol es: Color->Verde->Verde claro->0034.
+La preferencia **Mostrar Características de Producto padres** controla cuántos niveles de la jerarquía de una característica se muestran en la vista de formulario de la ventana **Producto**. Establézcala en un número (1, 2, 3, etc.) para controlar cuántos niveles superiores aparecen por encima de un valor. Por ejemplo, si la jerarquía es Color > Verde > Verde claro > 0034 y la preferencia está establecida en 2, el formulario mostrará Verde claro y su padre Verde, pero no el nivel superior Color ni el código 0034.
 
 Se pueden añadir nuevos valores de una característica existente. Por ejemplo, el color rojo cuando ya se dispone de Azul y Blanco. Cuando esto ocurre, este nuevo valor se añade automáticamente a todos los productos genéricos que ya tienen la característica Color. Este nuevo valor estará presente en la solapa de configuración, pero desactivado. Si el usuario quiere utilizarlo en un producto específico para crear nuevas variantes, puede simplemente activar el valor y usar el botón *Gestionar características*.
 
@@ -172,17 +195,18 @@ Esta modificación de impuestos se implementa mediante un servicio vinculado al 
 
 Para configurarlo, vaya a la ventana **Producto** y cree un nuevo servicio. Un servicio es simplemente un producto con el campo Tipo de producto establecido en Servicios. También deben activarse el campo Vinculado a producto y el campo **Modificar Impuesto**. Cuando este campo se activa, se hace visible una nueva solapa llamada **Modificar Categorías de Impuestos**. En esta solapa se define la configuración de las categorías de impuestos de los productos que este servicio modificará cuando esté vinculado y la nueva categoría de impuesto a aplicar.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-11.png)
+![Configuración de la solapa Modificar Categorías de Impuestos](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-11.png)
 
 Para facilitar el proceso de configuración, se han añadido dos componentes:
 
 1.- Modificar Impuesto para Categoría del producto (Botón): ventana Seleccionar y ejecutar para asignar las categorías del producto y las categorías de impuestos en la misma acción.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-12.png)
+![Botón Modificar Impuesto para Categoría del producto — ventana Seleccionar y ejecutar](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-12.png)
 
 2.- Copiar configuración de Modificar Impuesto del servicio (Botón): ventana Seleccionar y ejecutar donde se muestran los servicios que modifican impuestos. El usuario puede seleccionar uno o varios servicios, y la configuración actual se asignará a los servicios seleccionados. Una vez ejecutado el proceso, la configuración antigua (si existe) se eliminará y se añadirá una nueva. Este proceso ayuda a desplegar la misma configuración en múltiples servicios.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-13.png)
+![Botón Copiar configuración de Modificar Impuesto del servicio — ventana Seleccionar y ejecutar](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-13.png)
+
 ### Precio { #price }
 
 Un producto puede formar parte de muchas Versiones de tarifa que son válidas para un periodo de tiempo determinado.
@@ -194,13 +218,13 @@ Hay dos formas en las que el usuario puede hacer que un producto forme parte de 
     Como consecuencia, el producto que se está creando también formará parte de la Tarifa seleccionada.
 2.  **seleccionando el producto** e introduciendo los valores de *Precio unitario* y *Precio tarifa*, mientras se crea la *Tarifa*.  
     Como consecuencia, la Tarifa, así como los valores de *Precio unitario* y *Precio tarifa*, se mostrarán automáticamente en la solapa *Tarifa* del producto.  
-    Para obtener más información, visite Tarifa.
+    Para obtener más información, visite [Tarifa](../pricing/price-list.md).
 
 #### Versión de Regla de Precio { #price-rule-version }
 
 Esta solapa solo estará disponible cuando se seleccione el campo Is Price Rule Based. Esta solapa ofrece la posibilidad de añadir Reglas de Precio de Servicios al Servicio a partir de una fecha determinada.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-15.png)
+![Solapa Versión de Regla de Precio](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-15.png)
 
 En esta ventana también es posible definir importes máximos y mínimos que se tendrán en cuenta al mostrar servicios.
 
@@ -211,11 +235,12 @@ Para servicios con regla de cantidad: Cantidad única, la cantidad de la línea 
 Para servicios con regla de cantidad: Según producto, la cantidad de la línea no es relevante; solo importa el precio del producto, ya que se añadirán tantos servicios como productos se seleccionen. Solo si los precios de todos los productos están dentro del tramo, se mostrará el servicio.
 
 Además, si una vez que se ha añadido un servicio (aún no entregado) al albarán, cambia el precio del producto relacionado, se activará una validación y, en caso de que el servicio ya no cumpla las reglas del tramo, se eliminará del albarán actual y se mostrará un pop-up indicándolo.
+
 ### Contabilidad { #accounting }
 
 La solapa Contabilidad permite al usuario configurar las cuentas contables que se utilizarán al contabilizar transacciones relacionadas con el producto, como la compra o la venta del producto, en el libro mayor.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-16.png)
+![Solapa Contabilidad de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-16.png)
 
 Tal y como se muestra en la pantalla anterior, puede configurar para cada producto y libro mayor algunas cuentas que se utilizarán en las transacciones que se listan a continuación:
 
@@ -246,7 +271,7 @@ Esta cuenta suele ser una cuenta de activo.
   Esta cuenta suele ser una cuenta de gasto.
 - **Devolución de Ingresos por el Producto**: este campo almacena la cuenta por defecto que se utilizará para registrar devoluciones de ventas.  
   Esta cuenta suele ser una cuenta de ingresos.
-- **Devolución del Costo del Producto**: este campo almacena la cuenta por defecto que se utilizará para registrar.  
+- **Devolución del Costo del Producto**: este campo almacena la cuenta por defecto que se utilizará para registrar el coste de los bienes vendidos en devoluciones de ventas.  
   Esta cuenta suele ser una cuenta de gasto.
 - **Desviación pr. factura**: este campo almacena la cuenta por defecto que se utilizará para registrar diferencias de precio entre Albaranes (Proveedor) contabilizados y Facturas (Proveedor) registradas.  
   Esta cuenta suele ser una cuenta de activo.
@@ -256,7 +281,7 @@ Inicialmente, estas cuentas se heredan de las cuentas por defecto de la configur
 !!! info
     Además, es importante remarcar que es posible configurar la creación de nuevas cuentas correlativas para los productos, tal y como se describe en la solapa Libros mayores de la ventana Organización.
 
-#### Lista de materiales { #bill-of-materials }
+### Lista de materiales { #bill-of-materials }
 
 Esta solapa permite editar los componentes de la lista de materiales de los que consta el producto seleccionado.
 
@@ -266,7 +291,8 @@ Esta solapa proporciona información de la lista de productos contenidos y su ca
 
 Si la Categoría de Impuesto del producto está marcada como **As per BOM**, esta solapa también proporciona información del precio de cada producto en la lista de la Lista de materiales. El precio y la cantidad de esta lista se utilizan para realizar la división del importe base para calcular los impuestos en función de los impuestos configurados para cada producto de la lista.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
+![Solapa Lista de materiales de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
+
 ### Regla de cálculo de costes { #costing-rule }
 
 La solapa **Regla de cálculo de costes** permite al usuario revisar las reglas de cálculo de costes que se aplican al producto dentro de un rango de fechas determinado.
@@ -279,7 +305,8 @@ Las reglas de cálculo de costes se pueden crear y validar en la ventana **Regla
 
 La moneda utilizada por la regla de cálculo de costes es la moneda configurada para la organización.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-18.png)
+![Solapa Regla de cálculo de costes de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-18.png)
+
 ### Costo { #costing }
 
 La solapa **Costo** recopila y resume la información relacionada con el coste del producto como resultado de cada transacción del producto. Los costes del producto son válidos durante un rango de fechas fijo y pueden calcularse utilizando un algoritmo de cálculo de costes *Average* o *Standard*.
@@ -319,7 +346,7 @@ Es posible reconocerlos por su tipo de coste:
 - **Legacy Average**
 - y **Legacy Standard**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-19.png)
+![Solapa Costo de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-19.png)
 
 La forma de definir el **Costo** de un producto implica introducir la siguiente información detallada:
 
@@ -340,22 +367,23 @@ Además:
 
 !!! warning
     Tenga en cuenta que no debe completar este campo si la Regla de cálculo de costes no tiene marcado el campo Dimensión de Almacén.
-### Transacciones { #transactions }
 
-La solapa **Transacciones** es una vista resumida de todas las transacciones de un producto.
+### Operaciones { #transactions }
 
-No existe una forma para que el usuario cree directamente nuevas transacciones de producto en la solapa de transacciones.
+La solapa **Operaciones** es una vista resumida de todas las transacciones de un producto.
+
+No existe una forma para que el usuario cree directamente nuevas transacciones de producto en la solapa de operaciones.
 
 Las transacciones de producto de cualquier tipo se guardan automáticamente y se listan en esta solapa a medida que se contabilizan en Etendo.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-20.png)
+![Solapa Operaciones de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-20.png)
 
 Tal y como se muestra en la imagen anterior, Etendo guarda y nos informa de los siguientes datos relevantes para cada tipo de transacción de producto:
 
 - **Hueco** donde el producto ha sido almacenado o del que se ha retirado
 - **Cant. movida**, como el número de unidades de producto movidas internamente o bien de entrada o de salida
 - **Fecha del movimiento**, como la fecha de la transacción del producto
-- **Tipo de movimiento**, como por ejemplo:
+- **Tipo de Movimiento**, como por ejemplo:
   - **Albarán (Cliente)**, este tipo puede tener:
     - una cantidad movida negativa cuando un producto se envía a un cliente en un documento de **Albarán (Cliente)**.
     - una cantidad movida positiva cuando un producto se devuelve desde un cliente en una recepción de devolución de material.
@@ -375,7 +403,7 @@ Tal y como se muestra en la imagen anterior, Etendo guarda y nos informa de los 
 
 Etendo también nos informa sobre la información específica de:
 
-- **Línea de Albarán (Proveedor)/(Cliente)**
+- **Línea Albarán/Albarán (Proveedor)**
 - **Línea de almacén**
 - **Línea de movimiento**
 - **Línea de producción**
@@ -419,11 +447,11 @@ Por ejemplo, el coste promedio de un producto cuyas transacciones se listan a co
 - albarán de cliente para una cantidad movida -50 con un coste total de 1000
 - albarán de proveedor para una cantidad movida 100 con un coste total de 2500
 
-##### Ajuste manual de coste { #manual-cost-adjustment }
+#### Ajuste manual de coste { #manual-cost-adjustment }
 
-Adicionalmente, el coste de una transacción puede modificarse haciendo clic en el botón de proceso Ajuste manual de coste. Tras hacer clic en este botón, se abre un nuevo popup:
+Adicionalmente, el coste de una transacción puede modificarse haciendo clic en el botón de proceso Corrección Manual del Coste. Tras hacer clic en este botón, se abre un nuevo popup:
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-21.png)
+![Popup de Corrección Manual del Coste](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-21.png)
 
 Este pop-up permite introducir los siguientes datos detallados:
 
@@ -436,7 +464,7 @@ Este pop-up permite introducir los siguientes datos detallados:
   - si no está marcada, el importe incremental introducido en el campo de importe de coste total no se considerará parte del coste unitario de la transacción, sino del coste total. Esto es como introducir un coste *extra* como *Landed Cost*, que no cambia el coste unitario de esa transacción, pero sí el coste total.
   - si está marcada, el importe incremental introducido en el campo de importe de coste total se considerará parte del coste unitario de la transacción.
 
-Para información adicional sobre qué ajuste de coste es, o no es, coste unitario, revise la sección Ajustes de coste - Visión general.
+Para información adicional sobre qué ajuste de coste es, o no es, coste unitario, revise la sección Ajustes de coste - Descripción general.
 
 Una vez hecho, se creará un ajuste de coste de *corrección manual de coste*.
 
@@ -463,15 +491,14 @@ Algunos campos relevantes a tener en cuenta son:
   En última instancia, el coste total de una transacción de producto es la suma de todos los costes listados en esta solapa, tanto los originales como los ajustados, que pueden formar parte del coste unitario o no (p. ej., landed costs).
 - **Coste Unitario**: este campo detalla si el coste calculado forma parte del coste unitario del producto o no.
 - **Fecha contable**: es la fecha contable en la que el coste ha sido calculado y contabilizado en el libro mayor (p. ej., la fecha contable de un albarán de proveedor contabilizado en el libro mayor)
+
 ### Compras { #purchasing }
 
-La información de la solapa **Compras** se utiliza para productos que se planifican mediante el plan de compras.
-
-En esta solapa, se introduce la información necesaria para la creación del plan de compras y para la creación automática de **Pedidos de compra** a partir del plan de compras.
+La solapa **Compras** almacena datos de proveedor y planificación para los productos gestionados a través del Plan de Compras. Complete esta solapa cuando desee que Etendo sugiera o cree automáticamente Pedidos de compra para este producto.
 
 Además, el proceso de solicitud utiliza la información de **Terceros** para la creación automática de **Pedidos de compra**.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-23.png)
+![Solapa Compras de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-23.png)
 
 - **Terceros**, el proveedor que aparecerá en el **Pedido de compra** cuando se cree automáticamente desde la solicitud o desde el plan de compras.
 - **Valoración calidad**: valoración de calidad del proveedor. Campo solo informativo que no es utilizado por el proceso MRP.
@@ -497,6 +524,7 @@ Además, el proceso de solicitud utiliza la información de **Terceros** para la
 - **Fabricante**: campo solo informativo para indicar el fabricante del producto.
 - **Cantidad Std.**: cantidad que se tiene en cuenta en combinación con el **Tipo Cantidad** para el valor de cantidad del pedido de compra sugerido.
 - **Capacidad**: cantidad por día que el proveedor puede suministrar. En base a este campo y al tiempo de entrega, se calcula la fecha del pedido de compra. El número de días se calcula como el valor máximo entre el tiempo de entrega y la cantidad requerida / capacidad.
+
 ### Producción { #manufacturing }
 
 La solapa Producción se utiliza para productos que se planifican mediante el plan de producción.
@@ -525,6 +553,7 @@ La información de esta solapa es utilizada principalmente por el MRP para proce
     2.  Si este parámetro no estuviera definido, funcionaría como de costumbre y crearía un pedido de compra de 120 unidades (200-80)
 
 - **ABC**: valor utilizado en la gestión de almacén para indicar una combinación del nivel de stock y el coste de una pieza. El valor se calcula ejecutando el Informe de Producto Pareto.
+
 ### Traducción { #translation }
 
 Los nombres de los productos se pueden traducir a cualquier idioma.
@@ -534,7 +563,7 @@ La forma de hacerlo es tan sencilla como:
 - seleccionar primero el idioma requerido
 - y luego introducir el nombre del producto traducido a ese idioma.
 
-#### Características { #characteristics }
+### Características { #characteristics }
 
 Relación de características asignadas al **Producto**.
 
@@ -568,6 +597,7 @@ Campos a tener en cuenta:
 - **Código**: Código del valor. Hereda lo que se ha definido en la ventana de característica de producto
 - **Pr. estándar**: Este campo se muestra cuando la característica está marcada como _Define precio_. El objetivo de este campo es disponer de precios diferentes por valor. Por ejemplo, en función de las tallas
 - **Imagen**: Este campo se muestra cuando la característica está marcada como _Define imagen_. El objetivo de este campo es disponer de imágenes diferentes por valor. Por ejemplo, en función del color.
+
 ### Stock
 
 Esta solapa muestra el Stock disponible para este Producto en la Aplicación. Solo muestra los Huecos para los que la cantidad disponible del Producto no es 0.
@@ -576,9 +606,10 @@ Para cada hueco no vacío, también muestra información sobre:
 
 - la cantidad reservada
 - y la cantidad asignada
+
 ### Coste Unitario { #unit-cost }
 
-La solapa **Coste Unitario** muestra información sobre el *Coste Unitario* (Coste Unitario) real del producto.
+La solapa **Coste Unitario** muestra información sobre el *Coste Unitario* real del producto.
 
 El *Coste Unitario* de un Producto es el valor de cada unidad almacenada del producto, independientemente del algoritmo de cálculo de costes utilizado para calcular el coste de ese producto.
 
@@ -600,7 +631,7 @@ El usuario puede definir si un producto de una determinada categoría de product
 
 Esta solapa solo estará disponible cuando el campo 'Categorías de producto incluidas' del Servicio tenga un valor. Contiene todas las categorías de producto relacionadas con el servicio.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-25.png)
+![Solapa Categorías de Productos de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-25.png)
 
 En la solapa está disponible la siguiente información sobre los productos relacionados:
 
@@ -610,9 +641,11 @@ En la solapa está disponible la siguiente información sobre los productos rela
 
 Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón 'Relacionar categorías de producto' (visible solo cuando el campo 'Categorías de producto incluidas' tiene un valor). Este botón abrirá un Pick & Edit mostrando todas las categorías de producto no relacionadas con el servicio.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-26.png)
+![Ventana Pick and Edit de Relacionar categorías de producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-26.png)
 
 #### Versión de Regla de Precio de Categoría { #category-price-rule-version }
+
+Esta solapa solo estará disponible cuando el campo **Is Price Rule Based** esté seleccionado. Permite definir versiones de regla de precio que se aplican cuando el servicio está vinculado a productos pertenecientes a categorías de producto específicas.
 
 #### Productos { #products }
 
@@ -620,7 +653,7 @@ El usuario puede definir si un producto puede relacionarse con un producto de ti
 
 Esta solapa solo estará disponible cuando el campo 'Productos incluidos' del Servicio tenga un valor. Contiene todos los productos relacionados con el servicio.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-27.png)
+![Solapa Productos de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-27.png)
 
 En la solapa está disponible la siguiente información sobre los productos relacionados:
 
@@ -635,17 +668,20 @@ Esta solapa no es editable; no es posible añadir registros manualmente ni edita
 
 
 #### Versión de Regla de Precio de Producto { #product-price-rule-version }
-### Solapa de UOM alternativa { #alternate-uom-tab }
+
+Esta solapa solo estará disponible cuando el campo **Is Price Rule Based** esté seleccionado. Permite definir versiones de regla de precio que se aplican cuando el servicio está vinculado a productos individuales específicos.
+
+### Solapa de Unidad Alternativa { #alternate-uom-tab }
 
 !!! info
     Para habilitar esta funcionalidad, el usuario debe definir la preferencia **Habilitar la gestión de UOM** en el campo Propiedad con valor Y.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-29.png)
+![Solapa Unidad Alternativa de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-29.png)
 
 Campos a tener en cuenta:
 
 - **Unidad**, es la unidad de medida alternativa del producto, por ejemplo *Palet*. Es importante remarcar que cualquier unidad de medida debe crearse y configurarse en la ventana [Unidad de medida](../product-setup/unit-of-measure.md).
-- **Rangos**, es la conversión entre la unidad de medida alternativa del producto (AUM) y la unidad de medida del producto. Por ejemplo, si la conversión de la AUM del producto a la UOM del producto es 50, significa que 1 Palet representa 50 Unidades.
+- **Ratio de conversión**, es la conversión entre la unidad de medida alternativa del producto (AUM) y la unidad de medida del producto. Por ejemplo, si la conversión de la AUM del producto a la UOM del producto es 50, significa que 1 Palet representa 50 Unidades.
 - **Gtin**, es el *Global Trade Item Number* del producto definido en la AUM correspondiente.
 - **Ventas**, **Compra** y **Logística**, estos campos permiten definir el uso de la AUM del producto dentro de los flujos de Ventas, Compra e Inventario.  
   Los valores permitidos son:
@@ -661,20 +697,18 @@ Campos a tener en cuenta:
 #### Modificar Categorías de Impuestos { #modify-taxes-categories }
 
 Define la modificación de impuestos para productos vinculados a servicios. Los productos vinculados a este servicio que pertenezcan a la categoría configurada cambiarán la categoría de impuesto cuando se vinculen a este servicio.
+
 ### Stock por unidad logística { #stock-by-logistic-unit }
 
-Permite visualizar el stock por unidades logísticas (inventario referenciado) de una forma más clara y organizada.
-
-!!! info
-    Para más información, visite [Unidad logística de stock](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product---stock-by-logistic-unit).
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo **Unidad logística de stock**, parte de Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
+Permite visualizar el stock por unidades logísticas (inventario referenciado) de una forma más clara y organizada.
+
+!!! info
+    Para más información, visite [Unidad logística de stock](../../../optional-features/bundles/warehouse-extensions/stock-logistic-unit.md#product-stock-by-logistic-unit).
+
 ---
 
 Este trabajo es una obra derivada de [Gestión de Datos Maestros](https://wiki.openbravo.com/wiki/Master_Data_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
-
----
-
----
