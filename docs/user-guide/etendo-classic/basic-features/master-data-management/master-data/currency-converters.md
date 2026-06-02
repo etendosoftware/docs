@@ -18,7 +18,7 @@ tags:
 
 ## Overview
 
-The **Currency Converters** window is where you enter the access details (such as a URL and API key) that Etendo needs to connect to an external service that provides daily exchange rates. Once set up, the system can download current rates automatically instead of requiring you to enter them manually. The [Conversion Rate Downloader](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md) module uses this configuration to retrieve those rates.
+The **Currency Converters** window is where you enter the access details (such as a URL and API key) that Etendo needs to connect to an external service that provides daily exchange rates. Once set up, the system can download current rates automatically instead of requiring you to enter them manually. The [Conversion Rate Downloader](../../../optional-features/bundles/financial-extensions/conversion-rate-downloader.md) module uses this configuration to retrieve those rates.
 
 
 <figure markdown="span">
@@ -28,7 +28,7 @@ The **Currency Converters** window is where you enter the access details (such a
 
 
 !!! info 
-    The Currency Converters window is one step in the overall exchange rate automation setup. For the complete configuration workflow, including how to schedule automatic downloads and define conversion rules, visit the [Conversion Rate Downloader](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md) page.
+    The Currency Converters window is one step in the overall exchange rate automation setup. For the complete configuration workflow, including how to schedule automatic downloads and define conversion rules, visit the [Conversion Rate Downloader](../../../optional-features/bundles/financial-extensions/conversion-rate-downloader.md) page.
 
 ---
 

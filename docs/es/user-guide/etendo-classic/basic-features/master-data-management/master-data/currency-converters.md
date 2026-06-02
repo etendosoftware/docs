@@ -18,7 +18,7 @@ tags:
 
 ## Descripción general { #overview }
 
-La ventana **Conversores de Moneda** es donde se introducen los datos de acceso (como una URL y una clave de API) que Etendo necesita para conectarse a un servicio externo que proporciona tipos de cambio diarios. Una vez configurado, el sistema puede descargar los tipos vigentes de forma automática, sin necesidad de introducirlos manualmente. El módulo [Descargador de Tasa de Conversión](../../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md) utiliza esta configuración para recuperar dichos tipos.
+La ventana **Conversores de Moneda** es donde se introducen los datos de acceso (como una URL y una clave de API) que Etendo necesita para conectarse a un servicio externo que proporciona tipos de cambio diarios. Una vez configurado, el sistema puede descargar los tipos vigentes de forma automática, sin necesidad de introducirlos manualmente. El módulo [Descargador de rangos de conversión](../../../optional-features/bundles/financial-extensions/conversion-rate-downloader.md) utiliza esta configuración para recuperar dichos tipos.
 
 
 <figure markdown="span">
@@ -28,7 +28,7 @@ La ventana **Conversores de Moneda** es donde se introducen los datos de acceso 
 
 
 !!! info 
-    La ventana Conversores de Moneda es un paso dentro del proceso general de automatización de tipos de cambio. Para consultar el flujo de configuración completo, incluido cómo programar descargas automáticas y definir reglas de conversión, visite la página [Descargador de Tasa de Conversión](../../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/conversion-rate-downloader.md).
+    La ventana Conversores de Moneda es un paso dentro del proceso general de automatización de tipos de cambio. Para consultar el flujo de configuración completo, incluido cómo programar descargas automáticas y definir reglas de conversión, visite la página [Descargador de rangos de conversión](../../../optional-features/bundles/financial-extensions/conversion-rate-downloader.md).
 
 ---
 
