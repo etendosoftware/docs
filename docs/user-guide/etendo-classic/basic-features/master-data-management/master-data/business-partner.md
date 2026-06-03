@@ -8,7 +8,7 @@ tags:
   - Vendor
 ---
 
-# Business Partner { #business-partner }
+## Business Partner { #business-partner }
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
@@ -107,7 +107,7 @@ Your accounting team will see these posted automatically — you do not need to 
 
     - The Business Partner's currency changes from EUR to USD.
     - The current balance becomes 245.14 USD, calculated as 206.00 EUR × 1.19 = 245.14 USD
-    - Etendo also creates three automatic payments to properly move the available credit from EUR to USD, keeping accounting consistent.
+    - Etendo also makes three internal adjustments to properly move the available credit from EUR to USD, keeping accounting consistent.
 
     **Future Transactions**
 
@@ -588,4 +588,4 @@ Each time a rappel is granted to a business partner, a new sales invoice is auto
 *[BIC]: Bank Identifier Code
 ---
 
-This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+This work is a derivative of [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

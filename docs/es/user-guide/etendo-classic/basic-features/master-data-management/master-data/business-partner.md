@@ -8,7 +8,7 @@ tags:
   - Proveedor
 ---
 
-# Terceros { #business-partner }
+## Terceros { #business-partner }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Terceros`
 
@@ -107,7 +107,7 @@ Su equipo de contabilidad verá estos asientos publicados automáticamente — n
 
     - La moneda del tercero cambia de EUR a USD.
     - El saldo actual pasa a ser 245.14 USD, calculado como 206.00 EUR × 1.19 = 245.14 USD
-    - Etendo también crea tres pagos automáticos para mover correctamente el crédito disponible de EUR a USD, manteniendo la coherencia contable.
+    - Etendo también realiza tres ajustes internos para mover correctamente el crédito disponible de EUR a USD, manteniendo la coherencia contable.
 
     **Transacciones futuras**
 
@@ -590,4 +590,4 @@ Cada vez que se concede un rappel a un tercero, se genera automáticamente una n
 
 ---
 
-Este trabajo tiene licencia :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+Este trabajo es una derivación de [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="_blank"} por [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Este trabajo tiene licencia [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
