@@ -30,13 +30,13 @@ Fields to note:
     - Suppliers
     - Employees
 
-- **Search Key**: or short name which will help you to identify and search a given business partner
+- **Search Key**: A short code or abbreviation you assign to the business partner to make it easier to find later. For example, "ACME" for Acme Corporation.
 - **Commercial Name**
 - **Fiscal Name**: if known. If it is known, it is the one used in official documents such as invoices and tax reports, otherwise the commercial name will be used instead.
 - **Description**:  used to describe the business partner, if needed.
 - **URL**: The business partner URL, if known.
 - **Reference No**: which can be used as an additional way to identify a business partner.
-- **Consumption Days**: Sets how many days back the Copy Lines feature — a tool that lets you duplicate lines from a previous order into a new one — searches for order lines to copy. For example, entering 30 means Etendo only offers lines from orders placed in the last 30 days.
+- **Consumption Days**: Defines how many days back from the current date the Copy Lines process looks for order or invoice lines to copy. For example, entering 150 means the process will show lines from orders and invoices created in the last 150 days.
 
     !!! info
         For more information, visit [Sales Order](../../sales-management/transactions.md#sales-order) and [Purchase Order](../../procurement-management/transactions.md#purchase-order).
@@ -70,11 +70,13 @@ Fields to note:
 
 - **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../../general-setup/application/conversion-rates.md) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
+Available credit is money the business partner has already paid or overpaid that has not yet been applied to an invoice — it can be used to offset future charges.
+
 Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
 ![Etendo notification showing available credit in the original currency that must be converted when changing the Business Partner currency](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-3.png)
 
-To keep records balanced, Etendo automatically creates three internal accounting entries when available credit exists:
+To keep your records consistent, Etendo automatically makes three internal adjustments in the background when available credit exists — you do not need to do anything:
 
 - one that removes the available credit from the old currency.
 - one that records the equivalent credit in the new currency.
@@ -195,9 +197,9 @@ Fields to note:
         !!! info 
             For more information, visit [Invoice Schedule](../business-partner-setup/invoice-schedule.md).
 
-- **Credit Line limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
+- **Credit Line Limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 
-- **Tax Exempt**: To define a customer as Tax Exempt whenever applicable, therefore only those Tax rates also defined as exempt apply.
+- **Tax Exempt**: Check this if the customer is legally exempt from taxes. When enabled, Etendo will only apply tax rates that have been explicitly marked as exempt, so no standard tax will be added to their invoices.
 
 - **Sales Representative**: Select a customer sales representative. A sales representative is an employee set as such.
 
@@ -211,7 +213,7 @@ Fields to note:
 
 #### More Information { #more-information }
 
-- **SO BP Tax Category**: This field can be found under the *More Information* section.  
+- **Sales Order Business Partner Tax Category (SO BP Tax Category)**: This field can be found under the *More Information* section.  
     Use this field to restrict the tax rates available on sales documents for this customer to only those in the selected tax category.  
     
     !!! info
@@ -262,7 +264,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
     !!! info
         For more information, visit [Price List](../pricing/price-list.md).
 
-- **Payment method**: The one selected will be the one applied while creating and managing the payments    made to that vendor.  
+- **Payment Method**: The one selected will be the one applied while creating and managing the payments    made to that vendor.  
     If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
   
     !!! info
@@ -273,7 +275,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
     !!! info
         For more information, visit [Payment Term](../business-partner-setup/payment-term.md).
 
-- **PO Maturity Date 1**: Adjusts the payment due date to fall on a specific day of the month. For this to work, the payment term assigned to the vendor must have Fixed Due Date enabled and Next Business Day disabled — settings your accounting team configures in the [Payment Terms](../business-partner-setup/payment-term.md) window. The final due date is calculated from the payment term and then shifted to the maturity date.
+- **Purchase Order Maturity Date 1 (PO Maturity Date 1)**: Adjusts the payment due date to fall on a specific day of the month. For this to work, the payment term assigned to the vendor must have Fixed Due Date enabled and Next Business Day disabled — settings your accounting team configures in the [Payment Terms](../business-partner-setup/payment-term.md) window. The final due date is calculated from the payment term and then shifted to the maturity date.
     
     !!! example
         For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
@@ -285,7 +287,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 - **PO Maturity Date 3**: A third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
 
-- **Financial account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
+- **Financial Account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
 
     !!! info
         For more information, visit [Financial Account](../../financial-management/receivables-and-payables/transactions/financial-account.md).
@@ -324,7 +326,7 @@ Configure for each supplier or creditor and each general ledger your organizatio
     !!! info
         For more information, visit [Vendor Prepayments](../../financial-management/receivables-and-payables/transactions/payment-out.md).
 
-At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. They can always be changed.
+At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. They can always be changed.
 
 !!! important
     If your accounting team needs to automatically generate a dedicated ledger account for each new business partner, this can be configured in the [Organization](../../general-setup/enterprise-model/organization.md) window. This is an advanced setup — contact your system administrator if you are unsure whether it applies.
@@ -402,7 +404,7 @@ Fields to note:
 - **SWIFT Code**: The bank identifier code used for international payments (sometimes labeled BIC on bank statements). Required if you selected **Use SWIFT + Generic Account No.** in the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-#### Advanced Bank Account Management { #advanced-bank-account-management }
+#### Advanced Bank Account Management { #advanced-bank-account-management-bank-account }
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -429,7 +431,7 @@ This tab introduces flexibility by customizing document type assignments to invo
 
 ![Document Type tab showing Organization, Document Category, Sales Transaction, and Document Type fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-14.png)
 
-This functionality provides granular control over assigning transactional documents, overriding the default document type configured at the organization level. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
+This functionality lets you assign a specific document type to each transaction — order, invoice, shipment, or receipt — based on the business partner, overriding the organization's default settings. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
 
 When a transaction document (order, invoice, shipment or receipt) is created and linked to a business partner, the system first checks the Document Type Tab for the correct configuration. This setup can significantly enhance the user experience when documents are created repeatedly.
 
@@ -441,7 +443,7 @@ Fields to note:
 2. **Document Category**: Select the type of transaction document, such as order, invoice, or shipment/receipt.
 3. **Sales Transaction**: Checkbox used to distinguish document direction.
 
-    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, good shipments).
+    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, goods shipments).
     - Unchecked: Corresponds to purchasing documents (e.g., purchase orders, purchase invoices, goods receipts).
 
 4. **Document Type**: Select the specific document type available for the chosen category and transaction direction.
@@ -484,7 +486,7 @@ Fields to note:
 - **Ship to Address** checkbox: Flag this if the address being set up must be used for Goods Receipts/Shipments related transactions.
 - **Invoice to Address** checkbox: Flag this if the address being set up must be used for sales or purchase invoices transactions.
 
-#### Advanced Bank Account Management { #advanced-bank-account-management_1 }
+#### Advanced Bank Account Management { #advanced-bank-account-management-location }
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -547,7 +549,7 @@ It is possible to enter as many **Discounts** as agreed with your business partn
         - In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
 
-### Rappel Configuration { #rappel-configuration }
+### Rappel Configurations { #rappel-configurations }
 
 Rappels are discounts based on the volume of consumption of a business partner in a given period of time. Use this functionality to configure and grant rappels to business partners.
 
@@ -565,7 +567,7 @@ To be able to do this, it is necessary to configure certain aspects in the **Rap
 
 The **Rappel configuration** tab can be found in the tabs section of the Business Partner window. This tab shows the configured rappels for each business partner.
 
-To create a new rappel, select one of the available configurations in this tab and click the **Create Rappel** button. A pop-up window appears where you can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
+To create a new rappel, select one of the available configurations in this tab and click the **Create Rappel** button. A pop-up window appears where you can select the business partner (referred to here as trading partner) to whom the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
 ![Create Rappel pop-up window showing trading partner selector and date period fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-21.png)
 
@@ -578,6 +580,12 @@ Each time a rappel is granted to a business partner, a new sales invoice is auto
 !!! info
     For more information, visit [Sales Invoice](../../sales-management/transactions.md#advanced-rappels).
 
+*[PO]: Purchase Order
+*[SO]: Sales Order
+*[BP]: Business Partner
+*[IBAN]: International Bank Account Number
+*[SWIFT]: Society for Worldwide Interbank Financial Telecommunication (also referred to as BIC)
+*[BIC]: Bank Identifier Code
 ---
 
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

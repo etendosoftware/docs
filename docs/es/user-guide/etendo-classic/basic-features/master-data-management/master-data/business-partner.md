@@ -30,13 +30,13 @@ Campos a tener en cuenta:
     - Proveedores
     - Operarios
 
-- **Identificador**: o nombre corto que le ayudará a identificar y buscar un tercero determinado
+- **Identificador**: un código corto o abreviatura que asigna al tercero para facilitar su búsqueda. Por ejemplo, "ACME" para Acme Corporation.
 - **Nombre comercial**
 - **Nombre fiscal**: si se conoce. Si se conoce, es el que se utiliza en documentos oficiales como facturas e informes fiscales; en caso contrario, se utilizará el nombre comercial.
 - **Descripción**: se utiliza para describir el tercero, si es necesario.
 - **URL**: la URL del tercero, si se conoce.
 - **Nº de referencia**: que puede utilizarse como una forma adicional de identificar un tercero.
-- **Días consumo**: establece cuántos días hacia atrás busca la funcionalidad Copiar líneas — una herramienta que permite duplicar líneas de un pedido anterior en uno nuevo — para encontrar líneas de pedido a copiar. Por ejemplo, introducir 30 significa que Etendo solo ofrece líneas de pedidos realizados en los últimos 30 días.
+- **Días consumo**: define cuántos días hacia atrás desde la fecha actual buscará el proceso Copiar líneas para mostrar líneas de pedidos o facturas disponibles para copiar. Por ejemplo, introducir 150 significa que el proceso mostrará líneas de pedidos y facturas creados en los últimos 150 días.
 
     !!! info
         Para más información, visite [Pedido de venta](../../sales-management/transactions.md#sales-order) y [Pedido de compra](../../procurement-management/transactions.md#purchase-order).
@@ -70,11 +70,13 @@ Campos a tener en cuenta:
 
 - **Usar tipo de cambio por defecto**: casilla de verificación. Utiliza el tipo de cambio definido en la ventana [Rangos de conversión](../../general-setup/application/conversion-rates.md) para recalcular el saldo del tercero de USD a EUR, en nuestro caso. Si esta casilla no está seleccionada, se muestra un nuevo campo *Índice* para permitir introducir un tipo de cambio específico.
 
+El crédito disponible es el dinero que el tercero ya ha pagado o ha pagado en exceso y que aún no se ha aplicado a una factura; puede utilizarse para compensar cargos futuros.
+
 Adicionalmente, un tercero puede tener **crédito disponible en una moneda determinada**. Si ese es el caso, Etendo informa al usuario porque el crédito disponible del tercero deberá convertirse a la nueva moneda; por lo tanto, podrá consumirse en la nueva moneda.
 
 ![Notificación de Etendo que muestra el crédito disponible en la moneda original que debe convertirse al cambiar la moneda del Tercero](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-3.png)
 
-Para mantener los registros equilibrados, Etendo crea automáticamente tres asientos contables internos cuando existe crédito disponible:
+Para mantener sus registros coherentes, Etendo realiza automáticamente tres ajustes internos en segundo plano cuando existe crédito disponible — no es necesario que haga nada:
 
 - uno que elimina el crédito disponible en la moneda antigua.
 - uno que registra el crédito equivalente en la nueva moneda.
@@ -197,7 +199,7 @@ Campos a tener en cuenta:
 
 - **Crédito límite**: si la suma de todos los pagos pendientes supera el límite de crédito especificado para un cliente, el sistema le avisará indicando que este cliente ha alcanzado el límite de crédito cada vez que se seleccione este tercero en un documento de venta (pedido, albarán o factura).
 
-- **Exento de impuestos**: para definir un cliente como exento de impuestos cuando corresponda; por lo tanto, solo se aplican aquellos tipos impositivos que también estén definidos como exentos.
+- **Exento de impuestos**: marque esta opción si el cliente está legalmente exento de impuestos. Cuando está habilitado, Etendo solo aplicará las tasas de impuestos marcadas explícitamente como exentas, por lo que no se añadirá ningún impuesto estándar a sus facturas.
 
 - **Agente comercial**: seleccione un agente comercial del cliente. Un agente comercial es un empleado configurado como tal.
 
@@ -205,13 +207,13 @@ Campos a tener en cuenta:
     - **Pedido de venta:** Bloqueado
     - **Albarán (Cliente):** Bloqueado
     - **Factura (Cliente):** Bloqueado
-    - **[Cobros](../../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md):** No bloqueado
+    - **[Cobros](../../financial-management/receivables-and-payables/transactions/payment-in.md):** No bloqueado
 
     La configuración predeterminada anterior significa que no es posible completar un pedido de venta, un albarán (Cliente) o una factura (Cliente) para el cliente; solo es posible recibir un cobro.
 
 #### Más información { #more-information }
 
-- **Categoría Imp. Tercero**: este campo se puede encontrar en la sección *Más información*.
+- **Categoría Fiscal del Tercero en Pedido de Venta (SO BP Tax Category)**: este campo se puede encontrar en la sección *Más información*.
     Use este campo para restringir los tipos impositivos disponibles en los documentos de venta de este cliente a únicamente los pertenecientes a la categoría de impuestos seleccionada.
 
     !!! info
@@ -273,7 +275,7 @@ Como se muestra en la imagen anterior, existe una lista de datos relevantes que 
     !!! info
         Para más información, visite [Condiciones de pago](../business-partner-setup/payment-term.md).
 
-- **Día de vencimiento**: ajusta la fecha de vencimiento del pago para que caiga en un día específico del mes. Para que esto funcione, las condiciones de pago asignadas al proveedor deben tener activada la opción Fecha de vencimiento fija y desactivada la opción Día laborable siguiente — configuraciones que su equipo de contabilidad establece en la ventana [Condiciones de pago](../business-partner-setup/payment-term.md). La fecha de vencimiento final se calcula a partir de las condiciones de pago y luego se desplaza al día de vencimiento.
+- **Fecha de Vencimiento de OC 1 (PO Maturity Date 1)**: ajusta la fecha de vencimiento del pago para que caiga en un día específico del mes. Para que esto funcione, las condiciones de pago asignadas al proveedor deben tener activada la opción Fecha de vencimiento fija y desactivada la opción Día laborable siguiente — configuraciones que su equipo de contabilidad establece en la ventana [Condiciones de pago](../business-partner-setup/payment-term.md). La fecha de vencimiento final se calcula a partir de las condiciones de pago y luego se desplaza al día de vencimiento.
 
     !!! example
         Por ejemplo, la condición de pago definida es de 30 días y el Día de vencimiento se establece en 10. Si la fecha de la factura es el día 1 del mes, en base a la condición de pago de 30 días, la fecha de vencimiento del pago es el día 1 del mes siguiente, pero como el Día de vencimiento está establecido en 10, la fecha de vencimiento del pago resultante es el día 10 del mes siguiente.
@@ -402,7 +404,7 @@ Campos a tener en cuenta:
 - **Código Swift**: el código identificador bancario utilizado para pagos internacionales (a veces denominado BIC en los extractos bancarios). Requerido si seleccionó **Usar SWIFT + nº de cuenta genérico.** en el campo **Formato cuenta bancaria**.
 - **Cuenta mostrada**: se genera automáticamente en función del valor seleccionado en **Formato cuenta bancaria**. Este campo es de solo lectura y lo utilizan otros informes o procesos.
 
-#### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management }
+#### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management-bank-account }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -429,7 +431,7 @@ Esta solapa introduce flexibilidad al personalizar las asignaciones de tipo de d
 
 ![Solapa Tipo de documento con los campos Organización, Tipo doc. base, Operación de venta y Tipo de documento](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-14.png)
 
-Esta funcionalidad proporciona un control granular sobre la asignación de documentos transaccionales, sobrescribiendo el tipo de documento por defecto configurado a nivel de organización. Esto es útil, ya que cada país, región e incluso cada empresa puede utilizar diferentes tipos de documentos con sus respectivos números de secuencia imprimibles e incluso personalizados.
+Esta funcionalidad le permite asignar un tipo de documento específico a cada transacción — pedido, factura, envío o recepción — según el tercero, anulando la configuración predeterminada de la organización. Esto es útil, ya que cada país, región e incluso cada empresa puede utilizar diferentes tipos de documentos con sus respectivos números de secuencia imprimibles e incluso personalizados.
 
 Cuando se crea un documento de transacción (pedido, factura, albarán o recepción) y se vincula a un tercero, el sistema primero comprueba la solapa **Tipo de documento** para obtener la configuración correcta. Esta configuración puede mejorar significativamente la experiencia del usuario cuando los documentos se crean repetidamente.
 
@@ -457,7 +459,7 @@ Cuando se crea una transacción para un tercero, Etendo selecciona el tipo de do
 Añada una regla aquí únicamente si desea sobrescribir el valor por defecto de la organización para este tercero en concreto.
 
 !!! warning
-     Esta funcionalidad no está disponible para documentos creados mediante un proceso en segundo plano/botón como "Facturar desde albarán" en la ventana [**Albarán (Cliente)**](../../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment). En este caso, el tipo de documento que se utilizará es el definido a nivel de organización, en lugar del definido a nivel de la solapa **Tipo de documento**.
+     Esta funcionalidad no está disponible para documentos creados mediante un proceso en segundo plano/botón como "Facturar desde albarán" en la ventana [**Albarán (Cliente)**](../../sales-management/transactions.md#goods-shipment). En este caso, el tipo de documento que se utilizará es el definido a nivel de organización, en lugar del definido a nivel de la solapa **Tipo de documento**.
 
 ### Direcciones { #locationaddress }
 
@@ -484,7 +486,7 @@ Campos a tener en cuenta:
 - Casilla **Dirección de envío**: márquela si la dirección que se está configurando debe utilizarse para transacciones relacionadas con Albaranes (Proveedor)/(Cliente).
 - Casilla **Dirección de facturación**: márquela si la dirección que se está configurando debe utilizarse para transacciones de facturas de venta o compra.
 
-#### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management_1 }
+#### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management-location }
 
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -525,7 +527,7 @@ Use la solapa Descuentos para añadir y configurar los descuentos de terceros.
 
 Es posible introducir tantos **Descuento** como se hayan acordado con sus terceros, completando la siguiente información:
 
-- el **Descuento** que se aplicará al crear transacciones de venta/compra para ese tercero puede seleccionarse de la lista (si existe) o crearse navegando a la ventana [**Descuento**](../../../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/basic-discount.md).
+- el **Descuento** que se aplicará al crear transacciones de venta/compra para ese tercero puede seleccionarse de la lista (si existe) o crearse navegando a la ventana [**Descuento**](../business-partner-setup/basic-discount.md).
 - **Cliente:** esta casilla debe seleccionarse si el descuento se va a aplicar a un Tercero configurado como *Cliente*.
 - **Proveedor:** esta casilla debe seleccionarse si el descuento se va a aplicar a un Tercero configurado como *Proveedor*.
 - **Aplicar en pedido:** esta casilla debe seleccionarse en caso de que el descuento pueda aplicarse en pedidos de venta o de compra, según corresponda.
@@ -547,7 +549,7 @@ Es posible introducir tantos **Descuento** como se hayan acordado con sus tercer
         - En total -100 -100 -81 = -281 USD para los tres descuentos (un descuento total del 28,1%)
 
 
-### Configuración de Rappel { #rappel-configuration }
+### Configuraciones de Rappel { #rappel-configurations }
 
 Los rappels son descuentos basados en el volumen de consumo de un tercero en un periodo de tiempo determinado. Use esta funcionalidad para configurar y conceder rappels a terceros.
 
@@ -565,7 +567,7 @@ Para poder hacerlo, es necesario configurar determinados aspectos en la ventana 
 
 La solapa **Configuración de Rappel** se puede encontrar en la sección de solapas de la ventana Terceros. Esta solapa muestra los rappels configurados para cada tercero.
 
-Para crear un nuevo rappel, seleccione una de las configuraciones disponibles en esta solapa y haga clic en el botón **Crear Rappel**. Aparecerá una ventana emergente en la que puede seleccionar un tercero al que se asignará el Rappel, y también configurar un periodo de fechas en el que se tendrán en cuenta los consumos para calcular los descuentos, determinado por la información *fecha desde* y *fecha hasta*.
+Para crear un nuevo rappel, seleccione una de las configuraciones disponibles en esta solapa y haga clic en el botón **Crear Rappel**. Aparecerá una ventana emergente en la que puede seleccionar el tercero (denominado aquí socio comercial) al que se asignará el Rappel, y también configurar un periodo de fechas en el que se tendrán en cuenta los consumos para calcular los descuentos, determinado por la información *fecha desde* y *fecha hasta*.
 
 ![Ventana emergente Crear Rappel con el selector de tercero y los campos de periodo de fechas](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-21.png)
 
@@ -577,6 +579,14 @@ Cada vez que se concede un rappel a un tercero, se genera automáticamente una n
 
 !!! info
     Para más información, visite [Factura (Cliente)](../../sales-management/transactions.md#advanced-rappels).
+
+*[PO]: Purchase Order (OC — Orden de Compra)
+*[OC]: Orden de Compra (Purchase Order)
+*[SO]: Sales Order
+*[BP]: Business Partner
+*[IBAN]: International Bank Account Number
+*[SWIFT]: Society for Worldwide Interbank Financial Telecommunication (also referred to as BIC)
+*[BIC]: Bank Identifier Code
 
 ---
 
