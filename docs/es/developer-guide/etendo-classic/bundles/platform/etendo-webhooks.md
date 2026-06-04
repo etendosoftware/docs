@@ -179,6 +179,40 @@ public class AdAlertWebhookService extends BaseWebhookService {
 
 ## Casos de uso { #use-cases }
 
+### Webhook SimSearch { #simsearch-webhook }
+
+El webhook SimSearch realiza búsquedas difusas sobre entidades de Etendo y devuelve los registros más cercanos para un término de búsqueda determinado. Se utiliza en flujos de Copilot donde texto extraído o ingresado por el usuario debe mapearse contra registros existentes, por ejemplo para relacionar resultados de OCR con terceros, productos o documentos.
+
+#### Consideraciones de rendimiento { #performance-considerations }
+
+Si SimSearch sigue siendo lento en su entorno, especialmente sobre tablas grandes, puede añadir un índice trigram de PostgreSQL sobre la columna identificadora utilizada por la búsqueda.
+
+!!! info "Requisito previo"
+    Los índices trigram requieren que la extensión `pg_trgm` de PostgreSQL esté habilitada en la base de datos.
+
+La expresión del índice debe coincidir con la expresión utilizada por la búsqueda. Por ejemplo, si la búsqueda se realiza sobre el número de documento de factura en mayúsculas, cree el índice sobre `upper(documentno::text)`:
+
+```sql
+CREATE INDEX IF NOT EXISTS c_invoice_documentno_trgm
+    ON c_invoice
+    USING gin (upper(documentno::text) gin_trgm_ops);
+```
+
+**Ventajas:**
+
+- Búsquedas difusas más rápidas en tablas grandes.
+- Mejor tiempo de respuesta en flujos guiados por OCR y otros escenarios de coincidencia masiva.
+- Menor uso de CPU en la base de datos para búsquedas repetidas de similitud.
+
+**Desventajas:**
+
+- Mayor uso de disco porque el índice adicional debe almacenarse y mantenerse.
+- Operaciones `INSERT`, `UPDATE` y `DELETE` más lentas sobre la tabla indexada.
+- La reindexación, el vacuum y la creación inicial del índice pueden ser costosos en conjuntos de datos grandes.
+- El índice solo ayuda si coincide con la expresión real utilizada por la consulta.
+
+En entornos productivos, mida primero la consulta y añada índices trigram solo en las columnas que demuestren ser cuellos de botella.
+
 ### Visibilidad de tokens { #tokens-visibility }
 
 !!! note

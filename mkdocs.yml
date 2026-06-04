@@ -171,10 +171,10 @@ plugins:
                   # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
                   - Master Data Management:
                     - Master Data:
-                      - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
-                      - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
                       - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
                       - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
+                      - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
+                      - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
                       - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
                     - Business Partner Setup:
                       - Basic Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/basic-discount.md
@@ -726,6 +726,7 @@ plugins:
               - Overview: help-and-support/overview.md
               - Support Service: help-and-support/support-service.md
               - How to report bugs: help-and-support/how-to-report-bugs.md
+          
           nav_translations:
             ABC Activity: Actividad (ABC)
             Account Combination: Combinación de cuentas
@@ -767,6 +768,9 @@ plugins:
             Business Partner Settlement: Liquidación de Terceros
             Business Partner Setup: Configuración de terceros
             Business Partner Tax Category: Categoría de Impuestos de Terceros
+            Business Partner: Tercero
+            Business Partner Info: Información del Tercero
+            Business Partner General View: Vista General de Terceros
             Client: Entidad
             Cashflow Forecast Report: Informe de previsión de tesorería
             Create Budget Reports in Excel: Generador excel de presupuestos
@@ -792,6 +796,7 @@ plugins:
             Create Sequences: Crear Secuencias
             Creating a New Microservice: Creación de un Nuevo Microservicio
             Currency: Moneda
+            Currency Converters: Conversores de Moneda
             Data Access Layer: Capa de Acceso a Datos
             Data Model: Modelo de Datos
             Datasets: Conjuntos de Datos
@@ -1034,6 +1039,7 @@ plugins:
             Process Scheduling: Planificador de procesos
             Processes: Procesos
             Procurement Management: Gestión de Compras
+            Product: Producto
             Product Setup: Configuración de productos
             Production Management: Gestión de Producción
             Project and Service Management: Gestión de Proyectos y Servicios
@@ -1209,10 +1215,10 @@ nav:
         # - Jobs: user-guide/etendo-classic/basic-features/jobs/index.md
         - Master Data Management:
           - Master Data:
-            - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
-            - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
             - Business Partner: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md
             - Business Partner Info: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info.md
+            - Business Partner General View: user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-general-view.md
+            - Currency Converters: user-guide/etendo-classic/basic-features/master-data-management/master-data/currency-converters.md
             - Product: user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md
           - Business Partner Setup:
             - Basic Discount: user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/basic-discount.md
