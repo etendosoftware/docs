@@ -1841,9 +1841,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partner-selection" class="md-nav__link">
+  <a href="#business-partner-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      Partner Selection
+      Business Partner Selection
     </span>
   </a>
   
@@ -1871,6 +1871,15 @@
   <a href="#partner-invoices" class="md-nav__link">
     <span class="md-ellipsis">
       Partner Invoices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partner-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Assets
     </span>
   </a>
   
@@ -16896,9 +16905,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partner-selection" class="md-nav__link">
+  <a href="#business-partner-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      Partner Selection
+      Business Partner Selection
     </span>
   </a>
   
@@ -16926,6 +16935,15 @@
   <a href="#partner-invoices" class="md-nav__link">
     <span class="md-ellipsis">
       Partner Invoices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partner-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Assets
     </span>
   </a>
   
@@ -16994,19 +17012,69 @@
 <h2 id="business-partner-info">Business Partner Info</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Master Data Management</code> &gt; <code>Business Partner Info</code></p>
 <h3 id="overview">Overview</h3>
-<p>In this section, the user can view information related to business partner orders, receipts/shipments, invoices, and assets.</p>
-<h3 id="partner-selection">Partner Selection</h3>
-<p>The user can select a business partner to begin viewing related transactions.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png"></a></p>
+<p>The Business Partner Info window is a consolidated, read-only view of all transaction activity recorded for a given <a href="../business-partner/">business partner</a>. It centralizes four types of information in a single place: orders, shipments and receipts, invoices, and assets. Sales, purchasing, and accounts teams use this window to get a quick summary of a partner's activity without navigating to each individual transaction window. No data entry is possible here; the window is intended strictly for consultation and review.</p>
+<h3 id="business-partner-selection">Business Partner Selection</h3>
+<p>Select a business partner from the list to load their transaction data in the tabs below.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png" data-desc-position="bottom"><img alt="Business Partner Info window showing the header fields for business partner selection" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Active</strong>: indicates whether the business partner is currently active.</li>
+<li><strong>Search Key</strong>: short identifier used to search for the business partner.</li>
+<li><strong>Commercial Name</strong>: the business partner's commercial name.</li>
+<li><strong>Business Partner Category</strong>: classifies the partner. For example: Customer - Tier 1, Supplier, or Employee.</li>
+<li><strong>Sales Representative</strong>: the sales representative assigned to the business partner, if any.</li>
+<li><strong>Payment Method</strong>: the default payment method for the business partner. For example: Wire Transfer.</li>
+<li><strong>Payment Terms</strong>: the agreed payment terms. For example: 30 days.</li>
+</ul>
+<p>Once a record is selected, the <strong>Partner Orders</strong>, <strong>Partner Shipments</strong>, <strong>Partner Invoices</strong>, and <strong>Partner Assets</strong> tabs at the bottom of the screen are populated with the corresponding transaction data.</p>
 <h3 id="partner-orders">Partner Orders</h3>
-<p>The user can view orders related to a specific business partner.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png"></a></p>
+<p>This tab lists all orders associated with the selected business partner, covering both <a href="../../../sales-management/transactions/#sales-order">sales orders</a> and <a href="../../../procurement-management/transactions/#purchase-order">purchase orders</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png" data-desc-position="bottom"><img alt="Partner Orders tab listing sales and purchase orders for the selected business partner" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Document No.</strong>: the order document number.</li>
+<li><strong>Document Status</strong>: the current status of the order. For example: Booked.</li>
+<li><strong>Order Date</strong>: the date the order was placed.</li>
+<li><strong>Total Gross Amount</strong>: the total gross amount of the order.</li>
+</ul>
 <h3 id="partner-shipments">Partner Shipments</h3>
-<p>The user can view shipments related to a specific business partner.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png"></a></p>
+<p>This tab lists all <a href="../../../sales-management/transactions/#goods-shipment">shipments</a> and <a href="../../../procurement-management/transactions/#goods-receipts">receipts</a> associated with the selected business partner.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png" data-desc-position="bottom"><img alt="Partner Shipments tab listing goods shipments and receipts for the selected business partner" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Document No.</strong>: the shipment document number.</li>
+<li><strong>Document Status</strong>: the current status. For example, Completed.</li>
+<li><strong>Movement Type</strong>: the type of movement. For example, Customer Shipment.</li>
+<li><strong>Movement Date</strong>: the date the movement occurred.</li>
+<li><strong>Warehouse</strong>: the warehouse from which the shipment was dispatched.</li>
+</ul>
 <h3 id="partner-invoices">Partner Invoices</h3>
-<p>The user can view invoices related to a specific business partner.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png"></a></p>
+<p>This tab lists all invoices associated with the selected business partner, covering both <a href="../../../sales-management/transactions/#sales-invoice">sales invoices</a> (referred to as <abbr title="Accounts Receivable — sales-side invoices owed to the company">AR</abbr> — Accounts Receivable — in the system) and <a href="../../../procurement-management/transactions/#purchase-invoice">purchase invoices</a> (referred to as <abbr title="Accounts Payable — purchase-side invoices owed to vendors">AP</abbr> — Accounts Payable — in the system).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png" data-desc-position="bottom"><img alt="Partner Invoices tab listing sales and purchase invoices for the selected business partner" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Document Type</strong>: the type of invoice document. For example: <abbr title="Accounts Receivable — sales-side invoices owed to the company">AR</abbr> Invoice.</li>
+<li><strong>Document No.</strong>: the invoice document number.</li>
+<li><strong>Document Status</strong>: the current status. For example: Completed.</li>
+<li><strong>Invoice Date</strong>: the date the invoice was issued.</li>
+<li><strong>Total Gross Amount</strong>: the total gross amount of the invoice.</li>
+</ul>
+<h3 id="partner-assets">Partner Assets</h3>
+<p>This tab lists all <a href="../../../financial-management/assets/assets/">assets</a> associated with the selected business partner, such as equipment or property that the organization tracks in relation to that partner.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-5.png" data-desc-position="bottom"><img alt="Partner Assets tab listing assets linked to the selected business partner" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-5.png"></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Product</strong>: the product linked to the asset.</li>
+<li><strong>Asset Category</strong>: the category the asset belongs to. For example: Vehicles.</li>
+<li><strong>Name</strong>: the name that identifies the asset. For example: Car.</li>
+<li><strong>Description</strong>: additional details about the asset, if any.</li>
+<li><strong>Lot Name</strong>: the lot number associated with the asset, if applicable.</li>
+<li><strong>Serial No.</strong>: the serial number of the asset, if applicable.</li>
+<li><strong>In Service Date</strong>: the date the asset was placed in service.</li>
+<li><strong>Expiration Date</strong>: the date the asset is due to expire or be retired, if applicable.</li>
+</ul>
+<hr>
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Master_Data_Management" target="_blank">Master Data Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
