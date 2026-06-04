@@ -36,7 +36,7 @@ Once a record is selected, the **Partner Orders**, **Partner Shipments**, **Part
 
 ### Partner Orders
 
-This tab lists all orders associated with the selected business partner, covering both [sales](../../sales-management/transactions.md#sales-order) and [purchase orders](../../procurement-management/transactions.md#purchase-order).
+This tab lists all orders associated with the selected business partner, covering both [sales orders](../../sales-management/transactions.md#sales-order) and [purchase orders](../../procurement-management/transactions.md#purchase-order).
 
 ![Partner Orders tab listing sales and purchase orders for the selected business partner](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png)
 

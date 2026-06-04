@@ -1,7 +1,7 @@
 ---
-title: Información de terceros
+title: Información de Terceros
 tags:
-  - Gestión de datos maestros
+  - Gestión de Datos Maestros
   - Etendo Classic
   - Tercero
   - Pedidos
