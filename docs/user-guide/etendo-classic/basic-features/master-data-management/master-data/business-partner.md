@@ -8,47 +8,45 @@ tags:
   - Vendor
 ---
 
-## Business Partner
+## Business Partner { #business-partner }
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner`
 
-### Overview
+## Overview { #overview }
 
-Business partner master data window is the place where the user can easily organize and centralize business partner data.
+A Business Partner is any entity your company does business with: customers who buy your products or services, vendors and suppliers you purchase from, and employees. Use the Business Partner window to create and manage all Business Partner records in a single place. Each type has a dedicated tab — **Customer**, **Vendor**, and **Employee** — with specific configuration fields for that role. A single Business Partner can belong to more than one type at the same time.
 
-Etendo allows the user to enter business partner master data information whenever it is needed as the business takes place, therefore the procedure described below explains how to set up a single business partner of any type.
+## Header { #header }
 
-### Header
+The header holds the core information about the business partner — name, category, credit limit, and other details that apply regardless of whether the partner is a customer, vendor, or employee.
 
-Here, the user can define and configure business partners to be later used in transactions.
-
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-1.png)
+![Business Partner header fields including Search Key, Commercial Name, Fiscal Name, and Credit Line Limit](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-1.png)
 
 Fields to note:
 
-- **[Business Partner Category](../business-partner-setup/business-partner-category.md)**: Key field for the user to select a category which the business partner is going to belong to, under the following types:
+- **[Business Partner Category](../business-partner-setup/business-partner-category.md)**: Key field. Select a category which the business partner is going to belong to, under the following types:
 
     - Customers
     - Suppliers
     - Employees
 
-- **Search Key**: or short name which will help you to identify and search a given business partner
+- **Search Key**: A short code or abbreviation you assign to the business partner to make it easier to find later. For example, "ACME" for Acme Corporation.
 - **Commercial Name**
 - **Fiscal Name**: if known. If it is known, it is the one used in official documents such as invoices and tax reports, otherwise the commercial name will be used instead.
 - **Description**:  used to describe the business partner, if needed.
 - **URL**: The business partner URL, if known.
 - **Reference No**: which can be used as an additional way to identify a business partner.
-- **Consumption Days**: information which will be used while creating sales or purchase orders for that particular business partner, by using a process named *Copy Lines*.  
-    
-    !!! info
-        For more information about this process, visit [Sales Order](../../sales-management/transactions.md#sales-order) and [Purchase Order](../../procurement-management/transactions.md#purchase-order) sections.
+- **Consumption Days**: Defines how many days back from the current date the Copy Lines process looks for order or invoice lines to copy. For example, entering 150 means the process will show lines from orders and invoices created in the last 150 days.
 
-- **Credit Line Limit**: Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
+    !!! info
+        For more information, visit [Sales Order](../../sales-management/transactions.md#sales-order) and [Purchase Order](../../procurement-management/transactions.md#purchase-order).
+
+- **Credit Line Limit**: When the total of a customer's outstanding payments exceeds this amount, Etendo shows a warning. You can still complete the invoice — this is an alert, not a block.
 - **Consent for Customer Data Processing**: Checkbox in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization. 
 
-### Buttons
+## Buttons { #buttons }
 
-**Set New Currency**
+### Set New Currency { #set-new-currency }
 
 Business partner currency is automatically filled in with the currency of the Price List assigned to the business partner. Once filled in, it can be changed, if required, by using the **Set New Currency** button.
 
@@ -60,7 +58,7 @@ The **Set New Currency** process allows defining:
 - a new currency for the business partner
 - as well as the currency conversion rate to be used to exchange customer balance to the new currency.
 
-    ![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-2.png)
+    ![Set New Currency dialog showing Currency, Set Amount, Foreign Amount, and Use Default Conversion Rate fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-2.png)
 
 Fields to note:
 
@@ -68,19 +66,23 @@ Fields to note:
 
 - **Set Amount**: Checkbox. If selected, Etendo will update the Business Partner's balance with the amount entered in the Foreign Amount field, so they stay consistent with the new currency. 
 
-- **Foreign Amount**: Only shown if the **Set Amount** checkbox is selected. Here, Etendo allows the user to manually enter the equivalent amount in the new currency that will replace or update the Business Partner's balance.
+- **Foreign Amount**: Only shown if the **Set Amount** checkbox is selected. Use this field to manually enter the equivalent amount in the new currency that will replace or update the Business Partner's balance.
 
 - **Use default conversion rate**: Checkbox. It uses the conversion rate defined in [Conversion Rates](../../general-setup/application/conversion-rates.md) window, to recalculate business partner balance from USD to EUR, in our case. If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
+Available credit is money the business partner has already paid or overpaid that has not yet been applied to an invoice — it can be used to offset future charges.
+
 Additionally, a business partner might have **available credit in a given currency**. If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-3.png)
+![Etendo notification showing available credit in the original currency that must be converted when changing the Business Partner currency](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-3.png)
 
-This process automatically creates three new payments, in case business partner has available credit:
+To keep your records consistent, Etendo automatically makes three internal adjustments in the background when available credit exists — you do not need to do anything:
 
-- a **GL Item payment** in EUR, that moves credit amount to the ledger account defined in the selected G/L Item, in the *CREDIT*.
-- a **refunded payment** in EUR, that moves credit amount to a prepayment account in the *DEBIT*.
-- and a **Zero** amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the *CREDIT*.
+- one that removes the available credit from the old currency.
+- one that records the equivalent credit in the new currency.
+- one that zeros out the balance in the original currency.
+
+Your accounting team will see these posted automatically — you do not need to create them manually.
 
 !!! Example
   
@@ -105,11 +107,11 @@ This process automatically creates three new payments, in case business partner 
 
     - The Business Partner's currency changes from EUR to USD.
     - The current balance becomes 245.14 USD, calculated as 206.00 EUR × 1.19 = 245.14 USD
-    - Etendo also creates three automatic payments to properly move the available credit from EUR to USD, keeping accounting consistent.
+    - Etendo also makes three internal adjustments to properly move the available credit from EUR to USD, keeping accounting consistent.
 
     **Future Transactions**
 
-    Now that the Business Partner's currency is USD, let's see what happens with new invoices:
+    Now that the Business Partner's currency is USD, here is what happens with new invoices:
 
     - You create a new sales invoice in EUR (because the price list is still in EUR).
 
@@ -120,14 +122,14 @@ This process automatically creates three new payments, in case business partner 
 
     - Later, you create another sales invoice in USD for 100.00 USD. While completing it, Etendo shows that the partner has available credit in USD, converted from the old EUR credit: 100 EUR × 1.19 = 119.00 USD
 
-    ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-4.png)
+    ![Sales invoice completion screen showing available credit in USD after currency conversion from EUR](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-4.png)
 
     In short, the Set New Currency process updates the Business Partner's currency and converts balances and credits to the new currency using the chosen rate, existing balances and available credit are recalculated so everything matches the new currency and future transactions, even if created in the old currency (EUR), will still be correctly converted and reflected in the Business Partner's new currency (USD).
 
 
-### Tabs and Subtabs
+## Tabs and Subtabs { #tabs-and-subtabs }
 
-It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why the Business Partner window has three main tabs and therefore subtabs which allow you to set up each main business partner type separately:
+Customers, vendors, and employees each require different information. The Business Partner window provides a separate tab for each type so you can configure only the fields that apply:
 
 - **Customer** 
     - Customer Accounting
@@ -146,12 +148,12 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
 
     For more information about this workflow, visit [Financial Account](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 
-#### Customer
+### Customer { #customer }
 
 !!! note
     Customer related data can be entered and configured once the **Customer** checkbox is enabled.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
+![Customer tab fields including Price List, Payment Method, Payment Terms, Financial Account, and Invoice Terms](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 
 As shown above, there is a list of relevant data to be entered for customers together with current customer balance information. You could either select any data such as Price List from a previously created list of values, or, if necessary, create it by navigating to the corresponding window, and then select it.
 
@@ -181,7 +183,7 @@ Fields to note:
     !!! info
         For more information, visit [Financial Account](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 
-- **Invoice Terms**: There are few invoice terms which can be used while generating sales invoices.
+- **Invoice Terms**: Controls when a sales invoice is generated for this customer. Select one of the following options:
 
     !!! info
         For more information, visit [Generate Invoices](../../sales-management/transactions.md#generate-invoices).
@@ -195,24 +197,24 @@ Fields to note:
         !!! info 
             For more information, visit [Invoice Schedule](../business-partner-setup/invoice-schedule.md).
 
-- **Credit Line limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
+- **Credit Line Limit**: If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 
-- **Tax Exempt**: To define a customer as Tax Exempt whenever applicable, therefore only those Tax rates also defined as exempt apply.
+- **Tax Exempt**: Check this if the customer is legally exempt from taxes. When enabled, Etendo will only apply tax rates that have been explicitly marked as exempt, so no standard tax will be added to their invoices.
 
-- **Sales Representative**: Here, the user can select a customer sales representative. A sales representative is an employee set as such.
+- **Sales Representative**: Select a customer sales representative. A sales representative is an employee set as such.
 
 - **On Hold**: This checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
     - **Sales Order:** Blocked
     - **Goods Shipment:** Blocked
     - **Sales invoice:** Blocked
-    - **Payment In:** Not blocked
+    - **[Payment In](../../financial-management/receivables-and-payables/transactions/payment-in.md):** Not blocked
 
     Above defaulted configuration means that it is not possible to complete either a sales order, a goods shipment or a sales invoice for the customer, only receiving a payment is possible.
 
-**More information** section
+#### More Information { #more-information }
 
-- **SO BP Tax Category**: This field can be found under the *More Information* section.  
-    You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
+- **Sales Order Business Partner Tax Category (SO BP Tax Category)**: This field can be found under the *More Information* section.  
+    Use this field to restrict the tax rates available on sales documents for this customer to only those in the selected tax category.  
     
     !!! info
         For more information, visit [Business Partner Tax Category](../../financial-management/accounting/setup/business-partner-tax-category.md).
@@ -227,11 +229,11 @@ Fields to note:
 
 - **Birthplace**: Data about the customer.
 
-**Customer Accounting** { #customer-accounting }
+#### Customer Accounting { #customer-accounting }
 
-The Customer Accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
+Use the Customer Accounting tab to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-6.png)
+![Customer Accounting tab showing Customer Receivables and Customer Prepayment ledger account fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-6.png)
 
 As shown above, you can configure, for each customer and general ledger, the accounts to be used in:
 
@@ -242,17 +244,17 @@ As shown above, you can configure, for each customer and general ledger, the acc
 
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
-At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. The user can always change them.
+At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. They can always be changed.
 
 !!! important
-    It is possible to configure the creation of new correlative accounts for the business partners as described in the General Ledgers tab of the [Organization](../../general-setup/enterprise-model/organization.md) window.
+    If your accounting team needs to automatically generate a dedicated ledger account for each new business partner, this can be configured in the [Organization](../../general-setup/enterprise-model/organization.md) window. This is an advanced setup — contact your system administrator if you are unsure whether it applies.
 
-#### Vendor/Creditor
+### Vendor/Creditor { #vendorcreditor }
 
 !!! note
     Vendor or Creditor related data can be entered and configured once the **Vendor** checkbox is enabled.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-7.png)
+![Vendor tab fields including Purchase Price List, Payment Method, Payment Terms, and Financial Account](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-7.png)
 
 As shown in the image above, there is a list of relevant data to be entered for suppliers or creditors, also known as vendors:
 
@@ -262,7 +264,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
     !!! info
         For more information, visit [Price List](../pricing/price-list.md).
 
-- **Payment method**: The one selected will be the one applied while creating and managing the payments    made to that vendor.  
+- **Payment Method**: The one selected will be the one applied while creating and managing the payments    made to that vendor.  
     If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
   
     !!! info
@@ -273,7 +275,7 @@ As shown in the image above, there is a list of relevant data to be entered for 
     !!! info
         For more information, visit [Payment Term](../business-partner-setup/payment-term.md).
 
-- **PO Maturity Date 1**: As indicated in the Payment Term, the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
+- **Purchase Order Maturity Date 1 (PO Maturity Date 1)**: Adjusts the payment due date to fall on a specific day of the month. For this to work, the payment term assigned to the vendor must have Fixed Due Date enabled and Next Business Day disabled — settings your accounting team configures in the [Payment Terms](../business-partner-setup/payment-term.md) window. The final due date is calculated from the payment term and then shifted to the maturity date.
     
     !!! example
         For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
@@ -285,12 +287,12 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 - **PO Maturity Date 3**: A third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
 
-- **Financial account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
+- **Financial Account**: The one selected will be the one used while withdrawing and reconciling the payments made to a supplier.
 
     !!! info
         For more information, visit [Financial Account](../../financial-management/receivables-and-payables/transactions/financial-account.md).
 
-- **Tax Category**: You can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
+- **Tax Category**: Use this field to restrict the tax rates available on purchase documents for this vendor to only those in the selected tax category.  
     
     !!! info
         For more information, visit [Tax Category](../../financial-management/accounting/setup/tax-category.md).
@@ -306,13 +308,13 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
     As already mentioned if a business partner of any type is blocked, it is not possible to Complete (or book) some document types. However, it is always possible to Void them. Etendo shows an error message stating that it is not possible to complete a document for a business partner set as **on hold**.
 
-**Vendor Accounting** { #vendor-accounting }
+#### Vendor Accounting { #vendor-accounting }
 
-Vendor accounting tab allows the user to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
+Use the Vendor Accounting tab to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-8.png)
+![Vendor Accounting tab showing Vendor Liability and Vendor Prepayment ledger account fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-8.png)
 
-The user can configure for each supplier or creditor and available accounting schema, the ledger accounts to be used in:
+Configure for each supplier or creditor and each general ledger your organization uses the ledger accounts to be used in:
 
 - the **Vendor Liability** transactions such as purchase invoices posting.  
     
@@ -324,19 +326,19 @@ The user can configure for each supplier or creditor and available accounting sc
     !!! info
         For more information, visit [Vendor Prepayments](../../financial-management/receivables-and-payables/transactions/payment-out.md).
 
-At first, these accounts are inherited from the Defaults accounts of the Accounting Schema assigned to the Organization for which the business partner is being created. The user can always change them.
+At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. They can always be changed.
 
 !!! important
-    It is possible to configure the creation of new correlative accounts for the business partners being created as described in the Org Schema tab of the [Organization](../../general-setup/enterprise-model/organization.md) window.
+    If your accounting team needs to automatically generate a dedicated ledger account for each new business partner, this can be configured in the [Organization](../../general-setup/enterprise-model/organization.md) window. This is an advanced setup — contact your system administrator if you are unsure whether it applies.
 
-#### Employee
+### Employee { #employee }
 
 !!! note
     A business partner can be set up as employee once the checkbox **Employee** is enabled.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-9.png)
+![Employee tab with the Employee checkbox enabled](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-9.png)
 
-Employee tab allows the user to set which of your business partners are *Employees*.
+Use the Employee tab to set which of your business partners are *Employees*.
 
 An employee can be:
 
@@ -352,67 +354,64 @@ An employee can be:
     !!! info
         For more information, visit [Production Management](../../production-management/getting-started.md).
 
-- and can **issue expense's sheets** as part of his/her involvement in a company project.  
+- and can **issue expense sheets** as part of their involvement in a company project.  
     
     !!! info
         For more information, visit [Expense Sheet](../../project-and-service-management/transactions.md#expense-sheet).
 
-**Employee Accounting**
+#### Employee Accounting { #employee-accounting }
 
-In this tab, the user can add the ledger accounts to be used while posting employee related transactions such as payroll accounting.
+In this tab, add the ledger accounts to be used while posting employee related transactions such as payroll accounting.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-10.png)
+![Employee Accounting tab showing no ledger accounts required for employee transactions](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-10.png)
 
-As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
+No ledger accounts are required for employee accounting because no employee transactions are currently postable in Etendo. If a Human Resources module is installed, the accounts for any postable employee transactions are configured here.
 
-Anyway, this is the place where *Human Resources* related modules or features should point to while defining the accounts to be used in any employee transaction susceptible of being posted.
+#### Cost Salary Category { #cost-salary-category }
 
-**Cost Salary Category**
+In this tab, set up the salary category of the employee by selecting one of the options which were previously defined in the [Salary Category](../business-partner-setup/salary-category.md) window.
 
-In this tab, the user can set up the salary category of the employee by selecting one of the options which were previously defined in the [Salary Category](../business-partner-setup/salary-category.md) window.
+![Cost Salary Category tab showing the salary category selector for the employee](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-11.png)
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-11.png)
+### Bank Account { #bank-account }
 
-#### Bank Account
-
-The Bank Account tab allows the user to list and set up business partner bank accounts.
+Use the Bank Account tab to list and set up business partner bank accounts.
 
 It is possible to configure and properly set up business partner bank accounts to be used while making or receiving business partner payments of any type.
 
 !!! important
-    It is strongly recommended for the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
+    Make sure each bank account is fully filled in. Etendo uses this information when processing payments to and from this business partner.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-12.png)
+![Bank Account tab showing bank name, IBAN, SWIFT code, and Bank Account Format fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-12.png)
 
 Fields to note:
 
 - **Bank Name**
 - **Active** flag: It is recommended to keep only one bank account Active to avoid errors; otherwise ensure the correct bank account is used.
-- **Country**: Here, the user can select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
+- **Country**: Select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
 - **User/Contact**: In case you want to associate a contact for this bank account.
-- **Bank Account Format**: List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible  values are: 
-    - _Use Generic Account No._
-    - _Use IBAN_
-    - _Use SWIFT + Generic Account No._ 
+- **Bank Account Format**: List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible values are:
+    - **Use Generic Account No.**
+    - **Use IBAN**
+    - **Use SWIFT + Generic Account No.**
 
     !!! note 
         Other options can be added by other modules that extend the supported Bank Account Format.
 
-- **Generic Account No**: A generic account number to identify the bank account can be introduced here. This field must be mandatory filled in case either _Use Generic Account No._ or _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
+- **Generic Account No**: A generic account number to identify the bank account can be introduced here. Required if either **Use Generic Account No.** or **Use SWIFT + Generic Account No.** is selected in the Bank Account Format field.
 
-- **IBAN**: The International Bank Account Number (IBAN) is an international standard for numbering bank accounts.  
-    The IBAN consists of a two letter ISO 3166-1 country code, followed by two check digits, and up to thirty alphanumeric characters for the domestic bank account number, called the BBAN (Basic Bank Account Number). This field must be mandatory filled in case _Use IBAN_ is selected at the Bank Account Format field. The IBAN code will be automatically validated when inserting/updating the record taking into account the rules for the country bank defined.
-- **SWIFT Code**: Corresponds to the ISO 9362 international bank code identifier. It must be mandatory filled in case _Use SWIFT + Generic Account No._ is selected at the Bank Account Format field.
+- **IBAN**: The international account number used across most countries. Enter the full IBAN exactly as shown on your bank statement. Required if you selected **Use IBAN** in the Bank Account Format field. Etendo validates the number automatically when you save.
+- **SWIFT Code**: The bank identifier code used for international payments (sometimes labeled BIC on bank statements). Required if you selected **Use SWIFT + Generic Account No.** in the Bank Account Format field.
 - **Displayed Account**: It is automatically generated based on the value selected into the Bank Account Format. This field is read only, and it is used by other reports or processes.
 
-**Advanced Bank Account Management**
+#### Advanced Bank Account Management { #advanced-bank-account-management-bank-account }
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality introduces the possibility to mark a bank account as Default within the Bank Account tab of the Business Partner window. Here, it is possible to check the Default Account checkbox in order to set the account to be used in the documents for different transactions. 
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-13.png)
+![Bank Account tab with the Default Account checkbox available through the Advanced Bank Account Management module](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-13.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
@@ -421,7 +420,7 @@ This functionality introduces the possibility to mark a bank account as Default 
     Only one bank account can be selected as default for each business partner.
 
 
-#### Document Type
+### Document Type { #document-type }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8-MOprz-4FI?si=rc5geP_xaKmKvjsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -430,13 +429,13 @@ This functionality introduces the possibility to mark a bank account as Default 
 
 This tab introduces flexibility by customizing document type assignments to invoices, orders, shipments and receipts, specifically based on the business partner.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-14.png)
+![Document Type tab showing Organization, Document Category, Sales Transaction, and Document Type fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-14.png)
 
-This functionality provides granular control over assigning transactional documents, overriding the default document type configured at the organization level. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
+This functionality lets you assign a specific document type to each transaction — order, invoice, shipment, or receipt — based on the business partner, overriding the organization's default settings. This is useful since each country, region, and even each company may use different types of documents with their respective printable and even personalized sequence numbers.
 
 When a transaction document (order, invoice, shipment or receipt) is created and linked to a business partner, the system first checks the Document Type Tab for the correct configuration. This setup can significantly enhance the user experience when documents are created repeatedly.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-15.png)
+![Document Type configuration showing a sales invoice rule assigned to a specific organization](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-15.png)
 
 Fields to note:
 
@@ -444,27 +443,31 @@ Fields to note:
 2. **Document Category**: Select the type of transaction document, such as order, invoice, or shipment/receipt.
 3. **Sales Transaction**: Checkbox used to distinguish document direction.
 
-    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, good shipments).
+    - Checked: Corresponds to sales documents (e.g., sales orders, sales invoices, goods shipments).
     - Unchecked: Corresponds to purchasing documents (e.g., purchase orders, purchase invoices, goods receipts).
 
 4. **Document Type**: Select the specific document type available for the chosen category and transaction direction.
 
-**Document Type Selection Priority**
+#### Document Type Selection Priority { #document-type-selection-priority }
 
-1. Exact Match: Etendo searches for a direct rule defined for the business partner and the specific organization.
-2. Organizational Tree: If no exact match is found, Etendo navigates up the organizational tree to find a match.
-3. Default: If no rule exists, Etendo uses the default document type configured for the organization.
+When a transaction is created for a business partner, Etendo picks the document type in this order:
+
+1. It checks whether a rule has been defined for this specific business partner and organization.
+2. If none is found, it checks whether a rule exists for a parent organization.
+3. If no rule exists at any level, it falls back to the default document type set for the organization.
+
+Add a rule here only if you want to override the organization default for this specific partner.
 
 !!! warning
-     This functionality is not available for documents created with a background/button process such as "Generate Invoice from Shipment" in the Goods Shipment window. In this case, the document type to be used is the one defined at organization level, instead of the one defined at Document Type tab level.
+     This functionality is not available for documents created with a background/button process such as "Generate Invoice from Shipment" in the [Goods Shipment](../../sales-management/transactions.md#goods-shipment) window. In this case, the document type to be used is the one defined at organization level, instead of the one defined at Document Type tab level.
 
-#### Location/Address
+### Location/Address { #locationaddress }
 
 Business partner locations and full address details can be set up in this tab.
 
 Business partners might have different address details depending on location/address used for either *Goods Receipts/Shipments* purposes or location/address used for *Invoices* purposes.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-16.png)
+![Location/Address tab showing address fields, phone, Ship to Address and Invoice to Address checkboxes](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-16.png)
 
 Fields to note:
 
@@ -478,12 +481,12 @@ Fields to note:
 
 - **Phone**: The phone number to contact the business partner.
 - **Alternative Phone**: for an alternative phone, if any.
-- **Name**: Referred to the Address name. This field is automatically filled in by Etendo, once the Location/Address information has been configured. The user could change it as needed.
+- **Name**: Referred to the Address name. This field is automatically filled in by Etendo, once the Location/Address information has been configured. Change it as needed.
 - **Fax**: The fax number to contact the business partner.
-- **Ship to Address** checkbox: The user should flag this one if the address being set up must be used for Goods Receipts/Shipments related transactions.
-- **Invoice to Address** checkbox: The user should flag this one if the address being setup must be used for sales or purchase invoices transactions.
+- **Ship to Address** checkbox: Flag this if the address being set up must be used for Goods Receipts/Shipments related transactions.
+- **Invoice to Address** checkbox: Flag this if the address being set up must be used for sales or purchase invoices transactions.
 
-**Advanced Bank Account Management**
+#### Advanced Bank Account Management { #advanced-bank-account-management-location }
 
 !!! info
     To be able to include this functionality, the Advanced Bank Account Management module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -493,13 +496,13 @@ The Advanced Bank Account Management field is introduced in the Location/Address
 !!! warning
     In case of having both a default bank account and a location with a defined bank account, when generating a new document, the location bank account is prioritized over the default one.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-17.png)
+![Location/Address tab with the bank account association field added by the Advanced Bank Account Management module](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-17.png)
 
-#### Contact
+### Contact { #contact }
 
-Contact tab allows the user to add and configure the business partner contacts you deal with.
+Use the Contact tab to add and configure the business partner contacts you deal with.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-18.png)
+![Contact tab showing First Name, Last Name, Email, Phone, Position, and Default contact fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-18.png)
 
 Fields to note:
 
@@ -510,28 +513,27 @@ Fields to note:
 - **Position** in the business partner.
 - **Comments**: To enter additional information.
 - **Active** flag: to indicate if this contact is available for use or disabled.
-- **Default** flag: marks this contact as the default one for the business partner. This contact's email address will be automatically suggested in the email popup when sending emails from documents related to the business partner.
 - **Commercial Authorization**: This checkbox is selected to indicate or not whether customer wants or does not want to receive commercial information from the organization.
-- **Default**: Checkbox that marks this contact as the default recipient when sending documents by email. When selected, this contact's email address is automatically preloaded in the *To* field of the Email Options popup. If no contact has this flag set, the system falls back to the last used email for the business partner or, if none exists, to the first active contact ordered alphabetically.
+- **Default**: Marks this contact as the default recipient when sending documents by email. When selected, this contact's email address is automatically preloaded in the *To* field of the Email Options popup. If no contact has this flag set, the system falls back to the last used email for the business partner or, if none exists, to the first active contact ordered alphabetically.
 
     !!! info
-        Only one contact per Business Partner should have this checkbox selected to ensure a deterministic preselection.
+        Only mark one contact as Default per business partner. If more than one is marked, the system cannot reliably decide which email address to use.
 
-#### Basic Discount
+### Basic Discount { #basic-discount }
 
-Basic Discount tab allows the user to add and configure business partner Basic Discounts.
+Use the Basic Discount tab to add and configure business partner Basic Discounts.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-19.png)
+![Basic Discount tab showing discount configuration with Customer, Vendor, Apply in Order, and Cascade checkboxes](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-19.png)
 
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
-- the **Discount** to be applied while creating sales/purchase transactions for that business partner can be selected from the list (if any) or created by navigating to the **Discount** window.
+- the **Discount** to be applied while creating sales/purchase transactions for that business partner can be selected from the list (if any) or created by navigating to the [**Discount**](../business-partner-setup/basic-discount.md) window.
 - **Customer:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Customer*.
 - **Vendor:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Vendor*.
 - **Apply in Order:** this checkbox must be selected in case the discount can be applied in sales or purchase orders as applicable.
-- **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount won't be 15% but 14.5%.
+- **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount will not be 15% but 14.5%.
 
-    A discount not applied in Cascade means that it affects the full quantity of the Document Line. A Discount applied in Cascade means that affects the quantity of the Document Line that remains after applying all the discounts that come before it.
+    Without Cascade: each discount is calculated on the original line total. With Cascade: each discount is calculated on the amount left after the previous discount has already been applied.
 
     !!! example
         An example to explain the difference between a Cascade and not Cascade Discount is the following one:
@@ -547,33 +549,43 @@ It is possible to enter as many **Discounts** as agreed with your business partn
         - In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
 
-#### Rappel Configuration
+### Rappel Configurations { #rappel-configurations }
+
+Rappels are discounts based on the volume of consumption of a business partner in a given period of time. Use this functionality to configure and grant rappels to business partners.
 
 !!! info
     To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
-Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
+With this functionality, the tab "Rappel Configurations" is shown in the business partners included in the Rappel configurations. Also, in the Business Partner window, create rappels using the button **Create Rappel**.
 
-With this functionality, the tab "Rappel Configurations" is shown in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button **Create Rappel**.
-
-![bp_window.png](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-20.png)
+![Business Partner window showing the Rappel Configuration tab and the Create Rappel button](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-20.png)
 
 To be able to do this, it is necessary to configure certain aspects in the **Rappel Configurations** window.
 
 !!! info
     For more information, visit [Rappel Configurations](../business-partner-setup/rappel-configurations.md).
 
-The **Rappel configuration** tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
+The **Rappel configuration** tab can be found in the tabs section of the Business Partner window. This tab shows the configured rappels for each business partner.
 
-To create a new rappel, the user must select one of the available configurations in this tab and click the **Create Rappel** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
+To create a new rappel, select one of the available configurations in this tab and click the **Create Rappel** button. A pop-up window appears where you can select the business partner (referred to here as trading partner) to whom the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
-![bp_pop_up_new.png](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-21.png)
+![Create Rappel pop-up window showing trading partner selector and date period fields](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-21.png)
 
 When the rappel is created, a sales invoice is created automatically, as seen below.
 
-![created_rappel.png](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-22.png)
+![Automatically generated sales invoice for a rappel discount in Draft status](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-22.png)
 
-Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. This invoice is in Draft status.
+Each time a rappel is granted to a business partner, a new sales invoice is automatically generated to show the amount of the discount. This invoice uses a dedicated numbering series (configured separately) to distinguish rappel invoices from regular sales invoices, and shows a negative amount because it represents a discount. This invoice is in Draft status.
 
 !!! info
     For more information, visit [Sales Invoice](../../sales-management/transactions.md#advanced-rappels).
+
+*[PO]: Purchase Order
+*[SO]: Sales Order
+*[BP]: Business Partner
+*[IBAN]: International Bank Account Number
+*[SWIFT]: Society for Worldwide Interbank Financial Telecommunication (also referred to as BIC)
+*[BIC]: Bank Identifier Code
+---
+
+This work is a derivative of [Master Data Management](https://wiki.openbravo.com/wiki/Master_Data_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
