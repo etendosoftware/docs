@@ -8,17 +8,19 @@ tags:
   - Invoices
 ---
 
-# Business Partner Info
+## Business Partner Info
 
 :material-menu: `Application` > `Master Data Management` > `Business Partner Info`
 
-## Overview
+### Overview
 
 The Business Partner Info window is a consolidated, read-only view of all transaction activity recorded for a given [business partner](./business-partner.md). It centralizes four types of information in a single place: orders, shipments and receipts, invoices, and assets. Sales, purchasing, and accounts teams use this window to get a quick summary of a partner's activity without navigating to each individual transaction window. No data entry is possible here; the window is intended strictly for consultation and review.
 
-## Business Partner Selection
+### Business Partner Selection
 
 Select a business partner from the list to load their transaction data in the tabs below.
+
+![Business Partner Info window showing the header fields for business partner selection](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png)
 
 Fields to note:
 
@@ -32,11 +34,11 @@ Fields to note:
 
 Once a record is selected, the **Partner Orders**, **Partner Shipments**, **Partner Invoices**, and **Partner Assets** tabs at the bottom of the screen are populated with the corresponding transaction data.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-1.png)
-
-## Partner Orders
+### Partner Orders
 
 This tab lists all orders associated with the selected business partner, covering both [sales](../../sales-management/transactions.md#sales-order) and [purchase orders](../../procurement-management/transactions.md#purchase-order).
+
+![Partner Orders tab listing sales and purchase orders for the selected business partner](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png)
 
 Fields to note:
 
@@ -45,11 +47,11 @@ Fields to note:
 - **Order Date**: the date the order was placed.
 - **Total Gross Amount**: the total gross amount of the order.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-2.png)
-
-## Partner Shipments
+### Partner Shipments
 
 This tab lists all [shipments](../../sales-management/transactions.md#goods-shipment) and [receipts](../../procurement-management/transactions.md#goods-receipts) associated with the selected business partner.
+
+![Partner Shipments tab listing goods shipments and receipts for the selected business partner](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png)
 
 Fields to note:
 
@@ -59,11 +61,11 @@ Fields to note:
 - **Movement Date**: the date the movement occurred.
 - **Warehouse**: the warehouse from which the shipment was dispatched.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-3.png)
+### Partner Invoices
 
-## Partner Invoices
+This tab lists all invoices associated with the selected business partner, covering both [sales invoices](../../sales-management/transactions.md#sales-invoice) (referred to as AR — Accounts Receivable — in the system) and [purchase invoices](../../procurement-management/transactions.md#purchase-invoice) (referred to as AP — Accounts Payable — in the system).
 
-This tab lists all invoices associated with the selected business partner, covering both [sales (AR)](../../sales-management/transactions.md#sales-invoice) and [purchase (AP) invoices](../../procurement-management/transactions.md#purchase-invoice).
+![Partner Invoices tab listing sales and purchase invoices for the selected business partner](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png)
 
 Fields to note:
 
@@ -73,11 +75,11 @@ Fields to note:
 - **Invoice Date**: the date the invoice was issued.
 - **Total Gross Amount**: the total gross amount of the invoice.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-4.png)
-
-## Partner Assets
+### Partner Assets
 
 This tab lists all [assets](../../financial-management/assets/assets.md) associated with the selected business partner, such as equipment or property that the organization tracks in relation to that partner.
+
+![Partner Assets tab listing assets linked to the selected business partner](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-5.png)
 
 Fields to note:
 
@@ -90,7 +92,8 @@ Fields to note:
 - **In Service Date**: the date the asset was placed in service.
 - **Expiration Date**: the date the asset is due to expire or be retired, if applicable.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner-info/business-partner-info-5.png)
+*[AR]: Accounts Receivable — sales-side invoices owed to the company
+*[AP]: Accounts Payable — purchase-side invoices owed to vendors
 
 ---
 
