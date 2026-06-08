@@ -209,7 +209,15 @@ plugins:
                     - Analysis Tools: user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md
                   - Warehouse Management:
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
-                    - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
+                    - Transactions:
+                      - Inventario físico: user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md
+                      - Movimiento entre almacenes: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md
+                      - Producción LDM: user-guide/etendo-classic/basic-features/warehouse-management/transactions/bill-of-materials-production.md
+                      - Operaciones de material: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md
+                      - Reserva de existencias: user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation.md
+                      - Ajuste del valor del inventario: user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md
+                      - Ajuste de costes: user-guide/etendo-classic/basic-features/warehouse-management/transactions/cost-adjustment.md
+                      - Inventario referenciado: user-guide/etendo-classic/basic-features/warehouse-management/transactions/referenced-inventory.md
                     - Analysis Tools:
                       - Pareto Product Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md
                       - Material Transaction Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md
@@ -1253,7 +1261,15 @@ nav:
           - Analysis Tools: user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md
         - Warehouse Management:
           - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
-          - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
+          - Transactions:
+            - Physical Inventory: user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md
+            - Goods Movement: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md
+            - Bill of Materials Production: user-guide/etendo-classic/basic-features/warehouse-management/transactions/bill-of-materials-production.md
+            - Goods Transaction: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md
+            - Stock Reservation: user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation.md
+            - Inventory Amount Update: user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md
+            - Cost Adjustment: user-guide/etendo-classic/basic-features/warehouse-management/transactions/cost-adjustment.md
+            - Referenced Inventory: user-guide/etendo-classic/basic-features/warehouse-management/transactions/referenced-inventory.md
           - Analysis Tools:
             - Pareto Product Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md
             - Material Transaction Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md

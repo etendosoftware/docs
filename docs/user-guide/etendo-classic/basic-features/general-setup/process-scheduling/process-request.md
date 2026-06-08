@@ -157,7 +157,7 @@ Besides, there are other background processes which can also be scheduled and th
     !!! info
         There is a menu process named **Process Price Different Adjustment** that manually adjusts all already invoiced Goods Receipts, if required. 
 
-    You can view the changes in the [Cost Adjustments](../../warehouse-management/transactions.md#cost-adjustment) window.
+    You can view the changes in the [Cost Adjustments](../../warehouse-management/transactions/cost-adjustment.md) window.
 
 - ### Match Sales Order Invoice and Shipment Lines
 
