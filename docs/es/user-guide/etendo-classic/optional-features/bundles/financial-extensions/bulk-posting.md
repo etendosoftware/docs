@@ -26,11 +26,11 @@ La funcionalidad de Contabilización masiva permite al usuario contabilizar o de
 Esta funcionalidad está disponible en las siguientes ventanas:
 
 - [Amortización](../../../basic-features/financial-management/assets/overview.md#bulk-posting)
-- [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#bulk-posting_1)
+- [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/goods-movement.md#bulk-posting)
 - [Cuenta financiera](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
 - [Facturas cuadradas](../../../basic-features/procurement-management/transactions.md#bulk-posting_2)
-- [Ajuste de Costes](../../../basic-features/warehouse-management/transactions.md#bulk-posting_3)
-- [Producción LDM](../../../basic-features/warehouse-management/transactions.md#bulk-posting_2)
+- [Ajuste de Costes](../../../basic-features/warehouse-management/transactions/cost-adjustment.md#bulk-posting)
+- [Producción LDM](../../../basic-features/warehouse-management/transactions/bill-of-materials-production.md#bulk-posting)
 - [Consumo interno](../../../basic-features/production-management/transactions.md#bulk-posting_1)
 - [Dudoso cobro](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
 - [Landed Cost](../../../basic-features/procurement-management/transactions.md#bulk-posting_4)
@@ -45,7 +45,7 @@ Esta funcionalidad está disponible en las siguientes ventanas:
 - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#bulk-posting_1)
 - [Cobros](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
 - [Pago](../../../basic-features/financial-management/receivables-and-payables/transactions.md#bulk-posting)
-- [Inventario físico](../../../basic-features/warehouse-management/transactions.md#bulk-posting)
+- [Inventario físico](../../../basic-features/warehouse-management/transactions/physical-inventory.md#bulk-posting)
 
 ### Columna Estado contable { #accounting-status-column }
 

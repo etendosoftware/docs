@@ -337,7 +337,7 @@ Es posible generar estos códigos únicos para los huecos en las ventanas **Alma
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-La funcionalidad de [Inventario referenciado (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) se ha ampliado para gestionar unidades logísticas físicas como **palés** y **cajas**, vinculadas directamente a las [Unidades alternativas de medida (AUOM)](../../../basic-features/master-data-management/master-data/product.md#alternate-uom-tab) de cada producto. Esto permite definir equivalencias (p. ej., 1 Palé = 100 unidades) y gestionar estas unidades como entidades únicas y trazables en las operaciones de almacén.
+La funcionalidad de [Inventario referenciado (RI)](../../../basic-features/warehouse-management/transactions/referenced-inventory.md) se ha ampliado para gestionar unidades logísticas físicas como **palés** y **cajas**, vinculadas directamente a las [Unidades alternativas de medida (AUOM)](../../../basic-features/master-data-management/master-data/product.md#alternate-uom-tab) de cada producto. Esto permite definir equivalencias (p. ej., 1 Palé = 100 unidades) y gestionar estas unidades como entidades únicas y trazables en las operaciones de almacén.
 
 El módulo [Stock Logistic Unit](./stock-logistic-unit.md), instalado como dependencia, añade nuevas unidades (Caja, Palé) y tipos de inventario referenciado, permitiendo a los usuarios configurar equivalencias en la solapa **Unidad Alternativa** de la ventana Producto. Una vez definidas, si se requiere una conversión diferente, debe crearse una nueva AUOM.
 
@@ -1032,7 +1032,7 @@ Una vez completada, la tarea aparecerá en la sección de Tareas completadas. De
 Las tareas de reubicación permiten mover productos desde su ubicación original hasta su ubicación de destino dentro del mismo almacén. Cada tarea se muestra en formato de tarjeta, donde se puede confirmar o ajustar la cantidad movida y la ubicación de destino. La información introducida se sincroniza con el ERP al final de la tarea, garantizando la coherencia entre el movimiento registrado y el stock.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/goods-movement.md).
 
 #### Inicio del proceso (Etendo) { #process-start-etendo_3 }
 
@@ -1072,7 +1072,7 @@ Las tareas de ajuste de inventario permiten a los operarios de almacén realizar
 Esta funcionalidad corresponde a la misma operación realizada en la ventana **Inventario físico** de Etendo: registrar la cantidad real contada de un producto y actualizar las existencias en consecuencia, ya sea corrigiendo cantidades existentes o introduciendo existencias donde no había previamente. Cuando el estado de inventario cambia durante el proceso de ajuste, el sistema mueve automáticamente el/los producto(s) a los huecos asociados al nuevo estado, reflejando con precisión la condición actual de las existencias.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inventario físico](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inventario físico](../../../basic-features/warehouse-management/transactions/physical-inventory.md).
 
 
 #### Inicio del proceso (Etendo) { #process-start-etendo_4 }

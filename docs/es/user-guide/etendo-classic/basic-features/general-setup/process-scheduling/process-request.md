@@ -156,7 +156,7 @@ Además, existen otros procesos en segundo plano que también pueden programarse
     !!! info
         Existe un proceso de menú denominado **Procesar ajuste de diferencia de precio** que ajusta manualmente todas las recepciones de mercancía ya facturadas, si fuese necesario.
 
-    Puede ver los cambios en la ventana [Ajuste de Costes](../../warehouse-management/transactions.md#cost-adjustment).
+    Puede ver los cambios en la ventana [Ajuste de Costes](../../warehouse-management/transactions/cost-adjustment.md).
 
 - ### Conciliar líneas de factura y albarán con pedido de venta
 
