@@ -26,6 +26,8 @@ With the **Gmail integration** via [Pipedream](https://pipedream.com){target="_b
 
 The agent connects securely to your **Gmail** account (with your prior authorization), retrieves the messages, and responds inline in the chat. All without leaving Copilot.
 
+This guide walks you through three steps: connecting your Gmail account in Pipedream, registering that connection in Etendo, and linking it to your agent.
+
 **Why is this useful?**
 
 - **Centralized information**: Access ERP data and emails in the same place.  
@@ -37,7 +39,7 @@ The agent connects securely to your **Gmail** account (with your prior authoriza
 
 The flow is simple but powerful:
 
-1. [Pipedream](https://mcp.pipedream.com/){target="_blank"} manages the secure connection with Gmail and exposes the MCP configuration.  
+1. [Pipedream](https://mcp.pipedream.com/){target="_blank"} manages the secure connection with Gmail and exposes the MCP (Model Context Protocol) configuration — a standard way for AI assistants to securely connect to external services like Gmail.  
 2. In **Etendo**, you register that configuration as an MCP Server.  
 3. Finally, you link the MCP to your Copilot agent.  
 
@@ -49,7 +51,7 @@ From that point on, any Gmail-related query is automatically redirected to the P
 
 - Etendo and [Etendo Copilot](../installation.md) installed.  
 - A Google account to connect.  
-- Access to Pipedream
+- A free [Pipedream](https://pipedream.com){target="_blank"} account.
 
 
 !!! info 
@@ -61,9 +63,9 @@ From that point on, any Gmail-related query is automatically redirected to the P
 
 1. Open [Gmail MCP Server | Pipedream](https://mcp.pipedream.com/app/gmail).  
 2. Connect your Gmail account and accept Google’s consent screen.  
-	![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/sign-in.png)
-3. Set **VS Code** option and copy the **MCP Server Config** displayed. 
-	![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/mcp-server-config.png)
+	![Gmail account connection screen in Pipedream](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/sign-in.png)
+3. In the configuration panel, select the option labeled **VS Code** from the dropdown (this format is required for Etendo to read the configuration), then click **Copy** to copy the **MCP Server Config** text that appears.
+	![MCP Server Config panel in Pipedream](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/mcp-server-config.png)
 
 ## Create the MCP Server in Etendo 
 :material-menu: `Application` > `Service` > `Copilot` > `MCP Servers Configuration`
@@ -72,36 +74,36 @@ From that point on, any Gmail-related query is automatically redirected to the P
 2. Navigate to `MCP Servers Configuration` window.  
 3. Create a new record with the following values:  
 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/create-mcp-server.png)
+![New MCP Server record form in Etendo](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/create-mcp-server.png)
 
    - **Name**: e.g., *Pipedream Gmail*  
    - **Description**: (Optional) e.g., *Connecting to Gmail through Pipedream MCP*
-   - **JSON Structure**: Paste the configuration JSON copied from Pipedream. 
-   - **Module**: (Optional) To export this configuration to a development module.
+   - **JSON Structure**: Paste the code text you copied from Pipedream in the previous step. This is the configuration Etendo uses to connect to your Gmail account.
+   - **Module**: Leave this blank unless your technical team has asked you to fill it in.
 
 
 ## Link the MCP to the Agent
 :material-menu: `Application` > `Service` > `Copilot` > `Agent`
 
 1. Navigate to `Agent` window.  
-2. Open the agent (or create a new one) you want to give access to the Gmail account  and go to the **MCP Servers** tab.  
+2. Open the agent to which you want to grant Gmail access (or create a new one) and go to the **MCP Servers** tab.  
 3. Add a new line selecting the MCP Server just created.  
-4. **Save** the changes and **Sync Agent**.
+4. Click **Save** to record your changes, then click **Sync Agent** — this applies the new Gmail connection to the agent so it can start using it immediately.
 
-![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/add-mcp-to-agent.png)
+![MCP Servers tab on the Agent record in Etendo](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/add-mcp-to-agent.png)
 
 
 ## Test the Gmail Integration
 
--  Start a conversation with the agent and ask something Gmail-related, for example:  
+1. Start a conversation with the agent and ask something Gmail-related, for example:
 
-	![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/mcp-gmail-use-example.png)
+   ![Agent chat showing a Gmail query example](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/mcp-gmail-use-example.png)
 
--  Send emails directly from the agent
-    
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/send-email.png)
+2. Send emails directly from the agent:
 
-    ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/example-email.png)
+   ![Send email from agent example](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/send-email.png)
+
+   ![Resulting sent email example](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/example-email.png)
 
 
 ---
