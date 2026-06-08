@@ -12,171 +12,171 @@ tags:
 
 ## Overview
 
-Audit Trail allows users to monitor every data change made to any record in the system through the user interface.
+Audit Trail allows you to monitor every data change made to any record in the system through the user interface. The feature tracks the following types of changes:
 
-The Audit trail feature monitors data changes such as:
+- **Insert** — a new record was created
+- **Update** — an existing record was modified
+- **Delete** — a record was removed
 
-- Insert
-- Update
-- Delete
-
-This feature must be enabled by the System Administrator. To do this, the administrator configures which data tables should be tracked — this is done in a technical administration area called the Application Dictionary.
-
-Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button **Audit Trail**.
-
-![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-1.png)
-
-## Audit Trail Window
-
-Audit Trail view displays read-only information about all the recorded data changes done in the tables for which the audit trail feature has been enabled.
-
-![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-2.png)
-
-For each tracked change, the window shows which table and field was modified, along with a unique ID that identifies the specific record that was changed.
+The System Administrator enables audit tracking for each table before any changes are recorded. See [Configuration](#configuration) below.
 
 ## Configuration
 
-In order to track audit information, the system administrator needs to perform two tasks:
+To track audit information, the System Administrator completes two steps:
 
-- **Enable the audit trail** for one or more tables in the system
-- Run the **Applying Configuration Changes** process
+1. Enable the audit trail for one or more tables.
+2. Run the **Update Audit Trail Infrastructure** process.
 
-In the following sections, a step-by-step guide with more detailed information is provided.
+Both steps are described in the following sections.
 
 ## Enabling Audit Trail for a Table
 
-The System Administrator enables or disables the Audit Trail for a table by opening the table definition in the Application Dictionary.
+:material-menu: `Application Dictionary` > `Tables and Columns`
 
-- Switch to the **System Administrator** role
-- Go to the Application menu, then navigate to **Application Dictionary** > **Tables and Columns**
-- **Navigate to the table** for which you want to enable the Audit Trail
-- Switch to **Edit View**
-- Mark the **Fully Audited** checkbox and save
+!!! info
+    The **Application Dictionary** is a system configuration area accessible only to System Administrators. It is not part of the regular business menus.
+
+The System Administrator enables or disables the Audit Trail for a table through the table definition in the Application Dictionary.
+
+1. Switch to the **System Administrator** role.
+2. Go to `Application Dictionary` > `Tables and Columns`.
+3. Navigate to the table for which you want to enable the Audit Trail.
+4. Switch to **Edit View**.
+5. Mark the **Fully Audited** checkbox and save.
 
 ### Audit Inserts
 
-By default, when a table is set to **Fully Audited**, the system does not record a separate entry for every new item added — it only records that a new record was created. If you also need to capture the exact values that were entered when a record was first created, check the **Audit Inserts** field on that table. This is optional and is usually not needed.
+By default, when a table is set to **Fully Audited**, the system records that a new record was created but does not save the values that were entered at that moment.
+
+To also save those initial values, check the **Audit Inserts** field on that table. This is optional.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-3.png)
 
-### Excluding columns
+### Excluding Columns
 
-By default, all fields in an audited table are tracked. If you want to stop tracking changes to a specific field — for example, a notes field that changes frequently and is not important to audit — you can exclude it. To do this, open the **Column** tab inside **Application Dictionary** > **Tables and Columns**, find the field you want to exclude, and check the **Exclude Audit** box.
+By default, all fields in an audited table are tracked. To stop tracking changes to a specific field — for example, a notes field that changes frequently and is not important to audit — open the **Column** tab inside `Application Dictionary` > `Tables and Columns`, find the field, and check the **Exclude Audit** box.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-4.png)
 
-## Applying Configuration Changes
+## Update Audit Trail Infrastructure
 
-After enabling or disabling the Audit Trail for a table, or after any changes to that table's structure, a system administrator must run the Applying Configuration Changes process to apply the update. Until this process is run, the audit trail will not reflect the latest settings. Contact your system administrator if you are not sure whether this has been done.
+After enabling or disabling the Audit Trail for a table, or after any change to that table's structure, run the **Update Audit Trail Infrastructure** process. Until this process is run, the audit trail does not reflect the latest settings.
+
+Run the process through the [Process Request](../process-scheduling/process-request.md) window:
+
+1. Go to `Application` > `General Setup` > `Process Scheduling` > `Process Request`.
+2. Select the **Organization**.
+3. Select **Update Audit Trail Infrastructure** in the **Process** field.
+4. Set **Timing** to **Run Immediately**.
+5. Click **Schedule Process**.
+
+!!! tip
+    To verify that the process completed successfully, go to `Application` > `General Setup` > `Process Scheduling` > [`Process Monitor`](../process-scheduling/process-monitor.md) and check the status of the execution.
+
+## Viewing Audit Data
+
+There are two ways to view audit data: the **Audit Trail Popup**, which shows the history of a specific record, and the **Audit Trail Window**, which allows searching across all audit records.
 
 ## The Audit Trail Popup
 
-For the set of tables for which the audit trail feature has been enabled, the button ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-5.png) is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
+For each table where the audit trail is enabled, the button ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-5.png) appears in the toolbar of the corresponding window. It opens the Audit Trail Popup.
 
-This popup allows examination of the history of the record which is currently shown in the window. It has two main view modes which allow examining the following data:
+The popup shows the history of the record currently displayed in the window. It has two view modes:
 
-- **Record history** of a single record
-- **Deleted records** of a single tab
+- **Record History** — shows changes to a single record
+- **Deleted Records** — shows records deleted from a single tab
 
 ## Record History View
 
-This view is displayed when the popup is opened from an existing record via the new toolbar button.
+This view opens when you click the audit trail button from an existing record.
 
-The top area always shows the record type (for example, **Sales Order**) and the specific record — such as *1000175 - 2016-04-03* — whose history is displayed.
+The top area shows the record type (for example, **Sales Order**) and the specific record — such as *1000175 - 2016-04-03* — whose history is displayed. Below that, filters allow you to narrow the changes shown, which is useful for records with many modifications.
 
-Then a number of filters are available which allow some restriction on the changes displayed to ease the use of records with many modifications.
-
-The grid in the lower area shows all changes done to this record while the audit trail feature was enabled. The changes are shown sorted from the most recent change back to earlier changes.
+The grid shows all changes made to the record while the audit trail was enabled, sorted from the most recent change to the oldest.
 
 !!! info
-    Only fields which are visible in the corresponding tab are shown here.
+    Only fields visible in the corresponding tab are shown.
 
-Each row in the grid shows one changed field. If a record was edited, you will see one row for every field that was changed. If a record was created or deleted, you will see one row for every field in that record.
+Each row represents one changed field. If a record was edited, one row appears for every field that changed. If a record was created or deleted, one row appears for every field in that record.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-6.png)
 
-Finally, a link just on top of the grid allows switching to the Deleted Records view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.
-
-## Disable Filtering by User
-
-The User filter can be removed from both the **Record History** and the **Deleted Records** view. This can be interesting for performance reasons when the number of users available is high. In order to do this, go to **Application** > **General Setup** > **Application** > [`Preference`](../application/preference.md) and add the following preference: Show Audit Trail User filter with value Y.
+A link above the grid switches to the Deleted Records view, showing deleted records for the tab from which the popup was opened.
 
 ## Deleted Records View
 
-This view allows examination of records which have been deleted from a tab and are otherwise no longer accessible in the user interface.
+This view shows records that have been deleted from a tab and are no longer accessible through the normal interface.
 
-The general layout of the view is similar to the record history view.
-
-The top area shows the record type for which the deleted records are displayed. Directly below, a number of filters is available to restrict the records shown.
-
-Then a grid displays all deleted records belonging to this tab. Here one row shown corresponds to a single deleted record and the columns shown are the same as the ones shown in the normal grid view of the same tab.
+The top area shows the record type. Below it, filters let you narrow the records shown. The grid displays one row per deleted record, with the same columns as the normal grid view for that tab.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-7.png)
 
-This view offers a number of **navigation choices** to view related or more detailed information.
-
-### Navigation Choices
+### Navigation Options
 
 #### Back to History
 
-The first one is Back to history. Following this link, the view is just switched back to Record History showing the same records as shown before going to the deleted records view.
+Select **Back to history** to return to the Record History view, showing the same records as before.
 
 #### History of Selected Record
 
-The next one, View history of selected deleted record below, allows examining the detailed history of a deleted record, instead of the summary view which is shown here.
+Select **View history of selected deleted record** to see the full change history of a specific deleted record. This opens the Record History view, which indicates that the history of a deleted record is being displayed.
 
-This detailed history is displayed in the same 'Record History' view, however its top info area notes the fact that the history of a deleted record is displayed.
-
-The following screenshot shows an example of the history view of the same deleted Sales Order entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.
+The screenshot below shows the history of a deleted Sales Order. It includes entries for the deletion as well as the earlier creation and modification of the record.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-8.png)
 
 #### Child Tabs
 
-As the last method of navigation, the popup allows filtering records based on a parent record. This can be useful to search for deleted lines belonging to a sales order.
+The popup supports filtering deleted records by a parent record. This is useful for finding deleted lines that belonged to a sales order.
 
-There are two possible ways based on the status of the parent record: still existent or already deleted.
+**If the parent record still exists:**
 
-If the parent record (i.e. a Sales Order) does still exist, then the following steps can be done to view its deleted lines:
+1. Go to the lines tab of the Sales Order.
+2. Click the audit trail icon to open the Record History view.
+3. Click the **Deleted Records** link to switch to the Deleted Records view.
 
-1. Go to the lines tab of the Sales Order
-2. Click the audit trail icon to open the record history view
-3. Use the 'Deleted Records' links to switch to deleted records view
-
-As the lines tab is not a top level tab (it has a parent tab Sales Order) the deleted records view is automatically filtered to only show lines belonging to the current Sales Order. As visual information that the information shown is filtered, the top info area shows:
+Because the lines tab has a parent (the Sales Order), the view automatically filters to show only lines belonging to that Sales Order. The top area confirms the filter is active:
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-9.png)
 
-If the parent record (i.e. a Sales Order) does not exist anymore, then the same can be accomplished by using the following steps:
+**If the parent record has also been deleted:**
 
-1. Go to the Deleted Records view of the Sales Order tab
-2. Search the Sales Order for which the deleted lines should be shown
-3. Click the Lines link just below the grid
+1. Go to the Deleted Records view of the Sales Order tab.
+2. Find the Sales Order whose deleted lines you want to view.
+3. Click the **Lines** link below the grid.
 
-Then the deleted records view will show the deleted lines belonging to the selected (deleted) Sales Order.
+The view then shows the deleted lines belonging to that Sales Order.
 
-## A generated Audit Trail Window
+## Disable Filtering by User
 
-The second way to view audit data is a standard search window. Open the **Application** menu, go to **General Setup** > **Security**, and select **Audit Trail**. This window allows browsing all audit information filtered by the currently active client.
+The User filter can be removed from both the Record History and Deleted Records views. This is useful when the number of users in the system is large and affects performance.
 
-This window shows the unformatted audit data exactly as it is stored in the system. Values appear as they are recorded internally — for example, dates or code references may not display with the same labels you see elsewhere in the application. Use this window when you need to search or filter across all audit records.
+Go to `Application` > `General Setup` > `Application` > [`Preference`](../application/preference.md) and create a new preference record with the property **Show Audit Trail User filter** set to value `Y`.
 
-This window also offers more flexible filtering and searching options than the popup view.
+## Audit Trail Window
+
+The Audit Trail window displays a read-only view (meaning you can look but not change anything here) of all recorded data changes in the tables for which the audit trail is enabled.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-2.png)
+
+This window shows audit data as it is stored internally by the system. Some values may look different from what you see in the normal screens — for example, a date may appear in a different format, or an item may be identified by an internal code rather than its name. This is expected. Use this window to search or filter across all audit records.
+
+For each tracked change, the window shows which table and field was modified, along with a unique ID that identifies the specific record that was changed.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-10.png)
 
 ## Limitations
 
-The audit trail feature will record all data changes (for the table for which it has been enabled) with the following exceptions:
+The audit trail records all data changes for enabled tables, with the following exceptions:
 
-- Very long text fields (typically those used to store notes or descriptions exceeding a certain length) will not be audited.
-- Files or binary data attached to records (such as document attachments) will not be audited.
+- Very long text fields (such as notes or descriptions exceeding a certain length) are not audited.
+- Files or binary data attached to records (such as document attachments) are not audited.
 
-If you need to track changes to these types of fields, contact your system administrator.
+To track changes to these types of fields, contact your system administrator.
 
 ## Etendo Advanced Security
 
-The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
+The **Etendo Advanced Security** module allows you to customise several security features, including:
 
 - Password Security
 - Password History
