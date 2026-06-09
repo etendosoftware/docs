@@ -49,12 +49,12 @@ Los campos a tener en cuenta son:
 - **Cantidad de inventario:** incluye o excluye productos en el inventario físico en función de las cantidades reales. Las opciones disponibles son:
     - vacío - se mostrarán todos los productos en el inventario físico independientemente de su cantidad
     - 0 - se mostrarán solo los productos en el inventario físico que tengan cantidad 0 en stock.
-    - <0 - se mostrarán solo los productos en el inventario físico que tengan una cantidad positiva en stock.
-    - \>0 - se mostrarán solo los productos en el inventario físico que tengan una cantidad negativa en stock.
+    - <0 - se mostrarán solo los productos en el inventario físico que tengan una cantidad negativa en stock.
+    - \>0 - se mostrarán solo los productos en el inventario físico que tengan una cantidad positiva en stock.
     - distinto de 0 - se mostrarán solo los productos en el inventario físico que tengan una cantidad en stock distinta de 0.
 - **Establecer Cantidad teórica a cero:** esta casilla establece el campo **Cant.total** de la lista de conteo a cero. Cuando la casilla no está seleccionada, la **Cant.total** toma por defecto el mismo valor que la **Cantidad teórica** (Cantidad disponible) del producto.
     - La primera opción se utiliza para inventarios físicos ciegos, en los que las personas que cuentan los artículos en el almacén no necesitan conocer las cantidades esperadas.
-    - La primera opción se utiliza para permitir al usuario introducir el conteo de cantidad "real" en el almacén y el hueco. Una vez procesado el conteo de inventario, la cantidad teórica mostrada por el sistema se actualizará a la cantidad contada introducida por el usuario.
+    - La segunda opción se utiliza para permitir al usuario introducir el conteo de cantidad "real" en el almacén y el hueco. Una vez procesado el conteo de inventario, la cantidad teórica mostrada por el sistema se actualizará a la cantidad contada introducida por el usuario.
 - **ABC:** informe de productos Pareto
 
 ## Líneas { #lines }

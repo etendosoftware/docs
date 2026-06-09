@@ -53,13 +53,13 @@ Lo anterior implica que, por ejemplo, una cabecera de ajuste de costes de **"Pri
 
 Imaginemos un escenario en el que solo existe una transacción de recepción de 1 unidad de un producto, valorada a 10,00 €/unidad. En ese caso, los costes de la recepción son los siguientes, que pueden revisarse en la ventana **Producto**, solapa **Transacciones**:
 
-- Trx Orginal Cost: 10,00
+- Trx Original Cost: 10,00
 - Total Cost : 10,00
 - Unit Cost : 10,00
 
 Se contabiliza para la recepción una corrección manual de costes configurada como **"Unit Cost" = "Yes"** por un importe de 2,00 €. Esa corrección crea un ajuste de costes que cambia el coste de la recepción como se muestra a continuación:
 
-- Trx Orginal Cost: 10,00
+- Trx Original Cost: 10,00
 - Total Cost : 12,00 (10,00 + 2,00)
 - Unit Cost : 12,00 (10,00 + 2,00)
 
@@ -73,7 +73,7 @@ Esto implica que no hay cambio en el coste medio del producto; se mantiene en 12
 
 Sin embargo, imaginemos ahora que la corrección manual de costes contabilizada para la recepción por un importe de 2,00 € se configuró como **"Unit Cost" = No**; es decir, es un coste extra que también debe tenerse en cuenta. Esa corrección cambia el coste de la recepción como se muestra a continuación; el coste unitario no cambia:
 
-- Trx Orginal Cost: 10,00
+- Trx Original Cost: 10,00
 - Total Cost : 12,00 (10,00 + 2,00)
 - Unit Cost : 10,00
 
@@ -81,7 +81,7 @@ Después de eso, el precio de compra cambia de 10,00 €/unidad a 12,00 €/unid
 
 Ese cambio en el precio crea un ajuste de costes en la recepción de 2,00 = 12,00 - 10,00 €; por lo tanto, cambian los costes calculados de la recepción:
 
-- Trx Orginal Cost: 10,00
+- Trx Original Cost: 10,00
 - Total Cost : 14,00 (12,00 + 2,00)
 - Unit Cost : 12,00 (10,00 + 2,00)
 

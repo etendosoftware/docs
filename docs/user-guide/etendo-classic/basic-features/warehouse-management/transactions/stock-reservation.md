@@ -123,7 +123,7 @@ The Stock tab identifies each existing Stock or Purchase Order selected to fulfi
 
 ![Stock](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-2.png)
 
-In the _Stock_ tab, the actual reserved stock is shown. The stock should meet the dimensions defined in the header. When the stock is physically in the warehouse the reserved stock is identified by the Storage Bin and the Attribute Set Value when applied. In case of pre-reservations the stock is still not in the warehouse, so the _Storage Bin_ property is blank and the _Purchase Order line_ is set. When a pre-reservation is receipt and converted to reservation the storage bin where the stock has been stored is set keeping the purchase order line.
+In the _Stock_ tab, the actual reserved stock is shown. The stock should meet the dimensions defined in the header. When the stock is physically in the warehouse the reserved stock is identified by the Storage Bin and the Attribute Set Value when applied. In case of pre-reservations the stock is still not in the warehouse, so the _Storage Bin_ property is blank and the _Purchase Order line_ is set. When a pre-reservation is received and converted to reservation the storage bin where the stock has been stored is set keeping the purchase order line.
 
 The reserved stock has 2 quantities:
 

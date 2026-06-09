@@ -53,13 +53,13 @@ Above implies that, for instance, a "Price Difference Correction" cost adjustmen
 
 Let us imagine a scenario when there is only one receipt transaction of 1 unit of a product, valued at 10.00 €/unit. In that case receipt costs are the ones below, which can be reviewed in the "Product" window, Transactions tab:
 
-- Trx Orginal Cost: 10.00
+- Trx Original Cost: 10.00
 - Total Cost : 10.00
 - Unit Cost : 10.00
 
 A manual cost correction set as "Unit Cost" = "Yes" is booked for the receipt for an amount of 2.00 €. That correction creates a cost adjustment that changes the cost of the receipt as shown below:
 
-- Trx Orginal Cost: 10.00
+- Trx Original Cost: 10.00
 - Total Cost : 12.00 (10.00 + 2.00)
 - Unit Cost : 12.00 (10.00 + 2.00)
 
@@ -73,7 +73,7 @@ This implies no change in the average cost of the product, it remains as 12.00 �
 
 However, let us imagine now that the manual cost correction booked for the receipt for an amount of 2.00 € was set as "Unit Cost" = No, that is an extra cost which needs also to be taken into account. That correction changes the cost of the receipt as shown below, unit cost does not change:
 
-- Trx Orginal Cost: 10.00
+- Trx Original Cost: 10.00
 - Total Cost : 12.00 (10.00 + 2.00)
 - Unit Cost : 10.00
 
@@ -81,7 +81,7 @@ After that, purchase price changes from 10.00 €/unit to 12.00 €/unit.
 
 That change in the price creates a cost adjustment in the receipt of 2.00 = 12.00 - 10.00 €, therefore calculated costs of the receipt change:
 
-- Trx Orginal Cost: 10.00
+- Trx Original Cost: 10.00
 - Total Cost : 14.00 (12.00 + 2.00)
 - Unit Cost : 12.00 (10.00 + 2.00)
 
