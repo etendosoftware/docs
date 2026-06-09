@@ -230,7 +230,7 @@ This type of adjustment can be posted to the ledger in this window.
 
 In our example above, "movement from" transaction cost is changed (increased) manually by the end-user, therefore the cost of the "movement to" transaction needs also to be changed (increased).
 
-That adjustment can be post to the ledger. Posting will look as shown below:
+That adjustment can be posted to the ledger. Posting will look as shown below:
 
 **"Movement From"** transaction adjustment:
 
@@ -279,7 +279,7 @@ This type of adjustment can be posted to the ledger in this window.
 
 In our example above, an adjustment of this type is created whenever a new incoming transaction such as a goods receipt is booked for the product having a negative stock.
 
-That adjustment can be post to the ledger. Posting will look as shown below in the case of a negative adjustment amount, otherwise in case of a positive adjustment amount:
+That adjustment can be posted to the ledger. Posting will look as shown below in the case of a negative adjustment amount, otherwise in case of a positive adjustment amount:
 
 |                                                                                                 |                   |                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
@@ -291,7 +291,7 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 
 The source of this cost adjustment is a change in either the purchase price of an order or the purchase price of an invoice after receiving the goods.
 
-Price Difference Correction is launched only for Transactions of Type _Receipt_. Other Transactions, such as Return Material our Outgoing Transactions are not taken into account, since they should not modify the Average Cost due to a Price Correction.
+Price Difference Correction is launched only for Transactions of Type _Receipt_. Other Transactions, such as Return Material or Outgoing Transactions are not taken into account, since they should not modify the Average Cost due to a Price Correction.
 
 Those goods were received at a price that has changed, therefore the calculated cost of the receipt needs to be adjusted, same as the calculated "Average" cost of the product.
 
@@ -365,7 +365,7 @@ Some relevant fields to note are:
 - **Inventory Transaction**: Transactions available are:
     - Vendor receipt (V+)
     - Customer shipment (C-)
-    - Inventor in (I+)
+    - Inventory in (I+)
     - Inventory out (I-)
     - Movement from (M-)
     - Movement to (M+)
@@ -378,7 +378,7 @@ Some relevant fields to note are:
 - **Is source**: options available are "Yes" or "No" as a product transaction can be the source of an adjustment or not.
 - **Parent Cost Adjustment Line**: In the case of a cost adjustment that is not the source, this field shows the source cost adjustment line.
 - **Needs Posting**: options available are "Yes" or "No". Most cost adjustments needs to be posted to the ledger as they mean an increase/decrease of product asset value, however there are other whose cost adjustment is 0,00 that does not need any posting.
-- **Unit Cost**:options available are "Yes" or "No".
+- **Unit Cost**: options available are "Yes" or "No".
   - There are cost adjustments such a price difference correction which impact product unit cost
   - There are cost adjustment such as landed cost which does not impact product unit cost.  
     It is important to remark that each Product Transaction has below listed cost:

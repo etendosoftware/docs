@@ -210,14 +210,14 @@ plugins:
                   - Warehouse Management:
                     - ✨ Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
                     - Transactions:
-                      - Inventario físico: user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md
-                      - Movimiento entre almacenes: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md
-                      - Producción LDM: user-guide/etendo-classic/basic-features/warehouse-management/transactions/bill-of-materials-production.md
-                      - Operaciones de material: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md
-                      - Reserva de existencias: user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation.md
-                      - Ajuste del valor del inventario: user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md
-                      - Ajuste de costes: user-guide/etendo-classic/basic-features/warehouse-management/transactions/cost-adjustment.md
-                      - Inventario referenciado: user-guide/etendo-classic/basic-features/warehouse-management/transactions/referenced-inventory.md
+                      - Physical Inventory: user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md
+                      - Goods Movement: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md
+                      - Bill of Materials Production: user-guide/etendo-classic/basic-features/warehouse-management/transactions/bill-of-materials-production.md
+                      - Goods Transaction: user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md
+                      - Stock Reservation: user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation.md
+                      - Inventory Amount Update: user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md
+                      - Cost Adjustment: user-guide/etendo-classic/basic-features/warehouse-management/transactions/cost-adjustment.md
+                      - Referenced Inventory: user-guide/etendo-classic/basic-features/warehouse-management/transactions/referenced-inventory.md
                     - Analysis Tools:
                       - Pareto Product Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md
                       - Material Transaction Report: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md
@@ -769,6 +769,7 @@ plugins:
             Balance Sheet and P/L Structure Setup: Configuración de Estructura de Balance y P/G
             Basic Features: Funcionalidades Básicas
             Budget: Presupuesto
+            Bill of Materials Production: Producción LDM
             Bulk Completion: Completado Masivo
             Bulk Posting: Contabilización Masiva
             Bundles: Paquetes
@@ -780,6 +781,7 @@ plugins:
             Business Partner Info: Información del Tercero
             Business Partner General View: Vista General de Terceros
             Client: Entidad
+            Cost Adjustment: Ajuste de costes
             Cashflow Forecast Report: Informe de previsión de tesorería
             Create Budget Reports in Excel: Generador excel de presupuestos
             Create Tax Report: Creación de informes de impuestos
@@ -845,6 +847,8 @@ plugins:
             General Ledger Report Advanced: Libro mayor avanzado
             GL Category: Categoría Contable
             GL Item: Concepto contable
+            Goods Movement: Movimiento entre almacenes
+            Goods Transaction: Operaciones de material
             Grid and Forms: Grillas y Formularios
             Help and Support: Ayuda y Soporte
             Home: Inicio
@@ -993,6 +997,7 @@ plugins:
             Quick Installation: Instalación Rápida
             Interactive Setup: Configuración Interactiva
             Intercompany: Intercompañía
+            Inventory Amount Update: Ajuste del valor del inventario
             Inventory Status: Estado de Inventario
             ISO image: Imagen ISO
             Java Coding Conventions: Convenciones de Código Java
@@ -1025,6 +1030,7 @@ plugins:
             Organization Type: Tipo de Organización
             Overview: Visión General
             Packing: Empaquetado
+            Physical Inventory: Inventario físico
             Pareto Product Report: Informe Pareto de Productos
             Payables Aging Schedule: Listado de saldos a pagar por antigüedad
             Payment Execution: Ejecución de Pagos
@@ -1056,6 +1062,7 @@ plugins:
             Purchase Invoice Validation: Validación de Factura de Compra
             Receivables Aging Schedule: Listado de saldos a cobrar por antigüedad
             Receivables and Payables: Gestión de Cobros y Pagos
+            Referenced Inventory: Inventario referenciado
             Remittance: Remesa
             Reset Accounting: Reinicializar cuentas
             Release Notes: Notas de la Versión
@@ -1074,6 +1081,7 @@ plugins:
             Setup and Usage: Configuración y Uso
             Standard Windows: Ventanas Estándar
             Stock Logistic Unit: Unidad Logística de Stock
+            Stock Reservation: Reserva de existencias
             Sup-application Structure: Estructura de Sub-aplicación
             Support Service: Servicio de Soporte
             Supported Modules: Módulos Soportados

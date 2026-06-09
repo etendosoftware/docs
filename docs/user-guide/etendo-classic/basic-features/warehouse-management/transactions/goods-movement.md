@@ -64,7 +64,7 @@ This button allows you to quickly transfer all products located in a Storage Bin
 When you click it, the system automatically displays a list of products from the selected source location in the lines.
 When processing the transfer, all products are transferred from the source to the destination.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png)
+![Move Storage Bin popup showing the source and destination bin selectors](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png)
 
 ### Generate Relocation Task
 
@@ -74,13 +74,13 @@ When processing the transfer, all products are transferred from the source to th
 Allows you to create a relocation task from the **Goods Movement** document. The system takes the information loaded in the record and its lines and sends it to Etendo Mobile, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.
 
 !!! info
-    For more information,visit [Relocation Task](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
+    For more information, visit [Relocation Task](../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#relocation-tasks)
 
 ### Process Movement
 
 This button processes the Goods Movement document. When executed, the system validates the movement information and updates the stock in the corresponding locations.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png)
+![Process Movement button confirmation dialog in the Goods Movement window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png)
 
 
 ## Accounting
@@ -107,13 +107,13 @@ Posting a _Goods Movement_ implies to have its cost calculated:
 ## How to Reactivate Goods Movements
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 From the Goods Movement window, the user is able to reactivate a previously generated movement just by selecting the needed movement and clicking the Reactivate button.
 
 Once the movement is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png)
+![Goods Movement document showing Not processed status after reactivation](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png)
 
 !!! warning
     It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).

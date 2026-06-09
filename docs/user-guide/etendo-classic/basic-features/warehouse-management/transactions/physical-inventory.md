@@ -59,7 +59,7 @@ The fields to note are:
 
 ## Lines
 
-Lines tab allows  the user to add or to edit individual products to be included in the inventory count list. It represents the inventory count list of a given warehouse.
+Lines tab allows the user to add or to edit individual products to be included in the inventory count list. It represents the inventory count list of a given warehouse.
 
 Some relevant fields to note are:
 
@@ -86,7 +86,7 @@ That physical inventory can be posted once processed, if the cost of the product
 
 |                           |                                                             |                                                             |
 | ------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| Account               | Debit                                                   | Credit**                                                  |
+| Account               | Debit                                                   | Credit                                                  |
 | Product Asset         | (Quantity Count - Book Quantity) \* Cost of the Product |                                                             |
 | Warehouse Differences |                                                             | (Quantity Count - Book Quantity) \* Cost of the Product |
 
@@ -107,7 +107,7 @@ From the Physical Inventory window, it is possible to reactivate a previously ge
 
 Once the Inventory is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.
 
-![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
+![Physical Inventory document showing Not processed status after reactivation](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
 
 !!! warning
     It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
