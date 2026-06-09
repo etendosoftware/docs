@@ -2766,9 +2766,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../../basic-features/warehouse-management/transactions/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_4_2" id="__nav_3_2_1_4_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2777,7 +2793,203 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transactions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/physical-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Physical Inventory
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/goods-movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Goods Movement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/bill-of-materials-production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bill of Materials Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/goods-transaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Goods Transaction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/stock-reservation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock Reservation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/inventory-amount-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventory Amount Update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/cost-adjustment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cost Adjustment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic-features/warehouse-management/transactions/referenced-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referenced Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -18374,7 +18586,7 @@ GS1-128 identifiers 90–99 are free-use codes and can be assigned to custom pro
 <h3 id="overview_1">Overview</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p>The <a href="../../../../basic-features/warehouse-management/transactions/#referenced-inventory">Referenced Inventory (RI)</a> functionality has been extended to manage physical logistics units such as <strong>pallets</strong> and <strong>boxes</strong>, directly linked to the <a href="../../../../basic-features/master-data-management/master-data/product/#alternate-uom-tab">Alternative Units of Measure (AUOM)</a> of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.</p>
+<p>The <a href="../../../../basic-features/warehouse-management/transactions/referenced-inventory/">Referenced Inventory (RI)</a> functionality has been extended to manage physical logistics units such as <strong>pallets</strong> and <strong>boxes</strong>, directly linked to the <a href="../../../../basic-features/master-data-management/master-data/product/#alternate-uom-tab">Alternative Units of Measure (AUOM)</a> of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.</p>
 <p>The <a href="../stock-logistic-unit/">Stock Logistic Unit</a> module, installed as a dependency, adds new UOMs (Box, Pallet) and reference inventory types, allowing users to configure equivalences in the <strong>Alternate UOM</strong> tab of the Product window. Once defined, if a different conversion is required, a new AUOM must be created.</p>
 <p>When goods are received, the system can automatically generate RI records for each logistics unit (Box or Pallet), including product details, base unit quantity, and attributes such as batch or expiration date. Each unit is registered as a unique item from the moment it enters the warehouse, ensuring full traceability.  </p>
 <div class="admonition info">
@@ -19015,7 +19227,7 @@ Use the <strong>Generate Task</strong> button to create a quality inspection tas
 <p>Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/#goods-movement">Goods Movements</a>.</p>
+<p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/goods-movement/">Goods Movements</a>.</p>
 </div>
 <h4 id="process-start-etendo_3">Process Start (Etendo)</h4>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Movement</code></p>
@@ -19044,7 +19256,7 @@ Use the <strong>Generate Task</strong> button to create a quality inspection tas
 <p>This functionality corresponds to the same operation performed in Etendo's <strong>Physical Inventory</strong> window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/#physical-inventory">Physical Inventory</a>.</p>
+<p>For more information about how to use this functionality in Etendo, visit <a href="../../../../basic-features/warehouse-management/transactions/physical-inventory/">Physical Inventory</a>.</p>
 </div>
 <h4 id="process-start-etendo_4">Process Start (Etendo)</h4>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Physical Inventory</code></p>

@@ -11,7 +11,7 @@
         <link rel="prev" href="../../procurement-management/analysis-tools/">
       
       
-        <link rel="next" href="../transactions/">
+        <link rel="next" href="../transactions/physical-inventory/">
       
       
         <link rel="alternate" type="application/rss+xml" title="Fuente RSS" href="../../../../../../feed_rss_created.xml">
@@ -2865,9 +2865,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../transactions/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_4_2" id="__nav_3_2_1_4_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2876,7 +2892,203 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transacciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/physical-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventario físico
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/goods-movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Movimiento entre almacenes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/bill-of-materials-production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Producción LDM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/goods-transaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operaciones de material
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/stock-reservation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reserva de existencias
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/inventory-amount-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ajuste del valor del inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/cost-adjustment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ajuste de costes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/referenced-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventario referenciado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -17341,25 +17553,25 @@ Además, es necesario definir y validar una <a href="../setup/#costing-rules">Re
 <li>Tenga en cuenta que la clasificación ABC se basa en el coste de las transacciones del producto. Por eso debe configurarse y validarse una <a href="../setup/#costing-rules">Regla de cálculo de costes</a> para la entidad legal y debe planificarse el proceso <a href="../../general-setup/process-scheduling/process-request/#costing">Costing Background Process</a>.</li>
 </ul>
 </li>
-<li>Tras este procedimiento, el personal de almacén crea el documento de inventario físico en la ventana <a href="../transactions/#physical-inventory">Inventario físico</a> seleccionando el Almacén donde ejecutar esta actividad y pulsando el botón Create Inventory Count List. Definen los criterios para los productos que se incluirán en la lista de recuento (por ejemplo, la clasificación ABC) y el resultado es la <a href="../transactions/#lines">Lista</a> de productos con sus cantidades actuales, que se lleva al almacén y se verifica frente al inventario físico.</li>
-<li>Para actualizar el stock en Etendo, si se encuentran diferencias, primero el personal de almacén selecciona el <a href="../transactions/#physical-inventory">Inventario físico</a> que se creó previamente. A continuación, en la pestaña <a href="../transactions/#lines">Líneas</a>, encuentran los productos requeridos y actualizan el campo Quantity Count con un nuevo valor. Después, finalizan el recuento de inventario haciendo clic en el botón Process Inventory Count, que actualiza el inventario y lanza el contabilizado del documento (si está configurado).</li>
+<li>Tras este procedimiento, el personal de almacén crea el documento de inventario físico en la ventana <a href="../transactions/physical-inventory/">Inventario físico</a> seleccionando el Almacén donde ejecutar esta actividad y pulsando el botón Create Inventory Count List. Definen los criterios para los productos que se incluirán en la lista de recuento (por ejemplo, la clasificación ABC) y el resultado es la <a href="../transactions/physical-inventory/#lines">Lista</a> de productos con sus cantidades actuales, que se lleva al almacén y se verifica frente al inventario físico.</li>
+<li>Para actualizar el stock en Etendo, si se encuentran diferencias, primero el personal de almacén selecciona el <a href="../transactions/physical-inventory/">Inventario físico</a> que se creó previamente. A continuación, en la pestaña <a href="../transactions/physical-inventory/#lines">Líneas</a>, encuentran los productos requeridos y actualizan el campo Quantity Count con un nuevo valor. Después, finalizan el recuento de inventario haciendo clic en el botón Process Inventory Count, que actualiza el inventario y lanza el contabilizado del documento (si está configurado).</li>
 </ul>
 <p>Para ejecutar <em>Movimiento entre almacenes</em>, el personal de almacén:</p>
 <ul>
-<li>En la ventana <a href="../transactions/#goods-movement">Movimiento entre almacenes</a>, lista los productos a mover con la información de origen y destino y la cantidad correspondiente, y luego procesa el documento, lo que actualiza todas las cantidades de producto listadas en la pestaña Líneas en el almacén y lanza el contabilizado del documento (si está configurado).</li>
+<li>En la ventana <a href="../transactions/goods-movement/">Movimiento entre almacenes</a>, lista los productos a mover con la información de origen y destino y la cantidad correspondiente, y luego procesa el documento, lo que actualiza todas las cantidades de producto listadas en la pestaña Líneas en el almacén y lanza el contabilizado del documento (si está configurado).</li>
 </ul>
 <p>Para <em>Seguimiento de mercancías</em>, el personal de almacén utiliza:</p>
 <ul>
 <li><a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report">Informe Stock</a>, que proporciona el nivel de stock de todos los productos (que tienen inventario distinto de cero) y su ubicación (almacén y hueco) agrupados por categoría de producto.</li>
-<li>La ventana <a href="../transactions/#goods-transaction">Operaciones de material (uso indirecto)</a>, que ofrece una vista de solo lectura con amplias capacidades de filtrado y muestra todas las transacciones de inventario.</li>
+<li>La ventana <a href="../transactions/goods-transaction/">Operaciones de material (uso indirecto)</a>, que ofrece una vista de solo lectura con amplias capacidades de filtrado y muestra todas las transacciones de inventario.</li>
 <li><a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report">Informe Movimiento de Productos</a>, que muestra todas las recepciones, envíos, movimientos e inventarios físicos agrupados por Tipo de transacción y Tercero.</li>
 <li><a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report">Informe Transacción de Material</a>, que lista todos los documentos (envíos o recepciones) agrupados por Tercero.</li>
 </ul>
 <p>La <em>Valoración del inventario</em> se realiza con la ayuda del <a href="../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report">Informe de Valuación de Existencias</a>.
 Este informe muestra el coste del stock calculado por el proceso Costing Server.</p>
-<p>La <em>Actualización de inventario</em> se realiza con la ayuda de la ventana <a href="../transactions/#inventory-amount-update">Ajuste de Valor del Inventario</a>.
-Esta ventana permite cambiar el valor total del inventario o el coste unitario de uno o varios productos en una fecha de referencia determinada; por tanto, se crean automáticamente un inventario de cierre y uno de apertura en la ventana <a href="../transactions/#physical-inventory">Inventario físico</a>.</p>
-<p>Para la <em>Revisión de ajustes de costes</em>, el personal de almacén utiliza la ventana <a href="../transactions/#cost-adjustment">Ajuste de Costes</a>.
+<p>La <em>Actualización de inventario</em> se realiza con la ayuda de la ventana <a href="../transactions/inventory-amount-update/">Ajuste de Valor del Inventario</a>.
+Esta ventana permite cambiar el valor total del inventario o el coste unitario de uno o varios productos en una fecha de referencia determinada; por tanto, se crean automáticamente un inventario de cierre y uno de apertura en la ventana <a href="../transactions/physical-inventory/">Inventario físico</a>.</p>
+<p>Para la <em>Revisión de ajustes de costes</em>, el personal de almacén utiliza la ventana <a href="../transactions/cost-adjustment/">Ajuste de Costes</a>.
 Esta ventana permite revisar diferentes tipos de orígenes de ajuste de costes junto con las transacciones del producto cuyos costes se están ajustando, así como los importes del ajuste.</p>
 <h2 id="relationship-with-other-application-areas">Relación con otras áreas de aplicación</h2>
 <p>Gestión de Almacén tiene conexión con otras áreas de aplicación:</p>

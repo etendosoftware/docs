@@ -11,7 +11,7 @@
         <link rel="prev" href="../../procurement-management/analysis-tools/">
       
       
-        <link rel="next" href="../transactions/">
+        <link rel="next" href="../transactions/physical-inventory/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -2865,9 +2865,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../transactions/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_4_2" id="__nav_3_2_1_4_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2876,7 +2892,203 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transactions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/physical-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Physical Inventory
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/goods-movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Goods Movement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/bill-of-materials-production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bill of Materials Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/goods-transaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Goods Transaction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/stock-reservation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stock Reservation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/inventory-amount-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inventory Amount Update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/cost-adjustment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cost Adjustment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/referenced-inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referenced Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -17012,25 +17224,25 @@ In addition to this, a <a href="../setup/#costing-rules">Costing Rule</a> needs 
 <li>Note that the ABC classification is based on the cost of the product's transactions. That is why a <a href="../setup/#costing-rules">Costing Rule</a> for the legal entity must be configured and validated and the <a href="../../general-setup/process-scheduling/process-request/#costing">Costing Background Process</a> process has to be scheduled.</li>
 </ul>
 </li>
-<li>After this procedure, the Warehouse Staff creates the physical inventory document in the <a href="../transactions/#physical-inventory">Physical Inventory</a> window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the <a href="../transactions/#lines">list</a> of products with their current quantities that is brought to the warehouse and verified against physical inventory.</li>
-<li>In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the <a href="../transactions/#physical-inventory">Physical Inventory</a> that was previously created. Then in the <a href="../transactions/#lines">Lines</a> tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).</li>
+<li>After this procedure, the Warehouse Staff creates the physical inventory document in the <a href="../transactions/physical-inventory/">Physical Inventory</a> window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the <a href="../transactions/physical-inventory/#lines">list</a> of products with their current quantities that is brought to the warehouse and verified against physical inventory.</li>
+<li>In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the <a href="../transactions/physical-inventory/">Physical Inventory</a> that was previously created. Then in the <a href="../transactions/physical-inventory/#lines">Lines</a> tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).</li>
 </ul>
 <p>To execute <em>Goods Movement</em> Warehouse Staff:</p>
 <ul>
-<li>In the <a href="../transactions/#goods-movement">Goods Movements</a> window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).</li>
+<li>In the <a href="../transactions/goods-movement/">Goods Movements</a> window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).</li>
 </ul>
 <p>For <em>Goods Tracking</em> Warehouse Staff uses:</p>
 <ul>
 <li><a href="../analysis-tools/stock-report/">Stock Report</a> that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.</li>
-<li><a href="../transactions/#goods-transaction">Goods Transaction</a> window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.</li>
+<li><a href="../transactions/goods-transaction/">Goods Transaction</a> window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.</li>
 <li><a href="../analysis-tools/product-movements-report/">Product Movements Report</a> shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.</li>
 <li><a href="../analysis-tools/material-transaction-report/">Material Transaction Report</a> lists all documents (shipments or receipts) grouped by Business Partner.</li>
 </ul>
 <p><em>Inventory Valuation</em> is done with the help of the <a href="../analysis-tools/valued-stock-report/">Valued Stock Report</a>.
 This report shows the cost of the stock calculated by the Costing Server process.</p>
-<p><em>Inventory Update</em> is done with the help of the <a href="../transactions/#inventory-amount-update">Inventory Amount Update</a> window.
-This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the <a href="../transactions/#physical-inventory">Physical Inventory</a> window.</p>
-<p>For <em>Cost Adjustments Review</em>, Warehouse Staff uses the <a href="../transactions/#cost-adjustment">Cost Adjustment</a> window.
+<p><em>Inventory Update</em> is done with the help of the <a href="../transactions/inventory-amount-update/">Inventory Amount Update</a> window.
+This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the <a href="../transactions/physical-inventory/">Physical Inventory</a> window.</p>
+<p>For <em>Cost Adjustments Review</em>, Warehouse Staff uses the <a href="../transactions/cost-adjustment/">Cost Adjustment</a> window.
 This window allows reviewing different types of cost adjustment sources together with the product's transactions whose costs are being adjusted, as well as adjustment amounts.</p>
 <h2 id="relationship-with-other-application-areas">Relationship with other application areas</h2>
 <p>Warehouse Management has a connection with other application areas:</p>
