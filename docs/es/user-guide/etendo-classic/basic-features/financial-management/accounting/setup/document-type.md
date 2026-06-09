@@ -53,10 +53,10 @@ La lista completa de tipos de documento estándar es la siguiente:
 | Propuesta de Pago | Propuesta de pago a proveedor | [Propuesta de Pago](../../../financial-management/receivables-and-payables/transactions.md#payment-proposal) |
 | Conciliación | Conciliación | [Conciliación](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
 | Dudoso cobro | Dudoso cobro | [Dudoso cobro](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
-| Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions.md#cost-adjustment) |
+| Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions/cost-adjustment.md) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
 | Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions.md#header-7) |
-| Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions.md#inventory-amount-update) |
+| Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions/inventory-amount-update.md) |
 
 !!! note "Importante"
     **Se podrían añadir nuevos tipos de documento a la lista anterior**. Si ese fuera el caso, Etendo proporcionará una versión actualizada de los Datos de referencia que contenga los nuevos tipos de documento en nuevas versiones. Esos Datos de referencia recién creados deberán aplicarse a la Organización correspondiente en la [Gestión del módulo de Empresa](../../../general-setup/enterprise-model/enterprise-module-management.md). También es posible **crear manualmente nuevos tipos de documento**, pero este proceso debe ser realizado por un usuario avanzado, tal y como se explica a continuación.

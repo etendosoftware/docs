@@ -41,7 +41,7 @@ La gestión de códigos de barras incluye AIs GS1-128 (p. ej., GTIN, lote, caduc
 Este módulo añade la opción Automática - Solo almacén por defecto al campo Reserva de existencias de la solapa líneas en la ventana Pedido de venta. Esto se utiliza para limitar la reserva únicamente al almacén especificado en la cabecera del pedido.
 
 !!! info
-    Para más información, visite [Pedido de venta](../../../basic-features/sales-management/transactions.md#stock-reservations) y [Reserva de existencias](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
+    Para más información, visite [Pedido de venta](../../../basic-features/sales-management/transactions.md#stock-reservations) y [Reserva de existencias](../../../basic-features/warehouse-management/transactions/stock-reservation.md).
 
 ### Empaquetado { #packing }
 
@@ -87,10 +87,10 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
 !!! info
     Para más información, visite la guía de usuario de:
 
-    - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md#how-to-reactivate-goods-movements)
     - [Albarán (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
-    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#how-to-reactivate-physical-inventories)
 
 ### Historial de existencias { #stock-history }
 
@@ -124,7 +124,7 @@ Este módulo le permite configurar si el sistema permite transacciones de materi
 
 La preferencia **Permitir transacciones de coste con fecha anterior** se establece en **Y** por defecto, lo que significa que se permiten transacciones con fechas anteriores a la fecha actual. 
 
-Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Inventarios físicos](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
+Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/goods-movement.md), [Inventarios físicos](../../../basic-features/warehouse-management/transactions/physical-inventory.md), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
 
 !!! warning
     Si necesita crear una nueva configuración para esta preferencia, debe establecerse únicamente a nivel global, sin distinguir ningún nivel de visibilidad específico (Organización, Usuario, Rol, etc.), ya que podría afectar al correcto funcionamiento de la validación.
