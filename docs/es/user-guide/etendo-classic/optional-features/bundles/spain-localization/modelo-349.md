@@ -8,9 +8,9 @@ tags:
     - Herramientas de análisis
 ---
 
-# Modelo 349
-
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es`
+
+## Introducción
 
 Esta sección describe el módulo **Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias**, incluido en la Localización Española de Etendo.
 
@@ -245,9 +245,9 @@ Una vez que todas las operaciones se han registrado en el sistema, el usuario pu
     | **9-17** | NIF del declarante |
     | **18-57** | Apellidos y nombre o razón social del declarante |
     | **58** | Blanco |
-    | **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
+    | **59-107** | Persona con quien relacionarse: Teléfono / Apellidos y nombre |
     | **108-120** | Número identificativo de la declaración |
-    | **121-122** | Declaración complementaria o substitutiva |
+    | **121-122** | Declaración complementaria o sustitutiva |
     | **123-135** | Número identificativo de la declaración anterior |
     | **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
     | **138-146** | Número total de operadores intracomunitarios |
@@ -336,7 +336,7 @@ Para introducir esta información, el usuario debe navegar a `Gestión de Compra
 Allí debe crear una nueva factura utilizando una de las siguientes opciones:
 
 -   **Abono de compra o venta** (en el sistema: `AP/AR Invoice` con importe negativo)
--   **Nota de crédito** (en el sistema: `AP/AR Credit Memo`)
+-   **Nota de crédito** (en el sistema: `AP/AR Credit Memo`) — **Nota:** este tipo de documento no se tiene en cuenta en el cálculo del modelo 349
 -   **Factura revertida** (en el sistema: `Reversed Purchase/Sales Invoice`)
 -   **Anulación total** de una factura de compra o venta
 
