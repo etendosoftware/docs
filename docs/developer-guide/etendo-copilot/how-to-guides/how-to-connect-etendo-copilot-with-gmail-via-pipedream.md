@@ -93,6 +93,18 @@ From that point on, any Gmail-related query is automatically redirected to the P
 ![MCP Servers tab on the Agent record in Etendo](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/add-mcp-to-agent.png)
 
 
+## Grant Role Access to the Agent
+:material-menu: `Application` > `Service` > `Copilot` > `Agent Access`
+
+When you sync the agent, the role you are currently logged in as automatically receives access to that agent. If you need to grant access to additional roles — for example, non-admin users who will use the agent in the chat — use the **Agent Access** window to register each additional role.
+
+1. Navigate to the `Agent Access` window.
+2. Create a new record with the following values:
+   - **Role**: select the additional role that needs access (e.g., *Sales Representative*, or the role of the users who need access)
+   - **Agent**: select the agent you just configured (e.g., *Pipedream Gmail*)
+3. Save.
+
+
 ## Test the Gmail Integration
 
 1. Start a conversation with the agent and ask something Gmail-related, for example:
