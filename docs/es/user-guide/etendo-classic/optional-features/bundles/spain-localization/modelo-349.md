@@ -41,19 +41,17 @@ Hay dos excepciones:
 - La correspondiente al mes de julio puede presentarse durante el mes de agosto y los veinte primeros días naturales de septiembre.
 - La correspondiente al último período del año debe presentarse durante los treinta primeros días naturales de enero.
 
-Cuando ni en el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa supere los 50.000 euros, excluido el IVA, la declaración debe presentarse dentro de los veinte primeros días naturales del mes siguiente al correspondiente período trimestral.
-
-Si al final de cualquiera de los meses que componen un trimestre natural se supera ese importe, debe presentarse una declaración recapitulativa para el mes o meses transcurridos desde el inicio del trimestre, dentro de los veinte primeros días naturales siguientes.
+Si el importe total de las operaciones intracomunitarias no supera los 50.000 € (sin IVA) en el trimestre en curso ni en los cuatro trimestres anteriores, la declaración puede presentarse de forma trimestral, dentro de los veinte primeros días naturales del mes siguiente al trimestre. Si al final de cualquiera de los meses que componen un trimestre natural se supera ese importe, debe presentarse una declaración recapitulativa para el mes o meses transcurridos desde el inicio del trimestre, dentro de los veinte primeros días naturales siguientes.
 
 !!! info
     Desde 2020 se suprime el período anual de declaración.
 
 Las operaciones se entenderán realizadas el día en que se expida la factura o documento equivalente que sirva de justificante de las mismas.
 
-El modelo 349 diferencia las notas de abono que rectifican facturas ya incluidas en declaraciones anteriores de las que no lo hacen. Para cubrir ese caso, el sistema incorpora una funcionalidad que relaciona las notas de abono con las facturas que están siendo abonadas o rectificadas, como se explica en la sección [Casos de usuario](#casos-de-usuario).
+El modelo 349 diferencia las notas de abono que rectifican facturas ya incluidas en declaraciones anteriores de las que no lo hacen. Para cubrir ese caso, el sistema incorpora una funcionalidad que relaciona las notas de abono con las facturas que están siendo abonadas o rectificadas, como se explica en la sección [Operaciones rectificativas del 349](#operaciones-rectificativas-del-349).
 
 !!! info
-    El módulo de generación del Modelo 349 no incluye las operaciones triangulares, puesto que dichas operaciones no se gestionan en Etendo. 
+    El módulo no incluye las operaciones triangulares porque Etendo no registra este tipo de operaciones. Si su empresa realiza operaciones triangulares, deberá declararlas manualmente a través de la sede electrónica de la AEAT.
 
 Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo `AP/AR Credit Memo` (notas de crédito) como facturas de abono, ya que ese tipo de transacción no refleja devoluciones de mercancía.
 
@@ -64,7 +62,7 @@ Por ello, el módulo 349 sí tiene en cuenta:
 
 Además, el módulo no contempla el supuesto de **Declaración Complementaria** para los casos en que deban incluirse solo operaciones que, aun debiendo haberse declarado en otra declaración del mismo ejercicio ya presentada, no se incluyeron.
 
-Estas operaciones deben incorporarse manualmente a través de la página de la AEAT, tal y como se explica en la sección [Declaración Complementaria](#declaración-complementaria).
+Estas operaciones deben incorporarse manualmente a través de la página de la AEAT, tal y como se explica en la sección [Declaración Complementaria](#declaracion-complementaria).
 
 ## Instalación del módulo
 
@@ -190,7 +188,7 @@ Una vez introducidos los datos anteriores, el usuario puede completar los parám
 
 Una vez introducidos esos parámetros, el usuario puede generar el 349 desde el botón de proceso **Generar fichero**.
 
-### Navarra y Guipúzcoa
+### Navarra y Guipúzcoa (opcional)
 
 Navarra y el País Vasco (incluida Guipúzcoa) son territorios forales con administración tributaria propia. Las empresas domiciliadas en estos territorios deben presentar el Modelo 349 ante su Hacienda foral, no ante la AEAT, y el fichero requiere una parametrización específica.
 
@@ -203,108 +201,110 @@ Se incluyen dos checks que permiten generar el fichero con la parametrización c
 
 Anteriormente, el fichero generado del modelo 349 solo se podía presentar en la AEAT. Con esta mejora, el usuario puede presentarlo también en Navarra o en Guipúzcoa, según el check seleccionado.
 
-### Edición de Número de Justificante
+### Edición de Número de Justificante (opcional)
 
 Si la declaración se presentará a la AEAT utilizando la opción **Ejercicio 202X. Presentación mediante fichero**, deberá editar el fichero `.txt` generado antes de enviarlo. Para ello:
 
 1. Abra el fichero con un editor de texto (por ejemplo, el Bloc de notas en Windows).
 2. Localice la primera línea del fichero — es el registro del declarante.
+!!! tip "Consejo práctico"
+    Si usa un editor con indicador de columna (como Notepad++ o Visual Studio Code), posicione el cursor al inicio de la primera línea y desplácese hasta la columna 108. Si usa el Bloc de notas estándar de Windows, cuente los caracteres manualmente desde el inicio de la línea.
+
 3. En esa primera línea, entre los caracteres 108 y 120, encontrará el número de justificante. Este número no puede ser el código de modelo (182) seguido de ceros (por ejemplo, `1820000000000` no es válido).
 4. Sustitúyalo por un número válido, como `1820000000001`, o bien 182 seguido del año y un correlativo, por ejemplo `182AAAA000001` donde AAAA es el año del ejercicio declarado.
 
 Si presenta la declaración utilizando la opción **Ejercicio 202X. Presentación (hasta 40.000 registros)**, no es necesario realizar este cambio.
 
-## Casos de usuario
-
 ### Generación del modelo 349 como un fichero de texto válido
 
-Esta funcionalidad permitirá a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.
+Esta funcionalidad permite a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.
 
 Durante el año/trimestre/mes natural, el usuario registrará en Etendo las transacciones de compra y/o devolución con sus proveedores de la Unión Europea así como las transacciones de venta y/o devoluciones de ventas con sus clientes de la unión europea.
 
-Las transacciones de compra y venta se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y factura de compra — `AP Invoice`) y de venta (albarán de venta y factura de venta — `AR Invoice`), respectivamente.
+Las transacciones de compra y venta se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y **Factura (Proveedor)**) y de venta (albarán de venta y **Factura (Cliente)**), respectivamente.
 
-Las transacciones de devolución, tanto de compra como de venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y abono de compra — `AP Invoice` negativa) y de venta (albarán de venta y abono de venta — `AR Invoice` negativa).
+Las transacciones de devolución, tanto de compra como de venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y **Factura (Proveedor)** negativa) y de venta (albarán de venta y **Factura (Cliente)** negativa).
 
 Además, deberá asegurarse de que todos los productos tienen la parametrización adecuada en relación con las categorías de impuestos que tienen asociadas (21%-10%-4%).
 
-Una vez que todas las operaciones se han registrado en el sistema, el usuario podrá generar el fichero del modelo 349 tal y como se explicó en la sección de este documento [Generación del Modelo 349](#generación-del-modelo-349). El fichero `txt` del 349 tiene la siguiente estructura:
+Una vez que todas las operaciones se han registrado en el sistema, el usuario puede generar el fichero del modelo 349 tal y como se explicó en la sección de este documento [Generación del Modelo 349](#generacion-del-modelo-349). El fichero `txt` del 349 tiene la siguiente estructura:
 
 ![Estructura del fichero 349](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/estructura-fichero-349.png)
 
-Las tablas siguientes describen la estructura interna del fichero generado, conforme al formato definido por la AEAT. No es necesario consultarlas salvo en el caso descrito en la sección [Edición de Número de Justificante](#edición-de-número-de-justificante).
+??? info "Estructura técnica del fichero (solo para edición manual)"
+    Solo necesita consultar estas tablas si va a editar el fichero manualmente, como se describe en la sección [Edición de Número de Justificante](#edicion-de-numero-de-justificante-opcional).
 
-### Tipo de registro 1 – Registro de declarante
+    ### Tipo de registro 1 – Registro de declarante
 
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 1) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-57** | Apellidos y nombre o razón social del declarante |
-| **58** | Blanco |
-| **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
-| **108-120** | Número identificativo de la declaración |
-| **121-122** | Declaración complementaria o substitutiva |
-| **123-135** | Número identificativo de la declaración anterior |
-| **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
-| **138-146** | Número total de operadores intracomunitarios |
-| **147-161** | Importe de las operaciones intracomunitarias |
-| **162-170** | Número total de operadores intracomunitarios con rectificaciones |
-| **171-185** | Importe de las rectificaciones |
-| **186** | Indicador cambio periodicidad en la obligación de declarar |
-| **187- 390** | Blancos |
-| **391 - 399** | NIF del representante legal |
-| **400 - 500** | Blancos |
+    |     |     |
+    | --- | --- |
+    | **Posiciones** | **Descripción** |
+    | **1** | Tipo de Registro (constante = 1) |
+    | **2-4** | Modelo Declaración (constante = 349) |
+    | **5-8** | Ejercicio |
+    | **9-17** | NIF del declarante |
+    | **18-57** | Apellidos y nombre o razón social del declarante |
+    | **58** | Blanco |
+    | **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
+    | **108-120** | Número identificativo de la declaración |
+    | **121-122** | Declaración complementaria o substitutiva |
+    | **123-135** | Número identificativo de la declaración anterior |
+    | **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
+    | **138-146** | Número total de operadores intracomunitarios |
+    | **147-161** | Importe de las operaciones intracomunitarias |
+    | **162-170** | Número total de operadores intracomunitarios con rectificaciones |
+    | **171-185** | Importe de las rectificaciones |
+    | **186** | Indicador cambio periodicidad en la obligación de declarar |
+    | **187- 390** | Blancos |
+    | **391 - 399** | NIF del representante legal |
+    | **400 - 500** | Blancos |
 
-### Tipo de registro 2 – Registro de operador intracomunitario
+    ### Tipo de registro 2 – Registro de operador intracomunitario
 
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 2) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-75** | Blancos |
-| **76-92** | NIF del operador comunitario |
-| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
-| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
-| **134-146** | Base Imponible o Importe |
-| **147-178** | Blancos |
-| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
-| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
-| **236- 500** | Blancos |
+    |     |     |
+    | --- | --- |
+    | **Posiciones** | **Descripción** |
+    | **1** | Tipo de Registro (constante = 2) |
+    | **2-4** | Modelo Declaración (constante = 349) |
+    | **5-8** | Ejercicio |
+    | **9-17** | NIF del declarante |
+    | **18-75** | Blancos |
+    | **76-92** | NIF del operador comunitario |
+    | **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+    | **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+    | **134-146** | Base Imponible o Importe |
+    | **147-178** | Blancos |
+    | **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+    | **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+    | **236- 500** | Blancos |
 
-### Tipo de registro 2 – Registro de rectificaciones
+    ### Tipo de registro 2 – Registro de rectificaciones
 
-|     |     |
-| --- | --- |
-| **Posiciones** | **Descripción** |
-| **1** | Tipo de Registro (constante = 2) |
-| **2-4** | Modelo Declaración (constante = 349) |
-| **5-8** | Ejercicio |
-| **9-17** | NIF del declarante |
-| **18-75** | Blancos |
-| **76-92** | NIF del operador comunitario |
-| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
-| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
-| **134-146** | Blancos |
-| **147-178** | Rectificaciones   <br>  <br>\- 147-150 ejercicio (de la declaración que se corrige)   <br>\- 151-152 periodo (de la declaración que se corrige)   <br>\- 153-165 base imponible (para el tercero y el periodo) rectificada   <br>\- 166-178 base imponible (para el tercero y el periodo) declarada anteriormente |
-| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
-| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
-| **236- 500** | Blancos |
+    |     |     |
+    | --- | --- |
+    | **Posiciones** | **Descripción** |
+    | **1** | Tipo de Registro (constante = 2) |
+    | **2-4** | Modelo Declaración (constante = 349) |
+    | **5-8** | Ejercicio |
+    | **9-17** | NIF del declarante |
+    | **18-75** | Blancos |
+    | **76-92** | NIF del operador comunitario |
+    | **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+    | **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+    | **134-146** | Blancos |
+    | **147-178** | Rectificaciones   <br>  <br>\- 147-150 ejercicio (de la declaración que se corrige)   <br>\- 151-152 periodo (de la declaración que se corrige)   <br>\- 153-165 base imponible (para el tercero y el periodo) rectificada   <br>\- 166-178 base imponible (para el tercero y el periodo) declarada anteriormente |
+    | **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+    | **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+    | **236- 500** | Blancos |
 
-### Operaciones rectificativas del 349
+## Operaciones rectificativas del 349
 
 En el modelo 349, el registro de tipo 2 de rectificaciones distingue dos casos:
 
 -   Notas de abono que rectifican una factura ya incluida en una declaración 349 de un periodo anterior.
 -   Notas de abono que no rectifican una declaración anterior y que, por tanto, se acumulan en el periodo actual.
 
-#### Cuándo una nota de abono es rectificativa
+### Cuándo una nota de abono es rectificativa
 
 Una nota de abono es rectificativa cuando corrige una factura incluida en una declaración 349 ya presentada.
 
@@ -316,7 +316,7 @@ Ejemplo mensual:
 
 La misma lógica aplica a las declaraciones trimestrales y anuales. Solo cambia el periodo de referencia.
 
-#### Cuándo una nota de abono no es rectificativa
+### Cuándo una nota de abono no es rectificativa
 
 Una nota de abono no es rectificativa cuando corrige una factura del mismo periodo que todavía no se ha incluido en una declaración 349 presentada.
 
@@ -327,7 +327,7 @@ Ejemplo mensual:
 
 La misma lógica aplica a las declaraciones trimestrales y anuales.
 
-#### Cómo informar una operación rectificativa
+### Cómo informar una operación rectificativa
 
 Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono o devolución es una `rectificativa del 349`.
 
@@ -364,22 +364,22 @@ Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostr
 -   Año
 -   Periodo
 -   Base Imponible del 349 Productos
--   Business Partner (tercero)
+-   Tercero (Business Partner)
 -   Base Imponible del 349 Servicios
 
 !!! info
-    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, solo aquellas que así configure el usuario.
+    No todas las notas de abono o devoluciones de mercancía son rectificativas del 349, solo aquellas que así configure el usuario.
 
-### Presentación del modelo 349 en formato electrónico
+## Presentación del modelo 349 en formato electrónico
 
 La presentación telemática del modelo 349 en formato electrónico requiere que la empresa tenga un NIF español y un certificado electrónico (documento digital que acredita la identidad de su empresa ante Hacienda) emitido por la **Fábrica Nacional de Moneda y Timbre (FNMT)** u otro certificado válido y reconocido por Hacienda. Si aún no dispone de uno, puede solicitarlo en la web de la FNMT.
 
 La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde `Oficina virtual` > `Presentación de declaraciones` > `Todas las declaraciones` > `Modelo 349`.
 
 !!! info
-    Existe una **Guía de presentación telemática** en la página web de Hacienda que explica cómo debe realizarse este trámite y que se puede descargar [**aquí**](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
+    Existe una **Guía de presentación telemática** en la página web de Hacienda que explica cómo debe realizarse este trámite y que se puede descargar [**aquí**](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf){target="_blank"}.
 
-### Presentación de declaraciones sustitutivas
+## Presentación de declaraciones sustitutivas
 
 Es necesario presentar una declaración sustitutiva cuando se debe anular y sustituir por completo una declaración anterior del mismo periodo que contiene datos inexactos o erróneos.
 
@@ -387,7 +387,7 @@ Para ello, el usuario debe realizar los cambios necesarios en la aplicación y v
 
 ![Declaración sustitutiva - Modelo 349](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/declaracion-sustitutiva-349.png)
 
-### Declaración Complementaria
+## Declaración Complementaria
 
 El módulo no genera declaraciones complementarias de forma automática.
 
@@ -397,6 +397,12 @@ Para incluir esas operaciones, acceda a la página web de la AEAT y añádalas m
 
 !!! warning
     No realice cambios en la declaración original ya presentada. La declaración complementaria se presenta como un trámite independiente desde la sede electrónica de la AEAT.
+
+*[AEAT]: Agencia Estatal de Administración Tributaria
+*[CIF]: Código de Identificación Fiscal
+*[FNMT]: Fábrica Nacional de Moneda y Timbre
+*[IVA]: Impuesto sobre el Valor Añadido
+*[NIF]: Número de Identificación Fiscal
 
 ---
 
