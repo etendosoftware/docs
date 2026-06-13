@@ -7,7 +7,7 @@ tags:
     - Legislación española
 ---
 
-# Localización Española
+## Localización Española
 
 :octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
 
@@ -48,7 +48,7 @@ Este módulo provee las funcionalidades comunes y la infraestructura base para l
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
-Este módulo incluye el dataset con los tipos impositivos españoles, incluyendo IVA, IGIC e IPSI.
+Este módulo incluye el dataset con los tipos impositivos españoles, incluyendo IVA, IGIC e IPSI. Incluso el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
 !!! info
     Para más información, visite la [Guía de usuario Impuestos para España](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md).
@@ -315,11 +315,10 @@ El módulo permite obtener los datos necesarios para cumplimentar modelos de la 
 
 La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
 
-#### Nueva versión del módulo de Impuestos de España
-
-Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
 #### Professional Localization pack Spain (España)
+
+:octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain`
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
 
@@ -378,7 +377,7 @@ Para habilitar el uso del launcher de declaraciones de impuestos, se deben desca
 
 - Tax Report Launcher
 - Módulos individuales de informes para los informes de impuestos que se quieren utilizar.
-- Los módulos de códigos de transacción y de clave tributaria (contacte al administrador del sistema para obtener los nombres exactos de los módulos e instalarlos).
+- Los módulos de códigos de transacción y de clave tributaria. Para instalarlos, contacte al administrador del sistema o al equipo de soporte de Etendo, quienes le indicarán los módulos exactos según su versión instalada.
 
 Cuando estos módulos están instalados, es necesario asociar los rangos de impuestos con los parámetros de las declaraciones de impuestos.
 
@@ -398,6 +397,9 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Se selecciona la solapa **Parámetro de declaración**.
 - En la lista de Parámetros del informe de impuestos, se debe seleccionar el parámetro que se desea asociar con la tasa de impuestos.
 - Clic en **Guardar**.
+
+!!! info
+    Si posteriormente se desactiva un rango de impuestos, Etendo lo excluirá automáticamente de las operaciones futuras. Consulte la sección [¿Qué ocurre si se desactiva un rango de impuestos?](#que-ocurre-si-se-desactiva-un-rango-de-impuestos) para más información.
 
 ### Usar el Generador de Declaraciones de Impuestos para generar un informe
 
