@@ -48,7 +48,7 @@ Este módulo provee las funcionalidades comunes y la infraestructura base para l
 
 :octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
-Este módulo incluye el dataset con los tipos impositivos españoles, incluyendo IVA, IGIC e IPSI. Incluso el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
+Este módulo incluye el dataset con los tipos impositivos españoles: IVA, IGIC (incluyendo el IGIC Canario) e IPSI (aplicable en Ceuta y Melilla).
 
 !!! info
     Para más información, visite la [Guía de usuario Impuestos para España](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md).
@@ -413,7 +413,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - En la lista **Período**, se debe seleccionar el período para el que se desea crear el informe. Por ejemplo, si el informe se ha configurado para enviarse al final de cada trimestre, se puede seleccionar el trimestre correcto de la lista.
 - Al hacer clic en **Parámetros de entrada**, aparece una ventana que muestra campos a completar con información necesaria para el informe. Los campos que aparecen dependen de la configuración del informe fiscal y deben ser completados.
 - En el campo **Nombre de archivo** se asigna al informe un nombre de archivo.
-- Click en **Generar archivo electrónico**.
+- Clic en **Generar archivo electrónico**.
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción **Guardar**, se debe especificar una ubicación de archivo.
 
 ## FAQ
@@ -513,7 +513,7 @@ Cuando un rango de impuestos está inactivo, Etendo deja de utilizarlo en cualqu
 
 Esto significa que el rango de impuestos inactivo no participa en la generación de ficheros para la AEAT ni en la generación de modelos fiscales, como el [Modelo 303](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md), [347](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md), [349](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md), [390](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md), [190](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md) u otros. Tampoco interviene en ningún otro proceso que dependa de la configuración de impuestos.
 
-Este es el comportamiento general de Etendo: los registros inactivos quedan excluidos automáticamente de todas las consultas y procesos del sistema.
+Este es el comportamiento general de Etendo: los registros inactivos quedan excluidos de los procesos de generación y cálculo, aunque pueden seguir siendo visibles en consultas históricas y registros de auditoría.
 
 ---
 
