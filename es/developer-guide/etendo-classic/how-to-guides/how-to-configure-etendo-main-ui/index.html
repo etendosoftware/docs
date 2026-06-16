@@ -17718,6 +17718,7 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">authentication</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="na">etendoerp</span><span class="o">.</span><span class="na">etendorx</span><span class="o">.</span><span class="na">auth</span><span class="o">.</span><span class="na">SWSAuthenticationManager</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">ws</span><span class="o">.</span><span class="na">maxInactiveInterval</span><span class="o">=</span><span class="mi">3600</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">next</span><span class="o">.</span><span class="na">public</span><span class="o">.</span><span class="na">app</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:3000</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">ui</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">3000</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -17764,6 +17765,12 @@
 <td>URL pública desde la que los usuarios acceden a la Main UI.</td>
 <td><code>http://localhost:3000</code></td>
 <td><code>https://your.frontend.etendo.cloud</code></td>
+</tr>
+<tr>
+<td><code>ui.port</code></td>
+<td>Puerto en el que el servicio Main UI escucha dentro del contenedor. Debe coincidir con el puerto referenciado en <code>next.public.app.url</code>.</td>
+<td><code>3000</code></td>
+<td><code>3000</code></td>
 </tr>
 </tbody>
 </table>
