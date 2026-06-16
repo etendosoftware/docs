@@ -2,7 +2,7 @@
 title: Producto
 tags:
   - Gestión de datos maestros
-  - Etendo classic
+  - Etendo
   - Producto
   - Inventario
   - Costes
