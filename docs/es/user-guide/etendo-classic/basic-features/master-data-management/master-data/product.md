@@ -43,8 +43,8 @@ La información requerida para crear un **Producto** en Etendo viene determinada
 Hay cuatro tipos de producto disponibles:
 
 - **Artículo**. El tipo de producto más utilizado es *Artículo*. El inventario mantenido para reventa, los materiales que se incorporan a un proceso de producción y los productos semielaborados o terminados creados mediante producción son ejemplos de productos definidos usando el tipo de producto *Artículo*.
-    - Un artículo debe marcarse como ***Almacenado*** si se requiere el seguimiento de cantidades del artículo; en caso contrario, no es necesario marcarlo como *Almacenado*.
-    - Un artículo debe marcarse como ***Producción*** si el artículo se utiliza en fabricación.
+    - Un artículo debe marcarse como **Almacenado** si se requiere el seguimiento de cantidades del artículo; en caso contrario, no es necesario marcarlo como **Almacenado**.
+    - Un artículo debe marcarse como **Producción** si el artículo se utiliza en fabricación.
     - Si un artículo es un producto intermedio o terminado, su lista de materiales (BOM) debe detallarse en la solapa **Lista de Materiales**.
 - **Servicio**. Este tipo de producto se utiliza para identificar prestaciones como servicios profesionales, transporte, telefonía y otros artículos que no se corresponden con bienes materiales.
     - Por lo tanto, un servicio no es almacenable, pero puede comprarse o venderse.
@@ -73,16 +73,16 @@ Los datos clave adicionales a completar son:
     Este indicador ya no puede modificarse para un producto si dicho producto forma parte de cualquier documento relacionado con ventas, compras, inventario o producción, independientemente del estado del documento.
 - La casilla **Producción** se selecciona si el producto forma parte de un proceso de producción. Una vez seleccionada, aparece un campo adicional para seleccionar un *Plan de Producción*.  
     Para saber más, visite [Plan de Producción](../../production-management/setup.md#process-plan).
-- **Conjunto atributos**, un producto puede tener un grupo de características o un conjunto de atributos, como ***Color y talla***, a tener en cuenta al pedir o almacenar el producto.
+- **Conjunto atributos**, un producto puede tener un grupo de características o un conjunto de atributos, como **Color y talla**, a tener en cuenta al pedir o almacenar el producto.
 
-    - Si aquí se selecciona un **Conjunto atributos**, Etendo muestra un nuevo campo llamado *Valor atributos*. Para saber más, visite [Conjunto atributos](../product-setup/attribute-set.md).
+    - Si aquí se selecciona un **Conjunto atributos**, Etendo muestra un nuevo campo llamado **Valor atributos**. Para saber más, visite [Conjunto atributos](../product-setup/attribute-set.md).
 
-- **Valor atributos**, si se selecciona un valor del conjunto de atributos como *Azul y grande*, Etendo muestra un nuevo campo llamado *Valor del Conjunto de Atributos como*.
+- **Valor atributos**, si se selecciona un valor del conjunto de atributos como *Azul y grande*, Etendo muestra un nuevo campo llamado **Valor del Conjunto de Atributos como**.
 - **Valor del Conjunto de Atributos como**, una vez seleccionado un conjunto de atributos, este puede utilizarse como se describe a continuación según el criterio seleccionado en este campo:
 
-    - **Por defecto**: el sistema rellena previamente el valor del atributo (por ejemplo, Talla = Mediana), pero el usuario puede cambiarlo en cada transacción.
-    - **Sobrescribir Especificación**: el valor del atributo define completamente el producto (por ejemplo, Cerveza sin alcohol = 0% de graduación alcohólica), pero puede modificarse para registrar excepciones (por ejemplo, una desviación en producción).
-    - **Especificación**: el valor del atributo es fijo y no puede modificarse en ninguna transacción (por ejemplo, Vaqueros grandes azules siempre tiene Talla L y Color Azul).
+    - **Por defecto**: el sistema rellena previamente el valor del atributo (por ejemplo, Talla = *Mediana*), pero el usuario puede cambiarlo en cada transacción.
+    - **Sobrescribir Especificación**: el valor del atributo define completamente el producto (por ejemplo, *Cerveza sin alcohol* = 0% de graduación alcohólica), pero puede modificarse para registrar excepciones (por ejemplo, una desviación en producción).
+    - **Especificación**: el valor del atributo es fijo y no puede modificarse en ninguna transacción (por ejemplo, *Vaqueros grandes azules* siempre tiene Talla *L* y Color *Azul*).
 
     !!! info
         Para saber más sobre atributos, visite los artículos [Atributo](../product-setup/attribute.md) y [Conjunto de atributos](../product-setup/attribute-set.md).
@@ -91,7 +91,7 @@ Los datos clave adicionales a completar son:
 
 - **Ingresos diferidos** aplica cuando un producto se vende pero el ingreso debe registrarse a lo largo del tiempo en lugar de todo de una vez — por ejemplo, una suscripción anual a un software. Cuando se habilita este indicador, se define durante cuántos meses deben distribuirse los ingresos y cuándo comienza dicha distribución.
 
-    Este indicador solo es visible para productos con la casilla **Ventas** habilitada. Cuando está marcado, el grupo de campos Plan de ingresos se hace visible con los siguientes campos:
+    Este indicador solo es visible para productos con la casilla **Ventas** habilitada. Cuando está marcado, el grupo de campos **Plan de ingresos** se hace visible con los siguientes campos:
 
     - **Tipo de plan de ingresos**: este campo especifica la frecuencia por defecto de la distribución de ingresos. Actualmente, solo se admiten planes de ingresos mensuales.
     - **Número de periodo**: este campo especifica la duración por defecto de un plan de ingresos. Por ejemplo, una suscripción anual a una revista se definirá con un plan de ingresos de 12 periodos mensuales, mientras que un abono de esquí de temporada tendrá un plan de ingresos de 5 periodos mensuales.
@@ -103,7 +103,7 @@ Los datos clave adicionales a completar son:
 
 - **Gastos diferidos** aplica cuando un producto se compra pero el coste debe registrarse a lo largo del tiempo — por ejemplo, un servicio prepagado. Cuando se habilita este indicador, se define el periodo de distribución y el mes de inicio.
 
-    Este indicador solo es visible para productos con la casilla **Compra** habilitada. Cuando está marcado, el grupo de campos Plan de gastos se hace visible con los siguientes campos:
+    Este indicador solo es visible para productos con la casilla **Compra** habilitada. Cuando está marcado, el grupo de campos **Plan de gastos** se hace visible con los siguientes campos:
 
     - **Tipo de plan de gastos**: este campo especifica la frecuencia por defecto de la distribución de gastos. Actualmente, solo se admiten planes de gastos mensuales.
     - **Número de periodo**: este campo especifica la duración por defecto de un plan de gastos.
@@ -121,7 +121,7 @@ Para saber más, visite el artículo [Cómo gestionar ingresos y gastos diferido
 
 - **Registrar con precio de compra**: este indicador se utiliza al contabilizar un documento de **Albarán (Proveedor)** o una **Factura (Proveedor)** conciliada en el libro mayor.  
     Normalmente, se utiliza el coste del producto al contabilizar esas transacciones; sin embargo, esta casilla permite usar el precio de compra del producto en su lugar.  
-    Esta funcionalidad solo funciona para el tipo de producto *Gasto* que no tenga seleccionada la casilla *Ventas*.
+    Esta funcionalidad solo funciona para el tipo de producto *Gasto* que no tenga seleccionada la casilla **Ventas**.
 
 !!! info
     Tenga en cuenta que, en este caso, es necesario que un **Pedido de compra** esté relacionado con el **Albarán (Proveedor)**; de lo contrario, se mostrará un mensaje de error, ya que se requiere el precio de compra del producto.
@@ -153,7 +153,7 @@ Cuando se marca este indicador, se muestran dos botones:
     - El usuario quiere crear solo algunas combinaciones, no todas. El botón permite revisar y seleccionar combinaciones específicas antes de crearlas.
     - El usuario añade un nuevo valor de característica (por ejemplo, Rojo, cuando ya existían Azul y Blanco) y quiere ver qué nuevas combinaciones están ahora disponibles.
 
-    Por ejemplo, imagine que el producto genérico Camiseta Modelo A tiene las características:
+    Por ejemplo, imagine que el producto genérico *Camiseta Modelo A* tiene las características:
 
     - Color: Azul, Blanco
     - Talla: S, M, L
@@ -162,7 +162,7 @@ Cuando se marca este indicador, se muestran dos botones:
 
     ![Todas las combinaciones de variantes posibles para un producto genérico](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-5.png)
 
-    Entonces pueden seleccionarse todas las combinaciones o elegir solo algunas. Una vez que se pulsa Hecho, las combinaciones seleccionadas se crean como registros de producto individuales. Cada nuevo producto queda vinculado al producto genérico original mediante el campo Producto genérico — este vínculo significa que la variante hereda precios, impuestos e imágenes del producto genérico.
+    Entonces pueden seleccionarse todas las combinaciones o elegir solo algunas. Una vez que se pulsa **Hecho**, las combinaciones seleccionadas se crean como registros de producto individuales. Cada nuevo producto queda vinculado al producto genérico original mediante el campo **Producto genérico** — este vínculo significa que la variante hereda precios, impuestos e imágenes del producto genérico.
 
 
 - El botón **Crear variantes** crea todas las variantes de producto, es decir, todas las combinaciones basadas en las características definidas.
@@ -174,7 +174,7 @@ Cuando se marca este indicador, se muestran dos botones:
     ![Botón Actualizar característica](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-7.png)
 
     1.  **Producto genérico**: este botón permite introducir el valor de esa característica.  
-    Imagine que la característica es Línea de moda, que tiene tres valores: Sport, Vintage, Classic.  
+    Imagine que la característica es *Línea de moda*, que tiene tres valores: *Sport*, *Vintage*, *Classic*.  
     A diferencia de las características que son variantes, los usuarios no pueden introducir el valor mediante la solapa **Configuración de características**.
 
     2.  **Producto variante**: este botón permite al usuario introducir/actualizar la característica que no es variante.
@@ -186,11 +186,11 @@ Una vez creada una variante, sus características y valores pueden visualizarse 
 
     ![Columna Descripción de característica en la vista de grilla del producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
-- Vista de formulario: las variantes de producto tienen una nueva sección llamada _Descripción de característica_. Esta sección contiene tantos campos como características diferentes tenga el producto.
+- Vista de formulario: las variantes de producto tienen una nueva sección llamada **Descripción de característica**. Esta sección contiene tantos campos como características diferentes tenga el producto.
 
-La preferencia **Mostrar Características de Producto padres** controla cuántos niveles de la jerarquía de una característica se muestran en la vista de formulario de la ventana **Producto**. Establézcala en un número (1, 2, 3, etc.) para controlar cuántos niveles superiores aparecen por encima de un valor. Por ejemplo, si la jerarquía es Color > Verde > Verde claro > 0034 y la preferencia está establecida en 2, el formulario mostrará Verde claro y su padre Verde, pero no el nivel superior Color ni el código 0034.
+La preferencia **Mostrar Características de Producto padres** controla cuántos niveles de la jerarquía de una característica se muestran en la vista de formulario de la ventana **Producto**. Establézcala en un número (1, 2, 3, etc.) para controlar cuántos niveles superiores aparecen por encima de un valor. Por ejemplo, si la jerarquía es `Color` > `Verde` > `Verde claro` > `0034` y la preferencia está establecida en `2`, el formulario mostrará *Verde claro* y su padre *Verde*, pero no el nivel superior *Color* ni el código `0034`. Esta preferencia se establece en la ventana **Preferencias**. Contacte con su administrador del sistema si necesita cambiarla.
 
-Se pueden añadir nuevos valores de una característica existente. Por ejemplo, el color rojo cuando ya se dispone de Azul y Blanco. Cuando esto ocurre, este nuevo valor se añade automáticamente a todos los productos genéricos que ya tienen la característica Color. Este nuevo valor estará presente en la solapa de configuración, pero desactivado. Si el usuario quiere utilizarlo en un producto específico para crear nuevas variantes, puede simplemente activar el valor y usar el botón *Gestionar características*.
+Se pueden añadir nuevos valores de una característica existente. Por ejemplo, el color *Rojo* cuando ya se dispone de *Azul* y *Blanco*. Cuando esto ocurre, este nuevo valor se añade automáticamente a todos los productos genéricos que ya tienen la característica *Color*. Este nuevo valor estará presente en la solapa de configuración, pero desactivado. Si el usuario quiere utilizarlo en un producto específico para crear nuevas variantes, puede simplemente activar el valor y usar el botón **Gestionar características**.
 
 ### Modificar Impuesto { #modify-tax }
 
@@ -198,17 +198,17 @@ Se pueden añadir nuevos valores de una característica existente. Por ejemplo, 
 
 Esta modificación de impuestos se implementa mediante un servicio vinculado al producto. Este servicio debe marcarse como capaz de modificar los impuestos de los productos vinculados y también debe especificarse la configuración de los productos a los que se modificarán los impuestos y la nueva categoría de impuesto a aplicar.
 
-Para configurarlo, vaya a la ventana **Producto** y cree un nuevo servicio. Un servicio es simplemente un producto con el campo Tipo de producto establecido en Servicios. También deben activarse el campo Vinculado a producto y el campo **Modificar Impuesto**. Cuando este campo se activa, se hace visible una nueva solapa llamada **Modificar Categorías de Impuestos**. En esta solapa se define la configuración de las categorías de impuestos de los productos que este servicio modificará cuando esté vinculado y la nueva categoría de impuesto a aplicar.
+Para configurarlo, vaya a la ventana **Producto** y cree un nuevo servicio. Un servicio es simplemente un producto con el campo **Tipo de producto** establecido en *Servicios*. También deben activarse el campo **Vinculado a producto** y el campo **Modificar Impuesto**. Cuando este campo se activa, se hace visible una nueva solapa llamada **Modificar Categorías de Impuestos**. En esta solapa se define la configuración de las categorías de impuestos de los productos que este servicio modificará cuando esté vinculado y la nueva categoría de impuesto a aplicar.
 
 ![Configuración de la solapa Modificar Categorías de Impuestos](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-11.png)
 
 Para facilitar el proceso de configuración, se han añadido dos componentes:
 
-1.- Modificar Impuesto para Categoría del producto (Botón): ventana Seleccionar y ejecutar para asignar las categorías del producto y las categorías de impuestos en la misma acción.
+1. **Modificar Impuesto para Categoría del producto** (Botón): ventana **Seleccionar y ejecutar** para asignar las categorías del producto y las categorías de impuestos en la misma acción.
 
 ![Botón Modificar Impuesto para Categoría del producto — ventana Seleccionar y ejecutar](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-12.png)
 
-2.- Copiar configuración de Modificar Impuesto del servicio (Botón): ventana Seleccionar y ejecutar donde se muestran los servicios que modifican impuestos. El usuario puede seleccionar uno o varios servicios, y la configuración actual se asignará a los servicios seleccionados. Una vez ejecutado el proceso, la configuración antigua (si existe) se eliminará y se añadirá una nueva. Este proceso ayuda a desplegar la misma configuración en múltiples servicios.
+2. **Copiar configuración de Modificar Impuesto del servicio** (Botón): ventana **Seleccionar y ejecutar** donde se muestran los servicios que modifican impuestos. El usuario puede seleccionar uno o varios servicios, y la configuración actual se asignará a los servicios seleccionados. Una vez ejecutado el proceso, la configuración antigua (si existe) se eliminará y se añadirá una nueva. Este proceso ayuda a desplegar la misma configuración en múltiples servicios.
 
 ![Botón Copiar configuración de Modificar Impuesto del servicio — ventana Seleccionar y ejecutar](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-13.png)
 
@@ -231,7 +231,7 @@ Hay dos formas en las que el usuario puede hacer que un producto forme parte de 
 
 #### Versión de Regla de Precio { #price-rule-version }
 
-Esta solapa solo estará disponible cuando se seleccione el campo Is Price Rule Based. Esta solapa ofrece la posibilidad de añadir Reglas de Precio de Servicios al Servicio a partir de una fecha determinada.
+Esta solapa solo estará disponible cuando se seleccione el campo **Is Price Rule Based**. Esta solapa ofrece la posibilidad de añadir Reglas de Precio de Servicios al Servicio a partir de una fecha determinada.
 
 ![Solapa Versión de Regla de Precio](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-15.png)
 
@@ -288,7 +288,7 @@ Esta cuenta suele ser una cuenta de activo.
 Inicialmente, estas cuentas se heredan de las cuentas por defecto de la configuración del libro mayor de la organización para la cual se está creando el producto. El usuario final siempre puede modificarlas.
 
 !!! info
-    Además, es importante remarcar que es posible configurar la creación de nuevas cuentas correlativas para los productos, tal y como se describe en la solapa Libros mayores de la ventana Organización.
+    Además, es importante remarcar que es posible configurar la creación de nuevas cuentas correlativas para los productos, tal y como se describe en la solapa **Libros mayores** de la ventana **Organización**.
 
 ### Lista de materiales { #bill-of-materials }
 
@@ -298,7 +298,7 @@ La Lista de materiales aplica a productos marcados como **Lista de materiales**.
 
 Esta solapa proporciona información de la lista de productos contenidos y su cantidad para la producción de la Lista de materiales.
 
-Si la Categoría de Impuesto del producto está marcada como **As per BOM**, esta solapa también proporciona información del precio de cada producto en la lista de la Lista de materiales. El precio y la cantidad de esta lista se utilizan para realizar la división del importe base para calcular los impuestos en función de los impuestos configurados para cada producto de la lista.
+Si la Categoría de Impuesto del producto está marcada como `As per BOM`, esta solapa también proporciona información del precio de cada producto en la lista de la Lista de materiales. El precio y la cantidad de esta lista se utilizan para realizar la división del importe base para calcular los impuestos en función de los impuestos configurados para cada producto de la lista.
 
 ![Solapa Lista de materiales de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
 
@@ -426,18 +426,18 @@ También es posible revisar:
 
 1\. El **Costing Status** de una transacción.
 
-El estado de cálculo de costes de una transacción puede ser cualquiera de los que se listan a continuación y tiene mucho que ver con el proceso en segundo plano de cálculo de costes:
+El estado de cálculo de costes de una transacción puede ser cualquiera de los que se listan a continuación y tiene mucho que ver con el **Proceso en segundo plano de cálculo de costes**:
 
-- **Not Calculated**. Este estado significa que el proceso en segundo plano de cálculo de costes todavía no ha tomado la transacción para calcular su coste.
-- **Cost Calculated**. Este estado significa que el proceso en segundo plano de cálculo de costes ya ha tomado la transacción y su coste ha sido calculado.
-- **Pendiente**. Este estado se ha implementado para evitar que el proceso en segundo plano de cálculo de costes lance un error cuando no es posible calcular el coste de una transacción.  
+- **Not Calculated**. Este estado significa que el **Proceso en segundo plano de cálculo de costes** todavía no ha tomado la transacción para calcular su coste.
+- **Cost Calculated**. Este estado significa que el **Proceso en segundo plano de cálculo de costes** ya ha tomado la transacción y su coste ha sido calculado.
+- **Pendiente**. Este estado se ha implementado para evitar que el **Proceso en segundo plano de cálculo de costes** lance un error cuando no es posible calcular el coste de una transacción.  
   Este estado no es utilizado por los algoritmos de cálculo de costes implementados actualmente en Etendo, pero puede ser utilizado por otros algoritmos de cálculo de costes como FIFO para aquellos casos en los que se contabiliza una transacción de salida de producto sin contabilizar su correspondiente transacción de entrada de producto.
-- **Omitir**. Este estado se ha implementado para que el proceso en segundo plano de cálculo de costes no tenga en cuenta las transacciones establecidas como *Omitir* al calcular costes.  
+- **Omitir**. Este estado se ha implementado para que el **Proceso en segundo plano de cálculo de costes** no tenga en cuenta las transacciones establecidas como *Omitir* al calcular costes.  
   Este estado no es utilizado por los algoritmos de cálculo de costes implementados actualmente en Etendo, pero podría ser utilizado por otros algoritmos de cálculo de costes.
 
 2\. y si el coste de una transacción ha sido calculado o no.
 
-En cuanto una transacción de producto tiene su coste calculado por el proceso en segundo plano de cálculo de costes, el campo *Es coste calculado* toma el valor *Sí*.
+En cuanto una transacción de producto tiene su coste calculado por el **Proceso en segundo plano de cálculo de costes**, el campo **Es coste calculado** toma el valor *Sí*.
 
 Una vez calculado el coste de una transacción, también puede ver:
 
@@ -446,7 +446,7 @@ Una vez calculado el coste de una transacción, también puede ver:
 - **Coste Unitario**, que es la suma del coste original y todos los ajustes de tipo *coste unitario*.
 - **Moneda** utilizada para los cálculos.
 
-Adicionalmente, el campo ***Coste Permanente*** informa de si el coste de una transacción es permanente o no. En caso de ser permanente, ya no se modificará.
+Adicionalmente, el campo **Coste Permanente** informa de si el coste de una transacción es permanente o no. En caso de ser permanente, ya no se modificará.
 
 Por último, es importante remarcar que, en el caso del algoritmo de coste *Promedio*, el coste *promedio* de un producto se calcula como *Promedio móvil*.
 
@@ -460,7 +460,7 @@ Por ejemplo, el coste promedio de un producto cuyas transacciones se listan a co
 
 #### Ajuste manual de coste { #manual-cost-adjustment }
 
-Adicionalmente, el coste de una transacción puede modificarse haciendo clic en el botón de proceso Corrección Manual del Coste. Tras hacer clic en este botón, se abre un nuevo popup:
+Adicionalmente, el coste de una transacción puede modificarse haciendo clic en el botón de proceso **Corrección Manual del Coste**. Tras hacer clic en este botón, se abre un nuevo popup:
 
 ![Popup de Corrección Manual del Coste](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-21.png)
 
@@ -471,7 +471,7 @@ Este pop-up permite introducir los siguientes datos detallados:
 - **Incremental**:
   - si no está marcado, el importe introducido en el campo de importe de coste total es el nuevo coste total de la transacción que, además, se establecerá como un coste *Permanente* que ya no podrá ajustarse.
   - si está marcado, el importe introducido en el campo de importe de coste total se añadirá al coste total actual; además, se muestra la casilla **Coste Unitario**.
-- **Coste Unitario**: esta casilla solo se muestra si se selecciona la casilla *Incremental*.
+- **Coste Unitario**: esta casilla solo se muestra si se selecciona la casilla **Incremental**.
   - si no está marcada, el importe incremental introducido en el campo de importe de coste total no se considerará parte del coste unitario de la transacción, sino del coste total. Esto es como introducir un coste *extra* como *Landed Cost*, que no cambia el coste unitario de esa transacción, pero sí el coste total.
   - si está marcada, el importe incremental introducido en el campo de importe de coste total se considerará parte del coste unitario de la transacción.
 
@@ -479,13 +479,13 @@ Para información adicional sobre qué ajuste de coste es, o no es, coste unitar
 
 Una vez hecho, se creará un ajuste de coste de *corrección manual de coste*.
 
-Este ajuste de coste puede revisarse y contabilizarse en el libro mayor en la ventana de Ajuste de coste.
+Este ajuste de coste puede revisarse y contabilizarse en el libro mayor en la ventana **Ajuste de coste**.
 
 Del mismo modo, este ajuste de coste también puede revisarse en la solapa **Costes Transacción**.
 
 #### Costes Transacción { #transaction-costs }
 
-Los registros de **Costes Transacción** se crean automáticamente mediante el proceso en segundo plano de cálculo de costes y luego se listan para el producto en esta solapa.
+Los registros de **Costes Transacción** se crean automáticamente mediante el **Proceso en segundo plano de cálculo de costes** y luego se listan para el producto en esta solapa.
 
 En cuanto una transacción de producto tiene su coste calculado, se crea un nuevo registro en esta solapa.
 
@@ -495,7 +495,7 @@ En cuanto una transacción de producto tiene su coste ajustado, se crea un nuevo
 Algunos campos relevantes a tener en cuenta son:
 
 - **Fecha de coste**: es la fecha en la que el coste ha sido calculado (p. ej., la fecha contable de un albarán de proveedor)
-- **Costo**: es el coste total calculado por el proceso en segundo plano de cálculo de costes
+- **Costo**: es el coste total calculado por el **Proceso en segundo plano de cálculo de costes**
 - **Moneda**: es la moneda utilizada para calcular el coste.  
   La moneda del coste es la moneda de la entidad legal; por lo tanto, una transacción de producto que tenga una moneda diferente (una tarifa en moneda USD, por ejemplo) tendrá su coste calculado en la moneda heredada (p. ej., EUR)
 - **Línea de Ajuste de Coste**: si un coste calculado proviene de un ajuste de coste, este campo rellena la línea de ajuste de coste que provoca ese coste.  
@@ -581,22 +581,22 @@ Relación de características asignadas al **Producto**.
 Campos:
 
 - **Secuencia**: Orden de las características
-- **Característica**: Lista todas las características definidas en la ventana _Característica de producto_
+- **Característica**: Lista todas las características definidas en la ventana **Característica de producto**
 - **Variante**: Cuando está marcada, explotará/creará combinaciones con sus valores. Si no está marcada, no creará combinaciones con otras características. Por ejemplo:
-  - Característica Color: Variante marcada con valor Azul y Blanco
-  - Característica Talla: Variante marcada con valor M y L
-  - Característica Línea de moda: Variante no marcada con valor Sport
-  - Creará cuatro variantes/productos y en todos ellos con la característica Sport
-- **Explotar Solapa de Configuración**: Indicador disponible en Productos genéricos y Características de variante. Cuando está marcado, los valores de la característica de variante seleccionada se insertan automáticamente en la solapa _Configuración de características_. Si no está marcado, los valores deben añadirse manualmente.
-- **Define precio**: Cada valor de esa característica definirá el precio del nuevo producto. Sobrescribirá el precio definido para el producto genérico. Este precio se define en la solapa _Configuración de características_.
-- **Tipo de tarifa**: Se muestra cuando _Define precio_ está marcado. Permite al usuario seleccionar en qué tipo de tarifa desea sobrescribir el precio. Por ejemplo:
+  - Característica Color: Variante marcada con valor *Azul* y *Blanco*
+  - Característica Talla: Variante marcada con valor *M* y *L*
+  - Característica Línea de moda: Variante no marcada con valor *Sport*
+  - Creará cuatro variantes/productos y en todos ellos con la característica *Sport*
+- **Explotar Solapa de Configuración**: Indicador disponible en Productos genéricos y Características de variante. Cuando está marcado, los valores de la característica de variante seleccionada se insertan automáticamente en la solapa **Configuración de características**. Si no está marcado, los valores deben añadirse manualmente.
+- **Define precio**: Cada valor de esa característica definirá el precio del nuevo producto. Sobrescribirá el precio definido para el producto genérico. Este precio se define en la solapa **Configuración de características**.
+- **Tipo de tarifa**: Se muestra cuando **Define precio** está marcado. Permite al usuario seleccionar en qué tipo de tarifa desea sobrescribir el precio. Por ejemplo:
   - El producto genérico tiene dos tarifas: una es para ventas y la otra para compra
-  - Usted selecciona el valor _Tarifas de venta_. Entonces, al crear las variantes de producto, solo sobrescribirá el precio en las tarifas definidas como Ventas
-  - Lo contrario si el valor seleccionado es _Tarifa de compra_
-- **Define imagen**: Cada valor de esa característica definirá la imagen del nuevo producto. Sobrescribirá la imagen del producto genérico. Esta imagen se define en la solapa _Configuración de características_.
-- **Subconjunto de característica**: Lista todos los subconjuntos incluidos para la Característica seleccionada (p. ej., Pantalones)
+  - Usted selecciona el valor *Tarifas de venta*. Entonces, al crear las variantes de producto, solo sobrescribirá el precio en las tarifas definidas como Ventas
+  - Lo contrario si el valor seleccionado es *Tarifa de compra*
+- **Define imagen**: Cada valor de esa característica definirá la imagen del nuevo producto. Sobrescribirá la imagen del producto genérico. Esta imagen se define en la solapa **Configuración de características**.
+- **Subconjunto de característica**: Lista todos los subconjuntos incluidos para la Característica seleccionada (p. ej., *Pantalones*)
 
-Una vez guardado el registro, todos los valores de la característica se rellenan en la solapa de configuración de características.
+Una vez guardado el registro, todos los valores de la característica se rellenan en la solapa **Configuración de características**.
 
 **Configuración de características**
 
@@ -606,8 +606,8 @@ Campos a tener en cuenta:
 
 - **Valor de característica**: No puede ser editable, ya que se rellena automáticamente al seleccionar la característica
 - **Código**: Código del valor. Hereda lo que se ha definido en la ventana de característica de producto
-- **Pr. estándar**: Este campo se muestra cuando la característica está marcada como _Define precio_. El objetivo de este campo es disponer de precios diferentes por valor. Por ejemplo, en función de las tallas
-- **Imagen**: Este campo se muestra cuando la característica está marcada como _Define imagen_. El objetivo de este campo es disponer de imágenes diferentes por valor. Por ejemplo, en función del color.
+- **Pr. estándar**: Este campo se muestra cuando la característica está marcada como **Define precio**. El objetivo de este campo es disponer de precios diferentes por valor. Por ejemplo, en función de las tallas
+- **Imagen**: Este campo se muestra cuando la característica está marcada como **Define imagen**. El objetivo de este campo es disponer de imágenes diferentes por valor. Por ejemplo, en función del color.
 
 ### Stock { #stock }
 
@@ -638,9 +638,9 @@ En esta solapa, va a existir un registro para:
 
 ### Categorías de Productos { #product-categories }
 
-El usuario puede definir si un producto de una determinada categoría de producto puede relacionarse con un producto de tipo 'Servicios' creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto perteneciente a las categorías de producto incluidas/excluidas.
+El usuario puede definir si un producto de una determinada categoría de producto puede relacionarse con un producto de tipo *Servicios* creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto perteneciente a las categorías de producto incluidas/excluidas.
 
-Esta solapa solo estará disponible cuando el campo 'Categorías de producto incluidas' del Servicio tenga un valor. Contiene todas las categorías de producto relacionadas con el servicio.
+Esta solapa solo estará disponible cuando el campo **Categorías de producto incluidas** del Servicio tenga un valor. Contiene todas las categorías de producto relacionadas con el servicio.
 
 ![Solapa Categorías de Productos de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-25.png)
 
@@ -650,7 +650,7 @@ En la solapa está disponible la siguiente información sobre los productos rela
 - **Nombre**: Nombre de la Categoría del producto.
 - **Descripción**: Descripción de la Categoría del producto.
 
-Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón 'Relacionar categorías de producto' (visible solo cuando el campo 'Categorías de producto incluidas' tiene un valor). Este botón abrirá un Pick & Edit mostrando todas las categorías de producto no relacionadas con el servicio.
+Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón **Relacionar categorías de producto** (visible solo cuando el campo **Categorías de producto incluidas** tiene un valor). Este botón abrirá un Pick & Edit mostrando todas las categorías de producto no relacionadas con el servicio.
 
 ![Ventana Pick and Edit de Relacionar categorías de producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-26.png)
 
@@ -660,9 +660,9 @@ Esta solapa solo estará disponible cuando el campo **Is Price Rule Based** est�
 
 ### Productos { #products }
 
-El usuario puede definir si un producto puede relacionarse con un producto de tipo 'Servicios' creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto incluido/excluido.
+El usuario puede definir si un producto puede relacionarse con un producto de tipo *Servicios* creando una relación entre una Línea de pedido del producto de Servicios y otra Línea de Pedido de venta del producto incluido/excluido.
 
-Esta solapa solo estará disponible cuando el campo 'Productos incluidos' del Servicio tenga un valor. Contiene todos los productos relacionados con el servicio.
+Esta solapa solo estará disponible cuando el campo **Productos incluidos** del Servicio tenga un valor. Contiene todos los productos relacionados con el servicio.
 
 ![Solapa Productos de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-27.png)
 
@@ -675,7 +675,7 @@ En la solapa está disponible la siguiente información sobre los productos rela
 - **Producto genérico**: Producto genérico del Producto, si tiene.
 - **Descripción de característica**: Características del Producto, si tiene.
 
-Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón 'Relacionar productos' (visible solo cuando el campo 'Productos incluidos' tiene un valor). Este botón abrirá un Pick & Edit mostrando todos los productos no relacionados con el servicio.
+Esta solapa no es editable; no es posible añadir registros manualmente ni editarlos. Solo permite eliminar registros. Para añadir nuevos registros, es necesario hacer clic en el botón **Relacionar productos** (visible solo cuando el campo **Productos incluidos** tiene un valor). Este botón abrirá un Pick & Edit mostrando todos los productos no relacionados con el servicio.
 
 
 #### Versión de Regla de Precio de Producto { #product-price-rule-version }
@@ -685,7 +685,7 @@ Esta solapa solo estará disponible cuando el campo **Is Price Rule Based** est�
 ### UOM Alternativa { #alternate-uom }
 
 !!! info
-    Para habilitar esta solapa, vaya a Configuración General > Aplicación > Preferencias, cree una nueva preferencia con la propiedad **Habilitar la gestión de UOM** y establezca su valor en Y. Si no dispone de acceso, contacte con su administrador del sistema.
+    Para habilitar esta solapa, vaya a `Configuración General` > `Aplicación` > `Preferencias`, cree una nueva preferencia con la propiedad **Habilitar la gestión de UOM** y establezca su valor en Y. Si no dispone de acceso, contacte con su administrador del sistema.
 
 ![Solapa Unidad Alternativa de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-29.png)
 
@@ -703,7 +703,7 @@ Campos a tener en cuenta:
     - **Secundario**: la AUM del producto definida en esta solapa se puede seleccionar para el flujo seleccionado al crear un Documento.  
     Por ejemplo, si *Palet* es la AUM secundaria definida para un producto dentro del flujo de Ventas, mientras que *Paquete* es la primaria, significa que cada vez que se cree un documento de venta, *Paquete* será la unidad de medida por defecto que se mostrará, pero el usuario final puede cambiarla a *Palet*.
     - **No aplicable**: la AUM definida en esta solapa para el producto no estará disponible para su selección al crear Documentos para el flujo seleccionado.  
-    Esta es la opción a seleccionar para *Logística*, ya que el uso de unidades de medida alternativas actualmente está implementado solo para ventas y compras. Las transacciones/documentos de inventario siempre hacen referencia a la unidad de medida del producto.
+    Esta es la opción a seleccionar para **Logística**, ya que el uso de unidades de medida alternativas actualmente está implementado solo para ventas y compras. Las transacciones/documentos de inventario siempre hacen referencia a la unidad de medida del producto.
 
 #### Modificar Categorías de Impuestos { #modify-taxes-categories }
 

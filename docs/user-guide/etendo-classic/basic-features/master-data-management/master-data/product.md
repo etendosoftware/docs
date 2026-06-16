@@ -42,18 +42,18 @@ The information required to create a Product in Etendo is determined by the natu
 There are four product types available:
 
 - **Item**. The most frequently used product type is *Item*. Inventory held for resale, materials that are placed into a production process, and semifinished or finished goods created through production are examples of products defined using the product type *Item*.
-    - An item should be flagged as ***Stocked***, if quantity tracking is required for the item, otherwise there is no need to flag the item as *Stocked*.
-    - An item should be flagged as ***Production***, if the item is used in manufacturing.
-    - If an item is an intermediate or finished good, its bill of material (BOM) should be detailed on the Bill of Materials tab.
+    - An item should be flagged as **Stocked**, if quantity tracking is required for the item, otherwise there is no need to flag the item as **Stocked**.
+    - An item should be flagged as **Production**, if the item is used in manufacturing.
+    - If an item is an intermediate or finished good, its bill of material (BOM) should be detailed on the **Bill of Materials** tab.
 - **Service**. This product type is used to identify such provisions as professional services, transportation, telephony, and other items which do not correspond with material goods.
     - Therefore, a Service is not stockable but can be purchased or sold.
-    - A service can have a bill of materials to be defined in the Bill of Materials tab.
+    - A service can have a bill of materials to be defined in the **Bill of Materials** tab.
 - **Resource** and **Expense**. These product types can be used to distinguish between different types of products which can be purchased or sold but cannot be stocked.
     - Resource type can be used to configure resources such as Financial, Legal or Natural resources used by the organization.
     - Expense type can be used to configure expenses such as travel expenses to be used while reporting Employee expenses.
 
 !!! info
-    Product types do not affect how transactions are posted to the general ledger. All product types are accounted for in the same way when purchased, stocked, or sold, using the ledger accounts defined in the Accounting tab.
+    Product types do not affect how transactions are posted to the general ledger. All product types are accounted for in the same way when purchased, stocked, or sold, using the ledger accounts defined in the **Accounting** tab.
 
 ![Product window header fields form](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-1.png)
 
@@ -70,18 +70,18 @@ Additional key data to fill in are:
 - **Sales** checkbox can be selected to indicate that the product is sold or can be sold to an external parties or customers. This checkbox is an informative one, as it does not add any business logic behind.
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
     This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
-- **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
+- **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a **Process Plan**.  
     To learn more, visit [Process Plan](../../production-management/setup.md#process-plan).
-- **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
+- **Attribute Set**, a product can have a group of features or an attribute set, such as **Color and Size**, to take into account while ordering or storing the product.
     
-    - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*. To learn more, visit [Attribute Set](../product-setup/attribute-set.md).
+    - If an Attribute Set is selected here, Etendo displays a new field named **Attribute Set Value**. To learn more, visit [Attribute Set](../product-setup/attribute-set.md).
 
-- **Attribute Set Value**, if an Attribute Set value such as *Blue and Large* is selected, Etendo displays a new field named *Use Attribute Set Value As*.
+- **Attribute Set Value**, if an Attribute Set value such as *Blue and Large* is selected, Etendo displays a new field named **Use Attribute Set Value As**.
 - **Attribute Set Value As**, once an attribute set has been selected, that one could be used as described below depending on the criteria selected in this field:
     
-    - **Default**: The system pre-fills the attribute value (for example, Size = Medium), but the user can change it on each transaction.
-    - **Overwrite Specification**: The attribute value fully defines the product (for example, Alcohol Free Beer = 0% alcoholic proof), but can be changed to record exceptions (for example, a production deviation).
-    - **Specification**: The attribute value is fixed and cannot be changed on any transaction (for example, Large Blue Jeans always has Size L and Color Blue).
+    - **Default**: The system pre-fills the attribute value (for example, Size = *Medium*), but the user can change it on each transaction.
+    - **Overwrite Specification**: The attribute value fully defines the product (for example, *Alcohol Free Beer* = 0% alcoholic proof), but can be changed to record exceptions (for example, a production deviation).
+    - **Specification**: The attribute value is fixed and cannot be changed on any transaction (for example, *Large Blue Jeans* always has Size *Large* and Color *Blue*).
 
     !!! info 
         To learn more about attributes, visit the [Attribute](../product-setup/attribute.md) and [Attribute Set](../product-setup/attribute-set.md) articles.
@@ -91,7 +91,7 @@ Additional key data to fill in are:
 
 - **Deferred Revenue** applies when a product is sold but the income should be recorded over time rather than all at once — for example, an annual software subscription. When this flag is enabled, you define how many months the income should be spread across and when it starts.
 
-    This flag is visible only for products having the **Sale** checkbox enabled. When checked, the Revenue Plan field group becomes visible with the following fields:
+    This flag is visible only for products having the **Sale** checkbox enabled. When checked, the **Revenue Plan** field group becomes visible with the following fields:
 
     - **Revenue Plan Type**: this field specifies the default frequency of the revenue distribution. At the moment, only monthly revenue plans are supported.
     - **Period Number**: this field specifies the default duration of a revenue plan. For example, an annual subscription to a magazine will be defined with a revenue plan of 12 monthly periods, while a season ski pass will have revenue plan of 5 monthly periods.
@@ -103,7 +103,7 @@ Additional key data to fill in are:
 
 - **Deferred Expense** applies when a product is purchased but the cost should be recorded over time — for example, a prepaid service. When this flag is enabled, you define the distribution period and starting month.
 
-    This flag is visible only for products having the **Purchase** checkbox enabled. When checked, the Expense Plan field group becomes visible with the following fields:
+    This flag is visible only for products having the **Purchase** checkbox enabled. When checked, the **Expense Plan** field group becomes visible with the following fields:
 
     - **Expense Plan Type**: this field specifies the default frequency of the expense distribution. At the moment, only monthly expense plans are supported.
     - **Period Number**: this field specifies the default duration of an expense plan.
@@ -122,12 +122,12 @@ Additional key data to fill in are:
 
 - **Book Using Purchase Order Price**: This flag is used when posting a Goods Receipt or a Matched Purchase Invoice document to the ledger.  
     Normally, the product cost is used while posting those transactions, however this checkbox allows using the product purchase price instead.  
-    This feature only works for *Expense* product type not having the *Sales* checkbox selected.
+    This feature only works for *Expense* product type not having the **Sales** checkbox selected.
 
     !!! info
         Notice that in this case a Purchase Order needs to be related to the Goods Receipt, otherwise an error message will be shown as the purchase product price is required.
 
-- **Returnable**: Select this checkbox to indicate that the product can be returned by a customer. When this checkbox is selected, the **Overdue Return Days** field becomes available. If you try to return a non-returnable product from the Return from Customer window, Etendo will display an error message.
+- **Returnable**: Select this checkbox to indicate that the product can be returned by a customer. When this checkbox is selected, the **Overdue Return Days** field becomes available. If you try to return a non-returnable product from the **Return from Customer** window, Etendo will display an error message.
 
     ![Returnable field in the Product window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-2.png)
 
@@ -136,11 +136,11 @@ Additional key data to fill in are:
     ![Overdue Return Days warning message](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-3.png)
 
     !!! info
-        If the Stocked checkbox is not selected and the Bill of Materials checkbox is selected, the product price must be set to 0. In this case, the total price is calculated automatically from the prices of the individual components listed in the Bill of Materials tab. To apply promotions or discounts, use the Discounts and Promotions feature.
+        If the **Stocked** checkbox is not selected and the **Bill of Materials** checkbox is selected, the product price must be set to 0. In this case, the total price is calculated automatically from the prices of the individual components listed in the **Bill of Materials** tab. To apply promotions or discounts, use the Discounts and Promotions feature.
 
 ### Variants
 
-Product can be marked as **Is Generic**. This means that variants of this product will be created based on some characteristics such as colour, size, etc. The definition of these characteristics takes place in the generic product, so it can be said that a generic product is like a template where new variants will inherit all the attributes (taxes, prices, image) of this product. Due to this, a generic product cannot be used for transactions but its variants.
+A product can be marked as **Is Generic**. This means that variants of this product will be created based on some characteristics such as colour, size, etc. The definition of these characteristics takes place in the generic product, so it can be said that a generic product is like a template where new variants will inherit all the attributes (taxes, prices, image) of this product. Due to this, a generic product cannot be used for transactions but its variants.
 
 !!! info
     Products that are marked as generic cannot be used in transactions operations such as sales orders, purchase orders, goods receipts, etc.
@@ -154,7 +154,7 @@ When this flag is marked, two buttons are shown:
     - You want to create only some combinations, not all of them. The button lets you review and select specific combinations before creating them.
     - You have added a new characteristic value (for example, Red, when Blue and White already existed) and want to see which new combinations are now available.
 
-    For example, imagine generic product T-Shirt Model A has the characteristics:
+    For example, imagine generic product *T-Shirt Model A* has the characteristics:
 
     - Color: Blue, White
     - Size: S,M,L
@@ -163,7 +163,7 @@ When this flag is marked, two buttons are shown:
 
     ![All possible variant combinations for a generic product](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-5.png)
 
-    Then all combinations can be selected or just pick some of them. Once you press Done, the selected combinations are created as individual product records. Each new product is linked to the original generic product through the Generic Product field — this link means the variant inherits prices, taxes, and images from the generic product.
+    Then all combinations can be selected or just pick some of them. Once you press **Done**, the selected combinations are created as individual product records. Each new product is linked to the original generic product through the **Generic Product** field — this link means the variant inherits prices, taxes, and images from the generic product.
 
 
 - The **Create Variants** button, creates all product variants — that is, all combinations based on the characteristics defined.
@@ -176,29 +176,29 @@ When this flag is marked, two buttons are shown:
     
     1.  **Generic product**: This button allows entering the value of that characteristic.  
     Imagine the characteristic is Fashion Line that has three values: Sport, Vintage, Classic.  
-    Unlike the characteristics that are variants users cannot enter the value through the Characteristic Configuration tab
+    Unlike the characteristics that are variants users cannot enter the value through the **Characteristic Configuration** tab.
     
     2.  **Variant Product**: This button allows the user to enter/update the characteristic that is not variant.
 
 
 Once a variant has been created, its characteristics and values can be viewed either in the grid or in form view:
 
-- Grid view: There is a new column **Characteristic Description**. This column is calculated and is not editable. It shows the characteristics with their values as a text. This column has a new search-selector in order to find product variants based on its characteristics
+- Grid view: There is a new column **Characteristic Description**. This column is calculated and is not editable. It shows the characteristics with their values as text. This column has a new search-selector in order to find product variants based on their characteristics.
 
     ![Characteristic Description column in the product grid view](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-8.png)
 
-- Form view: Product variants have a new section named _Characteristic Description_. This section contains as many fields as different characteristics the product has.
+- Form view: Product variants have a new section named **Characteristic Description**. This section contains as many fields as different characteristics the product has.
 
-    The **Show Product Characteristics Parents** preference controls how many levels of a characteristic's hierarchy are displayed in the Product window's form view. Set it to a number (1, 2, 3, etc.) to control how many parent levels appear above a value. For example, if the hierarchy is `Color` > `Green` > `Green light` > `0034` and the preference is set to `2`, the form will show Green light and its parent Green, but not the higher-level Color or the code `0034`. This preference is set in the Preferences window. Contact your system administrator if you need to change it.
+    The **Show Product Characteristics Parents** preference controls how many levels of a characteristic hierarchy are displayed in the **Product** window form view. Set it to a number (1, 2, 3, etc.) to control how many parent levels appear above a value. For example, if the hierarchy is `Color` > `Green` > `Green light` > `0034` and the preference is set to `2`, the form will show Green light and its parent Green, but not the higher-level Color or the code `0034`. This preference is set in the **Preferences** window. Contact your system administrator if you need to change it.
 
-    New values of an existing characteristic can be added. For example, colour red when already having *Blue* and *White*. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the button *Manage Characteristics*
+    New values of an existing characteristic can be added. For example, colour *Red* when already having *Blue* and *White*. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the **Manage Characteristics** button.
 
 ### Modify Tax
 
 **Modify Tax** allows a service product (such as installation) to automatically change the tax rate applied to the goods it accompanies — for example, furniture sold with installation may have a different tax rate than furniture sold alone. This functionality applies only to Orders; documents created afterwards take the tax information from the Order. This feature is configured by an administrator.
 This tax modification is implemented through a service linked to the product. This service has to be marked as able to modify taxes of the products linked to, and the configuration of the products to modify taxes and the new tax to apply must be also specified.
 
-To configure it, go to the Product window and create a new service. A service is just a product with the field Product Type set to Service. It has to be activated also the field Linked To Product and the field Modify Tax. When this field is activated, a new tab named Modify taxes categories is visible. In this tab, it is defined the configuration of the tax categories of products this service will modify when linked and the new tax category to apply.
+To configure it, go to the **Product** window and create a new service. A service is just a product with the field **Product Type** set to *Service*. It has to be activated also the field **Linked To Product** and the field **Modify Tax**. When this field is activated, a new tab named **Modify taxes categories** is visible. In this tab, it is defined the configuration of the tax categories of products this service will modify when linked and the new tax category to apply.
 
 ![Modify Taxes Categories tab configuration](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-11.png)
 
@@ -236,7 +236,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
 
 ### Price Rule Version
 
-This tab will only be available when fields `Linked To Product` and  `Is Price Rule Based` are selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
+This tab will only be available when fields **Linked To Product** and **Is Price Rule Based** are selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
 ![Price Rule Version tab](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-15.png)
 
@@ -252,9 +252,9 @@ Also, if once a service (not yet delivered) has been added to the receipt, the p
 
 ### Product Categories
 
-The user can define if a product of a certain product category can be related to a product of `Service` type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product belonging to included/excluded product categories.
+The user can define if a product of a certain product category can be related to a product of *Service* type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product belonging to included/excluded product categories.
 
-This tab will only be available when the field `Included Product Categories` of the Service has a value. It contains all the product categories related to the service.
+This tab will only be available when the **Included Product Categories** field of the Service has a value. It contains all the product categories related to the service.
 
 ![Product Categories tab of the Product window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-25.png)
 
@@ -264,7 +264,7 @@ The following information about related products is available in the tab:
 - **Name**: Name of the Product Category.
 - **Description**: Description of the Product Category.
 
-This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the 'Relate Prod Categories' button (Visible only when the field 'Included Product Categories' has a value). This button will open a Pick & Edit displaying all product categories not related to the service.
+This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the **Relate Prod Categories** button (visible only when the **Included Product Categories** field has a value). This button will open a Pick & Edit displaying all product categories not related to the service.
 
 ![Relate Prod Categories Pick and Edit window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-26.png)
 
@@ -274,9 +274,9 @@ This tab will only be available when the field **Is Price Rule Based** is select
 
 ### Products
 
-The user can define if a product can be related to a product of 'Service' type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product included/excluded.
+The user can define if a product can be related to a product of *Service* type by creating a relation between an Order Line of the Service product and another Sales Order Line of the product included/excluded.
 
-This tab will only be available when the field 'Included Products' of the Service has a value. It contains all the products related to the service.
+This tab will only be available when the **Included Products** field of the Service has a value. It contains all the products related to the service.
 
 ![Products tab of the Product window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-27.png)
 
@@ -289,7 +289,7 @@ The following information about related products is available in the tab:
 - **Generic Product**: Generic Product of the Product, if it has any.
 - **Characteristic Description**: Characteristics of the Product, if it has any.
 
-This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the  'Relate Products' button (Visible only when the field 'Included Products' has a value). This button will open a Pick & Edit displaying all products not related to the service.
+This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the **Relate Products** button (visible only when the **Included Products** field has a value). This button will open a Pick & Edit displaying all products not related to the service.
 
 
 #### Product Price Rule Version
@@ -339,7 +339,7 @@ This account is typically an asset account.
 At first, these accounts are inherited from the Defaults accounts of the organization's general ledger configuration for which the product is being created. The end-user can always change them.
 
 !!! info
-    Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the products as described in the General Ledgers tab of the Organization window.
+    Besides, it is important to remark that it is possible to configure the creation of new correlative accounts for the products as described in the **General Ledgers** tab of the **Organization** window.
 
 ### Bill of Materials
 
@@ -357,11 +357,11 @@ If the product Tax_Category is flagged as **As per BOM**, this tab also provides
 
 Costing rule tab allows the user to review the costing rules that apply to the product within a given date range.
 
-Costing Rules apply to products set as *Item* type flagged as Stocked.
+Costing Rules apply to products set as *Item* type flagged as **Stocked**.
 
 This tab provides information about the validated costing rule(s) which applies on a given date range to the product, as well as the Costing Algorithm defined for that rule.
 
-Costing rules can be created and validated in the Costing Rules window related to the corresponding legal entity / organization.
+Costing rules can be created and validated in the **Costing Rules** window related to the corresponding legal entity / organization.
 
 Currency used by the costing rule is the currency set for the organization.
 
@@ -428,7 +428,7 @@ Besides:
 - the **Warehouse** allows having a different cost by warehouse when desired and whenever the Costing Rule defined allows to do that.
 
 !!! warning
-    Note that you should not fill this field if the Costing Rule does not have the Warehouse Dimension field checked.
+    Note that you should not fill this field if the Costing Rule does not have the **Warehouse Dimension** field checked.
 
 #### Manual Cost Adjustment
 
@@ -451,9 +451,9 @@ For more information about cost adjustments and which ones affect unit cost, con
 
 Once done, a *manual cost correction* cost adjustment will be created.
 
-This cost adjustment can be reviewed and posted to the ledger in the Cost Adjustment window.
+This cost adjustment can be reviewed and posted to the ledger in the **Cost Adjustment** window.
 
-In the same way, this cost adjustment can also be reviewed in the Transaction Cost tab.
+In the same way, this cost adjustment can also be reviewed in the **Transaction Cost** tab.
 
 ### Transactions
 
@@ -502,18 +502,18 @@ It is also possible to review:
 
 1\. The **Costing Status** of a transaction.
 
-Costing status of a transaction can be any of the ones listed below and has a lot to do with the Costing Background Process:
+Costing status of a transaction can be any of the ones listed below and has a lot to do with the **Costing Background Process**:
 
-- **Not Calculated**. This status means that the costing background process has not taken the transaction yet to calculate its cost.
-- **Cost Calculated**. This status means that the costing background process has already taken the transaction and its cost has been calculated.
-- **Pending**. This status has been implemented to get that the costing background process does not throw an error whenever it is not possible to calculate the cost of a transaction.  
+- **Not Calculated**. This status means that the **Costing Background Process** has not taken the transaction yet to calculate its cost.
+- **Cost Calculated**. This status means that the **Costing Background Process** has already taken the transaction and its cost has been calculated.
+- **Pending**. This status has been implemented to get that the **Costing Background Process** does not throw an error whenever it is not possible to calculate the cost of a transaction.  
     This status is not used by the Costing Algorithms currently implemented in Etendo but can be used by other costing algorithms such as FIFO for those cases where a product output transaction is booked without booking its corresponding product input transaction.
-- **Skip**. This status has been implemented to make the costing background process not taking into account the transactions set as *Skip* while calculating costs.  
+- **Skip**. This status has been implemented to make the **Costing Background Process** not taking into account the transactions set as *Skip* while calculating costs.  
     This status is not used by the Costing Algorithms currently implemented in Etendo but could be used by other costing algorithms.
 
 2\. and whether the cost of a transaction has been calculated or not.
 
-As soon as a product transaction gets its cost calculated by the Costing Background Process the field *Is Cost Calculated* gets the value *Yes*.
+As soon as a product transaction gets its cost calculated by the **Costing Background Process** the field **Is Cost Calculated** gets the value *Yes*.
 
 Once the cost of a transaction is calculated you can also view the:
 
@@ -522,7 +522,7 @@ Once the cost of a transaction is calculated you can also view the:
 - **Unit Cost**, that is the sum of the original cost and all the *unit cost* type adjustments.
 - **Currency** used for the calculations.
 
-Additionally, ***Is Cost Permanent*** field informs whether the cost of a transaction is permanent or not. In case it is permanent, it will not be changed anymore.
+Additionally, **Is Cost Permanent** field informs whether the cost of a transaction is permanent or not. In case it is permanent, it will not be changed anymore.
 
 Finally, it is important to remark that in the case of *Average* cost algorithm, the *average* cost of a product is calculated as *Moving Average*.
 
@@ -536,11 +536,11 @@ For instance the average cost of a product which transactions are listed below i
 
 #### Transaction Costs
 
-Transaction Costs records are automatically created by the `Costing Background` Process and then listed for the product in this tab.
+Transaction Costs records are automatically created by the **Costing Background Process** and then listed for the product in this tab.
 
 As soon as a product transaction gets its cost calculated, a new record is created in this tab.
 
-As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a *Cost Adjustment Line*.
+As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a **Cost Adjustment Line**.
 
 
 Some relevant fields to note are:
@@ -564,7 +564,7 @@ Also, the Requisition process uses the Business Partner information for the auto
 
 - **Business Partner**, the vendor that will appear on the Purchase Order when created automatically from the Requisition or from the Purchasing Plan.
 - **Quality Rating**: quality rating of the vendor. Information only field that is not used by the MRP process.
-- **Current Vendor checkbox**: indication of the default vendor that will be taken into account by the MRP process.
+- **Current Vendor**: indication of the default vendor that will be taken into account by the MRP process.
 - **UPC/EAN**: Universal Product Code/European Article Number (barcode) of the product as used by the selected vendor. Information only, this information does not appear on a created Purchase Order.
 - **Currency**: currency of the purchase order.
 - **Net List Price**: information only field of the Net List Price that has to be updated manually on the automatically created Purchase Order from the Purchasing Plan.
@@ -606,12 +606,12 @@ The information in this tab is mainly used by MRP to process the Manufacturing P
 - **Safety Stock**: the minimum level of stock that has to always be in the warehouse. For example, if there is a safety stock for 1000 units and stock is 900 units, a work requirement (Manufacturing Plan) or purchase order (Purchasing Plan) is suggested for 100 units. Typically, low cost products or products with a very long lead time are set up with a safety stock level.
 - **Max not reserved stock**: Maximum stock without taking into account the pre-reserved stock. This field is only visible when Stock reservation feature is enabled. See the below example to understand how it works:
 
-1.  _Safety stock_ and _Max not reserved stock_ are 200 and 1000 units, respectively
+1.  **Safety Stock** and **Max not reserved stock** are 200 and 1000 units, respectively
 2.  There are several sales orders to be delivered by 3000 units in total
 3.  These sales orders will generate the corresponding purchase orders (pre-reserved) when launching the MRP
 4.  There are currently in stock 80 units
 5.  When MRP is launched it will create the corresponding pre-reserved and because being after below safety stock it will create another purchase order:
-    1.  As the _Max not reserved stock_ is defined, the system will create a purchase order of 920 units (1000-80)
+    1.  As the **Max not reserved stock** is defined, the system will create a purchase order of 920 units (1000-80)
     2.  If this parameter was not defined, it would work as usual and it would create a purchase order of 120 units (200-80)
 
 - **ABC Classification**: a ranking (A, B, or C) used in warehouse management to categorize products by their combined stock level and cost value. A = high value/priority, C = low value/priority.
@@ -632,22 +632,22 @@ Relation of characteristics assigned to the Product.
 Fields:
 
 - **Sequence number**: Order of the characteristics
-- **Characteristic**: List all the characteristic defined in _Product Characteristics_ window
+- **Characteristic**: List all the characteristic defined in the **Product Characteristics** window
 - **Variant**: When it is marked, it will explode/create combinations with its values. If it is not marked, it will not create combinations with other characteristics. For example
-    - Characteristic Color: Variant marked with value Blue and White
-    - Characteristic Size: Variant marked with value M and L
-    - Characteristic Fashion line: Variant not marked with value Sport
-    - It will create four variants/products and for all of them with the characteristic Sport
-- **Explode Configuration Tab**: Flag available on Generic Products and Variant Characteristics. When it is checked, the values of the selected variant characteristic are automatically inserted in the _Characteristic Configuration_ tab. If it is not checked, the values must be added manually.
-- **Defines Price**: Every value of that characteristic will define the price of the new product. It will overwrite the price defined for the generic product. This price is defined in the _Characteristic Configuration_ tab
-- **Price List Type**: It is shown when _Defines Price_ is marked. It allows the user to select in which type of price list you want to overwrite the price. For example:
+    - Characteristic Color: Variant marked with value *Blue* and *White*
+    - Characteristic Size: Variant marked with value *M* and *L*
+    - Characteristic Fashion line: Variant not marked with value *Sport*
+    - It will create four variants/products and for all of them with the characteristic *Sport*
+- **Explode Configuration Tab**: Flag available on Generic Products and Variant Characteristics. When it is checked, the values of the selected variant characteristic are automatically inserted in the **Characteristic Configuration** tab. If it is not checked, the values must be added manually.
+- **Defines Price**: Every value of that characteristic will define the price of the new product. It will overwrite the price defined for the generic product. This price is defined in the **Characteristic Configuration** tab.
+- **Price List Type**: It is shown when **Defines Price** is marked. It allows the user to select in which type of price list you want to overwrite the price. For example:
     - The generic product has two price lists: One is for sales and the other for purchase
-    - You select _Sales Price List_ value. Then when creating the product variants it will only overwrite the price in price lists defined as Sales
-    - The opposite if the value selected is _Purchase Price List_
-- **Define image**: Every value of that characteristic will define the image of the new product. It will overwrite the image of the generic product. This image is defined in the _Characteristic Configuration_ tab
-- **Characteristic Subset**: List all the subsets included for the selected Characteristic (i.e. Pants)
+    - You select *Sales Price List* value. Then when creating the product variants it will only overwrite the price in price lists defined as Sales
+    - The opposite if the value selected is *Purchase Price List*
+- **Define image**: Every value of that characteristic will define the image of the new product. It will overwrite the image of the generic product. This image is defined in the **Characteristic Configuration** tab.
+- **Characteristic Subset**: List all the subsets included for the selected Characteristic (i.e. *Pants*)
 
-Once the record is saved, all the values of the characteristic are populated into the characteristic configuration tab
+Once the record is saved, all the values of the characteristic are populated into the **Characteristic Configuration** tab.
 
 **Characteristic Configuration**
 
@@ -657,8 +657,8 @@ Fields to take into account:
 
 - **Characteristic value**: Cannot be editable since it is populated automatically when selecting the characteristic
 - **Code**: Code for the value. It inherits what has been defined in product characteristic window
-- **Unit price**: This field is displayed when the characteristic is marked as _Defines Price_. The aim of this field is to have different prices per value. For example, depending on the Sizes
-- **Image**: This field is displayed when the characteristic is marked as _Defines Image_. The aim of this field is to have different images per value. For example, depending on the colour.
+- **Unit Price**: This field is displayed when the characteristic is marked as **Defines Price**. The aim of this field is to have different prices per value. For example, depending on the Sizes.
+- **Image**: This field is displayed when the characteristic is marked as **Defines Image**. The aim of this field is to have different images per value. For example, depending on the colour.
 
 ### Stock
 
@@ -689,7 +689,7 @@ In this Tab, there is going to be a record for:
 ### Alternate UOM
 
 !!! info
-    To enable this tab, go to General Setup > Application > Preferences, create a new preference with the property **Enable UOM Management** and set its value to Y. If you do not have access, ask your system administrator.
+    To enable this tab, go to `General Setup` > `Application` > `Preferences`, create a new preference with the property **Enable UOM Management** and set its value to Y. If you do not have access, ask your system administrator.
 
 ![Alternate UOM tab of the Product window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-29.png)
 
@@ -701,13 +701,13 @@ Fields to note:
 - **Sales**, **Purchase** and **Logistics**, those fields allow defining the use of product's AUM within Sales, Purchase and Inventory flows.  
     Values allowed are:
     
-    - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or  purchase document such as an order or receipt/shipment.  
+    - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or purchase document such as an order or receipt/shipment.  
     Only one Primary AUM can be defined per Product and flow.  
     For instance, if *Pallet* is the primary AUM defined for a product within Purchase flow, that means that every time that a purchase document is created, *Pallet* will be the default unit of measure shown.
-    - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
-    For instance, if *Pallet* is the secondary AUM defined for a product within Sales flow, while *Pack* is primary one; that means that every time that a sales document is created, *Pack* will be the default unit of measure shown, but end-user can change it to *Pallet*.
-    - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
-    That is the option to select for *Logistics* as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
+    - **Secondary**: Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
+    For instance, if *Pallet* is the secondary AUM defined for a product within Sales flow, while *Pack* is primary one; that means that every time that a sales document is created, *Pack* will be the default unit of measure shown, but the end-user can change it to *Pallet*.
+    - **Not Applicable**: The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
+    That is the option to select for **Logistics** as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
 
 ### Stock By Logistic Unit
 
