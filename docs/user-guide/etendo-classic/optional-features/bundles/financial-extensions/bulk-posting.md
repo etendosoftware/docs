@@ -28,11 +28,11 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 This functionality is available in the following windows:
 
 - [Amortization](../../../basic-features/financial-management/assets/amortization.md)
-- [Goods Movements](../../../basic-features/warehouse-management/transactions.md#bulk-posting_1)
+- [Goods Movements](../../../basic-features/warehouse-management/transactions/goods-movement.md#bulk-posting)
 - [Financial Account](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md)
 - [Matched Purchase Invoices](../../../basic-features/procurement-management/transactions.md#bulk-posting_2)
-- [Cost Adjustment](../../../basic-features/warehouse-management/transactions.md#bulk-posting_3)
-- [Bill of Materials Production](../../../basic-features/warehouse-management/transactions.md#bulk-posting_2)
+- [Cost Adjustment](../../../basic-features/warehouse-management/transactions/cost-adjustment.md#bulk-posting)
+- [Bill of Materials Production](../../../basic-features/warehouse-management/transactions/bill-of-materials-production.md#bulk-posting)
 - [Internal Consumption](../../../basic-features/production-management/transactions.md#bulk-posting_1)
 - [Doubtful Debt](../../../basic-features/financial-management/receivables-and-payables/transactions/doubtful-debt.md#bulk-posting)
 - [Landed Cost](../../../basic-features/procurement-management/transactions.md#bulk-posting_4)
@@ -47,7 +47,7 @@ This functionality is available in the following windows:
 - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#bulk-posting_1)
 - [Payment In](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-in.md)
 - [Payment Out](../../../basic-features/financial-management/receivables-and-payables/transactions/payment-out.md)
-- [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#bulk-posting)
+- [Physical Inventory](../../../basic-features/warehouse-management/transactions/physical-inventory.md#bulk-posting)
 
 ### Accounting Status Column
 

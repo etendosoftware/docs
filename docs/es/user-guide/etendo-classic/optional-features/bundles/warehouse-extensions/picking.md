@@ -25,7 +25,7 @@ Esta sección describe el módulo **Etendo Picking List** incluido en el bundle 
 
 Este módulo implementa y mejora la gestión de las **operaciones de picking** dentro de un almacén. Para gestionar y entregar las listas de picking, el módulo hace un uso intensivo de 2 funcionalidades core que deben estar habilitadas:
 
-- [Reserva de existencias](../../../basic-features/warehouse-management/transactions.md#stock-reservation): Cuando se crean listas de picking, los productos incluidos en ellas quedan reservados. Esto significa que ninguna otra lista de picking ni ningún otro proceso puede utilizar esos productos.
+- [Reserva de existencias](../../../basic-features/warehouse-management/transactions/stock-reservation.md): Cuando se crean listas de picking, los productos incluidos en ellas quedan reservados. Esto significa que ninguna otra lista de picking ni ningún otro proceso puede utilizar esos productos.
 
 - Proyecto de estado del documento: Con esta funcionalidad, el usuario puede saber fácilmente si un pedido de venta está pendiente de ser entregado o no.
 

@@ -35,8 +35,8 @@ Etendo ofrece diferentes opciones para la configuración de los CoA:
 
         Por ejemplo, el Spanish Localization Bundle incluye:
 
-        -   el [General Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
-        -   el [PYMES Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
+        -   el [General Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#plan-general-contable-pgc-2007-general-modelo-normal).
+        -   el [PYMES Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#plan-general-contable-pgc-2007-pymes).
 
 
     Cada organización puede **definir el plan de cuentas que mejor se adapte a sus prácticas**. En ese caso, Etendo proporciona un **módulo de Plan de Cuentas genérico** que ofrece una lista estándar de cuentas que puede evolucionar según las necesidades de la organización. Tras la instalación, el Plan de Cuentas genérico está disponible para su selección durante el proceso de [Crear entidad](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) y [Crear organización](../../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md).

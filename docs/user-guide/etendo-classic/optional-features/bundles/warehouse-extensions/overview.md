@@ -41,7 +41,7 @@ Barcode handling includes GS1-128 AIs (e.g., GTIN, lot, expiry, locator, logisti
 This module adds the option Automatic - Only Default Warehouse to the Stock Reservation field of the lines tab in the Sales Order window. This is used to limit the reservation only to the warehouse specified in the header of the order.
 
 !!! info
-    For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
+    For more information, visit [Sales Order](../../../basic-features/sales-management/transactions.md#stock-reservations) and [Stock Reservation](../../../basic-features/warehouse-management/transactions/stock-reservation.md).
 
 ### Packing 
 
@@ -87,10 +87,10 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 !!! info
     For more information, visit the user guide for:
 
-    - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md#how-to-reactivate-goods-movements)
     - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
-    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#how-to-reactivate-physical-inventories)
 
 ### Stock History
 
@@ -124,7 +124,7 @@ This module allows you to configure whether the system permits material transact
 
 The preference **Allow Backdated Cost Transactions** is set to **Y** by default, which means that transactions with dates earlier than the current date are allowed. 
 
-When the preference is set to **N**, the following documents will be restricted to only use the current date: [Goods Receipts](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Goods Shipments](../../../basic-features/sales-management/transactions.md#goods-shipment), [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Physical Inventories](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Work Efforts](../../../basic-features/production-management/transactions.md#work-effort), and [Internal Consumption](../../../basic-features/production-management/transactions.md#internal-consumption).
+When the preference is set to **N**, the following documents will be restricted to only use the current date: [Goods Receipts](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Goods Shipments](../../../basic-features/sales-management/transactions.md#goods-shipment), [Goods Movements](../../../basic-features/warehouse-management/transactions/goods-movement.md), [Physical Inventories](../../../basic-features/warehouse-management/transactions/physical-inventory.md), [Work Efforts](../../../basic-features/production-management/transactions.md#work-effort), and [Internal Consumption](../../../basic-features/production-management/transactions.md#internal-consumption).
 
 !!! warning
     If you need to create a new configuration for this preference, it must be set globally only, without distinguishing any specific visibility level (Organization, User, Role, etc.), as it could affect the correct operation of the validation.

@@ -32,7 +32,7 @@ El objetivo de este procedimiento es ilustrar cómo realizar cambios en ventanas
   * Ocultar un campo 
   * Reordenar la secuencia del diseño 
 
-[Inventario físico](../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) es una ventana que pertenece a Etendo Classic.
+[Inventario físico](../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md) es una ventana que pertenece a Etendo Classic.
 Consta de:
 
   * 1 ventana: Inventario físico. 
