@@ -16,7 +16,7 @@ Esta guía proporciona instrucciones detalladas sobre cómo empezar con Etendo C
 
 ## Requisitos { #requirements }
 
-1. Instale Etendo. Para ello, siga la [Guía de instalación de Etendo](../../getting-started/installation.md){target="_blank"}.
+1. Instale Etendo. Para ello, siga [Instalar Etendo - Entorno de Desarrollo Local](../etendo-classic/getting-started/installation/local-development.md){target="_blank"} o [Instalar Etendo - Instalación en servidor](../etendo-classic/getting-started/installation/production-server.md){target="_blank"}.
 2. Este proyecto depende de las siguientes herramientas:
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: versión `26.0.0` o superior.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: versión `2.26.0` o superior.
