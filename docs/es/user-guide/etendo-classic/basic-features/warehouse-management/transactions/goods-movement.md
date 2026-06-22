@@ -9,60 +9,72 @@ tags:
 
 # Movimiento entre almacenes { #goods-movement }
 
+## Descripción general { #overview }
+
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Movimiento entre almacenes`
 
-La ventana Movimiento entre almacenes permite al usuario realizar movimientos internos de inventario entre almacenes y huecos.
+La ventana **Movimiento entre almacenes** permite registrar y procesar movimientos internos de inventario entre almacenes y huecos (ubicaciones concretas dentro de un almacén, como una estantería o posición de rack — consulte [Almacén y huecos](../setup.md#warehouse-and-storage-bins)). Utilícela para transferir productos de una ubicación a otra y mantener los niveles de stock actualizados en todos los almacenes. Para una introducción al flujo de trabajo de almacén recomendado, consulte [Primeros pasos](../getting-started.md).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yW4Bv6bORk0" title="reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### Cómo registrar un movimiento entre almacenes { #how-to-record-a-goods-movement }
+
+1. Vaya a `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Movimiento entre almacenes`.
+2. Haga clic en **Nuevo** para crear un registro. Los campos **Nombre** y **Fecha del movimiento** se rellenan automáticamente — modifíquelos si es necesario.
+3. Añada los productos a mover. Dispone de dos opciones:
+    - **Un producto a la vez:** vaya a la solapa Líneas, haga clic en **Nuevo** y rellene el producto, la cantidad, el **Hueco** de origen y el **Movido a** (destino).
+    - **Todos los productos de un hueco a la vez:** haga clic en **Mover un hueco entero**, seleccione los huecos de origen y destino, y confirme. El sistema añade una línea por producto automáticamente.
+4. Revise las líneas para confirmar que las cantidades y ubicaciones son correctas.
+5. Haga clic en **Procesar movimientos**. Los niveles de stock se actualizan de inmediato.
+
+!!! info
+    Antes de crear un Movimiento entre almacenes, asegúrese de que los almacenes y huecos correspondientes estén configurados. Consulte [Almacén y huecos](../setup.md#warehouse-and-storage-bins).
+
 ## Cabecera { #header }
 
-Los movimientos internos de inventario pueden realizarse añadiendo productos en la solapa Líneas o moviendo todos los artículos a la vez.
+Los movimientos internos de inventario pueden realizarse añadiendo productos en la solapa Líneas o moviendo todos los artículos a la vez mediante el botón **Mover un hueco entero**.
 
-![Cabecera](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png)
+![Cabecera](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png)
 
 Todos los campos se rellenan automáticamente al crear un registro **nuevo**. Algunos a tener en cuenta:
 
+- **Organización:** La organización a la que pertenece este movimiento entre almacenes. Se rellena automáticamente según la sesión del usuario.
 - **Nombre:** este campo se utilizará para referenciar este movimiento entre almacenes, no solo en los informes de almacén sino también en el libro mayor; por lo tanto, es importante utilizar un nombre significativo.  
   Este campo toma por defecto la fecha actual, pero siempre puede modificarse según sea necesario.
-- **Fecha del movimiento:** es la fecha de la transacción del movimiento entre almacenes.  
-  Este campo toma por defecto la fecha actual, pero siempre puede modificarse según sea necesario.  
-  Desde el punto de vista contable, el movimiento entre almacenes se reflejará en esta fecha.
+- **Fecha del movimiento:** La fecha de la transferencia. Por defecto toma la fecha actual, pero puede modificarse. Importante: esta es la fecha en la que el movimiento aparece en los registros contables. Compruebe que es correcta antes de procesar.
+- **Descripción:** Campo de texto libre opcional para añadir notas sobre el movimiento.
+- **Proyecto** *(bajo Dimensiones):* Campo opcional para asociar este movimiento a un proyecto con fines contables y de informes.
 
-Como ya se ha mencionado, existen 2 formas de introducir líneas (o productos a mover entre almacenes y huecos):
+Existen 2 formas de introducir líneas (o productos a mover entre almacenes y huecos):
 
 1.  Añadiendo productos individuales en la solapa Líneas.
-2.  Moviendo todos los artículos de un hueco (**Hueco origen**) a otro (**Hueco destino**) mediante el botón **Mover un hueco entero**.  
-    El sistema inserta automáticamente una línea por cada hueco y producto.
+2.  Moviendo todos los artículos de un hueco a otro mediante el botón [**Mover un hueco entero**](#move-a-storage-bin).
 
 ![Cabecera](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-2.png)
 
 ## Líneas { #lines }
 
-La solapa Líneas es una lista de los productos movidos entre almacenes y huecos.
+La solapa Líneas lista todos los productos que se van a mover, junto con su ubicación de origen, destino y cantidad.
 
-Esta solapa también incluye información sobre el origen, el destino y la cantidad correspondiente.
-
-![Líneas](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png)
+![Líneas](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png)
 
 Algunos campos a tener en cuenta:
 
+- **Producto:** El artículo a mover. Al seleccionar un producto, los campos Hueco y Cant. movida se rellenan automáticamente con los datos de stock actuales.
 - **Cant. movida:** es la cantidad de producto a mover.  
   Por defecto, toma la cantidad total del **Producto** en el Hueco.
 - **Hueco:** es el hueco del que se retiran los productos.  
   Por defecto, toma el Hueco seleccionado en el selector de **Producto**.
 - **Movido a:** es el hueco de destino de los productos.
-- **Nuevo Valor atributos:** campo de solo lectura que solo es visible para transacciones de empaquetado/desempaquetado relacionadas con *Inventario Referenciado*. Muestra el nuevo valor de atributos tras realizarse el proceso de empaquetado/desempaquetado.
+- **Nuevo Valor atributos:** Este campo solo aparece cuando el movimiento está vinculado a una operación de empaquetado o desempaquetado (consulte [Inventario referenciado](referenced-inventory.md)). Muestra la nueva etiqueta asignada al artículo tras ser colocado o retirado de un contenedor. No es necesario rellenarlo: se actualiza automáticamente.
 
-Una vez ejecutado el proceso **Procesar movimientos**, el stock se actualiza.
+Para revisar el historial de movimientos de productos, consulte [Informe de movimientos de productos](../analysis-tools/product-movements-report.md).
 
 ## Botones { #buttons }
 
 ### Mover un hueco entero { #move-a-storage-bin }
 
-Este botón le permite transferir rápidamente todos los productos ubicados en un Hueco A a otro Hueco B de destino.  
-Al hacer clic, el sistema muestra automáticamente en las líneas una lista de productos de la ubicación de origen seleccionada.  
-Al procesar la transferencia, todos los productos se transfieren del origen al destino.
+Utilice este botón para mover todos los productos de un hueco a otro en una sola acción. Al hacer clic, el sistema rellena la solapa Líneas con todos los productos del hueco de origen. Al hacer clic en Procesar movimiento, el sistema mueve todos esos productos al hueco de destino.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png)
 
@@ -80,12 +92,15 @@ Permite crear una tarea de reubicación desde el documento **Movimiento entre al
 
 Este botón procesa el documento Movimiento entre almacenes. Al ejecutarlo, el sistema valida la información del movimiento y actualiza el stock en las ubicaciones correspondientes.
 
+Para verificar los niveles de stock resultantes, consulte [Informe de stock](../analysis-tools/stock-report.md) o [Informe de transacciones de material](../analysis-tools/material-transaction-report.md).
+
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png)
+
 
 ## Contabilidad { #accounting }
 
 !!! info
-    Un Movimiento entre almacenes puede contabilizarse en el libro mayor si la tabla MaterialMgmtInternalMovement está configurada como Activa en la solapa Tablas activas de la configuración del libro mayor de la organización.
+    Antes de que un Movimiento entre almacenes pueda contabilizarse en el libro mayor, debe estar habilitado en el Esquema contable. Si el botón Contabilizar no está disponible, contacte con su administrador del sistema y pídale que active la tabla de Movimiento entre almacenes en la solapa Tablas a contabilizar del Esquema contable de la organización.
 
 La contabilización de Movimiento entre almacenes crea los siguientes asientos contables.
 
@@ -97,11 +112,14 @@ Fecha de contabilización del registro: Fecha del movimiento.
 | Inmovilizado del producto | Importe de coste de la línea de movimiento |                           | Una por cada línea de Movimiento entre almacenes |
 | Inmovilizado del producto |                           | Importe de coste de la línea de movimiento | Una por cada línea de Movimiento entre almacenes |
 
-La contabilización de un _Movimiento entre almacenes_ implica tener su coste calculado:
+Antes de contabilizar un Movimiento entre almacenes, el sistema debe calcular el coste de los artículos movidos. Para ello deben cumplirse dos condiciones:
 
-- Se requiere una Regla de costes validada en la entidad legal de _Movimiento entre almacenes_.
-- Debe ejecutarse el proceso en segundo plano Proceso en segundo plano de cálculo de costes.
-- Una vez calculado el coste, el Movimiento entre almacenes puede contabilizarse.
+- Debe existir una [Regla de cálculo de costes](../setup.md#costing-rules) validada para la empresa (entidad legal) propietaria de este movimiento entre almacenes.
+- El [Proceso de background del cálculo de costes](../../general-setup/process-scheduling/process-request.md#costing) debe haberse ejecutado al menos una vez tras la creación del movimiento. Este proceso se ejecuta automáticamente según una programación. Si la contabilización falla, contacte con su administrador del sistema para confirmar que el proceso se ha ejecutado.
+
+Una vez cumplidas ambas condiciones, el Movimiento entre almacenes puede contabilizarse.
+
+Para consultar los niveles de stock a una fecha determinada, consulte [Historial de stock](../analysis-tools/stock-history.md).
 
 ## Cómo reactivar movimientos entre almacenes { #how-to-reactivate-goods-movements }
 
@@ -115,7 +133,9 @@ Una vez que el movimiento se reactiva correctamente, el estado del documento cam
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png)
 
 !!! warning
-    No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando la configuración del hueco permite la sobreemisión. Para más información, visite [Hueco](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
+    No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando el hueco está configurado para permitir envíos que superen el stock disponible (Estado de inventario Stock Negativo). Para más información, visite [Estado de inventario](../../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
+
+La reactivación de un movimiento procesado puede afectar a los cálculos de costes. Consulte [Ajuste de costes](cost-adjustment.md) para más información.
 
 ## Contabilización masiva { #bulk-posting }
 
