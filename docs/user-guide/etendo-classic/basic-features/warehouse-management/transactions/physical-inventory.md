@@ -11,6 +11,8 @@ tags:
 
 :material-menu: `Application` > `Warehouse Management` > `Transactions` > `Physical Inventory`
 
+## Overview
+
 The **Physical Inventory** window allows you to record and process goods count operations in Etendo. Use it to compare physical stock counts against system quantities and detect discrepancies. Adjust stock levels accordingly.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xqE_UnYO6cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

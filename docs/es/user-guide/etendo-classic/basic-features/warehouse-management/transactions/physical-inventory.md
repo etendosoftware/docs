@@ -11,6 +11,8 @@ tags:
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Inventario físico`
 
+## Descripción general { #overview }
+
 La ventana **Inventario físico** permite registrar y procesar operaciones de conteo de mercancías en Etendo. Úsela para comparar los conteos físicos de stock con las cantidades del sistema y detectar discrepancias. Ajuste los niveles de stock en consecuencia.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xqE_UnYO6cM" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
