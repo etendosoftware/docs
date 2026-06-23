@@ -86,7 +86,7 @@ El Administrador del sistema puede eliminar el filtro de usuario tanto de la vis
 1. Vaya a `Aplicación` > `Configuración General` > `Aplicación` > [`Preferencias`](../application/preference.md).
 2. Haga clic en **Nuevo**.
 3. Introduzca `Show Audit Trail User filter` en el campo **Propiedad**.
-4. Escriba `Y` en el campo **Valor**.
+4. Escriba `N` en el campo **Valor**.
 5. Haga clic en **Guardar**.
 
 ## Uso del Histórico de auditoría { #using-the-audit-trail }
@@ -181,9 +181,6 @@ El Histórico de auditoría registra todos los cambios de datos para las tablas 
 - Los archivos o datos binarios adjuntos a los registros (como documentos adjuntos) no son auditados.
 
 Estos tipos de campo no pueden ser auditados por el Histórico de auditoría estándar. Si su proceso de negocio requiere rastrearlos, plantee el requisito al administrador del sistema, quien le indicará si existe alguna solución alternativa disponible.
-
-*[UI]: Interfaz de usuario
-*[ID]: Identificador interno asignado por el sistema para distinguir de forma única un registro
 
 ---
 

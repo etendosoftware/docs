@@ -89,7 +89,7 @@ The System Administrator can remove the User filter from both the Record History
 1. Go to `Application` > `General Setup` > `Application` > [`Preference`](../application/preference.md).
 2. Click **New**.
 3. Enter `Show Audit Trail User filter` in the **Property** field.
-4. Type `Y` in the **Value** field.
+4. Type `N` in the **Value** field.
 5. Click **Save**.
 
 ## Using the Audit Trail
@@ -184,9 +184,6 @@ The audit trail records all data changes for enabled tables, with the following 
 - Files or binary data attached to records (such as document attachments) are not audited.
 
 These field types cannot be audited by the standard Audit Trail. If tracking them is required for a specific business process, raise the requirement with the system administrator, who can advise whether an alternative solution is available.
-
-*[UI]: User Interface
-*[ID]: Internal identifier assigned by the system to uniquely distinguish a record
 
 ---
 
