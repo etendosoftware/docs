@@ -53,7 +53,6 @@ Add one or more bundled products to produce in this run.
 - **Product:** the bundled product to produce. Must have the **Bill of Materials** checkbox enabled and its [Bill of Materials tab](../../master-data-management/master-data/product.md#bill-of-materials) configured.
 - **Production Quantity:** the number of bundled products to produce.
 - **[Storage Bin](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin):** the bin where the resulting bundled product is stored.
-- **Verify BOM:** button that validates the product's BOM setup and marks it as ready for production.
 
 ![Production Plan tab](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/bill-of-materials-production/bill-of-materials-production-2.png)
 
@@ -77,7 +76,7 @@ Key fields in this tab:
 1. **First click** — generates the list of components and their quantities based on the BOM setup. Review this list and make any adjustments needed.
 2. **Second click** — confirms and executes the production. Components are deducted from stock and the bundled product is added to stock.
 
-In the confirmation popup, select the **Product quantity must be on stock** checkbox to allow the process to run only when all components are available in stock. After a successful run, component stock decreases and bundled product stock increases.
+In the confirmation popup, select the **Product quantity must be on stock** checkbox to allow the process to run only when all components are available in stock. After a successful run, component stock decreases and bundled product stock increases. To verify the result, see the [Stock Report](../analysis-tools/stock-report.md) or [Product Movements Report](../analysis-tools/product-movements-report.md).
 
 !!! warning
     If you do not select this checkbox and there is not enough stock of a component, the system will use whatever stock is available. This may result in fewer bundled products than the quantity you requested. To avoid partial runs, always select the checkbox before confirming.
