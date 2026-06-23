@@ -8,7 +8,7 @@ tags:
 
 # Histórico de auditoría { #audit-trail }
 
-:material-menu: `Application` > `General Setup` > `Security` > `Audit Trail`
+:material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Histórico de auditoría`
 
 ## Descripción general { #overview }
 
@@ -33,18 +33,18 @@ Ambos pasos se describen en las secciones siguientes.
 
 ### Habilitar el Histórico de auditoría para una tabla { #enabling-audit-trail-for-a-table }
 
-:material-menu: `Application Dictionary` > `Tables and Columns`
+:material-menu: `Diccionario de la Aplicación` > `Tablas y columnas`
 
 !!! info
     El **Diccionario de la Aplicación** es un área de configuración del sistema accesible únicamente para los Administradores del sistema. No forma parte de los menús de negocio habituales.
 
 El Administrador del sistema habilita o deshabilita el Histórico de auditoría para una tabla a través de la definición de la tabla en el Diccionario de la Aplicación.
 
-1. Cambie al rol **System Administrator**. Para ello, haga clic en su nombre de usuario en la esquina superior derecha de la pantalla y seleccione **System Administrator** en la lista de roles.
-2. Vaya a `Application Dictionary` > `Tables and Columns`.
+1. Cambie al rol **Administrador del Sistema**. Para ello, haga clic en su nombre de usuario en la esquina superior derecha de la pantalla y seleccione **Administrador del Sistema** en la lista de roles.
+2. Vaya a `Diccionario de la Aplicación` > `Tablas y columnas`.
 3. En la lista que aparece, busque y abra la entrada correspondiente a la pantalla que desea auditar — por ejemplo, **Pedido de compra**.
 4. Cambie a **Edit View** haciendo clic en el icono de lápiz en la barra de herramientas.
-5. Marque la casilla **Completamente auditado** y haga clic en **Save** (el icono de disquete en la barra de herramientas).
+5. Marque la casilla **Completamente auditado** y haga clic en **Guardar** (el icono de disquete en la barra de herramientas).
 
 #### Inserciones en auditoría { #audit-inserts }
 
@@ -56,7 +56,7 @@ Para guardar también esos valores iniciales, marque el campo **Inserciones en a
 
 #### Excluir columnas { #excluding-columns }
 
-De forma predeterminada, todos los campos de una tabla auditada son rastreados. Para dejar de rastrear los cambios en un campo específico — por ejemplo, un campo de descripción que cambia con frecuencia y no es importante auditar — abra la solapa **Columna** dentro de `Application Dictionary` > `Tables and Columns`, busque el campo y marque la casilla **Excluir Auditoría**.
+De forma predeterminada, todos los campos de una tabla auditada son rastreados. Para dejar de rastrear los cambios en un campo específico — por ejemplo, un campo de descripción que cambia con frecuencia y no es importante auditar — abra la solapa **Columna** dentro de `Diccionario de la Aplicación` > `Tablas y columnas`, busque el campo y marque la casilla **Excluir Auditoría**.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-4.png)
 
@@ -81,13 +81,13 @@ La secuencia completa es:
 
 ### Deshabilitar el filtrado por usuario { #disable-filtering-by-user }
 
-El Administrador del sistema puede eliminar el filtro de usuario tanto de la vista **Record History** como de la vista **Deleted Records**. Esto resulta útil cuando el número de usuarios en el sistema es elevado y afecta al rendimiento.
+El Administrador del sistema puede eliminar el filtro de usuario tanto de la vista **Histórico de auditoría - Histórico de registro** como de la vista **Histórico de auditoría - Registros eliminados**. Esto resulta útil cuando el número de usuarios en el sistema es elevado y afecta al rendimiento.
 
-1. Vaya a `Application` > `General Setup` > `Application` > [`Preference`](../application/preference.md).
-2. Haga clic en **New**.
-3. Introduzca `Show Audit Trail User filter` en el campo **Property**.
-4. Escriba `Y` en el campo **Value**.
-5. Haga clic en **Save**.
+1. Vaya a `Aplicación` > `Configuración General` > `Aplicación` > [`Preferencias`](../application/preference.md).
+2. Haga clic en **Nuevo**.
+3. Introduzca `Show Audit Trail User filter` en el campo **Propiedad**.
+4. Escriba `Y` en el campo **Valor**.
+5. Haga clic en **Guardar**.
 
 ## Uso del Histórico de auditoría { #using-the-audit-trail }
 
@@ -99,8 +99,8 @@ Para cada tabla en la que el Histórico de auditoría está habilitado, el botó
 
 El popup muestra el historial del registro que se muestra actualmente en la ventana. Tiene dos modos de vista:
 
-- **Record History** — muestra los cambios de un único registro
-- **Deleted Records** — muestra los registros eliminados de una única solapa
+- **Histórico de auditoría - Histórico de registro** — muestra los cambios de un único registro
+- **Histórico de auditoría - Registros eliminados** — muestra los registros eliminados de una única solapa
 
 ### Vista de historial del registro { #record-history-view }
 
@@ -117,7 +117,7 @@ Cada fila representa un campo modificado. Si se editó un registro, aparece una 
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/security/audit-trail/audit-trail-6.png)
 
-Para cambiar a la vista de Registros eliminados, haga clic en el enlace **Deleted Records** situado encima de la grilla. Esta vista muestra los registros eliminados de la solapa actual.
+Para cambiar a la vista de Registros eliminados, haga clic en el enlace **Ver registros eliminados** situado encima de la grilla. Esta vista muestra los registros eliminados de la solapa actual.
 
 ### Vista de registros eliminados { #deleted-records-view }
 
@@ -129,11 +129,11 @@ El área superior muestra el tipo de registro. A continuación, los filtros perm
 
 **Volver al historial**
 
-Seleccione **Back to history** para volver a la vista de historial del registro, mostrando los mismos registros que antes.
+Seleccione **Volver al histórico** para volver a la vista de historial del registro, mostrando los mismos registros que antes.
 
 **Historial del registro seleccionado**
 
-Seleccione **View history of selected deleted record** para ver el historial completo de cambios de un registro eliminado específico. Esto abre la vista de historial del registro, que indica que el sistema está mostrando el historial de un registro eliminado.
+Seleccione **Ver histórico del registro seleccionado** para ver el historial completo de cambios de un registro eliminado específico. Esto abre la vista de historial del registro, que indica que el sistema está mostrando el historial de un registro eliminado.
 
 La siguiente captura de pantalla muestra el historial de un Pedido de venta eliminado. Incluye entradas correspondientes a la eliminación, así como la creación y modificación anteriores del registro.
 
@@ -147,7 +147,7 @@ Cuando un registro tiene líneas — por ejemplo, un Pedido de venta tiene líne
 
 1. Vaya a la solapa de líneas del Pedido de venta.
 2. Haga clic en el icono de Histórico de auditoría para abrir la vista de historial del registro.
-3. Haga clic en el enlace **Deleted Records** para cambiar a la vista de Registros eliminados.
+3. Haga clic en el enlace **Ver registros eliminados** para cambiar a la vista de Registros eliminados.
 
 Dado que la solapa de líneas tiene un padre (el Pedido de venta), la vista se filtra automáticamente para mostrar solo las líneas pertenecientes a ese Pedido de venta. El área superior confirma que el filtro está activo:
 
@@ -157,7 +157,7 @@ Dado que la solapa de líneas tiene un padre (el Pedido de venta), la vista se f
 
 1. Vaya a la vista de Registros eliminados de la solapa Pedido de venta.
 2. Busque el Pedido de venta cuyas líneas eliminadas desea ver.
-3. Haga clic en el enlace **Lines** situado debajo de la grilla.
+3. Haga clic en el enlace **Líneas** situado debajo de la grilla.
 
 La vista mostrará entonces las líneas eliminadas pertenecientes a ese Pedido de venta.
 
@@ -187,4 +187,4 @@ Estos tipos de campo no pueden ser auditados por el Histórico de auditoría est
 
 ---
 
-This work is a derivative of [General Setup](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+Este trabajo es una obra derivada de [Configuración General](https://wiki.openbravo.com/wiki/General_Setup){target="_blank"} de [Wiki de Openbravo](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} por [Etendo](https://etendo.software){target="_blank"}.
