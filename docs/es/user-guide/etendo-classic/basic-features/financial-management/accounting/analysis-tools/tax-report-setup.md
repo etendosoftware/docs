@@ -1,10 +1,10 @@
 ---
 tags:
   - Etendo Classic
-  - Financial Management
-  - Accounting
-  - Tax Report Setup
-  - Financial Reports
+  - Gestión financiera
+  - Contabilidad
+  - Configuración informes de impuestos
+  - Informes financieros
 ---
 
 # Configuración informes de impuestos { #tax-report-setup }
@@ -13,43 +13,24 @@ tags:
 
 ## Descripción general { #overview }
 
-Etendo permite al usuario crear diferentes informes de impuestos según sus necesidades específicas.
+Un informe de impuestos resume los importes de impuestos recaudados o pagados durante un período, por ejemplo, el IVA de ventas recaudado o el IVA de compras pagado. Antes de generar un informe de impuestos, es necesario definir su estructura en esta ventana.
 
-Para explicar el uso de este proceso, es necesario comprender la ventana Configuración informes de impuestos.
+## Configuración informes de impuestos { #tax-report-setup_1 }
 
-##### Configuración informes de impuestos { #tax-report-setup_1 }
-
-Esta ventana permite al usuario crear o modificar diferentes informes de impuestos para los distintos impuestos existentes. A continuación, se explica cómo crear un nuevo informe de impuestos:
+Use esta ventana para crear o editar definiciones de informes de impuestos. Cada definición controla qué impuesto se informa, si cubre ventas o compras y cómo se muestran las cifras. Los siguientes campos definen el informe de impuestos:
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-1.png)
 
-La ventana contiene algunos parámetros para indicar el informe de impuestos creado:
-
 - **Nombre:** El nombre del informe.
-- **Impuesto:** El impuesto que se mostrará en el informe.
+- **Impuesto:** El impuesto que se muestra en el informe.
 - **Operación de venta:** Marcado si es un informe de impuestos de ventas; desmarcado si es un informe de impuestos de compras.
-- **Informe:** Si está marcado, aparecerá en el formulario Creación de informes de impuestos para ser seleccionado.
-- **Mostrar:** Si está marcado, aparecerá en el formulario Creación de informes de impuestos para ser seleccionado.
-- **Nivel agrupación:** Si está marcado, el tipo impositivo se define como un impuesto padre que tiene impuestos dependientes: los impuestos hijo. Si un impuesto no va a tener "hijos", no debe marcarse como nivel agrupación.
-- **Negativo:** Si está marcado, el informe se imprimirá con valores negativos; de lo contrario, se imprimirá con valores positivos.
+- **Informe:** Si está marcado, esta definición de informe de impuestos aparece en la lista del formulario Creación de informes de impuestos y puede seleccionarse para su generación. Si está desmarcado, la definición se guarda pero no está disponible para su selección.
+- **Mostrar:** Si está marcado, esta línea de impuesto aparece como una fila visible en el resultado del informe. Si está desmarcado, la línea de impuesto sigue contribuyendo a los totales calculados, pero la fila individual queda oculta. Use esta opción cuando deba aparecer un subtotal sin mostrar cada línea que lo compone.
+- **Nivel agrupación:** Marque esta casilla solo si este impuesto es una categoría de agrupación que contiene subimpuestos subordinados (por ejemplo, un impuesto padre "IVA" que agrupa "IVA 10%" e "IVA 21%"). Si el impuesto está definido de forma independiente sin subimpuestos, deje esta casilla desmarcada. En caso de duda, consulte la estructura de impuestos con su administrador del sistema.
+- **Negativo:** Si está marcado, el informe se imprime con valores negativos; de lo contrario, se imprime con valores positivos.
 - **Activo:** Si es un informe de impuestos activo.
 
-Una vez configurado el informe de impuestos, aparecerá en el formulario Creación de informes de impuestos:
-
-##### **Creación de informes de impuestos** { #create-tax-report }
-
-Esta ventana permite imprimir los informes definidos previamente por el usuario. Para imprimir el informe, es necesario completar algunos campos:
-
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-2.png)
-
-- **Desde Fecha:** Fecha de inicio del informe.
-- **Hasta Fecha:** Última fecha del informe.
-- **Informe de impuestos:** En esta lista aparecerán todos los informes de impuestos creados para ser seleccionados.
-- **Organización:** Organización para la que se imprimirá el informe.
-
-Una vez introducidos estos campos, será posible imprimir el informe que mostrará el importe durante esas fechas.
-
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup/tax-report-setup-3.png)
+Una vez configurado el informe de impuestos, use el formulario [Creación de informes de impuestos](create-tax-report.md) para generar el informe.
 
 ---
 

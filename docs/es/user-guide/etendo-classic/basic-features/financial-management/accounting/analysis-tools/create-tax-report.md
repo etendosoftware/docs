@@ -1,10 +1,10 @@
 ---
 tags:
   - Etendo Classic
-  - Financial Management
-  - Accounting
-  - Tax Report
-  - Financial Reports
+  - Gestión financiera
+  - Contabilidad
+  - Informes de impuestos
+  - Informes financieros
 ---
 
 # Creación de informes de impuestos { #create-tax-report }
@@ -13,41 +13,22 @@ tags:
 
 ## Descripción general { #overview }
 
-Este formulario permite al usuario crear diferentes informes de impuestos según sus necesidades específicas.
+Este formulario permite al usuario generar un informe de impuestos previamente configurado para una organización y un rango de fechas seleccionados.
 
-Para explicar el uso de este proceso, es necesario comprender la ventana Configuración informes de impuestos.
+Antes de utilizar este formulario, el informe de impuestos debe estar configurado en la ventana [Configuración informes de impuestos](tax-report-setup.md).
 
-##### Configuración informes de impuestos { #tax-report-setup }
+## Creación de informes de impuestos { #create-tax-report_1 }
 
-Esta ventana permite al usuario crear o modificar diferentes informes de impuestos para los distintos impuestos existentes. A continuación, se explica cómo crear un nuevo informe de impuestos:
-
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-1.png)
-
-La ventana contiene algunos parámetros para indicar el informe de impuestos creado:
-
-- **Nombre:** El nombre del informe.
-- **Impuesto:** El impuesto que se mostrará en el informe.
-- **Operación de venta:** Marcado si es un informe de impuestos de ventas; desmarcado si es un informe de impuestos de compras.
-- **Informe:** Si está marcado, aparecerá en el formulario Creación de informes de impuestos para ser seleccionado.
-- **Mostrar:** Si está marcado, aparecerá en el formulario Creación de informes de impuestos para ser seleccionado.
-- **Nivel agrupación:** Si está marcado, el tipo impositivo se define como un impuesto padre que tiene impuestos dependientes: los impuestos hijo. Si un impuesto no va a tener "hijos", no debe marcarse como nivel agrupación.
-- **Negativo:** Si está marcado, el informe se imprimirá con valores negativos; de lo contrario, se imprimirá con valores positivos.
-- **Activo:** Si es un informe de impuestos activo.
-
-Una vez configurado el informe de impuestos, aparecerá en el formulario Creación de informes de impuestos:
-
-##### Creación de informes de impuestos { #create-tax-report_1 }
-
-Esta ventana permite imprimir los informes definidos previamente por el usuario. Para imprimir el informe, es necesario completar algunos campos:
+Complete los siguientes campos:
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-2.png)
 
-- **Desde Fecha:** Fecha de inicio del informe.
-- **Hasta Fecha:** Última fecha del informe.
-- **Informe de impuestos:** En esta lista aparecerán todos los informes de impuestos creados para ser seleccionados.
-- **Organización:** Organización para la que se imprimirá el informe.
+- **Fecha desde:** Fecha de inicio del informe.
+- **Fecha hasta:** Última fecha del informe.
+- **Informes de impuestos:** En esta lista aparecen todos los informes de impuestos creados para ser seleccionados.
+- **Organización:** La empresa o sucursal para la que se genera el informe. En una configuración multiorganización, seleccione la entidad legal correcta para el período fiscal a declarar.
 
-Una vez introducidos estos campos, será posible imprimir el informe que mostrará el importe durante esas fechas.
+Una vez completados estos campos, haga clic en el botón para generar el informe. El informe muestra los importes de impuestos —desglosados por las líneas de impuesto definidas en la Configuración informes de impuestos— para el rango de fechas y la organización seleccionados.
 
 ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-3.png)
 
