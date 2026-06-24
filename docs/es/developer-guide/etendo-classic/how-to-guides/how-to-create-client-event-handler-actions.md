@@ -1,4 +1,5 @@
 ---
+title: Cómo crear acciones de manejador de eventos del cliente
 tags:
   - Guía práctica
   - Manejador de eventos del cliente
@@ -6,39 +7,34 @@ tags:
   - Etendo Classic
 ---
 
-# Cómo crear acciones de Manejador de eventos del cliente { #how-to-create-client-event-handler-actions }
-  
-## Visión general { #overview }
+# Cómo crear acciones de manejador de eventos del cliente { #how-to-create-client-event-handler-actions }
 
-  Esta sección explica cómo implementar funciones del lado del cliente que se ejecutan antes o después de que se dispare un evento en una ventana estándar de la Interfaz de Usuario.
-  
+## Descripción general { #overview }
+
+Esta página es una referencia de implementación práctica para la clase `GreetingEventHandler`. Cubre los cuatro métodos clave y proporciona un ejemplo de código consolidado. Para el contexto conceptual — incluyendo el framework Weld, la configuración del classpath, el alcance de la transacción y el filtrado — consulte [Cómo implementar un manejador de eventos de negocio](how-to-implement-a-business-event-handler.md).
+
 ## Módulo de ejemplo { #example-module }
 
-  Esto se respalda con un módulo de ejemplo que muestra ejemplos del código presentado y comentado.
+Esto se respalda con un módulo de ejemplo que muestra ejemplos del código presentado y comentado.
 
-  El código de este módulo se puede descargar desde [este repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
+El código de este módulo se puede descargar desde [este repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
 
-## Definición de acciones del Manejador de eventos del cliente { #defining-client-event-handler-actions }
+## Referencia de métodos { #methods-reference }
 
-  Un **Manejador de eventos del cliente es un componente que permite a los desarrolladores responder a eventos específicos en Etendo**, como la creación, actualización o eliminación de entidades. Estos manejadores son esenciales para implementar lógica de negocio personalizada que se ejecuta cuando se producen determinados cambios en la base de datos.
+| Método | Descripción |
+| :--- | :--- |
+| `getObservedEntities()` | Devuelve el array de entidades que este manejador observa; llamado internamente por `isValidEvent`. |
+| `onUpdate()` | Se ejecuta cuando se actualiza un registro de una entidad observada. |
+| `onSave()` | Se ejecuta cuando se crea un nuevo registro de una entidad observada. |
+| `onDelete()` | Se ejecuta cuando se elimina un registro de una entidad observada. |
 
-## Definición de la clase del Manejador de eventos { #defining-the-event-handler-class }
-  En este paso, se implementarán los métodos clave necesarios para gestionar las acciones de eventos:
+## Ejemplo de implementación completo { #complete-implementation-example }
 
-  * `Method getObservedEntities()` : Este método define las entidades que serán observadas por el Manejador de eventos. Esta información es esencial para que el manejador de eventos sepa a qué tipo de entidades debe reaccionar.
+La siguiente clase implementa los cuatro métodos para la entidad `Greeting`. El método `onSave` añade un punto al título cuando éste está ausente y, a continuación, crea un registro hijo `GreetingTrl` para el idioma 171 (neerlandés).
 
-  * `Method onUpdate()` : Se ejecuta cuando se actualiza una entidad observada.
-
-  * `Method onSave()` : Se ejecuta cuando se crea una nueva entidad.
-
-  * `Method onDelete()` : Se ejecuta cuando se elimina una entidad observada.
-
-## Ejemplos { #examples }
-
-### `getObservedEntities()`
-Esta sección define las entidades que serán observadas por el Manejador de eventos. En este caso, se observa la entidad Greeting.
-```java 
+```java title="GreetingEventHandler.java"
 class GreetingEventHandler extends EntityPersistenceEventObserver {
+
   private static Entity[] entities = {
       ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
   private static final Logger logger = LogManager.getLogger();
@@ -47,75 +43,61 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
   protected Entity[] getObservedEntities() {
     return entities;
   }
-}
-```   
 
-### `onUpdate()`
-Este método intercepta las actualizaciones de registros en la entidad Greeting. Valida que el título de la entidad termine con un punto (“.”) y lo añade si es necesario.
-```java
-public void onUpdate(@Observes EntityUpdateEvent event) {
-  if (!isValidEvent(event)) {
-    return;
+  public void onUpdate(@Observes EntityUpdateEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    final Greeting greeting = (Greeting) event.getTargetInstance();
+    final String title = greeting.getTitle();
+    if (title != null && !title.endsWith(".")) {
+      final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+      final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+      // use setCurrentState, not a setter on the instance
+      event.setCurrentState(greetingTitleProperty, title + ".");
+    }
+    logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
   }
-  final Greeting greeting = (Greeting) event.getTargetInstance();
-  final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
+
+  public void onSave(@Observes EntityNewEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
-    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    event.setCurrentState(greetingTitleProperty, title + ".");
+    final Greeting greeting = (Greeting) event.getTargetInstance();
+    final String title = greeting.getTitle();
+    if (title != null && !title.endsWith(".")) {
+      final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+      // use setCurrentState, not a setter on the instance
+      event.setCurrentState(greetingTitleProperty, title + ".");
+    }
+
+    // create a translation child record for the new greeting
+    final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+    greetingTrl.setGreeting(greeting);
+    greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+    greetingTrl.setName(greeting.getName());
+    greetingTrl.setTitle(greeting.getTitle());
+    greetingTrl.setTranslation(false);
+
+    // get the list property and add the child — no explicit save needed
+    final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+    @SuppressWarnings("unchecked")
+    final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+    greetingTrls.add(greetingTrl);
+
+    logger.info("Greeting {} is being created", event.getTargetInstance().getId());
   }
-  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
+
+  public void onDelete(@Observes EntityDeleteEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
+  }
 }
 ```
-### `onSave()`
-En este método, se intercepta la creación de un nuevo registro en la entidad Greeting. Se realiza una validación similar a la del evento de actualización, añadiendo un punto al título si no lo tiene. Además, se crea un registro de traducción (GreetingTrl) para el saludo en un idioma específico (en este ejemplo, se utiliza el idioma con ID 171, que es neerlandés).
-```java 
-public void onSave(@Observes EntityNewEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
-  final Greeting greeting = (Greeting) event.getTargetInstance();
-  final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
-    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    event.setCurrentState(greetingTitleProperty, title + ".");
-  }
-
-  final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
-  greetingTrl.setGreeting(greeting);
-  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
-  greetingTrl.setName(greeting.getName());
-  greetingTrl.setTitle(greeting.getTitle());
-  greetingTrl.setTranslation(false);
-
-  final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
-  @SuppressWarnings("unchecked")
-  final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
-  greetingTrls.add(greetingTrl);
-
-  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
-}
-``` 
-
-### `onDelete()`
-El siguiente método se ejecuta cuando se elimina un saludo y registra la eliminación en el log.
-```java 
-public void onDelete(@Observes EntityDeleteEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
-}
-```
-
-!!!note
-    Este Manejador de eventos muestra cómo interceptar eventos de creación, actualización y eliminación en una entidad. Le permite realizar validaciones y acciones automáticas, como añadir un punto al final de un título o crear automáticamente una traducción asociada al crear un nuevo saludo.
-  
-
-!!!info
-    Este ejemplo se puede ajustar para otras entidades o eventos según los requisitos de su implementación.
 
 ---
 
-Este trabajo es una obra derivada de [Cómo crear acciones de Manejador de eventos del cliente](http://wiki.openbravo.com/wiki/How_to_create_client_event_handler_actions){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+Este trabajo es una obra derivada de [How to Create Client Event Handler Actions](http://wiki.openbravo.com/wiki/How_to_create_client_event_handler_actions){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.

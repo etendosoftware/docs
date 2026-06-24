@@ -1,4 +1,5 @@
 ---
+title: How to Create Client Event Handler Actions
 tags:
   - How to
   - Client Event Handler
@@ -6,39 +7,37 @@ tags:
   - Etendo Classic
 ---
 
-#  How to Create Client Event Handler Actions
-  
-##  Overview
+# How to Create Client Event Handler Actions
 
-  This section discusses how to implement client-side functions that are executed before or after an event is fired in a standard window of the User Interface.
-  
-##  Example Module
+## Overview
 
-  This is supported by an example module which shows examples of the code shown and discussed.
+This page shows the complete, ready-to-use `GreetingEventHandler` class and a summary of each method. Use it as a starting point when writing your own event handler. For the concepts behind how events work — including transaction scope, classpath setup, and entity filtering — see [How to Implement a Business Event Handler](how-to-implement-a-business-event-handler.md).
 
-  The code of this module can be downloaded from [this repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java).
+## Example Module
 
-##  Defining Client Event Handler Actions
+This is supported by an example module which shows examples of the code shown and discussed.
 
-  A **Client Event Handler is a component that allows developers to respond to specific events in Etendo**, such as the creation, update or deletion of entities. These handlers are essential for implementing custom business logic that executes when certain changes occur in the database.
+The code of this module can be downloaded from [this repository](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
 
-##  Defining the Event Handler Class
-  In this step, the key methods needed to handle event actions will be implemented:
+!!!note
+    The full list of required Java imports is available in the [example source file](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
 
-  * `Method getObservedEntities()` : This method defines the entities that will be observed by the Event Handler. This information is essential for the event handler to know what kind of entities it should react to.
+## Methods Reference
 
-  * `Method onUpdate()` : It is executed when a watched entity is updated.
+| Method | Description |
+| :--- | :--- |
+| `getObservedEntities()` | Returns the array of entities this handler observes; called internally by `isValidEvent`. |
+| `onUpdate()` | Executes when an observed entity record is updated. |
+| `onSave()` | Executes when a new observed entity record is created. |
+| `onDelete()` | Executes when an observed entity record is deleted. |
 
-  * `Method onSave()` : It is executed when a new entity is created.
+## Complete Implementation Example
 
-  * `Method onDelete()` : It is executed when an observed entity is eliminated.
+The following class implements all four methods for the `Greeting` entity. The `onSave` method appends a dot to the title when one is absent, then creates a `GreetingTrl` child record for language 171 (Dutch).
 
-## Examples
-
-### `getObservedEntities()`
-This section defines the entities that will be observed by the Event Handler. In this case, the Greeting entity is observed.
-```java 
+```java title="GreetingEventHandler.java"
 class GreetingEventHandler extends EntityPersistenceEventObserver {
+
   private static Entity[] entities = {
       ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
   private static final Logger logger = LogManager.getLogger();
@@ -47,74 +46,60 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
   protected Entity[] getObservedEntities() {
     return entities;
   }
-}
-```   
 
-### `onUpdate()`
-This method intercepts record updates in the Greeting entity. It validates that thetitle of the entity ends with a dot (“.”) and adds it if necessary.
-```java
-public void onUpdate(@Observes EntityUpdateEvent event) {
-  if (!isValidEvent(event)) {
-    return;
+  public void onUpdate(@Observes EntityUpdateEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    final Greeting greeting = (Greeting) event.getTargetInstance();
+    final String title = greeting.getTitle();
+    if (title != null && !title.endsWith(".")) {
+      final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+      final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+      // use setCurrentState, not a setter on the instance
+      event.setCurrentState(greetingTitleProperty, title + ".");
+    }
+    logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
   }
-  final Greeting greeting = (Greeting) event.getTargetInstance();
-  final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
+
+  public void onSave(@Observes EntityNewEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
-    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    event.setCurrentState(greetingTitleProperty, title + ".");
+    final Greeting greeting = (Greeting) event.getTargetInstance();
+    final String title = greeting.getTitle();
+    if (title != null && !title.endsWith(".")) {
+      final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+      // use setCurrentState, not a setter on the instance
+      event.setCurrentState(greetingTitleProperty, title + ".");
+    }
+
+    // create a translation child record for the new greeting
+    final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+    greetingTrl.setGreeting(greeting);
+    greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+    greetingTrl.setName(greeting.getName());
+    greetingTrl.setTitle(greeting.getTitle());
+    greetingTrl.setTranslation(false);
+
+    // get the list property and add the child — no explicit save needed
+    final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+    @SuppressWarnings("unchecked")
+    final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+    greetingTrls.add(greetingTrl);
+
+    logger.info("Greeting {} is being created", event.getTargetInstance().getId());
   }
-  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
+
+  public void onDelete(@Observes EntityDeleteEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
+  }
 }
 ```
-### `onSave()`
-In this method, the creation of a new record in the Greeting entity is intercepted. A validation similar to that of the update event is performed, adding a dot to the title if it does not have one. In addition, a translation record (GreetingTrl) is created for the greeting in a specific language (in this example, the language with ID 171, which is Dutch, is used).
-```java 
-public void onSave(@Observes EntityNewEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
-  final Greeting greeting = (Greeting) event.getTargetInstance();
-  final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
-    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    event.setCurrentState(greetingTitleProperty, title + ".");
-  }
-
-  final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
-  greetingTrl.setGreeting(greeting);
-  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
-  greetingTrl.setName(greeting.getName());
-  greetingTrl.setTitle(greeting.getTitle());
-  greetingTrl.setTranslation(false);
-
-  final Property greetingTrlProperty = greetingEntity.getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
-  @SuppressWarnings("unchecked")
-  final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
-  greetingTrls.add(greetingTrl);
-
-  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
-}
-``` 
-
-### `onDelete()`
-The following method is executed when a greeting is deleted and records the deletion in the log.
-```java 
-public void onDelete(@Observes EntityDeleteEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
-}
-```
-
-!!!note
-    This Event Handler shows how to intercept creation, update and deletion events in an entity. It allows you to perform automatic validations and actions, such as adding a dot at the end of a title or creating an associated translation automatically when creating a new greeting.
-  
-
-!!!info
-    This example can be adjusted for other entities or events according to the requirements of your implementation.
 
 ---
 

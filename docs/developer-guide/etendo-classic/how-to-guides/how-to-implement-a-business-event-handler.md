@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-The  business entity event  allows you to implement business logic which reacts to specific events which are fired when entities are updated, deleted or inserted into the database. 
+A business entity event is a hook that runs your Java code automatically when a record — called an entity in Etendo's data model — is saved, updated, or deleted. This lets you enforce business rules in Java instead of writing database triggers.
 Business entity events correspond to triggers in the database. 
 The main advantage of implementing logic using business entity events instead of in triggers is that you can code your logic in java using your IDE. 
 This helps productivity and quality as you can code, debug and test in an integrated environment with the rest of your business logic.
@@ -21,31 +21,36 @@ This helps productivity and quality as you can code, debug and test in an integr
     * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. 
     * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
     * You can make use of the full [data access layer](../concepts/data-access-layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
-      
-      Warning: Don't call setters on the instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. 
-      So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Business events make use of the event framework provided by the [Weld](../concepts/etendo-architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
+Business events use Weld, Etendo's dependency injection framework, to discover and register your event handler class automatically. You do not configure Weld directly; the annotations in your class are sufficient. For more information, see [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
 
 !!!note
-    In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/etendo-architecture.md#Analyzing_the_classpath) if your event handlers are not found.
+    In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/etendo-architecture.md#analyzing-the-classpath) if your event handlers are not found.
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+
+For a consolidated implementation reference, see [How to Create Client Event Handler Actions](how-to-create-client-event-handler-actions.md).
 
 ##  Example Module
 
 This section is supported by an example module which shows an example of the code shown and discussed here.
 
 The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+
+!!!note
+    The full list of required Java imports is available in the [example source file](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
   
 ##  The event handler - A first implementation
 
 An event handler is implemented as a normal java class in your module. The key thing is to create methods with an annotation on the parameters. Here is a first simple example of an event handler which listens to events on the Greeting entity:
 
     
+!!!warning
+    Do not call setters on the event entity directly. When the event fires, the persistence framework has already captured the object's current field values. Calling a setter updates the Java object in memory, but Hibernate has already captured the property values into its internal state array before firing the event, so the setter's change is silently ignored and will not be persisted. Use `event.setCurrentState(property, newValue)` instead. This is shown in every code example on this page.
+
 ```java title="GreetingEventHandler.java"
 class GreetingEventHandler extends EntityPersistenceEventObserver {
   private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
@@ -60,22 +65,21 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+    logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
   }
  
   public void onSave(@Observes EntityNewEvent event) {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-        + " is being created");
+    logger.info("Greeting {} is being created", event.getTargetInstance().getId());
   }
  
   public void onDelete(@Observes EntityDeleteEvent event) {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
+    logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
   }
 }
 ```
@@ -99,48 +103,17 @@ And do some actions you should see the following messages in the console:
 ```bash
 Greeting FF8081813097E041013097E805F4000F is being updated
 Greeting FF8081813097E041013097E805F4000F is being deleted
-Greeting Mr is being created
-```
-
-###  Event methods
-
-The source code above illustrates how the event methods are implemented:
-     
-```java    
-public void onUpdate(@Observes EntityUpdateEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
-}
- 
-public void onSave(@Observes EntityNewEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-      + " is being created");
-}
- 
-public void onDelete(@Observes EntityDeleteEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
-}
+Greeting FF8081813097E041013097E805F4000F is being created
 ```
 
 !!!note 
     * You only need to implement a method for the event you want to listen to, so if you only need to listen to update events, then only implement a method with the @Observes EntityUpdateEvent parameter. 
     * Each method starts with a check if the event is valid, this is needed to filter for relevant events only, see the section below. 
-    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](../concepts/etendo-architecture.md#Event_Classes_and_API) for more information. 
+    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](../concepts/etendo-architecture.md#event-classes-and-api) for more information. 
 
 ###  Filtering Only Relevant Events
 
-As mentioned above, the event methods get called for all entities of all types. 
-In our example, we only want to handle events on the Greeting entity.
-There is specific code in the example above which takes care of this. 
-It starts in the top of the class:
+Every event handler in the system receives events from every entity, not just the ones it was written for. If you omit the filter, your code will run on every insert, update, and delete across the entire application. The `isValidEvent` check restricts execution to the entities listed in `getObservedEntities`.
 
 ```java
 private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
@@ -162,6 +135,9 @@ if (!isValidEvent(event)) {
 
 This part is needed because the event methods will be called for entities of all types. 
 In this example we only want to listen to changes on the Greeting entity.
+
+!!!note
+    `isValidEvent` also returns `false` during data import operations. This is intentional — it prevents business logic from running on imported data. If your event handler is not firing, check whether the operation is being performed through an import process.
 
 ##  Adding some business logic
 
@@ -192,7 +168,7 @@ public void onUpdate(@Observes EntityUpdateEvent event) {
     // note use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
 }
  
 public void onSave(@Observes EntityNewEvent event) {
@@ -209,8 +185,7 @@ public void onSave(@Observes EntityNewEvent event) {
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
  
-  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-      + " is being created");
+  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
 }
 ```
 
@@ -237,7 +212,7 @@ if (title != null && !title.endsWith(".")) {
 And then set the current state.
 
 !!!note
-    Don't call setters on the Greeting instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. So you must change the value through the special `setCurrentState` method:
+    Don't call setters on the Greeting instance itself. Calling a setter updates the Java object in memory, but Hibernate has already captured the property values into its internal state array before firing the event, so the setter's change is silently ignored and will not be persisted. Use `event.setCurrentState(property, newValue)` instead:
 
 ```java
 event.setCurrentState(greetingTitleProperty, title + ".");
@@ -278,41 +253,9 @@ greetingTrls.add(greetingTrl);
 // OBDal.getInstance().save(greetingTrl);
 ```
 
+A `GreetingTrl` object is a translation child record linked to a parent `Greeting`. Etendo uses the `Trl` suffix to denote translation tables throughout the data model.
 
-Let's walk through the code. First the trl object is created and some properties are set. 
-Note as the object is not part of the event you can call its setters directly. 
-The language is arbitrarily chosen. 
-See the  [DAL](../concepts/data-access-layer.md) document for information on the api's you can use to retrieve objects from the database.
-
-```java
-final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
-// set relevant translation properties
-greetingTrl.setGreeting(greeting);
-// 171 is dutch, choose any other language..
-greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
-// note we can call getters on the targetInstance, but not setters!
-greetingTrl.setName(greeting.getName());
-greetingTrl.setTitle(greeting.getTitle());
-greetingTrl.setTranslation(false);
-```
-
-Then, as a next step, add the new trl object to the event entity. This is a bit
-special as we need to update a List property of the event entity. So instead
-of calling `setCurrentState` we get the list and add to it. This is a correct way of doing this:
-
-```java
-// and add the greetingTrl to the greeting
-// we don't use event.setCurrentState as we get the list and add to it
-// get the trl property for the greeting entity
-final Property greetingTrlProperty = greetingEntity
-    .getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
-@SuppressWarnings("unchecked")
-final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
-greetingTrls.add(greetingTrl);
- 
-// don't need to save the greetingTrl, it is saved as the child of the greeting
-// OBDal.getInstance().save(greetingTrl);
-```
+Note that the list property is retrieved with `getCurrentState` and appended to directly, rather than replaced with `setCurrentState`. This is because adding to an existing list does not require replacing the whole property value.
 
 The trl object is a child of the Greeting event entity and will persist together with it, so it is not necessary to explicitly save it.
 When you now enter a new entry in the window, you will see an additional translation child record being created.
@@ -321,7 +264,7 @@ When you now enter a new entry in the window, you will see an additional transla
 
 ###  Interrupt the Save Action
 
-Sometimes you need to interrupt the save action because the user is doing something wrong, this can be done throwing an exception
+Sometimes you need to interrupt the save action because the user is doing something wrong. This can be done by throwing an `OBException`. When you do, Etendo displays the exception message to the user as an error dialog and rolls back the entire transaction, including any changes the event handler had already made.
 
 ```java
 public void onUpdate(@Observes

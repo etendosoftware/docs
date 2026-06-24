@@ -9,7 +9,7 @@ tags:
  
 # Cómo implementar un manejador de eventos de negocio { #how-to-implement-a-business-event-handler }
 
-## Visión general { #overview }
+## Descripción general { #overview }
 
 El evento de entidad de negocio le permite implementar lógica de negocio que reacciona a eventos específicos que se disparan cuando las entidades se actualizan, eliminan o insertan en la base de datos. 
 Los eventos de entidad de negocio se corresponden con triggers en la base de datos. 
@@ -34,6 +34,8 @@ Los eventos de negocio hacen uso del framework de eventos proporcionado por el f
 En esta sección, implementaremos un manejador de eventos sobre la entidad Tratamientos. Cada vez que se guarde un título, se añadirá una traducción al español. Además, imprimiremos algunos mensajes en la consola para otros eventos de negocio.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+
+Para una referencia de implementación consolidada, consulte [Cómo crear acciones de manejador de eventos del cliente](how-to-create-client-event-handler-actions.md).
 
 ## Módulo de ejemplo { #example-module }
 
@@ -351,9 +353,5 @@ El código fuente completo del manejador de eventos de ejemplo está disponible 
 ---
 
 Este trabajo es una obra derivada de [How to implement a business event handler](https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
-
----
-
----
 
 ---
