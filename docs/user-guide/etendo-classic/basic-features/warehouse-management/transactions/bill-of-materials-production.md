@@ -13,7 +13,7 @@ tags:
 
 ## Overview
 
-Use this window to bundle components into a single product using a previously configured bill of materials.
+This window is used to bundle components into a single product using a previously configured bill of materials.
 
 !!! info "This is not a manufacturing process"
     Despite the name, this process is **not part of production**. It combines existing products into a **bundled product**. No manufacturing takes place. Use it, for example, to bundle a computer with its keyboard or a device with region-specific power cables.

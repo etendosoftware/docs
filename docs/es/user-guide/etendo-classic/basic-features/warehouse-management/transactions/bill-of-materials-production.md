@@ -13,7 +13,7 @@ tags:
 
 ## Descripción general { #overview }
 
-Utilice esta ventana para agrupar componentes en un único producto mediante una lista de materiales configurada previamente.
+Esta ventana se utiliza para agrupar componentes en un único producto mediante una lista de materiales configurada previamente.
 
 !!! info "Este no es un proceso de fabricación"
     A pesar del nombre, este proceso **no forma parte de la producción**. Combina productos existentes en un **producto empaquetado**. No hay fabricación real implicada. Utilícelo, por ejemplo, para agrupar un ordenador con su teclado o un dispositivo con cables de alimentación específicos para cada región.
