@@ -5307,10 +5307,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tax-report-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Tax Report Setup
@@ -5318,18 +5317,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#create-tax-report_1" class="md-nav__link">
     <span class="md-ellipsis">
       Create Tax Report
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5355,29 +5349,6 @@
   
   <span class="md-ellipsis">
     Customer Statement
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tax-report-setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tax Report Setup
     
   </span>
   
@@ -17076,10 +17047,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tax-report-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Tax Report Setup
@@ -17087,18 +17057,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#create-tax-report_1" class="md-nav__link">
     <span class="md-ellipsis">
       Create Tax Report
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -17127,7 +17092,7 @@
       
       
       
-        <span class="md-tag">Etendo Classic</span>
+        <span class="md-tag">Etendo</span>
       
     
       
@@ -17156,36 +17121,34 @@
 
 
 <h1 id="create-tax-report">Create Tax Report</h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>Create Tax Report</code></p>
 <h2 id="overview">Overview</h2>
-<p>This Form allows the user to create different Tax Reports according to the user's specific needs.</p>
-<p>In order to explain the use of this process, it is necessary to understand the window Tax Report Setup.</p>
-<h5 id="tax-report-setup">Tax Report Setup</h5>
-<p>This window allows the user to create or modify different Tax Report for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-1.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-1.png"></a></p>
-<p>The window has some parameters to indicate the Tax Report created:</p>
+<p>A Tax Report summarizes the tax amounts collected or paid during a period — for example, sales VAT collected or purchase VAT paid.</p>
+<p>Working with Tax Reports involves two sequential steps. First, define the report structure in <strong>Tax Report Setup</strong>: specify which taxes are included, whether the report covers sales or purchases, and how each line is displayed. Second, generate the report in <strong>Create Tax Report</strong>: select an organization and date range, then run the report to produce the output.</p>
+<h2 id="tax-report-setup">Tax Report Setup</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>Tax Report Setup</code></p>
+<p>Use this window to create or edit Tax Report definitions. Each definition controls which tax is reported, whether it covers sales or purchases, and how figures are displayed.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/tax-report-setup.png" data-desc-position="bottom"><img alt="Tax Report Setup" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/tax-report-setup.png"></a></p>
 <ul>
-<li><strong>Name:</strong> The name of the Report.</li>
-<li><strong>Tax:</strong> The tax that will be shown in the report.</li>
-<li><strong>Sales Transaction:</strong> Checked if it's a Sales Tax Report, unchecked if it's a Purchase Tax Report.</li>
-<li><strong>Report:</strong> If checked, it will appear in the Create Tax Report form to be chosen.</li>
-<li><strong>Shown:</strong> If checked, it will appear in the Create Tax Report form to be chosen.</li>
-<li><strong>Summary Level:</strong> If it is checked, the tax rate is defined as a parent tax that has dependent taxes: the child taxes. If a tax is not going to have any "children," it should not be checked as summary.</li>
-<li><strong>Negative:</strong> If checked, the report will be printed in negative values, otherwise, it will be printed in positive values.</li>
-<li><strong>Active:</strong> If it's an active Tax Report.</li>
+<li><strong>Name:</strong> The label used to identify this report definition.</li>
+<li><strong>Tax:</strong> The specific tax this report will cover (for example, VAT 21% or Import Duty). Select from the list of taxes already configured in your system.</li>
+<li><strong>Sales Transaction:</strong> Check for a sales tax report; leave unchecked for a purchase tax report.</li>
+<li><strong>Report:</strong> If checked, this Tax Report definition appears in the list on the Create Tax Report form and can be selected for generation. If unchecked, the definition is saved but not available for selection.</li>
+<li><strong>Shown:</strong> If checked, this tax line appears as a visible row in the report output. If unchecked, the tax line still contributes to calculated totals but the individual row is hidden. Use this when a sub-total should appear without showing every line that feeds into it.</li>
+<li><strong>Summary Level:</strong> Check this box only if this tax is a grouping category that contains sub-taxes underneath it (for example, a "VAT" parent that groups "VAT 10%" and "VAT 21%"). If the tax stands alone with no sub-taxes, leave this unchecked. If unsure, check the tax structure with your system administrator.</li>
+<li><strong>Negative:</strong> If checked, the report is printed in negative values; otherwise, it is printed in positive values.</li>
+<li><strong>Active:</strong> Controls whether this Tax Report definition is active. When unchecked, the definition is disabled and hidden from the system without being deleted. Uncheck this field to retire a definition without losing its configuration.</li>
 </ul>
-<p>Once, the Tax Report has been set up, it will appear in the Create Tax Report form:</p>
-<h5 id="create-tax-report_1">Create Tax Report</h5>
-<p>This window allows printing Reports previously defined by the user. In order to print the Report, it is necessary to fill a few fields:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-2.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-2.png"></a></p>
+<h2 id="create-tax-report_1">Create Tax Report</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Accounting</code> &gt; <code>Analysis Tools</code> &gt; <code>Create Tax Report</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report.png" data-desc-position="bottom"><img alt="Create Tax Report" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report.png"></a></p>
+<p>Use this form to run a previously configured Tax Report for a specific organization and date range. Fill in the following fields:</p>
 <ul>
-<li><strong>From Date:</strong> Starting Date of the Report.</li>
-<li><strong>To Date:</strong> Last Date of the Report.</li>
-<li><strong>Tax Report:</strong> In this list, all the Tax Reports created will appear to be chosen-</li>
-<li><strong>Organization:</strong> Organization for which the Report will be printed.</li>
+<li><strong>From Date:</strong> The first day of the reporting period.</li>
+<li><strong>To Date:</strong> The last day of the reporting period.</li>
+<li><strong>Tax Report:</strong> The report definition to run. The list shows all Tax Report definitions that have the <strong>Report</strong> flag enabled in Tax Report Setup.</li>
+<li><strong>Organization:</strong> The company or branch for which the report is generated. In a multi-organization setup, select the correct legal entity for the tax period being reported.</li>
 </ul>
-<p>Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-3.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report/create-tax-report-3.png"></a></p>
+<p>Once the fields are filled in, click <strong>OK</strong> to generate the report. The report displays the tax amounts — broken down by the tax lines defined in Tax Report Setup — for the selected date range and organization. Use this output to verify that your tax totals match what you will submit to the tax authorities when settling taxes for the period.</p>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Financial_Management" target="_blank">Financial Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
