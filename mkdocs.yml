@@ -301,7 +301,6 @@ plugins:
                         - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
                         - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
                         - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
-                        - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
                       - Setup:
                         - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
                         - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
@@ -1090,7 +1089,6 @@ plugins:
             Task Management for Supervisors: Gestión de Tareas para Supervisores
             Tax Category: Categoría de Impuesto
             Tax Payment: Pago de impuestos
-            Tax Report Setup: Informes de impuestos
             Trial Balance: Balance sumas y saldos
             Tax Rate: Rango impuesto
             Tax Report Launcher: Lanzador de Informes Fiscales
@@ -1361,7 +1359,6 @@ nav:
               - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
               - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
               - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
-              - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
             - Setup:
               - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
               - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
