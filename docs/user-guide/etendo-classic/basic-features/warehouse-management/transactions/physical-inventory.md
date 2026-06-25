@@ -23,7 +23,7 @@ Create an inventory count to check or update stock quantities.
 
 Fill in or confirm the fields below before adding products to the count list.
 
-![physical-inventory-1](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-1.png)
+![Header](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-1.png)
 
 All fields are pre-filled automatically when a new record is created.
 
@@ -47,7 +47,7 @@ Available when the document status is **Processed: No**.
 
 The **Create Inventory Count List** process can be executed more than once for the same physical inventory. Lines are created automatically by the process. Update them manually after creation if needed. The **Create Inventory Count List** filter dialog has the following parameters:
 
-![physical-inventory-2](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-2.png)
+![Create Inventory Count List](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-2.png)
 
 Fields to note:
 
@@ -89,7 +89,7 @@ Lines are entered into the physical inventory document in two ways:
 
 The **Lines** tab lets you add or edit individual products in the inventory count list. It represents the count list for a given warehouse.
 
-![physical-inventory-3](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
+![Lines](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
 
 Fields to note:
 
@@ -143,7 +143,7 @@ To correct a physical inventory that has already been processed — for example,
 
 Once the inventory is reactivated, the document status bar shows **Not processed**.
 
-![physical-inventory-4](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-4.png)
+![Reactivating a Physical Inventory](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-4.png)
 
 !!! warning
     It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the storage bin is configured to allow Over Issue — a setting that permits stock levels to go below zero. If you are blocked from reactivating and are unsure whether Over Issue applies to your storage bin, contact your system administrator. For more information, visit [Storage Bin](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).

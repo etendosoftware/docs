@@ -1,5 +1,5 @@
 ---
-title: Physical Inventory
+title: Inventario físico
 tags:
  - Physical Inventory
  - Warehouse Management
@@ -23,7 +23,7 @@ Cree un conteo de inventario para comprobar o actualizar las cantidades de stock
 
 Complete o confirme los campos a continuación antes de añadir productos a la lista de conteo.
 
-![physical-inventory-1](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-1.png)
+![Cabecera](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-1.png)
 
 Todos los campos se rellenan automáticamente cuando se crea un registro nuevo.
 
@@ -47,7 +47,7 @@ Disponible cuando el estado del documento es **Procesado: No**.
 
 El proceso **Crear lista de conteo de inventario** puede ejecutarse más de una vez para el mismo inventario físico. Las líneas se crean automáticamente mediante el proceso. Actualícelas manualmente después de su creación si es necesario. El diálogo de filtros de **Crear lista de conteo de inventario** tiene los siguientes parámetros:
 
-![physical-inventory-2](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-2.png)
+![Crear lista de conteo de inventario](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-2.png)
 
 Campos a tener en cuenta:
 
@@ -89,7 +89,7 @@ Las líneas se introducen en el documento de inventario físico de dos formas:
 
 La solapa **Líneas** permite añadir o editar productos individuales en la lista de conteo de inventario. Representa la lista de conteo de inventario de un almacén determinado.
 
-![physical-inventory-3](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
+![Líneas](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-3.png)
 
 Campos a tener en cuenta:
 
@@ -143,7 +143,7 @@ Para corregir un inventario físico que ya ha sido procesado — por ejemplo, de
 
 Una vez que el inventario se reactiva, la barra de estado del documento muestra **No procesado**.
 
-![physical-inventory-4](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-4.png)
+![Reactivar un inventario físico](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory/physical-inventory-4.png)
 
 !!! warning
     No es posible reactivar documentos que incluyan transacciones con cantidades que excedan la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando el hueco está configurado para permitir Over Issue, una configuración que permite que los niveles de stock bajen por debajo de cero. Si no puede reactivar y no sabe con certeza si Over Issue aplica a su hueco, contacte con su administrador del sistema. Para más información, visite [Hueco](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
