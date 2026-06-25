@@ -82,7 +82,7 @@ En la ventana Tipo de Inventario Referenciado, el módulo añade los tipos de in
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
-En la solapa [Unidad Alternativa](../../../basic-features/master-data-management/master-data/product.md#alternate-uom-tab) de la **ventana Producto**, al habilitar la preferencia **Habilitar la gestión de UDM** se permite a los usuarios asignar *Empaquetar* o *Pallet* como **unidades alternativas de medida**
+En la solapa [Unidad Alternativa](../../../basic-features/master-data-management/master-data/product.md#alternate-uom) de la **ventana Producto**, al habilitar la preferencia **Habilitar la gestión de UDM** se permite a los usuarios asignar *Empaquetar* o *Pallet* como **unidades alternativas de medida**
 
 !!! info
     Se admite el anidamiento de unidades logísticas: los pallets pueden contener cajas, y las cajas pueden contener unidades básicas. Al recibir mercancía, el botón **Create Reference Inventory** en la ventana Recepción de entrada gestiona esta jerarquía automáticamente. Para más detalles, consulte [Create Reference Inventory](../bundles/warehouse-extensions/advanced-warehouse-management.md#available-process).
@@ -98,7 +98,7 @@ Una funcionalidad adicional introducida es una mayor granularidad mediante la po
 
 - **Tipo de unidad logística**: Desplegable vinculado a [Tipo de Inventario Referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type), utilizado al registrar entradas y salidas de mercancía.
 
-### Producto - Stock por unidad logística { #product---stock-by-logistic-unit }
+### Producto - Stock por Unidad Logística { #product-stock-by-logistic-unit }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
