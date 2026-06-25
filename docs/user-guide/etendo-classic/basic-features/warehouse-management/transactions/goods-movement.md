@@ -39,15 +39,14 @@ The header record holds the date, name, and organizational context for the movem
 - **Description:** Optional free-text field for notes about the movement.
 - **Project** *(under Dimensions):* Optional field to associate this movement with a project for accounting and reporting purposes.
 
+## Lines
+
+The **Lines** tab lists every product to move, along with its source location, destination, and quantity.
+
 There are two ways to add lines (products to move between warehouses and storage bins):
 
 1. Add individual products in the **Lines** tab.
 2. Move all items from one bin to another using the [**Move Storage Bin**](#move-a-storage-bin) button.
-
-
-## Lines
-
-The **Lines** tab lists every product to move, along with its source location, destination, and quantity.
 
 ![goods-movement-1](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png)
 
