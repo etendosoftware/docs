@@ -1,17 +1,17 @@
 ---
-title: Cómo crear acciones de manejador de eventos del cliente
+title: Cómo crear acciones de client event handler
 tags:
-  - Guía práctica
-  - Manejador de eventos del cliente
+  - Cómo
+  - Client Event Handler
   - Acciones
   - Etendo Classic
 ---
 
-# Cómo crear acciones de manejador de eventos del cliente { #how-to-create-client-event-handler-actions }
+# Cómo crear acciones de client event handler { #how-to-create-client-event-handler-actions }
 
 ## Descripción general { #overview }
 
-Esta página es una referencia de implementación práctica para la clase `GreetingEventHandler`. Cubre los cuatro métodos clave y proporciona un ejemplo de código consolidado. Para el contexto conceptual — incluyendo el framework Weld, la configuración del classpath, el alcance de la transacción y el filtrado — consulte [Cómo implementar un manejador de eventos de negocio](how-to-implement-a-business-event-handler.md).
+Esta página es una referencia de implementación práctica para la clase `GreetingEventHandler`. Cubre los cuatro métodos clave y proporciona un ejemplo de código consolidado. Para el contexto conceptual — incluyendo el framework Weld, la configuración del classpath, el alcance de la transacción y el filtrado — consulte [Cómo implementar un business event handler](how-to-implement-a-business-event-handler.md).
 
 ## Módulo de ejemplo { #example-module }
 
@@ -19,11 +19,14 @@ Esto se respalda con un módulo de ejemplo que muestra ejemplos del código pres
 
 El código de este módulo se puede descargar desde [este repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
 
+!!!note
+    La lista completa de importaciones Java necesarias está disponible en el [archivo fuente de ejemplo](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
+
 ## Referencia de métodos { #methods-reference }
 
 | Método | Descripción |
 | :--- | :--- |
-| `getObservedEntities()` | Devuelve el array de entidades que este manejador observa; llamado internamente por `isValidEvent`. |
+| `getObservedEntities()` | Devuelve el array de entidades que este event handler observa; llamado internamente por `isValidEvent`. |
 | `onUpdate()` | Se ejecuta cuando se actualiza un registro de una entidad observada. |
 | `onSave()` | Se ejecuta cuando se crea un nuevo registro de una entidad observada. |
 | `onDelete()` | Se ejecuta cuando se elimina un registro de una entidad observada. |

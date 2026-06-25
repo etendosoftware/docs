@@ -32,7 +32,8 @@ In this section, we will implement an event handler on the Greeting entity. When
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
-For a consolidated implementation reference, see [How to Create Client Event Handler Actions](how-to-create-client-event-handler-actions.md).
+!!!note
+    For a consolidated implementation reference, see [How to Create Client Event Handler Actions](how-to-create-client-event-handler-actions.md).
 
 ##  Example Module
 
@@ -88,7 +89,7 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
     * It makes sense to extend the [EntityPersistenceEventObserver](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/event/EntityPersistenceEventObserver.java){target="\_blank"}, it helps to filter for the correct events. 
     * The name of the method is not relevant, the relevant thing is the annotation on the parameter and the parameter. Weld uses this to detect and register for which events this class listens to 
     * The event handler will be called for events occurring on all entities, therefore each method starts with the if statement with isValidEvent, to filter out unwanted events. 
-    * The use of the `_org.apache.logging.log4j.Logger_` class is recommended for logging as shown above 
+    * The use of the `_org.apache.logging.log4j.Logger_` class is recommended for logging as shown above.
 
 !!!info
     Classes extending `_EntityPersistenceEventObserver_` are defined as `_@ApplicationScoped_` by default.
@@ -284,8 +285,7 @@ EntityUpdateEvent event) {
 
 ##  Examples of Business Entity Event Handlers
 
-Etendo Classic uses business entity event handlers to implement business logic in
-various locations, here are some examples:
+Etendo uses business entity event handlers to implement business logic in various locations, here are some examples:
 
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}

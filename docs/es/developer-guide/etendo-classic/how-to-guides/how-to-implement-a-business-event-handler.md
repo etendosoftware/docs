@@ -1,17 +1,17 @@
 ---
-title: Cómo implementar un manejador de eventos de negocio
+title: Cómo implementar un business event handler
 tags:
   - Cómo
-  - Manejador de eventos
+  - Event Handler
   - Lógica de negocio
   - Método de evento
 ---
  
-# Cómo implementar un manejador de eventos de negocio { #how-to-implement-a-business-event-handler }
+# Cómo implementar un business event handler { #how-to-implement-a-business-event-handler }
 
 ## Descripción general { #overview }
 
-El evento de entidad de negocio le permite implementar lógica de negocio que reacciona a eventos específicos que se disparan cuando las entidades se actualizan, eliminan o insertan en la base de datos. 
+Un evento de entidad de negocio es un hook que ejecuta automáticamente su código Java cuando un registro — denominado entidad en el modelo de datos de Etendo — se guarda, actualiza o elimina. Esto le permite aplicar reglas de negocio en Java en lugar de escribir triggers en la base de datos.
 Los eventos de entidad de negocio se corresponden con triggers en la base de datos. 
 La principal ventaja de implementar lógica usando eventos de entidad de negocio en lugar de triggers es que puede programar su lógica en Java usando su IDE. 
 Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y probar en un entorno integrado con el resto de su lógica de negocio.
@@ -19,65 +19,68 @@ Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y 
 !!! note "Algunas notas sobre los eventos de entidad de negocio:"
     * Se disparan cuando una instancia de entidad se actualiza, elimina o inserta. Antes de que la operación real se haya realizado en la base de datos, por lo que puede cambiar o añadir información que persiste junto con la entidad del evento. 
     * Su código de gestión de eventos se ejecuta en la misma transacción que el evento de negocio; los cambios que realice en la base de datos persisten junto con el evento de entidad de negocio en una única transacción. 
-    * Los eventos de entidad de negocio solo funcionan cuando se accede a la base de datos a través de la capa de acceso a datos, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.
-    * Puede hacer uso de toda la funcionalidad de la [capa de acceso a datos](../concepts/data-access-layer.md) en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.
-      
-      Advertencia: no llame a setters en la propia instancia; esto no funciona porque, cuando el evento se ha difundido, Hibernate ya ha leído el estado del objeto. 
-      Por lo tanto, debe cambiar el valor mediante el método especial `setCurrentState`: `event.setCurrentState(greetingTitleProperty, title + ".");`
+    * Los eventos de entidad de negocio solo funcionan cuando se accede a la base de datos a través de la Data Access Layer, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.
+    * Puede hacer uso de toda la funcionalidad de la [Data Access Layer](../concepts/data-access-layer.md) en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.
 
 
-Los eventos de negocio hacen uso del framework de eventos proporcionado por el framework [Weld](../concepts/etendo-architecture.md#Introducing_Weld:_dependency_injection_and_more). Para registrar un manejador de eventos, se utilizan anotaciones. 
+Los eventos de negocio utilizan Weld, el framework de inyección de dependencias de Etendo, para descubrir y registrar automáticamente su clase event handler. No es necesario configurar Weld directamente; las anotaciones en su clase son suficientes. Para más información, consulte [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
 
 !!!note
-    Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte [esta sección](../concepts/etendo-architecture.md#Analyzing_the_classpath) si no se encuentran sus manejadores de eventos.
+    Para maximizar el rendimiento, se excluyen ciertas partes del classpath; consulte [esta sección](../concepts/etendo-architecture.md#analyzing-the-classpath) si no se encuentran sus event handlers.
 
-En esta sección, implementaremos un manejador de eventos sobre la entidad Tratamientos. Cada vez que se guarde un título, se añadirá una traducción al español. Además, imprimiremos algunos mensajes en la consola para otros eventos de negocio.
+En esta sección, implementaremos un event handler sobre la entidad Tratamientos. Cada vez que se guarde un título, se añadirá una traducción al español. Además, imprimiremos algunos mensajes en la consola para otros eventos de negocio.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
-Para una referencia de implementación consolidada, consulte [Cómo crear acciones de manejador de eventos del cliente](how-to-create-client-event-handler-actions.md).
+!!!note
+    Para una referencia de implementación consolidada, consulte [Cómo crear acciones de client event handler](how-to-create-client-event-handler-actions.md).
 
 ## Módulo de ejemplo { #example-module }
 
 Esta sección está respaldada por un módulo de ejemplo que muestra un ejemplo del código mostrado y comentado aquí.
 
 El código del módulo de ejemplo puede descargarse desde este repositorio: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
-  
-## El manejador de eventos: una primera implementación { #the-event-handler---a-first-implementation }
 
-Un manejador de eventos se implementa como una clase Java normal en su módulo. La clave es crear métodos con una anotación en los parámetros. Aquí tiene un primer ejemplo sencillo de un manejador de eventos que escucha eventos sobre la entidad Tratamientos:
+!!!note
+    La lista completa de importaciones Java necesarias está disponible en el [archivo fuente de ejemplo](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}.
+  
+## El event handler: una primera implementación { #the-event-handler---a-first-implementation }
+
+Un event handler se implementa como una clase Java normal en su módulo. La clave es crear métodos con una anotación en los parámetros. Aquí tiene un primer ejemplo sencillo de un event handler que escucha eventos sobre la entidad Tratamientos:
 
     
+!!!warning
+    No llame a setters directamente en la entidad del evento. Cuando el evento se dispara, el framework de persistencia ya ha capturado los valores actuales de los campos del objeto. Llamar a un setter actualiza el objeto Java en memoria, pero Hibernate ya ha capturado los valores de las propiedades en su array de estado interno antes de disparar el evento, por lo que el cambio realizado por el setter se ignora silenciosamente y no se persistirá. Utilice `event.setCurrentState(property, newValue)` en su lugar. Esto se muestra en cada ejemplo de código de esta página.
+
 ```java title="GreetingEventHandler.java"
 class GreetingEventHandler extends EntityPersistenceEventObserver {
   private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
   private static final Logger logger = LogManager.getLogger();
- 
+ 
   @Override
   protected Entity[] getObservedEntities() {
     return entities;
   }
- 
+ 
   public void onUpdate(@Observes EntityUpdateEvent event) {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+    logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
   }
- 
+ 
   public void onSave(@Observes EntityNewEvent event) {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-        + " is being created");
+    logger.info("Greeting {} is being created", event.getTargetInstance().getId());
   }
- 
+ 
   public void onDelete(@Observes EntityDeleteEvent event) {
     if (!isValidEvent(event)) {
       return;
     }
-    logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
+    logger.info("Greeting {} is being deleted", event.getTargetInstance().getId());
   }
 }
 ```
@@ -85,7 +88,7 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
 !!!note
     * Tiene sentido extender [EntityPersistenceEventObserver](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/event/EntityPersistenceEventObserver.java){target="\_blank"}, ya que ayuda a filtrar los eventos correctos. 
     * El nombre del método no es relevante; lo relevante es la anotación en el parámetro y el propio parámetro. Weld utiliza esto para detectar y registrar para qué eventos escucha esta clase. 
-    * El manejador de eventos se llamará para eventos que ocurran en todas las entidades; por lo tanto, cada método comienza con la sentencia if con isValidEvent, para filtrar eventos no deseados. 
+    * El event handler se llamará para eventos que ocurran en todas las entidades; por lo tanto, cada método comienza con la sentencia if con isValidEvent, para filtrar eventos no deseados. 
     * Se recomienda el uso de la clase `_org.apache.logging.log4j.Logger_` para el registro (logging), tal y como se muestra arriba. 
 
 !!!info
@@ -101,60 +104,29 @@ Y realice algunas acciones; debería ver los siguientes mensajes en la consola:
 ```bash
 Greeting FF8081813097E041013097E805F4000F is being updated
 Greeting FF8081813097E041013097E805F4000F is being deleted
-Greeting Mr is being created
-```
-
-### Métodos de evento { #event-methods }
-
-El código fuente anterior ilustra cómo se implementan los métodos de evento:
-     
-```java    
-public void onUpdate(@Observes EntityUpdateEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
-}
- 
-public void onSave(@Observes EntityNewEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-      + " is being created");
-}
- 
-public void onDelete(@Observes EntityDeleteEvent event) {
-  if (!isValidEvent(event)) {
-    return;
-  }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
-}
+Greeting FF8081813097E041013097E805F4000F is being created
 ```
 
 !!!note 
     * Solo necesita implementar un método para el evento que desea escuchar; por lo tanto, si solo necesita escuchar eventos de actualización, entonces implemente únicamente un método con el parámetro @Observes EntityUpdateEvent. 
     * Cada método comienza con una comprobación de si el evento es válido; esto es necesario para filtrar solo los eventos relevantes; consulte la sección siguiente. 
-    * Dentro de los métodos del manejador de eventos, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte [aquí](../concepts/etendo-architecture.md#Event_Classes_and_API) para más información. 
+    * Dentro de los métodos event handler, puede usar la API del objeto event para detectar cuál es el evento de entidad y para acceder al estado actual y al estado previo de la entidad. Consulte [aquí](../concepts/etendo-architecture.md#event-classes-and-api) para más información. 
 
 ### Filtrar solo los eventos relevantes { #filtering-only-relevant-events }
 
-Como se ha mencionado anteriormente, los métodos de evento se llaman para todas las entidades de todos los tipos. 
-En nuestro ejemplo, solo queremos gestionar eventos sobre la entidad Tratamientos.
-Hay código específico en el ejemplo anterior que se encarga de esto. 
-Comienza en la parte superior de la clase:
+Todos los event handlers del sistema reciben eventos de todas las entidades, no solo de aquellas para las que fue escrito. Si omite el filtro, su código se ejecutará en cada inserción, actualización y eliminación en toda la aplicación. La comprobación `isValidEvent` restringe la ejecución a las entidades listadas en `getObservedEntities`.
 
 ```java
 private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
- 
+ 
 @Override
 protected Entity[] getObservedEntities() {
   return entities;
 }
 ```
 
-El método `getObservedEntities` se llama cuando se llama al método `isValidEvent`; `getObservedEntities` devuelve las entidades que desea gestionar en este manejador de eventos. 
-Para hacer uso de ello, añada este código al inicio de cada método de gestión de eventos:
+El método `getObservedEntities` se llama cuando se llama al método `isValidEvent`; `getObservedEntities` devuelve las entidades que desea gestionar en este event handler. 
+Para hacer uso de ello, añada este código al inicio de cada método event handler:
 
 ```java
 if (!isValidEvent(event)) {
@@ -165,16 +137,18 @@ if (!isValidEvent(event)) {
 Esta parte es necesaria porque los métodos de evento se llamarán para entidades de todos los tipos. 
 En este ejemplo, solo queremos escuchar cambios en la entidad Tratamientos.
 
+!!!note
+    `isValidEvent` también devuelve `false` durante las operaciones de importación de datos. Esto es intencional — evita que la lógica de negocio se ejecute sobre datos importados. Si su event handler no se está disparando, compruebe si la operación se está realizando a través de un proceso de importación.
+
 ## Añadir algo de lógica de negocio { #adding-some-business-logic }
 
-En este siguiente paso, añadimos lógica al manejador de eventos:
+En este siguiente paso, añadimos lógica al event handler:
 
   * Cada vez que se cree/actualice un tratamiento, añadir un . al título, si no estaba ya ahí. 
   * Cuando se cree un nuevo tratamiento, añadir una traducción para él. 
 
 !!!note
-    Para crear una nueva traducción cuando se añade un nuevo tratamiento. 
-    Para este ejemplo, añadiremos una traducción al neerlandés.
+    En el siguiente paso se crea automáticamente una traducción al neerlandés cada vez que se inserta un nuevo tratamiento.
     
 
 ### Cambiar la entidad en actualización/inserción { #changing-the-entity-on-updateinsert }
@@ -188,15 +162,15 @@ public void onUpdate(@Observes EntityUpdateEvent event) {
   }
   final Greeting greeting = (Greeting) event.getTargetInstance();
   final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
+  if (title != null && !title.endsWith(".")) {
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
     final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
     // note use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
-  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+  logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
 }
- 
+ 
 public void onSave(@Observes EntityNewEvent event) {
   if (!isValidEvent(event)) {
     return;
@@ -204,19 +178,18 @@ public void onSave(@Observes EntityNewEvent event) {
   final Greeting greeting = (Greeting) event.getTargetInstance();
   // now also add the dot to the title
   final String title = greeting.getTitle();
-  if (title != null && !title.endsWith(".")) {
+  if (title != null && !title.endsWith(".")) {
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
     final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
     // note use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
- 
-  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
-      + " is being created");
+ 
+  logger.info("Greeting {} is being created", event.getTargetInstance().getId());
 }
 ```
 
-Repasemos el código. En primer lugar, haga el cast de la instancia y obtenga el título:
+Repasemos el código. En primer lugar, obtenga la entidad y el título:
 
     
 ```java
@@ -227,7 +200,7 @@ final String title = greeting.getTitle();
 Si el título no termina en un punto, entonces obtenga la entidad y la propiedad relevante:
 
 ```java
-if (title != null && !title.endsWith(".")) {
+if (title != null && !title.endsWith(".")) {
   final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
   final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
 ```
@@ -244,7 +217,7 @@ Y, a continuación, establezca el estado actual.
 event.setCurrentState(greetingTitleProperty, title + ".");
 ```
 
-La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la [capa de acceso a datos](../concepts/data-access-layer.md) y Hibernate automáticamente.
+La instancia de entidad modificada no necesita guardarse explícitamente; esto lo realiza la [Data Access Layer](../concepts/data-access-layer.md) y Hibernate automáticamente.
 
 A continuación, pruebe los cambios: vaya a la ventana ([http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)) e introduzca un nuevo tratamiento sin punto en el título. 
 Al guardar, verá que se añade un punto. 
@@ -265,7 +238,7 @@ greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
 greetingTrl.setName(greeting.getName());
 greetingTrl.setTitle(greeting.getTitle());
 greetingTrl.setTranslation(false);
- 
+ 
 // and add the greetingTrl to the greeting
 // we don't use event.setCurrentState as we get the list and add to it
 // get the trl property for the greeting entity
@@ -274,46 +247,14 @@ final Property greetingTrlProperty = greetingEntity
 @SuppressWarnings("unchecked")
 final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
 greetingTrls.add(greetingTrl);
- 
+ 
 // don't need to save the greetingTrl, it is saved as the child of the greeting
 // OBDal.getInstance().save(greetingTrl);
 ```
 
+Un objeto `GreetingTrl` es un registro hijo de traducción vinculado a un `Greeting` padre. Etendo utiliza el sufijo `Trl` para denominar las tablas de traducción en todo el modelo de datos.
 
-Repasemos el código. Primero se crea el objeto trl y se establecen algunas propiedades. 
-Tenga en cuenta que, como el objeto no forma parte del evento, puede llamar a sus setters directamente. 
-El idioma se elige de forma arbitraria. 
-Consulte el documento [DAL](../concepts/data-access-layer.md) para obtener información sobre las API que puede usar para recuperar objetos de la base de datos.
-
-```java
-final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
-// set relevant translation properties
-greetingTrl.setGreeting(greeting);
-// 171 is dutch, choose any other language..
-greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
-// note we can call getters on the targetInstance, but not setters!
-greetingTrl.setName(greeting.getName());
-greetingTrl.setTitle(greeting.getTitle());
-greetingTrl.setTranslation(false);
-```
-
-Después, como siguiente paso, añada el nuevo objeto trl a la entidad del evento. Esto es un poco
-especial, ya que necesitamos actualizar una propiedad de tipo List de la entidad del evento. Por lo tanto, en lugar
-de llamar a `setCurrentState`, obtenemos la lista y añadimos el elemento. Esta es una forma correcta de hacerlo:
-
-```java
-// and add the greetingTrl to the greeting
-// we don't use event.setCurrentState as we get the list and add to it
-// get the trl property for the greeting entity
-final Property greetingTrlProperty = greetingEntity
-    .getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
-@SuppressWarnings("unchecked")
-final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
-greetingTrls.add(greetingTrl);
- 
-// don't need to save the greetingTrl, it is saved as the child of the greeting
-// OBDal.getInstance().save(greetingTrl);
-```
+Tenga en cuenta que la propiedad de lista se recupera con `getCurrentState` y se le añaden elementos directamente, en lugar de reemplazarla con `setCurrentState`. Esto se debe a que añadir elementos a una lista existente no requiere reemplazar el valor completo de la propiedad.
 
 El objeto trl es hijo de la entidad del evento Tratamientos y persistirá junto con ella, por lo que no es necesario guardarlo explícitamente.
 Cuando ahora introduzca una nueva entrada en la ventana, verá que se crea un registro hijo adicional de traducción.
@@ -322,7 +263,7 @@ Cuando ahora introduzca una nueva entrada en la ventana, verá que se crea un re
 
 ### Interrumpir la acción de guardado { #interrupt-the-save-action }
 
-A veces necesita interrumpir la acción de guardado porque el usuario está haciendo algo incorrecto; esto puede hacerse lanzando una excepción.
+A veces necesita interrumpir la acción de guardado porque el usuario está haciendo algo incorrecto. Esto puede hacerse lanzando una `OBException`. Al hacerlo, Etendo muestra el mensaje de la excepción al usuario como un diálogo de error y revierte la transacción completa, incluidos los cambios que el event handler ya hubiera realizado.
 
 ```java
 public void onUpdate(@Observes
@@ -331,7 +272,7 @@ EntityUpdateEvent event) {
     return;
   }
   final OBSA_Orderline_Assign olineAssign = (OBSA_Orderline_Assign) event.getTargetInstance();
-  if (olineAssign.getProductWithStorage().getProduct() != olineAssign.getSalesOrderLine()
+  if (olineAssign.getProductWithStorage().getProduct() != olineAssign.getSalesOrderLine()
       .getProduct()) {
     String language = OBContext.getOBContext().getLanguage().getLanguage();
     ConnectionProvider conn = new DalConnectionProvider(false);
@@ -340,15 +281,15 @@ EntityUpdateEvent event) {
 }
 ```
 
-## Ejemplos de manejadores de eventos de entidad de negocio { #examples-of-business-entity-event-handlers }
+## Ejemplos de business entity event handlers { #examples-of-business-entity-event-handlers }
 
-Etendo Classic utiliza manejadores de eventos de entidad de negocio para implementar lógica de negocio en
+Etendo Classic utiliza business entity event handlers para implementar lógica de negocio en
 varias ubicaciones; aquí tiene algunos ejemplos:
 
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
 
-El código fuente completo del manejador de eventos de ejemplo está disponible aquí: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+El código fuente completo del event handler de ejemplo está disponible aquí: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
 ---
 

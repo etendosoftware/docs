@@ -4,7 +4,7 @@ tags:
   - How to
   - Client Event Handler
   - Actions
-  - Etendo Classic
+  - Etendo
 ---
 
 # How to Create Client Event Handler Actions
