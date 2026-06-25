@@ -24,7 +24,6 @@ theme:
   favicon: images/favicon.png
   features:
     - navigation.tabs
-    - navigation.instant
     - navigation.path
     - navigation.sections
     - navigation.top
