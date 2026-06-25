@@ -2891,6 +2891,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-record-a-goods-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Record a Goods Movement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -17099,6 +17117,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-record-a-goods-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Record a Goods Movement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -17233,67 +17269,74 @@
 
 
 <h1 id="goods-movement">Goods Movement</h1>
+<h2 id="overview">Overview</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Movement</code></p>
-<p>Goods Movement window allows the user to make internal inventory movements among warehouses and storage bins.</p>
+<p>The <strong>Goods Movement</strong> window records and processes internal inventory movements between warehouses and storage bins (specific locations within a warehouse, such as a shelf or rack position — see <a href="../../setup/#warehouse-and-storage-bins">Warehouse and Storage Bins</a>). Use it to transfer products from one location to another and keep stock levels accurate across all warehouses. For an introduction to the recommended warehouse workflow, see <a href="../../getting-started/">Getting Started</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yW4Bv6bORk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2 id="header">Header</h2>
-<p>Internal inventory movements can be made by adding products to the lines tab or by moving all items at once.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png" data-desc-position="bottom"><img alt="Header" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png"></a></p>
-<p>All fields are automatically pre-filled in when a <strong>new</strong> record is created. Some of them to note:</p>
-<ul>
-<li><strong>Name:</strong> This field will be used to reference this goods movement, not only in warehouse reports but also in the general ledger, therefore it is important to use a significant name.<br>
-  This field is defaulted to the current date but it can always be changed as required.</li>
-<li><strong>Movement Date:</strong> that is the date of the goods movement transaction.<br>
-  This field is defaulted to the current date but it can always be changed as required.<br>
-  From an accounting point of view, goods movement will be reflected on this date.</li>
-</ul>
-<p>As already mentioned, there are 2 ways of entering lines (or products to be moved between warehouses and storage bins):</p>
+<h2 id="how-to-record-a-goods-movement">How to Record a Goods Movement</h2>
 <ol>
-<li>By adding individual products to the Lines tab.</li>
-<li>By moving all items from one bin (<strong>Storage Bin From</strong>) to another (<strong>Storage Bin To</strong>) by using the <strong>Move Storage Bin</strong> button.<br>
-    The system automatically inserts one line per every storage bin and product.</li>
+<li>Go to <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Movement</code>.</li>
+<li>Click <strong>New</strong> to create a record. The <strong>Name</strong> and <strong>Movement Date</strong> fields fill in automatically — update them if needed.</li>
+<li>Add the products to move. You have two options:<ul>
+<li><strong>One product at a time:</strong> go to the <strong>Lines</strong> tab, click <strong>New</strong>, and fill in the product, quantity, source <strong>Storage Bin</strong>, and <strong>New Storage Bin</strong> (destination).</li>
+<li><strong>All products from one bin at once:</strong> click <strong>Move Storage Bin</strong>, select the source and destination bins, and confirm. The system adds one line per product automatically.</li>
+</ul>
+</li>
+<li>Review the lines to confirm quantities and locations are correct.</li>
+<li>Click <strong>Process Movement</strong>. Stock levels update immediately.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-2.png" data-desc-position="bottom"><img alt="Header" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-2.png"></a></p>
+<h2 id="header">Header</h2>
+<p>The header record holds the date, name, and organizational context for the movement. All fields are pre-filled when a new record is created.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png" data-desc-position="bottom"><img alt="goods-movement-3" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png"></a></p>
+<ul>
+<li><strong>Organization:</strong> The organization this goods movement belongs to. Pre-filled based on the user session.</li>
+<li><strong>Name:</strong> The reference name for this goods movement. It appears in warehouse reports and in the general ledger, so use a meaningful name. Defaults to the current date.</li>
+<li><strong>Movement Date:</strong> The date of the transfer. Defaults to today's date. This is the date the movement appears in your accounting records — confirm it is correct before processing.</li>
+<li><strong>Description:</strong> Optional free-text field for notes about the movement.</li>
+<li><strong>Project</strong> <em>(under Dimensions):</em> Optional field to associate this movement with a project for accounting and reporting purposes.</li>
+</ul>
 <h2 id="lines">Lines</h2>
-<p>Lines tab is a list of the products moved between warehouses and storage bins.</p>
-<p>This tab also includes information about the source, destination and the respective quantity.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png" data-desc-position="bottom"><img alt="Lines" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png"></a></p>
+<p>The <strong>Lines</strong> tab lists every product to move, along with its source location, destination, and quantity.</p>
+<p>There are two ways to add lines (products to move between warehouses and storage bins):</p>
+<ol>
+<li>Add individual products in the <strong>Lines</strong> tab.</li>
+<li>Move all items from one bin to another using the <a href="#move-a-storage-bin"><strong>Move Storage Bin</strong></a> button.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png" data-desc-position="bottom"><img alt="goods-movement-1" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png"></a></p>
 <p>Some fields to note:</p>
 <ul>
-<li><strong>Movement Quantity:</strong> that is the product amount to be moved.<br>
-  Defaulted to the total quantity of the <strong>Product</strong> in the Storage Bin.</li>
-<li><strong>Storage Bin:</strong> that is the bin products are taken from.<br>
-  Defaulted to the Storage Bin selected in the <strong>Product</strong> selector.</li>
-<li><strong>New Storage Bin:</strong> that is the destination bin for the products.</li>
-<li><strong>New Attribute Set Instance:</strong> A read-only field that appears only when this goods movement is part of a box or unbox operation (see <a href="../referenced-inventory/">Referenced Inventory</a>). It displays the updated item identifier — including the container reference — after the boxing or unboxing is complete.</li>
+<li><strong>Product:</strong> The item to move. Selecting a product automatically fills in the <strong>Storage Bin</strong> and <strong>Movement Quantity</strong> fields with the current stock data.</li>
+<li><strong>Movement Quantity:</strong> The amount to move. Defaults to the total quantity of the product in the selected <strong>Storage Bin</strong>.</li>
+<li><strong>Storage Bin:</strong> The location the products are taken from. Pre-filled based on the product selected. Change it if needed.</li>
+<li><strong>New Storage Bin:</strong> The destination bin for the products.</li>
+<li><strong>New Attribute Set Instance:</strong> You do not need to fill in this field — it updates automatically. It appears only when your warehouse uses container-tracking features (see <a href="../referenced-inventory/">Referenced Inventory</a>).</li>
 </ul>
-<p>Once <strong>Process Movements</strong> process is executed, the stock is updated.</p>
+<p>To review the history of product movements, see <a href="../../analysis-tools/product-movements-report/">Product Movements Report</a>.</p>
 <h2 id="buttons">Buttons</h2>
 <h3 id="move-a-storage-bin">Move a Storage Bin</h3>
-<p>This button allows you to quickly transfer all products located in a Storage Bin A to another destination Storage Bin B.
-When you click it, the system automatically displays a list of products from the selected source location in the lines.
-When processing the transfer, all products are transferred from the source to the destination.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png" data-desc-position="bottom"><img alt="Move Storage Bin popup showing the source and destination bin selectors" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png"></a></p>
+<p>Use this button to move all products from one storage bin to another in a single action. When clicked, the system fills the <strong>Lines</strong> tab with every product found in the source bin. When <strong>Process Movement</strong> is clicked, the system moves all those products to the destination bin.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png" data-desc-position="bottom"><img alt="goods-movement-4" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png"></a></p>
 <h3 id="generate-relocation-task">Generate Relocation Task</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E" target="_blank"><em>Warehouse Extensions Bundle</em></a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/">Warehouse Extensions - Release notes</a>.</p>
+<p>To include this functionality, the Warehouse Extensions Bundle must be installed. Follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E" target="_blank"><em>Warehouse Extensions Bundle</em></a>. For more information about available versions, core compatibility, and new features, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/">Warehouse Extensions - Release notes</a>.</p>
 </div>
-<p>Allows you to create a relocation task from the <strong>Goods Movement</strong> document. The system takes the information loaded in the record and its lines and sends it to Etendo Mobile, where the operator can execute the movement from the corresponding sub-application. When pressed, the automatic or manual assignment pop-up opens.</p>
+<p>Creates a relocation task from the <strong>Goods Movement</strong> document. The system reads the record and its lines and sends the movement data to Etendo Mobile. From there, a warehouse operator carries out the physical movement using the corresponding mobile application. When clicked, the automatic or manual assignment pop-up opens.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="../../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#relocation-tasks">Relocation Task</a></p>
+<p>For more information, visit <a href="../../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#relocation-tasks">Relocation Task</a>.</p>
 </div>
 <h3 id="process-movement">Process Movement</h3>
-<p>This button processes the Goods Movement document. When executed, the system validates the movement information and updates the stock in the corresponding locations.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png" data-desc-position="bottom"><img alt="Process Movement button confirmation dialog in the Goods Movement window" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png"></a></p>
+<p>This button processes the <strong>Goods Movement</strong> document. The system validates the movement information and updates the stock in the corresponding locations.</p>
+<p>To verify the resulting stock levels, see <a href="../../analysis-tools/stock-report/">Stock Report</a> or <a href="../../analysis-tools/material-transaction-report/">Material Transaction Report</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png" data-desc-position="bottom"><img alt="goods-movement-5" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png"></a></p>
 <h2 id="accounting">Accounting</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Before a Goods Movement can be posted to the ledger, it must be enabled in the general ledger configuration. If the Post button is unavailable, contact your system administrator and ask them to activate the Goods Movement table in the Active Tables tab of the organization's general ledger configuration.</p>
+<p>Before a Goods Movement can be posted to the ledger, it must be enabled in the general ledger configuration. If the <strong>Post</strong> button is unavailable, contact your system administrator and ask them to activate the <strong>Goods Movement</strong> table in the <strong>Active Tables</strong> tab of the organization's general ledger configuration.</p>
 </div>
-<p>Goods Movement posting creates following accounting entries.</p>
+<p>Goods Movement posting creates the following accounting entries.</p>
 <p>Posting record date: Movement Date.</p>
 <table>
 <thead>
@@ -17325,31 +17368,34 @@ When processing the transfer, all products are transferred from the source to th
 </tr>
 </tbody>
 </table>
-<p>Posting a <em>Goods Movement</em> implies to have its cost calculated:</p>
-<ul>
-<li>A validated Costing Rule in the <em>Goods Movement</em> legal entity is required.</li>
-<li>The background process Costing Background Process must be run.</li>
-<li>Once the cost has been calculated, the Goods Movement can be posted.</li>
-</ul>
+<p>Posting requires two things to be set up by your system administrator:</p>
+<ol>
+<li>A costing rule has been configured and approved for your company. See <a href="../../setup/#costing-rules">Costing Rule</a>.</li>
+<li>The system's automated cost calculation has run since the movement was saved. See <a href="../../../general-setup/process-scheduling/process-request/#costing">Costing Background Process</a>.</li>
+</ol>
+<p>If posting fails, contact your system administrator to confirm these are in place.</p>
+<p>Once both conditions are met, the Goods Movement can be posted.</p>
+<p>To review stock levels as of a specific date, see <a href="../../analysis-tools/stock-history/">Stock History</a>.</p>
 <h2 id="how-to-reactivate-goods-movements">How to Reactivate Goods Movements</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a>.</p>
+<p>To include this functionality, the Warehouse Extensions Bundle must be installed. Follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a>.</p>
 </div>
-<p>From the Goods Movement window, the user is able to reactivate a previously generated movement just by selecting the needed movement and clicking the Reactivate button.</p>
-<p>Once the movement is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png" data-desc-position="bottom"><img alt="Goods Movement document showing Not processed status after reactivation" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png"></a></p>
+<p>To correct a goods movement that has already been processed — for example, after an error is detected in the transferred quantities — reactivate it to make changes. From the <strong>Goods Movement</strong> window, select the corresponding document and click <strong>Reactivate</strong>.</p>
+<p>Once the movement is successfully reactivated, the document status bar shows <em>Not processed</em>, confirming the reactivation was successful.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png" data-desc-position="bottom"><img alt="goods-movement-6" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit <a href="../../setup/#storage-bin">Storage Bin</a>.</p>
+<p>It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a product in a given storage bin. The only exception is when the storage bin is configured to allow shipments that exceed available stock (known as Over Issue). This setting is configured by your system administrator. For more information, visit <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/">Inventory Status</a>.</p>
 </div>
+<p>Reactivating a processed movement may affect cost calculations. See <a href="../cost-adjustment/">Cost Adjustment</a> for more information.</p>
 <h2 id="bulk-posting">Bulk Posting</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+<p>To include this functionality, the Financial Extensions Bundle must be installed. Follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
-<p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the <strong>Bulk posting</strong> button.</p>
-<p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
+<p>Use this option when you need to post a large number of movements to the accounting ledger in a single step, instead of processing each one individually.</p>
+<p>Select the corresponding records and click <strong>Bulk posting</strong>. The accounting status of each record is shown in the status bar in form view, or in a column in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information, visit <a href="../../../../optional-features/bundles/financial-extensions/bulk-posting/">the Bulk Posting module user guide</a>.</p>
@@ -17576,7 +17622,7 @@ When processing the transfer, all products are transferred from the source to th
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
   

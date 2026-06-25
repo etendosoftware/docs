@@ -2891,6 +2891,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-record-a-goods-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo registrar un movimiento entre almacenes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
@@ -2939,7 +2957,7 @@
           <li class="md-nav__item">
   <a href="#process-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      Procesar movimiento
+      Procesar movimientos
     </span>
   </a>
   
@@ -2971,7 +2989,7 @@
         <li class="md-nav__item">
   <a href="#bulk-posting" class="md-nav__link">
     <span class="md-ellipsis">
-      Contabilización masiva
+      Contabilización Masiva
     </span>
   </a>
   
@@ -17428,6 +17446,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-record-a-goods-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo registrar un movimiento entre almacenes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Cabecera
@@ -17476,7 +17512,7 @@
           <li class="md-nav__item">
   <a href="#process-movement" class="md-nav__link">
     <span class="md-ellipsis">
-      Procesar movimiento
+      Procesar movimientos
     </span>
   </a>
   
@@ -17508,7 +17544,7 @@
         <li class="md-nav__item">
   <a href="#bulk-posting" class="md-nav__link">
     <span class="md-ellipsis">
-      Contabilización masiva
+      Contabilización Masiva
     </span>
   </a>
   
@@ -17533,25 +17569,25 @@
       
       
       
-        <span class="md-tag">Goods Movement</span>
+        <span class="md-tag">Gestión de Almacén</span>
       
     
       
       
       
-        <span class="md-tag">Inventory</span>
+        <span class="md-tag">Inventario</span>
       
     
       
       
       
-        <span class="md-tag">Transactions</span>
+        <span class="md-tag">Movimiento entre almacenes</span>
       
     
       
       
       
-        <span class="md-tag">Warehouse Management</span>
+        <span class="md-tag">Transacciones</span>
       
     
   </nav>
@@ -17562,67 +17598,74 @@
 
 
 <h1 id="goods-movement">Movimiento entre almacenes</h1>
+<h2 id="overview">Descripción general</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Transacciones</code> &gt; <code>Movimiento entre almacenes</code></p>
-<p>La ventana Movimiento entre almacenes permite al usuario realizar movimientos internos de inventario entre almacenes y huecos.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yW4Bv6bORk0" title="reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>La ventana <strong>Movimiento entre almacenes</strong> registra y procesa movimientos internos de inventario entre almacenes y huecos (ubicaciones específicas dentro de un almacén, como la posición de una estantería o un rack — véase <a href="../../setup/#warehouse-and-storage-bins">Almacén y huecos</a>). Úsela para transferir productos de una ubicación a otra y mantener los niveles de stock precisos en todos los almacenes. Para una introducción al flujo de trabajo de almacén recomendado, véase <a href="../../getting-started/">Primeros pasos</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yW4Bv6bORk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2 id="header">Cabecera</h2>
-<p>Los movimientos internos de inventario pueden realizarse añadiendo productos en la solapa Líneas o moviendo todos los artículos a la vez.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png" data-desc-position="bottom"><img alt="Cabecera" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png"></a></p>
-<p>Todos los campos se rellenan automáticamente al crear un registro <strong>nuevo</strong>. Algunos a tener en cuenta:</p>
-<ul>
-<li><strong>Nombre:</strong> este campo se utilizará para referenciar este movimiento entre almacenes, no solo en los informes de almacén sino también en el libro mayor; por lo tanto, es importante utilizar un nombre significativo.<br>
-  Este campo toma por defecto la fecha actual, pero siempre puede modificarse según sea necesario.</li>
-<li><strong>Fecha del movimiento:</strong> es la fecha de la transacción del movimiento entre almacenes.<br>
-  Este campo toma por defecto la fecha actual, pero siempre puede modificarse según sea necesario.<br>
-  Desde el punto de vista contable, el movimiento entre almacenes se reflejará en esta fecha.</li>
-</ul>
-<p>Como ya se ha mencionado, existen 2 formas de introducir líneas (o productos a mover entre almacenes y huecos):</p>
+<h2 id="how-to-record-a-goods-movement">Cómo registrar un movimiento entre almacenes</h2>
 <ol>
-<li>Añadiendo productos individuales en la solapa Líneas.</li>
-<li>Moviendo todos los artículos de un hueco (<strong>Hueco origen</strong>) a otro (<strong>Hueco destino</strong>) mediante el botón <strong>Mover un hueco entero</strong>.<br>
-    El sistema inserta automáticamente una línea por cada hueco y producto.</li>
+<li>Vaya a <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Transacciones</code> &gt; <code>Movimiento entre almacenes</code>.</li>
+<li>Haga clic en <strong>Nuevo</strong> para crear un registro. Los campos <strong>Nombre</strong> y <strong>Fecha del movimiento</strong> se completan automáticamente — actualícelos si es necesario.</li>
+<li>Agregue los productos a mover. Dispone de dos opciones:<ul>
+<li><strong>Un producto a la vez:</strong> vaya a la pestaña <strong>Líneas</strong>, haga clic en <strong>Nuevo</strong> y complete el producto, la cantidad, el <strong>Hueco</strong> de origen y el <strong>Movido a</strong> (destino).</li>
+<li><strong>Todos los productos de un hueco a la vez:</strong> haga clic en <strong>Mover un hueco entero</strong>, seleccione los huecos de origen y destino y confirme. El sistema agrega una línea por producto de forma automática.</li>
+</ul>
+</li>
+<li>Revise las líneas para confirmar que las cantidades y ubicaciones son correctas.</li>
+<li>Haga clic en <strong>Procesar movimientos</strong>. Los niveles de stock se actualizan de inmediato.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-2.png" data-desc-position="bottom"><img alt="Cabecera" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-2.png"></a></p>
+<h2 id="header">Cabecera</h2>
+<p>El registro de cabecera contiene la fecha, el nombre y el contexto organizativo del movimiento. Todos los campos se completan previamente al crear un nuevo registro.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png" data-desc-position="bottom"><img alt="goods-movement-3" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png"></a></p>
+<ul>
+<li><strong>Organización:</strong> La organización a la que pertenece este movimiento entre almacenes. Se completa previamente según la sesión del usuario.</li>
+<li><strong>Nombre:</strong> El nombre de referencia de este movimiento entre almacenes. Aparece en los informes de almacén y en el libro mayor, por lo que se recomienda usar un nombre descriptivo. Por defecto, toma la fecha actual.</li>
+<li><strong>Fecha del movimiento:</strong> La fecha de la transferencia. Por defecto, es la fecha de hoy. Esta es la fecha con la que el movimiento aparece en los registros contables — confirme que es correcta antes de procesar.</li>
+<li><strong>Descripción:</strong> Campo de texto libre opcional para notas sobre el movimiento.</li>
+<li><strong>Proyecto</strong> <em>(bajo Dimensiones):</em> Campo opcional para asociar este movimiento con un proyecto a efectos contables y de reporte.</li>
+</ul>
 <h2 id="lines">Líneas</h2>
-<p>La solapa Líneas es una lista de los productos movidos entre almacenes y huecos.</p>
-<p>Esta solapa también incluye información sobre el origen, el destino y la cantidad correspondiente.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png" data-desc-position="bottom"><img alt="Líneas" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png"></a></p>
+<p>La pestaña <strong>Líneas</strong> lista todos los productos a mover, junto con su ubicación de origen, destino y cantidad.</p>
+<p>Existen dos formas de agregar líneas (productos a mover entre almacenes y huecos):</p>
+<ol>
+<li>Agregar productos individuales en la pestaña <strong>Líneas</strong>.</li>
+<li>Mover todos los artículos de un hueco a otro mediante el botón <a href="#move-a-storage-bin"><strong>Mover un hueco entero</strong></a>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png" data-desc-position="bottom"><img alt="goods-movement-1" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png"></a></p>
 <p>Algunos campos a tener en cuenta:</p>
 <ul>
-<li><strong>Cant. movida:</strong> es la cantidad de producto a mover.<br>
-  Por defecto, toma la cantidad total del <strong>Producto</strong> en el Hueco.</li>
-<li><strong>Hueco:</strong> es el hueco del que se retiran los productos.<br>
-  Por defecto, toma el Hueco seleccionado en el selector de <strong>Producto</strong>.</li>
-<li><strong>Movido a:</strong> es el hueco de destino de los productos.</li>
-<li><strong>Nuevo Valor atributos:</strong> campo de solo lectura que solo es visible para transacciones de empaquetado/desempaquetado relacionadas con <em>Inventario Referenciado</em>. Muestra el nuevo valor de atributos tras realizarse el proceso de empaquetado/desempaquetado.</li>
+<li><strong>Producto:</strong> El artículo a mover. Al seleccionar un producto, se completan automáticamente los campos <strong>Hueco</strong> y <strong>Cant. movida</strong> con los datos de stock actuales.</li>
+<li><strong>Cant. movida:</strong> La cantidad a mover. Por defecto, toma la cantidad total del producto en el <strong>Hueco</strong> seleccionado.</li>
+<li><strong>Hueco:</strong> La ubicación desde la que se toman los productos. Se completa previamente según el producto seleccionado. Modifíquelo si es necesario.</li>
+<li><strong>Movido a:</strong> El hueco de destino para los productos.</li>
+<li><strong>Nuevo Valor atributos:</strong> No es necesario completar este campo — se actualiza automáticamente. Aparece únicamente cuando el almacén utiliza funciones de seguimiento de contenedores (véase <a href="../referenced-inventory/">Inventario Referenciado</a>).</li>
 </ul>
-<p>Una vez ejecutado el proceso <strong>Procesar movimientos</strong>, el stock se actualiza.</p>
+<p>Para revisar el historial de movimientos de productos, véase <a href="../../analysis-tools/product-movements-report/">Informe de movimientos de productos</a>.</p>
 <h2 id="buttons">Botones</h2>
 <h3 id="move-a-storage-bin">Mover un hueco entero</h3>
-<p>Este botón le permite transferir rápidamente todos los productos ubicados en un Hueco A a otro Hueco B de destino.<br>
-Al hacer clic, el sistema muestra automáticamente en las líneas una lista de productos de la ubicación de origen seleccionada.<br>
-Al procesar la transferencia, todos los productos se transfieren del origen al destino.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png"></a></p>
+<p>Use este botón para mover todos los productos de un hueco a otro en una sola acción. Al hacer clic, el sistema completa la pestaña <strong>Líneas</strong> con todos los productos encontrados en el hueco de origen. Al hacer clic en <strong>Procesar movimientos</strong>, el sistema mueve todos esos productos al hueco de destino.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png" data-desc-position="bottom"><img alt="goods-movement-4" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png"></a></p>
 <h3 id="generate-relocation-task">Generar tarea de reubicación</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E" target="_blank"><em>Warehouse Extensions Bundle</em></a>. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/">Warehouse Extensions - Notas de la versión</a>.</p>
+<p>Para incluir esta funcionalidad, debe estar instalado el Warehouse Extensions Bundle. Siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E" target="_blank"><em>Warehouse Extensions Bundle</em></a>. Para más información sobre versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/">Warehouse Extensions - Notas de versión</a>.</p>
 </div>
-<p>Permite crear una tarea de reubicación desde el documento <strong>Movimiento entre almacenes</strong>. El sistema toma la información cargada en el registro y sus líneas y la envía a Etendo Mobile, donde el operario puede ejecutar el movimiento desde la subaplicación correspondiente. Al pulsarlo, se abre el pop-up de asignación automática o manual.</p>
+<p>Crea una tarea de reubicación a partir del documento <strong>Movimiento entre almacenes</strong>. El sistema lee el registro y sus líneas y envía los datos del movimiento a Etendo Mobile. Desde allí, un operador de almacén lleva a cabo el movimiento físico utilizando la aplicación móvil correspondiente. Al hacer clic, se abre el pop-up de asignación automática o manual.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para más información, visite <a href="../../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#relocation-tasks">Tarea de reubicación</a></p>
+<p>Para más información, visite <a href="../../../../optional-features/bundles/warehouse-extensions/advanced-warehouse-management/#relocation-tasks">Tarea de reubicación</a>.</p>
 </div>
-<h3 id="process-movement">Procesar movimiento</h3>
-<p>Este botón procesa el documento Movimiento entre almacenes. Al ejecutarlo, el sistema valida la información del movimiento y actualiza el stock en las ubicaciones correspondientes.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png"></a></p>
+<h3 id="process-movement">Procesar movimientos</h3>
+<p>Este botón procesa el documento <strong>Movimiento entre almacenes</strong>. El sistema valida la información del movimiento y actualiza el stock en las ubicaciones correspondientes.</p>
+<p>Para verificar los niveles de stock resultantes, véase <a href="../../analysis-tools/stock-report/">Informe de stock</a> o <a href="../../analysis-tools/material-transaction-report/">Informe de transacciones de materiales</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png" data-desc-position="bottom"><img alt="goods-movement-5" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png"></a></p>
 <h2 id="accounting">Contabilidad</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Un Movimiento entre almacenes puede contabilizarse en el libro mayor si la tabla MaterialMgmtInternalMovement está configurada como Activa en la solapa Tablas activas de la configuración del libro mayor de la organización.</p>
+<p>Antes de que un Movimiento entre almacenes pueda contabilizarse en el libro mayor, debe estar habilitado en la configuración del libro mayor. Si el botón <strong>Contabilizar</strong> no está disponible, contacte con su administrador del sistema y solicítele que active la tabla <strong>Movimiento entre almacenes</strong> en la pestaña <strong>Tablas a contabilizar</strong> de la configuración del libro mayor de la organización.</p>
 </div>
-<p>La contabilización de Movimiento entre almacenes crea los siguientes asientos contables.</p>
+<p>La contabilización del Movimiento entre almacenes genera los siguientes asientos contables.</p>
 <p>Fecha de contabilización del registro: Fecha del movimiento.</p>
 <table>
 <thead>
@@ -17654,34 +17697,37 @@ Al procesar la transferencia, todos los productos se transfieren del origen al d
 </tr>
 </tbody>
 </table>
-<p>La contabilización de un <em>Movimiento entre almacenes</em> implica tener su coste calculado:</p>
-<ul>
-<li>Se requiere una Regla de costes validada en la entidad legal de <em>Movimiento entre almacenes</em>.</li>
-<li>Debe ejecutarse el proceso en segundo plano Proceso en segundo plano de cálculo de costes.</li>
-<li>Una vez calculado el coste, el Movimiento entre almacenes puede contabilizarse.</li>
-</ul>
+<p>La contabilización requiere que su administrador del sistema haya configurado dos aspectos:</p>
+<ol>
+<li>Se ha configurado y aprobado una regla de cálculo de costes para su empresa. Véase <a href="../../setup/#costing-rules">Regla de cálculo de costes</a>.</li>
+<li>El proceso automatizado de cálculo de costes del sistema se ha ejecutado desde que se guardó el movimiento. Véase <a href="../../../general-setup/process-scheduling/process-request/#costing">Proceso en segundo plano de cálculo de costes</a>.</li>
+</ol>
+<p>Si la contabilización falla, contacte con su administrador del sistema para confirmar que ambos aspectos están configurados.</p>
+<p>Una vez cumplidas ambas condiciones, el Movimiento entre almacenes puede contabilizarse.</p>
+<p>Para revisar los niveles de stock a una fecha determinada, véase <a href="../../analysis-tools/stock-history/">Historial de stock</a>.</p>
 <h2 id="how-to-reactivate-goods-movements">Cómo reactivar movimientos entre almacenes</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a></p>
+<p>Para incluir esta funcionalidad, debe estar instalado el Warehouse Extensions Bundle. Siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a>.</p>
 </div>
-<p>Desde la ventana Movimiento entre almacenes, el usuario puede reactivar un movimiento generado previamente simplemente seleccionando el movimiento necesario y haciendo clic en el botón Reactivar.</p>
-<p>Una vez que el movimiento se reactiva correctamente, el estado del documento cambia a No procesado, tal y como puede observarse en la barra de estado.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png"></a></p>
+<p>Para corregir un movimiento entre almacenes que ya ha sido procesado — por ejemplo, tras detectar un error en las cantidades transferidas — reactívelo para realizar cambios. Desde la ventana <strong>Movimiento entre almacenes</strong>, seleccione el documento correspondiente y haga clic en <strong>Reactivar</strong>.</p>
+<p>Una vez que el movimiento se reactiva correctamente, la barra de estado del documento muestra <em>No procesado</em>, confirmando que la reactivación fue exitosa.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png" data-desc-position="bottom"><img alt="goods-movement-6" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un determinado producto en un determinado hueco. La única excepción es cuando la configuración del hueco permite la sobreemisión. Para más información, visite <a href="../../setup/#storage-bin">Hueco</a>.</p>
+<p>No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un producto en un hueco determinado. La única excepción es cuando el hueco está configurado para permitir envíos que superen el stock disponible (conocido como Over Issue). Esta configuración la realiza su administrador del sistema. Para más información, visite <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/">Estado de inventario</a>.</p>
 </div>
-<h2 id="bulk-posting">Contabilización masiva</h2>
+<p>Reactivar un movimiento procesado puede afectar a los cálculos de costes. Véase <a href="../cost-adjustment/">Ajuste de costes</a> para más información.</p>
+<h2 id="bulk-posting">Contabilización Masiva</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para poder incluir esta funcionalidad, debe instalarse el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+<p>Para incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Siga las instrucciones del marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
-<p>La funcionalidad de Contabilización masiva permite al usuario contabilizar o descontabilizar múltiples registros seleccionando los registros correspondientes y haciendo clic en el botón <strong>Contabilización masiva</strong>.</p>
-<p>Además, el Estado contable del/de los registro(s) se muestra en la barra de estado, en vista de formulario, o en una columna, en vista de rejilla.</p>
+<p>Use esta opción cuando necesite contabilizar un gran número de movimientos en el libro mayor en un solo paso, en lugar de procesar cada uno individualmente.</p>
+<p>Seleccione los registros correspondientes y haga clic en <strong>Contabilización Masiva</strong>. El estado contable de cada registro se muestra en la barra de estado en la vista de formulario, o en una columna en la vista de grilla.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para más información, visite <a href="../../../../optional-features/bundles/financial-extensions/bulk-posting/">la guía de usuario del módulo de Contabilización masiva</a>.</p>
+<p>Para más información, visite <a href="../../../../optional-features/bundles/financial-extensions/bulk-posting/">la guía de usuario del módulo de Contabilización Masiva</a>.</p>
 </div>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Gestión de Almacén</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, usada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
@@ -17905,7 +17951,7 @@ Al procesar la transferencia, todos los productos se transfieren del origen al d
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "search.no_results", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
   
