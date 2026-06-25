@@ -102,6 +102,15 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
         # Account for objectID, url, content field names and JSON overhead (~100B)
         RECORD_SIZE_LIMIT = ALGOLIA_RECORD_LIMIT - base_size - 100
 
+        # Guard: if bulky h2/h3/h4 metadata leaves no room, drop those lists and retry
+        if RECORD_SIZE_LIMIT <= 0:
+            base_record = {k: v for k, v in base_record.items() if k not in ('h2', 'h3', 'h4')}
+            slim_size = len(json.dumps(base_record, ensure_ascii=False).encode('utf-8'))
+            RECORD_SIZE_LIMIT = ALGOLIA_RECORD_LIMIT - slim_size - 100
+            if RECORD_SIZE_LIMIT <= 0:
+                logging.warning(f"Skipping record for {base_url}: metadata alone exceeds size limit.")
+                return
+
         if len(content_chunk.encode('utf-8')) <= RECORD_SIZE_LIMIT:
             if content_chunk:
                 record = base_record.copy()
