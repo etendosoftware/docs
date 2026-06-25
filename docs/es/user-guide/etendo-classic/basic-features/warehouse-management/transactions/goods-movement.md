@@ -81,7 +81,7 @@ Utilice este botón para mover todos los productos de un hueco a otro en una sol
 ### Generar tarea de reubicación { #generate-relocation-task }
 
 !!! info
-    Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    Para poder incluir esta funcionalidad, debe instalarse el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 Permite crear una tarea de reubicación desde el documento **Movimiento entre almacenes**. El sistema toma la información cargada en el registro y sus líneas y la envía a Etendo Mobile, donde el operario puede ejecutar el movimiento desde la subaplicación correspondiente. Al pulsarlo, se abre el pop-up de asignación automática o manual.
 
