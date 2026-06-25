@@ -31,7 +31,7 @@ La ventana **Movimiento entre almacenes** registra y procesa movimientos interno
 
 El registro de cabecera contiene la fecha, el nombre y el contexto organizativo del movimiento. Todos los campos se completan previamente al crear un nuevo registro.
 
-![goods-movement-3](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png)
+![goods-movement-3](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-3.png)
 
 - **Organización:** La organización a la que pertenece este movimiento entre almacenes. Se completa previamente según la sesión del usuario.
 - **Nombre:** El nombre de referencia de este movimiento entre almacenes. Aparece en los informes de almacén y en el libro mayor, por lo que se recomienda usar un nombre descriptivo. Por defecto, toma la fecha actual.
@@ -51,7 +51,7 @@ Existen dos formas de agregar líneas (productos a mover entre almacenes y hueco
 2. Mover todos los artículos de un hueco a otro mediante el botón [**Mover un hueco entero**](#move-a-storage-bin).
 
 
-![goods-movement-1](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png)
+![goods-movement-1](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-1.png)
 
 Algunos campos a tener en cuenta:
 
@@ -69,12 +69,12 @@ Para revisar el historial de movimientos de productos, véase [Informe de movimi
 
 Use este botón para mover todos los productos de un hueco a otro en una sola acción. Al hacer clic, el sistema completa la pestaña **Líneas** con todos los productos encontrados en el hueco de origen. Al hacer clic en **Procesar movimientos**, el sistema mueve todos esos productos al hueco de destino.
 
-![goods-movement-4](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png)
+![goods-movement-4](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-4.png)
 
 ### Generar tarea de reubicación { #generate-relocation-task }
 
 !!! info
-    Para incluir esta funcionalidad, debe estar instalado el Warehouse Extensions Bundle. Siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Warehouse Extensions - Notas de versión](../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
+    Para incluir esta funcionalidad, debe estar instalado el Warehouse Extensions Bundle. Siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Warehouse Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 Crea una tarea de reubicación a partir del documento **Movimiento entre almacenes**. El sistema lee el registro y sus líneas y envía los datos del movimiento a Etendo Mobile. Desde allí, un operador de almacén lleva a cabo el movimiento físico utilizando la aplicación móvil correspondiente. Al hacer clic, se abre el pop-up de asignación automática o manual.
 
@@ -87,7 +87,7 @@ Este botón procesa el documento **Movimiento entre almacenes**. El sistema vali
 
 Para verificar los niveles de stock resultantes, véase [Informe de stock](../analysis-tools/stock-report.md) o [Informe de transacciones de materiales](../analysis-tools/material-transaction-report.md).
 
-![goods-movement-5](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png)
+![goods-movement-5](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-5.png)
 
 ## Contabilidad { #accounting }
 
@@ -124,10 +124,10 @@ Para corregir un movimiento entre almacenes que ya ha sido procesado — por eje
 
 Una vez que el movimiento se reactiva correctamente, la barra de estado del documento muestra *No procesado*, confirmando que la reactivación fue exitosa.
 
-![goods-movement-6](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png)
+![goods-movement-6](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement/goods-movement-6.png)
 
 !!! warning
-    No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un producto en un hueco determinado. La única excepción es cuando el hueco está configurado para permitir envíos que superen el stock disponible (conocido como Over Issue). Esta configuración la realiza su administrador del sistema. Para más información, visite [Estado de inventario](../../../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
+    No es posible reactivar documentos que incluyan transacciones con cantidades que superen la cantidad de stock existente para un producto en un hueco determinado. La única excepción es cuando el hueco está configurado para permitir envíos que superen el stock disponible (conocido como Over Issue). Esta configuración la realiza su administrador del sistema. Para más información, visite [Estado de inventario](../../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
 Reactivar un movimiento procesado puede afectar a los cálculos de costes. Véase [Ajuste de costes](cost-adjustment.md) para más información.
 
@@ -141,7 +141,7 @@ Use esta opción cuando necesite contabilizar un gran número de movimientos en 
 Seleccione los registros correspondientes y haga clic en **Contabilización Masiva**. El estado contable de cada registro se muestra en la barra de estado en la vista de formulario, o en una columna en la vista de grilla.
 
 !!! info
-    Para más información, visite [la guía de usuario del módulo de Contabilización Masiva](../../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
+    Para más información, visite [la guía de usuario del módulo de Contabilización Masiva](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
 ---
 
