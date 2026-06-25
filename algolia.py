@@ -71,9 +71,10 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
     base_hierarchy = {f'lvl{i}': title for i, title in enumerate(hierarchy_titles)}
     max_lvl = len(base_hierarchy) - 1
 
-    h2s = re.findall(r'^##\s+(.*)', markdown_content, re.MULTILINE)
-    h3s = re.findall(r'^###\s+(.*)', markdown_content, re.MULTILINE)
-    h4s = re.findall(r'^####\s+(.*)', markdown_content, re.MULTILINE)
+    _strip_anchor = lambda h: re.sub(r'\s*\{[^}]*\}\s*$', '', h).strip()
+    h2s = [_strip_anchor(h) for h in re.findall(r'^##\s+(.*)', markdown_content, re.MULTILINE)]
+    h3s = [_strip_anchor(h) for h in re.findall(r'^###\s+(.*)', markdown_content, re.MULTILINE)]
+    h4s = [_strip_anchor(h) for h in re.findall(r'^####\s+(.*)', markdown_content, re.MULTILINE)]
 
     def add_records_from_content(content_chunk, base_url, hierarchy):
         title_parts = [hierarchy.get(f'lvl{i}') for i in range(7)]
