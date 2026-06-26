@@ -353,7 +353,7 @@ If the product Tax_Category is flagged as **As per BOM**, this tab also provides
 
 ![Bill of Materials tab of the Product window](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
 
-After adding all components, click the **Verify BOM** button on the product record. This validates the BOM structure — confirming that all required components and quantities are correctly entered — and marks the product as ready for use in [Bill of Materials Production](../../../warehouse-management/transactions/bill-of-materials-production.md).
+After adding all components, click the **Verify BOM** button on the product record. This validates the BOM structure — confirming that all required components and quantities are correctly entered — and marks the product as ready for use in [Bill of Materials Production](../../warehouse-management/transactions/bill-of-materials-production.md).
 
 ### Costing Rule
 
