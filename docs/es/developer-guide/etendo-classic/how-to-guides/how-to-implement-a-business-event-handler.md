@@ -11,15 +11,15 @@ tags:
 
 ## Descripción general { #overview }
 
-Un evento de entidad de negocio es un hook que ejecuta automáticamente su código Java cuando un registro — denominado entidad en el modelo de datos de Etendo — se guarda, actualiza o elimina. Esto le permite aplicar reglas de negocio en Java en lugar de escribir triggers en la base de datos.
-Los eventos de entidad de negocio se corresponden con triggers en la base de datos. 
-La principal ventaja de implementar lógica usando eventos de entidad de negocio en lugar de triggers es que puede programar su lógica en Java usando su IDE. 
+Un business event handler es un hook que ejecuta automáticamente su código Java cuando un registro — denominado entidad en el modelo de datos de Etendo — se guarda, actualiza o elimina. Esto le permite aplicar reglas de negocio en Java en lugar de escribir triggers en la base de datos.
+Los business event handlers se corresponden con triggers en la base de datos. 
+La principal ventaja de implementar lógica usando business event handlers en lugar de triggers es que puede programar su lógica en Java usando su IDE. 
 Esto ayuda a la productividad y a la calidad, ya que puede programar, depurar y probar en un entorno integrado con el resto de su lógica de negocio.
 
-!!! note "Algunas notas sobre los eventos de entidad de negocio:"
+!!! note "Algunas notas sobre los business event handlers:"
     * Se disparan cuando una instancia de entidad se actualiza, elimina o inserta. Antes de que la operación real se haya realizado en la base de datos, por lo que puede cambiar o añadir información que persiste junto con la entidad del evento. 
-    * Su código de gestión de eventos se ejecuta en la misma transacción que el evento de negocio; los cambios que realice en la base de datos persisten junto con el evento de entidad de negocio en una única transacción. 
-    * Los eventos de entidad de negocio solo funcionan cuando se accede a la base de datos a través de la Data Access Layer, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.
+    * Su código de gestión de eventos se ejecuta en la misma transacción que el evento de negocio; los cambios que realice en la base de datos persisten junto con el business event handler en una única transacción. 
+    * Los business event handlers solo funcionan cuando se accede a la base de datos a través de la Data Access Layer, por lo que no funcionan para ventanas clásicas o llamadas JDBC directas.
     * Puede hacer uso de toda la funcionalidad de la [Data Access Layer](../concepts/data-access-layer.md) en su código de gestión de eventos: puede consultar, crear nuevos objetos, persistir, etc.
 
 
@@ -283,8 +283,7 @@ EntityUpdateEvent event) {
 
 ## Ejemplos de business entity event handlers { #examples-of-business-entity-event-handlers }
 
-Etendo Classic utiliza business entity event handlers para implementar lógica de negocio en
-varias ubicaciones; aquí tiene algunos ejemplos:
+Etendo utiliza business entity event handlers para implementar lógica de negocio en varias ubicaciones; aquí tiene algunos ejemplos:
 
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
