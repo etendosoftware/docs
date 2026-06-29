@@ -532,7 +532,6 @@ plugins:
                   - How to Create and Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services.md
                   - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
                   - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-                  - How to Create Client Event Handler Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
                   - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
                   - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
                   - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
@@ -919,7 +918,6 @@ plugins:
             How to Create and Update Translation Modules: Cómo Crear y Actualizar Módulos de Traducción
             How to Create and Work with Bulk Tasks for Copilot: Cómo Crear y Trabajar con Tareas Masivas para Copilot
             How to Create Build Validations and Module Scripts: Cómo Crear Validaciones de Build y Scripts de Módulo
-            How to Create Client Event Handler Actions: Cómo Crear Acciones de Manejo de Eventos del Cliente
             How to Create Client Side Callout Onchange Function: Cómo Crear una Función Callout Onchange del Lado del Cliente
             How to Create Copilot Tools: Cómo Crear Herramientas de Copilot
             How to Create Jest Test Cases: Cómo Crear Casos de Test con Jest
@@ -1575,7 +1573,6 @@ nav:
         - How to Create and Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-        - How to Create Client Event Handler Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
         - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
         - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
