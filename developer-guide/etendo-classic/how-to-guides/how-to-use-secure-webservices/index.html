@@ -12432,6 +12432,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining a Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Renewal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#secure-web-services-swagger" class="md-nav__link">
     <span class="md-ellipsis">
       Secure Web Services Swagger
@@ -17083,6 +17125,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtaining a Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Token Renewal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#secure-web-services-swagger" class="md-nav__link">
     <span class="md-ellipsis">
       Secure Web Services Swagger
@@ -17122,12 +17206,6 @@
       
       
       
-        <span class="md-tag">Secure Webservices</span>
-      
-    
-      
-      
-      
         <span class="md-tag">Swagger</span>
       
     
@@ -17146,21 +17224,25 @@
 
 <h1 id="how-to-use-secure-web-services">How to Use Secure Web Services</h1>
 <h2 id="overview">Overview</h2>
-<p>This module allows calling any standard <strong>Etendo web service</strong> in the same way as calling the <code>/ws</code> endpoint, but using token authentication.</p>
-<p>This authentication method also allows defining the context for the calls by choosing the role and or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.</p>
-<p>Besides the authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).</p>
+<p>The <strong>Secure Web Services</strong> module provides JWT token authentication for standard Etendo web service calls. All services are exposed under the <code>/sws/</code> path prefix. Authentication flows through <code>/sws/login</code>, and data services such as <code>obRest</code> are available at <code>/sws/com.smf.securewebservices.obRest/</code>. This replaces the session-based <code>/ws</code> endpoint with a secure, token-based alternative (see <a href="../how-to-create-a-new-rest-webservice/">How to Create a New REST Webservice</a> for background on the <code>/ws</code> framework).</p>
+<p>Scope the token to a specific role, organization, and warehouse at login time. Once issued, include the token in the <code>Authorization</code> header of every subsequent request.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Visit the <a href="https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/" target="_blank">Swagger reference</a> for the full flow.</p>
+</div>
+<p>The module also includes developer utilities and additional web services, such as <a href="../../concepts/json-rest-web-services/"><code>jsonDal</code></a>, to access the OB Data Access Layer with JSON.</p>
 <h2 id="setup">Setup</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>A valid domain name and <code>SSL/TLS</code> certificate are required to use <strong>Secure Web Services</strong>. Please install a certificate or contact your administrator to avoid runtime errors when generating tokens in server instances.</p>
+<p>A valid domain name and SSL/TLS certificate are required to use <strong>Secure Web Services</strong>. Install a certificate or contact your administrator to avoid runtime errors when generating tokens on server instances.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>By default, the <strong>ES256 encryption algorithm</strong> is used. To switch to a legacy algorithm, create a preference with the property <code>Encryption Algorithm</code> and set its value to <code>HS256</code>.</p>
+<p>By default, the <strong>ES256</strong> encryption algorithm is used. To switch to a legacy algorithm, create a preference with the property <code>Encryption Algorithm</code> and set its value to <code>HS256</code>.</p>
 </div>
 <h3 id="token-configuration">Token Configuration</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
-<p>In the <strong>Secure Web Service Configuration</strong> tab, the <em>System Administrator</em> can manage the SWS key and configure token expiration.</p>
+<p>In the <strong>Secure Web Service Configuration</strong> tab, the <strong>System Administrator</strong> manages the SWS key and configures token expiration.</p>
 <p>Starting from <strong>Etendo 26.1</strong>, the key is automatically generated during <code>./gradlew install</code> — no manual action is required for new installations. For earlier versions or to rotate the key, use one of the following methods:</p>
 <ol>
 <li>
@@ -17174,14 +17256,157 @@
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Both methods <strong>overwrite the existing SWS key</strong>. All tokens signed with the previous key are immediately invalidated.</p>
+<p>Both methods overwrite the existing SWS key. All tokens signed with the previous key are immediately invalidated.</p>
 </div>
-<p>The <strong>Token expiration</strong> field controls how long tokens remain valid, expressed in <strong>minutes</strong> (<code>0</code> = no expiration).</p>
+<p>The <strong>Token expiration</strong> field controls how long tokens remain valid, expressed in minutes (<code>0</code> = no expiration).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Security recommendation</p>
-<p>Non-expiring tokens pose a risk in production — a compromised token remains valid indefinitely. Set a reasonable expiration time and rotate tokens periodically.</p>
+<p>Non-expiring tokens are a risk in production — a compromised token remains valid indefinitely. Set a reasonable expiration time and rotate tokens periodically.</p>
 </div>
+<h2 id="authentication">Authentication</h2>
+<h3 id="obtaining-a-token">Obtaining a Token</h3>
+<p>The <code>/sws/login</code> endpoint issues a JWT token scoped to a specific Etendo context. Include the optional <code>role</code>, <code>organization</code>, and <code>warehouse</code> fields in the request body to restrict the token to a specific context. Omitting them assigns the user's server-side defaults for each field.</p>
+<p>The values for <code>role</code>, <code>organization</code>, and <code>warehouse</code> are internal record IDs (32-character hexadecimal strings) or <code>"0"</code> to use the server-assigned default.</p>
+<p><strong>Query parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>showRoles</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Include the <code>roleList</code> array in the response</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>showOrgs</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Include <code>orgList</code> within each role entry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>showWarehouses</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Include <code>warehouseList</code> within each org entry</td>
+</tr>
+</tbody>
+</table>
+<p>Set these to <code>false</code> to reduce response payload when context discovery is not needed.</p>
+<p><strong>Request body parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>username</code></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Etendo username</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>password</code></td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Etendo password</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>role</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID of the role to scope the token to</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organization</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID of the organization to scope the token to</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>warehouse</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID of the warehouse to scope the token to</td>
+</tr>
+</tbody>
+</table>
+<p>Replace <code>https://&lt;your-host&gt;</code> with your Etendo instance URL. All paths below are relative to that base.</p>
+<p><strong>Example request — scoped to a specific role and organization</strong></p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="err">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="err">  "username": "admin",</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="err">  "password": "admin",</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="err">  "role": "A97CFB945DC84D5BB0B7EC0CE8571F87",</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="err">  "organization": "2E60544D37534C0B89E765FE29BC0B43"</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="err">}</span>
+</span></code></pre></div>
+<p><strong>Example response</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;"</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"roleList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A97CFB945DC84D5BB0B7EC0CE8571F87"</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sales Representative"</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">"orgList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2E60544D37534C0B89E765FE29BC0B43"</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F&amp;B US, Inc."</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">          </span><span class="nt">"warehouseList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">              </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B2D40D8A5D644DD89E329DC297309055"</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">              </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA East Coast"</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">          </span><span class="p">]</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The <code>roleList</code> in the response lists all roles, organizations, and warehouses available to the user. Use these IDs to request a more narrowly scoped token in a follow-up call.</p>
+<h3 id="using-the-token">Using the Token</h3>
+<p>Include the token in the <code>Authorization</code> header of every API call:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Authorization: Bearer &lt;token&gt;
+</span></code></pre></div>
+<p><strong>Example — fetching products via <code>obRest</code></strong></p>
+<p>The segment after <code>obRest/</code> is the entity name as defined in the Application Dictionary — it matches the <strong>Name</strong> field on the <code>AD_Table</code> record (for example, <code>Product</code>, <code>BusinessPartner</code>, <code>Order</code>). Replace <code>Product</code> with any other entity name to query that dataset. <code>maxResults</code> is a standard pagination parameter that limits the number of records returned.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">GET https://&lt;your-host&gt;/etendo/sws/com.smf.securewebservices.obRest/Product?maxResults=10</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span></code></pre></div>
+<h3 id="token-renewal">Token Renewal</h3>
+<p>To renew a token without re-entering credentials, call <code>/sws/login</code> with the existing token in the <code>Authorization: Bearer</code> header instead of <code>username</code> and <code>password</code>. Do not include <code>username</code> or <code>password</code> in the body when renewing — the server ignores credentials when a valid <code>Authorization: Bearer</code> header is present. The server issues a new token with a refreshed expiration date, maintaining the same context. Include <code>role</code>, <code>organization</code>, or <code>warehouse</code> in the body to change the token scope at renewal time.</p>
+<p><strong>Example renewal request — same scope (empty body)</strong></p>
+<p>Send an empty body to renew the token and keep the existing role, organization, and warehouse scope unchanged.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="err">{}</span>
+</span></code></pre></div>
+<p><strong>Example renewal request — changing scope at renewal time</strong></p>
+<p>Include any combination of <code>role</code>, <code>organization</code>, or <code>warehouse</code> in the body to switch the token scope without re-entering credentials. Omit any field you do not want to change.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="err">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="err">  "role": "B14F5D9A3EC741C2A9F860DE48A3B721",</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="err">  "organization": "2E60544D37534C0B89E765FE29BC0B43"</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="err">}</span>
+</span></code></pre></div>
+<p>Both variants return the same response structure as the initial login: a new <code>token</code> string and, when the <code>showRoles</code> query parameter is <code>true</code>, the full <code>roleList</code> array.</p>
 <h2 id="secure-web-services-swagger">Secure Web Services Swagger</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>

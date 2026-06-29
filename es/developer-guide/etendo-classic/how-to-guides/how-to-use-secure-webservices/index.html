@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-secure-web-services" class="md-skip">
+        <a href="#how-to-use-secure-webservices" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -12788,7 +12788,7 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Visión general
+      Descripción general
     </span>
   </a>
   
@@ -12819,18 +12819,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secure-web-services-swagger" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Swagger de Servicios web seguros
+      Autenticación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtención de un token
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso del token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renovación del token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#this-work-is-licensed-under-cc-by-sa-25-es-by-futit-services-sl" class="md-nav__link">
+  <a href="#secure-web-services-swagger" class="md-nav__link">
     <span class="md-ellipsis">
-      This work is licensed under CC BY-SA 2.5 ES by Futit Services S.L.
+      Swagger de Secure Web Services
     </span>
   </a>
   
@@ -17390,7 +17423,7 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Visión general
+      Descripción general
     </span>
   </a>
   
@@ -17421,18 +17454,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secure-web-services-swagger" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Swagger de Servicios web seguros
+      Autenticación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autenticación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtaining-a-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtención de un token
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso del token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-renewal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renovación del token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#this-work-is-licensed-under-cc-by-sa-25-es-by-futit-services-sl" class="md-nav__link">
+  <a href="#secure-web-services-swagger" class="md-nav__link">
     <span class="md-ellipsis">
-      This work is licensed under CC BY-SA 2.5 ES by Futit Services S.L.
+      Swagger de Secure Web Services
     </span>
   </a>
   
@@ -17463,13 +17529,13 @@
       
       
       
-        <span class="md-tag">Servicios web</span>
+        <span class="md-tag">Secure Web Services</span>
       
     
       
       
       
-        <span class="md-tag">Servicios web seguros</span>
+        <span class="md-tag">Servicios web</span>
       
     
       
@@ -17485,23 +17551,27 @@
   
 
 
-<h1 id="how-to-use-secure-web-services">Cómo utilizar Servicios web seguros</h1>
-<h2 id="overview">Visión general</h2>
-<p>Este módulo permite llamar a cualquier <strong>servicio web de Etendo</strong> estándar del mismo modo que al endpoint <code>/ws</code>, pero utilizando autenticación mediante token.</p>
-<p>Este método de autenticación también permite definir el contexto de las llamadas eligiendo el rol y/o la organización al solicitar un token. También es posible renovar un token para actualizar la fecha de caducidad o cambiar el rol/organización.</p>
-<p>Además de la implementación de autenticación, el módulo incluye utilidades para desarrolladores y servicios web útiles, como jsonDal (para acceder a la capa de acceso a datos de OB con json).</p>
+<h1 id="how-to-use-secure-webservices">Cómo utilizar Secure Web Services</h1>
+<h2 id="overview">Descripción general</h2>
+<p>El módulo <strong>Secure Web Services</strong> proporciona autenticación mediante token JWT para las llamadas estándar a los web services de Etendo. Todos los servicios se exponen bajo el prefijo de ruta <code>/sws/</code>. La autenticación se realiza a través de <code>/sws/login</code>, y los servicios de datos como <code>obRest</code> están disponibles en <code>/sws/com.smf.securewebservices.obRest/</code>. Esto reemplaza el endpoint <code>/ws</code> basado en sesión por una alternativa segura basada en token (consulte <a href="../how-to-create-a-new-rest-webservice/">How to Create a New REST Webservice</a> para más contexto sobre el framework <code>/ws</code>).</p>
+<p>Restrinja el token a un rol, organización y almacén específicos en el momento del inicio de sesión. Una vez emitido, incluya el token en el encabezado <code>Authorization</code> de cada solicitud posterior.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Consulte la <a href="https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/" target="_blank">referencia Swagger</a> para conocer el flujo completo.</p>
+</div>
+<p>El módulo también incluye utilidades para desarrolladores y web services adicionales, como <a href="../../concepts/json-rest-web-services/"><code>jsonDal</code></a>, para acceder al OB Data Access Layer con JSON.</p>
 <h2 id="setup">Configuración</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Se requiere un nombre de dominio válido y un certificado <code>SSL/TLS</code> para utilizar <strong>Servicios web seguros</strong>. Instale un certificado o contacte con su administrador para evitar errores en tiempo de ejecución al generar tokens en instancias de servidor.</p>
+<p>Se requiere un nombre de dominio válido y un certificado SSL/TLS para utilizar <strong>Secure Web Services</strong>. Instale un certificado o contacte con su administrador para evitar errores en tiempo de ejecución al generar tokens en instancias de servidor.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>De forma predeterminada, se utiliza el <strong>algoritmo de cifrado ES256</strong>. Para cambiar a un algoritmo heredado, cree una preferencia con la propiedad <code>Encryption Algorithm</code> y establezca su valor en <code>HS256</code>.</p>
+<p>De forma predeterminada, se utiliza el algoritmo de cifrado <strong>ES256</strong>. Para cambiar a un algoritmo heredado, cree una preferencia con la propiedad <code>Encryption Algorithm</code> y establezca su valor en <code>HS256</code>.</p>
 </div>
 <h3 id="token-configuration">Configuración de token</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Entidad</code> &gt; <code>Entidad</code></p>
-<p>En la pestaña <strong>Configuración de Secure Web Services</strong>, el <em>Administrador del sistema</em> puede gestionar la clave SWS y configurar la caducidad del token.</p>
+<p>En la solapa <strong>Configuración de Secure Web Services</strong>, el <strong>Administrador del Sistema</strong> gestiona la clave SWS y configura la caducidad del token.</p>
 <p>A partir de <strong>Etendo 26.1</strong>, la clave se genera automáticamente durante <code>./gradlew install</code> — no se requiere ninguna acción manual para instalaciones nuevas. Para versiones anteriores o para rotar la clave, utilice uno de los siguientes métodos:</p>
 <ol>
 <li>
@@ -17510,27 +17580,169 @@
 </span></code></pre></div>
 </li>
 <li>
-<p><strong>Desde la UI:</strong> Abra la pestaña <strong>Configuración de Secure Web Services</strong> y haga clic en <strong>Generar Clave</strong>.</p>
+<p><strong>Desde la UI:</strong> Abra la solapa <strong>Configuración de Secure Web Services</strong> y haga clic en <strong>Generar Clave</strong>.</p>
 </li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Ambos métodos <strong>sobreescribirán la clave SWS existente</strong>. Todos los tokens firmados con la clave anterior se invalidarán inmediatamente.</p>
+<p>Ambos métodos sobreescriben la clave SWS existente. Todos los tokens firmados con la clave anterior quedan invalidados de forma inmediata.</p>
 </div>
-<p>El campo <strong>Intervalo en Minutos</strong> controla durante cuánto tiempo los tokens permanecen válidos, expresado en <strong>minutos</strong> (<code>0</code> = sin expiración).</p>
+<p>El campo <strong>Tiempo de expiración del token</strong> controla durante cuánto tiempo los tokens permanecen válidos, expresado en minutos (<code>0</code> = sin expiración).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Recomendación de seguridad</p>
 <p>Los tokens sin expiración representan un riesgo en producción: si un token es comprometido, permanece válido indefinidamente. Establezca un tiempo de expiración razonable y rote los tokens periódicamente.</p>
 </div>
-<h2 id="secure-web-services-swagger">Swagger de Servicios web seguros</h2>
+<h2 id="authentication">Autenticación</h2>
+<h3 id="obtaining-a-token">Obtención de un token</h3>
+<p>El endpoint <code>/sws/login</code> emite un token JWT restringido a un contexto específico de Etendo. Incluya los campos opcionales <code>role</code>, <code>organization</code> y <code>warehouse</code> en el cuerpo de la solicitud para restringir el token a un contexto concreto. Si se omiten, se asignan los valores predeterminados del servidor para cada campo según el usuario.</p>
+<p>Los valores de <code>role</code>, <code>organization</code> y <code>warehouse</code> son IDs de registro internos (cadenas hexadecimales de 32 caracteres) o <code>"0"</code> para utilizar el valor predeterminado asignado por el servidor.</p>
+<p><strong>Parámetros de consulta</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parámetro</th>
+<th style="text-align: left;">Predeterminado</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>showRoles</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Incluye el array <code>roleList</code> en la respuesta</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>showOrgs</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Incluye <code>orgList</code> dentro de cada entrada de rol</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>showWarehouses</code></td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Incluye <code>warehouseList</code> dentro de cada entrada de organización</td>
+</tr>
+</tbody>
+</table>
+<p>Establezca estos parámetros en <code>false</code> para reducir el payload de la respuesta cuando no se necesita descubrir el contexto.</p>
+<p><strong>Parámetros del cuerpo de la solicitud</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Requerido</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>username</code></td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Nombre de usuario de Etendo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>password</code></td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">Contraseña de Etendo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>role</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID del rol al que se restringe el token</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>organization</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID de la organización a la que se restringe el token</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>warehouse</code></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">ID del almacén al que se restringe el token</td>
+</tr>
+</tbody>
+</table>
+<p>Reemplace <code>https://&lt;your-host&gt;</code> con la URL de su instancia de Etendo. Todas las rutas que aparecen a continuación son relativas a esa base.</p>
+<p><strong>Ejemplo de solicitud — restringida a un rol y organización específicos</strong></p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="err">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="err">  "username": "admin",</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="err">  "password": "admin",</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="err">  "role": "A97CFB945DC84D5BB0B7EC0CE8571F87",</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="err">  "organization": "2E60544D37534C0B89E765FE29BC0B43"</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="err">}</span>
+</span></code></pre></div>
+<p><strong>Ejemplo de respuesta</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;"</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">"roleList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A97CFB945DC84D5BB0B7EC0CE8571F87"</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sales Representative"</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">"orgList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2E60544D37534C0B89E765FE29BC0B43"</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F&amp;B US, Inc."</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">          </span><span class="nt">"warehouseList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">              </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B2D40D8A5D644DD89E329DC297309055"</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">              </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA East Coast"</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">          </span><span class="p">]</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>El <code>roleList</code> en la respuesta lista todos los roles, organizaciones y almacenes disponibles para el usuario. Utilice estos IDs para solicitar un token con un ámbito más restringido en una llamada posterior.</p>
+<h3 id="using-the-token">Uso del token</h3>
+<p>Incluya el token en el encabezado <code>Authorization</code> de cada llamada a la API:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Authorization: Bearer &lt;token&gt;
+</span></code></pre></div>
+<p><strong>Ejemplo — obtención de productos mediante <code>obRest</code></strong></p>
+<p>El segmento que sigue a <code>obRest/</code> es el nombre de la entidad tal como está definido en el Diccionario de Aplicación — coincide con el campo <strong>Nombre</strong> del registro <code>AD_Table</code> (por ejemplo, <code>Product</code>, <code>BusinessPartner</code>, <code>Order</code>). Reemplace <code>Product</code> por cualquier otro nombre de entidad para consultar ese conjunto de datos. <code>maxResults</code> es un parámetro de paginación estándar que limita el número de registros devueltos.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">GET https://&lt;your-host&gt;/etendo/sws/com.smf.securewebservices.obRest/Product?maxResults=10</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span></code></pre></div>
+<h3 id="token-renewal">Renovación del token</h3>
+<p>Para renovar un token sin volver a introducir las credenciales, llame a <code>/sws/login</code> con el token existente en el encabezado <code>Authorization: Bearer</code> en lugar de <code>username</code> y <code>password</code>. No incluya <code>username</code> ni <code>password</code> en el cuerpo al renovar — el servidor ignora las credenciales cuando hay un encabezado <code>Authorization: Bearer</code> válido presente. El servidor emite un nuevo token con una fecha de expiración renovada, manteniendo el mismo contexto. Incluya <code>role</code>, <code>organization</code> o <code>warehouse</code> en el cuerpo para cambiar el ámbito del token en el momento de la renovación.</p>
+<p><strong>Ejemplo de solicitud de renovación — mismo ámbito (cuerpo vacío)</strong></p>
+<p>Envíe un cuerpo vacío para renovar el token y mantener sin cambios el ámbito de rol, organización y almacén existente.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="err">{}</span>
+</span></code></pre></div>
+<p><strong>Ejemplo de solicitud de renovación — cambio de ámbito en la renovación</strong></p>
+<p>Incluya cualquier combinación de <code>role</code>, <code>organization</code> o <code>warehouse</code> en el cuerpo para cambiar el ámbito del token sin volver a introducir las credenciales. Omita cualquier campo que no desee modificar.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">POST https://&lt;your-host&gt;/etendo/sws/login</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJFUzI1NiJ9.&lt;payload&gt;.&lt;signature&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="err">Content-Type: application/json</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="err">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="err">  "role": "B14F5D9A3EC741C2A9F860DE48A3B721",</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="err">  "organization": "2E60544D37534C0B89E765FE29BC0B43"</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="err">}</span>
+</span></code></pre></div>
+<p>Ambas variantes devuelven la misma estructura de respuesta que el inicio de sesión inicial: una nueva cadena <code>token</code> y, cuando el parámetro de consulta <code>showRoles</code> es <code>true</code>, el array <code>roleList</code> completo.</p>
+<h2 id="secure-web-services-swagger">Swagger de Secure Web Services</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para más información, visite <a href="https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login" target="_blank">Swagger de Servicios web seguros</a>.</p>
+<p>Para más información, visite <a href="https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login" target="_blank">Swagger de Secure Web Services</a>.</p>
 </div>
 <hr>
-<h2 id="this-work-is-licensed-under-cc-by-sa-25-es-by-futit-services-sl">This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</h2>
-<hr>
+<p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
 
 
 
