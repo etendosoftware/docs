@@ -12,47 +12,44 @@ tags:
 
 ## Overview
 
-A business entity event is a hook that runs your Java code automatically when a record — called an entity in Etendo's data model — is saved, updated, or deleted. This lets you enforce business rules in Java instead of writing database triggers.
-Business entity events correspond to triggers in the database.
-The main advantage of implementing logic using business entity events instead of in triggers is that you can code your logic in java using your IDE.
-This helps productivity and quality as you can code, debug and test in an integrated environment with the rest of your business logic.
+A business entity event is a hook that runs Java code automatically when a record is saved, updated, or deleted. Records in Etendo's data model are called entities. Use business entity events to enforce business rules in Java instead of writing database triggers.
 
-!!! note "Some notes on business entity events:"
-    * They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity.
-    * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction.
-    * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
-    * You can make use of the full [data access layer](../concepts/data-access-layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
+Business entity events run in the same transaction as the triggering operation. Any changes you make to the entity persist together with the original change. The full [data access layer](../concepts/data-access-layer.md) is available inside event handler code — you can query, create, and persist objects freely.
 
+!!! note "Business entity event behavior"
+    - Events fire before the database operation completes, so you can still modify the entity.
+    - Events only fire when data is accessed through the data access layer. Classic windows and direct JDBC calls do not trigger them.
 
-Business events use Weld, Etendo's dependency injection framework, to discover and register your event handler class automatically. You do not configure Weld directly; the annotations in your class are sufficient. For more information, see [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
+Business events use Weld, Etendo's dependency injection framework, to discover and register event handler classes automatically. The annotations on the method parameters are sufficient — no XML configuration is required. For more information, see [Weld](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
 
-!!!note
-    In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/etendo-architecture.md#analyzing-the-classpath) if your event handlers are not found.
+!!! note
+    Certain parts of the classpath are excluded to maximize performance. If your event handlers are not found, check [this section](../concepts/etendo-architecture.md#analyzing-the-classpath).
 
-In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
+The example in this guide implements an event handler on the Greeting entity. Whenever a title is saved, the handler adds a Spanish translation. It also logs messages to the console for other business events.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+![Business event handler result showing the Greeting window](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+/// caption
+The Greeting window used throughout this example.
+///
 
-!!!note
+!!! note
     For client-side (JavaScript) event handlers that run in the browser UI, see [Client Event Handler Actions](#client-event-handler-actions) below.
 
-Choose a **server-side event handler** when you need to enforce business rules regardless of how the data is accessed — through the UI, an API call, or a background process. Choose a **client-side event handler** when you need to react to UI events in the browser, such as showing a message after a save, blocking a form submission with client-side validation, or refreshing a grid — without writing server-side logic.
+Choose a **server-side event handler** when you need to enforce business rules regardless of how data is accessed — through the UI, an API call, or a background process. Choose a **client-side event handler** when you need to react to UI events in the browser, such as showing a message after a save, blocking a form submission, or refreshing a grid.
 
-##  Example Module
+## Example Module
 
-This section is supported by an example module which shows an example of the code shown and discussed here.
+The code shown in this guide is available in the following example module: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
-The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+!!! note
+    The full list of required Java imports is available in the [example source file](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}. Copy the package declaration and all imports from that file before compiling — the snippets below omit them for brevity.
 
-!!!note
-    The full list of required Java imports is available in the [example source file](https://github.com/etendosoftware/com.etendoerp.client.application.examples/blob/main/src/com/etendoerp/client/application/examples/GreetingEventHandler.java){target="_blank"}. Copy the package declaration and all imports from the example source file before compiling — the snippet above omits them for brevity.
+## The Event Handler — A First Implementation
 
-##  The event handler - A first implementation
+An event handler is a Java class in your module that extends `EntityPersistenceEventObserver`. Weld automatically treats it as `@ApplicationScoped` — you do not need to add that annotation manually. Weld discovers the class from the annotations on the method parameters; no XML configuration is required.
 
-An event handler is a normal Java class in your module that extends `EntityPersistenceEventObserver`. Weld automatically treats it as `@ApplicationScoped` — you do not need to add that annotation manually. The class is discovered from the annotations on the method parameters; no XML configuration is required.
-
-!!!warning
-    Do not call setters on the event entity directly. When the event fires, the persistence framework has already captured the object's current field values. Calling a setter updates the Java object in memory, but Hibernate has already captured the property values into its internal state array before firing the event, so the setter's change is silently ignored and will not be persisted. Use `event.setCurrentState(property, newValue)` instead. This is shown in every code example on this page.
+!!! warning
+    Do not call setters on the event entity directly. When the event fires, the persistence framework has already captured the object's current field values. Calling a setter updates the Java object in memory, but Hibernate has already captured the property values into its internal state array, so the change is silently ignored and will not be persisted. Use `event.setCurrentState(property, newValue)` instead. This is shown in every code example on this page.
 
 ```java title="GreetingEventHandler.java"
 class GreetingEventHandler extends EntityPersistenceEventObserver {
@@ -87,18 +84,14 @@ class GreetingEventHandler extends EntityPersistenceEventObserver {
 }
 ```
 
-!!!note
-    * It makes sense to extend the [EntityPersistenceEventObserver](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/event/EntityPersistenceEventObserver.java){target="\_blank"}, it helps to filter for the correct events.
-    * The name of the method is not relevant, the relevant thing is the annotation on the parameter and the parameter. Weld uses this to detect and register for which events this class listens to
-    * The event handler will be called for events occurring on all entities, therefore each method starts with the if statement with isValidEvent, to filter out unwanted events.
-    * The use of the `org.apache.logging.log4j.Logger` class is recommended for logging as shown above.
+!!! note
+    - Extend [EntityPersistenceEventObserver](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/event/EntityPersistenceEventObserver.java){target="_blank"} to filter events correctly.
+    - The method name is not relevant. Weld detects and registers the handler from the annotation and type of the parameter.
+    - Use the `org.apache.logging.log4j.Logger` class for logging.
 
-###  Result
+### Result
 
-When you add the above class to your module, restart the system, then go to the greeting window:
-[http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)
-
-And do some actions you should see the following messages in the console:
+Add the class to your module and restart the system. Open the greeting window at [http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282) and perform some actions. The console shows messages like:
 
 ```bash
 Greeting FF8081813097E041013097E805F4000F is being updated
@@ -106,14 +99,14 @@ Greeting FF8081813097E041013097E805F4000F is being deleted
 Greeting FF8081813097E041013097E805F4000F is being created
 ```
 
-!!!note
-    * You only need to implement a method for the event you want to listen to, so if you only need to listen to update events, then only implement a method with the @Observes EntityUpdateEvent parameter.
-    * Each method starts with a check if the event is valid, this is needed to filter for relevant events only, see the section below.
-    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](../concepts/etendo-architecture.md#event-classes-and-api) for more information.
+!!! note
+    - Implement only the methods for the events you want to handle. If you only need update events, implement only the method with `@Observes EntityUpdateEvent`.
+    - Each method starts with `isValidEvent` to filter for relevant events only. See [Filtering Only Relevant Events](#filtering-only-relevant-events) below.
+    - Use the API on the event object to identify the event type and access the current and previous state of the entity. See [here](../concepts/etendo-architecture.md#event-classes-and-api) for more information.
 
-###  Filtering Only Relevant Events
+### Filtering Only Relevant Events
 
-Every event handler in the system receives events from every entity, not just the ones it was written for. If you omit the filter, your code will run on every insert, update, and delete across the entire application. The `isValidEvent` check restricts execution to the entities listed in `getObservedEntities`.
+Every event handler receives events from every entity in the system, not just the ones it was written for. If you omit the filter, your code runs on every insert, update, and delete across the entire application. The `isValidEvent` check restricts execution to the entities listed in `getObservedEntities`.
 
 ```java
 private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
@@ -124,8 +117,7 @@ protected Entity[] getObservedEntities() {
 }
 ```
 
-The `getObservedEntities` method is called when you call the `isValidEvent` method, `getObservedEntities` returns the entities you want to handle in this event handler.
-To make use of it add this code to each event handling method in the beginning:
+`isValidEvent` calls `getObservedEntities` internally to determine which entities are relevant. Add this check at the start of each event handling method:
 
 ```java
 if (!isValidEvent(event)) {
@@ -133,26 +125,21 @@ if (!isValidEvent(event)) {
 }
 ```
 
-This part is needed because the event methods will be called for entities of all types.
-In this example we only want to listen to changes on the Greeting entity.
+In this example, only changes to the Greeting entity are handled. All other entity events are filtered out.
 
-!!!note
+!!! note
     `isValidEvent` also returns `false` during data import operations. This is intentional — it prevents business logic from running on imported data. If your event handler is not firing, check whether the operation is being performed through an import process.
 
-##  Adding some business logic
+## Adding Business Logic
 
-In this next step, we add logic to the event handler:
+The next examples extend the event handler with two behaviors:
 
-  * Whenever a greeting gets created/updated, add a . to the title, if it was not already there
-  * When a new greeting gets created, add a translation for it.
+- Append a dot to the greeting title on create or update, if one is not already present.
+- Create a translation child record when a new greeting is saved.
 
-!!!note
-    To create a new translation for when a new greeting is added.
-    For this example, we will be adding a dutch translation.
+### Changing the Entity on Update or Insert
 
-###  Changing the entity on update/insert
-
-In this step we will be adding some simple logic to the update and save event to add a dot to the title if it not already has one.
+The updated `onUpdate` and `onSave` methods below add a dot to the title if it does not already end with one.
 
 ```java
 public void onUpdate(@Observes EntityUpdateEvent event) {
@@ -164,7 +151,6 @@ public void onUpdate(@Observes EntityUpdateEvent event) {
   if (title != null && !title.endsWith(".")) {
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
     final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    // note use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
   logger.info("Greeting {} is being updated", event.getTargetInstance().getId());
@@ -175,12 +161,10 @@ public void onSave(@Observes EntityNewEvent event) {
     return;
   }
   final Greeting greeting = (Greeting) event.getTargetInstance();
-  // now also add the dot to the title
   final String title = greeting.getTitle();
   if (title != null && !title.endsWith(".")) {
     final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
     final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    // note use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
 
@@ -188,14 +172,14 @@ public void onSave(@Observes EntityNewEvent event) {
 }
 ```
 
-Let's walk through the code. First, cast the instance and get the title:
+Cast the instance and read the title:
 
 ```java
 final Greeting greeting = (Greeting) event.getTargetInstance();
 final String title = greeting.getTitle();
 ```
 
-If the title does not end on a dot then get the entity and the relevant property:
+If the title does not end with a dot, resolve the entity and the target property:
 
 ```java
 if (title != null && !title.endsWith(".")) {
@@ -203,28 +187,22 @@ if (title != null && !title.endsWith(".")) {
   final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
 ```
 
-!!!note
-    We use the generated constants to the entity name and property
-    names, this gives compile time checking and is a recommended practice.
+!!! note
+    Use the generated constants for entity and property names (`Greeting.ENTITY_NAME`, `Greeting.PROPERTY_TITLE`). This gives compile-time checking and is the recommended practice.
 
-And then set the current state.
-
-!!!note
-    Use `event.setCurrentState(property, newValue)` to modify the entity — direct setters are ignored (see the warning above).
+Set the new value using `event.setCurrentState`:
 
 ```java
 event.setCurrentState(greetingTitleProperty, title + ".");
 ```
 
-The changed entity instance does not need to be saved explicitly, this is done by the [data access layer](../concepts/data-access-layer.md) and hibernate automatically.
+The changed entity does not need to be saved explicitly. The [data access layer](../concepts/data-access-layer.md) and Hibernate handle persistence automatically.
 
-Then test the changes, go to the window ([http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)), enter a new greeting without a dot in the title.
-When saving you will see a dot getting added.
-Try updating the record, you will have the same behavior.
+Open the greeting window at [http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282). Enter a new greeting without a trailing dot. A dot is added on save. The same behavior applies on update.
 
-###  Adding a child instance
+### Adding a Child Instance
 
-As the next step we will extend the `onSave` method to create a translation child record whenever a new `Greeting` is saved. The complete method below replaces the partial `onSave` shown in the previous section:
+The complete `onSave` method below replaces the partial version from the previous section. It adds both the dot logic and a Dutch translation child record whenever a new greeting is saved.
 
 ```java
 public void onSave(@Observes EntityNewEvent event) {
@@ -239,7 +217,6 @@ public void onSave(@Observes EntityNewEvent event) {
   final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
   if (title != null && !title.endsWith(".")) {
     final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
-    // note: use setCurrentState and not setters on the Greeting object directly
     event.setCurrentState(greetingTitleProperty, title + ".");
   }
 
@@ -250,38 +227,38 @@ public void onSave(@Observes EntityNewEvent event) {
   greetingTrl.setGreeting(greeting);
   // 171 is Dutch — replace with any other Language ID as needed
   greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
-  // note: getters on the targetInstance are safe; setters are not
   greetingTrl.setName(greeting.getName());
   greetingTrl.setTitle(greeting.getTitle());
   greetingTrl.setTranslation(false);
 
   // Retrieve the translation list property and append the new record.
-  // We do not use event.setCurrentState here because we are appending to an
-  // existing list, not replacing the whole property value.
+  // Use getCurrentState here because the list already exists — appending does not replace the whole property.
   final Property greetingTrlProperty = greetingEntity
       .getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
   @SuppressWarnings("unchecked")
   final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
   greetingTrls.add(greetingTrl);
 
-  // greetingTrl is a child of the Greeting entity and persists with it —
-  // OBDal.getInstance().save(greetingTrl) is not needed
+  // greetingTrl is a child of the Greeting entity and persists with it automatically
 }
 ```
 
-A `GreetingTrl` object is a translation child record linked to a parent `Greeting`. Etendo uses the `Trl` suffix to denote translation tables throughout the data model.
+`GreetingTrl` is a translation child record linked to a parent `Greeting`. Etendo uses the `Trl` suffix to denote translation tables throughout the data model.
 
-The list property is retrieved with `getCurrentState` and appended to directly, rather than replaced with `setCurrentState`. This is because adding to an existing list does not require replacing the whole property value.
+The list property is retrieved with `getCurrentState` and the new record is appended directly. This is correct because adding to an existing list does not require replacing the whole property value with `setCurrentState`.
 
-The `greetingTrl` object is a child of the `Greeting` event entity and persists together with it, so it is not necessary to save it explicitly.
+The `greetingTrl` object persists together with the parent `Greeting` entity — no explicit save call is needed.
 
-When you now enter a new entry in the window, you will see an additional translation child record being created.
+Enter a new record in the greeting window. An additional translation child record is created automatically.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+![Translation child record created by the event handler](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+/// caption
+A Dutch translation child record created automatically on save.
+///
 
-###  Interrupt the Save Action
+### Interrupting the Save Action
 
-Sometimes you need to interrupt the save action because the user is doing something wrong. This can be done by throwing an `OBException`. When you do, Etendo displays the exception message to the user as an error dialog and rolls back the entire transaction, including any changes the event handler had already made.
+Throw an `OBException` to cancel a save when the user input is invalid. Etendo catches the exception, rolls back the entire transaction — including any changes the event handler had already made — and displays the exception message to the user as an error dialog.
 
 The minimum import required is `org.openbravo.base.exception.OBException`.
 
@@ -297,20 +274,20 @@ public void onSave(@Observes EntityNewEvent event) {
 }
 ```
 
-Etendo catches the `OBException`, rolls back the entire transaction, and displays the exception message to the user as an error dialog.
+## Examples of Business Entity Event Handlers
 
-##  Examples of Business Entity Event Handlers
+Etendo uses business entity event handlers to implement business logic in various locations. Examples:
 
-Etendo uses business entity event handlers to implement business logic in various locations, here are some examples:
+- [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="_blank"}
+- [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="_blank"}
 
-  * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
-  * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
+The complete source code for the example event handler is at [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples).
 
-The complete source code of the example event handler is available here [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+---
 
 ## Client Event Handler Actions
 
-Client event handler actions are JavaScript functions that execute in the browser before or after a UI event fires on a standard Etendo window. Unlike server-side business event handlers — which run in Java when a record is persisted to the database — client handlers react to UI lifecycle events and can interact with the form, grid, and message bar directly.
+Server-side business event handlers run in Java when a record is persisted. Client event handler actions are different: they are JavaScript functions that execute in the browser before or after a UI event fires on a standard Etendo window. Client handlers interact with the form, grid, and message bar directly — no server round-trip is needed.
 
 **Available events**
 
@@ -356,11 +333,11 @@ OB.MYMODULE.ClientSideEventHandlers.showMessage = function(view, form, grid, ext
 ```
 
 !!! warning
-    Do not declare the global object with `var`. JavaScript code included in Etendo runs inside a function scope, so a `var` declaration would not be globally accessible.
+    Do not declare the global object with `var`. JavaScript code included in Etendo runs inside a function scope, so a `var` declaration is not globally accessible.
 
 ### Registering the JavaScript File
 
-The JS file you create must be served to the browser by Etendo. Without this step, the browser never loads the file and `OB.EventHandlerRegistry.register()` never executes.
+The JS file must be served to the browser by Etendo. Without this step, the browser never loads the file and `OB.EventHandlerRegistry.register()` never executes.
 
 Create a `ComponentProvider` class in your module that extends `BaseComponentProvider` and overrides `getGlobalComponentResources()`. This method returns the list of static files Etendo includes on every page load.
 
@@ -394,18 +371,18 @@ public class MyModuleComponentProvider extends BaseComponentProvider {
 }
 ```
 
-The path passed to `createStaticResource()` must match the actual location of the JS file under the `web/` directory of your module. The second argument (`false`) controls whether the resource is also served in Etendo's classic UI mode. Pass `false` to include the resource only in the modern UI; pass `true` to include it in both modes.
+The path passed to `createStaticResource()` must match the actual location of the JS file under the `web/` directory of your module. The second argument (`false`) controls whether the resource is served in Etendo's classic UI mode. Pass `false` to include the resource only in the modern UI; pass `true` to include it in both.
 
 Replace `com.mycompany.mymodule` with your module's Java package name — the same string used as the module's directory under `modules/`. The `js/my-event-handlers.js` segment is the path relative to the `web/<your-module>/` directory; the file must exist at that path for Etendo to serve it.
 
-!!!note
+!!! note
     The `ComponentProvider` class must reside in the root package of your module — not in a sub-package. Weld discovers providers by scanning the classpath, and placing the class in a sub-package prevents discovery. For full details, see [Component Provider](../concepts/etendo-architecture.md#component-provider).
 
 ### Registering the Action
 
-Register the action using `OB.EventHandlerRegistry.register()`. The registration call goes in the same JS file, after the function definition.
+Register the action using `OB.EventHandlerRegistry.register()`. Place the registration call in the same JS file, after the function definition.
 
-Before registering the action, find the `AD_Tab_ID` of the tab where it applies. Open **Application** > **Application Dictionary** > **Windows, Tabs and Fields**, locate the tab, and copy the ID. Alternatively, query the database: `SELECT AD_Tab_ID FROM AD_Tab WHERE Name = 'YourTabName';`
+Before registering, find the `AD_Tab_ID` of the tab where the action applies. Open **Application** > **Application Dictionary** > **Windows, Tabs and Fields**, locate the tab, and copy the ID. Alternatively, query the database: `SELECT AD_Tab_ID FROM AD_Tab WHERE Name = 'YourTabName';`
 
 ```javascript
 OB.EventHandlerRegistry.register(
@@ -420,8 +397,8 @@ The unique ID prevents conflicts with actions from other modules and allows over
 
 ### Multiple Actions and Execution Order
 
-Multiple actions can be registered for the same tab and event. They execute sorted by a `sort` property on the callback function (default: `100`). When multiple actions share the same sort value, they execute in registration order. To control relative ordering, set `yourFunction.sort = <number>` before calling `register()`. To override an action defined by another module, register a new action with the same unique ID.
+Multiple actions can be registered for the same tab and event. They execute sorted by a `sort` property on the callback function (default: `100`). When multiple actions share the same sort value, they execute in registration order. Set `yourFunction.sort = <number>` before calling `register()` to control relative ordering. To override an action defined by another module, register a new action with the same unique ID.
 
 ---
 
-This work is a derivative of [How to implement a business event handler](https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [How to implement a business event handler](https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
