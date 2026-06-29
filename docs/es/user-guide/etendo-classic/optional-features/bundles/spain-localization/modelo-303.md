@@ -143,8 +143,8 @@ Al instalar y aplicar este módulo, Etendo crea automáticamente los siguientes 
 
 ![Declaración de Impuestos - Modelo 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/declaracion-de-impuestos.png)
 
--   La pestaña "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
-    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la pestaña "Parámetro de declaración":
+-   La solapa "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
+    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la solapa "Parámetro de declaración":
     -   IVA Devengado - Régimen Ordinario
     -   IVA Devengado - Recargo de Equivalencia
     -   IVA Devengado - Adquisiciones Intracomunitarias
@@ -177,7 +177,7 @@ Para configurar los impuestos, acceda a :material-menu: `Configuración General`
 ### Configuración del modelo 303
 La configuración del modelo 303 se instala por defecto y se puede comprobar en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos`.
 
-Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
+Tanto para el modelo 303 mensual como trimestral en la solapa "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
 
 ![Declaración de Impuestos - Secciones del 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/declaracion-impuestos-secciones.png)
 
