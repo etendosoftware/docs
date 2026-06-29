@@ -15,9 +15,11 @@ tags:
 
 The Goods Transaction window is the central record of every inventory movement in Etendo. It gives you a complete history, with the exact date and time of each movement — what moved, when, where, and why — so you can trace any change back to its source.
 
-This window captures every inventory movement recorded in the system, including [Goods Receipts](../../procurement-management/transactions.md), [Goods Shipments](../../sales-management/transactions.md), [Physical Inventories](physical-inventory.md), [Goods Movements](goods-movement.md), [Work Efforts](../../production-management/transactions.md), [Internal Consumptions](../../production-management/transactions.md), and Returns. Each movement appears here as a single line entry as soon as it is processed in the system — no extra steps needed.
+This window captures every inventory movement recorded in the system, including [Goods Receipts](../../procurement-management/transactions.md#goods-receipts), [Goods Shipments](../../sales-management/transactions.md#goods-shipment), [Physical Inventories](physical-inventory.md), [Goods Movements](goods-movement.md), [Work Efforts](../../production-management/transactions.md#work-effort), [Internal Consumptions](../../production-management/transactions.md#internal-consumption), [Return to Vendor](../../procurement-management/transactions.md#return-to-vendor-rtv), and [Return from Customer](../../sales-management/transactions.md#return-from-customer). Each movement appears here as a single line entry as soon as it is processed in the system — no extra steps needed.
 
 You can filter this window by warehouse, product, date range, or movement type and see results immediately — there is no need to run or generate a report. The window is read-only: you can view and filter records, but cannot create or edit them here.
+
+![Goods Transaction](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png)
 
 ## Columns
 
@@ -42,13 +44,13 @@ The **Movement Type** column uses a two-character code to identify the category 
 | `V-` | Vendor Return — stock returned to a supplier |
 | `C+` | Customer Return — stock returned by a customer |
 | `C-` | Customer Shipment — stock shipped to a customer |
-| `W+` | Warehouse In — stock received from another warehouse |
-| `W-` | Warehouse Out — stock transferred to another warehouse |
+| `M+` | Movement To — stock arriving at the destination bin |
+| `M-` | Movement From — stock leaving the source bin |
 | `I+` | Inventory In — stock increase from a physical inventory |
 | `I-` | Inventory Out — stock decrease from a physical inventory |
 | `P+` | Work Effort In — stock added by a production work effort |
 | `P-` | Work Effort Out — stock consumed by a production work effort |
-| `D+` | Internal Consumption Return — stock returned from internal use |
+| `D+` | Internal Consumption — stock reversal from internal use |
 | `D-` | Internal Consumption — stock removed for internal use |
 
 ## Filters
@@ -68,8 +70,6 @@ Useful filter combinations for common warehouse tasks:
 - **Auditing a specific transaction**: confirm the exact quantity and movement type recorded after processing a Goods Receipt, Goods Shipment, or Physical Inventory; use the [Material Transaction Report](../analysis-tools/material-transaction-report.md) for the associated cost and accounting details.
 - **Tracing a lot or serial number**: filter by Attribute Set Value to see the complete movement history of a tracked item from receipt to shipment; the [Product Movements Report](../analysis-tools/product-movements-report.md) provides the same history with additional filtering by warehouse and date.
 - **Verifying a storage bin's activity**: filter by Storage Bin to review every movement that has affected a specific warehouse location; use [Stock History](../analysis-tools/stock-history.md) to see what stock levels looked like at any point in the past.
-
-![Goods Transaction](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png)
 
 ---
 
