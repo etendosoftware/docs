@@ -25,12 +25,12 @@ Business events use Weld, Etendo's dependency injection framework, to discover a
 !!! note
     Certain parts of the classpath are excluded to maximize performance. If your event handlers are not found, check [this section](../concepts/etendo-architecture.md#analyzing-the-classpath).
 
-The example in this guide implements an event handler on the Greeting entity. Whenever a title is saved, the handler adds a Spanish translation. It also logs messages to the console for other business events.
+The example in this guide implements an event handler on the Greeting entity. Whenever a title is saved, the handler adds a Dutch translation. It also logs messages to the console for other business events.
 
-![Business event handler result showing the Greeting window](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
-/// caption
-The Greeting window used throughout this example.
-///
+<figure markdown="span">
+  ![Business event handler result showing the Greeting window](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+  <figcaption>The Greeting window used throughout this example.</figcaption>
+</figure>
 
 !!! note
     For client-side (JavaScript) event handlers that run in the browser UI, see [Client Event Handler Actions](#client-event-handler-actions) below.
@@ -226,7 +226,7 @@ public void onSave(@Observes EntityNewEvent event) {
   final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
   greetingTrl.setGreeting(greeting);
   // 171 is Dutch — replace with any other Language ID as needed
-  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171")); // 171 = Dutch
   greetingTrl.setName(greeting.getName());
   greetingTrl.setTitle(greeting.getTitle());
   greetingTrl.setTranslation(false);
@@ -251,10 +251,10 @@ The `greetingTrl` object persists together with the parent `Greeting` entity —
 
 Enter a new record in the greeting window. An additional translation child record is created automatically.
 
-![Translation child record created by the event handler](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
-/// caption
-A Dutch translation child record created automatically on save.
-///
+<figure markdown="span">
+  ![Translation child record created by the event handler](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+  <figcaption>A Dutch translation child record created automatically on save.</figcaption>
+</figure>
 
 ### Interrupting the Save Action
 
@@ -343,6 +343,7 @@ Create a `ComponentProvider` class in your module that extends `BaseComponentPro
 
 ```java title="MyModuleComponentProvider.java"
 import org.openbravo.client.kernel.BaseComponentProvider;
+import org.openbravo.client.kernel.BaseComponentProvider.ComponentResource;
 import org.openbravo.client.kernel.Component;
 import org.openbravo.client.kernel.ComponentProvider;
 

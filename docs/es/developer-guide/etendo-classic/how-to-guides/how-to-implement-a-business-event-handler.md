@@ -25,12 +25,12 @@ Los business events utilizan Weld, el framework de inyección de dependencias de
 !!! note
     Ciertas partes del classpath se excluyen para maximizar el rendimiento. Si sus event handlers no se encuentran, consulte [esta sección](../concepts/etendo-architecture.md#analyzing-the-classpath).
 
-El ejemplo de esta guía implementa un event handler sobre la entidad Greeting. Cada vez que se guarda un título, el handler añade una traducción al español. También registra mensajes en la consola para otros business events.
+El ejemplo de esta guía implementa un event handler sobre la entidad Greeting. Cada vez que se guarda un título, el handler añade una traducción al neerlandés. También registra mensajes en la consola para otros business events.
 
-![Resultado del business event handler mostrando la ventana Greeting](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
-/// caption
-La ventana Greeting utilizada a lo largo de este ejemplo.
-///
+<figure markdown="span">
+  ![Resultado del business event handler mostrando la ventana Greeting](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
+  <figcaption>La ventana Greeting utilizada a lo largo de este ejemplo.</figcaption>
+</figure>
 
 !!! note
     Para los event handlers del lado del cliente (JavaScript) que se ejecutan en la interfaz del navegador, consulte [Acciones de Client Event Handler](#client-event-handler-actions) más abajo.
@@ -225,8 +225,7 @@ public void onSave(@Observes EntityNewEvent event) {
   // Create a translation child record for this new Greeting
   final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
   greetingTrl.setGreeting(greeting);
-  // 171 is Dutch — replace with any other Language ID as needed
-  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+  greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171")); // 171 = Dutch
   greetingTrl.setName(greeting.getName());
   greetingTrl.setTitle(greeting.getTitle());
   greetingTrl.setTranslation(false);
@@ -251,10 +250,10 @@ El objeto `greetingTrl` persiste junto con la entidad `Greeting` padre — no se
 
 Introduzca un nuevo registro en la ventana de saludos. Se crea automáticamente un registro hijo de traducción adicional.
 
-![Registro hijo de traducción creado por el event handler](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
-/// caption
-Un registro hijo de traducción al neerlandés creado automáticamente al guardar.
-///
+<figure markdown="span">
+  ![Registro hijo de traducción creado por el event handler](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+  <figcaption>Un registro hijo de traducción al neerlandés creado automáticamente al guardar.</figcaption>
+</figure>
 
 ### Interrumpir la acción de guardado { #interrupt-the-save-action }
 
@@ -343,6 +342,7 @@ Cree una clase `ComponentProvider` en su módulo que extienda `BaseComponentProv
 
 ```java title="MyModuleComponentProvider.java"
 import org.openbravo.client.kernel.BaseComponentProvider;
+import org.openbravo.client.kernel.BaseComponentProvider.ComponentResource;
 import org.openbravo.client.kernel.Component;
 import org.openbravo.client.kernel.ComponentProvider;
 
@@ -372,6 +372,7 @@ public class MyModuleComponentProvider extends BaseComponentProvider {
 ```
 
 La ruta que se pasa a `createStaticResource()` debe coincidir con la ubicación real del archivo JS bajo el directorio `web/` de su módulo. El segundo argumento (`false`) controla si el recurso se sirve en el modo de interfaz clásica de Etendo. Pase `false` para incluir el recurso solo en la interfaz moderna; pase `true` para incluirlo en ambas.
+
 
 Reemplace `com.mycompany.mymodule` con el nombre del paquete Java de su módulo — la misma cadena utilizada como directorio del módulo bajo `modules/`. El segmento `js/my-event-handlers.js` es la ruta relativa al directorio `web/<su-modulo>/`; el archivo debe existir en esa ruta para que Etendo lo sirva.
 
