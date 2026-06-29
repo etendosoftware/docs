@@ -918,13 +918,6 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/"/>
     </url>
     <url>
-        <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/</loc>
-        <lastmod>2026-06-29</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/"/>
-    </url>
-    <url>
         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/</loc>
         <lastmod>2026-06-29</lastmod>
         <changefreq>daily</changefreq>
@@ -4290,13 +4283,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/"/>
-    </url>
-    <url>
-        <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/</loc>
-        <lastmod>2026-06-29</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions/"/>
     </url>
     <url>
         <loc>https://docs.etendo.software/es/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/</loc>
