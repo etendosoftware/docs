@@ -19,10 +19,17 @@ This window captures every inventory movement recorded in the system, including 
 
 You can filter this window by warehouse, product, date range, or movement type and see results immediately — there is no need to run or generate a report. The window is read-only: you can view and filter records, but cannot create or edit them here.
 
-![Goods Transaction](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png)
-/// caption
-The **Goods Transaction** window showing inventory movement records with their movement type, date, product, and quantity.
-///
+<figure markdown="span">
+  ![Goods Transaction](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png)
+  <figcaption>The Goods Transaction window showing inventory movement records with their movement type, date, product, and quantity.</figcaption>
+</figure>
+
+### When to Use This Window
+
+- **Investigating a stock discrepancy**: filter by product and date range to find all movements that affected a stock level and identify what caused the change. Use the [Stock Report](../analysis-tools/stock-report.md) to see the resulting current stock levels per bin.
+- **Auditing a specific transaction**: confirm the exact quantity and movement type recorded after processing a Goods Receipt, Goods Shipment, or Physical Inventory. Use the [Material Transaction Report](../analysis-tools/material-transaction-report.md) for the associated cost and accounting details.
+- **Tracing a lot or serial number**: filter by **Attribute Set Value** to see the complete movement history of a tracked item from receipt to shipment. The [Product Movements Report](../analysis-tools/product-movements-report.md) provides the same history with additional filtering by warehouse and date.
+- **Verifying a storage bin's activity**: filter by **Storage Bin** to review every movement that has affected a specific warehouse location. Use [Stock History](../analysis-tools/stock-history.md) to see what stock levels looked like at any point in the past.
 
 ## Columns
 
@@ -32,29 +39,27 @@ Each row in the Goods Transaction window represents one inventory movement line.
 - **Movement Date**: The date the movement was recorded in Etendo, used for costing and accounting purposes.
 - **Product**: The product involved in the transaction.
 - **Attribute Set Value**: The lot number or serial number of the product, if the product is set up for lot or serial tracking in Etendo. This field is empty if the product does not use tracking.
-- **Movement Type**: A code identifying the category of the transaction (for example, Vendor Receipt, Customer Shipment, or Physical Inventory).
+- **Movement Type**: The category of the inventory transaction (for example, Vendor Receipt, Customer Shipment, or Physical Inventory).
 - **Movement Quantity**: The quantity moved. Positive values indicate a stock increase; negative values indicate a stock decrease.
 - **UOM**: The unit of measure for the product.
 - **Order Quantity**: The quantity from the original purchase or sales order line that triggered this movement, if the movement came from an order. This field may be empty for physical inventory adjustments.
 
 ### Movement Type
 
-The **Movement Type** column uses a two-character code to identify the category of each inventory transaction.
+The **Movement Type** column identifies the category of each inventory transaction. The possible values are:
 
-| Code | Description |
-| :--: | :---------- |
-| `V+` | Vendor Receipt — stock received from a supplier |
-| `V-` | Vendor Return — stock returned to a supplier |
-| `C+` | Customer Return — stock returned by a customer |
-| `C-` | Customer Shipment — stock shipped to a customer |
-| `M+` | Movement To — stock arriving at the destination bin |
-| `M-` | Movement From — stock leaving the source bin |
-| `I+` | Inventory In — stock increase from a physical inventory |
-| `I-` | Inventory Out — stock decrease from a physical inventory |
-| `P+` | Work Effort In — stock added by a production work effort |
-| `P-` | Work Effort Out — stock consumed by a production work effort |
-| `D+` | Internal Consumption Reversal — stock returned to inventory after an internal consumption was undone |
-| `D-` | Internal Consumption — stock removed for internal use |
+- **Vendor Receipt**: stock received from a supplier.
+- **Vendor Return**: stock returned to a supplier.
+- **Customer Return**: stock returned by a customer.
+- **Customer Shipment**: stock shipped to a customer.
+- **Movement To**: stock arriving at the destination storage bin after an internal transfer.
+- **Movement From**: stock leaving the source storage bin during an internal transfer.
+- **Inventory In**: stock increase recorded during a physical inventory.
+- **Inventory Out**: stock decrease recorded during a physical inventory.
+- **Work Effort In**: stock added as output of a production work effort.
+- **Work Effort Out**: stock consumed as input of a production work effort.
+- **Internal Consumption**: stock removed for internal use.
+- **Internal Consumption Reversal**: stock returned to inventory after an internal consumption was undone.
 
 ## Filters
 
@@ -67,12 +72,8 @@ Useful filter combinations for common warehouse tasks:
 - **Storage Bin**: audits all movements that affected a specific warehouse location. Use this to identify misplaced stock or confirm a bin is empty.
 - **Attribute Set Value**: tracks the full movement history of a specific lot or serial number from receipt to shipment. Use this for traceability and quality investigations.
 
-## When to Use This Window
-
-- **Investigating a stock discrepancy**: filter by product and date range to find all movements that affected a stock level and identify what caused the change. Use the [Stock Report](../analysis-tools/stock-report.md) to see the resulting current stock levels per bin.
-- **Auditing a specific transaction**: confirm the exact quantity and movement type recorded after processing a Goods Receipt, Goods Shipment, or Physical Inventory. Use the [Material Transaction Report](../analysis-tools/material-transaction-report.md) for the associated cost and accounting details.
-- **Tracing a lot or serial number**: filter by **Attribute Set Value** to see the complete movement history of a tracked item from receipt to shipment. The [Product Movements Report](../analysis-tools/product-movements-report.md) provides the same history with additional filtering by warehouse and date.
-- **Verifying a storage bin's activity**: filter by **Storage Bin** to review every movement that has affected a specific warehouse location. Use [Stock History](../analysis-tools/stock-history.md) to see what stock levels looked like at any point in the past.
+*[UOM]: Unit of Measure
+*[RTV]: Return to Vendor
 
 ---
 
