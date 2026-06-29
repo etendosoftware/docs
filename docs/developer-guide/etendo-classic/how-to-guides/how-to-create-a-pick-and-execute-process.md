@@ -21,7 +21,7 @@ The implementation requires development experience.
 The following concept pages provide background information on action handlers and javascript
 development:
 
-- [Action Handler](how-to-create-client-event-handler-actions.md)
+- [Action Handler](how-to-implement-a-business-event-handler.md#client-event-handler-actions)
 - [Client Side Development and API](../concepts/client-side-development-and-api.md)
 - [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md)
 
