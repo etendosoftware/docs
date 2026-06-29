@@ -8,21 +8,21 @@ tags:
     - Contabilidad
 ---
 
-# Calendario anual y periodos
+# Calendario anual y periodos { #fiscal-calendar }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Calendario anual y periodos`
 
-## Visión general
+## Visión general { #overview }
 
 Las organizaciones de tipo **Entidad Legal con contabilidad** deben tener asignado un calendario fiscal. Otros tipos de organización pueden heredar el calendario fiscal de su organización padre.
 
 Un calendario fiscal define los **Ejercicio** y sus **Periodo** para garantizar una contabilidad precisa y un control adecuado del ciclo financiero. Cada organización solo puede tener asignado **un único calendario fiscal**, que se utiliza para contabilizar transacciones y gestionar la apertura y el cierre de periodos.
 
-### Ventana de calendario fiscal
+### Ventana de calendario fiscal { #fiscal-calendar-window }
 
 La **ventana de calendario fiscal** permite al usuario crear y mantener el calendario fiscal de la organización. Cada organización que requiera un calendario necesita tener asignado un calendario y **solo uno**, por lo que se conoce claramente qué calendario se va a utilizar al contabilizar transacciones y al abrir y cerrar el ciclo contable.
 
-![fiscal calendar 1](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png)
+![fiscal calendar 1](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar1.png)
 
 - Al crear un calendario, Etendo propone `*` como la organización por defecto:
 
@@ -36,13 +36,13 @@ Una vez creado el calendario, debe vincularse a la organización correspondiente
 
 - Seleccionar el tipo **organizaciones legales con contabilidad**.
 
-![fiscal calendar 2](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png)
+![fiscal calendar 2](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar2.png)
 
-### Ejercicio
+### Ejercicio { #year }
 
 La solapa **Ejercicio** se utiliza para definir tantos **Ejercicio** como sea necesario dentro de un calendario.
 
-![fiscal calendar 5](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png)
+![fiscal calendar 5](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar5.png)
 
 - Un ejercicio fiscal normalmente cubre **12 meses consecutivos**.
 
@@ -52,7 +52,7 @@ La solapa **Ejercicio** se utiliza para definir tantos **Ejercicio** como sea ne
 
     - Un **13.º periodo de ajuste** opcional, fechado el último día del último periodo estándar (p. ej., 31-12-2025), utilizado para ajustes contables mediante **Asientos manuales**.
 
-![fiscal calendar 3](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png)
+![fiscal calendar 3](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar3.png)
 
 Una vez creados, todos los periodos deben ser **abiertos** en la ventana [Abrir/Cerrar periodos](#abrircerrar-periodos).
 
@@ -63,11 +63,11 @@ Una vez creados, todos los periodos deben ser **abiertos** en la ventana [Abrir/
     -   Los **periodos estándar del calendario** se abren para **cada Categoría de documento**, lo que significa que Etendo permite al usuario contabilizar cualquier tipo de documento en el libro mayor dentro de un periodo estándar del calendario abierto.
     -   El **Periodo de ajuste** solo se abre para la categoría de documento **Asientos manuales**, lo que significa que Etendo permite contabilizar únicamente asientos manuales dentro del periodo de ajuste.
 
-### **Periodo**
+### **Periodo** { #period }
 
 La solapa **Periodo** lista todos los periodos de un ejercicio. Además, es posible crear **manualmente** los periodos contables de un ejercicio. Esa acción requiere introducir cierta información:
 
-![fiscal calendar 4](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png)
+![fiscal calendar 4](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar4.png)
 
 Los campos a tener en cuenta son:
 

@@ -7,13 +7,13 @@ tags:
     - Extensión de PostgreSQL
 ---
 
-# Configuración de PostgreSQL 
+# Configuración de PostgreSQL { #postgresql-configuration }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo configurar postgres para que funcione correctamente con Etendo Classic. Una vez que haya instalado postgres, debe asegurarse de que la configuración esté establecida correctamente.
 
-## Configuración del usuario del sistema
+## Configuración del usuario del sistema { #system-user-configuration }
 Cuando [instala postgres](https://www.postgresql.org/download/){target="_blank"}, se crea un usuario del sistema llamado `postgres`. Si no ha configurado una contraseña para este usuario, puede hacerlo ejecutando el siguiente comando
 
 ```bash title="Terminal"
@@ -28,7 +28,7 @@ ALTER USER postgres PASSWORD 'syspass';
 !!! info
     Etendo Classic tiene `syspass` preconfigurado como contraseña predeterminada para el usuario postgres. En caso de cambiar la contraseña del sistema, esta variable de configuración debe modificarse siguiendo la [guía de instalación](../../../../getting-started/installation.md) de Etendo Classic.
 
-## Configuración del usuario de Etendo Classic
+## Configuración del usuario de Etendo Classic { #etendo-classic-user-configuration }
 
 !!! warning
     En caso de instalar Etendo desde cero ejecutando el comando `./gradlew install`, el proceso de instalación crea automáticamente el usuario y la contraseña predeterminados `tad`, y ya están incluidos preconfigurados. En caso de que no necesite cambiar el usuario `tad`, puede omitir esta sección.
@@ -49,7 +49,7 @@ CREATE ROLE tad LOGIN PASSWORD 'tad'  CREATEDB CREATEROLE VALID UNTIL 'infinity'
     El usuario y la contraseña creados pueden configurarse en el archivo `gradle.properties`, tal y como puede verse en la [guía de instalación](../../../../getting-started/installation.md#install-etendo) de Etendo Classic.
 
 
-## Configuración requerida
+## Configuración requerida { #required-configuration }
 Asegúrese de tener la siguiente configuración de PostgreSQL en su `postgresql.conf`. Este archivo se encuentra en la ubicación donde tenga instalado postgresql
 
 ``` title="postgresql.conf"
@@ -57,7 +57,7 @@ lc_numeric = 'en_US.UTF-8'
 max_locks_per_transaction = 128
 ```        
 
-### Extensiones de PostgreSQL requeridas
+### Extensiones de PostgreSQL requeridas { #required-postgresql-extensions }
 Actualmente, Etendo Classic requiere que estén disponibles dos extensiones de PostgreSQL:
 
 **uuid-ossp** para generar UUID

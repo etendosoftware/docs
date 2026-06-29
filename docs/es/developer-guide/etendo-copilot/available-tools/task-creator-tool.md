@@ -8,11 +8,11 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de creación de tareas
+# Herramienta de creación de tareas { #task-creator-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de creación de tareas** automatiza la creación de tareas en función del contenido de un archivo. Admite los formatos **ZIP**, **CSV**, **XLS** y **XLSX**. Cada archivo o fila extraída de la entrada se convierte en una tarea independiente, lo que la hace ideal para la creación masiva de tareas basada en datos estructurados.
 
@@ -31,17 +31,17 @@ Esta herramienta proporciona al agente:
 
 Es especialmente útil para la colaboración en equipo, la incorporación a proyectos, los flujos de trabajo de entrada de datos y las configuraciones recurrentes de tareas estructuradas.
 
-## Configuración
+## Configuración { #setup }
 
 La herramienta no requiere variables de entorno específicas por parte del usuario. Sin embargo, depende de la configuración interna de Etendo para la obtención del token y del host, utilizando internamente los valores `ETENDO_TOKEN` y `etendo.host`. Estos valores se gestionan de forma segura y **nunca se exponen al modelo**.
 
-### Formatos de archivo compatibles
+### Formatos de archivo compatibles { #supported-file-formats }
 
   - **ZIP**: se crea una tarea por cada archivo extraído.
   - **CSV / Excel (XLS, XLSX)**: se crea una tarea por cada fila (excluyendo la cabecera), con los datos mapeados como cadenas clave-valor.
   - **Otros archivos**: se crea una única tarea utilizando la ruta completa del archivo.
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 La herramienta sigue estos pasos principales:
 
@@ -90,9 +90,9 @@ La herramienta sigue estos pasos principales:
     }
     ```
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Ejemplo 1: Uso básico
+### Ejemplo 1: Uso básico { #example-1-basic-usage }
 
 Usted tiene un archivo `.csv` con una lista de comentarios de clientes. Cada fila debe convertirse en una tarea independiente dentro del mismo grupo. Usted introduciría:
 
@@ -105,7 +105,7 @@ Usted tiene un archivo `.csv` con una lista de comentarios de clientes. Cada fil
 
 La Herramienta de creación de tareas procesará cada fila y generará una tarea con la pregunta base + los datos de la fila. Si un parámetro no se establece, la herramienta utiliza su valor predeterminado.
 
-### Ejemplo 2: Agrupación por valores de columna
+### Ejemplo 2: Agrupación por valores de columna { #example-2-grouping-by-column-values }
 
 Usted tiene un archivo `.xlsx` con líneas de pedido donde varias filas pertenecen al mismo documento de pedido. En lugar de crear una tarea por línea, usted quiere crear una tarea por pedido que contenga todas sus líneas.
 

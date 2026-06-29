@@ -9,9 +9,9 @@ tags:
     - Etendo Mobile
 ---
 
-# Gestión avanzada de almacén
+# Gestión avanzada de almacén { #advanced-warehouse-management }
 :octicons-package-16: Paquete Java: `com.etendoerp.advanced.warehouse.management`
-## Visión general
+## Visión general { #overview }
 
 El módulo **Advanced Warehouse Management** amplía las capacidades estándar de Etendo para ofrecer una gestión de inventario integral, flexible y automatizada, añadiendo integración con dispositivos móviles. Cada acción realizada desde Etendo Mobile se sincroniza automáticamente con Etendo, garantizando una trazabilidad completa y actualizaciones coherentes en las ventanas correspondientes del sistema.
 
@@ -22,7 +22,7 @@ Este módulo permite al usuario:
 - Automatizar reubicaciones y estados mediante reglas de movimiento.
 - Integrar la trazabilidad mediante códigos de barras, que pueden escanearse desde Etendo Mobile.
 - Ampliar y optimizar el proceso manual de picking y packing, incorporando la posibilidad de ejecutarlos desde Etendo Mobile.
-## Configuración inicial
+## Configuración inicial { #initial-setup }
 
 Para empezar a utilizar este módulo correctamente, deben completarse los siguientes pasos de instalación y configuración:
 
@@ -212,7 +212,6 @@ Para empezar a utilizar este módulo correctamente, deben completarse los siguie
 
         Este método permite al sistema leer el código y compararlo exactamente con los códigos de los productos almacenados en el sistema. La comparación es directa y estricta, sin tener en cuenta ninguna estructura adicional en el código.    
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-direct-1.png)
 
 
 6. Infraestructura de **Mantenimiento**:
@@ -235,9 +234,9 @@ Para empezar a utilizar este módulo correctamente, deben completarse los siguie
     **Preferencias del sistema**
 
     Las preferencias `Create Warehouse Task` y `Task From Date Completed Days`, disponibles en la solapa *Preferencias*, se relacionan con la funcionalidad de tareas: `Create Warehouse Task` habilita la creación automática de tareas cuando se completa un picking, y `Task From Date Completed Days` define el número de días por defecto para mostrar tareas completadas.
-## Configuración de datos maestros
+## Configuración de datos maestros { #master-data-configuration }
 
-### Creación de estados de inventario  
+### Creación de estados de inventario { #creating-inventory-statuses }
 
 `Aplicación` > `Gestión de Almacén` > `Configuración` > `Estado de Inventario`
 
@@ -248,7 +247,7 @@ Los estados de inventario permiten al usuario clasificar y gestionar las unidade
 
 El nuevo estado estará disponible en **Etendo Mobile** para asignarse a huecos nuevos o existentes mediante las opciones de Mantenimiento **Ajustar** o **Reubicar**. En este último caso, se utilizan las reglas definidas en la ventana `Configuración de reglas de movimiento`, descrita a continuación.
 
-### Ventana Configuración de reglas de movimiento
+### Ventana Configuración de reglas de movimiento { #movement-rules-configuration-window }
 
 `Aplicación` > `Gestión de Almacén` > `Configuración` > `Configuración de reglas de movimiento`
 
@@ -281,7 +280,7 @@ Campos a tener en cuenta:
 !!!Info
     Las acciones realizadas mediante reglas de movimiento impactan tanto en Etendo Mobile como en el **Informe Stock** de Etendo, reflejando la ubicación.
 
-### Código de barras
+### Código de barras { #barcode }
 
 La funcionalidad de código de barras es clave para las operaciones logísticas. Los huecos y los productos con códigos generados estarán disponibles para ser escaneados y gestionados tanto desde **Etendo Mobile** como desde **Etendo**, pero requiere una configuración previa.
 
@@ -332,13 +331,13 @@ Es posible generar estos códigos únicos para los huecos en las ventanas **Alma
         
         - En la ventana **Configuración avanzada de almacén**, existe una casilla de verificación denominada `Buscar código de barras relacionado`
         - Si la casilla está habilitada, al escanear un producto desde Etendo Mobile, el sistema buscará coincidencias en todos los códigos listados en la solapa Código de barras, además del código de la cabecera.
-## Recepción de entrada
+## Recepción de entrada { #inbound-receipt }
 
-### Visión general
+### Visión general { #overview_1 }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-La funcionalidad de [Inventario referenciado (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) se ha ampliado para gestionar unidades logísticas físicas como **palés** y **cajas**, vinculadas directamente a las [Unidades alternativas de medida (AUOM)](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) de cada producto. Esto permite definir equivalencias (p. ej., 1 Palé = 100 unidades) y gestionar estas unidades como entidades únicas y trazables en las operaciones de almacén.
+La funcionalidad de [Inventario referenciado (RI)](../../../basic-features/warehouse-management/transactions/referenced-inventory.md) se ha ampliado para gestionar unidades logísticas físicas como **palés** y **cajas**, vinculadas directamente a las [Unidades alternativas de medida (AUOM)](../../../basic-features/master-data-management/master-data/product.md#alternate-uom-tab) de cada producto. Esto permite definir equivalencias (p. ej., 1 Palé = 100 unidades) y gestionar estas unidades como entidades únicas y trazables en las operaciones de almacén.
 
 El módulo [Stock Logistic Unit](./stock-logistic-unit.md), instalado como dependencia, añade nuevas unidades (Caja, Palé) y tipos de inventario referenciado, permitiendo a los usuarios configurar equivalencias en la solapa **Unidad Alternativa** de la ventana Producto. Una vez definidas, si se requiere una conversión diferente, debe crearse una nueva AUOM.
 
@@ -347,7 +346,7 @@ Cuando se reciben mercancías, el sistema puede generar automáticamente registr
 !!! info
     Para una configuración y uso detallados de las unidades logísticas, consulte la documentación de [Stock Logistic Unit](./stock-logistic-unit.md).
 
-### Ventana Recepción de entrada  
+### Ventana Recepción de entrada { #inbound-receipt-window }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Transacción` > `Recepción de entrada`
 
@@ -361,7 +360,7 @@ Cuando se utilizan AUOM como Palé o Caja, el sistema puede generar automáticam
 
 Campos a tener en cuenta:
 
-#### Cabecera
+#### Cabecera { #header }
 
 - **Organización**: Define la organización en la que se creará la recepción de entrada y filtra la información.  
 - **Tipo de documento**: Se carga por defecto con *Recepción de entrada* para clasificar el tipo de documento.  
@@ -369,7 +368,7 @@ Campos a tener en cuenta:
 - **Fecha del movimiento**: Fecha en la que se registra el movimiento físico de mercancías. Por defecto, es la fecha actual.  
 - **Descripción**: Campo de texto libre para añadir información adicional o notas sobre la recepción.  
 
-#### Solapa Líneas
+#### Solapa Líneas { #lines-tab }
 
 La solapa Líneas permite añadir y modificar productos individuales de uno o varios pedidos de compra, ajustando su cantidad y/o unidad. Representa la lista de productos recibidos, mostrando los siguientes campos además de los básicos.
 
@@ -390,7 +389,7 @@ Campos a tener en cuenta:
 - **Tipo de inventario referenciado**: Tipo de inventario referenciado asociado a la agrupación (p. ej., Caja, Palé).
 - **Línea de albarán**: Referencia al albarán generado al completar el albarán.  
 
-#### Procesos disponibles
+#### Procesos disponibles { #available-process }
   
 **Crear líneas desde pedido**
 
@@ -502,7 +501,7 @@ Este botón está disponible **solo cuando la Recepción de entrada está comple
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-print-lines-2.png)
 
-### Flujo de trabajo
+### Flujo de trabajo { #workflow }
 
 **Flujo de recepción**
 
@@ -538,13 +537,13 @@ Este botón está disponible **solo cuando la Recepción de entrada está comple
 3. A continuación, en la línea de recepción, el usuario modifica la cantidad para reflejar la recepción parcial; por ejemplo, si el pedido es de 1 caja (12 unidades) pero solo se reciben 6 unidades, el usuario cambia la cantidad a 6 y, si es necesario, ajusta la unidad de medida a **unidades** en lugar de **caja**.
 4. Una vez ajustada la cantidad real recibida, el usuario completa la recepción pulsando el botón *Completar* en la ventana Recepciones de entrada.
 5. En ese momento, el sistema genera y completa el albarán, reflejando la cantidad parcial realmente recibida. El inventario se actualiza con la cantidad recibida. El **Pedido de compra** mostrará el porcentaje recibido en la barra de estado.
-## Inspección de calidad de inventario
+## Inspección de calidad de inventario { #inventory-quality-inspection }
 
-### Visión general
+### Visión general { #overview_2 }
 
 La ventana **Inspección de calidad de inventario** permite una gestión y control exhaustivos de los procesos de inspección de calidad dentro de las operaciones de almacén. Sirve como una herramienta centralizada para registrar, auditar y ejecutar controles de calidad, manteniendo una trazabilidad completa entre las inspecciones, las tareas de operador asignadas y los movimientos de existencias resultantes. Esta funcionalidad garantiza que los productos cumplan los estándares de calidad antes de ponerse a disposición para la venta o para su posterior procesamiento, evitando que artículos defectuosos o no conformes entren en la cadena de distribución.
 
-### Ventana Inspección de calidad de inventario
+### Ventana Inspección de calidad de inventario { #inventory-quality-inspection-window }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacción` > `Inspección de calidad de inventario`
 
@@ -554,7 +553,7 @@ Esta ventana permite a los usuarios crear y gestionar registros de inspección d
 
 Campos a tener en cuenta:
 
-#### Cabecera
+#### Cabecera { #header_1 }
 
 - **Organización**: Define la organización en la que se creará la inspección de calidad y filtra la información disponible.  
 - **Nº de documento**: Identificador único generado automáticamente para el documento de inspección, siguiendo una secuencia específica para este tipo de documento.  
@@ -562,7 +561,7 @@ Campos a tener en cuenta:
 - **Fecha de control de calidad**: Fecha en la que la inspección está programada o se realiza. Por defecto, es la fecha actual.  
 - **Descripción**: Campo de texto libre para añadir información adicional o notas sobre la inspección.
 
-#### Solapa Líneas
+#### Solapa Líneas { #lines-tab_1 }
 
 La solapa Líneas lista los productos a inspeccionar, incluyendo su estado de inventario actual, ubicación y cantidades planificadas para inspección. Cada línea representa un producto o lote que requiere inspección de calidad.
 
@@ -580,7 +579,7 @@ Campos a tener en cuenta:
 - **Descripción**: Campo de texto libre para añadir notas u observaciones adicionales sobre la línea de inspección.  
 - **Línea de movimiento**: Referencia a la línea de movimiento de inventario asociada a esta inspección, si aplica.
 
-#### Botones
+#### Botones { #buttons }
 
 **Proceso**
 
@@ -594,7 +593,7 @@ Al hacer clic, aparece una ventana emergente donde puede asignar la tarea a un u
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
 
-### Flujo de trabajo
+### Flujo de trabajo { #workflow_1 }
 
 El proceso de Inspección de calidad de inventario comienza en Etendo cuando un usuario crea un nuevo registro en la ventana **Inspección de calidad de inventario**.
 
@@ -633,16 +632,16 @@ El proceso de Inspección de calidad de inventario comienza en Etendo cuando un 
 
 !!!warning "Reglas de movimiento y huecos"
     Se recomienda configurar [Reglas de movimiento](#ventana-de-configuración-de-reglas-de-movimiento) para los estados de inspección de uso común (p. ej., *Dañado*, *Bloqueado*) para mantener una organización adecuada del almacén.
-## Reserva de existencias AUOM
+## Reserva de existencias AUOM { #auom-stock-reservation }
 
-### Visión general
+### Visión general { #overview_3 }
 
 Se ha añadido la opción de reservas de existencias basadas en la unidad definida en el pedido de venta (campo AUOM), que determina si el producto se vende en su unidad base o en una unidad alternativa (por ejemplo, una sola botella o una caja de 12).  
 
 !!! info 
     De forma predeterminada, cuando el módulo está instalado, las preferencias `Enable Stock Reservations` y `Enable UOM Management` están habilitadas. Para más detalles, consulte [Stock Logistic Unit - Preference](./stock-logistic-unit.md#preference).
 
-### Flujo de reserva
+### Flujo de reserva { #reservation-flow }
 
 1. El proceso comienza cuando se crea un **Pedido de venta** con líneas de producto definidas con una Unidad Alternativa de Medida (AUOM) (p. ej., 1 Caja = 24 Unidades).
 2. En cada línea, el campo **Reserva de existencias** se establece como *Automático*, por lo que el sistema intenta reservar existencias cuando se confirma el pedido.
@@ -662,7 +661,7 @@ Se ha añadido la opción de reservas de existencias basadas en la unidad defini
 - Pedido: 110 unidades; Stock: 100 unidades + 1 caja de 10 → Reserva completada con ambas.  
 - Si no hay stock disponible en la unidad solicitada, el sistema igualmente intenta reservar usando otras AUOM.  
 
-### Flujo de picking/packing
+### Flujo de picking/packing { #pickingpacking-flow }
 
 En los procesos de [Picking](./picking.md) y [Packing](./packing.md). Si los códigos de barras **GS1-128** están configurados, una vez que se ha validado un [código de barras](#código-de-barras), el sistema puede identificar no solo el producto, sino también su unidad alternativa de medida (AUOM) y los atributos asociados, como el lote o la fecha de caducidad.
 
@@ -686,7 +685,7 @@ De este modo, Etendo garantiza que un único escaneo reconozca de forma integral
     - 260910 = fecha de caducidad (YYMMDD)
     - 91 = identificador de hueco
     - Rn-0-0-0 = código de unidad logística
-## Uso de Etendo Mobile
+## Uso de Etendo Mobile { #using-etendo-mobile }
 
 Al iniciar sesión en Etendo Mobile, al operario de almacén se le presentarán las aplicaciones y menús disponibles según su rol.
 
@@ -700,17 +699,17 @@ Como se ha visto anteriormente, la opción de Gestión avanzada de almacén incl
 - [Mantenimiento de reubicación](#mantenimiento-de-reubicación)
 - [Mantenimiento de ajuste](#mantenimiento-de-ajuste)
 - [Todos los mantenimientos](#todos-los-mantenimientos)
-### Tareas de recepción
+### Tareas de recepción { #reception-tasks }
 
 Permite crear y controlar recepciones directamente desde la aplicación móvil mediante **tareas de recepción**, que reproducen el mismo comportamiento y flujo de proceso que las ventanas [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions/#goods-receipts) y [Recepción de entrada](#recepción-de-entrada) en el ERP.
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo }
 
 El proceso comienza haciendo clic en el botón **Generar tarea de recepción** en la ventana *Recepción de entrada* del ERP. Allí, la tarea se asigna a un operario, se define la prioridad y, a continuación, se refleja en la aplicación móvil del operario asignado.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inbound-receipt-popup-1.png)
 
-#### Acceso a las tareas de recepción (Etendo Mobile)
+#### Acceso a las tareas de recepción (Etendo Mobile) { #access-to-reception-tasks-etendo-mobile }
 
 Al acceder a **Etendo Mobile** en la sección **Tareas de recepción**, se mostrarán todas las tareas y sus estados correspondientes pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran con estado *Pendiente*.
 
@@ -735,7 +734,7 @@ Para realizar una **Recepción**:
 - Confirme la tarea con el botón **Finalizar recepción**.
 - Confirme que desea finalizar la tarea.
 - Vea el **Mensaje de éxito**.
-### Tareas de picking
+### Tareas de picking { #picking-tasks }
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-1.png)
 
@@ -744,7 +743,7 @@ El proceso de picking permite al operario recoger de forma eficiente los product
 !!!Info
     Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Picking](./picking.md).
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo_1 }
 
 El proceso se inicia en Etendo cuando se crea una [Lista de picking](picking.md#picking-list-generation) a partir de un Pedido de venta. Esto puede realizarse mediante el botón **Generar lista de picking** disponible en la ventana Pedido de venta, que crea una nueva **tarea** que se asignará a un usuario para su ejecución en Etendo Mobile.
 
@@ -780,7 +779,7 @@ Ejemplo de logs con errores:
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/message-picking-list-error.png)
 
-#### Acceso a las tareas de picking (Etendo Mobile)
+#### Acceso a las tareas de picking (Etendo Mobile) { #access-to-picking-tasks-etendo-mobile }
 
 Al acceder a **Etendo Mobile** en la sección **Picking**, se mostrarán todas las tareas y sus correspondientes estados y prioridades, pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
 
@@ -798,7 +797,7 @@ Esta pantalla contiene:
 
 <br clear="all">
 
-#### Picking de productos
+#### Picking de productos { #product-picking }
 
 1. El operario de almacén debe seleccionar una tarea `Pendiente`.
 
@@ -835,7 +834,7 @@ Esta pantalla contiene:
         - AUOM
         - Cantidad contada con botones `+` y `-`: que permiten sumar o restar, de uno en uno, la cantidad manualmente.
 
-#### Métodos de picking
+#### Métodos de picking { #picking-methods }
 
 En el proceso de picking, el operario tiene flexibilidad tanto en qué recoger como en cómo hacerlo. Por un lado, aunque el sistema solicite un código específico (por ejemplo, caja BX100020), es posible sustituirlo por otra unidad equivalente (como BX100023) siempre que el producto y la cantidad coincidan, o adaptarse a la disponibilidad de stock (por ejemplo, entregar 10 unidades sueltas en lugar de una caja de 10). Estas variaciones se registran automáticamente en la reserva y en el albarán de salida.
 
@@ -867,7 +866,7 @@ Por otro lado, el sistema también permite flexibilidad en el modo de operación
 
     
 
-#### Finalización del picking
+#### Finalización del picking { #picking-completion }
 
 Una vez que se registra al menos una unidad de cualquier producto, el botón **Finalizar picking** se activa. Esto permite el picking parcial, es decir, solo se puede recoger parte de la cantidad solicitada, lo cual resulta útil cuando faltan productos o no son aptos para su uso.
 
@@ -881,7 +880,7 @@ Tras la confirmación, la tarea se marca como Completada.
 Una vez completada, la tarea aparecerá en la sección de Tareas completadas, donde es posible revisar los productos y cantidades validados para esa tarea de picking específica.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/picking-7.png)
-### Tareas de empaquetado
+### Tareas de empaquetado { #packing-tasks }
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-1.png)
 
@@ -890,14 +889,14 @@ El proceso de empaquetado permite al operario empaquetar los productos de forma 
 !!!Info
     Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Empaquetado](./packing.md).
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo_2 }
 
 Las tareas de empaquetado están vinculadas a un registro en la ventana **Empaquetado**. La creación de una tarea de empaquetado se desencadena tras:
 
 - La finalización de una tarea de picking (cuando el Tipo de tarea `Picking and Packing` está activo).
 - Desde la ventana **Empaquetado** de Etendo al añadir al menos un pedido de venta a un nuevo Empaquetado.
 
-#### Acceso a las tareas de empaquetado (Etendo Mobile)
+#### Acceso a las tareas de empaquetado (Etendo Mobile) { #access-to-packing-tasks-etendo-mobile }
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-2.png){align=right width=300}
 
@@ -917,7 +916,7 @@ Esta pantalla contiene:
 
 <br clear="all">
 
-#### Empaquetado de productos
+#### Empaquetado de productos { #product-packing }
 
 1. El operario de almacén debe **seleccionar una tarea**. Para seleccionar la tarea, desplácese o introduzca datos clave en el buscador.
 
@@ -984,7 +983,7 @@ Esta pantalla contiene:
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-6.png)
 
-#### Métodos de empaquetado
+#### Métodos de empaquetado { #packing-methods }
 
 Durante el proceso de empaquetado, el operario debe ceñirse estrictamente a lo que debe recogerse, es decir, solo puede escanear los códigos de barras listados en el documento de empaquetado. No está permitido sustituir unas cajas por otras ni cambiar unidades logísticas, ya que los productos ya han sido reservados durante el picking y el empaquetado debe reflejar exactamente lo solicitado.
 
@@ -1008,7 +1007,7 @@ En cuanto a cómo realizar el empaquetado, el sistema ofrece flexibilidad en los
 
     En ambos casos, el mensaje de error mostrado es el que aparece en la imagen.
 
-#### Finalización del empaquetado
+#### Finalización del empaquetado { #packing-completion }
 
 Una vez que los productos han sido empaquetados:
 
@@ -1028,14 +1027,14 @@ Una vez completada, la tarea aparecerá en la sección de Tareas completadas. De
 - En la vista Paquete: qué productos se empaquetaron en cada paquete.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/packing-mobile-9.png)
-### Tareas de reubicación
+### Tareas de reubicación { #relocation-tasks }
 
 Las tareas de reubicación permiten mover productos desde su ubicación original hasta su ubicación de destino dentro del mismo almacén. Cada tarea se muestra en formato de tarjeta, donde se puede confirmar o ajustar la cantidad movida y la ubicación de destino. La información introducida se sincroniza con el ERP al final de la tarea, garantizando la coherencia entre el movimiento registrado y el stock.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/goods-movement.md).
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo_3 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Movimiento entre almacenes`
 
@@ -1047,7 +1046,7 @@ Permite al responsable crear una tarea de reubicación a partir del documento **
 
 El uso del botón **Generar tarea de reubicación** está sujeto a una validación del sistema que determina su disponibilidad. Solo se muestra cuando el documento *Movimiento entre almacenes* no ha sido procesado y no tiene ya una tarea asignada.
 
-#### Acceso a las tareas de reubicación (Etendo Mobile)
+#### Acceso a las tareas de reubicación (Etendo Mobile) { #access-to-relocation-tasks-etendo-mobile }
 
 Al acceder a Etendo Mobile en la sección Tareas de reubicación, se mostrarán todas las tareas y sus correspondientes estados y prioridades pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran como Pendiente.
 
@@ -1066,17 +1065,17 @@ Para realizar una **reubicación**:
 - Vea el mensaje de éxito.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/relocation-tasks-2.png)
-### Mantenimiento de ajuste
+### Mantenimiento de ajuste { #adjustment-tasks }
 
 Las tareas de ajuste de inventario permiten a los operarios de almacén realizar recuentos físicos y ajustes de existencias directamente desde la aplicación móvil. Estas tareas se generan a partir de inventarios físicos en el sistema ERP.
 
 Esta funcionalidad corresponde a la misma operación realizada en la ventana **Inventario físico** de Etendo: registrar la cantidad real contada de un producto y actualizar las existencias en consecuencia, ya sea corrigiendo cantidades existentes o introduciendo existencias donde no había previamente. Cuando el estado de inventario cambia durante el proceso de ajuste, el sistema mueve automáticamente el/los producto(s) a los huecos asociados al nuevo estado, reflejando con precisión la condición actual de las existencias.
 
 !!!Info
-    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inventario físico](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+    Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inventario físico](../../../basic-features/warehouse-management/transactions/physical-inventory.md).
 
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo_4 }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Inventario físico`
 
@@ -1084,7 +1083,7 @@ El proceso comienza creando tareas dentro de Etendo usando la ventana **Inventar
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-task-window-1.png)
 
-#### Acceso a las tareas de ajuste (Etendo Mobile)
+#### Acceso a las tareas de ajuste (Etendo Mobile) { #access-to-adjustment-tasks-etendo-mobile }
 
 Al acceder a Etendo Mobile en la sección de Tareas de ajuste, se mostrarán todas las tareas y sus correspondientes estados y prioridades, pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
 
@@ -1102,20 +1101,20 @@ Para **Ajustar** el inventario
 - Confirme que desea completar la tarea.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-tasks-status-1.png)
-### Mantenimiento de inspección de calidad
+### Mantenimiento de inspección de calidad { #quality-inspection-tasks }
 
 Las tareas de inspección de calidad permiten a los operarios de almacén realizar la verificación de calidad del producto directamente desde Etendo Mobile. Estas tareas permiten a los operarios inspeccionar la mercancía, registrar los resultados de la inspección y actualizar el estado del inventario en función de las condiciones del producto, garantizando que solo los artículos aprobados por calidad estén disponibles para la venta o para su posterior procesamiento.
 
 !!!Info
     Para más información sobre cómo utilizar esta funcionalidad en Etendo, visite [Inspección de calidad de inventario](#inspección-de-calidad-de-inventario).
 
-#### Inicio del proceso (Etendo)
+#### Inicio del proceso (Etendo) { #process-start-etendo_5 }
 
 El proceso comienza en Etendo creando tareas desde la ventana **Inspección de calidad de inventario**. Tras crear un documento de inspección con líneas de producto que requieren verificación de calidad, utilice el botón **Generar tarea** para crear una tarea móvil.
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/inventory-quality-inspection-generate-task.png)
 
-#### Acceso a las tareas de inspección de calidad (Etendo Mobile)
+#### Acceso a las tareas de inspección de calidad (Etendo Mobile) { #access-to-quality-inspection-tasks-etendo-mobile }
 
 Al acceder a Etendo Mobile en la sección **Mantenimiento de inspección de calidad**, se mostrarán todas las tareas y sus estados correspondientes pertenecientes al usuario que ha iniciado sesión. Por defecto, las tareas se muestran en estado *Pendiente*.
 
@@ -1147,7 +1146,7 @@ Para realizar una **inspección de calidad**:
 
 !!!note
     Cuando se completa la inspección, el sistema actualiza automáticamente el estado del inventario y aplica las [Reglas de movimiento](#ventana-de-configuración-de-reglas-de-movimiento) si están configuradas. Los productos marcados con un estado diferente se reubicarán en consecuencia, o se creará un hueco de almacenamiento virtual si no se ha definido una ubicación específica para ese estado.
-### Todas las tareas
+### Todas las tareas { #all-tasks }
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management/all-tasks.png)
 

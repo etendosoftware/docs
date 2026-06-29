@@ -9,18 +9,18 @@ tags:
     - CSV
 ---
 
-# Herramienta XLS
+# Herramienta XLS { #xls-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La Herramienta XLS procesa archivos `XLS` o `CSV` para extraer datos. Está diseñada para facilitar tareas como el análisis del contenido de hojas de cálculo, el procesamiento de datos tabulares y la extracción de información específica de archivos XLS. La herramienta acepta la ruta del archivo de un archivo de datos y devuelve datos procesados en función de los parámetros definidos.
 
 !!!info
     Para incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza el proceso de **extracción de datos desde archivos XLS**. Es especialmente útil para tareas como la lectura de datos financieros, la extracción de detalles de clientes o el análisis de registros de inventario. La herramienta admite lógica de procesamiento personalizable para gestionar estructuras de datos diversas.
 
@@ -42,9 +42,9 @@ El uso de esta herramienta consta de las siguientes acciones:
     - La herramienta devuelve un objeto JSON que contiene los datos extraídos.
     - **Datos**: Los datos procesados extraídos del archivo XLS.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Extracción de datos desde un archivo XLS
+### Extracción de datos desde un archivo XLS { #extracting-data-from-an-xls-file }
 
 Suponga que tiene un archivo de Excel en `/home/user/data.xls` y desea extraer información de clientes del archivo:
 

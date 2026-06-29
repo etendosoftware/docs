@@ -8,15 +8,15 @@ tags:
     - Etendo UI Library
 ---
 
-# Estructura de subaplicaciones en Etendo Mobile
+# Estructura de subaplicaciones en Etendo Mobile { #subapplications-structure-in-etendo-mobile }
 
-## Visión general
+## Visión general { #overview }
 Esta página proporciona una guía completa sobre la estructura de las subaplicaciones en Etendo Mobile. Explica conceptos clave como el archivo `App.tsx`, que sirve como el punto de entrada principal de las subaplicaciones, y detalla cómo se utilizan los parámetros de Etendo Mobile para la inicialización. Además, la guía cubre la gestión de idioma, la navegación entre pantallas mediante la pila de navegación y el uso de Etendo UI Library para un diseño y una funcionalidad coherentes en todas las subaplicaciones. Estos elementos constituyen la base para desarrollar subaplicaciones dinámicas y bien integradas dentro de Etendo Mobile.
 
-## Archivo de la aplicación
+## Archivo de la aplicación { #app-file }
 En `App.tsx`, se encuentra el archivo principal ubicado en la raíz de la subaplicación. En este archivo, definiremos las rutas y los componentes que se renderizarán en cada ruta. Además, este archivo es responsable de la inicialización de la subaplicación y obtiene los Parámetros de Etendo Mobile.
 
-### Parámetros de Etendo Mobile
+### Parámetros de Etendo Mobile { #params-from-etendo-mobile }
 Etendo Mobile _envía_ Parámetros a la subaplicación y todos están listos para usarse; son:
 
 !!! abstract "Parámetros"
@@ -31,7 +31,7 @@ Etendo Mobile _envía_ Parámetros a la subaplicación y todos están listos par
     - _Camera_: un componente previamente integrado en Etendo Mobile que ahora se ha transferido sin problemas a las subaplicaciones. Este componente en particular incluye una destacada capacidad de escaneo de códigos QR, mejorando la funcionalidad general de las subaplicaciones.
     - _sharedFiles_: array de IFile; si un archivo se comparte con Etendo Mobile desde una aplicación externa, al compartirlo y seleccionar una subaplicación se añadirá el archivo al array de archivos de la subaplicación correspondiente.
 
-### Idioma
+### Idioma { #language }
 El Idioma es una cadena que sirve como representación del Idioma seleccionado por el usuario. Esta configuración de Idioma es configurable dentro de los ajustes de la aplicación Etendo Mobile y desempeña un papel crucial a la hora de determinar el Idioma en el que se presentan los textos dentro de la subaplicación. En este ejemplo, utilizaremos el parámetro _language_ recibido como entrada para inicializar los aspectos restantes de la aplicación en el archivo `App.tsx`.
 
 ``` typescript title="App.tsx"
@@ -95,7 +95,7 @@ Los archivos de definición de traducciones pueden agrupar la información; por 
 
 Luego, para utilizarlo, use la función `local.t`, por ejemplo: `locale.t('ScreenOne.LabelOne')`
 
-### Pila de navegación
+### Pila de navegación { #navigation-stack }
 La parte de la pila de navegación de `App.tsx` nos permite navegar entre pantallas. Es un componente proporcionado por `@react-navigation/stack` en una aplicación React Native. Conceptualmente, una pila de navegación gestiona el flujo entre diferentes pantallas en la aplicación, permitiendo a los usuarios navegar hacia adelante y hacia atrás entre estas pantallas.
 
 **Conceptos clave**

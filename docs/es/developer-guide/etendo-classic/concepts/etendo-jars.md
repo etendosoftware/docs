@@ -6,7 +6,7 @@ tags:
     - Configuración de Gradle
     - Publicación de Módulos
 ---
-## Visión general
+## Visión general { #overview }
 
 La nueva versión de Etendo incluye un nuevo plugin que está enfocado en los JAR.
 
@@ -42,14 +42,14 @@ El plugin de Etendo intenta utilizar este enfoque, gestionando todas las bibliot
 
 ---
 
-### Módulos JAR de Etendo
+### Módulos JAR de Etendo { #etendo-jar-modules }
 
 Los Módulos son un aspecto importante de Etendo, le permiten crear e introducir nueva funcionalidad en su aplicación.
 
 Para obtener todos los beneficios de un archivo JAR, el nuevo plugin permite al usuario crear una versión JAR de un módulo con toda la configuración necesaria para ser publicada y distribuida.
 
 
-#### Permisos
+#### Permisos { #permissions }
 Para obtener permisos para publicar una nueva versión de un módulo necesita ejecutar:
 
 `./gradlew registerModule -Ppkg=<package name> -Prepo=<repository rame>`
@@ -69,7 +69,7 @@ Los Módulos que contienen un archivo **build.gradle** ahora se reconocen como s
     `./gradlew createModuleBuild -Ppkg=<package name> -Prepo=<repository rame>`
     Este comando **sobrescribirá** el archivo build.gradle si ya está presente.
 
-#### Publicación
+#### Publicación { #publishing }
 
 Para publicar una nueva versión de un módulo necesita ejecutar
 
@@ -87,12 +87,12 @@ Esta tarea crea la versión JAR y ZIP del módulo, e intenta publicarla en el re
 
 <br>
 
-#### Estructura del archivo JAR
+#### Estructura del archivo JAR { #jar-file-structure }
 Los **Módulo** JAR de Etendo contienen una estructura especial. Todo el contenido del directorio ***src*** se incluirá en la raíz del JAR, junto con las clases Java compiladas. 
 Otros directorios como ***src-db***, ***src-util***, etc., se almacenarán en la ubicación '***META-INF/etendo***'.
 
 
-#### Uso de un Módulo JAR de Etendo
+#### Uso de un Módulo JAR de Etendo { #using-an-etendo-jar-module }
 Para usar una versión publicada de un módulo en su entorno de Etendo, necesita definir la dependencia en el archivo '**build.gradle**' del proyecto raíz.
 
 Al igual que una biblioteca, usando la configuración implementation:
@@ -103,7 +103,7 @@ El plugin de Etendo intentará resolver automáticamente el artefacto. Si la dep
 
 El directorio '**build/etendo/modules**' es una nueva ubicación especial. Las tareas de desarrollo de Etendo ahora utilizarán este lugar como una nueva ubicación de módulos para buscar.
 
-### JAR del núcleo de Etendo
+### JAR del núcleo de Etendo { #etendo-core-jar }
 
 Con la nueva versión de Etendo, todavía puede trabajar con el código en fuentes o con el nuevo formato **JAR**.
 

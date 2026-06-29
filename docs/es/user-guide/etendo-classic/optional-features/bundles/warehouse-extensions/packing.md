@@ -9,12 +9,12 @@ tags:
 
 ---
 
-# Empaquetado
+# Empaquetado { #packing }
 
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el módulo **Etendo Packing** incluido en el bundle *Warehouse Extensions*.
 
@@ -24,14 +24,14 @@ Esta sección describe el módulo **Etendo Packing** incluido en el bundle *Ware
 Este módulo agiliza y mejora la gestión de las **operaciones de empaquetado** dentro del almacén. Una vez que se ha procesado un **albarán**, comienza el proceso de empaquetado. El empaquetado se realiza en base a cada documento individual de albarán. Para cada producto, el operario de almacén determina la unidad de manipulación adecuada (caja) en la que empaquetar el artículo. Solo los productos clasificados como **artículos** son aptos para el empaquetado.
 
 !!! warning
-    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+    Este módulo incluye documentación sobre cómo realizar el proceso de **Empaquetado** desde Etendo. Para más información sobre la configuración y la gestión de tareas de empaquetado desde **Etendo Mobile**, consulte la documentación del módulo: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing-tasks).
 
 
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 
 En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requieren algunas configuraciones previas en otras ventanas para poder calcular el peso de cada caja:
 
-- Ventana [**Producto**](../../../basic-features/master-data-management/master-data.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
+- Ventana [**Producto**](../../../basic-features/master-data-management/master-data/product.md#product): aquí es posible definir el peso y la unidad de medida (UdM) del producto.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
     
@@ -39,7 +39,7 @@ En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requie
         - Peso
         - Unidad para peso: solo muestra unidades de medida que estén definidas como `Is weight`
 
-- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
+- Ventana [**Unidad de medida**](../../../basic-features/master-data-management/product-setup/unit-of-measure.md): este módulo añade un nuevo campo **Is weight**. En esta ventana también es posible definir la **Conversión** entre UdM, es decir, entre la UdM del producto y la UdM de la caja.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 
@@ -48,7 +48,7 @@ En Etendo, es posible calcular el **peso del empaquetado**. Para ello, se requie
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-12.png)
 
 
-## Ventana de empaquetado
+## Ventana de empaquetado { #packing-window }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Packing`
 
@@ -68,7 +68,7 @@ Para proporcionar una mayor visibilidad, el sistema muestra un **mensaje de adve
     - Complete Packing from Shipment
     - Complete Packing from Packing
 
-### Cabecera
+### Cabecera { #header }
 
 ![packing9](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-9.png)
 
@@ -89,7 +89,7 @@ Campos a tener en cuenta:
     Tanto si el proceso se inicia desde la ventana Albarán (Cliente) como desde la ventana Empaquetado, se crea un registro en la **ventana de empaquetado**. Por tanto, esta es una ventana centralizada donde es posible consultar todos los empaquetados realizados y completar el proceso de empaquetado. 
 
 
-### Solapa Packing Box
+### Solapa Packing Box { #packing-box-tab }
 
 La solapa **Packing Box** del Albarán (Cliente) y de la ventana Empaquetado es una solapa **informativa** que muestra las nuevas cajas de empaquetado.
 
@@ -104,7 +104,7 @@ Campos a tener en cuenta:
 - **Weight Calculated**: estado que determina si el peso ya ha sido calculado o no.
 
 
-### Subsolapa Contenido
+### Subsolapa Contenido { #content-subtab }
 En la solapa Packing Box, la solapa **Contenido** es una solapa hija donde se muestra el **contenido de la caja**.
 
 ![packing3](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-3.png)
@@ -119,7 +119,7 @@ Campos a tener en cuenta:
 - **Unidad**: la unidad define una unidad de medida única no monetaria
 
 
-### Botones
+### Botones { #buttons }
 
 - **Pick Shipments**
     

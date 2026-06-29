@@ -6,9 +6,9 @@ tags:
     - Dependencias de Python
 ---
 
-# Cómo crear herramientas de Copilot
+# Cómo crear herramientas de Copilot { #how-to-create-copilot-tools }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía proporciona instrucciones paso a paso para ayudarle a crear herramientas personalizadas para **Etendo Copilot**. Aprenderá a:
 
@@ -27,12 +27,12 @@ En esta guía, aprenderá a crear una nueva herramienta de Copilot en un módulo
 !!! note "Etendo Copilot se basa en Langchain"
     Las librerías de Langchain están disponibles por defecto en Copilot. Puede utilizarlas en sus herramientas. Consulte la [documentación de Langchain](https://python.langchain.com/){target="_blank"} para más información.
 
-### Requisitos
+### Requisitos { #requirements }
 
 El bundle **Copilot Extensions** debe estar instalado en **Etendo Classic**. Si no está instalado, siga la [Guía de instalación de Etendo Copilot](../../../developer-guide/etendo-copilot/installation.md){target="_blank"} para configurarlo.
 
 
-### Crear una nueva herramienta
+### Crear una nueva herramienta { #create-a-new-tool }
 En este ejemplo, creará una herramienta que realiza un **ping** a un host especificado. La herramienta se llamará `PingTool` y estará ubicada en el paquete `com.etendoerp.copilot.pingtool`.
 
 1. Crear un módulo de Etendo Classic: todas las herramientas de Copilot deben ubicarse dentro de un módulo de **Etendo Classic**. Para crear un nuevo módulo, siga los pasos de [Cómo crear un módulo](../../etendo-classic/how-to-guides/how-to-create-a-module.md).
@@ -218,15 +218,15 @@ En este ejemplo, creará una herramienta que realiza un **ping** a un host espec
 8. Para probar la herramienta desarrollada, puede solicitar a un agente que tenga la herramienta asociada que realice la acción requerida; el agente ejecutará la herramienta y devolverá el resultado.
 
 
-## Interactuar con Etendo
+## Interactuar con Etendo { #interacting-with-etendo }
 
 Al crear herramientas que necesiten interactuar con **Etendo Classic**, el mejor enfoque es utilizar la **API de Webhooks de Eventos**. Esta API simplifica la autenticación y permite que sus herramientas disparen webhooks con datos.
 
-### Utilizar la API de Webhooks de Eventos de Etendo Classic
+### Utilizar la API de Webhooks de Eventos de Etendo Classic { #utilizing-etendo-classic-event-webhooks-api }
 
 La **API de Webhooks de Eventos de Etendo Classic** es una funcionalidad estándar en Etendo y permite una integración más sencilla con herramientas mediante utilidades de Copilot. Por ejemplo, si necesita disparar un WebHook llamado `UpdateOrderDescription` para actualizar un pedido en Etendo Classic, recibiendo un número de documento y una descripción como parámetros, puede hacerlo creando una herramienta específica.
 
-### Herramienta de ejemplo: UpdateSOTool
+### Herramienta de ejemplo: UpdateSOTool { #example-tool-updatesotool }
 
 Aquí tiene un ejemplo de una herramienta que dispara el WebHook `UpdateOrderDescription`:
 
@@ -262,7 +262,7 @@ class UpdateSOTool(ToolWrapper):
        return ToolOutputMessage(message=response)
 ```
 
-### Explicación de los componentes de la herramienta
+### Explicación de los componentes de la herramienta { #explanation-of-tool-components }
 
 La herramienta anterior aprovecha utilidades proporcionadas por Copilot Core:
 

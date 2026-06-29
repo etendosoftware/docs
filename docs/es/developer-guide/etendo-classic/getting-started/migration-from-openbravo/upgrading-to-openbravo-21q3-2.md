@@ -9,7 +9,7 @@ tags:
 
 #Actualización a Openbravo 21Q3.2
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía explica cómo actualizar su entorno actual de Openbravo a la versión 21Q3.2. Esto implica dos pasos principales:
 
@@ -19,14 +19,14 @@ Esta guía explica cómo actualizar su entorno actual de Openbravo a la versión
 !!! info
     Esta actualización es necesaria para migrar Openbravo a Etendo.
 
-## Cómo actualizar a Openbravo 21Q3.2
+## Cómo actualizar a Openbravo 21Q3.2 { #how-to-upgrade-to-openbravo-21q32 }
 
 !!! info "Requisitos"
     - Git  
     - Una herramienta de comparación/fusión si es necesario generar parches
     
 
-### Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo
+### Identificar y extraer los parches personalizados realizados en su versión actual de Openbravo { #identify-and-extract-custom-patches-made-to-your-current-version-of-openbravo }
 
 1.  Clonar el repositorio core en la nueva versión
 
@@ -43,7 +43,7 @@ Esta guía explica cómo actualizar su entorno actual de Openbravo a la versión
 -   Utilice una herramienta de comparación como Meld o Kdiff3 para comparar las diferencias entre su entorno y el Openbravo estándar que acaba de clonar.
 -   Extraiga los parches personalizados (evite generar parches para cambios que sean correcciones de errores, ya que deberían estar incluidos en la nueva versión).
 
-### Actualizar a Openbravo 21Q3.2
+### Actualizar a Openbravo 21Q3.2 { #upgrade-to-openbravo-21q32 }
 
 1.  Clonar el repositorio core en la nueva versión:
 

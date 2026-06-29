@@ -16,7 +16,7 @@ tags:
 
 In this window, the user can configure necessary accounting processes.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounting-process.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-process.png)
 
 !!!info
     For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md).

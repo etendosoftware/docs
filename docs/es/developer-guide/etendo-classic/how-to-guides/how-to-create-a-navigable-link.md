@@ -7,9 +7,9 @@ tags:
   - Enlace
 ---
 
-#  Cómo crear un enlace navegable
+# Cómo crear un enlace navegable { #how-to-create-a-navigable-link }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo crear un enlace navegable en Etendo Classic, implementando una ClientClass. Una ClientClass le permite añadir componentes visuales a un formulario o a una fila de una cuadrícula. Esto es útil para añadir campos calculados a formularios y cuadrículas, integrando elementos como botones, enlaces o etiquetas dinámicas.
 
@@ -21,7 +21,7 @@ Esta sección muestra cómo utilizar la información del registro y del formular
     La implementación de estos campos requiere conocimientos de JavaScript.
 
 
-## Pasos principales para crear una nueva ClientClass
+## Pasos principales para crear una nueva ClientClass { #main-steps-to-create-a-new-clientclass }
 
 1. Implementar la ClientClass en JavaScript:
 
@@ -37,7 +37,7 @@ Esta sección muestra cómo utilizar la información del registro y del formular
     - Configure el campo en la solapa/ventana donde se aplicará la funcionalidad.
 
 
-## Implementación de la ClientClass en JavaScript
+## Implementación de la ClientClass en JavaScript { #implementing-the-clientclass-in-javascript }
 
 El primer paso es definir la clase en JavaScript en dos etapas:
 
@@ -122,7 +122,7 @@ El primer paso es definir la clase en JavaScript en dos etapas:
     });
     ```
 
-## Casos especiales: Cálculo de `recordId` con Java
+## Casos especiales: Cálculo de `recordId` con Java { #special-cases-calculating-recordid-with-java }
 
 En algunos casos, la información de `recordId` no está disponible directamente en el registro, por lo que debe calcularse. Esto puede lograrse mediante una clase Java que determine el `recordId` correspondiente.
 
@@ -225,7 +225,7 @@ public class GetSalesOrderIdActionHandler extends BaseActionHandler {
    return result;
 ```
 
-## Registro del archivo JavaScript en el ComponentProvider
+## Registro del archivo JavaScript en el ComponentProvider { #registering-the-javascript-file-in-the-componentprovider }
 
 Una vez creada la clase JavaScript, es necesario registrarla en el ComponentProvider del módulo correspondiente.
 
@@ -237,13 +237,13 @@ protected static final String[] JS_FILES = new String[]{
 };
 ```
 
-## Definición de la ClientClass en el campo de la solapa (ADField)
+## Definición de la ClientClass en el campo de la solapa (ADField) { #definition-of-the-clientclass-in-the-tab-field-adfield }
 
 El último paso es añadir la implementación en el campo donde se aplicará la funcionalidad y configurar su ClientClass.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-navigable-link.png)
 
-## Resultado final
+## Resultado final { #final-result }
 
 Como se muestra a continuación, utilizando el enlace creado, puede abrir directamente el pedido de venta enlazado en la ventana Pedido de venta.
 

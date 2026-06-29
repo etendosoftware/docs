@@ -1,8 +1,8 @@
-## Visión general del servicio Etendo RX Edge
+## Visión general del servicio Etendo RX Edge { #overview-of-etendo-rx-edge-service }
 
 El servicio Etendo RX Edge está diseñado para simplificar el enrutamiento de API y proporcionar servicios esenciales como seguridad, monitorización, métricas y resiliencia. Es una herramienta versátil que se integra sin problemas en su infraestructura de API.
 
-### Funcionalidades clave
+### Funcionalidades clave { #key-features }
 
 - Base de Spring Framework: Utiliza la robustez de Spring Framework y Spring Boot.
 - Coincidencia flexible de rutas: Capaz de hacer coincidir rutas en función de varios atributos de la solicitud.
@@ -13,15 +13,15 @@ El servicio Etendo RX Edge está diseñado para simplificar el enrutamiento de A
 !!!info
     Para configuraciones y funcionalidades más avanzadas, visite la [Documentación de Spring Cloud Gateway](https://docs.spring.io/spring-cloud-gateway/reference/index.html){target="\_blank"}.
 
-### Dinámica operativa
+### Dinámica operativa { #operational-dynamics }
 
 El servicio Edge funciona como una pasarela, gestionando las solicitudes del cliente. Cuando se realiza una solicitud al Edge Server Gateway, el Gateway Handler Mapping evalúa si la solicitud corresponde a una ruta establecida. Si es así, el Gateway Web Handler procesa la solicitud, aplicando un conjunto de filtros específicos de la ruta.
 
-### Ejecución del servicio
+### Ejecución del servicio { #running-the-service }
 
 Para iniciar el servicio Edge, ejecute `./gradlew rx:rx` (o `./gradlew :rx` para instalaciones desde el código fuente). Se puede acceder al servicio en su URL predeterminada: `http://localhost:8096`.
 
-### Directrices de configuración
+### Directrices de configuración { #configuration-guidelines }
 
 Los ajustes de configuración se pueden realizar en el archivo `edge.yaml`. Para más información sobre los parámetros de configuración, consulte la [Documentación de Config Server](config-server.md) en el directorio rxconfig.
 
@@ -71,7 +71,7 @@ spring:
             - RewritePath=/das/(?<segment>.*), /$\{segment}
 ```
 
-### Comprender la configuración
+### Comprender la configuración { #understanding-the-configuration }
 
 1. Variables globales: Definen las URL para diferentes servicios como autenticación, aplicación clásica y subaplicaciones.
 2. Configuraciones de enrutamiento:
@@ -79,7 +79,7 @@ spring:
    - Ruta de la aplicación clásica: Gestiona varios métodos HTTP para rutas que comienzan por `/etendo/`.
    - Ruta DAS: Gestiona las solicitudes al servicio DAS con rutas que comienzan por `/das/`.
 
-### Añadir servicios personalizados
+### Añadir servicios personalizados { #adding-custom-services }
 
 Para integrar un nuevo servicio, añada una configuración de enrutamiento en `spring.cloud.gateway.routes`. Siga la estructura existente:
 

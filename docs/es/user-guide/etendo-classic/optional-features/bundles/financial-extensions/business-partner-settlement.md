@@ -6,14 +6,14 @@ tags:
     - Terceros
 ---
 
-# Liquidación de terceros
+# Liquidación de terceros { #business-partner-settlement }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
 
 :octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 
-## Visión general
+## Visión general { #overview }
 
 Este módulo proporciona un nuevo documento donde es posible **liquidar deudas o crédito** de terceros que son tanto clientes como proveedores. Cuando un tercero es Cliente y Proveedor, es posible tener crédito como ambos tipos. Pero no es posible consumir un crédito de cliente en un documento de Pago. Del mismo modo, no es posible mezclar facturas de compra o de venta en un único documento de pago. En algunos escenarios, cuando un tercero tiene facturas de venta y de compra, es deseable cancelar ambas deudas sin necesidad de una transacción financiera.
 
@@ -23,13 +23,13 @@ En este documento, debe seleccionar las facturas o el importe de crédito que se
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 
 No se requiere ninguna configuración específica para trabajar con este módulo. Se espera que los terceros ya estén completamente definidos como **Cliente** y **Proveedor** con sus correspondientes **Cuenta financiera** y **Moneda**.
 
 También es necesario tener al menos un **Concepto contable** definido para las Organizaciones donde se necesiten estas liquidaciones.
 
-## Ventana Liquidación de terceros
+## Ventana Liquidación de terceros { #business-partner-settlement-window }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Transacciones` > `Liquidación de terceros`
 
@@ -44,9 +44,9 @@ En esta ventana se registran todas las liquidaciones. En una nueva, debe selecci
 
 Dependiendo del tipo de liquidación, el botón de proceso seleccionado en la parte superior y las solapas hijas inferiores cambian en consecuencia para mostrar los pagos de crédito o las facturas a liquidar.
 
-### Botones
+### Botones { #buttons }
 
-#### Liquidación de crédito
+#### Liquidación de crédito { #credit-settlement }
 
 ![CS](../../../../../assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png)
 
@@ -57,7 +57,7 @@ En las liquidaciones de crédito, debe seleccionar los pagos de crédito que se 
 
 ![IS](../../../../../assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png)
 
-#### Liquidación de facturas
+#### Liquidación de facturas { #invoice-settlement }
 
 ![IS](../../../../../assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png)
 
@@ -65,7 +65,7 @@ Al igual que en las liquidaciones de crédito, al hacer clic en **Agregar Factur
 
 ![IS](../../../../../assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png)
 
-#### Procesar Liquidación
+#### Procesar Liquidación { #process-settlement }
 
 Dependiendo del estado de la liquidación, hay disponibles diferentes acciones:
 
@@ -119,7 +119,7 @@ Al igual que en el proceso de Reactivar, los pagos de liquidación se cancelan c
 !!! info
     En este estado, ya no es posible modificar la liquidación.
 
-## Usar la funcionalidad desde otras ventanas.
+## Usar la funcionalidad desde otras ventanas. { #use-the-functionality-from-other-windows }
 
 - [Cobro](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
 

@@ -9,29 +9,29 @@ tags:
 status: beta
 ---
 
-#  Expresiones dinámicas
+# Expresiones dinámicas { #dynamic-expressions }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 Las **Expresiones dinámicas** se utilizan para obtener valores que pueden depender de valores de sesión. Por ejemplo, pueden utilizarse para filtrar los registros que aparecen en una solapa por aquellos que fueron creados por el usuario que ha iniciado sesión en la aplicación.
 
-##  Valores de sesión (Variables Sesión)
+## Valores de sesión (Variables Sesión) { #session-values-session-variables }
 :material-menu:  `Configuración General` > `Aplicación` > `Variables Sesión`
 
 Dependiendo de cómo se definan, existen diferentes tipos de valores de sesión. Es posible comprobar (como **Administrador del sistema**) todos los valores actuales cargados en sesión en la ventana `Configuración General` > `Aplicación` > `Variables Sesión`.
 
-###  Variables globales de sesión
+### Variables globales de sesión { #session-global-variables }
 
 Estos valores son generados por clases `Java` y son accesibles desde cualquier parte de la aplicación.
 
-###  Columna
+### Columna { #columns }
 
 Los valores de todas las columnas utilizadas en una solapa son accesibles como variables de sesión dentro de esa solapa. Adicionalmente, también es posible establecer explícitamente una columna como valor de sesión configurando su atributo `Stored in Session`. Esto hará que este valor sea accesible no solo para su solapa, sino también para todas las solapas de esa ventana.
 
-###  Preferencias
+### Preferencias { #preferences }
 :material-menu: `Configuración General` > `Aplicación` > `Preferencias`
 
 Las **Preferencias** permiten definir valores de sesión. Es posible definir preferencias para una única ventana o para todas (dejando en blanco el campo ventana) y para un usuario o para todos. Las preferencias se definen en la ventana `Configuración General` > `Aplicación` > `Preferencias`.
@@ -80,7 +80,7 @@ Los conflictos pueden resolverse manualmente por el usuario, marcando el campo `
 
 Las preferencias pueden asignarse opcionalmente a un módulo. En este caso, se exportarán como parte del módulo. Esto tiene sentido en caso de que se quiera definir en un módulo una configuración general que se reutilizará.
 
-###  Inputs auxiliares
+### Inputs auxiliares { #auxiliary-inputs }
 
 :material-menu: `Diccionario de la Aplicación` > `Configuración` > `Inputs auxiliares`
 
@@ -88,7 +88,7 @@ Los **Inputs auxiliares** se utilizan para crear un valor de sesión para una so
 
 Los Inputs auxiliares se definen en la solapa `Diccionario de la Aplicación` > `Configuración` > `Inputs auxiliares`.
 
-###  Accesibilidad
+### Accesibilidad { #accessibility }
 
 Es posible que existan diferentes tipos de valores de sesión con el mismo nombre que sean accesibles en el mismo punto; en este caso (a menos que se especifique explícitamente tomar el valor en un valor global de sesión) el valor se tomará siguiendo el siguiente enfoque:
 
@@ -96,19 +96,19 @@ Es posible que existan diferentes tipos de valores de sesión con el mismo nombr
 2. Si no se ha obtenido ningún valor, intentar obtener un valor asociado a la ventana actual. 
 3. Si no se ha obtenido ningún valor, buscar un valor global de sesión. 
 
-##  Sintaxis y tipos en Expresiones dinámicas
+## Sintaxis y tipos en Expresiones dinámicas { #syntax-and-types-in-dynamic-expressions }
 
-###  Uso de valores de sesión
+### Uso de valores de sesión { #using-session-values }
 
 En las Expresiones dinámicas, los valores de sesión se obtienen por su nombre rodeado por símbolos arroba (@). Así, para obtener el contenido de un valor de sesión llamado `myValue`, se haría escribiendo `@myValue@`. Hacerlo de esta manera seguiría la [accesibilidad](#accesibilidad) descrita anteriormente, pero es posible obtener explícitamente el valor global (si existe) sin tener en cuenta los otros; para ello, el valor tendría un símbolo almohadilla (#) como prefijo. En el ejemplo anterior sería `@#myValue@`.
 
-###  Tipos de Expresiones dinámicas
+### Tipos de Expresiones dinámicas { #dynamic-expressions-types }
 
 Existen diferentes tipos de Expresión dinámica; cada tipo puede utilizarse dependiendo del objeto del Diccionario de la Aplicación en el que se defina. Una lista completa de todos los objetos y qué tipo de expresión puede usar se define en la siguiente sección.
 
 Los tipos son:
 
-###  Constante
+### Constante { #constant }
 
 Puede ser un valor constante o un valor almacenado en sesión; este tipo puede ser utilizado por todos los objetos. Para establecer este tipo, no se necesita prefijo.
 
@@ -135,7 +135,7 @@ Ejemplo:
 
 Es una cláusula where de SQL; en este caso no es necesario añadir el prefijo `@SQL=`.
 
-###  Comprobación
+### Comprobación { #checks }
 
 Se utiliza para obtener un valor booleano. No tiene ningún prefijo. Su sintaxis es `Javascript` pero los comparadores son:
 
@@ -144,7 +144,7 @@ Se utiliza para obtener un valor booleano. No tiene ningún prefijo. Su sintaxis
 - `&` en lugar de `&&`
 - `|` en lugar de `||` 
 
-###  Expresiones dinámicas utilizadas en objetos del Diccionario de la Aplicación
+### Expresiones dinámicas utilizadas en objetos del Diccionario de la Aplicación { #dynamic-expressions-used-in-application-dictionary-objects }
 
 AD Column  |  Tipo  
 ---|---  

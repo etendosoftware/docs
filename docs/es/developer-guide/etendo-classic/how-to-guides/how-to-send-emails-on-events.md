@@ -8,12 +8,12 @@ tags:
 status: beta
 ---
 
-# Cómo enviar correos electrónicos en eventos
+# Cómo enviar correos electrónicos en eventos { #how-to-send-emails-on-events }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-## Visión general
+## Visión general { #overview }
 
 Etendo proporciona un mecanismo que permite generar eventos de forma programática para enviar correos electrónicos. El disparo de eventos y la implementación del correo electrónico están desacoplados, siendo posible lanzar eventos genéricos, que son escuchados por otros módulos que implementan el contenido del correo electrónico.
 
@@ -21,7 +21,7 @@ Este procedimiento explica ambas cosas: cómo disparar los eventos y cómo escuc
 
 El servidor de correo electrónico está [configurado](../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md#email-configuration) a nivel de cliente.
 
-## Disparo de eventos de correo electrónico
+## Disparo de eventos de correo electrónico { #triggering-email-events }
 
 Un evento se identifica simplemente mediante un `String`.
 
@@ -55,7 +55,7 @@ if (sent) {
 
 El primer parámetro es el `nombre del evento` que identifica el evento. El segundo es la lista de destinatarios, separada por punto y coma (;) si hay más de uno. Y, por último, cualquier ` Object ` con los datos que se utilizarán para generar el evento. Tenga en cuenta que, aunque estos datos sean algo genérico (`Object`), el tipo real que el listener esperará puede variar dependiendo del evento.
 
-## Escucha de eventos de correo electrónico
+## Escucha de eventos de correo electrónico { #listening-to-email-events }
 
 Los eventos de correo electrónico son escuchados por clases que implementan `EmailEventContentGenerator`.
 

@@ -8,9 +8,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Configuración General - Primeros pasos
+# Configuración General - Primeros pasos { #general-setup---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe los pasos que deben realizarse primero para configurar Etendo.
 Las instalaciones de Etendo requieren al menos una [Entidad](../../../../user-guide/etendo-classic/basic-features/general-setup/client.md) y una [Organización](../../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/organization.md). Entidad y Organización son los dos conceptos clave dentro de la Configuración General.
@@ -19,7 +19,7 @@ En otras palabras, no es posible emitir una factura o contabilizar un asiento en
 
 Los primeros pasos a seguir para configurar Etendo son:
 
-#### Instalación del Localization Bundle si está disponible para el país
+#### Instalación del Localization Bundle si está disponible para el país { #installation-of-the-localization-bundle-if-available-for-the-country }
 
 !!!info
     Lea la documentación de [Instalar módulos](../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) para instalar el bundle de localización. 
@@ -37,11 +37,11 @@ El plan de cuentas está disponible para su selección únicamente al ejecutar C
 - y la configuración de los **impuestos** que cumplen con los requisitos de las autoridades fiscales del país.
 La configuración de los impuestos también está disponible para su selección al ejecutar [Crear entidad](../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) o [Crear organización](../general-setup/enterprise-model/initial-organization-setup.md), e incluso en la ventana de gestión de módulos de empresa.
 
-#### Crear entidad
+#### Crear entidad { #initial-client-setup }
 
 Una [Entidad](../general-setup/client.md) en Etendo es el nivel más alto de configuración y datos dentro de Etendo.
 
-Lo anterior significa que determinadas configuraciones como Usuario, clientes, proveedores y otros [datos maestros](../master-data-management/master-data.md) pueden gestionarse en una entidad y, por lo tanto, estar disponibles en todas las organizaciones dentro de la entidad.
+Lo anterior significa que determinadas configuraciones como Usuario, clientes, proveedores y otros [datos maestros](../master-data-management/master-data/business-partner.md) pueden gestionarse en una entidad y, por lo tanto, estar disponibles en todas las organizaciones dentro de la entidad.
 
 !!! info
     Cada entidad puede alojar al menos una o incluso más de una organización que puede utilizarse para modelar su empresa.
@@ -55,7 +55,7 @@ Todos esos datos, si se aplican a la Entidad, serán compartidos por todas las o
     Existe una Entidad de Sistema que Etendo crea automáticamente como parte del proceso de instalación de Etendo.
     Esta entidad gestiona datos de la aplicación como tablas, columnas y campos, y también gestiona algunos datos que pueden compartirse entre todas las Entidades, como monedas, países y regiones y unidades de medida.
 
-#### Crear organización
+#### Crear organización { #initial-organization-setup }
 
 Una **Organización** es el segundo nivel de configuración y datos.
 
@@ -78,7 +78,7 @@ En este caso, los datos, si se aplican a la Organización, estarán disponibles 
 !!! info
     Existe una Organización denominada (\*) que se crea automáticamente al mismo tiempo que se crea la Entidad de Sistema. Cada organización creada posteriormente se ubicará jerárquicamente por debajo de ella.
 
-#### Configuración de Usuario y Rol
+#### Configuración de Usuario y Rol { #users-and-roles-setup }
 
 La seguridad de Etendo puede dividirse en seguridad funcional y seguridad de datos.
 La seguridad **funcional** gestiona los derechos de acceso a entidades de Etendo como ventanas y procesos mediante la correcta configuración de [Usuario](../general-setup/security/user.md) y [Rol](../general-setup/security/role.md):
@@ -106,7 +106,7 @@ Cada [Tabla](../general-setup/security/role-access.md) en Etendo tiene una colum
 
 El nivel de acceso de usuario permite limitar los registros que serán accesibles en entidades como ventanas, procesos, formularios, clases de widget y vistas para un [Rol](../general-setup/security/role.md), o incluso limitar el acceso a una entidad determinada.
 
-### Diagrama de configuración básica
+### Diagrama de configuración básica { #basic-setup-diagram }
 
 El diagrama siguiente muestra el flujo básico de Configuración General de Etendo para una entidad legal con contabilidad. Este flujo es una parte del flujo global de configuración del negocio.
 
@@ -127,7 +127,7 @@ Existe una relación estrecha entre la configuración general, que permite la cr
 
 Un **Esquema contable** por defecto y el **plan de cuentas** pueden crearse automáticamente si se instala y aplica a la Organización un dato de referencia de **Contabilidad**, como un **Localization Bundle** que contenga un módulo de plan de cuentas. Además, en caso de que no exista un Localization Bundle para su país, Etendo proporciona un módulo genérico de plan de cuentas que, si se instala y aplica, crea un plan de cuentas de ejemplo y un Esquema contable por defecto que posteriormente puede personalizarse para satisfacer las necesidades de su organización.
 
-## Diagrama de configuración del negocio
+## Diagrama de configuración del negocio { #business-setup-diagram }
 
 El diagrama siguiente muestra el flujo de configuración del negocio.
 Este flujo de configuración del negocio va desde las áreas de configuración genérica y datos maestros hasta las áreas de configuración de contabilidad y almacén.

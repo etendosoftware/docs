@@ -8,20 +8,20 @@ tags:
     - cómo
 status: beta
 ---
-# Cómo definir un valor por defecto al crear
+# Cómo definir un valor por defecto al crear { #how-to-define-an-on-create-default }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 En esta sección se explica brevemente qué es un **onCreateDefault**, en qué situaciones es útil y cómo definirlo correctamente.
 
-## Concepto
+## Concepto { #concept }
 
 Los `OnCreateDefaults` son sentencias `SQL` que se ejecutan mediante la tarea `update.database` cuando se crea una columna en la base de datos. Normalmente se utilizan para insertar datos en una columna recién creada. Es importante tener en cuenta que solo se ejecutan cuando la columna se está creando. Si la columna ya existe en la base de datos, `update.database` no ejecutará la sentencia `onCreateDefault`. Para rellenar datos en una columna ya creada, puede utilizar un Script de módulo. Para más información sobre los Scripts de módulo, visite [Cómo crear validaciones de compilación y Scripts de módulo](../how-to-guides/how-to-create-build-validations-and-module-scripts.md).
 
-## Proceso de desarrollo
+## Proceso de desarrollo { #development-process }
 
 Las sentencias `onCreateDefault` se añaden directamente al archivo `XML` de la tabla. Esto significa que los pasos principales de desarrollo deberían ser:
 
@@ -55,7 +55,7 @@ Observe la diferencia de sintaxis en el `onCreateDefault`, en comparación con e
 
 Una limitación de la implementación actual de `onCreateDefaults` es que, debido a la necesidad de soportar los dos tipos diferentes de sintaxis `SQL`, no puede hacer referencia a una columna distinta de la tabla que está modificando. Esto significa que puede ser muy complicado diseñar un `onCreateDefault` correcto en situaciones en las que necesita crear un enlace a otra tabla. Para estas situaciones, podría utilizarse un **Script de módulo** en lugar de un `onCreateDefault`, y se puede lograr el mismo resultado de esta manera.
 
-## Cómo eliminar correctamente un `onCreateDefault`
+## Cómo eliminar correctamente un `onCreateDefault` { #how-to-correctly-remove-an-oncreatedefault }
 
 Los `onCreateDefaults` también se eliminan editando el archivo `XML`. La forma correcta de eliminarlo es borrar el contenido dentro de la etiqueta <onCreateDefault>, pero dejando la propia etiqueta. Si elimina todo, incluida la etiqueta, la próxima vez que exporte el módulo (o el Core, si está editando una columna del Core), habrá una inconsistencia, ya que [DBSourceManager](../concepts/dbsourcemanager.md) creará un elemento `onCreateDefault` vacío. En un ejemplo práctico, la siguiente columna tiene un `onCreateDefault`:
 

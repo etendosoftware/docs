@@ -214,7 +214,6 @@ To start using this module correctly, the following installation and configurati
 
         This method allows the system to read the code and compare it exactly with the codes of the products stored in the system. The comparison is direct and strict, without taking into account any additional structure in the code.    
 
-        ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/ai-config-direct-1.png)
 
 
 6. **Task** infrastructure:
@@ -343,7 +342,7 @@ It is possible to generate these unique codes for storage bins in the **Warehous
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GvCIj_a0c8?si=lUPwXGKvVXCQBf-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The [Referenced Inventory (RI)](../../../basic-features/warehouse-management/transactions.md#referenced-inventory) functionality has been extended to manage physical logistics units such as **pallets** and **boxes**, directly linked to the [Alternative Units of Measure (AUOM)](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.
+The [Referenced Inventory (RI)](../../../basic-features/warehouse-management/transactions/referenced-inventory.md) functionality has been extended to manage physical logistics units such as **pallets** and **boxes**, directly linked to the [Alternative Units of Measure (AUOM)](../../../basic-features/master-data-management/master-data/product.md#alternate-uom-tab) of each product. This enables defining equivalences (e.g., 1 Pallet = 100 units) and handling these units as unique, traceable entities in warehouse operations.
 
 The [Stock Logistic Unit](./stock-logistic-unit.md) module, installed as a dependency, adds new UOMs (Box, Pallet) and reference inventory types, allowing users to configure equivalences in the **Alternate UOM** tab of the Product window. Once defined, if a different conversion is required, a new AUOM must be created.
 
@@ -1050,7 +1049,7 @@ Once completed, the task will appear in the Completed Tasks section. From there,
 Relocation tasks allow products to be moved from their original location to their destination within the same warehouse. Each task is displayed in card format, where the quantity moved and the destination location can be confirmed or adjusted. The information entered is synchronized with the ERP at the end of the task, ensuring consistency between the recorded movement and the stock.
 
 !!!Info
-    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement).
+    For more information about how to use this functionality in Etendo, visit [Goods Movements](../../../basic-features/warehouse-management/transactions/goods-movement.md).
 
 #### Process Start (Etendo)
 
@@ -1091,7 +1090,7 @@ Inventory adjustment tasks allow warehouse operators to perform physical counts 
 This functionality corresponds to the same operation performed in Etendo's **Physical Inventory** window: recording the actual counted quantity of a product and updating the stock accordingly, either by correcting existing quantities or entering stock where there was none previously. When the inventory status changes during the adjustment process, the system automatically moves the product(s) to the storage bins associated with the new status, accurately reflecting the current stock condition.
 
 !!!Info
-    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions.md#physical-inventory).
+    For more information about how to use this functionality in Etendo, visit [Physical Inventory](../../../basic-features/warehouse-management/transactions/physical-inventory.md).
 
 
 #### Process Start (Etendo)

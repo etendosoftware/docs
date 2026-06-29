@@ -9,14 +9,14 @@ tags:
 
 :material-store: Etendo Marketplace:  [Essentials Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}
 
-## Descripción general 
+## Descripción general { #overview }
 Este bundle incluye módulos fundamentales que afectan a la mayoría de las áreas en Etendo.
 
-## Traducción
+## Traducción { #translations }
 
-## Módulo
+## Módulo { #modules }
 
-### Socio de negocio avanzado
+### Socio de negocio avanzado { #advanced-business-partner }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner`
 
@@ -29,7 +29,7 @@ El módulo “Socio de negocio avanzado” permite al usuario tener una vista ge
 !!! info
     Para más información, visite [Socio de negocio avanzado - Guía de usuario](../essentials-extensions/advanced-business-partner.md).
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion }
 
 :octicons-package-16: Javapackage: `com.etendoerp.bulk.completion` 
 

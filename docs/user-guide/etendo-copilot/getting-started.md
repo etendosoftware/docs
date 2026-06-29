@@ -139,6 +139,13 @@ By default, Copilot operates as a pop-up window, providing convenient access as 
 Use full screen mode for a more comfortable experience during long conversations when viewing Etendo is not necessary.
 
 Etendo Copilot offers conversation management through a **conversation selector** to review and switch between past interactions, a **New Conversation** button to start fresh topics or tasks, and **automatic conversation title generation** that creates meaningful titles for easy identification and organization of dialogues.
+
+You can also keep your chat history tidy with a few extra controls in the conversations sidebar:
+
+- **Search conversations**: quickly find past chats by typing keywords in the search bar.
+- **Rename**: give any conversation a custom title that better reflects its content.
+- **Delete**: remove conversations you no longer need; deleted items are moved to the **Archived** section.
+- **Archived conversations**: review previously deleted chats in a collapsible section, restore them, or permanently remove them when they are no longer useful.
 ![Full Screen Chat](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 </figure>
 
@@ -147,6 +154,14 @@ Etendo Copilot offers conversation management through a **conversation selector*
 **Minimized** <br>
 Copilot's interface can also be minimized. In this case, a Copilot bubble will be active at the bottom right of the screen.
 </figure>
+
+#### Agent Selector and Featured Agents
+
+From any display mode, you can switch between agents using the **agent selector** at the top of the chat. To make it easier to find the most relevant agents, Copilot highlights **Featured agents**:
+
+- **Featured first**: agents marked as featured appear at the top of the list, so the most useful ones for your environment are always within reach.
+- **Featured-only filter**: by default, the selector shows only featured agents to keep the list focused. You can toggle this filter off at any time to browse the full catalogue of available agents.
+- **Automatic fallback**: if no agent has been marked as featured, the selector simply lists all available agents, so you never end up with an empty selector.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

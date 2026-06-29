@@ -6,11 +6,11 @@ tags:
     - Protesto de remesas
 ---
 
-# Remesas automatizadas
+# Remesas automatizadas { #automated-remittance }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.automated.remittance` 
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe el módulo de Remesas automatizadas incluido en el bundle Etendo Financial Extensions.
 
@@ -23,7 +23,7 @@ Esta funcionalidad permite al usuario procesar y protestar remesas automáticame
 !!!important
     Esta funcionalidad depende del módulo `org.openbravo.module.remittance` en la versión `3.15.0` o superior. En caso de instalar el bundle Financial Extensions, las dependencias se gestionan automáticamente.
 
-## Configuración
+## Configuración { #setup }
 
 Para poder utilizar esta funcionalidad, es necesario instalar el conjunto de datos de Remesas automatizadas antes de utilizar la ventana Remesas.
 
@@ -31,7 +31,7 @@ Para ello, vaya a la ventana [Gestión del módulo de Empresa](../../../../../us
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-protest-remittance/Enterprise%20Module%20Management.png)
 
-## Proceso de remesas automatizadas
+## Proceso de remesas automatizadas { #automated-remittance-process }
 
 Esta funcionalidad permite el procesamiento automático de remesas. Esta funcionalidad se activa seleccionando la casilla de verificación Procesar automáticamente en la cabecera de la ventana [Remesas](../../../basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
 
@@ -51,7 +51,7 @@ Esta funcionalidad permite el procesamiento automático de remesas. Esta funcion
 !!!note
     Los pasos de selección, agrupación y procesamiento de facturas ya existían; lo nuevo es la automatización del procesamiento de remesas mediante la selección de la casilla de verificación Procesar automáticamente.
 
-## Protesto de remesas automatizadas
+## Protesto de remesas automatizadas { #automated-remittance-protest }
 
 El botón Protestar remesa permite el protesto automático de remesas. Esta función facilita la gestión de protestos y la reliquidación de remesas. Este protesto automático crea un pago negativo, por lo que no es necesario utilizar la ventana Liquidar/Protestar remesa ni añadir un pago manualmente.
 

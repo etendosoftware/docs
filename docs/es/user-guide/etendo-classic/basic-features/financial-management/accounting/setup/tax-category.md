@@ -8,19 +8,19 @@ tags:
     - Contabilidad
 ---
 
-# Categoría de Impuesto
+# Categoría de Impuesto { #tax-category }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Categoría de Impuesto`
 
-## Visión general
+## Visión general { #overview }
 
 Una categoría de impuesto se utiliza para agrupar productos o servicios que comparten el mismo **tratamiento fiscal**. Dado que no todos los artículos tienen el mismo tipo impositivo (estándar, reducido o exento), las categorías de impuesto ayudan a organizar estas diferencias y garantizan que los impuestos se apliquen de forma automática y correcta durante las transacciones.
 
-Cada producto o servicio debe asignarse a una categoría de impuesto en la ventana [Producto](../../../master-data-management/master-data.md#product), y los [Rango impuesto](../setup/tax-rate.md) también se vinculan a las categorías. Cuando se crea una transacción, Etendo solo considera los tipos impositivos asociados a la categoría seleccionada, reduciendo la intervención manual y evitando errores.
+Cada producto o servicio debe asignarse a una categoría de impuesto en la ventana [Producto](../../../master-data-management/master-data/product.md#product), y los [Rango impuesto](../setup/tax-rate.md) también se vinculan a las categorías. Cuando se crea una transacción, Etendo solo considera los tipos impositivos asociados a la categoría seleccionada, reduciendo la intervención manual y evitando errores.
 
 Factores adicionales, como la [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) y la configuración del tipo impositivo, ayudan al sistema a determinar el **impuesto final aplicable**.
 
-### Cómo funcionan las categorías de impuesto
+### Cómo funcionan las categorías de impuesto { #how-tax-categories-work }
 
 El proceso de determinación de impuestos sigue esta lógica:
 
@@ -32,11 +32,11 @@ El proceso de determinación de impuestos sigue esta lógica:
 Esta estructura permite una gestión fiscal flexible manteniendo la consistencia en todo el sistema.
 
 
-## Cabecera
+## Cabecera { #header }
 
 Puede crear tantas categorías de impuesto como necesite para organizar distintos tratamientos fiscales en su sistema. Cada categoría se vinculará a tipos impositivos específicos y se asignará a productos. La solapa Cabecera define la información principal de la categoría de impuesto.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category1.png)
 
 **Campos a tener en cuenta:**
 
@@ -54,19 +54,19 @@ Puede crear tantas categorías de impuesto como necesite para organizar distinto
     Una vez creadas, las categorías de impuesto deben:
 
     1. **Vincularse a tipos impositivos** en la ventana [Rango impuesto](../setup/tax-rate.md) - Cada tipo impositivo debe pertenecer al menos a una categoría de impuesto
-    2. **Asignarse a productos** en la ventana [Producto](../../../master-data-management/master-data.md#product) - Cada producto debe tener una categoría de impuesto
+    2. **Asignarse a productos** en la ventana [Producto](../../../master-data-management/master-data/product.md#product) - Cada producto debe tener una categoría de impuesto
     3. **Asignarse opcionalmente a terceros** mediante [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) para restringir los impuestos aplicables a clientes o proveedores específicos
 
 
-## Traducción
+## Traducción { #translation }
 
 La solapa Traducción le permite proporcionar nombres y descripciones traducidos para las categorías de impuesto en varios idiomas. Esto resulta útil para organizaciones multinacionales en las que los usuarios trabajan en distintos idiomas.
 
 Cuando un usuario inicia sesión con una preferencia de idioma específica, verá los nombres de las categorías de impuesto en su idioma, lo que garantiza claridad y reduce la confusión al seleccionar categorías de impuesto durante la introducción de transacciones.
 
-## Casos de uso comunes
+## Casos de uso comunes { #common-use-cases }
 
-### Cuándo crear múltiples categorías de impuesto
+### Cuándo crear múltiples categorías de impuesto { #when-to-create-multiple-tax-categories }
 
 Debe crear diferentes categorías de impuesto cuando:
 
@@ -76,20 +76,20 @@ Debe crear diferentes categorías de impuesto cuando:
 - **Ventas transfronterizas**: productos nacionales vs. de exportación (sujetos a impuesto vs. tipo cero)
 - **Requisitos normativos**: separar artículos declarables vs. no declarables para las autoridades fiscales (p. ej., SII en España)
 
-### Dónde se utilizan las categorías de impuesto
+### Dónde se utilizan las categorías de impuesto { #where-tax-categories-are-used }
 
 Las categorías de impuesto aparecen en todo el sistema:
 
 | Ventana/Proceso | Uso |
 |----------------|-------|
-| [Producto](../../../master-data-management/master-data.md#product) | Cada producto debe tener asignada una categoría de impuesto |
+| [Producto](../../../master-data-management/master-data/product.md#product) | Cada producto debe tener asignada una categoría de impuesto |
 | [Rango impuesto](../setup/tax-rate.md) | Cada tipo impositivo debe estar vinculado al menos a una categoría de impuesto |
 | [Categoría de Impuestos de Terceros](./business-partner-tax-category.md) | Asignación opcional de categoría de impuesto para restringir los impuestos aplicables a clientes/proveedores específicos |
 | Pedidos de venta/Facturas | Las categorías de impuesto determinan qué tipos impositivos están disponibles para su selección |
 | Pedidos de compra/Facturas | Las categorías de impuesto filtran los impuestos aplicables en función de la configuración del producto y del proveedor |
 | [Concepto contable](../setup/gl-item.md) | Requerido al habilitar conceptos contables para facturas financieras con implicaciones fiscales |
 
-### Ejemplo
+### Ejemplo { #example }
 
 Una empresa vende distintos tipos de artículos con diferentes tipos impositivos:
 
@@ -111,7 +111,7 @@ Una empresa vende distintos tipos de artículos con diferentes tipos impositivos
     - Crear un tipo impositivo del 10% y vincularlo a la categoría "IVA reducido"
     - Crear un tipo impositivo del 0% y vincularlo a la categoría "Exento"
 
-3. **Asignar productos** a categorías en la ventana [Producto](../../../master-data-management/master-data.md#product):
+3. **Asignar productos** a categorías en la ventana [Producto](../../../master-data-management/master-data/product.md#product):
     - Producto "Portátil" → Categoría de Impuesto: "IVA estándar"
     - Producto "Pan" → Categoría de Impuesto: "IVA reducido"
     - Producto "Novela" → Categoría de Impuesto: "Exento"

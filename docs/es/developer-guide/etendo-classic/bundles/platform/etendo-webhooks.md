@@ -4,9 +4,9 @@ title: Webhooks de Etendo | Documentación técnica
 
 :octicons-package-16: Paquete Java: `com.etendoerp.webhookevents`
 
-## Visión general
+## Visión general { #overview }
 
-### ¿Qué es un Webhook?
+### ¿Qué es un Webhook? { #what-is-a-webhook }
 
 Un webhook es un método utilizado por las aplicaciones web para enviar notificaciones o datos en tiempo real a otras aplicaciones o servidores. Los webhooks operan mediante callbacks HTTP, lo que significa que una aplicación envía una solicitud HTTP a una URL especificada (la URL del webhook) cuando ocurre un evento determinado.
 
@@ -16,9 +16,9 @@ Al utilizar webhooks, puede mantener sus aplicaciones sincronizadas, automatizar
 
 Esta documentación le guiará a través del proceso de configuración y uso de webhooks en Etendo Classic. Los webhooks le permiten ejecutar acciones mediante una llamada a una URL, proporcionando una forma potente de integrarse con servicios externos.
 
-## Descripción del Webhook
+## Descripción del Webhook { #webhook-description }
 
-### Campos de cabecera del Webhook
+### Campos de cabecera del Webhook { #webhook-header-fields }
 
 | Campo                         | Descripción                                                                 |
 |------------------------------|-----------------------------------------------------------------------------|
@@ -31,7 +31,7 @@ Esta documentación le guiará a través del proceso de configuración y uso de 
 
 ![Cabecera del Webhook](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
 
-### Campos de solapas del Webhook
+### Campos de solapas del Webhook { #webhook-tabs-fields }
 
 La ventana de Webhook tiene 2 solapas: Acceso y Parámetros.
 
@@ -39,7 +39,7 @@ La solapa de parámetros le permite crear parámetros que se utilizarán en la l
 
 La solapa de acceso le permite crear accesos que se utilizarán en la llamada a la URL.
 
-#### Parámetros
+#### Parámetros { #params }
 
 | Campo       | Descripción                                              |
 |------------|----------------------------------------------------------|
@@ -47,7 +47,7 @@ La solapa de acceso le permite crear accesos que se utilizarán en la llamada a 
 | Es obligatorio | Si el parámetro es obligatorio o no                  |
 | Activo     | Estado del parámetro (Activo por defecto)                |
 
-#### Acceso de usuario
+#### Acceso de usuario { #user-access }
 
 Permitir ejecución mediante token.
 
@@ -56,13 +56,13 @@ Permitir ejecución mediante token.
 | Activo | Estado del acceso (Activo por defecto)                                                           |
 | Token  | Selector con el token que se utilizará en la llamada a la URL creado en la ventana User API Token |
 
-#### Rol permisos
+#### Rol permisos { #role-access }
 
 Si necesita permitir usuarios autenticados con SWS, lea la guía: [Cómo usar servicios web seguros](../../how-to-guides/how-to-use-secure-webservices.md). Para ello, debe añadir roles a los que se les permita ejecutar un webhook en la solapa **Rol permisos**.
 
-## Ejemplo de uso del Webhook
+## Ejemplo de uso del Webhook { #webhook-usage-example }
 
-### Configuración de Webhooks
+### Configuración de Webhooks { #setting-up-webhooks }
 
 1. Navegue a la nueva opción de menú: `Aplicación → Configuración general → Aplicación → Eventos de Webhook → Webhooks`
 2. Cree un nuevo webhook completando los campos obligatorios:
@@ -84,9 +84,9 @@ Si necesita permitir usuarios autenticados con SWS, lea la guía: [Cómo usar se
 
 ![Parámetros del Webhook](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
 
-### Rol permisos
+### Rol permisos { #role-access_1 }
 
-#### Generación de clave API
+#### Generación de clave API { #api-key-generation }
 
 1. Para dar permiso de ejecución a un usuario, vaya a: `Aplicación → Configuración general → Aplicación → Eventos de Webhook → User API Token`
 2. Cree una nueva API con el Nombre: `<<user>> token`
@@ -94,7 +94,7 @@ Si necesita permitir usuarios autenticados con SWS, lea la guía: [Cómo usar se
 3. Tras guardar, ejecute la opción “Get API Key” y guarde el token resultante (cadena aleatoria de longitud 64) en su portapapeles.
     ![Cadena del token de Webhook](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookTokenString.png)
 
-#### Asignación de acceso al Webhook a usuarios
+#### Asignación de acceso al Webhook a usuarios { #assigning-webhook-access-to-users }
 
 1. Navegue a: `Aplicación → Configuración general → Aplicación → Eventos de Webhook → Webhooks`
 2. Seleccione el webhook creado y abra la solapa de acceso.
@@ -102,15 +102,15 @@ Si necesita permitir usuarios autenticados con SWS, lea la guía: [Cómo usar se
 
 ![Acceso al Webhook](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
 
-### Acceso a servicios web seguros
+### Acceso a servicios web seguros { #secure-web-servicess-access }
 
-#### Asignar roles permitidos
+#### Asignar roles permitidos { #assign-allowed-roles }
 
 En la ventana Webhooks, añada los roles permitidos para ejecutar el webhook.
 
 ![Rol del Webhook](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookRole.png)
 
-### Ejecución del Webhook
+### Ejecución del Webhook { #executing-the-webhook }
 
 Para ejecutar el webhook, realice una solicitud GET utilizando un cliente REST como Postman con la siguiente sintaxis:
 
@@ -124,7 +124,7 @@ DESCRIPTION=new alert description
 RULE=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
-#### URL de ejemplo:
+#### URL de ejemplo: { #example-url }
 
 *Con token*
 
@@ -142,7 +142,7 @@ http://localhost:8080/etendo/webhooks/?name=Alert&description=new alert descript
 
 Añada como autorización Bearer Token el JWT obtenido mediante el inicio de sesión SWS.
 
-#### Respuesta esperada
+#### Respuesta esperada { #expected-response }
 
 !!! success
     Este webhook crea una alerta, y puede visualizarla en la ventana "Gestión de Alertas".
@@ -154,7 +154,7 @@ Añada como autorización Bearer Token el JWT obtenido mediante el inicio de ses
     }
     ```
 
-### Ejemplo de uso de código
+### Ejemplo de uso de código { #example-code-usage }
 
 ```java title="AdAlertWebhookService.java"
 /**
@@ -177,9 +177,43 @@ public class AdAlertWebhookService extends BaseWebhookService {
 }
 ```
 
-## Casos de uso
+## Casos de uso { #use-cases }
 
-### Visibilidad de tokens
+### Webhook SimSearch { #simsearch-webhook }
+
+El webhook SimSearch realiza búsquedas difusas sobre entidades de Etendo y devuelve los registros más cercanos para un término de búsqueda determinado. Se utiliza en flujos de Copilot donde texto extraído o ingresado por el usuario debe mapearse contra registros existentes, por ejemplo para relacionar resultados de OCR con terceros, productos o documentos.
+
+#### Consideraciones de rendimiento { #performance-considerations }
+
+Si SimSearch sigue siendo lento en su entorno, especialmente sobre tablas grandes, puede añadir un índice trigram de PostgreSQL sobre la columna identificadora utilizada por la búsqueda.
+
+!!! info "Requisito previo"
+    Los índices trigram requieren que la extensión `pg_trgm` de PostgreSQL esté habilitada en la base de datos.
+
+La expresión del índice debe coincidir con la expresión utilizada por la búsqueda. Por ejemplo, si la búsqueda se realiza sobre el número de documento de factura en mayúsculas, cree el índice sobre `upper(documentno::text)`:
+
+```sql
+CREATE INDEX IF NOT EXISTS c_invoice_documentno_trgm
+    ON c_invoice
+    USING gin (upper(documentno::text) gin_trgm_ops);
+```
+
+**Ventajas:**
+
+- Búsquedas difusas más rápidas en tablas grandes.
+- Mejor tiempo de respuesta en flujos guiados por OCR y otros escenarios de coincidencia masiva.
+- Menor uso de CPU en la base de datos para búsquedas repetidas de similitud.
+
+**Desventajas:**
+
+- Mayor uso de disco porque el índice adicional debe almacenarse y mantenerse.
+- Operaciones `INSERT`, `UPDATE` y `DELETE` más lentas sobre la tabla indexada.
+- La reindexación, el vacuum y la creación inicial del índice pueden ser costosos en conjuntos de datos grandes.
+- El índice solo ayuda si coincide con la expresión real utilizada por la consulta.
+
+En entornos productivos, mida primero la consulta y añada índices trigram solo en las columnas que demuestren ser cuellos de botella.
+
+### Visibilidad de tokens { #tokens-visibility }
 
 !!! note
     :eye: Los usuarios pueden visualizar los tokens de su perfil actual.
@@ -187,7 +221,7 @@ public class AdAlertWebhookService extends BaseWebhookService {
 !!! warning
     :warning: Otros usuarios no pueden acceder al token de otro usuario. La ventana API Token y la solapa de acceso del webhook estarán vacías.
 
-### Gestión de errores
+### Gestión de errores { #error-handling }
 
 !!! failure
     Si un usuario llama a un webhook sin un token o incluye un token de API incorrecto, el backend responderá con una respuesta **401** y un mensaje.

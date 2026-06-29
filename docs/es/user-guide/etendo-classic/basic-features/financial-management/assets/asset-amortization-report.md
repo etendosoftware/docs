@@ -1,0 +1,47 @@
+---
+tags:
+  - Etendo Classic
+  - Financial Management
+  - Assets
+  - Asset Amortization Report
+  - Financial Extensions
+---
+
+# Informe de amortización de activos (Excel) { #asset-amortization-report-excel }
+
+:material-menu: `Application` > `Financial Management` > `Assets` > `Asset Amortization Report (Excel)`
+
+!!! info
+    Para poder incluir esta funcionalidad, se debe instalar el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el núcleo y nuevas funcionalidades, visite [Financial Extensions - Notas de versión](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+## Descripción general { #overview }
+
+El informe de amortización permite descargar informes en formato Excel. El informe se encuentra en Gestión Financiera > Activos > Herramientas de análisis > Informe de amortización de activos.
+
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-1.png)
+
+Este informe permite filtrar por organización, fecha, activo o cualquier descripción particular, categoría y configuración contable.
+
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-2.png)
+
+Una vez filtrada la información, se descarga una hoja de Excel tal como se muestra en la siguiente imagen:
+
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/assets/asset-amortization-report/asset-amortization-report-3.png)
+
+Este informe tiene en cuenta las líneas de amortización de cada activo. Es decir, el informe se generará incluso si las líneas de amortización no están procesadas ni contabilizadas.
+
+Es necesario filtrar por fecha, ya que la información se presenta en función de dicho filtro. Es decir, el período acumulado, el valor neto y los campos posteriores del informe dependerán de este filtro.
+
+Por ejemplo: Fecha de período filtrada del 01-01-2022 al 31-12-2022
+
+**Período:** Se mostrará el total de las líneas de amortización entre el 01/01/2022 y el 31/12/2022. <br>
+**Acumulado:** Se mostrará la suma de las líneas de amortización entre el 01/01/2022 y el 31/12/2022 más el total de las líneas de amortización anteriores al 01/01/2022. <br>
+**Valor neto:** Se mostrará el valor del activo menos el campo Acumulado. <br>
+**Posterior:** Se mostrarán las líneas de amortización posteriores al 31-12-2022. <br>
+
+!!! info
+    Cuando se rellena la fecha de fin en la ventana Activos, ese activo no aparecerá en el informe si la fecha filtrada es posterior a la fecha de fin del activo.
+
+---
+
+This work is a derivative of [Financial Management](http://wiki.openbravo.com/wiki/Financial_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

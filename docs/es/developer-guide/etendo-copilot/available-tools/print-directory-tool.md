@@ -7,11 +7,11 @@ tags:
     - Sistema de archivos
 ---
 
-# Herramienta de impresión de directorios
+# Herramienta de impresión de directorios { #print-directory-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de impresión de directorios** es una herramienta diseñada para imprimir archivos y directorios desde el directorio actual o desde un directorio superior especificado. Permite la opción de listar el contenido de forma recursiva.
 
@@ -20,7 +20,7 @@ La **Herramienta de impresión de directorios** es una herramienta diseñada par
     
 Esta herramienta es extremadamente valiosa para la gestión y monitorización del sistema de archivos. Facilita la visualización de la estructura de directorios, tanto localmente como hacia niveles superiores, y permite auditorías detalladas de la estructura. Su capacidad para ignorar directorios específicos comunes en entornos de desarrollo garantiza que los listados sean relevantes y limpios, haciendo que la herramienta sea eficiente y práctica.
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta se utiliza cuando necesita obtener una visión clara de la estructura de archivos y directorios en un directorio específico del sistema, ya sea el directorio actual o uno de sus directorios padre. Puede ser útil para:
 
@@ -60,7 +60,7 @@ Este proceso consta de las siguientes acciones:
 
     Devuelve un diccionario con la lista de archivos y directorios bajo la clave Mensaje.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si desea listar de forma recursiva los archivos y directorios en el directorio abuelo del directorio actual:
 

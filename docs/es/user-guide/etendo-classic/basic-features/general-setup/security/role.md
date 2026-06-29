@@ -5,11 +5,11 @@ tags:
     - Administrador
     - Permisos
 ---
-# Rol
+# Rol { #role }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol`
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de un rol es agrupar usuario/s en función de a qué partes de Etendo tienen permitido acceder y, por lo tanto, en cuáles pueden trabajar.
 
@@ -33,7 +33,7 @@ Dicho esto, Etendo permite la creación de tantos roles nuevos como sea necesari
 
 !!! info
     Los roles agrupan usuario/s en función de las tareas que realizan y, por lo tanto, de las partes de Etendo a las que deberían tener acceso, como ventanas, procesos, formularios, widgets y vistas.
-## Herencia de permisos
+## Herencia de permisos { #permissions-inheritance }
 
 Es posible configurar los roles para que obtengan su acceso a los diferentes elementos de Etendo de forma automática, heredándolos de otros roles padre. Esta configuración es posible gracias a una funcionalidad conocida como **Herencia de Roles**.
 
@@ -69,7 +69,7 @@ Tal y como se ha mencionado anteriormente, los cambios (crear, editar o eliminar
 Este mensaje de advertencia es similar al que se muestra a continuación. Aparece al crear o editar un registro que pertenece a un rol plantilla, en una solapa de una entidad heredable.
 
 ![](../../../../../assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
-## Ventana Rol
+## Ventana Rol { #role-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Rol`
 
@@ -119,7 +119,7 @@ Los campos a cumplimentar son:
 - La casilla **Administrador de la Entidad** permite que un rol administre el espacio de trabajo de otros usuarios, así como los Formularios Personalizados:
     - En otras palabras, un rol de administrador de la entidad puede asignar widgets al espacio de trabajo de cualquier usuario de la entidad, así como formularios personalizados.
 
-### Permiso a organizaciones
+### Permiso a organizaciones { #org-access }
 
 La pestaña Permiso a organizaciones permite al usuario definir la(s) organización(es) a las que un rol determinado tendrá derechos de acceso.
 
@@ -130,7 +130,7 @@ Como ya se ha mencionado, cada registro en Etendo pertenece a una organización;
 - La casilla **Administrador de la Organización** permite que un rol administre el espacio de trabajo de otros usuarios, así como los Formularios Personalizados:
     - En otras palabras, un administrador de la organización puede asignar widgets al espacio de trabajo de cualquier usuario de la organización, así como formularios personalizados.
 
-### Asignación de usuarios
+### Asignación de usuarios { #user-assignment }
 
 La pestaña Asignación de usuarios permite al usuario añadir usuarios a un rol determinado.
 
@@ -144,7 +144,7 @@ La casilla **Administrador de Rol** permite al usuario administrar el rol indica
 !!! info
     Dado que el indicador **Administrador de Rol** permite al usuario modificar el comportamiento de otros usuarios con el mismo rol, solo debería concederse a usuarios de confianza.
 
-### Permiso a ventanas
+### Permiso a ventanas { #window-access }
 
 Esta pestaña lista y/o permite al usuario añadir las ventanas a las que un rol tendrá acceso.
 
@@ -158,7 +158,7 @@ Dicho esto, si se selecciona la casilla **Manual**, será necesario añadir manu
 
 La casilla **Lectura y escritura** define si los datos accesibles en una ventana pueden ser editados por el rol o no.
 
-#### Acceso a Solapas
+#### Acceso a Solapas { #tab-access }
 
 Define si una solapa es editable o de solo lectura para un rol concreto.
 
@@ -168,7 +168,7 @@ Si la ventana es editable (está marcada **Lectura y escritura**), por defecto t
 
 Del mismo modo, teniendo una ventana no editable, es posible definir algunas de sus solapas como editables marcando **Pestaña Editable**.
 
-#### Acceso a Campos
+#### Acceso a Campos { #field-access }
 
 Define si un campo es editable o de solo lectura para un rol concreto.
 
@@ -178,7 +178,7 @@ Así, si una solapa es editable para un rol, un conjunto concreto de campos pued
 
 Al editar una solapa con algunos campos definidos como no editables de esta forma, el backend comprueba las modificaciones en esa solapa para evitar que esto ocurra. Tenga en cuenta que esto también afecta al campo en caso de que se haya modificado, por ejemplo, mediante un callout o una expresión por defecto. Esto se controla mediante la propiedad **Comprobar al Guardar**; al desmarcarla, esta comprobación no se realizará, permitiendo así que el campo sea modificado por un callout.
 
-### Permiso a procesos
+### Permiso a procesos { #report-and-process-access }
 
 Esta pestaña lista y/o permite al usuario añadir los informes y procesos a los que un rol tendrá acceso.
 
@@ -197,7 +197,7 @@ Por defecto, el acceso a procesos en una ventana estándar proporcionado desde u
 - Para revocar este acceso heredado y decidir manualmente caso por caso cuáles son los procesos accesibles, es posible definir una preferencia de **Proceso seguro** (a nivel de sistema o para esa ventana específica) con valor Y.
 - Si el desarrollador definió el proceso como Requires Explicit Access Permission. En este caso, los permisos nunca se heredarán para ese proceso.
 
-### Permiso a formularios
+### Permiso a formularios { #form-access }
 
 Esta pestaña lista y/o permite añadir los formularios a los que un rol tendrá acceso.
 
@@ -211,7 +211,7 @@ Dicho esto, si se selecciona la casilla Manual, será necesario añadir manualme
 
 La casilla Lectura y escritura define si los datos accesibles en un formulario pueden ser editados por el rol o no.
 
-### Permiso de la Clase de Widget
+### Permiso de la Clase de Widget { #widget-class-access }
 
 Esta pestaña lista y/o permite añadir las clases de widget a las que un rol tendrá acceso.
 
@@ -219,7 +219,7 @@ Esta pestaña lista y/o permite añadir las clases de widget a las que un rol te
 
 Los widgets son elementos de la interfaz de usuario que pueden colocarse en la pestaña de espacio de trabajo de los usuarios o formar parte de una ventana generada.
 
-### Implementacion de Vista
+### Implementacion de Vista { #view-implementation }
 
 La pestaña Implementacion de Vista permite al usuario seleccionar vistas personalizadas.
 
@@ -231,7 +231,7 @@ El acceso a una vista personalizada puede controlarse mediante esta pestaña de 
 
 Para información adicional sobre vistas, visite How to implement a new main view.
 
-### Definición del Proceso
+### Definición del Proceso { #process-definition }
 
 Concede acceso a Definición del Proceso. Por defecto, el acceso a definiciones de proceso en una ventana (proporcionado desde un botón) se hereda del permiso a la ventana. Para cancelar este acceso heredado y decidir manualmente caso por caso cuáles son los procesos accesibles, es necesario definir una preferencia de Proceso seguro (a nivel de sistema o para esa ventana específica) con valor Y.
 
@@ -239,7 +239,7 @@ Concede acceso a Definición del Proceso. Por defecto, el acceso a definiciones 
 
 El acceso cuando el proceso se invoca desde un botón de ventana estándar se hereda de la misma manera que para Procesos.
 
-### Herencia de Roles
+### Herencia de Roles { #role-inheritance }
 
 Permite definir una herencia para un rol. Una herencia es una relación entre dos roles: si el rol A hereda del rol B, significa que todos los permisos que el rol B tiene para diferentes elementos de la aplicación como organizaciones, ventanas, informes, procesos, widgets, etc. serán heredados automáticamente por el rol A, permitiéndole acceder a esos elementos de la misma manera que B. También es posible definir una jerarquía de herencia; es decir, un rol puede heredar de diferentes roles, y la prioridad (orden) para heredar los permisos se define mediante la **Secuencia**.
 

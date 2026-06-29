@@ -7,15 +7,15 @@ tags:
   - Seguridad
 ---
 
-# Cómo configurar el Tiempo de Expiración de sesión
+# Cómo configurar el Tiempo de Expiración de sesión { #how-to-configure-session-timeout }
 
-## Visión general
+## Visión general { #overview }
 
 Etendo Classic incluye un mecanismo de tiempo de expiración de sesión que cierra la sesión de los usuarios tras un periodo definido de inactividad. Esta funcionalidad ayuda a garantizar la seguridad y una gestión eficiente de los recursos.
 
 Esta guía explica cómo configurar el ajuste de tiempo de expiración de sesión en Etendo Classic, incluyendo los pasos para aplicar y exportar la configuración.
 
-## ¿Qué es el Tiempo de Expiración de sesión?
+## ¿Qué es el Tiempo de Expiración de sesión? { #what-is-session-timeout }
 
 El tiempo de expiración de sesión define la duración de la inactividad del usuario que desencadena la finalización automática de la sesión.  
 
@@ -23,7 +23,7 @@ El tiempo de expiración de sesión define la duración de la inactividad del us
 - Si un usuario cierra el navegador sin seleccionar **Cerrar sesión**, la sesión seguirá expirando tras el periodo de tiempo de expiración configurado.
 
 
-## Personalización del Tiempo de Expiración de sesión
+## Personalización del Tiempo de Expiración de sesión { #customizing-session-timeout }
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Mapeo de Implementación del Diccionario`
 
 Siga estos pasos para configurar un tiempo de expiración de sesión personalizado:
@@ -42,7 +42,7 @@ Siga estos pasos para configurar un tiempo de expiración de sesión personaliza
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout/ad-implementation-mapping.png)
 
-## Aplicación de los cambios
+## Aplicación de los cambios { #applying-the-changes }
 
 Después de modificar el parámetro de tiempo de expiración, aplique los cambios usando la siguiente tarea de Gradle:
 
@@ -52,7 +52,7 @@ Después de modificar el parámetro de tiempo de expiración, aplique los cambio
 Este comando regenera el archivo `web.xml` y aplica los cambios necesarios.
 
 
-## Exportación de la configuración
+## Exportación de la configuración { #exporting-the-configuration }
 
 Si hay una plantilla activa y desea exportar la configuración modificada del tiempo de expiración de sesión, ejecute:
 

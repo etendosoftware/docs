@@ -9,9 +9,9 @@ tags:
 - Gestión de secuencias de base de datos
 ---
 
-# Secuencias
+# Secuencias { #sequences }
 
-## Visión general
+## Visión general { #overview }
 
 Este documento cubre cómo utilizar la implementación de secuencias, explica todas las funcionalidades y ofrece algunos casos de ejemplo de implementación.
 
@@ -23,7 +23,7 @@ Existen dos implementaciones base de referencia definidas que puede utilizar o a
 !!! warning "Importante"
 	Tenga en cuenta que tanto las Secuencias transaccionales como las Secuencias no transaccionales, tal y como están configuradas en nuestro sistema, no están soportadas dentro de Procedimientos almacenados de base de datos (PL). Esto incluye procesos específicos como POSOrder, que no puede utilizar estas secuencias. Implementar estas secuencias en PL, por ejemplo dentro del proceso POSOrder, puede provocar fallos o errores del sistema. Estas secuencias están diseñadas para la capa de aplicación y pueden no ajustarse al contexto procedimental de operaciones directas en base de datos.
 
-## Configuración rápida de secuencias
+## Configuración rápida de secuencias { #quick-sequence-setup }
 
 1. En primer lugar, inicie sesión como “Administrador del sistema”. Abra `Application` > `Application Dictionary ` >`Tables and Columns`. Seleccione la columna que desea configurar como secuencia y cambie el campo **Referencia** a Secuencia transaccional o Secuencia no transaccional.
 	
@@ -109,7 +109,7 @@ Existen dos implementaciones base de referencia definidas que puede utilizar o a
  	./gradlew export.database
 	```
 
-### **Nueva referencia de secuencia**
+### **Nueva referencia de secuencia** { #new-sequence-reference }
 
 Si desea definir una nueva referencia con referencia padre transaccional o no transaccional, debe crear un nuevo registro en la ventana Referencia (`Application` > `Application Dictionary ` >`Reference`) y establecer:
 
@@ -126,7 +126,7 @@ Si desea definir una nueva referencia con referencia padre transaccional o no tr
 &nbsp;
 &nbsp;
 
-#### Solapa Configuración de secuencia: 
+#### Solapa Configuración de secuencia: { #sequence-config-tab }
 
 ![sequence_config.png](../../../assets/legacy/technicaldocumentation/platform/sequence_config.png)
 
@@ -159,7 +159,7 @@ CREATE SEQUENCE [ IF NOT EXISTS ] sequence_name
 
 &nbsp;
 
-### Lista de dimensiones
+### Lista de dimensiones { #dimension-list }
 
 Una dimensión es una nueva cláusula de filtro utilizada para seleccionar la secuencia que se usará al crear o guardar un nuevo registro. Las dimensiones por defecto son:
 
@@ -176,12 +176,12 @@ De este modo, puede tener dos secuencias diferentes dependiendo, por ejemplo, de
 
 &nbsp;
 
-#### Añadir dimensiones personalizadas
+#### Añadir dimensiones personalizadas { #adding-custom-dimensions }
 
 Si desea añadir una nueva dimensión para filtrar secuencias, esta dimensión debe ser una columna en ambas tablas `AD_Sequence` y en la tabla donde se utiliza la secuencia transaccional. También debe crear una nueva referencia y crear un nuevo registro en la solapa `Dimension List` con esta columna (consulte cómo crear una nueva referencia de secuencia arriba).
 
 
-#### Cuando una dimensión es una columna de clave foránea
+#### Cuando una dimensión es una columna de clave foránea { #when-a-dimension-is-a-foreign-key-column }
 
 1. Para definir una nueva dimensión, debe comenzar añadiendo una columna en la tabla `AD_Sequence` y una clave foránea a la columna referenciada en una tabla específica. La columna de dimensión debe crearse en la tabla correspondiente (`M_Product` en este ejemplo), a menos que decida utilizar una columna existente como dimensión.
 
@@ -215,7 +215,7 @@ Si desea añadir una nueva dimensión para filtrar secuencias, esta dimensión d
 ```
 
 
-#### Cuando una dimensión es una Lista
+#### Cuando una dimensión es una Lista { #when-a-dimension-is-a-list }
 
 1. En primer lugar, debe crear una nueva columna en la tabla AD_Sequence para referenciar una lista y hacer lo mismo en la tabla que utiliza la secuencia. La otra opción es utilizar una existente.
 
@@ -245,7 +245,7 @@ Si desea añadir una nueva dimensión para filtrar secuencias, esta dimensión d
 ```
 
 
-#### Cambiar secuencia al cambiar dimensión
+#### Cambiar secuencia al cambiar dimensión { #change-sequence-when-change-dimension }
 
 - Si desea que la secuencia cambie automáticamente cuando cambie la dimensión o la lista configurada, debe implementar un callback o ampliarlo si ya existe.
   El siguiente ejemplo explica cómo implementar el callout, teniendo en cuenta que la dimensión utilizada es la Categoría de producto y que el pedido se introduce automáticamente en el campo Search Key.

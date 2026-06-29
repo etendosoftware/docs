@@ -9,11 +9,11 @@ tags:
     - Análisis de Inventario
 ---
 
-# Informe Movimiento de Productos
+# Informe Movimiento de Productos { #product-movements-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Movimiento de Productos`
 
-## Descripción general
+## Descripción general { #overview }
 
 El **Informe Movimiento de Productos** proporciona una vista consolidada de todos los movimientos de productos que han tenido lugar en los almacenes. Abarca albaranes de proveedor, albaranes de cliente, movimientos de inventario, ajustes de inventario físico, transacciones de producción, consumos internos y devoluciones, todo agrupado por tipo de transacción y tercero.
 
@@ -27,12 +27,12 @@ Este informe ayuda a los responsables de almacén y coordinadores logísticos a 
 
 Para una comprensión más amplia de las operaciones de almacén, consulte [Introducción a Gestión de Almacén](../getting-started.md) y [Transacciones de Almacén](../transactions.md).
 
-## Ventana de Parámetros
+## Ventana de Parámetros { #parameters-window }
 
 Utilice la ventana de parámetros para filtrar el informe antes de generarlo. Los filtros disponibles son:
 
 -   **Fecha desde** / **Fecha hasta**: Define el rango de fechas de los movimientos a incluir. Solo aparecen en el informe las transacciones dentro de este período.
--   **Producto**: Filtra por un [producto](../../master-data-management/product-setup.md) específico. Déjelo en blanco para incluir todos los productos.
+-   **Producto**: Filtra por un [producto](../../master-data-management/product-setup/product-category.md) específico. Déjelo en blanco para incluir todos los productos.
 -   **Atributo**: Filtra por un atributo de producto (como talla, color o lote). Déjelo en blanco para incluir todos los atributos.
 -   **Tercero**: Filtra por un tercero específico (cliente o proveedor). Déjelo en blanco para incluir todos los terceros.
 
@@ -49,9 +49,9 @@ Todas las casillas de verificación están habilitadas por defecto. Desmarque cu
 
 Tras configurar los filtros deseados, haga clic en **Ver resultados** para generar el informe. El informe también puede exportarse mediante el botón **Formato HTML**.
 
-![Informe Movimiento de Productos](../../../../../assets/drive/1KCTc1ueZ2Z-w-saDYnPVYx-BUDlYq4Gl.png)
+![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-1.png)
 
-### Resultado del informe
+### Resultado del informe { #report-output }
 
 El resultado del informe muestra los movimientos agrupados primero por tipo de transacción (por ejemplo, Entradas/Salidas) y luego por tercero. Cada fila representa un único movimiento de producto con las siguientes columnas:
 
@@ -66,7 +66,14 @@ El resultado del informe muestra los movimientos agrupados primero por tipo de t
 -   **Salida**: Indica si el producto salió de la organización (Sí/No).
 -   **Cantidad**: El número de unidades movidas, junto con la unidad de medida.
 
-![Informe Movimiento de Productos](../../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+![Informe Movimiento de Productos](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-2.png)
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Informe Transacción de Material](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

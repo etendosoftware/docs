@@ -8,7 +8,7 @@ tags:
 status: beta
 ---
 
-# Utilidades ampliadas de base de datos (BETA)
+# Utilidades ampliadas de base de datos (BETA) { #extended-database-utilities-beta }
 
 :octicons-package-16: Javapackage: `com.etendoerp.db.extended`
 
@@ -17,25 +17,25 @@ status: beta
     - Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**, especialmente en entornos de producción.
     - Debe utilizarse con **precaución**, y siempre debe **validar las copias de seguridad** antes de ejecutar cualquier operación crítica.
 
-## Visión general
+## Visión general { #overview }
 
 El módulo **Utilidades ampliadas de base de datos** añade herramientas avanzadas de PostgreSQL a Etendo para gestionar **tablas particionadas**. El particionado divide grandes conjuntos de datos en segmentos más pequeños, mejorando el rendimiento, la escalabilidad y la mantenibilidad.
 
 Esta guía cubre los requisitos, la configuración y el uso para particionar y desparticionar tablas.
 
-### ¿Por qué particionar?
+### ¿Por qué particionar? { #why-partition }
 
 - **Consultas más rápidas** al escanear solo las particiones relevantes.  
 - **Mantenimiento más sencillo** mediante una organización lógica de los datos.  
 - **Crecimiento escalable** sin degradar el rendimiento.
 
-### Recomendaciones
+### Recomendaciones { #recommendations }
 
 - Cree siempre una **copia de seguridad completa de la base de datos** antes de realizar cambios.  
 - Planifique una **estrategia de particionado** clara basada en el uso de los datos y las tablas críticas.
 - Pruebe exhaustivamente primero en **entornos no productivos**.   
 
-## Requisitos
+## Requisitos { #requirements }
 
 Deben cumplirse los siguientes requisitos antes de usar el módulo:
 
@@ -44,7 +44,7 @@ Deben cumplirse los siguientes requisitos antes de usar el módulo:
 - **[PostgreSQL](https://www.postgresql.org/docs/16/index.html){target="_blank"}** – versión 16 o superior.
 - **Etendo DBSM (Database Source Manager)** – versión **1.2.0-beta**, configurada en el archivo `artifacts.list.COMPILATION.gradle` dentro del entorno de Etendo. 
 
-## Instalación del módulo
+## Instalación del módulo { #installing-the-module }
 
 1. Clone el código del módulo en la carpeta `/modules` dentro del entorno de Etendo:
 
@@ -59,7 +59,7 @@ Deben cumplirse los siguientes requisitos antes de usar el módulo:
     ./gradlew update.database smartbuild
     ```
 
-## Configuración del entorno Python
+## Configuración del entorno Python { #setting-up-the-python-environment }
 
 Para preparar el entorno Python necesario para este módulo:
 
@@ -81,11 +81,11 @@ Para preparar el entorno Python necesario para este módulo:
     pip3 install pyyaml psycopg2-binary
     ```
 
-## Particionar una tabla
+## Particionar una tabla { #partition-a-table }
 
 El particionado de una tabla altera su estructura física para mejorar el rendimiento de las consultas en conjuntos de datos muy grandes. Este proceso debe ejecutarse con precaución y requiere los permisos adecuados.
 
-### Ventana Configuración de tabla particionada
+### Ventana Configuración de tabla particionada { #partitioned-table-config-window }
 
 :material-menu: `Aplicación`> `Partición`> `Configuración de tabla particionada`
 
@@ -105,7 +105,7 @@ El particionado de una tabla altera su estructura física para mejorar el rendim
     - Guarde la configuración.
 
 
-### Aplicar el particionado
+### Aplicar el particionado { #apply-the-partitioning }
 
 1. Detenga el **servidor Tomcat**.
 2. Ejecute los siguientes comandos para particionar la(s) tabla(s):
@@ -122,7 +122,7 @@ El particionado de una tabla altera su estructura física para mejorar el rendim
             Aquí se ejecuta un `update.database` forzado porque, tras particionar una tabla, la estructura de la base de datos cambia debido a que una o más tablas pasan a estar particionadas. Este paso garantiza que la estructura actualizada se aplique correctamente, incluyendo el manejo de tablas particionadas, que el **DB Source Manager** predeterminado no gestionaría adecuadamente.
 
 
-## Desparticionar una tabla
+## Desparticionar una tabla { #unpartition-a-table }
 
 Antes de iniciar el desarrollo, las tablas deben estar **sin particionar** porque la tarea `export.database` no admite tablas particionadas.
 
@@ -131,7 +131,7 @@ La herramienta de desparticionado restaura las tablas a su estado original, sin 
 !!! warning
     La tarea `export.database` no puede ejecutarse sobre tablas particionadas. Desparticione siempre las tablas necesarias antes de ejecutar esta tarea.
 
-### Pasos para desparticionar una tabla
+### Pasos para desparticionar una tabla { #steps-to-unpartition-a-table }
 
 1. Ejecute el siguiente comando, sustituyendo "table_name1", "table_name2", etc., por el nombre de la(s) tabla(s) que desea desparticionar.
 

@@ -7,15 +7,15 @@ tags:
   - Configuration
 ---
 
-# Cómo Configurar la Main UI de Etendo
+# Cómo Configurar la Main UI de Etendo { #how-to-configure-etendo-main-ui }
 
-## Descripción General
+## Descripción General { #overview }
 
 La Main UI de Etendo es una interfaz de usuario moderna basada en React/TypeScript incluida en la instalación base de Etendo. Se ejecuta como un servicio Docker contenerizado junto a la instancia de Etendo y se inicia automáticamente con `./gradlew resources.up`.
 
 Esta guía cubre la configuración manual de las variables de la Main UI y la configuración avanzada de desarrollo para contribuidores.
 
-## Requisitos
+## Requisitos { #requirements }
 
 - Proyecto de Etendo correctamente configurado. Consulte las guías de [Desarrollo Local](../getting-started/installation/local-development.md) o [Instalación en Servidor](../getting-started/installation/production-server.md).
 - [Docker](https://docs.docker.com/get-docker/){target="_blank"} versión `26.0.0` o superior
@@ -27,7 +27,7 @@ Esta guía cubre la configuración manual de las variables de la Main UI y la co
 !!! info
     El módulo [Docker Management](../bundles/platform/docker-management.md), incluido como dependencia, gestiona la distribución de infraestructura dentro de los módulos de Etendo mediante contenedores Docker.
 
-## Token de Acceso de Entidad
+## Token de Acceso de Entidad { #client-access-token }
 
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
@@ -42,9 +42,9 @@ Se debe configurar un token de cifrado de un solo uso para la autenticación. Es
 !!! info
     Este token no requiere ninguna acción adicional — solo necesita ser generado para que el proceso de autenticación funcione correctamente.
 
-## Configuración
+## Configuración { #configuration }
 
-### Usando la Configuración Interactiva
+### Usando la Configuración Interactiva { #using-the-interactive-setup }
 
 Ejecute el asistente de configuración interactivo para establecer todas las variables requeridas:
 
@@ -60,7 +60,7 @@ Luego inicie los servicios Docker:
 ./gradlew resources.up
 ```
 
-### Configuración Manual
+### Configuración Manual { #manual-configuration }
 
 Agregue las siguientes variables a `gradle.properties`:
 
@@ -71,6 +71,7 @@ etendo.classic.host=http://localhost:8080/etendo
 authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ws.maxInactiveInterval=3600
 next.public.app.url=http://localhost:3000
+ui.port=3000
 ```
 
 | Variable | Descripción | Local | Producción |
@@ -81,6 +82,7 @@ next.public.app.url=http://localhost:3000
 | `authentication.class` | Clase Java que gestiona la autenticación entre la Main UI y Etendo Classic. | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` |
 | `ws.maxInactiveInterval` | Duración de la sesión en segundos para la conexión WebSocket de la Main UI. No afecta el tiempo de espera de sesión de Etendo Classic. | `3600` | `3600` |
 | `next.public.app.url` | URL pública desde la que los usuarios acceden a la Main UI. | `http://localhost:3000` | `https://your.frontend.etendo.cloud` |
+| `ui.port` | Puerto en el que el servicio Main UI escucha dentro del contenedor. Debe coincidir con el puerto referenciado en `next.public.app.url`. | `3000` | `3000` |
 
 Aplique la configuración e inicie los servicios:
 
@@ -89,7 +91,7 @@ Aplique la configuración e inicie los servicios:
 ./gradlew resources.up
 ```
 
-## Acceder a la Main UI
+## Acceder a la Main UI { #access-the-main-ui }
 
 Una vez que todos los servicios estén en ejecución, la Main UI está disponible en:
 
@@ -98,16 +100,16 @@ Una vez que todos los servicios estén en ejecución, la Main UI está disponibl
 | **Local** | [http://localhost:3000](http://localhost:3000){target="_blank"} |
 | **Producción** | `https://<server-address>/` |
 
-## Configuración Avanzada
+## Configuración Avanzada { #advanced-configuration }
 
 Esta sección es para desarrolladores que desean contribuir o personalizar directamente el código fuente de la Main UI.
 
-### Requisitos Adicionales
+### Requisitos Adicionales { #additional-requirements }
 
 - **Node.js** versión `^18.0.0` o superior
 - **pnpm** versión `^9.15.2`
 
-### Módulos Requeridos
+### Módulos Requeridos { #required-modules }
 
 Instale los siguientes módulos en el directorio `modules/`:
 
@@ -119,7 +121,7 @@ git clone git@github.com:etendosoftware/com.etendoerp.metadata.git
 git clone git@github.com:etendosoftware/com.etendoerp.metadata.template.git
 ```
 
-### Estructura del Proyecto
+### Estructura del Proyecto { #project-structure }
 
 ```
 com.etendorx.workspace-ui/
@@ -132,7 +134,7 @@ com.etendorx.workspace-ui/
 └── README.md
 ```
 
-### Configuración del Entorno de Desarrollo
+### Configuración del Entorno de Desarrollo { #development-setup }
 
 1. Clone el repositorio de desarrollo de la Main UI:
 
@@ -168,7 +170,7 @@ com.etendorx.workspace-ui/
 
     La aplicación está disponible en [http://localhost:3000](http://localhost:3000){target="_blank"}.
 
-### Comandos de Desarrollo
+### Comandos de Desarrollo { #development-commands }
 
 **Comandos a nivel raíz:**
 

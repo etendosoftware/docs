@@ -8,17 +8,17 @@ tags:
     - Contabilidad
 ---
 
-# Combinación de cuentas
+# Combinación de cuentas { #account-combination }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Combinación de cuentas`
 
-## Visión general
+## Visión general { #overview }
 
 Una combinación de cuentas representa **una cuenta del Esquema contable tal y como la utiliza una organización específica**. Esta ventana le permite revisar qué cuentas del esquema contable están disponibles para una organización y ver detalles básicos sobre cada combinación de cuentas.
 
 El propósito principal de esta ventana es **ver y gestionar, de una sola vez, estas combinaciones válidas de dimensiones contables** para que Etendo sepa exactamente dónde y cómo contabilizar las transacciones financieras.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-1.png)
 
 
 !!!info
@@ -27,11 +27,11 @@ El propósito principal de esta ventana es **ver y gestionar, de una sola vez, e
 !!! warning
     La ventana **Combinación de cuentas** permite al usuario eliminar cuentas. Esta acción implica que se eliminan de esta ventana, pero no de la ventana Árbol de cuentas.
 
-## Cabecera
+## Cabecera { #header }
 
 En esta ventana, el usuario puede ver todas las combinaciones de cuentas para el *Esquema contable* y la *Organización* seleccionados, filtrar y buscar combinaciones para encontrar cuentas específicas rápidamente.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-combination/account-combination-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-combination/account-combination-2.png)
 
 Campos a tener en cuenta:
 
@@ -47,7 +47,7 @@ Campos a tener en cuenta:
     - Las combinaciones de cuentas son necesarias para contabilizar: si falta una combinación necesaria, cree o ajuste la cuenta en el Árbol de cuentas y la combinación se creará automáticamente.
     - Utilice esta ventana para verificar que una organización tiene las cuentas correctas del esquema contable antes de contabilizar transacciones.
 
-## Ejemplo
+## Ejemplo { #example }
 
 Revisemos un ejemplo para entender mejor esta funcionalidad.  
 Suponga que una empresa tiene la siguiente configuración:
@@ -68,7 +68,7 @@ Cuando se crea la cuenta **Ingresos - Producto** en el Árbol de cuentas, Etendo
 
 Cada fila representa una **combinación de cuentas diferente**, aunque hagan referencia a la misma cuenta en el Árbol de cuentas.
 
-### Contabilizar una transacción
+### Contabilizar una transacción { #posting-a-transaction }
 
 Cuando se contabiliza una factura de venta para **F&B International Group 2**, Etendo:
 
@@ -81,7 +81,7 @@ Cuando se contabiliza una factura de venta para **F&B International Group 2**, E
 
 Si la combinación de cuentas correspondiente existe y está activa, la transacción se contabiliza correctamente.
 
-### Combinaciones faltantes
+### Combinaciones faltantes { #missing-combinations }
 
 Si la cuenta **Ingresos - Producto** no se definió correctamente para **F&B International Group 2** en el Árbol de cuentas:
 
@@ -90,7 +90,7 @@ Si la cuenta **Ingresos - Producto** no se definió correctamente para **F&B Int
 - El usuario debe actualizar el **Árbol de cuentas**
 - Una vez corregido, Etendo **crea la combinación de cuentas faltante**
 
-### Por qué son importantes las combinaciones de cuentas
+### Por qué son importantes las combinaciones de cuentas { #why-account-combinations-are-important }
 
 Este ejemplo muestra cómo las combinaciones de cuentas actúan como un **puente** entre:
 

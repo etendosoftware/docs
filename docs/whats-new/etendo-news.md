@@ -62,7 +62,7 @@ tags:
 
     - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
     - **Purchase Invoice automation**: automated workflows now create the corresponding financial transaction when a purchase invoice is processed, eliminating manual steps.
-    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) / Add Details**: fixed an error that prevented adding details in the Payment In window.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md) / Add Details**: fixed an error that prevented adding details in the Payment In window.
     - **Navigation between windows**: a new redirection system within grids improves cross-window navigation.
     - **Color support**: custom color configurations are now available system-wide in the interface.
 
@@ -474,7 +474,7 @@ tags:
     **Customer Statement Report migrated to process definition**
     The **Customer Statement Report** has been migrated to a process definition, aligning it with the standard reporting execution model and improving usability and future extensibility.
     
-    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#customer-statement)      
+    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md)      
 
 </div>
 
@@ -516,7 +516,7 @@ tags:
     
     --- 
     - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
-    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md)
+    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md)
 
 </div>
 
@@ -556,7 +556,7 @@ tags:
     
     In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
 
-    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>
@@ -569,7 +569,7 @@ tags:
     
     Enjoy a brand-new interactive installation wizard that guides you through the Etendo setup—configure core system settings and module-specific variables for bundles with ease. Accelerate deployments, reduce configuration errors, and get up and running faster.
 
-    - Documentation: [Interactive Installation](../getting-started/interactive-installation.md)
+    - Documentation: [Interactive Installation](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md)
 
 </div>
 
@@ -601,7 +601,7 @@ tags:
     - **Execute bulk posting actions** for faster and more consistent processing.  
     - **Refine searches** with advanced filters like organization, accounting date, and accounting status.
     --- 
-    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#not-posted-documents)
+    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.md)
     - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/blog/not-posted-documents-window-etendo/){target="_blank"}
 
 </div>
@@ -615,7 +615,7 @@ tags:
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Trial Balance** report gains new capabilities: Discover the revamped Trial Balance report, get instant, actionable insights with one-click navigation to General Ledger entries, full support for all accounting dimensions, and polished exports to Excel and PDF for sharing or audit. Faster analysis, clearer traceability, and professional output to power your financial workflows.
 
     ---
-    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#trial-balance)
+    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance.md)
     - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/blog/trial-balance-in-etendo/){target="_blank"}
 
 - :material-view-list: **Smarter Financial Planning with Budget (Projections)**
@@ -631,7 +631,7 @@ tags:
     - Analyze by multiple dimensions for deeper insights.  
     - Export, copy, and reuse budgets to accelerate financial planning. 
     ---
-    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
+    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget.md)
     - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/blog/budgets-in-etendo/){target="_blank"}
 
 </div>
@@ -687,7 +687,7 @@ tags:
 
     ---
 
-    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced)
+    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md)
     - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/blog/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
 
 
@@ -715,7 +715,7 @@ tags:
     ---
 
     - Try in demo environment: [Livebuilds](../live-builds/overview.md)
-    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/blog/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 
 </div>
@@ -1047,7 +1047,7 @@ tags:
 
     ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
 
-    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/assets.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
@@ -1332,7 +1332,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
--   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+-   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/overview.md)
     
     ---   
 
@@ -1378,7 +1378,7 @@ Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-not
 
 ### Financial Extensions
 
-[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal.md#g-l-journal-clone)
 
 Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 

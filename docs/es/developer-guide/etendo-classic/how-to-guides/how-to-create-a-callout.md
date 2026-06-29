@@ -7,9 +7,9 @@ tags:
     - DAL
 ---
 
-# Cómo crear un Callout
+# Cómo crear un Callout { #how-to-create-a-callout }
 
-##  Visión general
+## Visión general { #overview }
 
 El objetivo de este artículo es mostrarle cómo crear un nuevo callout. Un callout es una pieza de código Javascript asociada a un campo concreto en una solapa. Este código se ejecuta cada vez que el campo cambia. Es un tipo de sustituto de Ajax, que cambia partes de una solapa/ventana sin necesidad de refrescarla.
 
@@ -36,7 +36,7 @@ Los pasos implicados en la creación de un nuevo callout son:
     Este artículo asume que ha creado tanto el módulo como la plantilla de acuerdo con los artículos mencionados.  
 
   
-##  Creación del Callout
+## Creación del Callout { #creating-the-callout }
 
 Los callouts existentes se encuentran en [src/org/openbravo/erpCommon/ad_callouts](https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts){target="_blank"}.
 
@@ -45,7 +45,7 @@ Esta clase simplifica el código del callout, oculta parte de los detalles inter
 callout y le mantiene centrado en las operaciones requeridas. Para acceder a datos de base de datos
 se utiliza DAL.
 
-###  Teoría
+### Teoría { #theory }
 
 Para desarrollar un nuevo callout basado en esta clase, solo tiene que crear una nueva
 clase java que extienda SimpleCallout y sobrescribir el siguiente método:
@@ -89,13 +89,13 @@ es la parte interesante del código que realiza la lógica:
     info.addResult("inpservcost", serviceTotalCost);
   }
 ```
-###  Ampliar un Callout
+### Ampliar un Callout { #extend-a-callout }
 
 Es posible implementar un callout que extienda de otro callout. Para
 más información, visite este tutorial [Cómo crear un callout que extiende de otro callout](how-to-create-a-callout-that-extends-from-another-callout.md).
 
   
-###  Cálculo del Identificador del producto usando SimpleCallout
+### Cálculo del Identificador del producto usando SimpleCallout { #product-search-key-calculation-using-simplecallout }
 
 Definamos las tareas que deben ser realizadas por el callout:
 
@@ -162,7 +162,7 @@ Definamos las tareas que deben ser realizadas por el callout:
     }
 ``` 
 
-## Definición del Callout dentro del diccionario de aplicación
+## Definición del Callout dentro del diccionario de aplicación { #defining-the-callout-within-the-application-dictionary }
 
 !!!note
     En esta fase, solo necesita tener su módulo como "En desarrollo".
@@ -193,7 +193,7 @@ acaba de especificar.
     para persistir sus cambios en su módulo.  
  
   
-##  Asociación del Callout con una columna
+## Asociación del Callout con una columna { #associating-the-callout-with-a-column }
 
 !!!note
     En esta fase, necesita tener SOLO su plantilla como "En desarrollo".
@@ -221,7 +221,7 @@ también debería regenerar el Identificador.
     para persistir sus cambios en su plantilla.  
   
   
-##  Compilación de la ventana
+## Compilación de la ventana { #compiling-the-window }
 
 Por último, para que el callout tenga efecto, la ventana que lo utiliza necesita ser
 recompilada y desplegada en Tomcat. Ejecute:
@@ -233,7 +233,7 @@ recompilada y desplegada en Tomcat. Ejecute:
     Una vez finalizada la compilación, reinicie el servidor Apache Tomcat.  
   
 
-##  El resultado
+## El resultado { #the-result }
 
 Usando el rol _Group Admin_ (o su rol de 'administrador' definido),
 navegue a la ventana `Gestión de datos maestros` > `Producto`. Introduzca un nuevo

@@ -7,9 +7,9 @@ tags:
   - Creación de tabla de base de datos
 ---
 
-# Cómo crear una Ventana
+# Cómo crear una Ventana { #how-to-create-a-window }
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de esta sección es mostrar cómo puede crear una nueva ventana desde cero. 
 
@@ -17,14 +17,14 @@ El objetivo de esta sección es mostrar cómo puede crear una nueva ventana desd
     Esta sección se basa en dos secciones anteriores que explican
     [Cómo crear un Módulo](../how-to-guides/how-to-create-a-module.md) y [Cómo crear una Tabla](../how-to-guides/how-to-create-a-table.md).
 
-## Módulo y tabla
+## Módulo y tabla { #module-table }
 
 Como se mencionó anteriormente, este tutorial se basa en dos tutoriales previos y asume que los siguientes objetivos ya se han completado:
 
   * Creación de un nuevo módulo
   * Creación + registro en el AD de una nueva tabla
 
-##  Creación de la nueva Ventana
+## Creación de la nueva Ventana { #creating-the-new-window }
 
 Usando el rol *System Administrator* navegue a `Application Dictionary` > `Windows, Tabs and Fields`. 
 Cree un nuevo registro tal y como se indica en la captura de pantalla siguiente:
@@ -116,7 +116,7 @@ Para indicarlo, vaya a la ventana `Application Dictionary` > `Tables and Columns
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
 
-##  Creación del elemento de menú
+## Creación del elemento de menú { #creating-the-menu-item }
 
 Se requiere un elemento de menú para que el usuario pueda abrir la nueva ventana. Usando el rol System Administrator navegue a `General Setup` > `Application` > `Menu` y cree un nuevo registro:
 
@@ -145,7 +145,7 @@ otros grupos de menú.
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
 
 
-##  Compilación de la aplicación con la nueva Ventana
+## Compilación de la aplicación con la nueva Ventana { #compiling-the-application-with-the-new-window }
 
 Finalmente, la aplicación necesita recompilarse para generar el código de la nueva ventana y desplegarlo en Tomcat. 
 
@@ -153,7 +153,7 @@ Finalmente, la aplicación necesita recompilarse para generar el código de la n
 ./gradlew smartbuild
 ```
 
-##  El resultado
+## El resultado { #the-result }
 
 Usando el rol *F&B International Group Admin*, seleccione el enlace a la nueva ventana desde el menú. 
 

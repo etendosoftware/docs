@@ -9,41 +9,41 @@ tags:
 ---
 
 
-# Categoría de Impuestos de Terceros
+# Categoría de Impuestos de Terceros { #business-partner-tax-category }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Categoría de Impuestos de Terceros`
 
-## Visión general
+## Visión general { #overview }
 
 No todos los terceros están sujetos a los mismos impuestos. Un proveedor nacional sujeto a IVA y a retención de IRPF debe tratarse de forma diferente a un cliente de exportación con tipo cero, o a un tercero cuya actividad lo exime de impuestos. La **Categoría de Impuestos de Terceros** es el elemento de configuración que recoge estas diferencias: es un grupo con nombre que el administrador del sistema o el contable asigna a clientes y proveedores para que Etendo sepa qué tipos impositivos les aplican.
 
 Esta configuración se realiza una sola vez, durante la configuración inicial del esquema fiscal. Una vez que cada tercero tiene asignada una categoría, esta funciona en segundo plano: cada vez que un usuario crea un pedido o una factura, Etendo lee la categoría de impuestos del tercero y la usa como uno de los filtros para determinar qué tipo impositivo se rellena automáticamente en la línea del documento. El usuario no tiene que preocuparse por ello: el impuesto correcto aparece por sí solo.
 
-## Ventana Categoría de Impuestos de Terceros
+## Ventana Categoría de Impuestos de Terceros { #business-partner-tax-category-window }
 
 La ventana muestra todas las categorías de impuestos de terceros existentes y permite crear nuevas. Es posible definir tantas categorías como requiera la estructura fiscal de la empresa.
 
-![Ventana Categoría de Impuestos de Terceros mostrando la lista de categorías y el formulario de cabecera](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category.png)
+![Ventana Categoría de Impuestos de Terceros mostrando la lista de categorías y el formulario de cabecera](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/business-partner-tax-category/business-partner-tax-category-1.png)
 
-### Campos
+### Campos { #fields }
 
 - **Nombre**: El identificador de la categoría. Utilice una etiqueta clara y descriptiva que refleje el tratamiento fiscal que representa, como *IVA estándar*, *IVA + Retención de IRPF* o *Exento de IVA*. Este nombre aparece en la ventana Tercero al asignar la categoría a un cliente o proveedor.
 - **Descripción**: Un campo opcional de texto libre para notas internas que expliquen el propósito o el alcance de la categoría. Solo es visible en esta ventana y ayuda a otros administradores a entender cuándo usar cada categoría.
 - **Activo**: Cuando está marcado, la categoría está disponible para asignarse a terceros. Desactivar una categoría no la elimina de los terceros ya asignados, pero la oculta de las listas de selección para nuevas asignaciones.
 
-## Asignación de la categoría a un tercero
+## Asignación de la categoría a un tercero { #assigning-the-category-to-a-business-partner }
 
-Una vez creadas las categorías, cada tercero que requiera un tratamiento fiscal específico debe vincularse a la categoría adecuada. Esto se hace en la ventana [**Tercero**](../../../master-data-management/master-data.md):
+Una vez creadas las categorías, cada tercero que requiera un tratamiento fiscal específico debe vincularse a la categoría adecuada. Esto se hace en la ventana [**Tercero**](../../../master-data-management/master-data/business-partner.md#business-partner):
 
-- Para clientes: abra la solapa [**Cliente**](../../../master-data-management/master-data.md#customer) del registro del tercero y establezca el campo **Categoría Imp. Tercero**.
-- Para proveedores y acreedores: abra la solapa [**Proveedor/Acreedor**](../../../master-data-management/master-data.md#vendorcreditor) y establezca el mismo campo.
+- Para clientes: abra la solapa [**Cliente**](../../../master-data-management/master-data/business-partner.md#customer) del registro del tercero y establezca el campo **Categoría Imp. Tercero**.
+- Para proveedores y acreedores: abra la solapa [**Proveedor/Acreedor**](../../../master-data-management/master-data/business-partner.md#vendorcreditor) y establezca el mismo campo.
 
 Un mismo tercero puede actuar tanto como cliente como proveedor. En ese caso, ambas solapas pueden tener asignada una categoría de impuestos, y cada una puede ser diferente si el tratamiento fiscal difiere entre compras y ventas.
 
 !!!note
     Si un tercero no tiene asignada una categoría de impuestos, Etendo no filtra los tipos impositivos por este criterio para ese tercero. Todos los tipos impositivos que cumplan las condiciones restantes (categoría de impuesto del producto, zona geográfica, tipo de documento) se consideran al seleccionar el impuesto predeterminado.
 
-## Cómo funciona con los tipos impositivos
+## Cómo funciona con los tipos impositivos { #how-it-works-with-tax-rates }
 
 La Categoría de Impuestos de Terceros es una de las varias condiciones que Etendo evalúa cuando determina el impuesto predeterminado para una línea de documento. La lógica completa de selección se describe en la página [Tipo impositivo](tax-rate.md). En resumen, los pasos relevantes son:
 

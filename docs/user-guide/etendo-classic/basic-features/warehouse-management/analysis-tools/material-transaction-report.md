@@ -17,11 +17,18 @@ Material Transaction Report lists all documents (outgoing shipments and incoming
 
 Information on this report can be filtered using movement date, business partner, warehouse and project. Reports can be generated on HTML and PDF format.
 
-![Material Transaction Report parameters window](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
+![Material Transaction Report parameters window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
 
 ## Sample Report Output
 
-![Material Transaction Report output](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+![Material Transaction Report output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
+
+## Related Articles
+
+[:material-file-document-outline: Product Movements Report](product-movements-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Stock Report](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Valued Stock Report](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Management Getting Started](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

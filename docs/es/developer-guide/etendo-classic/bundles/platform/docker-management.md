@@ -5,11 +5,11 @@ tags:
   - Infraestructura
 ---
 
-# Gestión de Docker
+# Gestión de Docker { #docker-management }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.docker`
 
-## Visión general
+## Visión general { #overview }
 
 [Docker](https://docs.docker.com/){target=_isblank} es una plataforma que permite a los desarrolladores automatizar el despliegue, el escalado y la gestión de aplicaciones. Utiliza tecnología de contenedorización, que empaqueta una aplicación y sus dependencias en una unidad estandarizada llamada **contenedor**. Los contenedores pueden ejecutarse de forma consistente en distintos entornos de computación, lo que los hace altamente portables y eficientes.
 
@@ -23,7 +23,7 @@ Adicionalmente, la infraestructura podría ampliarse y permite que otros módulo
 !!! info
     Para poder incluir esta funcionalidad, debe instalarse el Platform Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Platform Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-## Requisitos
+## Requisitos { #requirements }
 
 Este proyecto depende de las siguientes herramientas:
 
@@ -35,7 +35,7 @@ Este proyecto depende de las siguientes herramientas:
 
     Recomendación: instale Etendo usando la [última ISO](../../../../whats-new/release-notes/etendo-classic/iso.md)(que incluye Docker) o instale Docker siguiendo la guía de instalación oficial de su distribución.
 
-## Uso de contenedores distribuidos en módulos
+## Uso de contenedores distribuidos en módulos { #using-containers-distributed-in-modules }
 
 **Variables de configuración**
 
@@ -88,10 +88,10 @@ Finalmente, para aplicar siempre los cambios, ejecute
 ./gradlew setup
 ```
 
-## Tareas de Gradle para gestionar contenedores
+## Tareas de Gradle para gestionar contenedores { #gradle-tasks-to-manage-containers }
 Ejecute el siguiente comando para usar la infraestructura:
 
-### Ejecución
+### Ejecución { #running }
 
 ``` bash title="Terminal"
 ./gradlew resources.up
@@ -104,21 +104,21 @@ Este comando buscará todos los recursos configurados e iniciará los contenedor
 !!! note 
     Si solo tiene instalado y configurado el módulo base `com.etendoerp.docker`, este comando iniciará una base de datos PostgreSQL.
 
-### Detención
+### Detención { #stopping }
 
 ``` bash title="Terminal"
 ./gradlew resources.stop
 ```
 Este comando detendrá los contenedores.
 
-### Baja
+### Baja { #down }
 
 ``` bash title="Terminal"
 ./gradlew resources.down
 ```
 Este comando detendrá y eliminará los contenedores.
 
-### Construcción
+### Construcción { #build }
 
 ``` bash title="Terminal"
 ./gradlew resources.build
@@ -128,7 +128,7 @@ Este comando fuerza a los servicios que usan un Dockerfile a reconstruir su prop
 !!! info
     Este comando debe ejecutarse cuando la proyección o el mapeo se hayan modificado debido a cambios del usuario o a actualizaciones de la gestión de módulos en estas tablas. El comando fuerza al servicio DAS a recompilar y generar nuevas clases antes de iniciar el servicio.
 
-### Verificación del estado
+### Verificación del estado { #verifying-the-status }
 
 Para verificar el estado de los recursos iniciados por Docker Compose, puede usar los siguientes comandos de Docker:
 
@@ -144,7 +144,7 @@ Este comando muestra los logs de todos los servicios definidos en su configuraci
     También es posible gestionar contenedores con herramientas como [Lazydocker](https://github.com/jesseduffield/lazydocker#installation){target=_isblank} o [Docker Desktop](https://www.docker.com/products/docker-desktop/){target=_isblank}.
 
 
-## Servicio de base de datos Postgres
+## Servicio de base de datos Postgres { #postgres-database-service }
 
 En este módulo se incluye un servicio de base de datos Postgres; esto permite usar la base de datos dockerizada en Etendo. Para utilizarlo, deben seguirse los siguientes pasos:
 

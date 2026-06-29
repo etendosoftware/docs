@@ -7,7 +7,7 @@ tags:
     - Convenciones de idioma
     - Tipos de Módulos
 ---
-## Introducción
+## Introducción { #introduction }
 
 Es importante seleccionar un nombre apropiado para su módulo con el fin de facilitar que los usuarios lo reconozcan tanto en Forge como en la ventana de Gestión de Módulos Empresariales.
 
@@ -15,7 +15,7 @@ En el futuro, Etendo también puede utilizar estas convenciones de nomenclatura 
 
 A continuación se presenta un conjunto de directrices de nomenclatura que solicitamos a los autores de módulos que sigan:
 
-## Reglas de marca
+## Reglas de marca { #branding-rules }
 
 - El nombre del módulo debe coincidir con el nombre del proyecto en Forge (opcional)
 - Los nombres de los módulos no deben tener más de 5 o 6 palabras y deben tener menos de 60 caracteres (opcional)
@@ -31,7 +31,7 @@ A continuación se presenta un conjunto de directrices de nomenclatura que solic
     - Copiar rol: :white_check_mark:
     - Módulo Copiar rol: :no_entry:
 
-## Convenciones de idioma y gramática
+## Convenciones de idioma y gramática { #language-and-grammar-conventions }
 
 - Todos los nombres de los módulos deben estar en inglés. La descripción y la ayuda del módulo pueden estar en cualquier otro idioma.
 - Se aceptan nombres propios no ingleses como parte de un nombre de módulo especificado en inglés
@@ -58,7 +58,7 @@ A continuación se presenta un conjunto de directrices de nomenclatura que solic
     - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher.: :white_check_mark:
     - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher: :no_entry:
 
-## Tipos específicos de módulos
+## Tipos específicos de módulos { #specific-types-of-modules }
 
 - Las traducciones del core (traducción de Etendo Core) deben seguir la convención:
     - "Traducción: $LANG $COUNTRY ($CODE)"
@@ -130,16 +130,16 @@ org.openbravo.functionalcategory.modulename
         - quickstart (industry templates / verticals are a category by itself)
         - quickstartspain (industry templates / verticals are a category by itself)
 
-## Elección de un db_prefix
+## Elección de un db_prefix { #choosing-a-db-prefix }
 
-### Módulos creados por Partners
+### Módulos creados por Partners { #modules-created-by-partners }
 - Use un db_prefix que no comience por las letras ET
 - EM es una palabra reservada no permitida como db_prefix
 
-### Módulos creados por Etendo y su personal
+### Módulos creados por Etendo y su personal { #modules-created-by-etendo-and-staff }
 - Use un db_prefix ETX donde X: de uno a 5 caracteres para el propio módulo
 
-### Módulos de personalización
+### Módulos de personalización { #customization-modules }
 - Use un db_prefix que comience por CUST
 
 Normalmente, los módulos de personalización no están pensados para publicarse en Central Repository. En este caso, DBPrefix debe comenzar por CUST. Los módulos con este tipo de DBPrefixes no pueden registrarse en Central Repository, pero son seguros frente a colisiones porque ningún otro módulo en Central Repository puede usar este DBPrefix. Esta es una decisión importante que debe tomarse antes de comenzar el desarrollo del módulo: en caso de que exista alguna posibilidad de publicar el módulo en algún momento, debe seguir la regla estándar; si está absolutamente seguro de que no se publicará, puede usar CUST y no registrarlo.

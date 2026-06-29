@@ -6,18 +6,18 @@ tags:
     - File Copy
 ---
 
-# Herramienta de copia de archivos
+# Herramienta de copia de archivos { #file-copy-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de copia de archivos** recibe dos rutas: una de un archivo y otra de un directorio. Su función es copiar el archivo especificado al directorio especificado y devolver la ruta del archivo copiado.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es útil cuando necesita duplicar archivos en diferentes ubicaciones dentro del sistema de archivos. Esto puede ser esencial para tareas de copia de seguridad, organización de archivos o preparación de archivos para su procesamiento en ubicaciones específicas. Esto simplifica el proceso de copiar archivos y gestionar directorios, garantizando la existencia del directorio de destino y proporcionando una respuesta clara con la ruta del archivo copiado.
 
@@ -42,7 +42,7 @@ Este proceso consta de las siguientes acciones:
 
     Una vez completado el proceso, la herramienta devuelve un objeto que contiene la ruta completa al archivo copiado en el directorio de salida.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si tiene un archivo en `/home/user/file.txt` y desea copiarlo al directorio `/home/user/destination_directory`, utilizaría la herramienta de la siguiente manera:
 

@@ -7,21 +7,28 @@ tags:
     - Inventory Analysis
 ---
 
-# Informe Transacción de Material
+# Informe Transacción de Material { #material-transaction-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Transacción de Material`
 
 El Informe Transacción de Material lista todos los documentos (envíos salientes y recepciones entrantes) agrupados por tercero y documento. Para cada número de documento se muestran los datos, el producto, el almacén, el contenedor y la cantidad.
 
-## Ventana de parámetros
+## Ventana de parámetros { #parameters-window }
 
 La información de este informe puede filtrarse usando la fecha de movimiento, el tercero, el almacén y el proyecto. Los informes pueden generarse en formato HTML y PDF.
 
-![Ventana de parámetros del Informe Transacción de Material](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
+![Ventana de parámetros del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
 
-## Ejemplo de salida del informe
+## Ejemplo de salida del informe { #sample-report-output }
 
-![Salida del Informe Transacción de Material](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+![Salida del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Informe Movimiento de Productos](product-movements-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

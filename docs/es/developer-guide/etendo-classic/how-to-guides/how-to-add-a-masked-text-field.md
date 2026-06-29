@@ -7,9 +7,9 @@ tags:
     - Añadir columna
 ---
 
-# Cómo añadir un campo de texto enmascarado
+# Cómo añadir un campo de texto enmascarado { #how-to-add-a-masked-text-field }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo añadir un **campo y columna de texto enmascarado** al sistema Etendo. Un texto enmascarado puede utilizarse para obligar al usuario a introducir valores de texto/cadena en el formato correcto.
 
@@ -27,7 +27,7 @@ Los 2 últimos pasos se definen en detalle en las siguientes secciones:
 Esta sección se centrará únicamente en las partes específicas de un **campo de texto enmascarado**.
  
   
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra un ejemplo del código mostrado y comentado en esta sección.
 
@@ -39,7 +39,7 @@ Mercurial:
 [https://github.com/etendosoftware/com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}
 
   
-## Definición de la referencia de máscara
+## Definición de la referencia de máscara { #defining-the-mask-reference }
 
 El primer paso es crear una referencia específica para la máscara y, a continuación, establecer la máscara en la solapa **hija de referencia de máscara**.
 
@@ -52,7 +52,7 @@ La referencia de máscara debe tener `Masked String` como referencia padre y no 
     Para obtener información sobre cómo definir una máscara, consulte la descripción en la referencia padre `Masked String`.
     ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-masked-test-field/how-to-add-masked-text-field-2.png)
 
-## Añadir una columna
+## Añadir una columna { #adding-a-column }
 
 Para obtener un campo de texto enmascarado, lo primero que debe hacer es seleccionar la **referencia correcta y la clave de búsqueda de la referencia** al añadir una columna:
 
@@ -60,14 +60,14 @@ Para obtener un campo de texto enmascarado, lo primero que debe hacer es selecci
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-masked-test-field/how-to-add-masked-text-field-3.png)
 
   
-## Crear un campo
+## Crear un campo { #create-a-field }
 
 A continuación, cree un campo dentro de la solapa/ventana:
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-masked-test-field/how-to-add-masked-text-field-4.png)
 
   
-## El resultado
+## El resultado { #the-result }
 
 El resultado se visualiza como un editor de texto enmascarado en la vista de formulario:
   

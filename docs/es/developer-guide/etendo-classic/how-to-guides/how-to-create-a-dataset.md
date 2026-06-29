@@ -8,13 +8,13 @@ tags:
     - Datos de referencia
 ---
 
-# Cómo crear un conjunto de datos
+# Cómo crear un conjunto de datos { #how-to-create-a-dataset }
   
-##  Visión general
+## Visión general { #overview }
 
 Este procedimiento se centrará en crear un conjunto de datos en Etendo Classic y también proporcionará algunos ejemplos en detalle en la sección Ejemplos. El conjunto de datos exportará tanto datos de referencia como datos por defecto.
 
-###  Introducción al concepto de conjunto de datos
+### Introducción al concepto de conjunto de datos { #introduction-to-dataset-concept }
 
 En primer lugar, es necesario comprender el concepto de conjunto de datos, que permite exportar los conjuntos de datos de diferentes tablas en un solo paso. Esto es especialmente útil para gestionar y distribuir el módulo junto con _datos de referencia_, por ejemplo tipos impositivos, regiones o _datos por defecto_ en una(s) nueva(s) tabla(s) añadida(s) por un módulo.
 
@@ -25,7 +25,7 @@ Hay algunas cosas importantes a tener en cuenta:
   * Un conjunto de datos pertenece a un módulo, por lo que los módulos pueden añadir Conjuntos de datos y definir sus propios Conjuntos de datos. 
   * Acceso datos: filtra las tablas que se pueden seleccionar para este conjunto de datos; solo las tablas con el nivel de acceso a datos establecido pueden incluirse en el conjunto de datos.   
   
-###  Datos de referencia
+### Datos de referencia { #reference-data }
 
 Los datos de referencia se publican, distribuyen e instalan junto con la implementación del código del programa del módulo.
 
@@ -36,7 +36,7 @@ En Etendo, el concepto de datos de referencia está generalizado y cualquier dat
 
 !!!info
     Para conceptos teóricos detallados sobre conjuntos de datos, consulte [Conjunto de datos](../../../developer-guide/etendo-classic/concepts/datasets.md).
-##  Estructura de datos para definir un Conjunto de datos
+## Estructura de datos para definir un Conjunto de datos { #data-structure-to-define-dataset }
 
 Existen principalmente tres tablas a las que se hace referencia como estructura de datos para definir conjuntos de datos. Son:
 
@@ -78,7 +78,7 @@ Existen principalmente tres tablas a las que se hace referencia como estructura 
 
     ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
 
-###  Acceso datos
+### Acceso datos { #data-access-level }
 
 El Acceso datos se utiliza para definir cómo importar/instalar el módulo en varios niveles, como nivel de Sistema, nivel de Entidad, nivel de Organización, etc. Este valor de nivel de acceso está disponible en la tabla `Dataset`. 
 
@@ -98,7 +98,7 @@ Esta es una explicación detallada de cada nivel de acceso.
     para cada entrada.
     - La tabla `AD_Orginfo` contiene información sobre qué Conjunto de datos se ha importado 
     para qué entidad y/o organización
-## Exportación del módulo
+## Exportación del módulo { #exporting-module }
 
 Antes de publicar, es necesario exportar el módulo, lo que crea un directorio en el módulo bajo el directorio raíz de Etendo Classic y los archivos XML adecuados para su inclusión en el módulo finalizado.
 
@@ -110,17 +110,17 @@ Cuando finalice el desarrollo del módulo, abra una ventana de comandos/shell y 
 ```bash title="Terminal"   
 ./gradlew export.database
 ```
-## Publicación de un Módulo
+## Publicación de un Módulo { #publishing-a-module }
 
 El último paso del proceso es publicar el módulo y distribuirlo al usuario final.
 
 !!!info
     Para una guía detallada sobre cómo hacerlo, visite [Cómo publicar módulos en un repositorio de GitHub](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
-## Ejemplos
+## Ejemplos { #examples }
 
 A continuación, encontrará ejemplos para saber cómo crear un conjunto de datos y exportarlo junto con los datos de referencia.
 
-### Conjunto de datos de roles y accesos
+### Conjunto de datos de roles y accesos { #dataset-of-roles-and-accesses }
 
 En esta sección puede encontrar el ejemplo de un conjunto de datos de roles y accesos. Básicamente cubre la definición del rol en la organización y los privilegios que requiere.
 
@@ -139,7 +139,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de roles y a
   * Ahora necesita asignar algunos privilegios haciendo clic en el botón `Grant Access`.
   * Seleccione el módulo y el tipo de acceso para asignar los privilegios al rol recién creado.
 
-#### Crear un usuario y asignar el usuario al rol
+#### Crear un usuario y asignar el usuario al rol { #create-a-user-and-assign-the-user-to-the-role }
 
   * Haga clic en `General Setup` y navegue a `Security` > `User`.
   * Cree un nuevo registro. El campo `Client` mostrará el nombre de su entidad por defecto.
@@ -159,7 +159,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de roles y a
   * Añada todos los roles que este nuevo usuario podrá tener/usar (una línea por cada rol).
   * Cierre sesión del rol actual.
 
-#### Crear un nuevo módulo
+#### Crear un nuevo módulo { #create-a-new-module }
 
   * Inicie sesión en Etendo ERP como Administrador del Sistema.
   * Haga clic en el menú `Module` desde el Diccionario de Aplicación.
@@ -172,7 +172,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de roles y a
   * En la solapa `Dependencies`, seleccione Core.
   * Guarde el módulo.
 
-#### Crear un conjunto de datos de roles y accesos
+#### Crear un conjunto de datos de roles y accesos { #create-a-dataset-of-roles-and-access }
 
   1. En el menú de la aplicación, seleccione `Application Dictionary` > `Dataset`
   2. Haga clic en Nuevo.
@@ -188,7 +188,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de roles y a
   12. Haga clic en Guardar.
   13. Haga clic en el botón `Exportar Datos de Referencia` para exportar los datos de referencia a un archivo .xml que pueda incluir en el módulo.
 
-#### Exportación y publicación del módulo
+#### Exportación y publicación del módulo { #exporting-and-publishing-module }
 
 Después de completar correctamente todos los pasos, ejecute la siguiente tarea de gradle para exportar el módulo:
 
@@ -199,7 +199,7 @@ Y publique el módulo.
 !!!info
     Para más información, consulte [Cómo publicar módulos en un repositorio de GitHub](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
-#### Cómo instalar - Datos de referencia con nivel de acceso Organización
+#### Cómo instalar - Datos de referencia con nivel de acceso Organización { #how-to-install---organization-access-level-reference-data }
 
   * Instale el módulo siguiendo la guía [Instalar módulos en Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md).
   * En este punto, los datos de referencia no se instalarán.
@@ -207,11 +207,11 @@ Y publique el módulo.
   * Haga clic en `General Setup` y navegue a `Enterprise` > `Enterprise module Management`.
   * Seleccione el `Organization type`, luego seleccione el módulo correspondiente y haga clic en Ok para instalar los datos de referencia.
 
-### Conjunto de datos de impuestos o alertas
+### Conjunto de datos de impuestos o alertas { #dataset-of-taxes-or-alerts }
 
 En esta sección puede encontrar el ejemplo de un conjunto de datos de impuestos o alertas. En el proceso de creación de un módulo estándar de datos de referencia para impuestos y alertas, si ha configurado Etendo ERP de una manera particular para cumplir requisitos locales, puede exportar estos datos y convertirlos en un módulo, de modo que pueda compartirlo con otros usuarios.
 
-#### Registro de un módulo de datos para impuestos y alertas:
+#### Registro de un módulo de datos para impuestos y alertas: { #registering-a-data-module-for-taxes-and-alerts }
 
   * Inicie sesión en Etendo ERP como Administrador del Sistema.
   * Haga clic en el menú `Module` desde el Diccionario de Aplicación.
@@ -224,7 +224,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de impuestos
   * En la solapa `Dependencies`, seleccione Core.
   * Guarde el módulo.
 
-#### Definición y exportación del conjunto de datos
+#### Definición y exportación del conjunto de datos { #defining-and-exporting-the-dataset }
 
   1. En el menú de la aplicación, seleccione `Application Dictionary` > `Dataset`
   2. Haga clic en Nuevo.
@@ -241,7 +241,7 @@ En esta sección puede encontrar el ejemplo de un conjunto de datos de impuestos
   13. Haga clic en Guardar.
   14. Haga clic en el botón `Exportar Datos de Referencia` para exportar los datos de referencia a un archivo .xml que pueda incluir en el módulo.
 
-#### Exportación y publicación del módulo
+#### Exportación y publicación del módulo { #exporting-and-publishing-module_1 }
 
 Después de completar correctamente todos los pasos, ejecute la siguiente tarea de gradle para exportar el módulo:
 
@@ -252,7 +252,7 @@ Y publique el módulo.
 !!!info
     Para más información, consulte [Cómo publicar módulos en un repositorio de GitHub](how-to-publish-modules-to-github-repository.md).
 
-#### Cómo instalar - Datos de referencia con nivel de acceso Sistema/Entidad
+#### Cómo instalar - Datos de referencia con nivel de acceso Sistema/Entidad { #how-to-install---systemclient-access-level-reference-data }
 
   * Instale el módulo siguiendo la guía [Instalar módulos en Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md).
   * En este punto, los datos de referencia no se instalarán.
@@ -261,7 +261,7 @@ Y publique el módulo.
   * Rellene todos los campos obligatorios y luego seleccione el módulo correspondiente.
   * Finalmente, haga clic en Ok para instalar los datos de referencia.
 
-### Conjunto de datos de regiones
+### Conjunto de datos de regiones { #dataset-of-regions }
 
 En esta sección puede exportar los datos de referencia con los ejemplos sobre regiones. A continuación se indican los pasos para crear el conjunto de datos para este módulo:
 
@@ -335,7 +335,7 @@ En esta sección puede exportar los datos de referencia con los ejemplos sobre r
 
   * Finalmente, navegue a la solapa `Dataset` de Indian States y haga clic en el botón `Exportar Datos de Referencia` para exportar los datos.
 
-#### Exportación y publicación del módulo
+#### Exportación y publicación del módulo { #exporting-and-publishing-module_2 }
 
 Después de completar correctamente todos los pasos, ejecute la siguiente tarea de gradle para exportar el módulo:
 
@@ -346,7 +346,7 @@ Y publique el módulo.
 !!!info
     Para más información, consulte [Cómo publicar módulos en un repositorio de GitHub](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
-#### Cómo instalar - Datos de referencia con nivel de acceso Solo sistema
+#### Cómo instalar - Datos de referencia con nivel de acceso Solo sistema { #how-to-install---system-only-access-level-reference-data }
 
   * Instale el módulo siguiendo la guía [Instalar módulos en Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md).
   * Se instalará junto con los datos de referencia.

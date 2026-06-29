@@ -10,9 +10,9 @@ tags:
   - Analítica de datos
 ---
 
-# Cómo explorar datos de Etendo con Postgres y Chart MCP
+# Cómo explorar datos de Etendo con Postgres y Chart MCP { #how-to-explore-etendo-data-with-postgres-and-chart-mcp }
 
-## Visión general
+## Visión general { #overview }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -29,7 +29,7 @@ Usted plantea una pregunta de negocio en lenguaje natural. El agente:
 4. Elige un tipo de gráfico adecuado (a través de Chart MCP).
 5. Devuelve un breve resumen analítico junto con la visualización.
 
-## Preguntas de negocio habituales
+## Preguntas de negocio habituales { #typical-business-questions }
 
 Ejemplos de prompts en lenguaje natural que se benefician de esta configuración:
 
@@ -38,7 +38,7 @@ Ejemplos de prompts en lenguaje natural que se benefician de esta configuración
 - "¿Qué porcentaje del total de ventas de enero representa cada producto?"  
 - "Muestre el stock promedio de los últimos seis meses."  
 
-## Valor para áreas funcionales
+## Valor para áreas funcionales { #value-for-functional-areas }
 
 Sin esperar a un equipo de BI ni crear un informe a medida:
 
@@ -47,19 +47,19 @@ Sin esperar a un equipo de BI ni crear un informe a medida:
 - Etendo se convierte en una superficie interactiva de insights en lugar de ser solo un ERP transaccional.
 - Mejora la adopción porque los datos se vuelven conversacionales e inmediatos.
 
-## Arquitectura de un vistazo
+## Arquitectura de un vistazo { #architecture-at-a-glance }
 
 ```
 Pregunta del usuario → Agente de Copilot → (Postgres MCP → SQL → Filas de resultado) → (Chart MCP → Visualización) → Respuesta consolidada
 ```
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Etendo Copilot instalado y configurado.
 - Acceso a la base de datos PostgreSQL de Etendo (se recomiendan credenciales de solo lectura).
 - Dos configuraciones de servidor MCP creadas en Etendo Classic (rol System Administrator).
 
-## Paso 1. Configurar Postgres MCP
+## Paso 1. Configurar Postgres MCP { #step-1-configure-postgres-mcp }
 
 Cree un nuevo registro de **Configuración del servidor MCP**.
 
@@ -74,7 +74,7 @@ Cree un nuevo registro de **Configuración del servidor MCP**.
 }
 ```
 
-### Notas
+### Notas { #notes }
 
 - Utilice un usuario de base de datos dedicado con los privilegios mínimos de solo lectura necesarios para consultas analíticas.
 - El flag `--access-mode=restricted` ayuda a limitar la exposición de catálogos del sistema u objetos no deseados.
@@ -83,7 +83,7 @@ Cree un nuevo registro de **Configuración del servidor MCP**.
 !!! warning "Seguridad"
     Nunca exponga credenciales de escritura de producción. Utilice un usuario controlado de solo lectura. Aplique restricciones de red (firewall / VPC) según corresponda.
 
-## Paso 2. Configurar Chart MCP
+## Paso 2. Configurar Chart MCP { #step-2-configure-chart-mcp }
 
 Cree un segundo registro de **Configuración del servidor MCP**.
 
@@ -95,12 +95,12 @@ Cree un segundo registro de **Configuración del servidor MCP**.
 }
 ```
 
-### Notas
+### Notas { #notes_1 }
 
 - Este servidor convierte los datos tabulares procedentes de Postgres MCP en gráficos rápidos.
 - Selecciona automáticamente tipos de gráfico simples (línea, barras, circular) alineados con el patrón de datos.
 
-## Paso 3. Vincular servidores MCP al agente
+## Paso 3. Vincular servidores MCP al agente { #step-3-link-mcp-servers-to-the-agent }
 
 1. Abra la ventana **Agente** (System Administrator).
 2. Seleccione (o cree) el agente de Copilot objetivo.
@@ -108,7 +108,7 @@ Cree un segundo registro de **Configuración del servidor MCP**.
 4. Añada ambos registros de servidor MCP (Postgres MCP y Chart MCP).
 5. Guarde.
 
-## Paso 4. Ajustar el prompt del agente
+## Paso 4. Ajustar el prompt del agente { #step-4-adjust-the-agent-prompt }
 
 Asegúrese de que el prompt del sistema / base del agente indique la siguiente secuencia:
 
@@ -125,7 +125,7 @@ Fragmento de prompt sugerido:
 > 4) Devuelva: párrafo breve de insight + gráfico.  
 > Si los datos son insuficientes, formule una pregunta de aclaración en lugar de suponer.
 
-## Paso 5. Probar el flujo
+## Paso 5. Probar el flujo { #step-5-test-the-flow }
 
 Pruebe la siguiente conversación:
 
@@ -134,7 +134,7 @@ Pruebe la siguiente conversación:
 **Agente (interno)**: Llama a Chart MCP → Produce un gráfico de líneas con dos series (Compras vs Ventas).  
 **Agente (respuesta)**: Proporciona un insight: tendencia, picos, meses de desaceleración + gráfico.
 
-## Lógica de selección de gráficos (heurística)
+## Lógica de selección de gráficos (heurística) { #chart-selection-logic-heuristic }
 
 | Objetivo | Forma de los datos | Gráfico recomendado |
 |------|------------|-------------------|
@@ -145,7 +145,7 @@ Pruebe la siguiente conversación:
 !!! note
     Si el conjunto de datos es demasiado pequeño (p. ej., una sola fila) o un gráfico no aporta valor, el agente debería omitir la generación del gráfico y proporcionar únicamente un resumen textual.
 
-## Resolución de problemas
+## Resolución de problemas { #troubleshooting }
 
 | Síntoma | Causa posible | Acción |
 |---------|----------------|--------|
@@ -154,7 +154,7 @@ Pruebe la siguiente conversación:
 | Error de SQL | Función no compatible o typo | Simplifique la consulta; reformule la pregunta |
 | Se accede a una tabla sensible | El prompt no está acotando el alcance | Refuerce las instrucciones del prompt y restrinja los permisos de la BD |
 
-## Buenas prácticas
+## Buenas prácticas { #best-practices }
 
 - Mantenga el SQL mínimo (solo columnas y filas necesarias).
 - Agregue en SQL, no en la capa de razonamiento del agente.
@@ -162,7 +162,7 @@ Pruebe la siguiente conversación:
 - Registre las consultas en una tabla de auditoría segura para su revisión si el cumplimiento lo requiere.
 - Rote periódicamente la contraseña de solo lectura de la base de datos.
 
-## Ejemplo de respuesta combinada (abstracto)
+## Ejemplo de respuesta combinada (abstracto) { #example-combined-answer-abstract }
 
 ```
 Las ventas mensuales crecieron de forma constante en Q1–Q2, se estabilizaron en julio y cayeron un 8% en agosto antes de recuperarse. Las compras siguieron una curva similar, pero con un mes de retraso, lo que indica una suavización del inventario. Pico de ventas: junio. Pico de compras: julio.
@@ -170,13 +170,13 @@ Las ventas mensuales crecieron de forma constante en Q1–Q2, se estabilizaron e
 [Gráfico de líneas inline multiserie]
 ```
 
-## Limitaciones
+## Limitaciones { #limitations }
 
 - Los cálculos complejos de BI (asignaciones multinivel, modelos estadísticos avanzados) quedan fuera del alcance del emparejamiento básico Postgres + Chart MCP.
 - Los conjuntos de resultados muy grandes pueden truncarse. Diseñe prompts que fomenten la agregación.
 - Los estilos de los gráficos son intencionadamente simples (insight rápido > profundidad estética).
 
-## Referencias relacionadas
+## Referencias relacionadas { #related-references }
 
 - Concepto: [Model Context Protocol (MCP)](../concepts/model-context-protocol.md)
 - Cómo configurar servidores MCP: [Cómo configurar servidores MCP en un agente de Etendo](how-to-configure-mcp-servers-on-agents.md)

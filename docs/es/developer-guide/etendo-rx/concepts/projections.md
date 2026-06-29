@@ -9,15 +9,15 @@ tags:
     - API
 ---
 
-# Proyecciones y mapeos
+# Proyecciones y mapeos { #projections-and-mappings }
 
-## Visión general
+## Visión general { #overview }
 
 Cuando Etendo recupera datos de la base de datos, a menudo devuelve más campos de los que una integración determinada necesita. Las proyecciones permiten definir exactamente qué campos se incluyen, reduciendo la cantidad de datos transferidos y mejorando el rendimiento. (Detalle técnico: esto se implementa mediante proyecciones de Spring Data JPA en la capa de persistencia.)
 
 En estos casos, puede que queramos recuperar los datos como objetos de tipos personalizados. Estos tipos reflejan vistas parciales de la clase raíz, conteniendo solo las propiedades necesarias. Aquí es donde las proyecciones son útiles.
 
-### Casos de uso
+### Casos de uso { #use-cases }
 
 Las proyecciones y los mapeos se utilizan para controlar qué campos de datos de Etendo se comparten con un sistema externo —como una plataforma de comercio electrónico o un marketplace— o se reciben de él. La conexión entre Etendo y ese sistema externo se realiza a través de una API (un canal de comunicación estándar entre aplicaciones de software). Dos escenarios habituales son:
 
@@ -26,7 +26,7 @@ Las proyecciones y los mapeos se utilizan para controlar qué campos de datos de
 
 Utilice proyecciones para controlar exactamente qué campos se exponen o se consumen, manteniendo la superficie de integración mínima y explícita.
 
-## Ventana Proyecciones y mapeos
+## Ventana Proyecciones y mapeos { #projections-and-mappings-window }
 
 :material-menu: `Aplicación` > `Etendo RX` > `Proyecciones y mapeos`
 
@@ -47,7 +47,7 @@ Para crear una nueva proyección en Etendo, es necesario completar los campos en
 - Descripción: Descripción de la proyección.
 - Activo: Un check para indicar si esta proyección está disponible o deshabilitada.
 
-### Solapa Entidades proyectadas
+### Solapa Entidades proyectadas { #projected-entities-tab }
 
 En esta solapa, se pueden definir las entidades a proyectar. Pueden tener dos tipos de proyecciones: Lectura y Escritura. Esto significa que, al interactuar con un sistema externo, es posible leer la información en la base de datos de Etendo Classic para exponerla al otro sistema. La otra opción es escribir información en la base de datos de Etendo Classic, es decir, extraer información del sistema externo para utilizarla en Etendo.
 
@@ -71,7 +71,7 @@ Campos a tener en cuenta:
 - External_Name: parámetro para llamar a la API. Debe ser único, pero es posible tener más de un nombre para cada entidad. Por defecto, se autogenera con el nombre de la entidad, pero en caso de generar más de uno, deben tener nombres diferentes.
 - Activo: Un check para indicar si este registro está disponible o no.
 
-#### Botón Crear campos de proyección
+#### Botón Crear campos de proyección { #create-projection-fields-button }
 
 Con este botón, se muestra una ventana emergente donde puede encontrar una lista de todos los campos a proyectar y seleccionar los necesarios. Este proceso no incluye proyecciones de tipo **Lista** ni de tipo Identidad.
 
@@ -80,7 +80,7 @@ Con este botón, se muestra una ventana emergente donde puede encontrar una list
 !!!info
     Los campos obligatorios a proyectar pueden filtrarse con la columna _Es obligatorio_.
 
-#### Subsolapa Campo de entidad
+#### Subsolapa Campo de entidad { #entity-field-subtab }
 
 En esta subsolapa, el desarrollador puede definir cada campo de entidad que se incluirá en la proyección.
 
@@ -162,7 +162,7 @@ En esta subsolapa, el desarrollador puede definir cada campo de entidad que se i
     
     Esta configuración garantiza que, cuando se crean nuevas líneas de pedido, los impuestos relacionados referencien el pedido original. Esta configuración solo es necesaria si la columna mapeada no tiene seleccionada la casilla Link to Parent Column. En este ejemplo, esto se refiere a la columna Pedido de venta en la tabla C_OrderLineTax.
 
-## Ventana Tablas y columnas
+## Ventana Tablas y columnas { #tables-and-columns-window }
 
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Tablas y columnas`
 
@@ -170,7 +170,7 @@ En esta ventana, es posible definir búsquedas asociadas a tablas. Estas son fil
 
 Esta ventana también permite la creación de endpoints de búsqueda, utilizando el servicio DAS. Este servicio, en base a las configuraciones de esta ventana, genera dinámicamente los endpoints al iniciarse.
 
-### Solapa Repositorio
+### Solapa Repositorio { #repository-tab }
 
 La solapa Repositorio se utiliza para registrar una tabla de modo que el servicio DAS pueda generar conexiones de búsqueda filtradas para ella — por ejemplo, recuperar únicamente los pedidos pertenecientes a un tercero específico. Registrar un repositorio aquí permite al [servicio DAS](../getting-started.md) (Data Access Service — un servicio en segundo plano de Etendo RX que lee la configuración que usted define aquí y crea automáticamente los puntos de conexión de la API utilizados para intercambiar datos con sistemas externos) generar conexiones de búsqueda filtradas personalizadas — más allá de las operaciones estándar de creación, lectura, actualización y eliminación — para la tabla seleccionada. Utilice la solapa Repositorio cuando necesite consultas filtradas (por ejemplo, "obtener todos los pedidos de un tercero específico") que no estén cubiertas por las conexiones predeterminadas.
 
@@ -178,7 +178,7 @@ Para registrar un repositorio, vaya a Tablas y columnas, seleccione una tabla y,
 
 ![](../../../assets/developer-guide/etendo-rx/concepts/projections/repository-tab.png)
 
-#### Subsolapa Búsqueda
+#### Subsolapa Búsqueda { #search-subtab }
 
 A continuación, podemos definir búsquedas para obtener datos filtrados de la tabla seleccionada.
 
@@ -192,7 +192,7 @@ Campos a tener en cuenta:
 - Nombre del método: el nombre de la búsqueda que se utiliza en la generación del endpoint.
 - Consulta: consulta HQL para filtrar los elementos de la tabla.
 
-##### Subsolapa Parámetro de búsqueda
+##### Subsolapa Parámetro de búsqueda { #search-parameter-subtab }
 
 En esta subsolapa, es posible definir parámetros a utilizar en la búsqueda.
 
@@ -206,7 +206,7 @@ Campos a tener en cuenta:
 - Nombre: Nombre del parámetro.
 - Tipo: Tipo de parámetro. Es un desplegable con los tipos base disponibles.
 
-## Ventana Valores constantes
+## Ventana Valores constantes { #constant-values-window }
 
 :material-menu: `Aplicación` > `Etendo RX` > `Valores constantes`
 

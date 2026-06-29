@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Procurement Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=08BDBA6C314149DBA05CB1A1694F2959){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados

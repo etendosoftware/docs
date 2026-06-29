@@ -9,7 +9,7 @@ tags:
   - Desarrollo
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo explica cómo usar Gradle, una herramienta de automatización de compilación de código abierto que está diseñada para ser lo suficientemente flexible como para compilar casi cualquier tipo de software. 
 
@@ -18,7 +18,7 @@ Este artículo explica cómo usar Gradle, una herramienta de automatización de 
 
 
 Etendo usa Gradle para definir y mejorar la compilación, la gestión de versiones, la publicación de módulos, las migraciones y más mantenimientos.
-## Cómo usar Gradle
+## Cómo usar Gradle { #how-to-use-gradle }
 
 El proyecto de Etendo incluye un wrapper embebido de Gradle llamado `gradlew`. Ejecute el siguiente comando en el directorio del proyecto de Etendo y se ejecutará el mantenimiento mencionado.
 
@@ -32,7 +32,7 @@ Puede usar `-P<Nombre del parámetro>` para pasar parámetros en un mantenimient
 ```bash title="Terminal"
 ./gradlew publishVersion -Ppkg=test.package
 ```
-## Flags comunes de Gradle
+## Flags comunes de Gradle { #common-gradle-flags }
 
 | Flag                     | Descripción                                                   |
 | ------------------------ | ------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Puede usar `-P<Nombre del parámetro>` para pasar parámetros en un mantenimient
 | `--no-daemon`            | Para ejecutar una tarea de Gradle sin iniciar un daemon.      |
 | `--info`                 | Para proporcionar más información en la ejecución de la tarea. |
 | `--refresh-dependencies` | Forzará la descarga de dependencias.                          |
-## Plugin de Etendo
+## Plugin de Etendo { #etendo-plugin }
 
 Añada en el archivo `build.gradle` la versión del plugin disponible en [Notas de la versión del plugin de Gradle](../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md).
 
@@ -51,7 +51,7 @@ plugins {
 }
 ```
 
-### Configuración del plugin
+### Configuración del plugin { #plugin-configuration }
 
 La configuración del plugin debe declararse en el archivo `build.gradle` en el *bloque etendo*. <br>
 En las siguientes secciones, puede encontrar todos los flags o variables disponibles para configurar y una breve descripción de cada uno.
@@ -142,7 +142,7 @@ etendo {
 }
 
 ```
-## Tareas principales de compilación
+## Tareas principales de compilación { #main-build-tasks }
 
 Esta sección explica las tareas principales de compilación siguiendo los pasos tal y como se ilustran en la imagen.
 
@@ -162,11 +162,11 @@ La diferencia entre el desarrollo `local` y `remote` se ilustra en el diagrama. 
 !!!info
     `remote` significa que el usuario está trayendo cambios al espacio de trabajo desde una ubicación externa, por ejemplo, con un `git pull` o `./gradlew expandModules`.
 
-### Instalación inicial
+### Instalación inicial { #initial-installation }
 
 Después de descargar los archivos fuente de Etendo ERP, es necesario instalarlo y desplegarlo. Consulte nuestra guía sobre [Etendo Install](../../../getting-started/installation.md#install-etendo)
 
-### Exportación de base de datos
+### Exportación de base de datos { #database-export }
 
 En la mayoría de los casos, los desarrollos incluyen modificaciones en la base de datos. Estas modificaciones pueden persistirse en archivos `xml` usando la herramienta **DBSourceManager**. **DBSourceManager** exporta a archivos `xml` únicamente los módulos (incluyendo el core) que estén configurados como `In Development`. Para exportar la base de datos, ejecute:
 
@@ -186,7 +186,7 @@ Actualmente se realizan las siguientes comprobaciones:
   * Los campos de clave foránea deben formar parte de una restricción de clave foránea.
   * Se comprueba la longitud de los nombres de tablas, columnas y restricciones (Oracle y PostgreSQL tienen ahí un límite de 30 caracteres).
 
-### Actualizar base de datos
+### Actualizar base de datos { #update-database }
 
 Los cambios del **modelo de base de datos** se distribuyen confirmando (commit) el esquema de base de datos como `xml` en `SCM`. Otros desarrolladores obtienen (pull) los cambios desde `SCM` y pueden aplicarlos para actualizar su propia base de datos. Tras actualizar la base de datos, el proceso es exactamente el mismo que el local: compilar y desplegar los elementos que se hayan modificado desde la última compilación.
 
@@ -202,11 +202,11 @@ Todas las acciones requeridas (actualizar base de datos, compilar las últimas m
 ```
 
 La única diferencia con el desarrollo local está en el parámetro `local`, que hace que el proceso actualice la base de datos en caso de que los archivos `xml` hayan cambiado.
-## Tareas de compilación detalladas
+## Tareas de compilación detalladas { #detailed-build-tasks }
 
 Esta sección contiene un listado detallado de todas las tareas de compilación disponibles.
 
-### Tareas de compilación de librerías
+### Tareas de compilación de librerías { #libraries-build-tasks }
 
 |  Mantenimiento      |  Descripción  |  Notas  |
 |------------|---------------|---------|
@@ -214,7 +214,7 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
 |  `wad.lib`   |  Compila y genera un archivo `.jar` a partir del proyecto `src-wad`. Es necesario para las tareas de compilación. Este proyecto contiene el WAD, el generador automático de ventanas.  |  **Requiere**: `core.lib`, base de datos creada **Requerido por**: compile.*  |
 |  `trl.lib`   |  Compila y genera un archivo `.jar` a partir del proyecto `src-trl`. Es necesario para la tarea de traducción. Este proyecto permite traducir a diferentes idiomas las ventanas manuales.  | **Requiere**: core.lib  |
   
-### Tareas de compilación
+### Tareas de compilación { #build-tasks }
 
 |  Mantenimiento                 |  Descripción   |  Notas  |
 |-----------------------|----------------|---------|
@@ -226,7 +226,7 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
 |  `antWar`                |  Genera un archivo war a partir del código ya compilado. En realidad, solo comprime la aplicación en un único archivo war.  |  **Requiere:** compile.*: la aplicación debe estar compilada antes de llamar a esta tarea.
 |  `deploy.context`     |  Despliega el archivo war existente en el contexto de Tomcat utilizando el gestor de Tomcat.  |  **Requiere:** <br> el archivo war debe estar creado <br> el gestor de Tomcat debe estar en ejecución <br> estas propiedades deben estar correctamente configuradas en el archivo `Openbravo.properties`: <br> `tomcat.manager. url` <br> `tomcat.manager.username` <br> `tomcat.manager.password` 
 
-### Tareas de base de datos
+### Tareas de base de datos { #database-tasks }
 
 |  Mantenimiento               |  Descripción  |  Notas  |  Subtareas  |
 |---------------------|---------------|---------|-------------|
@@ -238,7 +238,7 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
 
     ` update.database ` y ` export.database ` admiten ejecución paralela multihilo para algunas de sus acciones, como la creación de índices o la estandarización de funciones. Por defecto, el número de hilos utilizados se calcula como la mitad del número de núcleos disponibles en la máquina donde se ejecuta la tarea. Este valor puede configurarse añadiendo el parámetro `-Dmax.threads=numOfThreads`. 
 
-### Tareas de prueba
+### Tareas de prueba { #test-tasks }
 
 |  Mantenimiento     |  Descripción  |  
 |-----------|---------------|
@@ -247,12 +247,12 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
 !!!info
     Para más información sobre la ejecución de pruebas en Gradle, visite [Filtrado de pruebas en Gradle](https://docs.gradle.org/current/userguide/java_testing.html#test_filtering)
 
-### Otras tareas
+### Otras tareas { #other-tasks }
 
 |  Mantenimiento                   |  Descripción  |
 |-------------------------|---------------|
 |  `migrate.attachments`  |  Migra los adjuntos al nuevo modelo de adjuntos.
-## Tareas comunes de Gradle
+## Tareas comunes de Gradle { #common-gradle-tasks }
 
 !!!danger
     Desde Etendo Classic 25Q1, todas las tareas de Gradle requieren Java 17 o superior. Para añadir compatibilidad con versiones anteriores, se ha añadido el nuevo flag `java.version`.
@@ -360,7 +360,7 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
     ./gradlew cleanExpandCore
     ```
 
-### Módulo
+### Módulo { #modules }
 
 - Crea el archivo `build.gradle` con toda la información necesaria para publicar.
     ``` bash title="Terminal"
@@ -389,7 +389,7 @@ Esta sección contiene un listado detallado de todas las tareas de compilación 
     | `-PupdateLeaf=true   `          | Actualiza automáticamente la versión del proyecto que se está publicando. Por defecto `false`.      |
 
 
-### Desinstalar módulos (uninstallModule) 
+### Desinstalar módulos (uninstallModule) { #uninstall-modules-uninstallmodule }
 
 **:octicons-package-16: Módulos fuente**
 
@@ -448,7 +448,7 @@ Si el módulo a desinstalar es una dependencia de otro módulo fuente, se lanza 
     ./gradlew update.database compile.complete smartbuild
     ```
 
-### Tareas internas de desarrollo
+### Tareas internas de desarrollo { #internal-developer-tasks }
 
 - Se utiliza para clonar todos los submódulos git de una extensión de módulo (bundle). El `build.gradle` del módulo debe contener la propiedad
       ``` bash title="Terminal"
@@ -543,7 +543,7 @@ Si el módulo a desinstalar es una dependencia de otro módulo fuente, se lanza 
 
 
 
-### Tareas de Ant
+### Tareas de Ant { #ant-tasks }
 
 La mayoría de las [tareas de compilación de ant](#detailed-build-tasks) utilizadas anteriormente se pueden ejecutar con Gradle:
 
@@ -560,7 +560,7 @@ Excepto algunos comandos:
 | `init`            | `antInit`     |
 | `install.source`  | `antInstall`  |
 | `war`             | `antWar`      |
-## Resolución de conflictos
+## Resolución de conflictos { #conflict-resolution }
 
 !!!note
     Etendo hace uso de la [Estrategia de resolución de conflictos](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} ofrecida por Gradle.
@@ -597,7 +597,7 @@ Dependiendo del tipo de conflicto, si el problema es con el core de Etendo, ento
       performResolutionConflicts = false
     }
     ```
-## Consistencia de versiones
+## Consistencia de versiones { #version-consistency }
 
 El enfoque de consistencia de versiones verifica que un artefacto JAR de Etendo extraído sea consistente con el instalado (misma versión).
 
@@ -619,7 +619,7 @@ Puede forzar las tareas de compilación añadiendo en la extensión del plugin d
       ignoredArtifacts = ['com.etendoerp.mymodulename']
     }
     ```
-## Recompilar archivos CSS
+## Recompilar archivos CSS { #recompile-css-files }
 
 **Requisitos**
 
@@ -777,7 +777,7 @@ Después de ejecutar la tarea, busque la siguiente salida para indicar una compi
     Esto confirma el procesamiento correcto de los archivos.
 
 Por último, reinicie Tomcat para aplicar los cambios y asegurarse de que los archivos `.css` actualizados se despliegan correctamente.
-## Proceso de eliminación de cliente
+## Proceso de eliminación de cliente { #delete-client-process }
 
 La tarea `delete.client` permite ejecutar el Proceso de eliminación de cliente directamente desde gradlew. Esta tarea también permite ejecutar este proceso con el servicio Tomcat detenido para evitar bloqueos en la base de datos.
 

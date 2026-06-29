@@ -8,9 +8,9 @@ tags:
   - Servicios web seguros
 ---
 
-# Cómo crear y actualizar entidades de negocio mediante servicios web
+# Cómo crear y actualizar entidades de negocio mediante servicios web { #how-to-create-and-update-business-entities-using-web-services }
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de esta sección es mostrar cómo utilizar algunos de los **servicios web disponibles de Etendo** para crear entidades de negocio y/o actualizarlas.
 
@@ -19,7 +19,7 @@ Por lo tanto, estas funcionalidades de servicios web se explicarán en detalle:
   * **JSON REST**
   * **Servicios web seguros**
 
-## Pasos de ejecución
+## Pasos de ejecución { #execution-steps }
 
 Para añadir o actualizar entidades, utilice comandos `HTTP`. Para ejecutar cualquier `comando HTTP`, se podría crear una [**Clase Java**](../how-to-guides/how-to-call-an-etendo-webservice-from-java.md) y utilizar las clases disponibles relacionadas con el protocolo HTTP.
 
@@ -86,7 +86,7 @@ con el siguiente contenido:
     }
 ```
 
-### Servicios web seguros
+### Servicios web seguros { #secure-web-services }
 
 !!!note
     Para saber más sobre cómo Etendo introduce sus propios Servicios web seguros con funcionalidades únicas, visite [Cómo usar servicios web seguros](../how-to-guides/how-to-use-secure-webservices.md).

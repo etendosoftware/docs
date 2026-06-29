@@ -19,7 +19,7 @@ The Balance Sheet and P&L Structure Setup allows users to define how Etendo gene
 - Balance Sheet
 - Profit and Loss (P&L)
 
-This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the [Balance Sheet and P&L Structure Advanced](../analysis-tools.md#balance-sheet-and-pl-structure-advanced) window.
+This setup determines which accounts appear in each report and how they are grouped and calculated. Once configured, these reports can be generated from the [Balance Sheet and P&L Structure Advanced](../analysis-tools/balance-sheet-and-pl-structure-advanced.md) window.
 
 A key point is that both reports are built based on the **[Organization Account Tree](./account-tree.md)** (Chart of Accounts). Therefore, the account tree must be properly structured to obtain meaningful and accurate financial reports.
 
@@ -41,7 +41,7 @@ Each record created in this window represents one **financial report**. When def
 - The same applies in the case of organizations which are **Organization type** which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.
 - If the organization selected is a **Generic organization** which belongs to a Legal with Accounting one, the financial information provided by the reports will be just the financial information of that organization.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-1.png)
 
 Fields to note in this window:
 
@@ -57,13 +57,13 @@ Fields to note in this window:
 
 The **Grouping Category** tab allows users to define sections within the report. Each grouping category creates a page break, helping organize the report into clear sections.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-2.png)
 
 #### Node
 
 From the **Node** sub-tab it is possible to define the information shown in the report.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/balance-sheet-and-pl-structure-setup/balance-sheet-and-pl-structure-setup-3.png)
 
 A report node is defined by:
 
@@ -107,7 +107,7 @@ This setup defines how Etendo generates a **Profit and Loss report** for a selec
     Above node must be an Account Tree element properly configured. For more information, visit [Account Tree](./account-tree.md).
 
 !!! info
-    For more information about Balance Sheet and P/L Structure reports visit: [Balance Sheet and P/L Structure Advanced](../../accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced). 
+    For more information about Balance Sheet and P/L Structure reports visit: [Balance Sheet and P/L Structure Advanced](../../accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md). 
 
 ---
 

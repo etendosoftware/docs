@@ -13,19 +13,19 @@ tags:
 
 :material-store: Etendo Marketplace:  [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
-## Visión general 
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de Gestión de ventas en Etendo Classic.
 
 
-## Traducción
+## Traducción { #translations }
 
 -  :material-translate: Español: [Sales Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
 
 
-## Módulo
+## Módulo { #modules }
 
 
-### Rappels avanzados
+### Rappels avanzados { #advanced-rappels }
 
 :octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
 
@@ -37,7 +37,7 @@ Este bundle incluye mejoras para las funcionalidades de Gestión de ventas en Et
 Esta funcionalidad permite al usuario configurar y conceder rappels a terceros. Los rappels son descuentos basados en el volumen de consumo del tercero en un periodo de tiempo determinado.
 
 !!! info
-	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
+	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
 
 ### CRM Lead Management
 
@@ -52,7 +52,7 @@ Seguimiento y gestión nativos de leads para el equipo comercial. Permite regist
 !!! info
     Para más información, visite la [guía de usuario de CRM Lead Management](crm-lead-management.md).
 
-### Presupuesto de ventas
+### Presupuesto de ventas { #sales-quotation }
 
 :octicons-package-16: Javapackage: `com.etendoerp.quotation`
 

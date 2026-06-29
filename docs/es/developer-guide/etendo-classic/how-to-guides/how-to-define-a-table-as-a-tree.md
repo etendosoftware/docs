@@ -8,9 +8,9 @@ tags:
   - Application dictionary
 ---
 
-# Cómo definir una tabla como un árbol
+# Cómo definir una tabla como un árbol { #how-to-define-a-table-as-a-tree }
 
-## Visión general
+## Visión general { #overview }
 
 Si una tabla contiene datos que deben representarse jerárquicamente mediante un árbol, el desarrollador puede definir **categorías de árbol** para ella.
 
@@ -19,33 +19,33 @@ Definir categorías de árbol para una tabla tiene dos ventajas:
   * Permite utilizar la vista de cuadrícula de árbol para las pestañas asociadas a esa tabla.
   * Permite utilizar esa tabla en los selectores de árbol.
 
-## Subpestaña Categoría de árbol de tabla
+## Subpestaña Categoría de árbol de tabla { #table-tree-category-subtab }
 
 La pestaña Categoría de árbol de tabla permite **definir categorías de árbol para tablas**. Es posible definir varias categorías de árbol para una tabla, si puede expresarse de diferentes formas jerárquicamente.
 
-### Habilitar la subpestaña Categoría de árbol de tabla
+### Habilitar la subpestaña Categoría de árbol de tabla { #enabling-the-table-tree-category-subtab }
 
 Categoría de árbol de tabla es una subpestaña de la pestaña de cabecera de las ventanas Tablas y columnas. Está oculta por defecto; para habilitarla, el usuario debe marcar el indicador Is Tree de la tabla.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-1.png)
 
-### Estructura de árbol
+### Estructura de árbol { #tree-structures }
 
 Hay tres estructuras de árbol disponibles:
 
-#### Estructura de árbol AD
+#### Estructura de árbol AD { #ad-tree-structure }
 
 Si se utiliza esta estructura, la información necesaria para gestionar la jerarquía de los datos del árbol se almacenará internamente en Etendo en las tablas `AD_Tree` y `AD_TreeNode`.
 
-#### Estructura de árbol enlazada al padre
+#### Estructura de árbol enlazada al padre { #link-to-parent-tree-structure }
 
 Esta estructura debe utilizarse si la tabla contiene una columna que representa el nodo padre del registro. Por ejemplo, considere una tabla llamada `Employee`, que tiene una columna llamada `reportsTo`. Esta columna apunta al empleado al que el empleado actual debe reportar.
 
-#### Estructura de árbol personalizada
+#### Estructura de árbol personalizada { #custom-tree-structure }
 
 Puede haber otros casos en los que la información necesaria para gestionar la jerarquía se almacena dentro de la tabla, pero por medios distintos a una columna que apunte directamente al nodo padre. Por ejemplo, este es el caso de la tabla `AD_Tab`, donde la jerarquía de las pestañas se define utilizando las columnas `seqNo` y `tabLevel`. En este caso, el usuario debe proporcionar una fuente de datos manual para gestionar la jerarquía del árbol.
 
-### Campos comunes para todas las estructuras de árbol
+### Campos comunes para todas las estructuras de árbol { #common-fields-for-all-tree-structures }
 
 Los siguientes campos se aplican a todos los árboles, independientemente de su estructura de árbol:
 
@@ -59,13 +59,13 @@ Los siguientes campos se aplican a todos los árboles, independientemente de su 
     * **Reasignar nodos hijo al padre**: Si se elimina un nodo, todos sus nodos hijo se transfieren a su nodo padre.
     * **No permitir si tiene hijos**: Un nodo con hijos no se puede eliminar.
 
-### Campos de la estructura ADTree
+### Campos de la estructura ADTree { #adtree-structure-fields }
 
   * **Gestionar nodos manualmente**: Cada vez que se crea o elimina un nuevo registro en una tabla que contiene un `ADTree`, debe crearse o eliminarse, respectivamente, un nodo `ADTree`. El desarrollador puede definir mediante este indicador si Etendo debe crear y eliminar automáticamente los nodos `ADTree`, o si los nuevos nodos se van a gestionar manualmente (es decir, usando triggers o manejadores de eventos).
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-2.png)
 
-### Campos de la estructura LinkToParent
+### Campos de la estructura LinkToParent { #linktoparent-structure-fields }
 
   * **Columna padre**: Columna que apunta al nodo padre del registro.
   * **Columna de ID de nodo**: Columna apuntada por la Columna padre. En la mayoría de los casos debe utilizarse la columna clave de la tabla.
@@ -73,14 +73,14 @@ Los siguientes campos se aplican a todos los árboles, independientemente de su 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-3.png)
 
-### Campos de la estructura de árbol personalizada
+### Campos de la estructura de árbol personalizada { #custom-tree-structure-fields }
 
   * **Fuente de datos**: Una fuente de datos que gestionará todas las operaciones del árbol. 
   
 !!!info
     Para más información, visite [Cómo crear un árbol personalizado](../how-to-guides/how-to-create-a-custom-tree.md).
 
-## Habilitar la vista de cuadrícula de árbol en una pestaña
+## Habilitar la vista de cuadrícula de árbol en una pestaña { #enabling-the-tree-grid-view-in-a-tab }
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-4.png)
 
@@ -90,7 +90,7 @@ Por defecto, los nodos raíz serán aquellos cuyo padre sea null o '0'. El usuar
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree-5.png)
 
-## Definir un selector de árbol
+## Definir un selector de árbol { #defining-a-tree-selector }
 
 Las tablas que tienen árboles definidos están destinadas a utilizarse en **selectores de árbol**. Los selectores de árbol son una variante de los selectores de Etendo, que aprovechan los datos jerárquicos de las tablas, permitiendo utilizar árboles para filtrar y seleccionar registros.
 

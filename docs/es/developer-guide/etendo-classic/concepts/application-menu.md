@@ -7,15 +7,15 @@ tags:
   - Etendo Classic
 ---
 
-# Menú de la aplicación
+# Menú de la aplicación { #application-menu }
 
-## Visión general
+## Visión general { #overview }
 
 El Menú de la aplicación se muestra en el lado izquierdo de la ventana. Se utiliza para hacer accesibles al usuario todos los elementos de la aplicación.
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Application_Menu-0.png)
 
-### Gestión del menú
+### Gestión del menú { #managing-the-menu }
 
 El menú se gestiona desde la ventana `Configuración general` > `Aplicación` > `Menú`.
 
@@ -33,11 +33,11 @@ Para crear una nueva entrada de menú:
 
 Las carpetas se crean marcando el campo **Nivel agrupación**.
 
-### Seguridad
+### Seguridad { #security }
 
 Aunque una entrada de menú esté definida, no se mostrará en caso de que el rol que ha iniciado sesión en la aplicación no tenga concedido permiso para ese elemento.
 
-### Carpeta de información
+### Carpeta de información { #information-folder }
 
 En la parte inferior del menú, hay una **Carpeta de información** que contiene enlaces a los **Selector**. Los elementos mostrados en esta carpeta son aquellos que se utilizan en al menos una ventana accesible para el rol actual.
 

@@ -10,9 +10,9 @@ tags:
 
 ![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 
-# Guía de usuario - Etendo Copilot - Primeros pasos
+# Guía de usuario - Etendo Copilot - Primeros pasos { #user-guide---etendo-copilot---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 Etendo Copilot es una potente herramienta integrada en la interfaz de Etendo, o accesible vía API, que proporciona una forma eficiente de interactuar con agentes y utilizar herramientas desarrolladas para resolver problemas específicos. Es un proyecto innovador diseñado para agilizar sus procesos aprovechando el poder de la Inteligencia Artificial. Esta página le guiará a través de las principales funcionalidades de Etendo Copilot.
 
@@ -25,13 +25,13 @@ Etendo Copilot es una potente herramienta integrada en la interfaz de Etendo, o 
 
 ![Chat de Copilot](../../assets/user-guide/etendo-copilot/getting-started/copilot.png){align=right  width="300"}
 
-## ¿Qué es Etendo Copilot?
+## ¿Qué es Etendo Copilot? { #what-is-etendo-copilot }
 
 En esencia, Etendo Copilot es una iniciativa pionera que redefine cómo los desarrolladores y los usuarios interactúan con herramientas e información. Gira en torno a un componente central, el *Agente*, que actúa como el cerebro detrás de la delegación de tareas. Este Agente cuenta con módulos secundarios denominados *Herramientas*. La comunicación fluida entre estos componentes se facilita mediante una API RESTful, garantizando un modelo de interacción sin estado y escalable.
 
 <br clear="all"> 
 
-### Funcionalidades clave
+### Funcionalidades clave { #key-features }
 
 - **Integración sin esfuerzo**: Etendo Copilot se integra de forma fluida en su entorno, añadiendo una capa adicional de inteligencia a su flujo de trabajo.
 - **Asistencia bajo demanda**: Envíe sus consultas a Etendo Copilot, y el Agente le guiará hacia la Herramienta más adecuada para el trabajo.
@@ -44,7 +44,7 @@ En esencia, Etendo Copilot es una iniciativa pionera que redefine cómo los desa
 
 
 
-## Asistente (Agente)
+## Asistente (Agente) { #assistant-agent }
 
 Los agentes son entidades inteligentes que toman decisiones en tiempo real sobre qué Herramienta es la más adecuada para responder a una consulta específica. Esto garantiza que siempre reciba la asistencia más precisa y eficiente.
 
@@ -66,14 +66,14 @@ Los agentes pueden organizarse en módulos o crearse directamente dentro de sus 
     Para más información, visite la documentación de la ventana [Agente](../etendo-copilot/setup-and-usage.md#agent-window).
 
 
-### Habilidad/Herramienta
+### Habilidad/Herramienta { #skilltool }
 
 Cada herramienta representa un proyecto dedicado y autónomo, diseñado para destacar en tareas especializadas. Ya sea traducción, análisis de texto o manipulación de datos, el conjunto diverso de herramientas opera en coordinación fluida.  
 
 !!! info 
     Para una visión general de las herramientas disponibles y sus detalles técnicos, consulte [Herramientas de Copilot](../../developer-guide/etendo-copilot/available-tools/overview.md) en la sección de la Guía del desarrollador.
 
-### Base de conocimiento
+### Base de conocimiento { #knowledge-base }
 
 En muchos casos, necesitamos que el agente disponga de información específica que el modelo no tiene por defecto, por lo que generamos una Base de conocimiento. Esto nos permitirá **entrenar** a nuestro agente con información específica.
 
@@ -81,9 +81,9 @@ En muchos casos, necesitamos que el agente disponga de información específica 
     Para más información visite la documentación de la ventana [Archivo de Knowledge Base](../etendo-copilot/setup-and-usage.md#knowledge-base-file-window).
 
 
-## Interfaz de Copilot
+## Interfaz de Copilot { #copilot-interface }
 
-### Barra de navegación
+### Barra de navegación { #navigation-bar }
 
 En la barra de navegación principal de Etendo, encontrará un icono de Copilot que le lleva al pop-up del chat.
 
@@ -93,7 +93,7 @@ Aquí, puede seleccionar un agente e iniciar una conversación con él. Copilot 
 
 ![Barra de navegación de Copilot](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-### Barra de herramientas
+### Barra de herramientas { #toolbar }
 
 En cualquier ventana de Etendo, haga clic en el botón de Copilot en la barra de herramientas para abrir el chat. Copilot recibirá automáticamente el contexto de su pestaña actual o de los registros seleccionados, por lo que no necesita introducir los detalles manualmente.
 
@@ -109,7 +109,7 @@ Etendo Copilot puede aprovechar el contexto de la ventana o del registro actualm
 
 
 
-### Adjuntar archivos
+### Adjuntar archivos { #attach-files }
 
 ![Ejemplo de pedido de compra](../../assets/user-guide/etendo-copilot/getting-started/purchase-order-example.png){align=left  width="400"}
 
@@ -122,10 +122,10 @@ Por ejemplo, puede adjuntar un pedido de compra en formato PDF y pedir al agente
 ![Experto de compras](../../assets/user-guide/etendo-copilot/getting-started/purchase-expert.png)
 
 
-### Modo de visualización
+### Modo de visualización { #visualization-mode }
 
 
-#### Modos de visualización
+#### Modos de visualización { #display-modes }
 
 <figure markdown>
 ![](../../assets/user-guide/etendo-copilot/getting-started/regular-size-copilot.png){align=right width=300}
@@ -139,6 +139,13 @@ De forma predeterminada, Copilot funciona como una ventana pop-up, proporcionand
 Utilice el modo de pantalla completa para una experiencia más cómoda durante conversaciones largas cuando no sea necesario visualizar Etendo.
 
 Etendo Copilot ofrece gestión de conversaciones mediante un **selector de conversaciones** para revisar y cambiar entre interacciones anteriores, un botón de **Nueva conversación** para iniciar temas o tareas nuevas, y la **generación automática de títulos de conversación**, que crea títulos significativos para facilitar la identificación y organización de los diálogos.
+
+También puede mantener su historial de chats organizado con algunos controles adicionales en la barra lateral de conversaciones:
+
+- **Buscar conversaciones**: encuentre rápidamente chats anteriores escribiendo palabras clave en la barra de búsqueda.
+- **Renombrar**: asigne a cualquier conversación un título personalizado que refleje mejor su contenido.
+- **Eliminar**: elimine las conversaciones que ya no necesite; los elementos eliminados se trasladan a la sección **Archivados**.
+- **Conversaciones archivadas**: revise los chats eliminados previamente en una sección plegable, restáurelos o elimínelos definitivamente cuando ya no le resulten útiles.
 ![Chat a pantalla completa](../../assets/user-guide/etendo-copilot/getting-started/full-screen-copilot.png)
 </figure>
 
@@ -147,6 +154,14 @@ Etendo Copilot ofrece gestión de conversaciones mediante un **selector de conve
 **Minimizado** <br>
 La interfaz de Copilot también puede minimizarse. En este caso, una burbuja de Copilot estará activa en la parte inferior derecha de la pantalla.
 </figure>
+
+#### Selector de agentes y agentes destacados
+
+Desde cualquier modo de visualización, puede cambiar entre agentes utilizando el **selector de agentes** en la parte superior del chat. Para facilitar la búsqueda de los agentes más relevantes, Copilot resalta los **Agentes destacados**:
+
+- **Destacados primero**: los agentes marcados como destacados aparecen en la parte superior de la lista, de modo que los más útiles para su entorno estén siempre al alcance.
+- **Filtro de solo destacados**: de forma predeterminada, el selector solo muestra los agentes destacados para mantener la lista enfocada. Puede desactivar este filtro en cualquier momento para examinar el catálogo completo de agentes disponibles.
+- **Respaldo automático**: si no hay ningún agente marcado como destacado, el selector simplemente lista todos los agentes disponibles, de modo que nunca se encuentre con un selector vacío.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

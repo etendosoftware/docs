@@ -6,18 +6,18 @@ tags:
     - Código de barras
 ---
 
-# Herramienta Codbar
+# Herramienta Codbar { #codbar-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.ocrtool`
 
-## Visión general
+## Visión general { #overview }
 
 La **CodbarTool** es una herramienta que lee códigos de barras de archivos de imagen. Acepta un array de rutas de archivo como entrada y devuelve un array de códigos de barras encontrados en esas imágenes.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta permite a los agentes **leer códigos de barras de múltiples imágenes**, que posteriormente pueden aplicarse en la gestión de inventario, el seguimiento de productos y el procesamiento de documentos, entre otras áreas.
 
@@ -50,7 +50,7 @@ El uso de esta herramienta consiste en las siguientes acciones:
 !!!note
     La **librería pyzbar** se utiliza para decodificar códigos de barras de la imagen. Si no se encuentra ningún código de barras, devuelve None para esa imagen. Si se encuentran códigos de barras, decodifica los datos de cada código de barras.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 - Suponga que existe una imagen en `/tmp/goods-receipt.png` y desea extraer el código de barras relacionado con la información de la recepción de mercancía:
 

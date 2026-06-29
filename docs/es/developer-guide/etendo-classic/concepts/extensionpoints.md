@@ -7,16 +7,16 @@ tags:
 status: beta
 ---
 
-# Puntos de extensión
+# Puntos de extensión { #extensionpoints }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
     
-## Visión general
+## Visión general { #overview }
 
 Esta es la lista de Puntos de extensión disponibles en procedimientos del core.
 
-### `C_Order_Post` - Punto de extensión de finalización del proceso
+### `C_Order_Post` - Punto de extensión de finalización del proceso { #c-order-post---finish-process-extension-point }
 
 Este punto de extensión se llama al final de la función `C_Order_Post1`, la función que procesa pedidos.
 
@@ -29,7 +29,7 @@ Este punto de extensión se llama al final de la función `C_Order_Post1`, la fu
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `C_Order_Post` - Proceso de validación
+### `C_Order_Post` - Proceso de validación { #c-order-post---validation-process }
 
 Este punto de extensión se llama al inicio de la función `C_Order_Post1`, la función que procesa pedidos.
 
@@ -42,7 +42,7 @@ Este punto de extensión se llama al inicio de la función `C_Order_Post1`, la f
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `C_Invoice_Post` - Punto de extensión de finalización del proceso
+### `C_Invoice_Post` - Punto de extensión de finalización del proceso { #c-invoice-post---finish-process-extension-point }
 
 Este punto de extensión se llama al final de la función `C_Invoice_Post`, la función que procesa facturas.
 
@@ -55,7 +55,7 @@ Este punto de extensión se llama al final de la función `C_Invoice_Post`, la f
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `M_Inout_Post` - Punto de extensión de finalización del proceso
+### `M_Inout_Post` - Punto de extensión de finalización del proceso { #m-inout-post---finish-process-extension-point }
 
 Este punto de extensión se llama al final de la función `M_Inout_Post`, la función que completa los albaranes.
 
@@ -68,7 +68,7 @@ Este punto de extensión se llama al final de la función `M_Inout_Post`, la fun
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `M_Inout_Create` - Llamada al postproceso
+### `M_Inout_Create` - Llamada al postproceso { #m-inout-create---calling-post-process }
 
 Este punto de extensión se llama dentro de la función `M_Inout_Create`, la función que crea albaranes a partir de pedidos. Permite, en función del resultado devuelto, llamar o no a la función para completar el albarán creado y dejar el albarán en estado borrador.
 
@@ -78,7 +78,7 @@ Este punto de extensión se llama dentro de la función `M_Inout_Create`, la fun
     * `User` (`p_String`). `AD_User_Id` que ha lanzado el proceso. 
     * `Result` (`p_Number`). Entero para establecer el resultado del proceso (NULL, ejecutar el proceso de completar albarán. Otro valor, no ejecutar el proceso de completar albarán) 
 
-### `M_Inout_Cancel` - Llamada al postproceso
+### `M_Inout_Cancel` - Llamada al postproceso { #m-inout-cancel---calling-post-process }
 
 Este punto de extensión se llama dentro de la función `M_Inout_Cancel`, la función que anula albaranes a partir de pedidos. Permite, en función del resultado devuelto, llamar o no a la función para completar el albarán creado y dejar el albarán en estado borrador.
 
@@ -88,7 +88,7 @@ Este punto de extensión se llama dentro de la función `M_Inout_Cancel`, la fun
     * `User` (`p_String`). `AD_User_Id` que ha lanzado el proceso. 
     * `Result` (`p_Number`). Entero para establecer el resultado del proceso (NULL, ejecutar el proceso de completar albarán. Otro valor, no ejecutar el proceso de completar albarán) 
 
-### `MA_Copy_Version` - Finalización del proceso
+### `MA_Copy_Version` - Finalización del proceso { #ma-copy-version---finish-process }
 
 Este punto de extensión se llama al final de la función `MA_Copy_Version`, la función que copia versiones del plan de proceso.
 
@@ -101,7 +101,7 @@ Este punto de extensión se llama al final de la función `MA_Copy_Version`, la 
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `MA_Workrequirement_Process` - Finalización del proceso
+### `MA_Workrequirement_Process` - Finalización del proceso { #ma-workrequirement-process---finish-process }
 
 Este punto de extensión se llama al final de la función `MA_Workrequirement_Process`, la función que procesa requisitos de trabajo.
 
@@ -113,7 +113,7 @@ Este punto de extensión se llama al final de la función `MA_Workrequirement_Pr
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `MA_Productionrun_Standard` - Finalización del proceso
+### `MA_Productionrun_Standard` - Finalización del proceso { #ma-productionrun-standard---finish-process }
 
 Este punto de extensión se llama al final de la función `MA_Productionrun_Standard`, la función utilizada por el proceso Crear estándares.
 
@@ -125,7 +125,7 @@ Este punto de extensión se llama al final de la función `MA_Productionrun_Stan
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `MA_Workeffort_Validate` - Finalización del proceso
+### `MA_Workeffort_Validate` - Finalización del proceso { #ma-workeffort-validate---finish-process }
 
 Este punto de extensión se llama al final de la función `MA_Workeffort_Validate`, la función que valida esfuerzos de trabajo.
 
@@ -137,7 +137,7 @@ Este punto de extensión se llama al final de la función `MA_Workeffort_Validat
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `M_Get_Stock` - Finalización del proceso
+### `M_Get_Stock` - Finalización del proceso { #m-get-stock---finish-process }
 
 Este punto de extensión se llama al final de la función `M_Get_Stock`, la función que obtiene stock del almacén. Esta función se utiliza en la funcionalidad de gestión de stock de almacén.
 
@@ -152,9 +152,9 @@ Es posible personalizar el stock que propone la gestión de stock de almacén.
 
 `Message` y `Result` deben recuperarse después de que se hayan lanzado los procedimientos, ya que podrían ser modificados por dichos procedimientos para establecer advertencias y mensajes al usuario.
 
-### `M_PriceList_Create` - Finalización del proceso
+### `M_PriceList_Create` - Finalización del proceso { #m-pricelist-create---finish-process }
 
-Este punto de extensión se llama al final de la función `M_Pricelist_Create`, la función que crea precios en base a los parámetros de la versión de tarifa. Consulte [Versión de tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list-version).
+Este punto de extensión se llama al final de la función `M_Pricelist_Create`, la función que crea precios en base a los parámetros de la versión de tarifa. Consulte [Versión de tarifa](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md#price-list-version).
 
 * Parámetros: 
     * `Record_ID` (`p_String` column of `AD_EP_Instance_Para`). `M_PriceList_Version_ID` de la versión de tarifa que se está procesando. 

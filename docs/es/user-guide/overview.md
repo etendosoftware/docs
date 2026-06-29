@@ -5,11 +5,11 @@ hide:
 ---
 ![cover-user-guide.png](../assets/user-guide/overview/cover-user-guide.png)
 # 
-## Bienvenido a la documentación del software para usuarios
+## Bienvenido a la documentación del software para usuarios { #welcome-to-user-software-documentation }
 
 En esta sección, le damos la bienvenida a una guía de usuario completa para facilitar su experiencia al trabajar con cada uno de nuestros productos.
 
-### ¿Está listo para sumergirse en el mundo de nuestro software?
+### ¿Está listo para sumergirse en el mundo de nuestro software? { #are-you-ready-to-dive-into-the-world-of-our-software }
 
 Tanto si busca dominar los conceptos básicos como explorar funcionalidades avanzadas, nuestras guías están diseñadas para adaptarse a sus necesidades. Si usted es desarrollador, le sugerimos que visite nuestra sección creada especialmente para usted: [Guía del desarrollador](../developer-guide/overview.md).
 
@@ -18,7 +18,7 @@ Tanto si busca dominar los conceptos básicos como explorar funcionalidades avan
 <figure markdown>
 ![etendo-classic.png](../assets/user-guide/overview/etendo-classic.png){align=right width=400}
 <br><br>
-### Aquí encontrará guías de usuario sobre cómo utilizar nuestra plataforma con todas las ventanas de Etendo Classic, así como guías para todos nuestros bundles en la sección de funcionalidades opcionales.
+### Aquí encontrará guías de usuario sobre cómo utilizar nuestra plataforma con todas las ventanas de Etendo Classic, así como guías para todos nuestros bundles en la sección de funcionalidades opcionales. { #here-you-will-find-user-guides-on-how-to-use-our-platform-with-all-etendo-classic-windows-as-well-as-guides-for-all-our-bundles-in-the-optional-features-section }
 </figure>
 
 
@@ -27,7 +27,7 @@ Tanto si busca dominar los conceptos básicos como explorar funcionalidades avan
 <figure markdown>
 ![etendo-mobile.png](../assets/user-guide/overview/etendo-mobile.png){align=left width=400}
 <br><br>
-### Encontrará información sobre cómo utilizar la aplicación móvil de Etendo, desde su descarga desde Play Store y App Store, así como la interfaz de usuario completa.
+### Encontrará información sobre cómo utilizar la aplicación móvil de Etendo, desde su descarga desde Play Store y App Store, así como la interfaz de usuario completa. { #you-will-find-information-on-how-to-use-the-etendo-mobile-application-from-downloading-it-from-the-play-store-and-app-store-as-well-as-the-complete-user-interface }
 </figure>
 
 
@@ -36,7 +36,7 @@ Tanto si busca dominar los conceptos básicos como explorar funcionalidades avan
 <figure markdown>
 ![etendo-copilot.png](../assets/user-guide/overview/etendo-copilot.png){align=right width=400}
 <br>
-### En esta sección, encontrará todo sobre nuestro proyecto Copilot. Actualmente dispone de información sobre Bastian, nuestro chatbot basado en inteligencia artificial que puede responderle a todo sobre Etendo.
+### En esta sección, encontrará todo sobre nuestro proyecto Copilot. Actualmente dispone de información sobre Bastian, nuestro chatbot basado en inteligencia artificial que puede responderle a todo sobre Etendo. { #in-this-section-you-will-find-everything-about-our-copilot-project-currently-you-have-information-about-bastian-our-artificial-intelligence-based-chatbot-that-can-answer-you-all-about-etendo }
 </figure>
 
 ---

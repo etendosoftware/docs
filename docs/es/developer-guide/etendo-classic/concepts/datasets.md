@@ -8,9 +8,9 @@ tags:
   - Objetos de Negocio
 ---
 
-# Conjunto de datos
+# Conjunto de datos { #datasets }
   
-## Visión general
+## Visión general { #overview }
 
 El concepto de Conjunto de datos le permite definir **conjuntos de datos** de diferentes tablas y exportar estos datos en un solo paso. Los conjuntos de datos son especialmente útiles para gestionar datos de referencia de un módulo, por ejemplo tipos impositivos o datos por defecto en nuevas tablas añadidas por un módulo. Los datos de referencia se publican, distribuyen e instalan junto con el código del programa que implementa el módulo.
 
@@ -21,7 +21,7 @@ Los conjuntos de datos pueden definirse a nivel de **Sistema, Organización o En
 - Los conjuntos de datos a nivel de organización pueden aplicarse en [Crear organización](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model/initial-organization-setup.md) (al crear una nueva organización) o también pueden aplicarse a una organización existente usando la ventana **Gestión del módulo de Empresa**. Contienen **información a nivel de organización**.
 - Los conjuntos de datos a nivel de entidad/organización funcionan como los conjuntos de datos a nivel de organización, pero también pueden aplicarse en [Crear entidad](../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) al crear una nueva entidad. Contienen **información a nivel de organización/entidad**.
 
-## Ventana Conjunto de datos
+## Ventana Conjunto de datos { #dataset-window }
 
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Conjunto de datos`
 
@@ -47,7 +47,7 @@ modules
             └── Spanish_Tax_Alerts.xml
 ```
 
-### Solapa Tabla
+### Solapa Tabla { #table-tab }
 
 La solapa Tabla define qué datos de **una tabla se van a exportar**. Define tanto los registros (mediante una cláusula where) como las columnas por registro.
 
@@ -88,7 +88,7 @@ A continuación se muestran algunos ejemplos de cláusulas where:
 !!!info
     La cláusula puede contener selecciones internas y otras funcionalidades HQL más avanzadas. Sin embargo, **no se admiten las cláusulas order-by, group-by y having**, por lo que el contenido de este campo debe ser solo la cláusula where y nada más.
 
-### Solapa Columnas
+### Solapa Columnas { #columns-tab }
 
 La Columna del Conjunto de Datos define las **columnas/propiedades** que se exportan para un determinado objeto de negocio. Una Columna del Conjunto de Datos siempre pertenece a una Tabla del Conjunto de Datos, y una Tabla del Conjunto de Datos puede tener cero o más Columnas del Conjunto de Datos.
 El concepto de Columna del Conjunto de Datos puede utilizarse de dos maneras:
@@ -104,7 +104,7 @@ Los campos principales:
   * Una **Columna** del Conjunto de datos tiene un módulo, por lo que el usuario puede añadir una nueva Columna del Conjunto de Datos a una Tabla del Conjunto de Datos existente (de otro módulo). 
   * **Excluido**: si está marcado, entonces esta columna se define para no exportarse. 
 
-##  Uso de Conjunto de datos
+## Uso de Conjunto de datos { #usage-of-datasets }
 
 El propósito principal de los conjuntos de datos es definir **datos de referencia** para los módulos.
 
@@ -121,7 +121,7 @@ Después de esto, **el módulo puede publicarse**, e incluirá el contenido del 
 !!!note
     Los datos de referencia se insertan cuando se aplica un módulo (se compila y se instala). O pueden importarse por separado.
 
-##  Propiedad de los datos
+## Propiedad de los datos { #data-ownership }
 
 Los datos definidos por un conjunto de datos **son propiedad de este conjunto de datos**. Esto significa que cuando hay una actualización de este conjunto de datos, cualquier cambio en estos datos se sobrescribirá de nuevo para ajustarse a la definición de la nueva versión del conjunto de datos.
 
@@ -130,7 +130,7 @@ Es posible marcar un conjunto de datos como **Valores por defecto del Dataset**.
 !!!note
     En caso de que un registro proporcionado por uno de estos conjuntos de datos se elimine de la instancia, se recuperará en la siguiente actualización; la forma correcta de deshacerse de registros no deseados es marcarlos como inactivos.
 
-##  Importación de Datos de Referencia a nivel de organización
+## Importación de Datos de Referencia a nivel de organización { #importing-reference-data-on-organization-level }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Gestión del módulo de Empresa`
 

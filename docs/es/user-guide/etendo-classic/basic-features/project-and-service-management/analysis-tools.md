@@ -10,9 +10,9 @@ tags:
     - Gastos no reembolsados
 ---
 
-# Herramientas de análisis de Gestión de Proyectos y Servicios
+# Herramientas de análisis de Gestión de Proyectos y Servicios { #project-and-service-management-analysis-tools }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe las ventanas relacionadas con los informes de gestión de proyectos y servicios en Etendo. Estas son:
 
@@ -26,7 +26,7 @@ Esta sección describe las ventanas relacionadas con los informes de gestión de
 
 [:material-file-document-outline: Gastos no reembolsados](#gastos-no-reembolsados){ .md-button .md-button--primary } <br>
 
-## Progreso de Proyectos
+## Progreso de Proyectos { #project-progress }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Herramientas de análisis` > `Progreso de Proyectos`
 
@@ -39,7 +39,7 @@ La información principal que se puede obtener del informe es:
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-progress.png)
 
-## Rentabilidad de Proyectos
+## Rentabilidad de Proyectos { #project-profitability }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Herramientas de análisis` > `Rentabilidad de Proyectos`
 
@@ -84,7 +84,7 @@ Servicios y gastos reales:
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/project-profitability.png)
 
-## Informe de gastos
+## Informe de gastos { #expense-report }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Herramientas de análisis` > `Informe de gastos`
 
@@ -92,7 +92,7 @@ El **Informe de gastos** muestra un listado de hojas de gastos con sus detalles.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/expense-report.png)
 
-## Gastos para facturar
+## Gastos para facturar { #invoiceable-expenses }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Herramientas de análisis` > `Gastos para facturar`
 
@@ -104,7 +104,7 @@ En la vista de cuadrícula se lista una visión general de todos los clientes a 
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses.png)
 
-### Solapa Líneas
+### Solapa Líneas { #lines-tab }
 
 En esta solapa, el usuario puede ver cada línea de gasto que se incluirá en la factura de venta.
 
@@ -112,7 +112,7 @@ La información mostrada en la solapa de líneas se toma de la solapa de líneas
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/invoiceable-expenses-lines.png)
 
-## Gastos no reembolsados
+## Gastos no reembolsados { #employee-expenses }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Herramientas de análisis` > `Gastos no reembolsados`
 
@@ -124,7 +124,7 @@ En la vista de cuadrícula se lista una visión general de todos los empleados q
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/analysis-tools/employee-expenses.png)
 
-### Solapa Líneas
+### Solapa Líneas { #lines-tab_1 }
 
 En esta solapa, el usuario puede ver cada línea de gasto del empleado.
 

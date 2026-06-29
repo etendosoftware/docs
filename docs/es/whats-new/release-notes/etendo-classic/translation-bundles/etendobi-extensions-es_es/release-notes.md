@@ -14,7 +14,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Etendo BI Extensions Bundle](../../bundles/etendobi-extensions/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con Etendo BI Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

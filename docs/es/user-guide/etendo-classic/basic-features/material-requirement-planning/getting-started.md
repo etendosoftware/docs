@@ -10,15 +10,15 @@ tags:
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 
-# Gestión de MRP - Primeros pasos
+# Gestión de MRP - Primeros pasos { #material-requirement-planning---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2fGUSzo2ACI?si=h1BqAWPYXf6S1Pnj" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 En Gestión de MRP, la aplicación se utiliza para *revisar automáticamente la demanda y mostrar sugerencias relativas al suministro requerido*. En el *Planificación de la producción*, la aplicación sugiere *Orden de Fabricación* y *Necesidad de material* requeridas. En el *Planificación de compras*, la aplicación sugiere *Pedido de compra* requeridos.
 
-## Gestión de MRP
+## Gestión de MRP { #material-requirement-planning }
 
 La Gestión de MRP consta de dos planes:
 
@@ -29,32 +29,32 @@ Los **Método de planificación** se introducen para definir qué componentes de
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
 
-### **Configuración**
+### **Configuración** { #configuration }
 
 !!!info
     Además de las pantallas de configuración del módulo de MRP que se configuran, se requieren configuraciones adicionales.
     Para los productos que se planifican en el *Planificación de la producción*, se requieren las siguientes configuraciones:
 
 - el [Plan de Producción](../production-management/setup.md#process-plan) está configurado para el producto.
-- la *casilla de verificación de producción* y el nombre del Plan de Producción se seleccionan en la pantalla [Producto](../master-data-management/master-data.md#product).
-La solapa [Producción](../master-data-management/master-data.md#manufacturing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el plan de Planificación de la producción.
+- la *casilla de verificación de producción* y el nombre del Plan de Producción se seleccionan en la pantalla [Producto](../master-data-management/master-data/product.md#product).
+La solapa [Producción](../master-data-management/master-data/product.md#manufacturing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el plan de Planificación de la producción.
 
 Para los productos que se planifican en el *Planificación de compras*, se requieren las siguientes configuraciones:
 
-- la casilla de verificación de compra se selecciona en la pantalla [Producto](../master-data-management/master-data.md#product).
-- el [Precio](../master-data-management/master-data.md#price) del producto se define para la lista de precios del proveedor que se introduce en la solapa Compras.
-- la solapa [Compras](../master-data-management/master-data.md#purchasing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el Planificación de compras.
+- la casilla de verificación de compra se selecciona en la pantalla [Producto](../master-data-management/master-data/product.md#product).
+- el [Precio](../master-data-management/master-data/product.md#price) del producto se define para la lista de precios del proveedor que se introduce en la solapa Compras.
+- la solapa [Compras](../master-data-management/master-data/product.md#purchasing) en la pantalla de Producto se completa con la información requerida para que MRP realice los cálculos para el Planificación de compras.
 - el proveedor que se refleja como el Tercero en la solapa Compras mencionada anteriormente se completa en la pantalla de Tercero:
 
-    - solapa [Proveedor/Acreedor](../master-data-management/master-data.md#vendorcreditor) con, al menos, los siguientes campos completados:
+    - solapa [Proveedor/Acreedor](../master-data-management/master-data/business-partner.md#vendorcreditor) con, al menos, los siguientes campos completados:
         - Lista de precios de compra
         - Método de pago de pedido de compra
         - Condiciones de pago de pedido de compra
-    - solapa [Direcciones](../master-data-management/master-data.md#locationaddress)
+    - solapa [Direcciones](../master-data-management/master-data/business-partner.md#locationaddress)
 
-- La solapa [Producción](../master-data-management/master-data.md#manufacturing) en la pantalla de Producto se completa con la información de *Método de planificación* y *Planificador*.
+- La solapa [Producción](../master-data-management/master-data/product.md#manufacturing) en la pantalla de Producto se completa con la información de *Método de planificación* y *Planificador*.
 
-### **Ejecución** 
+### **Ejecución** { #execution }
 
 El planificador de material introduce una Planificación de la producción para un producto para un determinado período de tiempo y procesa el plan.
 
@@ -73,7 +73,7 @@ En la visión general creada, el planificador de material revisa y analiza las l
 - Una vez que el plan es correcto, se crean los pedidos de compra sugeridos haciendo clic en el botón *Lanzar Orden de Compra*.
 - El planificador de material completa el pedido de compra creado.
 
-## Relación con otras áreas
+## Relación con otras áreas { #relationship-with-other-areas }
 
 El MRP interactúa con los siguientes módulos:
 

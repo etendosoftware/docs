@@ -7,18 +7,18 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de plantilla
+# Herramienta de plantilla { #template-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de plantilla** es una plantilla para crear nuevas herramientas en aplicaciones basadas en Python. Está diseñada para proporcionar una estructura básica sobre la que construir funcionalidad personalizada. Los parámetros de entrada que acepta son: input1 e input2. La salida consiste en un mensaje que confirma una acción predeterminada.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es útil para desarrolladores que desean crear nuevas herramientas rápidamente siguiendo un formato estándar. Puede utilizarse como punto de partida para desarrollar funciones específicas sin tener que preocuparse por la configuración inicial del código. Proporciona al usuario:
 
@@ -44,7 +44,7 @@ El uso de esta herramienta consiste en las siguientes acciones:
 
     Devuelve un mensaje que actualmente indica `{“message”: “Mail sent successfully”}`, pero puede personalizarse según la acción realizada.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que desea crear una herramienta que sume dos números. Utilizaríamos la Herramienta de plantilla de la siguiente manera:
     

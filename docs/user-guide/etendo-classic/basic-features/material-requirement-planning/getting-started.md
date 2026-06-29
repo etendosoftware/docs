@@ -36,24 +36,24 @@ The Material Requirement Planning consists of two plans:
     For the products that are planned in the *Manufacturing Plan*, the following configurations are required:
 
 - the [Process plan](../production-management/setup.md#process-plan)  is set up for the product.
-- the *production checkbox* and the Process Plan name are selected in the [Product](../master-data-management/master-data.md#product) screen.
-The [Manufacturing](../master-data-management/master-data.md#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
+- the *production checkbox* and the Process Plan name are selected in the [Product](../master-data-management/master-data/product.md#product) screen.
+The [Manufacturing](../master-data-management/master-data/product.md#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
 
 For the products that are planned in the *Purchasing Plan*, the following configurations are required:
 
-- the purchase checkbox is selected in the [Product](../master-data-management/master-data.md#product) screen.
-- the [price](../master-data-management/master-data.md#price) of the product is defined for the price list of the vendor that is entered in the Purchasing tab.
-- the [Purchasing](../master-data-management/master-data.md#purchasing)  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.
+- the purchase checkbox is selected in the [Product](../master-data-management/master-data/product.md#product) screen.
+- the [price](../master-data-management/master-data/product.md#price) of the product is defined for the price list of the vendor that is entered in the Purchasing tab.
+- the [Purchasing](../master-data-management/master-data/product.md#purchasing)  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.
 - the vendor that is reflected as the Business Partner in the above mentioned Purchasing tab is filled out in the Business Partner screen:
 
 
-    - [Vendor/Creditor](../master-data-management/master-data.md#vendorcreditor) tab with at least the following fields filled out:
+    - [Vendor/Creditor](../master-data-management/master-data/business-partner.md#vendorcreditor) tab with at least the following fields filled out:
         - Purchase Price List
         - PO Payment Method
         - PO Payment Terms
-    - [Location/Address](../master-data-management/master-data.md#locationaddress) tab
+    - [Location/Address](../master-data-management/master-data/business-partner.md#locationaddress) tab
 
-- The [Manufacturing](../master-data-management/master-data.md#manufacturing) tab in the Product screen is filled out with the *Planning Method* and *Planner* information.
+- The [Manufacturing](../master-data-management/master-data/product.md#manufacturing) tab in the Product screen is filled out with the *Planning Method* and *Planner* information.
 
 ### **Execution** 
 
@@ -85,7 +85,7 @@ The MRP interacts with the following modules:
 - [Sales Management](../sales-management/getting-started.md):
     - [Sales Orders](../sales-management/transactions.md#sales-order) are optionally taken into account in the calculations of both plans
 - [Warehouse Management](../warehouse-management/getting-started.md):
-    - [Stock levels](../warehouse-management/analysis-tools.md#stock-report) are automatically taken into account in the calculations of both plans
+    - [Stock levels](../warehouse-management/analysis-tools/stock-report.md) are automatically taken into account in the calculations of both plans
 - [Production Management](../production-management/getting-started.md):
     - the [Process Plan](../production-management/setup.md#process-plan) is used for the calculation of the Manufacturing Plan
     - [Work Requirements](../production-management/transactions.md#work-requirement) are created from the Manufacturing Plan

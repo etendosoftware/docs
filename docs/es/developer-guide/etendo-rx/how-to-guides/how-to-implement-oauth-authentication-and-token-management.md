@@ -10,15 +10,15 @@ tags:
 status: beta
 ---
 
-# Cómo implementar la autenticación OAuth y la gestión de tokens en Etendo RX
+# Cómo implementar la autenticación OAuth y la gestión de tokens en Etendo RX { #how-to-implement-oauth-authentication-and-token-management-in-etendo-rx }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía describe cómo integrar la autenticación de inicio de sesión único (SSO) y la gestión de tokens de acceso OAuth 2.0 entre Etendo RX (ERP) y un Middleware externo (EtendoAuth) que intermedia la identidad (Auth0 u otro IdP OpenID Connect) y las APIs de Google (Drive, Picker, etc.).
 
 Cubre la arquitectura, el modelo de datos, el flujo de autenticación, la obtención de tokens, la persistencia, la renovación, el manejo de errores, los procedimientos operativos, las referencias de código y una lista de verificación de soporte.
 
-## 1. Arquitectura y responsabilidades
+## 1. Arquitectura y responsabilidades { #1-architecture-and-responsibilities }
 
 ### Etendo RX (ERP)
 
@@ -34,7 +34,7 @@ Cubre la arquitectura, el modelo de datos, el flujo de autenticación, la obtenc
 - Emite códigos de autorización internos de corta duración (efímeros) para un intercambio seguro por canal de backchannel (opcional).
 - Almacena `access_token` y `refresh_token` cifrados en reposo en SQLite usando AES-256-GCM (requiere la variable de entorno `ENCRYPTION_KEY`).
 
-### Modelo de datos (Etendo RX)
+### Modelo de datos (Etendo RX) { #data-model-etendo-rx }
 
 | Tabla | Propósito |
 |-------|-----------|
@@ -43,7 +43,7 @@ Cubre la arquitectura, el modelo de datos, el flujo de autenticación, la obtenc
 | `ETRX_TOKEN_USER` | Relación usuario ↔ token según el modelo de seguridad. |
 | `ETRX_INSTANCE_CONNECTOR` | Registro de instancia de middleware externa (URL base, tipo de autorización, credenciales/token si se requiere). |
 
-## 2. Flujo de autenticación (SSO vía Auth0)
+## 2. Flujo de autenticación (SSO vía Auth0) { #2-authentication-flow-sso-via-auth0 }
 
 Objetivo: autenticar al usuario y, opcionalmente, devolver un código interno de corta duración para la vinculación de sesión del ERP.
 
@@ -62,7 +62,7 @@ Notas:
 - El ERP también puede aceptar Bearer JWT directamente en las solicitudes entrantes (las pruebas referencian `SWSAuthenticationManagerTest`).
 - Los códigos efímeros se almacenan durante un TTL corto (p. ej. 10 minutos) en el almacén en memoria del Middleware.
 
-## 3. Generación y gestión de tokens OAuth (Google)
+## 3. Generación y gestión de tokens OAuth (Google) { #3-oauth-token-generation-and-management-google }
 
 Objetivo: obtener y mantener tokens de acceso válidos para las APIs de Google (p. ej. scope de Drive `drive.file`).
 
@@ -81,7 +81,7 @@ Secuencia de alto nivel:
 Refresco transparente:
 - La función del Middleware `ensureAccessToken(userId)` comprueba la expiración; si está expirado, usa el `refresh_token` almacenado para obtener un nuevo `access_token` y actualiza la caché.
 
-## 4. Configuración del ERP (Etendo RX)
+## 4. Configuración del ERP (Etendo RX) { #4-erp-configuration-etendo-rx }
 
 ### `ETRX_OAUTH_PROVIDER`
 
@@ -113,7 +113,7 @@ Registra:
 - URL base del Middleware
 - Tipo de autorización y credenciales (token / usuario y contraseña basic)
 
-## 5. Resumen de endpoints del Middleware
+## 5. Resumen de endpoints del Middleware { #5-middleware-endpoints-summary }
 
 | Endpoint | Método | Propósito |
 |----------|--------|-----------|
@@ -126,7 +126,7 @@ Registra:
 | `/jwks` | GET | Exposición de JWKS (si el Middleware firma tokens) |
 | `/logout`, `/register` | Var | Flujos secundarios |
 
-## 6. Manejo de errores y trazabilidad
+## 6. Manejo de errores y trazabilidad { #6-error-handling-and-traceability }
 
 ### Middleware
 
@@ -144,7 +144,7 @@ Registra:
 - Convierte códigos técnicos (p. ej. `access_denied`) en mensajes amigables para el usuario.
 - Elimina los registros de tokens anteriores antes de insertar (evitar duplicados / tokens obsoletos).
 
-## 7. Buenas prácticas de implementación
+## 7. Buenas prácticas de implementación { #7-implementation-best-practices }
 
 Seguridad:
 
@@ -167,29 +167,29 @@ Observabilidad:
 - Correlacione logs usando un ID de solicitud propagado desde ERP → Middleware.
 - Enmascare valores sensibles (tokens, client secrets) en los logs.
 
-## 8. Procedimiento operativo (paso a paso)
+## 8. Procedimiento operativo (paso a paso) { #8-operational-procedure-step-by-step }
 
-### A. Registrar proveedor OAuth en el ERP
+### A. Registrar proveedor OAuth en el ERP { #a-register-oauth-provider-in-erp }
 
 1. Cree un registro en `ETRX_OAUTH_PROVIDER` con endpoints y credenciales del IdP.
 2. Configure `REDIRECT_URI` al endpoint del servlet del ERP que gestiona el retorno del token (p. ej. `/etendorx/SaveTokenFromMiddleware`).
 3. Habilite `GET_MIDDLEWARE_TOKEN` si delega la obtención del token al Middleware.
 4. (Opcional) Configure `JWKSETURI` para validación directa de JWT.
 
-### B. Probar SSO (Auth0)
+### B. Probar SSO (Auth0) { #b-test-sso-auth0 }
 
 1. Dispare la acción de SSO del ERP → llama al Middleware `/login`.
 2. Autentíquese mediante Auth0 → vuelve al Middleware `/callback` → redirige al ERP.
 3. Confirme que se crea la sesión del ERP y que el usuario se mapea por `email` o `sub`.
 
-### C. Obtener token de Google (ejemplo de Drive)
+### C. Obtener token de Google (ejemplo de Drive) { #c-obtain-google-token-drive-example }
 
 1. En el ERP invoque la acción "Get Middleware Token" seleccionando el scope (p. ej. `drive.file`).
 2. Flujo: `/oauth/google/start` → consentimiento de Google → `/oauth/google/callback` → redirección al ERP.
 3. Valide una nueva entrada en `ETRX_TOKEN_INFO` con el valor correcto de `MIDDLEWARE_PROVIDER` y su expiración.
 4. Pruebe la integración con la API de Google / Picker; el Middleware refresca los tokens de forma transparente.
 
-## 9. Referencias de código
+## 9. Referencias de código { #9-code-references }
 
 ### ERP (Etendo RX)
 
@@ -210,7 +210,7 @@ Observabilidad:
 - Almacén de tokens (sustituir en producción): `src/tokenStore.ts`
 - Ejemplo de Google Picker: `src/routes/picker.ts`
 
-## 10. Lista de verificación de soporte
+## 10. Lista de verificación de soporte { #10-support-checklist }
 
 - Variables de entorno de Auth0: `AUTH0_DOMAIN`, `AUTH0_CLIENT_ID`, `AUTH0_CLIENT_SECRET` configuradas.
 - Variables de entorno de Google: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REDIRECT_URI`, `GOOGLE_API_KEY` configuradas.
@@ -224,7 +224,7 @@ Observabilidad:
 - Middleware: variable de entorno `ENCRYPTION_KEY` configurada (hexadecimal de 64 caracteres — genere con `openssl rand -hex 32`)
 - Etendo Core: propiedad `etrx.token.encryption.key` configurada en `gradle.properties` (hexadecimal de 64 caracteres — genere con `openssl rand -hex 32`)
 
-## Resumen
+## Resumen { #summary }
 
 Este documento centraliza los pasos y las estructuras necesarias para implementar SSO OAuth seguro y la gestión de tokens de Google en Etendo RX usando una capa de Middleware dedicada. Siga las buenas prácticas para garantizar seguridad, fiabilidad y mantenibilidad.
 
