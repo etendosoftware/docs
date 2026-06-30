@@ -161,8 +161,6 @@ Un pedido de venta puede reservarse cuando el documento está contabilizado y pe
     !!! info
         Esta opción solo está disponible si el módulo [Automated Warehouse Reservation](../../../optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) está instalado, como parte del Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
-Configure el modo de reserva en el campo **Reserva** de la cabecera del pedido de venta.
-
 Para más información, visite [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
 ### Flujo de aprovisionamiento { #procurement-flow }
