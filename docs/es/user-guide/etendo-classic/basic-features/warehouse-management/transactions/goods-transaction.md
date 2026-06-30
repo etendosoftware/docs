@@ -2,7 +2,7 @@
 title: Operaciones de material (uso indirecto)
 tags:
  - Operaciones de material
- - Gestión de almacén
+ - Gestión de Almacén
  - Inventario
  - Transacciones
 ---
@@ -46,7 +46,7 @@ Cada fila de la ventana **Operaciones de material (uso indirecto)** representa u
 
 ### Tipo de movimiento { #movement-type }
 
-La columna **Tipo de movimiento** identifica la categoría de cada transacción de inventario. Los posibles valores son:
+La columna **Tipo de movimiento** identifica la categoría de cada transacción de inventario. Los principales tipos de movimiento son:
 
 - **Albarán proveedor**: stock recibido de un proveedor.
 - **Devolución proveedor**: stock devuelto a un proveedor.
@@ -73,7 +73,6 @@ Combinaciones de filtros útiles para tareas habituales de almacén:
 - **Valor atributos**: rastrea el historial completo de movimientos de un lote o número de serie específico desde la recepción hasta el envío. Use este filtro para la trazabilidad e investigaciones de calidad.
 
 *[UOM]: Unidad de medida
-*[RTV]: Devolución a proveedor
 
 ---
 

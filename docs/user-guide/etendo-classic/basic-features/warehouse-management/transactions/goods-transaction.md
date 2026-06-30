@@ -46,7 +46,7 @@ Each row in the Goods Transaction window represents one inventory movement line.
 
 ### Movement Type
 
-The **Movement Type** column identifies the category of each inventory transaction. The possible values are:
+The **Movement Type** column identifies the category of each inventory transaction. The main movement types include:
 
 - **Vendor Receipt**: stock received from a supplier.
 - **Vendor Return**: stock returned to a supplier.
@@ -73,7 +73,6 @@ Useful filter combinations for common warehouse tasks:
 - **Attribute Set Value**: tracks the full movement history of a specific lot or serial number from receipt to shipment. Use this for traceability and quality investigations.
 
 *[UOM]: Unit of Measure
-*[RTV]: Return to Vendor
 
 ---
 
