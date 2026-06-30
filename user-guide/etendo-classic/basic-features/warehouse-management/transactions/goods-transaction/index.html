@@ -2943,6 +2943,54 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-this-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use This Window
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Columns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Columns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -17004,6 +17052,54 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-this-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use This Window
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Columns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Columns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -17056,9 +17152,58 @@
 <h1 id="goods-transaction">Goods Transaction</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Warehouse Management</code> &gt; <code>Transactions</code> &gt; <code>Goods Transaction</code></p>
 <h2 id="overview">Overview</h2>
-<p>Goods Transaction window provides a read-only view with extensive filtering capabilities that shows all inventory transactions.</p>
-<p>All real warehouse movements can be seen in this window: incoming, outgoing, movements between warehouses, physical inventories, etc.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png" data-desc-position="bottom"><img alt="Goods Transaction" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png"></a></p>
+<p>The Goods Transaction window is the central record of every inventory movement in Etendo. It gives you a complete history, with the exact date and time of each movement — what moved, when, where, and why — so you can trace any change back to its source.</p>
+<p>This window captures every inventory movement recorded in the system, including <a href="../../../procurement-management/transactions/#goods-receipts">Goods Receipts</a>, <a href="../../../sales-management/transactions/#goods-shipment">Goods Shipments</a>, <a href="../physical-inventory/">Physical Inventories</a>, <a href="../goods-movement/">Goods Movements</a>, <a href="../../../production-management/transactions/#work-effort">Work Efforts</a>, <a href="../../../production-management/transactions/#internal-consumption">Internal Consumptions</a>, <a href="../../../procurement-management/transactions/#return-to-vendor-rtv">Return to Vendor</a>, and <a href="../../../sales-management/transactions/#return-from-customer">Return from Customer</a>. Each movement appears here as a single line entry as soon as it is processed in the system — no extra steps needed.</p>
+<p>You can filter this window by warehouse, product, date range, or movement type and see results immediately — there is no need to run or generate a report. The window is read-only: you can view and filter records, but cannot create or edit them here.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png" data-desc-position="bottom"><img alt="Goods Transaction" src="../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png"></a>
+<br>
+<figcaption>The Goods Transaction window showing inventory movement records with their movement type, date, product, and quantity.</figcaption>
+</figure>
+<h3 id="when-to-use-this-window">When to Use This Window</h3>
+<ul>
+<li><strong>Investigating a stock discrepancy</strong>: filter by product and date range to find all movements that affected a stock level and identify what caused the change. Use the <a href="../../analysis-tools/stock-report/">Stock Report</a> to see the resulting current stock levels per bin.</li>
+<li><strong>Auditing a specific transaction</strong>: confirm the exact quantity and movement type recorded after processing a Goods Receipt, Goods Shipment, or Physical Inventory. Use the <a href="../../analysis-tools/material-transaction-report/">Material Transaction Report</a> for the associated cost and accounting details.</li>
+<li><strong>Tracing a lot or serial number</strong>: filter by <strong>Attribute Set Value</strong> to see the complete movement history of a tracked item from receipt to shipment. The <a href="../../analysis-tools/product-movements-report/">Product Movements Report</a> provides the same history with additional filtering by warehouse and date.</li>
+<li><strong>Verifying a storage bin's activity</strong>: filter by <strong>Storage Bin</strong> to review every movement that has affected a specific warehouse location. Use <a href="../../analysis-tools/stock-history/">Stock History</a> to see what stock levels looked like at any point in the past.</li>
+</ul>
+<h2 id="columns">Columns</h2>
+<p>Each row in the Goods Transaction window represents one inventory movement line. The columns below describe the information shown for each entry.</p>
+<ul>
+<li><strong>Storage Bin</strong>: The specific shelf, rack, or location inside the warehouse where the stock was taken from or placed into.</li>
+<li><strong>Movement Date</strong>: The date the movement was recorded in Etendo, used for costing and accounting purposes.</li>
+<li><strong>Product</strong>: The product involved in the transaction.</li>
+<li><strong>Attribute Set Value</strong>: The lot number or serial number of the product, if the product is set up for lot or serial tracking in Etendo. This field is empty if the product does not use tracking.</li>
+<li><strong>Movement Type</strong>: The category of the inventory transaction (for example, Vendor Receipt, Customer Shipment, or Physical Inventory).</li>
+<li><strong>Movement Quantity</strong>: The quantity moved. Positive values indicate a stock increase; negative values indicate a stock decrease.</li>
+<li><strong><abbr title="Unit of Measure">UOM</abbr></strong>: The unit of measure for the product.</li>
+<li><strong>Order Quantity</strong>: The quantity from the original purchase or sales order line that triggered this movement, if the movement came from an order. This field may be empty for physical inventory adjustments.</li>
+</ul>
+<h3 id="movement-type">Movement Type</h3>
+<p>The <strong>Movement Type</strong> column identifies the category of each inventory transaction. The main movement types include:</p>
+<ul>
+<li><strong>Vendor Receipt</strong>: stock received from a supplier.</li>
+<li><strong>Vendor Return</strong>: stock returned to a supplier.</li>
+<li><strong>Customer Return</strong>: stock returned by a customer.</li>
+<li><strong>Customer Shipment</strong>: stock shipped to a customer.</li>
+<li><strong>Movement To</strong>: stock arriving at the destination storage bin after an internal transfer.</li>
+<li><strong>Movement From</strong>: stock leaving the source storage bin during an internal transfer.</li>
+<li><strong>Inventory In</strong>: stock increase recorded during a physical inventory.</li>
+<li><strong>Inventory Out</strong>: stock decrease recorded during a physical inventory.</li>
+<li><strong>Work Effort In</strong>: stock added as output of a production work effort.</li>
+<li><strong>Work Effort Out</strong>: stock consumed as input of a production work effort.</li>
+<li><strong>Internal Consumption</strong>: stock removed for internal use.</li>
+<li><strong>Internal Consumption Reversal</strong>: stock returned to inventory after an internal consumption was undone.</li>
+</ul>
+<h2 id="filters">Filters</h2>
+<p>Filters are applied directly in the column headers. Type a value or select a range in any column header and the grid updates immediately.</p>
+<p>Useful filter combinations for common warehouse tasks:</p>
+<ul>
+<li><strong>Product</strong> + <strong>Movement Date</strong> range: traces all activity for a specific item over a given period. Use this combination for stock reconciliation or supplier claims.</li>
+<li><strong>Movement Type</strong>: isolates one category of transaction — for example, all Vendor Receipts or all Customer Shipments. Use this to review a specific flow without noise from other movement types.</li>
+<li><strong>Storage Bin</strong>: audits all movements that affected a specific warehouse location. Use this to identify misplaced stock or confirm a bin is empty.</li>
+<li><strong>Attribute Set Value</strong>: tracks the full movement history of a specific lot or serial number from receipt to shipment. Use this for traceability and quality investigations.</li>
+</ul>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 

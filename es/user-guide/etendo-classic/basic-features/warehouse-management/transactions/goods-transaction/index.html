@@ -22,7 +22,7 @@
     
     
       
-        <title>Operaciones de material - Documentación de Etendo</title>
+        <title>Operaciones de material (uso indirecto) - Documentación de Etendo</title>
       
     
     
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operaciones de material
+              Operaciones de material (uso indirecto)
             
           </span>
         </div>
@@ -2939,7 +2939,55 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Visión general
+      Descripción general
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción general">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-this-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo utilizar esta ventana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Columnas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Columnas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de movimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtros
     </span>
   </a>
   
@@ -17329,7 +17377,55 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Visión general
+      Descripción general
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción general">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-this-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo utilizar esta ventana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Columnas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Columnas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de movimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtros
     </span>
   </a>
   
@@ -17354,25 +17450,25 @@
       
       
       
-        <span class="md-tag">Goods Transaction</span>
+        <span class="md-tag">Gestión de Almacén</span>
       
     
       
       
       
-        <span class="md-tag">Inventory</span>
+        <span class="md-tag">Inventario</span>
       
     
       
       
       
-        <span class="md-tag">Transactions</span>
+        <span class="md-tag">Operaciones de material</span>
       
     
       
       
       
-        <span class="md-tag">Warehouse Management</span>
+        <span class="md-tag">Transacciones</span>
       
     
   </nav>
@@ -17382,12 +17478,61 @@
   
 
 
-<h1 id="goods-transaction">Operaciones de material</h1>
+<h1 id="goods-transaction">Operaciones de material (uso indirecto)</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Transacciones</code> &gt; <code>Operaciones de material (uso indirecto)</code></p>
-<h2 id="overview">Visión general</h2>
-<p>La ventana <strong>Operaciones de material</strong> proporciona una vista de solo lectura con amplias capacidades de filtrado que muestra todas las transacciones de inventario.</p>
-<p>Todos los movimientos reales de almacén pueden verse en esta ventana: entradas, salidas, movimientos entre almacenes, inventarios físicos, etc.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png" data-desc-position="bottom"><img alt="Operaciones de material" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png"></a></p>
+<h2 id="overview">Descripción general</h2>
+<p>La ventana <strong>Operaciones de material (uso indirecto)</strong> es el registro central de cada movimiento de inventario en Etendo. Proporciona un historial completo, con la fecha y hora exactas de cada movimiento — qué se movió, cuándo, dónde y por qué — de modo que se pueda rastrear cualquier cambio hasta su origen.</p>
+<p>Esta ventana captura todos los movimientos de inventario registrados en el sistema, incluyendo <a href="../../../procurement-management/transactions/#goods-receipts">Albaranes (Proveedor)</a>, <a href="../../../sales-management/transactions/#goods-shipment">Albaranes (Cliente)</a>, <a href="../physical-inventory/">Inventarios físicos</a>, <a href="../goods-movement/">Movimientos entre almacenes</a>, <a href="../../../production-management/transactions/#work-effort">Partes de Trabajo</a>, <a href="../../../production-management/transactions/#internal-consumption">Consumos internos</a>, <a href="../../../procurement-management/transactions/#return-to-vendor-rtv">Devolución a proveedor</a> y <a href="../../../sales-management/transactions/#return-from-customer">Devolución de cliente</a>. Cada movimiento aparece aquí como una línea individual en cuanto se procesa en el sistema — sin pasos adicionales.</p>
+<p>Esta ventana se puede filtrar por almacén, producto, rango de fechas o tipo de movimiento y ver los resultados de inmediato — no es necesario ejecutar ni generar un informe. La ventana es de solo lectura: puede ver y filtrar registros, pero no puede crearlos ni editarlos aquí.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png" data-desc-position="bottom"><img alt="Operaciones de material (uso indirecto)" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction/goods-transaction-1.png"></a>
+<br>
+<figcaption>La ventana Operaciones de material muestra los registros de movimientos de inventario con su tipo de movimiento, fecha, producto y cantidad.</figcaption>
+</figure>
+<h3 id="when-to-use-this-window">Cuándo utilizar esta ventana</h3>
+<ul>
+<li><strong>Investigar una discrepancia de stock</strong>: filtre por producto y rango de fechas para encontrar todos los movimientos que afectaron un nivel de stock e identificar qué causó el cambio. Utilice el <a href="../../analysis-tools/stock-report/">Informe Stock</a> para ver los niveles de stock actuales resultantes por hueco.</li>
+<li><strong>Auditar una transacción específica</strong>: confirme la cantidad exacta y el tipo de movimiento registrados después de procesar un albarán de proveedor, un albarán de cliente o un inventario físico. Utilice el <a href="../../analysis-tools/material-transaction-report/">Informe Transacción de Material</a> para obtener el coste y los detalles de contabilidad asociados.</li>
+<li><strong>Rastrear un lote o número de serie</strong>: filtre por <strong>Valor atributos</strong> para ver el historial completo de movimientos de un artículo con seguimiento desde la recepción hasta el envío. El <a href="../../analysis-tools/product-movements-report/">Informe Movimiento de Productos</a> proporciona el mismo historial con filtrado adicional por almacén y fecha.</li>
+<li><strong>Verificar la actividad de un hueco</strong>: filtre por <strong>Hueco</strong> para revisar todos los movimientos que han afectado a una ubicación de almacén específica. Utilice el <a href="../../analysis-tools/stock-history/">Historial de existencias</a> para ver cómo eran los niveles de stock en cualquier momento del pasado.</li>
+</ul>
+<h2 id="columns">Columnas</h2>
+<p>Cada fila de la ventana <strong>Operaciones de material (uso indirecto)</strong> representa una línea de movimiento de inventario. Las columnas que se describen a continuación muestran la información disponible para cada entrada.</p>
+<ul>
+<li><strong>Ubicación de almacén (hueco)</strong>: La estantería, rack o ubicación específica dentro del almacén de donde se tomó o donde se depositó el stock.</li>
+<li><strong>Fecha del movimiento</strong>: La fecha en que se registró el movimiento en Etendo, utilizada con fines de costeo y contabilidad.</li>
+<li><strong>Producto</strong>: El producto implicado en la transacción.</li>
+<li><strong>Valor atributos</strong>: El número de lote o número de serie del producto, cuando el producto está configurado para seguimiento de lote o serie en Etendo. Este campo está vacío si el producto no utiliza seguimiento.</li>
+<li><strong>Tipo de movimiento</strong>: La categoría de la transacción de inventario (por ejemplo, Albarán proveedor, Albarán cliente o Inventario físico).</li>
+<li><strong>Cant. movida</strong>: La cantidad movida. Los valores positivos indican un aumento de stock; los valores negativos indican una disminución de stock.</li>
+<li><strong>Unidad</strong>: La unidad de medida del producto.</li>
+<li><strong>Cant. pedido</strong>: La cantidad de la línea de pedido de compra o venta original que generó este movimiento, cuando el movimiento proviene de un pedido. Este campo puede estar vacío en los ajustes de inventario físico.</li>
+</ul>
+<h3 id="movement-type">Tipo de movimiento</h3>
+<p>La columna <strong>Tipo de movimiento</strong> identifica la categoría de cada transacción de inventario. Los principales tipos de movimiento son:</p>
+<ul>
+<li><strong>Albarán proveedor</strong>: stock recibido de un proveedor.</li>
+<li><strong>Devolución proveedor</strong>: stock devuelto a un proveedor.</li>
+<li><strong>Devolución del cliente</strong>: stock devuelto por un cliente.</li>
+<li><strong>Albarán cliente</strong>: stock enviado a un cliente.</li>
+<li><strong>Traslado entrada</strong>: stock que llega a la ubicación de destino tras un traslado interno.</li>
+<li><strong>Traslado salida</strong>: stock que sale de la ubicación de origen durante un traslado interno.</li>
+<li><strong>Entrada inventario</strong>: aumento de stock registrado durante un inventario físico.</li>
+<li><strong>Salida inventario</strong>: disminución de stock registrada durante un inventario físico.</li>
+<li><strong>Entrada de producción</strong>: stock añadido como resultado de una orden de trabajo de producción.</li>
+<li><strong>Salida de producción</strong>: stock consumido como insumo de una orden de trabajo de producción.</li>
+<li><strong>Consumo interno</strong>: stock retirado para uso interno.</li>
+<li><strong>Reversión de consumo interno</strong>: stock reincorporado al inventario tras anular un consumo interno.</li>
+</ul>
+<h2 id="filters">Filtros</h2>
+<p>Los filtros se aplican directamente en la fila de encabezados de la tabla de resultados. Escriba un valor o seleccione un rango en el encabezado de cualquier columna y la tabla se actualiza de inmediato, sin necesidad de pasos adicionales.</p>
+<p>Combinaciones de filtros útiles para tareas habituales de almacén:</p>
+<ul>
+<li><strong>Producto</strong> + rango de <strong>Fecha del movimiento</strong>: rastrea toda la actividad de un artículo específico durante un período determinado. Use esta combinación para la conciliación de stock o las reclamaciones a proveedores.</li>
+<li><strong>Tipo de movimiento</strong>: aísla una categoría de transacción — por ejemplo, todos los albaranes de proveedor o todos los albaranes de cliente. Use este filtro para revisar un flujo específico sin interferencias de otros tipos de movimiento.</li>
+<li><strong>Hueco</strong>: audita todos los movimientos que afectaron a una ubicación de almacén específica. Use este filtro para identificar stock fuera de lugar o confirmar que un hueco está vacío.</li>
+<li><strong>Valor atributos</strong>: rastrea el historial completo de movimientos de un lote o número de serie específico desde la recepción hasta el envío. Use este filtro para la trazabilidad e investigaciones de calidad.</li>
+</ul>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Gestión de Almacén</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, usada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
