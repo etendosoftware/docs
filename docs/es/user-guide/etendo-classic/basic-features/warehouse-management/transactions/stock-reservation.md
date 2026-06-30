@@ -13,7 +13,7 @@ tags:
 
 ## Descripción general { #overview }
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6Be_9LXecJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Be_9LXecJY" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 La ventana **Reserva de existencias** es donde se gestionan todas las reservas de stock del sistema. Desde aquí es posible crear, modificar, completar, bloquear o cerrar cualquier reserva, tanto si está vinculada a una línea de pedido de venta como si es un bloqueo de stock sin pedido asociado.
 
@@ -154,7 +154,7 @@ Un pedido de venta puede reservarse cuando el documento está contabilizado y pe
 
 - **Manual**: No se crea ninguna reserva automáticamente. Tras contabilizar el pedido, cree la reserva usando el botón **Gestionar reserva** en la línea del pedido de venta, o abra directamente la ventana **Reserva de existencias** y especifique el almacén, el hueco, el atributo del producto y la cantidad.
 
-- **Automatic**: La reserva se crea y procesa automáticamente, reservando el stock disponible. Este modo reserva stock de cualquier almacén disponible perteneciente a la organización del pedido de venta, no solo del almacén definido en la cabecera del pedido.
+- **Automático**: La reserva se crea y procesa automáticamente, reservando el stock disponible. Este modo reserva stock de cualquier almacén disponible perteneciente a la organización del pedido de venta, no solo del almacén definido en la cabecera del pedido.
 
 - **Automático - solo almacén predeterminado**: La reserva se limita al almacén especificado en la cabecera del pedido. Esto optimiza la asignación de inventario y garantiza que los productos se asignen según las preferencias de almacén definidas en cada transacción.
 
