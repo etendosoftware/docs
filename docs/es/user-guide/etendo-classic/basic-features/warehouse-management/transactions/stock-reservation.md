@@ -1,162 +1,179 @@
 ---
-title: Reserva de existencias
+title: Stock Reservation
 tags:
- - Reserva de existencias
+ - Stock Reservation
  - Gestión de almacén
  - Inventario
  - Transacciones
 ---
 
-# Reserva de existencias { #stock-reservation }
+# Stock Reservation { #stock-reservation }
 
-:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Reserva de existencias`
+:material-menu: `Aplicación` > `Gestión de Almacén` > `Transacciones` > `Stock Reservation`
 
 ## Descripción general { #overview }
 
-La ventana Reserva de existencias permite a los usuarios revisar y gestionar las reservas de existencias existentes.
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Be_9LXecJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Las reservas de existencias se utilizan principalmente para garantizar la disponibilidad de stock al entregar un Pedido de venta. Con esta funcionalidad, también es posible bloquear stock no relacionado con ningún Pedido de venta para evitar su consumo.
+La ventana **Stock Reservation** es donde se gestionan todas las reservas de stock del sistema. Desde aquí es posible crear, modificar, completar, bloquear o cerrar cualquier reserva, tanto si está vinculada a una línea de Sales Order como si es un bloqueo de stock sin pedido asociado.
+
+Una reserva garantiza que una cantidad de un producto quede retenida para un propósito específico y no pueda ser consumida por nadie más. Existen dos tipos:
+
+- **Reservation**: stock ya presente en el almacén, reservado para una línea de Sales Order o bloqueado para uso interno (System reservation).
+- **Pre-Reservation**: stock aún no recibido pero ya solicitado a un proveedor. La línea de Purchase Order está vinculada a una línea de Sales Order y el sistema la convierte en una reserva completa de forma automática una vez que se reciben las mercancías.
+
+Las reservas se originan desde distintos puntos — una Sales Order, una Purchase Order o una Planificación de compras — pero todas son visibles y se gestionan desde esta ventana. Cada sección a continuación cubre el flujo correspondiente en detalle.
 
 !!! note
-    Las reservas están deshabilitadas por defecto. Solicite a su administrador del sistema que habilite la preferencia [_Habilitar reserva de existencias_](../../../../../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#initial-setup) y confirme cuándo está activa. Deberá cerrar sesión e iniciar sesión de nuevo antes de que las reservas estén disponibles.
+    Las reservas están deshabilitadas por defecto. Para habilitarlas, inserte una nueva Preferencia con la propiedad `Enable Stock Reservations` y el valor `Y`.
 
-Esta funcionalidad cubre los siguientes flujos:
+## Cabecera { #header }
 
-1.  [Ventas](#sales-flow)
-2.  [Compras](#procurement-flow)
-3.  [Planificación de compras (MRP)](#purchasing-plan-mrp)
+Esta ventana muestra todas las reservas del sistema: las creadas automáticamente desde Sales Orders y las creadas manualmente como System reservations.
 
-## Conceptos clave { #key-concepts }
+<figure markdown="span">
+  ![Vista de listado de Stock Reservation](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-0.png)
+  <figcaption>La ventana Stock Reservation mostrando el listado de reservas existentes.</figcaption>
+</figure>
 
-Una reserva identifica determinadas existencias en el almacén que quedan reservadas y no pueden ser consumidas por nadie excepto por el propietario de la reserva. Las reservas tienen un propietario: la parte autorizada a utilizar el stock reservado. El propietario puede ser una _línea de Pedido de venta_ específica (lo que significa que el stock solo puede enviarse contra ese pedido) o el _Sistema_. Una reserva del _Sistema_ bloquea el stock por completo: nadie puede enviarlo ni consumirlo. Esto se utiliza cuando el stock debe retenerse físicamente en el almacén por cualquier motivo no relacionado con un pedido específico.
+Los campos descritos a continuación son comunes a todas las reservas independientemente de su origen. **Crear un nuevo registro directamente desde esta ventana solo es necesario para las System reservations** — bloqueos de stock no vinculados a ninguna Sales Order. Para las reservas vinculadas a una Sales Order, el registro se crea desde la línea del pedido mediante el botón **Manage Reservation** (véase [Flujo de ventas](#sales-flow)).
 
-Esta funcionalidad incluye dos tipos de reservas:
+<figure markdown="span">
+  ![Cabecera de Stock Reservation](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-1.png)
+  <figcaption>Campos de la cabecera de Stock Reservation.</figcaption>
+</figure>
 
-- Pre-reserva: son reservas de stock que aún no está físicamente en el almacén, sino pedido a un proveedor, y en las que existe una relación entre la línea del pedido de compra y una línea de pedido de venta. Una vez que se recibe la línea del pedido de compra, esta pre-reserva se convierte automáticamente en una reserva.
-- Reserva: se refiere a existencias almacenadas en el almacén que ya están reservadas por una línea de pedido de venta.
+Los campos de la cabecera son:
 
-Una reserva siempre se define por el producto que se desea reservar, pero también pueden definirse otras dimensiones como el almacén, el hueco y el atributo del producto (p. ej., color, número de lote o número de serie).
+- **Organización** y **Producto** — definen qué se está reservando. Se heredan automáticamente de la línea de Sales Order cuando la reserva se origina desde allí.
+- **Cantidad** — la cantidad a reservar. También se hereda de la línea de Sales Order cuando corresponde.
+- **Línea pedido de venta** — el propietario de la reserva. Actualmente, solo las líneas de Sales Order pueden establecerse como propietarias. Si se deja en blanco, la reserva actúa como un bloqueo de stock: no es posible generar ningún albarán contra ese stock hasta que la reserva se cierre o se libere. Este tipo se denomina *System reservation* — la organización propietaria retiene el stock pero no puede enviarlo.
 
-Las reservas también pueden configurarse como asignadas o no asignadas:
+Por último, opcionalmente restrinja qué stock puede utilizarse para satisfacer la reserva especificando una o más dimensiones:
 
-- El stock _Asignado_ significa que se reserva un stock específico para un pedido de venta, en lugar de ser una reserva general. Ese stock concreto no puede reservarse para ningún otro pedido de venta.
-- El stock de una reserva _No asignada_ puede cambiarse en cualquier momento por otras existencias disponibles, garantizando siempre que la línea del Pedido de venta mantenga su reserva.
-
-## Cabecera de reserva { #reservation-header }
-
-El producto que se desea reservar se define en la solapa principal.
-
-![Cabecera de Reserva de existencias](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-1.png)
-
-Rellene la _Organización_, el _Producto_ y la _Cantidad_ que desea reservar. Si la reserva está vinculada a una línea de Pedido de venta, estos campos se completan automáticamente a partir de esa línea. A continuación, especifique la línea de Pedido de venta que utilizará el stock reservado. Si se deja en blanco, el sistema lo trata como una reserva del _Sistema_: el stock queda completamente bloqueado y no puede enviarse ni consumirse hasta que la reserva se cierre o se libere. Por último, es posible definir ciertas dimensiones para restringir el stock que puede utilizarse para satisfacer la reserva:
-
-- _Almacén_
-- _Hueco_
-- _Valor atributos_
+- **Almacén**
+- **Hueco**
+- **Valor atributos**
 
 !!! note
-    Solo es posible seleccionar almacenes marcados como activos para su organización (denominados almacenes disponibles en la configuración del sistema), y huecos ubicados dentro de esos almacenes. Si el almacén que necesita no aparece, contacte con su administrador del sistema para revisar la configuración del almacén.
+    En la selección solo aparecen los almacenes definidos como almacenes disponibles para la organización, junto con los huecos que pertenecen a ellos.
 
-La reserva puede tener distintos estados:
+Una reserva puede tener los siguientes estados:
 
-- **Borrador**: la reserva puede tener ya algunas líneas de stock, pero estas aún no se consideran stock reservado y están disponibles para todos.
-- **Completada**: la reserva se ha procesado. Si aún quedaba stock pendiente de reservar, el proceso _Completar_ intentará reservar el stock disponible. Este stock reservado automáticamente queda como no asignado.
-- **Bloqueada**: cualquier reserva puede establecerse en estado bloqueado. Esto significa que el stock queda completamente bloqueado y ni siquiera es posible generar un albarán para el pedido de venta consumiendo el stock reservado. En este estado, el botón _Bloquear_ es reemplazado por _Desbloqueada_, permitiendo al usuario revertir la acción.
-- **Cerrado**: una reserva cerrada no puede reactivarse posteriormente. Además, cuando una reserva se cierra, su Cantidad se establece con el mismo valor que la Cantidad distribuida, evitando problemas adicionales de inconsistencia.
+- **Borrador**: La reserva puede ya tener líneas de stock, pero esas líneas aún no se consideran stock reservado y permanecen disponibles para todos.
+- **Completada**: La reserva ha sido procesada. Si aún quedaba stock pendiente de reservar, el proceso *Complete* reserva el stock disponible automáticamente, dejándolo como no asignado.
+- **Bloqueada**: El stock queda completamente bloqueado. No es posible generar un albarán para la Sales Order que consume el stock reservado mientras se encuentre en este estado. El botón **Bloquear** es reemplazado por **Unhold**, lo que revierte la acción.
+- **Cerrado**: Una reserva cerrada no puede reactivarse. Cuando una reserva se cierra, su **Cantidad** se establece con el mismo valor que la **Cantidad distribuida**, evitando posteriores inconsistencias.
 
-Una reserva tiene 3 cantidades principales:
+Una reserva registra tres cantidades principales:
 
-**Cantidad**
-
-Determina la cantidad que se desea reservar. Si la reserva está relacionada con una línea de Pedido de venta, esta cantidad debe ser la misma que la Cant. pedido.
-
-**Cantidad reservada**
-
-Es la cantidad total que realmente está reservada. Cuando no hay suficiente stock disponible, es posible tener una _Cantidad reservada_ inferior a la _Cantidad_.
-
-**Cantidad distribuida**
-
-Es la cantidad que se ha entregado y distribuida de la reserva. Cuando se procesa un Albarán (Cliente) para un Pedido de venta reservado, la Cantidad distribuida de la reserva se incrementa con la cantidad entregada.
-
-### Gestionar stock { #manage-stock }
-
-Cuando la reserva está en estado _Borrador_ o _Completada_, es posible modificar el stock reservado haciendo clic en el botón **Gestionar stock**, que abre una ventana de selección donde se elige qué líneas de stock incluir y se confirman los cambios.
-
-![Ventana de seleccionar y ejecutar de Gestionar stock](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-3.png)
-
-Esta ventana muestra todo el stock ya reservado, además de otro stock disponible y líneas de pedido de compra no recibidas que pueden utilizarse para satisfacer la reserva. El stock disponible se filtra por los almacenes configurados como activos (disponibles) para su organización —los mismos almacenes visibles en la cabecera de la reserva— y por las dimensiones que puedan estar establecidas; las líneas de pedido de compra también se filtran por las mismas dimensiones. Para cada línea seleccionada, debe establecerse la cantidad a reservar y si el stock está asignado o no. Al establecer cantidades, siga estas reglas:
-
-- La cantidad que introduzca para cada línea no debe superar el stock disponible para esa línea (el sistema resta del total disponible el stock ya reservado en otras reservas).
-- El total de todas las líneas seleccionadas no debe superar la cantidad total indicada en la cabecera de la reserva.
-- Si el stock de esta reserva ya ha sido enviado (la cantidad distribuida es mayor que cero), la cantidad que asigne a esas líneas enviadas debe ser al menos igual a la cantidad ya enviada.
+- **Cantidad** *(cabecera de reserva)* — la cantidad a reservar. Cuando está vinculada a una línea de Sales Order, debe coincidir con la cantidad pedida.
+- **Cantidad reservada** *(barra de estado)* — la cantidad total realmente reservada. Puede ser inferior a la **Cantidad** cuando no hay suficiente stock disponible.
+- **Distribuido** *(barra de estado)* — la cantidad entregada y liberada de la reserva. Se incrementa cada vez que se procesa un Albarán (Cliente) para la Sales Order reservada.
 
 ## Stock { #stock }
 
-La solapa Stock lista cada línea de stock o línea de Pedido de compra seleccionada para satisfacer la reserva.
+La solapa **Stock** lista cada línea de stock o línea de Purchase Order seleccionada para satisfacer la reserva. Estas líneas se añaden y editan mediante el botón [**Gestionar stock**](#manage-stock).
 
-![Solapa Stock mostrando líneas de stock reservado](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-2.png)
+<figure markdown="span">
+  ![Solapa Stock mostrando líneas de stock reservado](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-2.png)
+  <figcaption>Solapa Stock con líneas de stock reservado.</figcaption>
+</figure>
 
-En la solapa _Stock_ se muestra el stock realmente reservado. El stock debe cumplir las dimensiones definidas en la cabecera. Cuando el stock está físicamente en el almacén, el stock reservado se identifica por el Hueco y el Valor atributos cuando aplique. En el caso de pre-reservas, el stock aún no está en el almacén, por lo que la propiedad _Hueco_ está en blanco y se establece la _Línea de pedido de compra_. Cuando una pre-reserva se recibe y se convierte en una reserva, se establece el hueco donde se ha almacenado el stock, manteniendo la línea del pedido de compra.
+Cada línea representa un lote específico de stock asignado a la reserva. Los campos son:
 
-El stock reservado tiene 2 cantidades:
+- **Hueco** — la ubicación del almacén donde se encuentra el stock. Se completa cuando el stock ya está en el almacén. Vacío para las Pre-Reservations (stock aún no recibido); el sistema lo completa automáticamente una vez que llegan y se reciben las mercancías.
+- **Valor atributos** — el número de lote, número de serie u otro atributo de seguimiento del producto. Se completa solo cuando el producto está configurado para el seguimiento por atributo. Vacío en caso contrario.
+- **Línea pedido compra** — la línea del pedido de proveedor vinculada a esta reserva. Se completa solo para Pre-Reservations. Vacío para reservas estándar de stock ya presente en el almacén.
+- **Cantidad** — la cantidad asignada a esta línea.
+- **Distribuido** — la cantidad de esta línea que ya ha sido enviada. Se incrementa cada vez que se procesa un Albarán (Cliente) que consume esta reserva.
+- **Asignado** — controla si este stock específico queda bloqueado exclusivamente para esta reserva (*Asignado*) o puede ser reemplazado por el sistema con stock disponible equivalente si fuera necesario (*No asignado*). Use *Asignado* cuando deba enviarse exactamente ese lote; use *No asignado* cuando cualquier stock equivalente sea aceptable. Si el stock asignado entra en conflicto con otra reserva bloqueada, el sistema muestra un error en lugar de realizar el envío.
 
-**Cantidad**
+## Botones { #buttons }
 
-La cantidad reservada.
+### Gestionar stock { #manage-stock }
 
-**Cantidad distribuida**
+Cuando la reserva está en estado *Borrador* o *Completada*, modifique el stock reservado haciendo clic en **Gestionar stock**. Esto abre una ventana de selección donde se elige qué líneas de stock incluir y se confirman los cambios.
 
-La cantidad distribuida o entregada.
+<figure markdown="span">
+  ![Ventana de seleccionar y ejecutar de Gestionar stock](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-3.png)
+  <figcaption>Ventana de selección de Gestionar stock.</figcaption>
+</figure>
+
+Esta ventana muestra todo el stock ya reservado, el stock disponible y las líneas de Purchase Order no recibidas que pueden satisfacer la reserva. El stock disponible se filtra por los almacenes configurados como activos (disponibles) para su organización — los mismos almacenes visibles en la cabecera de la reserva — y por las dimensiones que puedan estar establecidas. Las líneas de Purchase Order también se filtran por las mismas dimensiones. Para cada línea seleccionada, establezca la cantidad a reservar y si el stock está asignado o no. Al establecer cantidades, siga estas reglas:
+
+- La cantidad introducida para cada línea no debe superar el stock disponible para esa línea. El sistema resta del total disponible el stock ya reservado en otras reservas.
+- El total de todas las líneas seleccionadas no debe superar la cantidad total indicada en la cabecera de la reserva.
+- Si el stock de esta reserva ya ha sido enviado (la cantidad distribuida es mayor que cero), la cantidad asignada a esas líneas enviadas debe ser al menos igual a la cantidad ya enviada.
+
+### Procesar { #process }
+
+Mueve la reserva del estado *Borrador* al estado *Completada*. Si aún quedaba stock pendiente de reservar, el sistema reserva el stock disponible automáticamente en ese momento, dejándolo como no asignado.
+
+### Bloquear { #put-on-hold }
+
+Bloquea la reserva completamente. Mientras está bloqueada, no es posible generar ningún albarán contra el stock reservado. El botón cambia a **Unhold** una vez que la reserva está bloqueada.
+
+### Desbloquear { #unhold }
+
+Elimina el bloqueo y devuelve la reserva al estado *Completada*, permitiendo que se vuelvan a generar albaranes.
 
 ### Movimiento entre almacenes { #goods-movement }
 
-Si el stock reservado necesita reubicarse dentro del almacén (por ejemplo, para trasladar artículos a una zona de almacenamiento diferente), utilice el botón **Movimiento entre almacenes**. Este abre una ventana con todos los huecos donde actualmente se encuentra el producto reservado. Puede seleccionar un hueco, ajustar la cantidad a mover y elegir el hueco de destino.
+Use el botón **Goods Movement** cuando los artículos se trasladen físicamente a una ubicación diferente del almacén y la reserva deba reflejar ese cambio.
 
-![Ventana de Movimiento entre almacenes para stock reservado](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-4.png)
+Este botón abre una ventana con todos los huecos donde actualmente se encuentra el producto reservado. Seleccione un hueco, ajuste la cantidad a mover y elija el hueco de destino.
 
-## Flujo de ventas { #sales-flow }
+<figure markdown="span">
+  ![Ventana de Goods Movement para stock reservado](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/transactions/stock-reservation/stock-reservation-4.png)
+  <figcaption>Ventana de Goods Movement para stock reservado.</figcaption>
+</figure>
 
-Un pedido de venta puede reservarse cuando el documento está contabilizado y pendiente de entrega. La forma de realizar la reserva es:
+## Consumo de reserva { #reservation-consumption }
 
-- Manual: no se genera ninguna reserva automáticamente. Tras contabilizar el pedido, cree la reserva utilizando el botón **Gestionar reserva** en la línea del Pedido de venta o abriendo directamente la ventana Reserva de existencias, especificando el almacén, el hueco, el atributo del producto y la cantidad.
+Cuando se crea automáticamente un [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment) de una Sales Order reservada, este consume el stock reservado. El sistema propone primero el stock asignado (bloqueado). Si no es suficiente, obtiene stock de cualquier otro disponible, incluido stock no bloqueado reservado para otros pedidos. Si la Sales Order relacionada no tiene ninguna reserva, solo se propone stock no reservado.
 
-- Automática: la reserva se crea y procesa automáticamente, reservando el stock disponible. Esta opción reserva stock de cualquiera de los almacenes disponibles pertenecientes a la organización del pedido de venta creado, no solo del almacén definido en la cabecera del pedido.
-
-- Automática - Solo almacén por defecto: la reserva se limita únicamente al almacén especificado en la cabecera del pedido. Esto permite optimizar la asignación de inventario y garantizar que los productos se asignen según las preferencias de almacén definidas en cada transacción.
-
-    !!! info
-        Esta última opción solo está disponible si el módulo [Automated Warehouse Reservation](../../../optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) está instalado, como parte del Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
-
-El modo de reserva se configura en el campo **Reserva** de la cabecera del Pedido de venta.
-
-Para más información, visite [Pedido de venta](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
-
-## Flujo de compras { #procurement-flow }
-
-Las pre-reservas también pueden realizarse desde el Pedido de compra. Desde la línea del pedido de compra, los usuarios pueden seleccionar cualquier línea de pedido de venta pendiente de entrega que esté esperando recibir la mercancía en el almacén. Una vez que se reciben los artículos, la pre-reserva se convierte en una reserva y las existencias quedan reservadas para esa línea de pedido de venta.
-
-Para más información, visite [Pedido de compra](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
-
-## Planificación de compras (MRP) { #purchasing-plan-mrp }
-
-Al lanzar la [Planificación de compras](../../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md#purchasing-plan), existe la posibilidad de realizar reservas para Pedidos de venta y pre-reservas; es decir, crear pedidos de compra vinculados a pedidos de venta.
-
-## Consumo de reservas { #reservation-consumption }
-
-Cuando se crea automáticamente un [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment) de un Pedido de venta reservado, consumirá el stock reservado. El proceso propondrá primero el posible stock asignado y, posteriormente, cualquier stock disponible basado en las reglas estándar de obtención de stock, incluyendo stock reservado pero no asignado (incluso de otras reservas). Si el Pedido de venta relacionado no tiene ninguna reserva, solo se propone stock no reservado.
-
-Cuando se procesa el Albarán (Cliente), la reserva se actualiza para reflejar el stock que finalmente se ha entregado y la cantidad distribuida se ajusta en consecuencia. El resultado depende de si el stock enviado coincide con el stock reservado y de si está involucrado en otra reserva:
+Cuando se procesa el Albarán (Cliente), la reserva se actualiza para reflejar el stock finalmente entregado y la cantidad distribuida se ajusta en consecuencia. El resultado depende de si el stock enviado coincide con el stock reservado y de si está involucrado en otra reserva:
 
 - Todo el stock del albarán coincide con el stock reservado. La cantidad distribuida se actualiza en consecuencia.
 - Se envía un stock diferente. El resultado depende de cómo está reservado ese stock:
 
 | Situación | Qué hace el sistema | Qué puede necesitar hacer |
-|---|---|---|
+| :--- | :--- | :--- |
 | El stock enviado no está reservado por nadie más | Actualiza la reserva para que coincida con el stock enviado automáticamente | Nada: la reserva se ajusta sola |
 | El stock enviado pertenece a otra reserva que NO está bloqueada (no asignada) | Intenta encontrar stock de reemplazo para esa otra reserva | Nada si se encuentra stock; si no, edite la otra reserva o cambie el stock del albarán |
 | El stock enviado pertenece a otra reserva que SÍ está bloqueada (asignada) | Muestra un error y se detiene | Cambie el stock en el Albarán (Cliente), o solicite al propietario de la otra reserva que libere el stock en conflicto |
+
+## Procesos relacionados { #related-processes }
+
+Las reservas también pueden crearse y gestionarse desde otras ventanas del sistema. Las secciones a continuación describen cada punto de entrada.
+
+### Flujo de ventas { #sales-flow }
+
+Una Sales Order puede reservarse cuando el documento está contabilizado y pendiente de entrega. Hay tres modos de reserva disponibles:
+
+- **Manual**: No se crea ninguna reserva automáticamente. Tras contabilizar el pedido, cree la reserva usando el botón **Manage Reservation** en la línea de la Sales Order, o abra directamente la ventana **Stock Reservation** y especifique el almacén, el hueco, el atributo del producto y la cantidad.
+
+- **Automatic**: La reserva se crea y procesa automáticamente, reservando el stock disponible. Este modo reserva stock de cualquier almacén disponible perteneciente a la organización de la Sales Order, no solo del almacén definido en la cabecera del pedido.
+
+- **Automatic - Only default warehouse**: La reserva se limita al almacén especificado en la cabecera del pedido. Esto optimiza la asignación de inventario y garantiza que los productos se asignen según las preferencias de almacén definidas en cada transacción.
+
+    !!! info
+        Esta opción solo está disponible si el módulo [Automated Warehouse Reservation](../../../optional-features/bundles/warehouse-extensions/overview.md#automated-warehouse-reservation) está instalado, como parte del Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
+
+Configure el modo de reserva en el campo **Reserva** de la cabecera de la Sales Order.
+
+Para más información, visite [Sales Order](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
+
+### Flujo de aprovisionamiento { #procurement-flow }
+
+Las Pre-Reservations también pueden realizarse desde la Purchase Order. Desde la línea del pedido de compra, seleccione cualquier línea de Sales Order pendiente de entrega que esté esperando recibir mercancía en el almacén. Una vez que se reciben los artículos, el sistema convierte la Pre-Reservation en una Reservation y reserva las mercancías para esa línea de Sales Order.
+
+Para más información, visite [Purchase Order](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
+
+### Planificación de compras (MRP) { #purchasing-plan-mrp }
+
+Al lanzar la [Planificación de compras](../../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md#purchasing-plan), pueden crearse reservas para Sales Orders y Pre-Reservations — es decir, Purchase Orders vinculadas a Sales Orders.
 
 ---
 
