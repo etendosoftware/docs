@@ -8,10 +8,6 @@ tags:
     - Herramientas de análisis
 ---
 
-:octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es`
-
-# Modelo 303
-
 ## Descripción General
 
 El módulo **Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación** permite a las empresas cumplir con sus obligaciones fiscales de autoliquidación de IVA. El resultado es la diferencia entre el IVA Devengado y el IVA Deducible. El módulo genera el Modelo 303 como un fichero de texto válido conforme a los requerimientos de la Agencia Tributaria española (Orden EHA/3786/2008). Es parte del bundle de [Localización Española](overview.md) de Etendo.
@@ -50,10 +46,7 @@ Genere el fichero en Etendo desde el **Generador de declaraciones de impuestos**
 
 :material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`
 
-Una vez generado, el fichero puede:
-
-1.  **Pre-validarse** en la página web de la AEAT: [_Formulario del 303 para su presentación (predeclaración)_](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
-2.  **Presentarse** en el siguiente enlace de la AEAT: [_Presentación del Modelo_](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
+Una vez generado, el fichero puede pre-validarse y presentarse desde el [portal oficial del Modelo 303 en la AEAT](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/G414.shtml){target="_blank"}.
 
 La autoliquidación de IVA puede ser:
 
@@ -195,13 +188,7 @@ Una vez generado, el fichero tiene el siguiente aspecto:
 
 ## Pre-validación y Presentación
 
-Pre-valide el fichero generado en Etendo en el siguiente enlace de la AEAT:
-
-[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
-
-En ese enlace, importe el fichero mediante la opción **Optativo: Importar datos de fichero**. Los datos del fichero se muestran para su validación.
-
-Una vez validados los datos, preséntelo en el siguiente enlace — se requiere certificado electrónico de identificación o DNI electrónico: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}.
+Acceda al [portal oficial del Modelo 303 en la AEAT](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/G414.shtml){target="_blank"} para pre-validar y presentar el fichero. Desde ese portal encontrará el servicio **Pre303** para validar los datos antes de la presentación oficial, así como la opción de presentación electrónica — se requiere certificado electrónico de identificación o DNI electrónico.
 
 ## Referencia
 
