@@ -10,16 +10,18 @@ tags:
 
 :octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es`
 
-## Descripción general
+# Modelo 303
 
-El módulo Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación, permite a las empresas cumplir con sus obligaciones fiscales de "Autoliquidación de IVA" como diferencia entre el IVA Devengado y el IVA Deducible, a través de la presentación del Modelo 303 como un fichero de texto válido conforme a los requerimientos establecidos por la Agencia Tributaria española (Orden EHA/3786/2008). Es parte del bundle de [Localización Española](overview.md) de Etendo.
+## Descripción General
+
+El módulo **Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación** permite a las empresas cumplir con sus obligaciones fiscales de autoliquidación de IVA. El resultado es la diferencia entre el IVA Devengado y el IVA Deducible. El módulo genera el Modelo 303 como un fichero de texto válido conforme a los requerimientos de la Agencia Tributaria española (Orden EHA/3786/2008). Es parte del bundle de [Localización Española](overview.md) de Etendo.
 
 !!! info
     Compatible con Etendo 21.4 o versiones posteriores.
 
-La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
+Consulte la estructura válida del fichero en el siguiente enlace de la AEAT: [_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
 
-El fichero del modelo 303 contiene la siguiente información:
+El fichero del Modelo 303 contiene la siguiente información:
 
 -   **Información genérica**
     -   NIF
@@ -29,7 +31,7 @@ El fichero del modelo 303 contiene la siguiente información:
 -   **IVA devengado** (IVA repercutido en ventas), incluyendo:
     -   IVA devengado conforme al régimen general - Base, Cuota y Tipo
     -   IVA devengado conforme al régimen especial de recargo de equivalencia, especificado por tipo de IVA - Base, Cuota y Tipo
-    -   IVA devengado en las adquisiciones intracomunitarias de bienes- Base y Cuota
+    -   IVA devengado en las adquisiciones intracomunitarias de bienes - Base y Cuota
 -   **IVA Deducible** (IVA soportado en compras), incluyendo:
     -   operaciones interiores de bienes y servicios - Base y Cuota
     -   operaciones interiores de bienes de inversión - Base y Cuota
@@ -44,31 +46,34 @@ El fichero del modelo 303 contiene la siguiente información:
     -   operaciones no sujetas o de inversión de sujeto pasivo - Base
 -   **Datos bancarios y otros.**
 
-Dicho fichero se genera en Etendo desde el Generador de declaraciones de impuestos que se encuentra en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`
+Genere el fichero en Etendo desde el **Generador de declaraciones de impuestos**:
 
-El fichero se puede:
+:material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`
 
-1.  **pre-validar** en la página web de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
-2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
+Una vez generado, el fichero puede:
+
+1.  **Pre-validarse** en la página web de la AEAT: [_Formulario del 303 para su presentación (predeclaración)_](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
+2.  **Presentarse** en el siguiente enlace de la AEAT: [_Presentación del Modelo_](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
 
 La autoliquidación de IVA puede ser:
 
 !!! info
     Las "casillas" corresponden a los campos del formulario oficial de la AEAT. Las "posiciones" indican la ubicación de cada dato dentro del fichero de texto generado.
 
--   "**A ingresar**" (casilla 48>0), en el caso de que el IVA Devengado > IVA deducible. El IVA a ingresar se reflejará en la casilla \[I\], posición 860.
--   "**A compensar**" (casilla 48<0), en el caso de que el IVA Devengado < IVA deducible. El IVA a compensar se reflejará en la casilla \[49\], posición 804.
--   "**A devolver**" (casilla 48<0 e inscripción en el Registro de devolución mensual), en el caso de que el IVA Devengado < IVA deducible. El IVA a devolver se reflejará en la casilla \[50\], posición 822.
--   "**Cero**" o "**Sin actividad**" (casilla 48=0).
+-   *A ingresar* (casilla 48>0): cuando el IVA Devengado > IVA deducible. El IVA a ingresar se refleja en la casilla \[I\], posición 860.
+-   *A compensar* (casilla 48<0): cuando el IVA Devengado < IVA deducible. El IVA a compensar se refleja en la casilla \[49\], posición 804.
+-   *A devolver* (casilla 48<0 e inscripción en el Registro de devolución mensual): cuando el IVA Devengado < IVA deducible. El IVA a devolver se refleja en la casilla \[50\], posición 822.
+-   *Cero* o *Sin actividad* (casilla 48=0).
 
 ## Presentación del Modelo 303
-Los obligados a presentar el modelo 303 son:
+
+Los obligados a presentar el Modelo 303 son:
 
 -   Los sujetos pasivos que realicen actividades a las que aplique el Régimen General del Impuesto (IVA) o cualquier otro de los regímenes del mismo, a excepción del Régimen especial de agricultura, ganadería y pesca, del Régimen de recargo de equivalencia y del Régimen Simplificado.
 
-La presentación del modelo 303 puede ser Mensual o Trimestral.
+La presentación del Modelo 303 puede ser mensual o trimestral.
 
-La presentación será obligatoria por vía telemática (fichero de texto válido) para los sujetos pasivos que:
+La presentación es obligatoria por vía telemática (fichero de texto válido) para los sujetos pasivos que:
 
 -   tengan forma jurídica de sociedad anónima o sociedad de responsabilidad limitada
 -   y/o estén inscritos en el "Régimen de devolución mensual".
@@ -81,16 +86,16 @@ La presentación será obligatoria por vía telemática (fichero de texto válid
 
     **Cumplimentación de declaraciones**
 
-    En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde julio de 2010 (correspondientes al mes 07 ó al 3T) , se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos (18%, 8%) junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de junio (7% ó 16%).
+    En las autoliquidaciones de IVA, Modelo 303, correspondientes a los períodos iniciados desde julio de 2010 (correspondientes al mes 07 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos (18%, 8%) junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de junio (7% ó 16%).
 
     En estos supuestos deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
 
     En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
 
-    En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2010 o a los meses 01 a 06 de 2010 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos del 18% ó 8%.
+    En las autoliquidaciones Modelo 303 correspondientes al 1T ó 2T de 2010 o a los meses 01 a 06 de 2010 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos del 18% ó 8%.
 
     !!! info
-        Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+        Los cambios expuestos en esta sección implican una modificación del contenido de los datos de referencia del módulo.
 
 ??? info "Novedades a partir del 1 de septiembre de 2012"
 
@@ -100,91 +105,122 @@ La presentación será obligatoria por vía telemática (fichero de texto válid
 
     **Cumplimentación de declaraciones**
 
-    En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde septiembre de 2012 (correspondientes al mes 09 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de agosto.
+    En las autoliquidaciones de IVA, Modelo 303, correspondientes a los períodos iniciados desde septiembre de 2012 (correspondientes al mes 09 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de agosto.
 
     En estos supuestos, deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
 
     En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
 
-    En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2012 o a los meses 01 a 08 de 2012 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos.
+    En las autoliquidaciones Modelo 303 correspondientes al 1T ó 2T de 2012 o a los meses 01 a 08 de 2012 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos.
 
     !!! info
-        Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+        Los cambios expuestos en esta sección implican una modificación del contenido de los datos de referencia del módulo.
 
 
-## Instalación y aplicación del módulo
-### Requisitos previos
-Antes de instalar el módulo `Spain AEAT Modelo 303`, deben estar instalados y aplicados a la organización los siguientes módulos:
+## Instalación y Aplicación del Módulo
 
-- **Etendo** (versión compatible con el bundle de Localización Española).
-- **Bundle de Localización Española** (`com.etendoerp.localization.spain.extensions`), disponible en el [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target=”_blank”}.
-- **[Impuestos para España](impuestos-para-españa.md)** (`org.openbravo.localization.spain.referencedata.taxes`), incluido en el bundle anterior, con su dataset aplicado a la organización legal correspondiente.
+!!! info
+    Si el bundle **Localización Española** todavía no está instalado en su entorno Etendo, solicítelo a su administrador o acceda al [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"} para adquirirlo. Una vez instalado, continúe con los pasos de esta sección.
 
-!!! note
-    El módulo incluye un conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 303. Este dataset debe aplicarse a la organización legal correspondiente, tal y como se explica en el apartado siguiente.
+Una vez instalado el bundle **Localización Española** — el cual incluye el módulo **Tax Report: Modelo 303 (Spain)** —, aplique su conjunto de datos a la organización legal con contabilidad desde:
 
-### Aplicación del módulo
-Una vez instalado el módulo del 303, el usuario debe aplicar su conjunto de datos a la organización legal con contabilidad correspondiente, desde :material-menu: `Configuración General` > `Organización` > `Gestión del módulo de Empresa`:
+:material-menu: `Configuración General` > `Organización` > `Gestión del módulo de Empresa`:
 
-1. Seleccionar la **Organización** legal con contabilidad correspondiente. (Es la organización que representa a la entidad legal con obligaciones fiscales en España y que tiene configurada una contabilidad activa. Si no está seguro, consulte con el administrador del sistema.)
-2. En **Datos de referencia**, marcar el dataset del módulo `Modelo AEAT 303`.
-3. Hacer clic en **Aceptar**.
+1. Seleccione la **Organización** legal con contabilidad. Es la organización que representa a la entidad legal con obligaciones fiscales en España y que tiene configurada una contabilidad activa.
+2. En **Datos de referencia**, marque las siguientes opciones:
+    - `Tax Report: Modelo 303 (Spain) - 3.0.0 - Spanish (Spain)`
+    - `Taxes: configuration for Spain (Impuestos para España) - 3.0.0 - Spanish (Spain)` (solo si no lo ha aplicado antes; si ya lo hizo al instalar otro módulo de la Localización Española, puede omitirlo).
+3. Haga clic en **Aceptar**.
 
 !!! note
-    El dataset del módulo 303 solo aparece en esta lista una vez que el módulo `Spain AEAT Modelo 303` está instalado.
+    **Si el dataset no aparece en la lista:** verifique que (1) el módulo `Tax Report: Modelo 303 (Spain)` está instalado y (2) ha seleccionado una organización distinta de `*` — debe ser siempre una organización legal. Si tras seleccionar la organización correcta las opciones siguen sin aparecer, espere unos segundos y vuelva a comprobar.
 
 ![Gestión del módulo de Empresa](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/gestion-modulo-empresa.png)
 
-## Contenido del módulo
-Al instalar y aplicar este módulo, Etendo crea automáticamente los siguientes elementos:
 
--   Se han creado dos nuevos informes, el modelo 303 mensual y el trimestral para la organización/es en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de impuestos`, tal y como se muestra en la siguiente imagen:
-     
+## Actividades del I.A.E.
 
-![Declaración de Impuestos - Modelo 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/declaracion-de-impuestos.png)
+En el Modelo 303, a partir de 2022, el informe mensual del último periodo debe incluir las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
 
--   La solapa "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
-    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la solapa "Parámetro de declaración":
-    -   IVA Devengado - Régimen Ordinario
-    -   IVA Devengado - Recargo de Equivalencia
-    -   IVA Devengado - Adquisiciones Intracomunitarias
+El módulo **Epígrafes I.A.E.**, instalado como dependencia del 303, añade una nueva solapa a la ventana **Organización** donde puede indicar todas las actividades en las que su empresa ha estado trabajando. El Modelo 303 debe incluir como mínimo una actividad principal, marcada en la aplicación como por defecto, y como máximo 5 actividades. Si incluye más de 5 actividades, el informe tomará las 5 primeras según el número de línea.
 
-Estos parámetros se ligan a los tipos de impuestos en función de que las operaciones ligadas a ellos deban declararse, por ejemplo, como parte del IVA Devengado en Régimen Ordinario o bien como parte del IVA Devengado por Recargo de Equivalencia.
+![Organización - Actividades del IAE](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/organizacion-actividades-iae.png)
 
-![Sección de Impuestos - IVA Devengado](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-impuestos-iva-devengado.png)
+El módulo **Epígrafes IAE** incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, cree un nuevo registro en la ventana **Epígrafes IAE** e inclúyalo en la solapa **Actividades del IAE** de la ventana **Organización**.
 
--   Por tanto, los rangos de impuestos se han asociado al correspondiente parámetro del 303, con el fin de que las transacciones completadas y contabilizadas ligadas a dichos impuestos, se tenga en cuenta en una u otra casilla/posición del fichero.  
-     
+Para el Modelo 303, los campos **Epígrafe IAE** y **Código** son obligatorios.
 
-![Rango de impuesto asociado a parámetro del 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/rango-impuesto-parametro-303.png)
+## Generación del Modelo 303
 
--   Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 303, desde la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`, tal y como se muestra en la siguiente imagen:
-     
+El Modelo 303 de autoliquidación de IVA se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde:
 
-![Generador de declaraciones de impuestos](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/generador-declaraciones-impuestos.png)
+:material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`
 
-## Configuración
-### Configuración de impuestos / IVA
+Introduzca los datos genéricos: **Organización**, **Ejercicio** y **Periodo**.
 
-Para configurar los impuestos, acceda a :material-menu: `Configuración General` > `Organización` > `Gestión del módulo de Empresa`. Seleccione la organización legal con contabilidad y aplique los módulos en el siguiente orden:
+![Generador de declaraciones - Datos genéricos](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/generador-declaraciones-datos-genericos.png)
 
-1. Primero, el módulo de **Impuestos para España** (si no ha sido aplicado previamente), a nivel de Organización raíz del sistema.
-2. Después, el módulo **Modelo AEAT 303**, a nivel de Organización legal con contabilidad.
+A continuación, introduzca los parámetros de entrada — datos que no se obtienen automáticamente de Etendo — mediante el botón de proceso **Parámetros de entrada**.
 
-!!! note
-    Si ya realizó este paso al seguir la sección [Aplicación del módulo](#aplicacion-del-modulo) más arriba, no es necesario repetirlo.
+!!! info
+    Algunos parámetros de entrada, como **Inscrito en el Registro Devolución Mensual**, pueden configurarse como parámetros constantes para no tener que introducirlos cada vez que se genera el fichero del 303.
 
-### Configuración del modelo 303
-La configuración del modelo 303 se instala por defecto y se puede comprobar en la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos`.
+Para configurar un parámetro como constante:
 
-Tanto para el modelo 303 mensual como trimestral en la solapa "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
+1. Acceda a :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos`.
+2. Localice la sección de declaración que contiene el parámetro a configurar. El parámetro **Inscrito en el Registro de devolución mensual** se encuentra en la sección **Identificación**.
+3. En ese parámetro, cambie el tipo de *Entrada* a *Constante*.
+4. En el campo **Valor constante** (*Constant Value*), introduzca `1` si el sujeto pasivo está inscrito en el registro de devolución mensual, o `2` si no lo está.
+
+!!! warning
+    Si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de tipo *Entrada* a *Constante* se sobreescriben. Vuelva a configurarlos tras cada actualización.
+
+Las secciones de la ventana de parámetros se corresponden con las secciones definidas para el Modelo 303.
+
+Secciones **Fichero**, **Tipo de declaración** y **Sin actividad**:
+
+![Secciones Fichero, Tipo de declaración y Sin actividad](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
+
+Secciones **IVA deducible**, **Liquidación-resultado** y **Banco**:
+
+![Secciones IVA deducible, Liquidación-resultado y Banco](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-iva-deducible-liquidacion-banco.png)
+
+Secciones **Complementaria**, **Tributación por razón de territorio** y **Additional Information** *(este nombre aparece en inglés en la aplicación)*:
+
+![Secciones Complementaria, Tributación por razón de territorio y Additional Information](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-complementaria-tributacion.png)
+
+Una vez generado, el fichero tiene el siguiente aspecto:
+
+![Fichero generado del Modelo 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/fichero-generado-303.png)
+
+## Pre-validación y Presentación
+
+Pre-valide el fichero generado en Etendo en el siguiente enlace de la AEAT:
+
+[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
+
+En ese enlace, importe el fichero mediante la opción **Optativo: Importar datos de fichero**. Los datos del fichero se muestran para su validación.
+
+Una vez validados los datos, preséntelo en el siguiente enlace — se requiere certificado electrónico de identificación o DNI electrónico: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}.
+
+## Referencia
+
+Esta sección es de consulta opcional. Describe cómo Etendo clasifica internamente cada tipo de factura en las casillas del Modelo 303. Si solo necesita generar el fichero, vaya directamente a [Generación del Modelo 303](#generacion-del-modelo-303).
+
+### Secciones del Modelo 303
+
+La configuración del Modelo 303 se instala por defecto. Compruébela en:
+
+:material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos`
+
+Tanto para el Modelo 303 mensual como trimestral, la solapa **Sección de declaración** contiene 11 secciones, una por cada grupo de información a incluir al generar el fichero del Modelo 303:
 
 ![Declaración de Impuestos - Secciones del 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/declaracion-impuestos-secciones.png)
 
 -   **Fichero**
-    -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
+    -   Esta sección contiene un parámetro de tipo *Entrada* para introducir el nombre del fichero 303 al generarlo.
 -   **Tipo de declaración**
-    -   Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
+    -   Esta sección contiene 8 parámetros de tipo *Entrada*, uno por cada tipo de declaración, para marcar el correspondiente al generar el fichero.
         -   Compensación
         -   Devolución
         -   Ingreso
@@ -194,44 +230,42 @@ Tanto para el modelo 303 mensual como trimestral en la solapa "Sección de decla
         -   Devolución cuenta corriente tributaria
         -   Devolución por transferencia al extranjero
 -   **Sin Actividad**
-    -   Esta sección contiene 1 parámetro de tipo "Entrada" para que el usuario pueda marcar una liquidación de IVA como "Sin Actividad".
+    -   Esta sección contiene 1 parámetro de tipo *Entrada* para marcar una liquidación de IVA como *Sin Actividad*.
 -   **Constantes**
     -   Esta sección incluye todos los valores constantes que requiere el 303, tales como:
         -   Modelo = 303
         -   Página = 01
         -   Identificador de fin de registro = </T30301>
 -   **Identificación**
-    -   Esta sección incluye 4 parámetros de "Salida" que se corresponden con datos de identificación de la organización para la cual se genera el fichero y 1 parámetro de "Entrada" de tipo "checkbox" que es "Inscrito en el Registro de devolución mensual" que podría configurarse como constante.
+    -   Esta sección incluye 4 parámetros de *Salida* que se corresponden con datos de identificación de la organización para la cual se genera el fichero, y 1 parámetro de *Entrada* de tipo checkbox: **Inscrito en el Registro de devolución mensual**, que puede configurarse como constante.
 -   **IVA Devengado**
-    -   Esta sección incluye 3 parámetros de tipo "Salida", uno por cada tipo de IVA devengado.
-        -   "IVA Devengado - Régimen General" de IVA. Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen general, por ejemplo, las entregas de bienes y servicios dentro del territorio de aplicación del impuesto.
-        -   "IVA Devengado - Recargo de Equivalencia". Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen de recargo de equivalencia, por ejemplo, las entregas de bienes a minoristas dentro del territorio de aplicación del impuesto.
-        -   "IVA Devengado - Adquisiciones Intracomunitarias”. Este parámetro está ligado a los rangos de impuestos de adquisiciones intracomunitarias de bienes
+    -   Esta sección incluye 3 parámetros de tipo *Salida*, uno por cada tipo de IVA devengado.
+        -   **IVA Devengado - Régimen General**: ligado a los rangos de impuestos cuyas operaciones tributan en régimen general, por ejemplo, las entregas de bienes y servicios dentro del territorio de aplicación del impuesto.
+        -   **IVA Devengado - Recargo de Equivalencia**: ligado a los rangos de impuestos cuyas operaciones tributan en régimen de recargo de equivalencia, por ejemplo, las entregas de bienes a minoristas dentro del territorio de aplicación del impuesto.
+        -   **IVA Devengado - Adquisiciones Intracomunitarias**: ligado a los rangos de impuestos de adquisiciones intracomunitarias de bienes.
 
-El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+Consulte el listado completo de los rangos de impuesto ligados a cada parámetro en el anexo al final de este documento.
 
 -   **IVA Deducible**
-    -   Esta sección incluye un total de 12 parámetros, 6 parámetros de tipo "Salida" y otros 6 de tipo "Entrada".  
-        Los parámetros de tipo "Salida" se corresponden con el tipo de IVA Deducible del que se puede sacar información de Etendo, por ejemplo "IVA Deducible por cuotas soportadas en operaciones interiores corrientes".  
-        Los parámetros de tipo "Entrada" se corresponden con tipos de IVA Deducible para los que no se puede sacar información de Etendo, por ejemplo "IVA Deducible por compensación Régimen Esp. A.G y P.(cuota)
+    -   Esta sección incluye un total de 12 parámetros: 6 de tipo *Salida* y 6 de tipo *Entrada*.  
+        Los parámetros de tipo *Salida* se corresponden con los tipos de IVA Deducible obtenibles desde Etendo, por ejemplo, **IVA Deducible por cuotas soportadas en operaciones interiores corrientes**.  
+        Los parámetros de tipo *Entrada* se corresponden con tipos de IVA Deducible para los que no se obtiene información de Etendo, por ejemplo, **IVA Deducible por compensación Régimen Esp. A.G y P.(cuota)**.
 
-El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+Consulte el listado completo de los rangos de impuesto ligados a cada parámetro en el anexo al final de este documento.
 
 -   **Diferencia**
-    -   Esta sección incluye 4 parámetros de tipo "Entrada" para que el usuario pueda introducir la siguiente información a la hora de generar el fichero:
-        -   % Atribuible a la Administración del Estado %.  
-            Los sujetos pasivos que tributen conjuntamente en la Administración del Estado y en las Diputaciones del País Vasco o a la Comunidad Foral de Navarra, deben hacer constar el % del volumen de operaciones en territorio común y que, por tanto, deben tributar en la Administración del Estado; el resto de sujetos pasivos harán costar un 100%.  
-            Este dato podría configurarse como constante.
-        -   Cuotas a compensar de periodos anteriores. Los sujetos pasivos deben hacer constar, cuando sea aplicable, las cuotas positivas a compensar procedentes de periodos anteriores.
-        -   Resultado de la regularización anual. En la última liquidación del año se hará constar el resultado de la regularización anual por inversiones
-        -   A deducir (autoliquidación complementaria), exclusivamente en el caso de declaración complementaria se hará constar el resultado de la última declaración presentada por el mismo concepto, correspondiente al mismo ejercicio y periodo.
-    -   Y, además, 3 parámetros de salida correspondientes a operaciones no sujetas que originan derecho a deducción:
-        -   Entregas Intracomunitarias de bienes. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+    -   Esta sección incluye 4 parámetros de tipo *Entrada* para introducir la siguiente información al generar el fichero:
+        -   **% Atribuible a la Administración del Estado**: los sujetos pasivos que tributen conjuntamente en la Administración del Estado y en las Diputaciones del País Vasco o la Comunidad Foral de Navarra deben indicar el porcentaje del volumen de operaciones en territorio común. El resto de sujetos pasivos indican un 100%. Este dato puede configurarse como constante.
+        -   **Cuotas a compensar de periodos anteriores**: indique, cuando sea aplicable, las cuotas positivas a compensar procedentes de periodos anteriores.
+        -   **Resultado de la regularización anual**: en la última liquidación del año, indique el resultado de la regularización anual por inversiones.
+        -   **A deducir (autoliquidación complementaria)**: exclusivamente en el caso de declaración complementaria, indique el resultado de la última declaración presentada por el mismo concepto, correspondiente al mismo ejercicio y periodo.
+    -   Esta sección incluye además 3 parámetros de salida correspondientes a operaciones no sujetas que originan derecho a deducción:
+        -   **Entregas Intracomunitarias de bienes**: ligado a los rangos de impuestos siguientes:
             -   Entregas intracomunitarias (%N=>0%)
             -   Entregas intracomunitarias (%R=>0%)
             -   Entregas intracomunitarias (%SR=>0%)
             -   Entregas intracomunitarias Bienes Inversión (%N=>0%)
-        -   Exportaciones y Operaciones asimiladas. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+        -   **Exportaciones y Operaciones asimiladas**: ligado a los rangos de impuestos siguientes:
             -   Entregas a Canarias,Ceuta y Melilla (%N=>0%)
             -   Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
             -   Entregas a Canarias,Ceuta y Melilla (%R=>0%)
@@ -239,7 +273,7 @@ El listado completo de los rangos de impuesto ligados a cada uno de estos parám
             -   Exportaciones (%R=>0%)
             -   Exportaciones (%SR=>0%)
             -   Exportaciones Bienes Inversión (%N=>0%)
-        -   Operaciones no sujetas o con inversión del sujeto pasivo. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+        -   **Operaciones no sujetas o con inversión del sujeto pasivo**: ligado a los rangos de impuestos siguientes:
             -   Servicios a Canarias, Ceuta y Melilla (%N=>0%)
             -   Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
             -   Servicios a Canarias, Ceuta y Melilla (%R=>0%)
@@ -248,60 +282,62 @@ El listado completo de los rangos de impuesto ligados a cada uno de estos parám
             -   Servicios prestados UE (%N=>0%)
             -   Servicios prestados UE (%R=>0%)
 -   **Devolución**
-    -   Esta sección incluye un parámetro de tipo "Entrada" que es la cuenta bancaria a utilizar en caso de declaración a devolver. Este dato podría configurarse como constante.
+    -   Esta sección incluye un parámetro de tipo *Entrada*: la cuenta bancaria a utilizar en caso de declaración a devolver. Este dato puede configurarse como constante.
 -   **Ingreso**
-    -   Esta sección incluye 5 parámetros de tipo "Entrada" relativos a declaraciones "A ingresar":
-        -   la cuenta bancaria a utilizar en caso de declaración a ingresar. Este dato podría configurarse como constante.
+    -   Esta sección incluye 5 parámetros de tipo *Entrada* relativos a declaraciones *A ingresar*:
+        -   la cuenta bancaria a utilizar en caso de declaración a ingresar. Este dato puede configurarse como constante.
         -   No consta
         -   Efectivo
         -   Adeudo en cuenta
         -   Domiciliación
 -   **Complementaria**
-    -   Esta sección incluye 2 parámetros de tipo entrada:
+    -   Esta sección incluye 2 parámetros de tipo *Entrada*:
         -   Declaración complementaria, como un checkbox (si/no)
-        -   Nº Justificate, de la declaración anterior que se complementa.
+        -   Nº Justificante de la declaración anterior que se complementa.
 
-### Tipos de documento y fecha
-A la hora de generar el fichero de texto válido para declarar el Modelo 303 de liquidación de IVA, se tiene en cuenta:
+### Tipos de Documento y Fecha
 
--   El IVA (soportado) deducible registrado y contabilizado en las Facturas/Abonos de Compra, que el usuario puede registrar en la ruta de aplicación: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`, para los siguientes tipos de documento:
-    -   AP Invoice (Factura de compra)
-    -   AP Invoice negativa (Abono de compra)
-    -   AP Credit Memo (Abono de compra)
--   El IVA devengado registrado y contabilizado en las Facturas/Abonos de Venta que el usuario puede emitir en la ruta de aplicación: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, para los siguientes tipos de documento:
-    -   AR Invoice (Factura de venta)
-    -   AR Invoice negativa (Abono de venta)
-    -   AR Credit Memo (Abono de venta)
+Al generar el fichero de texto válido para declarar el Modelo 303 de liquidación de IVA, se tiene en cuenta:
 
-La actual versión del módulo no tiene en cuenta los tipos de documento de Etendo sin APRM que se enumeran a continuación, y que podrían estar ligados a un rango de impuesto, por considerarse que no se deberían utilizar para la contabilización de facturas que incluyan IVA:
+-   El IVA (soportado) deducible registrado y contabilizado en las facturas y abonos de compra, que puede registrar en: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`, para los siguientes tipos de documento:
+    -   `AP Invoice` (Factura de compra)
+    -   `AP Invoice` negativa (Abono de compra)
+    -   `AP Credit Memo` (Abono de compra)
+-   El IVA devengado registrado y contabilizado en las facturas y abonos de venta que puede emitir en: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, para los siguientes tipos de documento:
+    -   `AR Invoice` (Factura de venta)
+    -   `AR Invoice` negativa (Abono de venta)
+    -   `AR Credit Memo` (Abono de venta)
+
+La versión actual del módulo no tiene en cuenta los tipos de documento de Etendo sin APRM que se enumeran a continuación, por considerarse que no deben utilizarse para la contabilización de facturas que incluyan IVA:
 
 -   Extracto bancario
 -   Diario de Caja
 -   Liquidaciones y asientos manuales
 
-**La fecha que se tiene en cuenta** para la inclusión de las facturas de compra/venta en la declaración/fichero del 303 es la **fecha de contabilización**, lo cual que implica que:
+**La fecha que se tiene en cuenta** para la inclusión de las facturas de compra y venta en la declaración del 303 es la **fecha de contabilización**, lo que implica que:
 
--   Las facturas de compra/venta con fecha de contabilización dentro de un mes determinado se incluirán en la declaración mensual de ese mes.
--   Las facturas de compra/venta con fecha de contabilización dentro de un trimestre determinado se incluirán en la declaración trimestral correspondiente a ese trimestre.
+-   Las facturas con fecha de contabilización dentro de un mes determinado se incluyen en la declaración mensual de ese mes.
+-   Las facturas con fecha de contabilización dentro de un trimestre determinado se incluyen en la declaración trimestral correspondiente.
 
-## Caso de Usuario
-### IVA Devengado - escenarios
-Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas puedan autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+### IVA Devengado - Escenarios
 
-El fichero del 303 recoge desde la posición 72 a la 357, la base imponible, tipo y cuota del IVA devengado en las operaciones de venta bajo el régimen general, especificando por tipo de IVA (16%/18%, 7%/8% y 4%), régimen de recargo de equivalencia especificado por tipo de IVA (4%, 1% y 0,5%) así como la base y cuota del IVA devengado en las adquisiciones intracomunitarias.
+El principal objetivo del Modelo 303 es que las empresas españolas autoliquiden el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de venta y el IVA soportado deducible.
 
-#### IVA devengado - régimen general
-Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas tanto por la entrega de bienes como por la prestación de servicios dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+El fichero del 303 recoge desde la posición 72 a la 357 la base imponible, tipo y cuota del IVA devengado en las operaciones de venta bajo el régimen general, especificando por tipo de IVA (16%/18%, 7%/8% y 4%), régimen de recargo de equivalencia especificado por tipo de IVA (4%, 1% y 0,5%), así como la base y cuota del IVA devengado en las adquisiciones intracomunitarias.
 
-Se tendrán en cuenta:
+#### IVA Devengado - Régimen General
 
-1.  las facturas/abonos emitidas por la venta de productos o por la prestación de servicios, contabilizadas en la ruta de aplicación :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente) - Cabecera - Impuestos`
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de venta emitidos tanto por la entrega de bienes como por la prestación de servicios dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
 
-El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes o la prestación del servicio lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+Se tienen en cuenta:
 
-Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+1.  Las facturas y abonos emitidos por la venta de productos o por la prestación de servicios, contabilizados en: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`.
+2.  Las facturas y abonos financieros emitidos desde: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, marcados como **Factura Financiera** a nivel de línea de factura de venta, ligados a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  Las líneas de impuesto introducidas manualmente en: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)` > `Cabecera` > `Impuestos`.
+
+El fichero del 303 recoge dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización. El IVA se devenga cuando se realiza la puesta a disposición de los bienes o la prestación del servicio, lo que conlleva la facturación correspondiente. Las facturas deben contabilizarse para que se tengan en cuenta.
+
+Los productos, servicios y conceptos contables deben estar ligados a una de las siguientes categorías de impuestos:
 
 -   IVA Normal
 -   IVA Reducido
@@ -313,64 +349,68 @@ Los productos/servicios/conceptos contables tiene que estar ligados a una de las
 -   IVA Reducido B. Inmuebles
 -   IVA Normal Bienes Inversión
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Régimen General".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Devengado - Régimen General**.
 
-#### IVA devengado - régimen de recargo de equivalencia
-Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas por la entrega de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares) a terceros minoristas que se encuentren en régimen de recargo de equivalencia.
+#### IVA Devengado - Régimen de Recargo de Equivalencia
+
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de venta emitidos por la entrega de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares) a terceros minoristas en régimen de recargo de equivalencia.
 
 En estos casos, el emisor de la factura incluye, además del IVA, el tipo (%) de recargo correspondiente.
 
-Se tendrán en cuenta:
+Se tienen en cuenta:
 
-1.  las facturas/abonos emitidas por la venta de productos, contabilizadas en la ruta de aplicación :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente) - Cabecera - Impuestos`
+1.  Las facturas y abonos emitidos por la venta de productos, contabilizados en: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`.
+2.  Las facturas y abonos financieros emitidos desde: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, marcados como **Factura Financiera** a nivel de línea de factura de venta, ligados a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  Las líneas de impuesto introducidas manualmente en: :material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)` > `Cabecera` > `Impuestos`.
 
-El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes, lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+El fichero del 303 recoge dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización. El IVA se devenga cuando se realiza la puesta a disposición de los bienes, lo que conlleva la facturación correspondiente. Las facturas deben contabilizarse para que se tengan en cuenta.
 
-Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+Los productos, servicios y conceptos contables deben estar ligados a una de las siguientes categorías de impuestos:
 
 -   IVA Normal
 -   IVA Reducido
 -   IVA Super reducido
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Recargo de Equivalencia".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Devengado - Recargo de Equivalencia**.
 
-#### IVA devengado - Adquisiciones intracomunitarias
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+#### IVA Devengado - Adquisiciones Intracomunitarias
 
-Se tendrán en cuenta:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores no residentes en el territorio de aplicación del impuesto pero residentes en la Unión Europea (operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
 
-1.  las facturas/abonos registradas en el sistema por la compra de productos, contabilizadas en la ruta de aplicación :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`
-2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`, marcados como "Factura Financiera" a nivel de línea de factura de compra, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
-3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor) - Cabecera - Impuestos`
+Se tienen en cuenta:
 
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+1.  Las facturas y abonos registrados en el sistema por la compra de productos, contabilizados en: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`.
+2.  Las facturas y abonos financieros emitidos desde: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)`, marcados como **Factura Financiera** a nivel de línea de factura de compra, ligados a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  Las líneas de impuesto introducidas manualmente en: :material-menu: `Gestión de Compras` > `Transacciones` > `Factura (Proveedor)` > `Cabecera` > `Impuestos`.
+
+Los productos y conceptos contables deben estar relacionados con una de las siguientes categorías de impuesto:
 
 -   IVA Normal
 -   IVA Reducido
 -   IVA Super Reducido
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Adquisiciones Intracomunitarias".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Devengado - Adquisiciones Intracomunitarias**.
 
-Es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+Las adquisiciones intracomunitarias se consideran realizadas en el territorio de aplicación del impuesto cuando:
 
 -   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
--   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+-   el adquirente haya comunicado al vendedor el número de identificación a efectos del IVA atribuido por la Administración española.
 
-Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Se aplica una exención en el país de origen y el hecho imponible se considera realizado en el de destino, con motivo de la adquisición. Esto se denomina *adquisición intracomunitaria de bienes*, y altera la regla general del impuesto: el sujeto pasivo es quien compra, no quien vende.
 
-El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+El sujeto pasivo/adquiriente es quien debe liquidar el IVA. Debe autorrepercutirse el IVA y a su vez deducírselo, si aplica. Por ello, este tipo de operaciones — como las de Inversión de Sujeto Pasivo — aparecen tanto en la sección de IVA devengado como en la de IVA deducible.
 
-### IVA Deducible - escenarios
-Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas pueda autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+### IVA Deducible - Escenarios
 
-El fichero del 303 recoge desde la posición 357 a la 612, la base imponible y cuota, en la mayoría de los casos, del IVA soportado que es deducible en operaciones interiores, importaciones y adquisiciones intracomunitarias de bienes corrientes (bienes y servicios) y de bienes de inversión.
+El principal objetivo del Modelo 303 es que las empresas españolas autoliquiden el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de venta y el IVA soportado deducible.
 
-#### IVA deducible - cuotas soportadas en operaciones interiores corrientes
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes como por los servicios prestados a la Empresa dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+El fichero del 303 recoge desde la posición 357 a la 612 la base imponible y cuota, en la mayoría de los casos, del IVA soportado deducible en operaciones interiores, importaciones y adquisiciones intracomunitarias de bienes corrientes (bienes y servicios) y de bienes de inversión.
 
-Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+#### IVA Deducible - Cuotas Soportadas en Operaciones Interiores Corrientes
+
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores tanto por la compra de bienes como por los servicios prestados a la empresa dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos, servicios y conceptos contables deben estar relacionados con una de las siguientes categorías de impuesto:
 
 -   IVA Normal
 -   IVA Reducido
@@ -381,166 +421,113 @@ Los productos/servicios/conceptos contables tienen que estar relacionados con un
 -   IVA Normal B. Inmuebles
 -   IVA Reducido B. Inmuebles
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes**.
 
-#### IVA deducible - operaciones interiores bienes de inversión
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes de inversión (se consideran bienes de inversión los bienes con un valor superior a 3.000,00 €) dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+#### IVA Deducible - Operaciones Interiores Bienes de Inversión
 
-Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores por la compra de bienes de inversión (se consideran bienes de inversión los bienes con un valor superior a 3.000,00 €) dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos, servicios y conceptos contables deben estar relacionados con la siguiente categoría de impuesto:
 
 -   IVA Normal Bienes Inversión
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Operaciones interiores bienes de inversión".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - Operaciones interiores bienes de inversión**.
 
-#### IVA deducible - por cuotas devengadas en importaciones de bienes
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+#### IVA Deducible - Por Cuotas Devengadas en Importaciones de Bienes
 
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores no residentes en el territorio de aplicación del impuesto, por la importación de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos y conceptos contables deben estar relacionados con una de las siguientes categorías de impuesto:
 
 -   IVA Normal
 -   IVA Reducido
 -   IVA Super Reducido
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes**.
 
-#### IVA deducible - importaciones bienes de inversión
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+#### IVA Deducible - Importaciones Bienes de Inversión
 
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores no residentes en el territorio de aplicación del impuesto, por la importación de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos y conceptos contables deben estar relacionados con la siguiente categoría de impuesto:
 
 -   IVA Normal Bienes Inversión
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Importaciones bienes de inversión".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - Importaciones bienes de inversión**.
 
-#### IVA deducible - adquisiciones intracomunitarias de bienes
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+#### IVA Deducible - Adquisiciones Intracomunitarias de Bienes
 
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores no residentes en el territorio de aplicación del impuesto pero residentes en la Unión Europea (operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos y conceptos contables deben estar relacionados con una de las siguientes categorías de impuesto:
 
 -   IVA Normal
 -   IVA Reducido
 -   IVA Super Reducido
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes corrientes".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - adquisiciones intracomunitarias de bienes corrientes**.
 
-Tal y como ya se ha mencionado, es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+Las adquisiciones intracomunitarias se consideran realizadas en el territorio de aplicación del impuesto cuando:
 
 -   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
--   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+-   el adquirente haya comunicado al vendedor el número de identificación a efectos del IVA atribuido por la Administración española.
 
-Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Se aplica una exención en el país de origen y el hecho imponible se considera realizado en el de destino, con motivo de la adquisición. Esto se denomina *adquisición intracomunitaria de bienes*, y altera la regla general del impuesto: el sujeto pasivo es quien compra, no quien vende.
 
-El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+El sujeto pasivo/adquiriente es quien debe liquidar el IVA. Debe autorrepercutirse el IVA y a su vez deducírselo, si aplica. Por ello, este tipo de operaciones — como las de Inversión de Sujeto Pasivo — aparecen tanto en la sección de IVA devengado como en la de IVA deducible.
 
-#### IVA deducible - adquisiciones intracomunitarias de bienes de inversión
-Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+#### IVA Deducible - Adquisiciones Intracomunitarias de Bienes de Inversión
 
-Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+Durante el periodo correspondiente (mes/trimestre), registre y contabilice en Etendo las facturas y abonos de compra recibidos de proveedores no residentes en el territorio de aplicación del impuesto pero residentes en la Unión Europea (operadores intracomunitarios), por la adquisición de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos y conceptos contables deben estar relacionados con la siguiente categoría de impuesto:
 
 -   IVA Normal Bienes Inversión
 
-Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes de inversión".
+Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **IVA Deducible - adquisiciones intracomunitarias de bienes de inversión**.
 
-### Diferencia - escenarios
-El fichero del 303 recoge desde la posición 629 a la 804, los datos relativos a la diferencia entre el IVA Devengado y el Deducible, junto con otro tipo de información adicional necesaria para el cálculo del resultado final casilla \[48\]
+### Diferencia - Escenarios
 
-Desde Etendo, el usuario puede obtener la diferencia entre IVA Devengado y Deducible, así como parte de la información adicional necesaria para el cálculo del resultado final, el resto debe introducirse por parte del usuario como "parámetros de entrada" a la hora de generar el fichero.
+El fichero del 303 recoge desde la posición 629 a la 804 los datos relativos a la diferencia entre el IVA Devengado y el Deducible, junto con otra información adicional necesaria para el cálculo del resultado final (casilla \[48\]).
 
-La información que el usuario puede obtener desde el sistema es las bases imponibles para un periodo determinado (mes/trimestre) respecto de las operaciones que a continuación se detallan:
+Desde Etendo puede obtener la diferencia entre IVA Devengado y Deducible, así como parte de la información adicional necesaria. El resto debe introducirse como parámetros de entrada al generar el fichero.
 
--   **Entregas intracomunitarias** - en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta a clientes no residentes en territorio de aplicación del impuesto pero residentes en la Unión Europea, emitidos y contabilizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Entregas Intracomunitarias".
--   **Exportaciones y operaciones asimiladas** - lo mismo aplica a las exportaciones, en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta emitidas y contabilizas, a clientes extranjeros, emitidos y contablizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Exportaciones y Operaciones Asimiladas".
--   **Operaciones no sujetas o con inversión del sujeto pasivo** que origina derecho a deducción - este caso aplica a facturas/abonos/facturas financieras de venta emitidos y contabilizados, por la prestación de servicios de la Empresa fuera del territorio de aplicación del impuesto, servicios exentos pero que originan derecho a deducción.  
-    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Operaciones no sujetas o con inversión del sujeto pasivo".
+La información disponible desde el sistema corresponde a las bases imponibles para un periodo determinado (mes/trimestre) respecto de las siguientes operaciones:
 
-El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:
+-   **Entregas intracomunitarias**: el sistema tiene en cuenta las facturas, abonos y facturas financieras de venta a clientes no residentes en el territorio de aplicación del impuesto pero residentes en la Unión Europea, emitidos y contabilizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **Diferencia - Entregas Intracomunitarias**.
+-   **Exportaciones y operaciones asimiladas**: el sistema tiene en cuenta las facturas, abonos y facturas financieras de venta emitidas y contabilizadas a clientes extranjeros, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **Diferencia - Exportaciones y Operaciones Asimiladas**.
+-   **Operaciones no sujetas o con inversión del sujeto pasivo** que originan derecho a deducción: aplica a facturas, abonos y facturas financieras de venta emitidos y contabilizados por la prestación de servicios de la empresa fuera del territorio de aplicación del impuesto, servicios exentos pero que originan derecho a deducción.  
+    Las líneas de facturas deben tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección **Diferencia - Operaciones no sujetas o con inversión del sujeto pasivo**.
+
+Introduzca el resto de datos manualmente al generar el Modelo 303 desde la ventana **Generador de declaraciones de impuestos**:
 
 ![Generador de declaraciones de impuestos - Diferencia](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/generador-declaraciones-diferencia.png)
 
-### Devoluciones - escenarios
-#### Devoluciones - Devolución/Devolución cuenta corriente tributaria
-Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
+### Devoluciones - Escenarios
 
-- IBAN
-- Marca SEPA: indique si la cuenta bancaria pertenece a la zona SEPA. Consulte con su entidad bancaria si no está seguro.
+#### Devoluciones - Devolución/Devolución Cuenta Corriente Tributaria
 
-#### Devoluciones - Devolución por transferencia al extranjero
-Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
+Para este tipo de declaraciones, y siempre que el check **Inscrito en registro de devolución mensual** esté marcado, los siguientes campos son obligatorios:
 
-- IBAN (cuenta bancaria para la devolución)
-- Nombre del banco (*Bank name*)
-- Dirección del banco (*Bank address*)
-- Ciudad (*City*)
-- Código de país (*Country code*)
-- Marca SEPA: indique si la cuenta bancaria pertenece a la zona SEPA. Consulte con su entidad bancaria si no está seguro.
+- **IBAN**
+- **Marca SEPA**: indique si la cuenta bancaria pertenece a la zona SEPA. Consulte con su entidad bancaria si no está seguro.
 
-### Configuración previa antes de generar el Informe
+#### Devoluciones - Devolución por Transferencia al Extranjero
 
-#### Actividades del I.A.E.
-En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+Para este tipo de declaraciones, y siempre que el check **Inscrito en registro de devolución mensual** esté marcado, los siguientes campos son obligatorios:
 
-El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
-
-![Organización - Actividades del IAE](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/organizacion-actividades-iae.png)
-
-En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
-
-Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
-
-### Generación del modelo 303
-Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: :material-menu: `Gestión Financiera` > `Contabilidad` > `Herramientas de análisis` > `Generador de declaraciones de impuestos`
-
-Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":
-
-![Generador de declaraciones - Datos genéricos](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/generador-declaraciones-datos-genericos.png)
-
-se pueden introducir los parámetros de entrada, o datos que no pueden obtenerse de Etendo a través de botón de proceso "Parámetros de entrada".
-
-!!! info
-    Es importante recalcar que algunos de los parámetros de entrada que se introducen a continuación, como por ejemplo "Inscrito en el Registro Devolución Mensual", pueden configurarse como parámetros "Constantes" con el fin de no tener que introducirlos cada vez que se genera el fichero del 303.
-
-
-Para configurar un parámetro como constante:
-
-1. Acceda a :material-menu: `Gestión Financiera` > `Contabilidad` > `Configuración` > `Declaración de Impuestos`.
-2. Localice la sección de declaración que contiene el parámetro a configurar. Por ejemplo, el parámetro "Inscrito en el Registro de devolución mensual" se encuentra en la sección "Identificación".
-3. En ese parámetro, cambie el tipo de "Entrada" a "Constante".
-4. En el campo **Valor constante** (*Constant Value*), introduzca `1` si el sujeto pasivo está inscrito en el registro de devolución mensual, o `2` si no lo está.
-
-Es importante recalcar que si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de entrada a constante se sobreescribirán, por lo que será necesario el volver a configurarlos.
-
-Las secciones de la nueva ventana que se muestra se corresponden con las secciones definidas para el Modelo 303:
-
-Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
-
-![Secciones Fichero, Tipo de declaración y Sin actividad](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
-
-Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
-
-![Secciones IVA deducible, Liquidación-resultado y Banco](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-iva-deducible-liquidacion-banco.png)
-
-Secciones: **"Complementaria"**, **"Tributación por razón de territorio"** y **"Additional Information"** *(este nombre aparece en inglés en la aplicación)*
-
-![Secciones Complementaria, Tributación por razón de territorio y Additional Information](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-complementaria-tributacion.png)
-
-Una vez que el fichero se ha generado, tendrá este aspecto:
-
-![Fichero generado del Modelo 303](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/fichero-generado-303.png)
-
-### Pre-validación del modelo 303
-El fichero generado en Etendo se puede pre-validar en el siguiente link de la AEAT:
-
-[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
-
-Una vez en dicho link el usuario podrá importar el fichero en la opción "Optativo: Importar datos de fichero", los datos obtenidos del fichero se mostrarán para su validación.
-
-Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}, para lo que se necesita certificado electrónico de identificación o DNI electrónico.
+- **IBAN** (cuenta bancaria para la devolución)
+- **Nombre del banco** (*Bank name*)
+- **Dirección del banco** (*Bank address*)
+- **Ciudad** (*City*)
+- **Código de país** (*Country code*)
+- **Marca SEPA**: indique si la cuenta bancaria pertenece a la zona SEPA. Consulte con su entidad bancaria si no está seguro.
 
 ??? info "Anexo — Listado completo de rangos de impuesto"
 
-    Este anexo incluye el listado completo de los rangos de impuestos asociados a los parámetros del modelo 303 de las secciones "IVA Devengado" e "IVA Deducible" incluidos en el dataset del módulo:
+    Este anexo incluye el listado completo de los rangos de impuestos asociados a los parámetros del Modelo 303 de las secciones **IVA Devengado** e **IVA Deducible** incluidos en el dataset del módulo:
 
     ### **IVA Devengado**
 
