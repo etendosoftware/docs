@@ -37,7 +37,7 @@ Este bundle incluye mejoras para las funcionalidades de Gestión de ventas en Et
 Esta funcionalidad permite al usuario configurar y conceder rappels a terceros. Los rappels son descuentos basados en el volumen de consumo del tercero en un periodo de tiempo determinado.
 
 !!! info
-	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
+	Para más información, visite la [guía de usuario de Rappels avanzados](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
 
 ### CRM Lead Management
 

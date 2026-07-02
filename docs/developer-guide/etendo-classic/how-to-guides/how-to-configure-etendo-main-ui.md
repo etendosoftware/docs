@@ -15,6 +15,9 @@ Etendo Main UI is a modern React/TypeScript-based user interface included in the
 
 This guide covers manual configuration of the Main UI variables and the advanced development setup for contributors.
 
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
+
 ## Requirements
 
 - Etendo project properly set up. See the [Local Development](../getting-started/installation/local-development.md) or [Server Installation](../getting-started/installation/production-server.md) guides.
@@ -33,14 +36,19 @@ This guide covers manual configuration of the Main UI variables and the advanced
 
 A one-time encryption token must be configured for authentication. This token is required for the Main UI to start a session.
 
+!!! note
+    Starting from **Etendo 26.1**, the SWS key is generated automatically during `./gradlew install` — no manual action is needed for new installations. For earlier versions, or to rotate the key, use one of the following options (not both):
+
+    - **From the command line:** `./gradlew generate.sws.keys`
+    - **From the UI:** follow the steps below.
+
+The following steps apply only if you need to generate or rotate the key manually:
+
 1. Access Etendo Classic as a `System Administrator`.
 2. Navigate to `Client` > `Secure Web Service Configuration` tab.
 3. Click **Generate Key** to create a token. The expiration time is in minutes; set to `0` for no expiration.
 
 ![Client Access Token](../../../assets/developer-guide/etendo-mobile/getting-started/token.png)
-
-!!! info
-    This token does not require any further action — it just needs to be generated for the authentication process to work correctly.
 
 ## Configuration
 
@@ -71,6 +79,7 @@ etendo.classic.host=http://localhost:8080/etendo
 authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ws.maxInactiveInterval=3600
 next.public.app.url=http://localhost:3000
+ui.port=3000
 ```
 
 | Variable | Description | Local | Production |
@@ -81,6 +90,7 @@ next.public.app.url=http://localhost:3000
 | `authentication.class` | Java class that manages authentication between Main UI and Etendo Classic. | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` |
 | `ws.maxInactiveInterval` | Session duration in seconds for the Main UI WebSocket connection. Does not affect Etendo Classic session timeout. | `3600` | `3600` |
 | `next.public.app.url` | Public URL where users access the Main UI. | `http://localhost:3000` | `https://your.frontend.etendo.cloud` |
+| `ui.port` | Port on which the Main UI service listens inside the container. Must match the port referenced in `next.public.app.url`. | `3000` | `3000` |
 
 Apply the configuration and start services:
 
@@ -88,6 +98,28 @@ Apply the configuration and start services:
 ./gradlew setup
 ./gradlew resources.up
 ```
+
+!!! warning "host.docker.internal not resolving"
+    On some Linux systems, `host.docker.internal` may not resolve correctly inside the container, causing connection errors even when the rest of the setup works. If this happens, find the actual host IP by running:
+
+    ```bash
+    docker run --rm alpine sh -c 'ip route show default | head -1 | cut -d" " -f3'
+    ```
+
+    Use the IP returned by that command in place of `host.docker.internal` in `etendo.classic.url`. For example:
+
+    ```groovy title="gradle.properties"
+    etendo.classic.url=http://172.17.0.1:8080/etendo
+    ```
+
+    After updating `gradle.properties`, rebuild and restart the containers so the new value is picked up:
+
+    ```bash title="Terminal"
+    docker compose down
+    docker rmi $(docker images | grep mainui | awk '{print $3}')
+    ./gradlew setup
+    ./gradlew resources.up
+    ```
 
 ## Access the Main UI
 

@@ -36,7 +36,7 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-	For more information, visit the [Advanced Rappels user guide](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration).
+	For more information, visit the [Advanced Rappels user guide](../../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
 
 ### CRM Lead Management
 

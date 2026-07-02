@@ -71,6 +71,7 @@ etendo.classic.host=http://localhost:8080/etendo
 authentication.class=com.etendoerp.etendorx.auth.SWSAuthenticationManager
 ws.maxInactiveInterval=3600
 next.public.app.url=http://localhost:3000
+ui.port=3000
 ```
 
 | Variable | Descripción | Local | Producción |
@@ -81,6 +82,7 @@ next.public.app.url=http://localhost:3000
 | `authentication.class` | Clase Java que gestiona la autenticación entre la Main UI y Etendo Classic. | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` | `com.etendoerp.etendorx.auth.SWSAuthenticationManager` |
 | `ws.maxInactiveInterval` | Duración de la sesión en segundos para la conexión WebSocket de la Main UI. No afecta el tiempo de espera de sesión de Etendo Classic. | `3600` | `3600` |
 | `next.public.app.url` | URL pública desde la que los usuarios acceden a la Main UI. | `http://localhost:3000` | `https://your.frontend.etendo.cloud` |
+| `ui.port` | Puerto en el que el servicio Main UI escucha dentro del contenedor. Debe coincidir con el puerto referenciado en `next.public.app.url`. | `3000` | `3000` |
 
 Aplique la configuración e inicie los servicios:
 

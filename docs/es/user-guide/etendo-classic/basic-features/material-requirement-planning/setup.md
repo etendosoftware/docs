@@ -75,7 +75,7 @@ Además, se configura un porcentaje de la cantidad a considerar por MRP con el *
 
 Defina la entidad encargada de gestionar la compra o la producción de productos específicos.
 
-Un **filtro opcional tanto en la Planificación de la producción como en la Planificación de compras** es el planificador. La información que se introduce en esta pantalla no tiene relación con la configuración del tercero. Después de crear el planificador, la información del planificador se introduce en la solapa [Producto](../master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
+Un **filtro opcional tanto en la Planificación de la producción como en la Planificación de compras** es el planificador. La información que se introduce en esta pantalla no tiene relación con la configuración del tercero. Después de crear el planificador, la información del planificador se introduce en la solapa [Producto](../master-data-management/master-data/product.md#product) en la sección de Gestión de datos maestros.
 
 ### Planificador { #planner_1 }
 

@@ -71,7 +71,7 @@ La siguiente configuración debe realizarse antes de ejecutar el proceso:
 - [Tipos de documento de pagos y cobros](../financial-management/accounting/setup/document-type.md).
 - [Método de pago](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - [Cuenta financiera](../financial-management/receivables-and-payables/transactions.md#financial-account).
-- [Terceros](../master-data-management/master-data.md#business-partner) para utilizar los Métodos de pago y las Cuentas financieras configurados anteriormente.
+- [Terceros](../master-data-management/master-data/business-partner.md#business-partner) para utilizar los Métodos de pago y las Cuentas financieras configurados anteriormente.
 
 !!!note
     No es necesario realizar ninguna configuración adicional para el proceso de negocio de Gestión de pagos y cobros si se va a utilizar la entidad de ejemplo Food & Beverage (F&B) que Etendo incluye por defecto para explorarlo. El conjunto de datos de ejemplo ya contiene los roles, almacenes, terceros, productos y precios preconfigurados.
@@ -271,8 +271,8 @@ Se puede crear una línea de asiento para cada cuenta y su saldo de apertura; un
 Como ya se ha mencionado, en Etendo la mayoría de los asientos contables se crean automáticamente al contabilizar documentos como una factura de proveedor o una factura de cliente.
 Por ejemplo, la contabilidad de una factura de proveedor tomará:
 
-- la configuración de la cuenta de gasto para el producto que se está comprando en la pestaña [Contabilidad](../master-data-management/master-data.md#accounting) de la ventana *Producto*
-- la configuración de la cuenta de pasivo del proveedor para el proveedor en la pestaña [Contabilidad proveedor](../master-data-management/master-data.md#vendor-accounting) de la ventana *Terceros*
+- la configuración de la cuenta de gasto para el producto que se está comprando en la pestaña [Contabilidad](../master-data-management/master-data/product.md#accounting) de la ventana *Producto*
+- la configuración de la cuenta de pasivo del proveedor para el proveedor en la pestaña [Contabilidad proveedor](../master-data-management/master-data/business-partner.md#vendorcreditor) de la ventana *Terceros*
 - y la configuración de la cuenta de impuesto soportado en la pestaña [Contabilidad](../financial-management/accounting/setup/tax-rate.md#accounting) de la ventana *Rango impuesto*.
 
 Etendo permite revisar y corregir, si es necesario, los asientos contables de documentos transaccionales como las facturas.

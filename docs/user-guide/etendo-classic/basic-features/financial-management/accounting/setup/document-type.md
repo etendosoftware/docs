@@ -53,10 +53,10 @@ The complete list of standard document types is the following:
 | Payment Proposal | AP Payment Proposal | [Payment Proposal](../../../financial-management/receivables-and-payables/transactions/payment-proposal.md) |
 | Reconciliation | Reconciliation | [Reconciliation](../../../financial-management/receivables-and-payables/transactions/financial-account.md#reconcile) |
 | Doubtful Debts | Doubtful Debt | [Doubtful Debt](../../../financial-management/receivables-and-payables/transactions/doubtful-debt.md) |
-| Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions.md#cost-adjustment) |
+| Cost Adjustment | Cost Adjustment | [Cost Adjustment](../../../warehouse-management/transactions/cost-adjustment.md) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
 | Landed Cost Cost | Landed Cost Cost | [Landed Cost Cost](../../../procurement-management/transactions.md#header-7) |
-| Inventory Amount Update | Inventory Amount Update | [Inventory Amount Update](../../../warehouse-management/transactions.md#inventory-amount-update) |
+| Inventory Amount Update | Inventory Amount Update | [Inventory Amount Update](../../../warehouse-management/transactions/inventory-amount-update.md) |
 
 !!! note "Important"
     **New document types could be added to the list above**. If that is the case, an updated version of the Reference Data containing the new document types will be provided by Etendo in new versions. That newly created Reference Data will have to be applied to the corresponding Organization in the [Enterprise Module Management](../../../general-setup/enterprise-model/enterprise-module-management.md). It is also possible to **manually create new document types**, but this process should be done by an advanced user, as explained below.
@@ -110,9 +110,9 @@ Fields to note:
             |     |     |     |     |
             | --- | --- | --- | --- |
             | **Account** | **Debit** | **Credit** | **Comments** |
-            | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
+            | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
             | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
-            | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+            | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) | Total Gross Amount |     | One per invoice |
 
 - **Document Cancelled**, if any, is the document to use for voiding a given document type. 
 
@@ -127,16 +127,16 @@ Fields to note:
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Account** | **Debit** | **Credit** | **Comments** |
-        | [Customer Receivables](../../../master-data-management/master-data.md#customer) | (-) Line Net Amount |     | One per invoice line |
+        | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) | (-) Line Net Amount |     | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Tax Amount | One per tax line |
-        | [Product Revenue](../../../master-data-management/product-setup.md#accounting) |     | (-) Total Gross Amount | One per invoice |
+        | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) |     | (-) Total Gross Amount | One per invoice |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Account** | **Debit** | **Credit** | **Comments** |
-        | [Customer Receivables](../../../master-data-management/master-data.md#customer) |     | Line Net Amount | One per invoice line |
+        | [Customer Receivables](../../../master-data-management/master-data/business-partner.md#customer) |     | Line Net Amount | One per invoice line |
         | [Tax Debit](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Tax Amount |     | One per tax line |
-        | [Product Revenue](../../../master-data-management/product-setup.md#accounting) | Total Gross Amount |     | One per invoice |
+        | [Product Revenue](../../../master-data-management/product-setup/product-category.md#accounting) | Total Gross Amount |     | One per invoice |
 
 - The **Active** checkbox can be used to activate or deactivate this document type.
 - The **Default** checkbox indicates if this record is to be used as a default value.

@@ -38,29 +38,29 @@ Apart from the [setup windows](./setup.md) in the Production module, additional 
     - Raw material used in production:
         - The **production** checkbox is selected to indicate that the product is used for production.
         - The process plan is selected.
-        - The default storage bin used to store the raw materials used (P-),  is defined in the [manufacturing](../master-data-management/master-data.md#manufacturing) tab.
+        - The default storage bin used to store the raw materials used (P-),  is defined in the [manufacturing](../master-data-management/master-data/product.md#manufacturing) tab.
 
-    - Any **semi finished products** are created directly in the process plan by copying the information of a raw material product used in the operation using the [Create Product Copy](./setup.md#io-products) button. Once created, the default storage bin is defined in the [manufacturing](../master-data-management/master-data.md#manufacturing) tab.
+    - Any **semi finished products** are created directly in the process plan by copying the information of a raw material product used in the operation using the [Create Product Copy](./setup.md#io-products) button. Once created, the default storage bin is defined in the [manufacturing](../master-data-management/master-data/product.md#manufacturing) tab.
 
     - Finished products manufactured in production:
         - The **production** checkbox is selected to indicate the product is manufactured in production.
         - The process plan is selected.
-        - The default storage bin that is used for the finished products (P+),  is defined in the [manufacturing](../master-data-management/master-data.md#manufacturing) tab.
+        - The default storage bin that is used for the finished products (P+),  is defined in the [manufacturing](../master-data-management/master-data/product.md#manufacturing) tab.
         - Based on [cost calculations](transactions.md#calculate-standard-costs), a **theoretical** standard cost can be determined for the finished product.
         - A safety stock level is determined and entered for the product.
 
 
     !!! info
-        For more information about the configuration of products, please refer to the [Product](../master-data-management/master-data.md#product) section.
+        For more information about the configuration of products, please refer to the [Product](../master-data-management/master-data/product.md#product) section.
 
 
 2. Also, Business Partners are configured for production:
 
     - In the Employee tab, any employees that are involved in the production process have the **operator** checkbox selected.
-    - The [Salary category](../master-data-management/master-data.md#salary-category) configured for employees is very important since they are included in the final cost calculations.
+    - The [Salary category](../master-data-management/business-partner-setup/salary-category.md) configured for employees is very important since they are included in the final cost calculations.
 
     !!! info
-        For more information about the configuration of business partners, please refer to the [Business Partner](../master-data-management/master-data.md#business-partner) section.
+        For more information about the configuration of business partners, please refer to the [Business Partner](../master-data-management/master-data/business-partner.md#business-partner) section.
 
 3. Work Efforts can be posted to the [General Ledger Journal](../financial-management/accounting/transactions/gl-journal.md). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [Active Tables](../financial-management/accounting/setup/general-ledger-configuration.md) tab of the General Ledger configuration.
 

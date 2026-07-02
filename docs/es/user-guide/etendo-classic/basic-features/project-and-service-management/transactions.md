@@ -191,7 +191,7 @@ Los campos de esta solapa son:
 - Organización: organización del gasto.
 - Nº de documento: número completado del informe de gasto.
 - Operarios: operario que realizó el gasto relacionado con un proyecto o dedicó tiempo a un proyecto. Es importante remarcar que los operarios:
-    - deben crearse como [Operarios](../master-data-management/master-data.md#employee) en la ventana Tercero,
+    - deben crearse como [Operarios](../master-data-management/master-data/business-partner.md#employee) en la ventana Tercero,
     - deben crearse como [Usuario](../general-setup/security/user.md) de Etendo en la ventana Usuario,
     - y, finalmente, el operario y el usuario deben estar relacionados entre sí.
     Esa relación puede establecerse seleccionando el registro de tercero del operario en el registro de Usuario del operario, como se muestra en la imagen siguiente.

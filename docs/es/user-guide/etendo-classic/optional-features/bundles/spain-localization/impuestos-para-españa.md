@@ -51,10 +51,11 @@ Para la instalación del módulo de Impuestos para España, el usuario debe segu
 !!! info
     Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
-
 ## **Aplicación del Módulo**
 
 Es importante recalcar que una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
+
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-espana/modulo-spain.png)
 
 Los datos se pueden aplicar:
 

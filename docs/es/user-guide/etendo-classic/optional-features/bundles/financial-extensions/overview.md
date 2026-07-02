@@ -75,7 +75,7 @@ Este módulo mejora la gestión de cuentas bancarias, permitiendo una mayor pers
 !!! info
     Esta funcionalidad está disponible en las siguientes ventanas:
 
-    - [Tercero](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Tercero](../../../basic-features/master-data-management/master-data/business-partner.md#bank-account)
     - [Factura (Cliente)](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
     - [Factura (Proveedor)](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
     - [Pedido de venta](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
@@ -125,6 +125,15 @@ Esta funcionalidad permite al usuario procesar y protestar remesas automáticame
 
 !!! info
     Para más información, visita [la guía de usuario de Automated Remittance](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
+### Bank Integration
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+Este módulo conecta Etendo con cuentas bancarias a través de [Salt Edge](https://www.saltedge.com/){target="_blank"}, una plataforma de Open Banking compatible con PSD2. Ofrece dos capacidades: **AIS** (importación automática de transacciones para conciliación) y **PIS** (iniciación de pagos a proveedores directamente desde Etendo, con autorización bancaria).
+
+!!! info
+    Para más información, visita la guía de usuario de [Bank Integration](bank-integration.md).
 
 ### Banking Pool
 

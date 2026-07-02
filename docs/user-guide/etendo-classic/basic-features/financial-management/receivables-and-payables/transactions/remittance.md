@@ -43,7 +43,7 @@ To be able to use this functionality, it is necessary to configure some aspects 
 - Business Partner default bank account: For each business partner, it is possible to   define a bank account that is selected by default each time creating a remittance is necessary.
 
     !!! info
-        To read more, visit [Bank Account](../../../master-data-management/master-data.md#remittance) in the Business Partner section.
+        To read more, visit [Bank Account](../../../master-data-management/master-data/business-partner.md#bank-account) in the Business Partner section.
 
 
 ## Remittance window

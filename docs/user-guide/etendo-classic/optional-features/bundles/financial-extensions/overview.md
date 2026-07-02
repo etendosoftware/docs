@@ -6,6 +6,10 @@ tags:
  - Banking
  - Accounting Enhancements
  - Automated Processes
+ - Bank Integration
+ - Salt Edge
+ - Open Banking
+ - Financial Account
 ---
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
@@ -76,7 +80,7 @@ This module enhances the bank account management enabling greater customization 
 !!! info
     This functionality is available in the following windows:
 
-    - [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management_1)
+    - [Business Partner](../../../basic-features/master-data-management/master-data/business-partner.md#advanced-bank-account-management_1)
     - [Sales invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
     - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
     - [Sales order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)
@@ -126,6 +130,15 @@ This functionality allows the user to automatically process and protest remittan
 
 !!! info
     For more information, visit [the Automated Remittance user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md).
+
+### Bank Integration
+
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
+
+This module connects Etendo to bank accounts via [Salt Edge](https://www.saltedge.com/){target="_blank"}, an Open Banking platform compliant with PSD2. It provides two capabilities: **AIS** (automatic transaction import for reconciliation) and **PIS** (vendor payment initiation directly from Etendo, with bank authorization).
+
+!!!info
+    For detailed setup and usage instructions, visit the [Bank Integration](bank-integration.md) user guide.
 
 ### Banking Pool
 

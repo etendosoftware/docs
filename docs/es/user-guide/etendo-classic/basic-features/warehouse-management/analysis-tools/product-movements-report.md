@@ -32,7 +32,7 @@ Para una comprensión más amplia de las operaciones de almacén, consulte [Intr
 Utilice la ventana de parámetros para filtrar el informe antes de generarlo. Los filtros disponibles son:
 
 -   **Fecha desde** / **Fecha hasta**: Define el rango de fechas de los movimientos a incluir. Solo aparecen en el informe las transacciones dentro de este período.
--   **Producto**: Filtra por un [producto](../../master-data-management/product-setup.md) específico. Déjelo en blanco para incluir todos los productos.
+-   **Producto**: Filtra por un [producto](../../master-data-management/product-setup/product-category.md) específico. Déjelo en blanco para incluir todos los productos.
 -   **Atributo**: Filtra por un atributo de producto (como talla, color o lote). Déjelo en blanco para incluir todos los atributos.
 -   **Tercero**: Filtra por un tercero específico (cliente o proveedor). Déjelo en blanco para incluir todos los terceros.
 

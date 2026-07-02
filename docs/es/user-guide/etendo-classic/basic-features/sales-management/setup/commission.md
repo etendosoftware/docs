@@ -33,9 +33,9 @@ Antes de utilizar comisiones, es necesario realizar algunas **configuraciones**:
 
 -   Crear un agente comercial. La forma de hacerlo es:
     -   En primer lugar, es posible crear un [usuario de Etendo](../../../../etendo-classic/basic-features/general-setup/security/user.md), ya que el agente comercial puede ser un usuario de Etendo que inicia sesión en Etendo y emite pedidos/facturas de venta.
-    -   A continuación, crear un [Terceros](../../../../etendo-classic/basic-features/master-data-management/master-data.md#business-partner). Es obligatorio crear un tercero porque el agente comercial podría ser alguien que vaya a emitir una factura para que se le paguen las comisiones.  Si ese es el caso,  ese tercero debe marcarse como *Proveedor* en la **solapa Proveedor** y tener definidos un *Método de pago PO*, un *Proveedor C.P* y una *Tarifa de compra*. Además, es necesario marcar el Terceros como Agente comercial en la **solapa Empleado**.
+    -   A continuación, crear un [Terceros](../../../../etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner). Es obligatorio crear un tercero porque el agente comercial podría ser alguien que vaya a emitir una factura para que se le paguen las comisiones.  Si ese es el caso,  ese tercero debe marcarse como *Proveedor* en la **solapa Proveedor** y tener definidos un *Método de pago PO*, un *Proveedor C.P* y una *Tarifa de compra*. Además, es necesario marcar el Terceros como Agente comercial en la **solapa Empleado**.
     -   Y, por último, si se creó el usuario, vincular ambos. La forma de hacerlo es seleccionar el tercero recién creado en el campo **Terceros** de la ventana **Usuario**. 
-    - Crear un [Producto](../../../../etendo-classic/basic-features/master-data-management/master-data.md#product) e incluirlo en una **Tarifa** sin información de precios como parte del concepto requerido cuando se crea la factura de compra de la comisión. 
+    - Crear un [Producto](../../../../etendo-classic/basic-features/master-data-management/master-data/product.md#product) e incluirlo en una **Tarifa** sin información de precios como parte del concepto requerido cuando se crea la factura de compra de la comisión. 
 
 
 ## Cabecera { #header }

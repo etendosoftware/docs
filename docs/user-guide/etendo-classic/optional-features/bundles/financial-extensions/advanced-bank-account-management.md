@@ -24,7 +24,7 @@ This functionality enhances the bank account management enabling greater customi
 
 This functionality is available in the following windows: 
 
-- [Business Partner](../../../basic-features/master-data-management/master-data.md#advanced-bank-account-management)
+- [Business Partner](../../../basic-features/master-data-management/master-data/business-partner.md#advanced-bank-account-management)
 - [Sales Invoice](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management_1)
 - [Purchase Invoice](../../../basic-features/procurement-management/transactions.md#advanced-bank-account-management_1)
 - [Sales Order](../../../basic-features/sales-management/transactions.md#advanced-bank-account-management)

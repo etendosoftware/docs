@@ -16,7 +16,7 @@ tags:
 
 Una categoría de impuesto se utiliza para agrupar productos o servicios que comparten el mismo **tratamiento fiscal**. Dado que no todos los artículos tienen el mismo tipo impositivo (estándar, reducido o exento), las categorías de impuesto ayudan a organizar estas diferencias y garantizan que los impuestos se apliquen de forma automática y correcta durante las transacciones.
 
-Cada producto o servicio debe asignarse a una categoría de impuesto en la ventana [Producto](../../../master-data-management/master-data.md#product), y los [Rango impuesto](../setup/tax-rate.md) también se vinculan a las categorías. Cuando se crea una transacción, Etendo solo considera los tipos impositivos asociados a la categoría seleccionada, reduciendo la intervención manual y evitando errores.
+Cada producto o servicio debe asignarse a una categoría de impuesto en la ventana [Producto](../../../master-data-management/master-data/product.md#product), y los [Rango impuesto](../setup/tax-rate.md) también se vinculan a las categorías. Cuando se crea una transacción, Etendo solo considera los tipos impositivos asociados a la categoría seleccionada, reduciendo la intervención manual y evitando errores.
 
 Factores adicionales, como la [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) y la configuración del tipo impositivo, ayudan al sistema a determinar el **impuesto final aplicable**.
 
@@ -54,7 +54,7 @@ Puede crear tantas categorías de impuesto como necesite para organizar distinto
     Una vez creadas, las categorías de impuesto deben:
 
     1. **Vincularse a tipos impositivos** en la ventana [Rango impuesto](../setup/tax-rate.md) - Cada tipo impositivo debe pertenecer al menos a una categoría de impuesto
-    2. **Asignarse a productos** en la ventana [Producto](../../../master-data-management/master-data.md#product) - Cada producto debe tener una categoría de impuesto
+    2. **Asignarse a productos** en la ventana [Producto](../../../master-data-management/master-data/product.md#product) - Cada producto debe tener una categoría de impuesto
     3. **Asignarse opcionalmente a terceros** mediante [Categoría de Impuestos de Terceros](../setup/business-partner-tax-category.md) para restringir los impuestos aplicables a clientes o proveedores específicos
 
 
@@ -82,7 +82,7 @@ Las categorías de impuesto aparecen en todo el sistema:
 
 | Ventana/Proceso | Uso |
 |----------------|-------|
-| [Producto](../../../master-data-management/master-data.md#product) | Cada producto debe tener asignada una categoría de impuesto |
+| [Producto](../../../master-data-management/master-data/product.md#product) | Cada producto debe tener asignada una categoría de impuesto |
 | [Rango impuesto](../setup/tax-rate.md) | Cada tipo impositivo debe estar vinculado al menos a una categoría de impuesto |
 | [Categoría de Impuestos de Terceros](./business-partner-tax-category.md) | Asignación opcional de categoría de impuesto para restringir los impuestos aplicables a clientes/proveedores específicos |
 | Pedidos de venta/Facturas | Las categorías de impuesto determinan qué tipos impositivos están disponibles para su selección |
@@ -111,7 +111,7 @@ Una empresa vende distintos tipos de artículos con diferentes tipos impositivos
     - Crear un tipo impositivo del 10% y vincularlo a la categoría "IVA reducido"
     - Crear un tipo impositivo del 0% y vincularlo a la categoría "Exento"
 
-3. **Asignar productos** a categorías en la ventana [Producto](../../../master-data-management/master-data.md#product):
+3. **Asignar productos** a categorías en la ventana [Producto](../../../master-data-management/master-data/product.md#product):
     - Producto "Portátil" → Categoría de Impuesto: "IVA estándar"
     - Producto "Pan" → Categoría de Impuesto: "IVA reducido"
     - Producto "Novela" → Categoría de Impuesto: "Exento"

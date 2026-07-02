@@ -26,7 +26,7 @@ This section describes the **Etendo Picking List** module included in the *Wareh
 
 This module implements and enhances the management of the **picking operations** within a warehouse. To manage and deliver the picking lists the module makes intensive use of 2 core features that must be enabled:
 
-- [Stock reservations](../../../basic-features/warehouse-management/transactions.md#stock-reservation): When picking lists are created the products included in them are reserved. This means that no other picking list or any other process can use those products.
+- [Stock reservations](../../../basic-features/warehouse-management/transactions/stock-reservation.md): When picking lists are created the products included in them are reserved. This means that no other picking list or any other process can use those products.
 
 - Document Status Project: With this feature the user can easily know whether a sales order is pending to be delivered or not.
 
@@ -160,7 +160,7 @@ In order to generate picking lists, some configuration is needed:
             It means that the products are picked from the storage bins, but instead of taking them directly to the packing/shipping area, they are moved to a **predefined outbound storage bin** in the warehouse. From this location, the products are packed and shipped.
 
             !!! info
-                When generating the outbound picking list from a sales order or manually, [Goods Movements](../../../basic-features/warehouse-management/transactions.md#goods-movement) are created in draft status to move the products from the storage locations to the outbound location.
+                When generating the outbound picking list from a sales order or manually, [Goods Movements](../../../basic-features/warehouse-management/transactions/goods-movement.md) are created in draft status to move the products from the storage locations to the outbound location.
                 In this window, the Process Movement button ends the process.
 
             ![picking10](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/picking/picking10.png)

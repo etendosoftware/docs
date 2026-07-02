@@ -22,7 +22,7 @@ En estas situaciones, la empresa y el proveedor acuerdan unas condiciones de pag
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) y una [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice), así como de cómo registrar un [Pago a proveedor](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
-También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 
@@ -90,7 +90,7 @@ La contabilización tendrá el siguiente aspecto:
 
 | Cuenta                    | Debe | Crédito contabilizado |
 |----------------------------|-------|--------|
-| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)          | 50    |        |
+| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)          | 50    |        |
 | [Cuenta de pagos en tránsito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) |       | 50     |
 
 
@@ -141,9 +141,9 @@ La situación anterior también se refleja en contabilidad, ya que la contabiliz
 
 | Cuenta              | Debe | Crédito contabilizado |
 |----------------------|-------|--------|
-| [Gastos del producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      | 110   |        |
-| [Pasivo del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)     |       | 60     |
-| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)    |       | 50     |
+| [Gastos del producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)      | 110   |        |
+| [Pasivo del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)     |       | 60     |
+| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)    |       | 50     |
 
 
 Existe un informe denominado [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) que permite monitorizar cada pago recibido o realizado.
