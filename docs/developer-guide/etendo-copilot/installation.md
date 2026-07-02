@@ -16,7 +16,7 @@ This guide provides detailed instructions on how to get started with Etendo Copi
 
 ## Requirements
 
-1. Install Etendo. For this, follow the [Etendo Installation Guide](../../getting-started/installation.md){target="_blank"}.
+1. Install Etendo. For this, follow the [Install Etendo - Local Development Environment](../etendo-classic/getting-started/installation/local-development.md){target="_blank"} or [Install Etendo - Server Installation](../etendo-classic/getting-started/installation/production-server.md){target="_blank"}.
 2. This project depends on the following tools:
     - [Docker](https://docs.docker.com/get-docker/){target="_blank"}: version `26.0.0` or higher.
     - [Docker Compose](https://docs.docker.com/compose/install/){target="_blank"}: version `2.26.0` or higher.

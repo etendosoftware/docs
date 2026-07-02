@@ -20,7 +20,7 @@ La implementación requiere experiencia en desarrollo.
 
 Las siguientes páginas de conceptos proporcionan información de base sobre action handlers y desarrollo JavaScript:
 
-- [Action Handler](how-to-create-client-event-handler-actions.md)
+- [Action Handler](how-to-implement-a-business-event-handler.md#client-event-handler-actions)
 - [Desarrollo del lado del cliente y API](../concepts/client-side-development-and-api.md)
 - [Convenciones de codificación JavaScript](../concepts/javascript-coding-conventions.md)
 

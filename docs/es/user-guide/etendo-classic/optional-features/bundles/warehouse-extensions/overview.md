@@ -90,7 +90,7 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
     - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md#how-to-reactivate-goods-movements)
     - [Albarán (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
-    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#how-to-reactivate-physical-inventories)
+    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#reactivating-a-physical-inventory)
 
 ### Historial de existencias { #stock-history }
 

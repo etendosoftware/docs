@@ -302,6 +302,8 @@ Si la Categoría de Impuesto del producto está marcada como `As per BOM`, esta 
 
 ![Solapa Lista de materiales de la ventana Producto](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/product/product-17.png)
 
+Tras añadir todos los componentes, haga clic en el botón **Comprobar LDM** en el registro del producto. Esto valida la estructura de la Lista de materiales — confirmando que todos los componentes y cantidades requeridos están correctamente introducidos — y marca el producto como listo para su uso en [Producción LDM](../../warehouse-management/transactions/bill-of-materials-production.md).
+
 ### Regla de cálculo de costes { #costing-rule }
 
 La solapa **Regla de cálculo de costes** permite al usuario revisar las reglas de cálculo de costes que se aplican al producto dentro de un rango de fechas determinado.

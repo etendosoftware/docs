@@ -24,7 +24,6 @@ theme:
   favicon: images/favicon.png
   features:
     - navigation.tabs
-    - navigation.instant
     - navigation.path
     - navigation.sections
     - navigation.top
@@ -301,7 +300,6 @@ plugins:
                         - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
                         - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
                         - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
-                        - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
                       - Setup:
                         - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
                         - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
@@ -535,7 +533,6 @@ plugins:
                   - How to Create and Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services.md
                   - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
                   - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-                  - How to Create Client Event Handler Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
                   - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
                   - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
                   - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
@@ -922,7 +919,6 @@ plugins:
             How to Create and Update Translation Modules: Cómo Crear y Actualizar Módulos de Traducción
             How to Create and Work with Bulk Tasks for Copilot: Cómo Crear y Trabajar con Tareas Masivas para Copilot
             How to Create Build Validations and Module Scripts: Cómo Crear Validaciones de Build y Scripts de Módulo
-            How to Create Client Event Handler Actions: Cómo Crear Acciones de Manejo de Eventos del Cliente
             How to Create Client Side Callout Onchange Function: Cómo Crear una Función Callout Onchange del Lado del Cliente
             How to Create Copilot Tools: Cómo Crear Herramientas de Copilot
             How to Create Jest Test Cases: Cómo Crear Casos de Test con Jest
@@ -1091,7 +1087,6 @@ plugins:
             Task Management for Supervisors: Gestión de Tareas para Supervisores
             Tax Category: Categoría de Impuesto
             Tax Payment: Pago de impuestos
-            Tax Report Setup: Informes de impuestos
             Trial Balance: Balance sumas y saldos
             Tax Rate: Rango impuesto
             Tax Report Launcher: Lanzador de Informes Fiscales
@@ -1362,7 +1357,6 @@ nav:
               - Journal Entries Report Advanced: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/journal-entries-report-advanced.md
               - Create Tax Report: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/create-tax-report.md
               - Customer Statement: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md
-              - Tax Report Setup: user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/tax-report-setup.md
             - Setup:
               - Open/Close Period Control: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control.md
               - Financial Type: user-guide/etendo-classic/basic-features/financial-management/accounting/setup/financial-type.md
@@ -1581,7 +1575,6 @@ nav:
         - How to Create and Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-business-entities-using-web-services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-        - How to Create Client Event Handler Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
         - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
         - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md

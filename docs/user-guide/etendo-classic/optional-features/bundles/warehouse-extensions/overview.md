@@ -90,7 +90,7 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md#how-to-reactivate-goods-movements)
     - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
-    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#how-to-reactivate-physical-inventories)
+    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#reactivating-a-physical-inventory)
 
 ### Stock History
 
