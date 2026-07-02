@@ -3,53 +3,52 @@ title: Mejoras de la interfaz de usuario
 tags:
     - Nueva UI
     - Mejoras
+    - Etendo
+    - Interfaz de usuario
+    - Copilot
 status: new
 ---
 
 # Mejoras de la interfaz de usuario { #user-interface-improvements }
 
-## Visión general { #overview }
+## Descripción general { #overview }
 
-Esta sección detalla las mejoras de la interfaz de usuario disponibles en la **Nueva UI de Etendo**.
+Esta página documenta las mejoras de la interfaz de usuario disponibles en la **Etendo New UI**. Cada sección describe una funcionalidad específica, su comportamiento y cómo utilizarla.
 
-## Mejoras y ampliaciones de la UI de Etendo { #etendo-ui-improvements-and-enhancements }
+## Formato de fecha regional { #regional-date-formatting }
 
-### Formato regional de fechas { #regional-date-formatting }
-
-Todas las fechas mostradas en la interfaz de usuario ahora se adaptan automáticamente a la configuración regional de su navegador. Esto proporciona una vista personalizada y localizada de la información de fechas, haciendo que la interfaz sea más intuitiva y fácil de leer para usuarios de distintas regiones.
+Todas las fechas que se muestran en la interfaz de usuario se adaptan automáticamente a la configuración regional del navegador del usuario. Esto ofrece a cada usuario una vista localizada de la información de fechas sin necesidad de configuración manual.
 
 !!! warning
 
-    Este formato regional se aplica exclusivamente a la capa de visualización de la interfaz de usuario. El procesamiento de datos subyacente sigue estas reglas:
+    **Nota para administradores:** El formato de fecha que se muestra en pantalla está controlado por la configuración del navegador. El formato utilizado para almacenar datos en el sistema lo configura por separado el administrador del sistema. Si observa una discrepancia entre lo que ve y lo que está almacenado, contacte con su administrador — los usuarios estándar no necesitan realizar ninguna acción.
 
-    - **Visualización/Vista:** las fechas se formatean según la configuración regional de su navegador
-    - **Operaciones de backend:** los valores de fecha se procesan y almacenan usando la configuración especificada en `gradle.properties`
-    - **Las fechas se muestran automáticamente en su formato regional preferido** sin configuración manual.
-
-**Ejemplo de UI clásica de Etendo**
+**Ejemplo de la UI clásica de Etendo**
 
 <figure markdown="span">
     ![Formato de fecha en Etendo Classic](../../assets/user-guide/newui/classic-date-1.png)
-    <figcaption>UI clásica de Etendo: las fechas en la UI clásica de Etendo se muestran en el formato estándar configurado en el sistema.
-    </figcaption>
+    <figcaption>UI clásica de Etendo: las fechas se muestran en el formato estándar configurado en el sistema.</figcaption>
 </figure>
 
-**Ejemplo de UI de Etendo con configuración regional (en-US):**
+**Ejemplo de la Etendo New UI con configuración regional (en-US):**
 
 <figure markdown="span">
-    ![Formato de fecha en la Nueva UI con configuración regional](../../assets/user-guide/newui/newui-date-1.png)
-    <figcaption>UI de Etendo: en la UI de Etendo, la misma tabla muestra las fechas formateadas automáticamente. En este ejemplo se aplica `en-US` (Estados Unidos), por lo que las fechas aparecen en formato `MM/DD/YYYY`. </figcaption>
+    ![Formato de fecha en la New UI con configuración regional](../../assets/user-guide/newui/newui-date-1.png)
+    <figcaption>Etendo New UI: la misma tabla muestra las fechas formateadas automáticamente. En este ejemplo se aplica `en-US` (Estados Unidos), por lo que las fechas aparecen en formato `MM/DD/YYYY`.</figcaption>
 </figure>
 
-### Gestión de adjuntos { #attachment-management }
+## Gestión de archivos adjuntos { #attachment-management }
 
-La **UI de Etendo** introduce un sistema de gestión de adjuntos completamente rediseñado que proporciona una forma más ágil, visual e integral de gestionar archivos adjuntos, tanto desde la **vista de formulario** como directamente desde los **registros de la cuadrícula**.
+La **Etendo New UI** presenta un sistema de gestión de archivos adjuntos completamente rediseñado. Ofrece una forma más ágil, visual e integral de gestionar adjuntos, tanto desde la **vista de formulario** como directamente desde los **registros de la grilla**.
 
-#### Sección de adjuntos en la vista de formulario { #attachments-section-in-form-view }
+**Sección de adjuntos en la vista de formulario**
 
-La sección de adjuntos se ha rediseñado para ser más intuitiva. Los archivos ahora se muestran como etiquetas o chips, lo que permite una identificación rápida.
+La sección de adjuntos se ha rediseñado para ser más intuitiva. Los archivos se muestran como etiquetas o chips, lo que permite identificarlos rápidamente.
 
-![Sección de adjuntos expandida](../../assets/user-guide/newui/attachment-section-expanded-1.png)
+<figure markdown="span">
+    ![Sección de adjuntos expandida](../../assets/user-guide/newui/attachment-section-expanded-1.png)
+    <figcaption>La sección de adjuntos en la vista de formulario, mostrando los archivos como chips para una identificación rápida.</figcaption>
+</figure>
 
 **Carga de archivos**
 
@@ -57,279 +56,314 @@ La sección de adjuntos se ha rediseñado para ser más intuitiva. Los archivos 
 
 Hay dos formas principales de cargar archivos dentro de un registro:
 
-1. **Arrastrar y soltar:** arrastre uno o varios archivos directamente desde su equipo a la **zona de suelta** punteada en la sección de adjuntos.
+1. **Arrastrar y soltar:** arrastre uno o varios archivos directamente desde su equipo a la **Drop Zone** punteada en la sección de adjuntos.
 
     !!! note
-        Al soltar el archivo, se abrirá un modal de confirmación donde puede verificar el archivo seleccionado y añadir una descripción opcional antes de cargarlo.
+        Al soltar el archivo, se abre un modal de confirmación. Verifique el archivo seleccionado y añada una descripción opcional antes de cargarlo.
 
 2. **Explorador de archivos:** haga clic en la zona de carga (o en el icono de carga) para abrir el selector de archivos de su sistema operativo.
 
-#### Vista previa y edición rápida { #preview-and-quick-edit }
+**Vista previa y edición rápida**
 
 ![Modal de carga con archivo](../../assets/user-guide/newui/upload-modal-with-file-1.png){align=right width=300}
 
-Al hacer clic en el nombre de cualquier adjunto cargado, se abrirá una ventana de vista previa avanzada.
+Haga clic en el nombre de cualquier adjunto cargado para abrir una ventana de vista previa avanzada.
 
-**Funcionalidades dentro de la vista previa:**
+Funciones disponibles en la vista previa:
 
 - **Visor integrado:** visualice imágenes y documentos PDF directamente sin necesidad de descargarlos.
-- **Edición de la descripción:** puede modificar la descripción del archivo _in situ_. Haga clic en el icono de **lápiz**, edite el texto y guarde los cambios con el icono de **Comprobación**, todo sin salir de la vista previa.
+- **Edición de la descripción:** modifique la descripción del archivo en el momento. Haga clic en el icono de **lápiz**, edite el texto y guárdelo con el icono de **verificación** — todo sin salir de la vista previa.
 - **Gestión individual:** botones dedicados para **Descargar** o **Eliminar** el archivo que está visualizando.
 
-#### Acciones masivas de adjuntos { #attachments-bulk-actions }
+**Acciones masivas sobre adjuntos**
 
-![Acciones masivas](../../assets/user-guide/newui/bulk-actions-1.png)
+<figure markdown="span">
+    ![Acciones masivas](../../assets/user-guide/newui/bulk-actions-1.png)
+    <figcaption>Botones de acción global en el encabezado de la sección de adjuntos para gestionar múltiples archivos a la vez.</figcaption>
+</figure>
 
-Para facilitar la gestión de múltiples archivos, se han incorporado botones de acción global en el encabezado de la sección de adjuntos:
+Los botones de acción global en el encabezado de la sección de adjuntos permiten gestionar múltiples archivos a la vez:
 
 - **Descargar todo:** genera y descarga un archivo comprimido (`.zip`) que contiene todos los adjuntos asociados al registro.
-- **Eliminar todo:** permite eliminar todos los adjuntos del registro en un solo paso (requiere confirmación de seguridad).
+- **Eliminar todo:** elimina todos los adjuntos del registro en un solo paso (requiere confirmación de seguridad).
 
-#### Carga rápida desde la cuadrícula (arrastrar y soltar en filas) { #quick-upload-from-grid-drag-drop-on-rows }
+**Carga rápida desde la grilla (arrastrar y soltar en filas)**
 
-Es posible adjuntar archivos sin necesidad de entrar en cada registro. Desde la vista principal de la cuadrícula:
+Adjunte archivos sin necesidad de abrir cada registro individualmente. Desde la vista principal de la grilla, arrastre y suelte archivos directamente sobre cualquier fila.
 
-![](../../assets/user-guide/newui/drop-file-in-grid-1.gif)
+<figure markdown="span">
+    ![Carga rápida desde la grilla](../../assets/user-guide/newui/drop-file-in-grid-1.gif)
+    <figcaption>Arrastrar y soltar un archivo directamente sobre una fila de la grilla para adjuntarlo a ese registro.</figcaption>
+</figure>
 
-### Filtro Avanzado { #advanced-filters }
+## Filtros avanzados { #advanced-filters }
 
-![](../../assets/user-guide/newui/advanced-filters-modal.png)
+<figure markdown="span">
+    ![Modal de Advanced Filters](../../assets/user-guide/newui/advanced-filters-modal.png)
+    <figcaption>El modal de Advanced Filters, que muestra los grupos de filtros y los selectores de operadores lógicos.</figcaption>
+</figure>
 
-El modal de **Filtro Avanzado** es un componente de filtrado potente que permite a los usuarios crear filtros complejos de múltiples condiciones directamente desde la interfaz de la cuadrícula. Proporciona una forma intuitiva de construir consultas sofisticadas usando operadores lógicos y múltiples grupos de filtros.
+El modal de **Advanced Filters** es un componente de filtrado potente. Permite crear filtros complejos de múltiples condiciones directamente desde la interfaz de la grilla, mediante operadores lógicos y múltiples grupos de filtros.
 
-!!! info "Funcionalidades clave"
-    - **Múltiples tipos de filtro:** compatibilidad con campos de tipo cadena, número, fecha, booleano y selección.
-    - **Operadores lógicos:** combine condiciones usando operadores AND/OR.
-    - **Grupos de filtros:** anide múltiples condiciones dentro de grupos para una lógica de consulta compleja.
-    - **Operadores dinámicos:** los operadores disponibles cambian según el tipo de campo seleccionado.
-    - **Añadir/eliminar condiciones:** añada o elimine dinámicamente condiciones de filtro individuales.
-    - **Añadir/eliminar grupos:** cree grupos de filtros anidados para organizar lógica compleja.
-    - **Borrar todo:** restablezca todos los filtros para empezar de nuevo.
-    - **Aplicar/validación:** solo se aplican condiciones válidas (con columna, operador y valor).
-
-#### Operadores compatibles por tipo de campo { #supported-operators-by-field-type }
+### Operadores compatibles por tipo de campo { #supported-operators-by-field-type }
 
 | Tipo de campo | Operadores compatibles |
-|-----------|---------------------|
-| **Cadena** | - `=` Igual<br> - `≠` Distinto<br>Contiene<br>No contiene<br>Empieza por<br>Termina en<br>Está vacío<br>No está vacío |
+|--------------|------------------------|
+| **Cadena** | `=` Igual<br>`≠` Distinto<br>Contiene<br>No contiene<br>Empieza por<br>Termina en<br>Está vacío<br>No está vacío |
 | **Número** | `=` Igual<br>`≠` Distinto<br>`>` Mayor que<br>`<` Menor que<br>`≥` Mayor o igual<br>`≤` Menor o igual |
 | **Fecha** | `=` Igual<br>`≠` Distinto<br>Antes de<br>Después de<br>Hoy<br>Esta semana<br>Este mes |
 | **Booleano** | sí<br>no |
 | **Selección (desplegable)** | `=` Igual<br>`≠` Distinto |
 
-#### Uso del Filtro Avanzado { #using-the-advanced-filters }
+El panel de Advanced Filters permite combinar múltiples condiciones de búsqueda — por ejemplo, mostrar solo las facturas de un cliente específico que además estén vencidas. Es posible agrupar condiciones y elegir si todas deben cumplirse (AND) o basta con que se cumpla alguna (OR).
 
-1. **Haga clic en el icono de filtro** en el encabezado de la cuadrícula para abrir el modal de Filtro Avanzado.
-2. **Seleccione una columna** en el desplegable de la primera fila de filtro.
-3. **Elija un operador** adecuado para el tipo de campo.
-4. **Introduzca o seleccione un valor** según el tipo de operador.
-5. **Añada más condiciones** haciendo clic en el botón *Añadir condición*.
-6. **Cree grupos de filtros** para lógica compleja usando el botón *Añadir grupo*.
-7. **Revise sus filtros**: el estado muestra el número de filtros activos.
-8. **Haga clic en el botón Aplicar filtros** para ejecutar la consulta.
-9. **Limpie los filtros** haciendo clic en el botón *Borrar todo* para restablecer y empezar de nuevo.
+**Uso de los Advanced Filters**
 
-#### Escenarios de ejemplo { #example-scenarios }
+1. Haga clic en el **icono de filtro** en el encabezado de la grilla para abrir el modal de Advanced Filters.
+2. Seleccione una columna en el desplegable de la primera fila de filtro.
+3. Elija un operador adecuado para el tipo de campo.
+4. Introduzca o seleccione un valor según el tipo de operador.
+5. Añada más condiciones haciendo clic en **Add Condition**.
+6. Cree grupos de filtros para lógica compleja usando **Add Group**.
+7. Revise sus filtros — el indicador de estado muestra el número de filtros activos.
+8. Haga clic en **Apply Filters** para ejecutar la consulta.
+9. Haga clic en **Clear All** para restablecer todos los filtros y empezar de nuevo.
+
+**Ejemplos de escenarios**
 
 <figure markdown="span">
-    ![Ejemplo 1 de Filtro Avanzado](../../assets/user-guide/newui/advanced-filters-modal-1-example.png)
-    <figcaption>Ejemplo 1: filtro simple con una condición seleccionando una organización específica.</figcaption>
+    ![Ejemplo 1 de Advanced Filters](../../assets/user-guide/newui/advanced-filters-modal-1-example.png)
+    <figcaption>Ejemplo 1: filtro simple con una condición que selecciona una organización específica.</figcaption>
 </figure>
 
 <figure markdown="span">
-    ![Ejemplo 2 de Filtro Avanzado](../../assets/user-guide/newui/advanced-filters-modal-2-example.png)
+    ![Ejemplo 2 de Advanced Filters](../../assets/user-guide/newui/advanced-filters-modal-2-example.png)
     <figcaption>Ejemplo 2: múltiples condiciones combinadas con lógica AND para acotar los resultados de búsqueda.</figcaption>
 </figure>
 
 <figure markdown="span">
-    ![Ejemplo 3 de Filtro Avanzado](../../assets/user-guide/newui/advanced-filters-modal-3-example.png)
-    <figcaption>Ejemplo 3: filtro complejo con una condición agrupada. El filtro principal comprueba si el estado del documento es contabilizado, Y el grupo comprueba si el importe bruto total es mayor que 10 Y menor que 100.</figcaption>
+    ![Ejemplo 3 de Advanced Filters](../../assets/user-guide/newui/advanced-filters-modal-3-example.png)
+    <figcaption>Ejemplo 3: filtro complejo con una condición agrupada. El filtro principal comprueba si el Estado doc. es Registrado, Y el grupo comprueba si el Importe bruto total es mayor que 10 Y menor que 100.</figcaption>
 </figure>
 
-### Vistas guardadas { #saved-views }
+## Vistas guardadas { #saved-views }
 
-Desde el toolbar de cualquier grilla o tabla, los usuarios pueden acceder al menú **Guardar vista** para persistir y gestionar configuraciones personalizadas de la grilla.
+Una vista guardada registra la configuración preferida del usuario para cualquier tabla — qué columnas son visibles, cómo están ordenadas y qué filtros se han aplicado. Al abrir una vista guardada se restaura la configuración completa con un solo clic. Para crear o gestionar vistas, abra el menú **Save View** desde la barra de herramientas en la parte superior de cualquier tabla.
 
-![Vistas guardadas](../../assets/user-guide/newui/saved-views.png)
+<figure markdown="span">
+  ![Vistas guardadas](../../assets/user-guide/newui/saved-views.png)
+  <figcaption>El menú Save View mostrando las configuraciones guardadas, el icono de estrella para establecer una vista predeterminada y el botón de eliminar.</figcaption>
+</figure>
 
-!!! info "Funcionalidades clave"
-    - **Guardar vista actual:** captura el estado completo de la grilla — filtros aplicados, columnas visibles, orden de columnas y ordenamiento — con un nombre personalizado (máx. 100 caracteres). La configuración se persiste en el backend.
-    - **Aplicar vistas guardadas:** al abrir el menú se muestran todas las vistas disponibles para el tab actual. Un clic aplica instantáneamente toda la configuración guardada.
-    - **Marcar como predeterminada:** cualquier vista puede marcarse como predeterminada mediante el icono de estrella. La vista predeterminada se carga automáticamente cada vez que se abre ese tab. Solo se permite una vista predeterminada por tab.
+!!! info
+    - **Guardar vista actual:** captura el estado completo de la grilla — filtros aplicados, columnas visibles, orden de columnas y criterio de ordenación — bajo un nombre personalizado (máx. 100 caracteres). La configuración se guarda en el backend.
+    - **Aplicar vistas guardadas:** al abrir el menú se muestran todas las vistas disponibles para la solapa actual. Un solo clic aplica toda la configuración guardada.
+    - **Establecer como predeterminada:** cualquier vista puede marcarse como predeterminada mediante el icono de estrella. La vista predeterminada se carga automáticamente cada vez que se abre la solapa. Solo se permite una vista predeterminada por solapa.
     - **Restablecer a estándar:** restaura el estado original de la grilla sin filtros ni configuración personalizada.
-    - **Eliminar vistas:** al pasar el cursor sobre una vista se muestra un botón de eliminar con confirmación.
+    - **Eliminar vistas:** al situar el cursor sobre una vista se muestra un botón de eliminar con solicitud de confirmación.
 
-### Dashboard configurable con Widgets { #configurable-dashboard-with-widgets }
+## Panel de inicio configurable con widgets { #configurable-dashboard-with-widgets }
 
-La pantalla de inicio se ha rediseñado como un dashboard completamente configurable donde los usuarios pueden agregar, eliminar y reorganizar widgets.
+La pantalla de inicio es un panel configurable. Añada, elimine y reorganice widgets para configurar su espacio de trabajo. Es la primera pantalla que se muestra al iniciar sesión en Etendo.
 
-![Vista general del dashboard](../../assets/user-guide/newui/dashboard-overview.png)
+<figure markdown="span">
+  ![Vista general del panel](../../assets/user-guide/newui/dashboard-overview.png)
+  <figcaption>El panel de la pantalla de inicio con múltiples widgets organizados en la grilla.</figcaption>
+</figure>
 
-#### Gestión del dashboard { #dashboard-management }
+**Gestión del panel**
 
-- Grilla responsiva de widgets con **arrastrar y soltar** para reposicionar.
-- Botón **Agregar Widget** que abre un diálogo con los tipos de widgets disponibles.
-- Cada widget tiene un botón de eliminar (**X**), y algunos incluyen una opción de **Editar parámetros** para personalizar sus datos.
+- La grilla de widgets admite **arrastrar y soltar** para reposicionar los widgets.
+- El botón **Add Widget** abre un diálogo con todos los tipos de widgets disponibles.
+- Cada widget dispone de un botón para eliminarlo (**X**). Algunos widgets incluyen una opción **Edit Parameters** para personalizar sus datos.
 
-![Diálogo de agregar widget](../../assets/user-guide/newui/dashboard-add-widget.png)
+<figure markdown="span">
+  ![Diálogo de Add Widget](../../assets/user-guide/newui/dashboard-add-widget.png)
+  <figcaption>El diálogo de Add Widget con la lista de tipos de widgets disponibles.</figcaption>
+</figure>
 
-#### Tipos de widgets disponibles { #available-widget-types }
+**Tipos de widgets disponibles**
 
-| Widget | Descripción |
-|--------|-------------|
-| **KPI** | Muestra un valor numérico grande con unidad, etiqueta e indicador de tendencia (verde para positivo, rojo para negativo). |
-| **Calendario** | Interfaz de calendario con eventos programados. |
-| **Proceso** | Información sobre procesos y flujos de trabajo. |
-| **Lista de consulta** | Tabla con paginación, columnas ordenables y navegación click-through a la ventana relacionada. |
-| **HTML** | Contenido HTML personalizado. |
-| **URL** | Contenido externo embebido mediante iframe. |
-| **Alerta de stock** | Alertas de inventario con indicadores de estado. |
-| **Notificación** | Notificaciones y mensajes. |
-| **Favoritos** | Ventanas favoritas mostradas como chips clickeables (ver abajo). |
-| **Vistos recientemente** | Documentos vistos recientemente. |
-| **Documentos recientes** | Actividad reciente de documentos. |
+- **KPI** — Muestra un valor numérico grande con unidad, etiqueta e indicador de tendencia (verde para positivo, rojo para negativo).
+- **Calendar** — Interfaz de calendario con eventos programados.
+- **Process** — Muestra el estado o el progreso de un proceso en segundo plano que se ejecuta en el sistema.
+- **Query List** — Tabla con paginación, columnas ordenables y navegación mediante clic a la ventana relacionada.
+- **HTML** — Muestra un bloque de texto o contenido con formato personalizado diseñado por su administrador.
+- **URL** — Muestra una página web o herramienta externa directamente dentro de su panel, sin salir de Etendo.
+- **Stock Alert** — Alertas de inventario con indicadores de estado.
+- **Notification** — Notificaciones y mensajes.
+- **Favorites** — Ventanas favoritas mostradas como chips sobre los que se puede hacer clic (véase más abajo).
+- **Recently Viewed** — Documentos vistos recientemente.
+- **Recent Documents** — Actividad reciente de documentos.
 
-#### Widget de Favoritos { #favorites-widget }
+**Widget de Favorites**
 
-Un widget dedicado que muestra todas las ventanas favoritas del usuario como chips compactos y clickeables.
+Un widget dedicado que muestra todas las ventanas favoritas del usuario como chips compactos sobre los que se puede hacer clic.
 
-![Widget de Favoritos](../../assets/user-guide/newui/dashboard-favorites-widget.png)
+<figure markdown="span">
+  ![Widget de Favorites](../../assets/user-guide/newui/dashboard-favorites-widget.png)
+  <figcaption>El widget de Favorites mostrando las ventanas guardadas como chips sobre los que se puede hacer clic.</figcaption>
+</figure>
 
-- Al hacer clic en cualquier chip se abre esa ventana en un nuevo tab.
-- El widget se actualiza en tiempo real cuando el usuario marca o desmarca favoritos desde cualquier parte de la UI (icono de estrella en el sidebar).
+- Haga clic en cualquier chip para abrir esa ventana en una nueva solapa.
+- El widget se actualiza en tiempo real cuando el usuario marca o desmarca favoritos desde cualquier parte de la UI (icono de estrella en la barra lateral).
 
-![Estrella de Favoritos](../../assets/user-guide/newui/dashboard-favorites-star.png)
-- Muestra un guion (**—**) como estado vacío si no hay favoritos configurados.
+<figure markdown="span">
+  ![Estrella de Favorites](../../assets/user-guide/newui/dashboard-favorites-star.png)
+  <figcaption>El icono de estrella en la barra lateral que se usa para marcar o desmarcar una ventana como favorita.</figcaption>
+</figure>
+
+- Muestra un guion (**—**) como estado vacío cuando no hay favoritos configurados.
 
 !!! note
-    El concepto de widget de Favoritos no existe en Etendo Classic. Es una funcionalidad exclusiva de la UI de Etendo.
+    El widget de Favorites no existe en Etendo Classic. Es una funcionalidad exclusiva de la Etendo New UI.
 
-### Email desde Toolbar { #email-from-toolbar }
+## Correo electrónico desde la barra de herramientas { #email-from-toolbar }
 
-Un modal de envío de email accesible desde el toolbar, que permite a los usuarios componer y enviar correos electrónicos directamente desde el contexto del registro actual.
+La barra de herramientas incluye un modal de correo electrónico. Úselo para redactar y enviar correos electrónicos directamente desde el contexto del registro actual.
 
-![Modal de email](../../assets/user-guide/newui/email-modal.png)
+<figure markdown="span">
+  ![Modal de correo electrónico](../../assets/user-guide/newui/email-modal.png)
+  <figcaption>El modal de redacción de correo electrónico abierto desde la barra de herramientas de un registro.</figcaption>
+</figure>
 
-#### Campos del formulario { #form-fields }
+**Campos del formulario**
 
 | Campo | Detalles |
 |-------|----------|
-| **Para** (obligatorio) | Dirección del destinatario, pre-cargada desde el contexto del registro actual. |
-| **CCO** | Copia oculta. |
+| **Para** (obligatorio) | Dirección del destinatario, precargada desde el contexto del registro actual. |
+| **CCO** | Los destinatarios añadidos aquí reciben el correo pero están ocultos para el resto de destinatarios. No pueden ver las direcciones de los demás y nadie ve quién fue incluido en CCO. |
 | **Responder a** | Dirección de respuesta. |
-| **CC** | Copia de carbón, disponible bajo **Mostrar más campos**. |
-| **Asunto** (obligatorio) | Línea de asunto del email. |
+| **CC** | Los destinatarios añadidos aquí reciben una copia del correo y son visibles para todos los destinatarios de los campos **Para** y **CC**. Disponible en **Mostrar más campos**. |
+| **Asunto** (obligatorio) | Línea de asunto del correo electrónico. |
 | **Cuerpo** | Área de texto con un panel de referencia que muestra los tokens de plantilla disponibles. |
 
-#### Tokens de plantilla { #template-tokens }
+**Tokens de plantilla**
 
-El campo de cuerpo proporciona un panel de referencia con los tokens disponibles que se reemplazan dinámicamente al enviar el email:
+Para personalizar el correo electrónico, escriba cualquier marcador de posición directamente en el cuerpo del mensaje. Al enviar el correo, cada marcador se sustituye automáticamente por los datos reales del registro actual — sin necesidad de introducirlos manualmente. Por ejemplo, escriba `Dear @cus_nam@,` y aparecerá "Dear Acme Corp," según el registro.
 
-`@cus_ref@`, `@our_ref@`, `@cus_nam@`, `@sal_nam@`, `@bp_nam@`, `@doc_date@`, `@doc_desc@`, `@doc_nextduedate@`, `@doc_lastduedate@`
+| Marcador | Lo que inserta en el correo |
+|----------|----------------------------|
+| `@cus_ref@` | Número de referencia del cliente |
+| `@our_ref@` | Referencia interna de su empresa |
+| `@cus_nam@` | Nombre del cliente |
+| `@sal_nam@` | Nombre del comercial |
+| `@bp_nam@` | Nombre del tercero |
+| `@doc_date@` | Fecha del documento |
+| `@doc_desc@` | Descripción del documento |
+| `@doc_nextduedate@` | Fecha del próximo vencimiento |
+| `@doc_lastduedate@` | Fecha del último vencimiento |
 
-#### Plantillas { #templates }
+**Plantillas**
 
-Un selector desplegable permite elegir plantillas predefinidas que auto-completan el cuerpo y otros campos.
+Un selector desplegable permite elegir plantillas predefinidas que rellenan automáticamente el cuerpo y otros campos.
 
-#### Adjuntos { #email-attachments }
+**Adjuntos**
 
-La sección de adjuntos muestra archivos de reporte, adjuntos del registro y archivos subidos en una tabla. Los usuarios pueden:
+La sección de adjuntos muestra archivos de informe, adjuntos del registro y archivos cargados en una tabla.
 
-- Agregar archivos locales desde su equipo.
-- Cargar adjuntos asociados al registro desde la base de datos.
-- Activar la casilla de **Archivar** en archivos de reporte.
-- Eliminar adjuntos individuales mediante el botón **X**.
+- Añada archivos locales desde su equipo.
+- Cargue adjuntos asociados al registro desde la base de datos.
+- Active la casilla **Archive** en los archivos de informe.
+- Elimine adjuntos individuales mediante el botón **X**.
 
-### Selector de imagen { #image-selector }
+## Selector de imágenes { #image-selector }
 
-Los campos de imagen en formularios ahora cuentan con un flujo completo de carga, vista previa y edición.
+Los campos de imagen en formularios disponen de un flujo completo de carga, vista previa y edición.
 
-![Campos de selector de imagen](../../assets/user-guide/newui/image-selector-fields.png)
+<figure markdown="span">
+    ![Campos del selector de imágenes](../../assets/user-guide/newui/image-selector-fields.png)
+    <figcaption>Campos de imagen en un formulario, mostrando los controles de carga y vista previa.</figcaption>
+</figure>
 
-#### Carga { #image-upload }
+**Carga**
 
-![Diálogo de carga de imagen](../../assets/user-guide/newui/image-upload-dialog.png)
+<figure markdown="span">
+    ![Diálogo de carga de imagen](../../assets/user-guide/newui/image-upload-dialog.png)
+    <figcaption>El diálogo de carga de imagen, con soporte para arrastrar y soltar y retroalimentación de validación de dimensiones.</figcaption>
+</figure>
 
-- Al hacer clic en un campo de imagen se abre un diálogo de carga.
-- Soporta **arrastrar y soltar** o selección de archivo.
-- Valida las dimensiones de la imagen contra las restricciones configuradas (mínimo/máximo).
+- Haga clic en un campo de imagen para abrir el diálogo de carga.
+- Admite **arrastrar y soltar** o selección de archivo.
+- Valida las dimensiones de la imagen respecto a las restricciones configuradas (mínimo/máximo).
 
 !!! warning "Validación de dimensiones"
-    - Si se violan restricciones obligatorias, se muestra un **error** con las dimensiones actuales vs. las requeridas.
-    - Si las restricciones son recomendadas, un **diálogo de confirmación** permite al usuario continuar o cancelar.
-    - Se puede aplicar un **redimensionamiento automático** opcional, con una confirmación que muestra las dimensiones original y final.
+    - Si se incumplen restricciones obligatorias, se muestra un **error** con las dimensiones actuales frente a las requeridas.
+    - Si las restricciones son recomendadas, un **diálogo de confirmación** permite continuar o cancelar.
+    - Existe una función opcional de **redimensionamiento automático**, con una confirmación que muestra las dimensiones original y final.
 
-#### Vista previa y edición { #image-preview-and-editing }
+**Vista previa y edición**
 
-![Modal de vista previa de imagen](../../assets/user-guide/newui/image-preview-modal.png)
+<figure markdown="span">
+    ![Modal de vista previa de imagen](../../assets/user-guide/newui/image-preview-modal.png)
+    <figcaption>El modal de vista previa a pantalla completa, con controles de zoom, desplazamiento, recarga y eliminación.</figcaption>
+</figure>
 
 - La imagen cargada aparece como una **miniatura** en el formulario.
-- Al hacer clic en la miniatura se abre un **modal de vista previa a pantalla completa**.
+- Haga clic en la miniatura para abrir un **modal de vista previa a pantalla completa**.
 - En el modal de vista previa:
-    - **Zoom** con la rueda del mouse (0.5x a 5x).
-    - **Arrastrar** para panear por la imagen.
-    - Botón de **restablecer zoom** para volver a la vista predeterminada.
-    - **Re-cargar** para reemplazar la imagen actual.
-    - **Eliminar** con confirmación.
+    - **Zoom** con la rueda del ratón (0,5x a 5x).
+    - **Arrastrar** para desplazarse por la imagen.
+    - **Restablecer zoom** para volver a la vista predeterminada.
+    - **Volver a cargar** para sustituir la imagen actual.
+    - **Eliminar** con solicitud de confirmación.
 
-### Atajos de teclado { #keyboard-shortcuts }
+## Atajos de teclado { #keyboard-shortcuts }
 
-Un sistema centralizado de atajos de teclado para acciones comunes en la UI de Etendo.
+Un sistema centralizado de atajos de teclado cubre las acciones más habituales en la Etendo New UI.
 
 | Atajo | Acción |
 |-------|--------|
-| `Arrow Up` / `Arrow Down` | Navegar entre filas de la tabla sin usar el mouse. |
+| `Arrow Up` / `Arrow Down` | Navegar entre filas de la tabla sin usar el ratón. |
 | `Ctrl + S` | Guardar el registro actual. |
 | `Ctrl + N` | Crear un nuevo registro. |
 
 !!! info "Detalles de comportamiento"
-    - Los atajos **no se activan** cuando el foco está en campos de entrada, áreas de texto o desplegables (salvo configuración explícita).
-    - Se **previene el comportamiento predeterminado** del navegador (ej: `Ctrl + S` no abre el diálogo "Guardar página" del navegador).
-    - Los atajos son **sensibles al contexto**: solo se disparan dentro de la región de UI apropiada.
+    - Los atajos **no se activan** cuando el foco está en campos de entrada, áreas de texto o desplegables (salvo que estén configurados explícitamente).
+    - El comportamiento predeterminado del navegador **queda bloqueado** (por ejemplo, `Ctrl + S` no abre el diálogo "Guardar página" del navegador).
+    - Los atajos son **sensibles al contexto**: solo se activan dentro de la región de la UI correspondiente.
 
-### Sistema de foco y guardado previo { #focus-system-and-prior-saving }
+## Sistema de enfoque y guardado previo { #focus-system-and-prior-saving }
 
-Un sistema automático de gestión de estado que maneja los cambios no guardados al cambiar entre tabs o ventanas.
+El sistema de enfoque guarda automáticamente los cambios sin guardar al cambiar entre solapas o ventanas.
 
-![Sistema de foco](../../assets/user-guide/newui/focus-system.png)
+- Al cambiar de solapa o ventana, los **cambios sin guardar** en el área previamente activa se **guardan automáticamente** (de forma asíncrona).
+- El sistema registra qué solapa o ventana está activa en cada momento.
+- Las solapas en segundo plano **mantienen su estado**, lo que permite cambiar entre ellas al instante sin pérdida de datos.
+- Navegue libremente entre las solapas abiertas sin perder el trabajo en curso. La navegación es fluida y los datos permanecen coherentes.
 
-- Al cambiar de tab o ventana, los **cambios no guardados** del área previamente enfocada se **guardan automáticamente** (de forma asíncrona).
-- El sistema rastrea qué tab o ventana está activo actualmente.
-- Los tabs en segundo plano **mantienen su estado**, permitiendo cambios instantáneos sin pérdida de datos.
-- Los usuarios pueden navegar libremente entre tabs abiertos sin perder trabajo en curso; la navegación es fluida y los datos se mantienen consistentes.
+## Navegación con teclas de flecha en tablas { #arrow-key-navigation-in-tables }
 
-### Navegación con teclas de dirección en tablas { #arrow-key-navigation-in-tables }
-
-Navegación mejorada por teclado en las filas de tabla usando las teclas de dirección.
+Las teclas de flecha permiten navegar por el teclado entre las filas de una tabla.
 
 - `Arrow Up`: mueve la selección a la fila anterior.
 - `Arrow Down`: mueve la selección a la fila siguiente.
-- La navegación **se detiene en los límites de la tabla** — no pasa de la primera ni la última fila.
-- Solo funciona cuando hay una **única fila seleccionada**.
-- Pulsaciones rápidas avanzan filas de forma fluida (con debounce para evitar lag).
+- La navegación **se detiene en los límites de la tabla** — no pasa de la primera ni de la última fila.
+- Solo funciona cuando hay **una única fila seleccionada**.
+- Las pulsaciones rápidas avanzan filas de forma fluida (con debounce para evitar lag).
 - **Deshabilitado en modo edición**.
-- El sistema distingue entre navegación por teclado y clic de mouse para optimizar el rendimiento.
+- El sistema distingue entre la navegación por teclado y los clics del ratón para optimizar el rendimiento.
 
-### Agentes destacados en Copilot { #featured-agents-in-copilot }
+## Agentes destacados en Copilot { #featured-agents-in-copilot }
 
-En el selector de asistentes del Copilot:
+El selector de asistentes de Copilot organiza los agentes en dos grupos para un acceso más rápido.
 
-- Sección **Agentes destacados**: ciertos agentes aparecen resaltados en la parte superior de la lista, visualmente distinguidos con un badge o estilo especial que indica que son recomendados.
-- Sección **Agentes regulares**: los agentes no destacados aparecen debajo.
-- Esta organización ayuda a los usuarios a encontrar rápidamente los asistentes más útiles sin necesidad de recorrer toda la lista.
+- Sección **Agentes destacados**: ciertos agentes aparecen resaltados en la parte superior de la lista, distinguidos visualmente con un distintivo o estilo especial que indica que son recomendados.
+- Sección **Agentes regulares**: los agentes no destacados aparecen a continuación.
+- Esta organización ayuda a los usuarios a encontrar rápidamente los asistentes más útiles sin tener que recorrer toda la lista.
 
-### Mejoras en el chat de Copilot { #copilot-chat-improvements }
+## Mejoras en el chat de Copilot { #copilot-chat-improvements }
 
-La experiencia de chat del Copilot se ha mejorado con varias mejoras de usabilidad:
+La interfaz de chat de Copilot incluye varias mejoras de usabilidad.
 
-!!! info "Funcionalidades clave"
-    - **Lista de conversaciones:** sidebar con el historial de conversaciones pasadas.
-    - **Archivar/eliminar:** las conversaciones se pueden archivar o eliminar.
+!!! info "Funciones principales"
+    - **Lista de conversaciones:** barra lateral que muestra el historial de conversaciones anteriores.
+    - **Archivar/Eliminar:** las conversaciones se pueden archivar o eliminar.
     - **Nueva conversación:** botón para iniciar una conversación nueva.
     - **Buscar conversaciones:** búsqueda en el historial de conversaciones.
-    - **Renombrar conversaciones:** títulos editables para mejor organización.
-    - **UI mejorada:** mejor formateo de mensajes, espaciado y jerarquía visual.
-    - **Estados claros:** indicadores de estado vacío, carga y error.
+    - **Renombrar conversaciones:** títulos editables para una mejor organización.
+    - **UI mejorada:** mejor formato de mensajes, espaciado y jerarquía visual.
+    - **Estados claros:** indicadores para el estado vacío, la carga y las condiciones de error.
     - **Streaming:** las respuestas se muestran en tiempo real mientras el agente las genera.
 
 ---
