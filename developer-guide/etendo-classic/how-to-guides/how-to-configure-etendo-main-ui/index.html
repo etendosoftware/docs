@@ -17299,6 +17299,10 @@
 <h2 id="overview">Overview</h2>
 <p>Etendo Main UI is a modern React/TypeScript-based user interface included in the base Etendo installation. It runs as a containerized Docker service alongside the Etendo instance and is started automatically with <code>./gradlew resources.up</code>.</p>
 <p>This guide covers manual configuration of the Main UI variables and the advanced development setup for contributors.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_blank"><em>Platform Extensions Bundle</em></a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/">Platform Extensions - Release notes</a>.</p>
+</div>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Etendo project properly set up. See the <a href="../../getting-started/installation/local-development/">Local Development</a> or <a href="../../getting-started/installation/production-server/">Server Installation</a> guides.</li>
@@ -17316,16 +17320,21 @@
 <h2 id="client-access-token">Client Access Token</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
 <p>A one-time encryption token must be configured for authentication. This token is required for the Main UI to start a session.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Starting from <strong>Etendo 26.1</strong>, the SWS key is generated automatically during <code>./gradlew install</code> — no manual action is needed for new installations. For earlier versions, or to rotate the key, use one of the following options (not both):</p>
+<ul>
+<li><strong>From the command line:</strong> <code>./gradlew generate.sws.keys</code></li>
+<li><strong>From the UI:</strong> follow the steps below.</li>
+</ul>
+</div>
+<p>The following steps apply only if you need to generate or rotate the key manually:</p>
 <ol>
 <li>Access Etendo Classic as a <code>System Administrator</code>.</li>
 <li>Navigate to <code>Client</code> &gt; <code>Secure Web Service Configuration</code> tab.</li>
 <li>Click <strong>Generate Key</strong> to create a token. The expiration time is in minutes; set to <code>0</code> for no expiration.</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/developer-guide/etendo-mobile/getting-started/token.png" data-desc-position="bottom"><img alt="Client Access Token" src="../../../../assets/developer-guide/etendo-mobile/getting-started/token.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This token does not require any further action — it just needs to be generated for the authentication process to work correctly.</p>
-</div>
 <h2 id="configuration">Configuration</h2>
 <h3 id="using-the-interactive-setup">Using the Interactive Setup</h3>
 <p>Run the interactive configuration assistant to set all required variables:</p>
@@ -17403,6 +17412,21 @@
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>setup
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>./gradlew<span class="w"> </span>resources.up
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">host.docker.internal not resolving</p>
+<p>On some Linux systems, <code>host.docker.internal</code> may not resolve correctly inside the container, causing connection errors even when the rest of the setup works. If this happens, find the actual host IP by running:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>alpine<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'ip route show default | head -1 | cut -d" " -f3'</span>
+</span></code></pre></div>
+<p>Use the IP returned by that command in place of <code>host.docker.internal</code> in <code>etendo.classic.url</code>. For example:</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">etendo</span><span class="o">.</span><span class="na">classic</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//172.17.0.1:8080/etendo</span>
+</span></code></pre></div>
+<p>After updating <code>gradle.properties</code>, rebuild and restart the containers so the new value is picked up:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>docker<span class="w"> </span>rmi<span class="w"> </span><span class="k">$(</span>docker<span class="w"> </span>images<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mainui<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'{print $3}'</span><span class="k">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>./gradlew<span class="w"> </span>setup
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>./gradlew<span class="w"> </span>resources.up
+</span></code></pre></div>
+</div>
 <h2 id="access-the-main-ui">Access the Main UI</h2>
 <p>Once all services are running, the Main UI is available at:</p>
 <table>
@@ -17432,70 +17456,70 @@
 </ul>
 <h3 id="required-modules">Required Modules</h3>
 <p>Install the following modules in the <code>modules/</code> directory:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>modules
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.etendorx.git
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.openapi.git
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.git
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.template.git
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>modules
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.etendorx.git
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.openapi.git
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.git
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:etendosoftware/com.etendoerp.metadata.template.git
 </span></code></pre></div>
 <h3 id="project-structure">Project Structure</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>com.etendorx.workspace-ui/
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── packages/
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>│   ├── api-client/          # API client for backend communication
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>│   ├── ComponentLibrary/    # Reusable UI components
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>│   └── MainUI/              # Main application
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>├── package.json
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>├── pnpm-workspace.yaml
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>└── README.md
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>com.etendorx.workspace-ui/
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>├── packages/
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>│   ├── api-client/          # API client for backend communication
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│   ├── ComponentLibrary/    # Reusable UI components
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│   └── MainUI/              # Main application
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>├── package.json
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>├── pnpm-workspace.yaml
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>└── README.md
 </span></code></pre></div>
 <h3 id="development-setup">Development Setup</h3>
 <ol>
 <li>
 <p>Clone the Main UI development repository:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/etendosoftware/com.etendorx.workspace-ui.git
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>com.etendorx.workspace-ui
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/etendosoftware/com.etendorx.workspace-ui.git
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">cd</span><span class="w"> </span>com.etendorx.workspace-ui
 </span></code></pre></div>
 </li>
 <li>
 <p>Install dependencies:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pnpm<span class="w"> </span>install
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pnpm<span class="w"> </span>install
 </span></code></pre></div>
 </li>
 <li>
 <p>Create <code>packages/MainUI/.env.local</code> and add the backend URL:</p>
-<div class="language-text highlight"><span class="filename">.env.local</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ETENDO_CLASSIC_URL=http://localhost:8080/etendo
+<div class="language-text highlight"><span class="filename">.env.local</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ETENDO_CLASSIC_URL=http://localhost:8080/etendo
 </span></code></pre></div>
 </li>
 <li>
 <p>Build required packages in order:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
 </span></code></pre></div>
 </li>
 <li>
 <p>Start the development server:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pnpm<span class="w"> </span>dev
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pnpm<span class="w"> </span>dev
 </span></code></pre></div>
 <p>The application is available at <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>.</p>
 </li>
 </ol>
 <h3 id="development-commands">Development Commands</h3>
 <p><strong>Root-level commands:</strong></p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pnpm<span class="w"> </span>dev<span class="w">          </span><span class="c1"># Start Main UI development server</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>pnpm<span class="w"> </span>build<span class="w">        </span><span class="c1"># Build all packages</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>pnpm<span class="w"> </span><span class="nb">test</span><span class="w">         </span><span class="c1"># Run tests across all packages</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>pnpm<span class="w"> </span>lint<span class="w">         </span><span class="c1"># Lint all packages</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>pnpm<span class="w"> </span>lint:fix<span class="w">     </span><span class="c1"># Fix lint issues automatically</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>pnpm<span class="w"> </span>format<span class="w">       </span><span class="c1"># Format code across all packages</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>pnpm<span class="w"> </span>format:fix<span class="w">   </span><span class="c1"># Auto-fix formatting issues</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>pnpm<span class="w"> </span>clean<span class="w">        </span><span class="c1"># Clean all build artifacts</span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>pnpm<span class="w"> </span>dev<span class="w">          </span><span class="c1"># Start Main UI development server</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>pnpm<span class="w"> </span>build<span class="w">        </span><span class="c1"># Build all packages</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>pnpm<span class="w"> </span><span class="nb">test</span><span class="w">         </span><span class="c1"># Run tests across all packages</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>pnpm<span class="w"> </span>lint<span class="w">         </span><span class="c1"># Lint all packages</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>pnpm<span class="w"> </span>lint:fix<span class="w">     </span><span class="c1"># Fix lint issues automatically</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>pnpm<span class="w"> </span>format<span class="w">       </span><span class="c1"># Format code across all packages</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>pnpm<span class="w"> </span>format:fix<span class="w">   </span><span class="c1"># Auto-fix formatting issues</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>pnpm<span class="w"> </span>clean<span class="w">        </span><span class="c1"># Clean all build artifacts</span>
 </span></code></pre></div>
 <p><strong>Per-package commands:</strong></p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>dev
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>lint
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>dev
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span>build
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/componentlibrary<span class="w"> </span>build
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/api-client<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>pnpm<span class="w"> </span>--filter<span class="w"> </span>@workspaceui/mainui<span class="w"> </span>lint
 </span></code></pre></div>
 <hr>
 <p>This work is licensed under <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.89 10.34-1.34.7c-.14-.3-.31-.51-.52-.63s-.41-.18-.58-.18c-.9 0-1.34.59-1.34 1.77 0 .54.11.97.34 1.29.22.32.55.48 1 .48.58 0 .99-.27 1.23-.86l1.23.63c-.26.49-.62.87-1.09 1.15q-.69.42-1.53.42c-.9 0-1.62-.27-2.17-.82C6.58 13.74 6.3 13 6.3 12c0-.95.28-1.7.83-2.26q.84-.84 2.1-.84c1.24-.01 2.13.48 2.66 1.44m5.77 0-1.32.7c-.14-.3-.34-.51-.53-.63q-.315-.18-.6-.18c-.89 0-1.34.59-1.34 1.77 0 .54.13.97.34 1.29.23.32.56.48 1 .48.59 0 1-.27 1.24-.86l1.25.63c-.28.49-.65.87-1.11 1.15-.47.28-.97.42-1.52.42-.9 0-1.63-.27-2.17-.82S12.09 13 12.09 12c0-.95.28-1.7.83-2.26S14.17 8.9 15 8.9c1.26-.01 2.14.48 2.66 1.44M12 3.5a8.5 8.5 0 0 1 8.5 8.5 8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M322.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H307c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3m-32.5-64.5a34.5 34.5 0 1 1-69 .8 34.5 34.5 0 1 1 69-.8M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M255.6 8C397.4 8 504 118.1 504 256c0 147.1-118.5 248-248.4 248C121.6 504 8 394.5 8 256 8 123.1 112.7 8 255.6 8m.8 44.7C138.2 52.7 52.7 150.6 52.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3M145.7 221c13-83.9 80.5-95.7 108.9-95.7 99.8 0 127.5 82.5 127.5 134.2 0 63.6-41 132.9-128.9 132.9-38.9 0-99.1-20-109.4-97h62.5c1.5 30.1 19.6 45.2 54.5 45.2 23.3 0 58-18.2 58-82.8 0-82.5-49.1-80.6-56.7-80.6q-49.65 0-55.8 43.8h18.2l-49.2 49.2-49-49.2z"></path></svg></span> <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank"> CC BY-SA 2.5 ES</a> by <a href="https://etendo.software" target="_blank">Futit Services S.L</a>.</p>
