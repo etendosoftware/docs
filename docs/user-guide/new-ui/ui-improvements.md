@@ -13,7 +13,7 @@ status: new
 
 ## Overview
 
-This page documents the user interface improvements available in the **Etendo New UI**. Each section describes a specific feature, its behaviour, and how to use it.
+This page documents the user interface improvements available in the **Etendo New UI**. Each section describes a specific feature, its behavior, and how to use it.
 
 ## Regional Date Formatting
 
@@ -346,6 +346,11 @@ Arrow keys provide keyboard navigation across table rows.
 - The system distinguishes between keyboard navigation and mouse clicks to optimize performance.
 
 ## Featured Agents in Copilot
+
+<figure markdown="span">
+  ![Featured Agents in Copilot](../../assets/user-guide/newui/copilot-ui.png)
+  <figcaption>The Copilot assistant selector showing Featured Agents at the top and Regular Agents below.</figcaption>
+</figure>
 
 The Copilot assistant selector organizes agents into two groups for faster access.
 

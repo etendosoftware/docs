@@ -143,7 +143,7 @@ El panel de Advanced Filters permite combinar múltiples condiciones de búsqued
 
 <figure markdown="span">
     ![Ejemplo 3 de Advanced Filters](../../assets/user-guide/newui/advanced-filters-modal-3-example.png)
-    <figcaption>Ejemplo 3: filtro complejo con una condición agrupada. El filtro principal comprueba si el Estado doc. es Registrado, Y el grupo comprueba si el Importe bruto total es mayor que 10 Y menor que 100.</figcaption>
+    <figcaption>Ejemplo 3: filtro complejo con una condición agrupada. El filtro principal comprueba si el Estado doc. es Registrado, y el grupo comprueba si el Importe bruto total es mayor que 10 y menor que 100.</figcaption>
 </figure>
 
 ## Vistas guardadas { #saved-views }
