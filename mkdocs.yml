@@ -408,7 +408,8 @@ plugins:
                     - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md
               - New UI:
                 - User Interface Improvements: user-guide/new-ui/ui-improvements.md
-                - How-To Guides:
+                - How to Guides:
+                  - How to Migrate Classic Process JavaScript: user-guide/new-ui/how-to-guides/how-to-migrate-classic-javascript-code.md
                   - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
             - Developer Guide:
@@ -1450,6 +1451,7 @@ nav:
     - New UI:
       - User Interface Improvements: user-guide/new-ui/ui-improvements.md
       - How-To Guides:
+        - How to Migrate Classic Process JavaScript: user-guide/new-ui/how-to-guides/how-to-migrate-classic-javascript-code.md
         - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
 
   - Developer Guide:
