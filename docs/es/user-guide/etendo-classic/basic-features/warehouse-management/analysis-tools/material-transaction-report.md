@@ -40,11 +40,11 @@ Los siguientes parámetros permiten filtrar los datos incluidos en el informe:
 Tras configurar los filtros deseados, el informe aparece en la sección **Ver resultados**. Expórtelo mediante los botones **Formato HTML** o **Formato PDF**, si es necesario.
 
 <figure markdown="span">
-  ![Ventana de parámetros del Informe Transacción de Material](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
+  ![Ventana de parámetros del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
   <figcaption>Ventana de parámetros del Informe Transacción de Material</figcaption>
 </figure>
 
-### Ver resultados { #view-results }
+## Ver resultados { #view-results }
 
 La salida del informe se organiza por **Tercero** y, dentro de cada tercero, por número de documento, que aparece como encabezado de sección, por ejemplo *Albarán (Cliente) 1000425*. Para cada línea de transacción, se muestran las siguientes columnas:
 
@@ -55,7 +55,7 @@ La salida del informe se organiza por **Tercero** y, dentro de cada tercero, por
 -   **Cantidad**: La cantidad del producto movida en la transacción, junto con su unidad de medida.
 
 <figure markdown="span">
-  ![Salida del Informe Transacción de Material](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
+  ![Salida del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
   <figcaption>Salida del Informe Transacción de Material</figcaption>
 </figure>
 

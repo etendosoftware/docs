@@ -44,7 +44,7 @@ After setting the desired filters, the report appears in the **View Results** se
   <figcaption>Material Transaction Report parameters window</figcaption>
 </figure>
 
-### View Results
+## View Results
 
 The report output is organized by **Business Partner** and, within each partner, by document number, which appears as a section header, for example *Goods Shipment 1000425*. For each transaction line, the following columns are displayed:
 
