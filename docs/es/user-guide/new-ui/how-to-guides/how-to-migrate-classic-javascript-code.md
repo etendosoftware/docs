@@ -33,19 +33,14 @@ hasta que se migren a las columnas de metadatos. Este documento es la referencia
 
 !!! info "Alcance y responsabilidades"
     Esta guía está dirigida a desarrolladores que deben migrar el JavaScript de procesos Classic **sin
-    acceso al código fuente de la nueva UI**. Sus herramientas son **esta documentación**, la **referencia
-    de arquitectura** a la que apunta, y el **"New UI Migrations" Team**. Concretamente:
+    acceso al código fuente de la nueva UI**. La vía recomendada y con soporte es **seguir esta
+    documentación** y migrar a mano. Sus herramientas son **esta documentación** y los pasos manuales y
+    autogestionados que describe. Concretamente:
 
-    1. Producir el código migrado (manualmente, o con el **"New UI Migrations" Team** — consulte
-       [Migrar con el "New UI Migrations" Team](#migrating-with-the-new-ui-migrations-team)).
+    1. Producir el código migrado **siguiendo esta guía**.
     2. Pegarlo en los campos de metadatos correctos (consulte [Los campos de metadatos](#the-metadata-fields-where-the-migrated-code-goes)).
     3. **Validar el resultado manualmente** en el diálogo en ejecución.
     4. Si algo no funciona, **notificar el problema** — describir exactamente qué falla y dónde.
-
-!!! warning "La automatización es asistida, no autónoma"
-    El **"New UI Migrations" Team** acelera la migración, pero **puede cometer errores**. Trate su salida
-    como un primer borrador a verificar, nunca como un resultado terminado y de confianza. Toda migración
-    que produzca **debe ser validada manualmente** por un desarrollador antes de considerarse terminada.
 
 ---
 
@@ -323,11 +318,39 @@ return { PAID_FULLY, remaining };
 
 ## Migrar con el "New UI Migrations" Team { #migrating-with-the-new-ui-migrations-team }
 
-Para la mayoría de los procesos usted no tiene que escribir la migración a mano. El **"New UI Migrations"
-Team** proporcionado por Fyso traduce un archivo JavaScript de un Proceso definido de Classic a las
-columnas de metadatos descritas arriba, usando su agente de migración interno. Interactúe con él **en
-español** (el mensaje de activación y sus entregables están en español), como se muestra en los pasos a
-continuación.
+Usted puede migrar todos los procesos **a mano** siguiendo esta guía. El **"New UI Migrations" Team** es
+una herramienta **opcional** que el equipo de Etendo construyó y usó internamente para acelerar el
+trabajo; **su uso no tiene soporte**. Traduce un archivo JavaScript de un Proceso definido de Classic a
+las columnas de metadatos descritas arriba, usando sus agentes de migración. Descárguelo desde
+[Descargas](#downloads) y cargue sus archivos en su asistente de IA. Se usó con **Claude Code**, pero los
+agentes y el skill son Markdown plano que **funciona con cualquier asistente de IA**. Interactúe con él
+**en español** (al menos el primer mensaje), como se muestra en los
+pasos a continuación.
+
+### Descargas { #downloads }
+
+Los agentes de migración y el skill de arquitectura y migración están disponibles como una única descarga:
+
+[:material-download: Descargar los agentes de migración y el skill (.zip)](../../../assets/user-guide/newui/how-to-guides/new-ui-migrations-team.zip)
+
+El zip contiene cuatro archivos Markdown:
+
+- **`faro.md`** — el agente coordinador, que valida la solicitud y despacha el trabajo.
+- **`babel.md`** — el agente migrador/desarrollador, que analiza el JavaScript de Classic y genera el
+  código migrado por columna de metadatos.
+- **`sello.md`** — el agente de QA, que guía la validación manual contra una lista de verificación de
+  pruebas.
+- **`new-ui-js-migration-guide.md`** — el **skill**: la referencia autoritativa de arquitectura y
+  migración. Es la fuente de verdad de cada API admitida, firma y regla de migración.
+
+Cargue estos archivos Markdown en su asistente de IA. Internamente, el equipo de Etendo usó **Claude
+Code**, pero los archivos son **agnósticos de herramienta**, de modo que funcionan con cualquier asistente de IA.
+
+!!! warning "El tooling de agentes no tiene soporte"
+    El uso del **"New UI Migrations" Team** es **opcional y no tiene soporte**. No se da soporte a los
+    problemas derivados del uso de los agentes en sí. Las carencias de capacidad de la plataforma y los
+    errores del sustrato se siguen notificando y recibiendo soporte de la forma habitual (consulte
+    [Notificar problemas](#reporting-issues)).
 
 !!! note "Migrar a mano"
     Los pasos 4 a 6 también se aplican a usted: sustituya sus propios cuerpos migrados por los bloques de
@@ -337,9 +360,9 @@ continuación.
 ### Qué hace — y qué no hace — el equipo { #what-the-team-does-and-does-not-do }
 
 **El equipo hace:** lee el archivo `.js` de Classic y los metadatos del proceso; comprueba la viabilidad
-contra el documento de arquitectura; genera el código migrado para cada columna como una arrow function
-simple; autocomprueba que cada cuerpo compila; y entrega una salida por columna lista para pegar, junto
-con una lista de verificación de pruebas manuales.
+contra el skill de arquitectura y migración (consulte [Descargas](#downloads)); genera el código migrado
+para cada columna como una arrow function simple; autocomprueba que cada cuerpo compila; y entrega una
+salida por columna lista para pegar, junto con una lista de verificación de pruebas manuales.
 
 **El equipo nunca:** pega el código en la UI por usted (eso lo hace usted); cambia el código fuente de la
 aplicación; hace commit o push de nada; ni inventa soporte de plataforma que no existe. Si un proceso usa
@@ -441,16 +464,6 @@ producir cuando una migración no se comporta como Classic. Incluya:
   `"<api> is not implemented yet"`, que nombra la capacidad faltante).
 - **El cuerpo migrado relevante** que pegó, y el informe de cobertura si activó el **"New UI Migrations"
   Team**.
-
----
-
-## Referencia { #reference }
-
-- **Referencia de arquitectura y capacidades (fuente de verdad):**
-  [new-javascript-code.md](https://github.com/etendosoftware/com.etendorx.workspace-ui/blob/main/docs/process/definition/new-javascript-code.md){target="_blank"}
-  — la descripción autoritativa de cada API admitida, firma y regla de migración.
-- **El "New UI Migrations" Team:** consulte la [lista completa de agentes disponibles](https://fyso.world/app/teams/){target="_blank"},
-  incluido el agente de migración utilizado para traducir el JavaScript de procesos Classic.
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
