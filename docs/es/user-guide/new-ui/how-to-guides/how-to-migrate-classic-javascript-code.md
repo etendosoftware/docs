@@ -101,7 +101,7 @@ Unas pocas reglas rigen cada campo. Un cuerpo que las incumpla no se ejecutará:
 | --------- | --------------------------------- |
 | **El objeto `view`** | Refleja el `OBStandardView` de Classic. El contexto de solo lectura (`view.theForm`, `view.messageBar`, `view.getContextInfo()`, `view.selectedRecords`, `view.tabId`, …) está siempre disponible; los métodos de acción (`view.refresh()`, `view.openProcess(...)`, `view.executeProcess()`, los botones del pie, el botón OK) están disponibles dentro de los hooks que los necesitan. |
 | **Proxies `form`, `item`** | `view.theForm.getItem(name)` y métodos de campo: `getValue()` / `setValue(v)`, `show()` / `hide()` / `isVisible()`, `setRequired(bool)` / `setDisabled(bool)`, `setTitle(text)`, `setValueMap(map)` / `getValueMap()`, `setValueFromRecord({ id, _identifier })`, y más. Los parámetros numéricos devuelven `number`s reales, de modo que las comparaciones de Classic siguen funcionando. |
-| **Proxy `grid`** | Para grillas insertadas (Window-Reference / Pick&Execute): selección (`getSelectedRecords`, `selectRecord`, …), lecturas de filas, valores de edición (`setEditValue`, `getEditValues`), visibilidad (`show()` / `hide()`), botones de acción por fila, y hooks de tiempo de ejecución registrados desde `onGridLoad` (`onRecordChange`, `onSelectionToggle`, `setColumnOnChange`, `setColumnValidator`, `fireOnPause`). |
+| **Proxy `grid`** | Para grillas insertadas (Window-Reference / Pick&Execute): selección (`getSelectedRecords`, `selectRecord`, …), lecturas de filas, valores de edición (`setEditValue`, `getEditValues`), visibilidad (`show()` / `hide()`), botones de acción por fila, y hooks de tiempo de ejecución registrados desde `onGridLoad` (`onRecordChange`, `onSelectionToggle`, `setColumnOnChange`, `setColumnValidator`, `fireOnPause`). Dentro de `onGridLoad` la grilla se recibe como el argumento `grid`; desde cualquier otro hook (`onLoad`, `onProcess`, `onRefresh`, el `onChange` de un parámetro) se accede al mismo handle mediante `view.theForm.getItem(name).canvas.viewGrid`. |
 | **Ejecución en el servidor — `view.executeProcess()`** | El equivalente en la nueva UI del `actionHandlerCall()` de Classic. Construye el payload de ejecución estándar y lo envía a la clase Java configurada del proceso. Úselo en `onProcess` en lugar de construir un payload a mano. |
 | **Funciones auxiliares HTTP** | `callAction(handler, payload)`, `callDatasource(entity, payload)`, `callServlet(path, payload)` — POST a handlers/datasources del backend con autenticación y CSRF gestionados automáticamente. |
 | **Diálogos modales** | `confirm` / `warn` / `say` (e `isc.confirm` / `ask` / `warn` / `say`). Basados en Promesas y también aceptan la forma de callback de Classic. |
@@ -130,8 +130,8 @@ de mecanismos de Classic están intencionadamente modificados o no se admiten:
 
 ## Los campos de metadatos (dónde va el código migrado) { #the-metadata-fields-where-the-migrated-code-goes }
 
-Siete columnas personalizadas contienen el código migrado. Cuatro pertenecen al **proceso**, dos a cada
-**parámetro**, y una es una marca de renderizado en el proceso. Introduzca el JavaScript migrado en el
+Siete columnas personalizadas contienen el código migrado. Cinco pertenecen al **proceso** (cuatro hooks
+más una marca de renderizado), y dos a cada **parámetro**. Introduzca el JavaScript migrado en el
 campo correspondiente a cada columna en la ventana **Process Definition** (y su solapa **Parameters**) en
 el Diccionario de la Aplicación.
 
@@ -154,7 +154,7 @@ A continuación se describe el propósito, la firma y un ejemplo sencillo para c
 
 **1. `em_etmeta_onload` — `onLoad` del proceso**
 
-- **Entidad:** process · **Firma:** `async (process, view) => { … }`
+- **Entidad:** Process · **Firma:** `async (process, view) => { … }`
 - **Se dispara:** una vez, cuando se abre el diálogo, después de que los valores por defecto hayan sido
   sembrados y antes de que el formulario sea interactivo.
 - **Propósito:** sembrar o calcular valores por defecto, ocultar o requerir campos, preseleccionar filas de
@@ -179,7 +179,7 @@ async (process, view) => {
 
 **2. `em_etmeta_onprocess` — `onProcess` del proceso**
 
-- **Entidad:** process · **Firma:** `async (process, view) => { … }`
+- **Entidad:** Process · **Firma:** `async (process, view) => { … }`
 - **Se dispara:** cuando el usuario pulsa el botón de ejecutar / OK.
 - **Propósito:** validación del lado del cliente antes del envío, llamada al backend y post-procesamiento
   de la respuesta.
@@ -210,7 +210,7 @@ async (process, view) => {
 
 **3. `em_etmeta_on_refresh` — `onRefresh` del proceso**
 
-- **Entidad:** process · **Firma:** `(view) => { … }`
+- **Entidad:** Process · **Firma:** `(view) => { … }`
 - **Se dispara:** cuando el diálogo necesita volver a obtener sus datos — por ejemplo, cuando se cierra un
   proceso anidado, el `onRefresh` del padre se invoca automáticamente.
 - **Propósito:** refrescar los datos de grilla/formulario después de un cambio externo.
@@ -225,7 +225,7 @@ async (process, view) => {
 <a id="4-em_etmeta_payscript_logic-shared-module-scope"></a>
 **4. `em_etmeta_payscript_logic` — ámbito de módulo compartido**
 
-- **Entidad:** process · **Forma:** un **cuerpo de módulo** (declaraciones y funciones auxiliares) que
+- **Entidad:** Process · **Forma:** un **cuerpo de módulo** (declaraciones y funciones auxiliares) que
   termina con `return { … };` — **no** una arrow function.
 - **Propósito:** contener todo lo que el archivo de Classic declaraba a nivel de módulo — funciones
   auxiliares compartidas, constantes y estado de closure — que los puntos de entrada referencian por su
@@ -250,7 +250,7 @@ return { PAID_FULLY, remaining };
 
 **5. `em_etmeta_on_parameter_change` — `onChange` del parámetro**
 
-- **Entidad:** parameter (uno por parámetro que tenga un onChange) · **Firma:**
+- **Entidad:** Parameter (uno por parámetro que tenga un onChange) · **Firma:**
   `(item, view, form, grid) => { … }` — `item` es el campo que cambió; `grid` es `null` para los
   parámetros escalares.
 - **Se dispara:** cuando el usuario confirma el valor del parámetro (nunca durante el sembrado inicial).
@@ -270,7 +270,7 @@ return { PAID_FULLY, remaining };
 
 **6. `em_etmeta_on_grid_load` — `onGridLoad` del parámetro**
 
-- **Entidad:** parameter (el parámetro de grilla) · **Firma:** `(grid, view, parameters) => { … }`
+- **Entidad:** Parameter (el parámetro de grilla) · **Firma:** `(grid, view, parameters) => { … }`
 - **Se dispara:** cada vez que la grilla insertada recibe un resultado de datasource entregado (incluido un
   resultado **vacío**, exactamente una vez).
 - **Propósito:** post-procesar las filas cargadas (selección por defecto, componentes por fila, columnas
@@ -293,7 +293,7 @@ return { PAID_FULLY, remaining };
 
 **7. `em_etmeta_custom_component` — marca de componente personalizado**
 
-- **Entidad:** process · **Tipo:** booleano (Sí/No).
+- **Entidad:** Process · **Tipo:** booleano (Sí/No).
 - **Propósito:** determina cómo se renderiza el diálogo del proceso:
     - **No (false) — el caso normal.** El diálogo renderiza el **formulario estándar basado en metadatos**:
       los parámetros del proceso, sus metadatos y los hooks de JavaScript migrados (`onLoad`, `onProcess`,
@@ -418,12 +418,16 @@ El equipo devuelve, en español para los entregables:
 
 Lea el informe de cobertura y las advertencias antes de pegar nada. Le indican qué esperar y qué probar.
 
+!!! note "Los pasos 4 a 6 se aplican en ambos casos"
+    Tanto si utilizó el equipo como si migró a mano, siga los pasos 4 a 6 tal como están escritos: pegue
+    su código migrado, valídelo manualmente y notifique cualquier problema.
+
 **Paso 4 — Pegar el código en los campos**
 
 Para cada bloque etiquetado, copie el cuerpo en el campo correspondiente de la ventana **Process
 Definition** (o su solapa **Parameters**), siguiendo [Los campos de metadatos](#the-metadata-fields-where-the-migrated-code-goes).
-Pegue **solo** el código que el equipo entregó, exactamente como se proporcionó, en la columna indicada.
-Guarde el registro.
+Pegue solo el código migrado — el que entregó el equipo o el suyo propio — exactamente como corresponda,
+en la columna indicada. Guarde el registro.
 
 !!! danger "Haga coincidir el campo con la columna"
     Pegar un cuerpo `onProcess` en el campo `onLoad` (o un hook de parámetro en el parámetro equivocado)
@@ -432,11 +436,11 @@ Guarde el registro.
 
 **Paso 5 — Validar manualmente**
 
-Abra el diálogo del proceso en la nueva UI y ejecute **cada** elemento de la lista de verificación de
-pruebas manuales del equipo: confirme que el diálogo se abre correctamente, que el sembrado/ocultamiento
-de `onLoad` ocurrió, que cada `onChange` reacciona como en Classic, que las grillas cargan y validan
-como se espera, y que la ejecución devuelve el mismo resultado que Classic. Compare lado a lado con el
-diálogo de Classic siempre que sea posible.
+Abra el diálogo del proceso en la nueva UI y ejecute cada elemento de su plan de pruebas manual (la lista
+de verificación del equipo, o su propio plan si migró a mano): confirme que el diálogo se abre
+correctamente, que el sembrado/ocultamiento de `onLoad` ocurrió, que cada `onChange` reacciona como en
+Classic, que las grillas cargan y validan como se espera, y que la ejecución devuelve el mismo resultado
+que Classic. Compare lado a lado con el diálogo de Classic siempre que sea posible.
 
 **Paso 6 — Notificar problemas (no corregir)**
 

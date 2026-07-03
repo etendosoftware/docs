@@ -97,7 +97,7 @@ A few rules govern every field. A body that breaks them will not run:
 | ---------- | ------------------------------ |
 | **The `view` object** | Mirrors the Classic `OBStandardView`. Read-only context (`view.theForm`, `view.messageBar`, `view.getContextInfo()`, `view.selectedRecords`, `view.tabId`, …) is always available; action methods (`view.refresh()`, `view.openProcess(...)`, `view.executeProcess()`, the footer buttons, the OK button) are available inside the hooks that need them. |
 | **`form`, `item` proxies** | `view.theForm.getItem(name)` and field methods: `getValue()` / `setValue(v)`, `show()` / `hide()` / `isVisible()`, `setRequired(bool)` / `setDisabled(bool)`, `setTitle(text)`, `setValueMap(map)` / `getValueMap()`, `setValueFromRecord({ id, _identifier })`, and more. Numeric parameters return real `number`s, so Classic comparisons keep working. |
-| **`grid` proxy** | For embedded (Window-Reference / Pick&Execute) grids: selection (`getSelectedRecords`, `selectRecord`, …), row reads, edit values (`setEditValue`, `getEditValues`), visibility (`show()` / `hide()`), per-row action buttons, and runtime hooks registered from `onGridLoad` (`onRecordChange`, `onSelectionToggle`, `setColumnOnChange`, `setColumnValidator`, `fireOnPause`). |
+| **`grid` proxy** | For embedded (Window-Reference / Pick&Execute) grids: selection (`getSelectedRecords`, `selectRecord`, …), row reads, edit values (`setEditValue`, `getEditValues`), visibility (`show()` / `hide()`), per-row action buttons, and runtime hooks registered from `onGridLoad` (`onRecordChange`, `onSelectionToggle`, `setColumnOnChange`, `setColumnValidator`, `fireOnPause`). Inside `onGridLoad` the grid is passed as the `grid` argument; from any other hook (`onLoad`, `onProcess`, `onRefresh`, a parameter's `onChange`) reach the same handle via `view.theForm.getItem(name).canvas.viewGrid`. |
 | **Server execution — `view.executeProcess()`** | The new-UI equivalent of the Classic `actionHandlerCall()`. It builds the standard execution payload and submits it to the process's configured Java class. Use it in `onProcess` instead of hand-building a payload. |
 | **HTTP helpers** | `callAction(handler, payload)`, `callDatasource(entity, payload)`, `callServlet(path, payload)` — POST to backend handlers/datasources with auth and CSRF handled automatically. |
 | **Modal dialogs** | `confirm` / `warn` / `say` (and `isc.confirm` / `ask` / `warn` / `say`). Promise-based and also accept the Classic callback shape. |
@@ -126,8 +126,8 @@ mechanisms are either intentionally changed or not supported:
 
 ## The metadata fields (where the migrated code goes)
 
-Seven custom columns carry the migrated code. Four belong to the **process**, two to each **parameter**,
-and one is a rendering flag on the process. Enter the migrated JavaScript in the field corresponding
+Seven custom columns carry the migrated code. Five belong to the **process** (four hooks plus one
+rendering flag), and two belong to each **parameter**. Enter the migrated JavaScript in the field corresponding
 to each column on the **Process Definition** window (and its **Parameters** tab) in the Application
 Dictionary.
 
@@ -149,7 +149,7 @@ Below is the purpose, signature, and a simple example for each field.
 
 **1. `em_etmeta_onload` — process `onLoad`**
 
-- **Entity:** process · **Signature:** `async (process, view) => { … }`
+- **Entity:** Process · **Signature:** `async (process, view) => { … }`
 - **Fires:** once, when the dialog opens, after the defaults have been seeded and before the form is
   interactive.
 - **Purpose:** seed or compute default values, hide or require fields, pre-select grid rows, gate the
@@ -172,7 +172,7 @@ async (process, view) => {
 
 **2. `em_etmeta_onprocess` — process `onProcess`**
 
-- **Entity:** process · **Signature:** `async (process, view) => { … }`
+- **Entity:** Process · **Signature:** `async (process, view) => { … }`
 - **Fires:** when the user presses the execute / OK button.
 - **Purpose:** client-side validation before submit, calling the backend, and post-processing the
   response.
@@ -201,7 +201,7 @@ async (process, view) => {
 
 **3. `em_etmeta_on_refresh` — process `onRefresh`**
 
-- **Entity:** process · **Signature:** `(view) => { … }`
+- **Entity:** Process · **Signature:** `(view) => { … }`
 - **Fires:** when the dialog needs to re-pull its data — for example, when a nested process closes, the
   parent's `onRefresh` is invoked automatically.
 - **Purpose:** refresh grid/form data after an external change.
@@ -216,7 +216,7 @@ async (process, view) => {
 <a id="4-em_etmeta_payscript_logic-shared-module-scope"></a>
 **4. `em_etmeta_payscript_logic` — shared module scope**
 
-- **Entity:** process · **Shape:** a **module body** (declarations and helper functions) that ends with
+- **Entity:** Process · **Shape:** a **module body** (declarations and helper functions) that ends with
   `return { … };` — **not** an arrow function.
 - **Purpose:** hold everything the Classic file declared at module level — shared helpers, constants, and
   closure state — that the entry points reference by bare name. It is evaluated once per dialog open, and
@@ -240,7 +240,7 @@ return { PAID_FULLY, remaining };
 
 **5. `em_etmeta_on_parameter_change` — parameter `onChange`**
 
-- **Entity:** parameter (one per parameter that has an onChange) · **Signature:**
+- **Entity:** Parameter (one per parameter that has an onChange) · **Signature:**
   `(item, view, form, grid) => { … }` — `item` is the changed field; `grid` is `null` for scalar
   parameters.
 - **Fires:** when the parameter's value is committed by the user (never during initial seeding).
@@ -260,7 +260,7 @@ return { PAID_FULLY, remaining };
 
 **6. `em_etmeta_on_grid_load` — parameter `onGridLoad`**
 
-- **Entity:** parameter (the grid parameter) · **Signature:** `(grid, view, parameters) => { … }`
+- **Entity:** Parameter (the grid parameter) · **Signature:** `(grid, view, parameters) => { … }`
 - **Fires:** each time the embedded grid receives a delivered datasource result (including an **empty**
   result, exactly once).
 - **Purpose:** post-process loaded rows (default selection, per-row components, derived columns), register
@@ -282,7 +282,7 @@ return { PAID_FULLY, remaining };
 
 **7. `em_etmeta_custom_component` — custom-component flag**
 
-- **Entity:** process · **Type:** boolean (Yes/No).
+- **Entity:** Process · **Type:** boolean (Yes/No).
 - **Purpose:** selects how the process dialog is rendered:
     - **No (false) — the normal case.** The dialog renders the **standard metadata-driven form**: the
       process's parameters, their metadata, and the migrated JavaScript hooks (`onLoad`, `onProcess`,
@@ -396,11 +396,16 @@ The team returns, in Spanish for the deliverables:
 Read the coverage report and advisories before pasting anything. They tell you what to expect and what to
 test.
 
+!!! note "Steps 4 to 6 apply either way"
+    Whether you used the team or migrated by hand, follow steps 4 to 6 as written: paste your migrated
+    code, validate it manually, and report any problem.
+
 **Step 4 — Paste the code into the fields**
 
 For each labeled block, copy the body into the matching field on the **Process Definition** window (or its
 **Parameters** tab), following [The metadata fields](#the-metadata-fields-where-the-migrated-code-goes).
-Paste **only** the code the team delivered, exactly as given, into the indicated column. Save the record.
+Paste only the migrated code — the team's output or your own — exactly as intended, into the indicated
+column. Save the record.
 
 !!! danger "Match the field to the column"
     Pasting an `onProcess` body into the `onLoad` field (or a parameter hook into the wrong parameter)
@@ -409,10 +414,10 @@ Paste **only** the code the team delivered, exactly as given, into the indicated
 
 **Step 5 — Validate manually**
 
-Open the process dialog in the new UI and run **every** item in the team's manual-test checklist: confirm
-the dialog opens correctly, that `onLoad` seeding/hiding happened, that each `onChange` reacts as in
-Classic, that grids load and validate as expected, and that execution returns the same result as Classic.
-Compare side-by-side with the Classic dialog where possible.
+Open the process dialog in the new UI and run every item in your manual-test plan (the team's checklist,
+or your own plan if you migrated by hand): confirm the dialog opens correctly, that `onLoad` seeding/hiding
+happened, that each `onChange` reacts as in Classic, that grids load and validate as expected, and that
+execution returns the same result as Classic. Compare side-by-side with the Classic dialog where possible.
 
 **Step 6 — Report problems (do not fix)**
 
