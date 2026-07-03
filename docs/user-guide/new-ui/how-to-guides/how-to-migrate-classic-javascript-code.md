@@ -4,6 +4,7 @@ tags:
   - New UI
   - JavaScript Migration
   - Process Definition
+  - Application Dictionary
 
 status: new
 ---
@@ -28,12 +29,12 @@ is deployed to the UI.
 This guide explains **how to migrate the JavaScript of a Defined Process** from Classic to the new UI in
 your own environment. If you maintain a productive instance with custom Defined Processes whose Classic
 JavaScript personalizes their behavior, those scripts will **not** run in the new UI until they are
-migrated into the metadata columns. This document is your reference for doing that.
+migrated into the metadata columns. This document is the reference for that migration.
 
-!!! info "Who this guide is for, and what your role is"
-    This guide is written for developers who must migrate Classic process JavaScript **without access to
+!!! info "Scope and responsibilities"
+    This guide targets developers who must migrate Classic process JavaScript **without access to
     the new UI source code**. Your tools are **this documentation**, the **architecture
-    reference** it points to, and the **"New UI Migrations" Team**. Concretely, your job is to:
+    reference** it points to, and the **"New UI Migrations" Team**. Concretely:
 
     1. Produce the migrated code (manually, or with the **"New UI Migrations" Team** — see
        [Migrating with the "New UI Migrations" Team](#migrating-with-the-new-ui-migrations-team)).
@@ -42,9 +43,9 @@ migrated into the metadata columns. This document is your reference for doing th
     4. If something does not work, **report the problem** — describe exactly what fails and where.
 
 !!! warning "Automation is assisted, not autonomous"
-    The **"New UI Migrations" Team** accelerates migration, but it **can make mistakes**. Every migration it produces
-    **must be validated manually** by a developer before it is considered done. Treat the team's output
-    as a first draft to verify, never as a finished, trusted result.
+    The **"New UI Migrations" Team** accelerates migration but **can make mistakes**. Treat its output
+    as a first draft to verify, never as a finished, trusted result. Every migration it produces
+    **must be validated manually** by a developer before it is considered done.
 
 ---
 
@@ -53,13 +54,13 @@ migrated into the metadata columns. This document is your reference for doing th
 A Classic Defined Process can attach behavior at up to five points. The new UI maps each one to a
 metadata column:
 
-| # | Classic hook | Fires when… | Scope |
-|---|---|---|---|
-| 1 | `onLoad` | The process dialog opens | Process(`OBUIAPP_Process`) |
-| 2 | `onProcess` | The user presses the execute / OK button | Process(`OBUIAPP_Process`) |
-| 3 | `onRefresh` | The dialog needs to re-pull its data (e.g. after a nested process closes) | Process(`OBUIAPP_Process`) |
-| 4 | `onChange` | A parameter's value is committed | Parameter(`OBUIAPP_Parameter`) |
-| 5 | `onGridLoad` | An embedded grid parameter finishes loading rows | Parameter(`OBUIAPP_Parameter`) |
+| # | Classic hook | Fires when | Scope |
+| - | ------------ | ---------- | ----- |
+| 1 | `onLoad` | The process dialog opens | Process (`OBUIAPP_Process`) |
+| 2 | `onProcess` | The user presses the execute / OK button | Process (`OBUIAPP_Process`) |
+| 3 | `onRefresh` | The dialog needs to re-pull its data (e.g. after a nested process closes) | Process (`OBUIAPP_Process`) |
+| 4 | `onChange` | A parameter's value is committed | Parameter (`OBUIAPP_Parameter`) |
+| 5 | `onGridLoad` | An embedded grid parameter finishes loading rows | Parameter (`OBUIAPP_Parameter`) |
 
 Beyond these entry points, a Classic process file is a single JavaScript *module*: the entry points call
 shared helpers, constants, and closure state declared in the same file. The new UI reproduces this with
@@ -79,7 +80,7 @@ than failing silently, so gaps surface during migration instead of in production
 
 ### The execution-model contract you must respect
 
-A few rules govern every field. They are not optional — a body that breaks them will not run:
+A few rules govern every field. A body that breaks them will not run:
 
 - **Each hook is a bare arrow-function expression.** A field value must be a single arrow function such
   as `async (process, view) => { … }`. It must **not** be wrapped in an immediately-invoked function
@@ -93,12 +94,12 @@ A few rules govern every field. They are not optional — a body that breaks the
   `BigDecimal` are likewise injected and callable directly.
 - **`onChange` does not fire during initial seeding.** Just like Classic, parameter `onChange` runs only
   on a genuine user change, never while the dialog seeds its initial/default values. Put load-time
-  computation in `em_etmeta_onload`, not in `on_parameter_change`.
+  computation in `em_etmeta_onload`, not in `em_etmeta_on_parameter_change`.
 
 ### Capability catalog
 
 | Capability | What it gives migrated scripts |
-|---|---|
+| ---------- | ------------------------------ |
 | **The `view` object** | Mirrors the Classic `OBStandardView`. Read-only context (`view.theForm`, `view.messageBar`, `view.getContextInfo()`, `view.selectedRecords`, `view.tabId`, …) is always available; action methods (`view.refresh()`, `view.openProcess(...)`, `view.executeProcess()`, the footer buttons, the OK button) are available inside the hooks that need them. |
 | **`form`, `item` proxies** | `view.theForm.getItem(name)` and field methods: `getValue()` / `setValue(v)`, `show()` / `hide()` / `isVisible()`, `setRequired(bool)` / `setDisabled(bool)`, `setTitle(text)`, `setValueMap(map)` / `getValueMap()`, `setValueFromRecord({ id, _identifier })`, and more. Numeric parameters return real `number`s, so Classic comparisons keep working. |
 | **`grid` proxy** | For embedded (Window-Reference / Pick&Execute) grids: selection (`getSelectedRecords`, `selectRecord`, …), row reads, edit values (`setEditValue`, `getEditValues`), visibility (`show()` / `hide()`), per-row action buttons, and runtime hooks registered from `onGridLoad` (`onRecordChange`, `onSelectionToggle`, `setColumnOnChange`, `setColumnValidator`, `fireOnPause`). |
@@ -131,12 +132,12 @@ mechanisms are either intentionally changed or not supported:
 ## The metadata fields (where the migrated code goes)
 
 Seven custom columns carry the migrated code. Four belong to the **process**, two to each **parameter**,
-and one is a rendering flag on the process. You enter the migrated JavaScript in the field corresponding
+and one is a rendering flag on the process. Enter the migrated JavaScript in the field corresponding
 to each column on the **Process Definition** window (and its **Parameters** tab) in the Application
 Dictionary.
 
 | Field (column) | Entity | Hook | Code shape |
-|---|---|---|---|
+| -------------- | ------ | ---- | ---------- |
 | `em_etmeta_onload` | Process | `onLoad` | `async (process, view) => { … }` |
 | `em_etmeta_onprocess` | Process | `onProcess` | `async (process, view) => { … }` |
 | `em_etmeta_on_refresh` | Process | `onRefresh` | `(view) => { … }` |
@@ -147,11 +148,11 @@ Dictionary.
 
 !!! tip "Any field may be left empty"
     A process rarely uses all five hooks. Fill only the fields that correspond to hooks the Classic file
-    actually implements; leave the rest empty. An empty field simply means "no script for this hook".
+    actually implements; leave the rest empty. An empty field means "no script for this hook".
 
 Below is the purpose, signature, and a simple example for each field.
 
-### 1. `em_etmeta_onload` — process `onLoad`
+**1. `em_etmeta_onload` — process `onLoad`**
 
 - **Entity:** process · **Signature:** `async (process, view) => { … }`
 - **Fires:** once, when the dialog opens, after the defaults have been seeded and before the form is
@@ -160,7 +161,7 @@ Below is the purpose, signature, and a simple example for each field.
   open behind a `confirm`, or (with the custom-component flag) return a UI schema.
 - **Returns (optional):** a map of `paramName: value` pairs to seed fields; a falsy return is a no-op.
 
-```js
+```javascript
 async (process, view) => {
   const form = view.theForm;
   // Hide an advanced field unless the launching record is a sales transaction.
@@ -174,7 +175,7 @@ async (process, view) => {
 };
 ```
 
-### 2. `em_etmeta_onprocess` — process `onProcess`
+**2. `em_etmeta_onprocess` — process `onProcess`**
 
 - **Entity:** process · **Signature:** `async (process, view) => { … }`
 - **Fires:** when the user presses the execute / OK button.
@@ -183,16 +184,16 @@ async (process, view) => {
 - **Key rule:** call `view.executeProcess()` to run the process's own Java class (the equivalent of the
   Classic `actionHandlerCall()`). To abort with an error, return `{ severity: 'error', text }`.
 
-```js
+```javascript
 async (process, view) => {
   const form = view.theForm;
-  const amount = form.getItem('actual_payment').getValue(); // numeric → a real number
+  const amount = form.getItem('actual_payment').getValue(); // numeric field returns a real number
   if (amount <= 0) {
     const text = OB.I18N.getLabel('ETP_AmountMustBePositive');
     view.messageBar.setMessage(isc.OBMessageBar.TYPE_ERROR, null, text);
     return { severity: 'error', text }; // aborts; the modal stays open
   }
-  const response = await view.executeProcess(); // = actionHandlerCall()
+  const response = await view.executeProcess(); // equivalent to actionHandlerCall()
   return response && response.message;
 };
 ```
@@ -203,21 +204,22 @@ async (process, view) => {
     hook**: return `{ severity: 'error', text }` to abort, or `undefined` to let the submit proceed —
     and do **not** call `view.executeProcess()` (it would double-submit).
 
-### 3. `em_etmeta_on_refresh` — process `onRefresh`
+**3. `em_etmeta_on_refresh` — process `onRefresh`**
 
 - **Entity:** process · **Signature:** `(view) => { … }`
 - **Fires:** when the dialog needs to re-pull its data — for example, when a nested process closes, the
   parent's `onRefresh` is invoked automatically.
 - **Purpose:** refresh grid/form data after an external change.
 
-```js
+```javascript
 (view) => {
   // Re-pull the embedded grid after a nested process modified the data.
   view.theForm.getItem('order_invoice').canvas.viewGrid.invalidateCache();
 };
 ```
 
-### 4. `em_etmeta_payscript_logic` — shared module scope
+<a id="4-em_etmeta_payscript_logic-shared-module-scope"></a>
+**4. `em_etmeta_payscript_logic` — shared module scope**
 
 - **Entity:** process · **Shape:** a **module body** (declarations and helper functions) that ends with
   `return { … };` — **not** an arrow function.
@@ -225,7 +227,7 @@ async (process, view) => {
   closure state — that the entry points reference by bare name. It is evaluated once per dialog open, and
   whatever it returns is made available inside all five hooks.
 
-```js
+```javascript
 const PAID_FULLY = 'PPM';
 
 function remaining(form) {
@@ -238,10 +240,10 @@ return { PAID_FULLY, remaining };
 ```
 
 !!! tip "Namespaced self-registration"
-    If the Classic file registers a namespace such as `OB.APRM.AddPayment = { … }`, you can do the same
+    If the Classic file registers a namespace such as `OB.APRM.AddPayment = { … }`, do the same
     inside this module body; the `OB` shim tolerates `OB.<Module>.<Process>` writes.
 
-### 5. `em_etmeta_on_parameter_change` — parameter `onChange`
+**5. `em_etmeta_on_parameter_change` — parameter `onChange`**
 
 - **Entity:** parameter (one per parameter that has an onChange) · **Signature:**
   `(item, view, form, grid) => { … }` — `item` is the changed field; `grid` is `null` for scalar
@@ -250,7 +252,7 @@ return { PAID_FULLY, remaining };
 - **Purpose:** react to a value change — recompute dependent fields, toggle required/disabled, refresh a
   value map, show a banner.
 
-```js
+```javascript
 (item, view, form) => {
   // When the document type changes, recompute the suggested amount.
   const isCredit = item.getValue() === 'CR';
@@ -261,7 +263,7 @@ return { PAID_FULLY, remaining };
 };
 ```
 
-### 6. `em_etmeta_on_grid_load` — parameter `onGridLoad`
+**6. `em_etmeta_on_grid_load` — parameter `onGridLoad`**
 
 - **Entity:** parameter (the grid parameter) · **Signature:** `(grid, view, parameters) => { … }`
 - **Fires:** each time the embedded grid receives a delivered datasource result (including an **empty**
@@ -269,7 +271,7 @@ return { PAID_FULLY, remaining };
 - **Purpose:** post-process loaded rows (default selection, per-row components, derived columns), register
   per-column edit hooks/validators, or react to an empty grid (e.g. an info banner when no rows match).
 
-```js
+```javascript
 (grid, view) => {
   if (grid.getData().getLength() === 0) {
     view.messageBar.setMessage(isc.OBMessageBar.TYPE_INFO, null,
@@ -283,24 +285,24 @@ return { PAID_FULLY, remaining };
 };
 ```
 
-### 7. `em_etmeta_custom_component` — custom-component flag
+**7. `em_etmeta_custom_component` — custom-component flag**
 
 - **Entity:** process · **Type:** boolean (Yes/No).
-- **Purpose:** it selects *how the process dialog is rendered*:
-    - **`No` (false) — the normal case.** The dialog renders the **standard metadata-driven form**: the
+- **Purpose:** selects how the process dialog is rendered:
+    - **No (false) — the normal case.** The dialog renders the **standard metadata-driven form**: the
       process's parameters, their metadata, and the migrated JavaScript hooks (`onLoad`, `onProcess`,
       `onChange`, …) described in this guide. This is what you use for virtually every migration.
-    - **`Yes` (true) — a bespoke UI.** The dialog does **not** render the standard parameter form.
+    - **Yes (true) — a bespoke UI.** The dialog does **not** render the standard parameter form.
       Instead, the new UI must contain a **dedicated custom component built specifically for that
       process**, and `onLoad` returns the schema that drives it. This mirrors Classic, where such a
       process also has its own hand-built UI rather than a generic parameter dialog. It is reserved for
       the rare process whose dialog is not a flat list of fields (e.g. a specialized picker).
 
-!!! warning "A custom component cannot be produced from metadata alone"
-    Setting this flag to `Yes` is **not** a migration you can complete by filling in fields. A custom
+!!! warning "A custom component requires platform team involvement"
+    Setting this flag to **Yes** is **not** a migration you can complete by filling in fields. A custom
     component is real code that must be added to the new UI for that specific process — and you do
     **not** have access to the new UI source code. If a process genuinely needs a custom component,
-    **contact the platform team** to have it built. For all other processes, leave this flag as `No`
+    **contact the platform team** to have it built. For all other processes, leave this flag as **No**
     and migrate using the standard fields above.
 
 ---
@@ -309,7 +311,7 @@ return { PAID_FULLY, remaining };
 
 For most processes you do not have to write the migration by hand. The **"New UI Migrations" Team**
 provided by Fyso translates a Classic Defined-Process JavaScript file into the metadata columns described
-above, using its internal migration agent. You interact with it **in Spanish** (the activation message
+above, using its internal migration agent. Interact with it **in Spanish** (the activation message
 and its deliverables are in Spanish), as shown in the steps below.
 
 !!! note "Migrating by hand"
@@ -323,25 +325,25 @@ architecture document; generate the migrated code for each column as a bare arro
 that each body compiles; and hand you a per-column output ready to paste, along with a manual-test
 checklist.
 
-**The team never:** paste the code into the UI for you (you do that); change application source code; commit
-or push anything; or invent platform support that does not exist. If a process uses something the new UI
+**The team never:** pastes the code into the UI for you (you do that); changes application source code; commits
+or pushes anything; or invents platform support that does not exist. If a process uses something the new UI
 cannot do, the team **stops and reports the gap** instead of producing code that looks migrated but breaks.
 
-!!! warning "You must still validate"
+!!! warning "Validate before considering the migration done"
     The team's output is a **draft to verify**, not a finished result. It can misread an edge case or a
     Classic idiom. Always run the manual checklist before considering the migration done, and
     [report](#reporting-issues) anything that fails.
 
-### Step 1 — Identify the inputs
+**Step 1 — Identify the inputs**
 
-You need two things:
+Gather two inputs:
 
 1. **The path to the Classic `.js` file** of the Defined Process (the file that holds its custom
    JavaScript).
-2. **The process id** — the 32-character `obuiapp_process_id` of the Defined Process. You can read it
-   from the Process Definition window's record, or from the URL/help of that record.
+2. **The process id** — the 32-character `obuiapp_process_id` of the Defined Process. Read it
+   from the **Process Definition** window's record, or from the URL/help of that record.
 
-### Step 2 — Engage the team
+**Step 2 — Engage the team**
 
 The team's migration agent only acts when your message matches its activation template **exactly** (the
 quotes may be single or double). Send it, in Spanish, the file path and the process id:
@@ -356,10 +358,10 @@ For example:
 Quiero migrar el javascript del proceso definido. El path del archivo original es 'modules/com.example.payments/web/js/ob-myprocess.js' y el id del proceso es '9BED7889E1034FE68BD85D5D16857320'.
 ```
 
-If the message does not match the template, the team will not act — it will simply restate the template you
+If the message does not match the template, the team will not act — it will restate the template you
 must use.
 
-### Step 3 — Review the team's output
+**Step 3 — Review the team's output**
 
 The team returns, in Spanish for the deliverables:
 
@@ -374,10 +376,10 @@ The team returns, in Spanish for the deliverables:
 Read the coverage report and advisories before pasting anything. They tell you what to expect and what to
 test.
 
-### Step 4 — Paste the code into the fields
+**Step 4 — Paste the code into the fields**
 
-For each labeled block, copy the body into the matching field on the Process Definition window (or its
-Parameters tab), following [The metadata fields](#the-metadata-fields-where-the-migrated-code-goes).
+For each labeled block, copy the body into the matching field on the **Process Definition** window (or its
+**Parameters** tab), following [The metadata fields](#the-metadata-fields-where-the-migrated-code-goes).
 Paste **only** the code the team delivered, exactly as given, into the indicated column. Save the record.
 
 !!! danger "Match the field to the column"
@@ -385,18 +387,18 @@ Paste **only** the code the team delivered, exactly as given, into the indicated
     will produce wrong behavior that is hard to diagnose. Double-check each block's label against the
     field you are editing.
 
-### Step 5 — Validate manually
+**Step 5 — Validate manually**
 
 Open the process dialog in the new UI and run **every** item in the team's manual-test checklist: confirm
 the dialog opens correctly, that `onLoad` seeding/hiding happened, that each `onChange` reacts as in
 Classic, that grids load and validate as expected, and that execution returns the same result as Classic.
 Compare side-by-side with the Classic dialog where possible.
 
-### Step 6 — Report problems (do not fix)
+**Step 6 — Report problems (do not fix)**
 
 If a test fails — a hook does not fire, a value is wrong, or you see a `"… is not implemented yet"`
 error — **report it**. Describe the symptom precisely (which process, which hook, what you did, what you
-expected, what happened) and include any error text. If you engaged the **"New UI Migrations" Team**, you can also tell it
+expected, what happened) and include any error text. If you engaged the **"New UI Migrations" Team**, tell it
 `"el test X falló: <síntoma>"` and it will re-analyze and re-emit the corrected field(s) for that
 process.
 
@@ -423,9 +425,9 @@ can produce when a migration does not behave like Classic. Include:
 ## Reference
 
 - **Architecture & capability reference (source of truth):**
-  [new-javascript-code.md](https://github.com/etendosoftware/com.etendorx.workspace-ui/blob/main/docs/process/definition/new-javascript-code.md)
+  [new-javascript-code.md](https://github.com/etendosoftware/com.etendorx.workspace-ui/blob/main/docs/process/definition/new-javascript-code.md){target="_blank"}
   — the authoritative description of every supported API, signature, and migration rule.
-- **The "New UI Migrations" Team:** see the [full list of available agents](https://fyso.world/app/teams/),
+- **The "New UI Migrations" Team:** see the [full list of available agents](https://fyso.world/app/teams/){target="_blank"},
   including the migration agent used to translate Classic process JavaScript.
 
 ---

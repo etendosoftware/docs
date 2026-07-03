@@ -410,7 +410,7 @@ plugins:
                 - User Interface Improvements: user-guide/new-ui/ui-improvements.md
                 - How-To Guides:
                   - How to Use the Color System: user-guide/new-ui/how-to-guides/how-to-configure-color-system.md
-                  - Cómo migrar el JavaScript de procesos Classic: user-guide/new-ui/how-to-guides/how-to-migrate-classic-javascript-code.md
+                  - How to Migrate Classic Process JavaScript: user-guide/new-ui/how-to-guides/how-to-migrate-classic-javascript-code.md
 
             - Developer Guide:
               - Overview: developer-guide/overview.md
