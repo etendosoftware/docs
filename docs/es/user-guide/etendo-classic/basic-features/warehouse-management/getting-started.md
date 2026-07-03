@@ -68,12 +68,12 @@ Para ejecutar *Movimiento entre almacenes*, el personal de almacén:
 
 Para *Seguimiento de mercancías*, el personal de almacén utiliza:
 
-- [Informe Stock](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report), que proporciona el nivel de stock de todos los productos (que tienen inventario distinto de cero) y su ubicación (almacén y hueco) agrupados por categoría de producto.
+- [Informe Stock](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report.md), que proporciona el nivel de stock de todos los productos (que tienen inventario distinto de cero) y su ubicación (almacén y hueco) agrupados por categoría de producto.
 - La ventana [Operaciones de material (uso indirecto)](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md), que ofrece una vista de solo lectura con amplias capacidades de filtrado y muestra todas las transacciones de inventario.
-- [Informe Movimiento de Productos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report), que muestra todas las recepciones, envíos, movimientos e inventarios físicos agrupados por Tipo de transacción y Tercero.
-- [Informe Transacción de Material](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report), que lista todos los documentos (envíos o recepciones) agrupados por Tercero.
+- [Informe Movimiento de Productos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report.md), que muestra todas las recepciones, envíos, movimientos e inventarios físicos agrupados por Tipo de transacción y Tercero.
+- [Informe Transacción de Material](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md), que lista todos los documentos (envíos o recepciones) agrupados por Tercero.
 
-La *Valoración del inventario* se realiza con la ayuda del [Informe de Valuación de Existencias](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report).
+La *Valoración del inventario* se realiza con la ayuda del [Informe de Valuación de Existencias](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report.md).
 Este informe muestra el coste del stock calculado por el proceso Costing Server.
 
 La *Actualización de inventario* se realiza con la ayuda de la ventana [Ajuste de Valor del Inventario](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md).
