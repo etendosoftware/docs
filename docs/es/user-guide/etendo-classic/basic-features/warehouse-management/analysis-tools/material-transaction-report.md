@@ -1,35 +1,44 @@
 ---
 title: Informe Transacción de Material
-tags:
-    - Material Transaction
-    - Gestión de Almacén
-    - Reports
-    - Inventory Analysis
 ---
-
-# Informe Transacción de Material { #material-transaction-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Transacción de Material`
 
-El Informe Transacción de Material lista todos los documentos (envíos salientes y recepciones entrantes) agrupados por tercero y documento. Para cada número de documento se muestran los datos, el producto, el almacén, el contenedor y la cantidad.
+### **Overview**
 
-## Ventana de parámetros { #parameters-window }
+El **Informe Transacción de Material** proporciona una vista consolidada de todos los movimientos de material registrados en el sistema, incluidas las expediciones de salida y las recepciones de entrada. Las transacciones se agrupan por Terceros y por documento, lo que facilita el seguimiento de qué productos se enviaron o recibieron, en qué cantidades y a través de qué almacén.
 
-La información de este informe puede filtrarse usando la fecha de movimiento, el tercero, el almacén y el proyecto. Los informes pueden generarse en formato HTML y PDF.
+Este informe es útil para:
 
-![Ventana de parámetros del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-1.png)
+- Hacer seguimiento de los movimientos de material de entrada y salida durante un período específico.
+- Auditar las transacciones de inventario para verificar que las expediciones y recepciones coincidan con las cantidades esperadas.
+- Conciliar documentos por Terceros para garantizar la integridad y exactitud de las transacciones registradas.
 
-## Ejemplo de salida del informe { #sample-report-output }
+### **Parameters Window**
 
-![Salida del Informe Transacción de Material](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report/material-transaction-report-2.png)
+![Material Transaction Report](../../../../../assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
 
-## Artículos relacionados { #related-articles }
+Los siguientes parámetros permiten filtrar los datos incluidos en el informe:
 
-[:material-file-document-outline: Informe Movimiento de Productos](product-movements-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
+-   **Movement Date (From / To):** Define el rango de fechas del informe. Solo aparecerán las transacciones que se hayan producido dentro de este rango.
+-   **Business Partner:** Filtra las transacciones por un proveedor o cliente específico. Si se deja vacío, se incluyen las transacciones de todos los Terceros.
+-   **Warehouse:** Restringe el informe a las transacciones que se hayan producido en el almacén seleccionado.
+-   **Project:** Filtra las transacciones asociadas a un proyecto específico.
+
+El informe se puede generar en formato **HTML** o **PDF**.
+
+### **Sample Report Output**
+
+![Material Transaction Report](../../../../../assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+
+La salida del informe se organiza por **Terceros** y, dentro de cada tercero, por **Número de Documento**. Para cada línea de transacción, se muestran las siguientes columnas:
+
+-   **Número de Documento:** El identificador del documento de expedición o recepción.
+-   **Producto:** El nombre del producto involucrado en la transacción.
+-   **Almacén:** El almacén donde tuvo lugar la transacción.
+-   **Hueco:** La ubicación específica (estante, rack o sección) dentro del almacén donde se almacenó o retiró el producto.
+-   **Cantidad:** La cantidad del producto movida en la transacción.
 
 ---
 
-Este trabajo es un derivado de [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
