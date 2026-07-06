@@ -1,40 +1,70 @@
 ---
 title: Informe Stock
 tags:
-    - Stock
-    - Inventory
-    - Warehouse Management
-    - Reports
-    - Inventory Analysis
+    - Informe Stock
+    - Gestión de Almacén
+    - Inventario
+    - Niveles de Stock
+    - Herramientas de análisis
 ---
 
 # Informe Stock { #stock-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe Stock`
 
-El Informe Stock muestra el nivel de stock de todos los productos (que tienen una cantidad en stock distinta de cero) y su ubicación (almacén y contenedor de almacenamiento) agrupados por categoría de producto. Para cada producto se muestran la fila, la cantidad, la unidad, el atributo, la estantería, la columna, la altura y el almacén.
+## Descripción general { #overview }
 
-## Parameters Window
+El **Informe Stock** muestra los niveles de stock actuales de todos los productos con inventario distinto de cero (incluidas las cantidades disponibles negativas). Los datos se agrupan por categoría de producto, y cada fila muestra el producto, el almacén y la ubicación del hueco. Este informe proporciona una visibilidad rápida de cómo se distribuye el inventario entre almacenes y huecos.
 
-El resultado de este informe puede filtrarse utilizando la fecha de movimiento, la categoría de producto, el producto y los ubicadores de almacén.
+Un hueco es un lugar físico específico dentro de un almacén (por ejemplo, una estantería o un espacio), identificado por una fila, una columna y una altura, de forma similar a una coordenada en un mapa.
 
-![Ventana de parámetros del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-1.png)
+Revisar periódicamente el Informe Stock ayuda a mantener la exactitud del inventario y favorece mejores decisiones de compra. Al identificar productos que están bajando de nivel o acumulándose por encima de lo esperado, los usuarios pueden actuar a tiempo para evitar roturas de stock que retrasen las operaciones o situaciones de sobrestock que inmovilicen capital y espacio de almacén. Esto convierte al informe en una herramienta práctica para mantener el inventario alineado con la demanda real del negocio.
 
-El resultado de este informe puede visualizarse en formato HTML y PDF.
+## Filtros primarios { #primary-filters }
 
-Los campos **Estantería (x)**, **Columna (y)**, **Altura (z)** corresponden a **Estantería (X)**, **Columna (Y)** y **Altura (Z)** del contenedor de almacenamiento.
+<figure markdown="span">
+  ![Ventana de parámetros del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-1.png)
+  <figcaption>Ventana de parámetros del Informe Stock</figcaption>
+</figure>
 
-## Sample Report Output
+El resultado de este informe puede filtrarse utilizando los siguientes parámetros:
 
-![Salida de ejemplo del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png)
+-   **Fecha**: Filtra las transacciones hasta la fecha seleccionada.
+-   **Categoría de producto**: Limita el informe a una categoría de producto específica.
+-   **Producto**: Filtra el informe a un producto específico.
+-   **Hueco**: Filtra el informe a un hueco específico seleccionado de la lista.
 
-## Artículos relacionados { #related-articles }
+## Hueco { #storage-bin }
 
-[:material-file-document-outline: Informe de Valuación de Existencias](valued-stock-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Informe Transacción de Material](material-transaction-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Informe Pareto de Productos](pareto-product-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
+En lugar de seleccionar un hueco de la lista, limite el informe a los huecos de una posición de fila, columna y/o altura específica, las mismas coordenadas que se muestran en la etiqueta del hueco:
+
+-   **Fila (x)**: Posición horizontal del hueco.
+-   **Columna (y)**: Posición en profundidad del hueco.
+-   **Altura (z)**: Posición vertical del hueco.
+
+## Ver resultados { #view-results }
+
+Tras configurar los filtros deseados, el informe aparece en la sección **Ver resultados**. Expórtelo mediante los botones **Formato HTML**, **Formato PDF** o **Formato Excel**, si es necesario.
+
+<figure markdown="span">
+  ![Salida del Informe Stock](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report/stock-report-2.png)
+  <figcaption>Salida del Informe Stock</figcaption>
+</figure>
+
+La salida del informe incluye las siguientes columnas:
+
+-   **Artículo**: Nombre o código del producto.
+-   **Cantidad**: Cantidad actual disponible.
+-   **Unidad**: Unidad de medida del producto.
+-   **Atributo**: Características del producto, como tamaño, color o número de lote, si están definidas para el producto.
+-   **X**: Posición de fila dentro del hueco (ubicación horizontal).
+-   **Y**: Posición de columna dentro del hueco (ubicación en profundidad).
+-   **Z**: Posición de altura dentro del hueco (ubicación vertical).
+-   **Almacén**: Almacén donde se encuentra el stock.
+
+!!! info
+    Las columnas **X**, **Y**, **Z** del informe corresponden a **Fila (x)**, **Columna (y)** y **Altura (z)** del hueco.
 
 ---
 
-Este trabajo es un derivado de [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
+Este trabajo es una derivación de [Warehouse Management](http://wiki.openbravo.com/wiki/Warehouse_Management){target="\_blank"} por [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizado bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Este trabajo está licenciado bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.
