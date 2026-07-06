@@ -8,7 +8,7 @@ tags:
     - Accounting Taxes
 ---
 
-# Rango impuesto
+# Rango impuesto { #tax-rate }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Rango impuesto`
 
@@ -65,11 +65,11 @@ Cuando un documento se procesa, el sistema calcula los importes finales de impue
 2. Para cada impuesto distinto aplicado a las líneas del documento, el sistema crea una entrada de impuesto y calcula el importe en función de las bases imponibles de las líneas asociadas (cada línea tiene solo un impuesto).
 3. Para los impuestos definidos como **summary**, el sistema expande el padre en sus rangos de impuesto hijo y calcula cada importe hijo por separado, teniendo en cuenta si los hijos están configurados como cascade.
 
-## Cabecera
+## Cabecera { #header }
 
 La cabecera define las características principales y el comportamiento del rango de impuesto.
 
-![Tax Rate header fields](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate1.png)
+![Tax Rate header fields](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png)
 
 Campos a tener en cuenta: 
 
@@ -147,7 +147,7 @@ De forma predeterminada, el importe contable que se genera en las facturas de pr
     Para más información, visita [Accounting Template Module user guide](../../../../optional-features/bundles/financial-extensions/accounting-template-module.md). 
 
 
-### Zona de Impuesto
+### Zona de Impuesto { #tax-zone }
 
 La zona de impuesto define el país/región de origen y el país/región de destino donde se aplica un determinado rango de impuesto, para aquellos casos en los que no basta con definir solo un **Origen** país/región y solo un **Destination** país/región a nivel de cabecera.
 
@@ -155,15 +155,15 @@ Por ejemplo, un rango de impuesto de **Export** debe detallar como País/Región
 
 Lo mismo se aplicaría a un rango de impuesto de **Import**; en este caso, País/Región de origen serían todos los países desde los que se pueden importar mercancías y País/Región de destino sería la ubicación propia de la organización.
 
-### Traducción
+### Traducción { #translation }
 
 La pestaña Traducción permite al usuario traducir el **Nombre**, la **Descripción** y el **Identificador de impuestos** del rango de impuesto a cualquier idioma habilitado en el sistema. Esto garantiza que la información del rango de impuesto se muestre en el idioma adecuado cuando los usuarios trabajan con Etendo en una configuración regional distinta de la predeterminada.
 
 Cada fila de la rejilla representa un idioma disponible. Para traducir un rango de impuesto, selecciona la fila del idioma correspondiente e introduce los valores traducidos en los campos **Nombre** y **Descripción**. La columna **Traducción** indica si se ha proporcionado una traducción manual para ese idioma.
 
-![Tax Rate translation tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate-translation.png)
+![Tax Rate translation tab](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png)
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 La pestaña Contabilidad permite al usuario configurar la cuenta que se utilizará al contabilizar transacciones de rango de impuesto en el libro mayor.
 
@@ -171,7 +171,7 @@ La pestaña Contabilidad permite al usuario configurar la cuenta que se utilizar
 - **Impuesto reclamado** es la cuenta utilizada al contabilizar importes de impuestos de compras.
 
 
-![Tax Rate accounting tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate2.png)
+![Tax Rate accounting tab](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate2.png)
 
 Una contabilización de factura de compra tiene este aspecto:
 

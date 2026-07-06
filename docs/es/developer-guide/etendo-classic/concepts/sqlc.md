@@ -16,10 +16,10 @@ status: beta
 
 !!! warning
     En general, cualquier código nuevo debería escribirse utilizando la nueva [Capa de acceso a datos](../concepts/data-access-layer.md). El código basado en `SqlC/xsql` solo debería utilizarse en casos especiales o cuando exista código antiguo.
-## Visión general
+## Visión general { #overview }
 
 **SqlC** es una herramienta que **genera una clase Java a partir de un archivo con sentencias SQL**. La clase Java contiene el código necesario para conectarla a una base de datos, dar formato a la sentencia, ejecutarla y devolver el conjunto de resultados desde la base de datos. Esta es una función común para la ejecución de cualquier sentencia. SqlC evita esta tarea repetitiva generando el código Java a partir de las definiciones de las sentencias deseadas.
-## Un ejemplo sencillo
+## Un ejemplo sencillo { #a-simple-example }
 
 Este ejemplo sencillo muestra cómo usar SqlC con una sentencia SQL `select` simple.
 
@@ -81,11 +81,11 @@ Como se muestra, la clase contiene tres atributos `public` de tipo `String` que 
 Además, se generó un único método `getField` para permitir obtener datos mediante el nombre del campo, que puede pasarse tanto en estilo camelCase como mediante el nombre original de la columna en la sentencia `select`.
 
 Por último, para la sentencia `select` se generó un método java llamado `select` que toma un parámetro correspondiente a la definición del parámetro en el archivo xsql. El método ejecuta la consulta y devuelve su resultado mediante un array del tipo de la clase generada.
-## Conceptos básicos
+## Conceptos básicos { #basics }
 
 Después del breve ejemplo, esta sección explica los conceptos básicos que son aplicables a todos los casos de uso de SqlC. Una vez mostrados, la siguiente sección se divide en los diferentes tipos de sentencias y cómo utilizar cada una de ellas con SqlC.
 
-### Convención de nomenclatura
+### Convención de nomenclatura { #naming-convention }
 
 Los archivos fuente para SqlC son archivos XML con la extensión xsql. Solo los archivos con esta extensión serán recogidos por los scripts de compilación de Etendo. Cuando se ejecuta la herramienta SqlC, se genera una única clase Java por cada archivo xsql. Esta clase contiene un método por cada sentencia definida en el archivo xsql. Los patrones de nombre de archivo para los archivos fuente y el archivo generado resultante son los siguientes:
 
@@ -95,7 +95,7 @@ Los archivos fuente para SqlC son archivos XML con la extensión xsql. Solo los 
 
 Cada archivo debe residir dentro de una carpeta que coincida con el paquete Java en el que se espera el archivo generado. La ubicación del archivo fuente xsql en la estructura de directorios debe coincidir con el paquete declarado dentro del archivo.
 
-### Estructura de los archivos fuente y generados
+### Estructura de los archivos fuente y generados { #structure-of-the-source-generated-files }
 
 No existe un DTD o XSD formal para la estructura de los archivos xsql. En su lugar, la estructura se explica aquí de manera informal.
 
@@ -119,7 +119,7 @@ public String getField(String fieldName);
 
 Como ya se mostró en el ejemplo anterior, este método es una forma de acceder a los datos de la clase. Alternativamente, se puede acceder directamente a los atributos generados.
 
-### Visibilidad de la clase generada
+### Visibilidad de la clase generada { #visibility-of-the-generated-class }
 
 De forma predeterminada, la clase Java generada no contendrá un modificador de acceso especial. Esto significa que la clase solo puede utilizarse desde dentro del paquete Java en el que está definida. No es visible desde otros paquetes Java.
 
@@ -140,7 +140,7 @@ public class PublicHowtoData implements FieldProvider {
 }
 ```
 
-### Definición de SqlMethod: partes comunes
+### Definición de SqlMethod: partes comunes { #sqlmethod-definition-common-parts }
 
 La parte central de un archivo xsql son las sentencias definidas en su interior. Aquí se muestran las partes comunes de la definición de un `SqlMethod`. Los atributos que son específicos de cada tipo de sentencia se explican en los capítulos correspondientes más adelante.
 
@@ -174,7 +174,7 @@ El atributo type distingue entre lo siguiente:
 - callableStatement 
     - Este tipo solo se utiliza para llamadas a métodos PL 
 
-### Gestión de conexión / transacción
+### Gestión de conexión / transacción { #connection-transaction-handling }
 
 De forma predeterminada, cada invocación de un método generado por SqlC se ejecuta dentro de una única transacción que se confirma (commit) automáticamente. Además, cada invocación obtiene una nueva conexión a base de datos del pool de conexiones para ejecutar la sentencia.
 
@@ -197,22 +197,22 @@ public static HowtoData[] select(Connection conn, ConnectionProvider connectionP
 ```
 
 Aquí, se puede pasar explícitamente un objeto de conexión a la función. Si quien llama deshabilita el autocommit para esta conexión y luego pasa la misma conexión en varias invocaciones de métodos, podrá controlar la transacción con más detalle.
-## Tipos de sentencias
+## Tipos de sentencias { #types-of-statements }
 
 El siguiente capítulo explica un único tipo de sentencia con más detalle y describe los distintos atributos adicionales que son necesarios / útiles en su contexto.
 
-### Consultas
+### Consultas { #queries }
 
 Este primer grupo, y el tipo de sentencias más común, lanza consultas a la base de datos. Este grupo puede dividirse aún más observando el tipo de datos devueltos por la consulta:
 
-#### Devolución de varias filas
+#### Devolución de varias filas { #returning-multiple-rows }
 
 Este tipo de sentencia SQL ya se trató en el primer ejemplo sencillo de este documento de conceptos. La consulta devuelve un número de filas igual o mayor que cero y la función Java generada devuelve un array de la clase generada, donde cada entrada del array representa una única fila del `ResultSet`.
 
 !!!note
     Si el usuario de la función solo necesita la primera fila del resultado, entonces debería utilizarse en su lugar el siguiente tipo de sentencia de consulta.  
 
-#### Devolución de una única fila
+#### Devolución de una única fila { #returning-a-single-row }
 
 Este tipo de sentencia SQL difiere únicamente en la forma en que se devuelve el resultado de la consulta. La propia consulta se envía a la base de datos del mismo modo que en las consultas que devuelven varias filas. Sin embargo, el código Java generado lee únicamente la primera fila del `ResultSet` desde la base de datos y la devuelve al usuario.
 
@@ -241,7 +241,7 @@ SampleData row = SampleData.sampleCall(this);
 !!!info
     Este tipo de consulta devuelve una única fila, pero no indica a la base de datos que solo se necesita una única fila. La base de datos aún necesita consultar y devolver todas las filas, lo que potencialmente conlleva una gran sobrecarga. Para evitarlo, la sentencia `select` necesita tener añadidas las partes correspondientes de LIMIT/OFFSET o ROWNUM.  
 
-#### Devolución de un único valor
+#### Devolución de un único valor { #returning-a-single-value }
 
 Si el usuario de una consulta solo necesita un único valor, entonces es posible un modo aún más simple devolviendo directamente un único valor en lugar de un registro o incluso un array de registros.
 
@@ -256,7 +256,7 @@ Cuando el tipo de retorno se especifica como `"boolean"`, entonces se devuelve u
 Cuando el tipo de retorno se especifica como `"date"`, entonces se devuelve un `String` que se construye leyendo la primera columna de la base de datos como una fecha y formateándola como un `String` usando el formato de fecha `"dateFormat.java"`, que se especifica en el archivo de configuración `"Openbravo.properties"` ???. Si la consulta no devuelve ninguna fila, entonces se devuelve al llamador un valor `null`.
 
 Para estos tres tipos de valores de retorno es posible especificar un valor por defecto. Esto se realiza añadiendo el atributo opcional `default=<value>` a la definición de `SqlMethod`. En este caso, se devuelve al llamador el `defaultValue` si la consulta no devuelve ninguna fila.
-### Parámetros y modificación de la consulta en tiempo de ejecución
+### Parámetros y modificación de la consulta en tiempo de ejecución { #parameters-runtime-modification-of-the-query }
 
 Esta parte explica cómo pasar parámetros a la sentencia de base de datos para completar valores en tiempo de ejecución o incluso modificar parte de la sentencia SQL completa en tiempo de ejecución. Esto aplica a todos los tipos de sentencias que se describen aquí.
 
@@ -268,11 +268,11 @@ Los parámetros que se definen en el archivo xsql acabarán como parámetros de 
 !!!info
     Si el mismo parámetro (con el mismo nombre) se especifica varias veces para una sentencia, aun así solo se generará un único parámetro java. La ubicación de este único parámetro corresponde a la posición del primer parámetro (de los duplicados) en el archivo xsql.  
 
-#### Parámetros obligatorios
+#### Parámetros obligatorios { #mandatory-parameters }
 
 El tipo de parámetros más común son los parámetros no opcionales. Estos simplemente especifican un único valor y una posición predefinida en la sentencia SQL. Un ejemplo de esto es el parámetro `adUserId` en el primer ejemplo. En tiempo de ejecución, su valor se pasa como parámetro a la sentencia JDBC o `preparedStament` y a la ubicación del signo de interrogación correspondiente `?` en la sentencia.
 
-#### Parámetros opcionales
+#### Parámetros opcionales { #optional-parameters }
 
 El segundo grupo son los parámetros opcionales. Estos permiten añadir opcionalmente y/o modificar partes de la sentencia SQL en tiempo de ejecución.
 
@@ -282,7 +282,7 @@ La primera manera es no definir explícitamente una ubicación para el cambio en
 
 La segunda manera, recomendada, es especificar la ubicación explícitamente usando el atributo `after` en la definición del parámetro. De este modo, se puede referenciar una parte explícita de la consulta para este propósito. El siguiente ejemplo mostrará cómo se ve esto en la práctica.
 
-#### Parámetros opcionales sin tipo
+#### Parámetros opcionales sin tipo { #optional-parameters-without-type }
 
 La forma más sencilla de añadir una cláusula `WHERE` opcional a una consulta es pasar un parámetro para ello en tiempo de ejecución e ignorar la parte opcional en caso contrario.
 
@@ -314,7 +314,7 @@ Si el valor del parámetro es null o la `String` vacía `""`, entonces el parám
 
 La forma recomendada de especificar la ubicación `AFTER` es añadir cláusulas extra como `WHERE 1=1` o `AND 2=2` a la sentencia. Esto no cambiará el comportamiento de la consulta y siempre se evalúan como true, además de proporcionar una forma sencilla de ver los lugares en la consulta donde se colocarán las partes opcionales.
 
-#### Parámetros opcionales de tipo none
+#### Parámetros opcionales de tipo none { #optional-parameters-of-type-none }
 
 Una variación de esto es un parámetro opcional de `type="none"`. Usando esto, es posible añadir una `String` constante a una sentencia SQL dependiendo del valor de un parámetro.
 
@@ -331,7 +331,7 @@ Una variación de esto es un parámetro opcional de `type="none"`. Usando esto, 
 
 En este ejemplo, si el valor del parámetro es el nombre del parámetro (aquí: `processed`), entonces la parte opcional definida por el parámetro se añade a la sentencia; en caso contrario, la parte opcional se ignora para la ejecución de la sentencia.
 
-#### Parámetros opcionales de tipo argument
+#### Parámetros opcionales de tipo argument { #optional-parameters-of-type-argument }
 
 Una segunda variación es un parámetro opcional de `type="argument"`. Esto puede usarse para añadir opcionalmente una parte fija y pasar el valor completo del parámetro (un valor arbitrario) a la consulta.
 
@@ -362,7 +362,7 @@ ORDER BY c.documentno
 !!!Note
     El valor del parámetro se pasa exactamente tal como se especifica y no se escapa ni se codifica. El llamador de la función debe asegurarse de que no se pasen valores no verificados en el parámetro para evitar inyecciones SQL.  
 
-#### Parámetros opcionales de tipo replace
+#### Parámetros opcionales de tipo replace { #optional-parameters-of-type-replace }
 
 La última variación de parámetros opcionales se define con `type="replace"`. Estos permiten reemplazar completamente una parte de una sentencia SQL por una parte nueva.
 
@@ -381,7 +381,7 @@ En este ejemplo, el parámetro `tablename` puede usarse para cambiar el nombre d
 
 !!! note 
     El valor del parámetro se pasa exactamente tal como se especifica y no se escapa ni se codifica. El llamador de la función debe tener cuidado de que no se pasen valores no verificados en el parámetro para evitar inyecciones SQL.
-### Consultas desplazables (eficientes en memoria)
+### Consultas desplazables (eficientes en memoria) { #scrollable-queries-memory-efficient }
 
 Las consultas que devuelven varias filas, tal y como se describe en [Devolver varias filas](#devolver-varias-filas) arriba, pueden consumir una enorme cantidad de memoria cuando devuelven muchas filas. Esto no es un problema si solo se devuelven pocas filas (<1000), pero si el número de filas no está acotado y puede ser mucho mayor, entonces las consultas desplazables, tal y como se describen aquí, pueden funcionar mucho mejor. Este tipo de consultas solo cambia la forma de invocar el `SqlcMethod` desde Java; el texto SQL en sí no necesita modificarse. La interfaz modificada permite obtener las filas de resultado una a una, en lugar de un gran array que contenga todos los datos.
 
@@ -452,7 +452,7 @@ try {
     }
 }
 ```
-### Campos adicionales
+### Campos adicionales { #extra-fields }
 
 La etiqueta de campo opcional permite añadir columnas adicionales que no pertenecen al `ResultSet` a la clase, las cuales se rellenan y se devuelven en las ejecuciones de los métodos.
 
@@ -462,7 +462,7 @@ Se pueden usar dos valores posibles:
 
 - **void**: Al usar el valor void, el campo adicional se rellenará con la cadena vacía "" y es simplemente un campo adicional rellenado que puede ser utilizado por quien invoque el método.
 - **count**: Al usar este valor, cada registro contendrá su índice dentro del `ResultSet`, donde el primer registro tiene el índice uno.
-### Actualizaciones
+### Actualizaciones { #updates }
 
 El segundo grupo de posibles sentencias son las actualizaciones de base de datos. Esto incluye las siguientes sentencias SQL:
 
@@ -493,7 +493,7 @@ public static int setInDevelopment(ConnectionProvider connectionProvider, String
     return(updateCount);
     }
 ```
-### Llamadas a funciones PL
+### Llamadas a funciones PL { #pl-function-calls }
 
 Esta sección describe cómo se puede usar SqlC para llamar a funciones PL y procedimientos PL. Los procedimientos PL son métodos que se ejecutan dentro del DBMS y que no devuelven un valor de resultado (esto se puede comparar con un método que devuelve `void` en Java). Las funciones PL son similares, pero sí devuelven un resultado de función. Además, ambos tipos de métodos PL pueden tener parámetros de tipo `out`. Estos no aceptan un valor de entrada, sino que se usan para devolver un valor de resultado a través de este parámetro. Usando esta funcionalidad, un método PL puede devolver más de un valor de resultado por llamada de función. Si un método PL no contiene parámetros de tipo `out`, entonces se puede usar una sentencia `select` como forma alternativa de llamar al método, lo cual algunos desarrolladores consideran más intuitivo. Sin embargo, si hay parámetros de tipo `out`, debe usarse una llamada de función SqlC como la que se presenta aquí.
 
@@ -564,7 +564,7 @@ class DocumentNoData implements FieldProvider {
 La diferencia con el ejemplo anterior es que aquí el procedimiento PL `AD_Sequence_DocType` tiene un cuarto parámetro `razon` de tipo `out`. SqlC espera que la clase Java que se usa para transportar el resultado tenga un atributo accesible con el mismo nombre `razon`. El valor del parámetro `out` se obtendrá después de la llamada a la función y se almacenará en el atributo de una instancia de la clase de resultado (aquí: `objectCSResponse.razon`). Este valor puede leerse posteriormente de forma sencilla desde el llamador.
 
 En este ejemplo se usa una clase (CSResponse) distinta de la clase generada por SqlC (`DocumetNoData`) para transportar el valor de retorno. Alternativamente, se podría haber usado la clase generada por SqlC para lograr el mismo efecto.
-### Constantes
+### Constantes { #constants }
 
 El tipo de sentencia es diferente de los descritos anteriormente. No realiza ninguna interacción con la base de datos.
 

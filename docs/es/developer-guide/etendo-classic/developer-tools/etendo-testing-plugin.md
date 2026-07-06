@@ -8,13 +8,13 @@ tags:
   - Spock
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Este artículo describe cómo utilizar el Plugin de pruebas de Etendo. Este plugin proporciona un entorno de pruebas estandarizado compatible con Groovy, Spock, JUnit 4/5 y Mockito para proyectos de Etendo Classic.
 
 ---
 
-## Instalación
+## Instalación { #installation }
 
 Añada el plugin a su archivo `build.gradle`:
 
@@ -27,7 +27,7 @@ plugins {
 !!! info
     Consulte las versiones disponibles del plugin en las [Notas de la versión](../../../whats-new/release-notes/etendo-classic/plugins/etendo-testing-plugin/release-notes.md).
 
-## Estructura de pruebas
+## Estructura de pruebas { #test-structure }
 
 El plugin incluye los siguientes directorios de pruebas de forma predeterminada:
 
@@ -45,7 +45,7 @@ También incluye dinámicamente fuentes de pruebas desde:
 
 ---
 
-## Ejemplo de uso
+## Ejemplo de uso { #example-usage }
 
 Ejecutar pruebas:
 
@@ -60,7 +60,7 @@ Generar informes:
 
 ---
 
-## Opciones avanzadas
+## Opciones avanzadas { #advanced-options }
 
 Puede añadir bibliotecas adicionales a `lib/test/` y se incluirán automáticamente:
 
@@ -80,7 +80,7 @@ Que inyecta dependencias en tiempo de compilación en `testImplementation`.
 
 ---
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas { #technologies-used }
 
 - Groovy 3.0.9  
 - Spock Framework 2.0 (Groovy 3)
@@ -90,7 +90,7 @@ Que inyecta dependencias en tiempo de compilación en `testImplementation`.
 
 ---
 
-## Compatibilidad
+## Compatibilidad { #compatibility }
 
 | Versión del plugin | Gradle | Java |
 |--------------------|--------|------|

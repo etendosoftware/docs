@@ -8,18 +8,18 @@ tags:
 status: beta
 ---
 
-# Cómo crear un árbol personalizado
+# Cómo crear un árbol personalizado { #how-to-create-a-custom-tree }
  
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Etendo proporciona soporte nativo para estructuras jerárquicas mediante los modelos **ADTree y LinkToParent**. Sin embargo, no todos los datos basados en árboles encajan en estas estructuras estándar. Para esos casos, Etendo permite a los desarrolladores definir **datasources manuales** que gestionan árboles almacenados en tablas personalizadas con su propia lógica de jerarquía.
 
 Esta sección explica cómo **crear y configurar** un datasource manual para trabajar con una tabla de árbol personalizada, habilitando la navegación completa del árbol, la carga y la interacción fuera de los frameworks ADTree y LinkToParent.
 
-## Clase TreeDatasourceService
+## Clase TreeDatasourceService { #treedatasourceservice-class }
 
 Todos los datasources de tablas personalizadas deben ser una subclase de **TreeDatasourceService**. Este datasource se utiliza en los siguientes eventos:
 
@@ -134,7 +134,7 @@ Este método debe devolver un objeto json que contenga todas las propiedades del
 - `seqno`: si el árbol está ordenado, debe establecerse el número de secuencia del nodo. 
 - `_hasChildren`: un booleano para especificar si el nodo tiene hijos por sí mismo.
 
-## Ejemplo: tabla AD_TAB
+## Ejemplo: tabla AD_TAB { #example-ad-tab-table }
 
 En esta sección se va a describir un **datasource de árbol personalizado para la tabla ADTab**.
 

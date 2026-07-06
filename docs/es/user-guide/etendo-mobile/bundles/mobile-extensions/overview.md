@@ -13,7 +13,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 Este bundle incluye subaplicaciones móviles.
 
@@ -21,9 +21,9 @@ Este bundle incluye subaplicaciones móviles.
     - Para poder incluir las subaplicaciones, debe instalarse Mobile Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Mobile Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="\_blank"}. <br>
     Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Mobile Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-mobile/bundles/mobile-extensions/release-notes.md).
 
-## Módulo
+## Módulo { #modules }
 
-### Subapp Etendo Classic
+### Subapp Etendo Classic { #etendo-classic-subapp }
 :octicons-package-16: Paquete Java: `com.etendoerp.subapp.classic`   
 
 La **SubApp Etendo Classic** es una extensión móvil de Etendo Classic, que ofrece a los usuarios una forma eficiente de acceder a las ventanas de negocio clave en función de su rol. 
@@ -33,7 +33,7 @@ La subaplicación Etendo Classic permite a los usuarios acceder y gestionar la i
 !!! info
     Para más información, visite [Subapp Etendo Classic - Guía de usuario](./etendo-classic-subapp.md).
 
-### Subapp Documents Manager
+### Subapp Documents Manager { #documents-manager-subapp }
 :octicons-package-16: Paquete Java: `com.etendoerp.subapp.docsmanager`
 
 ![](../../../../assets/user-guide/etendo-mobile/getting-started/share-files.gif){ width="250" align="right" }

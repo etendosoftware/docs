@@ -10,9 +10,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Proyectos y Servicios - Primeros pasos
+# Gestión de Proyectos y Servicios - Primeros pasos { #project-and-service-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 La funcionalidad de Gestión de Proyectos y Servicios es esencial para que las empresas gestionen proyectos, servicios o ambos. Ayuda a las organizaciones a planificar, ejecutar, supervisar y optimizar proyectos y servicios de forma eficiente, integrándolos con otras funcionalidades como Gestión de Compras, Gestión de Ventas, Gestión Financiera, etc.
 
@@ -25,11 +25,11 @@ El módulo de Gestión de Proyectos y Servicios consta de:
 
 Como se observa en este diagrama, tras configurar la información que se muestra [a continuación](#configuración), para gestionar un proyecto, el usuario debe introducir un [Proyecto multifase](../project-and-service-management/transactions.md#multiphase-project) en la ventana correspondiente. Esta ventana permite registrar el progreso de un proyecto en diferentes [Fase](../project-and-service-management/transactions.md#project-phase-tab). Cada proyecto incluye una o más fases y, en cada fase, una o más [Mantenimiento](../project-and-service-management/transactions.md#project-task-subtab). Para cada una de estas fases, es posible realizar un proceso de [aprovisionamiento a pago](../procurement-management/getting-started.md#procure-to-pay-business-flow), para las compras necesarias del proyecto, o un proceso de [pedido a cobro](../sales-management/getting-started.md#order-to-cash-business-flow) para las ventas necesarias del proyecto. Para registrar los gastos del proyecto requeridos, se utiliza la ventana de [Informe de gasto](../project-and-service-management/transactions.md#expense-sheet). Una vez que una fase se cierra, el usuario puede revisar la rentabilidad utilizando las [Herramientas de análisis](../project-and-service-management/analysis-tools.md) disponibles. Este flujo se realiza para cada una de las fases de un proyecto y, una vez completadas todas las fases, el proyecto puede ser [Cerrado](../project-and-service-management/transactions.md#process-buttons).
 
-### Conceptos clave
+### Conceptos clave { #key-concepts }
 
 Los conceptos clave de gestión de proyectos y servicios mencionados en este capítulo son:
 
-- [Terceros](../master-data-management/master-data.md#business-partner):
+- [Terceros](../master-data-management/master-data/business-partner.md#business-partner):
     - Proveedor: tercero que suministra bienes y/o servicios. En la gestión de proyectos y servicios, el proveedor es el vendedor de los bienes suministrados relacionados con el proyecto, la empresa de consultoría a la que se subcontrataron servicios de consultoría y el empleado al que se le reembolsan gastos relacionados con un proyecto.
     - Cliente: la parte a la que se venden bienes o servicios. En la gestión de proyectos y servicios, el cliente es a quien se le cargan los costes y gastos del proyecto.
     - Empleado: persona que trabaja en la empresa. En la gestión de proyectos y servicios, la información del empleado se utiliza para el cálculo del coste del proyecto, en base a los [Informe de tiempo](../project-and-service-management/transactions.md#expense-sheet).
@@ -42,17 +42,17 @@ Los conceptos clave de gestión de proyectos y servicios mencionados en este cap
 - [Tarea](../project-and-service-management/transactions.md#project-task-subtab): actividades que se ejecutan durante una fase del proyecto.
 - [Informe de gasto](../project-and-service-management/transactions.md#expense-sheet): formulario utilizado para registrar gastos de artículos y tiempo para un proyecto.
 
-### Configuración
+### Configuración { #configuration }
 
 A continuación se introduce en la aplicación para el módulo de gestión de proyectos y servicios:
 
 - [**Dimensión proyecto**](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab): para poder seleccionar proyectos en pedidos y facturas, la dimensión de proyecto se crea como un nuevo registro con tipo Proyecto en la pestaña Dimensión de la ventana [Esquema contable](../financial-management/accounting/setup/general-ledger-configuration.md).
 
-- [**Producto**](../master-data-management/master-data.md#product):
+- [**Producto**](../master-data-management/master-data/product.md#product):
     - Tipos de producto **Servicios** y **Tipo de gasto**: para los productos del informe de gasto se configuran productos con tipo de producto Servicios (para tiempo) y tipo de producto Tipo de gasto (para gastos).
     - Tipo de producto **Artículo**: se utiliza el proceso estándar de [aprovisionamiento a pago](../procurement-management/getting-started.md#procure-to-pay-business-flow) para la compra de productos relacionados con el proyecto.
 
-- [**Terceros**](../master-data-management/master-data.md#business-partner):
+- [**Terceros**](../master-data-management/master-data/business-partner.md#business-partner):
     - Cliente: el tercero para el que se ejecuta el proyecto se configura como cliente.
     - Proveedor: el tercero que suministra productos relacionados con el proyecto se configura como proveedor.
     - Empleado:
@@ -61,7 +61,7 @@ A continuación se introduce en la aplicación para el módulo de gestión de pr
 
 - [**Tipo de proyecto**](../project-and-service-management/setup.md#project-type): se puede crear una plantilla con fases y tareas estándar para generar fácilmente fases y tareas en un proyecto multifase.
 
-### Ejecución
+### Ejecución { #execution }
 
 El [Proyecto multifase](../project-and-service-management/transactions.md#multiphase-project) tiene la siguiente secuencia de eventos:
 
@@ -82,7 +82,7 @@ El [Proyecto multifase](../project-and-service-management/transactions.md#multip
 !!!info
     Recuerde que esta es una visión general de la Gestión de Proyectos y Servicios; visite las secciones [Configuración](../project-and-service-management/setup.md), [Transacciones](../project-and-service-management/transactions.md) y [Herramientas de análisis](../project-and-service-management/analysis-tools.md) para obtener información más específica.
 
-## Relación con otras áreas
+## Relación con otras áreas { #relationship-with-other-areas }
 
 Gestión de Proyectos y Servicios interactúa con los siguientes módulos:
 

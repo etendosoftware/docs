@@ -6,17 +6,17 @@ tags:
     - Configuración
     - Plantilla de proyecto
 ---
-# Configuración de Proyectos y Servicios
+# Configuración de Proyectos y Servicios { #project-and-service-setup }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe la ventana que se utiliza para configurar el proceso de Gestión de Proyectos y Servicios en Etendo: Tipo de proyecto.
 
-## Tipo de proyecto
+## Tipo de proyecto { #project-type }
 
 :material-menu: `Aplicación` > `Gestión de Proyectos y Servicios` > `Configuración` > `Tipo de proyecto`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Esta ventana se utiliza para definir tipos de proyecto con fases y tareas típicas que se utilizarán en los proyectos.
 
@@ -25,13 +25,13 @@ Un Tipo de proyecto es una plantilla con las fases y tareas típicas que son apl
 !!!info 
     El uso de esta ventana no es obligatorio, pero se recomienda, ya que permite completar el proyecto multifase de una manera más sencilla. Si no se utiliza, cada proyecto multifase, sus fases y tareas, deberán completarse manualmente.
 
-### Cabecera
+### Cabecera { #header }
 
 Aquí se puede definir un tipo de proyecto y, para ello, el campo principal es el Nombre del tipo de proyecto. Se debe asignar un nombre intuitivo para que, una vez introducido el proyecto multifase, el usuario pueda reconocer fácilmente el tipo de proyecto que podría utilizarse para generar las fases y tareas.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/project-and-services-management/setup/project-type.png)
 
-### Pestaña de fase estándar
+### Pestaña de fase estándar { #standard-phase-tab }
 
 En esta pestaña, el usuario puede definir las fases y los productos requeridos durante cada fase, para incluirlos en este tipo. Cada fase se añade creando una línea.
 
@@ -47,7 +47,7 @@ Los campos de esta pestaña son:
 - Casilla de verificación Activo: indicación de validez de la línea.
 - Descripción: campo de notas para la fase.
 
-### Subpestaña de tarea estándar
+### Subpestaña de tarea estándar { #standard-task-subtab }
 
 Aquí, el usuario puede definir las tareas que se deben completar durante cada fase. Cada tarea se añade creando una línea.
 

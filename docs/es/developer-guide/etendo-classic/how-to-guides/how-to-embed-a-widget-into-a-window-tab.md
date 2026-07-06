@@ -6,12 +6,12 @@ tags:
   - Tab
 ---
 
-#  Cómo incrustar un widget en una solapa de ventana
+# Cómo incrustar un widget en una solapa de ventana { #how-to-embed-a-widget-into-a-window-tab }
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab-0.png) 
 Este documento sigue siendo un trabajo en curso. Puede contener imprecisiones o errores.   
 
-##  Introducción
+## Introducción { #introduction }
 
 Este procedimiento asume familiaridad tanto con el funcionamiento de ventanas, solapas y campos como con la definición de widgets en general.
   
@@ -20,7 +20,7 @@ Este procedimiento describe cómo incrustar un widget en una solapa de una venta
   1. Cómo incrustar un widget simple en una solapa.
   2. Cómo incrustar un widget QueryList en una solapa que filtra sus datos según el registro mostrado actualmente.
 
-##  Cómo colocar un widget en una solapa
+## Cómo colocar un widget en una solapa { #how-to-place-a-widget-into-a-tab }
 
 En esta parte definiremos dos widgets sencillos y los colocaremos en una ventana/solapa generada.
 
@@ -81,7 +81,7 @@ El último paso es añadir un campo de formulario a la solapa y configurar este 
 
 Definición de campo para el widget de Twitter
 
-##  Cómo vincular un widget al registro actual
+## Cómo vincular un widget al registro actual { #how-to-link-a-widget-to-the-current-record }
 
 El objetivo de esta sección es crear un widget QueryList similar al widget existente _Factura a cobrar_ disponible para su colocación en el espacio de trabajo, que muestra datos para todos los terceros.
 

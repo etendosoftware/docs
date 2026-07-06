@@ -5,17 +5,17 @@ tags:
     - Árbol de cuentas
 ---
 
-# Validación de la estructura de cuentas
+# Validación de la estructura de cuentas { #account-structure-validation }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.account.structure.validation`
 
-## Visión general
+## Visión general { #overview }
 
 Este módulo ayuda a prevenir errores comunes de configuración al crear o modificar subcuentas en el Árbol de cuentas. Valida la estructura y la configuración para evitar discrepancias en informes financieros como la Cuenta de resultados o el Balance de situación.
 
 El módulo incluye la preferencia de sistema **"Habilitar validaciones de subcuentas"**, que está configurada como `SÍ` de forma predeterminada, garantizando que la validación esté activa desde el momento en que se instala el módulo.
 
-## Validaciones realizadas
+## Validaciones realizadas { #validations-performed }
 
 El módulo aplica las siguientes validaciones:
 
@@ -27,7 +27,7 @@ Si alguna validación falla, el sistema impide guardar la cuenta, evitando posib
 
 Estas validaciones se activan no solo al crear o modificar cuentas, sino también al **mover registros en la vista de árbol**, garantizando la consistencia de los datos incluso al reorganizar la estructura de cuentas.
 
-### Exclusión de la validación
+### Exclusión de la validación { #exclusion-from-validation }
 
 La casilla de verificación **"Excluir de la validación de subcuentas"** permite flexibilidad en la configuración de la estructura de cuentas. Al establecer este campo en **SÍ** para cuentas específicas, dichas cuentas quedarán excluidas de todas las validaciones mencionadas anteriormente. Esto resulta especialmente útil para cuentas que requieren una estructura o configuración diferente y que no necesitan seguir las reglas estándar de validación.
 

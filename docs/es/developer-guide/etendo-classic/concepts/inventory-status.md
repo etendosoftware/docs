@@ -7,11 +7,11 @@ tags:
     - Control de stock
     - Operaciones de almacén
 ---
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica el concepto de Estado de inventario que forma parte de Etendo.
 
-## Configuración
+## Configuración { #configuration }
 
 El Estado de inventario estará disponible y se configurará como parte de Etendo.
 
@@ -25,7 +25,7 @@ El estado inicial de las ubicaciones dependerá de la configuración previa del 
 !!! info
     Para más información, visite la [guía de usuario de Permitir stock negativo](../../../user-guide/etendo-classic/basic-features/general-setup/client/client.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 El concepto de Estado de inventario forma parte de la gestión de inventario de Etendo e incluye las dimensiones para Disponible, Planificable y Stock Negativo en la ubicación de almacenamiento, y todo el stock en esta ubicación tiene el mismo Estado de inventario. La semántica del Estado de inventario se refiere a la condición de un inventario específico y puede configurarse. Consulte los ejemplos al final de esta sección.
 
@@ -50,7 +50,7 @@ El estado de inventario permite o no permite determinados procesos de negocio.
 -   Añadir la posibilidad de actualizar manualmente el Estado de inventario de un Detalle de almacenamiento moviéndolo a una ubicación virtual creada AdHoc.
 -   Un nuevo proceso que identifica las reservas afectadas cuando un cambio del estado de inventario reduce/aumenta la cantidad disponible. (Una vez identificadas, los usuarios relevantes podrían recibir una alerta sobre la consecuencia del cambio en la disponibilidad).
 
-### Cambio de estado de inventario
+### Cambio de estado de inventario { #inventory-status-change }
 
 En la ventana Almacén y ubicaciones de almacenamiento, es posible comprobar el Estado de inventario de una Ubicación de almacenamiento y también modificarlo.
 
@@ -67,7 +67,7 @@ Existen algunas restricciones:
 
 ![](../../../assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png)
 
-### Ejemplos
+### Ejemplos { #examples }
 
 Ejemplos de valores de estado de inventario:
 

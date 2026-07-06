@@ -13,8 +13,8 @@ tags:
 
 status: beta
 ---
-# Configuración interactiva de Etendo
-## Visión general
+# Configuración interactiva de Etendo { #etendo-interactive-setup }
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -24,9 +24,9 @@ status: beta
     
 
 El sistema de **Configuración interactiva de Etendo** proporciona un asistente de línea de comandos fácil de usar para configurar proyectos de Etendo. Integrado en Etendo Gradle Plugin, guía a los desarrolladores a través de la configuración de propiedades con valores predeterminados inteligentes, gestión segura de datos sensibles y una presentación organizada de las opciones de configuración.
-## Inicio rápido
+## Inicio rápido { #quick-start }
 
-### Uso básico
+### Uso básico { #basic-usage }
 
 ```bash
 # Run interactive configuration (recommended)
@@ -36,7 +36,7 @@ El sistema de **Configuración interactiva de Etendo** proporciona un asistente 
 ./gradlew setup
 ```
 
-### Qué hace la configuración interactiva
+### Qué hace la configuración interactiva { #what-the-interactive-setup-does }
 
 1. **Escanea** su proyecto en busca de propiedades configurables desde:
 
@@ -64,7 +64,7 @@ El sistema de **Configuración interactiva de Etendo** proporciona un asistente 
     - **Conservación de los comentarios y la estructura existentes**: Mantiene el formato del archivo, los comentarios y la organización mientras actualiza los valores
     - **Marcado de procesos ejecutados**: Añade marcadores `EXECUTED:` a las propiedades de proceso que se han ejecutado
     - **Continuación con el proceso normal de configuración**: Se integra sin problemas con el flujo de trabajo de configuración existente de Etendo
-## Interfaz de configuración
+## Interfaz de configuración { #configuration-interface }
 
 **Seleccione el modo de configuración principal**
 
@@ -119,7 +119,7 @@ Antes de aplicar los cambios, verá un resumen completo:
 
 ✅ Confirm configuration? (Y/N):
 ```
-## Añadir configuración a módulos personalizados
+## Añadir configuración a módulos personalizados { #adding-configuration-to-custom-modules }
 
 **Creación de un archivo config.gradle**
 
@@ -275,7 +275,7 @@ Cada propiedad en su archivo `config.gradle` admite los siguientes metadatos:
 | `order` | Integer | No | Orden de visualización dentro del grupo (recomendado: 10, 20, 30...) |
 | `name` | String | No | Nombre de variable para gradle.properties O nombre de tarea para propiedades de proceso |
 
-### Orden de visualización de propiedades
+### Orden de visualización de propiedades { #property-display-order }
 
 Las propiedades se muestran en la configuración interactiva siguiendo estas reglas:
 
@@ -309,7 +309,7 @@ database {
 }
 ```
 
-### Nomenclatura y mapeo de propiedades
+### Nomenclatura y mapeo de propiedades { #property-naming-and-mapping }
 
 El campo `name` tiene distintos propósitos según el tipo de propiedad:
 
@@ -389,13 +389,13 @@ automation {
 **Resultados:**
 
 ```properties
-# Propiedades normales en gradle.properties
+# Propiedades normales en gradle.properties { #regular-properties-in-gradleproperties }
 api.baseUrl=https://api.example.com
 API_TOKEN=
 
-# Las propiedades de proceso ejecutan tareas
-# automation.databaseSetup → ejecuta la tarea "automation.databaseSetup"  
-# automation.customSetup → ejecuta la tarea "my.custom.task"
+# Las propiedades de proceso ejecutan tareas { #process-properties-execute-tasks }
+# automation.databaseSetup → ejecuta la tarea "automation.databaseSetup" { #automationdatabasesetup-executes-task-automationdatabasesetup }
+# automation.customSetup → ejecuta la tarea "my.custom.task" { #automationcustomsetup-executes-task-mycustomtask }
 ```
 
 - **Sin transformación automática**: nombres de propiedad como `systemUser` permanecen como `systemUser` (no se transforman a `system.user`).
@@ -431,9 +431,9 @@ security {
     }
 }
 ```
-## Propiedades de proceso
+## Propiedades de proceso { #process-properties }
 
-### Visión general
+### Visión general { #overview_1 }
 
 Las propiedades de proceso son un tipo especial de propiedad que ejecuta tareas de Gradle para recopilar valores de configuración automáticamente. En lugar de pedir a los usuarios que introduzcan manualmente una configuración compleja, estas propiedades ejecutan procesos automatizados que pueden:
 
@@ -443,7 +443,7 @@ Las propiedades de proceso son un tipo especial de propiedad que ejecuta tareas 
 - Configurar integraciones
 - Configurar procesos complejos de varios pasos
 
-### Cómo funcionan las propiedades de proceso
+### Cómo funcionan las propiedades de proceso { #how-process-properties-work }
 
 1. **Definición**: Marque una propiedad con `process = true` en su configuración
 2. **Ejecución de tareas**: Cuando se selecciona, el sistema ejecuta la tarea de Gradle correspondiente
@@ -451,7 +451,7 @@ Las propiedades de proceso son un tipo especial de propiedad que ejecuta tareas 
 4. **Actualizaciones de propiedades**: Los resultados se aplican automáticamente a gradle.properties
 5. **Seguimiento de ejecución**: Los procesos completados se marcan con marcadores `EXECUTED:`
 
-### Ciclo de vida de una propiedad de proceso
+### Ciclo de vida de una propiedad de proceso { #process-property-lifecycle }
 
 ```bash
 # User selects process property in interactive setup
@@ -472,7 +472,7 @@ myModule.workspace.id = "ws_abc123"
 myModule.variables.setup = "EXECUTED:3_properties_configured"
 ```
 
-### Creación de propiedades de proceso
+### Creación de propiedades de proceso { #creating-process-properties }
 
 **Configuración básica de una propiedad de proceso**
 
@@ -530,7 +530,7 @@ databaseMigration {
     - **Propiedades jerárquicas**: `database.setup` → ejecuta la tarea `database.setup`  
     - **Nombres simples**: `databaseMigration` → ejecuta la tarea `databaseMigration`
 
-### Implementación de tareas para propiedades de proceso
+### Implementación de tareas para propiedades de proceso { #task-implementation-for-process-properties }
 
 Las propiedades de proceso requieren tareas **Gradle** correspondientes que sigan este patrón:
 
@@ -614,7 +614,7 @@ boolean writeResultsForInteractiveSetup(Map results, String outputPath = null)
 
 El closure devuelve `true` cuando los resultados se han escrito correctamente como JSON (modo interactivo) y `false` cuando no (para que las tareas puedan recurrir a imprimir los valores en la consola).
 
-### Buenas prácticas para propiedades de proceso
+### Buenas prácticas para propiedades de proceso { #process-property-best-practices }
 
 1. **Nomenclatura de tareas**: Los nombres de las tareas deben coincidir con la clave de la propiedad (p. ej., `myModule.variables.setup` → `myModule.variables.setup`)
 2. **Aceptar el parámetro opcional output**: Las tareas deben aceptar un parámetro `output` cuando se suministre para especificar dónde se escriben los resultados, pero TAMBIÉN DEBEN comportarse de forma razonable cuando no se suministre (fallback a consola o llamada al closure del proyecto sin una ruta explícita).
@@ -623,7 +623,7 @@ El closure devuelve `true` cuando los resultados se han escrito correctamente co
 5. **Feedback al usuario**: Incluya mensajes de progreso para informar a los usuarios de lo que está ocurriendo
 6. **Validación de resultados**: Asegúrese de que todas las propiedades generadas sean válidas y estén correctamente formateadas
 
-### Ejemplo de propiedad de proceso en la configuración interactiva
+### Ejemplo de propiedad de proceso en la configuración interactiva { #process-property-example-in-interactive-setup }
 
 Cuando los usuarios se encuentran con propiedades de proceso en la configuración interactiva:
 
@@ -650,9 +650,9 @@ Cuando los usuarios se encuentran con propiedades de proceso en la configuració
 
 🔖 Process property marked as: EXECUTED:5_properties_configured
 ```
-## Buenas prácticas
+## Buenas prácticas { #best-practices }
 
-### Organización de propiedades
+### Organización de propiedades { #property-organization }
 
 1. **Agrupe las propiedades relacionadas**: Use grupos lógicos como "Configuración de API", "Ajustes de base de datos", "Ajustes de seguridad"
 2. **Descripciones claras**: Escriba un texto de ayuda descriptivo que explique el propósito de la propiedad y cualquier restricción
@@ -660,7 +660,7 @@ Cuando los usuarios se encuentran con propiedades de proceso en la configuració
 4. **Use el campo order**: Especifique siempre valores `order` en incrementos de 10 (10, 20, 30...) para permitir la inserción de nuevas propiedades
 5. **Marque los datos sensibles**: Marque siempre credenciales, contraseñas y tokens como sensibles
 
-### Convenciones de nomenclatura
+### Convenciones de nomenclatura { #naming-conventions }
 
 1. **Los nombres de las propiedades se conservan exactamente**: Use la convención de nomenclatura que prefiera; los nombres no se transforman automáticamente
 2. **Sea descriptivo**: Use nombres de propiedad claros y descriptivos
@@ -706,10 +706,10 @@ api {
 }
 ```
 
-### Validación de la configuración
+### Validación de la configuración { #configuration-validation }
 
 El sistema proporciona seguridad de tipos mediante el formato estructurado de ConfigSlurper. Todas las propiedades se validan para garantizar una sintaxis correcta y la presencia de los campos obligatorios durante el proceso de escaneo.
-## Pruebas de su configuración
+## Pruebas de su configuración { #testing-your-configuration }
 
 1. Pruebe que su archivo `config.gradle` se detecta correctamente:
 

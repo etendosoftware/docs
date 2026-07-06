@@ -8,9 +8,9 @@ tags:
   - Objetos físicos
 ---
 
-# Cómo excluir objetos físicos de la base de datos del modelo
+# Cómo excluir objetos físicos de la base de datos del modelo { #how-to-exclude-database-physical-objects-from-model }
 
-## Visión general
+## Visión general { #overview }
 
 Etendo Classic realiza el seguimiento de los objetos físicos de la base de datos (como tablas, vistas, funciones, secuencias o triggers) mediante una utilidad llamada `dbsourcemanager`. Esta utilidad es capaz de exportar todas las definiciones de objetos del modelo de base de datos a archivos `XML`, que se almacenan en la carpeta `src-db/database/model` (tanto en Core como en los módulos).
 
@@ -18,7 +18,7 @@ Esta herramienta está diseñada para funcionar en un entorno multiplataforma, c
 
 En estos casos, un enfoque posible es crear estos objetos específicos utilizando un Script de Módulo (puede encontrar más información sobre ellos [aquí](../how-to-guides/how-to-create-build-validations-and-module-scripts.md)) y, a continuación, excluirlos del modelo físico de base de datos de Etendo Classic.
 
-## Excluir objetos en módulos
+## Excluir objetos en módulos { #excluding-objects-in-modules }
 
 Los objetos se excluyen mediante un archivo llamado `excludeFilter.xml`. Este archivo debe ubicarse dentro de la carpeta `src-db/database/model/` del módulo (si no existe, deberá crearlo) y sigue un formato XML muy sencillo. A continuación se muestra un ejemplo:
 

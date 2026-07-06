@@ -11,17 +11,17 @@ tags:
   - Kafka
 ---
 
-# Mantenimiento
+# Mantenimiento { #task }
 :octicons-package-16: Paquete Java: `com.etendoerp.task`
 
-## Visión general
+## Visión general { #overview }
 Esta página explica cómo configurar y gestionar mantenimientos asíncronos y configurables en Etendo Platform. Los mantenimientos pueden activarse automáticamente en función de eventos de base de datos (como `INSERT` o `UPDATE`) y pueden ejecutar una secuencia de acciones definidas, como validaciones, notificaciones o asignaciones. Estos mantenimientos se gestionan dinámicamente mediante un conjunto de ventanas de configuración.
 
 El sistema procesa los mantenimientos en respuesta a eventos que ocurren dentro de Etendo, como la creación de un pedido o una incidencia. En función de estos eventos, los mantenimientos se generan automáticamente, se asignan y se procesan a través de una secuencia predefinida de estados y acciones.
 
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 
-### Configuración de PostgreSQL para el uso de Connect (Debezium)
+### Configuración de PostgreSQL para el uso de Connect (Debezium) { #postgresql-configuration-for-connect-debezium-use }
 
 ```sql title="PostgreSQL"
 ALTER SYSTEM SET wal_level = logical;
@@ -39,7 +39,7 @@ Estos comandos preparan la base de datos PostgreSQL para trabajar con **Debezium
 
 Estos comandos son **requisitos previos obligatorios** para que Debezium detecte y propague eventos a Kafka, que a su vez desencadena el procesamiento de mantenimientos en Etendo.
 
-### Iniciar servicios RX
+### Iniciar servicios RX { #start-rx-services }
 
 1. Configure las siguientes variables en `Gradle.properties` para habilitar e iniciar los servicios requeridos:
 
@@ -81,21 +81,21 @@ Estos comandos son **requisitos previos obligatorios** para que Debezium detecte
     ./gradlew kafkaConnectSetup --info
     ```
 
-### Compilar el entorno e iniciar Tomcat
+### Compilar el entorno e iniciar Tomcat { #compile-the-environment-and-start-tomcat }
 
 
 ```bash title="Terminal"
 ./gradlew update.database compile.complete smartbuild --info
 ```
 
-### Inicializar servicios RX
+### Inicializar servicios RX { #initialize-rx-services }
 :material-menu: `Aplicación` > `Etendo RX` > `RX Config`
 
 Una vez que el entorno esté compilado y Tomcat esté en ejecución, con el rol `System Administrator`, navegar a la ventana **RX Config** y ejecutar el proceso **Initialize RX Services** desde la barra de herramientas. Este paso registra los datos de acceso necesarios para la interacción entre los servicios de Etendo RX. Para más detalles, consultar [Configuraciones de Etendo RX](../../../etendo-rx/getting-started.md#etendo-rx-configurations).
 
 ![](../../../../assets/developer-guide/etendo-rx/getting-started/initialize-rx-service.png)
 
-## Ventana Tipo de mantenimiento
+## Ventana Tipo de mantenimiento { #task-type-window }
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Tipo de mantenimiento`
 
 En esta ventana se definen los tipos de mantenimiento. En este componente se definen los eventos de base de datos que crean automáticamente un nuevo mantenimiento, la secuencia de estados que debe seguir y las acciones que se ejecutarán en cada estado. 
@@ -118,7 +118,7 @@ Un desarrollador, con el rol `System Administrator`, debe definir los tipos de m
 
 - **Prioridad**: Prioridad por defecto opcional asignada a los mantenimientos creados a partir de este tipo de mantenimiento (p. ej., `Crítica`, `Mayor`, `Menor`, `Trivial`). Si se establece, todos los nuevos mantenimientos de este tipo heredarán esta prioridad, a menos que se sobrescriba manualmente.
 
-### Solapa Tabla
+### Solapa Tabla { #table-tab }
 En esta solapa se especifica la tabla observada y el evento (insert o update) que activará la creación del mantenimiento.
 Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de la tabla o incluso filtros avanzados definidos como acciones. 
 
@@ -134,7 +134,7 @@ Además, se pueden definir filtros opcionales (JEXL) asociados a los campos de l
 - **Acción de filtro**: Validación avanzada opcional implementada como [Acción](../../how-to-guides/how-to-create-jobs-and-actions.md) de filtro.
 - **Activo**: Casilla para habilitar o deshabilitar este disparador de tabla.
 
-### Solapa Estado
+### Solapa Estado { #status-tab }
 Define el ciclo de vida del mantenimiento listando los posibles estados (p. ej., Pendiente, En progreso, Cerrado) en una secuencia específica. 
 Cuando se crea un mantenimiento, se le asigna el **primer estado** de la secuencia. Asignar o cambiar el estado de un mantenimiento desencadena los **eventos** definidos en la siguiente subsolapa.
 
@@ -147,7 +147,7 @@ Cuando se crea un mantenimiento, se le asigna el **primer estado** de la secuenc
 - **Estado**: Desplegable de estados reutilizables definidos en la ventana [Ventana Estado del mantenimiento](#ventana-estado-del-mantenimiento).
 - **Activo**: Casilla para habilitar o deshabilitar este estado.
 
-#### Subsolapa Eventos
+#### Subsolapa Eventos { #events-subtab }
 
 Esta solapa define jobs asíncronos que se ejecutan automáticamente cuando el mantenimiento entra en un estado específico. Los jobs pueden publicar mensajes en topics de Kafka como parte del flujo de trabajo.
 
@@ -156,7 +156,7 @@ Esta solapa define jobs asíncronos que se ejecutan automáticamente cuando el m
 - **Job**: Referencia al job que se ejecutará (debería configurarse como asíncrono); para más información, consulte la documentación de [Jobs asíncronos]().
 - **Activo**: Casilla para habilitar o deshabilitar este evento.
 
-### Configuración de la secuencia del Nº de mantenimiento
+### Configuración de la secuencia del Nº de mantenimiento { #task-no-sequence-configuration }
 
 Cada Tipo de mantenimiento puede vincularse a una [Secuencia de documento (numeración)](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence.md) para autogenerar el campo **Nº de mantenimiento** con un identificador secuencial y con formato.
 
@@ -185,7 +185,7 @@ Cree una nueva secuencia con los siguientes valores:
     Cada Tipo de mantenimiento puede tener su propia secuencia, permitiendo diferentes prefijos, máscaras y rangos de numeración por tipo.
 
 
-## Ventana Estado del mantenimiento
+## Ventana Estado del mantenimiento { #task-status-window }
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Estado del mantenimiento`
 
 Esta ventana le permite crear estados reutilizables para tipos de mantenimiento. Los valores por defecto incluyen `Pendiente`, `En progreso`, `Completada` y `Cerrado`. Los desarrolladores con el rol `System Administrator` pueden añadir estados personalizados y exportarlos en un módulo en desarrollo. En la ventana Tipo de mantenimiento se utilizan estos estados, permitiendo al motor de flujo de trabajo rastrear y desencadenar transiciones de estado y eventos asociados (incluidas notificaciones de Kafka).
@@ -200,7 +200,7 @@ Esta ventana le permite crear estados reutilizables para tipos de mantenimiento.
 - **Descripción**: Descripción opcional del estado.
 - **Activo**: Casilla para habilitar o deshabilitar este estado.
 
-## Ventana Prioridad del mantenimiento
+## Ventana Prioridad del mantenimiento { #task-priority-window }
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Prioridad del mantenimiento`
 
 Esta ventana le permite crear prioridades reutilizables para mantenimientos. Las prioridades ayudan a organizar y categorizar los mantenimientos por nivel de importancia. Los desarrolladores con el rol `System Administrator` pueden añadir prioridades personalizadas y exportarlas en un módulo en desarrollo. Estas prioridades pueden asignarse a los mantenimientos para indicar su importancia relativa.
@@ -217,7 +217,7 @@ Esta ventana le permite crear prioridades reutilizables para mantenimientos. Las
 - **Color (Hex)**: Código de color hexadecimal para la identificación visual de la prioridad en la interfaz (p. ej., `#F57C00`).
 - **Activo**: Casilla para habilitar o deshabilitar esta prioridad.
 
-## Ventanas Algoritmo de usuario disponible
+## Ventanas Algoritmo de usuario disponible { #available-user-algorithm-windows }
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de mantenimientos` > `Algoritmo de usuario disponible`
 
 En esta ventana, puede configurar los diferentes algoritmos que permiten determinar la disponibilidad de usuarios para la asignación del mantenimiento.
@@ -234,7 +234,7 @@ Solo es necesario definir un nombre y la ruta Java donde se encuentra la impleme
 - **Implementación Java**: Ruta del archivo Java donde se encuentra la implementación del algoritmo; esta implementación debe extender la interfaz `UserAvailabilityStrategy`
 
 
-## Flujo de trabajo de ejemplo
+## Flujo de trabajo de ejemplo { #example-workflow }
 
 Si revisa la documentación de las diferentes ventanas, puede ver que se está siguiendo un ejemplo de cómo usar los mantenimientos.
 La idea es que, una vez configurado este tipo de mantenimiento, cuando se complete el primer pedido de venta de un tercero con la casilla International marcada, se cree un nuevo mantenimiento en estado pendiente. Se asocia automáticamente a un usuario usando el algoritmo definido.

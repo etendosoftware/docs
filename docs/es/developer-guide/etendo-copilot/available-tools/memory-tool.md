@@ -8,18 +8,18 @@ tags:
     - Chroma
 ---
 
-# Herramienta de Memoria
+# Herramienta de Memoria { #memory-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de Memoria** es una herramienta integral para gestionar memorias de usuario en una base de datos vectorial utilizando Chroma como almacenamiento de backend. Proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para memorias específicas por usuario con capacidades de búsqueda por similitud vectorial, lo que permite a los asistentes almacenar y recuperar información contextual a lo largo de las conversaciones.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta permite a los asistentes mantener memoria persistente a lo largo de las conversaciones almacenando información importante en una base de datos vectorial. Admite capacidades de búsqueda semántica, lo que permite una recuperación inteligente de memorias relevantes en función del contexto y la similitud. La herramienta está acotada por usuario, garantizando el aislamiento de datos y la privacidad.
 
@@ -31,36 +31,36 @@ Las funcionalidades clave incluyen:
 - **Operaciones CRUD**: conjunto completo de operaciones para la gestión de memorias
 - **Generación automática de ID**: se asignan automáticamente identificadores únicos a cada memoria
 
-## Operaciones compatibles
+## Operaciones compatibles { #supported-operations }
 
-### Modo Añadir
+### Modo Añadir { #add-mode }
 Crea una nueva memoria con generación automática de ID.
 
 - **Parámetros obligatorios**: `mode` (establecido en "add"), `memory` (contenido a almacenar)
 - **Devolución**: mensaje de éxito con el ID de memoria generado
 
-### Modo Selector
+### Modo Selector { #search-mode }
 Encuentra memorias mediante búsqueda por similitud vectorial.
 
 - **Parámetros obligatorios**: `mode` (establecido en "search"), `query` (cadena de búsqueda)
 - **Parámetros opcionales**: `k` (número máximo de resultados, por defecto: 3)
 - **Devolución**: lista de memorias coincidentes con sus IDs
 
-### Modo Actualizar
+### Modo Actualizar { #update-mode }
 Modifica el contenido de una memoria existente preservando los metadatos.
 
 - **Parámetros obligatorios**: `mode` (establecido en "update"), `memory_id` (memoria objetivo), `memory` (nuevo contenido)
 - **Devolución**: mensaje de éxito confirmando la actualización
 
-### Modo Eliminar
+### Modo Eliminar { #delete-mode }
 Elimina una memoria específica de la base de datos.
 
 - **Parámetros obligatorios**: `mode` (establecido en "delete"), `memory_id` (memoria objetivo)
 - **Devolución**: mensaje de éxito confirmando la eliminación
 
-## Ejemplos de uso
+## Ejemplos de uso { #usage-examples }
 
-### Añadir una memoria
+### Añadir una memoria { #adding-a-memory }
 
 Para almacenar una nueva memoria:
 
@@ -78,7 +78,7 @@ Para almacenar una nueva memoria:
 }
 ```
 
-### Buscar memorias
+### Buscar memorias { #searching-memories }
 
 Para encontrar memorias relevantes:
 
@@ -97,7 +97,7 @@ Para encontrar memorias relevantes:
 }
 ```
 
-### Actualizar una memoria
+### Actualizar una memoria { #updating-a-memory }
 
 Para modificar el contenido de una memoria existente:
 
@@ -116,7 +116,7 @@ Para modificar el contenido de una memoria existente:
 }
 ```
 
-### Eliminar una memoria
+### Eliminar una memoria { #deleting-a-memory }
 
 Para eliminar una memoria específica:
 
@@ -134,29 +134,29 @@ Para eliminar una memoria específica:
 }
 ```
 
-## Implementación técnica
+## Implementación técnica { #technical-implementation }
 
-### Base de datos vectorial
+### Base de datos vectorial { #vector-database }
 La herramienta utiliza Chroma como backend de base de datos vectorial, configurado con:
 
 - Almacenamiento persistente en directorios específicos por usuario
 - Funciones de embeddings para búsqueda semántica
 - Vectorización automática de documentos
 
-### Aislamiento de usuario
+### Aislamiento de usuario { #user-isolation }
 Las memorias se aíslan por usuario mediante:
 
 - Colecciones de almacenamiento vectorial específicas por usuario (`{assistant_id}_memories`)
 - Filtrado de metadatos basado en `user_id` desde el contexto del hilo
 - Control de acceso seguro que garantiza que los usuarios solo puedan acceder a sus propias memorias
 
-### Variables de contexto
+### Variables de contexto { #context-variables }
 La herramienta requiere las siguientes variables de contexto:
 
 - `assistant_id`: identificador único para la instancia del asistente
 - `ad_user_id`: identificador de usuario de Active Directory
 
-## Gestión de errores
+## Gestión de errores { #error-handling }
 
 La herramienta incluye una gestión de errores integral para:
 

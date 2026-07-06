@@ -69,7 +69,7 @@ When a document is processed, the system calculates the final tax amounts from t
 
 The Header defines the main characteristics and behavior of the tax rate.
 
-![Tax Rate header fields](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate1.png)
+![Tax Rate header fields](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate1.png)
 
 Fields to Note: 
 
@@ -161,7 +161,7 @@ The Translation tab allows the user to translate the tax rate **Name**, **Descri
 
 Each row in the grid represents an available language. To translate a tax rate, select the corresponding language row and enter the translated values in the **Name** and **Description** fields. The **Translation** column indicates whether a manual translation has been provided for that language.
 
-![Tax Rate translation tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate-translation.png)
+![Tax Rate translation tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate-translation.png)
 
 ### Accounting
 
@@ -171,7 +171,7 @@ Accounting tab allows the user to configure the account to be used while posting
 - **Tax Credit** account is the account used while posting purchase tax amounts.
 
 
-![Tax Rate accounting tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-rate2.png)
+![Tax Rate accounting tab](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-rate2.png)
 
 A purchase invoice posting looks like:
 

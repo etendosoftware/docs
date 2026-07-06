@@ -1,20 +1,26 @@
 ---
 title: Valued Stock Report
+tags:
+    - Valued Stock
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Valued Stock Report
+# Valued Stock Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Valued Stock Report`
 
-### **Overview**
+## Overview
 
 Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.
 
 The cost is calculated as a sum of the cost of each material transaction of the product in the warehouse. The cost of the product transactions is calculated by the Costing Server process.
 
-### **Parameters Window**
+## Parameters Window
 
-![Valued Stock Report](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Valued Stock Report Parameters Window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png)
 
 
 
@@ -28,9 +34,9 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 !!! warning
     Please note that Conversion Rate to the report Currency should be specified for the report to work.
 
-### **Output Window** 
+## Output Window
 
-![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report Output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png)
 
 
 -   **Product**: Name of the Product.
@@ -41,7 +47,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 -   **Actual Average/Standard Algorithm Cost**: Current Average/Standard Cost, the latest calculation of its value.
 -   **Actual Average/Standard Algorithm Valuation**: Valuation of the Stock based on the Actual Average/Standard Cost. It is the result of multiplying the Stock by the Actual Cost.
 
-### **Persisted Information**
+## Persisted Information
 
 This step is not necessary in order to launch the Report. However, if there are performance problems, this can help to greatly improve the performance of the Report.
 
@@ -52,15 +58,22 @@ The information will persist until the first not closed Period. By doing so, it 
 !!! info
     In order to use this functionality it is necessary to schedule the Background Process named *Generate Aggregated Data Background*. This can be done through the *Process Request* Window.
 
-![Generate Aggregated Data Background](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Valued Stock Report Process Request](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png)
 
 !!! info
     It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.
 
 
-### **Limitations**
+## Limitations
 
 By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information will be converted at the Period's Closing Date. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.
+
+## Related Articles
+
+[:material-file-document-outline: Pareto Product Report](pareto-product-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Stock Report](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Material Transaction Report](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Warehouse Management Getting Started](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

@@ -7,23 +7,23 @@ tags:
   - Etendo Classic
 ---
 
-#  Cómo crear un callout que extiende de otro callout
+# Cómo crear un callout que extiende de otro callout { #how-to-create-a-callout-that-extends-from-another-callout }
   
-##  Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo implementar un callout que extiende de otro callout. Se explican los principales elementos importantes necesarios para la nueva funcionalidad. Puede encontrar más detalles sobre los callouts en [Cómo crear un Callout](how-to-create-a-callout.md).
   
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
 El código del módulo de ejemplo se puede descargar desde este repositorio público de GitHub: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}.
 
-##  Definición de callouts
+## Definición de callouts { #defining-callouts }
 
 Se mostrarán dos callouts. Uno de ellos es el callout padre y el otro es el callout hijo. En este ejemplo, estos dos callouts funcionan en la ventana **Activos**.
 
-####  Definición del callout padre
+#### Definición del callout padre { #defining-parent-callout }
 
 El siguiente ejemplo sigue [esta guía](how-to-create-a-callout.md) para implementar el callout. El ejemplo muestra un callout que edita el valor del campo **Nombre**.
 
@@ -59,7 +59,7 @@ El siguiente ejemplo sigue [esta guía](how-to-create-a-callout.md) para impleme
 
 Como puede ver, el callout obtiene el valor del campo **Nombre** y concatena la siguiente cadena: `_UPDATED`. Además, puede ver un código que define un desplegable. Este código se explicará en la siguiente sección.
 
-####  Definición del callout hijo
+#### Definición del callout hijo { #defining-child-callout }
 
 Este callout de ejemplo extiende del callout padre definido anteriormente. El ejemplo del desplegable se explica en la siguiente sección.
 
@@ -145,7 +145,7 @@ En la siguiente captura de pantalla, puede ver cómo se muestra un mensaje de fa
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-1.png)
 
-##  Trabajo con desplegables
+## Trabajo con desplegables { #working-with-combos }
 
 Como puede ver en las secciones anteriores, el callout `OBEXAPP_Assets_Name` construye un desplegable de moneda. Este desplegable se rellena con 3 monedas y una de ellas queda seleccionada.
   ```java
@@ -178,7 +178,7 @@ En esta captura de pantalla, puede ver cómo se muestra el desplegable de moneda
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout-3.png)
 
-##  Uso del método getStringParameter
+## Uso del método getStringParameter { #using-getstringparameter-method }
 
 Este método se utiliza en los callouts para obtener valores de cualquier campo de la ventana (p. ej., el valor del campo nombre en la ventana Activos).
 

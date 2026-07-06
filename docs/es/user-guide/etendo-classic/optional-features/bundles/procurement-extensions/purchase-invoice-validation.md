@@ -6,15 +6,15 @@ tags:
     - Funcionalidades de Etendo
 ---
 
-# Validaciones de facturas de compra
+# Validaciones de facturas de compra { #purchase-invoice-validations }
 :octicons-package-16: Paquete Java: `com.etendoerp.purchase.invoice.validations` 
 
-## Visión general
+## Visión general { #overview }
 <iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Este módulo permite a los usuarios evitar la duplicación de facturas de compra dentro del sistema, siguiendo algunas reglas establecidas. Esta prevención se llevará a cabo mediante una validación que prohibirá el guardado de una factura de compra duplicada. La activación de esta validación estará determinada por una preferencia configurable.
 
-## Criterios de duplicación de facturas
+## Criterios de duplicación de facturas { #invoice-duplication-criteria }
 
 Etendo considerará una factura de compra como duplicada si ya existe otra factura de compra con los mismos datos clave, a saber:
 
@@ -26,7 +26,7 @@ Etendo considerará una factura de compra como duplicada si ya existe otra factu
 
 Las facturas de compra en el sistema deben tener un número de referencia de proveedor único para cada tercero. Esto significa que si dos facturas de compra, para el mismo tercero, tienen el mismo número de referencia, se consideran duplicadas.
 
-## Preferencias
+## Preferencias { #preference }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias`
 
@@ -39,7 +39,7 @@ Desde la ventana Preferencias, el usuario puede crear una nueva preferencia, eli
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
 
-## Validación
+## Validación { #validation }
 
 La validación evitará el guardado de una factura de compra que se considere duplicada según los criterios establecidos. Si el sistema detecta que la factura que se está guardando está duplicada, se informará al usuario mediante un mensaje que indicará la naturaleza de la duplicación, tal y como se muestra aquí:
 

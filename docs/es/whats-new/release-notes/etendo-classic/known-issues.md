@@ -6,10 +6,10 @@ tags:
     - Incidencias pendientes
 ---
 
-## Visión general
+## Visión general { #overview }
 Esta página muestra las incidencias conocidas reportadas por el equipo de soporte.
 
-## Incidencias conocidas
+## Incidencias conocidas { #know-issues }
 
 ??? success "EPL-1449 Resuelto"
 

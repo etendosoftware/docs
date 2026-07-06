@@ -7,24 +7,15 @@ tags:
     - Configuración multinivel
 ---
 
-# Cómo configurar el correo electrónico
+# Cómo configurar el correo electrónico { #how-to-configure-email }
 
-## Visión general
+## Visión general { #overview }
 
-Etendo soporta una **configuración SMTP multinivel** que permite definir los ajustes de correo de forma independiente en tres niveles: **Entidad**, **Organización** y **Usuario**. Al enviar un documento por correo electrónico (p. ej. una factura o un pedido), el sistema resuelve qué configuración utilizar siguiendo una cascada de prioridad:
-
-1. **Nivel de usuario** — si el usuario tiene una configuración de correo electrónico activa, tiene prioridad.
-2. **Nivel de organización** — si no se encuentra una configuración a nivel de usuario, se utiliza la configuración de la organización.
-3. **Nivel de entidad** — la configuración de respaldo, compartida por todas las organizaciones y usuarios de esa entidad.
-
-Este diseño permite a una empresa establecer un servidor SMTP global a nivel de entidad, permitiendo que organizaciones o usuarios específicos lo sobrescriban con sus propias credenciales.
-
-!!! info
-    Cada nivel puede almacenar más de un registro de configuración SMTP. **Solo un registro puede marcarse como Valor por defecto por nivel**, y ese será el que se seleccione para ese nivel cuando se evalúe la cascada.
+Etendo soporta una **configuración SMTP multinivel** que permite definir los ajustes de correo de forma independiente en tres niveles: **Entidad**, **Organización** y **Usuario**. Este diseño permite a una empresa establecer un servidor SMTP global a nivel de entidad, permitiendo que organizaciones o usuarios específicos lo sobrescriban con sus propias credenciales.
 
 ---
 
-## Prerrequisitos
+## Prerrequisitos { #prerequisites }
 
 - Rol **Administrador de la Entidad** para configurar el correo a nivel de Entidad.
 - Rol **Administrador de la Organización** para configurar el correo a nivel de Organización.
@@ -32,57 +23,9 @@ Este diseño permite a una empresa establecer un servidor SMTP global a nivel de
 
 ---
 
-## Pasos
+## Cómo funciona la cascada { #how-the-cascade-works }
 
-### 1. Configurar a nivel de entidad
-
-:material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad` > pestaña **Configuración del correo electrónico**
-
-La subpestaña **Configuración del correo electrónico** de la ventana Entidad define los ajustes SMTP globales. Esta es la configuración de respaldo compartida por todas las organizaciones y usuarios de esa entidad.
-
-![Client Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/client-email-configuration.png)
-
-Completa los campos SMTP. Para una descripción de cada campo, consulta [Referencia de campos](#referencia-de-campos).
-
-Después de completar los campos, haz clic en el botón **Probar conexión SMTP** para verificar que Etendo puede alcanzar el servidor con las credenciales proporcionadas.
-
-!!! info
-    El campo **Fecha de última prueba** se actualiza automáticamente después de cada prueba, y la casilla **Prueba satisfactoria** refleja si la última prueba fue correcta. Una prueba satisfactoria no garantiza que todos los correos se entreguen, pero confirma que la conexión y la autenticación funcionan correctamente.
-
----
-
-### 2. (Opcional) Sobrescribir a nivel de organización
-
-:material-menu: `Aplicación` > `Configuración General` > `Organización` > `Organización` > pestaña **Configuración del correo electrónico**
-
-Cada organización puede definir sus propios ajustes SMTP en la subpestaña **Configuración del correo electrónico**. Cuando existe y está activa, esta configuración sobrescribe los ajustes a nivel de entidad para todos los correos enviados por usuarios de esa organización.
-
-![Organization Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/organization-email-configuration.png)
-
-Los campos son los mismos que los descritos en la sección [Referencia de campos](#referencia-de-campos).
-
----
-
-### 3. (Opcional) Sobrescribir a nivel de usuario
-
-:material-menu: `Aplicación` > `Configuración General` > `Seguridad` > `Usuario` > pestaña **Configuración del correo electrónico**
-
-Un usuario individual puede tener sus propias credenciales SMTP configuradas en la subpestaña **Configuración del correo electrónico** de la ventana Usuario. Esto tiene la máxima prioridad: si el usuario tiene una configuración activa válida, siempre se utilizará independientemente de los ajustes de organización o entidad.
-
-![User Email Configuration](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/user-email-configuration.png)
-
-Los campos son los mismos que los descritos en la sección [Referencia de campos](#referencia-de-campos).
-
----
-
-!!! info
-    Cada nivel puede almacenar más de un registro de configuración SMTP. **Solo un registro puede marcarse como Valor por defecto por nivel**, y ese será el que se seleccione cuando se evalúe la cascada.
-
----
-
-## Cómo funciona la cascada
-
-Cuando se dispara un correo (p. ej. al enviar una factura), Etendo resuelve la configuración SMTP de la siguiente manera:
+Cuando Etendo envía un correo (p. ej. una factura), resuelve la configuración SMTP utilizando el siguiente orden de prioridad:
 
 1. **Nivel de usuario** — si el usuario que envía tiene una configuración de correo por defecto activa, se utiliza.
 2. **Nivel de organización** — si no se encuentra una configuración a nivel de usuario, se utiliza la configuración por defecto de la organización.
@@ -95,9 +38,9 @@ Una configuración se considera **utilizable** solo si tiene informados **Servid
 
 ---
 
-## Referencia de campos
+## Referencia de campos { #field-reference }
 
-En una instalación estándar de Etendo, el mismo conjunto de campos está disponible a nivel de **Entidad**, **Organización** y **Usuario**.
+El mismo conjunto de campos está disponible a nivel de **Entidad**, **Organización** y **Usuario**.
 
 ![Campos de configuración del correo electrónico](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-configure-email/email-configuration-fields.png)
 
@@ -116,13 +59,13 @@ En una instalación estándar de Etendo, el mismo conjunto de campos está dispo
 
 ---
 
-## Ejemplos
+## Ejemplos { #examples }
 
-### Gmail
+### Gmail { #gmail }
 
 - **Servidor SMTP**: `smtp.gmail.com`
 - **Autenticación SMTP**: `Sí`
-- **Cuenta del servidor SMTP**: una cuenta válida de Gmail (p. ej. `user@gmail.com` o `user@tudominio` si usas Google Workspace)
+- **Cuenta del servidor SMTP**: una cuenta válida de Gmail (p. ej. `user@gmail.com` o `user@tudominio` si se usa Google Workspace)
 - **Contraseña del servidor SMTP**: la contraseña de aplicación o el token específico de la cuenta
 - **Dirección de envío del servidor SMTP**: la misma que la dirección de la cuenta
 - **Conexión de seguridad Smtp**: `SSL`
@@ -132,7 +75,7 @@ En una instalación estándar de Etendo, el mismo conjunto de campos está dispo
 !!! warning
     Gmail requiere usar una **contraseña de aplicación** (si 2FA está habilitado) u OAuth2. Google eliminó el soporte de "acceso de aplicaciones menos seguras" en 2022, por lo que la autenticación simple usuario/contraseña ya no está soportada.
 
-### Servidor corporativo (STARTTLS)
+### Servidor corporativo (STARTTLS) { #corporate-server-starttls }
 
 Para la mayoría de servidores de correo corporativos o on-premise:
 
@@ -147,4 +90,4 @@ Para la mayoría de servidores de correo corporativos o on-premise:
 
 ---
 
-Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

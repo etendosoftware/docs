@@ -7,7 +7,7 @@ tags:
     - Configuración de Build Gradle
 ---
 
-# Migración del formato Core
+# Migración del formato Core { #core-format-migration }
 
 === "De código fuente a JAR"
 

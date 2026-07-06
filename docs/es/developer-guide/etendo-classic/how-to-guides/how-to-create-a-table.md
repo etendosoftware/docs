@@ -8,19 +8,19 @@ tags:
   - reconstrucción del sistema
 ---
 
-# Cómo crear una tabla
+# Cómo crear una tabla { #how-to-create-a-table }
 
-## Cómo crear una nueva tabla
+## Cómo crear una nueva tabla { #how-to-create-a-new-table }
 
 Puede encontrar documentación más genérica sobre las tablas y sus características en Etendo en la página [Tabla](../concepts/tables.md). Esa página explica las columnas comunes necesarias para todas las tablas en Etendo, las reglas de nomenclatura y otra información importante.
 
 En primer lugar, es necesario crear las estructuras subyacentes de la base de datos que contendrán los datos. En otras palabras, utilizando una herramienta de administración de bases de datos (p. ej., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} o [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} para PostgreSQL y [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) primero se debe ejecutar `CREATE TABLE` para crear la tabla que se utilizará para almacenar los datos de la nueva ventana/solapas.
 
-### Objetivo
+### Objetivo { #objective }
 
 Imagine que estamos desarrollando un módulo de RR. HH. y necesitamos una ventana que permita al usuario introducir los salarios de los empleados. También necesitamos realizar el seguimiento del salario del empleado, por lo que es necesario conservar los registros históricos. Cada registro de salario debe tener un campo Fecha de vigencia desde (Valid From Date) que indique cuándo entró en vigor un salario determinado. El registro perteneciente a un empleado concreto con la Fecha de vigencia desde más reciente es el salario que es válido hoy. Tenga en cuenta que los empleados ya están dentro del sistema, contenidos en la tabla de base de datos `C_BPARTNER` e indicados por la columna `C_BPARTNER ISEMPLOYEE`. Por lo tanto, solo necesitamos crear una tabla de base de datos que contenga los salarios reales.
 
-### Modularidad
+### Modularidad { #modularity }
 
 Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo _core_. Siga la sección [Cómo crear un módulo](how-to-create-a-module.md) del Manual del desarrollador de Modularidad para crear un nuevo módulo.
 
@@ -28,7 +28,7 @@ Una vez que haya registrado el módulo, debe decidir el prefijo de base de datos
 
 Por último, el paquete de datos debe introducirse en la solapa _Paquete de Datos_ de la ventana _Módulo_. Introduzca allí un nuevo registro con HR Data como _Nombre_ y _{modulePackage}.data_ (tenga en cuenta que este paquete debe ser un subpaquete del que introdujo a nivel de módulo), por ejemplo com.etendoerp.howtos.data en caso de que com.etendoerp.howtos sea el paquete del módulo.
 
-### Crear nuevas tablas en la base de datos
+### Crear nuevas tablas en la base de datos { #create-new-tables-in-the-database }
 
 Vamos a introducir una nueva tabla de base de datos llamada `ht_salary` que contendrá los datos requeridos. Observe el prefijo `HT` del nombre de la tabla, que indica el módulo al que pertenece esta tabla.
 
@@ -78,7 +78,7 @@ CREATE TABLE ht_salary
 );
 ```
 
-### Registrar la tabla en el Diccionario de Aplicación
+### Registrar la tabla en el Diccionario de Aplicación { #registering-the-table-within-the-application-dictionary }
 
 Los siguientes pasos registran la tabla recién creada dentro del Diccionario de Aplicación de Etendo Classic.
 
@@ -148,7 +148,7 @@ La mayoría de las columnas en nuestro caso específico `HT_SALARY` se detectar�
 
 Etendo Classic ahora conoce la nueva tabla de base de datos HT_SALARY y cómo tratarla en términos de su definición y de la representación al usuario.
 
-### Reconstrucción del sistema
+### Reconstrucción del sistema { #rebuilding-the-system }
 
 Por último, para que la tabla recién añadida esté disponible en tiempo de ejecución, es necesario ejecutar `./gradlew generate.entities` y desplegar los cambios en Tomcat. Estos dos pasos pueden realizarse conjuntamente ejecutando `./gradlew smartbuild`. Después de eso, debe reiniciarse Tomcat para refrescar el modelo en memoria de DAL, de modo que conozca las columnas recién añadidas.
 

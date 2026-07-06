@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Etendo BI Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados

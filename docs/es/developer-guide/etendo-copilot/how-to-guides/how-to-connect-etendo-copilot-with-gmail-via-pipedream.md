@@ -7,9 +7,9 @@ tags:
 status: beta
 ---
 
-# Cómo conectar Etendo Copilot con Gmail mediante Pipedream
+# Cómo conectar Etendo Copilot con Gmail mediante Pipedream { #how-to-connect-etendo-copilot-with-gmail-via-pipedream }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/taAPYMPWpLM?si=_xZf1LQUnPAmQcHF" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -33,7 +33,7 @@ El agente se conecta de forma segura a su cuenta de **Gmail** (con su autorizaci
 - **Más eficiente**: Su agente dispone de todo el contexto de sus correos y puede ayudarle a redactar correos, utilizando información de cualquier agente e incluso usando adjuntos.
 
 
-## Cómo funciona
+## Cómo funciona { #how-it-works }
 
 El flujo es simple pero potente:
 
@@ -45,7 +45,7 @@ A partir de ese momento, cualquier consulta relacionada con Gmail se redirige au
 
 
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Etendo y [Etendo Copilot](../installation.md) instalados.  
 - Una cuenta de Google para conectar.  
@@ -57,7 +57,7 @@ A partir de ese momento, cualquier consulta relacionada con Gmail se redirige au
 
 
 
-## Conectar Gmail en Pipedream
+## Conectar Gmail en Pipedream { #connect-gmail-in-pipedream }
 
 1. Abra [Servidor MCP de Gmail | Pipedream](https://mcp.pipedream.com/app/gmail).  
 2. Conecte su cuenta de Gmail y acepte la pantalla de consentimiento de Google.  
@@ -65,7 +65,7 @@ A partir de ese momento, cualquier consulta relacionada con Gmail se redirige au
 3. Seleccione la opción **VS Code** y copie la **configuración del servidor MCP** mostrada. 
 	![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/mcp-server-config.png)
 
-## Crear el servidor MCP en Etendo 
+## Crear el servidor MCP en Etendo { #create-the-mcp-server-in-etendo }
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Configuración de servidores MCP`
 
 1. Inicie sesión en **Etendo** con el rol de **Administrador del sistema**.  
@@ -80,7 +80,7 @@ A partir de ese momento, cualquier consulta relacionada con Gmail se redirige au
    - **Módulo**: (Opcional) Para exportar esta configuración a un módulo de desarrollo.
 
 
-## Vincular el MCP al agente
+## Vincular el MCP al agente { #link-the-mcp-to-the-agent }
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agente`
 
 1. Vaya a la ventana `Agente`.  
@@ -91,7 +91,7 @@ A partir de ese momento, cualquier consulta relacionada con Gmail se redirige au
 ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-connect-etendo-copilot-with-gmail-via-pipedream/add-mcp-to-agent.png)
 
 
-## Probar la integración con Gmail
+## Probar la integración con Gmail { #test-the-gmail-integration }
 
 -  Inicie una conversación con el agente y pregunte algo relacionado con Gmail, por ejemplo:  
 

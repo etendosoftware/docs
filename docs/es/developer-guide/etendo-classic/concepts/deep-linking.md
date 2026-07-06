@@ -9,16 +9,16 @@ tags:
 status: beta
 ---
 
-#  Enlaces profundos
+# Enlaces profundos { #deep-linking }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-##  Visión general
+## Visión general { #overview }
 
 Según [Wikipedia](https://en.wikipedia.org/wiki/Deep_linking){target="\_blank"}, los enlaces profundos consisten en crear un hipervínculo que apunte a una página o imagen específica dentro de un sitio web, en lugar de a la página principal o de inicio de ese sitio web. A estos enlaces se les denomina "enlaces profundos". En el caso de Etendo, es la forma de enlazar mediante una URL directamente a una funcionalidad específica, por ejemplo, una Ventana/Solapa, un Formulario manual, etc. Este enlace puede construirse y adjuntarse en un correo electrónico, o copiarse/pegarse en una ventana de mensajería instantánea, etc.
 
-##  Obtener un enlace directo/profundo
+## Obtener un enlace directo/profundo { #retrieving-a-directdeep-link }
 
 La interfaz de usuario de Etendo facilita mucho obtener una URL a una ventana, solapa y registro específico (en una solapa hija). Consulte el icono en la parte superior de la ventana de Etendo.
 
@@ -30,7 +30,7 @@ Se puede hacer clic en este icono para crear un enlace directo a una solapa:
   
 Este ejemplo muestra el enlace directo a la solapa de cabecera de la factura de ventas.
 
-##  Estructura de la URL
+## Estructura de la URL { #structure-of-the-url }
 
 ```  
 http://server:port/obcontext/?params

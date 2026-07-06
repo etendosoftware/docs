@@ -5,7 +5,7 @@ tags:
     - Proceso contable
     - Módulo
 ---
-## Introducción
+## Introducción { #introduction }
 
 Este módulo no sirve para cambiar los asientos contables generados por Etendo, sino para ejecutar cualquier proceso adicional que deba ejecutarse en el momento de contabilizar.
  
@@ -18,7 +18,7 @@ Desde el punto de vista del desarrollo, esta funcionalidad nos ofrece la posibil
 !!! note
     Dependiendo de los requisitos del país, estos posprocesos contables pueden no ser necesarios. Este tipo de módulos no forman parte del núcleo de una localización, como las traducciones, el plan contable o los impuestos, y deben incluirse en una extensión de localización solo en caso de que realmente sean necesarios.
 
-##  Creación de la definición del módulo
+## Creación de la definición del módulo { #creating-the-module-definition }
 
 Cada vez que se desarrolla un nuevo módulo, el primer paso siempre debe ser crear la definición del módulo y registrarlo en el Repositorio Central.
 
@@ -40,7 +40,7 @@ Finalmente, dentro del directorio del paquete java del posproceso contable del m
 
   ![](../../../assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
 
-## Creación de la configuración del posproceso contable
+## Creación de la configuración del posproceso contable { #creating-the-accounting-post-process-configuration }
   
 La clase Java que implementa la lógica del posproceso contable se define en la ventana Accounting Process. La definición es bastante sencilla y solo requiere un nombre y el nombre de la clase Java, que debe estar dentro del paquete java del módulo.
 
@@ -48,7 +48,7 @@ La clase Java que implementa la lógica del posproceso contable se define en la 
 
 Este posproceso contable se asociará posteriormente a un esquema contable. Por lo tanto, en este paso es importante definir tantas clases Java como posprocesos contables queramos incluir en nuestro módulo, aunque normalmente se recomienda incluir solo un proceso por módulo para mantener la regla general de aislar funcionalidades en módulos separados.
  
-### Definición del conjunto de datos
+### Definición del conjunto de datos { #dataset-definition }
   
 La definición del conjunto de datos es un paso clave en este proceso. Una definición incorrecta del conjunto de datos puede echar a perder todo el trabajo anterior, por lo que es importante seguir todas estas consideraciones:
 

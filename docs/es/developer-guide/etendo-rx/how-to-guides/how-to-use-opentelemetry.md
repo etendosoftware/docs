@@ -8,24 +8,24 @@ tags:
   - Dynamic Gradle
 status: beta
 ---
-# Cómo usar OpenTelemetry (BETA)
+# Cómo usar OpenTelemetry (BETA) { #how-to-use-opentelemetry-beta }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     - Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**, especialmente en entornos de producción.
     - Debe utilizarse con **precaución**, y siempre debe **validar las copias de seguridad** antes de ejecutar cualquier operación crítica.
-## Visión general
+## Visión general { #overview }
 
 OpenTelemetry es un framework de observabilidad de código abierto que define un conjunto de API, SDK y bibliotecas de instrumentación neutrales respecto al proveedor para generar, recopilar y exportar datos de telemetría; concretamente **trazas**, **métricas** y **logs**. Proporciona un modelo de programación coherente entre aplicaciones y servicios, lo que le permite capturar un comportamiento detallado en tiempo de ejecución sin acoplarse a ningún back end específico.
 
 OpenTelemetry y Jaeger, en conjunto, forman una potente pila de observabilidad para los microservicios de Etendo Rx. Al instrumentar sus canalizaciones reactivas con OpenTelemetry, captura spans y trazas detalladas a través de límites asíncronos. Exportar esta telemetría al collector y a la UI de Jaeger le ofrece visibilidad en tiempo real de los flujos de solicitudes, lo que permite identificar rápidamente errores, puntos críticos de latencia y dependencias entre servicios. Como resultado, los desarrolladores pueden acelerar la entrega de funcionalidades, mejorar la fiabilidad del sistema y solucionar de forma proactiva problemas de rendimiento en entornos distribuidos complejos.
 
-### Conceptos clave
+### Conceptos clave { #key-concepts }
 
 - **Span**: Una única unidad de trabajo u operación, como una consulta a base de datos o una solicitud HTTP.
 - **Trace**: Un árbol de spans que representa un flujo de solicitud de extremo a extremo a través de múltiples servicios.
 - **Propagación de contexto**: El mecanismo mediante el cual el contexto de la traza (ID de traza, ID de span, baggage) se transmite a lo largo de llamadas asíncronas o remotas.
 
-### Envío de trazas al servicio OpenTelemetry
+### Envío de trazas al servicio OpenTelemetry { #sending-traces-to-opentelemetry-service }
 
 1. **Instrumente su código**
     - Añada el SDK de OpenTelemetry para Java (o el agente de inyección automática) a sus servicios basados en Rx.
@@ -38,14 +38,14 @@ OpenTelemetry y Jaeger, en conjunto, forman una potente pila de observabilidad p
 3. **Propague el contexto**
     - Asegúrese de que cada llamada downstream transporte el contexto de traza actual para que los spans se aniden correctamente.
 
-### Jaeger: back end de trazado distribuido
+### Jaeger: back end de trazado distribuido { #jaeger-distributed-tracing-back-end }
 
 Jaeger es un sistema de trazado distribuido de código abierto desarrollado originalmente por Uber. Proporciona:
 
 - **Collector**: Recibe spans de las aplicaciones instrumentadas.
 - **Almacenamiento**: Persiste los datos de trazas (p. ej., en Elasticsearch o Cassandra).
 - **Servicio de consulta y UI**: Permite a desarrolladores y operadores buscar, visualizar y analizar trazas en tiempo real.
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 1. Instale Etendo Rx. Para ello, siga la [guía de instalación de Etendo Rx](../getting-started.md).
 2. Instale el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
@@ -57,7 +57,7 @@ Jaeger es un sistema de trazado distribuido de código abierto desarrollado orig
         Evite instalar Docker mediante [Snap](https://snapcraft.io){target="_blank"}, ya que puede estar restringido por este sandbox y no tener acceso a directorios del host como `/opt/`, lo que puede impedir que los contenedores Docker de Etendo se inicien correctamente.
     
         Recomendación: instale Etendo utilizando la [última ISO](../../../whats-new/release-notes/etendo-classic/iso.md) (que incluye Docker) o instale Docker siguiendo la guía de instalación oficial de su distribución.
-## Configurar el servicio Jaeger
+## Configurar el servicio Jaeger { #configure-jaeger-service }
 
 1. **Habilitar servicios Utils**: habilite los módulos de servicios util necesarios. En el archivo `gradle.properties`, añada la siguiente variable:
 

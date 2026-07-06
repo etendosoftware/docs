@@ -6,29 +6,29 @@ tags:
     - Informes
 ---
 
-# Herramienta Jasper
+# Herramienta Jasper { #jasper-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.devassistant`
 
-## Visión general
+## Visión general { #overview }
 
 La Herramienta Jasper permite a los desarrolladores crear definiciones de proceso para **Informe Jasper** directamente en el **Diccionario de Aplicación de Etendo**. Simplifica la integración de capacidades de informes automatizando la configuración de atributos clave y parámetros necesarios para procesos basados en Jasper.
 
 !!!info
     Esta herramienta es especialmente útil al automatizar o configurar informes como parte de la instalación de módulos o de scripts de despliegue.
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza la creación de **Definición del Proceso** para informes Jasper en Etendo. Utiliza los metadatos proporcionados (clave de búsqueda, ruta del informe, parámetros, etc.) y envía la solicitud API correspondiente a Etendo para registrar el nuevo proceso de informe.
 
-### Capacidades clave:
+### Capacidades clave: { #key-capabilities }
 
 - Añade una nueva entrada de informe Jasper al Diccionario de Aplicación.
 - Admite cadenas de parámetros delimitadas por punto y coma para facilitar la configuración por lotes.
 - Da formato automáticamente a la clave de búsqueda y recorta la ruta del informe.
 - Utiliza un webhook para registrar la definición del proceso.
 
-### Parámetros
+### Parámetros { #parameters }
 
 | Nombre           | Tipo   | Descripción |
 |------------------|--------|-------------|
@@ -40,7 +40,7 @@ Esta herramienta automatiza la creación de **Definición del Proceso** para inf
 | `i_parameters`   | string | Lista de parámetros separados por punto y coma usando el formato: `BD_NAME-NAME-LENGTH-SEQNO-REFERENCE`. |
 | `i_report_path`  | string | Ruta al informe almacenado, truncada después de `/web/` para referencia interna. |
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Desea registrar un informe Jasper llamado `Sales Overview` con los siguientes datos:
 
@@ -64,7 +64,7 @@ Desea registrar un informe Jasper llamado `Sales Overview` con los siguientes da
 }
 ```
 
-## Resultado
+## Resultado { #result }
 
 La herramienta:
 

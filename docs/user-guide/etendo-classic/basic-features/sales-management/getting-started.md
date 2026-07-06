@@ -50,12 +50,12 @@ Each product that is being sold needs to have a *price* in the sales price list 
 Same way, each product that is being sold needs to be defined in a *unit of measure* ("UOM"), and in an *alternative unit of measure* (AUM) if required.
 
 !!! Info
-    For more information, visit [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md). 
+    For more information, visit [Product Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) and [Pricing](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md). 
 
 Business Partners (customers) need to be configured prior any sales can automatically turn into a sales quotation or sales order. 
 
 !!! Info
-    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+    For more information, visit [Business Partner Setup](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) and [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 Above configuration is one part of the overall business setup flow within the Master Data Management setup.
 
@@ -70,7 +70,7 @@ In Sales Management the Order to Cash business process is executed as follows.
 
 Customers can ask directly for a Sales Order or request a Quotation. If the Business Partner asks for a quotation, the sales staff:
 
-- Creates a new document in the [Sales Quotation](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md) window and looks up the customer name in the Business Partner field. If the Business Partner does not exist, it is entered in the application with the [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) window.
+- Creates a new document in the [Sales Quotation](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md) window and looks up the customer name in the Business Partner field. If the Business Partner does not exist, it is entered in the application with the [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner) window.
 - Then Sales staff fills the [Sales Quotation](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md) window. The transaction document is set to Quotation by default. And continues by adding for each product a line with the product, quantity and if needed its attribute (size and/or color and/or serial number, etc.).
 - Once the quotation is ready, it is booked. The Document Status of the quotation changes to Under Evaluation. The Quotation can be printed and sent to the Business Partner by email.
 - When the Quotation is accepted by the Business Partner a sales order can be created based on this quotation. When this is done the status of the quotation changes to *Closed - Order* created and the Sales Order can be printed and sent to the Business Partner by email as a confirmation.
@@ -117,7 +117,7 @@ In Etendo, in this situation, the revenue can be deferred until a given starting
 
 Credit limit for business partner
 
-- Each [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) can be set up with a Credit Line Limit. When customer balance (amount that is outstanding for payment for the customer) is higher than the credit line limit a corresponding information message is shown when a business partner is selected during the creation of a sales order, sales invoice or goods shipment. This way Etendo assists in risk analysis while placing customer orders or executing other steps in the Order to Cash business flow.
+- Each [Business Partner](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner) can be set up with a Credit Line Limit. When customer balance (amount that is outstanding for payment for the customer) is higher than the credit line limit a corresponding information message is shown when a business partner is selected during the creation of a sales order, sales invoice or goods shipment. This way Etendo assists in risk analysis while placing customer orders or executing other steps in the Order to Cash business flow.
 
 
 Finally, the finance staff is in charge of recording and managing the customer payments:
@@ -140,14 +140,14 @@ or for replacement.
 
 The following configuration options are available in this process:
 
-- [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
+- [Return reasons](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md)
 - [Condition of the goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup/setup.md#condition-of-the-goods)
-- Accounts for [Cost of Goods Sold](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) for returns and [Revenue for returns](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
+- Accounts for [Cost of Goods Sold](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting) (COGS) for returns and [Revenue for returns](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)
 
 ### Execution
 
 In Sales Management the Customer Returns business process is executed as follows.
-Customers can request a [return material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) for whatever reason.
+Customers can request a [return material](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) for whatever reason.
 Sales staff:
 
 - Creates a new document in the [Return from Customer](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) window and looks for the customer name in the Business Partner field.

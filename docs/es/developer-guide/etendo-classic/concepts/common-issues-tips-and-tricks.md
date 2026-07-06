@@ -10,34 +10,34 @@ tags:
 status: beta
 ---
 
-#  Problemas comunes, consejos y trucos
+# Problemas comunes, consejos y trucos { #common-issues-tips-and-tricks }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Visión general
+## Visión general { #overview }
 
 Esta sección de la guía del desarrollador está dedicada a tratar problemas comunes y a responder preguntas frecuentes. Intenta proporcionar consejos y trucos para los obstáculos habituales que se encuentran al desarrollar y ampliar Etendo.
-##  Programación del lado del cliente, JavaScript
+## Programación del lado del cliente, JavaScript { #client-side-coding-javascript }
 
 Esta sección destaca temas específicos relacionados con la programación del lado del cliente en JavaScript.
 
-###  error de JavaScript en el objeto OB: OB undefined
+### error de JavaScript en el objeto OB: OB undefined { #javascript-error-on-ob-object-ob-undefined }
 
 Esto puede ocurrir si el JavaScript que usted ha creado se carga antes que el código JavaScript general de Etendo. Para solucionarlo, debe asegurarse de que su módulo dependa del módulo User Interface Application. En base a esto, el sistema Etendo cargará su JavaScript después del JavaScript base proporcionado por Etendo.
 
 En general, si su módulo depende de JavaScript proporcionado por otros módulos, debe establecer la dependencia correcta en las dependencias del módulo.
 
-###  Usar un linter de JavaScript
+### Usar un linter de JavaScript { #use-javascript-linter }
 
 Cuando usted desarrolla su propio JavaScript del lado del cliente, es conveniente usar un linter para detectar posibles errores y malas prácticas en su código. Dependiendo de la versión de Etendo utilizada, se usa un linter diferente.
 
-####  Usar ESLint
+#### Usar ESLint { #use-eslint }
 
 Etendo utiliza ESLint para comprobar todo el código JavaScript. Para usar este linter, es necesario instalar npm en su máquina y ejecutar `npm ci` en la carpeta raíz de Etendo para instalar todas las herramientas necesarias.
 
 Esta comprobación puede realizarse tanto para el core como para cualquier módulo ejecutando el siguiente script: `modules/org.openbravo.client.kernel/jslint`
 
-###  Depuración de JavaScript
+### Depuración de JavaScript { #debugging-javascript }
 
 Todo el código JavaScript estático (de todos los módulos) se concatena en un único archivo JavaScript grande que se almacena en el directorio de la aplicación web (en web/js/gen). El nombre del archivo se basa en un hash del contenido (véase la imagen a continuación). Usted puede revisar el contenido del archivo usando el depurador del navegador. Desde ahí, puede depurar su código. En Etendo, usamos Chromium y su depurador la mayor parte del tiempo.
 
@@ -49,11 +49,11 @@ Todo el código JavaScript estático (de todos los módulos) se concatena en un 
 !!!note
     Para ver código no minimizado en el depurador, necesita tener los módulos core/kernel/application en desarrollo.
 
-###  Convenciones de codificación JavaScript
+### Convenciones de codificación JavaScript { #javascript-coding-conventions }
 
 Visite [Convenciones de codificación JavaScript](../concepts/java-coding-conventions.md) para obtener consejos específicos sobre la codificación en JavaScript.
 
-###  API del lado del cliente
+### API del lado del cliente { #client-side-api }
 
 Etendo proporciona e implementa varios componentes del lado del cliente para enviar solicitudes al servidor, internacionalización, etc.
 
@@ -67,7 +67,7 @@ Etendo utiliza la librería de interfaz de usuario del lado del cliente Smartcli
 
 Puede ser útil tener el código fuente de Smartclient y el material de referencia en su workspace de IntelliJ; así es muy fácil buscar en el código fuente. El código fuente más reciente de Smartclient está disponible en este repositorio: [https://bitbucket.org/koodu_software/org.openbravo.userinterface.smartclient.dev](https://bitbucket.org/koodu_software/org.openbravo.userinterface.smartclient.dev)
 
-###  Trabajar en WebContent
+### Trabajar en WebContent { #working-in-webcontent }
 
 Cuando trabajamos con archivos JavaScript, es habitual trabajar directamente en la carpeta WebContent para comprobar los cambios inmediatamente en el navegador. Después, copiamos nuestros cambios desde WebContent al código fuente para poder enviarlos al repositorio correspondiente. La tarea smartbuild copia el código fuente js en WebContent. Al trabajar directamente en WebContent, podríamos perder nuestros cambios después de ejecutar smartbuild, por lo que sugerimos hacerlo de esta forma:
 
@@ -93,28 +93,28 @@ Cuando trabajamos con archivos JavaScript, es habitual trabajar directamente en 
 Después de seguir estos pasos, si estamos trabajando en WebContent con VSCode, se copiará el archivo que estamos editando en la carpeta correspondiente cuando lo guardemos. Recuerde que la copia se realizará solo cuando guardemos el archivo.
 ## Weld
 
-### Mi componente no se encuentra
+### Mi componente no se encuentra { #my-component-is-not-found }
 
 Si su componente no se encuentra, puede que esté dentro del filtro de exclusión definido en el módulo Weld.
 
-### ¿Puedo ejecutar lógica cuando se inicia la aplicación?
+### ¿Puedo ejecutar lógica cuando se inicia la aplicación? { #can-i-run-logic-when-the-application-starts }
 
 Sí, puede consultar [Arquitectura de Etendo](../concepts/etendo-architecture.md#implement-application-initialization-logic) para más información.
-##  Capa de Acceso a Datos
+## Capa de Acceso a Datos { #data-access-layer }
 
-###  Funciones SQL en HQL: error «no data type for node»
+### Funciones SQL en HQL: error «no data type for node» { #sql-functions-in-hql-no-data-type-for-node-error }
 
 Visite [Capa de Acceso a Datos](../concepts/data-access-layer.md#sql-functions-in-hql) para obtener información sobre cómo usar funciones SQL en HQL.
 
-###  Advertencia: llamadas desequilibradas a enableAsAdminContext y resetAsAdminContext
+### Advertencia: llamadas desequilibradas a enableAsAdminContext y resetAsAdminContext { #getting-warning-unbalanced-calls-to-enableasadmincontext-and-resetasadmincontext }
 
 Esta advertencia se muestra (junto con un *stacktrace*) cuando la configuración del modo administrador no se realiza correctamente. Visite [esta página](../concepts/data-access-layer.md#administrator-mode) de la guía del desarrollador.
 
-###  Cómo llamar a un procedimiento almacenado/proceso a través de la DAL
+### Cómo llamar a un procedimiento almacenado/proceso a través de la DAL { #how-to-call-a-stored-procedureprocess-through-the-dal }
 
 Visite [esta página](../how-to-guides/how-to-call-a-stored-procedure-from-the-dal.md) sobre cómo llamar a un proceso a través de la DAL.
 
-###  Cómo leer datos visibles solo desde una Organización específica
+### Cómo leer datos visibles solo desde una Organización específica { #how-to-read-data-visible-only-from-a-specific-organization }
 
 El comportamiento por defecto de la DAL (de `OBQuery` y `OBCriteria`) es leer información de todas las organizaciones legibles. Es decir, todas las organizaciones a las que el rol actual tiene acceso. Sin embargo, en ocasiones puede querer leer información que solo es accesible/visible desde una organización específica. El fragmento de código siguiente muestra cómo se puede conseguir:
 
@@ -127,7 +127,7 @@ final List<PaymentTerm> pts = obc.list();
 
 Este fragmento de código muestra que debe añadir una expresión `in` al `OBCriteria` y, a continuación, deshabilitar el filtrado estándar por organización. Se puede implementar un enfoque similar para `OBQuery`.
 
-###  Cuando al hacer flush/commit de un trigger se lanza una excepción, pero no puedo ver/mostrar el mensaje real del trigger
+### Cuando al hacer flush/commit de un trigger se lanza una excepción, pero no puedo ver/mostrar el mensaje real del trigger { #when-flushingcommitting-a-trigger-throws-an-exception-but-i-cant-seedisplay-the-real-trigger-message }
 
 Hibernate y JDBC envolverán la excepción lanzada por el trigger en otra excepción (la `java.sql.BatchUpdateException`) y, en ocasiones, esta excepción se vuelve a envolver. Además, `java.sql.BatchUpdateException` almacena la excepción subyacente del trigger en `nextException` y no en la propiedad `cause`. El siguiente método puede ayudarle a obtener el mensaje subyacente del trigger:
 
@@ -145,11 +145,11 @@ private String getExceptionMessage(Throwable t) {
 !!!info
     La API de Etendo proporciona un método llamado `getUnderlyingSQLException()` en la clase `DbUtility` que ya realiza estas comprobaciones y también cubre otros casos.
 
-###  Pruebe su HQL: la herramienta de Consulta HQL
+### Pruebe su HQL: la herramienta de Consulta HQL { #test-your-hql-the-hql-query-tool }
 
 Etendo contiene un módulo que ofrece una herramienta de consultas que le permite probar una **Consulta HQL** directamente en la interfaz de Etendo. La [herramienta de Consulta HQL](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool) también está disponible a través del repositorio de Etendo.
 
-###  ¿Cómo puedo ver qué SQL se ejecuta?
+### ¿Cómo puedo ver qué SQL se ejecuta? { #how-can-i-see-what-sql-is-executed }
 
 Para ver las consultas SQL lanzadas por Hibernate, debe establecerse la siguiente propiedad de log4j en `WEB-INF/log4j2-web.xml` o en `config/log4j2-web.xml`:
 
@@ -173,7 +173,7 @@ Para ver el *binding* de valores a los parámetros de la consulta, establezca es
 
 Si no le funciona, es posible que el archivo log4j.properties se esté leyendo desde otra ubicación distinta de la que espera. Para ver desde dónde lee log4j sus propiedades, establezca este parámetro de la JVM: `-Dlog4j2.debug=true`
 
-###  Mi consulta no devuelve mi objeto recién creado
+### Mi consulta no devuelve mi objeto recién creado { #my-query-does-not-return-my-newly-created-object }
 
 Esto puede ocurrir cuando no establece explícitamente la propiedad `active` a `true` en el nuevo objeto de negocio.
 
@@ -181,7 +181,7 @@ Las clases principales de consulta de Etendo (`OBCriteria` y `OBQuery`) añaden 
 
 Al crear un objeto de negocio, la propiedad `active` debe establecerse explícitamente a `true` (`setActive(true)`). Esto garantiza que el filtro de activos no lo omita en las consultas.
 
-###  Mi consulta no devuelve nada
+### Mi consulta no devuelve nada { #my-query-does-not-return-anything }
 
 Hay casos en los que Hibernate realizará un *inner-join* al ejecutar una consulta. Si no hay datos relacionados en la tabla unida, entonces la consulta completa no devolverá nada.
 
@@ -215,17 +215,17 @@ Tenga en cuenta que, en la práctica, esta excepción no ocurre tan a menudo, ya
 
 Los procesos de importación de datos/servicios web REST se encargan de persistir los objetos en el orden correcto, por lo que esta excepción no se produce al importar datos mediante estos procesos.
 
-###  Rendimiento: obtener el id de un BaseOBObject
+### Rendimiento: obtener el id de un BaseOBObject { #performance-getting-the-id-of-a-baseobobject }
 
 Para mejorar el rendimiento de asociaciones de un solo extremo, la DAL hace uso de la funcionalidad de *proxy* de Hibernate. Esta funcionalidad envuelve un objeto dentro de un objeto *proxy* de Hibernate (cglib). El *proxy* de Hibernate se encarga de cargar el objeto de negocio cuando realmente se accede a él y no antes.
 
 En muchos casos, un desarrollador solo quiere acceder al id o al `entityname` de un objeto. Para evitar la carga del objeto de negocio al recuperar solo esta información, la clase `DalUtil` en `org.openbravo.dal.core` ofrece un método `getId` y un método `getEntityName`. Estos métodos trabajan directamente con el objeto `HibernateProxy` y no cargan el objeto de negocio subyacente.
 
-###  Carga de clases
+### Carga de clases { #classloading }
 
 La DAL carga clases al inicializarse. Por defecto, la DAL utiliza el *context class loader* del hilo. En algunos casos esto no funciona correctamente (por ejemplo, al usar la DAL en Ant). La DAL utiliza la clase `OBClassLoader` para hacer configurable el *classloader*. Llamando a `OBClassLoader.setInstance` con su propio `OBClassLoader`, puede controlar el cargador de clases usado por la DAL.
 
-###  NPE al llamar a un getter de un objeto de negocio
+### NPE al llamar a un getter de un objeto de negocio { #npe-when-calling-a-getter-of-a-business-object }
 
 Todos los getters de los objetos de negocio de Etendo devuelven un `Object`. Esto también aplica a propiedades de tipo primitivo. De este modo, Etendo puede soportar valores nulos en la base de datos (lo que dará como resultado un valor nulo para la propiedad). Sin embargo, los valores nulos provocan NPE cuando se usan directamente en expresiones. Por ejemplo, tome este código:
 
@@ -238,7 +238,7 @@ Cuando el valor de `enableHeartbeat` es nulo en la base de datos, la llamada a `
 
 Lo mismo ocurrirá al usar directamente resultados de llamadas a getters en expresiones numéricas.
 
-###  Las consultas DAL no devuelven o no ven cambios en la base de datos
+### Las consultas DAL no devuelven o no ven cambios en la base de datos { #dal-queries-do-not-return-or-do-not-see-changes-in-the-database }
 
 Esto puede ocurrir en la siguiente situación:
 
@@ -288,32 +288,32 @@ Hibernate cargará de forma diferida los objetos a los que se hace referencia de
 La `LazyInitializationException` ocurre cuando esta sesión ya no es válida. Esto sucede, por ejemplo, cuando se llama a `OBDal.getInstance().commitAndClose()`, lo que cerrará y eliminará la sesión. Si se accede a un objeto *proxy* no inicializado después de la llamada a `commitAndClose`, se lanza esta excepción.
 
 Para evitarlo, asegúrese de que todos los objetos que necesita después de `commitAndClose` están inicializados. Esto puede hacerse usando la llamada `Hibernate.initialize(object)` o llamando a un método arbitrario del objeto (por ejemplo, `getIdentifier()`).
-##  Servicios web REST
+## Servicios web REST { #rest-web-services }
 
-###  Estoy obteniendo: 'Caused by: Object Entity(null) is new but not writable'
+### Estoy obteniendo: 'Caused by: Object Entity(null) is new but not writable' { #i-am-getting-caused-by-object-entitynull-is-new-but-not-writable }
 
 El servicio web REST utiliza el **rol, cliente y organización por defecto** del usuario. El error `Caused by: Object Order(null) is new but not writable` se debe a que el rol o la organización del usuario no permiten escribir/crear la entidad que está pasando.
 
-###  Mi servicio web REST no devuelve nada
+### Mi servicio web REST no devuelve nada { #my-rest-webservice-does-not-return-anything }
 
 Si su servicio web REST solo devuelve esto: `<ob:Openbravo/>`
 
 Entonces, la mayoría de las veces el usuario que utilizó para iniciar sesión no está autorizado a ver la información solicitada. Otro motivo para no ver información es que el sistema añadirá automáticamente el filtrado por cliente y organización a la consulta REST y solo mostrará objetos que tengan active==true.
 
-###  Uso del esquema XML de REST para generar código de (de-)serialización
+### Uso del esquema XML de REST para generar código de (de-)serialización { #using-the-rest-xml-schema-to-generate-de-serialization-code }
 
 El esquema XML de REST puede utilizarse para generar código Java o C# que puede usarse para (de-)serializar el contenido XML de REST de forma segura en cuanto a tipos. Algo a tener en cuenta es que los elementos de tipo primitivo (como un nombre o una descripción) tienen atributos definidos en el esquema XML. Esto significa que los generadores de código no crearán un miembro/accesor de tipo String (u otro tipo primitivo), sino que en su lugar utilizarán un tipo generado independiente para encapsular el valor del tipo primitivo. Este tipo generado por separado también contiene los otros atributos.
 
-###  Complemento de Firefox: Poster, para probar servicios web
+### Complemento de Firefox: Poster, para probar servicios web { #firefox-add-onposter-to-test-webservices }
 
 Para facilitar las pruebas de servicios web, Firefox dispone de un buen complemento: Poster. Este complemento le permite hacer POST/PUT de XML a una URL y realizar solicitudes GET y DELETE.
 
-###  Estoy obteniendo: 'message: "OBUIAPP_ActionNotAllowed" type: "user"'
+### Estoy obteniendo: 'message: "OBUIAPP_ActionNotAllowed" type: "user"' { #i-am-getting-message-obuiapp-actionnotallowed-type-user }
 
 Debe añadir la tabla que está intentando editar al perfil de usuario en `Role Access` > `Table Access`.
-##  Modelo de datos del Diccionario de la Aplicación
+## Modelo de datos del Diccionario de la Aplicación { #application-dictionary-data-model }
 
-###  Uso de referencias de Selector para no mostrar un desplegable en campos no editables
+### Uso de referencias de Selector para no mostrar un desplegable en campos no editables { #using-search-references-not-to-show-a-drop-down-in-non-editable-fields }
 
 Para la referencia completa sobre la referencia Selector, lea la sección Selector en el documento [Modelo de datos](../concepts/data-model.md).
 
@@ -321,11 +321,11 @@ Una referencia **Selector** no muestra una lista desplegable, sino únicamente u
 
 Si se sabe que una columna se utiliza siempre en campos no editables y sigue la regla de nomenclatura definida para las referencias **TableDir**, es una buena práctica no configurarla como referencia **TableDir**, sino como **Selector**; en este caso no es necesario configurar el campo **Referencia clave**. Al hacerlo, la página generada será más ligera porque, en lugar de generar una lista desplegable con todos los elementos, solo generará un cuadro de texto.
 
-###  Sintaxis del Diccionario de la Aplicación
+### Sintaxis del Diccionario de la Aplicación { #application-dictionary-syntax }
 
 El Diccionario de la Aplicación contiene muchos ejemplos de sintaxis de **Lógica del valor por defecto**, **Lógica para mostrar**, **lógicas de solo lectura** y **validaciones**. Simplemente consulte su base de datos para averiguar cómo están definidas (puede ejecutar estas consultas dentro de Etendo, iniciando sesión con un usuario con el rol de **Administrador del sistema** dentro de **Diccionario de la Aplicación** > **Mantenimiento** > **Consulta SQL**). Encuentre más información sobre Expresiones dinámicas [aquí](../concepts/dynamic-expressions.md)
 
-####  Lógica del valor por defecto
+#### Lógica del valor por defecto { #default-values }
     
 ``` 
 SELECT t.name AS table_name, c.name AS column_name, c.defaultvalue AS default_value
@@ -337,7 +337,7 @@ AND c.ad_table_id = t.ad_table_id
 ORDER BY t.name, c.name;
 ```
 
-####  Lógica para mostrar
+#### Lógica para mostrar { #display-logics }
     
 ```
 SELECT w.name AS window, t.name AS tab, f.name AS FIELD, f.displaylogic AS display_logic  
@@ -366,7 +366,7 @@ ORDER BY w.name, t.name, f.name;
 ```
 
   
-####  Lógicas de solo lectura  
+#### Lógicas de solo lectura { #read-only-logics }
     
 ```
 SELECT t.name AS table_name, c.name AS column_name, c.readonlylogic AS read_only_logic
@@ -376,7 +376,7 @@ AND c.ad_table_id = t.ad_table_id
 ORDER BY t.name, t.name;
 ```
 
-####  Validación
+#### Validación { #validations }
 
 ```
 SELECT t.name AS table_name, c.name AS column_name, vr.code AS validation_rule  

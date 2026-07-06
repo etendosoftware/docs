@@ -8,9 +8,9 @@ tags:
 status: beta
 ---
 
-# Cómo configurar Etendo Copilot para usar un proxy
+# Cómo configurar Etendo Copilot para usar un proxy { #how-to-configure-etendo-copilot-to-use-a-proxy }
 
-## Visión general
+## Visión general { #overview }
 
 **Etendo Copilot** puede configurarse para enrutar su tráfico de la API de LLM a través de un proxy por varios motivos operativos:
 
@@ -22,7 +22,7 @@ Un proxy delante de los **proveedores de LLM** actúa como intermediario que ree
 
 Esta guía muestra una configuración habitual usando [LiteLLM Proxy](https://docs.litellm.ai/docs/simple_proxy){target="_blank"} y explica cómo apuntar **Etendo Copilot** a ese proxy. El caso de *sin acceso directo a internet* es un escenario típico, pero la misma configuración aplica cuando necesita enrutamiento centralizado, aplicación de políticas o una mejor observabilidad de las solicitudes a LLM.
 
-## Configurar el servidor proxy
+## Configurar el servidor proxy { #set-up-the-proxy-server }
 
 Una opción conveniente es **LiteLLM Proxy**, que simplifica la gestión de distintos proveedores de LLM detrás de un único endpoint. El siguiente ejemplo muestra una configuración básica con Docker:
 
@@ -39,9 +39,9 @@ Una opción conveniente es **LiteLLM Proxy**, que simplifica la gestión de dist
 2.  **Crear el archivo `.env`**: Almacene de forma segura en este archivo las claves API del proveedor. Sustituya los placeholders por sus claves reales:
 
     ```bash
-    OPENAI_API_KEY=sk-proj-XXXXXXX
-    ANTHROPIC_API_KEY=sk-ant-XXXXXXXXXX
-    GOOGLE_API_KEY=
+    openai.api.key=sk-proj-XXXXXXX
+    anthropic.api.key=sk-ant-XXXXXXXXXX
+    google.api.key=
     ```
 
 3.  **Ejecutar el proxy con Docker**: Coloque `litellm_config.yaml` y `.env` en el mismo directorio y ejecute:
@@ -60,7 +60,7 @@ Una opción conveniente es **LiteLLM Proxy**, que simplifica la gestión de dist
     !!!info
         El ejemplo anterior muestra una configuración de passthrough simple. Para un uso avanzado (caché, control de acceso, limitación de tasa, etc.) consulte la [documentación de LiteLLM Proxy](https://docs.litellm.ai/docs/simple_proxy){target="_blank"}
 
-## Configurar Etendo Copilot
+## Configurar Etendo Copilot { #configure-etendo-copilot }
 
 Una vez que el proxy esté en ejecución, configure Etendo Copilot para enviar sus **solicitudes a LLM** a través de la URL del proxy.
 
@@ -72,7 +72,7 @@ Una vez que el proxy esté en ejecución, configure Etendo Copilot para enviar s
     COPILOT_PROXY_URL=http://my.server.with.the.proxy:4000
     ```
 
-## Aplicar los cambios y reiniciar el servicio
+## Aplicar los cambios y reiniciar el servicio { #apply-the-changes-and-restart-the-service }
 
 Para que la configuración sea efectiva, debe recompilar, desplegar la configuración en Etendo y reiniciar los servicios relevantes. Realice los pasos en el orden indicado a continuación:
 

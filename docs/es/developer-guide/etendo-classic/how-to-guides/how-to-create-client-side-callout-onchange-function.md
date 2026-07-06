@@ -7,9 +7,9 @@ tags:
   - Interacciones de la interfaz de usuario
 ---
 
-# Cómo crear una función OnChange de Callout del lado del cliente
+# Cómo crear una función OnChange de Callout del lado del cliente { #how-to-create-client-side-callout-onchange-function }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo implementar **funciones del lado del cliente (javascript)** que se ejecutan cuando cambia el valor de un campo en la interfaz de usuario. El concepto de onChange se corresponde con el [Callout](how-to-create-a-callout.md) tradicional; la principal diferencia es que la **funcionalidad onChange se implementa en el cliente**. Esto ofrece las siguientes ventajas:
 
@@ -18,7 +18,7 @@ Esta sección explica cómo implementar **funciones del lado del cliente (javasc
 
 Además, la función onChange tiene todas las ventajas del Callout clásico: aún puede **llamar al servidor** para ejecutar acciones más intensivas en rendimiento o realizar consultas.
 
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección se apoya en un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
@@ -26,7 +26,7 @@ El código del módulo de ejemplo puede descargarse desde este repositorio: [com
 
 El módulo de ejemplo está disponible a través del Repositorio Central (consulte "Client Application Examples"); para más información, consulte la página del proyecto Examples Client Application.
 
-## Definición de funciones OnChange
+## Definición de funciones OnChange { #defining-onchange-functions }
 
 Una función `OnChange` es una función en javascript disponible a través de un ID global.
 
@@ -80,7 +80,7 @@ Este ejemplo de onchange establece un mensaje en la barra de mensajes y establec
 !!!info
     Si su función onchange no funciona o no se llama, o si su ventana deja de cargar después de definir un onchange, entonces revise la consola.
 
-## Registro y configuración de un OnChange para un campo específico
+## Registro y configuración de un OnChange para un campo específico { #registering-setting-an-onchange-for-a-specific-field }
 
 Hay dos formas de vincular una función `OnChange` a un campo específico:
 
@@ -89,7 +89,7 @@ Hay dos formas de vincular una función `OnChange` a un campo específico:
 
 El primer enfoque le permite definir el `OnChange` directamente en la definición del campo. Para el segundo enfoque necesita usar javascript, pero ofrece flexibilidad adicional.
 
-### Configurar una función OnChange a través del AD
+### Configurar una función OnChange a través del AD { #setting-an-onchange-function-through-the-ad }
 
 El Diccionario de Aplicación le permite configurar el `OnChange` para un campo específico; consulte el campo de función `OnChange` en la ventana `Window, Tabs and Fields`.
 
@@ -97,7 +97,7 @@ El Diccionario de Aplicación le permite configurar el `OnChange` para un campo 
 
 El valor debe ser el ID global único mencionado anteriormente.
 
-### Registro programático de funciones OnChange
+### Registro programático de funciones OnChange { #programmatic-registration-of-onchange-functions }
 
 También es posible registrar una **función OnChange mediante javascript**. Esto ofrece más flexibilidad que definirlo a través del Diccionario de Aplicación:
 
@@ -118,7 +118,7 @@ Un ejemplo de registro:
 OB.OnChangeRegistry.register('FF8081813290114F0132901EB0A2001A', 'value', OB.OBEXAPP.OnChangeFunctions.Note_Value, 'OBEXAPP_Value');
 ```
 
-#### Múltiples funciones OnChange por campo, orden de llamada
+#### Múltiples funciones OnChange por campo, orden de llamada { #multiple-onchange-functions-per-field-call-order }
 
 La función `OnChange` puede tener una propiedad sort para controlar el orden de llamada si hay múltiples funciones `OnChange` para un mismo campo.
 
@@ -133,13 +133,13 @@ Algunas notas sobre la ordenación:
 - el `OnChange` definido en el Diccionario de Aplicación tiene sort 50 e id: Valor por defecto
 - si un `OnChange` no tiene un sort definido, obtiene el sort 100
 
-#### Sobrescribir/reemplazar un OnChange
+#### Sobrescribir/reemplazar un OnChange { #overridingreplacing-an-onchange }
 
 Un `OnChange` puede registrarse usando un id. Si ya existe un `OnChange` con el mismo id, entonces se reemplaza por el nuevo registro.
 
 El `OnChange` definido a través del Diccionario de Aplicación tiene el id **Valor por defecto**. Por lo tanto, al registrar un nuevo `OnChange` usando ese id, sobrescribirá el `OnChange` definido a través del Diccionario de Aplicación.
 
-## Ejemplo: OnChange llamando a una acción del lado del servidor
+## Ejemplo: OnChange llamando a una acción del lado del servidor { #example-onchange-calling-a-server-side-action }
 
 Esta sección muestra un ejemplo de un `OnChange` que llama a una acción del lado del servidor:
 
@@ -173,14 +173,14 @@ El ejemplo anterior llama a una clase ActionHandler: OnchangeExampleActionHandle
 !!!info
     Es posible deshabilitar el formulario durante la acción del lado del servidor; llame al método setDisabled en el formulario con el valor true como parámetro.
 
-## OnChange y el Callout clásico
+## OnChange y el Callout clásico { #onchange-and-the-classic-callout }
 
 Si un campo tiene definidos tanto un `OnChange` como un Callout clásico, entonces se aplica lo siguiente:
 
 - en la UI de Openbravo 3 se utilizará la función `OnChange` y el Callout quedará deshabilitado
 - en la UI clásica se utiliza el Callout y se ignoran las funciones `OnChange`
 
-## Módulo de ejemplo: ventana de ejemplo
+## Módulo de ejemplo: ventana de ejemplo { #example-module-example-window }
 
 El Módulo de ejemplo tiene una ventana de ejemplo con varios ejemplos de una función de Callout/onchange. Puede encontrar la ventana de ejemplo en `Application Examples` >`Callout/OnChange Function`.
 

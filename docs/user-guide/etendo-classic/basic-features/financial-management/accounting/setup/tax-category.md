@@ -16,7 +16,7 @@ tags:
 
 A Tax Category is used to group products or services that share the same **tax treatment**. Since not all items have the same tax rate (standard, reduced, or exempt), tax categories help organize these differences and ensure taxes are applied automatically and correctly during transactions.
 
-Each product or service must be assigned to one tax category in the [Product window](../../../master-data-management/master-data.md#product), and [tax rates](../setup/tax-rate.md) are also linked to categories. When a transaction is created, Etendo only considers the tax rates associated with the selected category, reducing manual intervention and preventing errors.
+Each product or service must be assigned to one tax category in the [Product window](../../../master-data-management/master-data/product.md#product), and [tax rates](../setup/tax-rate.md) are also linked to categories. When a transaction is created, Etendo only considers the tax rates associated with the selected category, reducing manual intervention and preventing errors.
 
 Additional factors, such as the [Business Partner tax category](../setup/business-partner-tax-category.md) and tax rate configuration, help the system determine the **final applicable tax**.
 
@@ -36,7 +36,7 @@ This structure allows for flexible tax management while maintaining consistency 
 
 You can create as many tax categories as needed to organize different tax treatments in your system. Each category will be linked to specific tax rates and assigned to products. The Header tab defines the main information of the tax category.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/tax-category1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/tax-category1.png)
 
 **Fields to note:**
 
@@ -54,7 +54,7 @@ You can create as many tax categories as needed to organize different tax treatm
     Once created, tax categories must be:
 
     1. **Linked to tax rates** in the [Tax Rate window](../setup/tax-rate.md) - Each tax rate must belong to at least one tax category
-    2. **Assigned to products** in the [Product window](../../../master-data-management/master-data.md#product) - Each product must have one tax category
+    2. **Assigned to products** in the [Product window](../../../master-data-management/master-data/product.md#product) - Each product must have one tax category
     3. **Optionally assigned to business partners** via [Business Partner Tax Category](../setup/business-partner-tax-category.md) to restrict applicable taxes for specific customers or vendors
 
 
@@ -82,7 +82,7 @@ Tax categories appear throughout the system:
 
 | Window/Process | Usage |
 |----------------|-------|
-| [Product](../../../master-data-management/master-data.md#product) | Each product must be assigned one tax category |
+| [Product](../../../master-data-management/master-data/product.md#product) | Each product must be assigned one tax category |
 | [Tax Rate](../setup/tax-rate.md) | Each tax rate must be linked to at least one tax category |
 | [Business Partner Tax Category](./business-partner-tax-category.md) | Optional tax category assignment to restrict applicable taxes for specific customers/vendors |
 | Sales Orders/Invoices | Tax categories determine which tax rates are available for selection |
@@ -111,7 +111,7 @@ A company sells different types of items with varying tax rates:
     - Create a 10% tax rate and link it to the "Reduced VAT" category
     - Create a 0% tax rate and link it to the "Exempt" category
 
-3. **Assign products** to categories in the [Product window](../../../master-data-management/master-data.md#product):
+3. **Assign products** to categories in the [Product window](../../../master-data-management/master-data/product.md#product):
     - Product "Laptop" → Tax Category: "Standard VAT"
     - Product "Bread" → Tax Category: "Reduced VAT"
     - Product "Novel Book" → Tax Category: "Exempt"

@@ -9,27 +9,27 @@ tags:
 status: beta
 ---
 
-# Cómo crear un Selector Múltiple
+# Cómo crear un Selector Múltiple { #how-to-create-a-multi-selector }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 **Selector Múltiple** es una referencia que permite seleccionar múltiples elementos al mismo tiempo. Está pensado para usarse como parámetro de una [Definición de Proceso Estándar](../how-to-guides/how-to-create-a-standard-process-definition.md). La referencia Selector Múltiple se define prácticamente igual que los selectores normales, que permiten seleccionar un único valor. 
 
-## Módulo de ejemplo 
+## Módulo de ejemplo { #example-module }
 
 Esta sección está respaldada por un módulo de ejemplo que muestra ejemplos del código mostrado y comentado. El código del módulo de ejemplo puede descargarse desde este [repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}. 
  
-## Pasos para implementar el proceso
+## Pasos para implementar el proceso { #steps-to-implement-the-process }
 
 Esta sección explica cómo crear un **selector múltiple de pedidos**.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-multi-selector/how-to-create-a-multi-selector-1.png){: .legacy-image-style}
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-multi-selector/how-to-create-a-multi-selector-2.png){: .legacy-image-style}
 
-### Definir el selector
+### Definir el selector { #defining-the-selector }
 
 - Como **Administrador del sistema**, abra la ventana **Referencia**. 
 - Cree un nuevo registro. 
@@ -39,7 +39,7 @@ Esta sección explica cómo crear un **selector múltiple de pedidos**.
   - Plantilla: **Plantilla de selector** 
   - Tabla: `C_Order`
 
-### Añadir campos al pop-up del selector
+### Añadir campos al pop-up del selector { #adding-fields-to-selectors-pop-up }
 
 El último paso es definir cuáles son los campos que estarán presentes en el pop-up para seleccionar registros.
 
@@ -51,14 +51,14 @@ El último paso es definir cuáles son los campos que estarán presentes en el p
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-multi-selector/how-to-create-a-multi-selector-3.png){: .legacy-image-style}
 
-### Usar el selector
+### Usar el selector { #using-the-selector }
 
 Este selector puede usarse como parámetro para una **Definición del Proceso**. 
 
 !!! info
     Para más información, visite [Cómo crear una Definición de Proceso Estándar](../how-to-guides/how-to-create-a-standard-process-definition.md).
 
-### Recuperar valores en backend
+### Recuperar valores en backend { #retrieving-values-in-backend }
 
 En el backend, el Java que implementa el proceso recibe un `JSONArray` con los IDs de todas las filas seleccionadas. En caso de que no se seleccione ninguna fila, se recibe un array vacío.
 
@@ -74,9 +74,9 @@ for (int i = 0; i < orders.length(); i++) {
 }
 ```
 
-## Temas avanzados
+## Temas avanzados { #advanced-topics }
 
-### Usar selector con consulta personalizada
+### Usar selector con consulta personalizada { #using-custom-query-selector }
 
 Al usar una consulta personalizada para definir el selector, debe existir un alias en la consulta llamado `_identifier`, que se utilizará como identificador legible por el usuario para los registros seleccionados, y otro llamado `id`, que se enviará al backend como id de los registros seleccionados. También se requieren campos para estas columnas de la consulta con los mismos nombres. 
 

@@ -7,10 +7,10 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de reconocimiento óptico de caracteres (OCR)
+# Herramienta de reconocimiento óptico de caracteres (OCR) { #optical-character-recognition-ocr-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
-## Visión general
+## Visión general { #overview }
 
 La herramienta de reconocimiento óptico de caracteres (OCR) es una herramienta avanzada que extrae datos estructurados de imágenes y documentos PDF. Utiliza modelos de IA de visión para reconocer y extraer texto, con soporte para la coincidencia automática de plantillas de referencia, esquemas de salida estructurada y configuración multiproveedor.
 
@@ -24,7 +24,7 @@ La herramienta de reconocimiento óptico de caracteres (OCR) es una herramienta 
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta automatiza el proceso de **extracción de texto de archivos basados en imágenes o PDFs**. Esto puede ser especialmente útil para tareas como la digitalización de documentos, la extracción de datos y el análisis de contenido. 
 
@@ -64,9 +64,9 @@ El uso de esta herramienta consta de las siguientes acciones:
 - **Procesamiento de imagen**: la imagen se procesa utilizando un modelo de IA de visión (OpenAI GPT o Google Gemini, según la configuración). Este modelo interpreta el texto dentro de la imagen y extrae la información relevante en función de la **question** proporcionada.
 
 - **Devolución del resultado**: la herramienta devuelve un objeto JSON que contiene la información extraída de la imagen o del PDF.
-## Características avanzadas
+## Características avanzadas { #advanced-features }
 
-### Coincidencia automática de plantillas de referencia
+### Coincidencia automática de plantillas de referencia { #automatic-reference-template-matching }
 
 La herramienta OCR incluye un sistema de referencias inteligente que busca automáticamente plantillas de documentos similares en la base de datos vectorial del agente. Cuando se encuentra una referencia similar, guía el proceso de extracción indicando qué campos de datos extraer.
 
@@ -111,7 +111,7 @@ Por defecto, la herramienta está configurada para ser **altamente permisiva**:
 - **Para especificar un umbral**: configure la propiedad `copilot.reference.similarity.threshold` en el archivo `gradle.properties` con un valor float (p. ej., `0.20`). Esto evitará que la herramienta utilice referencias que sean demasiado diferentes.
 - **Para desactivar el filtrado por umbral**: si tiene un umbral configurado pero quiere ignorarlo para una solicitud específica, configure el parámetro `disable_threshold_filter` a `true` en la entrada de la herramienta. Esto forzará a la herramienta a usar la referencia más similar encontrada, aunque no sea una coincidencia cercana. Esto puede hacerse indicando al agente que desactive el umbral en su prompt. El agente entonces pasará el parámetro a la herramienta.
 
-### Esquemas de salida estructurada
+### Esquemas de salida estructurada { #structured-output-schemas }
 
 La herramienta admite esquemas predefinidos que imponen una estructura de salida específica. Esto es útil cuando necesita formatos de datos consistentes para el procesamiento posterior.
 
@@ -150,7 +150,7 @@ Para modelos o agentes antiguos que no admiten salida estructurada nativa, utili
 }
 ```
 
-### Configuración multiproveedor
+### Configuración multiproveedor { #multi-provider-configuration }
 
 La herramienta OCR admite múltiples proveedores de IA con opciones de configuración flexibles:
 
@@ -179,7 +179,7 @@ El proveedor se detecta automáticamente en función del nombre del modelo:
 - Los modelos que empiezan por `gemini` usan el proveedor Gemini.
 - En caso contrario, se utiliza OpenAI por defecto.
 
-### Control de calidad de PDF
+### Control de calidad de PDF { #pdf-quality-control }
 
 Para documentos `PDF`, puede controlar la calidad de renderizado mediante el parámetro `scale`:
 
@@ -205,7 +205,7 @@ Para documentos `PDF`, puede controlar la calidad de renderizado mediante el par
 - Aumenta el tiempo de procesamiento y el consumo de memoria.
 - Seleccione en función del tamaño y la complejidad del texto del documento.
 
-### Optimizaciones de rendimiento
+### Optimizaciones de rendimiento { #performance-optimizations }
 
 La herramienta incluye varias optimizaciones para un mejor rendimiento:
 
@@ -213,9 +213,9 @@ La herramienta incluye varias optimizaciones para un mejor rendimiento:
 - **Renderizado eficiente de PDF**: utiliza *pypdfium2* para una conversión rápida de PDF a imagen.
 - **Limpieza automática**: los archivos temporales se eliminan automáticamente tras el procesamiento.
 - **Procesamiento paralelo de páginas**: los `PDF` de varias páginas se procesan de forma eficiente.
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
-### Solicitud de reconocimiento de texto desde una imagen/PDF
+### Solicitud de reconocimiento de texto desde una imagen/PDF { #requesting-text-recognition-from-an-imagepdf }
 
 Suponga que tiene una imagen en `/home/user/invoice.png` y quiere extraer información de la **Factura**:
 
@@ -357,7 +357,7 @@ A continuación se muestra una imagen de ejemplo de una factura:
         }
         ```
 
-### Uso avanzado: salida estructurada con referencia
+### Uso avanzado: salida estructurada con referencia { #advanced-usage-structured-output-with-reference }
 
 Suponga que ha subido una imagen de documento de referencia a la base de datos vectorial de su agente, y ahora quiere extraer datos con un esquema predefinido:
 
@@ -410,7 +410,7 @@ Suponga que ha subido una imagen de documento de referencia a la base de datos v
         }
         ```
 
-### Uso con configuración de modelo personalizada
+### Uso con configuración de modelo personalizada { #usage-with-custom-model-configuration }
 
 Puede configurar un modelo específico para el procesamiento OCR de varias maneras:
 
@@ -432,7 +432,7 @@ copilot.ocrtool.model="gpt-4o"
 
 Esto le permite usar distintos modelos para distintos agentes en función de sus necesidades específicas (p. ej., alta precisión para facturas frente a velocidad para recibos).
 
-### Encadenamiento de resultados
+### Encadenamiento de resultados { #result-chaining }
 
 !!!note
     Recuerde que el resultado de la herramienta puede usarse en otras herramientas; por ejemplo, puede usar el resultado de la herramienta OCR en una herramienta que escriba la información en una base de datos o la envíe a un servicio web. 

@@ -7,16 +7,16 @@ tags:
   - Casos de prueba
 ---
 
-# Cómo crear casos de prueba JUnit
+# Cómo crear casos de prueba JUnit { #how-to-create-junit-test-cases }
 
-## Visión general
+## Visión general { #overview }
 
 Este procedimiento se centrará en crear un caso de prueba haciendo uso de las clases `OBBaseTest` y `WeldBaseTest`. El caso de prueba comprobará que nuestro sistema tiene al menos un Usuario con contraseña. Para ello, utilizaremos el nuevo enfoque DAL para acceder a la base de datos.
 
 En programación informática, las **pruebas unitarias** son un método de diseño y desarrollo de software en el que el programador adquiere confianza en que las unidades individuales del código fuente son aptas para su uso. Una unidad es la parte más pequeña comprobable de una aplicación. En programación procedimental, una unidad puede ser un programa individual, una función, un procedimiento, etc., mientras que en programación orientada a objetos, la unidad más pequeña es un método, que puede pertenecer a una clase base/superclase, una clase abstracta o una clase derivada/subclase.
 
 Todos los nuevos desarrollos deben pertenecer a un módulo que no sea el módulo _core_.
-## Preparación del entorno de desarrollo
+## Preparación del entorno de desarrollo { #preparing-development-environment }
 
 !!! info
     Asegúrese de que en el archivo raíz **build.gradle** ha incluido el plugin `com.etendoerp.testing.gradleplugin`. Si no lo tiene, consulte la documentación del [Plugin de pruebas de Etendo](../../developer-tools/etendo-testing-plugin.md#installation) para instalarlo y, por último, recargue *Gradle* desde *IntelliJ*.
@@ -33,9 +33,9 @@ modules
 ```
 
 Ahora, está listo para trabajar con casos de prueba.
-## Creación del caso de prueba
+## Creación del caso de prueba { #creating-the-test-case }
 
-### Heredar de `OBBaseTest`
+### Heredar de `OBBaseTest` { #inheriting-from-obbasetest }
 
 Todos los casos de prueba del core son subclases de `OBBaseTest` (`org.openbravo.test.base.OBBaseTest`). Esta clase gestiona todos los pasos necesarios para inicializar la *Capa de Acceso a Datos*, se encarga de la gestión de transacciones y proporciona un conjunto de utilidades (métodos) para trabajar con el contexto de Openbravo (OBContext).
 
@@ -45,7 +45,7 @@ Todos los casos de prueba del core son subclases de `OBBaseTest` (`org.openbravo
     Asegúrese de usar `WeldBaseTest` para aprovechar todas las capacidades de la inyección de dependencias y de los observadores de eventos de DAL en sus casos de prueba.
 
 
-### Creación de la Clase Java
+### Creación de la Clase Java { #creating-the-java-class }
 
   - Abra IntelliJ IDE. 
   - Cree una nueva estructura de carpetas bajo la carpeta `modules`: `modules/com.etendoerp.examples/src-test/src/com.etendoerp.example` 
@@ -175,7 +175,7 @@ System.out.println("Total of users with password: " + (userCount));
 
 Por último, imprimimos el total de usuarios con contraseña solo a modo de registro.
 
-### Gestión de transacciones
+### Gestión de transacciones { #transaction-handling }
 
 Una pregunta que puede surgir al ver el código anterior es: ¿dónde se realiza la gestión de transacciones de base de datos? La respuesta es que esto lo gestiona la clase `WeldBaseTest` y la capa de acceso a datos de Etendo:
 
@@ -202,7 +202,7 @@ Un caso de prueba a menudo cambiará los datos en la base de datos subyacente. L
 
 Este último punto es importante porque siempre puede haber razones por las que durante una prueba no se realice el paso de limpieza. Por ejemplo, porque la ejecución de pruebas se detiene antes de que se complete la limpieza.
 
-### Ejecutar pruebas
+### Ejecutar pruebas { #run-tests }
 
 Etendo dispone de varias tareas de Gradle que ejecutan los casos de prueba:
 
@@ -243,7 +243,7 @@ Para poder ejecutar sus casos de prueba:
                 └── index.html
     ```
 
-### Ejecutar pruebas con cobertura
+### Ejecutar pruebas con cobertura { #run-tests-with-coverage }
 
 Para ejecutar sus pruebas y visualizar la **cobertura de código** de su módulo:
 
@@ -265,22 +265,22 @@ Una vez que finalicen las pruebas, **IntelliJ** mostrará la **ventana de herram
 | **Método %**  | Porcentaje de métodos ejecutados durante las pruebas.                     |
 | **Línea %**   | Porcentaje de líneas de código fuente que se ejecutaron.                  |
 | **Rama %**    | Cobertura de ramas condicionales (`if`, `else`, `switch`, etc).           |
-## Funcionalidades avanzadas de pruebas
+## Funcionalidades avanzadas de pruebas { #advanced-testing-features }
 
 
-### Pruebas parametrizadas
+### Pruebas parametrizadas { #parameterized-tests }
 
 !!! info 
     Para más información, visite: [Prueba parametrizada de JUnit](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests){target="_blank"}.
 
-### Extensiones
+### Extensiones { #extensions }
 
 En **JUnit 5**, el concepto de Rules ha sido reemplazado por las *Extensiones*.
 
 !!! info
     Para más información, visite la guía de [Extensión](https://junit.org/junit5/docs/current/user-guide/#extensions){target="_blank"}.
 
-### Aserciones y Hamcrest 1.13
+### Aserciones y Hamcrest 1.13 { #assertions-and-hamcrest-113 }
 
 Hamcrest es un framework para escribir objetos matcher que permite definir reglas de *conciliación* de forma declarativa. Hay varias situaciones en las que los matchers son invaluables, como la *validación de la UI* o el *filtrado de datos*, pero es en el ámbito de escribir pruebas flexibles donde los matchers se usan con mayor frecuencia.
 
@@ -289,7 +289,7 @@ Al escribir pruebas, a veces es difícil encontrar el equilibrio adecuado entre 
 !!! info 
     Para más información, visite: [Hamcrest](https://hamcrest.org/){target="_blank"}.
 
-### Matchers JSON
+### Matchers JSON { #json-matchers }
   
 Etendo proporciona un conjunto de matchers que pueden ser útiles al realizar aserciones sobre JSONObjects o JSONArrays.
 
@@ -385,7 +385,7 @@ public void testHasItems() {
 }
 ```
 
-### Simulación con Mockito en JUnit
+### Simulación con Mockito en JUnit { #mocking-with-mockito-in-junit }
 
 Al escribir pruebas unitarias, a menudo es necesario simular el comportamiento de dependencias externas. [Mockito](https://site.mockito.org/) es una biblioteca popular de simulación para Java que le permite crear objetos mock para aislar el código bajo prueba de sus dependencias.
 
@@ -451,7 +451,7 @@ Hay dos enfoques principales para crear mocks en Mockito:
     }
     ```
 
-#### Simulación de métodos estáticos
+#### Simulación de métodos estáticos { #mocking-static-methods }
 
 Para simular métodos estáticos, debe usar `mockito-inline`. Esto permite simular clases con métodos estáticos, como utilidades o fachadas de servicio.
 
@@ -476,7 +476,7 @@ void testWithStaticMock() {
 }
 ```
 
-#### Simulación de dependencias normales y estáticas
+#### Simulación de dependencias normales y estáticas { #mocking-regular-and-static-dependencies }
 
 A continuación se muestra un ejemplo que combina mocks normales y estáticos:
 
@@ -517,7 +517,7 @@ class PaymentProcessorTest {
 }
 ```
 
-#### Buenas prácticas de simulación
+#### Buenas prácticas de simulación { #mocking-best-practices }
 
 1. **Cerrar mocks estáticos**: los mocks estáticos deben cerrarse para evitar fugas de memoria.
 
@@ -543,14 +543,14 @@ class PaymentProcessorTest {
     reset(mockObject);
     ```
 
-### Pruebas de solicitudes
+### Pruebas de solicitudes { #testing-requests }
 
 En general, las pruebas unitarias no requieren que se ejecute una instancia de Etendo en *Tomcat*. Pero en algunos casos se desea probar cómo funcionan las solicitudes. Dependiendo de la solicitud que se quiera probar, se deben extender diferentes clases:
 
   - _Servicios web REST_. Se debe extender `BaseWSTest`; gestiona la autenticación y proporciona métodos para ejecutar solicitudes, analizar resultados `XML`, etc.
   - _Otras solicitudes_ (como datasources). Se pueden extender las clases `BaseDataSourceTestNoDal` o `BaseDataSourceTestDal` (dependiendo de si el caso de prueba requiere o no DAL). De forma similar a los **servicios web**, proporciona gestión de autenticación, así como métodos de utilidad para realizar solicitudes.
 
-### Pruebas de Contexts and Dependency Injection (CDI)
+### Pruebas de Contexts and Dependency Injection (CDI) { #testing-contexts-and-dependency-injection-cdi }
   
 Los casos de prueba por defecto que extienden la clase `org.openbravo.test.base.OBBaseTest` no pueden hacer uso de la inyección de dependencias. Para poder usarla, es necesario extender la clase `org.openbravo.base.weld.test.WeldBaseTest`. Esta también es una subclase de `OBBaseTest`, por lo que pone a disposición toda la infraestructura de DAL.
 
@@ -580,7 +580,7 @@ public class CdiInfrastructure extends WeldBaseTest {
 }
 ```
 
-#### Ámbitos
+#### Ámbitos { #scopes }
 
 Los ámbitos de aplicación y de sesión se comparten entre todos los casos de prueba de la misma clase, mientras que se crea un nuevo ámbito de solicitud para cada método de caso de prueba. El ámbito de aplicación se restablece para cada nueva clase.
 
@@ -608,7 +608,7 @@ public void applicationAndSessionShouldBeKept() {
 }
 ```
 
-#### Parametrización
+#### Parametrización { #parameterization }
 
 En **JUnit 5**, las pruebas parametrizadas se admiten de forma nativa mediante la anotación `@ParameterizedTest`, eliminando la necesidad de runners o rules especiales:
 
@@ -650,7 +650,7 @@ En este ejemplo, el primer caso de prueba (testWithParameters) se ejecutará 3 v
 
 A diferencia de cuando se usa el runner `Parameterized.class`, estas 3 ejecuciones se ven como una única ejecución (`Parameterized.class` mostraría 3 ejecuciones independientes), lo que provoca que, si por ejemplo falla la primera ejecución, el resto no se ejecutará.
 
-#### Observadores de eventos DAL
+#### Observadores de eventos DAL { #dal-event-observers }
 
 Dado que los observadores de eventos DAL hacen uso de CDI para funcionar, no se ejecutan en casos de prueba estándar que extienden `OBBaseTest`.
 

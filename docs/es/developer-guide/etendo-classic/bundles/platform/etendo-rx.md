@@ -9,14 +9,14 @@ tags:
 # Etendo RX 
 :octicons-package-16: Paquete Java: `com.etendoerp.etendorx`
 
-## Inicio de sesión SSO de Etendo
+## Inicio de sesión SSO de Etendo { #etendo-sso-login }
 
 Etendo le permite autenticarse utilizando estas cuentas de proveedores externos: **Google**, **Microsoft**, **LinkedIn**, **GitHub** y **Facebook**. El uso del protocolo Single Sign-On (SSO) es posible gracias a la integración a través de:
 
 - [Servicio EtendoAuth Middleware](#configurar-etendo-para-iniciar-sesión-con-el-servicio-etendoauth-middleware-recomendado)
 - [Implementación personalizada de Auth0](#cómo-integrar-su-propio-proveedor-de-inicio-de-sesión-auth0-con-etendo-opcional)
 
-### Configurar Etendo para iniciar sesión con el servicio EtendoAuth Middleware (Recomendado)
+### Configurar Etendo para iniciar sesión con el servicio EtendoAuth Middleware (Recomendado) { #set-up-etendo-to-login-with-etendoauth-middleware-service-recommended }
 
 Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externos (Google, Microsoft, LinkedIn, GitHub o Facebook), debe realizar dos pasos principales:
 
@@ -101,7 +101,7 @@ Para habilitar el inicio de sesión en **Etendo** utilizando proveedores externo
     !!! info
         Para más información sobre el uso de la funcionalidad de inicio de sesión SSO, visite la [Guía de usuario de inicio de sesión SSO](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
-### Cómo integrar su propio proveedor de inicio de sesión Auth0 con Etendo (Opcional)
+### Cómo integrar su propio proveedor de inicio de sesión Auth0 con Etendo (Opcional) { #how-to-integrate-your-own-auth0-login-provider-with-etendo-optional }
 
 Esta opción se recomienda solo si necesita implementar su propio servicio de autenticación y no puede utilizar el servicio EtendoAuth Middleware. Siga esta guía para configurar una aplicación de Auth0 y habilitar el inicio de sesión social en Etendo.
 
@@ -237,9 +237,9 @@ Esta opción se recomienda solo si necesita implementar su propio servicio de au
 !!! info
     Para más información sobre el uso de la funcionalidad de inicio de sesión SSO, visite la [Guía de usuario de inicio de sesión SSO](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-rx.md#etendo-sso-login).
 
-## Proveedor OAuth
+## Proveedor OAuth { #oauth-provider }
 
-### Visión general
+### Visión general { #overview }
 
 Esta sección describe el servicio de **autenticación OAuth** incluido en el módulo `Etendo RX`.
 
@@ -247,7 +247,7 @@ El proceso de autenticación OAuth facilita la **configuración del tipo de prov
 
 OAuth habilita un método de autenticación mediante un protocolo de seguridad para obtener un token necesario para realizar **llamadas API** y acceder a recursos específicos en nombre de su propietario. Esta autenticación permite a **Etendo** recuperar la información necesaria para acceder a **aplicaciones de terceros**.
 
-### Ventana Proveedor OAuth
+### Ventana Proveedor OAuth { #oauth-provider-window }
 
 :material-menu: `Aplicación`> `Etendo RX`> `Proveedor OAuth`.
 
@@ -269,9 +269,9 @@ Puede elegir entre dos métodos:
 
 
 
-### Configuración de Etendo Middleware (Recomendado)
+### Configuración de Etendo Middleware (Recomendado) { #etendo-middleware-setup-recommended }
 
-#### Variables de configuración
+#### Variables de configuración { #configuration-variables }
 
 Añada las siguientes propiedades al archivo `gradle.properties`:
 
@@ -283,7 +283,7 @@ sso.middleware.redirectUri=http://localhost:8080/etendo/secureApp/LoginHandler.h
 !!!note
     Durante el desarrollo, puede usar `localhost`. Sin embargo, para producción, establezca su dominio real.
 
-#### Compilar el entorno
+#### Compilar el entorno { #compile-environment }
 
 Ejecute el siguiente comando para compilar y configurar el entorno:
 
@@ -291,7 +291,7 @@ Ejecute el siguiente comando para compilar y configurar el entorno:
 ./gradlew setup smartbuild
 ```
 
-#### Crear la conexión con Etendo Middleware
+#### Crear la conexión con Etendo Middleware { #create-the-connection-with-etendo-middleware }
 
 - Inicie sesión como **admin**.
 - Abra la ventana **Proveedor oAuth**.
@@ -303,7 +303,7 @@ Ejecute el siguiente comando para compilar y configurar el entorno:
 
     ![Proveedor de Etendo Middleware](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/EtendoMiddlewareConfigs.png)
 
-#### Obtener token de acceso
+#### Obtener token de acceso { #get-access-token }
 
 - Seleccione el middleware recién creado.
 - Haga clic en **Obtener token de Middleware**.
@@ -336,7 +336,7 @@ Ejecute el siguiente comando para compilar y configurar el entorno:
 
     ![Consentimiento del proveedor](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/ProviderConsent.png)
 
-#### Token creado en la solapa Información del token
+#### Token creado en la solapa Información del token { #token-created-in-the-token-info-tab }
 
 Una vez completado el flujo, se generará un **token de acceso** y podrá verse en la solapa **Información del token**.
 
@@ -347,7 +347,7 @@ Una vez completado el flujo, se generará un **token de acceso** y podrá verse 
 
 ![Nuevo token de Middleware](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/NewMiddlewareToken.png)
 
-### Configurar manualmente un proveedor (Opcional)
+### Configurar manualmente un proveedor (Opcional) { #manually-configure-a-provider-optional }
 
 Este método está pensado para usuarios que prefieren registrar un proveedor OAuth personalizado sin usar EtendoMiddleware. Proporciona control total sobre los parámetros de registro, autorización y gestión de tokens.
 
@@ -358,7 +358,7 @@ Este método está pensado para usuarios que prefieren registrar un proveedor OA
 
 ![Ventana Proveedor OAuth](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-rx/oAuthProviderWindow.png)
 
-#### Cabecera
+#### Cabecera { #header }
 
 Campos a tener en cuenta:
 
@@ -366,7 +366,7 @@ Campos a tener en cuenta:
 - **URL de API oAuth**:  URL base del proveedor externo de la API OAuth. Se utiliza como endpoint principal para la comunicación con los servicios de autenticación y token del proveedor. (opcional)
 - **Activo**: Casilla para habilitar o deshabilitar esta configuración de proveedor.
 
-#### Sección: Registro
+#### Sección: Registro { #section-registration }
 
 Esta sección define cómo se registra su aplicación en el proveedor OAuth. Incluye credenciales, el flujo de autorización, los scopes solicitados y las URLs esenciales para completar la autenticación.
 
@@ -383,7 +383,7 @@ Campos a tener en cuenta:
 - **Método de autenticación de cliente:** Método para enviar credenciales del cliente (p. ej., client_secret_post, client_secret_basic).
 - **URI de token:** Endpoint para intercambiar el código de autorización por tokens (access_token y refresh_token opcional).
 
-#### Sección: Proveedor
+#### Sección: Proveedor { #section-provider }
 
 Esta sección define los endpoints del proveedor OAuth necesarios para que su aplicación se conecte y valide tokens correctamente.
 
@@ -394,7 +394,7 @@ Esta sección define los endpoints del proveedor OAuth necesarios para que su ap
 - **URI del conjunto JWK:** URL donde el proveedor publica claves públicas para verificar JWT firmados.
 
 
-### Solapa Información del token
+### Solapa Información del token { #token-info-tab }
 
 Esta solapa almacena los tokens generados a través del ERP. Aunque por motivos de seguridad no se muestran los tokens completos, está disponible la siguiente información:
 
@@ -406,7 +406,7 @@ Esta solapa almacena los tokens generados a través del ERP. Aunque por motivos 
 - **Válido hasta:** Fecha y hora de caducidad del token.
 
 
-### Botones
+### Botones { #buttons }
 
 - **Actualizar configuración**
     

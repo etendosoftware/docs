@@ -6,13 +6,13 @@ tags:
     - hook
 ---
 
-# Cómo implementar el hook JsonDataServiceExtraActions
+# Cómo implementar el hook JsonDataServiceExtraActions { #how-to-implement-jsondataserviceextraactions-hook }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo implementar el hook **JsonDataServiceExtraActions**. Este hook se invoca antes y después de cada operación de la clase `DefaultJSONDataService`.
 
-## Implementación del hook
+## Implementación del hook { #hook-implementation }
 
 El hook se implementa extendiendo la clase `JsonDataServiceExtraActions`. Esta clase tiene dos métodos que implementar:
 
@@ -29,7 +29,7 @@ El hook se implementa extendiendo la clase `JsonDataServiceExtraActions`. Esta c
     - **action**: valor del enum `DataSourceAction` con la Acción de la llamada a DataSource. Los valores posibles son `FETCH`, `ADD`, `UPDATE` y `REMOVE`. 
     - **originalObject**: String `JSONObject` disponible solo en `ADD` y `UPDATE` con los valores originales de los datos. 
 
-## Ejemplo
+## Ejemplo { #example }
 
 Este ejemplo registra una línea cada vez que se carga una ventana. Puede encontrar el código descrito a continuación en el módulo [org.openbravo.platform.features](../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.platform.features.zip).
 

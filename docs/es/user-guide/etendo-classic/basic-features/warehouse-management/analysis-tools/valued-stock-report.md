@@ -1,20 +1,26 @@
 ---
 title: Informe de Valuación de Existencias
+tags:
+    - Valued Stock
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Informe de Valuación de Existencias
+# Informe de Valuación de Existencias { #valued-stock-report }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Herramientas de análisis` > `Informe de Valuación de Existencias`
 
-### **Overview**
+## Overview
 
 El Informe de Valuación de Existencias muestra el stock de un almacén concreto, así como el valor del stock.
 
 El coste se calcula como la suma del coste de cada transacción de material del producto en el almacén. El coste de las transacciones del producto se calcula mediante el proceso Costing Server.
 
-### **Parameters Window**
+## Parameters Window
 
-![Valued Stock Report Parameters Window](../../../../../assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Valued Stock Report Parameters Window](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png)
 
 
 
@@ -28,9 +34,9 @@ El coste se calcula como la suma del coste de cada transacción de material del 
 !!! warning
     Tenga en cuenta que para que el informe funcione debe especificarse el tipo de cambio a la moneda del informe.
 
-### **Output Window** 
+## Output Window
 
-![Valued Stock Report Output](../../../../../assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Valued Stock Report Output](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png)
 
 
 -   **Producto**: Nombre del producto.
@@ -41,7 +47,7 @@ El coste se calcula como la suma del coste de cada transacción de material del 
 -   **Actual Average/Standard Algorithm Cost**: Coste medio/estándar actual, el cálculo más reciente de su valor.
 -   **Actual Average/Standard Algorithm Valuation**: Valoración del stock basada en el Coste medio/estándar actual. Es el resultado de multiplicar el stock por el coste actual.
 
-### **Persisted Information**
+## Persisted Information
 
 Este paso no es necesario para lanzar el informe. Sin embargo, si existen problemas de rendimiento, esto puede ayudar a mejorar considerablemente el rendimiento del informe.
 
@@ -52,15 +58,22 @@ La información persistirá hasta el primer período no cerrado. De este modo, e
 !!! info
     Para usar esta funcionalidad es necesario programar el proceso en segundo plano llamado *Generate Aggregated Data Background*. Esto puede hacerse a través de la ventana *Process Request*.
 
-![Valued Stock Report Process Request](../../../../../assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Valued Stock Report Process Request](../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png)
 
 !!! info
     Se recomienda programarlo diariamente, en un momento en que el sistema no tenga mucha actividad. Agregará datos solo cuando un nuevo período se cierre o se cierre permanentemente.
 
 
-### **Limitations**
+## Limitations
 
 Al agregar la información por cada período cerrado, no es posible conservar la fecha de cada transacción. Por tanto, cuando el informe se lance para una moneda diferente, toda esa información se convertirá en la fecha de cierre del período. Esto puede provocar pequeñas discrepancias con la versión anterior debido a conversiones entre monedas en fechas diferentes.
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Informe Pareto de Productos](pareto-product-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Stock](stock-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Informe Transacción de Material](material-transaction-report.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Introducción a Gestión de Almacén](../getting-started.md){ .md-button .md-button--primary }
 
 ---
 

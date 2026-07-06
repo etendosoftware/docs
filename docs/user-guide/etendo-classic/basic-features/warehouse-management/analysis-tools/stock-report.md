@@ -8,7 +8,7 @@ tags:
  - Analysis Tools
 ---
 
-## Stock Report
+# Stock Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Stock Report`
 

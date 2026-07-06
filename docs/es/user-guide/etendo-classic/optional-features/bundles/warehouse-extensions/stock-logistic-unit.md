@@ -7,10 +7,10 @@ tags:
     - Stock
     - Etendo Mobile
 ---
-# Unidad logística de stock
+# Unidad logística de stock { #stock-logistic-unit }
 :octicons-package-16: Javapackage: `com.etendoerp.stock.logisticunit`
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrP1iPmCk_U?si=Riy5plMo7lVDjVWS" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -18,7 +18,7 @@ tags:
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Warehouse Extensions Bundle_](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con core y nuevas funcionalidades, visite [Warehouse Extensions - Notas de la versión](../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 
-El módulo **Unidad logística de stock** amplía la funcionalidad estándar de Etendo para gestionar unidades logísticas dentro de los procesos de inventario, recepción y reserva de stock. En concreto, este módulo añade las [unidades de medida](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) y los [tipos de inventario referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type) **Empaquetar** y **Pallet**.
+El módulo **Unidad logística de stock** amplía la funcionalidad estándar de Etendo para gestionar unidades logísticas dentro de los procesos de inventario, recepción y reserva de stock. En concreto, este módulo añade las [unidades de medida](../../../basic-features/master-data-management/product-setup/unit-of-measure.md) y los [tipos de inventario referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type) **Empaquetar** y **Pallet**.
 
 Su objetivo es integrar las **Unidades Alternativas (AUOM)** con el modelo de **Inventario Referenciado (RI)**, de modo que las unidades logísticas se reconozcan, registren y gestionen como entidades trazables en todas las operaciones de almacén.
 
@@ -31,7 +31,7 @@ En resumen:
 - Cada AUOM debe estar vinculada a un **tipo de inventario referenciado**, mediante el campo *Tipo de unidad logística*, garantizando que la creación de stock en las ventanas de **Inventario Referenciado** cumpla con la unidad logística definida.
 - Introduce reglas inteligentes de reserva que respetan la lógica de las unidades logísticas (p. ej.: cajas) y de las unidades, reduciendo errores de asignación de stock. Con esta lógica, cuando un pedido de venta se reserva automáticamente, el sistema intenta satisfacer la cantidad solicitada en el pedido con unidades logísticas completas si es posible, antes de recurrir a unidades individuales.
 
-## Configuración inicial
+## Configuración inicial { #initial-setup }
 
 Para empezar a utilizar este módulo correctamente, deben completarse los siguientes pasos de instalación y configuración:
 
@@ -39,14 +39,14 @@ Para empezar a utilizar este módulo correctamente, deben completarse los siguie
 - [x] Instalar el conjunto de datos **Unidad logística de stock**.
 - [x] Configuración de preferencias.
 
-### Instalar el conjunto de datos Unidad logística de stock
+### Instalar el conjunto de datos Unidad logística de stock { #install-stock-logistic-unit-dataset }
 :material-menu: `Aplicación`>`Configuración General` > `Organización` > `Gestión del módulo de Empresa`
 
 Abra la ventana **Gestión del módulo de Empresa** e instale los datos de referencia **Unidad logística de stock** incluidos en el módulo; esto creará las unidades de medida y los tipos de inventario referenciado **Empaquetar** y **Pallet**. 
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit/dataset.png)
 
-### Preferencias 
+### Preferencias { #preference }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Preferencias`
 
@@ -60,7 +60,7 @@ Por defecto, el módulo incluye tres preferencias preconfiguradas. Estas pueden 
 
 - **Habilitar la gestión de UDM**: Activa la gestión de Unidades de Medida (UDM). Cuando está habilitada, los usuarios pueden asignar cajas o pallets como unidades para los productos, configurar conversiones y aplicarlas en los procesos (ventas, compras, logística). Esta preferencia es necesaria para integrar Unidades Alternativas con inventario referenciado (Tipo de unidad logística).
 
-### Unidad de medida
+### Unidad de medida { #unit-of-measure }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Configuración de productos` > `Unidad de medida`
 
@@ -70,7 +70,7 @@ En la ventana Unidad de medida, el módulo añade las unidades de medida **Empaq
 Estas UDM sirven como base para configurar productos con unidades alternativas, mientras que el usuario puede crear tantas variantes adicionales como necesite en función del diferente formato de caja utilizado.
 
 
-### Tipo de Inventario Referenciado
+### Tipo de Inventario Referenciado { #referenced-inventory-type }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Tipo de Inventario Referenciado`
 
@@ -78,11 +78,11 @@ Estas UDM sirven como base para configurar productos con unidades alternativas, 
 
 En la ventana Tipo de Inventario Referenciado, el módulo añade los tipos de inventario referenciado **Empaquetar** y **Pallet**, cada uno con su secuencia correspondiente. De este modo, el inventario referenciado mantiene la trazabilidad a nivel de unidad logística, garantizando la consistencia entre las AUOM definidas y los registros de stock. Las reservas se actualizan utilizando una lógica que permite tener en cuenta las unidades alternativas de medida.
 
-### Producto - Unidad Alternativa
+### Producto - Unidad Alternativa { #product---alternate-uom }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
-En la solapa [Unidad Alternativa](../../../basic-features/master-data-management/master-data.md#alternate-uom-tab) de la **ventana Producto**, al habilitar la preferencia **Habilitar la gestión de UDM** se permite a los usuarios asignar *Empaquetar* o *Pallet* como **unidades alternativas de medida**
+En la solapa [Unidad Alternativa](../../../basic-features/master-data-management/master-data/product.md#alternate-uom) de la **ventana Producto**, al habilitar la preferencia **Habilitar la gestión de UDM** se permite a los usuarios asignar *Empaquetar* o *Pallet* como **unidades alternativas de medida**
 
 !!! info
     Se admite el anidamiento de unidades logísticas: los pallets pueden contener cajas, y las cajas pueden contener unidades básicas. Al recibir mercancía, el botón **Create Reference Inventory** en la ventana Recepción de entrada gestiona esta jerarquía automáticamente. Para más detalles, consulte [Create Reference Inventory](../bundles/warehouse-extensions/advanced-warehouse-management.md#available-process).
@@ -98,7 +98,7 @@ Una funcionalidad adicional introducida es una mayor granularidad mediante la po
 
 - **Tipo de unidad logística**: Desplegable vinculado a [Tipo de Inventario Referenciado](../../../basic-features/warehouse-management/setup.md#referenced-inventory-type), utilizado al registrar entradas y salidas de mercancía.
 
-### Producto - Stock por unidad logística
+### Producto - Stock por Unidad Logística { #product-stock-by-logistic-unit }
 
 :material-menu: `Aplicación` > `Gestión de Datos Maestros` > `Producto`
 
@@ -114,12 +114,12 @@ Campos a tener en cuenta:
 - Cantidad disponible: cantidad disponible.
 - Cantidad reservada: cantidad reservada.
 
-## Flujo de trabajo
+## Flujo de trabajo { #workflow }
 
 El módulo Unidad logística de stock interviene de forma transversal en los procesos de recepción, reserva, venta y entrega de productos, proporcionando una gestión integral basada en unidades alternativas de medida (AUOM) y referencias de inventario (RI).
 Su funcionalidad se potencia cuando se utiliza junto con otros componentes del Warehouse Extensions Bundle.
 
-### Recepción (Recepción de mercancías)
+### Recepción (Recepción de mercancías) { #receipt-goods-receipt }
 
 El flujo de recepción comienza en la ventana Recepción de mercancías, donde se registran las entradas de producto. Al introducir mercancía que utiliza unidades alternativas (como **cajas** o **pallets**), el módulo Unidad logística de stock identifica estas condiciones gracias a su integración con AUOM y los tipos de Inventario Referenciado que define.
 
@@ -138,7 +138,7 @@ Las cajas recibidas pueden verse en el stock.
 
 De este modo, el stock recibido no se interpreta como unidades individuales, sino como una entidad logística trazable (una caja o un pallet), garantizando la consistencia entre las cantidades físicas y el inventario del sistema, sentando las bases para que los procesos posteriores —como reservas, ventas o entregas— respeten siempre la estructura logística en la que el producto fue registrado originalmente.
 
-### Inventario Referenciado
+### Inventario Referenciado { #referenced-inventory }
 
 Al instalar este módulo, el **Inventario Referenciado** permite crear unidades logísticas anidadas, lo que significa que un inventario referenciado (p. ej., un pallet) puede contener otros inventarios referenciados (p. ej., cajas). 
 
@@ -177,7 +177,7 @@ En cualquier momento, el usuario puede consultar la solapa Contenido del pallet 
     A continuación, debe crearse un nuevo Inventario Referenciado de tipo **Pallet** y asociar a este las cajas creadas previamente.
     De este modo, el stock del producto muestra un Pallet cuyo contenido está compuesto por cajas, en lugar de unidades individuales del producto.
 
-### Ventas
+### Ventas { #sales }
 
 El flujo de ventas se combina con la lógica de reserva de stock, garantizando que las unidades logísticas permanezcan consistentes y trazables durante todo el proceso.
 

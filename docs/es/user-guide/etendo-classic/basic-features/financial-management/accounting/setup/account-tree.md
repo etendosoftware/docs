@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Árbol de cuentas
+# Árbol de cuentas { #account-tree }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Árbol de cuentas`
 
-## Visión general  
+## Visión general { #overview }
 
 Un **árbol de cuentas** representa el **Plan de Cuentas (CoA)** de una organización. El CoA es la lista de cuentas utilizada en el libro mayor, incluyendo activos, pasivos, ingresos y gastos.  
 
@@ -23,7 +23,7 @@ La **ventana Árbol de cuentas** permite a los usuarios:
 - **Revisar y gestionar** un plan de cuentas importado desde un módulo de CoA.  
 - **Crear y personalizar** un nuevo plan de cuentas desde cero si es necesario.  
 
-## Configuración del Árbol de cuentas
+## Configuración del Árbol de cuentas { #account-tree-configuration }
 
 Etendo ofrece diferentes opciones para la configuración de los CoA: 
 
@@ -35,8 +35,8 @@ Etendo ofrece diferentes opciones para la configuración de los CoA:
 
         Por ejemplo, el Spanish Localization Bundle incluye:
 
-        -   el [General Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-general).
-        -   el [PYMES Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#chart-of-accounts-pgc-2007-pymes).
+        -   el [General Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#plan-general-contable-pgc-2007-general-modelo-normal).
+        -   el [PYMES Spanish CoA](../../../../optional-features/bundles/spain-localization/overview.md#plan-general-contable-pgc-2007-pymes).
 
 
     Cada organización puede **definir el plan de cuentas que mejor se adapte a sus prácticas**. En ese caso, Etendo proporciona un **módulo de Plan de Cuentas genérico** que ofrece una lista estándar de cuentas que puede evolucionar según las necesidades de la organización. Tras la instalación, el Plan de Cuentas genérico está disponible para su selección durante el proceso de [Crear entidad](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) y [Crear organización](../../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md).
@@ -61,18 +61,18 @@ Etendo ofrece diferentes opciones para la configuración de los CoA:
         
         - Si se instala un módulo de Plan de Cuentas y luego se selecciona a **nivel de organización** mediante el proceso [Crear organización](../../../../basic-features/general-setup/enterprise-model/initial-organization-setup.md), el plan de cuentas creado automáticamente queda vinculado a la organización que se está creando.
 
-## Ventana Árbol de cuentas
+## Ventana Árbol de cuentas { #account-tree-window }
 
 La cabecera principal de Árbol de cuentas permite crear el tipo de cuenta de la organización y, a continuación, definir el Plan de Cuentas. 
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree8.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree8.png)
 
 
-### Solapa Cuenta Contable
+### Solapa Cuenta Contable { #element-value-tab }
 
 La solapa **Cuenta Contable** lista todos los elementos del plan de cuentas, desde los encabezados del plan de cuentas hasta las subcuentas.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-0.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-0.png)
 
 Cada **Plan de Cuentas** en Etendo contiene diferentes tipos de elementos organizados en la siguiente jerarquía:
 
@@ -94,7 +94,7 @@ Además, es bien sabido que cada cuenta, subcuenta en términos de Etendo, debe 
 -   Los tipos de cuenta **Gasto** e **Ingresos** deben incluirse en la cuenta de Pérdidas y Ganancias.
 
 !!! tip
-    La mejor manera de entender cómo se captura un plan de cuentas en Etendo es pulsando el icono **Árbol** ![](../../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) que se puede encontrar en la barra de herramientas una vez que el usuario está en la solapa Cuenta Contable.
+    La mejor manera de entender cómo se captura un plan de cuentas en Etendo es pulsando el icono **Árbol** ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree/account-tree-1.png) que se puede encontrar en la barra de herramientas una vez que el usuario está en la solapa Cuenta Contable.
 
 El icono Árbol abre una nueva ventana que muestra una **rama del árbol** por cada estado financiero:
 
@@ -102,7 +102,7 @@ El icono Árbol abre una nueva ventana que muestra una **rama del árbol** por c
 -   Pérdidas y Ganancias
 -   Cuentas temporales por defecto: esta rama del árbol de cuentas agrupa cuentas temporales por defecto que no son cuentas del libro mayor.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-1.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-1.png)
 
 Además, cada rama del árbol contiene varios elementos estructurados de forma jerárquica; por ejemplo:
 
@@ -110,7 +110,7 @@ Además, cada rama del árbol contiene varios elementos estructurados de forma j
     -   Activos
     -   Pasivos y Patrimonio neto
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-2.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-2.png)
 
 
 Como se muestra en la imagen anterior, **Activos** también se divide en:
@@ -123,7 +123,7 @@ Del mismo modo, **Patrimonio neto** también se divide en varias cuentas, en té
 
 Volviendo a la solapa **Cuenta Contable**, existen varios **campos básicos** que ayudan a definir cada elemento del plan de cuentas:
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-3.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-3.png)
 
 
 -   El **Identificador** y el **Nombre** identifican el elemento del plan de cuentas.
@@ -168,7 +168,7 @@ Adicionalmente, existen otros campos avanzados que también ayudan a configurar 
     El módulo **Account Structure Validation** proporciona funcionalidad para validar la estructura y configuración de las subcuentas cuando se crean o modifican, ayudando a evitar desajustes en los informes financieros. Para más información, visite [Account Structure Validation](link-to-documentation).
     Esta funcionalidad está disponible a partir de la versión **3.11.0** del Financial Extensions Bundle, compatible con **Etendo 25.1**. Para instalarlo, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Release notes](../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
-### Solapa Operando
+### Solapa Operando { #customized-elements-tab }
 
 La solapa **Operando** permite al usuario obtener un elemento del árbol de cuentas como una combinación de una lista dada de elementos existentes.
 
@@ -182,13 +182,13 @@ Por ejemplo, el elemento 1900-Total Activos es la suma de tres elementos operand
 
 tal y como se muestra en la imagen siguiente.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-4.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-4.png)
 
-### Solapa Traducción
+### Solapa Traducción { #translation-tab }
 
 En la solapa **Traducción**, los elementos de cuenta pueden traducirse a cualquier idioma requerido.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-5.png)
+![alt text](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-5.png)
 
 ---
 

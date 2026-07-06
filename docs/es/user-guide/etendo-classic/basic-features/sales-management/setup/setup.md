@@ -8,7 +8,7 @@ tags:
   - Canal
   - Motivo del rechazo
 ---
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe las diferentes ventanas necesarias para configurar el proceso de ventas en Etendo. Estas son:
 
@@ -25,7 +25,7 @@ Esta sección describe las diferentes ventanas necesarias para configurar el pro
 [:material-file-document-outline:Motivo del rechazo](#motivo-del-rechazo){ .md-button .md-button--primary } <br>
 
 
-## Estado del producto
+## Estado del producto { #condition-of-the-goods }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Estado del producto`
 
@@ -33,7 +33,7 @@ En esta ventana, el usuario define en qué estado proviene el producto del clien
 
 ![Estado del producto](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/condition-of-the-goods-1.png)
 
-## Zona de venta
+## Zona de venta { #sales-region }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Zona de venta`
 
@@ -41,7 +41,7 @@ En esta sección, el usuario puede crear zonas de venta para utilizarlas en las 
 
 ![Zona de venta](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/sales-region-1.png)
 
-## Comisión
+## Comisión { #commission }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Comisión`
 
@@ -51,7 +51,7 @@ Para obtener información detallada sobre la configuración de comisiones, los m
 
 ![Ventana de Comisión](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/commission-1.png) 
 
-## Canal
+## Canal { #channel }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Canal`
 
@@ -59,7 +59,7 @@ En esta sección, el usuario puede crear canales de venta específicos para util
 
 ![Ventana de Canal](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/channel-1.png)
 
-## Campaña de Marketing
+## Campaña de Marketing { #sales-campaign }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Campaña de Marketing`
 
@@ -68,7 +68,7 @@ En esta sección, el usuario puede crear campañas de marketing específicas par
 ![Ventana de Campaña de Marketing](../../../../../assets/user-guide/etendo-classic/basic-features/sales-management/setup/sales-campaign-1.png)
 
 
-## Motivo del rechazo
+## Motivo del rechazo { #reject-reason }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Configuración` > `Motivo del rechazo`
 

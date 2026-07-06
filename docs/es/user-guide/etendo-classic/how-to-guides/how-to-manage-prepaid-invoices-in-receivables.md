@@ -6,9 +6,9 @@ tags:
   - Pedido de venta
 ---
 
-# Cómo gestionar facturas prepagadas en Cuentas a cobrar
+# Cómo gestionar facturas prepagadas en Cuentas a cobrar { #how-to-manage-prepaid-invoices-in-receivables }
 
-## Visión general
+## Visión general { #overview }
 
 Hay empresas que no desean conceder crédito a determinados clientes:
 
@@ -19,17 +19,17 @@ En estas situaciones, las partes acuerdan unas condiciones de pago específicas 
 
 Es importante señalar que una factura de venta creada a partir de un pedido de venta prepagado heredará la información de pago del pedido, sea cual sea.
 
-## Artículos recomendados
+## Artículos recomendados { #recommended-articles }
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de venta](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) y una [Factura (Cliente)](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice), así como de cómo registrar un [Cobro de cliente](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in).
 
-También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda entender cómo configurar las [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
-## Prepago de pedido: pasos de ejecución
+## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 
 En Etendo, la empresa de este ejemplo deberá acordar unas condiciones de pago específicas con su cliente, crear un pedido de venta para los bienes solicitados y, a continuación, registrar un pago parcial del pedido antes de emitir posteriormente la correspondiente factura de venta.
 
-### Configuración de condiciones de pago
+### Configuración de condiciones de pago { #payment-term-configuration }
 
 Como ya se ha mencionado, la empresa de este ejemplo necesita crear unas condiciones de pago específicas para reflejar lo acordado con su cliente.
 
@@ -44,7 +44,7 @@ Tenga en cuenta que las condiciones de pago de prepago tienen una cabecera y una
 - En la línea, el prepago del 50% se configura estableciendo **Días de plazo** en 0 días.
 - En la cabecera, la segunda parte de este pago se configura estableciendo **Días de plazo** en 30 días para el importe restante.
 
-### Creación del Pedido de venta
+### Creación del Pedido de venta { #sales-order-creation }
 
 Como ya se ha mencionado, el primer paso es crear un Pedido de venta de acuerdo con las necesidades del cliente.
 
@@ -58,7 +58,7 @@ Una vez informados todos los datos requeridos, el Pedido de venta debe contabili
 
 En otras palabras, no es posible registrar pagos contra pedidos que no estén completados y, por tanto, que no tengan ya un plan de pagos vinculado.
 
-### Creación del cobro y contabilización
+### Creación del cobro y contabilización { #payment-creation-and-accounting }
 
 Los cobros recibidos del cliente se registran en la ventana [Cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in). Etendo permite registrar cobros de clientes recibidos contra pedidos de venta y/o facturas.
 
@@ -94,13 +94,13 @@ La contabilización tendrá este aspecto:
 | Cuenta                          | Debe   | Crédito contabilizado |
 |----------------------------------|--------|------------------------|
 | [Cuenta de pagos en tránsito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | 863.20 |                        |
-| [Prepago del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)              |        | 863.20                 |
+| [Prepago del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer)              |        | 863.20                 |
 
 Es posible comprobar una vez más el Plan de pagos del pedido de venta de este ejemplo.
 
 El plan de pagos del pedido de venta incluye el pago registrado en la pestaña Detalles de pago.
 
-### Comprobación del cobro
+### Comprobación del cobro { #payment-check }
 
 De vuelta en el [Pedido de venta](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order), es posible comprobar el Plan de pagos creado recientemente con sus Detalles de pago.
 
@@ -116,7 +116,7 @@ En resumen:
 
 - y la pestaña Detalles de pago registra cada cobro recibido contra el pedido.
 
-### Gestión y contabilización de factura prepagada
+### Gestión y contabilización de factura prepagada { #pre-paid-invoice-management-and-accounting }
 
 Existen varias formas de crear una factura de venta a partir de un pedido; una de ellas es [Crear facturas desde pedidos](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-invoices-from-orders).
 
@@ -139,7 +139,7 @@ La situación anterior también se refleja en contabilidad, ya que la contabiliz
 
 | Cuenta                | Debe   | Crédito  |
 |------------------------|---------|---------|
-| [Cuenta a cobrar del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)    | 630.80  |         |
+| [Cuenta a cobrar del cliente](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#customer)    | 630.80  |         |
 | Prepago del cliente    |         | 863.20  |
 
 Existe un informe denominado [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) que permite monitorizar cada cobro recibido o pago realizado.
@@ -166,11 +166,11 @@ Por último, el "**Informe de pagos y cobros**" muestra ahora la factura como to
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/paymentcompletesm2.png)
 
-## Prepago de factura: pasos de ejecución
+## Prepago de factura: pasos de ejecución { #invoice-prepayment-execution-steps }
 
 En Etendo, la empresa de este ejemplo deberá configurar un método de pago que permita contabilizar el prepago en cuanto se reciba, crear una factura de venta para los bienes solicitados por su cliente y registrar el prepago de la factura en una fecha anterior a la fecha de la factura.
 
-### Configuración del método de pago
+### Configuración del método de pago { #payment-method-configuration }
 
 El método de pago que se va a utilizar debe configurarse para permitir la contabilización del prepago en cuanto se reciba; por tanto, se puede especificar la "Cuenta de cobros depositados" en el campo **Cuenta del cobro**.
 
@@ -179,13 +179,13 @@ El método de pago que se va a utilizar debe configurarse para permitir la conta
 !!! note
         La casilla de verificación "**Depósito automático en cuenta**" también está seleccionada. Eso significa que el cobro recibido se depositará automáticamente en la cuenta financiera.
 
-### Creación de la factura de venta
+### Creación de la factura de venta { #sales-invoice-creation }
 
 El primer paso es emitir la factura de venta con fecha 13 de noviembre de 2023, por ejemplo. La factura emitida puede completarse en cuanto esté correctamente informada.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/salesinvoicecreationsm.png)
 
-### Creación del cobro y contabilización
+### Creación del cobro y contabilización { #payment-creation-and-accounting_1 }
 
 El siguiente paso es registrar el prepago de la factura en una fecha anterior a la fecha de la factura, por ejemplo el 1 de noviembre de 2023.
 
@@ -197,7 +197,7 @@ Una vez procesado, se crea un cobro recibido en la ventana "**Cobros**" y, adem�
 
 El cobro recibido puede contabilizarse desde la ventana "**Cobros**".
 
-### Contabilización de la Factura (Cliente)
+### Contabilización de la Factura (Cliente) { #sales-invoice-posting }
 
 El último paso es contabilizar la factura de venta en el libro mayor.
 
@@ -207,7 +207,7 @@ La contabilización de la factura tiene este aspecto:
 
 La contabilización anterior refleja el momento en el que se contabiliza la cuenta a cobrar del cliente; sin embargo, la cuenta a cobrar del cliente ya está cancelada por el prepago.
 
-## Resultado
+## Resultado { #result }
 
 Esto completa la creación y el procesamiento de:
 

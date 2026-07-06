@@ -2,11 +2,11 @@
 title: Gestión de Ventas
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Gestión de Ventas se ocupa de todas las actividades relacionadas con el proceso de ventas al cliente y los informes correspondientes.
 
-## Presupuesto de ventas
+## Presupuesto de ventas { #sales-quotation }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Presupuesto de ventas`
 
@@ -42,7 +42,7 @@ El flujo general es el siguiente:
 
 - **Cerrado - Rechazado**: cuando el presupuesto finalmente no es aceptado por el cliente. Es obligatorio introducir un motivo de rechazo. No se permiten más acciones.
 
-### Cabecera
+### Cabecera { #header }
 
 El usuario puede crear un presupuesto de ventas y procesarlo cuando esté listo.
 
@@ -72,34 +72,34 @@ Antes de crear un pedido de venta, el sistema muestra un indicador denominado Pr
 - Si está seleccionado, establece un compromiso con el cliente para el suministro de una cantidad determinada de bienes a un precio presupuestado; por lo tanto, el pedido de venta será idéntico al presupuesto.
 - Si no está seleccionado, un cambio posterior en la tarifa modificará los precios presupuestados, del mismo modo que en el pedido de venta. La Modificación de precios también se recalculará aplicando las nuevas en función de la fecha de la transacción (la fecha en la que se ejecuta el botón).
 
-### Líneas
+### Líneas { #lines }
 
 Añada productos que se incluirán en su presupuesto de ventas. Cada producto se puede añadir creando una nueva línea.  
 La solapa Líneas lista cada producto a presupuestar y sus características.  
 El botón Registrar completa el presupuesto de ventas cuando se han introducido todos los productos.
 
-#### Línea de impuesto
+#### Línea de impuesto { #line-tax }
 
 Esta solapa muestra los impuestos relacionados con la línea del presupuesto.  
 La solapa de solo lectura Línea de impuesto detalla la información de impuestos para cada línea de un pedido de venta en función de su campo Impuesto, que se completa automáticamente según la configuración de impuestos.
 
-#### Descuentos
+#### Descuentos { #basic-discounts }
 
 Esta solapa del presupuesto de ventas lista información sobre los descuentos aplicados automáticamente y/o introducidos manualmente para el documento.
 
-#### Impuesto
+#### Impuesto { #tax }
 
 El usuario puede editar los impuestos aplicados al presupuesto.  
 Resume la información relacionada con impuestos para todo el presupuesto de ventas. Contiene tantos registros como tipos impositivos utilizados en el presupuesto.
 
-### **Presupuesto de ventas avanzado**
+### **Presupuesto de ventas avanzado** { #advanced-sales-quotation }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Sales Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Sales Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 A través de esta ventana, el usuario puede generar presupuestos de ventas y crear los pedidos correspondientes a partir de dichos presupuestos.
 
-#### Cabecera
+#### Cabecera { #header_1 }
 
 La cabecera principal enumera los términos y condiciones relacionados con el presupuesto de ventas que se utilizan en el encabezado de la copia impresa y, posteriormente, en su proceso de pedido, recepción de mercancía y factura.
 
@@ -126,7 +126,7 @@ En esta sección, los campos a cumplimentar son los siguientes:
 - Pedido de origen: cuando se ejecuta el botón "Cambiar cliente, tarifa y moneda" y está marcada la casilla "Vincular pedido", el nuevo presupuesto creado se establece en este campo, modificando el anterior, con el número del presupuesto original, es decir, el que se está modificando; que estará en estado "Cerrado - Rechazado".
 - Descripción: espacio para escribir información adicional relacionada.
 
-#### Barra de estado
+#### Barra de estado { #status-bar }
 
 Esta barra muestra la siguiente información:
 
@@ -142,7 +142,7 @@ Una vez alcanzado este estado, no se permiten más acciones. <br>
 - Importe neto total: indica el importe monetario final del presupuesto, excluidos los impuestos.
 - Moneda: indica en qué moneda se define el presupuesto. Este campo se completa según la tarifa seleccionada.
 
-#### Solapa Líneas
+#### Solapa Líneas { #lines-tab }
 
 Una vez completada la cabecera, deben añadirse las líneas.
 
@@ -219,7 +219,7 @@ Este proceso permite al usuario ajustar el precio de una o varias líneas del pr
 
 ![](../../../../assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png)
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -228,7 +228,7 @@ La funcionalidad Finalización masiva permite al usuario completar, reactivar o 
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-## Pedido de venta
+## Pedido de venta { #sales-order }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Pedido de venta`
 
@@ -243,7 +243,7 @@ La ventana **Pedido de venta** permite al usuario registrar documentos relaciona
 **Pedido de almacén:** Un pedido de almacén se utiliza para la situación en la que el albarán tiene lugar en el momento en que se registra el pedido de venta (por ejemplo, el cliente se lleva la mercancía inmediatamente directamente desde el almacén). Esto también significa que ambos documentos tienen las mismas fechas de pedido/entrega.
 
 ![Warehouse order document.png](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/warehouse-order.png)
-### Cabecera
+### Cabecera { #header_2 }
 
 La cabecera del **Pedido de venta** permite al usuario crear un pedido de venta y procesarlo cuando esté listo.  
 Esta cabecera lista los principales términos y condiciones relacionados con el pedido del cliente que se utilizan en el encabezado de su copia impresa y posteriormente en su proceso de envío y facturación.
@@ -324,7 +324,7 @@ Una vez que todo lo anterior se ha cumplido correctamente, el pago puede procesa
 !!! warning
     Es importante tener en cuenta que la factura de ventas creada a partir del pedido heredará el pago realizado para el pedido.
 
-#### Proceso de cancelación y reemplazo del pedido de venta
+#### Proceso de cancelación y reemplazo del pedido de venta { #sales-order-cancel-and-replace-process }
 
 La cancelación y reemplazo del pedido de venta es una funcionalidad avanzada oculta por defecto, que puede habilitarse mediante una preferencia denominada **"Enable Cancel and Replace”**.
 
@@ -372,7 +372,7 @@ El **Pedido inverso** tiene los campos que se listan a continuación:
 IsCanceled, este es el indicador que señala que este también es un pedido cancelado.
 
 **Pedido Cancelado**, este campo almacena el número de documento del pedido original cancelado por el pedido inverso.
-### Líneas
+### Líneas { #lines_1 }
 
 La solapa **Líneas** permite al usuario añadir los productos que se incluirán en su **Pedido de venta**. Cada producto se añade creando una línea. La solapa **Líneas** lista cada producto pedido y sus características.
 
@@ -386,7 +386,7 @@ Campos a tener en cuenta:
 - **Descuento:** indica el descuento aplicado como porcentaje del precio de tarifa.
 - **Cant.facturada** y **Cant.entregada:** se muestran en la barra de estado cuando se guarda la línea con un producto y se actualizan cuando se emite una factura o un albarán relacionado con esta línea.
 - **Regla de almacén:** definición de una regla de almacén a aplicar cuando el albarán se genera automáticamente. Esta regla sobrescribe cualquier regla definida en el *almacén*. Si no se define ninguna regla de almacén en el pedido de venta, se aplica la regla definida en el *almacén*.
-- **Cancelar Modificación de Precio:** con esta casilla es posible cancelar promociones definidas previamente en la ventana [Modificación de precios](../master-data-management/pricing.md#discounts-and-promotions). Solo estas, no los descuentos definidos en la ventana [Descuentos](../master-data-management/business-partner-setup.md#basic-discount). Si esta casilla está marcada, estas promociones para esta línea se cancelan; en caso contrario, se calculan con normalidad.
+- **Cancelar Modificación de Precio:** con esta casilla es posible cancelar promociones definidas previamente en la ventana [Modificación de precios](../master-data-management/pricing/discounts-and-promotions.md). Solo estas, no los descuentos definidos en la ventana [Descuentos](../master-data-management/business-partner-setup/basic-discount.md). Si esta casilla está marcada, estas promociones para esta línea se cancelan; en caso contrario, se calculan con normalidad.
 
 El botón **Explotar** se muestra al seleccionar una línea con un producto LdM (BOM) no almacenable y el producto aún no ha sido explotado. Al explotar un producto, los componentes de la lista de materiales de los que se compone el producto seleccionado se muestran en el pedido. Una vez explotado, no se puede comprimir. Debe eliminar todas las líneas (primero los componentes de la lista de materiales y después el producto LdM) e insertar de nuevo el producto LdM no almacenable.
 
@@ -398,7 +398,7 @@ El botón **Cerrar** cierra un pedido, lo que implica que:
 - la cantidad pedida pasa a ser la cantidad entregada y no pueden realizarse más acciones salvo prepagar ese pedido, si se cierra un pedido de venta **parcialmente entregado**
 - la cantidad pedida pasa a 0 y no pueden realizarse más acciones, si se cierra un pedido de venta **no entregado**
 
-#### **Reserva de existencias**
+#### **Reserva de existencias** { #stock-reservations }
 
 Las líneas del pedido de venta pueden reservarse cuando el pedido de venta se registra y está pendiente de entrega.
 
@@ -423,19 +423,19 @@ En la rejilla, es posible seleccionar y establecer la cantidad deseada sobre cua
 !!! warning
     Cuando el producto seleccionado tiene la marca Cantidad variable establecida como verdadera, es posible reservar más cantidad que la cantidad pedida. Pero tenga cuidado: cuando se genera un albarán contra esta línea de pedido y se completa (con la misma cantidad o una superior a la de la línea de pedido), la reserva se cerrará y la cantidad reservada se establecerá con el mismo valor que la cantidad pedida para evitar problemas de inconsistencias posteriores. Por tanto, es posible reservar más cantidad que la pedida cuando un producto está configurado como Cantidad variable, pero la reserva se ajustará a la **Cant. pedido** original cuando se realice un albarán.
 
-#### **Línea de impuesto**
+#### **Línea de impuesto** { #line-tax_1 }
 
 Para cada línea del pedido de venta, Etendo rellena automáticamente en esta solapa la información relacionada con el impuesto de la línea.
 
 La solapa de solo lectura **Línea de impuesto** detalla la información de impuestos para cada línea de un pedido de venta en función de su campo de impuesto, que se rellena automáticamente según la configuración de impuestos.
 
-#### **Stock reservado**
+#### **Stock reservado** { #reserved-stock }
 
 Relación del stock reservado y de los pedidos de compra pre-reservados relacionados con la **Línea pedido de venta**.
 
 Para cada línea de pedido de venta reservada, es posible revisar el stock reservado. Se muestran la cantidad, el hueco y el valor de atributos cuando aplica. Si existe parte del pedido de venta pre-reservada, también se mostrará la línea del pedido de compra. Cuando una pre-reserva se convierte en una reserva, seguirá teniendo la línea del pedido de compra original, pero esta última también tendrá un hueco definido. Todas las pre-reservas tienen el hueco en blanco.
 
-#### **Productos Relacionados**
+#### **Productos Relacionados** { #related-products }
 
 En esta tabla se añaden las líneas de pedido relacionadas con una línea de pedido de tipo «Servicio».
 
@@ -474,40 +474,40 @@ Sección de totales:
 - **Importe de descuentos sumado**: suma de los importes de descuento de línea seleccionados.
 - **Importe de servicio sumado**: precio del servicio basado en las líneas seleccionadas en la rejilla. Este importe se añadirá al importe total de la línea de servicio al crear las relaciones.
 
-#### **Modificar impuesto**
+#### **Modificar impuesto** { #modify-tax }
 
 Si el servicio está configurado para modificar el impuesto, se aplican automáticamente nuevos impuestos durante la operación; por tanto, después de vincular el servicio configurado a un producto, se aplicará la nueva configuración de impuestos.
 
 No se recomienda modificar el impuesto manualmente después, ya que el sistema puede crear inconsistencias. Sin embargo, es posible eliminar el producto de servicio y entonces el impuesto vuelve a su valor original.
 
-#### **Servicios Relacionados**
+#### **Servicios Relacionados** { #related-services }
 
 En esta tabla se muestran las líneas de pedido de producto de tipo «Servicio» relacionadas con una línea de pedido.
 
 Esta solapa solo se muestra para aquellas líneas con productos relacionados con servicios. Muestra los servicios relacionados. La rejilla tiene los mismos campos que utiliza Elegir/Editar lineas para añadir las líneas. Esta solapa no es editable.
 
-#### **Descuentos**
+#### **Descuentos** { #basic-discounts_1 }
 
 Esta sección lista información sobre descuentos aplicados automáticamente en función de la configuración del cliente y/o introducidos manualmente para el pedido de venta.
 
-#### **Impuesto**
+#### **Impuesto** { #tax_1 }
 
 El usuario puede editar los impuestos aplicados a su pedido. Resume la información relacionada con impuestos para todo el pedido de venta. Contiene tantos registros como tipos impositivos utilizados en el pedido.
 
-#### **Plan de pagos**
+#### **Plan de pagos** { #payment-plan }
 
 Esta sección muestra el importe total que se espera cobrar al registrar el pedido, así como el/los importe/s prepagados o pagados contra la/s factura/s del pedido.
 
 Muestra el importe total de pago esperado para el pedido y su cumplimiento. Esta solapa es de solo lectura y se rellena tras procesar el documento.
 
-#### **Detalles del pago**
+#### **Detalles del pago** { #payment-details }
 
 Muestra los detalles de los pagos (prepago o pagos regulares) recibidos para el pedido o para la/s factura/s del pedido.
 
-#### **Pedidos de Reemplazo**
+#### **Pedidos de Reemplazo** { #replacement-orders }
 
 Conjunto de pedidos que sustituyen a un pedido cancelado.
-### Cómo reactivar un Pedido de venta cerrado
+### Cómo reactivar un Pedido de venta cerrado { #how-to-reactivate-a-closed-sales-order }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -523,7 +523,7 @@ Una vez finalizado el proceso, el estado del pedido de venta pasa a *registrado*
 
 !!! info
     Consulte la documentación técnica sobre el procesamiento avanzado de documentos financieros para ampliar el proceso.
-### Eliminación de pagos
+### Eliminación de pagos { #payment-removal }
 
 El objetivo de esta funcionalidad es eliminar y reactivar pagos de una forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
@@ -549,7 +549,7 @@ En caso de que el usuario tenga que crear pedidos o facturas entre dos o más or
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-### Finalización masiva
+### Finalización masiva { #bulk-completion_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -558,7 +558,7 @@ La funcionalidad de **Finalización masiva** permite al usuario completar, **Rea
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-### Gestión avanzada de cuentas bancarias
+### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Bank Account Management del bundle Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -569,7 +569,7 @@ Este módulo añade un nuevo campo a la cabecera de la ventana Pedido de venta: 
 
 !!! info
     Para más información, visite la [Guía de usuario de Advanced Bank Account Management](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-## Albarán (Cliente)
+## Albarán (Cliente) { #goods-shipment }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Albarán (Cliente)`
 
@@ -581,7 +581,7 @@ Tal y como se describe en el artículo de Costing Server, el coste de un "Albar�
 
 El coste calculado de un "Albarán (Cliente)" se utiliza al contabilizarlo en el libro mayor.
 
-### **Cabecera**
+### **Cabecera** { #header_3 }
 
 El usuario puede crear y procesar un albarán.
 
@@ -611,7 +611,7 @@ Hay 2 formas de introducir líneas en el pedido de venta:
 
 ![Líneas de albarán](../../../../assets/drive/1gksOh0asH-Vye9WoBJa2q04TUyDh-aUC.png)
 
-### **Líneas**
+### **Líneas** { #lines_2 }
 
 El usuario puede añadir o ver los productos incluidos en su albarán. Cada producto se muestra en su propia línea. Las líneas listan cada producto a entregar y sus características.
 
@@ -627,7 +627,7 @@ El botón **Explotar** se muestra al seleccionar una línea con un producto LdM 
 
 El botón **Completar** finaliza el envío de los productos al cliente y la información de stock se actualiza en consecuencia (los niveles de producto disminuyen).
 
-#### **Contabilidad**
+#### **Contabilidad** { #accounting }
 
 Información contable relacionada con el envío de material.
 
@@ -654,7 +654,7 @@ Además:
 
 Una vez calculado el coste, el **Albarán (Cliente)** puede contabilizarse en el libro mayor.
 
-#### **Factura automática desde Albarán (Cliente)**
+#### **Factura automática desde Albarán (Cliente)** { #automatic-invoice-from-goods-shipment }
 
 Al completar un albarán, el popup de confirmación muestra una casilla llamada _Facturar si es posible_. Si se marca, la UI permite al usuario introducir una Tarifa válida, la **Fecha de la factura** y si desea completar la nueva factura de ventas o dejarla como borrador.
 
@@ -664,7 +664,7 @@ Las líneas no vinculadas a un pedido de venta siempre se facturarán automátic
 
 Además, la ventana muestra un nuevo botón **Generar factura desde albarán** que permite al usuario facturar el albarán en cualquier momento, siempre que el albarán aún no esté completamente facturado. En este proceso también se proporcionan los campos **Fecha de la factura**, Tarifa y Procesar factura, siguiendo la misma lógica explicada anteriormente.
 
-### Cómo reactivar Albaranes (Cliente)
+### Cómo reactivar Albaranes (Cliente) { #how-to-reactivate-goods-shipments }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Warehouse Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con core y nuevas funcionalidades, consulte [Warehouse Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
@@ -675,7 +675,7 @@ Una vez que el albarán se reactiva correctamente, el estado del documento cambi
 
 ![](../../../../assets/drive/1Ldt_3_sf1I-i3eJxxcsU-VT36TooiagO.png)
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con core y nuevas funcionalidades, consulte [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -687,7 +687,7 @@ Además, el Estado de contabilidad del/de los registro/s se muestra en la barra 
 !!! info
     Para más información, consulte [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion_2 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con core y nuevas funcionalidades, consulte [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -696,11 +696,11 @@ La funcionalidad de finalización masiva permite al usuario completar, reactivar
 
 !!! info
     Para más información, consulte [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-## Devolución de cliente
+## Devolución de cliente { #return-from-customer }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Devolución de cliente`
 
-### **Cabecera**
+### **Cabecera** { #header_4 }
 
 El usuario puede crear un pedido de venta y procesarlo cuando esté listo.
 
@@ -730,7 +730,7 @@ Solo los documentos *registrados* pueden ser recibidos.
   - También puede usar la ventana Factura (Cliente) para elegir líneas y, o bien agrupar líneas de pedidos de venta estándar y líneas de pedidos de devolución, o bien crear una _Factura (Cliente) inversa_ individual para los pedidos de devolución.
   - También puede crear una _Factura (Cliente) de devolución de material_ a través de la ventana Factura (Cliente) y dejarla como crédito para usarla posteriormente. Tenga en cuenta que esta factura debe crearse con importes negativos.
 
-### **Líneas**
+### **Líneas** { #lines_3 }
 
 El usuario puede añadir productos para incluirlos en su pedido de venta. Cada producto se añade creando una línea.
 
@@ -782,11 +782,11 @@ Este flujo (insertar línea huérfana) no admite productos con atributos.
 !!! info
     Para eliminar una línea, debe desmarcar la línea y luego hacer clic en Hecho.
 
-#### **Línea de impuesto**
+#### **Línea de impuesto** { #line-tax_2 }
 
 Impuestos relacionados con la línea del pedido.
 
-#### **Productos Relacionados**
+#### **Productos Relacionados** { #related-products_1 }
 
 En esta tabla se añaden las Líneas de pedido relacionadas con una Línea de pedido de tipo 'Servicio'.
 
@@ -800,15 +800,15 @@ La rejilla implementada en este Elegir/Editar es la misma que se utiliza en la v
 - **Cantidad devuelta en otras devoluciones**: muestra la cantidad devuelta de la línea en otros documentos de devolución diferentes.
 - **Ventas diferidas**: no aplican en esta ventana porque se están realizando devoluciones, no ventas.
 
-#### **Descuentos**
+#### **Descuentos** { #basic-discounts_2 }
 
 Muestra el descuento aplicado a la factura original del producto devuelto.
 
-#### **Impuesto**
+#### **Impuesto** { #tax_2 }
 
 El usuario puede editar los impuestos aplicados al pedido.
 
-### Finalización masiva
+### Finalización masiva { #bulk-completion_3 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -817,13 +817,13 @@ La funcionalidad de Finalización masiva permite al usuario completar, reactivar
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-## Recibo devolución de material
+## Recibo devolución de material { #return-material-receipt }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Recibo devolución de material`
 
 En esta ventana, el usuario recibe el material que ha sido devuelto por el cliente.
 
-### **Cabecera**
+### **Cabecera** { #header_5 }
 
 El usuario puede crear y procesar un recibo devolución de material.
 
@@ -836,7 +836,7 @@ El campo **Estado de factura**: indica en % qué cantidad ha sido facturada.
 !!! warning
     Tenga en cuenta que el botón **Elegir/Editar lineas** desaparece cuando el documento está en estado _Completada._
 
-### **Líneas**
+### **Líneas** { #lines_4 }
 
 El usuario puede añadir o ver productos que están incluidos en el recibo. Cada producto se muestra en su propia línea.
 
@@ -881,15 +881,15 @@ Fecha del registro contable: **Fecha contable**.
 | Devolución de COGS del producto (Coste de bienes devueltos) o, si no está definido, COGS del producto |                                  | Coste del producto x Cantidad del movimiento | Uno por cada línea de Recibo devolución de material |
 | Inmovilizado del producto                                                   | Coste del producto x Cantidad del movimiento |                                  | Uno por cada línea de Recibo devolución de material |
 
-##### **Configuración**
+##### **Configuración** { #configuration }
 
 - Active la tabla **MaterialMgmtShipmentInOut** en la solapa Tablas activas de la pantalla **Esquema contable**.
 
-#### **Contabilidad**
+#### **Contabilidad** { #accounting_1 }
 
 Información contable relacionada con el recibo devolución de material.
 
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -900,7 +900,7 @@ Además, el estado de contabilización del/de los registro(s) se muestra en la b
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-## Generar albaranes (manualmente)
+## Generar albaranes (manualmente) { #create-shipments-from-orders }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Generar albaranes (manualmente)`
 
@@ -917,7 +917,7 @@ Se crea un Albarán (Cliente) por cada Pedido de venta seleccionado, pero para e
 !!! info
     Tenga en cuenta el campo **Prioridad relativa** en la solapa Hueco de la ventana Almacén y Huecos, que se utiliza para determinar qué hueco usar en las Líneas de albarán generadas. El almacén a utilizar se hereda del Pedido de venta de origen.
 
-### **Formulario**
+### **Formulario** { #form }
 
 Campos a tener en cuenta:
 
@@ -926,7 +926,7 @@ Campos a tener en cuenta:
 - **Entrega pendiente:** el importe neto que aún está pendiente de entregar para el pedido específico (por ejemplo, cuando hubo una entrega parcial previa).
 
 Seleccione el/los pedido(s) que desea enviar y haga clic en el botón Procesar para generar el/los documento(s) de Albarán (Cliente) subyacente(s). El mensaje de ejecución del proceso muestra el/los número(s) de pedido de venta y el/los número(s) de albarán correspondiente(s) que se acaba(n) de crear.
-## Factura (Cliente)
+## Factura (Cliente) { #sales-invoice }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`
 
@@ -935,7 +935,7 @@ La Factura (Cliente) es un documento detallado de los bienes o servicios proporc
 La ventana Factura (Cliente) permite al usuario emitir y gestionar las facturas de clientes. También permite al usuario consultar información sobre el historial de todas las facturas de venta registradas en el sistema y crear manualmente nuevos documentos de factura. Resulta útil si se requiere la ejecución de algún escenario específico que no esté gestionado por procesos automáticos de generación de facturas como Facturar o Crear facturas desde pedidos.
 
 Los ingresos por ventas pueden reconocerse tan pronto como la factura de venta se contabiliza; no obstante, si se configura un plan de ingresos diferidos, es posible diferir el reconocimiento de ingresos según sea necesario.
-### **Cabecera**
+### **Cabecera** { #header_6 }
 
 Las facturas de cliente se pueden registrar, contabilizar y gestionar en la sección de cabecera de la ventana de **Factura (Cliente)**.
 
@@ -972,7 +972,7 @@ Una vez completada, una factura de cliente puede:
 - ser **contabilizada** en el libro mayor mediante el botón Contabilizar
 - ser **anulada** mediante el botón **Reactivar**
 - ser **pagada** mediante el botón **Añadir pago**.
-### Líneas
+### Líneas { #lines_5 }
 
 **Líneas** lista cada producto a entregar y sus características.
 
@@ -985,7 +985,7 @@ Campos a tener en cuenta:
 - **Valor atributos:** el campo se muestra si el producto de la línea tiene atributos (color, talla, número de serie o varios de ellos a la vez, etc.).
 - **Línea pedido de venta** y **Línea de albarán:** referencias a la línea del pedido de venta y a la línea del albarán que se está facturando.
 - **Línea de factura financiera:** se selecciona cuando la línea de factura no es un producto, sino una cuenta no configurada como producto sino como un apunte de mayor (G/L), o un inmovilizado no configurado como producto. Al seleccionarla, el campo de producto desaparece de la pantalla y aparece un campo de cuenta que quedará relacionado con la línea de la factura de ventas.
-- **Cancelar Modificación de Precio:** con esta casilla de verificación, es posible cancelar las promociones definidas previamente en la ventana [Modificación de precios](../master-data-management/pricing.md#discounts-and-promotions). Solo estas, no los descuentos definidos en la ventana [Descuentos](../master-data-management/business-partner-setup.md#basic-discount). Si esta casilla está marcada, estas promociones para esta línea se cancelan; en caso contrario, se calculan normalmente.
+- **Cancelar Modificación de Precio:** con esta casilla de verificación, es posible cancelar las promociones definidas previamente en la ventana [Modificación de precios](../master-data-management/pricing/discounts-and-promotions.md). Solo estas, no los descuentos definidos en la ventana [Descuentos](../master-data-management/business-partner-setup/basic-discount.md). Si esta casilla está marcada, estas promociones para esta línea se cancelan; en caso contrario, se calculan normalmente.
 
 Como ya se ha mencionado, los ingresos por ventas pueden periodificarse, por lo que no se reconocen en la fecha contable de ventas, sino dentro de un número determinado de periodos contables.
 
@@ -1005,12 +1005,12 @@ Si se configura un plan de ingresos, eso implica una contabilidad específica de
 
 El botón **Explotar** se muestra al seleccionar una línea con un producto LdM (BOM) no almacenable y el producto aún no está explotado. Al explotar un producto, los componentes de la lista de materiales de los que consta el producto seleccionado se muestran en la factura. Una vez explotado, no puede comprimirse. Debe eliminar todas las líneas (primero los componentes de la lista de materiales y después el producto LdM) e insertar de nuevo el producto LdM no almacenable.
 
-#### Línea de impuesto
+#### Línea de impuesto { #line-tax_3 }
 
 La información de impuestos de línea se completa automáticamente para cada línea de factura de ventas al completar la factura.
 
 La solapa de solo lectura **Línea de impuesto** detalla la información de impuestos para cada línea de una factura de ventas en función de su campo de impuesto, que se rellena automáticamente según la configuración de impuestos.
-### Impuesto
+### Impuesto { #tax_3 }
 
 Esta sección resume la información relacionada con los impuestos para toda la Factura (Cliente). Contiene tantos registros como tipos impositivos utilizados en la factura.
 
@@ -1025,11 +1025,11 @@ El campo **Impuestos** refleja el valor del impuesto calculado automáticamente 
     Para más información, visite: [Guía de usuario de Ajustar Impuesto de Factura](../../optional-features/bundles/financial-extensions/adjust-invoice-tax.md)
     
     Esta funcionalidad es compatible a partir de Etendo 23.
-### Descuentos
+### Descuentos { #basic-discounts_3 }
 
 Esta solapa lista información sobre los descuentos aplicados automáticamente en base a la configuración del cliente y/o introducidos manualmente para la **Factura (Cliente)**.
 
-### Plan de pagos
+### Plan de pagos { #payment-plan_1 }
 
 La solapa **Plan de pagos** lista los pagos programados esperados contra la factura.
 
@@ -1038,11 +1038,11 @@ El plan de pagos de una factura no pagada puede modificarse:
 - el pago "**fecha esperada**" puede cambiarse directamente si es necesario en esta solapa
 - el pago "**fecha esperada**", el "**método de pago**" y el **"importe pendiente de pago",** entre otros, pueden cambiarse si es necesario utilizando la funcionalidad avanzada **Plan de pagos editable**.
 
-#### Detalles del pago
+#### Detalles del pago { #payment-details_1 }
 
 Esta subsolapa muestra los detalles de los pagos realizados contra la factura.
 
-#### Pago
+#### Pago { #payment }
 
 Los pagos pueden recibirse contra una factura de ventas utilizando el botón **Añadir pago**, que abre la **ventana Añadir pago**.
 
@@ -1058,7 +1058,7 @@ Otros campos importantes a tener en cuenta son:
 - **Depositar en**: es la cuenta financiera en la que se va a depositar el importe.
 - **Fecha de cobro**: es la fecha del evento de pago. Se utiliza en el registro de contabilización del Pago en el libro mayor. Se establece por defecto con el campo **Fecha de la factura**.
 
-##### **Añadir pedido/factura**
+##### **Añadir pedido/factura** { #adding-orderinvoice }
 
 Si la ventana "Añadir pago" se abre desde una "Factura (Cliente)", todos los pagos programados de la factura se seleccionan por defecto si hay más de uno.
 
@@ -1078,7 +1078,7 @@ El motivo de lo anterior es que Etendo entiende que la factura se va a pagar com
     - mientras que la contabilización del pago en el libro mayor utiliza la cuenta de baja para contabilizar el importe dado de baja.
   - "Dejar el importe como un pago insuficiente" (si el campo **Writeoff** no está marcado), lo que implica que el importe restante será pagado más adelante por el cliente en un nuevo pago.
 
-##### **Añadir apuntes de libro mayor**
+##### **Añadir apuntes de libro mayor** { #adding-gl-items }
 
 La sección de apuntes de libro mayor permite al usuario introducir cualquier tipo de gasto relacionado con el pago pero no incluido en la factura, haciendo clic en \[Add New\].
 
@@ -1089,7 +1089,7 @@ Una vez hecho,
 - la contabilización de la factura en el libro mayor liquida el total del importe a cobrar del cliente,
 - mientras que la contabilización del pago en el libro mayor utiliza, además, la cuenta del apunte de libro mayor para contabilizar el importe del gasto pagado.
 
-##### Revisión de los totales y procesamiento del pago
+##### Revisión de los totales y procesamiento del pago { #reviewing-the-totals-and-processing-the-payment }
 
 Tal y como ya se ha mencionado, la sección "Totales" permite revisar:
 
@@ -1110,7 +1110,7 @@ El número de opciones anteriores depende de la configuración del método de pa
 
 Por último, cualquiera de estas acciones actualiza la sección de monitor de pagos de la Cabecera de la Factura. El importe pagado también se refleja en la solapa **Plan de pagos** de la **Factura (Cliente)** (y del **Pedido de venta** si existe). Los detalles del pago pueden encontrarse en la solapa **Detalles del pago**.
 
-##### **Pago con crédito**
+##### **Pago con crédito** { #credit-payment }
 
 Siempre que exista crédito disponible para un cliente, se abre automáticamente una nueva ventana al completar una nueva factura de ventas del cliente, para permitir al usuario seleccionar si desea utilizar el crédito disponible para pagar esa nueva factura o no.
 
@@ -1131,7 +1131,7 @@ La sección "Crédito a utilizar" muestra todos los pagos con crédito creados p
 
 Una vez procesado el pago, se crea un nuevo pago en la ventana de Pago (entrada). Ese pago indica en la parte superior el importe de "Crédito utilizado".
 
-##### **Pagos en múltiples monedas**
+##### **Pagos en múltiples monedas** { #payments-in-multiple-currencies }
 
 Etendo permite al usuario recibir pagos en una moneda diferente a la moneda de la cuenta financiera.
 
@@ -1148,10 +1148,10 @@ Para ello, el método de pago asignado a la cuenta financiera utilizada para rec
     - La organización F&B US Inc necesita emitir la factura del cliente en EUR, al igual que el pago recibido del cliente.
 
     Si el pago del cliente se registra en la ventana "Añadir pago" mostrada desde esta ventana "Factura (Cliente)", Etendo permite al usuario introducir un tipo de cambio; por lo tanto, el importe "Convertido real" a pagar en EUR puede modificarse si es necesario.
-### Factura Rectificativa
+### Factura Rectificativa { #reversed-invoices }
 
 Esta solapa permite al usuario seleccionar las facturas (si las hubiera) que están siendo rectificadas por la factura que se está creando. Cuando el usuario anula una factura existente, Etendo crea automáticamente la factura rectificativa y la vincula con la factura original que se está rectificando. En caso de crear una factura rectificativa de ventas que anule parcialmente una o varias facturas existentes, el usuario debe seleccionar manualmente en esta solapa la(s) factura(s) que se está(n) rectificando.
-### Tipos de cambio
+### Tipos de cambio { #exchange-rates }
 
 La solapa **Tipos de cambio** permite al usuario introducir un tipo de cambio entre la moneda del libro mayor de la organización y la moneda de la factura del cliente, que se utilizará al contabilizar la factura en el libro mayor.
 
@@ -1168,7 +1168,7 @@ Esta solapa permite al usuario introducir:
 
 Adicionalmente, Etendo dispone de un repositorio "central" de tipos de cambio que se utiliza en caso de que no exista un tipo de cambio definido a nivel de documento.
 
-#### Contabilidad
+#### Contabilidad { #accounting_2 }
 
 Información contable relacionada con la **Factura (Cliente)**.
 
@@ -1222,7 +1222,7 @@ Fecha de registro de la contabilización: **Fecha contable**.
 | Devolución de ingresos por el producto o, si no está definido, Ingresos por el producto | Imp. línea |                        | Uno por Línea de factura                    |
 | Impuesto repercutido                                         | Impuestos           |                        | Uno por línea de impuesto.                  |
 
-#### Anulación
+#### Anulación { #voiding }
 
 Es posible anular totalmente una **Factura (Cliente)** utilizando el botón de cabecera **Reactivar** y, a continuación, la acción **Anular**; esta acción implica:
 
@@ -1257,7 +1257,7 @@ La principal diferencia entre esos dos tipos de documento revertido es:
 - y en la **Factura de ventas revertida** la **Cant.facturada** es una cantidad negativa.
 
 Se recomienda encarecidamente al usuario utilizar el tipo de documento **Factura de ventas revertida** al anular parcialmente facturas de cliente.
-### Cómo reactivar una Factura (Cliente) anulada
+### Cómo reactivar una Factura (Cliente) anulada { #how-to-reactivate-a-voided-sales-invoice }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1275,7 +1275,7 @@ Una vez finalizado el proceso, el estado de la Factura (Cliente) pasa a **Comple
 
 !!! info
     Consulte la documentación técnica sobre el procesamiento avanzado de documentos financieros (Advanced Financial Docs Processing) para ampliar el proceso.
-### Eliminación de pagos
+### Eliminación de pagos { #payment-removal_1 }
 
 El objetivo de esta funcionalidad es eliminar y reactivar pagos de una forma ágil y sencilla. Además, permite eliminar y reactivar transacciones bancarias y conciliaciones.
 
@@ -1301,7 +1301,7 @@ En caso de que el usuario tenga que crear pedidos o facturas entre dos o más or
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
-### Contabilización masiva
+### Contabilización masiva { #bulk-posting_2 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1312,7 +1312,7 @@ Además, el estado de contabilización del/de los registro(s) se muestra en la b
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Posting](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md).
-### Rappels avanzados
+### Rappels avanzados { #advanced-rappels }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Rappels del bundle Sales Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Sales Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
@@ -1324,8 +1324,8 @@ Al utilizar esta funcionalidad, en la ventana Factura (Cliente), el usuario pued
 Estas facturas de venta tienen un importe negativo que representa el descuento del rappel, pueden incluir un prefijo en su código para distinguirlas del resto y su estado es “borrador”.
 
 !!! info
-    Para más información, visite [Rappels avanzados](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
-### Finalización masiva
+    Para más información, visite [Rappels avanzados](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#rappel-configuration).
+### Finalización masiva { #bulk-completion_4 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Essentials Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Essentials Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Essential Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
@@ -1334,7 +1334,7 @@ La funcionalidad de Finalización masiva permite al usuario completar, **Reactiv
 
 !!! info
     Para más información, visite [la guía de usuario del módulo Bulk Completion](../../optional-features/bundles/essentials-extensions/bulk-completion.md).
-### Gestión avanzada de cuentas bancarias
+### Gestión avanzada de cuentas bancarias { #advanced-bank-account-management_1 }
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el módulo Advanced Bank Account Management del Financial Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Financial Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
@@ -1345,7 +1345,7 @@ Este módulo añade un nuevo campo a la cabecera de la ventana Factura (Cliente)
 
 !!! info
     Para más información, visite la [Guía de usuario de Advanced Bank Account Management](../../optional-features/bundles/financial-extensions/advanced-bank-account-management.md).
-## Crear facturas desde pedidos
+## Crear facturas desde pedidos { #create-invoices-from-orders }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Crear facturas desde pedidos`
 
@@ -1385,14 +1385,14 @@ Si la **Facturación** es **Planificación del cliente después de la entrega**,
 !!!important
     Este proceso utiliza los valores especificados a nivel de producto para diferir los ingresos por ventas de las líneas correspondientes de la factura de ventas.
 
-### Botones
+### Botones { #buttons }
 
 - **Actualizar**: para actualizar los pedidos mostrados en esta ventana, utilice el botón de proceso **Actualizar**.
 
 - **Hecho**: a continuación, seleccione el/los pedido(s) que desea facturar y haga clic en el botón **Hecho** para generar el/los documento(s) de **Factura (Cliente)** correspondiente(s). El mensaje de ejecución del proceso muestra el/los número(s) de pedido de venta y el/los número(s) de factura correspondiente(s) que se acaba(n) de crear.
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/transactions/createinvoicesfromorders3.png)
-## Facturar
+## Facturar { #generate-invoices }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Facturar`
 
@@ -1423,14 +1423,14 @@ Para todas las opciones de **Facturación** excepto _Planificación del cliente 
 
 Por último, es importante remarcar que el proceso Facturar también utiliza los valores especificados a nivel de producto para diferir los ingresos por ventas de las líneas de factura de cliente correspondientes.
 
-### **Formulario**
+### **Formulario** { #form_1 }
 
 Un campo importante a tener en cuenta es **Fecha de la factura**. Si se especifica, esta fecha se transfiere como **Fecha de la factura** a las Factura (Cliente) generadas (y, por tanto, al campo **Fecha contable** que se utiliza en el registro de contabilización de la factura en el libro mayor). Si no se define, el campo **Fecha del movimiento** del Albarán (Cliente) relacionado con el Pedido de venta original se establece como Fecha de la factura. Si no existe Albarán (Cliente), entonces el campo **Fecha de pedido** del Pedido de venta original se utiliza como Fecha de la factura.
 
 El botón **OK** lanza el proceso y todos los pedidos pendientes de facturar que coincidan con los filtros se facturan automáticamente.
 
 Cuando el proceso finaliza, se muestra un mensaje con el número total de facturas creadas y sus números de documento.
-## Procesar comisión
+## Procesar comisión { #commission-payment }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Procesar comisión`
 
@@ -1447,7 +1447,7 @@ Esta ventana debe interpretarse de la siguiente manera:
 - La solapa **Cuantía de la comisión** agrupa el resultado de todas las líneas consideradas para calcular este importe. Por tanto, por cada línea definida en la ventana de comisión, el usuario tiene una entrada en esta solapa.
 - La solapa **Detalle de la comisión** muestra todas las líneas de pedido/líneas de factura tenidas en cuenta para calcular el importe.
 
-### Cabecera
+### Cabecera { #header_7 }
 
 Desde esta ventana es posible visualizar las comisiones creadas.
 
@@ -1459,7 +1459,7 @@ Desde esta ventana es posible visualizar las comisiones creadas.
 - El campo **Imp.total** muestra el importe de la comisión tras aplicar las condiciones configuradas. El importe de la comisión se calcula en base a importes sin impuestos.
 - El campo **Factura** muestra la factura creada, si existe.
 
-### Cuantía de la comisión
+### Cuantía de la comisión { #amounts }
 
 El usuario puede editar líneas individuales de pedido de venta que hayan generado una comisión seleccionada.
 
@@ -1486,7 +1486,7 @@ Campos a tener en cuenta:
 - **Imp. convertido**: El importe total sin aplicar las condiciones de la línea de comisión en la moneda correspondiente.
 - **Cant.real**: La cantidad total. Cuando la **Unidad** es diferente entre productos, esta información no es relevante.
 
-### Detalle de la comisión
+### Detalle de la comisión { #details }
 
 Crear y editar el cálculo y la facturación de la comisión de ventas.
 
@@ -1506,7 +1506,7 @@ Campos a tener en cuenta:
 - **Cant.real**: Cantidad pedida en la línea de pedido/factura
 - **Es coste calculado**: El valor por defecto de este campo es 'SÍ'. Solo se tiene en cuenta cuando la comisión se calcula en base al margen. Cuando este indicador no está marcado, el coste de la transacción no se calcula. Eso significa que no ha sido posible calcular su margen. Este indicador debe estar marcado en todos los detalles para poder generar la factura de la comisión.
 
-### Botones
+### Botones { #buttons_1 }
 
 - **Crear factura**: Desde aquí se puede crear una factura de compra en caso de que sea necesario para pagar al agente comercial, utilizando el botón de proceso.
 

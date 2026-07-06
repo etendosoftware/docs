@@ -14,7 +14,7 @@ status: beta
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Visión general
+## Visión general { #overview }
 
 **DBSourceManager** es una biblioteca Java que ayuda con tareas de base de datos relacionadas con el desarrollo. Su funcionalidad más importante es la independencia de la base de datos. Usted podrá centrarse en el desarrollo de funcionalidades de base de datos y dejar que DBSourceManager se encargue de los detalles de implementación de la base de datos.
 
@@ -24,11 +24,11 @@ El objetivo principal de DBSourceManager es ayudar al desarrollador en la creaci
 
 Por lo tanto, el desarrollador puede centrarse en crear y cambiar sus componentes (ya sea en la base de datos o en los archivos `XML`), y DBSourceManager puede trasladar automáticamente los cambios de un lugar al otro.
 
-##  Arquitectura
+## Arquitectura { #architecture }
 
 Como se indicó anteriormente, **DBSourceManager** se basa en el proyecto Apache ddlutils. Internamente, su estructura puede describirse como una serie de clases para gestionar el modelo de base de datos y una serie de clases relacionadas con cómo los objetos y sus cambios se transforman en comandos específicos del RDBMS.
 
-##  Tareas comunes
+## Tareas comunes { #common-tasks }
 
 Las principales tareas que DBSourceManager permite realizar al desarrollador son las siguientes:
 
@@ -38,7 +38,7 @@ Las principales tareas que DBSourceManager permite realizar al desarrollador son
 
 Para más información sobre las tareas de compilación de Etendo, visite [Tareas de compilación de desarrollo](../developer-tools/etendo-gradle-plugin.md#build-tasks). Estas tareas están relacionadas con los [conceptos de modularidad](../concepts/modularity-concepts.md) en Etendo.
 
-##  Más información
+## Más información { #more-information }
 
 DBSourceManager utiliza un mecanismo denominado **Filtros de modelo**, para eliminar intencionadamente algunos objetos no deseados del modelo físico de base de datos. Estos filtros pueden ampliarse mediante módulos. Para saber cómo, puede leer [Cómo excluir objetos físicos de base de datos del modelo](../how-to-guides/how-to-exclude-database-physical-objects-from-model.md).
 

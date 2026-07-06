@@ -5,10 +5,10 @@ tags:
     - Provincia
     - Configuración
 ---
-# País, provincia y ciudad
+# País, provincia y ciudad { #country-and-region }
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `País, provincia y ciudad`
 
-## Visión general
+## Visión general { #overview }
 
 Los países y las provincias son configuraciones básicas para compartir dentro de Etendo.
 
@@ -17,7 +17,7 @@ Los países y sus correspondientes provincias se crean y se listan automáticame
 !!! info
     Todos estos países y provincias están vinculados a la organización del sistema (\*), lo que significa que esos países y provincias serán compartidos por todas las organizaciones del sistema.
 
-## País, provincia y ciudad
+## País, provincia y ciudad { #country-and-region_1 }
 
 Esta ventana permite al usuario visualizar y/o crear y mantener los países y las provincias que se utilizarán en las actividades empresariales diarias.
 
@@ -39,13 +39,13 @@ Como se muestra en la imagen anterior, los datos relevantes del país son:
 - El **idioma** por defecto.
 - y la **moneda** por defecto.
 
-### Traducción
+### Traducción { #translation }
 
 Los países y las provincias se pueden traducir a cualquier idioma.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/country-translation.png)
 
-### Provincia
+### Provincia { #region }
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/application/region.png)
 

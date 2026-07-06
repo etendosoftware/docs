@@ -9,17 +9,17 @@ tags:
     - Distribuir Herramienta
 ---
 
-# Cómo exportar herramientas y agentes
+# Cómo exportar herramientas y agentes { #how-to-export-tools-and-agents }
 
-## Visión general
+## Visión general { #overview }
 
 Al desarrollar en Etendo Copilot, es posible exportar agentes y herramientas. Esta documentación detalla cómo exportarlos y cómo asegurarse de que, al instalar el módulo, las configuraciones estén listas para usar, permitiendo un proceso **listo para usar**.
 
-## Exportación de agentes
+## Exportación de agentes { #exporting-agents }
 
 Existen dos métodos principales para exportar agentes: exportarlos como un conjunto de datos donde los agentes configurados se exportan dentro de un conjunto de datos de Etendo Classic, o exportarlos como Administrador del Sistema, donde el/los agente(s) definidos con el rol Administrador del Sistema se exportan directamente junto con el módulo.
 
-### Exportación de agentes como conjuntos de datos
+### Exportación de agentes como conjuntos de datos { #exporting-agents-as-datasets }
 
 Los agentes deben exportarse como un conjunto de datos, en caso de que se requiera una instalación opcional y con nivel de acceso a datos `Cliente/Organización`.
 
@@ -52,7 +52,7 @@ Los agentes deben exportarse como un conjunto de datos, en caso de que se requie
     ```
     - **Habilidades/Herramientas:** Tabla `etcop_app_tool`
     ```sql title="Where Clause"
-    `copilotApp.id in ('<AssistantID>')
+    copilotApp.id in ('<AssistantID>')
     ```
     - **Miembros del Equipo:** Tabla `ETCOP_Team_Member`
     ```sql title="Where Clause"
@@ -91,7 +91,7 @@ Los agentes deben exportarse como un conjunto de datos, en caso de que se requie
     </figure>
 
 
-### Exportación de agentes como Administrador del Sistema
+### Exportación de agentes como Administrador del Sistema { #exporting-agents-as-system-administrator }
 
 Al exportar agentes que deben estar preconfigurados en una instalación de módulo, deben crearse con el rol Administrador del Sistema. Estos agentes solo serán editables por el Administrador del Sistema, pero pueden ejecutarse tanto por el `Administrador del Sistema` como por usuarios con niveles de acceso a datos `Cliente/Organización`.
 
@@ -99,7 +99,7 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 
     - Inicie sesión como Administrador del Sistema.
     - Configure el agente y sus solapas, asegurándose de seleccionar el módulo (en desarrollo) en el campo **Módulo**.
-    - Si el agente debe restringirse para uso exclusivo del Administrador del Sistema, marque la casilla **Aplicación del Sistema**. En caso contrario, déjela sin marcar para permitir la ejecución en todos los niveles de acceso a datos.
+    - Use el campo **Agent Scope** para controlar quién puede acceder al agente. Establézcalo en **Sistema** para restringir el agente únicamente al Administrador del Sistema a nivel de plataforma. Establézcalo en **Cliente + Sistema** para permitir que el agente se use también en todos los niveles de acceso a datos. Este campo reemplaza la antigua casilla **System App**. Para una descripción completa de cada opción, consulte [Agent Window – Header](../../../user-guide/etendo-copilot/setup-and-usage.md#header).
 
     <figure markdown="span">
     ![](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-export-tools-and-assistants/exportcopilot5.png)
@@ -109,7 +109,7 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 2. **Exportar la base de datos**.
     - Ejecute el comando `./gradlew export.database` para exportar el agente junto con el módulo.
 
-## Exportación de herramientas
+## Exportación de herramientas { #exporting-tools }
 
 **Configuración de la herramienta**: al definir una herramienta, seleccione el módulo (en desarrollo) en el campo **Módulo**, y ejecute el comando `./gradlew export.database` para exportar la herramienta junto con el módulo.
 
@@ -123,3 +123,5 @@ Al exportar agentes que deben estar preconfigurados en una instalación de módu
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L.](https://etendo.software){target="_blank"}.
+
+---

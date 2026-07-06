@@ -6,19 +6,19 @@ tags:
     - Tipo de cambio
 ---
 
-# Rangos de conversión
+# Rangos de conversión { #conversion-rates }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `Rangos de conversión`
 
 
-## Visión general
+## Visión general { #overview }
 
 El rango de conversión, también llamado *tipo de cambio de moneda*, es el tipo al que una moneda puede convertirse en otra.
 
 !!! info
     Los rangos de conversión solo pueden crearse a **nivel de organización del sistema (\*)**, lo que implica que están disponibles para todas las organizaciones dentro del cliente.
 
-## Rangos
+## Rangos { #conversion-rate }
 
 La ventana Rangos de conversión permite al usuario crear los rangos que se utilizarán para transacciones multimoneda.
 

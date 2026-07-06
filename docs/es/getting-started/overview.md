@@ -15,7 +15,7 @@ tags:
 ![cover-getting-started.png](../assets/getting-started/overview/cover-getting-started.png)
 
 
-# ¿Qué es un ERP?
+# ¿Qué es un ERP? { #what-is-an-erp }
 
 Bienvenido al primer paso para comprender los sistemas de **Enterprise Resource Planning (ERP)**, herramientas potentes que están en el corazón de la gestión empresarial moderna.
 
@@ -23,7 +23,7 @@ Esta sección le ayuda a entender qué es un ERP, cómo funciona y por qué es e
 
 Un sistema de **Enterprise Resource Planning (ERP)**, como **Etendo**, es una solución de software integral que integra y optimiza los procesos clave de una organización en una única plataforma unificada. Conecta departamentos, agiliza flujos de trabajo y ofrece a los responsables información en tiempo real para tomar decisiones fundamentadas.
 
-# ¿Cómo funciona un ERP?
+# ¿Cómo funciona un ERP? { #how-does-an-erp-work }
 
 Desde un punto de vista técnico, un ERP está compuesto por **módulos interconectados** o **áreas funcionales**. Cada módulo se centra en una parte específica del negocio, pero **se comunican en tiempo real**, manteniendo todo sincronizado.
 
@@ -76,7 +76,7 @@ En el caso de **Etendo**, puede encontrar funcionalidades como:
 
 </div>
 
-# ¿Por qué usar un ERP?
+# ¿Por qué usar un ERP? { #why-use-an-erp }
 
 Estos son algunos de los **beneficios clave** de utilizar **Etendo**:
 
@@ -86,7 +86,7 @@ Estos son algunos de los **beneficios clave** de utilizar **Etendo**:
 - **Escalabilidad**: crece con su negocio.  
 - **Cumplimiento normativo**: Etendo ayuda a cumplir estándares locales e internacionales.
 
-# Buenas prácticas para trabajar con un ERP
+# Buenas prácticas para trabajar con un ERP { #best-practices-for-working-with-an-erp }
 
 **Etendo** no es solo software: refleja cómo opera su empresa. Para utilizarlo de forma eficaz:
 

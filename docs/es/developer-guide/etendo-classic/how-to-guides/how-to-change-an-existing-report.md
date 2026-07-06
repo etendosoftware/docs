@@ -12,12 +12,12 @@ status: beta
 
 ---
 
-# Cómo cambiar un informe existente
+# Cómo cambiar un informe existente { #how-to-change-an-existing-report }
  
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Al desplegar Etendo, una de las personalizaciones iniciales más comunes es adaptar las plantillas estándar de documentos como **Pedidos, albaranes y facturas** para cumplir con los requisitos funcionales de la empresa y su imagen corporativa. Estos documentos se comparten entre procesos de clientes y proveedores, por lo que es esencial que reflejen información precisa y una identidad visual coherente.
 Esta guía describe cómo modificar plantillas de informes existentes de forma modular y mantenible, utilizando el informe de **Pedido de venta** como ejemplo de referencia.
@@ -26,7 +26,7 @@ Esta guía describe cómo modificar plantillas de informes existentes de forma m
     Para más información, visite [Cómo crear un informe ](../how-to-guides/how-to-create-a-report.md).
 
 
-## Definición del Módulo
+## Definición del Módulo { #defining-the-module }
 
 Primero es necesario definir un nuevo módulo que contenga las modificaciones del informe.
 
@@ -47,7 +47,7 @@ Primero es necesario definir un nuevo módulo que contenga las modificaciones de
     ./gradlew export.database
     ```
 
-## Copia de la plantilla base
+## Copia de la plantilla base { #copying-the-base-template }
 
 Después de exportar los cambios, habrá una nueva carpeta dentro de la carpeta modules.
 
@@ -58,7 +58,7 @@ Después de exportar los cambios, habrá una nueva carpeta dentro de la carpeta 
 
     ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-report/how-to-change-an-existing-report-2.png)
 
-## Modificación de la plantilla
+## Modificación de la plantilla { #changing-the-template }
 
 Después de hacer una copia de la **plantilla base** en el módulo, es posible realizar todos los cambios que necesite. Simplemente añada una etiqueta sencilla en el encabezado del informe.
 
@@ -79,7 +79,7 @@ Después de hacer una copia de la **plantilla base** en el módulo, es posible r
 
 - Recargue Etendo desde Tomcat Manager 
 
-## Definición de la plantilla de informe a nivel de documento
+## Definición de la plantilla de informe a nivel de documento { #defining-the-report-template-at-document-level }
 
 Las plantillas de informe se definen a **nivel de documento**. Es necesario cambiarlo para que funcione.
 
@@ -95,7 +95,7 @@ Las plantillas de informe se definen a **nivel de documento**. Es necesario camb
 
     ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-change-an-existing-report/how-to-change-an-existing-report-5.png)
 
-## Prueba de los cambios
+## Prueba de los cambios { #testing-the-changes }
 
 Ya se han realizado todas las definiciones necesarias para usar la plantilla personalizada de **Pedido de venta**. Solo es necesario verificar que la nueva plantilla de documento creada renderiza el documento como se espera con un documento de Pedido de venta existente.
 

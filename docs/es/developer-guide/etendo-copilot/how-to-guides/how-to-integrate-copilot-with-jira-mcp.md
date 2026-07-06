@@ -10,9 +10,9 @@ tags:
   - Automatización
 ---
 
-# Cómo integrar Copilot con Jira mediante MCP
+# Cómo integrar Copilot con Jira mediante MCP { #how-to-integrate-copilot-with-jira-via-mcp }
 
-## Visión general
+## Visión general { #overview }
 
 !!! note "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -21,7 +21,7 @@ La integración de **Etendo Copilot** con **Jira** permite a los agentes crear, 
 
 Esta guía explica cómo configurar un servidor de **Model Context Protocol (MCP)** que actúa como puente entre Copilot y la API REST de Jira utilizando la implementación MCP de Atlassian.
 
-### Capacidades clave
+### Capacidades clave { #key-capabilities }
 
 - Crear incidencias individuales o en lote.
 - Actualizar campos de incidencias (transiciones de estado, comentarios, registros de trabajo, enlaces, versiones, épicas).
@@ -29,10 +29,10 @@ Esta guía explica cómo configurar un servidor de **Model Context Protocol (MCP
 - Descargar adjuntos.
 - Mantener un acceso contextual y seguro mediante Etendo Copilot.
 
-### Cuándo usar esta integración
+### Cuándo usar esta integración { #when-to-use-this-integration }
 Úsela cuando los equipos de desarrollo, soporte u operaciones gestionen su backlog en Jira y deseen acceso conversacional desde Etendo para acelerar la clasificación de tareas, el seguimiento o la elaboración de informes.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Etendo y **Etendo Copilot** instalados.
 - Usuario de Jira válido con API Token.
@@ -42,7 +42,7 @@ Esta guía explica cómo configurar un servidor de **Model Context Protocol (MCP
 !!! info
     Almacene el API token de Jira usando la guía: [Cómo configurar API Tokens](./how-to-configure-api-tokens.md). Use el alias `JIRA_TOKEN` (recomendado).
 
-## Paso 1. Crear (o reutilizar) el API Token de Jira
+## Paso 1. Crear (o reutilizar) el API Token de Jira { #step-1-create-or-reuse-the-jira-api-token }
 
 1. Abra Atlassian Account Settings > Security > API tokens.
 2. Cree un nuevo token (etiquétele para el uso de Etendo Copilot).
@@ -54,7 +54,7 @@ Esta guía explica cómo configurar un servidor de **Model Context Protocol (MCP
    - Token: pegue el valor copiado.
    - (Opcional) Usuario / Rol: restrinja el ámbito si es necesario.
 
-## Paso 2. Registrar el servidor MCP de Jira
+## Paso 2. Registrar el servidor MCP de Jira { #step-2-register-the-jira-mcp-server }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `MCP Servers Configuration`
 
@@ -92,7 +92,7 @@ Campos explicados:
 !!! warning
     No pegue el API token en bruto directamente. Use siempre el marcador de posición (p. ej., `@JIRA_TOKEN@`). Esto garantiza el ámbito adecuado, la gestión de prioridades y la ocultación de secretos.
 
-## Paso 3. Vincular el MCP a un agente
+## Paso 3. Vincular el MCP a un agente { #step-3-link-the-mcp-to-an-agent }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agent`
 
@@ -101,7 +101,7 @@ Campos explicados:
 3. Añada una nueva línea seleccionando el servidor MCP de Jira.
 4. Guarde y haga clic en **Sync Agent**.
 
-## Paso 4. Probar la integración
+## Paso 4. Probar la integración { #step-4-test-the-integration }
 
 Ejemplos de prompts:
 
@@ -116,7 +116,7 @@ Link issue ERP-789 to epic ERP-22.
 !!! success
     Si está configurado correctamente, el agente responde con datos estructurados de la incidencia (clave, resumen, estado) o con la confirmación de las acciones realizadas.
 
-## Herramientas de Jira disponibles (habilitadas en el ejemplo)
+## Herramientas de Jira disponibles (habilitadas en el ejemplo) { #available-jira-tools-enabled-in-example }
 
 - Búsqueda / consulta: `jira_search`, `jira_search_fields`
 - Incidencias: `jira_get_issue`, `jira_create_issue`, `jira_update_issue`, `jira_batch_create_issues`

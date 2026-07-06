@@ -8,9 +8,9 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Compras - Primeros pasos
+# Gestión de Compras - Primeros pasos { #procurement-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="720" height="480"  src="https://www.youtube.com/embed/d33J6fTMEqM?si=NlHOoCq82bCJG3Rg" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -20,7 +20,7 @@ Esta área de aplicación de Etendo cubre las partes de Necesidad a Albarán (Pr
 
 Para la gestión de pagos de Procure To Pay, consulte el área de aplicación Gestión Financiera / Cuentas a cobrar y a pagar.
 
-## Flujo de negocio Procure to Pay
+## Flujo de negocio Procure to Pay { #procure-to-pay-business-flow }
 
 El flujo de trabajo *Procure to Pay* gestiona el ciclo de vida de un proceso de compras.
 
@@ -31,7 +31,7 @@ Debido a su complejidad y a los diferentes roles implicados, es conveniente divi
 
 ![procure-to-pay](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/procure-to-pay-business-flow.png)
 
-### Configuración
+### Configuración { #configuration }
 
 La siguiente configuración debe realizarse antes de ejecutar el proceso:
 
@@ -48,18 +48,18 @@ Cada producto que se vaya a comprar debe tener un precio en la lista de precios 
 Del mismo modo, cada producto que se compra debe definirse en una unidad de medida (UdM) y, si es necesario, en una unidad de medida alternativa (UdMA).
 
 !!!info
-    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md) para más información.
+    Consulte [Configuración de productos](../../../../user-guide/etendo-classic/basic-features/master-data-management/product-setup/product-category.md), [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) y [Tarifas](../../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md) para más información.
 
 El coste de una transacción de entrada como un "Albarán (Proveedor)" puede calcularse utilizando el precio de compra del producto sin impuestos.
 
 Además, el coste de los productos incluidos en un Albarán (Proveedor) puede ajustarse como resultado de la imputación de diferentes tipos de [Landed Cost](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type) en el albarán.
 
 El proceso "Costing Server" es el proceso "Costing Engine" de Etendo que calcula y ajusta el coste de transacción de un producto.
-Este proceso requiere que la entidad legal/organización tenga una [regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#costing-rule) configurada y aplicada a los productos configurados como "Almacenado".
+Este proceso requiere que la entidad legal/organización tenga una [regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#costing-rule) configurada y aplicada a los productos configurados como "Almacenado".
 Los terceros deben configurarse antes de que una necesidad de material pueda convertirse automáticamente en un pedido de compra.
 
 !!!info
-    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+    Para más información, visite [Configuración de terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/business-partner-category.md) y [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 
 La configuración anterior forma parte del flujo general de configuración del negocio dentro de la configuración de "Gestión de Datos Maestros".
 
@@ -67,14 +67,14 @@ La configuración anterior forma parte del flujo general de configuración del n
     No es necesario realizar ninguna configuración adicional para el área de aplicación Gestión de Compras si va a explorarla basándose en el cliente de ejemplo Food & Beverage (F&B) que Etendo incluye por defecto.
     El conjunto de datos de ejemplo ya contiene los roles, terceros, productos, almacenes y precios preconfigurados.
 
-### Ejecución
+### Ejecución { #execution }
 
 En Gestión de Compras, el proceso de negocio Procure to Pay se ejecuta del siguiente modo:
 
 Cualquier miembro de la organización autorizado puede emitir directamente una Necesidad de material como resultado de una necesidad de la organización o de una unidad de negocio.
 
 - El solicitante crea un nuevo documento en la ventana [Necesidad de material](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition), introduce una "Fecha de necesidad" y después busca el producto o servicio necesario.
-Si el producto no existe, puede introducirse en ese momento en la ventana [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Si el producto no existe, puede introducirse en ese momento en la ventana [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 - El solicitante continúa añadiendo, para cada producto necesario, una nueva línea con la fecha de necesidad, el producto, la cantidad, el precio si se conoce y, si es necesario, su atributo (talla y/o color, etc.).
 También puede añadirse un proveedor preferente si se conoce.
 - Una vez hecho, la necesidad de material se guarda en estado "Borrador", lo que permite que el usuario la modifique posteriormente si fuera necesario.
@@ -82,7 +82,7 @@ También puede añadirse un proveedor preferente si se conoce.
 Las necesidades de material notifican al personal de compras los productos a pedir, su cantidad y el plazo de entrega. El personal de compras se encarga entonces de gestionar las necesidades de material ya creadas o incluso de crear nuevas, si fuera necesario.
 
 - El personal de compras gestiona las necesidades en la ventana [Administrar necesidades](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions).
-- El personal de compras puede cambiar cualquier dato de las necesidades creadas en estado borrador y, además, puede buscar el proveedor que se utilizará en el campo Terceros. Si el tercero no existe, puede introducirse en ese momento en la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
+- El personal de compras puede cambiar cualquier dato de las necesidades creadas en estado borrador y, además, puede buscar el proveedor que se utilizará en el campo Terceros. Si el tercero no existe, puede introducirse en ese momento en la ventana [Terceros](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#business-partner).
 - El personal de compras también puede introducir el precio neto unitario de compra y los descuentos, si los hubiera, una vez se conozcan.
 - Una vez que la necesidad está lista, se completa. El estado del documento de la necesidad cambia a Completado y entonces puede convertirse en un pedido de compra.
 
@@ -143,7 +143,7 @@ Finalmente, el personal de finanzas se encarga de realizar y gestionar los pagos
 - Los pagos a proveedores pueden realizarse en la ventana Factura (Proveedor) utilizando el botón Añadir pago. También es posible realizar un prepago contra un Pedido de compra.
 La documentación detallada de la gestión de pagos está disponible en el área de aplicación Gestión Financiera / Cuentas a cobrar y a pagar y en la sección [Cómo gestionar facturas prepagadas en cuentas a pagar](../../../../user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md).
 
-## Flujo de negocio de Devoluciones a proveedor
+## Flujo de negocio de Devoluciones a proveedor { #supplier-returns-business-flow }
 
 Este flujo de trabajo gestiona la devolución de bienes comprados al proveedor. Debido a las consecuencias de la devolución, es conveniente dividir las devoluciones a proveedor en dos subprocesos principales:
 
@@ -153,10 +153,10 @@ Este flujo de trabajo gestiona la devolución de bienes comprados al proveedor. 
 
 ![supplier-returns](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png)
 
-### Configuración
-La ventana [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) es la única que requiere configuración antes de ejecutar este proceso.
+### Configuración { #configuration_1 }
+La ventana [Motivos de devolución](../../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/return-reasons.md) es la única que requiere configuración antes de ejecutar este proceso.
 
-### Ejecución
+### Ejecución { #execution_1 }
 
 En Gestión de Compras, el *flujo de negocio de Devolución a proveedor* se ejecuta del siguiente modo.
 
@@ -186,7 +186,7 @@ Personal de finanzas: para facturar estos documentos, vaya a la ventana [Factura
     - Dejarla como crédito para usarla más adelante mediante la ventana [Pago](../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out)
     - Una nueva factura de compra basada en el pedido de compra original puede consumir ese crédito
 
-## Relación con otras áreas de aplicación
+## Relación con otras áreas de aplicación { #relationship-with-other-application-areas }
 
 Gestión de Compras tiene relación con otras áreas de aplicación: 
 

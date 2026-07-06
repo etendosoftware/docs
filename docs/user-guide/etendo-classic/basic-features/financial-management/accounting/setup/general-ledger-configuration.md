@@ -46,7 +46,7 @@ Lastly, it is important to remark that the GL configuration and the CoA are link
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration1.png) 
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration1.png) 
 
 Fields to note:
 
@@ -96,7 +96,7 @@ A general ledger configuration created by **default** can be changed to meet the
         !!!info
             It is possible to uncheck any of the checkboxes listed above showing any of the balances as negative. 
 
-        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration7.png)
+        ![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration7.png)
 
     - **Centrally Maintained**: When NO, the **Account Sign** field is not hidden in the Element Value tab of the [Account Tree](#account-tree) window. Therefore, the account sign of each account tree element defines how the balance of that account is going to be shown in the financial statements.
 
@@ -116,7 +116,7 @@ There are **two mandatory dimensions** at the organization's general ledger conf
 -   The **Account** as any document/transaction posted to the ledger needs to be posted in a ledger account (or subaccount in Etendo terms) of a given account tree or chart of accounts.
 -   The **Organization**, as any document/transaction posted to the ledger, needs to be posted in an organization's general ledger.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration2.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration2.png)
 
 Besides, if an organization belongs to a Client which centrally maintains the accounting dimensions, it is possible to add in this tab other dimensions such as the ones listed below which can be even set as **mandatory** for the organization:
 
@@ -184,13 +184,13 @@ For instance, the records of the table **FinancialMgmtAmortization** are the amo
 
 The **Documents** tab allows the user to define which document types of a table allow negative posting and if they use a different accounting process than the default one based on a given accounting template.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration5.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration5.png)
 
 ### General Accounts
 
 The **General Accounts** tab allows the user to define the accounts to be used in balancing entries and in the end-year closing process.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration3.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration3.png)
 
 Fields to note:
 
@@ -224,15 +224,15 @@ The **mandatory Default** accounts are populated by default as part of the [gene
 !!!info
     If an accounting csv or reference data is not selected while running the [Initial Client Setup](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-run-an-initial-client-setup-process.md) and the [Initial Organization Setup](../../../general-setup/enterprise-model/initial-organization-setup.md) processes, these mandatory accounts need to be manually entered here once the [Account Tree](#account-tree) and therefore the corresponding subaccounts have been created.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration4.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration4.png)
 
-The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../../master-data-management/business-partner-setup.md#business-partner-category) or [Product Category](../../../master-data-management/product-setup.md#product-category).
+The **Copy Accounts** button allows selecting accounts defaulted to every [Business Partner Category](../../../master-data-management/business-partner-setup/business-partner-category.md) or [Product Category](../../../master-data-management/product-setup/product-category.md).
 
 !!!info
-    The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../../master-data-management/business-partner-setup.md#business-partner-category) window.
+    The accounts defaulted to every business partner category, for instance, can be as well defaulted to every vendor or customer by using the action button **Copy Accounts**, this time from the [Business Partner Category](../../../master-data-management/business-partner-setup/business-partner-category.md) window.
 
 !!!note
-    It is possible to override these defaults at business partner category level allowing vendor liabilities and customer receivables for different business partners to be posted to different accounts. This last configuration change needs to be done in the vendor and/or customer tabs from the [Business Partner](../../../master-data-management/master-data.md#business-partner) windows.
+    It is possible to override these defaults at business partner category level allowing vendor liabilities and customer receivables for different business partners to be posted to different accounts. This last configuration change needs to be done in the vendor and/or customer tabs from the [Business Partner](../../../master-data-management/master-data/business-partner.md#business-partner) windows.
 
 The default accounts are:
 

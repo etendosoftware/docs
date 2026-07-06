@@ -6,17 +6,17 @@ tags:
     - Proceso en segundo plano
 ---
 
-# Procesamiento de Peticiones
+# Procesamiento de Peticiones { #process-request }
 
 :material-menu: `Aplicación` > `Configuración General` > `Planificador de procesos` > `Procesamiento de Peticiones`
 
-## Visión general
+## Visión general { #overview }
 
 Un proceso en segundo plano es una acción del sistema solicitada por el usuario, quien debe proporcionar valores de parámetros auxiliares para ejecutar dicha acción.
 
 La ventana Procesamiento de Peticiones permite al usuario revisar y añadir procesos en segundo plano, que pueden programarse o desprogramarse según sea necesario.
 
-## Ventana Procesamiento de Peticiones
+## Ventana Procesamiento de Peticiones { #process-request-window }
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.gif)
 
@@ -63,21 +63,21 @@ La información a completar para programar un proceso en segundo plano es:
         En ambos casos, es necesario que el rol tenga acceso al proceso en la pestaña **Acceso a Proceso** de la ventana **Rol**.
 
 
-### Monitor de Procesos
+### Monitor de Procesos { #process-monitor }
 
 El monitor de procesos es una pestaña de solo lectura que permite revisar el estado de los procesos ejecutados por la petición actual.  
 La información mostrada es la misma que en el [Monitor de Procesos](../process-scheduling/process-monitor.md).
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/process-monitor.png)
 
-### Procesos en Grupo
+### Procesos en Grupo { #processes-in-group }
 
 En caso de que el proceso ejecutado por el procesamiento de peticiones sea un **grupo de procesos**, aquí encontrará la información sobre las ejecuciones de los procesos del grupo para cada ejecución del grupo de procesos.
 
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request/process-group.png)
 
 
-## Procesos clave en segundo plano
+## Procesos clave en segundo plano { #key-background-processes }
 
 Existen algunos procesos en segundo plano que se configuran por defecto en la ventana de procesamiento de peticiones:
 
@@ -156,7 +156,7 @@ Además, existen otros procesos en segundo plano que también pueden programarse
     !!! info
         Existe un proceso de menú denominado **Procesar ajuste de diferencia de precio** que ajusta manualmente todas las recepciones de mercancía ya facturadas, si fuese necesario.
 
-    Puede ver los cambios en la ventana [Ajuste de Costes](../../warehouse-management/transactions.md#cost-adjustment).
+    Puede ver los cambios en la ventana [Ajuste de Costes](../../warehouse-management/transactions/cost-adjustment.md).
 
 - ### Conciliar líneas de factura y albarán con pedido de venta
 

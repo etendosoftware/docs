@@ -6,18 +6,18 @@ tags:
     - File Downloader
 ---
 
-# Herramienta de descarga de archivos
+# Herramienta de descarga de archivos { #file-downloader-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de descarga de archivos** está diseñada para recibir una URL y descargar el archivo correspondiente en un directorio temporal, devolviendo la ruta al archivo temporal. Esta herramienta es extremadamente valiosa para cualquier aplicación que necesite interactuar dinámicamente con archivos en la web. Le permite descargar archivos de forma eficiente y almacenarlos temporalmente, facilitando su uso y manipulación posteriores sin necesidad de preocuparse por la gestión de archivos en el sistema. Además, gestiona automáticamente distintos tipos de contenido (texto y binario), haciendo que la operación sea transparente y sencilla para el usuario.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es especialmente útil cuando necesita descargar archivos desde la web para su posterior procesamiento sin preocuparse por gestionar los archivos en el sistema local. Puede ser útil para tareas como:
 
@@ -53,7 +53,7 @@ Este proceso consta de las siguientes acciones:
 
     Si la URL no es válida o la descarga falla, devuelve un mensaje de error relevante.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si hay un archivo alojado en `https://example.com/file.txt` y es necesario descargarlo temporalmente:
 

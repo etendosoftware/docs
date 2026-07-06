@@ -5,15 +5,15 @@ tags:
   - Crear un procedimiento almacenado
 ---
 
-# Cómo crear un procedimiento almacenado
+# Cómo crear un procedimiento almacenado { #how-to-create-a-stored-procedure }
 
-## Cómo crear un procedimiento almacenado
+## Cómo crear un procedimiento almacenado { #how-to-create-a-stored-procedure_1 }
 
 Los procedimientos almacenados son uno de los mecanismos que Openbravo ERP proporciona para implementar lógica de negocio. Los procedimientos almacenados son ejecutados por el motor de base de datos y se implementan en el lenguaje estándar PL/pgSQL (para PostgreSQL) o PL/SQL (para Oracle). Se deben comprender las particularidades sobre cómo estos procedimientos PL/SQL se integran con el resto de la aplicación. También es necesario seguir algunas reglas de codificación para que sea posible exportar/importar a archivos XML usando DBSourceManager.
 
 Este documento trata la infraestructura de Openbravo para procedimientos almacenados PL/SQL. Estos actúan como Procesos en el Diccionario de Aplicación.
 
-## Tablas AD_PInstance y AD_PInstance_Para
+## Tablas AD_PInstance y AD_PInstance_Para { #ad-pinstance-and-ad-pinstance-para-tables }
 
 Antes de implementar un procedimiento PL/SQL es importante entender cómo será llamado desde la aplicación.
 
@@ -23,7 +23,7 @@ En caso de que el proceso tenga parámetros adicionales introducidos por el usua
 
 Por último, tenga en cuenta que el ID del registro recién creado en la tabla _AD_PInstance_ es el ÚNICO parámetro que se pasa al procedimiento PL/SQL. Es responsabilidad del procedimiento almacenado leer el/los registro(s) de AD_PInstance y AD_PInstance_Para para obtener cualquier parámetro que requiera y escribir el mensaje resultante de vuelta en la tabla _AD_PInstance_.
 
-## Definición del procedimiento
+## Definición del procedimiento { #procedure-definition }
 
 La cabecera de un procedimiento PL/SQL que implementa un proceso tiene este aspecto:
 
@@ -43,7 +43,7 @@ En primer lugar, observe el nombre del procedimiento PL/SQL: sigue las reglas de
 
 Tenga en cuenta que el único parámetro que recibe el procedimiento PL/SQL es una cadena; contendrá el UUID de la clave del registro _AD_PInstance_ generado para su invocación.
 
-## Recuperación de parámetros
+## Recuperación de parámetros { #retrieving-parameters }
 
 **PostgreSQL** y **Oracle**
 
@@ -88,7 +88,7 @@ El primer `SELECT` obtiene de _AD_PInstance_ los IDs (UUIDs) del usuario que inv
 
 A continuación, un bucle obtiene todos los parámetros e itera solo en caso de que el proceso tenga parámetros definidos. Observe que el parámetro se identifica por _ParameterName_, que coincide con el _Nombre columna BD_ definido en el parámetro. Dependiendo de su tipo, el valor real se almacena en una de las siguientes columnas: `P_String`, `P_Number` o `P_Date`. El procedimiento almacenado necesita saber qué esperar y recuperarlo en consecuencia.
 
-## Actualización de _AD_PInstance_
+## Actualización de _AD_PInstance_ { #updating-ad-pinstance }
 
 La tabla _AD_PInstance_ tiene una columna `IsProcessing`, que indica si una instancia se está procesando actualmente o no. Al inicio del proceso, la instancia debe marcarse como en procesamiento con:
 
@@ -104,7 +104,7 @@ AD_UPDATE_PINSTANCE(p_PInstance_ID, v_User_ID, 'N', v_Result, v_Message);
 
 Aquí, el parámetro `v_Result` es un valor numérico: puede ser 0 para error o 1 para éxito. `v_Message` es el mensaje que se mostrará; para más información sobre cómo gestionar mensajes, lea la sección siguiente.
 
-## Gestión de excepciones
+## Gestión de excepciones { #managing-exceptions }
 
 Las excepciones en un procedimiento PL/SQL deben capturarse para insertar el mensaje adecuado en la tabla _PInstance_ y que se muestre correctamente al usuario. Por ello, es una buena práctica disponer de una sección _EXCEPTION_ para capturar todas las excepciones en el cuerpo del procedimiento.
 
@@ -174,11 +174,11 @@ END IF;
 
 Para más explicaciones sobre los mensajes, consulte la documentación de Mensajes.
 
-## Funciones
+## Funciones { #functions }
 
 También se admiten funciones de base de datos.
 
-### Volatilidad
+### Volatilidad { #volatility }
 
 Las funciones pueden definir diferentes niveles de volatilidad. Tenga en cuenta que Oracle no implementa ningún equivalente para funciones estables; en caso de que una función se marque en PostgreSQL como estable, se implementará como una función estándar en Oracle añadiendo un comentario para que el XML exportado conserve esta información.
 

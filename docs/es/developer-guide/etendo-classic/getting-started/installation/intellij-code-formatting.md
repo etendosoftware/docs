@@ -7,11 +7,11 @@ tags:
 search:
   boost: 1.5
 ---
-## Visión general
+## Visión general { #overview }
 
 Este documento explica cómo IntelliJ IDEA es capaz de importar la configuración del formateador de código.
 
-## Formato de código
+## Formato de código { #code-formatting }
 
 1. En primer lugar, descargue el siguiente [archivo de formato de IntelliJ](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/code-formatting-style-in-intellij/etendo.xml){: download="etendo.xml"}.
 2. Abra :simple-intellijidea: Ajustes de IntelliJ IDEA

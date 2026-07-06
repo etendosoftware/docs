@@ -1,7 +1,7 @@
 ---
 title: Configuración de Gestión de Almacén
 ---
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe los pasos que deben realizarse para configurar las secciones de gestión de almacén en Etendo. Las ventanas correspondientes son:
 
@@ -24,16 +24,16 @@ Esta sección describe los pasos que deben realizarse para configurar las seccio
 [:material-file-document-outline:Tipo de Inventario Referenciado](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline:Tipo EAN 128](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#ean-128-type){ .md-button .md-button--primary } <br>
-## Procesar Ajuste de Diferencias de Precio
+## Procesar Ajuste de Diferencias de Precio { #process-price-difference-adjustment }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Procesar Ajuste de Diferencias de Precio`
 
 Los ajustes de diferencias de precio se pueden realizar de forma "automática" programando el "Proceso en segundo plano de corrección de precios" o manualmente para un producto determinado o un conjunto de productos ejecutando este proceso.
-## Almacén y huecos
+## Almacén y huecos { #warehouse-and-storage-bins }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Almacén y huecos`
 
-### Visión general
+### Visión general { #overview_1 }
 
 El usuario puede crear almacenes y organizarlos mediante huecos.
 
@@ -41,7 +41,7 @@ El usuario puede crear almacenes y organizarlos mediante huecos.
 
 Esta ventana permite al usuario crear y configurar almacenes y obtener información sobre los bienes disponibles en el almacén, así como información relacionada con las transacciones.
 
-### Almacén
+### Almacén { #warehouse }
 
 El usuario puede crear almacenes para sus organizaciones.
 
@@ -55,7 +55,7 @@ Campos a tener en cuenta:
 -   **Hueco de devoluciones:** valor por defecto para el campo **Hueco** de las líneas de recibo de devolución de material, al que se colocan los productos devueltos por el cliente.
 -   **Regla de almacén:** definición de una regla de almacén que se aplicará al obtener stock del almacén.
 
-### Hueco
+### Hueco { #storage-bin }
 
 El usuario puede crear huecos para un almacén seleccionado.
 
@@ -71,13 +71,13 @@ Otros campos a tener en cuenta:
 -   **Estado de Inventario:** es el Estado de Inventario actual del Hueco seleccionado. Puede cambiarse haciendo clic en el botón *Cambiar estado*.  
 Para más información, visite [Estado de Inventario](../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
-### Operaciones de producto
+### Operaciones de producto { #product-transactions }
 
 El usuario puede ver todas las operaciones de producto relacionadas con el almacén seleccionado y el historial de transacciones (recepción de materiales, envío, uso en producción, etc.) que influyen en el hueco seleccionado.
 
 El contenido de esta solapa es el mismo que el de la ventana de transacciones de mercancías.
 
-### Inventario
+### Inventario { #bin-contents }
 
 El usuario puede ver los productos almacenados de un hueco seleccionado.
 
@@ -92,14 +92,14 @@ Campos a tener en cuenta:
 -   **Cantidad disponible:** stock actual del producto.
 -   **Cant. en curso:** cantidad de producto que está en transacciones de almacén (como recepción de mercancías, envío de mercancías, inventario físico, movimientos de mercancías) en estado Borrador.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 El usuario puede crear y editar cuentas de mayor (G/L) que se utilizarán en transacciones que incluyan un almacén seleccionado.
 
 Esta solapa especifica la cuenta de diferencias de almacén para la configuración del libro mayor de cada organización.
 
 Se completa automáticamente cuando se crea un nuevo almacén, ya que se toma de la cuenta correspondiente de la solapa Valor por defecto de la configuración del libro mayor correspondiente.
-## Transportista
+## Transportista { #shipping-company }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Transportista`
 
@@ -107,20 +107,20 @@ El usuario puede crear transportistas y definir costes de portes que se utilizar
 
 También se pueden crear transportistas para ser utilizados en otras transacciones de la aplicación.
 
-### Porte
+### Porte { #freight }
 
 El usuario puede definir portes que se utilizarán para un transportista especificado.
-## Categoría portes
+## Categoría portes { #freight-category }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Categoría portes`
 
 El usuario puede definir y crear categorías de portes para que sean utilizadas por los transportistas.
 
-## Reglas de cálculo de costes
+## Reglas de cálculo de costes { #costing-rules }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Reglas de cálculo de costes`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Una regla de cálculo de costes se puede aplicar durante el cálculo de costes. Cada regla de cálculo de costes requiere un algoritmo de cálculo de costes y una fecha válida desde para calcular correctamente el coste de las operaciones de material. El "Almacén" se puede configurar como una dimensión que se tendrá en cuenta al calcular los costes.
 
@@ -151,7 +151,7 @@ Para crear y validar una "Regla de cálculo de costes", el usuario debe tener en
 -   La segunda regla de cálculo de costes no permite introducir una "Fecha de inicio", ya que se toma la fecha "actual" por defecto; por lo tanto, la primera regla de cálculo de costes finaliza cuando comienza la segunda, y así sucesivamente.
     -   Lo mismo aplica a la fecha "Ajuste Retroactivo de Transacciones Desde", que por defecto toma la fecha actual, a menos que se introduzca una fecha específica posterior a la fecha "actual".
 
-#### **Regla de cálculo de costes**
+#### **Regla de cálculo de costes** { #costing-rule }
 
 La ventana de regla de cálculo de costes permite al usuario definir y validar reglas de cálculo de costes.
 
@@ -206,7 +206,7 @@ El proceso de **validación de la regla de cálculo de costes** realiza varias c
     -   en el caso de productos incluidos en transacciones cuyo coste se calculó utilizando una regla, si se configura una nueva regla, primero es necesario calcular todas sus transacciones de acuerdo con esa regla anterior.
     -   en el caso de productos incluidos en transacciones cuyo coste no se calculó mediante ninguna regla, si se configura una nueva regla, no se debe calcular el coste de ninguna de sus transacciones.
 
-##### **Ajuste Retroactivo de Transacciones**
+##### **Ajuste Retroactivo de Transacciones** { #fix-backdated-transactions }
 
 Tal y como ya se ha descrito, una regla de cálculo de costes también puede definir si las transacciones retroactivas registradas para un producto deben ajustarse; por lo tanto, se crean y contabilizan los ajustes de coste de la transacción retroactiva correspondiente para ese producto con el fin de obtener el coste correcto del producto.
 
@@ -227,14 +227,14 @@ En ambos casos:
 -   la "Fecha de inicio" de la regla de cálculo de costes se establecerá como la fecha "Ajuste Retroactivo de Transacciones Desde" siempre que el usuario final no introduzca una fecha "Ajuste Retroactivo de Transacciones Desde".
 -   la fecha "Ajuste Retroactivo de Transacciones Desde" debe ser una fecha válida dentro de un periodo abierto.
 
-#### **Inicialización**
+#### **Inicialización** { #initialization }
 
 La solapa Inicialización es una solapa de solo lectura que permite revisar el inventario físico de "Cierre" / "Apertura" creado para validar una regla de cálculo de costes. Cada vez que se valida una regla de cálculo de costes, se crea un nuevo registro para cada Organización y Almacén. Este registro contiene enlaces a los inventarios físicos creados.
-## Algoritmo de cálculo de costes
+## Algoritmo de cálculo de costes { #costing-algorithm }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Algoritmo de cálculo de costes`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Un algoritmo de cálculo de costes define el método que se va a utilizar para calcular el coste de las transacciones.
 
@@ -242,7 +242,7 @@ Etendo entrega los algoritmos de cálculo de costes Estándar y Promedio como pa
 
 Cada algoritmo de cálculo de costes debe contener e implementar todo lo necesario para calcular los costes y almacenarlos.
 
-### Cabecera 
+### Cabecera { #header }
 
 La principal característica de un algoritmo de cálculo de costes es la clase Java que incluye todo lo necesario para implementarlo.
 
@@ -253,11 +253,11 @@ Los algoritmos de cálculo de costes pueden listarse en esta ventana una vez que
 Se recomienda aplicar este tipo de conjuntos de datos de sistema a la organización (\*) para que estén disponibles para cada organización de la Entidad.
 
 Si no se muestra ningún registro en esta ventana, póngase en contacto con su "Administrador del sistema" para asegurarse de que los conjuntos de datos de "Sistema" se han aplicado correctamente utilizando el siguiente comando de "ant": *ant apply.module -DforceRefData=true*
-## Tipo de Landed Cost
+## Tipo de Landed Cost { #landed-cost-type }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Tipo de Landed Cost`
 
-### Visión general
+### Visión general { #overview_4 }
 
 La ventana Tipo de Landed Cost permite al usuario definir diferentes tipos de Landed Cost que pueden asignarse a las recepciones de mercancía y, por tanto, distribuirse a los productos incluidos en las recepciones.
 
@@ -265,7 +265,7 @@ El Landed Cost es el coste total de un envío recibido, incluyendo el precio de 
 
 Etendo gestiona los landed costs no como parte del "coste unitario" de un producto, sino como parte de su coste total.
 
-### Cabecera
+### Cabecera { #header_1 }
 
 Los Tipos de Landed Cost pueden definirse como un "Producto" o como una "Cuenta" (apunte de mayor / elemento de G/L). Además, puede definirse un algoritmo de distribución para configurar la forma en que los landed costs se van a distribuir a los productos.
 
@@ -297,11 +297,11 @@ Un tipo de landed cost puede crearse como una "**Cuenta**" o como un "**Producto
     -   La cuenta contable de tipo "Gasto" utilizada al contabilizar una factura de compra que incluya un landed cost de este tipo es la configurada en la solapa Contabilidad del Producto.
 
 ![Tipo de Landed Cost](../../../../assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png)
-## Reglas de almacén
+## Reglas de almacén { #warehouse-rules }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Reglas de almacén`
 
-### Visión general
+### Visión general { #overview_5 }
 
 La ventana de reglas de almacén permite al usuario revisar las reglas de almacén disponibles.
 
@@ -309,7 +309,7 @@ Las reglas de almacén se utilizan para restringir el stock disponible en el alm
 
 Las reglas se aplican cuando el stock se recupera automáticamente mediante procesos como la generación de albaranes.
 
-### Regla
+### Regla { #rule }
 
 Las nuevas reglas de almacén solo pueden aplicarse mediante módulos de extensión, que deben incluir un conjunto de datos con la definición de la regla y un procedimiento que la implemente.
 
@@ -318,7 +318,7 @@ Etendo incluye tres reglas diferentes por defecto:
 -   **Atributo único**: todo el stock propuesto para su uso debe ser del mismo valor de atributos. Devuelve el primer valor de atributos que se encuentre con cantidad suficiente para cumplir el requisito. Si no existe ningún valor de atributos con stock suficiente, no se propone ningún stock. Esta es una regla de exclusión.
 -   **Hueco único**: todo el stock propuesto debe proceder del mismo hueco. Devuelve el stock del primer hueco encontrado con cantidad suficiente. Si no existe ningún hueco con cantidad suficiente, entonces el stock se obtiene de cualquier hueco. Esta es una regla de preferencia y no una regla de exclusión.
 -   y **Regla de almacén por defecto**: la regla por defecto no restringe nada y se devuelve todo el stock disponible de los almacenes con cantidad disponible. Esta regla puede utilizarse en los pedidos de venta siempre que se desee sobrescribir una regla definida en el almacén para no aplicar ninguna regla.
-## Tipo de Inventario Referenciado
+## Tipo de Inventario Referenciado { #referenced-inventory-type }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Tipo de Inventario Referenciado`
 
@@ -334,7 +334,7 @@ Campos de la ventana **Tipo de Inventario Referenciado**
 -   **Activo** : Un indicador que señala si este registro está disponible para su uso o está desactivado.
 -   **Tipo de Inventario Referenciado**
 -   **Entidad** : Entidad para esta instalación.
-## Ventana Tipo EAN 128
+## Ventana Tipo EAN 128 { #ean-128-type-window }
 
 :material-menu: `Aplicación` > `Gestión de Almacén` > `Configuración` > `Tipo EAN 128`
 
@@ -342,7 +342,7 @@ En esta ventana puede añadir diferentes tipos de códigos de barras. Estos alma
 
 ![Ventana Tipo EAN 128](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Type.png)
 
-### Cabecera
+### Cabecera { #header_2 }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/EAN128Header.png)
 
@@ -360,7 +360,7 @@ En esta ventana puede añadir diferentes tipos de códigos de barras. Estos alma
 
 - **Activo** : Un indicador que señala si este registro está disponible para su uso o está desactivado.
 
-### Líneas
+### Líneas { #lines }
 
 En las líneas puede añadir un registro que haga referencia al padre ya creado. Aquí creará un dato que se recibirá al escanear un código de barras.
 
@@ -398,7 +398,7 @@ En las líneas puede añadir un registro que haga referencia al padre ya creado.
 
 - **Campo de entidad** : Propiedad de la entidad de la que se obtiene el valor. Hace referencia al campo HQL de la entidad.
 
-### Ejemplo
+### Ejemplo { #example }
 
 Por ejemplo, veremos un registro creado aquí:
 

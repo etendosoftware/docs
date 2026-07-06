@@ -2,6 +2,7 @@ import os
 import argparse
 import logging
 import re
+import json
 import yaml
 from algoliasearch.search.client import SearchClientSync
 
@@ -64,15 +65,16 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
     """
     Segmenta el contenido, añadiendo un group_id para la deduplicación.
     """
-    RECORD_SIZE_LIMIT = 7000
+    ALGOLIA_RECORD_LIMIT = 9500  # Algolia limit is 10KB; reserve 500B margin
 
     records = []
     base_hierarchy = {f'lvl{i}': title for i, title in enumerate(hierarchy_titles)}
     max_lvl = len(base_hierarchy) - 1
 
-    h2s = re.findall(r'^##\s+(.*)', markdown_content, re.MULTILINE)
-    h3s = re.findall(r'^###\s+(.*)', markdown_content, re.MULTILINE)
-    h4s = re.findall(r'^####\s+(.*)', markdown_content, re.MULTILINE)
+    _strip_anchor = lambda h: re.sub(r'\s*\{[^}]*\}\s*$', '', h).strip()
+    h2s = [_strip_anchor(h) for h in re.findall(r'^##\s+(.*)', markdown_content, re.MULTILINE)]
+    h3s = [_strip_anchor(h) for h in re.findall(r'^###\s+(.*)', markdown_content, re.MULTILINE)]
+    h4s = [_strip_anchor(h) for h in re.findall(r'^####\s+(.*)', markdown_content, re.MULTILINE)]
 
     def add_records_from_content(content_chunk, base_url, hierarchy):
         title_parts = [hierarchy.get(f'lvl{i}') for i in range(7)]
@@ -81,13 +83,12 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
             h1_title = title_parts[max_lvl + 1].lower()
             if h1_title.startswith(page_title):
                 title_parts[max_lvl] = None
-        
+
         final_parts = [part for part in title_parts if part]
         record_title = final_parts[-1] if final_parts else ''
-        
+
         # group id is base_url without fragment
         group_id = base_url.split('#')[0]
-        # --- NUEVO: Objeto base con group_id y otros atributos ---
         base_record = {
             'title': record_title,
             'tags': tags,
@@ -96,6 +97,20 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
             'h4': h4s,
             'group_id': group_id
         }
+
+        # Calculate how much space is left for content after metadata fields
+        base_size = len(json.dumps(base_record, ensure_ascii=False).encode('utf-8'))
+        # Account for objectID, url, content field names and JSON overhead (~100B)
+        RECORD_SIZE_LIMIT = ALGOLIA_RECORD_LIMIT - base_size - 100
+
+        # Guard: if bulky h2/h3/h4 metadata leaves no room, drop those lists and retry
+        if RECORD_SIZE_LIMIT <= 0:
+            base_record = {k: v for k, v in base_record.items() if k not in ('h2', 'h3', 'h4')}
+            slim_size = len(json.dumps(base_record, ensure_ascii=False).encode('utf-8'))
+            RECORD_SIZE_LIMIT = ALGOLIA_RECORD_LIMIT - slim_size - 100
+            if RECORD_SIZE_LIMIT <= 0:
+                logging.warning(f"Skipping record for {base_url}: metadata alone exceeds size limit.")
+                return
 
         if len(content_chunk.encode('utf-8')) <= RECORD_SIZE_LIMIT:
             if content_chunk:

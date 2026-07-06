@@ -11,11 +11,11 @@ Tags:
     - Corrección de céntimos
 ---
 
-# Ajustar Impuesto de Factura
+# Ajustar Impuesto de Factura { #adjust-invoice-tax }
 
 :octicons-package-16: Javapackage: `com.etendoerp.adjust.invoice.tax`
 
-## Visión general
+## Visión general { #overview }
 
 Este módulo permite realizar ajustes controlados en los importes de impuestos de las facturas para conciliar pequeñas **diferencias de redondeo** con sistemas externos o cuando las facturas se presentan ante **entidades gubernamentales**. Es compatible tanto con facturas de **Ventas** como de **Compra**, ofrece **ajustes manuales y automatizados** para correcciones mínimas a nivel de céntimos y registra todos los cambios para garantizar la **auditabilidad**, asegurando que el total final de la factura coincida con requisitos externos, gubernamentales o regulatorios.
 
@@ -29,7 +29,7 @@ Este módulo permite realizar ajustes controlados en los importes de impuestos d
     Esta funcionalidad es compatible desde Etendo 23.
 
 
-## Factura (Proveedor)
+## Factura (Proveedor) { #purchase-invoice }
 
 En la solapa **Impuesto**, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de compra se encuentra en estado Borrador.
 
@@ -38,7 +38,7 @@ El sistema aplica validaciones estrictas: el importe del impuesto no puede modif
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-purchase-invoice-tax.png)
 
 
-## Factura (Cliente)
+## Factura (Cliente) { #sales-invoice }
 
 En la solapa **Impuesto**, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de ventas se encuentra en estado Borrador.
 

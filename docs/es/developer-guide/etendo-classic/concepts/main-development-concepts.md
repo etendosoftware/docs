@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-#  Conceptos principales de desarrollo
+# Conceptos principales de desarrollo { #main-development-concepts }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-##  Principios de diseño
+## Principios de diseño { #design-principles }
 
 Etendo es una aplicación de software que se está desarrollando teniendo en cuenta los siguientes principios de diseño:
 
@@ -32,7 +32,7 @@ El objetivo de Etendo es, siguiendo estos principios, ofrecer una aplicación qu
 
 Etendo es un proyecto open source construido sobre tecnologías open source. Nuestro objetivo es aprovechar los excelentes componentes de infraestructura desarrollados por la comunidad open source para garantizar que nuestra plataforma se beneficie de las ventajas y la estabilidad de componentes respaldados por una gran comunidad. Siempre que sea necesario, contribuimos con nuestros desarrollos de vuelta a la comunidad.
 
-### Framework de aplicación ERP
+### Framework de aplicación ERP { #erp-application-framework }
 
 Etendo es una aplicación desarrollada mediante un framework de desarrollo integrado incluido en la distribución de Etendo. Este framework de desarrollo integrado se encarga de una amplia gama de aspectos en todas las áreas implicadas durante el proceso de desarrollo. Los más relevantes, de nivel bajo a nivel alto:
 
@@ -56,7 +56,7 @@ Etendo es una aplicación desarrollada mediante un framework de desarrollo integ
 - Soporte multimoneda.
 - Soporte multilibro mayor. 
 
-###  Desarrollo dirigido por modelos
+### Desarrollo dirigido por modelos { #model-driven-development }
 
 Etendo sigue un enfoque de [Desarrollo dirigido por modelos](../concepts/development-model.md#development-process) (MDD). Esto significa que Etendo utiliza un modelo agnóstico a la tecnología para definir componentes de la aplicación, como ventanas y procesos. Basándose en este modelo de aplicación, se generan código y otros artefactos de software.
 
@@ -68,7 +68,7 @@ Esta separación de responsabilidades —descripción funcional abstracta en el 
 
 En algunos casos es necesario codificar una solución externamente al modelo. Esto está totalmente soportado por Etendo. Los desarrolladores pueden desarrollar libremente sus propias soluciones sobre el stack tecnológico de Etendo.
 
-###  Modularidad
+### Modularidad { #modularity }
 
 La modularidad es una capacidad que permite definir y empaquetar funcionalidad adicional y configuraciones como módulos de extensión, de forma independiente del producto core.
 
@@ -80,7 +80,7 @@ Este nuevo enfoque tiene varias ventajas. Las más importantes:
 - **Mejora enormemente el mantenimiento del código** : desarrollar mediante módulos implica empaquetar de forma independiente. Con una definición adecuada de las dependencias del módulo y manteniendo estables las API, el proceso de actualización de una instancia es directo y puede realizarse con un solo clic del usuario. 
 - **Fomenta el intercambio y la reutilización de nueva funcionalidad** : desarrollar mediante módulos hace que sea bastante sencillo compartir esta nueva funcionalidad con otras personas. Si los desarrolladores quieren compartir sus módulos, todo lo que necesitan es empaquetarlos y publicarlos en Etendo Forge (Repositorio central). Después, estos módulos estarán disponibles públicamente y otros usuarios podrán buscarlos e instalarlos mediante un proceso sencillo. 
 
-###  Aplicación web pura - Cliente enriquecido
+### Aplicación web pura - Cliente enriquecido { #pure-web-application---rich-client }
 
 Etendo es, por su propia naturaleza, una aplicación web pura. La ubicuidad de los navegadores web proporciona un punto de acceso universal. Etendo entiende la red como una plataforma, ofreciendo y permitiendo a los usuarios utilizar aplicaciones completamente a través de un navegador.
 
@@ -88,7 +88,7 @@ Los requisitos son mínimos: un navegador web está disponible prácticamente en
 
 Tradicionalmente, las aplicaciones web tenían grandes limitaciones en lo relativo a la interfaz de usuario. Esto ha cambiado con la introducción de nuevas tecnologías web como AJAX. Con AJAX y frameworks similares, es posible desarrollar una interfaz enriquecida, interactiva y fácil de usar.
 
-###  Java - J2EE ligero
+### Java - J2EE ligero { #java---lightweight-j2ee }
 
 Etendo utiliza Java como su lenguaje de programación de backend. Hay muchas razones para elegir Java como lenguaje del lado del servidor:
 
@@ -98,15 +98,15 @@ Etendo utiliza Java como su lenguaje de programación de backend. Hay muchas raz
 
 Etendo sigue la arquitectura Java 2 Enterprise Edition (J2EE) sin hacer uso del contenedor EJB. En su lugar, Etendo utiliza una infraestructura ligera para implementar el acceso a datos y la lógica de negocio. Etendo ha proporcionado una nueva Capa de acceso a datos [(DAL)](../concepts/data-access-layer.md) basada en Hibernate que ofrece un mecanismo de persistencia potente pero aun así ligero.
 
-###  Soporte para múltiples bases de datos
+### Soporte para múltiples bases de datos { #support-for-multiple-databases }
 
 Etendo está comprometido a evitar el bloqueo por proveedor en cualquier tecnología que utilice, incluida la base de datos. Etendo funciona sobre PostgreSQL (8.3.5+) y Oracle SE (10g-11g).
 
 En versiones futuras, Etendo pretende ser independiente de la base de datos. La Capa de acceso a datos (DAL) basada en Hibernate es un primer paso en esa transición.
 
-##  Conceptos principales de Etendo
+## Conceptos principales de Etendo { #etendo-main-concepts }
 
-###  Requisitos del sistema
+### Requisitos del sistema { #system-requirements }
 
 Etendo se ejecuta sobre un grupo de aplicaciones de terceros bien conocidas:
 
@@ -116,7 +116,7 @@ Etendo se ejecuta sobre un grupo de aplicaciones de terceros bien conocidas:
 
 Todas estas aplicaciones pueden instalarse tanto en Linux como en Windows.
 
-###  Entorno de desarrollo
+### Entorno de desarrollo { #development-environment }
 
 Los desarrolladores de Etendo tienen tres formas diferentes de desarrollar su código. Siguiendo el enfoque MDD, lo más común es editar el Diccionario de la Aplicación de Etendo a través de un navegador web conectado a Etendo. Basándose en la nueva definición del modelo, los artefactos de software pueden generarse automáticamente. Un desarrollador también puede conectarse directamente a la base de datos de Etendo mediante un cliente SQL (p. ej., `pgAdmin`, `sqlDeveloper`) para gestionar objetos del esquema de base de datos (tablas, procedimientos, etc.). Por último, los desarrolladores pueden desarrollar su propio código mediante un entorno de desarrollo integrado como Eclipse.
 
@@ -130,7 +130,7 @@ El proceso para construir el sistema a partir del código fuente de Etendo inclu
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/main-development-concepts-1.png){: .legacy-image-style}
 
-###  Arquitectura
+### Arquitectura { #architecture }
 
 La nueva arquitectura se explica en el artículo [Arquitectura de Etendo](../concepts/etendo-architecture.md).
 

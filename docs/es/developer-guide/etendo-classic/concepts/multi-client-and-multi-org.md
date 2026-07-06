@@ -9,20 +9,20 @@ tags:
 status: beta
 ---
 
-# Multi-Entidad y Multi-Organización
+# Multi-Entidad y Multi-Organización { #multi-client-and-multi-org }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-## Visión general
+## Visión general { #overview }
 
 Este documento describe multi-entidad y multi-organización desde la perspectiva de desarrollo. Para una comprensión funcional sobre estas funcionalidades, lea la [Documentación funcional](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md).
 
-## Estructura
+## Estructura { #structure }
 
 A nivel de base de datos y de diccionario de aplicación, todas las tablas deben tener la estructura necesaria para soportar multi-entidad y multi-organización. Se describe en el [documento de Tablas de base de datos](../concepts/tables.md#clientorganization).
 
-## Filtrado de datos
+## Filtrado de datos { #filtering-data }
 
 Esta sección explica el código necesario para filtrar correctamente los datos relativos a entidad y organización con el fin de evitar accesos a información no permitida. Estos filtros son diferentes en caso de que el desarrollo esté utilizando `XSQL` o `DAL`.
 
@@ -52,7 +52,7 @@ o el árbol de hijos de una organización.
 
 Se recomienda encarecidamente que, si se está utilizando el DAL, se utilice también esta clase si es necesario realizar cualquiera de estas tareas.
 
-### XSQL - Definición
+### XSQL - Definición { #xsql---definition }
 
 Todas las consultas utilizadas para mostrar o modificar datos deben incluir filtro por entidad y organización. La única excepción a esta regla son las consultas que afectan únicamente a filas seleccionadas por un ID conocido (que se ha obtenido, en la mayoría de los casos, a partir de una consulta que sigue la regla); en este caso, como se sabe que esa fila es accesible por el usuario, el filtro no es necesario.
 
@@ -77,9 +77,9 @@ Y la sección de parámetros:
 
 Esto creará un par de parámetros: `adClientId` y `adOrgID`; cómo pasarlos se explica en la siguiente sección.
 
-### XSQL - Uso en Java
+### XSQL - Uso en Java { #xsql---java-usage }
 
-#### Entidad
+#### Entidad { #client }
 
 Solo la entidad actualmente conectada es accesible aunque el rol tenga permiso para diferentes entidades. Adicionalmente, dependiendo del nivel de usuario definido para el rol y del nivel de acceso para la tabla a la que se está accediendo, se concede o deniega el acceso a la entidad 0 (sistema).
 
@@ -103,7 +103,7 @@ String strClient = Utility.getContext(this, vars, "#User_Client", "");
   
 El segundo recibe el nivel de acceso para la tabla a la que se está accediendo; esta es la forma en que las ventanas WAD obtienen la lista de entidades.
 
-#### Organización
+#### Organización { #organization }
 
 Hay tres niveles de acceso a organización: **Editable**, **Accesible** y **Referenciable**.
 
@@ -119,7 +119,7 @@ Utility.getContext(conn, vars, "#User_Org", windowId, accesslevel)
 
 Este tipo debe utilizarse al mostrar datos que el usuario puede modificar. Por ejemplo, una ventana de proceso que muestra registros sobre los que el usuario puede realizar una acción.
 
-##### Accesible
+##### Accesible { #accessible }
 
 Los datos accesibles pueden verse pero no modificarse. La lista de organizaciones accesibles consiste en el árbol estándar de su orgList; es decir, todas las organizaciones concedidas, sus ancestros y sus organizaciones descendientes. Para obtenerla:
 
@@ -129,7 +129,7 @@ Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 
 Este tipo debe utilizarse al mostrar datos informativos. Por ejemplo, en informes. También se utiliza para combos en filtros. Por ejemplo, un combo mostrado en un filtro para un informe.
 
-##### Referenciable
+##### Referenciable { #referenceable }
 
 Un registro puede hacer referencia a otros registros con datos definidos en el árbol estándar de la organización del registro padre.
 
@@ -138,11 +138,11 @@ Utility.getReferenceableOrg(vars, currentOrg)
 ```
   
 
-##### Selectores (Búsquedas)
+##### Selectores (Búsquedas) { #selectors-searchs }
 
 Los selectores son un caso que merece una atención específica; tienen dos elementos principales: **Filtro** y **Datos**.
 
-###### Filtro
+###### Filtro { #filter }
 
 Cuando se utiliza un combo en un filtro, la lista de organizaciones que recibe es la accesible:
 
@@ -152,7 +152,7 @@ Utility.getContext(conn, vars, "#AccessibleOrgTree", windowId, accesslevel)
 
 Si se utiliza otro selector dentro del filtro, no debe pasarse ninguna organización (no tiene efecto en la implementación actual; consulte el capítulo siguiente).
 
-###### Datos
+###### Datos { #data }
 
 Como el propósito principal de los selectores es seleccionar datos para ser referenciados desde otros registros, implementan el filtrado **Referenciable**.
 
@@ -193,11 +193,11 @@ Recibe 3 parámetros:
 
 Esta función devuelve -1 en caso de que la 2ª organización no sea ancestro de la 1ª o el nivel en la jerarquía en caso de que sí lo sea.
 
-## Transacciones
+## Transacciones { #transactions }
 
 Al desarrollar procesos transaccionales debe tenerse en cuenta que esos procesos solo deben afectar a filas en entidad y organizaciones editables. También deben comprobar que todos los objetos involucrados en el proceso están en una organización correcta (por ejemplo, usando la función `AD_IsOrgIncluded`).
 
-### Datos específicos de organización
+### Datos específicos de organización { #organization-specific-data }
 
 Es posible definir una estructura que permita definir objetos en una organización y cambiar algunos de sus atributos para otra organización inferior en la jerarquía del árbol de organizaciones. Actualmente el core de Etendo lo implementa para productos usando la tabla `M_Product_Org`. En este caso es posible definir productos, por ejemplo, en la organización *, y sobrescribir algunos de sus atributos para otras organizaciones. El efecto sería que, por defecto, se utilizan los atributos definidos para el producto en la organización * excepto en el caso de que se sobrescriban en la organización actual. Esta gestión debe realizarse manualmente al desarrollar procesos que utilicen estas tablas.
 

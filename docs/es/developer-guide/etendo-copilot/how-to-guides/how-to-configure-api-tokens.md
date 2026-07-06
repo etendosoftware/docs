@@ -9,16 +9,16 @@ tags:
     - Seguridad
 ---
 
-# Cómo configurar tokens de API para Etendo Copilot
+# Cómo configurar tokens de API para Etendo Copilot { #how-to-configure-api-tokens-for-etendo-copilot }
 
-## Visión general
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
 
 Esta guía explica cómo configurar y utilizar **tokens de API** en **Etendo Copilot** para una autenticación segura con servicios externos. Los tokens de API permiten que los agentes se autentiquen con APIs de terceros manteniendo la seguridad mediante una gestión adecuada de tokens y mecanismos de sustitución.
 
-### ¿Qué son los tokens de API en Etendo Copilot?
+### ¿Qué son los tokens de API en Etendo Copilot? { #what-are-api-tokens-in-etendo-copilot }
 
 Los tokens de API en Etendo Copilot son credenciales seguras que permiten que los agentes se autentiquen con servicios externos y APIs. Estos tokens son:
 
@@ -27,7 +27,7 @@ Los tokens de API en Etendo Copilot son credenciales seguras que permiten que lo
 - **Seguros**: los tokens se almacenan de forma segura y solo se exponen durante el procesamiento del prompt
 - **Flexibles**: admite múltiples alias para distintos servicios
 
-### Sistema de prioridad de tokens de API
+### Sistema de prioridad de tokens de API { #api-token-priority-system }
 
 El sistema implementa un mecanismo sofisticado de prioridad para la selección de tokens:
 
@@ -38,9 +38,9 @@ El sistema implementa un mecanismo sofisticado de prioridad para la selección d
 
 Esto garantiza que siempre se utilice el token más apropiado según el contexto.
 
-## Configuración
+## Configuración { #configuration }
 
-### Crear un nuevo token de API
+### Crear un nuevo token de API { #create-a-new-api-token }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot API Tokens`
 
@@ -56,7 +56,7 @@ Cree un nuevo registro con estos campos:
 - **Usuario/Contacto (Opcional)**: usuario con acceso al token. Asigne a un usuario específico (déjelo vacío para un alcance más amplio).
 - **Rol (Opcional)**: rol autorizado a utilizar el token. Asigne a un rol específico (déjelo vacío para un alcance más amplio).
 
-### Uso de tokens en prompts
+### Uso de tokens en prompts { #token-usage-in-prompts }
 
 **Formato del marcador de posición del token**
 
@@ -68,7 +68,7 @@ Los tokens de API se referencian en los prompts utilizando el siguiente formato:
 
 El alias se convierte automáticamente a mayúsculas para la coincidencia del marcador de posición.
 
-#### Ejemplo de uso
+#### Ejemplo de uso { #example-usage }
 
 **En prompts de agente**
 ```
@@ -103,7 +103,7 @@ Los tokens de API pueden utilizarse en configuraciones del servidor MCP:
 }
 ```
 
-### Proceso de sustitución de tokens
+### Proceso de sustitución de tokens { #token-replacement-process }
 
 Cuando se procesan los prompts, el sistema:
 

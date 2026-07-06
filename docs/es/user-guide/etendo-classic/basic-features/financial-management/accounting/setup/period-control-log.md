@@ -9,11 +9,11 @@ tags:
     - Contabilidad
 ---
 
-# Histórico de Control de Periodos
+# Histórico de Control de Periodos { #period-control-log }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Histórico de Control de Periodos`
 
-## Visión general
+## Visión general { #overview }
 
 Esta ventana muestra el histórico del control de periodos.
 
@@ -23,7 +23,7 @@ Cuando un periodo se abre o se cierra mediante la ventana de control de periodos
 
 Por ejemplo, esta captura de pantalla muestra el Histórico de Control de Periodos para una organización que ha abierto todos sus periodos para el año 2019:
 
-![](../../../../../../assets/drive/1ZQv4ciDH8NuE6aOQLnWmztUUVg2PxZuN.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/period-control-log/period-control-log-1.png)
 
 Tal y como se muestra en la imagen anterior, los campos principales en esta ventana son:
 

@@ -5,13 +5,13 @@ tags:
   - Hook
   - Hook de clonación
 ---
-## Introducción
+## Introducción { #introduction }
 
 Etendo permite que cualquier ventana o solapa tenga un botón **Clonar**. Por defecto, utilizará el método `Dal.copy()`, pero esto puede sobrescribirse mediante hooks, para implementar una lógica de clonación personalizada para entidades específicas.
 
 ![](../../../assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png)
 
-## ¿Cómo crear un Hook de clonación?
+## ¿Cómo crear un Hook de clonación? { #how-to-create-a-clone-hook }
 
 Para crear un Hook de clonación, solo tiene que seguir unos pocos pasos:
 
@@ -45,7 +45,7 @@ public class ExampleCloningHook extends CloneRecordHook {
 
 ```
 
-## API del Hook de clonación
+## API del Hook de clonación { #clone-hook-api }
 
 Para crear un Hook de clonación, solo tiene que seguir unos pocos pasos:
 
@@ -78,7 +78,7 @@ Para crear un Hook de clonación, solo tiene que seguir unos pocos pasos:
     Sobrescriba este método cuando exista un hook para la entidad seleccionada (por ejemplo, ya existe un proceso de clonación implementado para facturas y pedidos) y quiera que se utilice su propio hook en su lugar.
     Se seleccionará y ejecutará el hook con la prioridad más baja por entidad. Devuelve `100` por defecto.
 
-## ¿Cómo ampliar un Hook de clonación ya existente?
+## ¿Cómo ampliar un Hook de clonación ya existente? { #how-to-extend-an-already-existing-clone-hook }
 La acción de clonación es una acción particular que puede ampliarse creando un nuevo hook, para implementar una lógica personalizada para una entidad específica. Esto tiene la desventaja de que solo se puede usar un hook por entidad, pero existen mecanismos para ampliar esta funcionalidad. Estos son los `preActionHooks` y `postActionHooks`. Puede encontrar más información en la siguiente página: [Cómo crear trabajos y acciones](./how-to-create-jobs-and-actions.md#how-to-extend-an-action-using-preaction-and-postaction-hooks)
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Informes de Compras 
 ---
-## Visión general
+## Visión general { #overview }
 
 Esta sección describe las ventanas relacionadas con los informes de compras en Etendo. Estas son:
 
@@ -18,17 +18,17 @@ Esta sección describe las ventanas relacionadas con los informes de compras en 
 [:material-file-document-outline: Facturas](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#vendor-invoice-report){ .md-button .md-button--primary } <br>
 
 
-## Informe pedidos de compra
+## Informe pedidos de compra { #purchase-order-report }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Informe pedidos de compra`
 
 Este informe muestra una lista detallada de los pedidos de compra emitidos a los proveedores. 
 
-## Análisis dimensional pedidos compras
+## Análisis dimensional pedidos compras { #purchase-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Análisis dimensional pedidos compras`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Este informe muestra información sobre los pedidos de compra emitidos y enviados a los proveedores.
 
@@ -36,24 +36,24 @@ Es un informe de tipo dimensional que muestra información sobre las compras reg
 
 Este informe puede mostrar información sobre los proveedores utilizados con mayor frecuencia, así como los bienes comprados con mayor frecuencia, junto con información de importes de compra y cantidades pedidas.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window }
 
 ![](../../../../assets/drive/1tfjdJFeCwoMFq7Osb7iA4oCx8AQtsO5M.png)
 
 
 No hay ningún campo específico a destacar, salvo los filtros dimensionales primarios y secundarios que pueden utilizarse para acotar la información a mostrar.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output }
 
 ![](../../../../assets/drive/1HteUH5sPx3PmrHdRqlR8S6l0EzDizuUu.png)
 
 -   **Importe:** es el importe **neto** del Pedido de compra convertido a la **Moneda** del informe.
 
-## Análisis dimensional albaranes compras
+## Análisis dimensional albaranes compras { #goods-receipts-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Análisis dimensional albaranes compras`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Este informe muestra información sobre los bienes recibidos en la organización.
 
@@ -61,7 +61,7 @@ Es un informe de tipo dimensional que muestra información sobre las recepciones
 
 Este informe puede mostrar información sobre los proveedores utilizados con mayor frecuencia, así como los bienes recibidos con mayor frecuencia, junto con información de importes y cantidades recibidas.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_1 }
 
 No hay ningún campo específico a destacar, salvo los filtros dimensionales primarios y secundarios que pueden utilizarse para acotar la información a mostrar.
 
@@ -70,11 +70,11 @@ No hay ningún campo específico a destacar, salvo los filtros dimensionales pri
 !!! tip
     El resultado de este informe puede visualizarse en formato HTML y en formato PDF.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_1 }
 
 ![](../../../../assets/drive/1lvq1Mtz7ed_qJW40ezxrQvqa5ssh5NgM.png)
 
-## Análisis dimensional facturas compras
+## Análisis dimensional facturas compras { #purchase-invoice-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Análisis dimensional facturas compras`
 
@@ -84,13 +84,13 @@ No hay ningún campo específico a destacar, salvo los filtros dimensionales pri
 !!! warning
     Si no dispone del [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}, el informe permanecerá en una versión legacy.
 
-### Visión general
+### Visión general { #overview_3 }
 
 Este informe muestra información sobre las facturas de compra recibidas en la organización. Es un informe de tipo dimensional que muestra información sobre las facturas de compra registradas (Facturas de compra en estado *Completada* o *Anulada*) durante un periodo de tiempo seleccionado.
 
 Este informe puede mostrar el importe total de compra de un proveedor determinado, desglosado por producto y factura de compra.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_2 }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-0.png)
 
@@ -133,7 +133,7 @@ Este informe incluye varios filtros y opciones de configuración que le permiten
     - **Por importe ascendente**: ordena los resultados por importe de menor a mayor.
     - **Por importe descendente**: ordena los resultados por importe de mayor a menor.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_2 }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/purchase-invoice-dimensional-report-1.png)
 
@@ -162,15 +162,15 @@ El formato PDF muestra los mismos campos explicados anteriormente, pero en forma
 -   Importe
 -   Cantidad
 
-## Pedidos de compra cuadrados
+## Pedidos de compra cuadrados { #matched-purchase-orders }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Pedidos de compra cuadrados`
 
-### Visión general
+### Visión general { #overview_4 }
 
 Esta ventana informa sobre el emparejamiento entre cada pedido de compra, albarán de recepción de mercancías y línea de factura.
 
-### Pedidos de compra cuadrados
+### Pedidos de compra cuadrados { #matched-purchase-orders_1 }
 
 La vista Pedidos de compra cuadrados informa sobre qué línea de pedido de compra está vinculada a qué línea de recepción y línea de factura, si existe.
 
@@ -178,17 +178,17 @@ La vista Pedidos de compra cuadrados informa sobre qué línea de pedido de comp
 
 En otras palabras, esta ventana proporciona información valiosa que ayuda a obtener una comprensión rápida de qué líneas de pedido de un producto ya han sido recibidas y facturadas.
 
-## Facturas
+## Facturas { #vendor-invoice-report }
 
 :material-menu: `Aplicación` > `Gestión de Compras` > `Herramientas de análisis` > `Facturas`
 
-### Visión general
+### Visión general { #overview_5 }
 
 Este informe proporciona información sobre el importe total facturado por cada proveedor dentro de un periodo de tiempo determinado y para una moneda determinada.
 
 Muestra información de facturas de proveedor, que puede acotarse para obtener información sobre aquellas facturas relacionadas con un proyecto determinado y/o con un tercero determinado dentro de un periodo de tiempo determinado.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_3 }
 
 ![](../../../../assets/drive/1V8A7QEZI3fa7ecV6W-VK-ki_VXx_8Ii8.png)
 
@@ -196,7 +196,7 @@ Campo a destacar:
 
 -   Moneda: funciona de la misma manera que ya se ha descrito en el informe de pedidos de compra.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_3 }
 
 ![](../../../../assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)
 

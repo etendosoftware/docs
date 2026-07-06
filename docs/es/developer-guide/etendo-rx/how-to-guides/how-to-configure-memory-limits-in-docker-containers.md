@@ -9,12 +9,12 @@ tags:
   - Contenedores
 ---
 
-# Cómo gestionar los límites de memoria para contenedores Docker de Etendo
+# Cómo gestionar los límites de memoria para contenedores Docker de Etendo { #how-to-manage-memory-limits-for-etendo-docker-containers }
 
 !!! warning
     Esta guía asume conocimientos prácticos de **entornos de desarrollo Java**, incluidos **comandos de compilación de Gradle**, **despliegue de aplicaciones Java** y **gestión de contenedores Docker**. Está dirigida a desarrolladores con habilidades técnicas intermedias a avanzadas en desarrollo de software y administración de sistemas.
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía explica cómo configurar los límites de memoria y CPU para los servicios de Etendo que se ejecutan en contenedores Docker.
 Presenta tres niveles de configuración tanto para el uso de memoria como de CPU:
@@ -26,7 +26,7 @@ Presenta tres niveles de configuración tanto para el uso de memoria como de CPU
 Cada nivel tiene una precedencia definida: los límites directos del servicio prevalecen sobre los límites base, y los límites base prevalecen sobre los valores por defecto.
 El documento también proporciona tablas de referencia detalladas que enumeran todas las variables disponibles para los servicios de Etendo en distintos archivos de Docker Compose.
 
-## Gestión de memoria
+## Gestión de memoria { #memory-management }
 Etendo permite configurar los límites de memoria en tres niveles diferentes.  
 Cada nivel tiene prioridad sobre el anterior:
 
@@ -71,7 +71,7 @@ Cada nivel tiene prioridad sobre el anterior:
         2. **Límite base de memoria del servicio**  
         3. **Lógica del valor por defecto**
 
-## Configuración de CPU
+## Configuración de CPU { #cpu-configuration }
 
 La lógica para la asignación de CPU es similar a la de los límites de memoria.  
 
@@ -99,11 +99,11 @@ La lógica para la asignación de CPU es similar a la de los límites de memoria
 3. **Lógica del valor por defecto**  
     Si no se define ninguna variable, cada servicio utiliza valores por defecto preconfigurados.  
 
-## Todos los servicios y variables 
+## Todos los servicios y variables { #all-services-and-variables }
 
 Las siguientes tablas proporcionan referencias detalladas para todas las variables de configuración de memoria y CPU.
 
-### Servicios Etendo RX
+### Servicios Etendo RX { #etendo-rx-services }
 
 :material-docker: Archivo Docker Compose: `com.etendoerp.etendorx.yml`
 
@@ -127,7 +127,7 @@ Las siguientes tablas proporcionan referencias detalladas para todas las variabl
 | Auth     | auth.cpu.limit     |                                     | 1.0          | BASE_AUTH_CPU_LIMIT                   | 1.0                          |
 | Edge     | edge.cpu.limit     |                                     | 1.0          | BASE_EDGE_CPU_LIMIT                   | 1.0                          |
 
-### Servicios de conectores
+### Servicios de conectores { #connector-services }
 
 **Memoria**
 
@@ -151,7 +151,7 @@ Las siguientes tablas proporcionan referencias detalladas para todas las variabl
 | Kafka      | kafka.cpu.limit        |                                     | 1.0          | BASE_KAFKA_CPU_LIMIT                  | 1.0                          |
 | Connect    | connect.cpu.limit      |                                     | 1.0          | BASE_CONNECT_CPU_LIMIT                | 1.0                          |
 
-### Servicios de utilidades
+### Servicios de utilidades { #utils-services }
 
 :material-docker: Archivo Docker Compose: `com.etendoerp.etendorx_utils.yml`
 
@@ -173,7 +173,7 @@ Las siguientes tablas proporcionan referencias detalladas para todas las variabl
 | Jaeger         | jaeger.cpu.limit          |                                     | 1.0          | BASE_JAEGER_CPU_LIMIT                 | 1.0                          |
 | Jaeger-health  | jaeger.health.cpu.limit   |                                     | 1.0          | BASE_JAEGER_HEALTH_CPU_LIMIT          | 1.0                          |
 
-### Servicios de conectores
+### Servicios de conectores { #connector-services_1 }
 :material-docker: Archivo Docker Compose: `com.etendoerp.etendorx_async.yml`
 
 **Memoria**
@@ -190,7 +190,7 @@ Las siguientes tablas proporcionan referencias detalladas para todas las variabl
 |                |                           | async.base.cpu                      |              |                                       |                              |
 | Asyncprocess   | asyncprocess.cpu.limit    |                                     | 1.0          | BASE_ASYNCPROCESS_CPU_LIMIT           | 1.0                          |
 
-### Servicios Tomcat
+### Servicios Tomcat { #tomcat-services }
 :material-docker: Archivo Docker Compose: `com.etendoerp.tomcat.yml`
 
 **Memoria**
@@ -207,7 +207,7 @@ Las siguientes tablas proporcionan referencias detalladas para todas las variabl
 |          |                     | tomcat.base.cpu                     |              |                                       |                              |
 | Tomcat   | tomcat.cpu.limit    |                                     | 1.0          | BASE_TOMCAT_CPU_LIMIT                 | 1.0                          |
 
-### Servicios de base de datos
+### Servicios de base de datos { #database-services }
 :material-docker: Archivo Docker Compose: `com.etendoerp.docker_db.yml`  
 
 **Memoria**

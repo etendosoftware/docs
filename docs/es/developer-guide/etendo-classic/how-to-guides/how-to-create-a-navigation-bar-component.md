@@ -7,9 +7,9 @@ tags:
   - Etendo Classic
 ---
 
-#  Cómo crear un Componente de la barra de navegación
+# Cómo crear un Componente de la barra de navegación { #how-to-create-a-navigation-bar-component }
   
-##  Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo se puede añadir un componente a la barra de navegación principal de Etendo. Los componentes de la barra de navegación se muestran en la parte superior del diseño de Etendo Classic. Se posicionan de izquierda a derecha.
 
@@ -23,14 +23,14 @@ Algunas características principales de los componentes de la barra de navegaci�
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-0.png)
 
-##  Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esto está soportado por un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
   El código de este módulo se puede descargar desde [este repositorio](https://github.com/etendosoftware/com.etendoerp.client.application.examples/tree/main/src/com/etendoerp/client/application/examples).
 
 
-##  Flujo principal de la generación de la barra de navegación
+## Flujo principal de la generación de la barra de navegación { #main-flow-of-the-navigation-bar-generation }
 
 La generación de la barra de navegación pasa por una serie de pasos:
 
@@ -43,7 +43,7 @@ La generación de la barra de navegación pasa por una serie de pasos:
 
 Este flujo principal ilustra que cada componente de la barra de navegación puede implementar su propia visualización proporcionando/usando una plantilla y un componente personalizados.
 
-##  Implementación de un Componente de la barra de navegación
+## Implementación de un Componente de la barra de navegación { #implementing-a-navigation-bar-component }
 
 Para crear un componente que se muestre en la barra de navegación, es necesario implementar las siguientes partes:
 
@@ -70,7 +70,7 @@ modules
                             └── HelloWordlComponent.java
 ```
 
-###  Creación de un Componente
+### Creación de un Componente { #creating-a-component }
 
 Un componente es útil cuando desea añadir información en tiempo de ejecución al JavaScript del componente de la barra de navegación cuando se genera. Por ejemplo, el nombre de usuario u otra información de rol o de usuario.
 
@@ -99,7 +99,7 @@ El módulo de ejemplo tiene un componente de hola mundo que proporciona el usuar
   }
   ```
 
-###  Creación de una Plantilla
+### Creación de una Plantilla { #creating-a-template }
 
 La plantilla contiene el JavaScript real. Una plantilla consta de dos partes:
 
@@ -108,7 +108,7 @@ La plantilla contiene el JavaScript real. Una plantilla consta de dos partes:
 
 La plantilla es un mecanismo potente de Etendo, ya que hace posible combinar información generada dinámicamente y permite la sobrescritura de plantillas por otros módulos.
 
-####  El origen de la plantilla
+#### El origen de la plantilla { #the-template-source }
 
 Para crear la plantilla de su componente de la barra de navegación, cree un archivo `.FTL` en el árbol de fuentes de su módulo. El archivo `.FTL` debe contener JavaScript plano con posibles construcciones de freemarker para leer información del componente. El JavaScript debe crear un canvas de Smartclient o un array de JavaScript con instancias de canvas de Smartclient.
 
@@ -138,25 +138,25 @@ Algunos aspectos a tener en cuenta en este código fuente JavaScript:
   * El título del botón se obtiene mediante el método `OB.I18N.getLabel`. Esto es para soportar traducción; consulte una sección más abajo en este artículo para más información. 
   * Vea la parte `${data.userName?js_string}'`; esta es una construcción de plantilla de [freemarker](https://freemarker.sourceforge.io/docs/){target="blank"} mediante la cual se recupera información de un objeto Java. En el sistema de plantillas de Etendo, la instancia del componente está disponible como el objeto **Datos**. La `${data.userName?js_string}'` llamará al accesor `getName` en el HelloWorldComponent. 
 
-####  Registro de plantilla
+#### Registro de plantilla { #template-record }
 
 El siguiente paso es informar a Etendo de que la plantilla existe. Esto se hace registrando la plantilla en Etendo en la tabla Template. La función de mantenimiento de plantillas se puede encontrar aquí: `Application Dictionary` > `User Interface` > `Template`.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-2.png)
 
-###  Registro del Componente como un Componente de la barra de navegación
+### Registro del Componente como un Componente de la barra de navegación { #registering-the-component-as-a-navigation-bar-component }
 
 El último paso es añadir el componente a la barra de navegación. Esto se hace a través de la tabla/ventana de componentes de la barra de navegación. Puede encontrarla mediante el lanzamiento rápido o en el menú aquí: `Application Dictionary` > `User Interface` > `Navigation Bar Components`.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-3.png)
 
-###  El resultado
+### El resultado { #the-result }
 
 Después de ejecutar los pasos anteriores, debería ver un botón **Hola Mundo** en la barra de navegación. Al hacer clic, aparecerá un pequeño mensaje de saludo.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-4.png)
 
-###  Componentes estáticos de la barra de navegación
+### Componentes estáticos de la barra de navegación { #static-navigation-bar-components }
   
 Marcando el indicador **Componente Estático** de un componente de la barra de navegación en `Application Dictionary` > `User Interface` > `Navigation Bar Components`, se declara como **Estático**. Este tipo de componentes difiere de sus homólogos en la forma en que se crean. Los **Componentes estáticos de la barra de navegación** se cargan al inicio del contenido **JavaScript** utilizado dentro de la aplicación y no requieren una solicitud adicional para cargarse.
 

@@ -10,11 +10,11 @@ tags:
     - Contabilidad
 ---
 
-# Abrir/Cerrar periodos
+# Abrir/Cerrar periodos { #openclose-period-control }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Abrir/Cerrar periodos`
 
-## Visión general
+## Visión general { #overview }
 
 La funcionalidad **Abrir/Cerrar periodos** permite al usuario gestionar qué periodos contables están abiertos o cerrados para una determinada organización.
 
@@ -46,7 +46,7 @@ Así es como funciona el proceso en Etendo:
     - No puede generar asientos de cierre aquí; utilice la ventana de cierre de fin de ejercicio.
     - También puede comprobar el estado de cualquier periodo en la pestaña [Control de Periodos](../../../general-setup/enterprise-model/organization.md#period-control) de la Organización.
 
-### ¿Por qué utilizar esta funcionalidad?
+### ¿Por qué utilizar esta funcionalidad? { #why-use-this-feature }
 
 El control de periodos ayuda al usuario a:
 
@@ -54,11 +54,11 @@ El control de periodos ayuda al usuario a:
 - Evitar cambios no deseados en periodos cerrados.
 - Gestionar los asientos de cierre durante los procesos de fin de ejercicio.
 
-## Control de Periodos
+## Control de Periodos { #period-control }
 
 La ventana **Abrir/Cerrar periodos** permite al usuario revisar y gestionar todos los periodos contables creados en el **[Calendario fiscal](#calendario-fiscal)**. Puede **abrir**, **cerrar** o **cerrar permanentemente** periodos según sea necesario para su organización.
 
-![Ventana Abrir/Cerrar periodos](../../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
+![Ventana Abrir/Cerrar periodos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-1.png)
 
 **Campos a tener en cuenta:**
 
@@ -100,13 +100,13 @@ Por defecto, esta ventana solo muestra periodos que:
         - Solo se pueden abrir o cerrar periodos de organizaciones de tipo "Legal con contabilidad" con "Permitir Control de Periodos" habilitado. 
         - Si un periodo está abierto para todos los tipos de documento excepto uno (por ejemplo, factura de proveedor), puede contabilizar todas las transacciones excepto las de ese tipo de documento en ese periodo.
 
-### Ejemplo de Control de Periodos
+### Ejemplo de Control de Periodos { #period-control-example }
 
 A continuación se muestra un ejemplo sencillo de cómo funciona el control de periodos:
 
 Una organización ha creado y abierto todos los periodos de tres ejercicios, incluido el "Periodo 13" para ajustes.
 
-![](../../../../../../assets/drive/1dOWq4RquxSziuUbqVYpORdf9eA4Ts7g5.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-2.png)
 
 Con la configuración mostrada arriba, puede contabilizar cualquier documento en cualquier periodo dentro de esos ejercicios. Si intenta contabilizar en un periodo que no existe (como diciembre de 2018, en este ejemplo), Etendo mostrará un error.
 
@@ -118,7 +118,7 @@ Imagine que quiere cerrar el ejercicio 2019. Antes de ejecutar el proceso "Crear
 4. Seleccione todos los periodos excepto el Periodo 13.
 5. Haga clic en **Cerrar periodo** y confirme.
 
-![](../../../../../../assets/drive/1AxEefqisj3SW_FqBBXGfF6Th0rWpaJrn.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-3.png)
 
 Después de esto, todos los periodos estándar de 2019 quedan cerrados. Solo puede:
 
@@ -128,7 +128,7 @@ Después de esto, todos los periodos estándar de 2019 quedan cerrados. Solo pue
 !!!important
     Si necesita realizar cambios en un periodo cerrado, debe reabrirlo, lo cual solo es posible si el ejercicio no está cerrado permanentemente; de lo contrario, ejecute primero Borrar asiento de regularización.
 
-## Pestaña Documentos
+## Pestaña Documentos { #documents-tab }
 
 Cada periodo contable en Etendo puede abrirse o cerrarse para todos los tipos de documento a la vez, o para tipos de documento específicos.
 
@@ -137,7 +137,7 @@ Cada periodo contable en Etendo puede abrirse o cerrarse para todos los tipos de
 
 Esto es útil en caso de que el usuario necesite evitar la creación de más documentos de un determinado tipo para un periodo específico.
 
-![](../../../../../../assets/drive/18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-4.png)
 
 **Columnas de estado:**  
 Cada tipo de documento muestra su estado con un color y un nombre:

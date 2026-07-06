@@ -7,18 +7,18 @@ tags:
     - Localización
 ---
 
-#  Herramienta de traducción XML
+# Herramienta de traducción XML { #xml-translation-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
-## Visión general
+## Visión general { #overview }
 
 La XMLTranslationTool traduce directamente el contenido de los archivos XML en función del atributo de idioma especificado dentro del XML, lo que permite una localización eficaz y precisa en diferentes idiomas. 
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 La XMLTranslationTool permite a los agentes traducir el contenido de archivos XML de un idioma a otro, según se especifica dentro del propio XML. Esto resulta especialmente útil en escenarios en los que se requieren versiones localizadas del contenido XML para diferentes regiones o idiomas.
 
@@ -57,7 +57,7 @@ El uso de esta herramienta consta de las siguientes acciones:
 
     Una vez completado el proceso de traducción, la herramienta devuelve una lista de rutas de archivos, cada una apuntando a un archivo XML traducido correctamente.
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si tiene archivos XML ubicados en `/modules/com.etendoerp.webhookevents.es_es` que necesitan traducción, utilizaría la herramienta de la siguiente manera:
 

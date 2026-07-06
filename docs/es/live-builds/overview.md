@@ -12,7 +12,7 @@ tags:
     - Environments
 ---
 
-# Entornos de prueba de Etendo
+# Entornos de prueba de Etendo { #etendo-test-environments }
 
 Esta página proporciona acceso rápido a entornos de prueba en vivo de Etendo que se mantienen siempre actualizados, lo que los hace ideales para probar nuevas funcionalidades de forma segura y reproducir incidencias sin afectar a producción.
 
@@ -38,6 +38,15 @@ Esta página proporciona acceso rápido a entornos de prueba en vivo de Etendo q
     [Etendo 26 (New UI)](https://demo26.etendo.cloud){ target="_blank"}<br>
     [Etendo 26 (Classic UI)](https://demo26.etendo.cloud/etendo){ target="_blank"}<br><br>
     [Etendo 25 (Classic UI)](https://demo25.etendo.cloud){ target="_blank"}
+
+-   :material-warehouse:{ .lg .middle } **Etendo 26 + Almacenes**
+
+    Entorno de Etendo 26 preconfigurado con la sub-aplicación de Gestión de Almacenes.
+
+    ---
+
+    [Etendo 26 + Almacenes (New UI)](https://webinar-almacenes.etendo.cloud/){ target="_blank"}<br>
+    [Etendo 26 + Almacenes (Classic UI)](https://webinar-almacenes.etendo.cloud/etendo){ target="_blank"}
 
 </div>
 
