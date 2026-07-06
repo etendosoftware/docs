@@ -3197,52 +3197,34 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Descripción general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#primary-filters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Filtros primarios
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-window" class="md-nav__link">
+  <a href="#view-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Output Window
+      Ver resultados
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#improving-report-performance-data-pre-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Artículos relacionados
+      Mejora del rendimiento del informe (precálculo de datos)
     </span>
   </a>
   
@@ -17404,52 +17386,34 @@
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Descripción general
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-window" class="md-nav__link">
+  <a href="#primary-filters" class="md-nav__link">
     <span class="md-ellipsis">
-      Parameters Window
+      Filtros primarios
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-window" class="md-nav__link">
+  <a href="#view-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Output Window
+      Ver resultados
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persisted-information" class="md-nav__link">
+  <a href="#improving-report-performance-data-pre-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Persisted Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Artículos relacionados
+      Mejora del rendimiento del informe (precálculo de datos)
     </span>
   </a>
   
@@ -17474,31 +17438,31 @@
       
       
       
-        <span class="md-tag">Inventory</span>
+        <span class="md-tag">Análisis de costes</span>
       
     
       
       
       
-        <span class="md-tag">Inventory Analysis</span>
+        <span class="md-tag">Gestión de almacén</span>
       
     
       
       
       
-        <span class="md-tag">Reports</span>
+        <span class="md-tag">Informes financieros</span>
       
     
       
       
       
-        <span class="md-tag">Valued Stock</span>
+        <span class="md-tag">Inventario</span>
       
     
       
       
       
-        <span class="md-tag">Warehouse Management</span>
+        <span class="md-tag">Valuación de existencias</span>
       
     
   </nav>
@@ -17510,56 +17474,87 @@
 
 <h1 id="valued-stock-report">Informe de Valuación de Existencias</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Almacén</code> &gt; <code>Herramientas de análisis</code> &gt; <code>Informe de Valuación de Existencias</code></p>
-<h2 id="overview">Overview</h2>
-<p>El Informe de Valuación de Existencias muestra el stock de un almacén concreto, así como el valor del stock.</p>
-<p>El coste se calcula como la suma del coste de cada transacción de material del producto en el almacén. El coste de las transacciones del producto se calcula mediante el proceso Costing Server.</p>
-<h2 id="parameters-window">Parameters Window</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png" data-desc-position="bottom"><img alt="Valued Stock Report Parameters Window" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png"></a></p>
+<h2 id="overview">Descripción general</h2>
+<p>El <strong>Informe de Valuación de Existencias</strong> proporciona una vista completa del inventario que se mantiene en cada almacén junto con su valor monetario. Es una herramienta esencial para comprender cuánto capital está inmovilizado en existencias, y da soporte a procesos empresariales clave como:</p>
 <ul>
-<li><strong>Organización</strong>: Este campo permite al usuario seleccionar entre organizaciones de tipo "Legal with Accounting" y "Generic".</li>
-<li><strong>Almacén</strong>: Si la organización seleccionada es "Generic", entonces lista todos los almacenes que le pertenecen; en caso contrario, si la organización es "Legal with accounting", no se muestra ningún almacén para seleccionar.</li>
-<li><strong>Date</strong>: El informe mostrará la información hasta la fecha seleccionada.</li>
-<li><strong>Consolidated Warehouse</strong>: Si se marca, la información del stock se consolidará a nivel de organización; en caso contrario, la información se desglosará por almacén.</li>
-<li><strong>Categoría del Producto</strong>: Permite mostrar información solo de la Categoría del Producto seleccionada.</li>
-<li><strong>Moneda</strong>: Define la moneda en la que se muestran todos los valores monetarios del informe (como Coste, Valoración).</li>
+<li><strong>Informes financieros</strong>: determinar el valor total del inventario para los balances y los cierres de período.</li>
+<li><strong>Conciliación contable</strong>: comparar las valoraciones de existencias con los asientos del libro mayor para identificar discrepancias.</li>
+<li><strong>Análisis de costes</strong>: evaluar los costes unitarios entre productos y almacenes para apoyar las decisiones de compra y de precios.</li>
+<li><strong>Visibilidad multi-almacén</strong>: revisar los valores de existencias en varios almacenes, ya sea consolidados a nivel de organización o desglosados por almacén individual.</li>
+</ul>
+<p>La valoración se calcula sumando el coste de cada <a href="../../transactions/goods-transaction/">transacción de material</a> de cada producto en el almacén. Los costes de las transacciones se determinan mediante el proceso <a href="../../getting-started/">Costing Server</a>.</p>
+<h2 id="primary-filters">Filtros primarios</h2>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png" data-desc-position="bottom"><img alt="Ventana de parámetros del Informe de Valuación de Existencias" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png"></a>
+<br>
+<figcaption>Ventana de parámetros del Informe de Valuación de Existencias</figcaption>
+</figure>
+<p>Antes de generar el informe, configure los siguientes parámetros:</p>
+<ul>
+<li><strong>Organización</strong>: seleccione la organización sobre la que desea generar el informe. Solo están disponibles las organizaciones configuradas como <em>Legal with Accounting</em> (una entidad que contabiliza sus propios asientos contables) o <em>Generic</em> (una organización agrupadora sin contabilidad propia). Consulte con el administrador del sistema si no tiene claro el tipo de organización.</li>
+<li><strong>Almacén</strong>: cuando se selecciona una organización <em>Generic</em>, se listan todos los almacenes que pertenecen a esa organización. Cuando se selecciona una organización <em>Legal with Accounting</em>, no está disponible una selección específica de almacén.</li>
+<li><strong>Fecha</strong>: el informe muestra la información de inventario hasta esta fecha, inclusive.</li>
+<li><strong>Almacén Consolidado</strong>: cuando se marca, la información de existencias se consolida a nivel de organización. Cuando no se marca, el informe muestra un desglose por almacén individual.</li>
+<li><strong>Categoría de producto</strong>: filtra opcionalmente el informe para mostrar solo los productos que pertenecen a una <a href="../../../master-data-management/product-setup/product-category/">categoría</a> específica.</li>
+<li><strong>Moneda</strong>: establece la <a href="../../../general-setup/application/currency/">moneda</a> en la que se muestran todos los valores monetarios (como el coste y la valoración).</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Tenga en cuenta que para que el informe funcione debe especificarse el tipo de cambio a la moneda del informe.</p>
+<p>Debe definirse un <a href="../../../general-setup/application/conversion-rates/">tipo de cambio</a> a la moneda seleccionada para el informe. Si falta este tipo de cambio, el informe puede mostrar valores incorrectos o en cero en lugar de un mensaje de error. Verifique que el tipo de cambio esté configurado antes de confiar en los resultados.</p>
 </div>
-<h2 id="output-window">Output Window</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png" data-desc-position="bottom"><img alt="Valued Stock Report Output" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png"></a></p>
+<h2 id="view-results">Ver resultados</h2>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png" data-desc-position="bottom"><img alt="Salida del Informe de Valuación de Existencias" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png"></a>
+<br>
+<figcaption>Salida del Informe de Valuación de Existencias</figcaption>
+</figure>
+<p>Tras configurar los parámetros deseados, haga clic en <strong>Ver resultados</strong> para generar el informe. Exporte el informe mediante el botón <strong>Formato HTML</strong>.</p>
+<p>La salida del informe incluye las siguientes columnas:</p>
 <ul>
-<li><strong>Producto</strong>: Nombre del producto.</li>
-<li><strong>Cantidad</strong>: Stock del producto en la fecha seleccionada.</li>
-<li><strong>Unidad de medida</strong> : Unidad en la que se mide el stock.</li>
-<li><strong>Coste Unitario</strong>: Coste de cada unidad concreta. Es el resultado de dividir la Valoración entre el stock.</li>
-<li><strong>Valoración</strong>: Valoración del stock. Se calcula sumando todas las valoraciones de cada transacción que ha tenido lugar en el almacén.</li>
-<li><strong>Actual Average/Standard Algorithm Cost</strong>: Coste medio/estándar actual, el cálculo más reciente de su valor.</li>
-<li><strong>Actual Average/Standard Algorithm Valuation</strong>: Valoración del stock basada en el Coste medio/estándar actual. Es el resultado de multiplicar el stock por el coste actual.</li>
+<li><strong>Producto</strong>: el nombre del producto.</li>
+<li><strong>Cantidad</strong>: la cantidad de existencias del producto a la fecha seleccionada.</li>
+<li><strong>Unidad</strong>: la unidad de medida en la que se expresa la cantidad de existencias.</li>
+<li><strong>Coste Unitario</strong>: el coste por unidad individual. Se calcula dividiendo la valoración total entre la cantidad de existencias.</li>
+<li><strong>Valoración</strong>: el valor monetario total de las existencias. Se calcula sumando las valoraciones de todas las transacciones de material que han tenido lugar en el almacén para ese producto.</li>
+<li><strong>Actual Average/Standard Algorithm Cost</strong>: el coste Medio o Estándar calculado más recientemente para el producto.</li>
+<li><strong>Actual Average/Standard Algorithm Valuation</strong>: la valoración de las existencias basada en el coste Medio o Estándar actual. Se calcula multiplicando la cantidad de existencias por el coste actual.</li>
 </ul>
-<h2 id="persisted-information">Persisted Information</h2>
-<p>Este paso no es necesario para lanzar el informe. Sin embargo, si existen problemas de rendimiento, esto puede ayudar a mejorar considerablemente el rendimiento del informe.</p>
-<p>Es posible agregar información que permite realizar consultas más rápidas. Esta información se agrega para cada período contable cerrado, lo que significa que los períodos contables deben estar definidos y, al menos algunos de ellos, deben estar en un estado <em>Cerrado</em> o <em>Cerrado permanentemente</em>.</p>
-<p>La información persistirá hasta el primer período no cerrado. De este modo, es posible evitar recorrer muchos registros. Sin embargo, no se agregará información después del primer período cerrado y esto puede provocar un rendimiento no óptimo del informe si necesita recuperar mucha información.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para usar esta funcionalidad es necesario programar el proceso en segundo plano llamado <em>Generate Aggregated Data Background</em>. Esto puede hacerse a través de la ventana <em>Process Request</em>.</p>
+<p><strong>Valoración</strong> refleja el coste histórico de las transacciones que conformaron las existencias actuales. <strong>Actual Average/Standard Algorithm Valuation</strong> refleja cuánto valdrían hoy las existencias según el método de coste actual del producto. Estas dos cifras pueden diferir. Utilice <strong>Valoración</strong> para conciliar con las transacciones contables contabilizadas, y utilice <strong>Actual Average/Standard Algorithm Valuation</strong> para ver el valor de las existencias al coste actual.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png" data-desc-position="bottom"><img alt="Valued Stock Report Process Request" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png"></a></p>
+<h2 id="improving-report-performance-data-pre-calculation">Mejora del rendimiento del informe (precálculo de datos)</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Este paso es <strong>opcional</strong>. El Informe de Valuación de Existencias funciona sin él. Sin embargo, si el informe tarda mucho en generarse porque el sistema tiene un gran volumen de transacciones, habilitar el precálculo de datos puede reducir significativamente los tiempos de espera.</p>
+</div>
+<p>El sistema puede resumir (precalcular) los datos de inventario de cada <a href="../../../financial-management/accounting/setup/openclose-period-control/">período contable</a> cerrado con antelación, de modo que el informe no tenga que procesar cada transacción individual cada vez que se ejecuta. Para que esta funcionalidad funcione:</p>
+<ul>
+<li>Los períodos contables deben estar definidos en el <a href="../../../financial-management/accounting/setup/fiscal-calendar/">Calendario anual y periodos</a>.</li>
+<li>Al menos algunos períodos deben estar en estado <em>Cerrado</em> o <em>Cerrado permanente</em>.</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Se recomienda programarlo diariamente, en un momento en que el sistema no tenga mucha actividad. Agregará datos solo cuando un nuevo período se cierre o se cierre permanentemente.</p>
+<p>Para habilitar esta funcionalidad, programe el proceso en segundo plano llamado <em>Generate Aggregated Data Background</em> a través de la ventana <a href="../../../general-setup/process-scheduling/process-request/">Procesamiento de Peticiones</a>.</p>
 </div>
-<h2 id="limitations">Limitations</h2>
-<p>Al agregar la información por cada período cerrado, no es posible conservar la fecha de cada transacción. Por tanto, cuando el informe se lance para una moneda diferente, toda esa información se convertirá en la fecha de cierre del período. Esto puede provocar pequeñas discrepancias con la versión anterior debido a conversiones entre monedas en fechas diferentes.</p>
-<h2 id="related-articles">Artículos relacionados</h2>
-<p><a class="md-button md-button--primary" href="../pareto-product-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe Pareto de Productos</a>
-<a class="md-button md-button--primary" href="../stock-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe Stock</a>
-<a class="md-button md-button--primary" href="../material-transaction-report/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Informe Transacción de Material</a>
-<a class="md-button md-button--primary" href="../../getting-started/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Introducción a Gestión de Almacén</a></p>
+<p>El precálculo cubre todas las transacciones hasta el período cerrado más reciente. Las transacciones que ocurren después de ese período siguen calculándose en tiempo real. Si existe un período extenso de periodos abiertos con muchas transacciones, el informe puede seguir experimentando un rendimiento más lento.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png" data-desc-position="bottom"><img alt="Ventana de Procesamiento de Peticiones configurada para el proceso de precálculo de datos" src="../../../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png"></a>
+<br>
+<figcaption>Ventana de Procesamiento de Peticiones configurada para el proceso de precálculo de datos</figcaption>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Se recomienda programar este proceso para que se ejecute diariamente durante un período de baja actividad del sistema. El proceso solo genera nuevos datos precalculados cuando se ha cerrado o cerrado permanentemente un período adicional desde la última ejecución.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Limitaciones</p>
+<p>Cuando el sistema precalcula los datos de un período cerrado, combina todas las transacciones de ese período en un único resumen. No se conserva la fecha original de cada transacción individual.</p>
+<p><strong>Qué significa esto para los informes multi-moneda:</strong> si el informe se ejecuta en una moneda diferente de la moneda base de la organización, el sistema convierte los totales precalculados utilizando el tipo de cambio de la fecha de cierre del período, no el tipo de cambio de la fecha en que ocurrió originalmente cada transacción.</p>
+<p>Como resultado, pueden aparecer pequeñas diferencias en los valores de moneda en comparación con ejecutar el informe sin el precálculo habilitado, donde cada transacción se convertiría al tipo de cambio de su propia fecha.</p>
+</div>
 <hr>
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
+<p>Este trabajo es una derivación de <a href="http://wiki.openbravo.com/wiki/Warehouse_Management" target="_blank">Warehouse Management</a> por <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Este trabajo está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
