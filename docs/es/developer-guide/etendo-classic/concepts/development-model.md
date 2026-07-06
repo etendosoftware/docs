@@ -8,40 +8,40 @@ tags:
 
 status: beta
 ---
-#  Modelo de desarrollo
+# Modelo de desarrollo { #development-model }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Visión general
+## Visión general { #overview }
 
 El **Entorno de Desarrollo de Etendo** (abreviado como **ODE**) es un framework de herramientas, metodologías y procesos para facilitar el proceso de desarrollo de Etendo y ayudar a los desarrolladores a ser más eficientes en tareas como editar el código fuente, depurar, probar, desplegar y gestionar repositorios de código. ODE es compatible con entornos basados en **Oracle** y **PostgreSQL**. ODE está diseñado para dar soporte al proceso de desarrollo independientemente del objetivo (contribuciones al core de Etendo, módulos y código personalizado) y del alcance (desde pequeñas correcciones de errores hasta nuevos módulos funcionales completos).
-##  Conceptos
+## Conceptos { #concepts }
 
 Antes de comenzar con el proceso de desarrollo, expliquemos algunos conceptos generales básicos.
 
-###  Modelo de Base de datos
+### Modelo de Base de datos { #database-model }
 
 Contiene la estructura de todos los elementos de base de datos utilizados en Etendo: tablas, triggers, vistas, secuencias y funciones. El Modelo de Base de datos forma parte del modelo `XML`.
 
-###  Diccionario de la Aplicación
+### Diccionario de la Aplicación { #application-dictionary }
 
 El Diccionario de la Aplicación es la parte del código fuente de Etendo almacenada en la base de datos. Es un conjunto de definiciones declarativas de elementos y lógica de negocio que se utilizan para construir y renderizar la aplicación. Por ejemplo, contiene la definición de ventanas, tablas, formularios, informes, procesos, etc. Se almacena en tablas `AD` como `AD_Window` o `AD_Column` y forma parte del modelo `XML`.
 
-###  Modelo XML
+### Modelo XML { #xml-model }
 
 El modelo XML contiene el esquema de la base de datos y el Modelo de Base de datos y el Diccionario de la Aplicación. Para facilitar los desarrollos concurrentes, esta información puede exportarse desde la base de datos a archivos XML de texto plano. Estos archivos mantienen toda la información necesaria para generar la base de datos y poblarla con todos los datos del Diccionario de la Aplicación. Se almacena en un lenguaje neutral compatible con los dos motores de base de datos soportados por Etendo: PostgreSQL y Oracle.
 
 La sincronización desde la base de datos al modelo XML y viceversa se gestiona mediante el [DBSourceManager](../concepts/dbsourcemanager.md).
 
-###  Código fuente
+### Código fuente { #source-code }
 
 Es donde se encuentra toda la información necesaria para construir el sistema completo de Etendo. Incluye el Modelo de Base de datos, el Diccionario de la Aplicación, clases de entidad generadas, clases del core para gestionar el sistema, así como código Java, código JavaScript, HTML, informes y otros archivos para implementar funcionalidad que complementa al Diccionario de la Aplicación.
 
-###  Binarios
+### Binarios { #binaries }
 
 Durante el proceso de build, todas las clases `Java` del sistema se compilan y se transforman en archivos binarios. Estos archivos binarios pueden empaquetarse y desplegarse en un servidor de aplicaciones `J2EE` como Tomcat.
 
-###  Base de datos
+### Base de datos { #database }
 
 La Base de datos es donde se almacenan el Diccionario de la Aplicación y los datos del usuario.
 
@@ -57,7 +57,7 @@ El código fuente de Etendo está preparado para IntelliJ IDEA. Esto significa q
 
 GitHub es un SCM distribuido que facilita que varios desarrolladores trabajen sobre el mismo código gestionando revisiones para cada archivo de código fuente. El código fuente y los paquetes de Etendo se mantienen y están disponibles libremente en los **repositorios de Etendo Software**. 
 
-###  Modos de despliegue
+### Modos de despliegue { #deploy-modes }
 
 Etendo es una aplicación web que se ejecuta en un contenedor de servlets. Esto significa que, para construir el sistema, necesita generar los binarios a partir del código fuente y desplegar los binarios en un contenedor de servlets, normalmente Apache-Tomcat. Las tareas de build de Etendo pueden configurarse para gestionar el despliegue en tres modos diferentes:
 
@@ -74,7 +74,7 @@ Etendo es una aplicación web que se ejecuta en un contenedor de servlets. Esto 
     Cuando Etendo se compila, todos los archivos necesarios para ejecutarse en el servidor se copian al directorio `WebContent`. Es posible configurar el servidor para servir desde este directorio, que es la forma estándar de trabajar desde Eclipse IDE. En este caso, Eclipse gestionará el despliegue.
 
 El modo de despliegue se establece en el archivo `gradle.properties`, mediante la propiedad `deploy.mode`.
-##  Estructura del código fuente
+## Estructura del código fuente { #source-code-structure }
 
 El código fuente de Etendo está estructurado en diferentes carpetas:
 
@@ -94,9 +94,9 @@ El código fuente de Etendo está estructurado en diferentes carpetas:
 - **src-test** : En esta carpeta se encuentran todos los archivos fuente y recursos de las pruebas. 
 - **web** : Aquí es donde se encuentran todos los archivos web estáticos, como archivos JavaScript, imágenes, skins, ... 
 - **WebContent** : Aquí es donde se copian todos los archivos necesarios para desplegar Etendo al ejecutar las tareas de compilación. Un servidor de aplicaciones puede servir la aplicación Etendo directamente desde aquí o se puede construir un archivo de paquete desde aquí para ser desplegado.
-##  Gestión del código de base de datos
+## Gestión del código de base de datos { #database-code-management }
 
-###  Visión general
+### Visión general { #overview_1 }
 
 El código fuente de Etendo está compuesto por dos **Tipo** diferentes de código: **código fuente** (archivos `Java`, `JavaScript`, `CSS`, `HTML`) y **código de base de datos**. El código de base de datos puede separarse en sentencias DDL del **Modelo de Base de datos** (tablas, triggers, vistas, secuencias y funciones) y el **Diccionario de la Aplicación**.
 
@@ -112,7 +112,7 @@ Los nuevos desarrollos (correcciones de errores o nuevas funcionalidades) normal
 
 DBSourceManager se basa en [DdlUtils](https://db.apache.org/ddlutils/){target="\_blank"}, un componente pequeño y fácil de usar de la Apache Foundation para trabajar con archivos de Definición de Base de Datos (DDL). Estos son **archivos XML** que contienen la definición del esquema de la base de datos (p. ej., tablas y columnas). Estos archivos pueden alimentarse a DBSourceManager mediante su correspondiente **tarea Ant** para crear o modificar la base de datos. Del mismo modo, DBSourceManager puede generar un archivo DDL a partir de una base de datos existente. **Etendo ha ampliado varias capacidades de DdlUtils** (por ejemplo, soporte para restricciones check, procedimientos y vistas; traducción PL/SQL de Oracle a PostgreSQL; soporte para más tipos de base de datos, etc.) y ha ajustado otras (por ejemplo, exportar objetos del esquema de base de datos, etc.) para dar soporte completo a los requisitos de ODE.
 
-###  Cómo funciona
+### Cómo funciona { #how-it-works }
 
 Cada sistema Etendo (copia de trabajo) tiene una carpeta llamada [`database`](../concepts/development-project-structure.md#src-db) donde se almacena todo el **código de base de datos** (Modelo de Base de datos y Diccionario de la Aplicación) en **archivos de texto XML sin formato**. El código fuente en archivos XML sin formato dentro de la carpeta `src/database` se divide en:
 
@@ -146,7 +146,7 @@ En resumen, la carpeta `src-db/database` contiene el código fuente de base de d
     Dado que los cambios en la base de datos pueden producirse dentro de los archivos de texto o en la propia base de datos, es extremadamente **importante garantizar que estos cambios no se produzcan simultáneamente en ambos lados**, ya que esta situación conduciría a inconsistencias del sistema y pérdida de datos. Esto se garantiza mediante una comprobación basada en el **número de revisión de GitHub**. Cada vez que se lanzan las tareas `create.database` o `update.database`, el número de revisión de la copia de trabajo se guarda en la base de datos. La tarea `export.database` comprueba que el número de revisión de la copia de trabajo coincide con el número de revisión de la base de datos.
     Si coincide, existe una garantía de que los cambios en nuestra base de datos no sobrescribirán los cambios realizados por otros desarrolladores en los archivos XML de base de datos. Si no coincide, el desarrollador obtendrá un error y se verá obligado a cambiar la copia de trabajo al número de revisión actual de la base de datos.
 
-###  Diferentes tipos de datos
+### Diferentes tipos de datos { #different-types-of-data }
 
 La instalación por defecto de Etendo instalará diferentes conjuntos de datos, dando como resultado un sistema completo y operativo. Dentro de Etendo, distinguimos la siguiente información:
 
@@ -156,7 +156,7 @@ La instalación por defecto de Etendo instalará diferentes conjuntos de datos, 
 * sampledata (): esta es información de ejemplo que proporcionamos para que los usuarios prueben Etendo, y contiene un nuevo cliente, con su correspondiente información de negocio. Estos datos se encuentran en la carpeta `referencedata/sampledata`.
 
 Estos datos se instalan/cargan en la base de datos al instalar Etendo.
-##  Proceso de desarrollo
+## Proceso de desarrollo { #development-process }
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Development_Model-1.png)
 
@@ -168,7 +168,7 @@ La tarea principal del proceso estándar es **smartbuild**, que realiza un build
 
 Smartbuild es un proceso incremental y evita cualquier tarea que no sea necesaria. Cuando el desarrollo es local, smartbuild puede omitir la actualización de la base de datos. En cualquier caso, los desarrolladores pueden actualizar su base de datos desde archivos XML en cualquier momento.
 
-###  Instalación inicial
+### Instalación inicial { #initial-installation }
 
 Después de descargar los archivos fuente de Etendo (por ejemplo, desde un repositorio clonado usando GitHub), el siguiente paso es instalar y desplegar el sistema.
 
@@ -180,7 +180,7 @@ Una vez configuradas todas las propiedades, el siguiente paso es construir la ap
 ./gradlew install.source
 ```
 
-###  Desarrollos locales
+### Desarrollos locales { #local-developments }
 
 Una vez que Etendo está en funcionamiento, es posible desarrollar sobre él. Generalmente, los nuevos desarrollos deben realizarse mediante módulos.
 
@@ -207,7 +207,7 @@ Esta tarea genera y compila las fuentes de los elementos modificados y, dependie
 ./gradlew smartbuild -Dlocal=yes -Drestart=yes # Note the -Drestart=yes 
 ```
 
-####  Exportación de base de datos
+#### Exportación de base de datos { #database-exportation }
 
 En la mayoría de los casos, los desarrollos incluyen modificaciones en la base de datos. Estas modificaciones pueden persistirse en los archivos XML de base de datos usando la herramienta [DBSourceManager](../concepts/dbsourcemanager.md). DBSourceManager exporta a archivos XML únicamente los cambios de base de datos de los módulos (incluyendo el core) que estén establecidos como `In Development`. Para exportar los cambios de base de datos, ejecute:
     
@@ -215,7 +215,7 @@ En la mayoría de los casos, los desarrollos incluyen modificaciones en la base 
 ./gradlew export.database
 ```
 
-###  Desarrollos remotos
+### Desarrollos remotos { #remote-developments }
 
 Los desarrollos remotos los realizan otros desarrolladores de forma remota y luego se fusionan con las fuentes locales. La principal diferencia con los desarrollos locales es que los desarrollos remotos no modifican la base de datos directamente. La forma en que un desarrollo remoto puede cambiar objetos en la base de datos es usando archivos XML, por lo que, tras actualizar (fusionar) los archivos XML, también es necesario actualizar la base de datos. Después de actualizar la base de datos, el proceso es exactamente el mismo que el local; es decir, compilar y desplegar los elementos que se hayan modificado desde el último build. Todo esto (actualizar la base de datos, compilar las últimas modificaciones y desplegarlas) puede hacerse al mismo tiempo con el comando **smartbuild**:
     
@@ -225,7 +225,7 @@ Los desarrollos remotos los realizan otros desarrolladores de forma remota y lue
 
 La única diferencia con el desarrollo local está en el parámetro `local`, que hace que el proceso actualice la base de datos en caso de que los archivos XML hayan cambiado.
 
-###  Validar base de datos
+### Validar base de datos { #validate-database }
 
 Cuando un módulo se exporta usando la tarea `export.database`, primero se valida para comprobar errores comunes. Si la validación falla, entonces la tarea `export.database` también fallará y no será posible exportar.
 
@@ -237,7 +237,7 @@ Actualmente se realizan las siguientes comprobaciones:
 * Los campos de clave foránea deben formar parte de una restricción de clave foránea. 
 * Se comprueba la longitud de los nombres de tablas, columnas y restricciones (Oracle tiene un límite de 30 caracteres). 
 
-###  Tareas de test de Gradle
+### Tareas de test de Gradle { #gradle-test-tasks }
 
 Etendo dispone de varias tareas de Gradle para ejecutar casos de prueba JUnit.
 
@@ -249,7 +249,7 @@ Etendo dispone de varias tareas de Gradle para ejecutar casos de prueba JUnit.
 ```
 
 Estas tareas ejecutarán todos los tests definidos en Etendo y en los módulos instalados.
-##  Core, módulos y personalizaciones
+## Core, módulos y personalizaciones { #core-modules-and-customizations }
 
 Etendo está diseñado para satisfacer todos los requisitos del cliente, sean cuales sean. Esto se realiza en diferentes niveles, cada uno más específico para el cliente que el anterior:
 

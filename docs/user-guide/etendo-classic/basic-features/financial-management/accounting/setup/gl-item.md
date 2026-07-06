@@ -26,7 +26,7 @@ Direct account posting refers to:
 
 G/L Item window allows the user to create as many account items as required for an organization and general ledger.
 
-![](../../../../../../assets/drive/1hHiMTePnKxuaHcACgsqhmT3AxiD0MxKQ.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-1.png)
 
 As shown in the image above, a G/L item or accounting item can be created by entering below listed basic information:
 
@@ -39,7 +39,7 @@ As shown in the image above, a G/L item or accounting item can be created by ent
 
 Account items are directly related to the debit and credit accounts to be used while posting them.
 
-![](../../../../../../assets/drive/1Z4sfyfiCMHTj0jE2vxq9xtUb8zZyPzzk.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-2.png)
 
 As shown in the image above, the accounting tab allows the user to enter debit and credit accounts for the G/L item. It is possible to enter a debit and a credit account for each organization's general ledger configuration.
 

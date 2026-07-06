@@ -16,7 +16,7 @@ Before setting up a general ledger, it is recommended to first create the [Accou
 
 From the **General Ledger Configuration** window, the configuration process involves:
 
-![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/gl-configuration6.png)
+![alt text](../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-configuration6.png)
 
 -   Selecting the **Organization** for which the general ledger is going to be available.
 -   Entering the **Name of the General Ledger configuration**, for instance EUR General Ledger.  

@@ -1,20 +1,20 @@
-## Navegación 
+## Navegación { #navigation }
 
 Para acceder a una ventana, escriba una parte de su nombre en el **botón Crear nuevo** o en el **botón Inicio rápido**. Etendo también ofrece un menú en árbol para facilitar la exploración.
 
-### Inicio rápido
+### Inicio rápido { #quick-launch }
 
 !!! info
     Para obtener más información sobre las funcionalidades de Inicio rápido, consulte la sección Menú rápido en la sección Barra de navegación superior.
 
 
-### Estructura en árbol del menú de la aplicación
+### Estructura en árbol del menú de la aplicación { #application-menu-tree-structure }
 
 El menú de la aplicación se utiliza para hacer accesibles al usuario todos los elementos de la aplicación. Además, las tres últimas búsquedas se muestran en esta ventana.
 
 ![Navegación del menú de la aplicación](../../assets/getting-started/user-interface/navigation/application-menu.png)
 
-#### Referencias de iconos
+#### Referencias de iconos { #icon-references }
 
 Existen diferentes tipos de elementos de menú que se identifican con distintos iconos:
 
@@ -25,11 +25,11 @@ Existen diferentes tipos de elementos de menú que se identifican con distintos 
 | ![](../../assets/getting-started/user-interface/navigation/icon-process.png) | Los procesos permiten realizar operaciones complejas. Algunos ejemplos serían importar datos desde un archivo o la creación automática de facturas a partir de pedidos de compra. |
 | ![](../../assets/getting-started/user-interface/navigation/icon-window.png) | Las ventanas permiten al usuario crear, modificar o consultar registros. Por registros se entiende cualquier entidad que tenga sus propios datos dentro de Etendo Classic, como un producto, un pedido, una factura, etc. |
 
-## Áreas de la aplicación 
+## Áreas de la aplicación { #application-areas }
 
 Etendo se divide en diferentes áreas de la aplicación. Cada área está representada por una carpeta independiente accesible desde el menú de la aplicación en el área de pantalla de **la navegación superior**.
 
-### Estructura de la ventana
+### Estructura de la ventana { #window-structure }
 
 La barra de herramientas contiene botones de acción y botones de proceso. Los botones de acción son genéricos y pueden aplicarse a casi todos los registros seleccionados. Los botones de proceso son específicos del registro y dependen del estado del registro y del nivel activo (cabecera o líneas o inferior).
 
@@ -40,7 +40,7 @@ La barra de herramientas contiene botones de acción y botones de proceso. Los b
 | 1   | Botones de acción |
 | 2   | Botones de proceso |
 
-### Botones
+### Botones { #buttons }
 
 Los botones de acción realizan las siguientes acciones:  
  
@@ -65,7 +65,7 @@ Los botones de acción realizan las siguientes acciones:
 | ![Guardar vista](../../assets/getting-started/user-interface/navigation/btn-save-view.png) | Guardar vista |.png
 | ![Mostrar tabla y formulario](../../assets/getting-started/user-interface/navigation/btn-table-and-form.png) | Mostrar tabla y formulario |.png
 
-#### Correo electrónico
+#### Correo electrónico { #email }
 
 Al hacer clic en el botón **Correo electrónico** se abre el popup **Email Options**, que permite enviar un correo electrónico directamente desde el documento actual al contacto del tercero.
 

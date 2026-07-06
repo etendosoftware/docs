@@ -1,8 +1,8 @@
 ---
 title: Lanzador de informes de impuestos
 ---
-## Visión general
-### Propósito
+## Visión general { #overview }
+### Propósito { #purpose }
 
 El objetivo de este documento es describir las especificaciones funcionales para un nuevo módulo de extensión que es el “Lanzador de informes de impuestos”.
 El módulo lanzador de informes de impuestos permite a los usuarios finales crear y presentar informes de impuestos ante las autoridades fiscales según lo requerido por las autoridades fiscales del país.
@@ -13,7 +13,7 @@ Estas especificaciones funcionales se implementarán posteriormente de acuerdo c
 
 También es un hecho que la especificación actual está principalmente relacionada con las necesidades españolas, ya que son las que se conocen actualmente; por lo tanto, la documentación actual y la implementación del lanzador de informes de impuestos se mejorarán o ajustarán más adelante si fuese necesario.
 
-### Alcance
+### Alcance { #scope }
 El lanzador de informes de impuestos es un **módulo de impuestos ampliado** que permite al usuario final:
 1. configurar diferentes **“parámetros de impuestos”** así como **"parámetros de informes de impuestos"** en función del tipo de impuesto y de los requisitos del informe de impuestos, respectivamente
 2. configurar diferentes **“informes de impuestos”** en una única ventana y de acuerdo con los requisitos fiscales del país
@@ -21,23 +21,23 @@ El lanzador de informes de impuestos es un **módulo de impuestos ampliado** que
 4. y obtener la **"salida de impuestos como un archivo"** requerida para ser presentada ante las autoridades fiscales en un formato válido.
 
 Además, el lanzador de informes de impuestos es un **framework** que permitirá al usuario final desarrollar nuevos informes de impuestos según sea necesario.
-## Consideraciones de diseño
-### Dependencias
+## Consideraciones de diseño { #design-considerations }
+### Dependencias { #dependencies }
 Dado que probablemente se deban implementar más informes de impuestos nuevos para el mismo país u otros, e incluso los existentes podrían cambiar, el módulo lanzador de informes de impuestos debe implementarse de manera que la lógica de negocio de cada informe de impuestos quede aislada del resto, de modo que, en caso de que sea necesario modificar un informe de impuestos existente, ese cambio no afecte al resto y, en caso de que haya nuevos informes de impuestos que implementar, esos nuevos tendrán su propia lógica de negocio.
 
-### Restricciones
+### Restricciones { #constraints }
 Etendo ya proporciona configuración de impuestos, transacciones de impuestos y, en general, funcionalidades relacionadas con impuestos; por lo tanto, y con el fin de ser coherentes, las funcionalidades existentes relacionadas con impuestos se tienen en cuenta como parte de este nuevo módulo. Además, podría ocurrir que algunas de las funcionalidades de impuestos existentes deban mejorarse para obtener la información fiscal requerida para que este módulo de extensión funcione.
 
-### Entrega
+### Entrega { #delivery }
 !!! info
     Esta funcionalidad se va a entregar como un módulo. Los datos de configuración se entregarán como un módulo adicional que podría ser importado por el usuario final, conteniendo una configuración por defecto; además, cada informe se incluirá en un módulo particular.
-## Requisitos funcionales
-### Roles de usuario y perfiles
+## Requisitos funcionales { #functional-requirements }
+### Roles de usuario y perfiles { #user-roles-profiles }
 Los siguientes roles están involucrados:
 
 - Responsable de contabilidad (Mary): Mary es la responsable de contabilidad. Debe saber qué informes de impuestos deben presentarse a las autoridades fiscales en función de los requisitos de las autoridades fiscales del país, así como de las particularidades del negocio. Por lo tanto, debe asegurarse de que, una vez instalada la extensión "Datos de configuración", entregada como un módulo adicional para el Lanzador de informes de impuestos, los datos por defecto o la configuración requerida para los informes de impuestos específicos que necesita presentar a las autoridades fiscales estén correctamente configurados en el sistema. Mary lo hará en colaboración con Peter.
 - Personal de contabilidad (Peter): Peter es un empleado que forma parte del personal de contabilidad. Será responsable de ayudar a Mary comprobando o configurando los parámetros necesarios, así como introduciendo las transacciones contables correspondientes en colaboración con ventas (Mike) y el personal de compras (Alice), y ejecutando los informes de impuestos y, finalmente, obteniendo la salida del informe de impuestos para presentarla a las autoridades fiscales.
-### Tipo informe
+### Tipo informe { #report-types }
 El módulo Tax Report Launcher permite definir los tipos de informes de impuestos descritos a continuación:
 
 - **informes de impuestos de extracto**, que son los informes destinados únicamente a **listar un tipo específico de transacciones de impuestos** para que las autoridades fiscales estén informadas al respecto. Por ejemplo, las autoridades fiscales necesitan ser informadas de cada transacción de venta y/o compra que supere un importe específico o de aquellas realizadas dentro de países de la UE.
@@ -55,7 +55,7 @@ En algunos países, como España, existe otro tipo de retención comúnmente con
 - **Tipos de renta** pueden ser “en efectivo” (monetarias/por ejemplo, un salario o un honorario pagado a un profesional) o “en especie” (no monetarias/por ejemplo, un coche de empresa o un piso de empresa)
 - el término **Retención** aplica a las **rentas en efectivo**
 y el término **Pago a cuenta** aplica a las **rentas en especie** en algunos países como España.
-### Historias de usuario
+### Historias de usuario { #user-stories }
 Mary es la responsable de Contabilidad de una empresa ubicada en España y es la encargada de decidir qué informes de impuestos deben presentarse ante las autoridades fiscales. Con seguridad, los informes de **IVA** y de **Retención** deberán presentarse ante las autoridades fiscales. En función de los "tipos impositivos del país", así como de los requisitos de las autoridades fiscales nacionales y del tipo de actividad de la empresa, Mary debe saber exactamente qué informes de **IVA** y de **Retención** deben presentarse obligatoriamente ante las autoridades fiscales por su empresa.
 
 Mary sabe que, como regla general, los informes de impuestos relacionados con el **IVA** **reconocen la obligación tributaria** en el momento en que los bienes se entregan y, por tanto, se facturan, o en el momento en que los servicios se han ejecutado y, por tanto, se facturan; y que los informes de **Retención** **reconocen la obligación tributaria** en el momento en que se contabiliza la factura de bienes o servicios, pero en otros países como España, en el momento en que se satisfacen o se pagan los ingresos en efectivo o en especie ya facturados y contabilizados.
@@ -67,10 +67,10 @@ Por lo tanto, y teniendo en cuenta que su empresa está ubicada en España, Eten
 
 Mary también debe ser consciente de que la mayoría de las transacciones sujetas a impuestos se introducirán en el sistema como una transacción de compra o de venta y, por tanto, como una factura de compra o de venta, pero también habrá algunas que no tendrán una factura asociada. Estos últimos casos están principalmente relacionados con la retención, que deberá introducirse en el sistema como **liquidaciones manuales vinculadas a los Concepto contable correspondientes.**  
 **La liquidación manual generará el asiento contable de retención** en el caso de retenciones que no tengan una factura vinculada y, por tanto, deban introducirse en el sistema como una liquidación manual, lo que implicará posteriormente un pago en efectivo o por banco.
-#### Configuración general del sistema
+#### Configuración general del sistema { #overall-system-setup }
 Mary informa al personal de contabilidad sobre qué informes fiscales deben presentarse a las autoridades tributarias por parte de la empresa, para que Peter pueda **comprobar la configuración** o **configurar** los parámetros fiscales, las categorías fiscales de terceros y los informes fiscales y los parámetros de informes fiscales necesarios; después, introducir las transacciones contables correspondientes en colaboración con el personal de ventas y compras, para finalmente ejecutar los informes fiscales y obtener la salida del informe fiscal que se presentará a las autoridades tributarias.
 
-##### Primer paso:
+##### Primer paso: { #first-step }
 El **primer** paso que Peter debe realizar es **comprobar la configuración** o **configurar** los parámetros fiscales requeridos según el flujo de trabajo que se indica a continuación:
 
 1. Peter va a **Gestión Financiera / Contabilidad / Configuración / Categoría de Impuestos de Terceros** para crear las **categorías fiscales de terceros** necesarias en función de quién haya generado una transacción de venta o compra sujeta a IVA o quién haya generado un ingreso sujeto a retención. Por ejemplo, debe introducir como categoría fiscal de tercero: Proveedor nacional, Proveedor UE, Proveedor internacional, Cliente nacional, Cliente UE, Cliente internacional, Empleados, Empleados no residentes, Profesionales, Profesionales UE, Profesional internacional, Alquiler, Actividades económicas, etc. 
@@ -87,7 +87,7 @@ Rangos de retención = por ejemplo WSalary35%, WPrizes18%, WProfessionals15%, WP
 
 6. El paso anterior también podría realizarlo Peter desde **Gestión de datos maestros / Configuración de tercero / Retención**. Deberá elegir esta vía y no la anterior en relación con los rangos de retención en caso de que necesite contabilizar los importes de retención en el momento en que se paga una factura y no en el momento en que se contabiliza la factura. Por ejemplo WSalary35%, WPrizes18%, WProfessionals15%, WProfessionals7%. Además, los rangos de retención existentes y los nuevos deben estar **vinculados** a las **claves y subclaves** tributarias correspondientes en función de los informes fiscales en los que se vayan a incluir esos rangos. 
 
-##### Segundo paso:
+##### Segundo paso: { #second-step }
 El **segundo** paso que Peter debe realizar es comprobar que los **Informes de impuestos** y los **parámetros de informes fiscales** están correctamente configurados por defecto. Para ello, deberá navegar a **Gestión Financiera / Contabilidad / Configuración / Informe fiscal.**
  
 **Informe fiscal.** Debe existir un registro para cada informe fiscal que deba presentarse a las autoridades tributarias. Cada informe fiscal debe incluir la siguiente información:
@@ -110,18 +110,18 @@ Por ejemplo, "Nombre de archivo del informe fiscal", "persona de contacto" u otr
 ***Parámetros constantes.** Parámetros constantes específicos del informe fiscal que deben **configurarse por defecto**, ya que siempre serán los mismos.  
 Por ejemplo, en el caso del informe fiscal español 110, debe comprobar que el parámetro constante "Modelo fiscal" se introduce como "110", y "01" como número de página.  
 ***Parámetros de salida**. Peter debe saber que los parámetros de salida son parámetros del informe fiscal que obtendrán información del sistema, como "Nombre de la empresa", "NIF de la empresa", así como datos/salidas más complejos relacionados con transacciones vinculadas, por ejemplo, a unas **"claves de impuesto y/o subclaves"** específicas. Es el momento de comprobar que esos parámetros de salida están configurados por defecto correctamente y vinculados a un informe fiscal específico.
-#### Configuración específica y transacciones
+#### Configuración específica y transacciones { #specific-setup-and-transactions }
 
 En colaboración con el equipo de ventas (Mike) y el personal de compras (Alice), Peter necesita introducir en el sistema las transacciones de actividad normal que se incluirán en uno u otro informe de impuestos en función del tipo de transacción del que estemos hablando:
 
-##### Compras – Escenario general
+##### Compras – Escenario general { #purchase-overall-scenario }
 
 Alice crea una **necesidad de material** en función de las necesidades de artículos y/o servicios de la empresa o entidad. En cuanto Dan, el responsable de compras, confirma las necesidades de material, ella convierte la(s) necesidad(es) de material en uno o varios **pedido de compra** y los envía al tercero correspondiente (proveedor o acreedor o profesional).
 Una vez que su empresa ha **recibido los bienes** o que el acreedor ha **ejecutado los servicios** solicitados por su empresa, el proveedor o acreedor emitirá una factura. Esa factura deberá ser introducida por Alice en el sistema como una **Factura (Proveedor)**.
 En general, las transacciones de compra y, por tanto, la Factura (Proveedor) pueden ser el resultado de la adquisición de bienes o de servicios prestados por proveedores ubicados en España, en la UE o en el extranjero; por ello, en función del origen de los bienes y del tipo de bienes/servicios intercambiados, el tipo de IVA a pagar (IVA-crédito fiscal), así como el código de transacción, serán diferentes.
 Además, existen algunos tipos de transacciones de compra para las que será aplicable la retención, así como las claves tributarias correspondientes, en función del tipo de ingreso generado y del tipo de tercero que los haya generado.
 
-##### Compras - Escenarios específicos y configuración requerida
+##### Compras - Escenarios específicos y configuración requerida { #purchase---specific-scenarios-setup-required }
 
 Alice podría introducir en el sistema cualquiera de las Factura (Proveedor) de compra listadas a continuación, ya que son escenarios de compra muy comunes para una empresa pequeña-mediana ubicada en un país de la UE como España. Peter y Alice deberán comprobar que, al menos, la información listada a continuación por transacción de Factura (Proveedor) de compra está correctamente configurada antes de introducir cualquier transacción de compra.
 
@@ -178,7 +178,7 @@ Alice podría introducir en el sistema cualquiera de las Factura (Proveedor) de 
 6. Rango impuesto - código de transacción: "A" (adquisición)
 
 
-###### Factura (Proveedor) de compra de bienes
+###### Factura (Proveedor) de compra de bienes { #goods-purchase-invoices }
 
 Al introducir una Factura (Proveedor) de compra de bienes en el sistema, Alice debe asegurarse de que el IVA se va a calcular correctamente tal y como se ha descrito anteriormente:
 Proveedor nacional:
@@ -194,7 +194,7 @@ Importe de la factura = 100.000 € => Importe de la base imponible = 100.000 �
 ImportVAT21% = 100.000 € x 21% = 21.000 € => Importe de IVA = 21.000 €
 Importe total de la factura a pagar al proveedor = 121.000 €
 
-###### Recargo de equivalencia
+###### Recargo de equivalencia { #equivalence-charge }
 
 En este caso, la empresa de Alice (entidad legal de Etendo) es una empresa minorista que compra bienes únicamente a proveedores nacionales y bajo este régimen específico de IVA.
 Aunque la empresa de Alice no está obligada a realizar el seguimiento del IVA-crédito fiscal y del IVA-débito fiscal y no está obligada a liquidar el IVA, sí está obligada a informar a sus proveedores de que está sujeta al régimen especial de recargo de equivalencia (EC), con el objetivo de permitir que sus proveedores le apliquen un tipo impositivo adicional denominado tipo de recargo de equivalencia (EC).
@@ -205,7 +205,7 @@ VAT21% = 100.000 € x 21% = 21.000 => Importe de IVA = 21.000 €
 EC4% = 100.000 € x 4% = 4.000 €
 Importe total de la factura a pagar al proveedor nacional = 100.000 € + 21.000 € + 4.000 € = 125.000 €
 
-###### Factura (Proveedor) de compra de servicios profesionales
+###### Factura (Proveedor) de compra de servicios profesionales { #professional-service-purchase-invoices }
 
 Al introducir una Factura (Proveedor) de compra de servicios en el sistema, Alice debe asegurarse de que el IVA y la retención se van a calcular correctamente tal y como se ha descrito anteriormente:
 
@@ -214,7 +214,7 @@ VAT21% = 100.000 € x 21% = 21.000 => Importe de IVA = 21.000 €
 W-18% = 100.000 € x -15% = -15.000 => Importe de la retención = -15.000 €
 Importe total de la factura a pagar a un proveedor profesional = 100.000 € + 21.000 € -15.000 € = 106.000 €
 
-###### Inversión del sujeto pasivo
+###### Inversión del sujeto pasivo { #reverse-charge }
 
 Alice debe saber que un tipo IntraVAT podría marcarse como “Inversión del sujeto pasivo” únicamente en el caso de servicios prestados por profesionales de la UE, ya que ya no es obligatorio para las adquisiciones de bienes en la UE. En ese caso, la empresa tendrá que crear una autofactura después de recibir la Factura (Proveedor) de compra de servicios con un tipo de IVA = 0%
 Por lo tanto, deberá haber 3 asientos para cada factura bajo este escenario con un código de operación = "I":
@@ -227,19 +227,19 @@ Por lo tanto, deberá haber 3 asientos para cada factura bajo este escenario con
     Tenga en cuenta que la línea de IVA-crédito fiscal y la línea de IVA de importación o exento se mostrarán y almacenarán como IVA soportado/recibido (IVA-crédito fiscal), mientras que la línea de IVA-débito fiscal se mostrará y almacenará como IVA repercutido/emitido.
 
 
-##### Abonos de compra
+##### Abonos de compra { #purchase-credit-notes }
 
 En caso de que exista algún error en las Factura (Proveedor) de compra de bienes o servicios prestados por un tercero, o en caso de que haya que devolver bienes a un proveedor por falta de calidad o cualquier otro tipo de error, Alice y el personal de contabilidad deberán anular la Factura (Proveedor) correspondiente y crear y contabilizar una nueva factura de abono de compra (nota de crédito de compra). En este caso, los escenarios aplicables son los mismos que los descritos en la sección anterior, pero:
 1. Los importes de las facturas de abono de compra serán importes negativos
 2. Peter debe asegurarse de que facturas de abono de compra similares no se agrupen al incluirse en los informes de IVA.
 
-##### Ventas - Escenario general
+##### Ventas - Escenario general { #sales---overall-scenario }
 
 Mike crea un **Pedido de venta** en función de la(s) necesidad(es) de un cliente. Una vez que su empresa ha **enviado los bienes** mediante un albarán de salida, le es posible emitir una **Factura (Cliente)** y enviarla al cliente junto con la documentación del envío de mercancía, por ejemplo, un albarán de entrega.
 En general, las transacciones de venta y, por tanto, las **Factura (Cliente)** podrían ser el resultado de envíos de bienes o de servicios prestados por una empresa a un cliente o tercero ubicado en España, en la UE o en el extranjero; por ello, en función del destino de los bienes y del tipo de bienes/servicios prestados, el tipo de IVA a cobrar (IVA-débito fiscal), así como el código de transacción, serán diferentes.
 Además, existen algunos tipos de transacciones de venta para las que será aplicable la retención, así como las claves tributarias correspondientes, en función del tipo de ingreso generado.
 
-##### Ventas - Escenarios específicos y configuración requerida
+##### Ventas - Escenarios específicos y configuración requerida { #sales---specific-scenarios-setup-required }
 
 Mike podría introducir en el sistema cualquiera de las transacciones de venta listadas a continuación, ya que son escenarios de venta muy comunes para una empresa pequeña-mediana ubicada en un país de la UE como España. Peter y Mike deberán comprobar que, al menos, la información listada a continuación por transacción de Factura (Cliente) de venta está correctamente configurada antes de introducir cualquier transacción de venta.
 
@@ -296,7 +296,7 @@ Mike podría introducir en el sistema cualquiera de las transacciones de venta l
 6. Rango impuesto - código de transacción: "E" (suministro)
 
 
-###### Factura (Cliente) de venta de bienes
+###### Factura (Cliente) de venta de bienes { #goods-sales-invoices }
 Al introducir una Factura (Cliente) de venta de bienes en el sistema, Mike debe asegurarse de que el IVA repercutido se va a calcular correctamente tal y como se ha descrito anteriormente:
 Cliente nacional:
 Importe de la factura = 100.000 € => Importe de la base imponible = 100.000 €
@@ -311,7 +311,7 @@ Importe de la factura = 100.000 € => Importe de la base imponible = 100.000 �
 Export0% = 100.000 € x 0% = 0 € => Importe de IVA = 0 €
 Importe total de la factura a cobrar al cliente = 100.000 €
 
-###### Recargo de equivalencia
+###### Recargo de equivalencia { #equivalence-charge_1 }
 
 En este caso, la empresa de Mike vende bienes a una empresa minorista nacional y debe aplicarle un tipo impositivo adicional denominado tipo de recargo de equivalencia (EC).
 Por lo tanto, al introducir una Factura (Cliente) de venta de bienes en el sistema bajo este régimen específico de IVA, Mike debe asegurarse de que el IVA repercutido y los impuestos EC se calculan correctamente tal y como se ha descrito anteriormente:
@@ -320,7 +320,7 @@ SalesVAT21% = 100.000 € x 21% = 21.000 € => Importe de IVA repercutido = 21.
 EC4% = 100.000 € x 4% = 4.000 €
 Importe total de la factura a cobrar al minorista = 100.000 € + 21.000 € + 4.000 € = 125.000 €
 
-###### Factura (Cliente) de venta de servicios profesionales
+###### Factura (Cliente) de venta de servicios profesionales { #professional-service-sales-invoices }
 
 Al introducir una Factura (Cliente) de venta de servicios en el sistema, Mike debe asegurarse de que el IVA repercutido y la retención se van a calcular correctamente tal y como se ha descrito anteriormente:
 Importe de la factura = 100.000 € => Importe de la base imponible = 100.000 €
@@ -329,13 +329,13 @@ SalesWProfessionals15% = 100.000 € x -15% = -15.000 => Importe de la retenció
 Importe total de la factura a cobrar al cliente = 100.000 € + 21.000 € -15.000 € = 106.000 €
 
 
-##### Facturas de abono de venta
+##### Facturas de abono de venta { #sales-credit-invoices }
 
 En caso de que exista un error en las Factura (Cliente) de venta de bienes o servicios que la empresa de Mike está prestando a sus clientes, o en caso de que un cliente quiera devolver bienes por falta de calidad o cualquier otro tipo de error, Mike y el personal de contabilidad deberán anular la Factura (Cliente) correspondiente y crear y contabilizar una nueva factura de abono de venta (nota de crédito de venta). En este caso, los escenarios aplicables son los mismos que los descritos en la sección anterior, pero:
 1. Los importes de las facturas de abono de venta serán importes negativos
 2. Mike debe asegurarse de que facturas de abono de venta similares no se agrupen al incluirse en los informes de IVA.
 
-##### Liquidación manual
+##### Liquidación manual { #manual-settlements }
 
 Peter tendrá que utilizar la funcionalidad de Etendo de **Liquidación manual** para **introducir en el sistema el resto de ingresos sujetos a impuestos** **que no pueden introducirse en el sistema** ni como una transacción de compra y, por tanto, como una Factura (Proveedor), ni como una transacción de venta y, por tanto, como una Factura (Cliente).
 Peter tendrá que utilizar **Concepto contable** al introducir liquidaciones manuales, ya que no habrá una factura detrás de este tipo de transacciones, sino un tercero y un ingreso satisfecho o pagado por su empresa, o un ingreso cobrado por su empresa; por lo tanto, Peter tendrá que crear tantos Concepto contable como sea necesario en función del **tipo de ingresos** cobrados o pagados y del **tipo de terceros** implicados en la generación del ingreso.
@@ -346,7 +346,7 @@ Peter tendrá que utilizar **Concepto contable** al introducir liquidaciones man
 
 Los escenarios siguientes explican que Peter tendrá que crear al menos dos Concepto contable por transacción; no utilizará la funcionalidad de contabilización directa, ya que estos tipos de retención, los introducidos en el sistema como liquidación manual, solo pueden contabilizarse en el momento del pago mediante diario de caja o diario de pagos.
 
-###### Pagos de salarios de empleados
+###### Pagos de salarios de empleados { #employee-salary-payments }
 
 Peter sabe que Etendo no automatiza las transacciones de pago de nóminas, por lo que, para registrar en el sistema una transacción de pago de salario de un empleado, Peter tendrá que utilizar la funcionalidad de "liquidación manual" como primer paso y, a continuación, liquidarla o pagarla utilizando un pago en efectivo o un pago bancario.
 Al hacerlo, debe asegurarse de que la transacción está vinculada a los Concepto contable específicos creados para ese fin y, además, Peter debe introducir la retención correspondiente, ya que este tipo de pagos están sujetos a retención, que deberá presentarse posteriormente ante la administración tributaria.
@@ -393,7 +393,7 @@ Peter puede navegar al asiento contable y luego a las líneas del diario de caja
 
 Finalmente, Peter tiene que verificar que los informes de Retención correspondientes muestran un importe de retención de 350 vinculado al tipo WSalary35%.
 
-###### Pagos de premios
+###### Pagos de premios { #prizes-payments }
 
 La empresa de Peter organizó una competición entre sus empleados. Alice ganó ese premio, que fue un premio "en efectivo" de 500 €, que debe incluirse en el sistema. Para ello, Peter tendrá que utilizar la funcionalidad de "liquidación manual" como primer paso y, a continuación, liquidarlo o pagarlo utilizando un pago en efectivo o un pago bancario.
 Al hacerlo, debe asegurarse de que la transacción está vinculada a los Concepto contable específicos creados para ese fin y, además, Peter debe introducir la retención correspondiente, ya que este tipo de pagos están sujetos a retención, que deberá presentarse posteriormente ante la administración tributaria.
@@ -490,7 +490,7 @@ Peter puede navegar al asiento contable y luego a las líneas del diario de caja
 Finalmente, Peter tiene que verificar que los informes de Retención correspondientes muestran un importe de retención de 360 vinculado al tipo WRenting18%.
 
 
-###### Alquiler en caso de un edificio no vinculado a una actividad económica
+###### Alquiler en caso de un edificio no vinculado a una actividad económica { #renting-in-case-of-a-building-do-not-linked-to-an-economic-activity }
 La empresa de Peter es propietaria de un edificio no relacionado con la actividad económica de la empresa de Peter. Ese edificio se alquila a un tercero o arrendatario. La empresa de Peter emite un extracto o un recibo y lo envía al arrendatario para que se pague mensualmente. La empresa de Peter debe cobrar el dinero e introducir en el sistema el pago correspondiente; para registrar esto en el sistema, Peter tendrá que utilizar la funcionalidad de "liquidación manual" como primer paso y, a continuación, cobrarlo utilizando un cobro en efectivo o un cobro bancario.
 
 !!! info
@@ -537,7 +537,7 @@ Después de eso, Peter procesa y contabiliza.
 Peter puede navegar al asiento contable y luego a las líneas del diario de caja, y luego al pago, y una vez allí Peter puede seleccionar y contabilizar "Liquidación cancelada" para generar y comprobar la contabilización final.
 
 Finalmente, Peter tiene que verificar que los informes de Retención correspondientes muestran un importe de retención de 630 vinculado al tipo WPropertyRent18%.
-### Configuración del Lanzador de informes de impuestos
+### Configuración del Lanzador de informes de impuestos { #tax-report-launcher-setup }
 
 Tal y como se ha descrito anteriormente, Mary, la responsable de contabilidad, debe decidir qué informes de impuestos deben presentarse ante las autoridades fiscales en función de la actividad de su empresa y de los requisitos de las autoridades fiscales del país. Peter le ayudaría aquí, ya que es responsable de comprobar la configuración por defecto y/o configurar los parámetros de impuestos, los informes de impuestos y los parámetros de informes de impuestos, así como de introducir las transacciones contables correspondientes en colaboración con el equipo de ventas (Mike) y el personal de compras (Alice). Lo último que tendrá que hacer será lanzar los informes de impuestos y, por último, obtener la salida del informe de impuestos para presentarla ante las autoridades fiscales.
 
@@ -585,7 +585,7 @@ Una vez que Peter sepa qué informes de impuestos deben presentarse ante las aut
 
 !!! info
     Los informes de impuestos de IVA no tienen ese tipo de secciones anteriores porque no son informes de impuestos como tales, sino informes fiscales de extracto; por lo tanto, deberá crearse un grupo fiscal genérico vinculado a un parámetro genérico de informe de impuestos de salida relacionado con el parámetro de código de transacción, para ese tipo de informes de impuestos de IVA.
-### Salida del informe de impuestos
+### Salida del informe de impuestos { #tax-report-output }
 
 Los informes de impuestos pueden presentarse ante las autoridades fiscales como archivos *.pdf, lo que significa un formato impreso, o como archivos *.txt, lo que significa una presentación electrónica que puede enviarse a las autoridades fiscales por Internet. Ambos formatos deben cumplir los requisitos bien conocidos de las autoridades fiscales, por lo que, tras obtener los archivos de salida correspondientes, Peter tendrá que verificar que los formatos son los correctos.
 

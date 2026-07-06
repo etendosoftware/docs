@@ -8,9 +8,9 @@ tags:
   - Referencia
 ---
 
-# Cómo añadir un campo y una columna de texto enriquecido
+# Cómo añadir un campo y una columna de texto enriquecido { #how-to-add-a-rich-text-field-and-column }
   
-## Visión general
+## Visión general { #overview }
 
 Esta sección de procedimientos explica cómo añadir un campo y una columna de texto enriquecido a Etendo Classic.
 
@@ -23,13 +23,13 @@ También puede crear una nueva tabla y una nueva ventana/solapa, por supuesto.
 Este procedimiento solo se centrará en la parte específica de un campo de texto enriquecido.
 
   
-##  Ejemplo 
+## Ejemplo { #example }
 
 Para este procedimiento, utilizaremos la redefinición del campo de descripción en la ventana de pedido de venta. Por lo tanto, puede que necesite hacer un *smartbuild* después de los cambios para ver el resultado.
 
 
   
-###  Añadir una columna
+### Añadir una columna { #adding-a-column }
 
 Primero, tiene que [añadir una columna a la tabla existente](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md).
 
@@ -43,14 +43,14 @@ Al introducir la nueva columna en el diccionario de aplicación, se debe selecci
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
 
-###  Crear un campo: configurar col y rowspan
+### Crear un campo: configurar col y rowspan { #create-a-field---set-col-and-rowspan }
 
 A continuación, [cree un campo](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md) dentro de la solapa/ventana. Para un campo de texto enriquecido también puede configurar col y rowspan (solo se muestran cuando la columna correspondiente está definida como texto enriquecido):
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
 
-###  El resultado
+### El resultado { #the-result }
 
 El resultado se visualiza como un editor de texto enriquecido en la vista de formulario:
 

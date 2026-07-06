@@ -8,12 +8,12 @@ tags:
 status: beta
 ---
   
-# Cómo restringir los movimientos de nodos en un árbol
+# Cómo restringir los movimientos de nodos en un árbol { #how-to-restrict-the-movements-of-nodes-in-a-tree }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 La **vista de cuadrícula de árbol** permite mover un nodo a otro padre o a otra posición dentro de su nodo padre actual.
 
@@ -21,9 +21,9 @@ Algunos árboles pueden tener restricciones sobre cómo se puede mover un nodo a
 
 Los desarrolladores pueden restringir los movimientos de nodos de un árbol en particular mediante la creación de una subclase de la clase `CheckTreeOperationManager`.
 
-## Clase CheckTreeOperationManager
+## Clase CheckTreeOperationManager { #checktreeoperationmanager-class }
 
-### Sobrescritura del método checkNodeMovement
+### Sobrescritura del método checkNodeMovement { #overwriting-the-checknodemovement-method }
 
 `CheckTreeOperationManager` es una clase abstracta que expone un método:
 
@@ -52,7 +52,7 @@ El atributo success representa si el movimiento del nodo es válido. Los atribut
 El método `checkNodeMovement` es ejecutado por `TreeDatasourceService` después de cada movimiento de nodo si se ha definido un `CheckTreeOperationManager` para el árbol al que pertenece el nodo. Si el método `checkNodeMovement` devuelve un `ActionResponse` con success = true, entonces el movimiento del nodo se confirmará y el nodo se mostrará en el lado del cliente en su posición actualizada. 
 Si devuelve un Action response con `success = false`, el movimiento del nodo se cancelará y el nodo volverá a su posición original en el lado del cliente.
 
-### Asociar un `CheckTreeOperationManager` con un árbol en particular
+### Asociar un `CheckTreeOperationManager` con un árbol en particular { #associating-a-checktreeoperationmanager-with-a-particular-tree }
 
 Los `CheckTreeOperationManagers` se instancian usando [inyección de dependencias](../concepts/etendo-architecture.md#introducing-weld-dependency-injection-and-more).
 
@@ -63,7 +63,7 @@ Todas las implementaciones de `CheckTreeOperationManagers` deben tener alcance d
     @Qualifier("ADMenu")
 ```
 
-## Ejemplo: Árbol de Organización
+## Ejemplo: Árbol de Organización { #example-organization-tree }
 
 En el árbol definido para la tabla Organización, no se permite mover nodos si pertenecen a una organización que está marcada como lista.
 

@@ -10,12 +10,12 @@ tags:
 status: beta
 ---
 
-# Cómo usar un pool de conexiones externo
+# Cómo usar un pool de conexiones externo { #how-to-use-an-external-connection-pool }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 De forma predeterminada, Etendo utiliza dos pools de conexiones:
 
@@ -25,7 +25,7 @@ De forma predeterminada, Etendo utiliza dos pools de conexiones:
 !!!info
     Es posible especificar un proveedor de conexiones externo que Etendo utilizará para obtener las *conexiones JDBC*. Para ello, es necesario instalar un módulo que contenga una subclase de `ExternalConnectionPool`, y se debe establecer la propiedad `db.externalPoolClassName` en el archivo `gradle.properties`.
 
-## Ejemplo: uso del pool de conexiones JDBC de Apache
+## Ejemplo: uso del pool de conexiones JDBC de Apache { #example-using-the-apache-jdbc-connection-pool }
 
 El módulo core [Apache JDBC Connection Pool](https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.apachejdbcconnectionpool){target="\_blank"} proporciona una implementación del pool de conexiones JDBC de Apache.
 

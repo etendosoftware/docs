@@ -9,9 +9,9 @@ tags:
   - Módulos
 ---
 
-# Cómo añadir un campo a una solapa de ventana
+# Cómo añadir un campo a una solapa de ventana { #how-to-add-a-field-to-a-window-tab }
 
-## Visión general
+## Visión general { #overview }
 
 El objetivo de esta sección es mostrar cómo puede añadir un nuevo campo a una solapa en Etendo Classic.
 
@@ -21,7 +21,7 @@ La tarea de añadir columnas a una ventana existente ahora es muy sencilla, ya q
 
 En esta página mostraremos un ejemplo de cómo colocar el campo `example_column` en la ventana `Production Run` usando el botón `create fields`.
 
-### Ejemplo: añadir los campos a la ventana
+### Ejemplo: añadir los campos a la ventana { #add-the-fields-to-the-window-example }
 
 El proceso para añadir nuevos campos a una ventana existente es el mismo que para añadir campos a una ventana nueva (vacía). Accediendo a `Application Dictionary` > `Window, Tabs and Fields`, necesitamos buscar la ventana `Production Run`. A continuación, para esa ventana, marque su solapa `Incidence`.
 

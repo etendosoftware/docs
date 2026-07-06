@@ -7,13 +7,13 @@ tags:
   - IntelliJ
 ---
 
-# Instalar Etendo - Entorno de Desarrollo Local
+# Instalar Etendo - Entorno de Desarrollo Local { #install-etendo---local-development-environment }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía cubre la configuración de un entorno local de desarrollo de Etendo. Utiliza IntelliJ IDEA con una instancia local de Tomcat para ejecutar Etendo, y Docker para ejecutar Copilot y la UI principal como servicios en contenedores.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 Antes de empezar, asegúrate de que lo siguiente está listo:
 
@@ -27,9 +27,9 @@ Antes de empezar, asegúrate de que lo siguiente está listo:
 !!! warning
     Evita instalar Docker mediante [Snap](https://snapcraft.io){target="_blank"} — sus restricciones de sandbox pueden impedir que los contenedores Docker de Etendo accedan correctamente a los directorios del host. Instala Docker siguiendo la guía oficial para tu distribución.
 
-## Instalación
+## Instalación { #installation }
 
-### 1. Clonar el proyecto
+### 1. Clonar el proyecto { #1-clone-the-project }
 
 ```bash title="Terminal"
 cd /path/to/workspace
@@ -37,7 +37,7 @@ git clone https://github.com/etendosoftware/etendo_base.git EtendoERP
 cd EtendoERP
 ```
 
-### 2. Añadir credenciales de GitHub
+### 2. Añadir credenciales de GitHub { #2-add-github-credentials }
 
 Edita `gradle.properties` y añade tus credenciales de GitHub. Para generarlas, sigue la guía [Uso de repositorios en Etendo](use-of-repositories-in-etendo.md).
 
@@ -46,7 +46,7 @@ githubUser=<username>
 githubToken=<*******>
 ```
 
-### 3. Expandir el proyecto
+### 3. Expandir el proyecto { #3-expand-the-project }
 
 === ":octicons-file-zip-24: Source Format"
 
@@ -67,7 +67,7 @@ githubToken=<*******>
     !!! info
         Para conocer las versiones disponibles, visita las [Notas de versión de Etendo](../../../../whats-new/release-notes/etendo-classic/release-notes.md).
 
-### 4. Aplicar la plantilla local
+### 4. Aplicar la plantilla local { #4-apply-the-local-template }
 
 Ejecuta la siguiente tarea para configurar todas las variables necesarias para Etendo, Copilot y la UI principal:
 
@@ -98,7 +98,7 @@ La plantilla configura `gradle.properties` automáticamente con todos los ajuste
     ```
     Para más detalles, consulta la guía [Cómo usar la configuración interactiva](../../how-to-guides/how-to-use-interactive-setup.md).
 
-### 5. Instalar Etendo
+### 5. Instalar Etendo { #5-start-docker-services }
 
 ```bash title="Terminal"
 ./gradlew install smartbuild --info
@@ -106,7 +106,7 @@ La plantilla configura `gradle.properties` automáticamente con todos los ajuste
 
 Esto crea la base de datos, compila las fuentes y despliega en el directorio local de Tomcat.
 
-### 6. Iniciar servicios Docker
+### 6. Iniciar servicios Docker { #6-install-etendo }
 
 ```bash title="Terminal"
 ./gradlew resources.up --info
@@ -114,7 +114,7 @@ Esto crea la base de datos, compila las fuentes y despliega en el directorio loc
 
 Esto inicia los contenedores de **Copilot** y la **UI principal**. Ambos están incluidos en la instalación base.
 
-## Ejecutar en IntelliJ
+## Ejecutar en IntelliJ { #run-in-intellij }
 
 === "IntelliJ IDEA Community Edition"
 
@@ -173,7 +173,7 @@ Esto inicia los contenedores de **Copilot** y la **UI principal**. Ambos están 
 
     4. Inicia Tomcat desde la configuración de ejecución.
 
-## Acceder a la instalación
+## Acceder a la instalación { #access-the-installation }
 
 Una vez que Tomcat y los servicios Docker estén en ejecución:
 
@@ -186,9 +186,9 @@ Una vez que Tomcat y los servicios Docker estén en ejecución:
     Usuario: `admin`
     Contraseña: `admin`
 
-## Opcional
+## Opcional { #optional }
 
-### Habilitar logs de Etendo
+### Habilitar logs de Etendo { #enable-etendo-logs }
 
 1. Abre `config/log4j2-web.xml` y descomenta la referencia al appender `Console`:
 

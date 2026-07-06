@@ -9,15 +9,15 @@ tags:
   - Integración de bots
 ---
 
-# Cómo conectar un Etendo Copilot Agent a un Telegram bot con n8n
+# Cómo conectar un Etendo Copilot Agent a un Telegram bot con n8n { #how-to-connect-an-etendo-copilot-agent-to-a-telegram-bot-with-n8n }
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía explica cómo exponer un **Etendo Copilot Agent** existente como un **Telegram bot** interactivo utilizando la plataforma de automatización **n8n**. 
 
 Los usuarios envían mensajes a un Telegram bot. n8n los recibe, reenvía el texto al endpoint de Copilot y devuelve la respuesta generada al mismo chat. El mismo patrón puede adaptarse a otros canales (p. ej., WhatsApp vía Twilio) sustituyendo los nodos de disparador/envío.
 
-## Arquitectura
+## Arquitectura { #architecture }
 
 ```
 Usuario de Telegram  →  Telegram Bot  →  Flujo de trabajo de n8n  →  Etendo Copilot (Agent)
@@ -32,7 +32,7 @@ Conceptos clave:
 - El nodo **Send Message** responde al chat de origen.
 - **conversation_id** mantiene el contexto conversacional por chat de Telegram.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Una instancia operativa de **Etendo Classic** con **Etendo Copilot** instalado y configurado.
 - Un **Copilot Agent** configurado (obtenga su ID interno desde el encabezado de la ventana del agente).
@@ -44,7 +44,7 @@ Conceptos clave:
 !!! warning "Seguridad"
     Para bots públicos, cree un usuario de Etendo con privilegios mínimos (p. ej., acceso de solo lectura a consultas de stock) para evitar exponer datos sensibles.
 
-## Especificación del endpoint
+## Especificación del endpoint { #endpoint-specification }
 
 Endpoint de preguntas de Etendo Copilot:
 
@@ -70,9 +70,9 @@ Descripción de campos:
 - **app_id**: ID interno del Copilot Agent a invocar.
 - **conversation_id**: Identificador estable para mantener el contexto del hilo. Use el `chat.id` de Telegram.
 
-## Flujo de trabajo de n8n: paso a paso
+## Flujo de trabajo de n8n: paso a paso { #n8n-workflow-step-by-step }
 
-### 1. Nodo Telegram Trigger
+### 1. Nodo Telegram Trigger { #1-telegram-trigger-node }
 
 Propósito: capturar mensajes entrantes.
 
@@ -85,7 +85,7 @@ Configuración:
 
 No se requieren parámetros personalizados para un flujo básico de texto.
 
-### 2. Nodo HTTP Request (puente hacia Etendo Copilot)
+### 2. Nodo HTTP Request (puente hacia Etendo Copilot) { #2-http-request-node-bridge-to-etendo-copilot }
 
 Propósito: enviar el mensaje del usuario al Copilot Agent.
 
@@ -114,7 +114,7 @@ Ejemplo de cuerpo en bruto (con expresiones):
 !!! note "Gestión de errores"
     Añada un nodo **IF** (o **Switch**) adicional después del HTTP Request para detectar estados no 2xx. Enrute los fallos a un mensaje alternativo (p. ej., "Servicio temporalmente no disponible").
 
-### 3. Nodo Send Telegram Message
+### 3. Nodo Send Telegram Message { #3-send-telegram-message-node }
 
 Propósito: entregar al usuario la respuesta de Copilot.
 
@@ -125,7 +125,7 @@ Configuración:
 
 Si la estructura de salida del nodo HTTP Request anida el JSON (p. ej., en `data`), ajuste la expresión en consecuencia (`={{ $json.data.response }}`).
 
-### 4. (Opcional) Limitación de tasa / moderación
+### 4. (Opcional) Limitación de tasa / moderación { #4-optional-rate-limiting-moderation }
 
 Inserte un nodo Function o Code para:
 
@@ -133,7 +133,7 @@ Inserte un nodo Function o Code para:
 - Filtrar mensajes vacíos o solo de comandos
 - Forzar una longitud máxima de mensaje
 
-## Ejemplo mínimo de flujo de trabajo (exportación de n8n)
+## Ejemplo mínimo de flujo de trabajo (exportación de n8n) { #minimal-example-workflow-n8n-export }
 
 Sustituya los marcadores de posición antes de importar.
 
@@ -200,7 +200,7 @@ Sustituya los marcadores de posición antes de importar.
 !!! info "Ajuste de nombres de campos"
     Si el servicio de Copilot cambia su esquema de respuesta, inspeccione la salida del nodo HTTP Request y actualice la expresión utilizada en el nodo de envío.
 
-## Pruebas
+## Pruebas { #testing }
 
 1. Active el flujo de trabajo en n8n (`Active = true`).
 2. Envíe un mensaje al Telegram bot (p. ej., `Hello` o una pregunta del dominio como: *Listar pedidos de venta abiertos*).

@@ -12,6 +12,209 @@ tags:
 
 #
 
+## March 2026
+
+### Etendo
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **New Etendo Release: Version 26.1 — Email Overhaul and a Modernized Tech Stack**
+
+    ---
+
+    Version [26.1.0](./release-notes/etendo-classic/release-notes.md) marks the start of the new **Etendo 26** generation. **All supported modules** have been updated to ensure full compatibility.
+
+    **Revamped email configuration and sending**
+
+    Outbound email in Etendo has been completely reworked. You can now set up a sending address at three levels — for individual **users**, for each **organization**, or for the whole **company** — and Etendo automatically picks the most specific address available, preferring the user's own address over the company-wide default. No more hard-coded defaults. The [email popup](../getting-started/user-interface/navigation.md#email) also gains **assisted recipient selection**: the system pre-selects recipients according to configurable rules, reducing manual input and the risk of sending to the wrong address. Sent messages are now traceable in the system logs.
+
+    - Documentation: [How to Configure Email](../user-guide/etendo-classic/how-to-guides/how-to-configure-email.md)
+
+    **Infrastructure update: action required before upgrading**
+
+    This version requires an updated server environment (Java 17). This is an infrastructure change that your **IT team or Etendo implementation partner** must handle before upgrading. No action is needed from business users. If your organization manages its own servers, contact your IT team to confirm readiness before upgrading.
+
+    **PostgreSQL 17 supported**
+
+    PostgreSQL 17 is now officially supported. Existing databases on earlier supported versions require no changes; upgrading the database engine is optional.
+
+    - IT upgrade guide: [API Change Documentation](../developer-guide/etendo-classic/developer-changelog/apichanges.md)
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Platform Extensions 3.16.0 – 3.17.0: Task Management, updated interface and PDF download**
+
+    ---
+
+    Versions [3.16.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) and [3.17.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) of the **Platform Extensions** bundle bring improvements to task management, the Etendo interface, and document handling.
+
+    **Task module: sequences and scheduling**
+
+    Each task created through the [Task Management](../developer-guide/etendo-classic/bundles/platform/task.md) module now automatically receives a **unique reference number per task category** — for example, all delivery tasks are numbered independently from approval tasks. This makes it easy to find, sort, and discuss specific tasks without reference numbers overlapping between categories. Tasks also gain **start date and due date** fields, enabling scheduling and deadline tracking directly in Etendo.
+
+    **Interface improvements (version 0.11.2)**
+
+    The Etendo Main UI reaches version [0.11.2](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.2){target="_blank"}, with fixes and additions across key workflows:
+
+    - **[Remittance process](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/automated-remittance.md)**: resolved data flow issues blocking correct execution.
+    - **Purchase Invoice automation**: automated workflows now create the corresponding financial transaction when a purchase invoice is processed, eliminating manual steps.
+    - **[Payment In](../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md) / Add Details**: fixed an error that prevented adding details in the Payment In window.
+    - **Navigation between windows**: a new redirection system within grids improves cross-window navigation.
+    - **Color support**: custom color configurations are now available system-wide in the interface.
+
+    **PDF download in Print Provider**
+
+    The print pop-up now includes a **Download** option that generates the document as a PDF and downloads it directly to the browser — without requiring a physical printer or a configured print provider. When no provider is selected, the process runs in **download-only mode**: multiple selected records are merged into a single PDF, and any records that fail to generate still allow the successfully generated ones to be downloaded with a warning.
+
+    - Documentation: [Print Provider](../user-guide/etendo-classic/optional-features/bundles/platform-extensions/print-provider.md)
+
+</div>
+
+### Warehouse Extensions
+
+<div class="grid cards" markdown>
+
+- :material-warehouse: **Warehouse Extensions 3.7.0 – 3.8.0: Multi-level container receiving, mobile stock validation and warehouse task scheduling**
+
+    ---
+
+    Versions [3.7.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) and [3.8.0](./release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md) of the **Warehouse Extensions** bundle deliver three improvements for warehouse teams.
+
+    **Receiving pallets with inner containers**
+
+    The mobile [Reception Tasks](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md#reception-tasks) screen now supports receiving containers inside other containers — for example, a pallet that holds several individually labelled inner boxes. Previously, only a single container level could be registered at reception. Barcode data is now displayed in plain text alongside the scanned code, making it easier for operators to verify what was received.
+
+    **Stock reservation check in the mobile app**
+
+    The mobile warehouse app now checks whether stock is already committed to a sales order or reservation before allowing a warehouse movement. If a transaction would use stock that is already set aside for another order, the system blocks the action and alerts the operator — preventing stock shortages and fulfillment conflicts without requiring manual cross-checking.
+
+    **Warehouse task scheduling**
+
+    Warehouse tasks in the [Advanced Warehouse Management](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/advanced-warehouse-management.md) module now support **start and due dates** and **sequence numbers per task type**. No additional modules are required — this works with the standard Warehouse Extensions installation.
+
+    - Documentation: [Stock Logistic Unit](../user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/stock-logistic-unit.md)
+
+</div>
+
+### Sales Extensions
+
+<div class="grid cards" markdown>
+
+- :octicons-rocket-24: **Sales Extensions 4.0.0: CRM Lead Management — native lead tracking inside Etendo** ⚡
+
+    ---
+
+    Version [4.0.0](./release-notes/etendo-classic/bundles/sales-extensions/release-notes.md) of the **Sales Extensions** bundle introduces the **CRM Lead Management** module — a native CRM built directly into Etendo ERP that lets commercial teams manage the full prospect lifecycle without leaving the system.
+
+    **Lead pipeline**
+
+    Each prospect is tracked as a **Lead** record that moves through configurable pipeline stages: *New → Contacted → Qualified → Converted → Dead*. Every status change is automatically logged in a **Status History** tab, giving full traceability of the commercial lifecycle. Two metrics update automatically on every save: **Success Probability** (0–100%, calculated from status, task activity, and linked quotations) and **Estimated Value** (sum of active quotations in *Under Evaluation* or *Order Created* status).
+
+    **Follow-up tasks and Sales integration**
+
+    The **Generate Task** button creates follow-up activities (call, email, meeting, etc.) linked to the lead. When the lead is ready, changing its status to *Converted* automatically creates a **Business Partner** — with location, contact, price list, and payment terms — and makes it immediately available in the Sales flow (quotations → orders → invoices). Quotations can be linked directly to a lead: status changes on the quotation update the lead's probability and estimated value, and reaching *Order Created* automatically sets the lead's **Opportunity Status** to *Won*.
+
+    **Mobile app and CRM Agent**
+
+    The module ships a **mobile sub-app** for field sales teams: tasks are listed by priority and due date, lead data and status can be updated on the go, and completing a task boosts the lead's probability score. A **CRM Agent** (Copilot) allows querying the full pipeline in natural language — leads by status, overdue tasks, new customers, conversion rates, average closing time, and sales performance rankings — without writing any query.
+
+    - Documentation: [CRM Lead Management](../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md)
+
+</div>
+
+### Copilot Extensions
+
+<div class="grid cards" markdown>
+
+- :material-robot: **Copilot Extensions 4.0.0: Featured Agents and secure external connections** ⚡
+
+    ---
+
+    Versions [3.13.0](./release-notes/etendo-copilot/bundles/release-notes.md) and [4.0.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the **Copilot Extensions** bundle deliver a set of improvements that make agents easier to discover and connect to from external tools.
+
+    **Featured Agents**
+
+    Agents can now be marked as **Featured**. Featured agents appear at the top of the Copilot chat list and are shown by default when the chat opens. A star button (⭐) in the chat lets users switch between the featured view and the full agent list. If no agents are marked as Featured, all agents are displayed as usual.
+
+    **Secure connections to external AI tools**
+
+    Copilot agents can now be connected to external AI applications using the **Model Context Protocol (MCP)** — an open standard that lets external tools interact with Copilot agents without manual token handling. The connection now supports **OAuth 2.1 authentication**: users log in through the standard Etendo login page and the external application receives authorization automatically, with no need to copy or paste tokens.
+
+    - Documentation: [Setup and Usage](../user-guide/etendo-copilot/setup-and-usage.md) · [How to Use an Agent as MCP Server](../developer-guide/etendo-copilot/how-to-guides/how-to-use-an-agent-as-mcp-server.md)
+
+</div>
+
+## February 2026
+
+### Financial Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Financial Extensions Update: Smarter Account Validation and Cleaner Budget Exports**
+
+    ---
+
+    With versions [3.10.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) and [3.11.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the **Financial Extensions** bundle, two meaningful improvements land for accounting teams managing chart of accounts and financial planning.
+
+    **New module: Account Structure Validation ⚡**
+
+    The new [Account Structure Validation](../user-guide/etendo-classic/optional-features/bundles/financial-extensions/account-structure-validation.md) module prevents configuration errors when creating or modifying subaccounts in the Account Tree — a common source of hard-to-detect imbalances in the Balance Sheet and Income Statement.
+
+    When enabled (active by default), the system validates:
+
+    - The account has a parent at the **Breakdown** level.
+    - The **Search Key** length is consistent with sibling accounts.
+    - The **Account Type** and **Sign** match those of the parent account.
+
+    If any validation fails, the account is not saved. Individual accounts can be excluded from validation when needed.
+
+    **Budget Export to Excel: no more stuck popups**
+
+    The **Export Budget to Excel** process has been migrated to a **Process Definition**, replacing a legacy servlet implementation. The result: the export runs cleanly and the popup no longer stays open after the download completes. Behavior is now consistent across Etendo 24 and Etendo 25.
+
+
+</div>
+
+### Platform Extensions
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **🖥️ Main UI Beta 0.11.0: Attachments, Aggregations and Packaging**
+
+    ---
+
+    The **Platform Extensions** bundle version [3.15.0](./release-notes/etendo-classic/bundles/platform-extensions/release-notes.md) ships the next iteration of the **Etendo Main UI**, now at Beta [0.11.0](https://github.com/etendosoftware/com.etendorx.workspace-ui/releases/tag/0.11.0){target="_blank"}.
+
+    - **Attachments button**: records can now have files attached directly from the new UI toolbar.
+    - **Aggregate functions auto-refresh**: aggregate values in grids update automatically, keeping totals and summaries in sync without manual refresh.
+    - **Packaging process**: the Packaging process is now available and executable from the new UI.
+    - **Improved save flow**: the Save Changes button state is now accurate across all form interactions, eliminating cases where it appeared enabled or disabled incorrectly.
+    - **Security**: the UI no longer redirects users to windows they are not authorized to access.
+
+    - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
+
+</div>
+
+### Etendo BI
+
+<div class="grid cards" markdown>
+
+- :material-chart-bar: **Etendo BI: Base queries refactored — BI process no longer blocks on errors**
+
+    ---
+
+    In version [3.4.0](./release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md) of the **Etendo BI Extensions** bundle, a critical issue affecting the BI data pipeline has been resolved.
+
+    Several base queries in `com.etendoerp.powerbi.queries` referenced columns and tables that no longer exist. Because queries run sequentially, a single failing query blocked all subsequent ones — meaning a misconfigured query could silently prevent large portions of the BI data from being processed.
+
+    All affected queries have been updated or replaced with functional versions compatible with both **Etendo 24** and **Etendo 25**, ensuring the full pipeline runs to completion.
+
+</div>
+
 ## January 2026
 
 ### Warehouse Extensions
@@ -271,7 +474,7 @@ tags:
     **Customer Statement Report migrated to process definition**
     The **Customer Statement Report** has been migrated to a process definition, aligning it with the standard reporting execution model and improving usability and future extensibility.
     
-    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#customer-statement)      
+    - Documentation: [Customer Statement Report](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/customer-statement.md)      
 
 </div>
 
@@ -313,7 +516,7 @@ tags:
     
     --- 
     - Documentation: [UI Improvements](../user-guide/new-ui/ui-improvements.md)
-    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md)
+    - Documentation: [New UI - Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md)
 
 </div>
 
@@ -353,7 +556,7 @@ tags:
     
     In this latest release, a new feature was added: the ability to configure document types for invoices, orders, and shipments/receipts based on the selected business partner: 
 
-    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#document-type)
+    - Documentation: [Document Type](../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#document-type)
     - Blog: [Still Creating Invoices Manually? Discover How Etendo 25.3 Automates Document Type Selection per Customer](https://etendo.software/en/blog/document-type-tab-etendo-25-3/){target="_blank"}
 
 </div>
@@ -366,7 +569,7 @@ tags:
     
     Enjoy a brand-new interactive installation wizard that guides you through the Etendo setup—configure core system settings and module-specific variables for bundles with ease. Accelerate deployments, reduce configuration errors, and get up and running faster.
 
-    - Documentation: [Interactive Installation](../getting-started/interactive-installation.md)
+    - Documentation: [Interactive Installation](../developer-guide/etendo-classic/developer-tools/etendo-interactive-configuration.md)
 
 </div>
 
@@ -398,7 +601,7 @@ tags:
     - **Execute bulk posting actions** for faster and more consistent processing.  
     - **Refine searches** with advanced filters like organization, accounting date, and accounting status.
     --- 
-    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#not-posted-documents)
+    - Documentation: [Not Posted Documents](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/not-posted-documents.md)
     - Blog: [Ready for the Accounting Close? Discover Etendo’s Centralized Window for Not Posted Documents](https://etendo.software/en/blog/not-posted-documents-window-etendo/){target="_blank"}
 
 </div>
@@ -412,7 +615,7 @@ tags:
     In version [3.4.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, the **Trial Balance** report gains new capabilities: Discover the revamped Trial Balance report, get instant, actionable insights with one-click navigation to General Ledger entries, full support for all accounting dimensions, and polished exports to Excel and PDF for sharing or audit. Faster analysis, clearer traceability, and professional output to power your financial workflows.
 
     ---
-    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#trial-balance)
+    - Documentation: [Trial Balance](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/trial-balance.md)
     - Blog: [Trial Balance in Etendo: Advanced Features for Superior Accounting Analysis](https://etendo.software/en/blog/trial-balance-in-etendo/){target="_blank"}
 
 - :material-view-list: **Smarter Financial Planning with Budget (Projections)**
@@ -428,7 +631,7 @@ tags:
     - Analyze by multiple dimensions for deeper insights.  
     - Export, copy, and reuse budgets to accelerate financial planning. 
     ---
-    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#budget)
+    - Documentation: [Budget](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/budget.md)
     - Blog: [How Budgets and Projections in Etendo Boost Profitability and Financial Control](https://etendo.software/en/blog/budgets-in-etendo/){target="_blank"}
 
 </div>
@@ -484,7 +687,7 @@ tags:
 
     ---
 
-    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced)
+    - Documentation: [Balance Sheet and P&L Report Advanced](../user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/balance-sheet-and-pl-structure-advanced.md)
     - Blog: [Unlock the Power of Advanced Financial Analysis with Etendo!](https://etendo.software/en/blog/unlock-the-power-of-advanced-financial-analysis-with-etendo/){target="_blank"}
 
 
@@ -512,7 +715,7 @@ tags:
     ---
 
     - Try in demo environment: [Livebuilds](../live-builds/overview.md)
-    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/getting-started/installation/install-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
+    - Documentation: [Install Etendo Main UI](../developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md) today and help shape the next-generation Etendo experience.
     - Blog: [You Can Now Try Etendo’s New Interface! Discover the Alpha Version](https://etendo.software/en/blog/you-can-now-try-etendos-new-interface-discover-the-alpha-version/)
 
 </div>
@@ -844,7 +1047,7 @@ tags:
 
     ![dimension.png](../assets/whats-new/etendo-news/financial-dimension.png)
 
-    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
+    In version [1.22.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of the Financial Extensions bundle, with the [Accounting Dimensions Assets](../user-guide/etendo-classic/basic-features/financial-management/assets/assets.md#accounting-dimensions-assets) module improves asset management by allowing users to assign accounting dimensions to assets like Business Partner, Activity, and Cost Center among others. These dimensions transfer to amortization lines. Also, amortizations are now grouped by period (monthly or yearly), enhancing financial reporting accuracy and ensuring consistent asset depreciation tracking.
 
 - :octicons-package-16: **Gain better control with the Not Posted Documents window**
 
@@ -1129,7 +1332,7 @@ In the version [1.8.0](./release-notes/etendo-classic/bundles/warehouse-extensio
 
     From version [1.3.0](./release-notes/etendo-copilot/bundles/release-notes.md) of the Copilot Extensions bundle, the possibility to add a parameter to the OCR Tool to specify and detail the analysis on images has been included, and Codbar tool reader has been added to the tool capable of reading barcodes on images.
 
--   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+-   [:material-robot: **Purchase Expert**](../user-guide/etendo-copilot/bundles/overview.md)
     
     ---   
 
@@ -1175,7 +1378,7 @@ Starting with version [1.2.0](./release-notes/etendo-copilot/bundles/release-not
 
 ### Financial Extensions
 
-[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md/#gl-journal-clone)
+[:octicons-package-16: **G/L Journal Clone**](../user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/simple-gl-journal.md#g-l-journal-clone)
 
 Starting with version [1.15.0](./release-notes/etendo-classic/bundles/financial-extensions/release-notes.md) of this bundle, the GL Journal Clone module is included, which makes it possible to clone the Simple GL Journal.
 

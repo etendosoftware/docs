@@ -6,13 +6,13 @@ tags:
   - Indexes
 ---
 
-# Restricciones
+# Restricciones { #constraints }
 
-## Visión general
+## Visión general { #overview }
 
 Tanto las restricciones de comprobación como los triggers son objetos definidos físicamente en la base de datos. Este documento no explicará los fundamentos de las restricciones, sino únicamente las particularidades que Etendo Classic tiene en su uso.
 
-##  Nomenclatura
+## Nomenclatura { #naming }
 
 Al añadir una restricción de comprobación, triggers e índices, deben tenerse en cuenta las reglas de nomenclatura de modularidad. Esto es necesario porque los triggers y los índices son objetos globales para una base de datos. 
 
@@ -32,29 +32,29 @@ directorio del módulo y se empaqueta con el módulo.
 !!!info
     El nombre de las restricciones no debe exceder los 30 caracteres, ya que la longitud máxima del nombre de un objeto en Oracle es de 30 caracteres.  
 
-##  Restricciones
+## Restricciones { #constraints_1 }
 
 Las restricciones de comprobación no tienen ninguna particularidad en Etendo, excepto por cómo deben nombrarse y cómo el back-end las trata para mostrar mensajes.
 
 !!!info
     Para más información, lea [Cómo añadir una restricción](../how-to-guides/how-to-add-a-constraint.md).
 
-###  Mensaje
+### Mensaje { #messages }
 
 Es posible definir un mensaje que se mostrará cuando no se satisfaga la regla definida por la restricción. 
 
 !!!info
     Cómo hacerlo se explica en la documentación de [Mensaje](messages.md#checks).
 
-###  Compatibilidad hacia atrás
+### Compatibilidad hacia atrás { #backwards-compatibility }
 
 Los módulos deberían permitir compatibilidad con otros construidos sobre ellos al menos entre versiones menores; adicionalmente, podría haber datos de usuario ya existentes en la aplicación si se encuentra en un entorno productivo. 
 Esto significa que los datos de usuario u otros módulos podrían depender del modelo actual de base de datos y, en caso de que se añada una nueva restricción o se modifique una existente para que sea más restrictiva
 de lo que era, podría romperse la compatibilidad hacia atrás. Por lo tanto, debe evitarse añadir nuevas restricciones o modificar las existentes para hacerlas más restrictivas entre versiones.
 
-##  Índices
+## Índices { #indexes }
 
-###  Clases de operador
+### Clases de operador { #operator-classes }
 
   
 En PostgreSQL, determinadas [Clases de operador](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} (`text_pattern_ops`,
@@ -89,7 +89,7 @@ pero sí usaría un índice definido con una clase de operador:
 
 Las clases de operador no son necesarias en Oracle para usar un índice en la consulta definida anteriormente; en ese caso, si la columna del índice define una clase de operador, la clase de operador no tendrá efecto.
 
-###  Índices basados en funciones
+### Índices basados en funciones { #function-based-indexes }
 
   
 Etendo admite el uso de funciones en índices. Por ejemplo, esto, junto con el uso de una clase de operador, permitiría el uso de índices en consultas sin distinción de mayúsculas y minúsculas que usan el operador iStartsWith, como esta:
@@ -134,7 +134,7 @@ El siguiente índice también puede usarse.
 
 
   
-###  Índices parciales
+### Índices parciales { #partial-indexes }
   
 `PostgreSQL` admite la definición de [índices parciales](https://www.postgresql.org/docs/9.3/indexes-partial.html){target="\_blank"}. Un índice parcial es un índice en el que es posible especificar las filas que se indexan. Este tipo de índices es útil para condiciones _WHERE_ de uso común que utilizan valores constantes.
 
@@ -151,7 +151,7 @@ Un índice parcial puede crearse de la siguiente manera:
 
 Oracle todavía no admite la creación de índices parciales de forma explícita. Por esta razón, si se encuentra un índice parcial en el modelo XML de Etendo al usar una base de datos Oracle, la definición del índice parcial no se tiene en cuenta y se crea como un índice normal.
   
-####  Índices parciales NOT NULL en columnas anulables
+#### Índices parciales NOT NULL en columnas anulables { #not-null-partial-indexes-on-nullable-columns }
 
 En una base de datos Oracle, no se incluyen filas en un índice si las columnas indexadas son NULL. Eso significa que, para el caso en el que se está indexando una columna de clave externa anulable, cada índice es un índice parcial.
 
@@ -164,7 +164,7 @@ Este no es el comportamiento en las `bases de datos PostgreSQL`, donde necesitar
       WHERE c_return_reason_id IS NOT NULL;
 ```
 
-###  Índices para búsqueda por contiene
+### Índices para búsqueda por contiene { #indexes-for-contains-search }
 
   
 Los índices para búsqueda por *contiene* son aquellos destinados a proporcionar una búsqueda rápida de subcadenas dentro de los valores almacenados en una columna concreta de la base de datos.

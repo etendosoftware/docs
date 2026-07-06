@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Secuencia de documento (numeración)
+# Secuencia de documento (numeración) { #document-sequence }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de documento (numeración)`
 
-## Visión general
+## Visión general { #overview }
 
 Cada documento en Etendo puede numerarse y, por lo tanto, vincularse a una secuencia de documento.
 
@@ -27,11 +27,11 @@ Es importante remarcar que:
     -   esa secuencia puede cambiarse desmarcando la casilla Numeración automática, lo que implicaría que los números de "Factura de proveedor" deberán introducirse manualmente de acuerdo con el número de factura del proveedor.
 -   El escenario más común es que diferentes tipos de documento tengan diferentes secuencias de documento; sin embargo, también es posible que un conjunto de diferentes tipos de documento comparta la misma secuencia de documento para obtener la misma numeración consecutiva.
 
-## Secuencia
+## Secuencia { #sequences }
 
 La ventana de secuencia de documento (numeración) permite al usuario definir cómo se van a comportar las secuencias de documento.
 
-![](../../../../../../assets/drive/1cqBJ-LRNEyws3SX80mIMk8SbXVlAmEKI.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/document-sequence-1.png)
 
 Como se muestra en la imagen anterior, una secuencia de numeración de documentos puede configurarse como *"Numeración automática"*, lo que significa que el documento vinculado a esa secuencia obtendrá un número de documento generado automáticamente por la secuencia.
 
@@ -44,22 +44,22 @@ También es posible definir cómo se van a comportar las secuencias de documento
 !!! info
     La lógica de numeración se aplica al guardar el documento.
 
-## Secuencias enmascaradas
+## Secuencias enmascaradas { #masked-sequences }
 
 Las secuencias transaccionales y no transaccionales pueden utilizarse en cualquier documento y en cualquier campo.
 En estas nuevas secuencias, las máscaras pueden añadirse con fechas dinámicas o cadenas.
 
 El usuario puede filtrar la nueva secuencia según la organización, el tipo de documento y la máscara; la máscara es `#######` por defecto. Estas secuencias podrían crearse con el proceso `Create sequences` en la ventana `General Setup > Aplication > Create Sequences`.
 
-![Creación de secuencias](../../../../../../assets/drive/1PP0CkomMyGlx20kQe3l7D0hW5Jn__2q-.png)
+![Creación de secuencias](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-sequence/document-sequence-2.png)
 
 - Máscara: es una cadena para definir un formato de análisis, con la posibilidad de crear una fecha dinámica o una subcadena literal, además del número incremental formateado.
 
-## Enmascaramiento de secuencias
+## Enmascaramiento de secuencias { #sequence-masking }
 
 El enmascaramiento de secuencias siempre utiliza una clave numérica para analizar la entrada. Por lo tanto, la máscara debe tener al menos el mismo número de caracteres '#' o '\*' que la longitud del campo `Next Assigned Number`. (Siete es la longitud de este campo por defecto)
 
-### Formato de fecha y hora
+### Formato de fecha y hora { #data-time-formatting }
 
 | Letra | Tipo | Presentación | Ejemplos |
 | :--- | :--- | :--- | ---: |
@@ -87,7 +87,7 @@ El enmascaramiento de secuencias siempre utiliza una clave numérica para analiz
 | X   | Zona horaria | Zona horaria ISO 8601 | \-08; -0800; -08:00 |
 | ‘ ’ | Literal | Texto |     |
 
-### Formato de análisis
+### Formato de análisis { #parse-formatting }
 
 | Letra | Tipo | Presentación | Ejemplos |
 | :--- | :--- | :--- | ---: |
@@ -103,7 +103,7 @@ El enmascaramiento de secuencias siempre utiliza una clave numérica para analiz
 !!! info
     El análisis se resuelve en dos pasos: primero las fechas y después los tipos. Por este motivo, si se utilizan caracteres de formato de análisis como ‘l’, ‘x’, ‘U’ o ‘A’, debe utilizarse el carácter ‘!’ para escapar cada carácter.
 
-## Ejemplos
+## Ejemplos { #examples }
 
 | Máscara | Entrada | Resultado |
 | :--- | ---: | ---: |

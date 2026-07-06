@@ -47,7 +47,7 @@ Create and edit a manufacturing plan.
 -   Name: name of the manufacturing plan
 -   Time Horizon: the number of days that are being taken into account for the calculation of the manufacturing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested work requirements and requisitions. For example, the manufacturing lead time is used to indicate how long it will take for a product between being produced and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) tab in the Master Data Management section.
 -   Business Partner: filter to only select products ordered by a certain customer
 -   Business Partner Category: filter to only select business partners of a certain business partner category.
 -   Product: filter to select only a certain product
@@ -139,7 +139,7 @@ Create and edit a purchase plan.
 -   Name: name of the purchasing plan
 -   Time Horizon: the number of days that are taking into account for the calculation of the purchasing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested purchase order. For example, the purchasing lead time is used to indicate how long it will take for a product between being ordered and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) tab in the Master Data Management section.
 -   Vendor: filter to select only products for a certain vendor as configured in the Purchasing tab of the product.
 -   Product: filter to select only a certain product
 -   Product Category: filter to select only products related to a certain product category

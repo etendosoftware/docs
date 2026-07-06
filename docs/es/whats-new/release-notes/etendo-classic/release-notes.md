@@ -8,7 +8,7 @@ tags:
     - Etendo Core
 ---
 
-# Etendo Classic - Notas de la versión
+# Etendo Classic - Notas de la versión { #etendo-classic---release-notes }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.platform.etendo-core`
 
@@ -23,9 +23,26 @@ tags:
 
 | Notas de la versión | Fecha de publicación | Versión | Estado | Imagen ISO | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [26Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.1){target="_blank"} | 09/04/2026 | 26.1.1 | QAA | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) | :white_check_mark: |
+| [26Q1.11](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.11){target="_blank"} | 26/06/2026 | 26.1.11 | QAA |  | :white_check_mark: |
+| [26Q1.10](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.10){target="_blank"} | 19/06/2026 | 26.1.10 | C |  | :white_check_mark: |
+| [26Q1.9](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.9){target="_blank"} | 10/06/2026 | 26.1.9 | C |  | :white_check_mark: |
+| [26Q1.8](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.8){target="_blank"} | 03/06/2026 | 26.1.8 | C |  | :white_check_mark: |
+| [26Q1.7](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.7){target="_blank"} | 15/05/2026 | 26.1.7 | C |  | :white_check_mark: |
+| [26Q1.6](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.6){target="_blank"} | 13/05/2026 | 26.1.6 | C |  | :white_check_mark: |
+| [26Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.5){target="_blank"} | 07/05/2026 | 26.1.5 | C |  | :white_check_mark: |
+| [26Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.4){target="_blank"} | 28/04/2026 | 26.1.4 | C |  | :white_check_mark: |
+| [26Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.3){target="_blank"} | 23/04/2026 | 26.1.3 | C |  | :white_check_mark: |
+| [26Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.2){target="_blank"} | 21/04/2026 | 26.1.2 | C |  | :white_check_mark: |
+| [26Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.1){target="_blank"} | 09/04/2026 | 26.1.1 | C | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) | :white_check_mark: |
 | [26Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.1.0){target="_blank"} | 27/03/2026 | 26.1.0 | C |  | :white_check_mark: |
-| [25Q4.12](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.12){target="_blank"} | 09/04/2026 | 25.4.12 | CS |  | :white_check_mark: |
+| [25Q4.19](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.19){target="_blank"} | 26/06/2026 | 25.4.19 | CS |  | :white_check_mark: |
+| [25Q4.18](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.18){target="_blank"} | 19/06/2026 | 25.4.18 | C |  | :white_check_mark: |
+| [25Q4.17](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.17){target="_blank"} | 02/06/2026 | 25.4.17 | C |  | :white_check_mark: |
+| [25Q4.16](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.16){target="_blank"} | 22/05/2026 | 25.4.16 | C |  | :white_check_mark: |
+| [25Q4.15](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.15){target="_blank"} | 07/05/2026 | 25.4.15 | C |  | :white_check_mark: |
+| [25Q4.14](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.14){target="_blank"} | 23/04/2026 | 25.4.14 | C |  | :white_check_mark: |
+| [25Q4.13](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.13){target="_blank"} | 20/04/2026 | 25.4.13 | C |  | :white_check_mark: |
+| [25Q4.12](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.12){target="_blank"} | 09/04/2026 | 25.4.12 | C |  | :white_check_mark: |
 | [25Q4.11](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.11){target="_blank"} | 10/03/2026 | 25.4.11 | C |  | :white_check_mark: |
 | [25Q4.10](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.10){target="_blank"} | 06/03/2026 | 25.4.10 | C |  | :white_check_mark: |
 | [25Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/25.4.9){target="_blank"} | 02/03/2026 | 25.4.9 | C |  | :white_check_mark: |

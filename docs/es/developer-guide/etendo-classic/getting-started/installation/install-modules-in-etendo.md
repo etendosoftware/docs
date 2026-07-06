@@ -9,8 +9,8 @@ tags:
     - Gestor de dependencias
 ---
 
-# Instalar módulos en Etendo Classic
-## Visión general
+# Instalar módulos en Etendo Classic { #install-modules-in-etendo-classic }
+## Visión general { #overview }
 Esta guía explica dos formas diferentes de instalar módulos en Etendo Classic:
 
 - **Instalación estándar con Gradle**: este método implica definir manualmente las dependencias en el archivo `build.gradle` del proyecto, especificando los módulos que se incluirán en formato JAR o en formato código fuente.
@@ -21,18 +21,18 @@ Esta guía explica dos formas diferentes de instalar módulos en Etendo Classic:
 
 !!! warning "Aviso importante"
     Se recomienda encarecidamente elegir **un único método** para gestionar dependencias: **Instalación estándar con Gradle** o el **gestor de dependencias**. Una vez que empiece a utilizar el **gestor de dependencias**, este tiene prioridad sobre el archivo `build.gradle`, y la información de dependencias se gestionará a través de la base de datos. No se admite combinar ambos métodos y puede dar lugar a comportamientos inesperados o incoherencias durante la instalación o la actualización de módulos.
-##  Autenticación
+## Autenticación { #authentication }
 
 Es importante mencionar que las dependencias se resuelven desde GitHub, por lo que debe tener las credenciales configuradas correctamente tal y como se explica en el documento [Uso de repositorios en Etendo](../../../etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md). 
 Dependiendo del nivel de acceso que tenga su usuario de GitHub, tendrá acceso a paquetes públicos o privados (comerciales).
 
 !!! success "Info"
     Junto con su licencia, tiene acceso a todos los paquetes distribuidos por Etendo.
-## Instalación estándar de Gradle
+## Instalación estándar de Gradle { #gradle-standard-installation }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gY0kLINlyq0?si=fGXiZ9wJsw-Bhs2B" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Lista de verificación
+### Lista de verificación { #checklist }
 
 :octicons-check-circle-16: **Configurar credenciales**.<br>
 :octicons-check-circle-16: **Buscar módulos o bundles para instalar**.<br>
@@ -43,7 +43,7 @@ Dependiendo del nivel de acceso que tenga su usuario de GitHub, tendrá acceso a
 :octicons-check-circle-16: **Reiniciar el servicio de Tomcat y verificar la instalación**.<br>
 
 
-### Buscar dependencias
+### Buscar dependencias { #search-for-dependencies }
 Existen dos opciones para buscar e instalar módulos en Etendo Classic. Seleccione una de las siguientes:
 
 === ":material-store: Marketplace"
@@ -89,7 +89,7 @@ Existen dos opciones para buscar e instalar módulos en Etendo Classic. Seleccio
     ![search-packages.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png)
     ![package.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png)
 
-### Configurar dependencias en Etendo Classic 
+### Configurar dependencias en Etendo Classic { #set-dependencies-in-etendo-classic }
 
 En función del formato de los módulos con el que quiera trabajar:
 
@@ -141,7 +141,7 @@ En función del formato de los módulos con el que quiera trabajar:
     Puede utilizar reglas de exclusión de Gradle para evitar descargar un módulo transitivo específico. Consulte la [Documentación de Gradle](https://docs.gradle.org/current/userguide/how_to_exclude_transitive_dependencies.html){target="_blank"}
 
 
-### Resolver dependencias
+### Resolver dependencias { #resolve-dependencies }
 
 
 === ":octicons-package-16: Formato de fuentes"
@@ -209,7 +209,7 @@ En función del formato de los módulos con el que quiera trabajar:
         }
         ```
 
-### Instalar dependencias
+### Instalar dependencias { #install-dependencies }
 
 Por último, actualice la base de datos y compile los nuevos módulos.
 
@@ -220,7 +220,7 @@ Por último, actualice la base de datos y compile los nuevos módulos.
 !!! success ":simple-apachetomcat: Reiniciar Tomcat"
     Reinicie el servidor Tomcat y compruebe la instalación. <br>
     El módulo está listo para usarse en Etendo!
-## Gestor de dependencias
+## Gestor de dependencias { #dependency-manager }
 :octicons-package-16: Paquete Java: `com.etendoerp.dependencymanager`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/du8EYoSsZ68?si=HDmwg-JxPg7gJ2sT" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -229,7 +229,7 @@ Por último, actualice la base de datos y compile los nuevos módulos.
 - Además, desde la ventana Gestión de módulos puede consultar paquetes, versiones disponibles, dependencias e instalar nuevos paquetes.
 - A continuación, desde la ventana Gestión de dependencias puede actualizar, eliminar y cambiar el formato de los módulos ya instalados.
 
-### Instalación
+### Instalación { #installation }
 
 El **Gestor de dependencias** se distribuye por defecto en las versiones actuales de Etendo Classic; en caso de que no esté instalado en su instancia, puede hacerlo siguiendo la sección [Instalación estándar de Gradle](#instalación-estándar-de-gradle) descrita anteriormente.
 
@@ -239,7 +239,7 @@ El **Gestor de dependencias** se distribuye por defecto en las versiones actuale
 !!! warning
     Debe asegurarse de utilizar Etendo Gradle Plugin en la versión `1.5.1` o superior; compruebe la sección de plugins en el archivo `build.gradle`. Para más información sobre las versiones del plugin, consulte [Etendo Gradle Plugin - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md)
 
-### Ventanas de gestión de módulos
+### Ventanas de gestión de módulos { #module-management-windows }
 :material-menu: `Aplicación` > `Gestión de dependencias de Etendo` > `Gestión de módulos`
     
 Con la sesión iniciada con el rol de Administrador del sistema, en la ventana `Gestión de módulos`, el usuario puede ver todos los módulos que se van a añadir y seleccionar la versión correspondiente en la pestaña **Versión**. Una vez seleccionada una de las versiones, las dependencias de dicha versión pueden encontrarse en la subpestaña **dependencias**.
@@ -259,8 +259,8 @@ Campos a tener en cuenta:
 
 Esta ventana presenta dos botones que pueden utilizarse: **Añadir dependencia** y **Actualizar paquetes**.
 
-#### Botones
-##### Botón Añadir dependencia
+#### Botones { #buttons }
+##### Botón Añadir dependencia { #add-dependency-button }
 
 Este botón permite añadir las dependencias asociadas a una versión específica del módulo seleccionado. Al hacer clic, una ventana emergente mostrará todas las dependencias y módulos que se instalarán.
 
@@ -291,11 +291,11 @@ Una vez finalizado el proceso, se abre la ventana **Gestión de dependencias** y
 
     - Se muestra un error y se deshabilita el proceso, evitando la instalación de una versión anterior para prevenir problemas de compatibilidad. Este enfoque garantiza que las dependencias se gestionen correctamente, manteniendo la compatibilidad y minimizando el riesgo de pérdida de funcionalidad. En caso de que necesite instalar igualmente esa versión de la dependencia, debe degradar la versión desde la ventana `Gestión de dependencias` con el botón [cambiar versión](#cambiar-versión).
 
-##### Botón Actualizar paquetes
+##### Botón Actualizar paquetes { #update-packages-button }
 
 Este botón se utiliza para ejecutar el proceso Actualizar paquetes, que actualiza la lista de paquetes disponibles con la información más reciente.
 
-### Ventanas de gestión de dependencias
+### Ventanas de gestión de dependencias { #dependency-management-windows }
 :material-menu: `Aplicación` > `Gestión de dependencias de Etendo` > `Gestión de dependencias`
 
 Con la sesión iniciada con el rol de Administrador del sistema, en la ventana `Gestión de dependencias`, el usuario puede encontrar todas las dependencias instaladas en el paso anterior.
@@ -322,9 +322,9 @@ Campos a tener en cuenta:
     - Actualizado: está instalada la última versión disponible.
 - **Dependencia externa** (solo disponible para dependencias `JAR`): casilla de verificación que identifica una librería externa o módulo requerido por el proyecto, gestionado por Gradle. Estas dependencias se recuperan desde repositorios remotos durante el proceso de build.
 
-#### Botones
+#### Botones { #buttons_1 }
 
-##### Cambiar versión
+##### Cambiar versión { #change-version }
 
 ![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/dependencymanager4.png)
 
@@ -335,7 +335,7 @@ Cuando se modifica la versión de un módulo, sus dependencias relacionadas tamb
 !!! warning
     Se muestra una notificación de advertencia para informar al usuario sobre la compatibilidad de versiones antes de ejecutar el proceso.
 
-##### Cambiar formato
+##### Cambiar formato { #change-format }
 
 ![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/dependencymanager6.png)
 
@@ -347,7 +347,7 @@ Este botón se utiliza para cambiar el formato del módulo. Este proceso debe ej
 
 - En caso de que el módulo esté originalmente en formato `JAR`, la única opción en la ventana emergente **Cambiar formato** es `source`. En este caso, la ventana muestra una notificación de advertencia para recordar al usuario que el directorio original se elimina una vez finalizado el proceso.
 
-##### Eliminar dependencia
+##### Eliminar dependencia { #delete-dependency }
 
 Este botón se utiliza para eliminar dependencias.
 
@@ -362,7 +362,7 @@ Este botón se utiliza para eliminar dependencias.
     !!! warning
         Se muestra una notificación de advertencia para informar al usuario de los pasos para eliminarla.
 
-### Proceso Añadir dependencias locales
+### Proceso Añadir dependencias locales { #add-local-dependencies-process }
 :material-menu: `Aplicación` > `Gestión de dependencias de Etendo` > `Añadir dependencias locales`
 
 ![](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/dependencymanager5.png)
@@ -372,7 +372,7 @@ Este proceso, en la ventana `Añadir dependencias locales`, que también forma p
 !!! note
     El objetivo principal de este proceso es añadir las dependencias en formato `local`, de modo que, en caso de distribuirse como un módulo de Etendo, pueda migrarse fácilmente a formato `Sources` o `Jar`.
 
-### Proceso Actualizar información de paquetes
+### Proceso Actualizar información de paquetes { #update-packages-information-process }
 :material-menu: `Aplicación` > `Gestión de dependencias de Etendo` > `Actualizar información de paquetes`
 
 Dado que la información sobre los paquetes se actualiza diariamente, el usuario puede ejecutar manualmente el proceso desde la ventana `Actualizar información de paquetes` para actualizar la lista de paquetes con la información más reciente.

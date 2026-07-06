@@ -7,12 +7,12 @@ tags:
 status: beta
 ---
 
-# Cómo crear una tabla basada en una fuente de datos definida por el usuario
+# Cómo crear una tabla basada en una fuente de datos definida por el usuario { #how-to-create-a-table-based-on-a-user-defined-datasource }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Se pueden establecer dos orígenes de datos diferentes para las tablas definidas en el diccionario de aplicación: **Tabla** (tablas y vistas de base de datos) y **Fuente de datos**. Existen dos motivos principales para utilizar una tabla basada en una fuente de datos.
 
@@ -23,7 +23,7 @@ Se pueden establecer dos orígenes de datos diferentes para las tablas definidas
     Definir una fuente de datos requiere un esfuerzo considerable (es necesario programar el filtrado, la paginación, la ordenación, etc.). Si se ajusta a sus necesidades, se puede utilizar una [Tabla basada en HQL](../how-to-guides/how-to-create-a-hql-based-table.md).  
 
   
-## Creación de la fuente de datos Java
+## Creación de la fuente de datos Java { #creating-the-java-datasource }
 
 [Esta sección](../concepts/datasources.md) describe cómo crear una fuente de datos Java y proporciona [algunos ejemplos](../concepts/datasources.md#datasource-examples).
 
@@ -41,7 +41,7 @@ return ModelProvider.getInstance().getEntityByTableId(AD_TABLE_ID);
 }
 ```
 
-## Definición de la fuente de datos en el diccionario de aplicación
+## Definición de la fuente de datos en el diccionario de aplicación { #defining-the-datasource-in-the-application-dictionary }
 
 [Esta sección](../concepts/datasources.md#datasource-definition) describe cómo definir una fuente de datos en el diccionario de aplicación.
 
@@ -52,7 +52,7 @@ Se debe marcar el indicador 'Utilizar como origen de datos de tabla' en las fuen
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource-2.png){: .legacy-image-style}
 
-## Definición de la tabla y sus columnas
+## Definición de la tabla y sus columnas { #defining-the-table-and-its-columns }
 
 [Esta sección](../how-to-guides/how-to-create-a-table.md#registering-the-table-within-the-application-dictionary) describe cómo definir en el diccionario de aplicación tablas basadas en tablas o vistas de base de datos.
 
@@ -62,11 +62,11 @@ El campo **Origen de datos** permite al usuario seleccionar el tipo de origen de
 
 No es posible utilizar **Crear columnas de la base de datos** para definir las columnas de tablas basadas en una fuente de datos, por lo que deberán añadirse manualmente.
 
-## Definición de la ventana, sus pestañas y sus campos
+## Definición de la ventana, sus pestañas y sus campos { #defining-the-window-its-tabs-and-its-fields }
 
 Una vez que se han definido la tabla y sus columnas, es el turno de la ventana. Las ventanas con pestañas asociadas a tablas basadas en una fuente de datos se definen exactamente de la misma forma que las pestañas asociadas a tablas basadas en tablas de base de datos. [Esta sección](../how-to-guides/how-to-create-a-window.md) describe cómo hacerlo.
 
-## Consideraciones de diseño
+## Consideraciones de diseño { #design-considerations }
 
 Existen algunas consideraciones de diseño que deben tenerse en cuenta al crear una tabla basada en una fuente de datos:
 
@@ -74,7 +74,7 @@ Existen algunas consideraciones de diseño que deben tenerse en cuenta al crear 
 - No se genera ninguna clase Java para las tablas basadas en una fuente de datos. 
 - Las fuentes de datos manuales deben implementar el filtrado, la ordenación y la paginación de las tablas. Si la fuente de datos manual que se está definiendo no admite filtrar claves foráneas basándose en su id, se debe desmarcar el indicador Support Filtering Foreign Key Columns Using Their ID. Por ejemplo, el criterio construido al filtrar la organización '*' usando su id sería: {fieldName: 'organization', operator: 'equals', value: '0'}. 
 
-## Ejemplo: una ventana basada en una hoja de cálculo de Google
+## Ejemplo: una ventana basada en una hoja de cálculo de Google { #example-a-window-based-on-a-google-spreadsheet }
 
 Esta sección es un resumen de una tabla basada en una fuente de datos que utiliza una hoja de cálculo de Google como su origen de datos.
 
@@ -96,7 +96,7 @@ La ventana definida en este ejemplo tiene la misma funcionalidad que si se hubie
 
 Cuando se actualiza un registro desde la ventana de Etendo, la hoja de cálculo de Google se actualiza en tiempo real. Si la hoja de cálculo de Google se actualiza manualmente, la rejilla de Etendo debe refrescarse para obtener los registros actualizados.
 
-### Fuente de datos Java
+### Fuente de datos Java { #java-datasource }
 
 Implementar la fuente de datos Java es el paso que más tiempo consume de todo el proceso. En esta sección, solo se va a demostrar la operación de obtención.
 
@@ -228,7 +228,7 @@ El método `getData` devuelve los registros que realmente se devolverán dado el
 
 Se ha creado otra clase de conveniencia llamada `IssueTrackerItem` para gestionar cada registro del gestor de incidencias.
 
-### Fuente de datos de seguridad
+### Fuente de datos de seguridad { #security-datasource }
 
 Las fuentes de datos deben implementar un mecanismo de seguridad. El método `checkFetchDatasourceAccess` permite implementar un acceso de seguridad a una DataSource cuando se utiliza el método fetch(). El método `checkEditDatasourceAccess` se utiliza para implementar el mecanismo de seguridad en las operaciones de añadir, eliminar y actualizar. Se puede sobrescribir en fuentes de datos específicas para aplicar un mecanismo de seguridad particular. Este es un ejemplo de implementación del método `checkFetchDatasourceAccess`:
 
@@ -259,14 +259,14 @@ Para implementar el mecanismo de seguridad, se han implementado 3 métodos de co
 - `checkDerivedAccess`(Entity entity): comprueba si una entidad es derivada para el usuario actual. 
 - `checkWritableAccess`(Entity entity): comprueba si una entidad es escribible para el usuario actual. 
 
-### Definición de la fuente de datos en el diccionario de aplicación
+### Definición de la fuente de datos en el diccionario de aplicación { #datasource-definition-in-the-application-dictionary }
 
 Es muy fácil definir la fuente de datos en el diccionario de aplicación. Simplemente asegúrese de introducir el nombre correcto de la clase Java y de marcar el indicador **Utilizar como origen de datos de tabla**.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource-6.png){: .legacy-image-style}
   
 
-### Definición de la tabla y las columnas en el diccionario de aplicación
+### Definición de la tabla y las columnas en el diccionario de aplicación { #table-and-columns-definition-in-the-application-dictionary }
 
 Asegúrese de seleccionar la opción 'Fuente de datos' en el desplegable 'Origen de datos'. La fuente de datos definida en el paso anterior debería mostrarse en el desplegable 'Fuente de datos'.
 
@@ -278,7 +278,7 @@ Al menos una columna debe definirse como clave primaria.
 
 El nombre de las columnas en el diccionario de aplicación es el mismo que el título de las columnas en la hoja de cálculo de Google; esto simplifica la implementación de la fuente de datos.
 
-### Definición de la ventana, la pestaña y los campos en el diccionario de aplicación
+### Definición de la ventana, la pestaña y los campos en el diccionario de aplicación { #window-tab-and-fields-definition-in-the-application-dictionary }
 
 Definir la ventana, la pestaña y el campo en el diccionario de aplicación se realiza de la misma forma que con las tablas estándar:
 

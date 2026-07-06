@@ -14,7 +14,7 @@ tags:
 
 :octicons-project-symlink-16: Notas de la versión del bundle original: [Platform Extensions Bundle](../../bundles/platform-extensions/release-notes.md)
 
-## Visión general
+## Visión general { #overview }
 
 | Versión | Fecha de publicación | Compatibilidad con Platform Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |

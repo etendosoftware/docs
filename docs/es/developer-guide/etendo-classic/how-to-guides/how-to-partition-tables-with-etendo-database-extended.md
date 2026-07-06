@@ -9,9 +9,9 @@ tags:
 status: beta
 ---
 
-# Cómo particionar tablas con el módulo Etendo Database Extended
+# Cómo particionar tablas con el módulo Etendo Database Extended { #how-to-partition-tables-with-etendo-database-extended-module }
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning "MÓDULO BETA"
     El módulo Etendo Database Extended se encuentra actualmente en **BETA**. Las funcionalidades pueden cambiar sin previo aviso. No lo utilice en producción sin una validación previa.
@@ -25,7 +25,7 @@ Usted:
 - Actualizará el modelo de datos para que Etendo sea consciente de los cambios estructurales.
 - (Opcional) Revertirá el particionado usando `unpartition.py` para desarrollo u operaciones de `export.database`.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - PostgreSQL 16+
 - Python 3 (disponible en el entorno)
@@ -33,12 +33,12 @@ Usted:
 - Módulo Etendo Database Extended instalado
 - Capacidad para detener Tomcat temporalmente (recomendado para consistencia)
 
-## Componentes implicados
+## Componentes implicados { #components-involved }
 
 ### Application Dictionary (AD)
 Ventana `Partitioned Table Config`: define la tabla objetivo y la columna de fecha/marca de tiempo utilizada como clave de particionado.
 
-### Herramientas del módulo (Python)
+### Herramientas del módulo (Python) { #module-tools-python }
 - `tool/migrate.py`: orquesta la creación de particiones y la migración de datos.
 - `tool/unpartition.py`: revierte una tabla particionada a una estructura plana (sin particionado) (necesario antes de ejecutar `export.database`).
 
@@ -48,7 +48,7 @@ Crea la tabla padre particionada, las particiones anuales, migra los datos y vue
 ### DBSM / Gradle
 `./gradlew update.database -Dforce=yes smartbuild` alinea los metadatos del modelo de datos con la nueva estructura física tras particionar o revertir.
 
-## Flujo de extremo a extremo (alto nivel)
+## Flujo de extremo a extremo (alto nivel) { #end-to-end-flow-high-level }
 
 ```
 [1] Definir en AD (tabla + columna de fecha)
@@ -74,24 +74,24 @@ $ python3 modules/com.etendoerp.db.extended/tool/unpartition.py "table1,table2"
 $ ./gradlew update.database -Dforce=yes smartbuild
 ```
 
-## Funcionamiento interno de migrate.py (paso a paso)
+## Funcionamiento interno de migrate.py (paso a paso) { #internal-operation-of-migratepy-step-by-step }
 
-### 1. Configuración y conexión
+### 1. Configuración y conexión { #1-configuration-connection }
 
 - Lee las credenciales de base de datos desde el entorno de Etendo.
 - Lee las entradas AD de `Partitioned Table Config`.
 
-### 2. Prevalidaciones
+### 2. Prevalidaciones { #2-pre-validations }
 
 - Garantiza que la tabla existe y que no está ya particionada.
 - Valida que la columna de particionado existe y es de tipo `date` o `timestamp`.
 - Recopila objetos dependientes (índices, triggers, claves foráneas, vistas).
 
-### 3. Preparación de tablas relacionadas (si es necesario)
+### 3. Preparación de tablas relacionadas (si es necesario) { #3-related-tables-preparation-if-needed }
 
 - Añade columnas auxiliares de fecha faltantes en tablas relacionadas (cuando sea necesario para mantener la integridad referencial/temporal).
 
-### 4. Transformación
+### 4. Transformación { #4-transformation }
 
 - Inicia una transacción (rollback seguro en caso de fallo).
 - Crea la tabla padre particionada (refleja la estructura original).
@@ -99,21 +99,21 @@ $ ./gradlew update.database -Dforce=yes smartbuild
 - Migra los datos desde la tabla original (enrutamiento automático hacia las particiones).
 - Intercambia nombres para que la nueva tabla padre conserve el nombre lógico original de la tabla.
 
-### 5. Re-adjunción de dependencias
+### 5. Re-adjunción de dependencias { #5-dependency-re-attachment }
 
 - Recrea índices.
 - Reconstruye triggers.
 - Vuelve a vincular las claves foráneas al nuevo padre.
 - Garantiza que las vistas sigan siendo válidas.
 
-### 6. Finalización
+### 6. Finalización { #6-finalization }
 
 - Confirma (commit) si tiene éxito (rollback en caso contrario, se preserva la tabla original).
 - Requiere: `./gradlew update.database -Dforce=yes smartbuild` posteriormente.
 
-## Procedimiento operativo
+## Procedimiento operativo { #operational-procedure }
 
-### 1. Preparar el entorno
+### 1. Preparar el entorno { #1-prepare-environment }
 
 ```bash
 ./gradlew update.database smartbuild
@@ -122,7 +122,7 @@ source modules/com.etendoerp.db.extended/.venv/bin/activate
 pip3 install pyyaml psycopg2-binary
 ```
 
-### 2. Configurar la definición de particionado en AD
+### 2. Configurar la definición de particionado en AD { #2-configure-partition-definition-in-ad }
 
 `Application`>`Partition`>`Partitioned Table Config`
 
@@ -130,13 +130,13 @@ Seleccione:
 - Tabla
 - Columna de fecha/marca de tiempo (alta cardinalidad, p. ej. `dateordered`, `created`)
 
-### 3. Ejecutar el particionado
+### 3. Ejecutar el particionado { #3-execute-partitioning }
 
 ```bash
-# 1) Detener Tomcat (recomendado)
-# 2) Ejecutar migración
+# 1) Detener Tomcat (recomendado) { #1-stop-tomcat-recommended }
+# 2) Ejecutar migración { #2-run-migration }
 python3 modules/com.etendoerp.db.extended/tool/migrate.py
-# 3) Actualizar modelo
+# 3) Actualizar modelo { #3-refresh-model }
 ./gradlew update.database -Dforce=yes smartbuild
 ```
 
@@ -144,14 +144,14 @@ python3 modules/com.etendoerp.db.extended/tool/migrate.py
 
 Este ModuleScript se ejecuta durante `./gradlew update.database ...` y automatiza los ajustes de restricciones cuando una tabla se particiona o se revierte.
 
-### Propósito
+### Propósito { #purpose }
 
 - Crea copias de seguridad de seguridad en el esquema `etarc_backups` (`<table>_backup_<timestamp>`).
 - Mantiene `backup_metadata` (limpia automáticamente copias antiguas: retención ~7 días / máx. 5 por tabla).
 - Reconstruye la clave primaria (PK): compuesta `(id, <partition_column>)` si está particionada; simple `id` si no lo está.
 - Recrea claves foráneas (FK) en tablas hijas, añadiendo la columna auxiliar `etarc_<partition_column>__<fkname>` cuando sea necesario para referencias compuestas.
 
-### Esquema del proceso
+### Esquema del proceso { #process-outline }
 
 - Detecta el estado de particionado mediante `pg_partitioned_table`.
 - Lee definiciones del modelo XML para metadatos de PK/FK.
@@ -159,37 +159,37 @@ Este ModuleScript se ejecuta durante `./gradlew update.database ...` y automatiz
 - Añade y (cuando es posible) rellena columnas auxiliares en tablas hijas.
 - Genera logs detallados y seccionados para trazabilidad.
 
-### Señales de log a tener en cuenta
+### Señales de log a tener en cuenta { #log-signals-to-look-for }
 
 - Separadores tipo banner: `=======================================================`
 - Títulos: `Partitioning process info`, `Partitioning processing summary (ms)`
 - Mensajes de backup: detalles de creación y limpieza
 - Mensajes de restricciones: `Recreating constraints for <table>`, `Added helper column ...`
 
-### Problemas comunes
+### Problemas comunes { #common-issues }
 
 - Falta definición de PK en XML → verifique el XML de la entidad.
 - Errores de permisos al crear el esquema `etarc_backups`.
 - Nomenclatura de FK inesperada o FKs multicolumna.
 - Columna auxiliar NULL (no se puede inferir) → rellénela manualmente antes de forzar la FK compuesta.
 
-## Revertir (desparticionado)
+## Revertir (desparticionado) { #reverting-des-partitioning }
 `export.database` no soporta tablas particionadas. Revierta antes de exportar o para reinicios de desarrollo.
 
 ```bash
-# Una o varias tablas (separadas por comas, sin espacios)
+# Una o varias tablas (separadas por comas, sin espacios) { #one-or-multiple-tables-comma-separated-no-spaces }
 python3 modules/com.etendoerp.db.extended/tool/unpartition.py "c_order,c_invoice"
 ./gradlew update.database -Dforce=yes smartbuild
 ```
 
-### Pasos internos de unpartition.py
+### Pasos internos de unpartition.py { #internal-steps-of-unpartitionpy }
 
 - Crea una tabla de reemplazo sin particionado.
 - Copia los datos desde el padre + particiones.
 - Recrea índices / FKs / triggers.
 - Elimina la jerarquía de particiones y deja una tabla plana con el nombre lógico original.
 
-## Buenas prácticas y advertencias
+## Buenas prácticas y advertencias { #best-practices-warnings }
 
 - Pruebe siempre primero en preproducción (módulo BETA).
 - Elija una clave de particionado con buena distribución y predicados por rango frecuentes.
@@ -199,21 +199,21 @@ python3 modules/com.etendoerp.db.extended/tool/unpartition.py "c_order,c_invoice
 - Mantenga nombres de FK convencionales (simplifica el reemplazo mediante scripts).
 - Valide que la lógica de negocio puede inferir la clave de particionado para filas hijas.
 
-## Lista rápida de verificación de éxito
+## Lista rápida de verificación de éxito { #quick-success-checklist }
 
 - `\d+ <table>` en `psql` muestra `Partitioned table` con particiones anuales (p. ej. 2023, 2024 ...).
 - Las consultas por rango leen menos bloques (poda de particiones visible en `EXPLAIN`).
 - `./gradlew update.database -Dforce=yes smartbuild` finaliza sin errores.
 - La aplicación opera de forma transparente contra el mismo nombre lógico de tabla.
 
-## Resumen ejecutivo del flujo
+## Resumen ejecutivo del flujo { #executive-flow-summary }
 
 1. Defina el particionado en AD (tabla + columna de fecha).
 2. Ejecute `migrate.py` (valida, crea el padre, particiones anuales, migra datos, vuelve a adjuntar dependencias).
 3. Ejecute `update.database` para sincronizar el modelo.
 4. (Opcional) Ejecute `unpartition.py` + `update.database` para revertir.
 
-## Consultas de verificación (ejemplos)
+## Consultas de verificación (ejemplos) { #verification-queries-examples }
 
 ```sql
 -- Check partitioned status
@@ -230,7 +230,7 @@ ORDER BY 1;
 EXPLAIN ANALYZE SELECT * FROM c_order WHERE dateordered >= '2024-01-01' AND dateordered < '2024-07-01';
 ```
 
-## Documentación relacionada
+## Documentación relacionada { #related-documentation }
 
 - [Módulo Etendo Database Extended Module](../developer-tools/etendo-database-extended-module.md)
 

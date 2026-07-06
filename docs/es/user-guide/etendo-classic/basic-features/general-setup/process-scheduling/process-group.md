@@ -6,11 +6,11 @@ tags:
     - Planificación
 ---
 
-# Grupo de Procesos
+# Grupo de Procesos { #process-group }
 
 :material-menu: `Aplicación` > `Configuración General` > `Planificador de procesos` > `Grupo de Procesos`
 
-## Visión general
+## Visión general { #overview }
 
 Un **Grupo de Procesos** permite al usuario definir y planificar una secuencia de procesos que se ejecutarán uno tras otro como un único lote. Esto es útil para automatizar flujos de trabajo que requieren que varios procesos se ejecuten en un orden específico.
 
@@ -19,7 +19,7 @@ Cuando se planifica un Grupo de Procesos:
 - Aparece una única entrada en las ventanas **Procesamiento de Peticiones** y **Monitor de Procesos**.
 - Cada proceso dentro del grupo también aparece por separado en ambas ventanas con su propio registro y estado, independientemente de si se ejecutó correctamente o falló.
 
-## Ventana Grupo de Procesos 
+## Ventana Grupo de Procesos { #process-group-window }
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-group.png)
 
@@ -33,7 +33,7 @@ Campos a tener en cuenta:
     !!! info
         Esto es útil cuando los procesos dependen entre sí.
 
-### Lista de Grupo de Procesos
+### Lista de Grupo de Procesos { #process-group-list }
 
 Lista de procesos individuales, cada uno con un número de secuencia asignado que determina el orden de ejecución.
 

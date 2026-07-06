@@ -7,9 +7,9 @@ tags:
   - Application Dictionary
 ---
 
-#  Cómo añadir columnas a una tabla 
+# Cómo añadir columnas a una tabla { #how-to-add-columns-to-a-table }
 
-##  Visión general
+## Visión general { #overview }
 
 En esta sección, el usuario puede encontrar información sobre cómo ampliar la tabla creada en la sección [Cómo crear una tabla](how-to-create-a-table.md) para incluir campos adicionales.
 
@@ -43,7 +43,7 @@ Para mostrar cómo se configuran diferentes tipos de columna, añadiremos 3 colu
   * _Payment Schedule_ una lista valores que contiene una lista de valores: _Start of Month_ , _Mid of Month_ , _End of Month_
   * _Salary Category_ una referencia que apunta a la tabla existente _Salary Category_. 
 
-###  Creación del nuevo módulo
+### Creación del nuevo módulo { #creating-the-new-module }
 
 Esta sección solo enumera los principales elementos importantes necesarios para el nuevo módulo. Puede encontrar más detalles en [Cómo crear un módulo](how-to-create-a-module.md)
 
@@ -51,7 +51,7 @@ Esta sección solo enumera los principales elementos importantes necesarios para
   * Dependencias: 
     * Core como es habitual 
 
-###  Creación de las columnas en la base de datos
+### Creación de las columnas en la base de datos { #creating-the-columns-in-the-database }
 
 | Nombre de columna     | Tipo   | Longitud | Nota                                                                                                                                   |
 | --------------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,11 +70,11 @@ ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_
 
 Como puede verse en el SQL, se añade una clave foránea junto con el nuevo campo que enlaza con la tabla `c_salary_category`. Esto garantiza que solo se puedan seleccionar categorías existentes y también que no se pueda eliminar ninguna categoría salarial mientras se utilice en la tabla `ht_salary`.
 
-###  Añadir y configurar las columnas en el Diccionario de aplicación
+### Añadir y configurar las columnas en el Diccionario de aplicación { #adding-configuring-the-columns-in-the-application-dictionary }
 
 En esta parte, añadiremos la columna recién añadida a la lista de columnas ya definidas para la tabla `ht_salary` y luego configuraremos esas definiciones de columna para que coincidan con la descripción indicada en la sección de objetivos anterior.
 
-####  Añadir la nueva columna al Diccionario de aplicación
+#### Añadir la nueva columna al Diccionario de aplicación { #adding-the-new-column-to-the-application-dictionary }
 
 Los pasos a seguir son:
 
@@ -102,7 +102,7 @@ org.openbravo.howtos2
             └── AD_PACKAGE.xml
 ```  
 
-####  Configuración de las nuevas columnas
+#### Configuración de las nuevas columnas { #configuring-the-new-columns }
 
 Antes de empezar a configurar las nuevas columnas, deben realizarse dos pasos preparatorios.
 
@@ -174,7 +174,7 @@ Navegando a `Application Dictionary` > `Element` buscamos el nuevo elemento y re
 
 Estas actualizaciones son necesarias para tener etiquetas útiles en la UI para cualquier ventana definida sobre esta tabla y para evitar que estas utilicen nombres internos con la terminología técnica `EM`.
 
-###  Reconstrucción del sistema
+### Reconstrucción del sistema { #rebuilding-the-system }
 
 Finalmente, para que las columnas recién añadidas estén disponibles en tiempo de ejecución, debe ejecutarse `./gradlew generate.entities` y desplegarse los cambios en tomcat. Estos dos pasos pueden realizarse juntos ejecutando `./gradlew smartbuild`. Después de eso, debe reiniciarse Tomcat para refrescar el modelo DAL en memoria, de modo que conozca las columnas recién añadidas.
 

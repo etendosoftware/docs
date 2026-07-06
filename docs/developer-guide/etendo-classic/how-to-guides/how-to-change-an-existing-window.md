@@ -33,7 +33,7 @@ The objective of this how-to is to illustrate how to make changes to existing ge
   * Hide a field 
   * Re-sequence the layout 
 
-[Physical Inventory](../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) is a window that belongs to Etendo Classic.
+[Physical Inventory](../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md) is a window that belongs to Etendo Classic.
 It comprises of:
 
   * 1 Window - Physical Inventory. 

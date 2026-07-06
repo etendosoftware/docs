@@ -8,16 +8,16 @@ tags:
 title: Cómo documentar un endpoint con OpenAPI
 ---
 
-# Cómo documentar un endpoint con OpenAPI
+# Cómo documentar un endpoint con OpenAPI { #how-to-document-an-endpoint-with-openapi }
 
-## Visión general
+## Visión general { #overview }
 
 Esta documentación detalla los pasos para documentar endpoints de API utilizando la especificación OpenAPI. Al aprovechar Swagger, los desarrolladores pueden garantizar que sus API estén bien documentadas, estandarizadas y sean fáciles de integrar.
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Platform Extensions Bundle. Para ello, siga las instrucciones del marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Platform Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-## Definir una solicitud OpenAPI por defecto
+## Definir una solicitud OpenAPI por defecto { #define-a-default-openapi-request }
 
 Este tipo requiere implementar el endpoint de forma programática. Cree una nueva clase Java que extienda la clase abstracta `OpenAPIDefaultRequest` e implemente los métodos requeridos (por ejemplo: `getClasses()`, `getEndpointPath()` y los métodos de operación como `getPOSTEndpoint()`).
 
@@ -74,7 +74,7 @@ La clase `ImageUploadOpenAPI` muestra:
 - **Operación POST**: define las propiedades obligatorias (`filename`, `base64Image`) y valida la entrada.
 - **Asociación de clase Java**: enlaza con `ImageUploadServlet` para gestionar las solicitudes.
 
-### Ventana Solicitud OpenAPI
+### Ventana Solicitud OpenAPI { #openapi-request-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `OpenAPI Request`
 
@@ -92,7 +92,7 @@ Campos a tener en cuenta:
 6. **Descripción POST**: proporcione una descripción para el método POST del endpoint. Esta descripción se utiliza si el endpoint soporta el método POST.
 7. **Descripción PUT**: proporcione una descripción para el método PUT del endpoint. Esta descripción se utiliza si el endpoint soporta el método PUT.
 
-### Ventana Flujo OpenAPI
+### Ventana Flujo OpenAPI { #openapi-flow-window }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `OpenAPI Flow`
 
@@ -108,7 +108,7 @@ Cada registro de Flujo OpenAPI puede:
 
 Para garantizar que una Solicitud OpenAPI aparezca en la documentación de Swagger, debe estar enlazada a un Flujo OpenAPI. Esto asegura un agrupamiento lógico y visibilidad.
 
-### Interfaz de endpoint OpenAPI
+### Interfaz de endpoint OpenAPI { #openapi-endpoint-interface }
 
 Esta interfaz garantiza un comportamiento consistente de los endpoints de API definiendo métodos como:
 
@@ -119,7 +119,7 @@ Por ejemplo, la clase `ImageUploadOpenAPI` implementa estos métodos para valida
 
 ![Ejemplo de Swagger para el endpoint de subida de imagen con esquemas de solicitud y respuesta](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi/swagger-imageupload-example.png)
 
-## Otros tipos de Solicitud OpenAPI
+## Otros tipos de Solicitud OpenAPI { #other-openapi-request-types }
 
 === "Solapa"
 
@@ -180,7 +180,7 @@ Por ejemplo, la clase `ImageUploadOpenAPI` implementa estos métodos para valida
         - Añada un nuevo registro.
         - Enlace la Solicitud OpenAPI en la solapa hija.
 
-## Comprobar Swagger
+## Comprobar Swagger { #check-swagger }
 
 :material-menu: `Aplicación` > `Configuración General` > `Aplicación` > `OpenAPI Flow`
 

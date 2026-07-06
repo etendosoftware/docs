@@ -5,9 +5,9 @@ tags:
   - Process Definition
   - Menu Entry
 ---
-# Cómo crear un informe usando Definición del Proceso
+# Cómo crear un informe usando Definición del Proceso { #how-to-create-a-report-using-process-definition }
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo añadir un nuevo informe usando una Definición del Proceso y crear una entrada de menú para invocarlo.
 
@@ -17,15 +17,15 @@ Esta sección explica cómo añadir un nuevo informe usando una Definición del 
     - [Cómo crear una Definición del Proceso estándar](../how-to-guides/how-to-create-a-standard-process-definition.md)
     - [Cómo crear un informe](../how-to-guides/how-to-create-a-report.md).
 
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección está respaldada por un módulo de ejemplo que incluye el informe simple descrito en este documento. El informe se denomina **Informe simple de productos** y muestra en `PDF` una lista de productos que puede filtrarse por *Categoría del producto*.
 
 El código del módulo de ejemplo puede descargarse desde el repositorio [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}.
 
-## Definición del informe en Diccionario de la Aplicación
+## Definición del informe en Diccionario de la Aplicación { #report-definition-in-application-dictionary }
 
-### Definición del Proceso
+### Definición del Proceso { #process-definition }
 
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Definición del Proceso` 
 
@@ -39,7 +39,7 @@ Como rol `Administrador del sistema`, cree un nuevo registro en la ventana **Def
 
 El `BaseReportActionHandler` es el handler de acción por defecto que se utiliza en los informes. En caso de que desee realizar algunas validaciones Java o incluir parámetros adicionales que no estén definidos en la solapa Parámetros de la Definición del Proceso, es posible utilizar un Handler de acción personalizado que extienda `BaseReportActionHandler`.
 
-### Definición de parámetros
+### Definición de parámetros { #parameter-definition }
 
 En la solapa **Parámetro** se añaden todos los parámetros necesarios para filtrar los resultados del informe. Sus valores son gestionados por `BaseReportActionHandler` y enviados a Jasper Reports como parámetros. Estos parámetros deben definirse en la plantilla JR con el mismo nombre que el nombre de la columna.
 
@@ -127,7 +127,7 @@ Dependiendo de la salida del informe, se establecen algunos parámetros adiciona
     DEBUG org.openbravo.client.application.report.ReportingUtils - parameter name: IS_IGNORE_PAGINATION value: false
     ```
 
-### Parámetros de lista de botones
+### Parámetros de lista de botones { #button-list-parameters }
 
 Cuando se añade un parámetro de lista de botones, los botones se añaden junto con los botones predefinidos de este tipo de proceso (**Vista**, **Exportar a PDF**, **Exportar a Excel**). Este comportamiento permite añadir lógica adicional al comportamiento estándar de estos procesos, ya que es posible extender el comportamiento base desde la implementación Java del proceso.
 
@@ -177,7 +177,7 @@ Después, cuando pulse los botones, se ejecutará su lógica personalizada.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/9.png)
 
-### Definición de la fuente de datos del informe
+### Definición de la fuente de datos del informe { #report-datasource-definition }
 
 Existen dos formas de definir los datos que se mostrarán en el informe:
 
@@ -203,7 +203,7 @@ Map<String, Object> jrParameters = (Map<String, Object>) parameters
 
 Esto permite generar los datos del informe de forma dinámica, es decir, en base a algún tipo de lógica construida con el valor de cualquiera de estos parámetros.
 
-### Gestión de mensajes
+### Gestión de mensajes { #message-handling }
 
 Es posible mostrar mensajes (`success`, `warning`, etc.) al usuario después de ejecutar un informe basado en una Definición del Proceso.
 
@@ -225,14 +225,14 @@ Si no se proporciona el parámetro **message**, el sistema mostrará un mensaje 
 !!! Success
     Informe generado correctamente.
 
-### Compilación de subinformes en tiempo de ejecución
+### Compilación de subinformes en tiempo de ejecución { #sub-report-runtime-compilation }
 
 En caso de que nuestro informe de definición del proceso contenga subinformes, la infraestructura permite compilar los subinformes en tiempo de ejecución. Para ello, deben cumplirse las siguientes condiciones:
 
 1. El nombre del parámetro para el subinforme en el informe principal sigue este patrón: `SUBREP_name_of_the_sub_report_file`.
 2. Los subinformes (archivos `JRXML`) se colocan en la misma carpeta que el informe principal.
 
-### Definición Informe
+### Definición Informe { #report-definition }
 
 En la solapa **Definición Informe** se definen las plantillas JR del informe. Cada Definición del Proceso solo puede tener una definición de informe. También es necesario definir al menos una plantilla: `HTML`, `PDF` o `Excel`.
 
@@ -244,7 +244,7 @@ Las plantillas deben almacenarse en la carpeta **Web**.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/10.png)
 
-### Añadir hipervínculos a un informe
+### Añadir hipervínculos a un informe { #adding-hyperlinks-to-a-report }
 
 Puede añadir hipervínculos a elementos del informe para permitir la navegación a otro registro, abrir un informe diferente o ejecutar lógica personalizada según sea necesario.
 
@@ -257,7 +257,7 @@ Para ello, seleccione el componente sobre el que desea hacer clic (p. ej., **Cam
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-report-using-process-definition/11.png)
 
-#### Ejemplo 1: Navegar a un registro específico (p. ej., una factura)
+#### Ejemplo 1: Navegar a un registro específico (p. ej., una factura) { #example-1-navigating-to-a-specific-record-eg-an-invoice }
 
 Para abrir una ventana y un registro específicos en el sistema (p. ej., una ventana de Factura con un ID de factura determinado), utilice una expresión como esta en la **Expresión de referencia del hipervínculo**:
 
@@ -280,7 +280,7 @@ Donde:
 
 - `$P{OUTPUT_FORMAT}` es el formato de salida del informe.
 
-#### Ejemplo 2: Abrir otro informe desde un enlace
+#### Ejemplo 2: Abrir otro informe desde un enlace { #example-2-opening-another-report-from-a-link }
 
 También puede usar un hipervínculo para disparar la generación de otro informe. En este caso, en lugar de una URL simple, la Expresión de referencia del hipervínculo debe contener una llamada javascript: a `OB.RemoteCallManager.call(...)`, pasando todos los parámetros requeridos para el informe:
 
@@ -308,7 +308,7 @@ También puede usar un hipervínculo para disparar la generación de otro inform
 
 Este fragmento de `JavaScript` realiza una llamada remota al handler del proceso del informe, pasando todos los parámetros que necesita. El informe se generará y se abrirá como resultado de esta acción. Puede personalizar completamente esta lógica para adaptarla a sus necesidades de navegación o integración.
 
-## Resultado
+## Resultado { #result }
 
 El resultado se muestra en un nuevo formulario con todos los parámetros y el/los botón(es) correspondiente(s) de *Exportar*.
 

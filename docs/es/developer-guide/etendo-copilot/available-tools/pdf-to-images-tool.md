@@ -6,18 +6,18 @@ tags:
     - Herramienta
 ---
 
-# Herramienta de PDF a Imágenes
+# Herramienta de PDF a Imágenes { #pdf-to-images-tool }
 
 :octicons-package-16: Paquete Java: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de PDF a Imágenes** es una herramienta que convierte un archivo PDF en un array de imágenes, donde cada imagen representa una página del PDF. La herramienta utiliza bibliotecas especializadas de Python para el procesamiento de PDF y la gestión de imágenes para lograr esta conversión de forma eficiente.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta permite a los agentes convertir documentos PDF a formatos de imagen. Esto es especialmente útil para escenarios en los que es necesario procesar páginas individuales de un PDF como imágenes, como en el archivado digital, la revisión de documentos o tareas posteriores de análisis de imágenes.
 
@@ -54,7 +54,7 @@ El uso de esta herramienta consta de las siguientes acciones:
     Una vez completado el proceso de conversión, la herramienta devuelve una lista de rutas de archivo, cada una apuntando a la imagen convertida correspondiente para cada página del PDF.
 
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Si tiene un archivo PDF ubicado en `/home/user/document.pdf` y desea convertir sus páginas en imágenes, utilizaría la herramienta de la siguiente manera:
 

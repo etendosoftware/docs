@@ -121,11 +121,11 @@ As in the Reactivate process, the settlement payments are canceled by creating a
 
 ## Use the Functionality from Other Windows.
 
-- [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+- [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-in.md#advanced-business-partner-settlement)
 
-- [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+- [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/payment-out.md#advanced-business-partner-settlement)
 
-- [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+- [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#advanced-business-partner-settlement)
   
 
 ---

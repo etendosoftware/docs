@@ -9,11 +9,11 @@ tags:
 status: beta
 ---
 
-#  Servicios web JSON REST
+# Servicios web JSON REST { #json-rest-web-services }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-##  Visión general
+## Visión general { #overview }
 
 Esta sección describe la funcionalidad JSON REST de Etendo tal y como la proporciona el [módulo Etendo JSON REST](https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.service.json){target="\_blank"} incluido en Etendo Core. La funcionalidad **JSON REST** consta de 2 partes principales:
 
@@ -30,14 +30,14 @@ Esta sección describe la funcionalidad JSON REST de Etendo tal y como la propor
         - [Fuente de datos REST de Smartclient](https://smartclient.com/smartclient-release/isomorphic/system/reference/?id=class..RestDataSource){target="\_blank"} 
 
     Esta funcionalidad no la proporciona Etendo Core
-## Glosario y enlaces
+## Glosario y enlaces { #glossary-and-links }
 
 Este manual asume que usted está familiarizado con los conceptos de `JSON` y `REST`. Los siguientes enlaces proporcionan información de referencia sobre estos temas.
 
 - [json.org](https://www.json.org/json-en.html){target="\_blank"} 
 - [Wikipedia de JSON](https://en.wikipedia.org/wiki/JSON){target="\_blank"}  
 - [Wikipedia de REST](https://en.wikipedia.org/wiki/REST){target="\_blank"}
-##  Conversión desde y hacia JSON
+## Conversión desde y hacia JSON { #conversion-from-and-to-json }
 
 Esta sección analiza cómo se convierten los objetos de negocio desde y hacia `JSON`. La lógica es utilizada por el servicio web para implementar la lógica de recuperación, actualización e inserción. Los servicios web de Etendo devolverán el `JSON` comprimido. `JSON` comprimido (tal y como lo devuelven los servicios web):
 
@@ -57,7 +57,7 @@ JSON formateado (mejor legibilidad):
 }
 ```
 
-###  Convertir de un objeto de negocio a JSON
+### Convertir de un objeto de negocio a JSON { #convert-from-a-business-object-to-json }
 
 Para convertir un objeto de negocio a `JSON`, la lógica itera sobre todas las propiedades (excepto las propiedades de lista/uno-a-muchos) del objeto y aplica la siguiente lógica:
 
@@ -126,7 +126,7 @@ Aquí puede encontrar un ejemplo del objeto País (con id 100) convertido a `JSO
 }
 ```
 
-###  Convertir de JSON a un objeto de negocio (usando la base de datos)
+### Convertir de JSON a un objeto de negocio (usando la base de datos) { #convert-from-json-to-a-business-object-using-the-database }
 
 La lógica de `JSON` a objeto de negocio es ligeramente más compleja, ya que intenta tener en cuenta que un objeto puede existir en la base de datos e intentará actualizar dicho objeto. Además, se admiten referencias entre objetos `JSON`.
 
@@ -248,7 +248,7 @@ Las solicitudes GET que obtienen múltiples resultados del servicio web pueden i
 - `endRow`: la fila final marca la última fila que se va a recuperar y es exclusiva. Si no se establece, se obtendrán todas las filas. No puede ser menor que la propiedad `startRow`. 
 
 Por ejemplo, solicitar algún objeto con las propiedades startRow = 0 y endRow = 1 recuperará solo una fila. Si hay más filas que no se han obtenido, totalRows será 3 (endRow + 2).
-## POST y PUT
+## POST y PUT { #post-and-put }
 
 Las operaciones POST y PUT realizan acciones de alta y actualización. En el caso de Etendo, la operación PUT también realizará un alta si un objeto no tiene establecido un ID.
 
@@ -356,7 +356,7 @@ Si esta URL se utiliza como destino de la acción DELETE, entonces se elimina el
     }
 }
 ```
-## Resultado de error
+## Resultado de error { #error-result }
 
 El servicio REST `JSON` devuelve los errores también como `JSON` y/o utiliza códigos de error estándar `HTTP`.
 
@@ -422,14 +422,14 @@ En caso de un error de validación, el mensaje es diferente:
 ```
 
 En este caso, el objeto de respuesta contiene uno o más campos con un mensaje de error. Cada combinación campo/mensaje se relaciona con una propiedad específica de un objeto.
-##  Inicio de sesión y seguridad
+## Inicio de sesión y seguridad { #login-and-security }
 
 El servicio web `JSON` proporciona el mismo control de inicio de sesión y seguridad que el servicio web [XML REST](../concepts/xml-rest-web-services.md).
 
 La autorización de acceso a los datos se define a través del acceso a tablas y ventanas en Etendo. Consulte la sección [Seguridad y validación](../concepts/data-access-layer.md#security-and-validation) en la guía del desarrollador de [DAL](../concepts/data-access-layer.md) para obtener más detalles.
 
 Además, el rol por defecto del usuario que está realizando el inicio de sesión debe estar habilitado para realizar llamadas a servicios web. Busque "Está habilitado el servicio web" dentro del documento [Rol](../../../user-guide/etendo-classic/basic-features/general-setup/security/role.md#role) para obtener más información.
-##  Clases principales de JSON
+## Clases principales de JSON { #json-core-classes }
 
 Esta sección describe las clases y componentes utilizados por el servicio web JSON REST. Estas clases también pueden utilizarse como base para otros módulos.
 
@@ -480,7 +480,7 @@ La clase JsonToDataConverter también recopila todos los errores que encuentra. 
 
 La clase JsonDataService proporciona cuatro tipos de métodos: fetch, remove, add y update. Los métodos esperan una combinación de un mapa de parámetros y el contenido de la solicitud.
 
-#### Operación de obtención
+#### Operación de obtención { #fetch-operation }
 
 El método fetch obtiene uno o más objetos de la base de datos utilizando los parámetros de consulta especificados en el mapa de parámetros. Los parámetros de consulta pueden ser un criterio de filtro, parámetros de paginación o una cláusula where. Los nombres de los parámetros se definen en la clase JsonConstants, todos los estáticos que terminan en _PARAMETER. La cadena `JSON` devuelta contiene información de paginación, así como los datos realmente recuperados (que pueden estar vacíos si no se encuentran).
 
@@ -562,18 +562,18 @@ el método fetch de JsonDataService devolverá esto (por tanto, con información
 !!!note
     El método fetch realizará una operación de recuento y devolverá el valor `startRows` si los parámetros que se pasan tienen valores para los parámetros de paginación.
 
-#### Operación de eliminación
+#### Operación de eliminación { #remove-operation }
 
 La operación de eliminación espera un mapa de parámetros con dos parámetros: ID y `entityName`. Elimina el objeto y devuelve el objeto eliminado como una cadena `JSON`. Consulte la descripción del método DELETE anterior.
 
 !!!note
     Si el objeto no se puede encontrar en la base de datos, se devuelve un mensaje de error.
 
-#### Operación de alta y actualización
+#### Operación de alta y actualización { #add-and-update-operation }
 
 La operación de alta y actualización funciona del mismo modo. Si un objeto tiene un ID y existe en la base de datos, entonces se realiza una acción de actualización; en todos los demás casos se realiza un alta. La entrada para ambas operaciones es un mapa de parámetros y el contenido publicado. Para saber qué tipo de contenido publicado se espera, consulte la descripción anterior de la operación PUT y POST. El mapa de parámetros puede contener un parámetro ID y `entityName`. Si es así, entonces se utilizan para identificar el objeto a actualizar. Estos parámetros solo se utilizan si se publica un único objeto.
 
-#### Casos de prueba
+#### Casos de prueba { #test-cases }
 
 El código fuente de JSON REST contiene varios casos de prueba que se pueden encontrar en el paquete `org.openbravo.service.json.test`. Tenga en cuenta que algunos de los casos de prueba requieren una instancia de Etendo en ejecución en localhost:8080 y el contexto Etendo. Esto se puede cambiar fácilmente a otra configuración en la clase JsonRestTest.
 

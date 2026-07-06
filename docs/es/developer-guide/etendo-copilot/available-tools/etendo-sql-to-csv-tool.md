@@ -8,18 +8,18 @@ tags:
     - Etendo
 ---
 
-# Herramienta de Etendo de SQL a CSV
+# Herramienta de Etendo de SQL a CSV { #etendo-sql-to-csv-tool }
 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.toolpack`
 
-## Visión general
+## Visión general { #overview }
 
 La **Herramienta de Etendo de SQL a CSV** es una herramienta especializada para ejecutar consultas SQL en la base de datos de Etendo y convertir los resultados a formato CSV. Se conecta a Etendo mediante el webhook DBQueryExec, ejecuta consultas SELECT de forma segura y exporta los resultados JSON como archivos CSV para facilitar el análisis de datos y la elaboración de informes.
 
 !!!info
     Para poder incluir esta funcionalidad, debe estar instalado el bundle Copilot Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/?#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="\_blank"}. Para obtener más información sobre las versiones disponibles, la compatibilidad con el core y las nuevas funcionalidades, visite [Copilot Extensions - Notas de la versión](../../../whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
 
-## Funcionalidad
+## Funcionalidad { #functionality }
 
 Esta herramienta es esencial para tareas de extracción de datos, elaboración de informes y análisis dentro de Etendo. Proporciona una forma segura y estandarizada de consultar la base de datos y exportar resultados. La herramienta gestiona:
 
@@ -75,7 +75,7 @@ El uso de esta herramienta consta de las siguientes acciones:
     🔍 Query: SELECT u.name, u.email FROM ad_user u WHERE...
     ```
 
-## Funcionalidades de seguridad
+## Funcionalidades de seguridad { #security-features }
 
 La Herramienta de Etendo de SQL a CSV implementa múltiples capas de seguridad:
 
@@ -85,18 +85,18 @@ La Herramienta de Etendo de SQL a CSV implementa múltiples capas de seguridad:
 - **Autenticación automática**: utiliza autenticación segura basada en token mediante el contexto de Copilot
 - **Seguridad del lado del servidor**: aprovecha los controles de acceso y los filtros de datos integrados de Etendo
 
-## Requisitos de consultas SQL
+## Requisitos de consultas SQL { #sql-query-requirements }
 
 Todas las consultas SQL deben seguir los estándares de seguridad de Etendo:
 
-### Formato requerido
+### Formato requerido { #required-format }
 
 - **Solo SELECT**: solo se permiten sentencias SELECT
 - **Alias de tablas**: todas las tablas deben tener alias (p. ej., `FROM ad_user u`, no `FROM ad_user`)
 - **Tablas accesibles**: solo se pueden consultar las tablas accesibles para el usuario actual
 - **Filtros de seguridad**: Etendo aplica automáticamente filtros de seguridad de organización y cliente
 
-### Ejemplos de consultas válidas
+### Ejemplos de consultas válidas { #examples-of-valid-queries }
 
 ```sql
 -- Query active users
@@ -119,7 +119,7 @@ WHERE so.issotrx = 'Y'
   AND so.docstatus = 'CO'
 ```
 
-### Ejemplos de consultas no válidas
+### Ejemplos de consultas no válidas { #examples-of-invalid-queries }
 
 ```sql
 -- Missing table alias
@@ -132,7 +132,7 @@ UPDATE ad_user SET isactive = 'N' WHERE ad_user_id = '123'
 DROP TABLE temp_table
 ```
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 Imagine que queremos exportar usuarios activos con sus roles a un archivo CSV para su análisis. Nuestros parámetros serían:
 
@@ -148,7 +148,7 @@ La Herramienta de Etendo de SQL a CSV:
 4. Guardará el archivo incluyendo los encabezados
 5. Devolverá un mensaje de éxito con los detalles de la operación
 
-## Gestión de errores
+## Gestión de errores { #error-handling }
 
 La herramienta proporciona una gestión de errores completa para escenarios habituales:
 

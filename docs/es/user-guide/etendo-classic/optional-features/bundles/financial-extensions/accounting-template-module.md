@@ -8,11 +8,11 @@ tags:
     - Gestión financiera
 ---
 
-# Módulo de plantilla contable
+# Módulo de plantilla contable { #accounting-template-module }
 
 :octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
-## Resumen
+## Resumen { #overview }
 
 Esta sección describe el Módulo de plantilla contable incluido en el paquete Financial Extensions de Etendo.
 
@@ -32,7 +32,7 @@ Para habilitar este comportamiento, debe activarse la casilla **Use the configur
 
 
 
-## Configuración inicial
+## Configuración inicial { #initial-setup }
 
 :material-menu: `Aplicación` > `Diccionario de la Aplicación` > `Ventanas, solapas y campos` 
 
@@ -40,17 +40,17 @@ Para asignar un impuesto no deducible a una cuenta financiera específica, hay u
 
 Como System Admin, vaya a **Ventanas, solapas y campos** y, en la ventana Configuración del libro mayor, en la solapa Tablas activas, establezca el campo Plantilla contable como **Yes**. Esto permite que más adelante se pueda definir la plantilla contable necesaria desde la ventana Configuración del libro mayor.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module1.png)
+![Ventanas, solapas y campos — campo Plantilla contable](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module1.png)
 
-## Configuración GL
+## Configuración GL { #gl-configuration }
 
 El **campo Plantilla contable** de la solapa Tabla activa de la ventana Configuración del libro mayor debe activarse y, a continuación, establecer la plantilla llamada **Purchase Invoice Not Deductible**.
 
 Por último, la casilla **Use the configured account** debe marcarse en la ventana Tipo de impuesto. Solo será visible si previamente se ha marcado la casilla bajo el encabezado **Non-deductible tax**. El valor predeterminado de esta casilla será NO.
 
-![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module-3.png)
+![Configuración del libro mayor — plantilla Purchase Invoice Not Deductible y casilla Use the configured account](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module-3.png)
 
-## Ejemplo
+## Ejemplo { #example }
 
 ![Captura de pantalla de ejemplo del módulo de plantilla contable 1](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/accounting-template-module/accounting-template-module2.png)
 
@@ -69,3 +69,5 @@ El importe del IVA debe contabilizarse en el libro mayor en una cuenta de crédi
 ---
 
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---

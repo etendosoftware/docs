@@ -39,7 +39,7 @@ Here’s how the process works in Etendo:
     !!!warning
         Permanently closed periods can’t be reopened unless you run Undo Close Year first.
 
-6. If needed, **run [Undo Close Year](../../accounting/transactions.md#undo-close-year)** to reopen periods and allow further changes. After making changes, you can run Close Year again.
+6. If needed, **run [Undo Close Year](../../accounting/transactions/end-year-close.md)** to reopen periods and allow further changes. After making changes, you can run Close Year again.
 
 !!!important
     - You can’t create years or periods in the Open/Close Period Control window—use the Fiscal Calendar window for that.
@@ -58,7 +58,7 @@ Using period control helps the user:
 
 The **Open/Close Period Control** window allows the user to revise and manage all accounting periods created in the [Fiscal Calendar](#fiscal-calendar). You can **open**, **close**, or **permanently close** periods as needed for your organization.
 
-![Open/Close Period Control window](../../../../../../assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
+![Open/Close Period Control window](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-1.png)
 
 **Fields to note:**
 
@@ -107,7 +107,7 @@ Here’s a simple example of how period control works:
 
 An organization has created and opened all periods for three years, including the "13th Period" for adjustments.
 
-![](../../../../../../assets/drive/1dOWq4RquxSziuUbqVYpORdf9eA4Ts7g5.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-2.png)
 
 With the setup shown above, you can post any document to any period within those years. If you try to post to a period that doesn’t exist (like December 2018, in this example), Etendo will show an error.
 
@@ -119,7 +119,7 @@ Imagine you want to close the year 2019. Before running the "Close Year" process
 4. Select all periods except the 13th Period.
 5. Click **Close Period** and confirm.
 
-![](../../../../../../assets/drive/1AxEefqisj3SW_FqBBXGfF6Th0rWpaJrn.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-3.png)
 
 After this, all standard periods for 2019 are closed. You can only:
 
@@ -138,7 +138,7 @@ Each accounting period in Etendo can be opened or closed for all document types 
 
 This is useful in case the user needs to prevent the creation of further documents of a certain type for a specific period.
 
-![](../../../../../../assets/drive/18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD.png)
+![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/openclose-period-control/openclose-period-control-4.png)
 
 **Status columns:**  
 Each document type shows its status with a color and a name:

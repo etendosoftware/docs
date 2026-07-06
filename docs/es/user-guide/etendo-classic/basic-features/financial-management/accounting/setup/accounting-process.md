@@ -8,15 +8,15 @@ tags:
     - Contabilidad
 ---
 
-# Proceso Contable
+# Proceso Contable { #accounting-process }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Proceso Contable`
 
-## Visión general 
+## Visión general { #overview }
 
 En esta ventana, el usuario puede configurar los procesos contables necesarios.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounting-process.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/accounting-process.png)
 
 !!!info
     Para más información, visite la guía del desarrollador sobre [Cómo crear un módulo que añada un proceso contable](../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md).

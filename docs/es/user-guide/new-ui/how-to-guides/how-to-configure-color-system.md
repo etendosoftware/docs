@@ -7,9 +7,9 @@ tags:
 status: new
 ---
 
-# Cómo Usar el Sistema de Colores en Workspace UI
+# Cómo Usar el Sistema de Colores en Workspace UI { #how-to-use-the-color-system-in-workspace-ui }
 
-## Visión General
+## Visión General { #overview }
 
 El sistema de colores permite asignar una pastilla de color visual a los registros en una ventana maestra. Una vez asignado un color, cada grilla en Workspace UI que referencie esa ventana mostrará automáticamente una etiqueta coloreada en lugar de texto plano, facilitando el escaneo e identificación de registros de un vistazo.
 

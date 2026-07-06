@@ -7,7 +7,7 @@ tags:
     - Gestión de facturas
 ---
 
-## Visión general
+## Visión general { #overview }
 
 En la mayoría de las situaciones, una empresa querría reconocer los ingresos en cuanto se completa una factura. Por ejemplo, cuando un distribuidor de alimentación y bebidas vende bebidas, el ingreso de la transacción se reconoce en cuanto la mercancía sale del almacén. En Etendo, en esta situación, el ingreso se genera como parte de la contabilización de la factura de venta correspondiente a la transacción.
 
@@ -24,7 +24,7 @@ Sin embargo, en algunas circunstancias, es necesario diferir el reconocimiento d
 - Una empresa que compra un seguro empresarial por la duración de un año querría distribuir ese gasto a lo largo de 12 meses.
 - Una empresa que paga el alquiler por adelantado de forma trimestral querría distribuir ese gasto a lo largo de 3 meses.
 
-## Visión general
+## Visión general { #overview_1 }
 
 Etendo permite dar soporte a estas situaciones mediante las capacidades de ingresos y gastos diferidos.
 
@@ -56,7 +56,7 @@ De forma similar, en el lado de los gastos:
 - Los valores especificados a nivel de producto se establecen automáticamente como valores por defecto en las líneas de factura de compra cuando se utiliza el producto.
 - Estos valores también se utilizan cuando se crea una factura a partir de otro documento.
 
-## Ejemplo
+## Ejemplo { #example }
 
 Considere la siguiente situación.
 
@@ -79,9 +79,9 @@ Se crean los siguientes asientos contables en base a esta factura:
 |              | Ingresos             |                      | 10.00  |
 
 
-## Configuración de Contabilidad
+## Configuración de Contabilidad { #accounting-configuration }
 
-#### Esquema contable
+#### Esquema contable { #general-ledger-configuration }
 
 Para poder utilizar diferimientos de ingresos y gastos, primero necesita definir correctamente las cuentas por defecto que se utilizarán para contabilizar ingresos diferidos y gastos diferidos.
 
@@ -94,19 +94,19 @@ En esta ventana, en la pestaña Por defecto, puede encontrar dos campos relevant
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/glconfiguration.png)
 
-### Categoría del producto
+### Categoría del producto { #product-category }
 
 Las cuentas seleccionadas en la ventana Esquema contable se establecen como valores por defecto para cada Categoría del producto. Los usuarios pueden sobrescribir estos valores por defecto a nivel de categoría del producto, permitiendo que los ingresos y gastos diferidos de diferentes grupos de productos se contabilicen en cuentas distintas y aparezcan como asientos separados en el balance de la empresa.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/productcategory.png)
 
-## Pasos de ejecución - Ingresos
+## Pasos de ejecución - Ingresos { #execution-steps---revenues }
 
-### Configuración de productos para el diferimiento de ingresos
+### Configuración de productos para el diferimiento de ingresos { #configuring-products-for-revenue-deferral }
 
 Para diferir ingresos, necesita configurar correctamente los productos que generarán el diferimiento cuando se vendan. En Etendo, los productos se crean y mantienen en la ventana Producto.
 
-Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de ingresos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de ingresos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 
 Pestaña Cabecera:
 
@@ -122,7 +122,7 @@ Pestaña Contabilidad:
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product.png)
 
-### Creación manual de facturas
+### Creación manual de facturas { #manual-invoice-creation }
 
 Cuando crea una línea de factura de venta, puede definir a nivel de línea si la línea va a provocar que el ingreso se difiera.
 
@@ -135,24 +135,24 @@ Los campos relevantes son:
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/salesinvoice.png)
 
-### Generación automática de facturas
+### Generación automática de facturas { #automatic-generation-of-invoices }
 
 Si la factura se crea automáticamente, ya sea a partir de un pedido de venta o de cualquier otro documento, se tiene en cuenta la configuración del producto y, si procede, el plan de ingresos se define para las líneas de factura en base a los valores por defecto de la configuración del producto.
 
-### Resultados contables
+### Resultados contables { #accounting-results }
 
 Independientemente de cómo se cree la factura (manual o automáticamente), cuando se completa y se contabiliza, se crean una serie de asientos contables:
 
 - El primer asiento contable, con fecha de la fecha contable de la factura, carga cuentas a cobrar y abona ingresos no devengados.
 - Para cada periodo, se crea un asiento contable adicional cargando ingresos no devengados y abonando ingresos.
 
-## Pasos de ejecución - Gastos
+## Pasos de ejecución - Gastos { #execution-steps---expenses }
 
-### Configuración de productos para el diferimiento de gastos
+### Configuración de productos para el diferimiento de gastos { #configuring-products-for-expense-deferral }
 
 Para diferir gastos, necesita configurar correctamente los productos que generarán el diferimiento cuando se compren. En Etendo, los productos se crean y mantienen en la ventana Producto.
 
-Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de gastos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
+Ventana Producto: en esta ventana, la configuración relacionada con el diferimiento de gastos se encuentra en la pestaña Cabecera y en la pestaña Contabilidad de la [ventana Producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product).
 
 Pestaña Cabecera:
 
@@ -168,7 +168,7 @@ Pestaña Contabilidad:
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product2.png)
 
-### Creación manual de facturas
+### Creación manual de facturas { #manual-invoice-creation_1 }
 
 Cuando crea una línea de factura de compra, puede definir a nivel de línea si la línea va a provocar que el gasto se difiera.
 
@@ -181,11 +181,11 @@ Los campos relevantes son:
 
 Estos campos se establecen por defecto en base a la configuración del producto, excepto el campo Fecha de inicio.
 
-### Generación automática de facturas
+### Generación automática de facturas { #automatic-generation-of-invoices_1 }
 
 Si la factura se crea automáticamente, ya sea a partir de un pedido de compra o de cualquier otro documento, se tiene en cuenta la configuración del producto y, si procede, el plan de gastos se define para las líneas de factura en base a los valores por defecto de la configuración del producto.
 
-### Resultados contables
+### Resultados contables { #accounting-results_1 }
 
 Independientemente de cómo se cree la factura (manual o automáticamente), cuando se completa y se contabiliza, se crean una serie de asientos contables:
 

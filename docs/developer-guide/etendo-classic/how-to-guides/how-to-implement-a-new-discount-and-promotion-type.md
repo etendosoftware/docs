@@ -15,9 +15,9 @@ status: beta
 
 ## Overview
 
-A discount and promotion type is an implementation of a rule for [Discounts and Promotions](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#discounts-and-promotions-window). These rules define the logic to be applied to calculate the discount when the discount or promotion can be applied.
+A discount and promotion type is an implementation of a rule for [Discounts and Promotions](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md). These rules define the logic to be applied to calculate the discount when the discount or promotion can be applied.
 
-This how to targets developers wanting to implement these kind of rules. Users that need to configure existent ones should read [Discounts and Promotions](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#discounts-and-promotions-window) instead.
+This how to targets developers wanting to implement these kind of rules. Users that need to configure existent ones should read [Discounts and Promotions](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/discounts-and-promotions.md) instead.
 
 It is possible to define types that take care of a single line, such as **X per cent discount** in a single product, and types that look to the whole order or invoice to determine if the discount is applicable, for example **buying product X and Y, Z is free**.
 
@@ -158,7 +158,7 @@ Any function implementing a Discount and Promotion Type, must receive the follow
 - `p_priceprecision`: Based on document's currency, the precision to be used when rounding prices.
 - `p_stdprecision`: Based on document's currency, the precision to be used when rounding amounts.
 - `p_user_id`: ID of the user that has invoked the process, used when creating the actual discount for audit purposes.
-- `p_taxincluded`: Possible values are Y or N. Indicates whether the [Price List](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing.md#price-list) that is applied to current document includes (Y) or not (N) taxes.
+- `p_taxincluded`: Possible values are Y or N. Indicates whether the [Price List](../../../user-guide/etendo-classic/basic-features/master-data-management/pricing/price-list.md) that is applied to current document includes (Y) or not (N) taxes.
 
 #### 1. Get rule configuration
 

@@ -7,9 +7,9 @@ tags:
   - Etendo classic
 ---
 
-# Cómo crear una columna calculada
+# Cómo crear una columna calculada { #how-to-create-a-computed-column }
 
-## Visión general
+## Visión general { #overview }
 
 Una columna calculada es una columna de una tabla que se calcula mediante una expresión _SQL_ y que no existe explícitamente en el esquema de la base de datos.
 
@@ -20,7 +20,7 @@ Las columnas calculadas tienen estas características:
   * Se calculan usando una expresión SQL que puede utilizar columnas de la definición de tabla del diccionario de aplicación en la que se define la columna.
   * Se pueden usar en la definición de un campo (del mismo modo que una columna "normal"), se pueden ordenar y filtrar, pero no se pueden editar.
 
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 
 Esta sección está respaldada por un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
@@ -29,7 +29,7 @@ El código del módulo de ejemplo se puede descargar desde este repositorio: [co
 !!!Note
     El módulo de ejemplo también contiene implementaciones de otras guías.
 
-## Definición de una columna calculada
+## Definición de una columna calculada { #defining-a-computed-column }
 
 Definir una columna calculada es sencillo.
 
@@ -59,7 +59,7 @@ Lo que puede ver es que la cláusula from utiliza una tabla con alias; el `c_ord
     * El campo es siempre de solo lectura; se recalcula/se establece automáticamente al actualizar o insertar un registro.
     * Es posible filtrar y ordenar por columnas/campos calculados.
 
-## Caso de uso: mostrar totales en una cabecera
+## Caso de uso: mostrar totales en una cabecera { #use-case-show-totals-on-a-header }
 
 En la sección "Definición de una columna calculada" se mostró un ejemplo de expresión SQL. El ejemplo anterior calcula la suma de las cantidades de una línea. Puede añadir una columna calculada como un campo a una solapa/ventana:
 
@@ -73,15 +73,15 @@ o en el formulario:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Computed_Column-4.png)
 
-## Implicaciones de rendimiento
+## Implicaciones de rendimiento { #performance-implications }
 
-### Filtrado y ordenación
+### Filtrado y ordenación { #filtering-and-sorting }
 
 Cuando las columnas calculadas se utilizan para filtrar u ordenar la cuadrícula, su valor necesita calcularse para todas las filas existentes antes de que se pueda aplicar cualquier límite de paginación; esto puede tener un impacto muy importante en términos de rendimiento.
 
 En general, al definir columnas calculadas, deberían configurarse como no filtrables ni ordenables. La única excepción a esta regla es cuando se garantiza que el número de registros en la tabla para la que se crean va a ser siempre reducido o que siempre se mostrará como una subsolapa, donde el número de filas por registro padre no puede ser grande.
 
-### Evaluación diferida
+### Evaluación diferida { #lazy-evaluation }
 
 Las columnas calculadas se evalúan de forma diferida. Esto significa que su consulta no se ejecuta cuando se recupera la entidad en la que están definidas, sino cuando se accede a una de ellas.
 
@@ -108,7 +108,7 @@ es en este punto cuando la consulta de la columna calculada se ejecuta en la bas
 !!!Note
     En caso de que haya muchas columnas calculadas en la misma entidad, se evalúan todas juntas cuando se calcula la primera.
 
-#### Limitaciones
+#### Limitaciones { #limitations }
 
 Para que las columnas calculadas sean diferidas, se mapean en su entidad como una propiedad `many-to-one` (llamada `computedColumns`) enlazada a una entidad virtual; es en esta entidad virtual donde se ubican las columnas calculadas reales como propiedades de fórmula de Hibernate.
 

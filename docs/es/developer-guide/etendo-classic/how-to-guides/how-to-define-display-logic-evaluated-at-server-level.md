@@ -7,9 +7,9 @@ tags:
   - Diccionario de aplicación
 ---
 
-# Cómo definir la lógica de visualización evaluada a nivel de servidor
+# Cómo definir la lógica de visualización evaluada a nivel de servidor { #how-to-define-display-logic-evaluated-at-server-level }
 
-## Visión general
+## Visión general { #overview }
 
 Con la introducción de esta funcionalidad, es posible definir en Openbravo lógicas de visualización que se van a evaluar a nivel de servidor.
 
@@ -17,7 +17,7 @@ Esto significa que la expresión para esta lógica de visualización en particul
 
 Al hacerlo, es posible evitar campos en blanco cuando el campo no debería mostrarse. En su lugar, los campos se reorganizan y la ventana se ve más limpia.
 
-### Uso
+### Uso { #usage }
 
 En la ventana **Ventanas, Pestañas y Campos**, hay un nuevo campo llamado _Mostrar Lógica Evaluada en el Servidor_.
 
@@ -30,7 +30,7 @@ Un ejemplo de una expresión sería:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png)
 
-### Limitaciones
+### Limitaciones { #limitations }
 
 Dado que esta funcionalidad se va a evaluar a nivel de sistema (la visibilidad de los campos va a ser la misma para todos los clientes, organizaciones y usuarios), es posible usar Preferencias, pero solo aquellas que se hayan definido a nivel de sistema.
 

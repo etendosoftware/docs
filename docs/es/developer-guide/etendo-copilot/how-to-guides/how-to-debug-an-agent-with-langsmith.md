@@ -6,18 +6,18 @@ tags:
   - Observability
 ---
 
-# Cómo depurar un agente con LangSmith
+# Cómo depurar un agente con LangSmith { #how-to-debug-an-agent-with-langsmith }
 
-## Introducción
+## Introducción { #introduction }
 LangSmith es una potente herramienta de observabilidad que le permite realizar el seguimiento y analizar el rendimiento de sus aplicaciones de IA, si están basadas en LangChain/LangGraph. Proporciona una visión integral del comportamiento de su aplicación, lo que le permite identificar cuellos de botella, optimizar el rendimiento y mejorar la experiencia de usuario.
 Este tutorial le guía a través de la configuración del SDK de observabilidad para realizar el seguimiento de Copilot en LangSmith.
 
-## Crear una clave de API
+## Crear una clave de API { #create-an-api-key }
 Vaya al [Sitio web de LangSmith](https://smith.langchain.com/){target=_isblank} e inicie sesión. Si no tiene una cuenta, cree una.
 
 Para crear una clave de API, navegue a la página de configuración de LangSmith. A continuación, haga clic en **Crear clave de API** y siga las instrucciones.
 
-## Configurar su entorno
+## Configurar su entorno { #set-up-your-environment }
 
 Configure su archivo `gradle.properties` para incluir las siguientes variables de entorno:
 
@@ -37,7 +37,7 @@ Asegúrese de reiniciar Copilot para establecer las variables de entorno en el c
 ./gradlew resources.up --info
 ```
 
-## Visualización desde LangSmith
+## Visualización desde LangSmith { #viewing-from-langsmith }
 
 - Una vez en LangSmith, estará disponible el acceso a los proyectos de su organización.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith.png)
@@ -46,7 +46,7 @@ Asegúrese de reiniciar Copilot para establecer las variables de entorno en el c
 - Seleccionar su espacio de trabajo le permite ver la traza de las consultas realizadas en Copilot y evaluar las respuestas.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-2.png)
 
-## Ejemplo de uso
+## Ejemplo de uso { #usage-example }
 
 1. Realice una solicitud a cualquier agente de Copilot.
     ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-3.png)
@@ -63,7 +63,7 @@ Asegúrese de reiniciar Copilot para establecer las variables de entorno en el c
     - Para las interacciones con OpenAI, hay disponible una opción llamada **Playground**.
         ![alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-9.png)
 
-### Uso del Playground
+### Uso del Playground { #using-the-playground }
 
 Acceder al Playground le permite experimentar, probar y depurar cadenas de prompts e interacciones con modelos de lenguaje. Esta herramienta permite:
 
@@ -99,7 +99,7 @@ Acceder al Playground le permite experimentar, probar y depurar cadenas de promp
         ![ alt text](../../../assets/developer-guide/etendo-copilot/how-to-guides/how-to-debug-an-agent-prompt-with-langsmith/how-to-debug-an-agent-prompt-with-langsmith-17.png)
 Esta funcionalidad es crucial para probar diversas solicitudes y modificar prompts para cumplir los requisitos.
 
-## Depuración del prompt del sistema
+## Depuración del prompt del sistema { #system-prompt-debugging }
 El Playground le permite depurar el prompt utilizado en el agente. Esto es útil para mejorar el comportamiento del agente en caso de resultados inesperados.
 Como hemos visto anteriormente, en LangSmith puede ver las ejecuciones de herramientas y otras acciones realizadas por el agente, según lo determinado por el LLM. Dado que el razonamiento se origina en el LLM, estos son los puntos clave en los que podemos intervenir para optimizar el comportamiento. 
 
@@ -112,7 +112,7 @@ Al ejecutar **Iniciar**, solicita la respuesta del LLM en función del prompt de
 
 Entonces, si al analizar la traza de ejecución encontramos dónde el agente "cometió un error" o "decidió incorrectamente", podemos ir a ese punto y ajustar el prompt para mejorar su razonamiento. Además, podemos ejecutar la solicitud varias veces para asegurarnos de que la decisión correcta sea consistente y no se deba al azar, ya que los LLM no son deterministas en situaciones definidas de forma imprecisa.
 
-### Ejemplo
+### Ejemplo { #example }
 
 En este ejemplo, veremos cómo mejorar el prompt de un agente que no está proporcionando la respuesta esperada.
 En este caso, utilizaremos el **Agente redactor** con el siguiente prompt:

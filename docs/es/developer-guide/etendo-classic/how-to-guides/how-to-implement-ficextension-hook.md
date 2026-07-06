@@ -6,14 +6,14 @@ tags:
     - hook
 ---
 
-# Cómo implementar el hook de FICExtension
+# Cómo implementar el hook de FICExtension { #how-to-implement-ficextension-hook }
 
 
-## Visión general
+## Visión general { #overview }
 
 Este documento explica cómo implementar el hook de **FICExtension**. El hook se ejecuta en el método *execute* de la clase **FormInitializationComponent** justo antes de que se construya la respuesta.
 
-## Implementación del hook
+## Implementación del hook { #hook-implementation }
 
 Este hook se implementa extendiendo la clase `FICExtension`. Solo tiene un método void para implementar: `execute`. Este método recibe como parámetros las instancias de los objetos utilizados para construir la respuesta.
 
@@ -29,7 +29,7 @@ Este hook se implementa extendiendo la clase `FICExtension`. Solo tiene un méto
 - **noteCount**: Recuento de notas disponibles en el registro que se está editando. 
 - **overwrittenAuxiliaryInputs**: La `List` de entradas auxiliares sobrescritas por callouts.   
 
-## Ejemplo
+## Ejemplo { #example }
 
 Este ejemplo muestra un mensaje cada vez que se edita un producto nuevo. Puede encontrar el código descrito a continuación en el módulo `org.openbravo.platform.features`.
 

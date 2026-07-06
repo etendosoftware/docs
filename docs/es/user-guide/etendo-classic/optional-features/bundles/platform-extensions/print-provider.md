@@ -11,7 +11,7 @@ tags:
 # Print Provider
 :octicons-package-16: Javapackage: `com.etendoerp.print.provider`
 
-## Visión general
+## Visión general { #overview }
 
 El módulo **Print Provider** conecta Etendo con plataformas de impresión, ofreciendo una solución unificada para generar imprimibles directamente desde diferentes áreas del sistema.
 
@@ -25,7 +25,7 @@ Permite que cada organización configure su proveedor de impresión, gestione y 
     Además, este módulo permite la implementación de proveedores de impresión personalizados, expone servicios de back-end reutilizables que pueden ser consumidos por diferentes módulos, y una API pública para imprimir desde desarrollos personalizados. Para más información, visite: [Print Provider - Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/print-provider.md)
 
 
-## Configuración inicial
+## Configuración inicial { #initial-setup }
 
 Antes de utilizar el módulo **Print Provider**, debe completarse una configuración inicial para establecer la conexión entre Etendo y el servicio de impresión seleccionado.
 
@@ -43,7 +43,7 @@ Este proceso incluye:
 Una vez completados estos pasos, el sistema estará listo para ejecutar impresiones de forma centralizada y segura.
 
 
-### Instalar el conjunto de datos del proveedor y de plantillas de impresión
+### Instalar el conjunto de datos del proveedor y de plantillas de impresión { #install-provider-and-print-template-dataset }
 
 :material-menu: `Aplicación`>`Configuración General` > `Organización` > `Gestión del módulo de Empresa`
 
@@ -123,7 +123,7 @@ Campos a tener en cuenta:
 - **Template Line**: Ubicación de la plantilla.
 
 
-## Generar imprimibles
+## Generar imprimibles { #generate-printables }
 
 Este **button** es un componente reutilizable del módulo de proveedor de impresión que puede configurarse en ventanas de Etendo según las necesidades del negocio. Permite la selección múltiple de registros y, al pulsarlo, abre una ventana emergente donde el usuario puede seleccionar opcionalmente un proveedor y una impresora, especificar el número de copias y elegir si desea descargar el archivo generado.
 

@@ -10,14 +10,15 @@ tags:
 
 :material-store: Etendo Marketplace:  [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 
 !!!warning 
     Necesita tener permisos para acceder a los repositorios privados
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [4.0.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/4.0.0){target="_blank"} | 30/03/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.0.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/4.0.1){target="_blank"} | 22/04/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.0.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/4.0.0){target="_blank"} | 30/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [3.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.3.0){target="_blank"} | 30/12/2025 | 25.4.0 | 25.4.x | C | :white_check_mark: |
 | [3.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.2.0){target="_blank"} | 30/09/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
 | [3.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/3.1.0){target="_blank"} | 02/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |

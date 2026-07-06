@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Concepto contable
+# Concepto contable { #gl-item }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Concepto contable`
 
-## Visión general
+## Visión general { #overview }
 
 Un concepto contable es un elemento de cuenta que se utilizará para la contabilización directa en cuenta.
 
@@ -22,11 +22,11 @@ La contabilización directa en cuenta se refiere a:
 -   crear y contabilizar facturas financieras como, por ejemplo, facturas financieras de compra; lo mismo aplica a las de venta.
 -   o crear y contabilizar pagos de conceptos contables en un diario de G/L.
 
-### Concepto contable
+### Concepto contable { #gl-item_1 }
 
 La ventana Concepto contable permite al usuario crear tantos elementos de cuenta como sean necesarios para una organización y un libro mayor.
 
-![](../../../../../../assets/drive/1hHiMTePnKxuaHcACgsqhmT3AxiD0MxKQ.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-1.png)
 
 Tal y como se muestra en la imagen anterior, se puede crear un concepto contable o elemento contable introduciendo la siguiente información básica:
 
@@ -35,11 +35,11 @@ Tal y como se muestra en la imagen anterior, se puede crear un concepto contable
 -   el indicador *"Disponible en Facturas Financieras"* define si el elemento puede utilizarse como una cuenta al crear y contabilizar facturas financieras de venta y compra; si ese es el caso:
     -   deberá seleccionarse una *Categoría de Impuesto* para que los impuestos de compra o venta se calculen correctamente.
 
-### Contabilidad
+### Contabilidad { #accounting }
 
 Los elementos de cuenta están directamente relacionados con las cuentas de debe y haber que se utilizarán al contabilizarlos.
 
-![](../../../../../../assets/drive/1Z4sfyfiCMHTj0jE2vxq9xtUb8zZyPzzk.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/gl-item/gl-item-2.png)
 
 Tal y como se muestra en la imagen anterior, la solapa de contabilidad permite al usuario introducir las cuentas de debe y haber para el concepto contable. Es posible introducir una cuenta de debe y una cuenta de haber para la configuración del libro mayor de cada organización.
 

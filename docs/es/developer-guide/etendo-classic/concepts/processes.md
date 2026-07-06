@@ -7,9 +7,9 @@ tags:
   - Métodos de ejecución
   - Programación de procesos
 ---
-# Procesos
+# Procesos { #processes }
   
-## Visión general
+## Visión general { #overview }
 
 Un proceso es una serie sistemática de acciones dirigidas a un fin. Un proceso recibe algunos parámetros y, teniéndolos en cuenta, realiza algunas acciones para obtener un resultado. Etendo define dos tipos principales de procesos: _Procesos SQL_ y _Procesos Java_.
 
@@ -19,7 +19,7 @@ Una vez definido un proceso, puede añadirse al menú para ser llamado directame
 
 Los procesos en segundo plano pueden configurarse como _Prevenir ejecuciones concurrentes_. Antes de que se ejecute un proceso con este atributo, se comprueba que no existan otras instancias del mismo proceso ejecutándose al mismo tiempo; en ese caso, se aborta la nueva ejecución.
 
-### Parámetros
+### Parámetros { #parameters }
 
 Cuando un proceso (SQL o Java) o un informe Jasper se configura como _Estándar_, se genera y muestra automáticamente un mensaje emergente al invocarlo; este mensaje tiene este aspecto:
 
@@ -52,11 +52,11 @@ Veamos algunos de los campos más importantes en esta solapa:
   * *Referencia*, *Clave de búsqueda de referencia* y *Validación*: estos tres campos funcionan exactamente igual que los mismos al definir referencias para columnas. 
   * *Rango* : si está marcado, el emergente mostrará dos parámetros para definir un rango: el primer parámetro se llamará como se especifica en el campo _Nombre columna BD_ y el segundo tendrá el mismo nombre con el sufijo _HASTA_. 
 
-### Definición de procesos
+### Definición de procesos { #defining-processes }
 
 Los procesos pueden ser de dos tipos diferentes: _Procesos SQL_ y _Procesos Java_. Los procesos SQL se implementan en el lenguaje SQL y son ejecutados por el motor de base de datos. Los procesos Java se implementan en el lenguaje Java y son ejecutados por el servidor de aplicaciones.
 
-#### Procesos SQL
+#### Procesos SQL { #sql-processes }
 
 Los _Procesos SQL_ se implementan mediante procedimientos almacenados de base de datos. 
 
@@ -76,7 +76,7 @@ En caso de que el proceso requiera algún parámetro, es posible definirlos.
 !!!info
     Para saber más sobre cómo hacerlo, consulte [Parámetros](#parámetros).
 
-#### Procesos Java
+#### Procesos Java { #java-processes }
 
 Los procesos Java se implementan mediante clases Java. 
 
@@ -95,7 +95,7 @@ También es necesario indicar la clase Java que va a implementar el proceso. Est
 !!!info
     Si el proceso requiere parámetros, pueden definirse en la solapa *Parámetro* tal y como se explica en la sección [Parámetros](#parámetros) de este documento.
 
-### Ejecución de procesos
+### Ejecución de procesos { #executing-processes }
 
 !!!note
     Es necesario definir la compilación del proceso para poder ejecutarlo.
@@ -105,19 +105,19 @@ También es necesario indicar la clase Java que va a implementar el proceso. Est
   
 Los procesos pueden ejecutarse desde la interfaz de usuario desde un menú o con un botón. También pueden programarse para ejecutarse en segundo plano sin ninguna interacción del usuario.
 
-#### Ejecutar un proceso desde una opción de menú
+#### Ejecutar un proceso desde una opción de menú { #executing-a-process-from-a-menu-option }
 
 Para ejecutar un proceso desde una opción de menú, necesita definir una nueva opción de menú que ejecute el proceso. Los menús se definen en `General Setup > Application > Menu`. En el campo *Acción* debe seleccionarse la entrada *Proceso*; después, en el campo *Proceso* seleccione el proceso. Se ejecutará inmediatamente y, a continuación, se guardará.
 
 Por último, pulse el botón *Árbol* para organizar la nueva opción de menú en el árbol de menús; ahora el proceso definido puede ejecutarse seleccionando este nuevo menú creado.
 
-#### Ejecutar un proceso desde un botón
+#### Ejecutar un proceso desde un botón { #executing-a-process-from-a-button }
 
 Para ejecutar un proceso con un botón, necesita definir una columna que haga referencia a un botón. En `Application Dictionary > Tables and Columns`, vaya a la columna que desea utilizar para ejecutar el proceso y, en el campo *Referencia*, seleccione la entrada *Botón*; después, en el campo *Proceso* seleccione el proceso que desea ejecutar y guarde.
 
 Al ejecutar un proceso con un botón, el ID de registro del registro actual seleccionado de la tabla se pasará al proceso. Esto permite ejecutar funciones para registros específicos.
 
-#### Ejecutar un proceso en segundo plano
+#### Ejecutar un proceso en segundo plano { #executing-a-process-in-the-background }
 
 Los procesos en segundo plano se definen en `General Setup > Process Scheduling > Process Request`. 
 
@@ -129,7 +129,7 @@ En esta ventana puede definir un proceso en segundo plano. El proceso a ejecutar
 !!!note
     No es necesaria ninguna interacción del usuario para ejecutar el proceso; por lo tanto, no aparecerá ningún emergente solicitando parámetros adicionales.
 
-##### Parar un proceso en segundo plano
+##### Parar un proceso en segundo plano { #kill-a-background-process }
  
   
 En la ventana Monitor de procesos se muestra un botón *Parar Proceso* en aquellos procesos que implementan la interfaz KillableProcess mientras un proceso se está ejecutando (Estado = Procesando). La interfaz KillableProcess le permitirá parar su proceso utilizando un mecanismo de parada.

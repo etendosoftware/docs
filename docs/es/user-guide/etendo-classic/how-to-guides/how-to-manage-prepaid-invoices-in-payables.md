@@ -6,7 +6,7 @@ tags:
   - Pagos a proveedores
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Hay proveedores que no desean conceder crédito a sus clientes:
 
@@ -18,17 +18,17 @@ En estas situaciones, la empresa y el proveedor acuerdan unas condiciones de pag
 !!! note
         Una factura de compra creada a partir del pedido de compra prepagado heredará la información de pago, tanto si se trata de un prepago total como de un prepago parcial.
 
-## Artículos recomendados
+## Artículos recomendados { #recommended-articles }
 
 La gestión de facturas prepagadas requiere una comprensión clara de cómo crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) y una [Factura (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice), así como de cómo registrar un [Pago a proveedor](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
-También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
+También se recomienda comprender cómo configurar unas [Condiciones de pago](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/payment-term.md) y cómo lanzar el [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
-## Prepago de pedido: pasos de ejecución
+## Prepago de pedido: pasos de ejecución { #order-prepayment-execution-steps }
 
 En Etendo, la empresa de este ejemplo deberá reconocer unas condiciones de pago específicas acordadas con su proveedor, crear un **Pedido de compra** y realizar un pago antes de que se le entreguen los bienes.
 
-### Configuración de condiciones de pago
+### Configuración de condiciones de pago { #payment-term-configuration }
 
 Tal y como se ha mencionado, la empresa de este ejemplo necesita crear unas condiciones de pago específicas para reflejar lo acordado con su proveedor.
 
@@ -43,7 +43,7 @@ Tenga en cuenta que las condiciones de pago de prepago tienen una cabecera y una
 - en la línea, se configura el prepago del 25% y el campo "Días de plazo" se establece en 0 días.
 - en la cabecera, se configura la segunda parte de este pago; en este caso, el campo "Días de plazo" es de 30 días para el importe restante.
 
-### Creación del Pedido de compra
+### Creación del Pedido de compra { #purchase-order-creation }
 
 Tal y como se ha mencionado, el primer paso es crear un [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) que contenga los bienes que la empresa necesita.
 
@@ -56,7 +56,7 @@ Una vez que todos los datos requeridos se han informado según corresponda, el *
 !!! note
         No es posible registrar pagos contra pedidos que no estén completados y, por tanto, que no tengan ya un plan de pagos vinculado.
 
-### Creación del pago y contabilidad
+### Creación del pago y contabilidad { #payment-creation-and-accounting }
 
 Los pagos realizados a un proveedor se registran en la ventana de [Pago](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out). Etendo permite registrar pagos a proveedores creados contra pedidos de compra y/o facturas.
 
@@ -90,7 +90,7 @@ La contabilización tendrá el siguiente aspecto:
 
 | Cuenta                    | Debe | Crédito contabilizado |
 |----------------------------|-------|--------|
-| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)          | 50    |        |
+| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)          | 50    |        |
 | [Cuenta de pagos en tránsito](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) |       | 50     |
 
 
@@ -98,7 +98,7 @@ Es posible volver a comprobar el plan de pagos de salida del pedido de compra de
 
 El plan de pagos del pedido de compra incluye el pago registrado en la solapa Detalles de pago de salida.
 
-### Comprobación del pago
+### Comprobación del pago { #payment-check }
 
 De vuelta al [Pedido de compra](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), es posible comprobar el plan de pagos creado recientemente con sus detalles de pago.
 
@@ -112,7 +112,7 @@ En resumen:
     - y el importe pendiente de pago en caso de que ya se haya registrado un pago parcial.
 - y la solapa Detalles de pago registra cada pago realizado contra el pedido.
 
-### Gestión y contabilidad de facturas prepagadas
+### Gestión y contabilidad de facturas prepagadas { #pre-paid-invoice-management-and-accounting }
 
 La empresa de este ejemplo puede registrar el [Albarán (Proveedor)](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) antes de registrar la factura del proveedor utilizando el proceso [Albaranes pendientes de recibir](../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts).
 
@@ -141,9 +141,9 @@ La situación anterior también se refleja en contabilidad, ya que la contabiliz
 
 | Cuenta              | Debe | Crédito contabilizado |
 |----------------------|-------|--------|
-| [Gastos del producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      | 110   |        |
-| [Pasivo del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)     |       | 60     |
-| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)    |       | 50     |
+| [Gastos del producto](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#accounting)      | 110   |        |
+| [Pasivo del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)     |       | 60     |
+| [Pagos por adelantado del proveedor](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner.md#vendorcreditor)    |       | 50     |
 
 
 Existe un informe denominado [Informe de pagos y cobros](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) que permite monitorizar cada pago recibido o realizado.
@@ -168,11 +168,11 @@ Por último, el "Informe de pagos y cobros" muestra ahora la factura como totalm
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentreport2.png)
 
-## Prepago de factura: pasos de ejecución
+## Prepago de factura: pasos de ejecución { #invoice-prepayment-execution-steps }
 
 En Etendo, la empresa de este ejemplo deberá configurar un método de pago que permita contabilizar el prepago en cuanto se realice, crear una factura de compra para los bienes requeridos y registrar el prepago de la factura en una fecha anterior a la fecha de la factura.
 
-### Configuración del método de pago
+### Configuración del método de pago { #payment-method-configuration }
 El método de pago que se va a utilizar debe configurarse para permitir la contabilización del prepago en cuanto se realice; por tanto, se puede especificar la "Cuenta de pago retirada" en el campo 'Cuenta de pago'.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentmethod.png)
@@ -180,13 +180,13 @@ El método de pago que se va a utilizar debe configurarse para permitir la conta
 !!! note
     La casilla de verificación "Reintegro automático en cuenta" también está seleccionada. Esto significa que el pago se retirará automáticamente de la cuenta financiera.
 
-### Creación de la factura de compra
+### Creación de la factura de compra { #purchase-invoice-creation }
 
 El primer paso es emitir la factura de compra con fecha 6 de noviembre de 2023, por ejemplo. La factura emitida puede completarse en cuanto se haya informado correctamente.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseinvoice3.png)
 
-### Creación del pago y contabilidad
+### Creación del pago y contabilidad { #payment-creation-and-accounting_1 }
 
 El siguiente paso es registrar el prepago de la factura en una fecha anterior a la fecha de la factura, por ejemplo el 1 de noviembre de 2023.
 
@@ -204,7 +204,7 @@ La contabilización del pago tiene el siguiente aspecto:
 
 La contabilización anterior refleja el momento en el que el pasivo del proveedor se cancela mediante el prepago, que también se cancela mediante el reconocimiento del pago retirado.
 
-### Contabilización de la Factura (Proveedor)
+### Contabilización de la Factura (Proveedor) { #purchase-invoice-posting }
 
 El último paso es contabilizar la factura de compra en el libro mayor.
 La contabilización de la factura tiene el siguiente aspecto:
@@ -213,7 +213,7 @@ La contabilización de la factura tiene el siguiente aspecto:
 
 La contabilización anterior refleja el momento en el que se contabiliza el pasivo del proveedor; sin embargo, el pasivo del proveedor ya está cancelado por el prepago.
 
-### Resultado
+### Resultado { #result }
 
 Esto completa la creación y el procesamiento de:
 

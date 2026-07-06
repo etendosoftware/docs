@@ -8,7 +8,7 @@ tags:
     - Instalar
 ---
 
-# Gestión del módulo de Empresa
+# Gestión del módulo de Empresa { #enterprise-module-management }
 
 :material-menu: `Aplicación` > `Configuración General` > `Organización` > `Gestión del módulo de Empresa`
 

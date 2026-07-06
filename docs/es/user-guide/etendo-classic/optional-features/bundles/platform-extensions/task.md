@@ -5,10 +5,10 @@ tags:
     - Gestión de tareas
 ---
 
-# Mantenimiento
+# Mantenimiento { #task }
 :octicons-package-16: Javapackage: `com.etendoerp.task`
 
-## Visión general
+## Visión general { #overview }
 
 La infraestructura de mantenimiento en Etendo permite la creación, asignación y gestión automáticas de tareas basadas en eventos de base de datos, como la inserción o actualización de registros. Está diseñada para ayudar a las organizaciones a automatizar procesos de negocio mediante la definición de tipos de tarea, algoritmos de asignación y acciones automatizadas que se activan cuando ocurren eventos específicos. Esta funcionalidad es útil para casos en los que se requiere un seguimiento consistente, validación o acciones del usuario, como la gestión de pedidos, el seguimiento de incidencias o las actualizaciones del estado del cliente.
 
@@ -16,7 +16,7 @@ La infraestructura de mantenimiento en Etendo permite la creación, asignación 
     Para poder utilizar esta infraestructura de mantenimiento es necesario definir tipos de tarea, algoritmos de asignación y automatizaciones, así como la configuración inicial de la infraestructura. Puede encontrar más información en la [Guía del desarrollador - Mantenimiento](../../../../../developer-guide/etendo-classic/bundles/platform/task.md)
 
 
-## Ventana de Mantenimiento
+## Ventana de Mantenimiento { #task-window }
 :material-menu: `Aplicación` > `Configuración General` > `Gestión de tareas` > `Mantenimiento`
 
 Esta ventana muestra todos los **Mantenimiento** creados por triggers definidos en la definición de [Tipo de tarea](../../../../../developer-guide/etendo-classic/bundles/platform/task.md#task-type-window) y permite crear o gestionar tareas manualmente.
@@ -39,7 +39,7 @@ En esta ventana puede gestionar tareas. Estas tareas son genéricas y, por lo ta
 !!!note 
     Módulos específicos pueden añadir campos contextuales a la ventana de mantenimiento.
 
-#### Solapa Registros
+#### Solapa Registros { #logs-tab }
 
 Esta solapa muestra un registro detallado de todos los procesos asíncronos que se han ejecutado como parte del flujo de trabajo de esta tarea. Cada entrada de registro representa una ejecución de proceso activada por transiciones de estado o eventos definidos en la configuración del tipo de tarea.
 

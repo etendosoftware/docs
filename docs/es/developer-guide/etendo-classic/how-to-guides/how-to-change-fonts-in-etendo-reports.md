@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-# Cómo cambiar las fuentes en los informes de Etendo
+# Cómo cambiar las fuentes en los informes de Etendo { #how-to-change-fonts-in-etendo-reports }
  
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Esta sección explica cómo **cambiar las fuentes** utilizadas en los informes de Etendo. Actualizar las fuentes predeterminadas puede ser útil en dos escenarios principales: mejorar la apariencia visual de los informes con una **tipografía** más legible o alineada con la marca, o garantizar la correcta visualización de **Idioma** cuyos caracteres no están soportados por el conjunto de fuentes estándar, como japonés, árabe o vietnamita. Sustituir las fuentes predeterminadas por otras que soporten los conjuntos de caracteres requeridos permite que los informes se rendericen correctamente en distintos idiomas.
 
@@ -24,7 +24,7 @@ Esta sección explica cómo **cambiar las fuentes** utilizadas en los informes d
 Etendo utiliza la herramienta **Informe Jasper** para crear informes:
 
 
-## Cambiar la fuente en Informe Jasper
+## Cambiar la fuente en Informe Jasper { #changing-the-font-in-jasper-reports }
 
 Al cambiar la fuente en **Informe Jasper**, el software [Jaspersoft Studio](https://community.jaspersoft.com/download-jaspersoft/){target="\_blank"} será de gran ayuda.
 
@@ -48,7 +48,7 @@ En el enlace anterior, encontrará un tutorial detallado que describe **cómo ge
 10. Ejecute `./gradlew smartbuild`
 11. Reinicie tomcat. 
 
-## Resultado
+## Resultado { #result }
 
 Las siguientes capturas de pantalla muestran los resultados tras realizar correctamente los pasos mencionados anteriormente:
 

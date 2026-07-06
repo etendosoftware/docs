@@ -6,18 +6,18 @@ tags:
   - Infraestructura
 ---
 
-# Servicio Tomcat dockerizado
+# Servicio Tomcat dockerizado { #dockerized-tomcat-service }
 
 :octicons-package-16: Javapackage: `com.etendoerp.tomcat`
 
-## Visión general
+## Visión general { #overview }
 
 El módulo `com.etendoerp.tomcat` permite la dockerización de Tomcat dentro de Etendo Classic. Este módulo modifica las tareas de Gradle para desplegar automáticamente el archivo `WAR` en el contenedor al ejecutar la tarea `smartbuild`.
 
 !!! info
     Para poder incluir esta funcionalidad, debe estar instalado el Platform Extensions Bundle. Para ello, siga las instrucciones del marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. Para más información sobre las versiones disponibles, compatibilidad con el core y nuevas funcionalidades, visite [Platform Extensions - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
-## Variables de configuración
+## Variables de configuración { #configuration-variables }
 
 Para habilitar y configurar el servicio de Tomcat, están disponibles las siguientes variables de configuración:
 
@@ -52,7 +52,7 @@ Ejecute el siguiente comando para aplicar los cambios de configuración:
 ./gradlew setup
 ```
 
-## Compilar el entorno
+## Compilar el entorno { #compile-the-environment }
 
 - La primera vez que se utiliza Tomcat dentro de un entorno Docker, debe compilarse la configuración ejecutando:
     
@@ -74,7 +74,7 @@ Ejecute el siguiente comando para aplicar los cambios de configuración:
 - Consulte la página [Gestión de Docker](./docker-management.md) para más información sobre la gestión de contenedores.
 
 
-## Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux
+## Configuración adicional para usar Tomcat (dockerizado) con una base de datos del host en entornos Linux { #extra-configuration-to-use-tomcat-dockerized-with-a-host-database-in-linux-environments }
 
 1. Escuchar en la red de Docker
 

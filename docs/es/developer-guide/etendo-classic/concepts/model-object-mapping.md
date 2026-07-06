@@ -8,18 +8,18 @@ tags:
 
 status: beta
 ---
-# Mapeo de objetos del modelo
+# Mapeo de objetos del modelo { #model-object-mapping }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
-## Visión general
+## Visión general { #overview }
 
 Las aplicaciones web (como Etendo) tienen un **descriptor de despliegue**. En realidad, es un archivo `XML` (`web.xml`) que define todo lo que el servidor necesita saber sobre la aplicación (servlets, mapeos y otros componentes).
 
 Etendo genera este archivo en tiempo de compilación con la información almacenada en las tablas `AD_Model_Object` y `AD_Model_Object_Mapping`. Este documento explica estas dos tablas.
 
-## Modelo - Concepto de implementación
+## Modelo - Concepto de implementación { #model---implementation-concept }
 
 `AD_Model_Object` es una tabla en el Diccionario de Aplicación de Etendo para vincular componentes del Diccionario de Aplicación y la clase (servlet) que implementa ese objeto. Por tanto, esta tabla es un mapeo entre el lado lógico (componentes AD) y el lado físico (clases). Es útil por dos razones principales:
 
@@ -32,17 +32,17 @@ Etendo genera este archivo en tiempo de compilación con la información almacen
 
 ### Servlets
 
-#### Objetos del Diccionario de Aplicación
+#### Objetos del Diccionario de Aplicación { #application-dictionary-objects }
 
 En versiones anteriores de Etendo, cuando se creaba una solapa, se creaban nuevos objetos del modelo para ella. Esto ya no ocurre, ya que las entradas de web.xml para solapas se añaden automáticamente al archivo web.xml directamente cuando se realiza la compilación, sin leer información de las tablas de objetos del modelo.
 
-#### Otros servlets
+#### Otros servlets { #other-servlets }
 
 Como se explica en la [sección Modelo - Concepto de implementación](#modelo---concepto-de-implementación), existen algunas situaciones en las que es necesario definir un servlet que no implementa un objeto del Diccionario de Aplicación.
 
 Estos casos se definen en la ventana `Application Dictionary` > `AD Implementation Mapping`. Seleccionando en la solapa **Objeto** el tipo de objeto `Servlet`, configurando la clase Java con la implementación del servlet y añadiendo en la solapa **Mapeo** el mapeo para acceder al servlet.
 
-### Filtro
+### Filtro { #filters }
 
 Los filtros también pueden definirse en la ventana `Application Dictionary` > `AD Implementation Mapping`. Seleccione el tipo de objeto `Filter` y configure la clase Java que implementa el filtro. En la solapa **Mapeo**, añada los patrones de URL para el objeto a filtrar y, en caso de que el filtro reciba algún parámetro, configúrelos en la solapa **Parámetros** con los valores que tendrán. Para recuperar los valores de los parámetros en la implementación, implemente el método `init` como se muestra a continuación:
 
@@ -58,7 +58,7 @@ if (encoding == null)
 
 Los listeners se definen en la ventana `Application Dictionary` > `AD Implementation Mapping` con el tipo `Listener`. En este caso, no es necesario definir `Mapping` ni `Parameters`, solo la clase Java que lo implementa. Tenga en cuenta que los listeners deben ejecutarse en un orden determinado; este orden se define mediante el campo `Sequence number`.
 
-### Recursos
+### Recursos { #resources }
 
 Los recursos se definen en la ventana `Application Dictionary`> `AD Implementation Mapping` con el tipo `Resource`.
 
@@ -80,7 +80,7 @@ Este recurso se define asignando los siguientes valores a los siguientes campos:
 - `Parameters.Name`: auth
 - `Parameters.Search Key`: Container
 
-### Páginas de error
+### Páginas de error { #error-pages }
   
 Las páginas de error pueden definirse en la ventana `Application Dictionary` > `AD Implementation Mapping` usando el tipo `Error page`.
 
@@ -96,7 +96,7 @@ Los objetos `Error page` aceptan los siguientes parámetros:
 
 Dependiendo de los parámetros definidos, se generarán los siguientes tipos de páginas de error:
 
-#### Página de error por defecto
+#### Página de error por defecto { #default-error-page }
 
 Parámetros:
 
@@ -108,7 +108,7 @@ Parámetros:
     </error-page>
     ```
 
-#### Tipo de excepción
+#### Tipo de excepción { #exception-type }
 
 Parámetros:
 
@@ -122,7 +122,7 @@ Parámetros:
     </error-page>
     ```
   
-#### Código de error
+#### Código de error { #error-code }
 
 Parámetros:
 
@@ -136,7 +136,7 @@ Parámetros:
     </error-page>
     ```
 
-## Modularidad y la definición del objeto del modelo
+## Modularidad y la definición del objeto del modelo { #modularity-and-the-model-object-definition }
 
 La modularidad de Etendo tiene como objetivo permitir, mediante módulos, el despliegue de cualquier tipo de contenido opcional en una instancia de Etendo, incluidas entradas adicionales en el archivo `web.xml` del contexto de Etendo. Esto se realiza a través de la tabla `AD_Model_Object`. Los desarrolladores pueden crear entradas en esta ventana no vinculadas a ningún componente AD. Para soportar cualquier tipo de contenido de web.xml (servlet, listeners, filtros, etc.), se añade una nueva columna a `AD_Model_Object` para representar el tipo de entrada de `web.xml` que el desarrollador está añadiendo. También pueden declarar un conjunto de mapeos para la entrada y un conjunto de parámetros si es necesario.
 

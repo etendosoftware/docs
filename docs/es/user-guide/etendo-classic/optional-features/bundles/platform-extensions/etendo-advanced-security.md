@@ -10,7 +10,7 @@ tags:
 # Etendo Advanced Security
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.security` 
 
-## Visión general
+## Visión general { #overview }
 Esta sección describe el módulo Etendo Advanced Security incluido en el bundle Platform Extensions.
 
 !!! info
@@ -28,7 +28,7 @@ El módulo **Etendo Advanced Security** permite al usuario personalizar varias f
 !!! info
     Para más información sobre la configuración del módulo, visite la [Guía del desarrollador](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
 
-## Seguridad de contraseñas
+## Seguridad de contraseñas { #password-security }
 
 Esta funcionalidad se ejecuta cuando se cambia la contraseña, ya sea porque el usuario necesita cambiarla o porque el sistema lo requiere. El proceso puede realizarse desde el campo **Cambiar contraseña** en la barra de navegación y/o desde la ventana **Usuario**.
 
@@ -51,7 +51,7 @@ Este proceso también puede ejecutarse desde la ventana **Usuario** aplicando lo
 
 ![](../../../../../assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
 
-### Historial de contraseñas
+### Historial de contraseñas { #password-history }
 
 Al cambiar la contraseña, una de las condiciones que deben cumplirse es que la nueva contraseña no puede ser la misma que una utilizada previamente. Etendo crea registros de las contraseñas usadas anteriormente, por lo que, si el usuario introduce una ya utilizada, el sistema informa con un **mensaje de error.**
 
@@ -70,7 +70,7 @@ El siguiente ejemplo muestra el mismo mensaje de error al cambiar la contraseña
 !!! info
     Etendo también permite introducir la misma contraseña un número indefinido de veces. En caso de que el usuario desee mantener la misma contraseña, simplemente mantenga el campo **Habilitar historial de contraseñas** de la ventana Información del Sistema **sin marcar**. 
 
-## Bloqueo de usuario
+## Bloqueo de usuario { #user-lockout }
 
 Otra funcionalidad de este módulo es el **bloqueo** del usuario tras N **intentos de inicio de sesión fallidos**. Al introducir una contraseña incorrecta, Etendo muestra un mensaje de error indicando el número de intentos restantes.
 
@@ -92,7 +92,7 @@ Para configurar el número de intentos de inicio de sesión fallidos, es necesar
 !!! warning
     Es importante tener en cuenta que, una vez introducida la nueva contraseña, si el usuario vuelve a introducir una contraseña incorrecta, el sistema bloqueará automáticamente el inicio de sesión en el primer intento. 
 
-## Verificación de múltiples sesiones  
+## Verificación de múltiples sesiones { #multiple-session-verification }
 
 Otra innovación funcional que facilita este módulo es la capacidad de permitir o bloquear tener múltiples sesiones abiertas desde otro navegador.
 
@@ -111,7 +111,7 @@ De este modo, al intentar iniciar sesión, el sistema verifica que ya existe una
 !!! info
     Por defecto, Etendo con este módulo instalado solo permite tener una sesión activa. 
 
-## Cambio de contraseña tras el inicio de sesión
+## Cambio de contraseña tras el inicio de sesión { #changing-password-after-login }
 
 Tras iniciar sesión por **primera vez** con un usuario, Etendo solicita **cambiar la contraseña**. Al intentar iniciar sesión, el sistema indica que la contraseña ha caducado y que el usuario necesita cambiarla por una nueva para poder iniciar sesión.
 
@@ -119,7 +119,7 @@ Tras iniciar sesión por **primera vez** con un usuario, Etendo solicita **cambi
 
 Una vez realizado el cambio, el usuario es redirigido a la interfaz principal de la aplicación.
 
-## Tiempo de caducidad (bloqueo automático de contraseña)
+## Tiempo de caducidad (bloqueo automático de contraseña) { #expiration-time-autolock-password }
 
 Como parte de la gestión de seguridad, Etendo también permite la gestión de los días del **tiempo de caducidad de la contraseña**.
 

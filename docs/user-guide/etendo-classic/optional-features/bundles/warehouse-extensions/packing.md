@@ -24,14 +24,14 @@ This section describes the  **Etendo Packing** module included in the *Warehouse
 This module streamlines and enhances the management of **packing operations** within the warehouse. Once a **goods shipment** has been processed, the packing process begins. Packing is carried out based on each individual goods shipment document. For every product, the warehouse worker determines the appropriate handling unit (box) in which to pack the item. Only products classified as **items** are eligible for packing.
 
 !!! warning
-    This module includes documentation on how to perform the **Packing** process from Etendo. For more information about configuration and managing packing tasks from **Etendo Mobile**, see the module documentation: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing).
+    This module includes documentation on how to perform the **Packing** process from Etendo. For more information about configuration and managing packing tasks from **Etendo Mobile**, see the module documentation: [Advanced Warehouse Management - Packing](./advanced-warehouse-management.md#packing-tasks).
 
 
 ## Initial Configuration
 
 In Etendo, it is possible to calculate the **weight of the packing**. To do this, some prior configurations from other windows are needed in order to calculate the weight for each box:
 
-- [**Product**](../../../basic-features/master-data-management/master-data.md#product) window: Here it is possible to define the weight and the unit of measure (UoM) for the product.
+- [**Product**](../../../basic-features/master-data-management/master-data/product.md#product) window: Here it is possible to define the weight and the unit of measure (UoM) for the product.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-10.png)
     
@@ -39,7 +39,7 @@ In Etendo, it is possible to calculate the **weight of the packing**. To do this
         - Weight
         - UOM for Weigth: It only shows units of measures that are defined as `Is weight`
 
-- [**Unit of Measure**](../../../basic-features/master-data-management/product-setup.md#unit-of-measure) window: This module adds a new field **Is weight**. In this window, also it is possible to define the **Conversion** between UOM, that is, between the UOM of the product and the UOM of the box.
+- [**Unit of Measure**](../../../basic-features/master-data-management/product-setup/unit-of-measure.md) window: This module adds a new field **Is weight**. In this window, also it is possible to define the **Conversion** between UOM, that is, between the UOM of the product and the UOM of the box.
 
     ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/packing/packing-11.png)
 

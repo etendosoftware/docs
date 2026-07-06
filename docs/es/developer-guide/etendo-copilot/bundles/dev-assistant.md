@@ -8,11 +8,11 @@ tags:
     - Asistente de desarrollo
 ---
 
-# Asistente de desarrollo
+# Asistente de desarrollo { #dev-assistant }
 
 :octicons-package-16: Paquete Java:  `com.etendoerp.copilot.devassistant`
 
-## Visión general
+## Visión general { #overview }
 
 Esta página proporciona una visión general de las herramientas, la funcionalidad y los ejemplos de uso de los distintos agentes de desarrollo disponibles en Etendo. **Dev Assistant** agiliza la gestión del flujo de trabajo para los desarrolladores ofreciendo agentes especializados que simplifican tareas como la creación de botones, ventanas, solapas y tablas, manejadores de eventos, informes Jasper, procesos en segundo plano y más. Estos agentes están diseñados para mejorar la productividad y reducir la complejidad, facilitando que los desarrolladores creen y gestionen de forma eficiente distintos componentes dentro de la plataforma Etendo.
 
@@ -23,9 +23,9 @@ Esta página proporciona una visión general de las herramientas, la funcionalid
 
 !!!warning
     Tenga en cuenta que los agentes se encuentran actualmente en su fase de pruebas beta.
-## Agentes
+## Agentes { #agents }
 
-### Supervisor de Dev Assistant
+### Supervisor de Dev Assistant { #dev-assistant-supervisor }
 El Agente de Desarrollo optimiza la gestión del flujo de trabajo para desarrolladores ofreciendo asistentes especializados que simplifican tareas como la creación de botones, ventanas, solapas y tablas, manejadores de eventos, informes Jasper, procesos en segundo plano y más.
 
 **Funcionalidad**
@@ -33,7 +33,7 @@ El Agente de Desarrollo optimiza la gestión del flujo de trabajo para desarroll
 El Agente de Desarrollo actúa como un asistente integrado que automatiza y acelera tareas repetitivas en el ciclo de vida de una aplicación, permitiéndole centrarse en la lógica de negocio y la experiencia de usuario. Su función principal es eliminar la “fontanería” y el código repetitivo: genera y configura automáticamente los elementos de la interfaz, vincula la lógica de eventos, construye informes y orquesta procesos en segundo plano, todo ello sin que usted tenga que escribir manualmente decenas de archivos o parámetros. Al integrarse directamente en su entorno de desarrollo, garantiza que cada componente cumpla con las convenciones de su proyecto y minimiza los errores de configuración, optimizando así su productividad y la calidad del código.
 
 **Miembros del equipo**
-#### Creador de procesos en segundo plano
+#### Creador de procesos en segundo plano { #background-process-creator }
 
 **Creador de procesos en segundo plano** es un agente especializado en la creación automática de procesos en segundo plano en Java. El agente lee código previamente indexado y utiliza ejemplos de clases que extienden `DalBaseProcess` para construir nuevos procesos en segundo plano.
 
@@ -64,7 +64,7 @@ El Creador de procesos en segundo plano genera procesos en segundo plano en Java
 
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG2.png)
     ![background.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/BG3.png)
-#### Creador de procesos de botón
+#### Creador de procesos de botón { #button-process-creator }
 
 El **Agente de creación de procesos de botón** simplifica el proceso de creación y registro de botones y definiciones de proceso en Etendo Classic. Al automatizar el flujo de trabajo mediante webhooks, elimina la necesidad de configuración manual, garantizando que sus procesos y botones se configuren de forma correcta y eficiente.
 
@@ -133,7 +133,7 @@ El proceso y el botón se registrarán automáticamente, y se notificará al usu
 En este punto, tendremos creada la clase Java del botón junto con el proceso registrado.
 
 ![ButtonProcess2.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/button-process-2.png)
-#### Ejecución de código
+#### Ejecución de código { #code-run }
 
 **Ejecución de código** es un agente diseñado para ejecutar comandos de Python en un entorno controlado. Traduce la solicitud a comandos de Python o Bash para completar la tarea.
 
@@ -238,7 +238,7 @@ Este agente es útil para evitar la necesidad de revisar manualmente todos los a
 4. Pregunte al agente lo que necesita crear.
 
     ![code-expert.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/etendo-code-expert2.png)
-#### Creador de manejadores de eventos
+#### Creador de manejadores de eventos { #event-handler-creator }
 
 Este agente es capaz de crear **manejadores de eventos** en Etendo Classic. Solo necesita proporcionar el Paquete Java del módulo donde debe exportarse y especificar la acción que se debe realizar.
 
@@ -268,7 +268,7 @@ Este agente es capaz de crear **manejadores de eventos** en Etendo Classic. Solo
 3. A continuación, este es el resultado proporcionado por el agente.
 
     ![eventhandler.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/event-handler-creator-2.png)
-#### Creador de informes Jasper
+#### Creador de informes Jasper { #jasper-report-creator }
 
 El **Agente Jasper** está diseñado para facilitar la creación, edición y registro de informes dentro de la plataforma Etendo. Usando JasperReports, permite a los desarrolladores definir la estructura del informe, aplicar estilos, gestionar parámetros y registrar los informes en el sistema para utilizarlos en diferentes módulos.
 
@@ -357,7 +357,7 @@ Finalmente, podemos observar el informe creado y establecer el parámetro elegid
 **Edición de informes**
 
 ![EditReport.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/edit-report.png)
-#### Creador de mensajes
+#### Creador de mensajes { #message-creator }
 
 El **Creador de mensajes** agiliza el proceso de creación y registro de AD_Messages en Etendo Classic. Al utilizar un webhook, garantiza una creación de mensajes eficiente y sin errores, cumpliendo las convenciones de nomenclatura y las mejores prácticas.
 
@@ -424,7 +424,7 @@ Notas:
     ```java
     OBMessageUtils.messageBD("MODPREFIX_InvalidInput");
     ```
-#### Creador de Módulos
+#### Creador de Módulos { #module-creator }
 
 Etendo Classic le permite crear módulos que proporcionan funcionalidad adicional y que pueden desplegarse de forma independiente. Estos módulos pueden abarcar desde informes adicionales hasta paquetes de contenido (traducciones, plan contable, etc.).
 
@@ -513,7 +513,7 @@ Puede confirmar que el módulo se ha creado navegando a la ventana `Módulo` en 
 
 !!!info
     Para una mayor personalización y desarrollo, consulte la guía oficial [Guía del desarrollador de Etendo](../../etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md) para ver pasos más detallados.
-#### Creador de traducciones de módulos
+#### Creador de traducciones de módulos { #module-translation-creator }
 
 **Herramientas**
 
@@ -557,7 +557,7 @@ A continuación, proporcione al agente la ruta al módulo de traducción (por ej
 ./gradlew install.translation -Dmodule=javapackage
 ./gradlew smartbuild -Dlocal=no
 ```
-#### Creador de Referencias
+#### Creador de Referencias { #reference-creator }
 
 El **Creador de Referencias** crea referencias en el Diccionario de Aplicación (AD) de Etendo. Esta herramienta permite, por ejemplo, añadir nuevas referencias de lista a un módulo específico dentro de la base de datos de Etendo mediante una solicitud HTTP a un webhook.
 
@@ -595,7 +595,7 @@ El **Creador de Referencias** está diseñado para facilitar la creación de ref
     ```title="Terminal"
     ./gradlew export.database --info
     ```
-#### Agente de Tabla y Columna
+#### Agente de Tabla y Columna { #table-and-column-agent }
 
 El **Agente de Tabla y Columna** es un asistente inteligente que automatiza la creación y gestión de estructuras de base de datos dentro de la plataforma Etendo. Está diseñado específicamente para ayudar a los desarrolladores a gestionar de forma eficiente **Tabla**, **Columna** y **Vista**, garantizando que todas las operaciones sigan los estándares internos de Etendo y las reglas de consistencia de la base de datos.  
 
@@ -625,7 +625,7 @@ Cuando se solicita, el agente:
 5. Recompile usando `./gradlew smartbuild --info` y reinicie Tomcat para aplicar los cambios.  
 
 Este agente garantiza que todas las actualizaciones de la base de datos se realicen de forma segura, coherente y en pleno cumplimiento de los estándares de desarrollo de Etendo.
-#### Agente de Ventanas, Solapas y Campos
+#### Agente de Ventanas, Solapas y Campos { #windows-tabs-and-fields-agent }
 
 !!!warning
     El agente de ventanas, solapas y campos se encuentra actualmente en fase de pruebas **beta**. Aunque está diseñado para automatizar el proceso de creación de **Ventana**, **Solapa** y **Campo**, hay casos en los que las tareas pueden no completarse totalmente. En concreto, puede haber problemas al añadir claves foráneas, nombrar correctamente los elementos, etc.
@@ -679,7 +679,7 @@ El agente opera mediante un flujo de trabajo guiado que incluye validación de d
     ```title="Terminal"
     ./gradlew export.database --info
     ```
-#### Creador de Webhooks
+#### Creador de Webhooks { #webhook-creator }
 
 **Creador de Webhooks** es un agente diseñado para facilitar la creación y el registro de webhooks en Java. Un webhook actúa como un comunicador entre aplicaciones o servicios, permitiendo que los datos se envíen automáticamente de un sistema a otro en tiempo real cuando ocurre un evento específico.
 
@@ -710,7 +710,7 @@ Este agente simplifica la creación de webhooks generando automáticamente los a
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-2.png)
 
     ![webhook.png](../../../assets/developer-guide/etendo-copilot/bundles/dev-assistant/wh-3.png)
-### Supervisor de pruebas
+### Supervisor de pruebas { #test-supervisor }
 Un supervisor que permite generar pruebas para un Módulo de Etendo completo mediante un flujo de trabajo, comprobando los archivos sin pruebas y generándolas. El supervisor también ejecutará las pruebas y proporcionará feedback al usuario.
 
 **Funcionalidad**
@@ -765,7 +765,7 @@ Este agente recibe un Módulo de Etendo y comprobará los archivos Java y JavaSc
     - [Herramienta de ejecución de pruebas](../available-tools/test-run-tool.md)
 
 
-#### Agente de pruebas de React
+#### Agente de pruebas de React { #react-test-agent }
 
     El **Agente de pruebas de React** es un agente especializado en crear y gestionar pruebas de componentes React usando `TypeScript` y `@testing-library/react-native`. Su enfoque principal es generar archivos de prueba de alta calidad para componentes React y React Native dentro de módulos de **subaplicación de Etendo**.
 
@@ -787,7 +787,7 @@ Este agente recibe un Módulo de Etendo y comprobará los archivos Java y JavaSc
 2. Abra Copilot y seleccione `Test Supervisor`; a continuación, solicite al agente lo que necesite crear. Una entrada sugerida podría ser `Generate tests for the module com.etendoerp.examplemodule`.
 
 3. El agente generará las pruebas y las ejecutará, comprobando errores y proporcionando feedback al usuario.
-### Agente de refactorización
+### Agente de refactorización { #refactor-agent }
 
 Un agente experto en refactorización de código centrado en mejorar la claridad, el mantenimiento y la originalidad, preservando la funcionalidad. El agente analiza archivos de código, identifica áreas de mejora y sugiere cambios en nombres de variables, documentación y estructuras para una mejor legibilidad. Garantiza que las importaciones, los nombres de métodos y los nombres de entidades permanezcan sin cambios para mantener la funcionalidad. El flujo de trabajo incluye análisis de código, confirmación del usuario, aplicación de cambios y verificación de las actualizaciones. Se proporcionan explicaciones claras y un resumen de los cambios para la comprensión del usuario.
 
@@ -810,7 +810,7 @@ Un agente experto en refactorización de código centrado en mejorar la claridad
 2. Abra Copilot y seleccione Agente de refactorización; después, solicite al agente lo que necesita refactorizar. Por ejemplo, una entrada sugerida podría ser `Refactor the file located in the path /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java changing the variables to spanish`.
 3. El agente leerá el archivo, lo analizará y sugerirá cambios.
 4. El agente escribirá el archivo con los cambios, sobrescribiendo el archivo original.
-### Agente de prueba Java único
+### Agente de prueba Java único { #unique-java-test-agent }
 
 Este agente está diseñado para generar pruebas para un único archivo Java o para un módulo de Etendo Classic.
 
@@ -842,7 +842,7 @@ Este agente está diseñado para generar pruebas para un único archivo Java o p
 1. Para utilizar este agente, es necesario iniciar sesión con el rol `System Administrator` y configurar el acceso del rol. Para ello, vaya a la ventana **Agente**, seleccione Generador de pruebas Java y sincronícelo. A continuación, vaya a la ventana **Acceso de agente** y conceda acceso al rol.
 2. Abra Copilot y seleccione Agente de prueba Java único; a continuación, solicite al agente lo que necesita crear. Una entrada sugerida podría ser ```Generar pruebas para el archivo Java ubicado en la ruta /modules/com.etendoerp.module/src/com/etendoerp/module/MyClass.java```.
 3. El agente generará las pruebas y las ejecutará, comprobando si hay errores y proporcionando comentarios al usuario.
-### Inicializador de Entidad/Organización
+### Inicializador de Entidad/Organización { #clientorganization-initializer }
 
 Este agente ayuda al usuario a inicializar entidades u organizaciones. 
 

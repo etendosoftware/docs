@@ -22,7 +22,7 @@ A fiscal calendar defines the **years** and their **periods** to ensure accurate
 
 The **fiscal calendar window** allows the user to create and maintain the organization's fiscal calendar. Each organization requiring a calendar needs to have one calendar assigned to it and **only one** therefore it is clearly known which calendar is going to be used while posting transactions and while opening and closing the accounting cycle.
 
-![fiscal calendar 1](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar1.png)
+![fiscal calendar 1](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar1.png)
 
 - When creating a calendar, Etendo proposes `*` as the default organization:
 
@@ -36,13 +36,13 @@ Once the calendar is created, it must be linked to the corresponding organizatio
 
 - Selecting **legal with accounting organizations** type.
 
-![fiscal calendar 2](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar2.png)
+![fiscal calendar 2](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar2.png)
 
 ### Year
 
 The **Year** tab is used to define as many **fiscal years** as required within a calendar.
 
-![fiscal calendar 5](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar5.png)
+![fiscal calendar 5](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar5.png)
 
 - A Fiscal Year usually covers **12 consecutive months**.
 
@@ -52,7 +52,7 @@ The **Year** tab is used to define as many **fiscal years** as required within a
 
     - An optional **13th Adjustment Period**, dated the last day of the last standard period (e.g., 31-12-2025), used for accounting adjustments via G/L Journals.
 
-![fiscal calendar 3](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar3.png)
+![fiscal calendar 3](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar3.png)
 
 
 Once created, all the periods need to be **opened** in the [Open/Close Period Control](#openclose-period-control) window.
@@ -70,7 +70,7 @@ Once created, all the periods need to be **opened** in the [Open/Close Period Co
 
 The **Period** tab lists all the periods of a year. Also, it is possible to **manually** create the accounting periods of a year. That action requires to enter some information:
 
-![fiscal calendar 4](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/fiscal-calendar4.png)
+![fiscal calendar 4](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/fiscal-calendar4.png)
 
 The fields to note are:
 
@@ -90,7 +90,7 @@ Finally, a year can be:
 -   **closed**
 -   and **re-opened**
 
-Both actions are performed in the [End Year Close](../../accounting/transactions.md#end-year-close) window.
+Both actions are performed in the [End Year Close](../../accounting/transactions/end-year-close.md) window.
 
 ---
 

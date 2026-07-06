@@ -7,9 +7,9 @@ tags:
  - Instrucciones de usuario
 ---
 
-# Configuración y uso de Copilot
+# Configuración y uso de Copilot { #copilot-setup-and-usage }
 
-## Configuración inicial
+## Configuración inicial { #initial-configuration }
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad` 
 
 Para poder utilizar Copilot, debe existir un token SWS válido. A partir de **Etendo 26.1**, este token se **genera automáticamente** durante la instalación.
@@ -24,14 +24,13 @@ Para versiones anteriores, o para verificar la configuración:
 !!! warning "Recomendación de seguridad"
     Configure un tiempo de expiración razonable en entornos productivos. Dejarlo en `0` (sin expiración) implica que, si el token se ve comprometido, seguirá siendo válido indefinidamente.
 
-![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
-## Cómo configurar agentes
+## Cómo configurar agentes { #how-to-set-up-agents }
 
 Con Etendo Copilot, es posible:
 
 1. *Crear su propio agente*: Utilice la ventana Agente para configurar un nuevo agente con todas las características específicas necesarias.
 2. *Instalar un módulo con un agente preconfigurado*: Algunos módulos incluyen agentes preconfigurados, que pueden utilizarse tal cual o modificarse para adaptarse a sus necesidades. Para más información, visite el bundle [Extensiones de Copilot](./bundles/overview.md).
-## Ventana Agente
+## Ventana Agente { #agent-window }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agente`
 
@@ -46,14 +45,15 @@ La ventana Agente le permite definir y configurar agentes. Las capacidades de un
 !!! tip
     Se recomienda leer esta página completa para comprender las posibles configuraciones, pero después puede continuar a la página [Cómo crear un agente](../../developer-guide/etendo-copilot/how-to-guides/how-to-create-an-agent.md).
 
-### Cabecera
+### Cabecera { #header }
 
-![agents-window](../../assets/user-guide/etendo-copilot/setup/assistant-window.png)
+The Header section contains the main configuration of the agent: its identity, availability, and synchronization behavior. Most of these fields need to be set when the agent is first created and rarely change afterwards.
+
+![agents-window](../../assets/user-guide/etendo-copilot/setup/agent-window.png)
 
 Campos a tener en cuenta:
 
 - **Nombre**: nombre del agente
-- **Descripción**: descripción del agente
 - **Descripción**: la descripción del agente para que el gestor pueda elegir el agente adecuado para cada caso.
 - **Tipo de aplicación**:
 
@@ -66,20 +66,31 @@ Campos a tener en cuenta:
         Esta opción funciona como un gestor de otros agentes y permite seleccionar miembros del equipo. Como librería, LangGraph suele funcionar como una herramienta de software diseñada para ayudar a desarrolladores e investigadores a trabajar con datos lingüísticos en un formato estructurado basado en grafos. La cantidad máxima por defecto de interacciones entre el gestor y los agentes es 50, aunque se puede configurar una cantidad diferente.
 
 - **Estado de sincronización**: este campo de solo lectura indica el estado actual del agente.
-    - `Pending synchronization` el agente cambiará a este estado ante cualquier cambio, ya sea en la cabecera o en las solapas.
+    - `Pending synchronization`: el agente cambiará a este estado ante cualquier cambio, ya sea en la cabecera o en las solapas.
     - `Synchronized`, es necesario sincronizar el agente usando el botón “Sincronizar agente”.
 
 - **Módulo**: módulo en el que se exportarán el agente y todas sus configuraciones. Este campo solo está disponible con el rol `System Administrator`.
 - **Activo**: casilla para activar o no el agente.
-- **SystemApp**: casilla para limitar el uso de determinados agentes únicamente bajo el rol `system administrator` y no disponible para usuarios finales.
+- **Alcance del agente**: define el alcance de visibilidad del agente. Opciones disponibles:
+
+    - **Client**: el agente solo está disponible para el cliente en el que fue creado. Este es el valor por defecto.
+    - **System**: el agente solo está disponible bajo el rol `System Administrator`.
+    - **Client + System**: el agente está disponible para el cliente y también bajo el rol `System Administrator`.
+
+- **Sincronizar al inicio**: cuando está habilitado, el agente se sincroniza automáticamente cuando el sistema Etendo se inicia. Esto elimina la necesidad de ejecutar manualmente el proceso `Sincronizar agente` después de cada reinicio, asegurando que el agente esté siempre actualizado.
+
+    !!!info "Acceso automático al sincronizar al inicio"
+        Cuando se activa **Sincronizar al inicio**, el sistema otorga automáticamente acceso al agente a cada rol **Client Admin** activo (el rol de administrador a nivel de empresa en Etendo) del cliente. Si aún no existe una entrada de acceso en la ventana [Acceso del Agente](#agent-access-window) para un rol Client Admin determinado, se crea automáticamente. Esto garantiza que los administradores de la empresa siempre tengan acceso a los agentes sincronizados sin necesidad de configuración manual.
+
+- **Destacado**: cuando está habilitado, el agente se resalta y aparece primero en el desplegable de agentes del Chat de Copilot. Cuando existen agentes destacados, el desplegable del chat muestra un botón de filtro (⭐) que permite a los usuarios alternar entre ver solo agentes destacados o todos los agentes disponibles. Por defecto, cuando existen agentes destacados, el desplegable muestra solo los destacados.
 - **Prompt**: instrucciones específicas de los agentes. Estas instrucciones pueden escribirse en inglés o en español.
     
     !!!info
-        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@ETENDO_HOST@`, `@ETENDO_HOST_DOCKER@` y `@source.path@`. Estas variables se sustituirán por los valores definidos en el archivo `gradle.properties`.
+        El campo **Prompt** puede tener las siguientes variables dinámicas: `@context.url@`, `@etendo.host@`, `@etendo.host.docker@` y `@source.path@`. Estas variables se sustituyen por los valores definidos en el archivo `gradle.properties`.
 
 - **Vista previa del grafo**: en caso de definir una aplicación de tipo **LangGraph**, muestra el árbol de agentes bajo un determinado gestor.
 
-### Configuración avanzada
+### Configuración avanzada { #advanced-settings }
 
 - **Modelo**: lista desplegable de modelos disponibles, desde la ventana [Modelos de IA](#ventana-modelos-de-ia). Si se deja vacío al ejecutar el botón `Sync Agent`, se utiliza el modelo por defecto.
 - **Ejecución de código**: esta casilla habilita la funcionalidad experimental de ejecución de código en agentes de tipo **multimodelo**.
@@ -87,11 +98,14 @@ Campos a tener en cuenta:
 - **Temperatura**: controla la aleatoriedad; valores más bajos dan como resultado completados menos aleatorios. A medida que la temperatura se aproxima a cero, el modelo se vuelve determinista y repetitivo.
 - **Esquema JSON para salidas estructuradas**: cuando se configura, el agente intentará devolver respuestas que se ajusten al esquema proporcionado descrito en formato JSON Schema. Esto es útil para garantizar que las salidas del agente estén estructuradas y puedan analizarse o procesarse fácilmente por otros sistemas.
 
-### Botones
+### Botones { #buttons }
 
 ![](../../assets/user-guide/etendo-copilot/setup/clone-agent.png)
 
 - **Sincronizar agente**: este proceso se encarga de actualizar o crear un nuevo agente, en caso de que no exista. Además de crear el agente en base a las configuraciones, inicialmente obtiene o actualiza la lista de modelos y, finalmente, obtiene y/o sube los archivos usados como base de conocimiento.
+
+    !!! info "Sincronización desde cualquier rol"
+        Cualquier usuario con acceso a la ventana de Agente puede sincronizar agentes, independientemente de su rol. Al sincronizar, los archivos de la base de conocimiento se limitan al cliente del usuario, asegurando que los datos de cada cliente permanezcan aislados en la base de datos vectorial. Los archivos pertenecientes al cliente del sistema (`*`) se comparten entre todos los clientes.
 
 - **Actualizar vista previa**: se muestra solo cuando el tipo de agente es **Langraph**, permitiendo al usuario actualizar la Vista previa del grafo cuando se introducen cambios en los miembros del equipo.
 
@@ -99,7 +113,7 @@ Campos a tener en cuenta:
 
 - **Clonar**: el botón de clonado de la barra de navegación permite clonar agentes, creando una copia tanto de todos los campos de cabecera como de los registros relacionados en las solapas. Cuando se clona un agente, se añade el nombre `Copy of`.
 
-### Solapa Conocimiento
+### Solapa Conocimiento { #knowledge-tab }
 
 En esta solapa, puede configurar los archivos que se utilizarán por el agente como base de conocimiento, en prompts o preguntas.
 
@@ -116,7 +130,7 @@ Campos a tener en cuenta:
 - **Archivo**: el archivo seleccionado como base de conocimiento.
 - **Comportamiento**: la forma en que el agente utilizará el archivo. Tiene múltiples opciones disponibles:
 
-    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones).
+    - **[Agente] Añadir al agente como base de conocimiento**: adecuado para archivos grandes. El agente utiliza una `Knowledge Base Search tool` por defecto para recuperar información durante la ejecución. Requiere sincronización usando el botón [Sincronizar agente](#botones). Al sincronizar, los documentos se almacenan con un identificador de cliente, asegurando que los datos de cada cliente permanezcan separados.
     - **[Agente] Añadir el contenido del archivo al prompt**: recomendado para archivos pequeños con datos esenciales. El contenido del archivo se inserta en el prompt en cada @alias@ o se añade al final si no se define ningún alias.
     - **[Agente] SPEC: Añadir como especificación del agente**: usado para archivos de tipo `OpenAPI Specification`. Genera automáticamente herramientas para cada método y endpoint, permitiendo que el agente interactúe con APIs.
     - **[Pregunta del usuario] Añadir contenido a cada pregunta**: lo mejor cuando el contenido del archivo cambia con frecuencia. El archivo se añade a cada mensaje del usuario, asegurando que el agente siempre reciba datos actualizados.
@@ -126,7 +140,7 @@ Campos a tener en cuenta:
 - **Módulo**: módulo en el que se exportará esta configuración del archivo de base de conocimiento. Este campo solo está disponible con el rol `System Administrator`.
 - **Alias**: en caso de que seleccione el comportamiento `[Agente] Añadir el contenido del archivo al prompt`, por defecto añade el contenido del archivo dinámicamente al final del prompt; el alias puede usarse para reemplazar el contenido del archivo dentro del prompt, usando el comodín @<alias>@, con el alias que defina en este campo.
 
-### Solapa Habilidades y herramientas
+### Solapa Habilidades y herramientas { #skills-and-tools-tab }
 
 En esta solapa, puede definir las herramientas que utilizará el agente.
 
@@ -143,7 +157,7 @@ Campos a tener en cuenta:
 !!!info
     Para introducir nuevas herramientas, debe hacerlo desde la [ventana Habilidad/Herramienta](#ventana-habilidadherramienta).
 
-### Solapa Miembros del equipo
+### Solapa Miembros del equipo { #team-members-tab }
 
 En esta solapa define los miembros del equipo de los agentes; solo está presente si selecciona el tipo de aplicación `LangGraph`. Recuerde que LangGraph funciona como un gestor de otros agentes, capaz de delegar tareas específicas.
 
@@ -163,7 +177,7 @@ Campos a tener en cuenta:
 
 - **Activo**: casilla para activar el miembro del equipo.
 
-### Solapa Servidores MCP
+### Solapa Servidores MCP { #mcp-servers-tab }
 
 Esta solapa permite la configuración de **servidores Model Context Protocol (MCP)**, que amplían las capacidades del agente integrando herramientas y recursos externos. Los [servidores MCP](../../developer-guide/etendo-copilot/concepts/model-context-protocol.md) operan como procesos externos con los que los agentes establecen comunicación para acceder a funcionalidades especializadas.
 
@@ -177,7 +191,7 @@ Campos a tener en cuenta:
 
 !!!tip
     Para instrucciones detalladas sobre cómo crear y configurar servidores MCP, consulte [Cómo configurar servidores MCP en agentes de Etendo](../../developer-guide/etendo-copilot/how-to-guides/how-to-configure-mcp-servers-on-agents.md).
-## Ventana de Archivo de base de conocimiento
+## Ventana de Archivo de base de conocimiento { #knowledge-base-file-window }
 
 :material-menu: `Aplicación`>`Servicios`>`Copilot`>`Archivo de base de conocimiento`
 
@@ -191,7 +205,7 @@ En la ventana Archivo de base de conocimiento, puede definir los archivos con lo
     - Esta base de datos de imágenes se utiliza actualmente por la [Herramienta OCR](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md) para encontrar plantillas de referencia con marcadores visuales que guían la extracción de datos
     - Cada agente mantiene su propia base de datos de imágenes, separada de su base de conocimiento de texto
 
-### Cabecera
+### Cabecera { #header_1 }
 
 ![](../../assets/user-guide/etendo-copilot/setup/knowledge-base-file-window.png)
 
@@ -258,7 +272,7 @@ Campos a tener en cuenta:
                 - `/`: Siempre comienza con una barra.  
                 - `{owner}`: El usuario u organización de GitHub (sin dominio). P. ej.:`etendosoftware`  
                 - `/{repo}`: El nombre del repositorio de GitHub. P. ej.: `etendo_core`  
-                - `{branch}`: El nombre de la rama o etiqueta que desea descargar. P. ej.: `main` o `release/24.4`  
+                - `{branch}`: El nombre de la rama o etiqueta que desea descargar. P. ej: `main` o `release/24.4`  
                 - `/{subpath}` La ruta interna dentro del repositorio que desea filtrar. Puede apuntar a un directorio o incluir un patrón de nombre de archivo con `*`.
 
                     Ejemplos:  
@@ -276,7 +290,7 @@ Campos a tener en cuenta:
 
     === "Consulta HQL"
 
-        Este tipo permite usar el resultado de una consulta HQL como archivo para el archivo de base de conocimiento.
+        Este tipo permite usar el resultado de una consulta HQL como archivo para el archivo de base de conocimiento. Los archivos de consulta HQL son **multicliente**: al sincronizar, la consulta se ejecuta por separado para cada cliente, generando una versión específica de los resultados por cliente. Esto asegura que la base de conocimiento de cada cliente contenga solo sus propios datos.
 
         ![hql-query.png](../../assets/user-guide/etendo-copilot/setup/hql-query.png)
 
@@ -316,7 +330,7 @@ Campos a tener en cuenta:
 
         - **Texto**: Contenido de texto del archivo.
 
-### Ajustes avanzados
+### Ajustes avanzados { #advanced-settings_1 }
 
 Campos a tener en cuenta:
 
@@ -325,14 +339,14 @@ Campos a tener en cuenta:
 - **Solapamiento de fragmentos**: Establece el número de tokens repetidos entre fragmentos para evitar pérdida de información al dividir el contenido. Por ejemplo, con un tamaño de fragmento de 100 y un solapamiento de 10, cada fragmento tendrá 90 tokens nuevos y 10 tokens del fragmento anterior. Establézcalo en 0 para desactivar el solapamiento.
 
     
-### Botones
+### Botones { #buttons_1 }
 
 - **Clonar**
 
     El botón de clonado de la barra de navegación permite clonar archivos, creando una copia tanto de todos los campos de cabecera como de los registros relacionados en las solapas. Cuando se clona un archivo, se añade el nombre `Copy of`. 
 
     ![](../../assets/user-guide/etendo-copilot/setup/clone-file.png)
-## Ventana de Habilidad/Herramienta
+## Ventana de Habilidad/Herramienta { #skilltool-window }
 
 :material-menu: `Aplicación`>`Servicios`>`Copilot`>`Habilidad/Herramienta`
 
@@ -348,7 +362,7 @@ Algunas herramientas requieren comunicarse con Etendo a través de WebHooks. Su 
 
 !!!info
     En caso de que quiera definir nuevas herramientas, visite [Cómo crear herramientas de Copilot](../../developer-guide/etendo-copilot/how-to-guides/how-to-create-copilot-tools.md).
-## Ventana de Acceso del Agente
+## Ventana de Acceso del Agente { #agent-access-window }
 
 :material-menu: `Aplicación`>`Servicios`>`Copilot`>`Acceso del Agente`
 
@@ -359,9 +373,15 @@ En esta ventana, es posible configurar los roles de acceso para cada Agente. Est
 !!!info
     Esta configuración también es posible desde la ventana de Rol.
 
+!!!info "Acceso automático"
+    Los registros de acceso pueden crearse automáticamente; no siempre es necesario agregarlos manualmente:
+
+    - **En cualquier sincronización** (manual o al inicio): el rol que realiza la sincronización recibe automáticamente acceso al agente si aún no existe un registro.
+    - **Al sincronizar al inicio**: cada rol **Client Admin** activo (el rol de administrador a nivel de empresa en Etendo) recibe automáticamente acceso.
+
 !!!note
     En caso de eliminar un agente, los registros de acceso del agente relacionados también se eliminan.
-## Ventana Memoria del Agente
+## Ventana Memoria del Agente { #agent-memory-window }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Memoria del Agente`
 
@@ -379,7 +399,7 @@ Campos a tener en cuenta:
 
 !!! info
     Cuando varias memorias coinciden, Copilot las lista como viñetas bajo “Utilice la siguiente información previa relevante”.
-## Ventana Procesamiento de Peticiones
+## Ventana Procesamiento de Peticiones { #process-request-window }
 
 :material-menu: `Aplicación`>`Configuración General`>`Planificador de procesos`>`Procesamiento de Peticiones`
 
@@ -388,7 +408,7 @@ En esta ventana, el usuario puede planificar procesos en segundo plano de Etendo
 !!!info
     Para más información, visite [Procesamiento de Peticiones](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md).
 
-### Solapa Agente 
+### Solapa Agente { #agent-tab }
 
 !!! info
     Esta solapa solo es visible cuando se selecciona un proceso **Agents Schedule**.
@@ -403,7 +423,7 @@ Campos a tener en cuenta:
 - **Agente**: Agente correspondiente para el proceso.
 - **Prompt**: Instrucción para el proceso.
 - **Activo**: Casilla de verificación para seleccionar si esta herramienta está activa o no.
-## Ventana Conversaciones
+## Ventana Conversaciones { #conversations-window }
 
 :material-menu: `Aplicación`>`Servicios`>`Copilot`>`Conversaciones`
 
@@ -420,7 +440,7 @@ Campos a tener en cuenta:
 - **Último mensaje**: Fecha del último mensaje de la conversación
 - **Agente**: Agente seleccionado para interactuar
 
-### Solapa Mensajes
+### Solapa Mensajes { #messages-tab }
 
 En esta solapa se muestran los diferentes mensajes incluidos en cada conversación específica.
 
@@ -429,7 +449,7 @@ Campos a tener en cuenta:
 - **Mensaje**: Mensaje exacto utilizado en la conversación
 - **Hora**: Hora del mensaje
 - **Fecha Creación**: Fecha del mensaje
-## Ventana AI Models
+## Ventana AI Models { #ai-models-window }
 
 :material-menu: `Aplicación`>`Servicios`>`Copilot`>`AI Models`
 
@@ -451,7 +471,7 @@ Campos a tener en cuenta:
 - **Default Override**: Si este campo está marcado, el modelo seleccionado tendrá prioridad sobre los demás. Solo un registro puede tener esta marca seleccionada.
 - **Etendo Maintenance**: Campo de solo lectura, para identificar los modelos que son distribuidos por Etendo.
 
-### Botones
+### Botones { #buttons_2 }
 
 - **Sync Models** 
 
@@ -459,6 +479,12 @@ Este proceso permite sincronizar bajo demanda los modelos distribuidos por Etend
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
+
+---
+
+---
+
+---
 
 ---
 

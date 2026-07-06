@@ -6,13 +6,13 @@ tags:
   - Jaspersoft Studio
   - Classpath
 ---
-#  Cómo crear un informe
+# Cómo crear un informe { #how-to-create-a-report }
   
-##  Visión general
+## Visión general { #overview }
 
 En esta sección, el usuario puede encontrar información sobre los pasos necesarios para crear un nuevo informe en Etendo. El ejemplo explicado es un informe sencillo con una lista de productos.
 
-##  Configuración de Jaspersoft Studio
+## Configuración de Jaspersoft Studio { #setting-up-jaspersoft-studio }
   
 !!!note
     Se recomienda utilizar la última versión de Jaspersoft Studio.  
@@ -24,7 +24,7 @@ Primero, necesita descargar Jaspersoft Studio, una herramienta gráfica que perm
   * En Linux: simplemente descargue el archivo .tgz y descomprímalo; ejecute el binario _Jaspersoft Studio_ ubicado dentro de la carpeta principal.
   * En Windows: descargue y ejecute el archivo .exe.
 
-###  Configuración de la versión de la librería de Jaspersoft Studio
+### Configuración de la versión de la librería de Jaspersoft Studio { #configuring-jaspersoft-studio-library-version }
 !!! warning
     Etendo soporta Jasper Reports compatible con JasperReports 6.0.0. Por lo tanto, si está utilizando una versión más reciente de Jaspersoft Studio, necesita asegurarse de que la versión de la librería de JasperReports sea 6.0.0. Es muy importante utilizar la versión correcta de la librería de JasperReports, para que el archivo jrxml tenga la sintaxis compatible con Etendo.
 
@@ -32,7 +32,7 @@ Primero, necesita descargar Jaspersoft Studio, una herramienta gráfica que perm
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
 
-###  Configuración de las propiedades de Jaspersoft Studio
+### Configuración de las propiedades de Jaspersoft Studio { #configuring-jaspersoft-studio-properties }
 
 Algunas propiedades de Jaspersoft Studio deben modificarse para que funcione correctamente. En resumen, necesita asegurarse de que:
 
@@ -42,7 +42,7 @@ Algunas propiedades de Jaspersoft Studio deben modificarse para que funcione cor
 
 
   
-###  Configuración del Classpath
+### Configuración del Classpath { #setting-up-classpath }
 
 En Jaspersoft Studio, se supone que cada informe forma parte de un un proyecto. Por lo tanto, primero necesita crear un nuevo proyecto (`File` > `New` > `Project`).
 
@@ -54,7 +54,7 @@ El proyecto tiene un classpath, y aquí es donde puede añadir los jars que nece
   * Añada la librería deseada. 
   * Haga clic en *OK*
 
-##  Creación de la plantilla
+## Creación de la plantilla { #creating-the-template }
 
   * Vaya a `File` > `New`
   * Seleccione *Jasper Report*
@@ -128,7 +128,7 @@ Ahora vamos a diseñar el diseño del informe
     la tipografía Dejavu es la familia de fuentes que Etendo incluyó en la librería
     jasperreports-fonts.   
   
-###  Entorno de ejecución de Etendo
+### Entorno de ejecución de Etendo { #etendo-runtime-environment }
 
 Los informes estándar en Etendo (`src/org/openbravo/erpReports`) hacen uso de varios métodos que residen dentro del *Entorno de ejecución de Etendo*, que no pueden ejecutarse en tiempo de diseño. Por esta razón, proporcionamos un archivo .jar que encapsula los siguientes métodos adaptados de la clase `org.openbravo.erpCommon.utility.Utility`:
 
@@ -138,7 +138,7 @@ Los informes estándar en Etendo (`src/org/openbravo/erpReports`) hacen uso de v
 
 Para ello, para poder previsualizar los informes estándar de Etendo desde *JasperStudio*, basta con importar el archivo .jar en el classpath del proyecto dentro de JasperStudio.
 
-###  Añadir imágenes y logotipos a un informe usando la API ShowImage
+### Añadir imágenes y logotipos a un informe usando la API ShowImage { #adding-images-and-logos-to-a-report-using-the-showimage-api }
 
 Puede utilizar la referencia Image BLOB para mostrar una imagen para un informe específico, o uno de los logotipos de la Compañía en la aplicación. 
 
@@ -165,9 +165,9 @@ IMAGEID necesita ser el UUID de la imagen que quiere mostrar. Podría establecer
 
 ORGANIZATIONID necesita ser el UUID de la Organización cuyo logotipo quiere mostrar. Podría establecer este valor usando un argumento de Jasper. Un ejemplo podría ser `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` siendo `4387D62C6486481AB3D148442A6AD34E` el ID de la organización.
 
-##  Registro del informe en el Diccionario de Aplicación
+## Registro del informe en el Diccionario de Aplicación { #registering-the-report-in-application-dictionary }
 
-###  Creación del informe
+### Creación del informe { #creating-the-report }
 
 Es posible crear un informe usando una definición de proceso. Para más información, visite [esta sección](how-to-create-a-report-using-process-definition.md).
 
@@ -193,7 +193,7 @@ Debemos copiar el archivo de plantilla .jrxml generado con Jaspersoft Studio en 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
 
-###  Creación del registro de menú
+### Creación del registro de menú { #creating-the-menu-record }
 
   * Usando el rol de Administrador del Sistema 
   * Abra la ventana Menú 
@@ -207,7 +207,7 @@ Debemos copiar el archivo de plantilla .jrxml generado con Jaspersoft Studio en 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
 
-##  Compilación
+## Compilación { #compiling }
 
 Después de haber registrado el informe y la entrada de menú en el Diccionario de Aplicación, necesita compilar para generar el código necesario.
 
@@ -217,21 +217,21 @@ Después de haber registrado el informe y la entrada de menú en el Diccionario 
 
 Una vez completada la compilación, reinicie su servidor Tomcat.
 
-##  Prueba del informe
+## Prueba del informe { #testing-the-report }
 
 Si ha completado todos los pasos, debería poder abrir su informe Lista de productos desde el inicio rápido o desde la entrada de menú.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
 
-##  Más detalles
+## Más detalles { #further-details }
 
-###  Diseño
+### Diseño { #layout }
 
 Para información sobre cómo JasperReports gestiona el diseño, consulte [Creación de informes compatibles con HTML, XLS o CSV](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/making-html-xls-or-csv-friendly-reports/){target="\_blank"}.
 
 Además, puede encontrar [aquí](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/designing-report-jaspersoft-studio/){target="\_blank"} un tutorial con los conceptos básicos sobre cómo diseñar un informe.
 
-###  Configuración del tipo de celda en informes XLS
+### Configuración del tipo de celda en informes XLS { #configuring-cell-type-in-xls-reports }
 
 Por defecto, el motor de informes de Etendo exporta los datos XLS como cadenas. Esto se hace para asegurar que los datos exportados puedan leerse después de abrir el informe con la gran mayoría de aplicaciones de hoja de cálculo.
 
@@ -247,11 +247,11 @@ Para sobrescribir esta configuración, debe hacerse lo siguiente dentro de la pl
     exportadas de esta forma serán los definidos dentro del propio programa de hoja de cálculo
     (LibreOffice Calc, Excel, etc.).
 
-###  Creación de un informe usando Informe y Proceso
+### Creación de un informe usando Informe y Proceso { #creating-a-report-using-report-and-process }
 
 En [esta sección](how-to-create-a-report-with-ireport.md#registering-the-report-in-application-dictionary), puede encontrar un ejemplo sobre cómo crear un informe de esta manera.
 
-###  Compilación de informes
+### Compilación de informes { #report-compilation }
   
 Al imprimir un informe en la aplicación, previamente se compila en tiempo de ejecución. El resultado de esta compilación del informe se almacena en caché si no hay módulos en estado _En Desarrollo_.
 
@@ -262,7 +262,7 @@ Además, es posible gestionar el estado de esta caché mediante una extensión J
   * Ver la lista de informes cuya compilación se almacena en caché. 
   * Limpiar el contenido de la caché. 
 
-###  Código de barras
+### Código de barras { #barcodes }
 
 Es posible generar códigos de barras desde JasperReports, usando las librerías barcode4j o barbecue. Estas librerías están incluidas en el módulo [Generación de código de barras en informes](../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"}.
 

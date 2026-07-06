@@ -9,12 +9,12 @@ tags:
 status: beta
 ---
 
-# Modelo de seguridad
+# Modelo de seguridad { #security-model }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
   
-## Visión general
+## Visión general { #overview }
 
 Esta sección analiza cómo los diferentes conceptos de seguridad de Etendo influyen en el desarrollo en Etendo.
 
@@ -33,20 +33,20 @@ El desarrollador puede trabajar en dos modos en Etendo:
 
 Ambos enfoques se analizan por separado.
 
-## Conceptos de seguridad y los Servlets de Etendo
+## Conceptos de seguridad y los Servlets de Etendo { #security-concepts-and-etendo-servlets }
 
 Las tablas del paquete `org.openbravo.model.ad.access` definen el control de acceso para ventanas/solapas, procesos, flujo de trabajo, etc.
 
 Las comprobaciones de seguridad que usan esta tabla están implementadas por el servlet `HttpSecureAppServlet`. Cualquier servlet que extienda esta clase heredará automáticamente esta implementación de seguridad.
 
-## Conceptos de seguridad y XSQL y código manual
+## Conceptos de seguridad y XSQL y código manual { #security-concepts-and-xsql-and-manual-code }
 
 Etendo proporciona una forma estándar de ampliar consultas SQL con filtros para entidades y organizaciones accesibles. Esto se analiza en detalle en esta sección de la guía del desarrollador:
 
 - [Definición de XSQL](../concepts/multi-client-and-multi-org.md#xsql---definition)
 - [Uso de XSQL en Java](../concepts/multi-client-and-multi-org.md#xsql---java-usage) 
 
-## Conceptos de seguridad y la Data Access Layer
+## Conceptos de seguridad y la Data Access Layer { #security-concepts-and-the-data-access-layer }
 
 Para el desarrollador, la [Data Access Layer](../concepts/data-access-layer.md) proporciona varias interfaces ([OBCriteria](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java){target="\_blank"} y [OBQuery](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java){target="\_blank"}) que se encargan automáticamente de aspectos específicos de seguridad:
 
@@ -71,7 +71,7 @@ La capa de acceso a datos también realiza comprobaciones específicas de autori
     - Para mucha más información sobre cómo la **Data Access Layer** implementa la seguridad, consulte [este enlace](./data-access-layer.md#security-and-validation).
     - Para más información sobre la **Data Access Layer y multi-client/multi-organization**, consulte [este enlace](./multi-client-and-multi-org.md#data-access-layer).
 
-## Administradores de la aplicación
+## Administradores de la aplicación { #application-administrators }
 
 Existe un indicador de administrador en la ventana **Rol** que permite a los usuarios realizar configuraciones en diferentes niveles en función de su rol.
 
@@ -101,7 +101,7 @@ Hay 4 niveles diferentes en Etendo:
 - Los usuarios pueden configurar ajustes a nivel de **Rol** en todos los roles a los que esté asignado con el indicador habilitado. 
 - Estos ajustes están disponibles para todos los usuarios que inicien sesión con ese rol. 
 
-### Actualización desde MPs anteriores
+### Actualización desde MPs anteriores { #upgrading-from-previous-mps }
 
 Cuando se crea un rol manualmente, todos los indicadores se establecen en false de forma predeterminada. Existe un script de módulo definido para establecer en true los indicadores según las siguientes reglas:
 
@@ -119,7 +119,7 @@ Cuando se crea un rol manualmente, todos los indicadores se establecen en false 
 
 Tenga en cuenta que este script de módulo solo rellena los indicadores la primera vez que se añaden estos indicadores. En las siguientes actualizaciones del core, los indicadores no se actualizarán y la configuración deberá realizarse manualmente.
 
-### Roles creados por la configuración inicial de entidad y organización
+### Roles creados por la configuración inicial de entidad y organización { #roles-created-by-the-initial-client-and-organization-setup }
 
 Los formularios **Configuración inicial de entidad** y **Configuración inicial de organización** crean automáticamente algunos usuarios y roles. Estos tienen el indicador inicializado a true.
 

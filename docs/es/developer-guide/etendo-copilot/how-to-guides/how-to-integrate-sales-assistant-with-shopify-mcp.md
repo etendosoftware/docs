@@ -11,9 +11,9 @@ tags:
   - Prompts de agente
 ---
 
-# Cómo integrar un asistente de ventas con Shopify MCP
+# Cómo integrar un asistente de ventas con Shopify MCP { #how-to-integrate-a-sales-assistant-with-shopify-mcp }
 
-## Visión general
+## Visión general { #overview }
 
 !!!example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úselo **bajo su propia responsabilidad**. El comportamiento del módulo puede cambiar sin previo aviso. No lo utilice en entornos de producción.
@@ -28,14 +28,14 @@ El asistente puede:
 - Acceder a políticas y preguntas frecuentes
 - Proporcionar recomendaciones contextuales y consultivas
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Etendo Copilot instalado y configurado
 - Al menos un proveedor de LLM de OpenAI / compatible configurado (o un modelo interno mediante Ollama)
 - Un endpoint de servidor Shopify MCP operativo que exponga herramientas (transporte HTTP o SSE)
 - Acceso de red desde el backend de Copilot al endpoint de Shopify MCP
 
-## Herramientas Shopify MCP compatibles (ejemplos)
+## Herramientas Shopify MCP compatibles (ejemplos) { #supported-shopify-mcp-tools-examples }
 
 Las implementaciones típicas de servidor Shopify MCP exponen herramientas similares a:
 
@@ -49,7 +49,7 @@ Las implementaciones típicas de servidor Shopify MCP exponen herramientas simil
 
 Los nombres de las herramientas pueden variar según la implementación del servidor MCP. Confírmelo inspeccionando la respuesta de capacidades del servidor.
 
-## Paso 1. Configurar el servidor Shopify MCP
+## Paso 1. Configurar el servidor Shopify MCP { #step-1-configure-the-shopify-mcp-server }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Configuración de servidores MCP`
 
@@ -57,7 +57,7 @@ Los nombres de las herramientas pueden variar según la implementación del serv
 2. Cree un nuevo registro y pegue la configuración JSON.
 3. Guarde. El sistema valida y normaliza la estructura.
 
-### Ejemplos de configuración JSON
+### Ejemplos de configuración JSON { #json-configuration-examples }
 
 Configuración mínima basada en HTTP:
 
@@ -74,7 +74,7 @@ Configuración mínima basada en HTTP:
 }
 ```
 
-## Paso 2. Vincular el servidor MCP a un agente
+## Paso 2. Vincular el servidor MCP a un agente { #step-2-link-the-mcp-server-to-an-agent }
 
 :material-menu: `Aplicación` > `Servicios` > `Copilot` > `Agente`
 
@@ -83,7 +83,7 @@ Configuración mínima basada en HTTP:
 3. Añada un nuevo registro seleccionando la configuración de Shopify MCP.
 4. Guarde.
 
-## Paso 3. Redactar un prompt especializado
+## Paso 3. Redactar un prompt especializado { #step-3-author-a-specialized-prompt }
 
 Proporcione instrucciones de comportamiento claras para que el asistente actúe como un vendedor digital consultivo.
 
@@ -109,7 +109,7 @@ Return final answers in clear, concise business English.
 !!!tip "Ajuste del prompt"
     Itere en función de las transcripciones. Añada guardarraíles para precios, avisos de disponibilidad o lógica de upselling.
 
-## Paso 4. Probar el asistente
+## Paso 4. Probar el asistente { #step-4-test-the-assistant }
 
 1. Inicie una conversación con el agente configurado.
 2. Pruebe primero consultas de descubrimiento (p. ej., *"Necesito una zapatilla de running ligera"*).
@@ -117,7 +117,7 @@ Return final answers in clear, concise business English.
 4. Añada al carrito (p. ej., *"Añada la segunda zapatilla en talla 42"*). El agente debe llamar a `update_cart` tras la confirmación.
 5. Pregunte por políticas (p. ej., *"¿Cuál es la política de devoluciones?"*).
 
-## Conversación de ejemplo
+## Conversación de ejemplo { #example-conversation }
 
 **Usuario**: *"¿Qué producto recomienda para preparar café en casa?"*
 
@@ -142,7 +142,7 @@ Return final answers in clear, concise business English.
 *"Añadido. Su carrito ahora contiene: ..."*
 
 
-## Páginas relacionadas
+## Páginas relacionadas { #related-pages }
 
 - [Model Context Protocol (MCP)](../concepts/model-context-protocol.md)
 - [Cómo configurar servidores MCP en un agente de Etendo](how-to-configure-mcp-servers-on-agents.md)

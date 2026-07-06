@@ -10,9 +10,9 @@ tags:
   - Programación de procesos
 ---
 
-#  Cómo desarrollar un proceso en segundo plano DAL
+# Cómo desarrollar un proceso en segundo plano DAL { #how-to-develop-a-dal-background-process }
 
-##  Visión general
+## Visión general { #overview }
 
 Un proceso en segundo plano es un proceso que se ejecuta a intervalos regulares. Para esta sección desarrollaremos un proceso en segundo plano para el siguiente escenario:
 
@@ -29,7 +29,7 @@ En esta sección se mostrará cómo un proceso Java puede implementarse como un 
 !!!info
       Para una descripción genérica de los procesos Java, consulte [Procesos](../../../developer-guide/etendo-classic/concepts/processes.md).
 
-##  Definición dentro del diccionario de aplicación
+## Definición dentro del diccionario de aplicación { #definition-within-the-application-dictionary }
 
 Los procesos en segundo plano se definen dentro de la ventana `Application Dictionary` > `Report and Process`. Utilice el rol de **Administrador del sistema** para crear un nuevo registro como se indica a continuación:
 
@@ -44,7 +44,7 @@ Los siguientes campos son vitales para la definición de un proceso en segundo p
   * **Es en segundo plano** \- Indica que este proceso es un proceso en segundo plano, lo que en consecuencia también muestra el campo **Nombre de la clase Java**
   * **Nombre de la clase Java** \- La especificación completa del nombre de la clase incluyendo el paquete (este paquete debe seguir la estructura de paquetes de su módulo especificado anteriormente): `com.etendoerp.client.application.examples.ProductRevenueCalculation`
 
-##  Proceso y clase DalBaseProcess
+## Proceso y clase DalBaseProcess { #process-and-dalbaseprocess }
 
 Antes de continuar, decida cómo realizará el proceso en segundo plano las operaciones de base de datos. Tenemos dos opciones:
 
@@ -68,7 +68,7 @@ La Data Access Layer se trata en varios otros artículos y secciones.
 !!!info
       Para más información, lea el manual de referencia de [Data Access Layer](../../../developer-guide/etendo-classic/concepts/data-access-layer.md).
 
-##  Implementación
+## Implementación { #implementation }
 
 El módulo de ejemplo implementa el proceso en segundo plano en `modules/org.openbravo.client.application.examples/src/org.openbravo.client.application.examples.ProductRevenueCalculation.java`
 
@@ -170,11 +170,11 @@ public class ProductRevenueCalculation extends DalBaseProcess {
 }
 ```
 
-##  Compilación de la aplicación
+## Compilación de la aplicación { #compiling-the-application }
 
 Usando la compilación por línea de comandos, utilice `./gradlew smartbuild` para compilar el código manual de la aplicación y desplegarlo en el contexto de Tomcat. A continuación, reinicie Tomcat.
 
-##  Programación
+## Programación { #scheduling }
 
 Para que un proceso en segundo plano se ejecute, primero necesita ser programado. Usando el rol **Etendo Client Admin** (por lo tanto, no el rol de Administrador del sistema) navegue a `General Setup` > `Process Scheduling` > ventana `Process Request` e introduzca un nuevo registro.
 
@@ -193,13 +193,13 @@ Guarde el registro y haga clic en el botón **Programar Proceso** para que el pr
 !!!note
       Es necesario usar el rol de Administrador de Etendo para que el proceso en segundo plano tenga acceso a los productos de BigBazaar. El cliente del rol que introduce la solicitud del proceso en segundo plano se utiliza para determinar los privilegios de acceso.
   
-##  Monitorización
+## Monitorización { #monitoring }
 
 Para ver las ejecuciones del proceso, el estado y el log que generó, use `General Setup` > `Process Scheduling` > ventana `Process Monitor`. Tras uno o dos minutos de programar el proceso, deberían verse entradas relacionadas con las ejecuciones del nuevo proceso.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process-4.png)
 
-##  El resultado
+## El resultado { #the-result }
 
 Para poder obtener resultados significativos, introduzca y complete un Pedido de venta (`Sales Management` > `Transactions` > `Sales Order`) ya que el proceso en segundo plano calcula los ingresos dentro de los últimos 6 meses y la base de datos de demostración puede contener registros más antiguos que eso. Por ejemplo, introduzca un nuevo Pedido de venta para un tercero, e introduzca una línea para un determinado producto, y luego complete el pedido de venta.
 

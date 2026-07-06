@@ -2,10 +2,10 @@
 title: Guía del desarrollador - Etendo RX - Primeros pasos
 ---
 
-## Visión general
+## Visión general { #overview }
 
 Esta guía le ayudará a configurar Etendo, incluyendo tanto las funcionalidades de Etendo Classic como Etendo RX, nuestra plataforma reactiva capaz de ejecutar microservicios con interacción con la base de datos y acciones asíncronas.
-## Requisitos
+## Requisitos { #requirements }
 
 1. Instale Etendo Classic. Para ello, siga la [guía de instalación de Etendo Classic](../../getting-started/installation.md).
 2. Instale el [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
@@ -17,7 +17,7 @@ Esta guía le ayudará a configurar Etendo, incluyendo tanto las funcionalidades
     Evite instalar Docker mediante [Snap](https://snapcraft.io){target="_blank"}, ya que puede estar restringido por este sandbox y puede no tener acceso a directorios del host como `/opt/`, lo que puede impedir que los contenedores Docker de Etendo se inicien correctamente.
 
     Recomendación: instale Etendo utilizando la [ISO más reciente](../../whats-new/release-notes/etendo-classic/iso.md)(que incluye Docker) o instale Docker siguiendo la guía de instalación oficial de su distribución.
-## Servicios dockerizados
+## Servicios dockerizados { #dockerized-services }
 
 En el bundle de plataforma, puede encontrar el módulo **Servicios dockerizados**, que proporciona la arquitectura necesaria para distribuir la infraestructura. En este caso, en este bundle, también se incluye el módulo **Etendo RX** y, para lanzar los servicios distribuidos en él, se necesita una determinada configuración. En el archivo `gradle.properties`, añada la siguiente variable:
 
@@ -37,11 +37,11 @@ docker_com.etendoerp.etendorx=true
     ```
 
     Si desea depurar Tomcat localmente con IntelliJ, visite [Servicio dockerizado de Tomcat](../etendo-classic/bundles/platform/dockerized-tomcat-service.md).
-###  Configuraciones de Etendo RX
+### Configuraciones de Etendo RX { #etendo-rx-configurations }
 
 Antes de iniciar los servicios dockerizados, hay algunas configuraciones que deben realizarse en Etendo Classic.
 
-### Configuración de la Entidad 
+### Configuración de la Entidad { #client-setup }
 :material-menu: `Aplicación` > `Configuración General` > `Entidad` > `Entidad`
 
 Se requiere un token de cifrado para la autenticación.
@@ -55,7 +55,7 @@ Para verificar o gestionar el token, abra la ventana `Entidad` con el rol `Syste
     Si bien el valor por defecto es `0` (sin expiración), el equipo de Etendo recomienda configurar un tiempo de expiración razonable en entornos productivos y rotar los tokens periódicamente.
 
 ![](../../assets/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-web-services/SWS.png)
-### Ventana RX Config
+### Ventana RX Config { #rx-config-window }
 :material-menu: `Aplicación` > `Etendo RX` > `RX Config`
 
 Esta ventana de configuración almacena los datos de acceso para los servicios de Etendo RX, que son cruciales para la interacción entre diferentes servicios. Con el rol `System Administrator`, en esta ventana, ejecute el proceso `Initialize RX Services` en la barra de herramientas. 
@@ -68,7 +68,7 @@ Tras la ejecución de este proceso, se completan las variables de configuración
 
 !!!info
     El campo **Public URL** solo necesita configurarse cuando los servicios estén configurados para producción.
-### Lanzar servicios RX
+### Lanzar servicios RX { #launch-rx-services }
 
 A continuación, para ejecutar eficazmente los servicios, es necesario **ejecutar el comando** en el terminal:
 
@@ -93,7 +93,7 @@ Por defecto, los siguientes servicios deberían estar en funcionamiento:
 Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes Docker denominadas dynamic-das y dynamic-gradle, que sustentan la ejecución de microservicios. Dynamic-das se dedica exclusivamente a ejecutar el microservicio Das y dynamic-gradle, por el contrario, puede lanzar múltiples microservicios, como Config, Edge, Auth, AsyncProcess, ObConnSrv, Worker y otros.
 ### Dynamic DAS v1.1.0
 
-#### Pila
+#### Pila { #stack }
 
 - **Imagen base:** `amazoncorretto:17.0.14-alpine3.21` ([enlace](https://github.com/corretto/corretto-docker/tree/main/17/jdk/alpine/3.21))
 - **Versión de JDK:** 17.0.14
@@ -104,7 +104,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 
 ---
 
-#### Puertos
+#### Puertos { #ports }
 
 | Puerto | Descripción                 |
 |--------|-----------------------------|
@@ -113,7 +113,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 
 ---
 
-#### Variables de entorno
+#### Variables de entorno { #environment-variables }
 
 | Name                                                        | Description                                                                                              | Type     | Allowed Values                                                      | Default                                      | Notes                                                                                                                                                        |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|----------|---------------------------------------------------------------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -145,7 +145,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 ---
 ### Dynamic Gradle v1.1.0
 
-#### Pila
+#### Pila { #stack_1 }
 
 - **Imagen base:** `amazoncorretto:17.0.14-alpine3.21` ([enlace](https://github.com/corretto/corretto-docker/tree/main/17/jdk/alpine/3.21))
 - **Versión de JDK:** 17.0.14
@@ -156,7 +156,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 
 ---
 
-#### Puertos
+#### Puertos { #ports_1 }
 
 | Puerto | Descripción                                  |
 |--------|----------------------------------------------|
@@ -175,7 +175,7 @@ Actualmente, la mayor parte de los servicios de Etendo RX se basan en imágenes 
 
 ---
 
-#### Variables de entorno
+#### Variables de entorno { #environment-variables_1 }
 
 | Nombre                                                       | Descripción                                                                                              | Tipo     | Valores permitidos                                                | Valor por defecto                             | Notas                                                                                                                                                        |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|

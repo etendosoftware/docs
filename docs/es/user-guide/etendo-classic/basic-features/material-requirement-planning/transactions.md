@@ -7,15 +7,15 @@ tags:
     - Previsión de ventas
     - Transacciones
 ---
-## Visión general
+## Visión general { #overview }
 
 La Gestión de MRP (MRP) se ocupa de todas las actividades relacionadas con la planificación de una fabricación y las sugerencias para el suministro requerido.
 
-## Planificación de la producción
+## Planificación de la producción { #manufacturing-plan }
 
 :material-menu: `Aplicación` > `Gestión de MRP` > `Transacciones` > `Planificación de la producción`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Cree una orden de fabricación integral para solicitar materiales durante un periodo de tiempo especificado.
 
@@ -37,7 +37,7 @@ La Planificación de la producción muestra la demanda de materia prima requerid
 
 Una vez que el plan es el deseado, al hacer clic en diferentes botones se crean automáticamente las órdenes de fabricación y las necesidades de material.
 
-### Cabecera
+### Cabecera { #header }
 
 Cree y edite un plan de fabricación.
 
@@ -47,7 +47,7 @@ Cree y edite un plan de fabricación.
 -   Nombre: nombre del plan de fabricación
 -   Horizonte temporal: número de días que se tienen en cuenta para el cálculo del plan de fabricación
 -   Plazo de seguridad: número de días que se añaden al desfase para el cálculo de la fecha de pedido planificada de las órdenes de fabricación y necesidades de material sugeridas. Por ejemplo, el plazo de fabricación se utiliza para indicar cuánto tiempo tardará un producto desde que se produce hasta que llega al almacén, y el plazo de seguridad se añade por el tiempo necesario para poner el producto en stock (debido a controles de calidad u otros procesos internos).
--   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
+-   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) en la sección de Gestión de datos maestros.
 -   Tercero: filtro para seleccionar solo productos pedidos por un determinado cliente
 -   Categoría de tercero: filtro para seleccionar solo terceros de una determinada categoría de tercero.
 -   Producto: filtro para seleccionar solo un determinado producto
@@ -56,7 +56,7 @@ Cree y edite un plan de fabricación.
 !!! info
     Una vez añadida la información en la sección principal, pueden crearse las líneas. Si es necesario, se realizan cambios en las configuraciones haciendo clic en el botón **Recalcular fechas/cantidades**.
 
-### Líneas
+### Líneas { #lines }
 
 Añada productos que se incluirán en su plan. Cada producto se muestra en su propia línea.
 
@@ -98,11 +98,11 @@ Una vez que los documentos se crean automáticamente, los números de los docume
 !!! info
     Para más información, consulte la sección [_Pedido de compra_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
 
-## Planificación de compras
+## Planificación de compras { #purchasing-plan }
 
 :material-menu: `Aplicación` > `Gestión de MRP` > `Transacciones` > `Planificación de compras`
 
-### Visión general 
+### Visión general { #overview_2 }
 
 Cree un plan completo y organizado para solicitar compras durante un periodo de tiempo especificado.
 
@@ -123,7 +123,7 @@ El proceso de MRP equilibra la demanda con la oferta, teniendo en cuenta las fec
 
 Una vez que el plan es el deseado, al hacer clic en un botón se crean automáticamente los pedidos de compra.
 
-### Cabecera
+### Cabecera { #header_1 }
 
 Cree y edite un plan de compras.
 
@@ -133,7 +133,7 @@ Cree y edite un plan de compras.
 -   Nombre: nombre del plan de compras
 -   Horizonte temporal: número de días que se tienen en cuenta para el cálculo del plan de compras
 -   Plazo de seguridad: número de días que se añaden al desfase para el cálculo de la fecha de pedido planificada del pedido de compra sugerido. Por ejemplo, el plazo de compra se utiliza para indicar cuánto tiempo tardará un producto desde que se pide hasta que llega al almacén, y el plazo de seguridad se añade por el tiempo necesario para poner el producto en stock (debido a controles de calidad u otros procesos internos).
--   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) en la sección de Gestión de datos maestros.
+-   Planificador: filtro para seleccionar solo productos gestionados por un determinado planificador, según se configura en la pestaña [Producto](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#product) en la sección de Gestión de datos maestros.
 -   Proveedor: filtro para seleccionar solo productos de un determinado proveedor según se configura en la pestaña **Compras** del producto.
 -   Producto: filtro para seleccionar solo un determinado producto
 -   Categoría de producto: filtro para seleccionar solo productos relacionados con una determinada categoría de producto
@@ -143,7 +143,7 @@ Cree y edite un plan de compras.
 -   Crear pedido de compra: genera los pedidos de compra correspondientes
 -   Crear reservas: este botón solo es visible cuando la funcionalidad de reservas de stock está habilitada. Reserva stock para los pedidos de venta que no están reservados, si hay stock, y para los que no pueden reservarse porque no hay stock crea los pedidos de compra correspondientes y los vincula al pedido de venta
 
-### Líneas
+### Líneas { #lines_1 }
 
 Añada productos que se incluirán en su plan. Cada producto se muestra en su propia línea.
 
@@ -184,17 +184,17 @@ Una vez que el pedido de compra se crea automáticamente, el número del documen
 !!! info
     Para más información, consulte la sección [Pedido de compra](../procurement-management/transactions.md#purchase-order).
 
-## Previsión de ventas
+## Previsión de ventas { #mrp-forecast }
 
 :material-menu: `Aplicación` > `Gestión de MRP` > `Transacciones` > `Previsión de ventas`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Cree y edite previsiones de MRP durante un periodo de tiempo especificado para ayudar a planificar las compras necesarias.
 
 Se introduce una previsión de demanda para un determinado cliente para que pueda incluirse en el método de planificación y, por tanto, en los cálculos de la Planificación de la producción y la Planificación de compras. Una previsión se basa en expectativas de demanda futura, no en datos existentes. Por lo tanto, una vez que la información real se introduce en la aplicación en un pedido de venta, la previsión debe eliminarse para evitar duplicidades.
 
-### Cabecera
+### Cabecera { #header_2 }
 
 Cree una previsión de MRP.
 
@@ -203,7 +203,7 @@ Cree una previsión de MRP.
 -   Fecha del documento: fecha en la que se introduce la previsión.
 -   Tercero: el cliente para el que se espera la demanda. Esto aplica a la previsión tanto en la Planificación de la producción como en la Planificación de compras.
 
-### Líneas
+### Líneas { #lines_2 }
 
 Añada productos que se incluirán en su previsión de MRP. Cada producto se añade creando una línea.
 

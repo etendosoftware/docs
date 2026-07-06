@@ -9,13 +9,13 @@ status: beta
 ---
 
 
-# Cómo añadir una restricción
+# Cómo añadir una restricción { #how-to-add-a-constraint }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 
-## Visión general
+## Visión general { #overview }
 
 Al añadir nuevas columnas a una tabla como la **fecha Válido hasta** en la **tabla ht_salary**, a menudo es necesario aplicar reglas lógicas para que los datos se mantengan consistentes. En este caso, la fecha Válido hasta debe ser siempre igual o posterior a la fecha Válido desde. Esta regla puede aplicarse añadiendo una **restricción de base de datos**, que es una `SQL-Expression`, que comprueba la validez de los datos cada vez que se insertan o actualizan filas.
 
@@ -23,7 +23,7 @@ Al añadir nuevas columnas a una tabla como la **fecha Válido hasta** en la **t
     Para más información, visite [Cómo añadir columnas a una tabla](./how-to-add-columns-to-a-table.md).
 
 
-## Modularidad
+## Modularidad { #modularity }
 
 Como la restricción se colocará en el módulo con dbprefix `HT2` pero la tabla **ht_salary** está definida en otro módulo `HT`, el nombre de la restricción debe seguir la regla habitual y comenzar con `EM_HT2`.
 
@@ -33,7 +33,7 @@ Si la restricción se añadiera en el mismo módulo que su tabla, entonces no se
     Recuerde que, en todos los casos, el nombre completo de la restricción (como cualquier otro nombre de `db-object`) no puede tener más de 30 caracteres.  
  
   
-## Añadir restricción a la base de datos
+## Añadir restricción a la base de datos { #add-constraint-to-database }
 
 Para añadir la restricción, ejecute la siguiente cláusula en la base de datos:
 
@@ -49,7 +49,7 @@ ALTER TABLE HT_SALARY ADD CONSTRAINT EM_HT2_HT_SALARY_DATES_CHK CHECK  (VALIDTO>
     Añadir una **restricción única** a un módulo existente se considera un cambio de API y podría afectar a entornos existentes ya poblados. Antes de añadirla, evalúe el riesgo y considere crear una buildvalidation para comprobar si los datos existentes cumplen. Si no lo hacen, la buildvalidation puede detener el proceso de actualización y mostrar un mensaje adecuado.  
  
   
-## Añadir un mensaje adecuado
+## Añadir un mensaje adecuado { #adding-a-proper-message }
 
 Ahora, al editar datos en la pestaña `Employee Salary > Salary` e intentar usar una fecha **Válido hasta** anterior a la fecha **Válido desde**, obtenemos un mensaje de error como se muestra a continuación.
 
@@ -77,7 +77,7 @@ Entonces, tendremos un mensaje como:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-add-a-constraint-3.png)
 
-## Exportar base de datos
+## Exportar base de datos { #export-database }
 
 Siempre que se modifique el Diccionario de Aplicación o la base de datos física, es posible exportar esa información a archivos `XML`; esta es la forma en que Etendo mantiene los datos de base de datos como parte de sus archivos de código fuente. 
 Para hacerlo, simplemente ejecute:

@@ -6,12 +6,12 @@ tags:
     - Bundle de traducción
 ---
 
-# Instalar bundles de traducción en Etendo Classic
+# Instalar bundles de traducción en Etendo Classic { #install-translation-bundles-in-etendo-classic }
 
-## Visión general
+## Visión general { #overview }
 Esta página explica cómo instalar bundles de traducción en Etendo Classic, lo cual es ligeramente diferente de la instalación estándar de módulos.
 
-## Pasos de instalación
+## Pasos de instalación { #installation-steps }
 
 Siga la guía estándar de [instalación de módulos](./install-modules-in-etendo.md), pero asegúrese de incluir tanto el bundle original como su bundle de traducción correspondiente, copiando la línea de instalación desde [Etendo Marketplace](https://marketplace.etendo.cloud/#/modules?page=1&category=0821B7B067004CD0BAD7A583B2BA9FD2){target="_blank"}; puede filtrar la categoría **Traducción** para encontrar todas las traducciones disponibles.
 
@@ -39,11 +39,11 @@ Siga la guía estándar de [instalación de módulos](./install-modules-in-etend
         }
         ```
 
-## Compatibilidad de bundles
+## Compatibilidad de bundles { #bundle-compatibility }
 
 Para comprobar la compatibilidad entre un módulo y su bundle de traducción. Por ejemplo, las [Warehouse Extensions ES - Notas de la versión](../../../../whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes.md).
 
-## Resolución de problemas
+## Resolución de problemas { #troubleshooting }
 
 1. De forma predeterminada, las traducciones se aplican cuando actualiza la base de datos. Si no se aplican, o si actualiza la versión del módulo, ejecute:
 

@@ -39,6 +39,15 @@ This page provides quick access to Etendo live test environments that are always
     [Etendo 26 (Classic UI)](https://demo26.etendo.cloud/etendo){ target="_blank"}<br><br>
     [Etendo 25 (Classic UI)](https://demo25.etendo.cloud){ target="_blank"}
 
+-   :material-warehouse:{ .lg .middle } **Etendo 26 + Warehouse**
+
+    Etendo 26 environment preconfigured with the Warehouse Management sub-application.
+
+    ---
+
+    [Etendo 26 + Warehouse (New UI)](https://webinar-almacenes.etendo.cloud/){ target="_blank"}<br>
+    [Etendo 26 + Warehouse (Classic UI)](https://webinar-almacenes.etendo.cloud/etendo){ target="_blank"}
+
 </div>
 
 [![Services Health](https://etendo-environments-status.montastic.io/badge)](https://etendo-environments-status.montastic.io){ target="_blank"} *Here you can check the Etendo servers status.*

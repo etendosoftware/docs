@@ -29,7 +29,7 @@ As seen in this diagram, after setting up the information shown [below](#configu
 
 The key project and service management concepts mentioned in this chapter are:
 
-- [Business Partner](../master-data-management/master-data.md#business-partner):
+- [Business Partner](../master-data-management/master-data/business-partner.md#business-partner):
     - Supplier: third party that supplies goods and/or services. In project and service management the supplier is the vendor of provided goods related to the project, the consultancy company that consultancy services were outsourced to and the employee that is reimbursed for expenses related to a project.
     - Customer: the party that goods or services are sold to. In project and service management the customer is who gets charged for the cost and expenses of the project.
     - Employee: person that works in the company.In project and service management, the employee information is used for the cost calculation of the project, based on [time sheets](../project-and-service-management/transactions.md#expense-sheet).
@@ -48,11 +48,11 @@ The following is entered in the application for the project and service manageme
 
 - [**Project Dimension**](../financial-management/accounting/setup/general-ledger-configuration.md#dimension-tab): in order to be able to select projects on orders and invoices, the project dimension is created as a new record with type Project in the Dimension tab of the [General Ledger Configuration](../financial-management/accounting/setup/general-ledger-configuration.md) window.
 
-- [**Product**](../master-data-management/master-data.md#product):
+- [**Product**](../master-data-management/master-data/product.md#product):
     - **Service** and **Expense Type** Products Types: for the expense sheet products with product type Service (for time) and product type Expense Type (for expenses) are set up.
     - **Item** Product type: the standard [procure to pay](../procurement-management/getting-started.md#procure-to-pay-business-flow) process is used for the purchase or products related to the project.
 
-- [**Business Partner**](../master-data-management/master-data.md#business-partner):
+- [**Business Partner**](../master-data-management/master-data/business-partner.md#business-partner):
     - Customer: the third party for whom the project is executed is set up as a customer.
     - Vendor: the third party that supplies products related to the project is set up as a vendor.
     - Employee:

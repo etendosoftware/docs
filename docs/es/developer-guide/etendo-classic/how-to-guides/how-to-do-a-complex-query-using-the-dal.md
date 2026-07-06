@@ -7,16 +7,16 @@ tags:
 status: beta
 ---
 
-# Cómo realizar una consulta compleja usando el DAL
+# Cómo realizar una consulta compleja usando el DAL { #how-to-do-a-complex-query-using-the-dal }
  
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
-## Visión general
+## Visión general { #overview }
 
 Esta sección ilustra cómo se puede programar una consulta compleja utilizando construcciones de la Capa de Acceso a Datos (DAL). La solución utilizará [Hibernate HQL](https://docs.hibernate.org/orm/3.5/reference/en/html/queryhql.html){target="\_blank"}, por lo que, antes de leer este procedimiento, asegúrese de que **conoce los conceptos básicos de HQL**.
 
 El procedimiento comienza con una consulta SQL del formulario de solicitud a pedido dentro de la Gestión de Aprovisionamiento y de la recepción de mercancías pendiente, y la traduce a una representación en HQL. Se tratan distintos aspectos del uso de HQL y de la DAL, incluidos aspectos de rendimiento y depuración.
-## Configurar un caso de prueba
+## Configurar un caso de prueba { #setup-a-test-case }
 
 Existe un procedimiento independiente sobre cómo crear casos de prueba utilizando la Capa de Acceso a Datos (consulte [aquí](./how-to-create-testcases/how-to-create-junit-testcases.md)). En este procedimiento, solo proporcionaremos un resumen.
 
@@ -53,7 +53,7 @@ Puede hacer clic con el botón derecho en el archivo Java en IntelliJ y, a conti
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-do-a-complex-queryusing-dal/how-to-do-a-complex-query-using-dal-1.png)
   
 Esta es la configuración principal del caso de prueba. La siguiente sección añadirá algo de código a los casos de prueba para consultar la DAL y mostrar algunos resultados.
-## Consulta SQL de solicitud de compra
+## Consulta SQL de solicitud de compra { #requisition-sql-query }
 
 La siguiente consulta SQL se traducirá a HQL:
 
@@ -98,7 +98,7 @@ El [Lenguaje de consulta de Hibernate](https://docs.hibernate.org/core/3.5/refer
 !!! Note
     En HQL, se utiliza el concepto de Entidad y Propiedades.
 
-### Traducción a HQL
+### Traducción a HQL { #translating-to-hql }
 
 Esta sección muestra cómo traducir la consulta SQL anterior a una consulta HQL utilizando la Capa de Acceso a Datos.
 
@@ -248,7 +248,7 @@ AND rl.active='Y'
 ORDER BY rl.needByDate, rl.product.id, rl.attributeSetValue.id
 ```
 
-### Ejecución de la consulta HQL y recuperación de resultados
+### Ejecución de la consulta HQL y recuperación de resultados { #executing-the-hql-query-and-retrieving-results }
 
 El HQL se ejecuta cuando se llama al método list sobre el objeto de consulta. Esto se hace en un bucle for para procesar todos los resultados. Como puede ver, el método `list()` devuelve una lista con conversión de tipo de objetos `RequisitionLine`. Esto hace que desarrollar contra el resultado de una consulta sea muy sencillo y además seguro en cuanto a tipos.
 
@@ -310,7 +310,7 @@ System.err.println(requisitionLine.getRequisition().getUserContact().getIdentifi
 }
 ```
 
-### El resultado
+### El resultado { #the-result }
 
 El código anterior produce la siguiente salida:
 
@@ -325,7 +325,7 @@ Etendo
 10000000 Screwdriver 10 2009-04-01 00:00:00.0
 ```
 
-### El SQL ejecutado, el problema de selección N+1
+### El SQL ejecutado, el problema de selección N+1 { #the-executed-sql-the-n1-select-problem }
 
 Ahora veamos el SQL real que se ejecuta. Esto también mostrará que la implementación anterior podría sufrir el problema de selección N+1.
 
@@ -414,7 +414,7 @@ whereClause.append(" left join fetch rl.requisition.businessPartner.language");
 ```
 
 Esto resuelve el problema N+1 para este caso. Sin embargo, es evidente que esto añade muchos joins a la consulta.
-## Consulta SQL de línea de pedido
+## Consulta SQL de línea de pedido { #order-line-sql-query }
 
 La siguiente consulta SQL se traducirá a una representación DAL:
 
@@ -464,7 +464,7 @@ Veamos qué hace la consulta anterior:
 
 El siguiente paso es traducir este enfoque a HQL. Inicialmente ignoraremos la parte `select` porque esta información se recupera de los objetos de negocio de líneas de pedido devueltos por el HQL.
 
-### Traducción a HQL
+### Traducción a HQL { #translating-to-hql_1 }
 
 En esta sección, el SQL anterior se traduce a HQL. Para HQL, utilizaremos el concepto Entidad/Propiedad frente al concepto Tabla/Columna de SQL.
 
@@ -607,7 +607,7 @@ System.err.println(sum);
 }
 ```
 
-### El resultado
+### El resultado { #the-result_1 }
 
 El código anterior produce la siguiente salida:
 
@@ -625,7 +625,7 @@ Block of Wood
 60
 ```
 
-### El SQL ejecutado, el problema de selección N+1
+### El SQL ejecutado, el problema de selección N+1 { #the-executed-sql-the-n1-select-problem_1 }
 
 Ahora, veamos el SQL real que se ejecuta. Esto también mostrará que la implementación anterior podría sufrir el problema de selección N+1.
 
@@ -728,7 +728,7 @@ Así, esto resuelve el problema de selección N+1.
 
 !!! Note
     Como se ha mencionado anteriormente, también tiene sentido usar la caché de segundo nivel de Hibernate, ya que esto aporta otros beneficios de rendimiento (los datos se recuperan desde memoria, lo cual es mucho más rápido que consultar, en general).
-## Cómo puede ver qué sentencias SQL se ejecutan
+## Cómo puede ver qué sentencias SQL se ejecutan { #how-you-can-see-what-sql-statements-are-executed }
 
 Tenga en cuenta que, para ver las consultas SQL lanzadas por Hibernate, debe configurarse la siguiente propiedad de log4j:
     
@@ -743,7 +743,7 @@ Si no le funciona, es posible que el archivo `log4j.properties` se esté leyendo
 -Dlog4j.debug
 ```
 
-### Conclusión
+### Conclusión { #conclusion }
 
 Con esto finaliza la descripción de esta consulta compleja en HQL. Algunas conclusiones importantes que pueden extraerse:
 
@@ -751,7 +751,7 @@ Con esto finaliza la descripción de esta consulta compleja en HQL. Algunas conc
 - Al realizar joins con propiedades que pueden ser nulas, utilice siempre sentencias `left join` en el HQL. 
 - Con Hibernate puede tener sentido trasladar parte del procesamiento y la lógica a Java. Aunque existen inconvenientes de rendimiento, el código y las consultas resultantes son mucho más simples. Esto se traduce en menos errores y en un desarrollo más productivo, lo que a su vez deja tiempo para mejoras de rendimiento en otras áreas. 
 - Considere utilizar `left join fetch` para controlar la cantidad de consultas adicionales realizadas por Hibernate.
-## Un enfoque alternativo de HQL
+## Un enfoque alternativo de HQL { #an-alternative-hql-approach }
 
 El enfoque anterior se centró en consultar el objeto `OrderLine` completo.
 

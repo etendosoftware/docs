@@ -8,11 +8,11 @@ tags:
     - Contabilidad
 ---
 
-# Tipo de documento
+# Tipo de documento { #document-type }
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de documento`
 
-## Visión general
+## Visión general { #overview }
 
 **Cada tipo de documento en Etendo hace referencia a una transacción empresarial** como pedidos de compra, albaranes o facturas de venta, entre otros. Etendo incluye un conjunto completo de Tipos de documento estándar necesarios para que la aplicación funcione correctamente.
 
@@ -53,21 +53,21 @@ La lista completa de tipos de documento estándar es la siguiente:
 | Propuesta de Pago | Propuesta de pago a proveedor | [Propuesta de Pago](../../../financial-management/receivables-and-payables/transactions.md#payment-proposal) |
 | Conciliación | Conciliación | [Conciliación](../../../financial-management/receivables-and-payables/transactions.md#reconciliations) |
 | Dudoso cobro | Dudoso cobro | [Dudoso cobro](../../../financial-management/receivables-and-payables/transactions.md#doubtful-debt) |
-| Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions.md#cost-adjustment) |
+| Ajuste de Costes | Ajuste de Costes | [Ajuste de Costes](../../../warehouse-management/transactions/cost-adjustment.md) |
 | Landed Cost | Landed Cost | [Landed Cost](../../../procurement-management/transactions.md#landed-cost-1) |
 | Coste de Landed Cost | Coste de Landed Cost | [Coste de Landed Cost](../../../procurement-management/transactions.md#header-7) |
-| Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions.md#inventory-amount-update) |
+| Ajuste de Valor del Inventario | Ajuste de Valor del Inventario | [Ajuste de Valor del Inventario](../../../warehouse-management/transactions/inventory-amount-update.md) |
 
 !!! note "Importante"
     **Se podrían añadir nuevos tipos de documento a la lista anterior**. Si ese fuera el caso, Etendo proporcionará una versión actualizada de los Datos de referencia que contenga los nuevos tipos de documento en nuevas versiones. Esos Datos de referencia recién creados deberán aplicarse a la Organización correspondiente en la [Gestión del módulo de Empresa](../../../general-setup/enterprise-model/enterprise-module-management.md). También es posible **crear manualmente nuevos tipos de documento**, pero este proceso debe ser realizado por un usuario avanzado, tal y como se explica a continuación.
 
-## Guía avanzada de usuario
+## Guía avanzada de usuario { #advanced-user-guide }
 
-### Cabecera
+### Cabecera { #header }
 
 La ventana Tipo de documento permite a los usuarios avanzados configurar cómo se va a comportar cada tipo de documento en términos de contabilidad y secuenciación, entre otros.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-1.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-1.png)
 
 Campos a tener en cuenta:
 
@@ -110,9 +110,9 @@ Campos a tener en cuenta:
             |     |     |     |     |
             | --- | --- | --- | --- |
             | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+            | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
             | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
-            | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
+            | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) | Importe total |     | Una por factura |
 
 - **Doc. anulacion**, si existe, es el documento que se utilizará para anular un tipo de documento determinado. 
 
@@ -127,16 +127,16 @@ Campos a tener en cuenta:
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) | (-) Imp. línea |     | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) | (-) Imp. línea |     | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) |     | (-) Impuestos | Una por línea de impuesto |
-        | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) |     | (-) Importe total | Una por factura |
+        | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) |     | (-) Importe total | Una por factura |
 
         |     |     |     |     |
         | --- | --- | --- | --- |
         | **Cuenta** | **Débito contabilizado** | **Crédito contabilizado** | **Observaciones** |
-        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data.md#customer) |     | Imp. línea | Una por línea de factura |
+        | [Cuentas a cobrar de clientes](../../../master-data-management/master-data/business-partner.md#customer) |     | Imp. línea | Una por línea de factura |
         | [Débito de impuestos](../../../financial-management/accounting/setup/tax-rate.md#accounting) | Impuestos |     | Una por línea de impuesto |
-        | [Ingresos por el producto](../../../master-data-management/product-setup.md#accounting) | Importe total |     | Una por factura |
+        | [Ingresos por el producto](../../../master-data-management/product-setup/product-category.md#accounting) | Importe total |     | Una por factura |
 
 - La casilla **Activo** puede utilizarse para activar o desactivar este tipo de documento.
 - La casilla **Valor por defecto** indica si este registro se va a utilizar como valor por defecto.
@@ -150,7 +150,7 @@ Campos a tener en cuenta:
 - El campo **Tipo de Documento para Factura Simplificada** indica el tipo de documento que se utilizará cuando se genere una factura simplificada a partir de este documento de ventas.
 - **Tipo de Documento de Factura Agregada** indica el tipo de documento que se utilizará cuando se genere una factura agregada a partir de este documento de ventas.
 
-### Plantillas para Informes
+### Plantillas para Informes { #report-templates }
 
 La solapa **Plantillas para Informes** permite al usuario configurar un aspecto diferente para los **documentos imprimibles** relacionados con cada tipo de documento mediante la configuración de plantillas Jasper `.jrxml`.
 
@@ -166,13 +166,13 @@ Si es necesario, **las plantillas de informe se pueden personalizar** e incluso 
 !!! warning
     Aunque esta opción está disponible en esta solapa funcional, esta configuración debe ser realizada por un desarrollador.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-2.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-2.png)
 
-#### Definiciones del correo electrónico
+#### Definiciones del correo electrónico { #email-definitions }
 
 La solapa Definiciones del correo electrónico permite la creación de tantas plantillas de correo electrónico como sea necesario, dependiendo del idioma que se vaya a utilizar para enviar los documentos por correo electrónico. Los documentos pueden enviarse por correo electrónico utilizando el botón de acción **Correo electrónico**, que se puede encontrar en la barra de herramientas correspondiente.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-3.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-3.png)
 
 Tal y como se muestra en la imagen anterior, es posible definir:
 
@@ -196,11 +196,11 @@ Esta es la lista de etiquetas posibles:
 - `@doc_nextduedate@`: La siguiente fecha de vencimiento (si el documento tiene asociado algún plan de pagos).
 - `@doc_lastduedate@`: La última fecha de vencimiento (si el documento tiene asociado algún plan de pagos).
 
-### Traducción
+### Traducción { #translation }
 
 En esta solapa, los tipos de documento pueden traducirse a cualquier idioma requerido. Para ello, cree un nuevo registro y rellene los campos correspondientes, tal y como se muestra a continuación.
 
-![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/document-type/document-type-4.png)
+![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/document-type/document-type-4.png)
 
 ---
 Este trabajo es una obra derivada de [Document Type](https://wiki.openbravo.com/wiki/Document_Type){target="\_blank"} de [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, utilizada bajo [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. Esta obra está licenciada bajo [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} por [Etendo](https://etendo.software){target="\_blank"}.

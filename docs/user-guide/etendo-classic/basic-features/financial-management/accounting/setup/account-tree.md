@@ -65,14 +65,14 @@ Etendo offers different options for CoAs configuration:
 
 The Account Tree main header allows creating the organization's account type and then define the Chart of Accounts. 
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree8.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree8.png)
 
 
 ### Element Value Tab
 
 The **Element value** tab lists every chart of account elements from the chart of accounts headings to the subaccounts.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-0.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-0.png)
 
 Every **Chart of Accounts** in Etendo contains different types of elements organized into the following hierarchy:
 
@@ -94,7 +94,7 @@ Besides, it is well-known that every account, subaccount in Etendo terms, needs 
 -   **Expense** and **Revenue** account types need to be included in the Profit & Loss.
 
 !!! tip
-    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar once the user is in the Element Value tab.
+    The best way to understand how a chart of accounts is captured in Etendo is by pressing the **Tree** icon  ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree/account-tree-1.png) which can be found in the toolbar once the user is in the Element Value tab.
 
 The Tree icon opens a new window which shows one **tree branch** per financial statement:
 
@@ -102,7 +102,7 @@ The Tree icon opens a new window which shows one **tree branch** per financial s
 -   Profit & Loss
 -   Temporary default accounts: This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-1.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-1.png)
 
 Besides, each tree branch contains several elements inside structured in a hierarchical way, for instance:
 
@@ -110,7 +110,7 @@ Besides, each tree branch contains several elements inside structured in a hiera
     -   Assets
     -   Liabilities and Owner's Equity
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-2.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-2.png)
 
 
 As shown in the image above **Assets** is also split into:
@@ -123,7 +123,7 @@ Same way **Equity** is also split into several accounts, in Etendo terms **subac
 
 Back to the **Element Value** tab, there are several **basic fields** which help to define each chart of account element:
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-3.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-3.png)
 
 
 -   The **Search Key** and the **Name** identifies the chart of account element.
@@ -183,13 +183,13 @@ For instance, the element 1900-Total Assets is the sum up of three customized el
 
 as shown in the image below.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-4.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-4.png)
 
 ### Translation Tab
 
 In the **Translation** tab, account elements can be translated to any language required.
 
-![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/account-tree-5.png)
+![alt text](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/account-tree-5.png)
 
 ---
 

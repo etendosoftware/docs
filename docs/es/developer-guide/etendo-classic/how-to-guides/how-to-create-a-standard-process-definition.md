@@ -11,8 +11,8 @@ tags:
     - Subir archivo
 ---
 
-# Cómo crear una Definición del Proceso estándar
-## Visión general
+# Cómo crear una Definición del Proceso estándar { #how-to-create-a-standard-process-definition }
+## Visión general { #overview }
 
 El **patrón de IU estándar de la Definición del Proceso** permite crear ventanas de Parámetros definidas en el :material-menu: `Diccionario de la Aplicación`; la IU de estas ventanas se genera bajo demanda, por lo que, una vez definidos esos parámetros, el desarrollador solo necesita encargarse de la implementación del proceso.
 
@@ -23,11 +23,11 @@ La implementación requiere experiencia en desarrollo. Consulte las siguientes p
 - [Handler de acción](../concepts/etendo-architecture.md)
 - [Desarrollo del lado del cliente y API](../concepts/client-side-development-and-api.md)
 - [Convenciones de codificación JavaScript](../concepts/javascript-coding-conventions.md)
-## Módulo de ejemplo
+## Módulo de ejemplo { #example-module }
 Este procedimiento está respaldado por un módulo de ejemplo que muestra ejemplos del código mostrado y comentado.
 
 El código del módulo de ejemplo puede descargarse desde el repositorio [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="\_blank"}
-## Pasos para implementar el Proceso
+## Pasos para implementar el Proceso { #steps-to-implement-the-process }
 
 Los procesos de **Definición del Proceso estándar** aprovechan los mismos conceptos base del *Diccionario de la Aplicación*, lo que permite definir parámetros para el proceso como metadatos que generan la UI cuando se requiere, sin necesidad de generar código, compilar o reiniciar tomcat para aplicar los cambios durante el desarrollo.
 
@@ -44,15 +44,15 @@ Cuando se hace clic en el botón **Hecho**, se ejecuta el proceso:
     - Se suma el importe total de todas las partes seleccionadas y se muestra en un mensaje en la ventana de **Parámetro**. 
     - Si se selecciona un tercero, se abre la ventana **Terceros** dentro del seleccionado y se muestra un mensaje en esta ventana. 
 
-### Definir el Proceso
+### Definir el Proceso { #defining-the-process }
 
 - Abra la ventana **Definición del Proceso** 
 - Cree un nuevo registro 
 - Defina el patrón de UI: **Estándar (Parámetros definidos en el Diccionario)**
-- Establezca el Handler: `org.openbravo.client.application.examples.StandardProcessActionHandler`. Esta es la clase Java que implementa el proceso y que se invocará cuando el usuario haga clic en el botón de acción. 
+- Establezca el Handler: `com.etendoerp.client.application.examples.StandardProcessActionHandler`. Esta es la clase Java que implementa el proceso y que se invocará cuando el usuario haga clic en el botón de acción. 
 - Guarde 
 
-### Añadir Parámetros
+### Añadir Parámetros { #adding-parameters }
 
 - Parámetro `Min Qty`: 
     - Vaya a la pestaña **Parámetros** 
@@ -65,13 +65,13 @@ Cuando se hace clic en el botón **Hecho**, se ejecuta el proceso:
     - Valor por defecto: 0. Es el valor que tomará el parámetro por defecto. Es una expresión JavaScript evaluada en el lado servidor, como las Expresiones de filtrado por defecto usadas en los selectores. 
 - Siga pasos similares para crear el campo **Max Qty** 
 - Multiselector **Parte** 
-    - Cree un selector de múltiples partes 
+    - Cree un nuevo selector Multi Order siguiendo los pasos descritos en [Cómo crear un selector múltiple](how-to-create-a-multi-selector.md)
     - Cree un nuevo parámetro 
     - Referencia: `OBUISEL_Multi Selector Reference` 
     - Referencia clave: Multi Order Selector 
 - El parámetro Terceros tiene `OBUISEL_Selector Reference` como Referencia y **Terceros no filtrado por defecto por cliente/proveedor** como Referencia clave 
 
-### Añadirlo al Menú
+### Añadirlo al Menú { #adding-it-to-the-menu }
 
 Añadir un proceso al menú permite abrirlo desde el menú como una nueva pestaña.
 
@@ -79,7 +79,7 @@ Añadir un proceso al menú permite abrirlo desde el menú como una nueva pesta�
 - Acción: `Definición del Proceso`.
 - Definición del Proceso: `Example Parameter Process`.
 
-### Implementación Java
+### Implementación Java { #java-implementation }
 
 En el caso de un handler de acción de Definición del Proceso, extienda de `BaseProcessActionHandler` e implemente el método `doExecute`.
     
@@ -102,7 +102,7 @@ En el caso de un handler de acción de Definición del Proceso, extienda de `Bas
   * Contributor(s):  ______________________________________.
   ************************************************************************
   */
-package org.openbravo.client.application.examples;
+package com.etendoerp.client.application.examples;
  
 import java.math.BigDecimal;
 import java.util.Map;
@@ -203,11 +203,14 @@ public class StandardProcessActionHandler extends BaseProcessActionHandler {
 }
 ```
 
-#### Respuesta
+#### Respuesta { #response }
 
 El `ActionHandler` devuelve un `JSONObject` con las acciones que se deben realizar tras la ejecución.
 
-##### Validaciones
+!!!info
+    Para más información sobre cómo crear acciones, visite [Desarrollo del lado del cliente y API](../concepts/client-side-development-and-api.md#obutilitiesaction---actions-execution-related-utilities)
+
+##### Validaciones { #validations }
 
 Es posible realizar validaciones en el backend antes de ejecutar el proceso real; cuando estas validaciones no se satisfacen, se puede mostrar un mensaje en la UI para permitir que el usuario corrija los valores problemáticos.
 
@@ -226,7 +229,7 @@ La respuesta tendría un aspecto similar a este:
 }
 ```
 
-##### Devolver varias acciones
+##### Devolver varias acciones { #returning-several-actions }
 
 Tras ejecutar el proceso, es posible realizar una serie de acciones.
 
@@ -277,18 +280,18 @@ La respuesta debería ser similar a:
 - `refreshGrid`. Actualiza el grid donde está definido el botón del proceso. Los grids no se actualizan automáticamente tras invocar un proceso estándar; solo se actualiza el registro seleccionado. Si el proceso añade o elimina registros de ese grid, entonces debe añadir `refreshGrid` a la lista de acciones de respuesta para ver los datos actualizados en el grid. 
 - `refreshGridParameter`. Actualiza el **parámetro de grid** con nombre `gridName` presente en la ventana de parámetros del proceso estándar. Este tipo de respuesta es especialmente útil para aquellas ventanas de parámetros que no se cierran tras la ejecución del **handler de acción** (los parámetros permanecen visibles tras la ejecución del proceso), por ejemplo, aquellas definiciones de proceso que se abren directamente desde el menú. 
 - El método `getResponseBuilder()` está disponible para las clases que extienden `BaseProcessActionHandler`. Este método devuelve un asistente que puede utilizarse para construir el resultado del proceso con las acciones de respuesta estándar deseadas de forma sencilla. Por ejemplo:
-    
-```java
-@Override
-protected JSONObject doExecute(Map<String, Object> parameters, String content) {
-  ...
-  ...
-  return getResponseBuilder()
-      .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
-      .openDirectTab("220", false).build();
-}
-```
-## Prueba del Proceso
+
+    ```java
+    @Override
+    protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+      ...
+      ...
+      return getResponseBuilder()
+          .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
+          .openDirectTab("220", false).build();
+    }
+    ```
+## Prueba del Proceso { #testing-the-process }
 
 Ahora es necesario compilar y desplegar (porque se ha añadido una nueva clase Java; tenga en cuenta que esto no es necesario en caso de solo editar/añadir parámetros).
 
@@ -299,28 +302,28 @@ Después de compilar y desplegar, habrá una nueva entrada en el menú: **Proces
 - Si se selecciona un tercero, se abre en una nueva pestaña mostrando un mensaje en ella.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition/standard-process-definition-1.png)
-## Temas avanzados
+## Temas avanzados { #advanced-topics }
 
-### Invocar el proceso desde una solapa
+### Invocar el proceso desde una solapa { #invoke-the-process-from-a-tab }
 
 Los procesos de **Definición del Proceso** estándar pueden abrirse como una solapa desde el menú o como un popup modal desde un botón en una solapa. Esta segunda opción puede lograrse añadiendo una columna adicional a la tabla utilizada en la solapa. 
 
 !!!info
-    Para más detalles sobre este proceso, visite [Cómo crear un proceso Pick and Execute](how-to-create-a-pick-and-execute-process.md). 
+    Para obtener la configuración completa paso a paso de la columna, el botón y la vinculación del proceso, consulte [Cómo crear un proceso Pick and Execute](how-to-create-a-pick-and-execute-process.md).
 
-### Solo lectura y lógica de visualización
+### Solo lectura y lógica de visualización { #read-only-and-display-logic }
 
 Los parámetros en **Definición del Proceso** soportan lógica de visualización y de solo lectura. Esto permite mostrar u ocultar, y hacer editables o de solo lectura, los parámetros en función de los valores introducidos en otros parámetros.
 
-### Combos subordinados
+### Combos subordinados { #subordinated-combos }
   
 Los datos que pueden seleccionarse dentro de un combo (selector) pueden restringirse en función de los valores que tomen otros parámetros usando **Reglas de validación**. La lógica de estas validaciones es un HQL que se añade a su datasource. Esto se escribe en JavaScript, siendo posible usar `OBBindings`, del mismo modo que se escribe el valor por defecto.
 
-### Agrupación de parámetros
+### Agrupación de parámetros { #parameter-grouping }
   
 Es posible agrupar parámetros en la UI usando la propiedad **Grupo de campos** al definir el parámetro.
 
-### Mostrar resultados en la propia ventana del proceso
+### Mostrar resultados en la propia ventana del proceso { #showing-results-in-the-process-window-itself }
 
 Es posible mostrar el resultado de un proceso directamente en la propia ventana del proceso. Esto tiene sentido si la sección de parámetros es pequeña y desea mostrar el resultado directamente.
 
@@ -353,11 +356,11 @@ OB.Utilities.Action.set('openSaikuReport', function(paramObj) {
 
 ```
 
-### Colocar un parámetro en una columna concreta
+### Colocar un parámetro en una columna concreta { #placing-a-parameter-in-a-particular-column }
   
 El campo **Número de columna** de la solapa **Parámetro** permite especificar la columna donde debe colocarse el parámetro. Los parámetros de grid usan siempre las cuatro columnas del formulario, por lo que este campo no aplica a ellos.
 
-### Invocar una validación de lado del cliente antes de llamar al handler de acción
+### Invocar una validación de lado del cliente antes de llamar al handler de acción { #invoking-a-client-side-validation-before-calling-the-action-handler }
 
 El campo **Validación de lado del cliente** de la solapa **Definición del Proceso** permite definir una función que se ejecutará antes de que se realice la petición al handler de acción. Esta función puede usarse para realizar **Validación de lado del cliente**.
 
@@ -380,6 +383,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     failureCallback();
   }
+};
 ```
 
 Además, las funciones de validación de lado del cliente soportan un cuarto parámetro que contiene información adicional, como el botón pulsado:  
@@ -391,6 +395,7 @@ OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failu
   } else {
     // do another validations
   }
+};
 ```
 
 !!!info
@@ -403,7 +408,7 @@ Se puede añadir información adicional al payload que recibirá el proceso. Por
 view.externalParams = { myParam:'value' };
 ```
 
-### Invocar una función cuando se cambia un parámetro que no es de grid
+### Invocar una función cuando se cambia un parámetro que no es de grid { #invoking-a-function-when-a-non-grid-parameter-is-changed }
 
 El campo **Función 'On Change'** de la solapa **Parámetro** permite definir una función que se ejecutará cuando se actualice un parámetro que no es de grid, después de que el parámetro pierda el foco. Esta función puede usarse para realizar validaciones o para implementar **callouts del lado del cliente**, entre otras cosas.
 
@@ -412,8 +417,9 @@ La función debe aceptar cuatro parámetros:
 - item: el elemento que se ha modificado 
 - view: el objeto de la ventana de parámetros 
 - form: el formulario que contiene el elemento 
+- grid: el contexto de la grilla (presente cuando la función se invoca desde un parámetro de grilla; `null` en caso contrario)
 
-### Cómo establecer el valor de parámetros que no son de grid de forma programática
+### Cómo establecer el valor de parámetros que no son de grid de forma programática { #how-to-set-the-value-of-non-grid-parameters-programmatically }
 
 Es posible ejecutar una **Función 'On Change'**, además de cuando el parámetro pierde el foco, al establecer el valor del parámetro de forma programática.
 
@@ -426,11 +432,11 @@ var issotrx = form.getItem('issotrx');
 issotrx.setValueProgrammatically('Y');
 ```
 
-### Invocar una función cuando se han inicializado todos los parámetros que no son de grid
+### Invocar una función cuando se han inicializado todos los parámetros que no son de grid { #invoking-a-function-when-all-the-non-grid-parameters-have-been-initialized }
 
 El campo **Función 'On Load'** de la solapa **Definición del Proceso** permite definir una función que se ejecutará una vez que los parámetros se hayan inicializado.
 
-### Invocar una función cuando el proceso necesita refrescarse
+### Invocar una función cuando el proceso necesita refrescarse { #invoking-a-function-when-the-process-needs-to-be-refreshed }
 
 El campo **Función On Refresh** de la solapa **Definición del Proceso** permite definir una función que se ejecutará cuando se invoque la acción de refresco de la ventana de parámetros.
 
@@ -443,7 +449,7 @@ La función debe aceptar, al menos, un parámetro:
 
 - view: el objeto de la ventana de parámetros 
 
-### Invocar cuando un parámetro de grid se carga por primera vez
+### Invocar cuando un parámetro de grid se carga por primera vez { #invoking-when-a-grid-parameter-is-loaded-for-the-first-time }
 
 La inicialización de los parámetros de grid se realiza de forma asíncrona, por lo que cuando se invoca la **onLoadFunction** general, no es seguro que todos los parámetros de grid se hayan cargado con sus datos iniciales. Si necesita ejecutar código justo después de que un grid se cargue por primera vez, use el campo **Función 'On Grid Load'**. La función usada aquí debe aceptar un parámetro: el propio grid.
 
@@ -457,14 +463,14 @@ OB.Utilities.TestOnGridLoad = function (grid) {
     }
 ```
 
-### Especificar el número de filas mostradas en un parámetro de grid
+### Especificar el número de filas mostradas en un parámetro de grid { #specifying-the-number-of-rows-displayed-in-a-grid-parameter }
 
 Puede establecer el número de filas que deben mostrarse la primera vez en un parámetro de grid usando el campo **Número de filas mostradas**. Este campo se usa únicamente para establecer la altura del grid; si el grid tiene realmente más filas que el **Número de filas mostradas**, se mostrará una barra de desplazamiento. El valor por defecto de este campo es 5.
 
 !!!note
     No es posible definir el colspan de los parámetros de grid, porque siempre usan las cuatro columnas disponibles del formulario.
 
-### Definir una lógica para mostrar para columna de grid para los campos de un parámetro de grid
+### Definir una lógica para mostrar para columna de grid para los campos de un parámetro de grid { #defining-a-display-logic-for-the-fields-of-a-grid-parameter }
 
 El campo **Lógica para mostrar para columna de grid** en la solapa Campo permite definir una lógica de visualización para los campos de los parámetros de grid.
 
@@ -479,15 +485,15 @@ Supongamos que el grid tiene algunos campos que solo deben mostrarse si está ma
 @showAdvancedColumns@='Y'
 ```
 
-### Especificar un valor por defecto para el filtro de un campo de grid de parámetros
+### Especificar un valor por defecto para el filtro de un campo de grid de parámetros { #specifying-a-default-value-for-the-filter-of-a-parameter-grid-field }
 
 El campo **Expresión de filtrado por defecto** de la solapa Campo permite definir un valor por defecto para el filtro de un campo. Este valor por defecto puede ser una constante, depender de otro parámetro o usar `OBBindings`.
 
-### Ocultar el nombre del parámetro de un parámetro de grid
+### Ocultar el nombre del parámetro de un parámetro de grid { #hiding-the-parameter-name-of-a-grid-parameter }
 
 Aunque es posible definir varios parámetros de grid en una ventana de parámetros, es probable que la mayoría de las veces haya como máximo uno (por ejemplo, en ventanas de pick and execute). En esos casos, considere no mostrar el nombre del parámetro de grid. Hágalo desmarcando el indicador **Mostrar título** en la solapa **Parámetro**.
 
-### Añadir nuevos botones
+### Añadir nuevos botones { #adding-new-buttons }
 
 Por defecto, las definiciones de proceso tienen un único botón **Hecho** (y uno de **Cancelar** en caso de que se muestren en un popup desde una ventana estándar). Es posible cambiar ese botón o añadir nuevos.
 
@@ -500,11 +506,50 @@ Para hacerlo:
     Debe haber, como máximo, un único parámetro de tipo **Lista de Botones**. 
 
 
-### Proceso multi-registro
+### Proceso multi-registro { #multi-record-process }
 
-Un proceso estándar puede definirse como proceso multi-registro para poder ejecutarlo para más de un registro.
+Un proceso estándar puede definirse como proceso **Multi-Registro**, lo que permite ejecutarlo sobre múltiples registros seleccionados a la vez desde una grilla.
 
-### Subida de archivos
+**Habilitarlo:** En la ventana **Definición del Proceso**, marque el indicador **Multi-Registro**.
+
+**Comportamiento:** Cuando el proceso se invoca desde una solapa, el usuario puede seleccionar una o más filas en la grilla antes de hacer clic en el botón del proceso. Todos los IDs de los registros seleccionados se recopilan en el lado del cliente y se envían al handler de acción como un array `recordIds`.
+
+**Lo que recibe el handler:**
+
+```json
+{
+  "recordIds": ["A1B2C3...", "D4E5F6...", "G7H8I9..."],
+  "_params": { ... }
+}
+```
+
+**Ejemplo de implementación Java:**
+
+```java
+@Override
+protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+  try {
+    JSONObject request = new JSONObject(content);
+    JSONArray recordIds = request.getJSONArray("recordIds");
+
+    for (int i = 0; i < recordIds.length(); i++) {
+      String recordId = recordIds.getString(i);
+      // Process each selected record
+      MyEntity entity = OBDal.getInstance().get(MyEntity.class, recordId);
+      // ... business logic
+    }
+
+    JSONObject result = new JSONObject();
+    // build response actions
+    return result;
+  } catch (JSONException e) {
+    log.error("Error in multi-record process", e);
+    return new JSONObject();
+  }
+}
+```
+
+### Subida de archivos { #uploading-files }
 
 La **referencia de archivo** mejora las capacidades de Etendo habilitando la subida de archivos directamente dentro de las definiciones de proceso. 
 
@@ -514,14 +559,14 @@ Esta funcionalidad puede usarse en **Definición del Proceso**, introduciendo un
     - El tamaño máximo de archivo que los usuarios pueden subir está limitado por defecto a 10MB. Esto se configura en la preferencia `Maximum file upload size (MB)`. Esta comprobación de tamaño de archivo se realiza tanto en el lado del cliente como en el lado del servidor.
     - Para más información sobre preferencias, visite la [sección de Preferencias en la Guía de usuario](../../../user-guide/etendo-classic/basic-features/general-setup/application/preference.md).
 
-#### Módulo de ejemplo
+#### Módulo de ejemplo { #example-module_1 }
 
 Este procedimiento está soportado por un módulo de ejemplo que demuestra cómo usar la referencia **Subir archivo** en un proceso basado en Java.
 
 El código del módulo de ejemplo puede descargarse desde el repositorio [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples){target="_blank"}
 
 
-#### Referencia Subir archivo en Definición del Proceso
+#### Referencia Subir archivo en Definición del Proceso { #upload-file-reference-in-process-definitions }
 
 Para habilitar la subida de archivos en una definición de proceso, puede definirse una referencia **Subir archivo** como parámetro del proceso.
 
@@ -538,7 +583,7 @@ El archivo subido queda disponible durante la ejecución del proceso a través d
 
     Puede seleccionarse cualquier archivo, ya que esta funcionalidad fue diseñada como una base para que los programadores la adapten a sus necesidades específicas.
 
-#### Definición del Proceso
+#### Definición del Proceso { #process-definition }
 
 Este ejemplo se proporciona como parte del módulo **User Interface Application Examples**.
 
@@ -554,7 +599,7 @@ En la ventana **Definición del Proceso**, pueden observarse los siguientes elem
 - **Patrón de la Interfaz de Usuario**: Estándar (Parámetros definidos en el Diccionario)
 - **Acceso datos**: Configurado según las necesidades del ejemplo.
 
-#### Parámetro Subir archivo
+#### Parámetro Subir archivo { #upload-file-parameter }
 
 La **Definición del Proceso** incluye un único parámetro configurado con la referencia **Subir archivo**.
 
@@ -563,7 +608,7 @@ La **Definición del Proceso** incluye un único parámetro configurado con la r
 
 Este parámetro permite al usuario subir un **único archivo**, que está disponible únicamente durante la ejecución del proceso.
 
-#### Ejecutar el proceso
+#### Ejecutar el proceso { #executing-the-process }
 
 Para ejecutar el ejemplo, se define una entrada de **Menú** que apunta a la **Definición del Proceso**.
 
@@ -582,7 +627,7 @@ Durante la ejecución:
 - El contenido del archivo subido se lee durante la ejecución.
 - El texto contenido en el archivo se muestra de vuelta al usuario como resultado del proceso.
 
-#### Procesar el archivo subido
+#### Procesar el archivo subido { #processing-the-uploaded-file }
 
 Tras seleccionar un archivo `.txt` válido y ejecutar el proceso, el archivo se procesa mediante el handler de acción Java.
 
@@ -597,9 +642,9 @@ En este ejemplo, el proceso:
 El mensaje mostrado al usuario contiene el texto completo leído del archivo subido, confirmando que el archivo se recibió y procesó correctamente.
 
 Este ejemplo demuestra cómo se puede acceder a los archivos subidos, validarlos y procesarlos en una **Definición del Proceso** basada en Java usando la referencia **Subir archivo**.
-## Limitaciones
+## Limitaciones { #limitations }
 
-### Referencias
+### Referencias { #references }
 
 Actualmente, no todas las referencias disponibles en las **ventanas estándar** están disponibles en **Definición del Proceso**. Las siguientes no se pueden usar como parámetros:
 
@@ -611,10 +656,10 @@ Actualmente, no todas las referencias disponibles en las **ventanas estándar** 
 - Árbol
 - PAttribute
 
-### Lógica de la UI
+### Lógica de la UI { #ui-logic }
 
 Los callouts no están implementados para los parámetros.
-## Migración de procesos antiguos
+## Migración de procesos antiguos { #migrating-old-processes }
 
 Las Definiciones del Proceso admiten varios parámetros. Para implementar este soporte, se cambió la forma en que el valor del parámetro de grid se envía al backend y se añadió un nuevo indicador **Compatibilidad con parámetros de grid antiguos**.  
 

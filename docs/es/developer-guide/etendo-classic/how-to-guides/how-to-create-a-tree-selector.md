@@ -8,13 +8,13 @@ tags:
 status: beta
 ---
 
-# Cómo crear un selector de árbol
+# Cómo crear un selector de árbol { #how-to-create-a-tree-selector }
 
 !!! example "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 
-## Visión general
+## Visión general { #overview }
 
 El **Selector de árbol** es una variante especializada del selector estándar de Etendo, diseñada específicamente para tablas que tienen una estructura de árbol asociada. Su configuración y uso siguen los mismos principios que un **selector estándar**, con una diferencia clave: en lugar de mostrar los datos en una cuadrícula tradicional, presenta tanto el **desplegable y la ventana emergente** usando una cuadrícula en árbol, lo que permite a los usuarios navegar por datos jerárquicos de forma más intuitiva.
 
@@ -27,11 +27,11 @@ El **Selector de árbol** es una variante especializada del selector estándar d
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-tree-selector/how-to-create-a-tree-selector-2.png){: .legacy-image-style}
 
-## Definición de un selector de árbol
+## Definición de un selector de árbol { #defining-a-tree-selector }
 
 Definir un selector de árbol es muy similar a definir un **selector estándar**.
 
-### Definir una referencia
+### Definir una referencia { #define-a-reference }
 
 Abra la **ventana Referencia** y cree un nuevo registro en la solapa de cabecera. Estos son los campos más relevantes:
 
@@ -42,7 +42,7 @@ Abra la **ventana Referencia** y cree un nuevo registro en la solapa de cabecera
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-a-tree-selector/how-to-create-a-tree-selector-3.png){: .legacy-image-style}
 
-### Definir el selector de árbol
+### Definir el selector de árbol { #define-the-tree-selector }
 
 Cree un nuevo registro en la solapa **Referencia de árbol**.
 
@@ -60,7 +60,7 @@ Algunos campos a tener en cuenta:
 
 En este punto, todavía no se han definido Campos del selector de árbol, por lo que los campos Campo de Valor y Campo Mostrado están vacíos.
 
-### Definir los campos del selector de árbol
+### Definir los campos del selector de árbol { #define-the-tree-selector-fields }
 
 El siguiente paso es definir los **Campos del selector de árbol**. Un campo del selector puede tener varios propósitos:
 
@@ -88,7 +88,7 @@ Algunos campos a tener en cuenta:
 - **Filtro**: si se establece, este campo será filtrable en la ventana emergente 
 - **Ordenar**: si se establece, este campo será ordenable en la ventana emergente 
 
-### Establecer los campos Campo de Valor y Campo Mostrado del selector de árbol
+### Establecer los campos Campo de Valor y Campo Mostrado del selector de árbol { #set-the-value-and-display-fields-of-the-tree-selector }
 
 Una vez que se han definido los Campos del selector de árbol, se pueden establecer los campos Campo de Valor y Campo Mostrado de la solapa **Referencia de árbol**.
 

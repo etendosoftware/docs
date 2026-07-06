@@ -14,16 +14,16 @@ tags:
 
 :material-store: Etendo Marketplace:  [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 Este bundle incluye mejoras para las funcionalidades de gestión de almacenes en Etendo.
 
-## Traducción
+## Traducción { #translations }
 
 -  :material-translate: Español: [Warehouse Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}
 
-## Módulo
+## Módulo { #modules }
 
-### Gestión avanzada de almacenes
+### Gestión avanzada de almacenes { #advanced-warehouse-management }
 
 :octicons-package-16: Javapackage: `com.etendoerp.advanced.warehouse.management`
 
@@ -34,16 +34,16 @@ La gestión de códigos de barras incluye AIs GS1-128 (p. ej., GTIN, lote, caduc
 !!! info
     Para más información, visite [Gestión avanzada de almacenes](./advanced-warehouse-management.md).
 
-### Reserva automatizada de almacén
+### Reserva automatizada de almacén { #automated-warehouse-reservation }
 
 :octicons-package-16: Javapackage: `com.etendoerp.automated.warehouse.reservation`
 
 Este módulo añade la opción Automática - Solo almacén por defecto al campo Reserva de existencias de la solapa líneas en la ventana Pedido de venta. Esto se utiliza para limitar la reserva únicamente al almacén especificado en la cabecera del pedido.
 
 !!! info
-    Para más información, visite [Pedido de venta](../../../basic-features/sales-management/transactions.md#stock-reservations) y [Reserva de existencias](../../../basic-features/warehouse-management/transactions.md#stock-reservation).
+    Para más información, visite [Pedido de venta](../../../basic-features/sales-management/transactions.md#stock-reservations) y [Reserva de existencias](../../../basic-features/warehouse-management/transactions/stock-reservation.md).
 
-### Empaquetado 
+### Empaquetado { #packing }
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.packing`
 
@@ -53,7 +53,7 @@ Si ambos módulos, preparación de pedidos y empaquetado, están instalados, el 
 !!! info
     Para más información, visite [Empaquetado](packing.md). 
 
-### Preparación de pedidos 
+### Preparación de pedidos { #picking }
 
 :octicons-package-16: Javapackage: `org.openbravo.warehouse.pickinglist`
 
@@ -64,17 +64,17 @@ En Etendo, la funcionalidad de Preparación de pedidos está diseñada para ayud
 !!! info
     Para más información, visite [Preparación de pedidos](picking.md).
 
-### Operaciones de producto
+### Operaciones de producto { #product-operations }
 
 :octicons-package-16: Javapackage: `com.etendoerp.product.operations`
 
 Este módulo le permite observar y analizar en detalle todas las transacciones asociadas al producto seleccionado. 
 
 !!! info
-    Para más información, visite la [Guía de usuario de Operaciones de producto](../../../basic-features/warehouse-management/analysis-tools/product-operations.md).
+    Para más información, visite la [Guía de usuario de Operaciones de producto](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 
-### Reactivar documentos de almacén
+### Reactivar documentos de almacén { #reactivate-warehouse-documents }
 
 :octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
@@ -87,21 +87,21 @@ Esta funcionalidad forma parte de Warehouse Extensions Bundle y es útil cuando 
 !!! info
     Para más información, visite la guía de usuario de:
 
-    - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Movimiento entre almacenes](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md#how-to-reactivate-goods-movements)
     - [Albarán (Proveedor)](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Albarán (Cliente)](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
-    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+    - [Inventario físico](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#reactivating-a-physical-inventory)
 
-### Historial de existencias
+### Historial de existencias { #stock-history }
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 Este módulo proporciona información actualizada sobre el historial diario de existencias de los productos. 
 
 !!! info
-    Para más información, visite la [Guía de usuario de Historial de existencias](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-history.md) y la [Guía del desarrollador de Historial de existencias](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
+    Para más información, visite la [Guía de usuario de Historial de existencias](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) y la [Guía del desarrollador de Historial de existencias](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
-### Unidad logística de existencias
+### Unidad logística de existencias { #stock-logistic-unit }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrP1iPmCk_U?si=Riy5plMo7lVDjVWS" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -113,7 +113,7 @@ Este módulo también mejora la lógica de reserva de existencias, priorizando u
 !!! info
     Para más información, visite la [Guía de usuario de Unidad logística de existencias](./stock-logistic-unit.md).
 
-### Reglas de gestión de materiales
+### Reglas de gestión de materiales { #material-management-rules }
 
 :octicons-package-16: Javapackage: `com.etendoerp.materialmgmt.rules`
 
@@ -124,14 +124,14 @@ Este módulo le permite configurar si el sistema permite transacciones de materi
 
 La preferencia **Permitir transacciones de coste con fecha anterior** se establece en **Y** por defecto, lo que significa que se permiten transacciones con fechas anteriores a la fecha actual. 
 
-Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions.md#goods-movement), [Inventarios físicos](../../../basic-features/warehouse-management/transactions.md#physical-inventory), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
+Cuando la preferencia se establece en **N**, los siguientes documentos estarán restringidos a utilizar únicamente la fecha actual: [Albarán (Proveedor)](../../../basic-features/procurement-management/transactions.md#goods-receipts), [Albarán (Cliente)](../../../basic-features/sales-management/transactions.md#goods-shipment), [Movimiento entre almacenes](../../../basic-features/warehouse-management/transactions/goods-movement.md), [Inventarios físicos](../../../basic-features/warehouse-management/transactions/physical-inventory.md), [Parte de Trabajo](../../../basic-features/production-management/transactions.md#work-effort) y [Consumo interno](../../../basic-features/production-management/transactions.md#internal-consumption).
 
 !!! warning
     Si necesita crear una nueva configuración para esta preferencia, debe establecerse únicamente a nivel global, sin distinguir ningún nivel de visibilidad específico (Organización, Usuario, Rol, etc.), ya que podría afectar al correcto funcionamiento de la validación.
 
     ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/material-mgmt-rules-preference.png)
 
-## Desinstalar bundle
+## Desinstalar bundle { #uninstall-bundle }
 
 Para desinstalar el bundle y evitar problemas futuros con registros huérfanos, debe seguirse una secuencia de pasos:
 

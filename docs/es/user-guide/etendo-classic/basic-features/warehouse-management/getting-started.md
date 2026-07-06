@@ -7,15 +7,15 @@ tags:
 ---
 
 ![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
-# Gestión de Almacén - Primeros pasos
+# Gestión de Almacén - Primeros pasos { #warehouse-management---getting-started }
 
-## Visión general
+## Visión general { #overview }
 
 <iframe width="720" height="480" src="https://www.youtube.com/embed/l7RMb0Oz7Wo?si=ngxYnwDkiDqwRkLO" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 En Etendo, la mayoría de los movimientos de almacén se crean automáticamente en función de las transacciones de los procesos de [Ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/getting-started.md) y [Gestión de Compras](../../../../user-guide/etendo-classic/basic-features/procurement-management/getting-started.md). Sin embargo, la operativa de un almacén también implica varias actividades manuales, como el inventario físico, los movimientos de mercancía y su seguimiento, y la valoración del inventario. Estas actividades se ejecutan en el área de aplicación Gestión de Almacén y se agrupan en el flujo de negocio Precisión del inventario, que se describe a continuación.
 
-## Precisión del inventario
+## Precisión del inventario { #inventory-accuracy }
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png)
 
@@ -35,7 +35,7 @@ Los principales subprocesos del flujo de negocio Precisión del inventario son:
 - *Actualización de inventario*: permite a una empresa cambiar el importe actual del inventario o el coste unitario actual de los productos en stock.
 - *Revisión de ajustes de costes*: permite a una empresa revisar los ajustes de coste de producto causados por cambios en los precios de compra, la asignación de landed costs o correcciones manuales / negativas de coste.
 
-### Configuración
+### Configuración { #configuration }
 
 Es necesario crear y configurar [Almacén y huecos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins) antes de ejecutar el flujo de negocio.
 Además, es necesario definir y validar una [Regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) para la entidad legal. Cada regla de cálculo de costes requiere una fecha de inicio a partir de la cual será válida, así como un [Algoritmo de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm) que será utilizado por el proceso [Costing Background Process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing), que debe planificarse.
@@ -49,40 +49,40 @@ Por último, pueden configurarse [Reglas de almacén](../../../../user-guide/ete
 
 La configuración anterior forma parte del flujo general de configuración del negocio dentro de la configuración de "Almacén".
 
-### Ejecución
+### Ejecución { #execution }
 
 En Gestión de Almacén, las principales operaciones de Precisión del inventario se ejecutan de la siguiente manera.
 
 Para realizar el *Inventario físico*, el personal de almacén:
 
 - Comienza con las clasificaciones de productos y ejecuta el [Informe Pareto de Productos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/pareto-product-report.md), que distribuye los productos en tres clases (A, B o C) según su porcentaje de coste en el almacén.
-En función de la clasificación, puede decidirse la frecuencia del ciclo de recuento (p. ej., los productos A se cuentan semanalmente, los productos B mensualmente y los productos C anualmente).
-A continuación, la clasificación ABC se rellena en la pestaña [Producción](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#manufacturing) de la ventana Producto haciendo clic en el botón Update ABC.
+    En función de la clasificación, puede decidirse la frecuencia del ciclo de recuento (p. ej., los productos A se cuentan semanalmente, los productos B mensualmente y los productos C anualmente).
+    A continuación, la clasificación ABC se rellena en la pestaña [Producción](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data/product.md#manufacturing) de la ventana Producto haciendo clic en el botón Update ABC.
     - Tenga en cuenta que la clasificación ABC se basa en el coste de las transacciones del producto. Por eso debe configurarse y validarse una [Regla de cálculo de costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) para la entidad legal y debe planificarse el proceso [Costing Background Process](../../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling/process-request.md#costing).
-- Tras este procedimiento, el personal de almacén crea el documento de inventario físico en la ventana [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) seleccionando el Almacén donde ejecutar esta actividad y pulsando el botón Create Inventory Count List. Definen los criterios para los productos que se incluirán en la lista de recuento (por ejemplo, la clasificación ABC) y el resultado es la [Lista](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#lines) de productos con sus cantidades actuales, que se lleva al almacén y se verifica frente al inventario físico.
-- Para actualizar el stock en Etendo, si se encuentran diferencias, primero el personal de almacén selecciona el [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) que se creó previamente. A continuación, en la pestaña [Líneas](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#lines), encuentran los productos requeridos y actualizan el campo Quantity Count con un nuevo valor. Después, finalizan el recuento de inventario haciendo clic en el botón Process Inventory Count, que actualiza el inventario y lanza el contabilizado del documento (si está configurado).
+- Tras este procedimiento, el personal de almacén crea el documento de inventario físico en la ventana [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md) seleccionando el Almacén donde ejecutar esta actividad y pulsando el botón Create Inventory Count List. Definen los criterios para los productos que se incluirán en la lista de recuento (por ejemplo, la clasificación ABC) y el resultado es la [Lista](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#lines) de productos con sus cantidades actuales, que se lleva al almacén y se verifica frente al inventario físico.
+- Para actualizar el stock en Etendo, si se encuentran diferencias, primero el personal de almacén selecciona el [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md) que se creó previamente. A continuación, en la pestaña [Líneas](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md#lines), encuentran los productos requeridos y actualizan el campo Quantity Count con un nuevo valor. Después, finalizan el recuento de inventario haciendo clic en el botón Process Inventory Count, que actualiza el inventario y lanza el contabilizado del documento (si está configurado).
 
 Para ejecutar *Movimiento entre almacenes*, el personal de almacén:
 
-- En la ventana [Movimiento entre almacenes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#goods-movement), lista los productos a mover con la información de origen y destino y la cantidad correspondiente, y luego procesa el documento, lo que actualiza todas las cantidades de producto listadas en la pestaña Líneas en el almacén y lanza el contabilizado del documento (si está configurado).
+- En la ventana [Movimiento entre almacenes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-movement.md), lista los productos a mover con la información de origen y destino y la cantidad correspondiente, y luego procesa el documento, lo que actualiza todas las cantidades de producto listadas en la pestaña Líneas en el almacén y lanza el contabilizado del documento (si está configurado).
 
 Para *Seguimiento de mercancías*, el personal de almacén utiliza:
 
 - [Informe Stock](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/stock-report.md), que proporciona el nivel de stock de todos los productos (que tienen inventario distinto de cero) y su ubicación (almacén y hueco) agrupados por categoría de producto.
-- La ventana [Operaciones de material (uso indirecto)](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#goods-transaction), que ofrece una vista de solo lectura con amplias capacidades de filtrado y muestra todas las transacciones de inventario.
+- La ventana [Operaciones de material (uso indirecto)](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/goods-transaction.md), que ofrece una vista de solo lectura con amplias capacidades de filtrado y muestra todas las transacciones de inventario.
 - [Informe Movimiento de Productos](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report.md), que muestra todas las recepciones, envíos, movimientos e inventarios físicos agrupados por Tipo de transacción y Tercero.
 - [Informe Transacción de Material](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/material-transaction-report.md), que lista todos los documentos (envíos o recepciones) agrupados por Tercero.
 
 La *Valoración del inventario* se realiza con la ayuda del [Informe de Valuación de Existencias](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report.md).
 Este informe muestra el coste del stock calculado por el proceso Costing Server.
 
-La *Actualización de inventario* se realiza con la ayuda de la ventana [Ajuste de Valor del Inventario](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#inventory-amount-update).
-Esta ventana permite cambiar el valor total del inventario o el coste unitario de uno o varios productos en una fecha de referencia determinada; por tanto, se crean automáticamente un inventario de cierre y uno de apertura en la ventana [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory).
+La *Actualización de inventario* se realiza con la ayuda de la ventana [Ajuste de Valor del Inventario](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/inventory-amount-update.md).
+Esta ventana permite cambiar el valor total del inventario o el coste unitario de uno o varios productos en una fecha de referencia determinada; por tanto, se crean automáticamente un inventario de cierre y uno de apertura en la ventana [Inventario físico](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/physical-inventory.md).
 
-Para la *Revisión de ajustes de costes*, el personal de almacén utiliza la ventana [Ajuste de Costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#cost-adjustment).
+Para la *Revisión de ajustes de costes*, el personal de almacén utiliza la ventana [Ajuste de Costes](../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions/cost-adjustment.md).
 Esta ventana permite revisar diferentes tipos de orígenes de ajuste de costes junto con las transacciones del producto cuyos costes se están ajustando, así como los importes del ajuste.
 
-## Relación con otras áreas de aplicación
+## Relación con otras áreas de aplicación { #relationship-with-other-application-areas }
 
 Gestión de Almacén tiene conexión con otras áreas de aplicación:
 

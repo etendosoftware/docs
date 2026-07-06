@@ -1,7 +1,7 @@
 ---
 title: Informes de ventas
 ---
-## Visión general
+## Visión general { #overview }
 
 
 Esta sección describe las ventanas relacionadas con los informes de ventas en Etendo. Estas son:
@@ -21,17 +21,17 @@ Esta sección describe las ventanas relacionadas con los informes de ventas en E
 [:material-file-document-outline: Análisis dimensional facturas ventas](../../../../user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
 
-## Análisis dimensional pedidos ventas
+## Análisis dimensional pedidos ventas { #sales-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Análisis dimensional pedidos ventas`
 
-### Visión general
+### Visión general { #overview_1 }
 
 Este es un informe de tipo dimensional que muestra información principalmente sobre el "**Imp. total líneas**" de los pedidos de venta registrados (Pedidos de venta en estado *Reservado* o *Cerrado*) durante un periodo de tiempo seleccionado.
 
 Este informe puede mostrar los productos más vendidos y los principales clientes, y responder a muchas otras preguntas relacionadas con la actividad de registro de ventas de la empresa.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window }
 
 ![Sales Dimensional Report](../../../../assets/drive/1hUSiwTVhtzym77PrGRYXNcTx4jRqX3Ur.png)
 
@@ -44,7 +44,7 @@ Campos a tener en cuenta:
     En la mayoría de los casos, filtrar por los campos mencionados anteriormente ofrece los mismos resultados. Podrían diferir si un cliente tiene una persona responsable principal, pero distintos miembros del equipo de ventas pueden registrar pedidos. O si un cliente se traslada de un agente comercial a otro. Los nuevos agentes comerciales podrían querer utilizar el segundo filtro para ver las actividades de todos sus clientes (independientemente de quién cerró la operación), mientras que los antiguos agentes comerciales podrían querer utilizar el primer filtro para ver los pedidos que cerraron, independientemente de quién gestione actualmente al cliente.
 
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output }
 
 ![Sample Report Output](../../../../assets/drive/1ZYCoYa83A96xOFcOfd6-qIFTr81ymJ2S.png)
 
@@ -53,15 +53,15 @@ Información a tener en cuenta:
 -   **Importe:** es el importe **neto** del Pedido de venta convertido a la **Moneda** del informe.
 -   **Peso:** del producto vendido si se especifica en la ventana **Producto**.
 
-## Análisis dimensional albaranes ventas
+## Análisis dimensional albaranes ventas { #shipments-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Análisis dimensional albaranes ventas`
 
-### Visión general
+### Visión general { #overview_2 }
 
 Este informe muestra información sobre los bienes enviados a los clientes (albaranes de salida en estado Completada o Anulada) durante un periodo de tiempo seleccionado. Es un informe de tipo dimensional.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_1 }
 
 No hay ningún campo específico a destacar, solo los filtros dimensionales primario y secundario que pueden utilizarse para acotar la información que se va a mostrar.
 
@@ -69,7 +69,7 @@ No hay ningún campo específico a destacar, solo los filtros dimensionales prim
 
 El resultado de este informe puede visualizarse en formato HTML, formato XLS y formato PDF.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_1 }
 
 Algunos datos a tener en cuenta:
 
@@ -78,17 +78,17 @@ Algunos datos a tener en cuenta:
 
 ![Sample Report Output](../../../../assets/drive/1TD2GMryWaNAeWDcX10o7t7qmMdkpZ6Jx.png)
 
-## Descuentos
+## Descuentos { #discount-invoice-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Descuentos`
 
-### Visión general
+### Visión general { #overview_3 }
 
 Este informe muestra información sobre las facturas de venta registradas (facturas de venta en estado Completada o Anulada) durante un periodo de tiempo seleccionado, agrupando la información por tercero y producto.
 
 El informe muestra información sobre el precio medio por producto, el precio neto y el descuento aplicado en cada producto.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_2 }
 
 ![Discount Invoice Report](../../../../assets/drive/1ghqLTYaD2stIcN7FmRjo8EIxsP7CP1Jy.png)
 
@@ -100,7 +100,7 @@ Campos a tener en cuenta:
 -   **Terceros:** permite filtrar los resultados por **Terceros**. El informe resultante solo mostrará información sobre facturas de venta de los terceros seleccionados. No es un parámetro obligatorio, por lo que si no se selecciona ningún tercero, las facturas de venta no se filtrarán por ese campo.
 -   **Mostrar solo con descuento:** si está marcado, solo se mostrarán los artículos con descuento.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_2 }
 
 ![](../../../../assets/drive/1ycGDW3jPjlFaRlhOW4CxRZ4cxFfdW0iP.png)
 
@@ -121,20 +121,20 @@ En la imagen siguiente se muestra el mismo informe, pero habiendo marcado el fil
 ![](../../../../assets/drive/1Z36B4O0Ih4xnuLhT_HYRHJfP0QlZDeiG.png)
 
 
-## Informe pedidos pendientes y stock
+## Informe pedidos pendientes y stock { #stock-for-open-orders }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Informe pedidos pendientes y stock`
 
-### Visión general
+### Visión general { #overview_4 }
 
 Esta sección muestra las líneas de los pedidos pendientes con el stock actual de cada producto.
 
 
-## Pedidos no facturados
+## Pedidos no facturados { #orders-awaiting-invoice-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Pedidos no facturados`
 
-### Visión general
+### Visión general { #overview_5 }
 
 **Pedidos no facturados** muestra la información sobre los pedidos de venta que aún no están completamente facturados.
 
@@ -142,7 +142,7 @@ Solo los pedidos de venta con el término de facturación *No facturar* no se mu
 
 ![Orders Awaiting Invoice Report](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/orders-awaiting-invoice-report.png)
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_3 }
 
 ![Orders Awaiting Invoice](../../../../assets/drive/1m5K-52iabxWTBcYXnuBxhisNKIiOPhlP.png)
 
@@ -153,7 +153,7 @@ Todos los valores monetarios (como **Importe**, **Precio**, **Base**) del inform
 !!! warning
     Tenga en cuenta que debe especificarse el tipo de cambio a la Moneda del informe para que el informe funcione.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_3 }
 
 ![Sample Report Output](../../../../assets/drive/1OTwoN7NttxZipv10smwuOv6ET_2OtddS.png)
 
@@ -161,39 +161,39 @@ Todos los valores monetarios (como **Importe**, **Precio**, **Base**) del inform
     Tenga en cuenta que el informe proporciona información sobre los pedidos de venta y los productos incluidos en ellos sin reflejar la información de las cantidades ya entregadas y facturadas.
 
 
-## Informe de Pedidos a la Espera de Entrega
+## Informe de Pedidos a la Espera de Entrega { #orders-awaiting-delivery-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Informe de Pedidos a la Espera de Entrega`
 
-### Visión general
+### Visión general { #overview_6 }
 
 **Informe de Pedidos a la Espera de Entrega** muestra la información sobre los pedidos de venta que están a la espera (pendientes) de ser entregados (enviados).
 
 ![](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/orders-awaiting-delivery-report-18.png)
 
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_4 }
 
 ![Orders Awaiting Delivery](../../../../assets/drive/1hbLnfh3onAAqN6yKjgUh2VCPlgDrG8XK.png)
 
 Todos los filtros hacen referencia a los campos correspondientes del Pedido de venta.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_4 }
 
 ![Sample Report Output](../../../../assets/drive/1Liay4G2dIvO513rwpadunx-v0ud0rs87.png)
 
 
-## Análisis dimensional facturas ventas
+## Análisis dimensional facturas ventas { #sales-invoice-dimensional-report }
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Herramientas de análisis` > `Análisis dimensional facturas ventas`
 
-### Visión general
+### Visión general { #overview_7 }
 
 Este es un informe de tipo dimensional que muestra información sobre las facturas de venta registradas (facturas de venta en estado *Completada* o *Anulada*) durante un periodo de tiempo seleccionado.
 
 Este informe puede mostrar clasificaciones de productos y principales clientes en función de los ingresos por ventas, mostrar el beneficio y el margen de las ventas y responder a muchas otras preguntas relacionadas con la actividad de facturación de ventas de la empresa.
 
-### Ventana de parámetros
+### Ventana de parámetros { #parameters-window_5 }
 
 ![Sales Invoice Dimensional](../../../../assets/drive/1u4QnUnLSo4PvVzeduFYZDQgs3FKZwJMG.png)
 
@@ -208,7 +208,7 @@ Campos a tener en cuenta:
 -   **Proyecto:** permite al usuario mostrar información de facturación para un proyecto concreto.
 -   **Tipo de producto:** filtro que muestra resultados para los tipos de producto seleccionados.
 
-### Ejemplo de salida del informe
+### Ejemplo de salida del informe { #sample-report-output_5 }
 
 ![Sample Report Output](../../../../assets/drive/19rJehYODpxaL4CHLStphythhzfSAswSq.png)
 

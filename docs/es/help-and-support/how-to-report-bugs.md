@@ -7,7 +7,7 @@ tags:
     - Plantilla de informe
 ---
 
-## Plantilla para informar de errores
+## Plantilla para informar de errores { #template-to-report-bugs }
 
 !!! warning
     *Esta estructura debe respetarse siempre para informar de un error en el [Centro de ayuda de Etendo](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*

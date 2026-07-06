@@ -1,15 +1,15 @@
-## Visión general
+## Visión general { #overview }
 
 Esta sección proporciona una guía paso a paso para trabajar con Etendo RX, lo que implica crear un nuevo módulo con capacidades RX y construir un proyecto Spring Boot para consumir pedidos haciendo uso de proyecciones, repositorio y otros recursos JPA que crearemos en nuestro Etendo Classic.
 
 ------------------------------------------------------------------
 
-## Creación de un nuevo módulo con capacidades RX
+## Creación de un nuevo módulo con capacidades RX { #building-a-new-module-for-rx-capabilities }
 
 !!!note
     Asegúrese de completar la sección [Getting Started section in the developer guide](../../../developer-guide/etendo-rx/getting-started.md) para configurar la plataforma Etendo.
 
-### Acceso como usuario administrador
+### Acceso como usuario administrador { #accessing-as-admin-user }
 
 Después de configurar el entorno local, tal y como se describe en [**instalar el entorno de desarrollo de Etendo**](../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md), necesitaremos iniciar sesión en el sistema con permisos de administración para crear el nuevo módulo, proyecciones, repositorio, etc.
 
@@ -24,7 +24,7 @@ Una vez haya iniciado sesión, cambie su rol a *System Administrator*, tal y com
 
 El rol *System Administrator* nos permite acceder a algunas ventanas y otorga permisos para crear y manipular el sistema para satisfacer nuestras necesidades.
 
-### Creación de un nuevo módulo
+### Creación de un nuevo módulo { #creating-a-new-module }
 
 Ahora crearemos un nuevo módulo. Es una unidad de código autocontenida que realiza una función específica y, en nuestro caso, contiene todos los recursos necesarios en esta guía.
 Para crear un nuevo módulo, vaya a la ventana Módulo y añada un nuevo registro proporcionando la siguiente información:
@@ -46,7 +46,7 @@ Con nuestro nuevo módulo creado, comenzaremos a trabajar con *Proyecciones*.
 
 ------------------------------------------------------------------
 
-## Proyección
+## Proyección { #projection }
 
 Al utilizar Spring Data JPA para implementar la capa de persistencia, el repositorio normalmente devuelve una o más instancias de la clase raíz. Sin embargo, en la mayoría de los casos, no necesitamos todas las propiedades de los objetos devueltos.
 
@@ -62,12 +62,12 @@ Comience abriendo la ventana *Projections* y creando una nueva proyección con l
 
   ![new-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/new-projection.png)
 
-### Añadir la proyección a una tabla
+### Añadir la proyección a una tabla { #adding-the-projection-to-a-table }
 
 A medida que creamos la proyección, ahora necesitamos asignarla a una tabla de la que queramos extraer datos.
 Para ello, abra la ventana :material-menu: Tablas y columnas y busque la tabla *Parte* (tal y como se menciona en la introducción, queremos consumir pedidos).
 
-### Añadir una proyección
+### Añadir una proyección { #adding-a-projection }
 
 A continuación, navegue a la solapa *Projections* y añada una nueva proyección con el siguiente valor:
 
@@ -77,7 +77,7 @@ A continuación, navegue a la solapa *Projections* y añada una nueva proyecció
 
   ![assign-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
 
-### Añadir campos de entidad
+### Añadir campos de entidad { #adding-entity-fields }
 
 Cuando se crea una proyección, necesitamos definir qué campos queremos recuperar.
 En nuestro caso, necesitaremos el ID del registro, el nombre del tercero, el Nº de documento, el nombre del tipo de documento y el total general.
@@ -99,12 +99,12 @@ En la solapa Proyección, navegue a la solapa *Entity Field* y añada los siguie
 
 ------------------------------------------------------------------
 
-## Repositorio
+## Repositorio { #repository }
 
 En Spring Data, un repositorio es una abstracción que proporciona las operaciones relativas a una clase de dominio para interactuar con un almacén de datos.
 Para crear el repositorio para nuestro propósito, y del mismo modo que hicimos con las proyecciones, necesitamos ir a Tablas y columnas y buscar la tabla `C_Order`.
 
-### Creación de un nuevo repositorio
+### Creación de un nuevo repositorio { #creating-a-new-repository }
 
 Después de seleccionar una tabla, en este caso `C_Order`, necesitamos ir a la solapa *Repository* y crear un nuevo registro con los siguientes valores:
 
@@ -116,9 +116,9 @@ Después de seleccionar una tabla, en este caso `C_Order`, necesitamos ir a la s
 
 ------------------------------------------------------------------
 
-## Selector
+## Selector { #search }
 
-### Creación de un nuevo selector
+### Creación de un nuevo selector { #creating-a-new-search }
 
 A continuación, definiremos un método de búsqueda para usarlo más adelante cuando queramos consumir los pedidos. Esta consulta se toma como un filtro para recuperar los pedidos.
 Para crear este nuevo método de filtro/búsqueda, en la solapa Repository de la tabla `C_Order`, cree un nuevo registro con los siguientes datos:
@@ -130,7 +130,7 @@ Para crear este nuevo método de filtro/búsqueda, en la solapa Repository de la
 
   ![new-search.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search.png)
 
-### Creación de un parámetro de búsqueda
+### Creación de un parámetro de búsqueda { #creating-a-new-search-parameter }
 
 Como puede ver en la consulta anterior, utilizamos un parámetro llamado `:documentType`. 
 Podemos añadir este tipo de parámetro para utilizarlo más adelante añadiéndole un valor correspondiente y filtrando en función de las necesidades actuales.
@@ -148,12 +148,12 @@ En nuestro caso, filtraremos en función del tipo de documento de los pedidos.
 
 ------------------------------------------------------------------
 
-## Creación de un nuevo proyecto Spring Boot
+## Creación de un nuevo proyecto Spring Boot { #creating-a-new-spring-boot-project }
 
 Ahora que hemos declarado la proyección, los campos, el repositorio y las búsquedas en Etendo Classic, necesitaremos crear un nuevo proyecto Spring para hacer uso de estos recursos JPA que acabamos de crear.
 A continuación, encontrará los pasos para crear el proyecto Spring Boot y añadirlo como un módulo en Etendo RX.
 
-### Creación del proyecto
+### Creación del proyecto { #project-creation }
 
 1. Visite [**Spring Initializr**](https://start.spring.io/){target="_blank"} para iniciar la configuración de su proyecto.
 2. Rellene los siguientes detalles:
@@ -186,11 +186,11 @@ A continuación, encontrará los pasos para crear el proyecto Spring Boot y aña
 !!!info
     Recuerde crear la carpeta `com.tutorial.rxtutorial`, dentro de `modules_rx` antes de extraerlo.
 
-### Configuración del proyecto
+### Configuración del proyecto { #project-configuration }
 
 Después de crear el proyecto, necesitamos añadir cierta configuración para poder trabajar con Etendo Classic.
 
-### Modificar el archivo build.gradle
+### Modificar el archivo build.gradle { #modify-buildgradle-file }
 
 Elimine la versión de los plugins de Spring:
 
@@ -265,11 +265,11 @@ Ejecute la tarea `rx:generate.entities` para hacerlo.
 
 ------------------------------------------------------------------
 
-## Configuración de un proyecto Spring Boot
+## Configuración de un proyecto Spring Boot { #configuring-a-spring-boot-project }
 
 Ahora configuraremos el nuevo proyecto Spring Boot para definir cómo se ejecutará.
 
-### Actualización del archivo application.properties
+### Actualización del archivo application.properties { #updating-the-applicationproperties-file }
 
 Modifique su archivo `application.properties`, dentro del nuevo proyecto Spring Boot creado en los pasos anteriores, con las siguientes configuraciones:
 
@@ -283,7 +283,7 @@ token=
 
 El token está vacío, pero ahora generaremos uno nuevo.
 
-### Añadir el valor del token
+### Añadir el valor del token { #adding-the-token-value }
 
 Para generar el valor del token necesitamos seguir estos pasos:
 
@@ -344,7 +344,7 @@ Para generar el valor del token necesitamos seguir estos pasos:
 
   9. Tome el token de la respuesta y rellene la propiedad *token* en el `application.properties` del módulo del tutorial.
 
-### Añadir la anotación Component Scan a la clase Application
+### Añadir la anotación Component Scan a la clase Application { #adding-component-scan-annotation-to-the-application-class }
 
 Para escanear su aplicación en busca de componentes anotados, añada la anotación `@ComponentScan` a su clase Application con los paquetes base necesarios:
 
@@ -391,7 +391,7 @@ public class RxtutorialApplication {
 
 ------------------------------------------------------------------
 
-## Creación de un nuevo servicio Spring Boot
+## Creación de un nuevo servicio Spring Boot { #creating-a-new-spring-boot-service }
 
 En este último paso antes de lanzar el microservicio, crearemos la lógica para consumir los pedidos utilizando la proyección y todos los recursos JPA que definimos en los pasos anteriores.
 Siga las instrucciones a continuación para crear un nuevo servicio:
@@ -468,7 +468,7 @@ Siga las instrucciones a continuación para crear un nuevo servicio:
 
 ------------------------------------------------------------------
 
-## Ejecutar servicios RX
+## Ejecutar servicios RX { #run-rx-services }
 
 Para simplificar las ejecuciones de RX, dispone de una tarea de ejecución simplificada:
 
@@ -479,7 +479,7 @@ Para simplificar las ejecuciones de RX, dispone de una tarea de ejecución simpl
 !!!warning
     Recuerde configurar el servicio de Auth tal y como se describe en la página [Getting Started](../../../developer-guide/etendo-rx/getting-started.md#configure-auth-project).
 
-## Ejecutar el proyecto del tutorial
+## Ejecutar el proyecto del tutorial { #run-tutorial-project }
 
 Ahora podemos ejecutar nuestro nuevo microservicio. Para ello, ejecute la siguiente tarea:
 

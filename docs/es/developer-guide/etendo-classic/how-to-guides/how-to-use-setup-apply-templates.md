@@ -8,9 +8,9 @@ tags:
   - Plantillas
 ---
 
-# Cómo usar Setup Apply Templates
+# Cómo usar Setup Apply Templates { #how-to-use-setup-apply-templates }
 
-## Visión general
+## Visión general { #overview }
 
 La tarea de Gradle `setup.applyTemplates` permite configurar rápidamente un proyecto de Etendo usando plantillas predefinidas o personalizadas. Las plantillas son archivos que contienen propiedades, dependencias y módulos que se aplican automáticamente a tu proyecto, agilizando tanto la configuración inicial como las configuraciones específicas por entorno.
 
@@ -18,16 +18,16 @@ El plugin incluye dos plantillas integradas: **local** (para desarrollo local) y
 
 Esta guía explica cómo usar la tarea, las plantillas disponibles, el formato de plantilla, el soporte de placeholders y cómo crear plantillas personalizadas.
 
-## Requisitos previos
+## Requisitos previos { #prerequisites }
 
 - Un proyecto de Etendo con el plugin de Gradle instalado.
 - El proyecto no debería tener ya una **Base de datos** configurada. Si la tiene, usa el flag `--force` para sobrescribir esta comprobación.
 
-## Uso
+## Uso { #usage }
 
 La tarea puede ejecutarse en cuatro modos diferentes: selección interactiva, plantilla incluida, archivo local o URL remota.
 
-### Modo interactivo
+### Modo interactivo { #interactive-mode }
 
 Cuando no se proporcionan opciones, la tarea muestra un menú interactivo para seleccionar entre las plantillas incluidas disponibles:
 
@@ -52,7 +52,7 @@ Salida:
   >> Enter your selection (1-2):
 ```
 
-### Aplicar una plantilla incluida
+### Aplicar una plantilla incluida { #apply-a-bundled-template }
 
 Usa la opción `--template` para aplicar una de las plantillas incluidas con el plugin:
 
@@ -60,7 +60,7 @@ Usa la opción `--template` para aplicar una de las plantillas incluidas con el 
 ./gradlew setup.applyTemplates --template=local
 ```
 
-### Aplicar una plantilla desde un archivo local
+### Aplicar una plantilla desde un archivo local { #apply-a-template-from-a-local-file }
 
 Usa la opción `--file` para aplicar una plantilla almacenada en tu sistema de archivos local:
 
@@ -68,7 +68,7 @@ Usa la opción `--file` para aplicar una plantilla almacenada en tu sistema de a
 ./gradlew setup.applyTemplates --file=/path/to/custom.template
 ```
 
-### Aplicar una plantilla desde una URL remota
+### Aplicar una plantilla desde una URL remota { #apply-a-template-from-a-remote-url }
 
 Usa la opción `--url` para descargar y aplicar una plantilla desde una ubicación remota:
 
@@ -76,7 +76,7 @@ Usa la opción `--url` para descargar y aplicar una plantilla desde una ubicaci�
 ./gradlew setup.applyTemplates --url=https://example.com/templates/my-setup.template
 ```
 
-### Modo forzado
+### Modo forzado { #force-mode }
 
 Por defecto, la tarea comprueba si ya existe una **Base de datos** para el proyecto. Si existe, la tarea se aborta para evitar modificaciones no deseadas. Para omitir esta comprobación, usa el flag `--force`:
 
@@ -87,7 +87,7 @@ Por defecto, la tarea comprueba si ya existe una **Base de datos** para el proye
 !!!warning
     Usar `--force` omite la validación del entorno. Asegúrate de entender las implicaciones antes de aplicar una plantilla a un proyecto ya configurado.
 
-## Opciones disponibles
+## Opciones disponibles { #available-options }
 
 | Opción | Descripción | Ejemplo |
 |---|---|---|
@@ -96,9 +96,9 @@ Por defecto, la tarea comprueba si ya existe una **Base de datos** para el proye
 | `--url` | URL a un archivo `.template` remoto | `--url=https://example.com/my.template` |
 | `--force` | Omitir la comprobación de existencia de la **Base de datos** | `--force` |
 
-## Plantillas incluidas
+## Plantillas incluidas { #bundled-templates }
 
-### `local` — Desarrollo local
+### `local` — Desarrollo local { #local-local-development }
 
 Diseñada para entornos de desarrollo local. La mayoría de valores están preconfigurados con valores por defecto razonables. El único valor que requiere entrada del usuario es la **OpenAI API Key**.
 
@@ -106,7 +106,7 @@ Diseñada para entornos de desarrollo local. La mayoría de valores están preco
 ./gradlew setup.applyTemplates --template=local
 ```
 
-#### Configuración interactiva
+#### Configuración interactiva { #interactive-configuration }
 
 Al aplicarse, la tarea solicita el siguiente valor:
 
@@ -114,7 +114,7 @@ Al aplicarse, la tarea solicita el siguiente valor:
 |---|---|---|
 | 1 | OpenAI API Key | Tu clave de API de OpenAI para la integración con Copilot. La entrada se enmascara por seguridad. |
 
-### `server` — Despliegue en servidor / producción
+### `server` — Despliegue en servidor / producción { #server-server-production-deployment }
 
 Diseñada para entornos de servidor y producción. Esta plantilla usa **placeholders** que se resuelven de forma interactiva durante la ejecución: se solicita al usuario que proporcione valores específicos del entorno.
 
@@ -122,7 +122,7 @@ Diseñada para entornos de servidor y producción. Esta plantilla usa **placehol
 ./gradlew setup.applyTemplates --template=server
 ```
 
-#### Configuración interactiva
+#### Configuración interactiva { #interactive-configuration_1 }
 
 Al aplicarse, la tarea solicita los siguientes valores:
 
@@ -151,7 +151,7 @@ Al aplicarse, la tarea solicita los siguientes valores:
   >> ****
 ```
 
-#### Valores derivados
+#### Valores derivados { #derived-values }
 
 A partir de la entrada `context.url`, se derivan automáticamente los siguientes valores:
 
@@ -166,9 +166,9 @@ Estos valores derivados se usan para configurar:
 - `etendo.classic.host` → `{context.url}`
 - `next.public.app.url` → `{context.host}`
 
-## Funcionalidades avanzadas
+## Funcionalidades avanzadas { #advanced-features }
 
-### Formato de plantilla
+### Formato de plantilla { #template-format }
 
 Las plantillas usan un formato similar a INI con tres secciones: `[properties]`, `[dependencies]` y `[modules]`.
 
@@ -190,7 +190,7 @@ implementation 'com.example:library:1.0.0'
 com.etendoerp:mymodule:1.0.0
 ```
 
-#### Soporte de placeholders
+#### Soporte de placeholders { #placeholder-support }
 
 Las plantillas pueden usar **placeholders** con el formato `{placeholder.name}` dentro de los valores de propiedades. Cuando la tarea detecta placeholders, solicita automáticamente al usuario los valores y los sustituye antes de aplicar la plantilla.
 
@@ -203,7 +203,7 @@ OPENAI_API_KEY={openai.api.key}
 
 Los nombres de placeholders pueden contener letras, números, puntos y guiones bajos (p. ej., `{context.url}`, `{openai.api.key}`).
 
-#### Detalles de secciones
+#### Detalles de secciones { #section-details }
 
 ##### `[properties]`
 
@@ -234,7 +234,7 @@ Los módulos pueden especificarse en dos formatos:
 - Los **módulos de artefacto** se añaden al archivo `artifacts.list.COMPILATION.gradle`. Si ya existen, se omiten.
 - Los **módulos Git** se clonan en el directorio `modules/`. Si el directorio destino ya existe, se omite el clonado. Si no se especifica rama, la tarea intenta `main`, luego `master` y después la rama por defecto del repositorio.
 
-### Mecanismo de copia de seguridad
+### Mecanismo de copia de seguridad { #backup-mechanism }
 
 Antes de aplicar cualquier cambio, la tarea crea automáticamente copias de seguridad de los archivos que se van a modificar:
 
@@ -243,7 +243,7 @@ Antes de aplicar cualquier cambio, la tarea crea automáticamente copias de segu
 
 El formato del timestamp es `yyyyMMdd_HHmmss`. Estas copias de seguridad permiten restaurar configuraciones anteriores si es necesario.
 
-### Creación de plantillas personalizadas
+### Creación de plantillas personalizadas { #creating-custom-templates }
 
 El sistema de plantillas es **extensible**: cualquier archivo `.template` añadido al directorio `src/main/resources/templates/` del plugin se descubre automáticamente y se lista en el menú interactivo. No se requieren cambios de código.
 
@@ -254,16 +254,16 @@ Para crear una plantilla personalizada:
 3. Usa la sintaxis `{placeholder.name}` para valores que deban proporcionarse de forma interactiva.
 4. Aplícala usando la opción `--file` o `--url`, o añádela al directorio de recursos para su descubrimiento automático.
 
-#### Ejemplo: plantilla personalizada con placeholders
+#### Ejemplo: plantilla personalizada con placeholders { #example-custom-template-with-placeholders }
 
 ```properties title="staging.template"
 [properties]
-## Base de datos
+## Base de datos { #database }
 bbdd.driver=org.postgresql.Driver
 bbdd.url=jdbc:postgresql://{db.host}:5432/{db.name}
 context.name={app.context}
 
-## Entorno
+## Entorno { #environment }
 environment=staging
 log.level=INFO
 
@@ -283,18 +283,18 @@ Aplicarla:
 !!!info
     Las plantillas personalizadas cargadas mediante `--file` o `--url` que contengan placeholders también activarán el prompt interactivo. Sin embargo, solo los placeholders que coincidan con las definiciones de prompt integradas mostrarán mensajes descriptivos; el resto usará un prompt genérico.
 
-### Integración CI/CD
+### Integración CI/CD { #cicd-integration }
 
 La tarea `setup.applyTemplates` puede usarse en pipelines de CI/CD. Como los prompts interactivos requieren entrada del usuario, usa la plantilla `local` o una plantilla personalizada sin placeholders en contextos automatizados.
 
-#### Ejemplo: GitHub Actions
+#### Ejemplo: GitHub Actions { #example-github-actions }
 
 ```yaml title=".github/workflows/setup.yml"
 - name: Apply Etendo template
   run: ./gradlew setup.applyTemplates --template=local --force
 ```
 
-#### Ejemplo: plantilla remota en CI
+#### Ejemplo: plantilla remota en CI { #example-remote-template-in-ci }
 
 ```bash title="Terminal"
 ./gradlew setup.applyTemplates --url=$TEMPLATE_URL --force
@@ -303,7 +303,7 @@ La tarea `setup.applyTemplates` puede usarse en pipelines de CI/CD. Como los pro
 !!!info
     Usa siempre el flag `--force` en entornos CI/CD donde el estado de la **Base de datos** puede variar entre ejecuciones. Evita usar la plantilla `server` en CI/CD, ya que requiere entrada interactiva.
 
-### Flujo de ejecución
+### Flujo de ejecución { #execution-flow }
 
 Cuando se ejecuta la tarea, sigue esta secuencia:
 
@@ -314,7 +314,7 @@ Cuando se ejecuta la tarea, sigue esta secuencia:
 5. **Aplicación de plantilla** — Aplica propiedades (con separadores de sección), dependencias y módulos desde la plantilla.
 6. **Ejecución de setup** — Ejecuta `./gradlew setup` automáticamente para aplicar los cambios de configuración.
 
-#### Ejemplo de salida
+#### Ejemplo de salida { #example-output }
 
 ```text
 Applying template: local
@@ -338,7 +338,7 @@ Template 'local' applied successfully
 !!!note
     Los valores sensibles (claves API, tokens, contraseñas) se enmascaran automáticamente en la salida de consola.
 
-## Resolución de problemas
+## Resolución de problemas { #troubleshooting }
 
 | Problema | Causa | Solución |
 |---|---|---|

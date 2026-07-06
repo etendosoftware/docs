@@ -8,20 +8,20 @@ tags:
 status: beta
 ---
 
-#  Adjuntos
+# Adjuntos { #attachments }
 
-##  Visión general
+## Visión general { #overview }
 
 !!! example  "IMPORTANTE: ESTA ES UNA VERSIÓN BETA"
     Esta página está en desarrollo activo y puede contener **funcionalidades inestables o incompletas**. Úsela **bajo su propia responsabilidad**.
 
 Etendo tiene un modelo de adjuntos integrado en el que puede adjuntar cualquier número de registros a un registro en particular, como Pedido de venta, Remito, Facturas, etc. Todos los adjuntos pueden descargarse o eliminarse desde el propio registro.
 
-##  API para obtener adjuntos
+## API para obtener adjuntos { #api-for-fetching-attachments }
 
 Hay 2 API que obtienen el directorio de un adjunto y también obtienen el directorio donde debe almacenarse un nuevo adjunto.
 
-###  API para obtener adjuntos existentes
+### API para obtener adjuntos existentes { #api-for-fetching-existing-attachments }
 
 El adjunto puede obtenerse mediante un método de API en TabAttachments. El método **TabAttachments.getAttachmentDirectory** puede utilizarse para obtener un adjunto en particular. Los argumentos que deben pasarse son:
 
@@ -39,7 +39,7 @@ String attachmentDirectory = TabAttachments.getAttachmentDirectory("259","0F3A10
 
 La API también gestiona el caso en el que el adjunto se almacena usando el modelo anterior de `tableId`- `recordId`.
 
-###  API para obtener el directorio para guardar nuevos adjuntos
+### API para obtener el directorio para guardar nuevos adjuntos { #api-to-fetch-directory-to-save-new-attachments }
 
 Al guardar nuevos adjuntos, el método **TabAttachments.getAttachmentDirectoryForNewAttachments** puede utilizarse para obtener el directorio en el que debe almacenarse el adjunto. Los argumentos que deben pasarse son:
 
@@ -48,7 +48,7 @@ Al guardar nuevos adjuntos, el método **TabAttachments.getAttachmentDirectoryFo
 
 El valor devuelto es el directorio para guardar el `record.Note` que el directorio devuelto es relativo al directorio de adjuntos de Etendo.
 
-##  Migración de adjuntos del modelo anterior al modelo mejorado
+## Migración de adjuntos del modelo anterior al modelo mejorado { #migrating-attachments-from-earlier-model-to-improved-model }
 
 Los adjuntos existentes que siguen el modelo anterior pueden migrarse al último modelo mejorado usando una tarea ant `migrate.attachments`.
 

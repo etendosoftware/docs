@@ -11,14 +11,14 @@ tags:
 
 :material-store: Etendo Marketplace:  [Bundle de Etendo BI](https://marketplace.etendo.cloud/#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}
 
-## Visión general
+## Visión general { #overview }
 El Bundle de Etendo BI incluye funcionalidades que conectan Etendo con Power BI.
 
-## Traducción
+## Traducción { #translations }
 
-## Módulo
+## Módulo { #modules }
 
-### Módulo de inclusión / exclusión de Etendo BI
+### Módulo de inclusión / exclusión de Etendo BI { #etendo-bi-inclusion-exclusion-module }
 
 :octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion`
 
@@ -29,7 +29,7 @@ Este módulo permite a los usuarios personalizar y configurar la información y 
 !!! info
     Para más información, visite la [Guía de usuario de configuración de inclusión/exclusión de Etendo BI](../../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md).
 
-### Módulo conector de Etendo BI
+### Módulo conector de Etendo BI { #etendo-bi-connector-module }
 
 :octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
 
@@ -42,7 +42,7 @@ Se debe configurar un proceso en segundo plano que cree archivos CSV que se carg
 !!! info
     Para más información, visite la [Guía del desarrollador del Módulo conector de Etendo BI](../../../../../developer-guide/etendo-classic/bundles/etendo-bi-extensions.md#etendo-bi-connector).
 
-### Consultas base para Etendo BI 
+### Consultas base para Etendo BI { #base-queries-for-etendo-bi }
 
 :octicons-package-16: Javapackage: `com.etendoerp.powerbi.queries`
 
