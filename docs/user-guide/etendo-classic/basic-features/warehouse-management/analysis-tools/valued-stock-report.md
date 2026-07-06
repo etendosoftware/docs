@@ -1,11 +1,12 @@
 ---
 title: Valued Stock Report
+
 tags:
     - Valued Stock
     - Inventory
     - Warehouse Management
-    - Reports
-    - Inventory Analysis
+    - Cost Analysis
+    - Financial Reporting
 ---
 
 # Valued Stock Report
@@ -14,66 +15,87 @@ tags:
 
 ## Overview
 
-Valued Stock Report shows the stock for a particular warehouse as well as the value of the stock.
+The **Valued Stock Report** provides a comprehensive view of the inventory held in each warehouse along with its monetary value. It is an essential tool for understanding how much capital is tied up in stock, supporting key business processes such as:
 
-The cost is calculated as a sum of the cost of each material transaction of the product in the warehouse. The cost of the product transactions is calculated by the Costing Server process.
+- **Financial reporting**: Determining the total value of inventory for balance sheets and period-end closing.
+- **Accounting reconciliation**: Comparing stock valuations against general ledger entries to identify discrepancies.
+- **Cost analysis**: Evaluating unit costs across products and warehouses to support purchasing and pricing decisions.
+- **Multi-warehouse visibility**: Reviewing stock values across multiple warehouses, either consolidated at the organization level or broken down by individual warehouse.
 
-## Parameters Window
+The valuation is calculated by summing the cost of every [material transaction](../transactions/goods-transaction.md) for each product in the warehouse. Transaction costs are determined by the [Costing Server](../getting-started.md) process.
 
-![Valued Stock Report Parameters Window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png)
+## Primary Filters
 
+<figure markdown="span">
+  ![Valued Stock Report parameters window](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-1.png)
+  <figcaption>Valued Stock Report parameters window</figcaption>
+</figure>
 
+Before generating the report, configure the following parameters:
 
--   **Organization**: This field allows the user to select among  Organizations of type "Legal with Accounting" and "Generic".
--   **Warehouse**: If the selected organization is "Generic", then lists all warehouses that belong to it, else if the organization is "Legal with accounting" then no warehouse is displayed to be selected.
--   **Date**: The report is going to show information up to the selected date.
--   **Consolidated Warehouse**: If checked the information of the stock will be consolidated at Organization Level, otherwise, the information will be broken down by Warehouse.
--   **Product Category**: Allows to show information of only the Product Category selected.
--   **Currency**: Defines currency in which all monetary values (like Cost, Valuation) of the report are shown.
+-   **Organization**: Select the organization to report on. Only organizations set up as *Legal with Accounting* (an entity that posts its own accounting entries) or *Generic* (a grouping organization without its own accounting) are available. Ask the system administrator if the organization type is unclear.
+-   **Warehouse**: When a *Generic* organization is selected, all warehouses belonging to that organization are listed. When a *Legal with Accounting* organization is selected, no specific warehouse selection is available.
+-   **Date**: The report displays inventory information up to and including this date.
+-   **Consolidated Warehouse**: When checked, stock information is consolidated at the organization level. When unchecked, the report shows a breakdown by individual warehouse.
+-   **Product Category**: Optionally filter the report to show only products belonging to a specific [category](../../master-data-management/product-setup/product-category.md).
+-   **Currency**: Sets the [currency](../../general-setup/application/currency.md) in which all monetary values (such as cost and valuation) are displayed.
 
 !!! warning
-    Please note that Conversion Rate to the report Currency should be specified for the report to work.
-
-## Output Window
-
-![Valued Stock Report Output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png)
+    A [conversion rate](../../general-setup/application/conversion-rates.md) to the selected report currency must be defined. If this rate is missing, the report may show incorrect or zero values instead of an error message. Verify the conversion rate is set up before trusting the results.
 
 
--   **Product**: Name of the Product.
--   **Quantity**: Stock of the Product on the selected date.
--   **Unit** : Unit in which the stock is measured.
--   **Unit Cost**: Cost of each particular unit. It is the result of dividing the Valuation between the Stock.
--   **Valuation**: Valuation of the Stock. It is calculated by adding up all the valuations of each transaction that has happened in the Warehouse.
--   **Actual Average/Standard Algorithm Cost**: Current Average/Standard Cost, the latest calculation of its value.
--   **Actual Average/Standard Algorithm Valuation**: Valuation of the Stock based on the Actual Average/Standard Cost. It is the result of multiplying the Stock by the Actual Cost.
 
-## Persisted Information
+## View Results
 
-This step is not necessary in order to launch the Report. However, if there are performance problems, this can help to greatly improve the performance of the Report.
+<figure markdown="span">
+  ![Valued Stock Report output](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-2.png)
+  <figcaption>Valued Stock Report output</figcaption>
+</figure>
 
-It is possible to aggregate information that allows for faster queries. This information is aggregated for each Closed Accounting Period, that means that accounting periods must be defined and, at least some of them, must be in a *Closed* or *Permanently Closed* Status. 
+After setting the desired parameters, click **View Results** to generate the report. Export the report using the **HTML Format** button.
 
-The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non-optimal performance of the report if it needs to retrieve plenty of information.
+The report output includes the following columns:
 
-!!! info
-    In order to use this functionality it is necessary to schedule the Background Process named *Generate Aggregated Data Background*. This can be done through the *Process Request* Window.
-
-![Valued Stock Report Process Request](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png)
+-   **Product**: The name of the product.
+-   **Quantity**: The stock quantity of the product as of the selected date.
+-   **Unit**: The unit of measure in which the stock quantity is expressed.
+-   **Unit Cost**: The cost per individual unit. It is calculated by dividing the total valuation by the stock quantity.
+-   **Valuation**: The total monetary value of the stock. It is calculated by adding the valuations of all material transactions that have occurred in the warehouse for that product.
+-   **Actual Average/Standard Algorithm Cost**: The most recently calculated Average or Standard cost for the product.
+-   **Actual Average/Standard Algorithm Valuation**: The stock valuation based on the current Average or Standard cost. It is calculated by multiplying the stock quantity by the current cost.
 
 !!! info
-    It is recommended to schedule it daily, at a moment when the System does not have plenty of activity. It will aggregate data only when a new Period is Closed or Permanently Closed.
+    **Valuation** reflects the historical cost of the transactions that built up the current stock. **Actual Average/Standard Algorithm Valuation** reflects what the stock would be worth today at the product's current costing method. These two figures can differ. Use **Valuation** to reconcile against posted accounting transactions, and use **Actual Average/Standard Algorithm Valuation** to see the stock's value at today's cost.
 
+## Improving Report Performance (Data Pre-Calculation)
 
-## Limitations
+!!! note
+    This step is **optional**. The Valued Stock Report works without it. However, if the report takes a long time to generate because the system has a large volume of transactions, enabling data pre-calculation can significantly reduce waiting times.
 
-By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information will be converted at the Period's Closing Date. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.
+The system can summarize (pre-calculate) inventory data for each closed [accounting period](../../financial-management/accounting/setup/openclose-period-control.md) in advance, so the report does not have to process every individual transaction each time it runs. For this feature to work:
 
-## Related Articles
+- Accounting periods must be defined in the [Fiscal Calendar](../../financial-management/accounting/setup/fiscal-calendar.md).
+- At least some periods must be in *Closed* or *Permanently Closed* status.
 
-[:material-file-document-outline: Pareto Product Report](pareto-product-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Stock Report](stock-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Material Transaction Report](material-transaction-report.md){ .md-button .md-button--primary }
-[:material-file-document-outline: Warehouse Management Getting Started](../getting-started.md){ .md-button .md-button--primary }
+!!! info
+    To enable this feature, schedule the background process named *Generate Aggregated Data Background* through the [Process Request](../../general-setup/process-scheduling/process-request.md) window.
+
+The pre-calculation covers all transactions up to the most recent closed period. Transactions occurring after that period are still calculated in real time. If there is a long span of open periods with many transactions, the report may still experience slower performance.
+
+<figure markdown="span">
+  ![Process Request window configured for the data pre-calculation process](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/valued-stock-report/valued-stock-report-3.png)
+  <figcaption>Process Request window configured for the data pre-calculation process</figcaption>
+</figure>
+
+!!! info
+    It is recommended to schedule this process to run daily during a period of low system activity. The process only generates new pre-calculated data when an additional period has been closed or permanently closed since the last run.
+
+!!! warning "Limitations"
+    When the system pre-calculates data for a closed period, it combines all transactions in that period into a single summary. The original date of each individual transaction is not kept.
+
+    **What this means for multi-currency reports:** If the report runs in a currency different from the organization's base currency, the system converts the pre-calculated totals using the exchange rate on the period's closing date, not the exchange rate on the date each transaction originally occurred.
+
+    As a result, small differences in currency values may appear compared to running the report without pre-calculation enabled, where each transaction would be converted at its own date's exchange rate.
 
 ---
 
