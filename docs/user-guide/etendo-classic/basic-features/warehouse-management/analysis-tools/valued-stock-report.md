@@ -22,7 +22,7 @@ The **Valued Stock Report** provides a comprehensive view of the inventory held 
 - **Cost analysis**: Evaluating unit costs across products and warehouses to support purchasing and pricing decisions.
 - **Multi-warehouse visibility**: Reviewing stock values across multiple warehouses, either consolidated at the organization level or broken down by individual warehouse.
 
-The valuation is calculated by summing the cost of every [material transaction](../transactions.md) for each product in the warehouse. Transaction costs are determined by the [Costing Server](../getting-started.md) process.
+The valuation is calculated by summing the cost of every [material transaction](../transactions/goods-transaction.md) for each product in the warehouse. Transaction costs are determined by the [Costing Server](../getting-started.md) process.
 
 ## Primary Filters
 
@@ -37,7 +37,7 @@ Before generating the report, configure the following parameters:
 -   **Warehouse**: When a *Generic* organization is selected, all warehouses belonging to that organization are listed. When a *Legal with Accounting* organization is selected, no specific warehouse selection is available.
 -   **Date**: The report displays inventory information up to and including this date.
 -   **Consolidated Warehouse**: When checked, stock information is consolidated at the organization level. When unchecked, the report shows a breakdown by individual warehouse.
--   **Product Category**: Optionally filter the report to show only products belonging to a specific [category](../../master-data-management/product-setup.md#product-category).
+-   **Product Category**: Optionally filter the report to show only products belonging to a specific [category](../../master-data-management/product-setup/product-category.md).
 -   **Currency**: Sets the [currency](../../general-setup/application/currency.md) in which all monetary values (such as cost and valuation) are displayed.
 
 !!! warning

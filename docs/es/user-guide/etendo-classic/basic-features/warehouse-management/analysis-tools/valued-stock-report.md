@@ -22,7 +22,7 @@ El **Informe de Valuación de Existencias** proporciona una vista completa del i
 - **Análisis de costes**: evaluar los costes unitarios entre productos y almacenes para apoyar las decisiones de compra y de precios.
 - **Visibilidad multi-almacén**: revisar los valores de existencias en varios almacenes, ya sea consolidados a nivel de organización o desglosados por almacén individual.
 
-La valoración se calcula sumando el coste de cada [transacción de material](../transactions.md) de cada producto en el almacén. Los costes de las transacciones se determinan mediante el proceso [Costing Server](../getting-started.md).
+La valoración se calcula sumando el coste de cada [transacción de material](../transactions/goods-transaction.md) de cada producto en el almacén. Los costes de las transacciones se determinan mediante el proceso [Costing Server](../getting-started.md).
 
 ## Filtros primarios { #primary-filters }
 
@@ -37,7 +37,7 @@ Antes de generar el informe, configure los siguientes parámetros:
 -   **Almacén**: cuando se selecciona una organización *Generic*, se listan todos los almacenes que pertenecen a esa organización. Cuando se selecciona una organización *Legal with Accounting*, no está disponible una selección específica de almacén.
 -   **Fecha**: el informe muestra la información de inventario hasta esta fecha, inclusive.
 -   **Almacén Consolidado**: cuando se marca, la información de existencias se consolida a nivel de organización. Cuando no se marca, el informe muestra un desglose por almacén individual.
--   **Categoría de producto**: filtra opcionalmente el informe para mostrar solo los productos que pertenecen a una [categoría](../../master-data-management/product-setup.md#product-category) específica.
+-   **Categoría de producto**: filtra opcionalmente el informe para mostrar solo los productos que pertenecen a una [categoría](../../master-data-management/product-setup/product-category.md) específica.
 -   **Moneda**: establece la [moneda](../../general-setup/application/currency.md) en la que se muestran todos los valores monetarios (como el coste y la valoración).
 
 !!! warning
