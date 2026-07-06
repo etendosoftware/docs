@@ -1,18 +1,29 @@
 ---
 title: Product Movements Report
+
+tags:
+    - Product Movements
+    - Inventory
+    - Warehouse Management
+    - Reports
+    - Inventory Analysis
 ---
 
-## Product Movements Report
+# Product Movements Report
 
 :material-menu: `Application` > `Warehouse Management` > `Analysis Tools` > `Product Movements Report`
 
-Product Movements Report shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner. For each row, document number, date, description, locators and quantity are shown.
+## Overview
 
-### Parameters Window
+The **Product Movements Report** provides a consolidated view of all product movements that have taken place across your warehouses. It covers goods receipts, goods shipments, inventory movements, physical inventory adjustments, production transactions, internal consumptions, and returns, all grouped by transaction type and business partner.
 
-The outcome of this report can be filtered using movement date, product, attribute and business partner.
+This report helps warehouse managers and logistics coordinators answer key business questions such as:
 
-Additionally, the user can include or exclude these documents:
+- **What products moved in or out during a specific period?**: Track inbound and outbound flow to understand demand patterns.
+- **Which business partners are associated with each movement?**: Identify goods receipts and goods shipments at a glance.
+- **Where did products move from and to?**: See the starting and final warehouse and storage bin locations for every transaction.
+- **Are there inventory discrepancies?**: Compare physical inventory adjustments against expected stock levels to investigate variances.
+- **What is the complete movement history of a product?**: Audit the full trail of a specific product across all transaction types.
 
 For a broader understanding of warehouse operations, see [Warehouse Management Getting Started](../getting-started.md) and [Warehouse Transactions](../transactions.md).
 
@@ -40,7 +51,20 @@ After setting the desired filters, click **View Results** to generate the report
 
 ![Product Movements Report](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-1.png)
 
-### Sample Report Output
+### Report Output
+
+The report output displays movements grouped first by transaction type (for example, Incoming/Outgoing) and then by business partner. Each row represents a single product movement with the following columns:
+
+-   **Document No.**: The unique identifier of the source document (receipt, shipment, inventory count, etc.).
+-   **Date**: The date the movement was recorded.
+-   **Description**: The name or description of the product involved in the movement.
+-   **Attribute**: The product attribute value, if applicable (for example, lot number or variant).
+-   **Starting Warehouse**: The warehouse where the product originated before the movement.
+-   **Starting Location (X, Y, Z)**: The storage bin coordinates (Row, Stack, Level) in the starting warehouse.
+-   **Final Warehouse**: The warehouse where the product was received or moved to.
+-   **Final Location (X, Y, Z)**: The storage bin coordinates (Row, Stack, Level) in the final warehouse.
+-   **Exit**: Indicates whether the product left the organization (Yes/No).
+-   **Quantity**: The number of units moved, along with the unit of measure.
 
 ![Product Movements Report](../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/product-movements-report/product-movements-report-2.png)
 
