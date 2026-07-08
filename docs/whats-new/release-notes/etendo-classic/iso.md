@@ -13,6 +13,7 @@ tags:
 
 | Version | Publication Date | ISO Image |
 | --- | --- | --- |
+| [26.2.0](#2620) | 07/07/2026 | [26Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q2.0.iso) |
 | [26.1.1](#2611) | 09/04/2026 | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) |
 | [25.4.3](#2543) | 22/01/2026 | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) |
 | [25.4.0](#2540) | 29/12/2025 | [25Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.0.iso) |
@@ -31,6 +32,9 @@ tags:
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
+
+## 26.2.0
+New ISO with Etendo Classsic version 26.2.0
 
 ## 26.1.1
 New ISO with Etendo version 26.1.1. Includes the `/utils/apache-config.sh` script. For more information, visit [Configure Apache](../../../developer-guide/etendo-classic/getting-started/installation/production-server.md#8-configure-apache).
