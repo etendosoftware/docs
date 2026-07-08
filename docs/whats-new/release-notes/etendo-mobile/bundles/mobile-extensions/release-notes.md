@@ -6,7 +6,7 @@ tags:
     - Bundle
     - Versions
 ---
-:octicons-package-16: Javapackage: `com.etendoerp.classic.subapp.extensions`
+:octicons-package-16: Javapackage: `com.etendoerp.mobile.extensions`
 
 :material-store: Etendo Marketplace: [Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589){target="_blank"}
 
@@ -15,7 +15,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [4.0.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.1.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/4.1.0){target="_blank"} | 07/07/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.0.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [3.3.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.3.0){target="_blank"} | 29/12/2025 | 25.1.0 | 25.4.x | CS | :white_check_mark: |
 | [3.2.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.2.0){target="_blank"} | 03/10/2025 | 25.1.0 | 25.3.x | C | :white_check_mark: |
 | [3.1.0](https://github.com/etendosoftware/com.etendoerp.mobile.extensions/releases/tag/3.1.0){target="_blank"} | 03/07/2025 | 25.1.0 | 25.2.x | C | :white_check_mark: |

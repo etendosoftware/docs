@@ -16,7 +16,8 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [4.1.8](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.1.8){target="_blank"} | 06/07/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.2.0){target="_blank"} | 08/07/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.1.8](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.1.8){target="_blank"} | 06/07/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.1.7](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.1.7){target="_blank"} | 30/06/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.1.6](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.1.6){target="_blank"} | 13/05/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.1.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/4.1.5){target="_blank"} | 12/05/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
