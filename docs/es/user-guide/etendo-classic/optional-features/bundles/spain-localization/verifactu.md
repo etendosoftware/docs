@@ -347,6 +347,28 @@ Para aquellas facturas de venta en estado **Completado** que se generen desde pr
     Es fundamental asegurar el cumplimiento de **todas las validaciones previas necesarias** para que la factura se envíe correctamente a *Verifactu*.  
     En este flujo automático **pueden no aplicarse** validaciones previas desarrolladas, lo que podría provocar el **rechazo** de la factura por parte de *Verifactu*.
 
+### Facturas Creadas Fuera de Etendo
+
+Existen escenarios en los que la factura **no nace en Etendo**, sino que se importa desde otro sistema (otro ERP, un POS, una integración de facturación, etc.) que ya cuenta con su propio SIF y que **ya envió esa factura a *Verifactu* por su cuenta**.
+
+En ese caso, si Etendo también intentara declarar la factura a la AEAT, se estaría enviando **dos veces el mismo hecho de facturación** (una vez desde el sistema externo, otra desde Etendo), lo cual es incorrecto de cara al reglamento *Verifactu*: cada factura debe ser declarada una única vez por el SIF que la emite.
+
+Para resolver esto, el modelo de datos de Etendo incluye un campo dedicado en la factura: **Factura Emitida en SIF Externo**.
+
+:material-menu: `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, cabecera, grupo de campos **Verifactu**
+
+- **Nombre visible**: Factura Emitida en SIF Externo.
+- **Columna técnica**: `EM_Etvfac_Issued_Externally` (propiedad Java `etvfacIssuedExternally` en la entidad `Invoice`).
+- **Ubicación**: ventana **Factura (Cliente)**, cabecera, grupo de campos **Verifactu**.
+- **Tipo**: casilla de verificación (Sí/No), valor por defecto **No**.
+
+Marcar este campo en una factura le indica a Etendo que esa factura **no fue emitida por este sistema**, sino que **ya fue declarada a la AEAT por otro Sistema Informático de Facturación** (el sistema externo que la generó), por lo que **Etendo no debe volver a enviarla a *Verifactu***.
+
+!!! warning
+    En la ventana **Factura (Cliente)** este campo se muestra, pero **no es editable manualmente** por el usuario, ya que está configurado como de solo lectura en esa pestaña. Esto es intencional: no se trata de una casilla que deba marcarse "a mano" al facturar normalmente desde Etendo, sino de un valor que **debe llegar ya establecido en `Y`** en el momento en que la factura se crea, como parte del proceso de integración/importación desde el sistema externo (por ejemplo, mediante *Web Services*, API REST o un proceso de importación de datos que inserte la factura directamente con `EM_Etvfac_Issued_Externally = 'Y'`).
+
+    En otras palabras, la responsabilidad de marcar correctamente este campo es del **proceso de integración** que trae la factura a Etendo, no de un usuario funcional completando la factura desde la interfaz.
+
 ## Proceso de Anulación de Factura
 
 Según lo establecido en la normativa vigente (**RD 1007/2023**) y en las directrices de la Agencia Tributaria, el uso del sistema *Verifactu* en entornos de prueba está **restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)** durante sus fases de desarrollo.
