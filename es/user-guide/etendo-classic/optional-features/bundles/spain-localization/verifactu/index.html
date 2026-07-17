@@ -7581,6 +7581,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#facturas-creadas-fuera-de-etendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facturas Creadas Fuera de Etendo
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -17955,6 +17964,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#facturas-creadas-fuera-de-etendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facturas Creadas Fuera de Etendo
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -18676,6 +18694,24 @@ Por tanto, la utilización de esta funcionalidad requiere realizar determinados 
 <p class="admonition-title">Warning</p>
 <p>Es fundamental asegurar el cumplimiento de <strong>todas las validaciones previas necesarias</strong> para que la factura se envíe correctamente a <em>Verifactu</em>.<br>
 En este flujo automático <strong>pueden no aplicarse</strong> validaciones previas desarrolladas, lo que podría provocar el <strong>rechazo</strong> de la factura por parte de <em>Verifactu</em>.</p>
+</div>
+<h3 id="facturas-creadas-fuera-de-etendo">Facturas Creadas Fuera de Etendo</h3>
+<p>Existen escenarios en los que la factura <strong>no nace en Etendo</strong>, sino que se importa desde otro sistema (otro ERP, un POS, una integración de facturación, etc.) que ya cuenta con su propio <strong>SIF (Sistema Informático de Facturación)</strong> y que ya envió esa factura a <em>Verifactu</em> por su cuenta.</p>
+<p>En ese caso, si Etendo también intentara declarar la factura a la AEAT, se estaría enviando <strong>dos veces el mismo hecho de facturación</strong> (una vez desde el sistema externo, otra desde Etendo), lo cual es incorrecto de cara al reglamento <em>Verifactu</em>: cada factura debe ser declarada una única vez por el SIF que la emite.</p>
+<p>Para resolver esto, Etendo incluye un campo específico en la factura: <strong>Factura Emitida en SIF Externo</strong>.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión de Ventas</code> &gt; <code>Transacciones</code> &gt; <code>Factura (Cliente)</code>, cabecera, grupo de campos <strong>Verifactu</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-emitida-en-sif-externo.png" data-desc-position="bottom"><img alt="Factura Emitida en SIF Externo" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-emitida-en-sif-externo.png"></a></p>
+<ul>
+<li><strong>Nombre visible</strong>: Factura Emitida en SIF Externo.</li>
+<li><strong>Ubicación</strong>: ventana <strong>Factura (Cliente)</strong>, cabecera, grupo de campos <strong>Verifactu</strong>.</li>
+<li><strong>Tipo</strong>: check (Sí/No), valor por defecto <strong>No</strong>.</li>
+</ul>
+<p>Marcar este campo en una factura le indica a Etendo que esa factura <strong>no fue emitida por este sistema</strong>, sino que <strong>ya fue declarada a la AEAT por otro SIF</strong> (el sistema externo que la generó), por lo que <strong>Etendo no debe volver a enviarla a <em>Verifactu</em></strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>En la ventana <strong>Factura (Cliente)</strong> este campo se muestra, pero <strong>no es editable manualmente</strong> por el usuario, ya que está configurado como de solo lectura en esa pestaña. Esto es intencional: no se trata de una casilla que deba marcarse <em>a mano</em> al facturar normalmente desde Etendo, sino de un valor que debe llegar ya establecido en el momento en que la factura se crea, como parte del proceso de integración o importación que la trae desde el sistema externo.</p>
+<p>La responsabilidad de marcar correctamente este campo es del <strong>proceso de integración</strong>, no de un usuario funcional completando la factura desde la interfaz.</p>
+<p><strong>Detalle técnico</strong>: la columna técnica del campo es <code>EM_Etvfac_Issued_Externally</code> (propiedad Java <code>etvfacIssuedExternally</code> en la entidad <code>Invoice</code>). El proceso de integración, por ejemplo mediante <em>Web Services</em>, API REST o un proceso de importación de datos, debe insertar la factura con este campo en <code>Y</code>.</p>
 </div>
 <h2 id="proceso-de-anulacion-de-factura">Proceso de Anulación de Factura</h2>
 <p>Según lo establecido en la normativa vigente (<strong>RD 1007/2023</strong>) y en las directrices de la Agencia Tributaria, el uso del sistema <em>Verifactu</em> en entornos de prueba está <strong>restringido exclusivamente a fabricantes de Sistemas Informáticos de Facturación (SIF)</strong> durante sus fases de desarrollo.</p>
