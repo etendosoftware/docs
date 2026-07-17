@@ -357,6 +357,8 @@ Para resolver esto, Etendo incluye un campo específico en la factura: **Factura
 
 :material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`, cabecera, grupo de campos **Verifactu**
 
+![Factura Emitida en SIF Externo](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-emitida-en-sif-externo.png)
+
 - **Nombre visible**: Factura Emitida en SIF Externo.
 - **Ubicación**: ventana **Factura (Cliente)**, cabecera, grupo de campos **Verifactu**.
 - **Tipo**: check (Sí/No), valor por defecto **No**.
