@@ -55,53 +55,55 @@ Confirm the following before using the Bank Integration functionality:
 
 - :material-server: **Server Configuration**: Your system administrator has configured the application URL `context.url` in the Etendo server and run the setup process. Contact your IT team or implementation partner to confirm this is done.
 - :material-key: **Salt Edge API Key**: Your organization has a Salt Edge API Key. Contact [Etendo Support](../../../../../help-and-support/support-service.md) to request it.
-- :material-account: **User Configuration**: The API Key is configured in your Etendo user profile (detailed in the Setup section below).
+- :material-account: **Client Configuration**: The API Key is configured once at the Client level (detailed in the Setup section below).
 - :material-bank-outline: **Financial Accounts**: The Financial Accounts that will be linked to your bank accounts exist in Etendo.
-- :material-eye: **Button Visibility**: Confirm the logged-in user has a **PSD2 API Key** configured. The integration buttons and fields (**Connect Bank Account**, **Get Bank Statement**, **Generate Bank Payment**, etc.) are only visible when the API Key is set.
+- :material-eye: **Button Visibility**: Confirm the Client has an **API Key** configured. The integration buttons and fields (**Connect Account**, **Get Bank Statement**, **Generate Bank Payment**, etc.) are only visible when the API Key is set.
 
 ## Setup
 
 ### 1. Configure Salt Edge API Key
 
-:material-menu: `Application` > `General Setup` > `Security` > `User`
+:material-menu: `Application` > `General Setup` > `Client`
 
-As an **Administrator** or user with appropriate permissions:
+As an **Administrator**:
 
-1. Navigate to the **User** window.
-2. Select the user record that will perform bank operations.
-3. Locate the **API Key** field in the **PSD2 Bank Integration** section and enter the API Key provided by Support Service.
+1. Navigate to **Client** window.
+2. Select your Client.
+3. Locate the **Api Key** field in the **Bank Integration** field group and enter the API Key provided by Support Service.
 
-![PSD2 API Key field in the User window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
+![API Key field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
 
 !!!info
-    Each user who will perform bank synchronization or payment initiation must have their own API Key configured. The API Key is user-specific — keep it confidential.
+    The API Key is configured **once per Client** and shared by every user of that Client, including scheduled processes and Salt Edge callbacks. Individual users do not configure their own API Key.
 
 !!!warning "Button and Field Visibility"
-    All PSD2 integration buttons and fields are **only visible** when the logged-in user has a PSD2 API Key configured. This includes:
+    All Bank Integration buttons and fields are **only visible** when the current Client has an API Key configured. This includes:
     
-    - In the **Financial Account** window: the **Connect Bank Account** button, **Get Bank Statement** button, **Bank Provider** selector, **Import From Date**, **Import To Date**, and **Statement Frequency** fields.
+    - In the **Financial Account** window: the **Connect Account** button, **Get Bank Statement** button, **Bank Provider** selector, **Import From Date**, **Import To Date**, and **Statement Grouping** fields.
     - In the **Payment OUT** window: the **Generate Bank Payment** button.
     
-    If you do not see these elements, verify that the current user has a valid API Key entered in the **PSD2 API Key** field of the User window.
+    If you do not see these elements, verify that the Client has a valid API Key configured in the **Client** window.
 
 ### 2. Configure Financial Accounts { #step-2-configure-financial-accounts }
 
 :material-menu: `Financial Management` > `Receivables and Payables` > `Transactions` > `Financial Account`
 
-For each financial account you want to synchronize with a bank, open it and fill in the following fields in the **PSD2 Bank Integration** tab:
+The module supports financial accounts of type **Bank** and **Card**. The fields described below apply equally to both types.
 
-![PSD2 Bank Integration tab fields in the Financial Account window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png)
+For each financial account you want to synchronize with a bank, open it and fill in the following fields in the **Bank Integration** tab:
+
+![Bank Integration tab fields in the Financial Account window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png)
 
 | Field | Description |
 |---|---|
 | **Bank Provider** | The bank associated with this account. If set, the bank selection step is skipped when connecting (AIS) or initiating payments (PIS). Leave empty to select the bank manually each time. The provider list must be synchronized first — see Step 3. |
 | **Import From Date** | Start date for importing transactions. If left empty, the system uses the last imported bank statement date. Set this only for the initial import (e.g., beginning of fiscal year) — leave it empty afterward so imports continue automatically from where they left off. |
-| **Import To Date** | End date for importing transactions. If left empty, the system uses today's date. Leave it empty in normal operation. |
-| **Statement Frequency** | Controls how imported transactions are grouped into bank statements: **One per run** (default) creates a new statement on every import; **One per week** or **One per month** groups transactions into a single statement per period, reactivating it if already processed. Use weekly or monthly grouping when importing daily to reduce the total number of statements. |
+| **Import To Date** | End date for importing transactions. If left empty, the system uses today's date. Leave it empty in normal operation. Also leave it empty so the automatic **Get Bank Statements** process includes this account — if a date is set, the process skips that account on every scheduled run. |
+| **Statement Grouping** | Controls how imported transactions are grouped into bank statements: **Within 1 day** (default) groups transactions from the same day into a single statement; **New statement each run** creates a new statement on every import; **Within 7 days** and **Within 30 days** group transactions into a single statement per week or per month respectively, reactivating it if already processed. Use a wider grouping when importing frequently to reduce the total number of statements. |
 
 ### 3. Synchronize Bank Providers
 
-:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Synchronize Bank Providers`
+:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `Bank Integration` > `Synchronize Bank Providers`
 
 Run this process once during initial setup. Re-run it on demand if a bank provider does not appear in the list or you want to verify whether a specific bank is supported by Salt Edge. Execute the process from the menu above — no specific user is required.
 
@@ -110,15 +112,15 @@ Run this process once during initial setup. Re-run it on demand if a bank provid
 
 ## Bank Connection Flow (AIS)
 
-### Connect Bank Account
+### Connect a Bank or Card Account
 
-Once your user has the API Key configured and the financial account dates are set:
+Once the Client's API Key is configured and the financial account dates are set:
 
 !!!tip
-    Make sure your Financial Account has the **IBAN** field configured before connecting. The system uses it to help match your bank accounts correctly. If the IBAN is missing, you will see a warning message.
+    Enter the **IBAN** field on your Financial Account before connecting, if you already know it. For **Bank** accounts, the system attempts to complete this field automatically from the data returned by the bank when it is empty — see step 7 below for details.
 
-1. Open the **Financial Account** (bank) you want to connect.
-2. Click the **Connect Bank Account** button.
+1. Open the **Financial Account** (**Bank** or **Card** type) you want to connect.
+2. Click the **Connect Account** button.
 3. A **Salt Edge connection widget** will open in a popup window.
 
     ![Salt Edge bank selection widget](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-3.png)
@@ -148,10 +150,39 @@ Once your user has the API Key configured and the financial account dates are se
         - Salt Edge never stores your bank credentials
         - Etendo never has access to your bank username or password
 
-6. After successful authentication, a success page confirms the connection. The system automatically synchronizes your bank accounts — connection details appear in the **Bank Connections** tab. Close the popup and proceed to import transactions.
+6. **Select the account to connect**. 
 
-    !!!info
-        Running **Synchronize Bank Connections** manually after connecting is not required — it runs automatically.
+![Select Account](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-5.1.png)
+
+	After a successful login, Salt Edge returns the accounts it finds for that bank connection. Etendo always shows a **Select Your Bank Account** screen so you confirm which one to link to this Financial Account — this happens even when Salt Edge returns only one candidate account. You are never linked to an account automatically without this confirmation.
+
+	- The list only shows candidate accounts that match the **Type** of the Financial Account you are connecting: bank accounts for a **Bank** Financial Account, and credit cards for a **Card** Financial Account.
+	- Each option shows the account or card name together with its IBAN, or its masked card number, so you can identify the correct one.
+	- Select an option and click **Confirm**.
+
+    !!!warning
+        The process stops with an explanatory message if the system cannot find a valid account to link. This happens, for example, when no candidate account matches the expected type, when the currency does not match, or when every candidate account is already linked to another Financial Account. Resolve the issue and try again.
+
+7. After you confirm the account, Etendo completes the connection differently depending on the Financial Account **Type**:
+
+    === "Bank"
+
+        - If the **IBAN** field is empty, the system completes it automatically with the IBAN returned by the bank.
+        - Before saving it, the system validates that the IBAN is valid (checksum) and that its country code matches the **Country** already configured on the Financial Account. If **Country** is empty, the system completes it automatically from the IBAN.
+        - If this validation fails, the connection still completes, but a warning message indicates that the IBAN could not be completed automatically. Enter it manually afterward.
+        - If the Financial Account already has a manually entered **IBAN** that does not match the account you selected, the system blocks the connection with a conflict error. Verify which IBAN is correct and resolve the discrepancy before continuing.
+
+    === "Card"
+
+        - The system automatically completes the masked card number returned by the bank, for example `•••• •••• •••• 1285`.
+
+8. A success page confirms the connection. The system automatically synchronizes your bank account — connection details appear in the **Bank Connections** tab, and the following read-only fields appear in the Financial Account header:
+
+    - **Salt Edge Account ID**: the internal identifier of the account in Salt Edge.
+    - **Card Number**: the masked card number, completed only for **Card** accounts.
+    - **Bank Connection Status**: the status of the connection, also shown in the **Bank Connections** tab (see [Connection Status](#connection-status)).
+
+    Close the popup and proceed to import transactions.
 
 ### Importing Transactions
 
@@ -167,12 +198,18 @@ For importing transactions on-demand for specific accounts:
 
     ![Get Bank Statement button in the Financial Account window](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-6.png)
 
+    !!!tip "Search Recent Transactions: an alternative with real-time confirmation"
+        The Financial Account header also includes a **Search Recent Transactions** button, visible under the same conditions as **Get Bank Statement** (API Key configured and at least one active connection). It runs the same import process, but with a different behavior: the window stays open and waits until the bank confirms that the synchronization has finished — this can take up to one minute — before showing the result. Use **Get Bank Statement** for a quicker response, or **Search Recent Transactions** when you prefer to wait for the bank's confirmation before seeing the outcome.
+
 4. The system will:
     - Connect to Salt Edge.
     - Retrieve transactions within the configured date range.
     - Filter out duplicate transactions.
-    - Create or update bank statements.
+    - Create or update bank statements, naming each one after the actual date range (earliest to latest transaction date) of the imported batch, and setting the **File** field to a fixed note identifying the source (*Statements obtained from bank integration.*).
     - Create bank statement lines for each transaction.
+
+    !!!note
+        Etendo retrieves the full available transaction history from the connection and filters it locally using the **Import From Date** and **Import To Date** fields. This does not change the expected result — these fields continue to define what gets imported.
 
 5. A summary message will show the results:
     - Number of new transactions imported.
@@ -205,6 +242,9 @@ For regular, automated imports across all connected accounts:
         - For high-volume accounts: Run every few hours.
         - Consider your bank's update frequency and your business needs.
 
+    !!!tip "Per-account log detail"
+        Each run of **Get Bank Statements** logs a block for every account processed in that run, whether or not it had activity — including the account, its connection status, the result (*OK*, *ERROR*, or *skipped* with a reason), the number of transactions imported, and any relevant notes or errors. Review the **Bank Integration Logs** window (see [Monitoring and Logs](#monitoring-and-logs)) to check this detail account by account.
+
 ## Connection Management
 :material-menu: `Financial Management` > `Receivables and Payables` > `Transactions` > `Financial Account`
 
@@ -229,7 +269,7 @@ Bank connections can have different statuses:
 
 ### Syncing Bank Connections
 
-:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Synchronize Bank Connections`
+:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `Bank Integration` > `Synchronize Bank Connections`
 
 The **Synchronize Bank Connections** process allows you to manually refresh the connection information for your financial accounts.
 
@@ -315,11 +355,12 @@ Before generating bank payments, make sure the payment method assigned to the fi
 2. Go to the **Payment Method** tab.
 3. Select the payment method used for bank transfers.
 4. In the **Payment OUT** section, make sure **Automatic Withdrawn** is **disabled** (unchecked).
+5. Make sure the **Wire Transfer** checkbox is enabled for this payment method. Enable it globally in the **Payment Method** window (:material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Setup` > `Payment Method`), or as an override in this same **Payment Method** tab of the Financial Account. If the checkbox is not set here, the system uses the global value as fallback.
 
 ![Payment Method – Automatic Withdrawn disabled](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png)
 
 !!!warning
-    If **Automatic Withdrawn** is enabled, the system processes the withdrawal automatically and the **Generate Bank Payment** button does not appear on the Payment OUT record. Disable this option to allow manual bank payment initiation through Salt Edge.
+    The **Generate Bank Payment** button only appears when **Automatic Withdrawn** is **disabled** and **Wire Transfer** is **enabled** (globally or as an override on this Financial Account). If either condition is not met, the button does not appear on the Payment OUT record.
 
 ### Generating a Bank Payment
 
@@ -420,13 +461,13 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
 **Connection and API Key**
 
 ??? failure "No API Key Available"
-    - Ensure your user has the Salt Edge API Key configured.
+    - Ensure the Client has the Salt Edge API Key configured.
     - Check that the API Key is correct and active.
 
 ??? failure "Invalid or expired API Key"
     - Your API Key has expired or is no longer valid.
     - Contact your Etendo administrator or Etendo Support to obtain a new API Key.
-    - Update the API Key in the User window (**PSD2 API Key** field).
+    - Update the API Key in the **Client** window (**Api Key** field, in the **Bank Integration** field group).
 
 ??? warning "Could not get redirect link"
     - The bank connection service may be temporarily unavailable.
@@ -436,6 +477,11 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
     - Check your Import From/To Date configuration.
     - Verify that there are new transactions in your bank account and that the date range covers the expected period.
 
+??? warning "Requested date exceeds the bank's maximum supported history"
+    - Each **Bank Provider** has a maximum historical range it can actually provide (**Max Fetch Interval**). If the **Import From Date** configured on the Financial Account is older than what the bank supports, the import result includes a warning stating that the requested date exceeds the maximum supported by that bank.
+    - This warning is informational only — no action is required. The bank has no further history available.
+    - The system already imports the maximum history it can retrieve, starting from the oldest date the bank supports.
+
 ??? warning "Rate limit or service temporarily unavailable"
     - The system has exceeded the allowed number of API requests, or Salt Edge is undergoing maintenance.
     - These errors are transient — wait a few minutes and try again. Scheduled processes retry automatically.
@@ -443,7 +489,7 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
 ??? failure "Connection Status shows Disabled"
     A connection may show as **Disabled** due to authentication expiration, communication errors with Salt Edge, or temporary bank unavailability.
 
-    1. Run **Synchronize Bank Connections** (`Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Synchronize Bank Connections`) to verify the connection health.
+    1. Run **Synchronize Bank Connections** (`Financial Management` > `Receivables and Payables` > `Setup` > `Bank Integration` > `Synchronize Bank Connections`) to verify the connection health.
     2. Execute **Get Bank Statements** again to see if the issue persists.
     3. If still **Disabled**, click **Reconnect Connection** in the **Bank Connections** tab (see [Reconnecting a Bank Connection](#reconnecting-a-bank-connection)).
 
@@ -470,15 +516,15 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
     - If the redirect failed, check the **Bank Payments** tab. The payment may have been processed correctly via webhooks.
 
 !!!tip "Getting support"
-    Before contacting support, check the **PSD2 Logs** window for error details, verify your API Key, and try the **Reconnect Connection** button for connection issues. When contacting Etendo Support, include the error message, relevant log entries (including **JSON Info**), the financial account affected, and the date and time of the issue.
+    Before contacting support, check the **Bank Integration Logs** window for error details, verify your API Key, and try the **Reconnect Connection** button for connection issues. When contacting Etendo Support, include the error message, relevant log entries (including **JSON Info**), the financial account affected, and the date and time of the issue.
 
 ## Monitoring and Logs
 
 The module provides two dedicated windows for monitoring integration activity.
 
-**PSD2 Logs**
+**Bank Integration Logs**
 
-:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `PSD2 Logs`
+:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `Bank Integration` > `Bank Integration Logs`
 
 Displays all activity and error logs generated by the integration. Each entry includes:
 
@@ -496,7 +542,7 @@ Displays all activity and error logs generated by the integration. Each entry in
 
 **Bank Provider**
 
-:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `PSD2` > `Bank Provider`
+:material-menu: `Financial Management` > `Receivables and Payables` > `Setup` > `Bank Integration` > `Bank Provider`
 
 Lists all banks available through Salt Edge. Each entry shows the **Provider Code** and **Provider Name**. Run **Synchronize Bank Providers** periodically (e.g., weekly) to keep this list up to date.
 
