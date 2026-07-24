@@ -29,8 +29,6 @@ Este módulo permite a Etendo automatizar procesos clave como la generación, el
 
     - Reactivación de facturas.
     - Anulación de facturas.
-    - Eliminación de facturas, pedidos o albaranes (incluso en estado borrador).
-    - Modificación del Rango de un impuesto ya creado.
     - Configuración simultánea para un mismo emisor de:
         - *Verifactu* + *SII*.
         - *Verifactu* + *TBAI*.
@@ -218,17 +216,17 @@ Los siguientes campos son **obligatorios**:
 
 Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a *Verifactu*.
 
-### Ajustes para Facturas Rectificativas por Sustitución o F3
-Con los nuevos procedimientos de facturación introducidos por la AEAT, ya no es posible reactivar ni modificar una factura que ya haya sido emitida (completada y enviada a *Verifactu*). Para corregir errores en una factura previamente emitida, se incorpora el concepto de **Factura Rectificativa**, que se emite específicamente para corregir incidencias o rectificar datos de una factura anterior.
-Por tanto, la utilización de esta funcionalidad requiere realizar determinados ajustes de configuración para garantizar que la información registrada y enviada sea correcta.
+### Ajustes Contables para Facturas F3
+
+Una **factura F3** (*factura emitida en sustitución de facturas simplificadas facturadas y declaradas*, clave de tipo de factura `F3`) reemplaza a las facturas simplificadas que consolida. Su emisión requiere determinados ajustes de configuración para garantizar que la información contable registrada sea correcta.
 
 ### Ajustes Contables
 
-La emisión de una factura sustitutiva requiere ajustar los asientos contables, ya que los únicos datos contables que deben conservarse son los correspondientes a la factura que se crea para sustituir a la anterior.
+La emisión de una factura **F3** requiere ajustar los asientos contables, ya que los únicos datos contables que deben conservarse son los correspondientes a la factura F3 que sustituye a las anteriores.
 
 Para ello, se ha desarrollado una plantilla contable que:
 
-- Detecta la factura original relacionada.
+- Detecta la factura (o facturas) original relacionada.
 - Copia sus apuntes contables.
 - Genera los apuntes inversos (intercambiando Debe y Haber), anulando el impacto contable original.
 
@@ -257,9 +255,9 @@ En la ventana **Esquema Contable**, en la solapa **Tablas a Contabilizar**, loca
 
 ### Cobro Cero
 
-Cuando la **factura original** no ha sido cobrada, pero tiene un **plan de pagos** definido, al completar la **factura sustitutiva** el sistema genera automáticamente un **cobro cero** en la factura original.
+Cuando la **factura original** no ha sido cobrada, pero tiene un **plan de pagos** definido, al completar la **factura F3** el sistema genera automáticamente un **cobro cero** en la factura original.
 
-Este cobro se registra en la **factura original** utilizando la **cuenta contable asociada al tercero**, con el objetivo de insertar el **concepto contable** necesario y dejar la factura original sin un plan de pagos activo. De este modo, el **único plan de pagos activo** queda vinculado a la **nueva factura sustitutiva**.
+Este cobro se registra en la **factura original** utilizando la **cuenta contable asociada al tercero**, con el objetivo de insertar el **concepto contable** necesario y dejar la factura original sin un plan de pagos activo. De este modo, el **único plan de pagos activo** queda vinculado a la **nueva factura F3**.
 
 Para configurar este **concepto contable**, se debe acceder a la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Concepto Contable`, seleccionar la organización legal utilizada y, en la solapa **Contabilidad**, añadir un registro con el **esquema contable** y por último, completar el campo `Cuenta crédito` con la **cuenta asociada al tercero** utilizado.
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
@@ -268,6 +266,57 @@ Para configurar este **concepto contable**, se debe acceder a la ventana :materi
 Esta cuenta es la que figura en la ventana :material-menu: `Aplicación` > `Datos Maestros` > `Terceros`, subsolapa **Contabilidad Cliente**, en el campo `Recibos de clientes` del esquema contable utilizado.
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
 
+### Cobros Asociados
+
+Si la factura que se está reemplazando ya tiene cobros asociados, al enlazarla en la solapa **Factura Rectificativa** se mostrará una advertencia informando que se deben regularizar dichos cobros.
+
+Para tener mayor control, se puede configurar una **alerta** para recibir información sobre facturas de reemplazo que tengan cobros relacionados en sus facturas enlazadas, utilizando la siguiente consulta:
+
+```sql
+SELECT DISTINCT ON (cir.C_Invoice_ID)
+  cir.C_Invoice_ID AS referencekey_id,
+  cir.documentno AS record_id,
+  0 AS ad_role_id,
+  NULL AS ad_user_id,
+  cir.description AS description,
+  'Y' AS isActive,
+  cir.ad_org_id,
+  cir.ad_client_id,
+  now() AS created,
+  0 AS createdBy,
+  now() AS updated,
+  0 AS updatedBy
+FROM FIN_Payment_Schedule p
+JOIN FIN_Payment_ScheduleDetail d 
+  ON d.FIN_Payment_Schedule_Invoice = p.FIN_Payment_Schedule_id
+JOIN c_invoice_Reverse r 
+  ON r.reversed_c_invoice_id = p.C_Invoice_ID
+JOIN (
+  SELECT DISTINCT AD_ORG_ID, AD_GET_ORG_LE_BU(AD_ORG_ID, 'LE') AS LE_ORG_ID
+  FROM c_invoice_reverse
+) r_org ON r_org.AD_ORG_ID = r.ad_org_id
+JOIN etvfac_verifactu_config v 
+  ON v.AD_ORG_ID = r_org.LE_ORG_ID
+JOIN C_Invoice ci 
+  ON ci.C_Invoice_ID = p.C_Invoice_ID
+JOIN C_Invoice cir 
+  ON cir.C_Invoice_ID = r.C_Invoice_ID
+WHERE p.created >= v.created
+  AND ci.issotrx = 'Y'
+  AND ci.processed = 'Y'
+  AND (cir.em_etvfac_reverseinvtype = 'S' OR cir.em_etvfac_inv_type = 'F3')
+  AND EXISTS (
+    SELECT 1
+    FROM FIN_Payment_ScheduleDetail d2
+    WHERE d2.FIN_Payment_Schedule_Invoice = p.FIN_Payment_Schedule_id
+      AND d2.em_etvfac_payment_zero = 'N'
+      AND d2.FIN_Payment_Detail_ID IS NOT NULL
+  )
+```
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
+
+!!! note
+    Puede consultar más información sobre cómo crear una [Alerta](../../../basic-features/general-setup/application/alert.md)
 
 ## Proceso de Envío a Verifactu
 
@@ -322,9 +371,12 @@ Al completar la factura:
 
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/rf-adjunto.png)
 
+    !!! info "Protección frente al borrado"
+        Los adjuntos generados por *Verifactu* (como el Registro de Facturación) están **protegidos frente a su eliminación** mientras la organización esté acogida a *Verifactu*, en cumplimiento de la obligación de conservación de los registros.
+
 - Una vez generado el RF, un proceso automático (no requiere configuración previa y se activa automáticamente al instalar el módulo de *Verifactu*) se encargará de enviarlo a la **Agencia Tributaria**. Por defecto, este proceso se ejecuta cada *60 segundos*.
 
-- El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu** refrescando los datos.
+- El estado del envío puede consultarse en la solapa **Verifactu** de la factura o en la ventana **Monitor Verifactu**.
 
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/estado-envio-alta.png)
 
@@ -444,16 +496,18 @@ Para crear una factura rectificativa, debe seleccionarse uno de los siguientes t
 - `R5`: Factura rectificativa en facturas simplificadas
 
 
-#### Rectificación por diferencias
+En *Verifactu*, para saber **qué rectificación aplicar en cada caso** (disminución, aumento, impago, corrección de tipo de IVA, reemplazo completo, etc.) y qué **motivo** (`R1`–`R5`) usar, consulte la guía común [Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#facturas-rectificativas).
 
-Se informa únicamente la **variación de importes** con respecto a la factura original.
+#### Crear una factura rectificativa
+
+Se informa únicamente la **variación** respecto a la factura original.
 
 **Acción:**  
 Crear una nueva factura de venta utilizando un [tipo de documento para facturas rectificativas](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la original. Luego:
 
 1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
-2. Indicar que se trata de una **Rectificativa por Diferencias**.
-3. Enlazar la factura original en la solapa **Factura Rectificativa**.
+2. Enlazar la factura original en la solapa **Factura Rectificativa**.
+3. Introducir las líneas con la diferencia y completar la factura para su envío a *Verifactu*.
 
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-orig.png)  
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectifica-inc-rect.png)  
@@ -462,75 +516,15 @@ Crear una nueva factura de venta utilizando un [tipo de documento para facturas 
     !!! example
         En este ejemplo, la factura original declaraba 20 unidades del producto, pero en realidad se debían facturar 21. Por lo tanto, la factura rectificativa incluye una línea adicional por esa unidad faltante.
 
-#### Rectificación por Sustitución
+#### Reemplazo completo de una factura
 
-Se reemplaza por completo la factura original.
+Cuando el error obliga a **reemplazar la factura por completo** —por ejemplo, por un error de **destinatario equivocado** (otra persona o NIF distinto)— se utiliza el patrón de **reversión y reemisión**:
 
-**Acción:**  
-Crear una nueva factura de venta utilizando un [tipo de documento para facturas rectificativas](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la original. Luego:
+1. Emitir una factura rectificativa, con el **motivo que corresponda** (por ejemplo, **`R4`** cuando el error está en el destinatario), por el **100 % de la original con signo contrario**, dejando la operación original a cero.
+2. Emitir una **nueva factura normal** con los datos correctos.
 
-1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
-2. Indicar que se trata de una **Rectificativa por Sustitución**.
-3. Enlazar la factura original en la solapa **Factura Rectificativa**.
-
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-orig.png)  
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-rectificativa-sust-rect.png)  
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/contabilidad-ajustada.png)
-
-    !!! example
-        En este ejemplo, la factura original incluía un producto incorrecto. Se genera una factura rectificativa **por sustitución** con el producto correcto y se ajusta la contabilidad para reflejar la operación correctamente.
-
-#### Cobros Asociados
-
-Si la factura que se está sustituyendo ya tiene cobros asociados, al enlazarla en la solapa **Factura Rectificativa** se mostrará una advertencia informando que se deben regularizar dichos cobros.
-
-Para tener mayor control, se puede configurar una **alerta** para recibir información sobre facturas sustitutivas que tengan cobros relacionados en sus facturas enlazadas, utilizando la siguiente consulta:
-
-```sql
-SELECT DISTINCT ON (cir.C_Invoice_ID)
-  cir.C_Invoice_ID AS referencekey_id,
-  cir.documentno AS record_id,
-  0 AS ad_role_id,
-  NULL AS ad_user_id,
-  cir.description AS description,
-  'Y' AS isActive,
-  cir.ad_org_id,
-  cir.ad_client_id,
-  now() AS created,
-  0 AS createdBy,
-  now() AS updated,
-  0 AS updatedBy
-FROM FIN_Payment_Schedule p
-JOIN FIN_Payment_ScheduleDetail d 
-  ON d.FIN_Payment_Schedule_Invoice = p.FIN_Payment_Schedule_id
-JOIN c_invoice_Reverse r 
-  ON r.reversed_c_invoice_id = p.C_Invoice_ID
-JOIN (
-  SELECT DISTINCT AD_ORG_ID, AD_GET_ORG_LE_BU(AD_ORG_ID, 'LE') AS LE_ORG_ID
-  FROM c_invoice_reverse
-) r_org ON r_org.AD_ORG_ID = r.ad_org_id
-JOIN etvfac_verifactu_config v 
-  ON v.AD_ORG_ID = r_org.LE_ORG_ID
-JOIN C_Invoice ci 
-  ON ci.C_Invoice_ID = p.C_Invoice_ID
-JOIN C_Invoice cir 
-  ON cir.C_Invoice_ID = r.C_Invoice_ID
-WHERE p.created >= v.created
-  AND ci.issotrx = 'Y'
-  AND ci.processed = 'Y'
-  AND (cir.em_etvfac_reverseinvtype = 'S' OR cir.em_etvfac_inv_type = 'F3')
-  AND EXISTS (
-    SELECT 1
-    FROM FIN_Payment_ScheduleDetail d2
-    WHERE d2.FIN_Payment_Schedule_Invoice = p.FIN_Payment_Schedule_id
-      AND d2.em_etvfac_payment_zero = 'N'
-      AND d2.FIN_Payment_Detail_ID IS NOT NULL
-  )
-```
-![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
-
-!!! note
-    Puede consultar más información sobre cómo crear una [Alerta](../../../basic-features/general-setup/application/alert.md)
+!!! warning "Efecto económico, no anulación registral"
+    En el caso de un **destinatario equivocado**, este procedimiento logra el **efecto económico de un abono**, pero **no** el efecto registral de una anulación: la factura original sigue constando en *Verifactu* como un **registro de alta válido** (con su QR verificable). Consulte el detalle en [Reemplazar una factura por completo](./funcionalidades-generales-para-sifs.md#reemplazar-una-factura-por-completo-reversion-y-reemision).
 
 ### Rectificaciones desde Pedidos de Venta o Devolución de Cliente
 
@@ -553,7 +547,7 @@ Existen dos ventanas desde las cuales es posible consultar el estado de envío d
 ### Monitor Verifactu
 :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Monitor Verifactu`
 
-Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos. Se debe pulsar Refrescar Datos para obtener los últimos registros.
+Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos.
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
 
@@ -598,19 +592,6 @@ Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar
 - **Factura no encontrada en AEAT:**
   
   ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-baja.png)
-
-
-## Desinstalar el Módulo
-
-Para desinstalar el módulo y evitar futuros problemas con registros huérfanos, se debe seguir una secuencia de pasos:
-
-1. Ejecute la siguiente consulta en la base de datos del entorno
-
-  ```
-  DELETE FROM c_attachment_conf WHERE c_attachment_method_id = 'E30F0DBF1C164251B6163AA6B078F2AD';
-  ```
-
-2. Una vez finalizada correctamente la consulta, [elimine el módulo](../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md#desinstalar-módulos-uninstallmodule) siguiendo el procedimiento correspondiente al método de instalación (Sources/JARs)
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

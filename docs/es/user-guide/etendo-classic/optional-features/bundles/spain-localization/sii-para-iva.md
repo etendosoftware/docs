@@ -412,10 +412,7 @@ Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en 
 
 
 !!! info
-    No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).
- 
-
-Se validará que al crear una factura de tipo "Factura Rectificativa" "Por Diferencias", el documento de la transacción sea del tipo "Reverse".
+    Una factura rectificativa se identifica indicando **Clave Tipo Factura = "Factura Rectificativa"** y el **Motivo de la rectificación** (`R1`–`R5`). Es necesario usar un [tipo de documento marcado como rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos). Consulte el detalle en [Facturas Rectificativas de Venta](#facturas-rectificativas-de-venta).
 
 - La **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
 - O bien introducimos directamente una descripción de la operación en el campo de texto libre "**Descripción SII**".  
@@ -492,64 +489,30 @@ Finalmente, en la cabecera de la factura de venta enviada a SII de forma manual 
 
 ##### **Facturas Rectificativas de Venta**
 
-Es posible rectificar una factura de venta dada de alta en SII de forma correcta, si se produce una devolución de mercancía, descuentos posteriores a la venta (Rappels de venta) o situaciones de deuda incobrable o concurso.
+Es posible rectificar una factura de venta dada de alta en SII de forma correcta, por ejemplo si se produce una devolución de mercancía, descuentos posteriores a la venta (Rappels de venta) o situaciones de deuda incobrable o concurso.
 
-La rectificación de facturas de venta se deben gestionar y dar de alta en SII bien sea "Por Diferencias" o "Por Sustitución", tal y como se explica a continuación:
+En SII, al igual que en *Verifactu* y *TicketBAI*, una factura rectificativa se identifica por su **Clave tipo factura = Factura Rectificativa** y el **Motivo de la rectificación** (`R1`–`R5`). Se registra informando únicamente la variación respecto a la factura original.
 
-**Por Diferencias**, en este caso se registra una factura de tipo "Reverse" por el importe negativo correspondiente.
+**Cómo registrarla:**
 
-Sería el caso en el que se realizó una venta por valor de 1527.77 € que se dio de alta en SII de forma correcta y, con posterioridad, se devuelve mercancía por parte del cliente por un valor de -27.77 € (15 unidades de producto).
+1. Crear una **factura de venta** utilizando un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la de la factura original.
+2. En el grupo de campos "**AEAT SII**" indicar:
+    - **Clave tipo factura** = Factura Rectificativa
+    - **Motivo de la rectificación** = `R1`–`R5`, a seleccionar según el motivo de la rectificación.
+3. Introducir las líneas con **la variación** respecto a la factura original.
+4. Enlazar la **factura original** que se rectifica.
+5. Completar la factura y darla de **alta en SII**.
 
-En este caso, al registrar la factura rectificativa por diferencias, dentro del grupo de campos "AEAT SII" deberemos indicar la siguiente información:
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/factura-rectificativa.png)
 
-- **Clave tipo factura** = Factura Rectificativa
-- **Tipo Rectificativa** = Por Diferencias
-- **Motivo de la rectificación** = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
+Al dar de alta esa factura en SII, el fichero XML registrará automáticamente el **Tipo Factura** (`R1`–`R5`) con el importe (positivo o negativo) correspondiente a la variación.
 
-Este tipo de facturas rectificativas se deben crear con documentos del tipo "Reverse" (por ejemplo: "Reverse Sales Invoice"), e importes negativos, tal y como se muestra en la pantalla. Etendo mostrará un error en caso contrario.
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/factura-rectificativa-xml.png)
 
-![](../../../../../../assets/drive/vTuKPdCz4_8FyY4_zSO6LA157zXc_9Nr_D8zgcKv0O4rP5aKXnKOTp6T4ga6SwbHN29oEgD3MZBP_lEyZ4uTmZY43pXsiFapBmKqvowAp_z9xCeRLmituMo4UW7FG0zv2wbDhZuUvIiRR2diRP0.png)
+!!! tip "Qué rectificación usar en cada caso"
+    Para conocer **qué rectificación aplicar en cada situación** (disminución, aumento, impago total, corrección de un tipo de IVA mal aplicado, reemplazo completo de la factura mediante reversión y reemisión, o rectificar una rectificativa anterior), consulte la guía común con ejemplos resueltos: [Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#facturas-rectificativas).
 
-Al dar de Alta esa factura en SII, el fichero XML registrará de forma automática la siguiente información:
-
-- Tipo Factura = R1
-- Tipo Rectificativa = I
-- Importe total = -27.77
-
-![](../../../../../../assets/drive/SeBxMk8qhA3rmNFmPr8rDLDp0Te2HvbQ6RS9HV_BlXMUelz5MFQEFTIvC_pg7HDHeh4joNbWJekXn4gGPcPBVhqE4JWeIrEuGE-vXyWDbF0EYfTQVeXUS_9SIqTt-hIk5IGmO4BKrjnfCwV7cVs.png)
-
-**Por Sustitución**, en este caso se produce una anulación de la factura original (ya dada de alta en SII) y la creación de una nueva factura con los importes correctos.
-
-La anulación de la factura original se puede realizar a través de la opción "**Reactivar-Anular**" de Etendo. Esta acción creará una factura del tipo "Reverse" con los siguientes datos:
-
-- **Tipo de documento** = Reverse Sales Invoice
-- **Fecha de operación** = fecha de operación de la factura original
-- **Clave tipo factura** = Factura
-
-Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
-
-- Tipo Factura = F1
-- Importe total = -185.13
-
-Posteriormente, se crea la nueva factura con los importes correctos y con los siguientes datos:
-
-- **Tipo de documento** = AR Invoice (no reverse)
-- **Clave tipo factura** = Factura Rectificativa
-- **Tipo Rectificativa** = Por Sustitución
-- **Motivo de la rectificación** = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
-- **Fecha de operación** = fecha de operación de la factura original
-
-![](../../../../../../assets/drive/rdC0SMKqwDEIs85X9vxqT-gH-nz2YhzthhfKlLB_r9C21y2DwmdHFH5IAjvQSuPjMhDh68W3XBvEA1suciw55sUz01nQtcCjXQLCPLy4GM79hmE-0TnTPJWtlT9wqsIQiSjLi7NSbJQYNjLoePI.png)
-
-Al dar de Alta esta factura rectificativa por sustitución en SII, el fichero XML registrará de forma automática la siguiente información:
-
-- Tipo Factura = R1
-- Tipo Rectificativa = S
-- Importe total = 92.57
-
-![](../../../../../../assets/drive/lnYFE3_FU4bzz-1q2uHRiBxo8WEjg6PJjEZxg7iqFzPwM5kUFVzoXW7eGuF7vCCciW59Ls5jRsSI6vksPNZ6nvMYFB2yBLMgqjW6oausvB8IvBPlj3mVYTv9qAbRfhLQaTat-jaFOxSIpzrRrPw.png)
-
-Tanto en facturas rectificativas de venta por diferencias como por sustitución, el usuario deberá asignar la fecha de operación correspondiente a la factura original (devengo de la operación). Sin embargo, **en facturas rectificativas el periodo de alta en SII será el correspondiente a la fecha factura**, incorporándose a la declaración de IVA en dicho mes.
+El usuario deberá asignar la **fecha de operación** correspondiente a la factura original (devengo de la operación). Sin embargo, **en facturas rectificativas el periodo de alta en SII será el correspondiente a la fecha factura**, incorporándose a la declaración de IVA en dicho mes.
 
 ##### **Facturas de Compra**
 
@@ -886,10 +849,8 @@ Al procesar, Etendo nos informa de que se han creado las facturas correspondient
 
 Si el pedido de venta o los pedidos de venta fueran negativos, este proceso generaría facturas de tipo "AR Invoice" que tendremos que reactivar y modificar antes de dar de alta en SII:
 
-- El tipo de documento debe cambiar a un tipo "reverse" como "Reverse Sales Invoice".
-- La clave de tipo factura se debe seleccionar como "Factura Rectificativa", e introducir:
-  - el tipo de rectificativa
-  - y el motivo de la rectificación.
+- El tipo de documento debe cambiar a un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos).
+- La clave de tipo factura se debe seleccionar como "Factura Rectificativa", e introducir el **motivo de la rectificación**.
 
 ![](../../../../../../assets/drive/pwCBP_ahyxDvNz_-q3IcT0IJBo4B1r05w3AhJLrmfTGMoX9-BFL41vf4-CH6DMC_RN-pZBjBp0LlOigea-baElLEvjiaMlZt52aVaw7SmLR6EW5QwzM86iNtmfaQcygSC21OipvaKGRLLiK4v2w1YeU.png)
 
@@ -1385,93 +1346,42 @@ Este proceso se denomina "**Proceso de adaptación a SII de Facturas de Venta de
 
 La ventana "**Monitor SII**" incluye también una pestaña "**Facturas de Venta Primer Semestre 2017**" desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
 
-#### **Factura emitidas rectificativa fuera de plazo**
+#### **Factura rectificativa fuera de plazo**
 
-Factura emitida rectificativa por sustitución en un periodo posterior al de presentación de la declaración de IVA - Modelo 303, de la factura original.
+Factura rectificativa emitida en un periodo posterior al de la declaración de IVA - Modelo 303 de la factura original.
 
-La organización F&B España realiza una entrega de bienes por valor de 2420 € (IVA incluido) La operación se realiza el 2 de enero de 2018. F&B España emite la correspondiente factura de venta con fecha 2 de enero de 2022.
+La organización F&B España realiza una entrega de bienes por valor de 2.420 € (IVA incluido). La operación se realiza y la factura se expide el **2 de enero de 2022**.
 
-En este caso, y dado que el IVA se ha devengado en el periodo de enero (fecha operación 2 de enero), el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de febrero.
+Dado que el IVA se ha devengado en el periodo de enero (fecha de operación 2 de enero), el plazo límite de expedición de la factura y de su alta en SII sería el 15 de febrero. Una vez completada, se procede a su alta en SII. El XML de alta contendrá:
 
-Una vez completada la factura, se procede a su Alta en SII el día 2 de enero.
-
-El XML de alta en SII contendrá la siguiente información:
-
-Clave tipo factura = F1-Factura
-
-Importe total = 2420
-
-Fecha Factura: 02-01-2022
-
-Fecha Contable: 02-01-2022
-
-**Fecha de Operación: 02-01-2022**
-
-**Periodo SII: 01 - Enero**
-
-**Ejercicio SII: 2022**
+- Clave tipo factura = F1 - Factura
+- Importe total = 2.420
+- Fecha Factura / Fecha Contable / **Fecha de Operación** = 02-01-2022
+- **Periodo SII: 01 - Enero** — **Ejercicio SII: 2022**
 
 ![](../../../../../../assets/drive/HJdwEipVS4djsZugPA3zso45tgrG6enxXhlP_KOSpe4a9r2v8EcytimONV_AMoVyaMIE8oJ3f4oLSpzObpdoRRgJ3HsTjWRAijIB94bZdAt45OvJPcGz-rwKdw2x1ykj9oX6_eoMKw02eqNaAk01Tjs.png)
 
-El día 1 de marzo, se produce una devolución por mal estado del 20% de la mercancía con un valor de 484 € (IVA incluido) por lo que F&B España procede a la anulación de la factura original y emisión de una nueva con el importe final correcto.
+Más adelante, el **27 de julio de 2022**, se produce una devolución por mal estado del 20 % de la mercancía, por valor de 484 € (IVA incluido). F&B España emite la **factura rectificativa**, que recoge únicamente la variación:
 
-Se produce una anulación de la factura original (ya dada de alta en SII e incorporada a la declaración de IVA del mes de enero) a través de la opción "Reactivar-Anular" de Etendo. Esta acción creará una factura del tipo "Reverse" con los siguientes datos:
+- Tipo de documento = **rectificativo**
+- Clave tipo factura = **Factura Rectificativa**
+- Motivo de la rectificación = `R1 - Error fundado`
+- Importe total (diferencia) = **−484**
+- Fecha Factura / Fecha Contable = 27-07-2022
+- **Fecha de Operación: 02-01-2022** (la de la factura original, que el usuario debe seleccionar)
 
-Clave Tipo Factura = F1-Factura
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/rectificativa-fuera-plazo.png)
 
-Importe total = -2420
+Al dar de alta la rectificativa en SII, el fichero XML registrará:
 
-Tipo de documento = Reverse Sales Invoice
+- **Periodo SII: 07 - Julio** — **Ejercicio SII: 2022**
 
-Fecha Factura: 01-03-2018
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/rectificativa-fuera-plazo-xml.png)
 
-Fecha Contable: 01-03-2018
+El periodo asignado en SII **no se corresponde con la fecha de operación (enero), sino con la fecha de factura (julio)**, por lo que la rectificación **pasará a formar parte de la liquidación del impuesto del mes de julio**.
 
-**Fecha de Operación: 02-01-2018** (fecha de operación de la factura original)
-
-![](../../../../../../assets/drive/fetQO0nNF-Q3kkLURvyOFzQ46wSUEIIjymSsJCfk9GkiUMInhKjnvjWnmvgsZdi2_oM-dpdLGenWjw9a1h6OFBxj7CUAfQBzNLrTT64XL0pA6zhIrcE8hJxoOFD-KP6Uywr6ZuOKqbzsVSUCIt3J2EE.png)
-
-Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
-
-**Periodo SII: 07 - Julio**
-
-**Ejercicio SII: 2022**
-
-El periodo asignado en SII no se corresponde con la fecha de operación, si no con la Fecha Factura (julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
-
-![](../../../../../../assets/drive/qPqZ-pAmr6pO6ALY0z4_PrmOrkEnqWO5b-YqmEbVPZX3DSUQUEd36VwA5LmUZciyEqR4l70kFCR9QIv0u2VgUf-HJEWUEDJcp9mCuBe5J_sW6o8wC5PSAesUXAsH3e_0cOVbsnHg4LmSx3XFpJIQtfs.png)
-
-Posteriormente, se crea la nueva factura con los importes correctos y con los siguientes datos:
-
-Tipo de documento = AR Invoice (no reverse)
-
-Clave tipo factura = Factura Rectificativa
-
-Tipo Rectificativa = Por Sustitución
-
-Motivo de la rectificación = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
-
-Fecha Factura: 01-03-2018
-
-Fecha Contable: 01-03-2018
-
-**Fecha de Operación: 02-01-2018** (fecha de operación de la factura original que tendrá que seleccionar el usuario de forma manual)
-
-![](../../../../../../assets/drive/Ln5HvZyVHOBK-JEMdCGGj7N__H5Bzn8mAm3xqW2jRUNOpDdeOdBXNWaa6F-0lWrHDbXbVFXclkYHFqsQ5e-IJWVuo_o8871Y0TTpk7apWwr7W6lwixlux5lbKxTfBsJBHP1o1RsigQrozwyHTJSuGPk.png)
-
-Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
-
-**Periodo SII: 07 - Julio**
-
-**Ejercicio SII: 2022**
-
-![](../../../../../../assets/drive/WmCrqgr1mzfFPN73yfGGt5a6jseoeH0wUEAWYyzaOROUsZtcVEtmljTWDUh_CT6KpHmza0a2Oc6P1ZqnczOZF8COnXiEXg2_W2FiQU8vz_fgIINsqydZnwSpojBEjhBGMcJgJXFss9Ihy4eIjKWzgPo.png)
-
-Al igual que la anterior factura que anula el importe de la original, el periodo asignado en SII, no se corresponde con la fecha de operación si no con la Fecha Factura (Julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
-
-Si la emisión de una factura rectificativa, ya sea por diferencias o por sustitución, se produce en el mismo período del devengo de la operación. Es decir, la emisión de las distintas facturas (Factura original, anulación y rectificativa con motivos R1,R2,R3 Y R4) se emiten en un mismo mes, podrán liquidarse en la declaración del impuesto del mismo periodo.
-
-En el resto de casos en los que la fecha de operación de la factura original sea distinta a la emisión de las facturas correctivas posteriores, el periodo de liquidación será distinto.
+!!! note "Periodo de liquidación de la rectificativa"
+    Si la factura rectificativa se emite en el **mismo periodo** del devengo de la operación original, ambas se liquidan en la declaración del mismo periodo. Si la fecha de operación de la original y la fecha de la rectificativa caen en periodos distintos, el periodo de liquidación de la rectificativa será el de su fecha de factura.
 
 ### **Libro de Facturas Recibidas**
 
