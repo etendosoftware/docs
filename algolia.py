@@ -70,6 +70,7 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
     records = []
     base_hierarchy = {f'lvl{i}': title for i, title in enumerate(hierarchy_titles)}
     max_lvl = len(base_hierarchy) - 1
+    page_title = hierarchy_titles[-1] if hierarchy_titles else ''
 
     _strip_anchor = lambda h: re.sub(r'\s*\{[^}]*\}\s*$', '', h).strip()
     h2s = [_strip_anchor(h) for h in re.findall(r'^##\s+(.*)', markdown_content, re.MULTILINE)]
@@ -79,9 +80,9 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
     def add_records_from_content(content_chunk, base_url, hierarchy):
         title_parts = [hierarchy.get(f'lvl{i}') for i in range(7)]
         if max_lvl + 1 < len(title_parts) and title_parts[max_lvl] and title_parts[max_lvl + 1]:
-            page_title = title_parts[max_lvl].lower()
+            nav_title = title_parts[max_lvl].lower()
             h1_title = title_parts[max_lvl + 1].lower()
-            if h1_title.startswith(page_title):
+            if h1_title.startswith(nav_title):
                 title_parts[max_lvl] = None
 
         final_parts = [part for part in title_parts if part]
@@ -91,6 +92,7 @@ def create_records(markdown_content, hierarchy_titles, page_url, tags):
         group_id = base_url.split('#')[0]
         base_record = {
             'title': record_title,
+            'page_title': page_title,
             'tags': tags,
             'h2': h2s,
             'h3': h3s,
