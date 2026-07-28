@@ -32,7 +32,7 @@ El módulo de Funcionalidades Generales para SIFs (**Sistemas de Información Fi
 
 Para poder filtrar los datos del [**Informe Dimensional de Impuestos**](./overview.md#multidimensional-tax-report) por **Fecha de Operación**, se ha incorporado un nuevo campo **Fecha de Operación** dentro del grupo **Datos para Sistemas de Facturación** en las facturas. Este campo unifica las fechas equivalentes que existían en los sistemas [Verifactu](./verifactu.md), [TicketBAI](./ticketbai-batuz.md) y [SII](./sii-para-iva.md).
 
-Al instalar el módulo, cuando se crea una factura nueva, el campo se rellena automáticamente. Sin embargo, en facturas ya existentes, este campo permanecerá vacío, lo que impide que el informe dimensional muestre correctamente esos datos.
+Al crear una factura nueva, el campo **Fecha de Operación** se rellena automáticamente en cualquier vía de creación (ventana de factura, facturación desde albarán, procesos en segundo plano, servicios web/API o creación programática): por defecto toma la **fecha de la factura** y nunca queda vacío para una factura creada con normalidad. Sin embargo, en facturas ya existentes (anteriores a la actualización) este campo permanecerá vacío, lo que impide que el informe dimensional muestre correctamente esos datos; para poblarlas se utiliza el proceso descrito a continuación.
 
 Para poblar los valores del campo **Fecha de Operación** de las facturas, con los datos anteriores en las mismas provenientes de los sistemas de facturación, se recomienda utilizar el proceso **Rellenar Fechas de Operación**. 
 
