@@ -95,19 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
             article.className = "md-search-result__article md-typeset";
             article.setAttribute("data-md-score", hit.score || "0");
 
+            const displayTitle = hit.page_title || hit.title;
             const h1 = document.createElement("h1");
-            if (hit.title) {
+            if (displayTitle) {
                 const escapedQuery = escapeRegExp(query);
                 const regex = new RegExp(`\\b([^\\s]*${escapedQuery}[^\\s]*)\\b`, 'gi');
-                h1.innerHTML = hit.title.replace(regex, function(match, p1, offset) {
+                h1.innerHTML = displayTitle.replace(regex, function(match, p1, offset) {
                     return offset > 0
                         ? `<span class="custom-highlight" style="margin-left:0.2em">${match}</span>`
                         : `<span class="custom-highlight">${match}</span>`;
                 });
             } else {
-                h1.textContent = hit.title;
+                h1.textContent = displayTitle;
             }
             article.appendChild(h1);
+
+            // --- Matched section heading (only if different from the page title) ---
+            if (hit.title && hit.title !== displayTitle) {
+                const sectionTitle = document.createElement("p");
+                sectionTitle.className = "md-search-result__section-title";
+                sectionTitle.textContent = hit.title;
+                article.appendChild(sectionTitle);
+            }
 
             // --- Combine sections (h2, h3, h4) ---
             let sectionsArray = [];
