@@ -151,7 +151,7 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
 ### Customer { #customer }
 
 !!! note
-    Customer related data can be entered and configured once the **Customer** checkbox is enabled.
+    Etendo enables the **Customer** checkbox automatically when you save the header of a new Business Partner. Once saved, you can configure customer-related data in the Customer tab shown below.
 
 ![Customer tab fields including Price List, Payment Method, Payment Terms, Financial Account, and Invoice Terms](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 

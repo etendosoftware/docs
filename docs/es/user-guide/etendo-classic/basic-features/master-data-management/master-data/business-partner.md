@@ -151,7 +151,7 @@ Las solapas y subsolapas mencionadas anteriormente se describen en los siguiente
 ### Cliente { #customer }
 
 !!! note
-    Los datos relacionados con el cliente se pueden introducir y configurar una vez que se habilita la casilla **Cliente**.
+    Etendo habilita automáticamente la casilla **Cliente** cuando usted guarda la cabecera de un nuevo tercero. Una vez guardada, puede configurar los datos relacionados con el cliente en la solapa Cliente que se muestra a continuación.
 
 ![Campos de la solapa Cliente, incluidos Tarifa, Método de pago, Condiciones de pago, Cuenta financiera y Facturación](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 
