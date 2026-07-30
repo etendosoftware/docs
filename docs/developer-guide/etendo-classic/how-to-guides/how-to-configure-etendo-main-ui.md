@@ -3,6 +3,7 @@ tags:
   - How to
   - Etendo Classic
   - Main UI
+  - New UI
   - Docker
   - Configuration
 ---

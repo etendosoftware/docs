@@ -115,6 +115,14 @@
     font-size: var(--font-size-status);
 }
 
+/* Matched section heading, shown under the page title */
+.md-search-result__section-title {
+    color: var(--color-status-text);
+    font-size: var(--font-size-status);
+    font-weight: 600;
+    margin: 0.2em 0;
+}
+
 /* Highlight style for tags */
 .custom-tag-highlight {
     color: var(--color-highlight);

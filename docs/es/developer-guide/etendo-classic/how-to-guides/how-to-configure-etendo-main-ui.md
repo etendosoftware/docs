@@ -1,10 +1,12 @@
 ---
 tags:
   - How to
-  - Etendo Classic
+  - Etendo
   - Main UI
+  - New UI
+  - Nueva UI
   - Docker
-  - Configuration
+  - Configuración
 ---
 
 # Cómo Configurar la Main UI de Etendo { #how-to-configure-etendo-main-ui }

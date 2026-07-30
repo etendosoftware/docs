@@ -18,7 +18,7 @@ tags:
 
 ## Overview
 
-This page explains how to export the CRM master data (statuses and sources) as part of a development module. These operations must be performed with the `System Administrator` role. For day-to-day configuration without module export, see the [CRM Lead Management User Guide](../../../../../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md).
+This page explains how to export the CRM master data (statuses and sources) as part of a development module. These operations must be performed with the `System Administrator` role. For day-to-day configuration without module export, see the [CRM Lead Management User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/sales-extensions/crm-lead-management.md).
 
 ---
 
