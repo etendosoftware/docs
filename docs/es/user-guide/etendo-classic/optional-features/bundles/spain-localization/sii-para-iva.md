@@ -269,7 +269,7 @@ Si una factura tiene ambas descripciones "Descripción SII" y "Descripción maes
 
 Si en un pedido se informa de la "Descripción SII" y/o la "Fecha de Operación", y la correspondiente factura se crea desde dicho pedido, ambos valores del pedido se trasladan de forma automática a la factura. La "Descripción SII" y la "Fecha de Operación" del pedido tienen prioridad sobre los valores por defecto (respectivamente, la descripción del maestro marcada como "Por defecto" y la fecha de la factura), pero nunca sobre un valor propio ya introducido en la factura que sea distinto de esos valores por defecto.
 
-Si se copiara desde más de un pedido, solo se trasladaría la primera descripción.
+Si se copiara desde más de un pedido, solo se trasladarían la "Descripción SII" y la "Fecha de Operación" del primer pedido seleccionado.
 
 ### **Configuración de la Organización en RECC**
 
