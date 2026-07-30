@@ -18930,6 +18930,7 @@
 <li>se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks "<strong>Descripción factura de compra</strong>" y "<strong>Descripción factura de venta</strong>", están seleccionados.</li>
 <li>será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check "<strong>Por defecto</strong>".</li>
 </ul>
+<p>Estas descripciones se configuran a nivel de una organización concreta. Si dicha organización es una organización padre dentro de la jerarquía organizativa (por ejemplo, una entidad legal), la descripción marcada como "<strong>Por defecto</strong>" se aplica también, en cascada, a las facturas emitidas por sus organizaciones hijas.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png" data-desc-position="bottom"><img alt="" src="../../../../../../../assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png"></a></p>
 <p>Además, en las ventanas de</p>
 <ul>
@@ -18941,8 +18942,8 @@
 <p>existe otro campo de texto libre que se denomina "<strong>Descripción SII</strong>" que siempre se puede utilizar.</p>
 <p>Si en una factura seleccionamos una descripción en el campo "Descripción maestro SII", el campo "Descripción SII" heredará esa descripción para que para esa operación en concreto podamos modificar/completar dicha descripción.</p>
 <p>Si una factura tiene ambas descripciones "Descripción SII" y "Descripción maestro SII", siempre prevalece la primera, es decir, será la "Descripción SII" la que se incluya en el fichero XML de "alta" / "modificación" en SII.</p>
-<p>Si en un pedido se informa de la "Descripción SII" y la correspondiente factura se crea desde dicho pedido, la descripción introducida en el campo "Descripción SII" del pedido, se rellenará de forma automática en el campo "Descripción SII" de la factura.</p>
-<p>Si se copiara desde más de un pedido, solo se trasladaría la primera descripción.</p>
+<p>Si en un pedido se informa de la "Descripción SII" y/o la "Fecha de Operación", y la correspondiente factura se crea desde dicho pedido, ambos valores del pedido se trasladan de forma automática a la factura. La "Descripción SII" y la "Fecha de Operación" del pedido tienen prioridad sobre los valores por defecto (respectivamente, la descripción del maestro marcada como "Por defecto" y la fecha de la factura), pero nunca sobre un valor propio ya introducido en la factura que sea distinto de esos valores por defecto.</p>
+<p>Si se copiara desde más de un pedido, solo se trasladarían la "Descripción SII" y la "Fecha de Operación" del primer pedido seleccionado.</p>
 <h3 id="configuracion-de-la-organizacion-en-recc"><strong>Configuración de la Organización en RECC</strong></h3>
 <p>Si una organización se acoge al régimen del IVA de Caja, deberán seleccionarse el campo "IVA de Caja" y el campo "Criterio de caja doble" en la ventana "Organización", pestaña "Información".</p>
 <p>En este caso, tanto las facturas de compra como de venta nacionales estarán sujetas al RECC y tendrán que darse de alta como tales en SII.</p>
@@ -19051,7 +19052,7 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <li>La <strong>Descripción maestro SII</strong> de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.</li>
 <li>O bien introducimos directamente una descripción de la operación en el campo de texto libre "<strong>Descripción SII</strong>".<br>
   Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.</li>
-<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.</li>
+<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, salvo que ésta ya tenga una "Descripción SII" propia distinta de las descripciones por defecto.</li>
 <li>Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.</li>
 </ul>
 <p>Es importante recalcar que en el caso de las facturas de venta, debemos considerar dos fechas para el envío (alta) en SII:</p>
@@ -19173,7 +19174,7 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <li>La <strong>Descripción maestro SII</strong> de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso, seleccionamos una descripción del maestro.</li>
 <li>O bien introducimos directamente una descripción de la operación en el campo de texto libre "<strong>Descripción SII</strong>".<br>
   Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.</li>
-<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.</li>
+<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, salvo que ésta ya tenga una "Descripción SII" propia distinta de las descripciones por defecto.</li>
 <li>Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.</li>
 </ul>
 <p>Y además, debemos reflejar el número de factura del proveedor en el campo <strong>"Referencia del Proveedor"</strong>.</p>
@@ -19255,7 +19256,7 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <li>la <em>Descripción maestro SII</em> de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.</li>
 <li>o bien introducimos directamente una descripción de la operación en el campo de texto libre "<em>Descripción SII</em>".<br>
   Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.</li>
-<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.</li>
+<li>Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, salvo que ésta ya tenga una "Descripción SII" propia distinta de las descripciones por defecto.</li>
 <li>Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.</li>
 </ul>
 <p>Y además, debemos reflejar el número de factura del proveedor en el campo <em>"Referencia del Proveedor"</em>.</p>
@@ -19419,8 +19420,8 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <p>Las facturas de compra/venta pueden crearse desde pedidos con la opción "<strong>Crear Lineas de</strong>". Varios pedidos pueden seleccionarse para ser incluidos en una factura.</p>
 <p>Respecto de la información de SII, tenemos que tener en cuenta que:</p>
 <ul>
-<li>Si la factura de venta/compra que se está creando <strong>no tiene información en el campo "Descripción SII"</strong>, se tomará la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.</li>
-<li>La fecha <strong>de operación</strong> de la factura será por defecto la fecha de la factura y no se modificará al copiar los pedidos. El usuario tendrá que modificarla de forma manual si es diferente a la fecha de factura.</li>
+<li>Si la factura de venta/compra que se está creando no tiene una "Descripción SII" propia distinta de las descripciones por defecto, se incorporará de forma automática la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.</li>
+<li>La <strong>fecha de operación</strong> de la factura toma por defecto la fecha de la factura, pero si el primer pedido seleccionado tiene su propia fecha de operación, esta se traslada de forma automática a la factura, teniendo prioridad sobre dicho valor por defecto. El usuario solo tendrá que modificarla de forma manual si desea introducir un valor distinto.</li>
 <li>Si el <strong>primer pedido que se copia es negativo</strong> (en el caso de las facturas de venta), la factura de venta correspondiente se creará como "Factura Rectificativa", "Por diferencias", con el "Motivo de rectificación" R1, pudiendo el usuario cambiar esa información si fuera necesario, al añadir líneas de pedido adicionales positivas o negativas.</li>
 <li>Las <strong>facturas de compra creadas desde pedidos positivos</strong>, se crearán con clave tipo factura "<strong>Factura</strong>", con tipo de documento "AP Invoice".</li>
 <li>Las <strong>facturas de compra creadas desde pedidos negativos</strong>, se crearán con clave tipo factura "<strong>Factura</strong>", y el usuario debería crearlas con un tipo de documento reverse "Reverse Purchase Invoice", ya que en el caso de las facturas recibidas<br>
@@ -19430,7 +19431,7 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <p>Las facturas de compra/venta pueden crearse desde albaranes/devoluciones con la opción "<strong>Crear Lineas de</strong>". Varios albaranes/devoluciones pueden seleccionarse para ser incluidos en una factura.</p>
 <p>Respecto de la información de SII, tenemos que tener en cuenta que:</p>
 <ul>
-<li>Estos <strong>albaranes y devoluciones no incorporan información de SII</strong>, por tanto, la información de SII de la cabecera de las facturas deberá ser rellenada por el usuario, tanto la fecha de operación, como la clave de tipo factura y la descripción SII.</li>
+<li>Estos <strong>albaranes y devoluciones no incorporan información de SII</strong>. La <strong>fecha de operación</strong> se rellena automáticamente con la fecha de la factura (el usuario puede modificarla), pero la <strong>clave de tipo factura</strong> y la <strong>descripción SII</strong> de la cabecera deberán ser rellenadas por el usuario.</li>
 </ul>
 <h2 id="integridad-de-facturas-mediante-huella-digital-hmac">Integridad de facturas mediante huella digital (HMAC)</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Gestión Financiera</code> &gt; <code>Sistemas de Facturación</code> &gt; <code>Suministro Inmediato de Información (SII)</code> &gt; <code>Configuración SII</code></p>
