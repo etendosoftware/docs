@@ -250,6 +250,8 @@ Las descripciones introducidas en esta pantalla:
 - se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks "**Descripción factura de compra**" y "**Descripción factura de venta**", están seleccionados.
 - será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check "**Por defecto**".
 
+Estas descripciones se configuran a nivel de una organización concreta. Si dicha organización es una organización padre dentro de la jerarquía organizativa (por ejemplo, una entidad legal), la descripción marcada como "**Por defecto**" se aplica también, en cascada, a las facturas emitidas por sus organizaciones hijas.
+
 ![](../../../../../../assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png)
 
 Además, en las ventanas de
@@ -901,8 +903,8 @@ Las facturas de compra/venta pueden crearse desde pedidos con la opción "**Crea
 
 Respecto de la información de SII, tenemos que tener en cuenta que:
 
-- Si la factura de venta/compra que se está creando **no tiene información en el campo "Descripción SII"**, se tomará la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.
-- La fecha **de operación** de la factura será por defecto la fecha de la factura y no se modificará al copiar los pedidos. El usuario tendrá que modificarla de forma manual si es diferente a la fecha de factura.
+- Si la factura de venta/compra que se está creando no tiene una "Descripción SII" propia distinta de las descripciones por defecto, se incorporará de forma automática la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.
+- La **fecha de operación** de la factura toma por defecto la fecha de la factura, pero si el primer pedido seleccionado tiene su propia fecha de operación, esta se traslada de forma automática a la factura, teniendo prioridad sobre dicho valor por defecto. El usuario solo tendrá que modificarla de forma manual si desea introducir un valor distinto.
 - Si el **primer pedido que se copia es negativo** (en el caso de las facturas de venta), la factura de venta correspondiente se creará como "Factura Rectificativa", "Por diferencias", con el "Motivo de rectificación" R1, pudiendo el usuario cambiar esa información si fuera necesario, al añadir líneas de pedido adicionales positivas o negativas.
 - Las **facturas de compra creadas desde pedidos positivos**, se crearán con clave tipo factura "**Factura**", con tipo de documento "AP Invoice".
 - Las **facturas de compra creadas desde pedidos negativos**, se crearán con clave tipo factura "**Factura**", y el usuario debería crearlas con un tipo de documento reverse "Reverse Purchase Invoice", ya que en el caso de las facturas recibidas  
