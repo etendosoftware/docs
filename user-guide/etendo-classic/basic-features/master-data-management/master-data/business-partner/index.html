@@ -17718,9 +17718,10 @@ That credit must be converted into the new currency, so the system applies the c
 <p>For more information about this workflow, visit <a href="../../../financial-management/receivables-and-payables/transactions/financial-account/">Financial Account</a>.</p>
 </div>
 <h3 id="customer">Customer</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Customer related data can be entered and configured once the <strong>Customer</strong> checkbox is enabled.</p>
+<div class="admonition warning">
+<p class="admonition-title">Uncheck the Customer checkbox if this Business Partner is not a customer</p>
+<p>Etendo enables the <strong>Customer</strong> checkbox automatically when you save the header of a new Business Partner. Once saved, you can configure customer-related data in the Customer tab shown below.</p>
+<p>If this Business Partner is not meant to be a customer, uncheck the <strong>Customer</strong> checkbox after saving the header. If you leave it checked, Etendo may record transactions for this partner as if it were a customer instead of a vendor. For example, if a vendor refunds money to your company, Etendo could record it as a payment received from a customer instead of linking it correctly to the vendor — making your accounting records inaccurate.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png" data-desc-position="bottom"><img alt="Customer tab fields including Price List, Payment Method, Payment Terms, Financial Account, and Invoice Terms" src="../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png"></a></p>
 <p>As shown above, there is a list of relevant data to be entered for customers together with current customer balance information. You could either select any data such as Price List from a previously created list of values, or, if necessary, create it by navigating to the corresponding window, and then select it.</p>
