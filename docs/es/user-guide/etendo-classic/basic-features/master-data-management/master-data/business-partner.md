@@ -150,8 +150,10 @@ Las solapas y subsolapas mencionadas anteriormente se describen en los siguiente
 
 ### Cliente { #customer }
 
-!!! note
-    Los datos relacionados con el cliente se pueden introducir y configurar una vez que se habilita la casilla **Cliente**.
+!!! warning "Desmarque la casilla Cliente si este tercero no es un cliente"
+    Etendo habilita automáticamente la casilla **Cliente** cuando usted guarda la cabecera de un nuevo tercero. Una vez guardada, puede configurar los datos relacionados con el cliente en la solapa Cliente que se muestra a continuación.
+
+    Si este tercero no está destinado a ser un cliente, desmarque la casilla **Cliente** después de guardar la cabecera. Si la deja marcada, Etendo puede registrar las transacciones de este tercero como si fuera un cliente en lugar de un proveedor. Por ejemplo, si un proveedor reembolsa dinero a su empresa, Etendo podría registrarlo como un cobro recibido de un cliente en lugar de vincularlo correctamente con el proveedor, lo que haría que sus registros contables fueran incorrectos.
 
 ![Campos de la solapa Cliente, incluidos Tarifa, Método de pago, Condiciones de pago, Cuenta financiera y Facturación](../../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 
