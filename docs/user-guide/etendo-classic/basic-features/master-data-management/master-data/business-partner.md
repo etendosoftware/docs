@@ -150,8 +150,10 @@ The tabs and subtabs mentioned above are described in the next chapters of this 
 
 ### Customer { #customer }
 
-!!! note
+!!! warning "Uncheck the Customer checkbox if this Business Partner is not a customer"
     Etendo enables the **Customer** checkbox automatically when you save the header of a new Business Partner. Once saved, you can configure customer-related data in the Customer tab shown below.
+
+    If this Business Partner is not meant to be a customer, uncheck the **Customer** checkbox after saving the header. If you leave it checked, Etendo may record transactions for this partner as if it were a customer instead of a vendor. For example, if a vendor refunds money to your company, Etendo could record it as a payment received from a customer instead of linking it correctly to the vendor — making your accounting records inaccurate.
 
 ![Customer tab fields including Price List, Payment Method, Payment Terms, Financial Account, and Invoice Terms](../../../../../assets/user-guide/etendo-classic/basic-features/master-data-management/master-data/business-partner/business-partner-5.png)
 
