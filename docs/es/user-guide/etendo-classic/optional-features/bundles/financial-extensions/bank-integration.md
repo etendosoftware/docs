@@ -31,7 +31,7 @@ El módulo ofrece dos capacidades principales, ambas impulsadas por **[Salt Edge
         B --> C[Descargar transacciones]
         C --> D([Extracto listo<br/>para conciliación ✅])
     ```
-	
+
 - **PIS (Payment Initiation Service)**: inicie pagos a proveedores directamente desde Etendo, con la autorización gestionada a través del banco.
 
     ``` mermaid
@@ -138,11 +138,11 @@ Una vez configurada la clave API de la Entidad y establecidas las fechas de la c
 
 3. **Seleccione la cuenta a conectar**.
 
-	![Seleccionar cuenta](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-5.1.png)
+    ![Seleccionar cuenta](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-5.1.png)
 
-	Tras un inicio de sesión correcto, Salt Edge devuelve las cuentas que encuentra para esa conexión bancaria. Etendo siempre muestra una pantalla **Seleccione su cuenta bancaria** para que confirme cuál desea vincular a esta Cuenta Financiera.
+    Tras un inicio de sesión correcto, Salt Edge devuelve las cuentas que encuentra para esa conexión bancaria. Etendo siempre muestra una pantalla **Seleccione su cuenta bancaria** para que confirme cuál desea vincular a esta Cuenta Financiera.
 
-	La lista solo muestra las cuentas candidatas que coinciden con el **Tipo** de la Cuenta Financiera que está conectando (cuentas bancarias para una Cuenta Financiera de tipo **Banco**, tarjetas de crédito para una Cuenta Financiera de tipo **Tarjeta**), y cada opción muestra el nombre de la cuenta o tarjeta junto con su IBAN o número de tarjeta enmascarado para que pueda identificar la correcta. Seleccione una opción y haga clic en **Confirmar**.
+    La lista solo muestra las cuentas candidatas que coinciden con el **Tipo** de la Cuenta Financiera que está conectando (cuentas bancarias para una Cuenta Financiera de tipo **Banco**, tarjetas de crédito para una Cuenta Financiera de tipo **Tarjeta**), y cada opción muestra el nombre de la cuenta o tarjeta junto con su IBAN o número de tarjeta enmascarado para que pueda identificar la correcta. Seleccione una opción y haga clic en **Confirmar**.
 
     !!!warning
         El proceso se detiene con un mensaje explicativo si el sistema no puede encontrar una cuenta válida para vincular. Esto ocurre, por ejemplo, cuando ninguna cuenta candidata coincide con el tipo esperado, cuando la moneda no coincide, o cuando todas las cuentas candidatas ya están vinculadas a otra Cuenta Financiera. Resuelva el problema e inténtelo de nuevo.
@@ -294,12 +294,12 @@ Antes de generar pagos bancarios, asegúrese de que el método de pago asignado 
 1. Abra la **Cuenta Financiera** vinculada a la conexión bancaria, vaya a la pestaña **Método de Pago** y seleccione el método de pago utilizado para las transferencias bancarias.
 2. En la sección **Pago**, asegúrese de que **Reintegro automático en cuenta** esté **deshabilitado** (sin marcar). Esto permite que el pago se cree sin ejecutarse automáticamente, de modo que pueda ejecutarlo luego desde el botón **Generar pago bancario**.
 
-	![Método de pago con Reintegro automático en cuenta deshabilitado](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png)
+    ![Método de pago con Reintegro automático en cuenta deshabilitado](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png)
 
 3. Asegúrese de que la casilla **Transferencia bancaria** esté habilitada para este método de pago; si no lo está, el botón **Generar pago bancario** no aparecerá al momento de generar pagos. Puede habilitarla globalmente en la ventana **Método de Pago**, o como excepción en esta misma pestaña **Método de Pago** de la Cuenta Financiera.
 
-	!!!warning
-		El botón **Generar pago bancario** solo aparece cuando **Reintegro automático en cuenta** está **deshabilitado** y **Transferencia bancaria** está **habilitada** (globalmente o como excepción en esta Cuenta Financiera). Si no se cumple alguna de las dos condiciones, el botón no aparece en el registro de Pago.
+!!!warning
+    El botón **Generar pago bancario** solo aparece cuando **Reintegro automático en cuenta** está **deshabilitado** y **Transferencia bancaria** está **habilitada** (globalmente o como excepción en esta Cuenta Financiera). Si no se cumple alguna de las dos condiciones, el botón no aparece en el registro de Pago.
 
 ### Generar un pago bancario { #generating-a-bank-payment }
 
@@ -470,8 +470,8 @@ Muestra todos los bancos disponibles a través de Salt Edge. Cada entrada muestr
 ## Recursos adicionales { #additional-resources }
 
 - [Salt Edge Documentation](https://docs.saltedge.com/){target="_blank"}
-- [Financial Extensions Bundle Release Notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md)
-- [Bank Reconciliation Guide](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
+- [Notas de la versión del Financial Extensions Bundle](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md)
+- [Guía de conciliación bancaria](../../../basic-features/financial-management/receivables-and-payables/transactions/financial-account.md#reconciliations)
 
 *[AIS]: Servicio de Información de Cuentas
 *[PIS]: Servicio de Iniciación de Pagos

@@ -136,11 +136,11 @@ Once the Client's API Key is configured and the financial account dates are set:
 
 3. **Select the account to connect**.
 
-	![Select Account](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-5.1.png)
+    ![Select Account](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-5.1.png)
 
-	After a successful login, Salt Edge returns the accounts it finds for that bank connection. Etendo always shows a **Select Your Bank Account** screen so you confirm which one to link to this Financial Account.
+    After a successful login, Salt Edge returns the accounts it finds for that bank connection. Etendo always shows a **Select Your Bank Account** screen so you confirm which one to link to this Financial Account.
 
-	The list only shows candidate accounts that match the **Type** of the Financial Account you are connecting (bank accounts for a **Bank** Financial Account, credit cards for a **Card** Financial Account), and each option shows the account or card name together with its IBAN or masked card number so you can identify the correct one. Select an option and click **Confirm**.
+    The list only shows candidate accounts that match the **Type** of the Financial Account you are connecting (bank accounts for a **Bank** Financial Account, credit cards for a **Card** Financial Account), and each option shows the account or card name together with its IBAN or masked card number so you can identify the correct one. Select an option and click **Confirm**.
 
     !!!warning
         The process stops with an explanatory message if the system cannot find a valid account to link. This happens, for example, when no candidate account matches the expected type, when the currency does not match, or when every candidate account is already linked to another Financial Account. Resolve the issue and try again.
@@ -292,12 +292,12 @@ Before generating bank payments, make sure the payment method assigned to the fi
 1. Open the **Financial Account** linked to the bank connection, go to the **Payment Method** tab, and select the payment method used for bank transfers.
 2. In the **Payment OUT** section, make sure **Automatic Withdrawn** is **disabled** (unchecked). This lets the payment be created without being executed automatically, so you can execute it later from the **Generate Bank Payment** button.
 
-	![Payment Method – Automatic Withdrawn disabled](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png)
+    ![Payment Method – Automatic Withdrawn disabled](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png)
 
 3. Make sure the **Wire Transfer** checkbox is enabled for this payment method — if it is disabled, the **Generate Bank Payment** button does not appear when creating payments. You can enable it globally in the **Payment Method** window, or as an override in this same **Payment Method** tab of the Financial Account.
 
-	!!!warning
-		The **Generate Bank Payment** button only appears when **Automatic Withdrawn** is **disabled** and **Wire Transfer** is **enabled** (globally or as an override on this Financial Account). If either condition is not met, the button does not appear on the Payment OUT record.
+!!!warning
+    The **Generate Bank Payment** button only appears when **Automatic Withdrawn** is **disabled** and **Wire Transfer** is **enabled** (globally or as an override on this Financial Account). If either condition is not met, the button does not appear on the Payment OUT record.
 
 ### Generating a Bank Payment
 
