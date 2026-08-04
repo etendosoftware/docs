@@ -17,17 +17,17 @@ tags:
 
 ## Introducción
 
-Esta sección explica el contenido del nuevo módulo comercial de Etendo, "**Spain AEAT SII template**", compatible con Etendo 21Q4 y posteriores, bajo licencia comercial "**Etendo Commercial License**".
+Esta sección explica el contenido del nuevo módulo comercial de Etendo, **SII España**, compatible con *Etendo 21Q4* y posteriores, bajo licencia comercial **Etendo Commercial License**.
 
-Este módulo forma parte del bundle (paquete) de Localización para España en su versión para Etendo.
+Este módulo forma parte del paquete de Localización para España en su versión para Etendo.
 
 ## Descripción del Módulo
 
-El módulo  "Spain AEAT SII template" permite que las organizaciones puedan gestionar el Impuesto sobre el Valor Añadido y el Impuesto General Indirecto Canario de forma telemática, dentro del marco del proyecto "Suministro Inmediato de Información" (SII).
+El módulo **SII España** permite que las organizaciones puedan gestionar el Impuesto sobre el Valor Añadido y el Impuesto General Indirecto Canario de forma telemática, dentro del marco del proyecto **Suministro Inmediato de Información (SII)**.
 
 Este proyecto consiste en la gestión de los Libros registro de IVA a través de la Sede Electrónica de la Agencia Estatal de Administración Tributaria (AEAT), mediante el suministro casi inmediato de los registros de facturación. También se lleva la gestión de IGIC a través de la sede electrónica de la Agencia Tributaria Canaria.
 
-El objetivo final de este trámite online del IVA es proporcionar a las empresas información contrastada sobre su liquidación del IVA, esto es un "borrador" de su declaración del IVA, siempre que los clientes/proveedores de dichas empresas se encuentren también acogidos al SII.
+El objetivo final de este trámite online del IVA es proporcionar a las empresas información contrastada sobre su liquidación del IVA, esto es un borrador de su declaración del IVA, siempre que los clientes/proveedores de dichas empresas se encuentren también acogidos al SII.
 
 Existen dos posibilidades de envío o alta/modificación de los registros de facturas a SII:
 
@@ -35,7 +35,7 @@ Existen dos posibilidades de envío o alta/modificación de los registros de fac
 2.  a través del Formulario de alta web, que la AEAT pone a disposición de los contribuyentes.  
     En este portal se pueden consultar, modificar o dar de baja facturas ya enviadas.
 
-![](../../../../../../assets/drive/NcapLkTK0dSBkBKnjlIi4vrC9hJzMZL9ZBod26PJNUbKwihAng4l6CYr99qkDa4oF13Qu117ZzDoaMx3Fxlo1K9Xv65A3akDmFWkF0WYKZlNNU-SN0z9vcHkE8a_dZGxs05lrXEjgsv8EVRPzAQ.png)
+	![](../../../../../../assets/drive/NcapLkTK0dSBkBKnjlIi4vrC9hJzMZL9ZBod26PJNUbKwihAng4l6CYr99qkDa4oF13Qu117ZzDoaMx3Fxlo1K9Xv65A3akDmFWkF0WYKZlNNU-SN0z9vcHkE8a_dZGxs05lrXEjgsv8EVRPzAQ.png)
 
 Desde Etendo es posible enviar (dar de alta o modificar) los registros de facturas por vía telemática, opción 1 anterior, lo cual se traduce en la generación de un fichero XML con el siguiente contenido por cada envío a SII:
 
@@ -78,27 +78,28 @@ La AEAT pone a disposición del contribuyente las siguientes URLs que entendemos
 
 Al instalar este módulo, el usuario podrá comprobar que:
 
-1.  Se crea un **nuevo menú** dentro de `Gestión Financiera` > `Sistemas de Facturación`, denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
+1.  Se crea un **nuevo menú** dentro de `Gestión Financiera` > `Sistemas de Facturación`, denominado **AEAT SII**. Este nuevo menú contiene las siguientes pantallas:
+
     1.  **Configuración SII**, en la que se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a SII.
     2.  **Consulta Facturas SII**, en esta pantalla el usuario tendrá información sobre el estado de cuadre de las facturas enviadas a SII, estado de cuadre recibido de la AEAT.
     3.  **Descripciones SII**, en esta pantalla se pueden dar de alta descripciones tipo para las operaciones de compra y venta que realice la organización acogida a SII.
     4.  **Conexiones a SII**, nos muestra el estado de todas las conexiones online con la AEAT referenciadas al Código CSV (Código Seguro de Verificación), proporcionado por la AEAT en cada conexión.  
         La AEAT responde con un CSV para cada factura enviada. Si se envía un fichero XML con varias facturas, en el XML de respuesta aparecerá un CSV para cada una de ellas.
     5.  **Monitor SII**, desde la que se puede gestionar el estado de las facturas, en relación con su envío a SII, así como realizar envíos de las mismas, según su estado.
-2.  Se crean **nuevos campos y pestañas relativos a SII** en las ventanas de "**Pedidos y Facturas**", tanto de compra como de venta, con el fin de añadir la información requerida por parte de SII, respecto del "Alta"/"Modificación" del registro de las facturas.
-3.  Se genera un nuevo campo en la cabecera de las facturas denominado "**Modificada por error registral**", que permite modificar una factura dada ya de alta en SII.
-4.  Se crea un nuevo campo en la cabecera de las facturas de compra, ventana "Factura (Proveedor)", que permite recoger la "**fecha de registro contable**" al registrar las facturas recibidas.
+2.  Se crean **nuevos campos y pestañas relativos a SII** en las ventanas de **Pedidos y Facturas**, tanto de compra como de venta, con el fin de añadir la información requerida por parte de SII, respecto del "Alta"/"Modificación" del registro de las facturas.
+3.  Se genera un nuevo campo en la cabecera de las facturas denominado **Modificada por error registral**, que permite modificar una factura dada ya de alta en SII.
+4.  Se crea un nuevo campo en la cabecera de las facturas de compra, ventana **Factura (Proveedor)**, que permite recoger la **fecha de registro contable** al registrar las facturas recibidas.
 5.  Igualmente, se añaden dos botones en las ventanas de Facturas, tanto de compra como de venta, con el fin de dar de alta (**Alta en SII**) y, si fuera necesario, modificar (**Modificación en SII**) el registro de las facturas.
-6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
+6.  Se generan dos nuevos procesos en la ventana **Procesamiento de Peticiones**, denominados **Proceso de alta en SII** y **Proceso de Modificación en SII por error registral**, configurables para cada Organización o Entidad Legal.  
     Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
 
 ## Configuración
 
-Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".
+Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de **Terceros**, **Productos** e **Impuestos**.
 
-Los productos/servicios tienen que tener correctamente configurado su "Grupo/Categoría de Impuestos" (de producto o servicio).
+Los productos/servicios tienen que tener correctamente configurado su **Grupo/Categoría de Impuestos** (de producto o servicio).
 
-Los terceros (cliente/proveedores) tienen que tener correctamente configurada su "Categoría de impuestos de Tercero", si aplica, así como su "CIF/NIF" o "Clave NIF País Residencia".
+Los terceros (cliente/proveedores) tienen que tener correctamente configurada su **Categoría de impuestos de Tercero**, si aplica, así como su **CIF/NIF** o **Clave NIF País Residencia**.
 
 Además, los impuestos tienen que estar configurados correctamente, tal y como se explica en el siguiente apartado.
 
@@ -110,20 +111,20 @@ Se recomienda ejecutar el proceso [Rellenar Fechas de Operación](./funcionalida
 
 El proyecto SII amplía el contenido de los libros registro de facturas, tal y como se describe a continuación:
 
-- al enviar el registro de una factura emitida a SII, debemos indicar si esa factura está "Sujeta" a IVA, o, por el contrario, se trata de una operación no sujeta a IVA. Igualmente, las operaciones sujetas a IVA, se deben diferenciar entre "Exentas" y "No Exentas".
-- al enviar el registro de una factura recibida a SII, debemos indicar si esa factura es de "Inversión de Sujeto Pasivo" o se trata de una "Adquisición Intracomunitaria de Bienes y/o Servicios", por ejemplo.
+- al enviar el registro de una factura emitida a SII, debemos indicar si esa factura está **Sujeta** a IVA, o, por el contrario, se trata de una operación no sujeta a IVA. Igualmente, las operaciones sujetas a IVA, se deben diferenciar entre **Exentas** y **No Exentas**.
+- al enviar el registro de una factura recibida a SII, debemos indicar si esa factura es de **Inversión de Sujeto Pasivo** o se trata de una **Adquisición Intracomunitaria de Bienes y/o Servicios**, por ejemplo.
 
 !!! info
-    La utilización del módulo "Spain AEAT SII", requiere de la versión 1.2.204500 o posterior del módulo de impuestos para España, versión que ya incluye toda la configuración de impuestos requerida para el correcto funcionamiento de envío de registros de factura a SII (alta/modificación).
+    La utilización del módulo **SII España**, requiere de la versión 1.2.204500 o posterior del módulo de impuestos para España, versión que ya incluye toda la configuración de impuestos requerida para el correcto funcionamiento de envío de registros de factura a SII (alta/modificación).
 
 ### **Configuración de terceros**
 
-Todos los terceros, ya sean del tipo "Cliente" o "Proveedor/Acreedor", deben configurarse en la ventana "Terceros".
+Todos los terceros, ya sean del tipo **Cliente** o **Proveedor/Acreedor**, deben configurarse en la ventana **Terceros**.
 
 Es muy importante indicar para cada tercero:
 
 - sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos
-- su "Clave NIF País" Residencia):
+- su **Clave NIF País Residencia**:
 
 | Código | Descripción | Cuándo se usa | Ejemplo práctico |
 |---------|--------------|----------------|------------------|
@@ -141,7 +142,7 @@ Es muy importante indicar para cada tercero:
 
 **Tercero con NIF no censado**
 
-Se ha creado una nueva "Clave NIF País de Residencia", de valor 7 - No Censado.
+Se ha creado una nueva **Clave NIF País de Residencia**, de valor 7 - No Censado.
 
 Un NIF no censado es un NIF que se ha dado de baja.
 
@@ -149,7 +150,7 @@ Esta nueva clave habrá que configurarla para aquellos terceros con un NIF espa�
 
 ![](../../../../../../assets/drive/x32lggVwaGGuN2LEHAcmdiTxQkiGQmJy-C-c1aJE_PtbYs-wEPOGsmF60MeJ-dy-mCyeV5bMha-AGazmPGsm8zJNwXbnA03--9vbE9SM3kBh1NFa23UUVAm58gGNEmODILze76yjrlb8PoaCM2Q.png)
 
-Las facturas con un NIF no censado que se den de alta en SII, quedarán en un estado "Aceptado con errores".
+Las facturas con un NIF no censado que se den de alta en SII, quedarán en un estado **Aceptado con errores**.
 
 Es muy importante recalcar que la AEAT comprueba en los envíos a SII que el NIF español introducido se corresponda con el nombre/apellidos del tercero persona física (cliente/proveedor).
 
@@ -161,11 +162,11 @@ Respecto de las personas jurídicas o empresas, parece no se está realizando di
 
 **Gastos de empleado no declarables**.
 
-Los empleados de la organización que incurran en gastos a reembolsar, deben darse de alta como Terceros de tipo Empleado en la ventana "Terceros". Se les debe asociar la categoría de impuestos de tercero “No declarable SII”, con el fin de que las facturas de gasto registradas para el reembolso de los gastos, no se incluyan en SII.
+Los empleados de la organización que incurran en gastos a reembolsar, deben darse de alta como Terceros de tipo Empleado en la ventana **Terceros**. Se les debe asociar la categoría de impuestos de tercero **No declarable SII**, con el fin de que las facturas de gasto registradas para el reembolso de los gastos, no se incluyan en SII.
 
 ### **Configuración del Local Arrendado**
 
-Los locales arrendados sujetos a IVA se deben configurar en la ventana de "Producto", con al menos los siguientes datos:
+Los locales arrendados sujetos a IVA se deben configurar en la ventana de **Producto**, con al menos los siguientes datos:
 
 - **Grupo de Impuestos** = IVA Normal
 - **Local arrendado**, este campo se debe seleccionar
@@ -176,11 +177,11 @@ Los locales arrendados sujetos a IVA se deben configurar en la ventana de "Produ
   - Sin referencia catastral
 - **Referencia catastral**, en este se informa de la referencia catastral del local arrendado.
 
-Dependiendo de si el Tercero se configura con la categoría de impuestos de Tercero "Arrendamiento con retención" o "Arrendamientos sin retención", el arrendamiento del local de negocio estará o no sujeto a retención.
+Dependiendo de si el Tercero se configura con la categoría de impuestos de Tercero **Arrendamiento con retención** o **Arrendamientos sin retención**, el arrendamiento del local de negocio estará o no sujeto a retención.
 
 ### **Configuración Transmisión de Bienes Inmuebles**
 
-Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.
+Los bienes inmuebles se configuran en la ventana **Producto**, asociándolos la categoría de impuestos **IVA Normal B. Inmuebles**, por ejemplo.
 
 ### Certificado Digital
 
@@ -192,7 +193,7 @@ Para cargar o actualizar el certificado, consulte la sección [Carga de Certific
 
 :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Suministro Inmediato de Información (SII)` > `Configuración SII`
 
-En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
+En la ventana **Configuración SII** se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-sii.png)
 
@@ -231,11 +232,11 @@ Tal y como se muestra en la imagen anterior, los parámetros de configuración d
   Este proceso considera en todo caso las facturas de fecha desde la fecha acogida a SII configurada (01-07-2017).
   - Si está seleccionado, las facturas de fecha desde 01-01-2017 hasta el 30-06-2017, serán también incluidas en el proceso automático de Alta en SII.
   - Si no está seleccionado, las facturas de fecha desde 01-01-2017 hasta el 30-06-2017, no serán incluidas en el proceso de alta automático y, por tanto, habrá que enviarlas de forma manual o a través de Monitor SII, o no enviarlas como es el caso para los sujetos acogidos a REDEME.
-- **Afectada RECC**, este parámetro permite configurar el que para una Organización no acogida al "Régimen Especial del Criterio de Caja" (RECC), pero si afectada por recibir facturas de proveedores acogidos, se muestre o no la pestaña de "Cobros/ Pagos Criterio Caja" dentro de la pantalla "Monitor SII".  
-  Si la organización, llegado un punto, no se viera ya afectada por dicho régimen, podría desactivar este campo, y la pestaña "Cobros/ Pagos Criterio Caja" se dejaría de mostrar en el monitor SII.
+- **Afectada RECC**, este parámetro permite configurar el que para una Organización no acogida al Régimen Especial del Criterio de Caja (RECC), pero si afectada por recibir facturas de proveedores acogidos, se muestre o no la pestaña **Cobros/ Pagos Criterio Caja** dentro de la pantalla **Monitor SII**.  
+  Si la organización, llegado un punto, no se viera ya afectada por dicho régimen, podría desactivar este campo, y la pestaña **Cobros/ Pagos Criterio Caja** se dejaría de mostrar en el monitor SII.
 - **Sujeto inscrito en REDEME**, si se selecciona este campo, se está indicando que la organización es un sujeto pasivo inscrito en REDEME que, por tanto, no tiene obligación de enviar las facturas del primer semestre de 2017 a SII.  
   Con este campo se controla que las facturas del primer semestre de este tipo de sujetos pasivo no se puedan dar de alta en SII de forma manual, esto es, desde la venta de factura.
-- **Fecha desde visualización "Monitor SII"**, en este campo podemos introducir la fecha desde la cual se visualizarán las facturas de compra/venta y los cobros/pagos en RECC en la ventana "Monitor SII" para su alta en SII. Por ejemplo:
+- **Fecha desde visualización Monitor SII**, en este campo podemos introducir la fecha desde la cual se visualizarán las facturas de compra/venta y los cobros/pagos en RECC en la ventana **Monitor SII** para su alta en SII. Por ejemplo:
   - si una organización se acoge al SII el 01-07-2017 y no está inscrita en REDEME, la fecha a introducir en este campo será el 01-01-2017
   - si una organización se acoge al SII el 01-07-2017 y está inscrita en REDEME, la fecha a introducir en este campo será el 01-07-2017.
 
@@ -245,10 +246,10 @@ En esta ventana es posible introducir descripciones tipo para las operaciones de
 
 Las descripciones introducidas en esta pantalla:
 
-- sólo se podrán seleccionar en las facturas de compra, si la descripción está configurada como "**Descripción factura de compra**"
-- sólo se podrán seleccionar en las facturas de venta, si la descripción está configurada como "**Descripción factura de venta**"
-- se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks "**Descripción factura de compra**" y "**Descripción factura de venta**", están seleccionados.
-- será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check "**Por defecto**".
+- sólo se podrán seleccionar en las facturas de compra, si la descripción está configurada como **Descripción factura de compra**
+- sólo se podrán seleccionar en las facturas de venta, si la descripción está configurada como **Descripción factura de venta**
+- se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks **Descripción factura de compra** y **Descripción factura de venta**, están seleccionados.
+- será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check **Por defecto**.
 
 ![](../../../../../../assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png)
 
@@ -259,30 +260,30 @@ Además, en las ventanas de
 - Factura de Venta
 - Factura de Compra
 
-existe otro campo de texto libre que se denomina "**Descripción SII**" que siempre se puede utilizar.
+existe otro campo de texto libre que se denomina **Descripción SII** que siempre se puede utilizar.
 
-Si en una factura seleccionamos una descripción en el campo "Descripción maestro SII", el campo "Descripción SII" heredará esa descripción para que para esa operación en concreto podamos modificar/completar dicha descripción.
+Si en una factura seleccionamos una descripción en el campo **Descripción maestro SII**, el campo **Descripción SII** heredará esa descripción para que para esa operación en concreto podamos modificar/completar dicha descripción.
 
-Si una factura tiene ambas descripciones "Descripción SII" y "Descripción maestro SII", siempre prevalece la primera, es decir, será la "Descripción SII" la que se incluya en el fichero XML de "alta" / "modificación" en SII.
+Si una factura tiene ambas descripciones **Descripción SII** y **Descripción maestro SII**, siempre prevalece la primera, es decir, será la **Descripción SII** la que se incluya en el fichero XML de "alta" / "modificación" en SII.
 
-Si en un pedido se informa de la "Descripción SII" y la correspondiente factura se crea desde dicho pedido, la descripción introducida en el campo "Descripción SII" del pedido, se rellenará de forma automática en el campo "Descripción SII" de la factura.
+Si en un pedido se informa de la **Descripción SII** y la correspondiente factura se crea desde dicho pedido, la descripción introducida en el campo **Descripción SII** del pedido, se rellenará de forma automática en el campo **Descripción SII** de la factura.
 
 Si se copiara desde más de un pedido, solo se trasladaría la primera descripción.
 
 ### **Configuración de la Organización en RECC**
 
-Si una organización se acoge al régimen del IVA de Caja, deberán seleccionarse el campo "IVA de Caja" y el campo "Criterio de caja doble" en la ventana "Organización", pestaña "Información".
+Si una organización se acoge al régimen del IVA de Caja, deberán seleccionarse el campo **IVA de Caja** y el campo **Criterio de caja doble** en la ventana **Organización**, pestaña **Información**.
 
 En este caso, tanto las facturas de compra como de venta nacionales estarán sujetas al RECC y tendrán que darse de alta como tales en SII.
 
 !!! info
-    La clave de "RÉGIMEN ESPECIAL / IDENTIFICACIÓN OPERACIONES CON TRASCENDENCIA TRIBUTARIA" del RECC es la "07". Esta clave prevalece sobre las demás.
+    La clave de **RÉGIMEN ESPECIAL / IDENTIFICACIÓN OPERACIONES CON TRASCENDENCIA TRIBUTARIA** del RECC es la "07". Esta clave prevalece sobre las demás.
 
 Esto significa que las operaciones de arrendamiento con RECC no se informarán con la clave propia de los arrendamientos sino con la de RECC que es la 07.
 
 ### **Configuración de proveedores en RECC**
 
-Si una organización no se acoge al régimen del IVA de Caja, pero recibe facturas de proveedores acogidos al RECC, tendrá que configurar dichos proveedores como Acogidos al RECC en la ventana "Terceros", pestaña "Proveedor/Acreedor", campo "IVA de Caja.
+Si una organización no se acoge al régimen del IVA de Caja, pero recibe facturas de proveedores acogidos al RECC, tendrá que configurar dichos proveedores como Acogidos al RECC en la ventana **Terceros**, pestaña **Proveedor/Acreedor**, campo **IVA de Caja**.
 
 ### **Configuración de los métodos de pago**
 
@@ -294,40 +295,40 @@ Al dar de alta este tipo de cobros/pagos tenemos que informar del **importe**, l
 - Cheque "02"
 - Otros "04"
 
-Es por ello que en la ventana "**Método de Pago**" tendremos que configurar el tipo de método de pago, tal y como se explica a continuación:
+Es por ello que en la ventana **Método de Pago** tendremos que configurar el tipo de método de pago, tal y como se explica a continuación:
 
-- los métodos de pago que configuremos con el tipo "Bank Account", serán del tipo 01 = Transferencia
-- los métodos de Pago que configuremos con el tipo "Check", serán del tipo 02 = Cheque
-- y los métodos de Pago que configuremos con el tipo "Others", serán del tipo 04 = Otros.
+- los métodos de pago que configuremos con el tipo **Bank Account**, serán del tipo 01 = Transferencia
+- los métodos de Pago que configuremos con el tipo **Check**, serán del tipo 02 = Cheque
+- y los métodos de Pago que configuremos con el tipo **Others**, serán del tipo 04 = Otros.
 
 ![](../../../../../../assets/drive/6RIBz5XNdlOJZfAYW9noDPVGUdVjzgJ-odzlxR_I1kl4zuYXuKJeVqJ-oFz2l39Lk3LFBcIOpFh-JT6v4sa4TseyUaT6AXWHwV7_uD-XTTRasQSsjYBhZUzzVR12IJXodchVfGWSmlPZRVFQ8Zs.png)
 
 ### **Causas de exención**
 
-Tratándose de una operación de venta exenta, la AEAT permite consignar la causa de exención dentro del bloque “Desglose Factura” como “Sujeta” y “Exenta”, utilizando una de las siguientes claves:
+Tratándose de una operación de venta exenta, la AEAT permite consignar la causa de exención dentro del bloque **Desglose Factura** como **Sujeta** y **Exenta**, utilizando una de las siguientes claves:
 
-“E1: exenta por el artículo 20”
+**E1: exenta por el artículo 20**
 
-“E2: exenta por el artículo 21”
+**E2: exenta por el artículo 21**
 
-“E3: exenta por el artículo 22”
+**E3: exenta por el artículo 22**
 
-“E4: exenta por los artículos 23 y 24”
+**E4: exenta por los artículos 23 y 24**
 
-“E5: exenta por el artículo 25”
+**E5: exenta por el artículo 25**
 
-“E6: exenta por otros”
+**E6: exenta por otros**
 
 En Etendo existen dos opciones para indicar la causa de exención junto con la base imponible:
 
 - En la **ventana Factura (Cliente)**, dentro del grupo de campos AEAT SII, se cumplimentará la causa de exención relacionada con las bases exentas de la factura. El usuario tendrá que asignar un valor del desplegable de forma manual que trasladará al XML la clave que hace referencia a la base imponible exenta en factura.
-- En la **ventana "Causa de exención"** existe la opción de establecer una clave por defecto que se asignará en factura cuando se incorporen líneas que utilicen un impuesto configurado como exento. Es decir, cuando en una factura de venta se introduzca una línea exenta, automáticamente en la cabecera se seleccionará la causa asignada por defecto, siendo modificable si el usuario quisiera elegir otra.
+- En la **ventana Causa de exención** existe la opción de establecer una clave por defecto que se asignará en factura cuando se incorporen líneas que utilicen un impuesto configurado como exento. Es decir, cuando en una factura de venta se introduzca una línea exenta, automáticamente en la cabecera se seleccionará la causa asignada por defecto, siendo modificable si el usuario quisiera elegir otra.
 
 ![](../../../../../../assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png)
 
 ### **Configuración alta de factura de compra sólo tras su contabilización**
 
-Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check "Alta en SII facturas de compra tras su contabilización" ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.
+Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check **Alta en SII facturas de compra tras su contabilización** ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/configuracion-alta-contabilizacion.png)
 
@@ -337,16 +338,16 @@ Para organizaciones que desean dar de alta una factura de compra sólo tras su c
 ### Configuración de rangos de impuestos - Prorrata SII
 
 Los rangos de impuestos para la prorrata se tendrán que crear siempre de manera manual
-(tanto el rango “padre” como los rangos “hijos” necesarios). Esto es debido a que el
+(tanto el rango padre como los rangos hijos necesarios). Esto es debido a que el
 porcentaje de deducción varía año a año al no ser un porcentaje fijo.
 
-En la ventana “Rango impuesto” se ha creado un nuevo check denominado “Is prorate”:
+En la ventana **Rango impuesto** se ha creado un nuevo check denominado **Is Prorate**:
 
 ![screenhunter_01_sep._01_11.08.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
 
 Al tener activo este check, se mostrará un segundo check nuevo, dentro de la cabecera en
-el detalle de “More Information” que se llamará “Prorrata SII - XML” que estará marcado por
-defecto como “Si”:
+el detalle de **More Information** que se llamará **Prorrata SII - XML** que estará marcado por
+defecto como **Si**:
 ![screenhunter_02_sep._01_11.09.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
 
 Estos check permitirán, con la configuración correcta que realicemos, enviar al SII
@@ -357,34 +358,34 @@ debe realizarse para que la información se envíe de forma correcta al SII:
 
 ![unnamed.gif](../../../../../../assets/legacy/enduserdocumentation/unnamed.gif)
 
-1 – Crear un rango padre “Prorrata Gener.22 (77%) IVA 10%”:
+1 – Crear un rango padre "Prorrata Gener.22 (77%) IVA 10%":
 Lo haremos con la misma configuración que puede tener cualquier rango nacional de la
-misma categoría, por ejemplo “Prestación servicios nacional 10%“. Las únicas
-particularidades que debemos tener en cuenta serán las de indicar en el campo “Indice” el
-valor total del impuesto (en los rangos “padres” estándar es un campo en el que se indica 0)
-y activar el check “Is Prorate”. En nuestro ejemplo indicaremos en el campo “Indice” el valor
-10 y posteriormente marcaremos el check de “Nivel de agrupación”.
+misma categoría, por ejemplo "Prestación servicios nacional 10%". Las únicas
+particularidades que debemos tener en cuenta serán las de indicar en el campo **Indice** el
+valor total del impuesto (en los rangos padres estándar es un campo en el que se indica 0)
+y activar el check **Is Prorate**. En nuestro ejemplo indicaremos en el campo **Indice** el valor
+10 y posteriormente marcaremos el check de **Nivel de agrupación**.
 
 ![screenhunter_04_sep._01_11.16.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
 
 ![screenhunter_05_sep._01_11.16.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
 
-2 – Crear un rango hijo deducible “Prorrata Gener.22 (77%) IVA 10% (+77%)”:
-Al igual que en el punto anterior, crearemos un rango “hijo” con la misma configuración que
-puede tener cualquier rango nacional de la misma categoría, por ejemplo “Prestación
-servicios nacional 10%“ e indicaremos cual es el rango “padre” (el creado en el punto 1).
+2 – Crear un rango hijo deducible "Prorrata Gener.22 (77%) IVA 10% (+77%)":
+Al igual que en el punto anterior, crearemos un rango hijo con la misma configuración que
+puede tener cualquier rango nacional de la misma categoría, por ejemplo "Prestación
+servicios nacional 10%" e indicaremos cual es el rango padre (el creado en el punto 1).
 Las únicas particularidades que debemos tener en cuenta serán las de indicar en el campo
-“Indice” el valor del porcentaje de impuesto deducible (según nuestro ejemplo indicaremos
-7,7) y activar el check “Is Prorate”:
+**Indice** el valor del porcentaje de impuesto deducible (según nuestro ejemplo indicaremos
+7,7) y activar el check **Is Prorate**:
 
 ![screenhunter_06_sep._01_11.17.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
 
-3 – Crear un rango hijo no deducible “Prorrata Gener.22 (77%) IVA 10% (-23%)”:
-Crearemos el segundo rango “hijo” de la misma manera que el anterior. Además de indicar
-en el campo “Indice” el valor del porcentaje de impuesto no deducible (según nuestro
+3 – Crear un rango hijo no deducible "Prorrata Gener.22 (77%) IVA 10% (-23%)":
+Crearemos el segundo rango hijo de la misma manera que el anterior. Además de indicar
+en el campo **Indice** el valor del porcentaje de impuesto no deducible (según nuestro
 
-ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marcar el check de
-“Impuesto no deducible” que se encuentra dentro del detalle “More Information”:
+ejemplo indicaremos 2,3) y activar el check **Is Prorate**, tendremos que marcar el check de
+**Impuesto no deducible** que se encuentra dentro del detalle **More Information**:
 ![screenhunter_07_sep._01_11.18.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
 ![screenhunter_08_sep._01_11.19.gif](../../../../../../assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
 
@@ -400,25 +401,27 @@ Desde Etendo podremos enviar estos registros (alta/modificación) de forma manua
 
 ##### **Facturas de Venta**
 
-Desde la ventana "Factura (Cliente)" se crea una nueva factura de venta, tal y como se crean las facturas de venta en Etendo.
+Desde la ventana **Factura (Cliente)** se crea una nueva factura de venta, tal y como se crean las facturas de venta en Etendo.
 
-Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
+Dentro del grupo de campos **AEAT SII** debemos indicar, tal y como se muestra en la siguiente imagen:
 
 ![](../../../../../../assets/drive/9JpfQqGKF7-_z1OT14yslxXsujho_F52LKKra1oEchhjCvNqSuKeeAFl-I_8R9ZLicY5kC7xFZWE0pKjKoL37cWY460b3-oxGq8rCAF0jeNDnY9zW-1kx3JeANgejmqgjvbjC3dOTHStPYt8ag8.png)
 
-- la "**Fecha Operación**" que por defecto se informa con la misma fecha que la "Fecha de la factura", si bien el usuario la puede modificar.
-- la **Clave Tipo Factura**, que por defecto se informará con el valor "**Factura**", clave tipo factura "F1".  
-   Otros valores posibles son: - "**Factura simplificada**", clave tipo de factura "F2", respecto de las facturas simplificadas creadas desde cada ticket/pedido registrado. - "**Factura rectificativa**", clave tipo de factura "R1 a R5", según el "Motivo de la rectificación" seleccionada. - "**Asiento resumen facturas simplificadas**", clave tipo de factura "F4", respecto de facturas simplificadas que agrupan tickets/pedidos registrados.
+- la **Fecha Operación** que por defecto se informa con la misma fecha que la **Fecha de la factura**, si bien el usuario la puede modificar.
+- la **Clave Tipo Factura**, que por defecto se informa con el valor **Factura** (clave tipo factura "F1"). Otros valores posibles son:
 
+    - **Factura simplificada** (clave tipo factura "F2"), respecto de las facturas simplificadas creadas desde cada ticket/pedido registrado.
+    - **Factura rectificativa** (clave tipo factura), con el **Motivo de la rectificación** seleccionado ("R1" a "R5").
+    - **Asiento resumen facturas simplificadas** (clave tipo factura "F4"), respecto de facturas simplificadas que agrupan tickets/pedidos registrados.
 
 !!! info
-    Una factura rectificativa se identifica indicando **Clave Tipo Factura = "Factura Rectificativa"** y el **Motivo de la rectificación** (`R1`–`R5`). Es necesario usar un [tipo de documento marcado como rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos). Consulte el detalle en [Facturas Rectificativas de Venta](#facturas-rectificativas-de-venta).
+    Una factura rectificativa se identifica indicando **Clave Tipo Factura = Factura Rectificativa** y el **Motivo de la rectificación** (`R1`–`R5`). Es necesario usar un [tipo de documento marcado como rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos). Consulte el detalle en [Facturas Rectificativas de Venta](#facturas-rectificativas-de-venta).
 
 - La **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
-- O bien introducimos directamente una descripción de la operación en el campo de texto libre "**Descripción SII**".  
-  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
-  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
-  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+- O bien introducimos directamente una descripción de la operación en el campo de texto libre **Descripción SII**.  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo **Descripción SII** por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una **Descripción SII**, dicha descripción se incorporará de forma automática en la factura, siempre que el campo **Descripción SII** de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una **Descripción SII**, sólo se incorporará en la factura la del primer pedido seleccionado.
 
 Es importante recalcar que en el caso de las facturas de venta, debemos considerar dos fechas para el envío (alta) en SII:
 
@@ -433,7 +436,7 @@ En este ejemplo, el periodo será agosto (fecha de operación) y el ejercicio 20
 
 Una vez introducida esta información, podemos completar y contabilizar la factura, o sólo completarla.
 
-En este momento el botón "**Alta en SII**" se muestra habilitado.
+En este momento el botón **Alta en SII** se muestra habilitado.
 
 ![](../../../../../../assets/drive/7cFVkpUUzmAnQ82GFakllefI21kNGCJOtphTnAVpQM-249bn8AgShm_73EiSU6YnkQ2Th2bfw7xfX36ohWf7LMrZP_CbAAjUv8E3Sns6qsP5BZXOzjP-wQ9TsS_Fu_ncK0Gfg1pFoOW_Pdu4yUU.png)
 
@@ -445,22 +448,22 @@ Etendo nos muestra un mensaje indicando que:
 
 Es decir, siempre es posible contabilizar/descontabilizar la factura después de darla de alta en SII, pero sólo será posible reactivarla en los siguientes casos:
 
-- **Error en la comunicación** - el alta en SII ha resultado "Incorrecta" debido a algún error aceptado o debido a error de conexión. En ese caso será posible reactivar la factura para subsanar dicho error y volver a dar de "alta en SII".
-- **Error registral** - el estado del alta en SII de la factura es "Correcto", sin embargo se produjo un error registral que se debe subsanar. En ese caso será posible reactivar la factura, seleccionando el campo "Modificada error registral", realizar los cambios oportunos y enviar la "modificación" del registro de la factura. Ver sección: Modificación en SII.
+- **Error en la comunicación** - el alta en SII ha resultado **Incorrecta** debido a algún error aceptado o debido a error de conexión. En ese caso será posible reactivar la factura para subsanar dicho error y volver a dar de alta en SII.
+- **Error registral** - el estado del alta en SII de la factura es **Correcto**, sin embargo se produjo un error registral que se debe subsanar. En ese caso será posible reactivar la factura, seleccionando el campo **Modificada error registral**, realizar los cambios oportunos y enviar la modificación del registro de la factura. Ver sección: Modificación en SII.
 
-En la pestaña "Datos SII" de la factura, tendremos acceso a los siguientes datos:
+En la pestaña **Datos SII** de la factura, tendremos acceso a los siguientes datos:
 
-- "**Tipo de Comunicación**", con el valor "Alta".
-- número de "**Conexión SII**" que también quedará reflejada en la ventana "Conexiones SII".
-- el "**Código CSV**" o código seguro de verificación que la AEAT nos ha indicado relacionado con el alta de esta factura en SII.  
+- **Tipo de Comunicación**, con el valor **Alta**.
+- número de **Conexión SII** que también quedará reflejada en la ventana **Conexiones SII**.
+- el **Código CSV** o código seguro de verificación que la AEAT nos ha indicado relacionado con el alta de esta factura en SII.  
   La AEAT responde con un CSV para cada factura enviada. Si se envía un fichero XML con varias facturas, en el XML de respuesta aparecerá un CSV para cada una de ellas.
-- el "**Estado registro SII**", que en este punto puede ser:
-  - "**Correcto**" - la factura se ha registrado de forma satisfactoria en la sede electrónica de la AEAT.
-  - "**Incorrecto**" - la factura se ha rechazado totalmente y, por tanto, no está registrada. En este caso, la AEAT nos informará de los datos erróneos. Debemos subsanarlos y volver a enviar la factura.
-  - "**Aceptado con errores**" - la factura se ha registrado pero contiene errores que debemos subsanar y volver a enviar. Igualmente, la AEAT nos indicará los errores que se deben subsanar.
-  - "**Error al enviar**" - la factura no está registrada, ya que se ha producido un error en la conexión online con la AEAT. Debemos volver a enviar la factura.
-  - "**Anulado**" - se trata de un estado que podemos obtener en las respuestas recibidas al hacer una "Consulta a SII". Se ha añadido este estado para poder "gestionarlo" igualmente.
-  - "**No Declarable en SII**" - la factura no está registrada, ya que todas sus líneas están asociadas a un impuesto configurado como "No Declarable en SII"
+- el **Estado registro SII**, que en este punto puede ser:
+  - **Correcto** - la factura se ha registrado de forma satisfactoria en la sede electrónica de la AEAT.
+  - **Incorrecto** - la factura se ha rechazado totalmente y, por tanto, no está registrada. En este caso, la AEAT nos informará de los datos erróneos. Debemos subsanarlos y volver a enviar la factura.
+  - **Aceptado con errores** - la factura se ha registrado pero contiene errores que debemos subsanar y volver a enviar. Igualmente, la AEAT nos indicará los errores que se deben subsanar.
+  - **Error al enviar** - la factura no está registrada, ya que se ha producido un error en la conexión online con la AEAT. Debemos volver a enviar la factura.
+  - **Anulado** - se trata de un estado que podemos obtener en las respuestas recibidas al hacer una consulta a SII. Se ha añadido este estado para poder gestionarlo igualmente.
+  - **No Declarable en SII** - la factura no está registrada, ya que todas sus líneas están asociadas a un impuesto configurado como **No Declarable en SII**
 
 **Para la AEAT los errores "Admisibles"** son aquellos que serán admitidos por la AEAT.
 
@@ -481,9 +484,9 @@ Esta pestaña también incluye información sobre el "cuadre" de la factura, env
 - **Estado cuadre SII**
 - y **Fecha de cuadre**
 
-Y, en el grupo de campos "**Archivos Adjuntos**", podremos encontrar los ficheros XML de alta y respuesta de la AEAT, si hemos configurado la organización para que se guarden estos ficheros.
+Y, en el grupo de campos **Archivos Adjuntos**, podremos encontrar los ficheros XML de alta y respuesta de la AEAT, si hemos configurado la organización para que se guarden estos ficheros.
 
-Finalmente, en la cabecera de la factura de venta enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
+Finalmente, en la cabecera de la factura de venta enviada a SII de forma manual o automática, tendremos información del **Ejercicio** y del **Periodo** que se incluyeron en el alta en SII de dicha factura.
 
 ![](../../../../../../assets/drive/g2N7zkHFiQI0VRRrWd1wUiRbD_YMkUTZbPjj55rc-J27t0yuKU8a53rk49H79ww5LD3qEXTg6YF5TReKkRhcxZYX4ZN2e7_G_LsptRjA5Wm5jDmezbpqjEJXtxGIFho5QDNvJEKSpLX4FNfcO5Q.png)
 
@@ -495,13 +498,10 @@ En SII, al igual que en *Verifactu* y *TicketBAI*, una factura rectificativa se 
 
 **Cómo registrarla:**
 
-1. Crear una **factura de venta** utilizando un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la de la factura original.
-2. En el grupo de campos "**AEAT SII**" indicar:
-    - **Clave tipo factura** = Factura Rectificativa
-    - **Motivo de la rectificación** = `R1`–`R5`, a seleccionar según el motivo de la rectificación.
-3. Introducir las líneas con **la variación** respecto a la factura original.
-4. Enlazar la **factura original** que se rectifica.
-5. Completar la factura y darla de **alta en SII**.
+La factura se crea siguiendo el [procedimiento común descrito en Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#como-hacerlo-en-etendo) (tipo de documento rectificativo en una serie distinta a la original, líneas con la variación, enlace a la factura original y envío al SIF). Lo específico de SII es la información a indicar en el grupo de campos **AEAT SII**:
+
+- **Clave tipo factura** = Factura Rectificativa
+- **Motivo de la rectificación** = `R1`–`R5`, seleccionando el motivo que corresponda (ver [Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#facturas-rectificativas) para saber cuál usar en cada caso).
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/factura-rectificativa.png)
 
@@ -509,8 +509,8 @@ Al dar de alta esa factura en SII, el fichero XML registrará automáticamente e
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii/factura-rectificativa-xml.png)
 
-!!! tip "Qué rectificación usar en cada caso"
-    Para conocer **qué rectificación aplicar en cada situación** (disminución, aumento, impago total, corrección de un tipo de IVA mal aplicado, reemplazo completo de la factura mediante reversión y reemisión, o rectificar una rectificativa anterior), consulte la guía común con ejemplos resueltos: [Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#facturas-rectificativas).
+!!! tip "Casos especiales: impago, reversión y reemisión, o rectificar una rectificativa"
+    Para situaciones concretas como el **impago total** (crédito incobrable o concurso del destinatario), el **reemplazo completo de la factura** mediante reversión y reemisión, o **rectificar una rectificativa anterior**, consulte los ejemplos resueltos en la guía común: [Facturas Rectificativas](./funcionalidades-generales-para-sifs.md#facturas-rectificativas).
 
 El usuario deberá asignar la **fecha de operación** correspondiente a la factura original (devengo de la operación). Sin embargo, **en facturas rectificativas el periodo de alta en SII será el correspondiente a la fecha factura**, incorporándose a la declaración de IVA en dicho mes.
 
@@ -518,30 +518,30 @@ El usuario deberá asignar la **fecha de operación** correspondiente a la factu
 
 El proceso de registro y alta en SII de este tipo de facturas es muy similar al de las facturas de venta.
 
-La información del alta del registro de la factura de compra en SII se recogerá de la ventana "Factura(Proveedor)", una vez que la factura de compra correspondiente esté en estado "Completado".
+La información del alta del registro de la factura de compra en SII se recogerá de la ventana **Factura (Proveedor)**, una vez que la factura de compra correspondiente esté en estado **Completado**.
 
-Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
+Dentro del grupo de campos **AEAT SII** debemos indicar, tal y como se muestra en la siguiente imagen:
 
 ![](../../../../../../assets/drive/cqDeUP_hKuC8VbLZevAo4OeHT3UwNZ3jdR2d30gp4MCdn2Gt3BmAwtXG_808xBrfS_VOHrta0oBdhRVjlUlB959b2ZuhfP4oPjpw1tL_d1VyK6m-0V7YwTkcq7Y_UvYuDQCGARgGz0hkuCdYgA0.png)
 
-- la "**Fecha Operación**", que por defecto se informa con la misma fecha que la "Fecha de la factura", fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
-- la "**Fecha registro contable**", que por defecto y para las facturas que se crean de forma manual se informa con la fecha actual, o fecha de creación de la factura en Etendo y, por tanto, registro de la factura recibida en Etendo.  
+- la **Fecha Operación**, que por defecto se informa con la misma fecha que la **Fecha de la factura**, fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
+- la **Fecha registro contable**, que por defecto y para las facturas que se crean de forma manual se informa con la fecha actual, o fecha de creación de la factura en Etendo y, por tanto, registro de la factura recibida en Etendo.  
   Esta fecha de registro contable no tiene por qué coincidir con la fecha contable de la factura de compra.
 - la **Clave Tipo Factura**, que se debe puede informar con los siguientes valores:
-  - "**Factura**", que se corresponde con una clave de tipo de Factura "F1"
-  - "**Importación (DUA)**", que se corresponde con una clave de tipo de Factura "F5"
-  - "**Liquidación Complementaria Aduana IVA a la importación**", que se corresponde con una clave de tipo de Factura "LC"
-  - "**Justificante contable**", que se corresponde con una clave de tipo de Factura "F6"
+  - **Factura**, que se corresponde con una clave de tipo de Factura "F1"
+  - **Importación (DUA)**, que se corresponde con una clave de tipo de Factura "F5"
+  - **Liquidación Complementaria Aduana IVA a la importación**, que se corresponde con una clave de tipo de Factura "LC"
+  - **Justificante contable**, que se corresponde con una clave de tipo de Factura "F6"
 
 En el caso de las facturas de compra no es necesario indicar si se trata o no de una factura rectificativa.
 
 - La **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso, seleccionamos una descripción del maestro.
-- O bien introducimos directamente una descripción de la operación en el campo de texto libre "**Descripción SII**".  
-  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
-  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
-  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+- O bien introducimos directamente una descripción de la operación en el campo de texto libre **Descripción SII**.  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo **Descripción SII** por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una **Descripción SII**, dicha descripción se incorporará de forma automática en la factura, siempre que el campo **Descripción SII** de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una **Descripción SII**, sólo se incorporará en la factura la del primer pedido seleccionado.
 
-Y además, debemos reflejar el número de factura del proveedor en el campo **"Referencia del Proveedor"**.
+Y además, debemos reflejar el número de factura del proveedor en el campo **Referencia del Proveedor**.
 
 Las facturas recibidas deben enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) naturales desde la fecha del registro contable de la factura, excluyendo sábados, domingos, y feriados reconocidos nacionalmente y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado). El periodo límite puede ser más corto que los días iniciales del plazo. Si el día 15 es Sábado, Domingo o feriado, la fecha límite se extiende al siguiente día hábil.
 
@@ -550,7 +550,7 @@ Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha d
 !!! info
     Se puede utilizar la [Calculadora de Plazos de la Agencia Tributaria](https://www2.agenciatributaria.gob.es/wlpl/AVAC-CALC/LanzadorCalculadoraPlazos) para realizar simulaciones para diferentes casos y ayudar a clarificar cualquier duda respecto a los plazos de liquidación.
 
-Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
+Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección **Periodo de Liquidación** (Ejercicio/Periodo):
 
 - la **fecha de operación** de la factura
 - la **fecha del registro contable de la factura**
@@ -573,7 +573,7 @@ Caben dos posibilidades:
 
 Una vez introducida esta información, podemos completar y contabilizar la factura, o sólo completarla.
 
-En este momento el botón "**Alta en SII**" se muestra habilitado.
+En este momento el botón **Alta en SII** se muestra habilitado.
 
 ![](../../../../../../assets/drive/W1rkgnVrH0mKDQ0NA-IAK1sLYniuAWMvnbMWL0uzeVoFAitGq8m9p_nu1zpcBthrvEmYnuJpHAvGF1iK6xfsCBwukRa6Si97mEssOkn6thGnWEhTyPyopkGdd-5pEsKpggQZEd4BjTqOFxy_LLY.png)
 
@@ -588,7 +588,7 @@ Es decir, siempre es posible contabilizar/descontabilizar la factura después de
 !!! info
     En el caso de las facturas de compra, no será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
 
-Finalmente, en la cabecera de la factura de compra enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
+Finalmente, en la cabecera de la factura de compra enviada a SII de forma manual o automática, tendremos información del **Ejercicio** y del **Periodo** que se incluyeron en el alta en SII de dicha factura.
 
 ![](../../../../../../assets/drive/Qj4R1IM6iiRpAwD5W06pJn2eqh9uR_mlF5dhG82eF3WkUc7_9mVb9jrw8EinOCeDZJL2U1kSXGoHnWZQ7vTV-ykEAu_PUGcAfengKKCFtGrRR89qnQGMNryBR9kWqseAky2pyK-f5XwISH1dPl4.png)
 
@@ -600,60 +600,60 @@ Deberán consignarse, como número de factura y fecha de expedición, el número
 
 En los datos identificativos correspondientes al proveedor se consignarán los del importador y titular del libro registro, esto es la organización de Etendo.
 
-Finalmente, y respecto de la **factura del transitario,** se consignará únicamente la prestación de servicios sujeta y no exenta, con clave de tipo de factura "**F1**".
+Finalmente, y respecto de la **factura del transitario,** se consignará únicamente la prestación de servicios sujeta y no exenta, con clave de tipo de factura **F1**.
 
-Para registrar en Etendo este tipo de operaciones "Importaciones con DUA" debemos seguir los pasos siguientes en la ventana "Factura (Proveedor)":
+Para registrar en Etendo este tipo de operaciones "Importaciones con DUA" debemos seguir los pasos siguientes en la ventana **Factura (Proveedor)**:
 
-- Crear una nueva factura para el tercero "Transitario" con su número de factura o "Referencia del Proveedor", con la siguiente información en el grupo de campos "AEAT SII" e "Import (DUA):
+- Crear una nueva factura para el tercero "Transitario" con su número de factura o **Referencia del Proveedor**, con la siguiente información en el grupo de campos **AEAT SII** e **Import (DUA)**:
   - Clave tipo factura: Importación (DUA)
   - DUA: número de referencia que figura en el propio DUA
   - Fecha DUA: fecha de la admisión del DUA por la Administración Aduanera respectivamente
-- en la pestaña "Líneas" introducir los datos de la factura del transitario, incluida su prestación de servicios sujeta y no exenta.
-- en la pestaña "Impuestos" incluir de forma manual una nueva línea de impuestos para impuestos del tipo "Importaciones 21%", que incluya la base imponible de importación y su correspondiente cuota.
+- en la pestaña **Líneas** introducir los datos de la factura del transitario, incluida su prestación de servicios sujeta y no exenta.
+- en la pestaña **Impuestos** incluir de forma manual una nueva línea de impuestos para impuestos del tipo "Importaciones 21%", que incluya la base imponible de importación y su correspondiente cuota.
 
 Una vez completada y dada de alta en SII, obtendremos un XML con la información requerida por parte de la AEAT.
 
-En los casos en que una operación de "Importación (DUA)", se **relacione con más de un DUA** será posible seleccionar el check "**Multiple DUA**".
+En los casos en que una operación de "Importación (DUA)", se **relacione con más de un DUA** será posible seleccionar el check **Multiple DUA**.
 
 Al seleccionar esta opción:
 
-- los campos "**DUA**" y "**Fecha DUA**" de la cabecera de la factura no se muestran ya que dichos campos **se tienen que informar en la pestaña "Impuestos"**, con el fin de relacionar el DUA y su fecha, con la base imponible de importación correspondiente, tal y como se muestra en la siguiente imagen.
+- los campos **DUA** y **Fecha DUA** de la cabecera de la factura no se muestran ya que dichos campos **se tienen que informar en la pestaña Impuestos**, con el fin de relacionar el DUA y su fecha, con la base imponible de importación correspondiente, tal y como se muestra en la siguiente imagen.
 
 ![](../../../../../../assets/drive/lFZBqb1lzXOH1Y1FtRibpnZJ3Rh9aXTirC2xlThC9N6okNSa2pFWBQa0582MMpvssLILoOwm27vTXyXK4Vxi0qIAN537ODDJZ8GuVDik669avGDaIn2K3ShmyjKRcwSBXiGJ6Hz_YNCazPDxOh8.png)
 
 ##### **Facturas de Compra (alta tras la contabilización)**
 
-Aquellas organizaciones que activen el check "Alta en SII facturas de compra tras su contabilización" en la ventana Configuración SII, podrán enviar sus facturas de compra a SII tras su contabilización.
+Aquellas organizaciones que activen el check **Alta en SII facturas de compra tras su contabilización** en la ventana Configuración SII, podrán enviar sus facturas de compra a SII tras su contabilización.
 
 El proceso de registro y alta en SII de este tipo de facturas es muy similar al resto de facturas de compra.
 
-La información del alta en SII del registro de la factura de compra se recogerá de la ventana "Factura(Proveedor)", una vez que la factura de compra correspondiente esté en estado **"Completado"** y **"Contabilizado"**.
+La información del alta en SII del registro de la factura de compra se recogerá de la ventana **Factura (Proveedor)**, una vez que la factura de compra correspondiente esté en estado **Completado** y **Contabilizado**.
 
-Dentro del grupo de campos "AEAT SII" estarán informados los campos:
+Dentro del grupo de campos **AEAT SII** estarán informados los campos:
 
-- la _"Fecha Operación"_, que por defecto se informa con la misma fecha que la "Fecha de la factura", fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
-- la "**Fecha registro contable**", que por defecto se consignará en blanco hasta el momento en que la factura sea contabilizada con la fecha en la que se ha realizado el asiento, independientemente de la fecha en la que se hayan imputado los apuntes contables en el libro diario. El botón de Alta en SII permanecerá deshabilitado hasta que se produzca la contabilización del documento. Si la factura se descontabiliza antes de suministrarla a SII, la fecha registro contable eliminará su contenido. En caso de que se hubiera producido ya el alta, y fuera necesaria realizar una Modificación por error registral, la fecha registro contable no cambiará al descontabilizar y reactivar la factura.
-- la _Clave Tipo Factura_, que se debe puede informar con los siguientes valores:
-  - "_Factura_", que se corresponde con una clave de tipo de Factura "F1"
-  - "_Importación (DUA)_", que se corresponde con una clave de tipo de Factura "F5"
-  - "_Liquidación Complementaria Aduana IVA a la importación_", que se corresponde con una clave de tipo de Factura "LC"
-  - "_Justificante contable_", que se corresponde con una clave de tipo de Factura "F6"
+- la **Fecha Operación**, que por defecto se informa con la misma fecha que la **Fecha de la factura**, fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
+- la **Fecha registro contable**, que por defecto se consignará en blanco hasta el momento en que la factura sea contabilizada con la fecha en la que se ha realizado el asiento, independientemente de la fecha en la que se hayan imputado los apuntes contables en el libro diario. El botón de Alta en SII permanecerá deshabilitado hasta que se produzca la contabilización del documento. Si la factura se descontabiliza antes de suministrarla a SII, la fecha registro contable eliminará su contenido. En caso de que se hubiera producido ya el alta, y fuera necesaria realizar una Modificación por error registral, la fecha registro contable no cambiará al descontabilizar y reactivar la factura.
+- la **Clave Tipo Factura**, que se debe puede informar con los siguientes valores:
+  - **Factura**, que se corresponde con una clave de tipo de Factura "F1"
+  - **Importación (DUA)**, que se corresponde con una clave de tipo de Factura "F5"
+  - **Liquidación Complementaria Aduana IVA a la importación**, que se corresponde con una clave de tipo de Factura "LC"
+  - **Justificante contable**, que se corresponde con una clave de tipo de Factura "F6"
 
 En el caso de las facturas de compra no es necesario indicar si se trata o no de una factura rectificativa.
 
-- la _Descripción maestro SII_ de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
-- o bien introducimos directamente una descripción de la operación en el campo de texto libre "_Descripción SII_".  
-  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
-  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
-  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+- la **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
+- o bien introducimos directamente una descripción de la operación en el campo de texto libre **Descripción SII**.  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo **Descripción SII** por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una **Descripción SII**, dicha descripción se incorporará de forma automática en la factura, siempre que el campo **Descripción SII** de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una **Descripción SII**, sólo se incorporará en la factura la del primer pedido seleccionado.
 
-Y además, debemos reflejar el número de factura del proveedor en el campo _"Referencia del Proveedor"_.
+Y además, debemos reflejar el número de factura del proveedor en el campo **Referencia del Proveedor**.
 
 Las facturas recibidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha del registro contable de la factura y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado).
 
 Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha de registro contable** de la factura como fecha a tener en cuenta respecto del alta en SII.
 
-Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
+Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección **Periodo de Liquidación** (Ejercicio/Periodo):
 
 - la _fecha de operación_ de la factura
 - la _fecha del registro contable de la factura_
@@ -661,7 +661,7 @@ Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo d
 
 De modo que:
 
-- Sólo se dará de alta en SII una factura que se encuentre en estado "Completado" y "Contabilizado".
+- Sólo se dará de alta en SII una factura que se encuentre en estado **Completado** y **Contabilizado**.
 - Cuando el usuario contabilice la factura, el campo Fecha registro contable se rellenará automáticamente con la fecha del día en que se registra el asiento en contabilidad.
 - Si el documento es descontabilizado antes de realizar el alta el campo Fecha registro contable eliminará su contenido.
 - Si el documento es descontabilizado tras realizar el alta para proceder a una modificación por error registral, el campo fecha registro contable mantendrá su contenido y la fecha registro contable continuará siendo la misma que se informó en la comunicación de alta.
@@ -672,7 +672,7 @@ Un empresario A vende mercancía a otro empresario B el 26 de abril de 2022. El 
 
 Una vez introducida esta información, podemos completar y contabilizar la factura.
 
-Tras la contabilización del documento, el botón "**Alta en SII**" se muestra habilitado.
+Tras la contabilización del documento, el botón **Alta en SII** se muestra habilitado.
 
 ![](../../../../../../assets/drive/1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv.png)
 
@@ -684,7 +684,7 @@ Etendo nos muestra un mensaje indicando que:
 
 Siempre es posible contabilizar/descontabilizar la factura después de darla de alta en SII, pero sólo será posible reactivarla en caso de error en la comunicación o error registral.
 
-El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento de introducir el precio del producto en la línea de la factura, por lo que es necesario realizar una modificación por error registral (Tipo de comunicación A1). El proceso a seguir es "Descontabilizar", activar el check "Modificar por error registral" y "Reactivar" el documento. Tras hacer la modificación correspondiente, de nuevo se completa y contabiliza el documento antes de pulsar el botón "Modificación en SII", manteniéndose la fecha registro contable que inicialmente se informó en SII.
+El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento de introducir el precio del producto en la línea de la factura, por lo que es necesario realizar una modificación por error registral (Tipo de comunicación A1). El proceso a seguir es **Descontabilizar**, activar el check **Modificar por error registral** y **Reactivar** el documento. Tras hacer la modificación correspondiente, de nuevo se completa y contabiliza el documento antes de pulsar el botón **Modificación en SII**, manteniéndose la fecha registro contable que inicialmente se informó en SII.
 
 ![](../../../../../../assets/drive/1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA.png)
 
@@ -703,12 +703,12 @@ Este tipo de comunicación implica la modificación de los registros de factura 
 
 Por ejemplo, nos damos cuenta de un error en el rango de impuesto seleccionado en una factura que ya está dada de alta en SII.
 
-En esos casos tendremos que modificar la factura y enviarla de nuevo a SII, con un tipo de comunicación diferente que es A1 "Modificación (Corrección por errores registrales).
+En esos casos tendremos que modificar la factura y enviarla de nuevo a SII, con un tipo de comunicación diferente que es A1 **Modificación (Corrección por errores registrales)**.
 
-Se ha creado un nuevo campo en la cabecera de las facturas (tanto de compra como de venta), sección "AEAT SII" denominado, "**Modificada por error registral**". Este nuevo campo sólo se habilita si:
+Se ha creado un nuevo campo en la cabecera de las facturas (tanto de compra como de venta), sección **AEAT SII** denominado **Modificada por error registral**. Este nuevo campo sólo se habilita si:
 
-- la factura está en estado "Completado"
-- y, además, está dada de alta en SII (Alta en SII= Si) correctamente, "Estado Registro SII" = Correcto.
+- la factura está en estado **Completado**
+- y, además, está dada de alta en SII (Alta en SII= Si) correctamente, **Estado Registro SII** = Correcto.
 
 Al seleccionar este nuevo campo, es posible descontabilizar y reactivar la factura, modificar el error cometido, para finalmente volver a completar la factura.
 
@@ -718,7 +718,7 @@ En ningún caso será posible modificar:
 - la fecha de factura (fecha de expedición en las facturas de venta/fecha factura en las facturas de compra)
 - el número de factura (Nº documento en las facturas de venta/Referencia del proveedor en las facturas de compra)
 
-El botón "**Modificación en SII**" nos permitirá enviar la modificación del registro de la factura a SII, tal y como se muestra en la pantalla siguiente:
+El botón **Modificación en SII** nos permitirá enviar la modificación del registro de la factura a SII, tal y como se muestra en la pantalla siguiente:
 
 ![](../../../../../../assets/drive/662noKMIVCrzTjC2DZyK9mKmy-suka3TFRNe707uHDJqd_LF2rhWbpV50_BnPRTsYT1cWx7KZ6JPOvO5IKs4A1KJpQLlBeYg0587HHMHVgh0zBRf-1NT1VWvysRKzeD-_Owkm-sYIYPiv8VkOAM.png)
 
@@ -726,7 +726,7 @@ El suministro de este tipo de registros de "modificación" deberá realizarse an
 
 ### **Envío Automático**
 
-Dentro de la venta "Procesamiento de Peticiones" se han creado dos nuevos procesos "Proceso de alta en SII" y "Proceso de modificación en SII por error registral", que pueden configurarse para cada organización o entidad legal.
+Dentro de la ventana **Procesamiento de Peticiones** se han creado dos nuevos procesos **Proceso de alta en SII** y **Proceso de modificación en SII por error registral**, que pueden configurarse para cada organización o entidad legal.
 
 Tal y como sucede con otros procesos de Etendo, éstos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia.
 
@@ -743,7 +743,7 @@ Este proceso permite el "alta" masiva (tipo de comunicación A0) en SII de todas
 En el caso de las **facturas de venta**, este proceso tendrá en cuenta:
 
 - la "fecha de operación" y la "fecha de expedición" de las facturas
-- y la "cadencia del proceso de alta en SII", establecido para las facturas de venta en la ventana "Configuración SII", para cada Organización
+- y la cadencia del proceso de alta en SII, establecido para las facturas de venta en la ventana **Configuración SII**, para cada Organización
 
 Por ejemplo, en el escenario siguiente:
 
@@ -770,7 +770,7 @@ El plazo límite de alta en SII de esta factura para 2022 sería el 15-07-2022
 En el caso de las **facturas de compra**, este proceso tendrá en cuenta:
 
 - la fecha contable y la fecha de registro contable de la factura
-- y la "cadencia del proceso de alta en SII", establecido para las facturas de venta en la ventana "Configuración SII", para cada Organización
+- y la cadencia del proceso de alta en SII, establecido para las facturas de venta en la ventana **Configuración SII**, para cada Organización
 
 Por ejemplo, en el escenario siguiente:
 
@@ -796,7 +796,7 @@ El plazo límite de alta en SII de esta factura sería el 15-07-2022.
 
 ## Gestión y envío de registros desde el Monitor SII
 
-Desde la ventana "Monitor SII" podemos realizar gestionar y realizar envíos masivos de facturas emitidas/recibidas a SII, así como de los cobros/pagos de facturas en RECC y los cobros en metálico, esta última información a enviar de forma anual.
+Desde la ventana **Monitor SII** podemos realizar gestionar y realizar envíos masivos de facturas emitidas/recibidas a SII, así como de los cobros/pagos de facturas en RECC y los cobros en metálico, esta última información a enviar de forma anual.
 
 Tal y como se muestra en la siguiente pantalla, filtramos por:
 
@@ -808,7 +808,7 @@ seleccionamos varias facturas y procedemos a su Alta en SII.
 
 ![](../../../../../../assets/drive/OOCosDIgqaozTNviBVAylAHt_OtM1Xs1MCqkHr8ZwFcnzZ365gqZH7PMx4QVCXEjC6AHI7FYUQlG_HLFCToPyy4es_b5DUxJMU03G2dnnNWgmhz2LQ6lZnC_f-QSZsbRwH2h6vUZCeRfp71BG-XyKpg.png)
 
-Lo mismo aplica para el envío masivo de modificaciones de facturas emitidas/recibidas. En ese caso, dichas facturas deberán encontrarse marcadas como "Modificada por error registral" = SI.
+Lo mismo aplica para el envío masivo de modificaciones de facturas emitidas/recibidas. En ese caso, dichas facturas deberán encontrarse marcadas como **Modificada por error registral** = SI.
 
 Tal y como se muestra en la siguiente pantalla, filtramos por:
 
@@ -824,12 +824,12 @@ seleccionamos varias facturas y procedemos a su Modificación en SII.
 
 ### **Generar facturas (manualmente)**
 
-El proceso "Generar facturas (manualmente)” permite crear facturas de venta del tipo "AR Invoice" en estado completado.
+El proceso **Generar facturas (manualmente)** permite crear facturas de venta del tipo "AR Invoice" en estado completado.
 
-Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro de los grupos de campos "Datos para Sistemas de Facturación" y "AEAT SII", con el fin de indicar en cada pedido de venta:
+Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro de los grupos de campos **Datos para Sistemas de Facturación** y **AEAT SII**, con el fin de indicar en cada pedido de venta:
 
-- la "**Fecha de operación**", si ésta es conocida
-- y la "**Descripción SII**" de la operación.
+- la **Fecha de operación**, si ésta es conocida
+- y la **Descripción SII** de la operación.
 
 En ningún caso es posible enviar pedidos de venta a SII (alta/modificación).
 
@@ -837,41 +837,41 @@ Tal y como se muestra en la pantalla, es posible seleccionar los pedidos a factu
 
 ![](../../../../../../assets/drive/Ew-3GmSHo4SC8MYPB1b_faB3t50XX3uNoBlp8hK4o8NQ_NNQGk0Rlfkgjxvmvp7QJn-acYuicdRzLB8eZ_EgDfvgBKxcOSoolmbX-kn6oROckmVoCBYZKrtoA55jIXX51NQ1-wp7DLVY5ETVjxvHSdk.png)
 
-Al procesar, Etendo nos informa de que se han creado las facturas correspondientes, que tendrán ya un estado de "Completado".
+Al procesar, Etendo nos informa de que se han creado las facturas correspondientes, que tendrán ya un estado de **Completado**.
 
 !!! info
     Cada una de estas facturas heredará la fecha de operación y la descripción SII introducidas en el pedido. Es importante recalcar que el usuario siempre las puede modificar, si es necesario, antes de dar de alta en SII dicha factura.
 
 !!! info
-    La clave de tipo factura no se informa por defecto, por tanto el usuario, antes de dar de alta en SII, tendrá que seleccionar el valor "Factura".
+    La clave de tipo factura no se informa por defecto, por tanto el usuario, antes de dar de alta en SII, tendrá que seleccionar el valor **Factura**.
 
 ![](../../../../../../assets/drive/aMgaLXe4tY4nipPDVT33nXXZCbiZiuddcE0lErcIFB-8SKN3BRIzIRw88im-00dJUrIlUoROIE7koQT9TfNhz81rTmkaR1EoLZZ_B53WfMtum0QRsdwvaxFUT3ruMFTNiMGL-m6NJVySFnQTXvyxn30.png)
 
 Si el pedido de venta o los pedidos de venta fueran negativos, este proceso generaría facturas de tipo "AR Invoice" que tendremos que reactivar y modificar antes de dar de alta en SII:
 
 - El tipo de documento debe cambiar a un [tipo de documento rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos).
-- La clave de tipo factura se debe seleccionar como "Factura Rectificativa", e introducir el **motivo de la rectificación**.
+- La clave de tipo factura se debe seleccionar como **Factura Rectificativa**, e introducir el **motivo de la rectificación**. Consulte [Qué motivo de rectificación usar (R1–R5)](./funcionalidades-generales-para-sifs.md#que-motivo-de-rectificacion-usar-r1r5) para saber cuál corresponde a cada caso.
 
 ![](../../../../../../assets/drive/pwCBP_ahyxDvNz_-q3IcT0IJBo4B1r05w3AhJLrmfTGMoX9-BFL41vf4-CH6DMC_RN-pZBjBp0LlOigea-baElLEvjiaMlZt52aVaw7SmLR6EW5QwzM86iNtmfaQcygSC21OipvaKGRLLiK4v2w1YeU.png)
 
-### **Crear Líneas de** 
+### **Crear Líneas de**
 
 **Pedidos**
 
-Las facturas de compra/venta pueden crearse desde pedidos con la opción "**Crear Lineas de**". Varios pedidos pueden seleccionarse para ser incluidos en una factura.
+Las facturas de compra/venta pueden crearse desde pedidos con la opción **Crear Lineas de**. Varios pedidos pueden seleccionarse para ser incluidos en una factura.
 
 Respecto de la información de SII, tenemos que tener en cuenta que:
 
-- Si la factura de venta/compra que se está creando **no tiene información en el campo "Descripción SII"**, se tomará la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.
+- Si la factura de venta/compra que se está creando **no tiene información en el campo Descripción SII**, se tomará la **Descripción SII** introducida en el primer pedido seleccionado de venta/compra.
 - La fecha **de operación** de la factura será por defecto la fecha de la factura y no se modificará al copiar los pedidos. El usuario tendrá que modificarla de forma manual si es diferente a la fecha de factura.
-- Si el **primer pedido que se copia es negativo** (en el caso de las facturas de venta), la factura de venta correspondiente se creará como "Factura Rectificativa", "Por diferencias", con el "Motivo de rectificación" R1, pudiendo el usuario cambiar esa información si fuera necesario, al añadir líneas de pedido adicionales positivas o negativas.
-- Las **facturas de compra creadas desde pedidos positivos**, se crearán con clave tipo factura "**Factura**", con tipo de documento "AP Invoice".
-- Las **facturas de compra creadas desde pedidos negativos**, se crearán con clave tipo factura "**Factura**", y el usuario debería crearlas con un tipo de documento reverse "Reverse Purchase Invoice", ya que en el caso de las facturas recibidas  
+- Si el **primer pedido que se copia es negativo** (en el caso de las facturas de venta), la factura de venta correspondiente se creará como **Factura Rectificativa**, "Por diferencias", con el **Motivo de rectificación** R1, pudiendo el usuario cambiar esa información si fuera necesario, al añadir líneas de pedido adicionales positivas o negativas.
+- Las **facturas de compra creadas desde pedidos positivos**, se crearán con clave tipo factura **Factura**, con tipo de documento "AP Invoice".
+- Las **facturas de compra creadas desde pedidos negativos**, se crearán con clave tipo factura **Factura**, y el usuario debería crearlas con un tipo de documento reverse "Reverse Purchase Invoice", ya que en el caso de las facturas recibidas  
   no es obligatorio informar de si una factura es rectificativa o no, sea positiva o negativa.
 
 **Albaranes** (Albarán (Cliente)/Recibo devolución de material o Albarán (Proveedor)/Devolución a albarán de Proveedor)
 
-Las facturas de compra/venta pueden crearse desde albaranes/devoluciones con la opción "**Crear Lineas de**". Varios albaranes/devoluciones pueden seleccionarse para ser incluidos en una factura.
+Las facturas de compra/venta pueden crearse desde albaranes/devoluciones con la opción **Crear Lineas de**. Varios albaranes/devoluciones pueden seleccionarse para ser incluidos en una factura.
 
 Respecto de la información de SII, tenemos que tener en cuenta que:
 
@@ -901,14 +901,14 @@ Dentro de este apartado se describen diferentes casos de uso tanto para las fact
 
 ### **Libro de Facturas Emitidas**
 
-La información del registro de alta/modificación de las facturas de venta se obtiene de la ventana "Factura (Cliente)", que como ya se ha explicado se ha modificado para incluir información requerida por SII (fecha operación, clave tipo factura, descripción SII, etc).
+La información del registro de alta/modificación de las facturas de venta se obtiene de la ventana **Factura (Cliente)**, que como ya se ha explicado se ha modificado para incluir información requerida por SII (fecha operación, clave tipo factura, descripción SII, etc).
 
 El registro de alta/modificación en SII de las facturas de venta varía en función de las siguientes variables:
 
-- la **localización del "Tercero"** (Cliente), ya sea éste extranjero, intracomunitario o nacional, que conlleva la sujeción o no al IVA y dentro de la sujeción, su exención.
-- el **tipo de factura emitida**, esto es "Factura"(F1), "Factura Rectificativa"(RX), "Factura Simplificada" (F2) o "Asiento Resumen de Factura Simplificada" (F4).
+- la **localización del Tercero** (Cliente), ya sea éste extranjero, intracomunitario o nacional, que conlleva la sujeción o no al IVA y dentro de la sujeción, su exención.
+- el **tipo de factura emitida**, esto es **Factura** (F1), **Factura Rectificativa** (RX), **Factura Simplificada** (F2) o **Asiento Resumen de Factura Simplificada** (F4).
 - **la sujeción al RECC** de la organización
-- la venta a minoristas en las que se incluye "**Recargo de Equivalencia**"
+- la venta a minoristas en las que se incluye **Recargo de Equivalencia**
 - la venta a revendedores en **Inversión del Sujeto Pasivo**
 
 y en función de que la factura emitida incluya:
@@ -968,7 +968,7 @@ Es importante recalcar que:
 
 Factura emitida por la exportación de bienes y prestación de servicios en el extranjero.
 
-La organización F&B España emite el 13 de septiembre de 2017 una factura a la Empresa Z situada en Marruecos por la venta de un equipo y el servicio de instalación. La operación se produjo el día 29 de agosto. Este tercero debe identificarse en Etendo con un "Clave NIF País Residencia", distinta de 1 (NIF) y 2 (NOI).
+La organización F&B España emite el 13 de septiembre de 2017 una factura a la Empresa Z situada en Marruecos por la venta de un equipo y el servicio de instalación. La operación se produjo el día 29 de agosto. Este tercero debe identificarse en Etendo con un **Clave NIF País Residencia**, distinta de 1 (NIF) y 2 (NOI).
 
 En este caso, y dado que el IVA se ha devengado en el periodo de agosto (fecha operación 29 de agosto), el plazo límite de expedición de la factura de venta y su alta en SII sería el 13 de septiembre.
 
@@ -990,8 +990,8 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave régimen especial "02" (Exportación)
 - con desglose por tipo de Operación
-- prestación del servicio "No sujeto por reglas de localización"
-- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación).
+- prestación del servicio **No sujeto por reglas de localización**
+- exportación del bien **Sujeta y Exenta**, con clave de causa de exención "E2" (Exportación).
 
 ![](../../../../../../assets/drive/5zXCAlCIBhJiUvUE2u4IPU47L16nNpn96Y-FbZ5SXgiiHoocMWiyDbeUoVD8UY7LVRTxk75wW3hqZnOjC0rDk2OSh5zZgWu07ggeMiRrDfJVAY01TQ-e8SaS2IdbuHMtJ8DQPAA-1n1f9fBVVFuwepE.png)
 
@@ -1005,8 +1005,8 @@ el XML generado incluye igualmente:
 - un tipo de Factura "F1"
 - con clave régimen especial "02" (Exportación)
 - con desglose por tipo de Operación
-- prestación del servicio "No sujeto por reglas de localización"
-- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
+- prestación del servicio **No sujeto por reglas de localización**
+- exportación del bien **Sujeta y Exenta**, con clave de causa de exención "E2" (Exportación). Esta clave se puede configurar para que aparezca por defecto en la ventana **Causa de exención** o indicar en la cabecera de la factura.
 
 ![](../../../../../../assets/drive/BnMTWAUJv3Itf0gbWYlfNV0RuyNPonFy4GFIpV9Ahh81Y2KK9JiI1p7dVLY79EidOqX8eOuGrGYYwN6Y6cVERAU_iNjULVsQUU_FKxk30SLRq1Nz-WDyW2SCC_YKC1gDqGXGt87ofjEjs9ka8oiiiQY.png)
 
@@ -1016,7 +1016,7 @@ Factura emitida con IVA Intracomunitario por entrega de bienes y prestación de 
 
 La organización F&B España emite el día 18 de agosto de 2017 una factura por la entrega de hardware (por importe de 1000.00 €) y su instalación (por importe de 800.00 €) a un cliente localizado en Francia. La operación se realiza el día 10 de agosto de 2017.
 
-Este cliente localizado en Francia, debe estar identificado en Etendo con una "Clave NIF País Residencia" de tipo 2 = NOI.
+Este cliente localizado en Francia, debe estar identificado en Etendo con una **Clave NIF País Residencia** de tipo 2 = NOI.
 
 En este caso, y dado que el IVA se ha devengado en el periodo de agosto (fecha operación 10 de agosto), el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de septiembre.
 
@@ -1038,8 +1038,8 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave régimen especial "01" (Régimen General)
 - con desglose por tipo de Operación
-- prestación del servicio "No sujeto por reglas de localización"
-- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E5" (Entrega intracomunitaria). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
+- prestación del servicio **No sujeto por reglas de localización**
+- exportación del bien **Sujeta y Exenta**, con clave de causa de exención "E5" (Entrega intracomunitaria). Esta clave se puede configurar para que aparezca por defecto en la ventana **Causa de exención** o indicar en la cabecera de la factura.
 
 ![](../../../../../../assets/drive/luCZJQdNJOYe_30B8lauePugxFfIgv8TCOATfe2t1uFBz-FVINtxs0KooEAXdaTMGE9o44PXUQF4lS5hwGljNUQU-1G_x5GqakdHzFPBerOuzHQr3am409yP-YwDbE1YEknU8jFIatjxrkzkuUEiCHY.png)
 
@@ -1076,7 +1076,7 @@ El XML de alta en SII contendrá la siguiente información:
 
 Los cobros totales o parciales de facturas en RECC deben darse de alta en SII en el momento de producirse.
 
-Desde la ventana "Monitor SII" podemos filtrar por el número de cobro y proceder a su envío a SII.
+Desde la ventana **Monitor SII** podemos filtrar por el número de cobro y proceder a su envío a SII.
 
 Una vez dado de alta en SII, el XML generado informa de los siguientes datos del cobro, referenciados al número de la factura de venta:
 
@@ -1086,7 +1086,7 @@ Una vez dado de alta en SII, el XML generado informa de los siguientes datos del
 
 ![](../../../../../../assets/drive/zNO7__LCn0RS6lT_b-IqOr-5UI7FWlcdIhnJAiPhseee-s6Wc1FTV4EtmD9Ujp_R_Q7WEKcPY-LBi9xWWe_hj2Q28fkR-JnyV3NVvoPKGxhptTlVq6VOhKpIVhfkkUsi6H_Dj1eCS8kcA2T6YgkonZg.png)
 
-El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
+El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo **Type**.
 
 **Anulación de cobros**
 
@@ -1094,11 +1094,11 @@ En el caso de los libros registro de cobros en RECC, no se utilizará el tipo de
 
 La modificación de un cobro en RECC ya dado de alta en SII se efectuará enviando el cobro que se pretende anular en negativo.
 
-Lo anterior implica que en Etendo, no podremos reactivar un cobro en RECC ya dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago" que se muestra en la siguiente imagen:
+Lo anterior implica que en Etendo, no podremos reactivar un cobro en RECC ya dado de alta en SII, si no que tendremos que revertirlo, con la opción **Revertir pago** que se muestra en la siguiente imagen:
 
 ![](../../../../../../assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
-Al revertir el cobro, Etendo genera un nuevo cobro por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
+Al revertir el cobro, Etendo genera un nuevo cobro por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana **Monitor SII**, tal y como se muestra en la siguiente imagen:
 
 ![](../../../../../../assets/drive/10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD.png)
 
@@ -1119,7 +1119,7 @@ Por tanto, las facturas en RECC de fecha 2017 que no estén cobradas a 31-12-201
 - **Importe** = importe pendiente de cobro de la factura
 - **Medio** = 03 (No se cobra/No se paga)
 
-Desde la ventana de "Liquidación manual del IVA de Caja" será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
+Desde la ventana **Liquidación manual del IVA de Caja** será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
 
 #### **Ventas con recargo de equivalencia**
 
@@ -1158,8 +1158,8 @@ El XML de alta en SII contendrá la siguiente información:
 
 - un tipo de Factura "F1"
 - con clave régimen especial "01" (Operación de régimen general.)
-- y la operación dentro del bloque funcional ”Desglose factura”, "Sujeta - No Exenta – Con Inversión sujeto pasivo” (S2).
-- Los campos “tipo impositivo” “cuota repercutida” se informarán con importe cero
+- y la operación dentro del bloque funcional **Desglose Factura**, **Sujeta - No Exenta – Con Inversión sujeto pasivo** (S2).
+- Los campos **tipo impositivo** y **cuota repercutida** se informarán con importe cero
 
 ![](../../../../../../assets/drive/ZEqqB3TgdDl7PnFVsTpM5FtOKACsXZ1wU2VmDKspeWJQCkSuqpJCREyAK2NtnDT9QweIYdz-H89Bh74hcqr1ATWVgxjZm15zPTXzGRBLkZvGnq0uFrFAJIp1HochquU5YMhUpboj3HTmXg1eJe7beRo.png)
 
@@ -1187,7 +1187,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave regimen especial "12" (Operaciones de arrendamiento de local de negocio no sujetos a retención)
 - Sujeta No Exenta "S1"
-- con el detalle del Inmueble, que se obtiene de la configuración realizada para el "local arrendado" en la ventana "Producto" :
+- con el detalle del Inmueble, que se obtiene de la configuración realizada para el **local arrendado** en la ventana **Producto**:
   - Situación del inmueble
   - Referencia catastral
 
@@ -1260,34 +1260,34 @@ El XML de alta en SII contendrá la siguiente información:
 
 La información correspondiente a los importes superiores a 6.000 euros percibidos en metálico durante el ejercicio de una misma persona o entidad, deberá suministrarse con carácter anual, durante los primeros 30 días del mes de enero siguiente al ejercicio al que se refieran.
 
-En Etendo se ha creado una nueva ventana denominada "SII Cobros en metálico" que permite gestionar la generación de dichos cobros y su posterior "alta" o "Modificación" en SII.
+En Etendo se ha creado una nueva ventana denominada **SII Cobros en Metálico** que permite gestionar la generación de dichos cobros y su posterior "alta" o "Modificación" en SII.
 
 **Alta Cobros en Metálico**
 
-En la ventana "SII Cobros en metálico" se puede introducir la "Organización" y el Ejercicio (por ejemplo 2021), para el cual se necesita suministrar este tipo de información de carácter anual.
+En la ventana **SII Cobros en Metálico** se puede introducir la **Organización** y el Ejercicio (por ejemplo 2021), para el cual se necesita suministrar este tipo de información de carácter anual.
 
-Una vez introducida dicha información, el botón "**Actualizar Cobros Metálicos SII**" lanza un proceso que tiene en cuenta:
+Una vez introducida dicha información, el botón **Actualizar Cobros Metálicos SII** lanza un proceso que tiene en cuenta:
 
-- todas las transacciones del tipo **“BP Deposit”** o **“Cobro”** con estado **"Cobro depositado"** o **"Conciliado"**, realizadas en cuentas bancarias de tipo **“Caja”** con **"fecha de transacción”** durante el año natural especificado (Ejercicio).
-- respecto de operaciones/transacciones bancarias relacionadas con **Facturas y Conceptos Contables**, asociadas a un “Tercero” identificado con un **Tax ID** (por ejemplo NIF)
+- todas las transacciones del tipo **BP Deposit** o **Cobro** con estado **Cobro depositado** o **Conciliado**, realizadas en cuentas bancarias de tipo **Caja** con **fecha de transacción** durante el año natural especificado (Ejercicio).
+- respecto de operaciones/transacciones bancarias relacionadas con **Facturas y Conceptos Contables**, asociadas a un **Tercero** identificado con un **Tax ID** (por ejemplo NIF)
 - y que, **agrupadas por dicho tercero**, superen el importe de 6.000,00 €
 
 ![](../../../../../../assets/drive/1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt.png)
 
-Una vez generado el cobro/cobros, se puede realizar su "**Alta en SII**". Una vez dado de alta en SII, los campos "Alta en SII", "Estado registro SII", "Importe", "Importe enviado" e "Importe enviado" se actualizarán.
+Una vez generado el cobro/cobros, se puede realizar su **Alta en SII**. Una vez dado de alta en SII, los campos **Alta en SII**, **Estado registro SII**, **Importe**, **Importe enviado** e **Importe enviado** se actualizarán.
 
 Si se produjera un error al dar de alta en SII, se mostraría el código de error y el mensaje del error para su subsanación.
 
 **Modificación Cobros en Metálico**
 
-La ventana "SII Cobros metálico" permite además, controlar incidencias que se podrían producir con posterioridad al alta del cobro(s). Incidencias que puedan deberse a la incorporación de nuevos cobros, modificación/eliminación de cobros existentes para un tercero.
+La ventana **SII Cobros en Metálico** permite además, controlar incidencias que se podrían producir con posterioridad al alta del cobro(s). Incidencias que puedan deberse a la incorporación de nuevos cobros, modificación/eliminación de cobros existentes para un tercero.
 
 Para ello, se diferencian los siguientes campos:
 
 - **Importe**: corresponde a la suma total de los cobros depositados en una cuenta financiera de tipo caja, que supere la cantidad de 6.000,00 €, respecto de un tercero
 - **Importe enviado** a SII
 - **Importe pendiente** de envío a SII
-- **Totalmente enviado**: tomará los valores, "Sí" cuando no existan diferencias entre el campo "importe" e "importe enviado"; "No" cuando un aumento/disminución del importe provoque una diferencia al ya enviado.
+- **Totalmente enviado**: tomará los valores, **Sí** cuando no existan diferencias entre el campo "importe" e "importe enviado"; **No** cuando un aumento/disminución del importe provoque una diferencia al ya enviado.
 
 Por ejemplo para un tercero determinado se realizaron varias facturas durante el año 2021 que se cobran en metálico. El importe total de dichas facturas y, por tanto, el importe recibido en metálico de este tercero asciende a 151,000.00. Tanto las facturas como el cobro en metálico se han dado de alta en SII.
 
@@ -1295,15 +1295,15 @@ Por ejemplo para un tercero determinado se realizaron varias facturas durante el
 
 Con posterioridad se realiza una nueva factura por importe de 1,800.00 €, que también se cobra en efectivo, y que por tanto debe darse de alta en SII.
 
-En la ventana "SII Cobros en Metálico", tendremos que:
+En la ventana **SII Cobros en Metálico**, tendremos que:
 
-- actualizar la información para que se refleje el nuevo cobro creado como "Importe pendiente" de alta en SII, tal y como se muestra en la imagen siguiente:
+- actualizar la información para que se refleje el nuevo cobro creado como **Importe pendiente** de alta en SII, tal y como se muestra en la imagen siguiente:
 
 ![](../../../../../../assets/drive/1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF.png)
 
-- y activar el check "**Modificada error registral**" en el cobro.
+- y activar el check **Modificada error registral** en el cobro.
 
-Una vez hecho esto se podrá proceder a la modificación en SII de dicho cobro para el tercero, a través del botón "**Modificación en SII**".
+Una vez hecho esto se podrá proceder a la modificación en SII de dicho cobro para el tercero, a través del botón **Modificación en SII**.
 
 ![](../../../../../../assets/drive/1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF.png)
 
@@ -1316,7 +1316,7 @@ Respecto de las facturas emitidas con fecha de expedición anterior al 01-01-201
 - **Clave de régimen especial** = 16 (Primer semestre 2017).
 - **Descripción de la operación**: “Registro del Primer semestre 2017”.
 
-Y, en el caso de las facturas emitidas, con independencia de su calificación cuando son "No Exentas", se informarán bajo la siguiente clave:
+Y, en el caso de las facturas emitidas, con independencia de su calificación cuando son **No Exentas**, se informarán bajo la siguiente clave:
 
 - **Tipo no exenta: S1**.
 
@@ -1328,23 +1328,23 @@ En Etendo, al dar de alta en SII una factura con fecha anterior al 01-07-2017, c
 
 En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
 
-Este proceso se denomina "**Proceso de adaptación a SII de Facturas de Venta del primer semestre de 2017**" y configura las facturas de venta del primer semestre, de la siguiente forma:
+Este proceso se denomina **Proceso de adaptación a SII de Facturas de Venta del primer semestre de 2017** y configura las facturas de venta del primer semestre, de la siguiente forma:
 
-- como "**Factura**", es decir, con la **"Clave de tipo Factura" = F1**.
+- como **Factura**, es decir, con la **Clave de tipo Factura = F1**.
   - las facturas de venta positivas, con/sin pedido relacionado, y tercero con NIF.
-- como "**Factura Rectificativa por Diferencias y error fundado"**, es decir, con la "**Clave de tipo Factura" = R1**
+- como **Factura Rectificativa (motivo R1 - Error fundado)**, es decir, con la **Clave de tipo Factura = R1**
   - las facturas de venta negativas, con/sin pedido relacionado, y tercero con NIF.
-- como "**Factura Simplificada**", es decir, con "**Clave tipo Factura" = F2**
+- como **Factura Simplificada**, es decir, con **Clave tipo Factura = F2**
   - las facturas positivas o negativas sin/con un ticket/pedido relacionado y tercero sin NIF.
-- como "**Asiento Resumen de Factura Simplificada**", es decir, con "**Clave tipo Factura" = F4**
+- como **Asiento Resumen de Factura Simplificada**, es decir, con **Clave tipo Factura = F4**
   - las facturas positivas o negativas con más de un ticket/pedido relacionado, y tercero sin NIF.
-- añade la descripción tipo "**Registro del Primer semestre**"
-- e indica como "**Fecha de operación**" la fecha de la factura tal y como requiere la AEAT.
+- añade la descripción tipo **Registro del Primer semestre**
+- e indica como **Fecha de operación** la fecha de la factura tal y como requiere la AEAT.
 
 !!! info
     El usuario siempre podrá revisar la configuración otorgada a dichas facturas antes de darlas de alta en SII.
 
-La ventana "**Monitor SII**" incluye también una pestaña "**Facturas de Venta Primer Semestre 2017**" desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
+La ventana **Monitor SII** incluye también una pestaña **Facturas de Venta Primer Semestre 2017** desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
 
 #### **Factura rectificativa fuera de plazo**
 
@@ -1385,14 +1385,14 @@ El periodo asignado en SII **no se corresponde con la fecha de operación (enero
 
 ### **Libro de Facturas Recibidas**
 
-La información del registro de alta de las facturas de compra se obtiene de la ventana "Factura (Proveedor)".
+La información del registro de alta de las facturas de compra se obtiene de la ventana **Factura (Proveedor)**.
 
-En todo caso, será obligatorio introducir el número de factura del proveedor en el campo "Referencia del Proveedor", con el fin de identificar y cruzar la información de las facturas.
+En todo caso, será obligatorio introducir el número de factura del proveedor en el campo **Referencia del Proveedor**, con el fin de identificar y cruzar la información de las facturas.
 
 El registro de alta en SII de las facturas de compra varían en función de las siguientes variables:
 
-- la **localización del "Tercero"** (Proveedor), ya sea éste extranjero, intracomunitario o nacional
-- el **tipo de factura recibida**, esto es "Factura", "Factura de Importación (con DUA)", "Justificante Contable".
+- la **localización del Tercero** (Proveedor), ya sea éste extranjero, intracomunitario o nacional
+- el **tipo de factura recibida**, esto es **Factura**, **Factura de Importación (con DUA)**, **Justificante Contable**.
 - **la sujeción al RECC** de la operación reflejada en la factura de compra
 - **la sujeción al RECC** de la organización que recibe (registra) la factura de compra.
 - que la factura de compra incluya operaciones por las que los empresarios satisfacen compensaciones en las adquisiciones a **personas acogidas al REAGYP**.
@@ -1405,7 +1405,7 @@ y en función de que la factura recibida incluya:
 
 así como que la factura recibida refleje:
 
-- una "**Inversión del Sujeto Pasivo**"
+- una **Inversión del Sujeto Pasivo**
 - o su **fecha contable sea anterior al 1 de Julio de 2017**
 
 #### **Tercero (Proveedor) Nacional**
@@ -1453,17 +1453,17 @@ Es importante recalcar que:
 
 F&B España recibe una factura de compra de un proveedor extranjero, localizado en USA, por la adquisición de unos bienes. Todavía no se ha recibido el DUA ni la factura del transitario que realizará la importación de los bienes.
 
-En este caso, la factura del proveedor extranjero se debe registrar con la siguiente información dentro del grupo de campos "AEAT SII":
+En este caso, la factura del proveedor extranjero se debe registrar con la siguiente información dentro del grupo de campos **AEAT SII**:
 
 - **Fecha de la operación** si es diferente a la fecha de la factura
-- **Clave tipo factura** como "Justificante Contable" (F6)
+- **Clave tipo factura** como **Justificante Contable** (F6)
 - **Descripción SII** que corresponda
 
 Al registrar esta factura, el impuesto seleccionado será del tipo:
 
 - Importaciones 21%=0%
 
-Podemos indicar el tipo de cambio de la divisa (USD) a EUR en la factura, pestaña "Tipo de cambio", ya que todas las operaciones que se registren en SII deberán estar en euros. De no indicarse tipo de cambio en esta pestaña se tomará el tipo de cambio configurado en la ventana "Rangos de conversión" para la fecha de la factura.
+Podemos indicar el tipo de cambio de la divisa (USD) a EUR en la factura, pestaña **Tipo de cambio**, ya que todas las operaciones que se registren en SII deberán estar en euros. De no indicarse tipo de cambio en esta pestaña se tomará el tipo de cambio configurado en la ventana **Rangos de conversión** para la fecha de la factura.
 
 Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
 
@@ -1483,17 +1483,17 @@ F&B España recibe una factura de transitario, junto con el correspondiente DUA,
 
 La forma de registrar en Etendo la factura de transitario que incluye el IVA de importación será la siguiente:
 
-- en la ventana "**Factura (Proveedor)**" creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo "Tercero".  
-  Introducimos en el campo "Referencia del Proveedor", el número de factura del transitario.
-- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+- en la ventana **Factura (Proveedor)** creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo **Tercero**.  
+  Introducimos en el campo **Referencia del Proveedor**, el número de factura del transitario.
+- en el grupo de campos **AEAT SII** introducimos la siguiente información:
   - **fecha de operación**, si es distinta de la fecha factura del transitario
-  - **clave tipo factura** como "**Importación (DUA)**" (F5)
-  - seleccionamos la "**Descripción SII**" correspondiente
-- en el grupo de campos "**Import (DUA)**" introducimos:
+  - **clave tipo factura** como **Importación (DUA)** (F5)
+  - seleccionamos la **Descripción SII** correspondiente
+- en el grupo de campos **Import (DUA)** introducimos:
   - el **número de DUA**
   - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino"
-- en la pestaña "**Líneas**" introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 500 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
-- en la pestaña "**Impuestos**" creamos una nueva línea de impuestos con el tipo de impuesto "Importaciones 21%". En el campo "Base Imponible" introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
+- en la pestaña **Líneas** introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 500 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
+- en la pestaña **Impuestos** creamos una nueva línea de impuestos con el tipo de impuesto "Importaciones 21%". En el campo **Base Imponible** introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
 
 ![](../../../../../../assets/drive/vQSib6h0rlB988u0S84IkPdDUQWZOVwPLTHBjgTRPXDjrmWMLf4Ix0K901j0Cw-5coy52rLVU5M-Bzki63aleZoqmv2BtYqrKxpQe7qms2C8DNJLn77KoQZpoUnBBnfLrx83uf6_HzeGpa68qGnIerU.png)
 
@@ -1521,7 +1521,7 @@ El XML de alta en SII contendrá la siguiente información:
 
 ![](../../../../../../assets/drive/4pMaJ6g3yMj7fZotizXLbgwfpFLPziqoQOUdxahcLyupnKiZgG-VwpIhhDTTzXoSxbsx4-5NKG7CtYwDIDaVGWm_Hts8AiKdQQ4Vlv3zF4rFnWMwLJLZoPbkRCSnCa7K9gmxiqUCuO_RU1L9xcZHM8w.png)
 
-Respecto de la factura del proveedor extranjero, ésta se deberá registrar también en la ventana "Factura Proveedor", en la divisa que corresponda y, con la clave de tipo de factura "Factura" (F1).
+Respecto de la factura del proveedor extranjero, ésta se deberá registrar también en la ventana **Factura Proveedor**, en la divisa que corresponda y, con la clave de tipo de factura **Factura** (F1).
 
 Al registrar este tipo de facturas en Etendo, el rango de impuestos utilizado será del tipo "Importaciones 21%=>0%", dado que dichas facturas de proveedor extranjero no incluyen IVA.
 
@@ -1535,17 +1535,17 @@ F&B España recibe una factura de transitario, acompañada de tres DUAS que corr
 
 La forma de registrar en Etendo la factura de transitario que incluye varios documentos referentes al IVA liquidado en la aduana de destino es la siguiente:
 
-- en la ventana "**Factura (Proveedor)**" creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo "Tercero".  
-  Introducimos en el campo "Referencia del Proveedor", el número de factura del transitario.
-- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+- en la ventana **Factura (Proveedor)** creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo **Tercero**.  
+  Introducimos en el campo **Referencia del Proveedor**, el número de factura del transitario.
+- en el grupo de campos **AEAT SII** introducimos la siguiente información:
   - **fecha de operación**, si es distinta de la fecha factura del transitario
-  - **clave tipo factura** como "**Importación (DUA)**" (F5)
-  - seleccionamos la "**Descripción SII**" correspondiente
-- en este escenario no rellenamos los campos "**Import (DUA)**" de la cabecera, ya que los datos **número de DUA** y **fecha de admisión del DUA** los vamos a asociar a la línea de impuesto correspondiente al IVA liquidado en aduana.  
-  Para ello activamos el check "**Múltiple DUA**" que va a permitir introducir líneas sin haber informado los campos anteriores.
-- en la pestaña "**Lineas**" introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 700 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
-- en la pestaña "**Impuestos**" creamos tantas líneas de impuestos como DUAS, con el tipo de impuesto "Importaciones 21%" o "Importaciones 10%" con la siguiente información:
-  - en el campo "Base Imponible" introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
+  - **clave tipo factura** como **Importación (DUA)** (F5)
+  - seleccionamos la **Descripción SII** correspondiente
+- en este escenario no rellenamos los campos **Import (DUA)** de la cabecera, ya que los datos **número de DUA** y **fecha de admisión del DUA** los vamos a asociar a la línea de impuesto correspondiente al IVA liquidado en aduana.  
+  Para ello activamos el check **Múltiple DUA** que va a permitir introducir líneas sin haber informado los campos anteriores.
+- en la pestaña **Líneas** introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 700 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
+- en la pestaña **Impuestos** creamos tantas líneas de impuestos como DUAS, con el tipo de impuesto "Importaciones 21%" o "Importaciones 10%" con la siguiente información:
+  - en el campo **Base Imponible** introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
   - el **número de DUA**
   - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino"
 
@@ -1557,19 +1557,19 @@ Hacienda pone a disposición de las empresas importadoras un servicio de [_Agenc
 
 En estos casos, no se registra factura de transitario, pero si DUA y, por tanto, el DUA, esto es la deducibilidad del IVA de importación soportado, debe registrarse en Etendo junto a la factura del proveedor extranjero de la siguiente forma:
 
-- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+- en el grupo de campos **AEAT SII** introducimos la siguiente información:
   - **fecha de operación**, si es distinta de la fecha factura del transitario
-  - **clave tipo factura** como "**Importación (DUA)**" (F5)
-  - seleccionamos la "**Descripción maestro SII**" correspondiente
-- en el grupo de campos "**Import (DUA)**" introducimos:
+  - **clave tipo factura** como **Importación (DUA)** (F5)
+  - seleccionamos la **Descripción maestro SII** correspondiente
+- en el grupo de campos **Import (DUA)** introducimos:
   - el **número de DUA**
   - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino".
-- en la pestaña "**Líneas**" introducimos en euros los conceptos incluidos en la factura del proveedor extranjero relacionados con tipos impositivos del tipo "Importaciones 21%=0%".
+- en la pestaña **Líneas** introducimos en euros los conceptos incluidos en la factura del proveedor extranjero relacionados con tipos impositivos del tipo "Importaciones 21%=0%".
 
-Finalmente, el usuario de forma manual, deberá realizar los cambios que se indican a continuación, en la pestaña "Impuestos":
+Finalmente, el usuario de forma manual, deberá realizar los cambios que se indican a continuación, en la pestaña **Impuestos**:
 
-- creación de una nueva línea relacionada con el impuesto "**Importaciones 21%**", con el fin de reflejar la base imponible (casilla 47 del DUA) y, por tanto, el IVA de importación correspondiente.
-- creación de una nueva línea relacionada con el impuesto "**Importaciones 21%=0%**", con una base imponible y cuota negativa del mismo importe que la anterior, para evitar duplicar la base imponible.
+- creación de una nueva línea relacionada con el impuesto **Importaciones 21%**, con el fin de reflejar la base imponible (casilla 47 del DUA) y, por tanto, el IVA de importación correspondiente.
+- creación de una nueva línea relacionada con el impuesto **Importaciones 21%=0%**, con una base imponible y cuota negativa del mismo importe que la anterior, para evitar duplicar la base imponible.
 
 Hay que tener en cuenta que el importe del DUA vendrá indicado en euros. No es posible mezclar líneas en diferentes divisas en la misma factura, por lo que al introducir la factura de proveedor extranjero junto al DUA deberá existir una única divisa en euros.
 
@@ -1646,7 +1646,7 @@ Es importante recalcar que:
 
 Los pagos totales o parciales de facturas en RECC deben darse de alta en SII en el momento de producirse.
 
-Desde la ventana "Monitor SII" podemos filtrar por el número de pago y proceder a su envío a SII.
+Desde la ventana **Monitor SII** podemos filtrar por el número de pago y proceder a su envío a SII.
 
 Una vez dado de alta en SII, el XML generado informa de los siguientes datos del pago, referenciados al número de la factura de compra:
 
@@ -1656,7 +1656,7 @@ Una vez dado de alta en SII, el XML generado informa de los siguientes datos del
 
 ![](../../../../../../assets/drive/pTf6aP4P4yYSU7eESj_WiuFr1XYE_4hk8WEz5XcZ6g8pe7TApPwnYGTNX201Hfibrhyjd09RryZ8HEAJp0kROlrZP-88pas8JvfcfbY6wHWI-I8H0gOWndeLzJf9r23nigKinsyKyPNVnc3ew_RAUyA.png)
 
-El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
+El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo **Type**.
 
 **Anulación de pagos**
 
@@ -1664,9 +1664,9 @@ En el caso de los libros registro de pagos en RECC no se utilizará el tipo de c
 
 La modificación de un pago en RECC ya dado de alta en SII se efectuará enviando el pago que se pretende anular en negativo.
 
-Lo anterior implica que en Etendo, al igual que se ha explicado para los cobros en RECC, no podremos reactivar un pago en RECC dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago".
+Lo anterior implica que en Etendo, al igual que se ha explicado para los cobros en RECC, no podremos reactivar un pago en RECC dado de alta en SII, si no que tendremos que revertirlo, con la opción **Revertir pago**.
 
-Al revertir el pago, Etendo genera un nuevo pago por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
+Al revertir el pago, Etendo genera un nuevo pago por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana **Monitor SII**, tal y como se muestra en la siguiente imagen:
 
 ![](../../../../../../assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
@@ -1687,7 +1687,7 @@ Por tanto, las facturas en RECC de fecha 2017 que no estén pagadas a 31-12-2018
 - **Importe** = importe pendiente de pago de la factura
 - **Medio** = 03 (No se cobra/No se paga)
 
-Desde la ventana de "Liquidación manual del IVA de Caja" será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
+Desde la ventana **Liquidación manual del IVA de Caja** será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
 
 #### **Compensaciones en las adquisiciones a personas acogidas al REAGYP**
 
@@ -1734,7 +1734,7 @@ Al no ser un impuesto de IVA, los campos _tipo impositivo_ y _cuota soportada_ n
 
 En este régimen, podría producirse "autofacturación", es decir el receptor de la operación realiza la emisión de la factura en nombre del proveedor.
 
-Para esos casos se ha creado el check "**Autofactura**" en el grupo de campos "AEAT SII" de la cabecera de las facturas de compra, que permite que el "Nº de Documento" de factura de Etendo se traslade al campo "Referencia de proveedor", tal y como se muestra en la imagen adjunta:
+Para esos casos se ha creado el check **Autofactura** en el grupo de campos **AEAT SII** de la cabecera de las facturas de compra, que permite que el **Nº de Documento** de factura de Etendo se traslade al campo **Referencia de proveedor**, tal y como se muestra en la imagen adjunta:
 
 ![](../../../../../../assets/drive/kVdQsySjrBFfrCYtwfJcPCfQMeNJBmZnZJTnnuVdNPZbq5xZ1_7wpSwMcu8xqeJUCs6ctB1MmFhRPWVpZQwxA2C53rni_TYzg8NvsYv_CvI9C4mS0Ie17IGB8YIn5EPls_HN11zCuvtSDvfvlKTIVEs.png)
 
@@ -1793,10 +1793,10 @@ El XML de alta en SII contendrá la siguiente información:
 
 En el caso del registro de facturas de compra a empleados de la organización, por gastos de personal tales como dietas, se debe tener en cuenta lo siguiente:
 
-- los empleados de la organización que incurran en gastos a reembolsar, tienen que tener la categoría de impuestos de tercero “No declarable SII” asociada.
-- los gastos (productos de tipo “Gasto”) tienen que estar relacionados con el grupo de impuesto “No Sujeto Servicios”
+- los empleados de la organización que incurran en gastos a reembolsar, tienen que tener la categoría de impuestos de tercero **No declarable SII** asociada.
+- los gastos (productos de tipo **Gasto**) tienen que estar relacionados con el grupo de impuesto **No Sujeto Servicios**
 
-en ese caso, las facturas de compra creadas en la organización para el reembolso de gastos a dichos empleados, se crearán con el rango de impuesto “No declarable gastos de empleado".
+en ese caso, las facturas de compra creadas en la organización para el reembolso de gastos a dichos empleados, se crearán con el rango de impuesto **No declarable gastos de empleado**.
 
 El registro de estas facturas de compra no se enviarán a SII, en ningún caso.
 
@@ -1816,8 +1816,8 @@ Al registrar esta factura de compra los impuestos utilizados serán del tipo:
 
 El importe de la operación en dólares es de 500.00 USD, con un contravalor en EUR de 446.62, ya que:
 
-- será posible utilizar el tipo de conversión según la fecha de factura configurado a nivel de sistema en la ventana "Rangos de conversión"
-- o bien, el "Tipo de cambio" introducido en la propia factura de compra.
+- será posible utilizar el tipo de conversión según la fecha de factura configurado a nivel de sistema en la ventana **Rangos de conversión**
+- o bien, el **Tipo de cambio** introducido en la propia factura de compra.
 
 Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
 
@@ -1833,7 +1833,7 @@ Es importante recalcar que si este tipo de facturas incluyen más de un tipo imp
 
 **Caso 2 = Inversión Sujeto Pasivo - Proveedor Nacional**
 
-F&B España recibe una factura de otro empresario que emite su factura sin IVA por producirse dicha operación bajo la figura fiscal de "Inversión del Sujeto Pasivo", de modo que F&B España registra dicha operación a través de una factura de compra con Inversión del Sujeto Pasivo.
+F&B España recibe una factura de otro empresario que emite su factura sin IVA por producirse dicha operación bajo la figura fiscal de **Inversión del Sujeto Pasivo**, de modo que F&B España registra dicha operación a través de una factura de compra con Inversión del Sujeto Pasivo.
 
 Al registrar esta factura de compra los impuestos utilizados serán del tipo:
 
@@ -1858,8 +1858,8 @@ Respecto de las facturas recibidas antes del día 01-07-2017, existe también la
 
 Y, en el caso de las facturas recibidas:
 
-- la "**Fecha registro contable**" será la fecha del envío o alta en SII
-- y la "**Cuota deducible**" se fija a 0.00
+- la **Fecha registro contable** será la fecha del envío o alta en SII
+- y la **Cuota deducible** se fija a 0.00
 
 Lo anterior aplica excepto para sujetos pasivos en REDEME que ya las habrán enviado en el Modelo 340 correspondiente.
 
@@ -1869,18 +1869,18 @@ En Etendo, al dar de alta en SII una factura recibida con fecha anterior al 01-0
 
 En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
 
-Este proceso se denomina "**Proceso de adaptación a SII de Facturas de Compra del primer semestre de 2017**" y configura dichas facturas con:
+Este proceso se denomina **Proceso de adaptación a SII de Facturas de Compra del primer semestre de 2017** y configura dichas facturas con:
 
-- la clave tipo factura **"Factura" = "F1"**, en el caso de facturas de compra positivas y negativas
-- o **"Importación (DUA)" = "F5"**, en el caso de facturas de compra que incluyan un impuesto del tipo "Importaciones", en la pestaña "Impuestos".  
-  En estos casos el usuario final tendrá que informar los campos "**DUA**" y "**Fecha DUA**", antes de dar de alta en SII dichas facturas.
-- añade la descripción tipo "**Registro del Primer semestre**"
-- e indica como "**Fecha de operación**" la fecha de la factura tal y como requiere la AEAT.  
+- la clave tipo factura **Factura** = "F1", en el caso de facturas de compra positivas y negativas
+- o **Importación (DUA)** = "F5", en el caso de facturas de compra que incluyan un impuesto del tipo "Importaciones", en la pestaña **Impuestos**.  
+  En estos casos el usuario final tendrá que informar los campos **DUA** y **Fecha DUA**, antes de dar de alta en SII dichas facturas.
+- añade la descripción tipo **Registro del Primer semestre**
+- e indica como **Fecha de operación** la fecha de la factura tal y como requiere la AEAT.  
   El usuario siempre podrá revisar la configuración otorgada a dichas facturas antes de darlas de alta en SII
 
-Al dar de alta en SII la factura de compra del primer semestre ya adaptada por el proceso, se informará el campo "**Fecha registro contable**" con la fecha de alta en SII.
+Al dar de alta en SII la factura de compra del primer semestre ya adaptada por el proceso, se informará el campo **Fecha registro contable** con la fecha de alta en SII.
 
-La ventana "Monitor SII" incluye también una pestaña "Facturas de Compra Primer Semestre 2017" desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
+La ventana **Monitor SII** incluye también una pestaña **Facturas de Compra Primer Semestre 2017** desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
 
 #### **Factura recibida con IVA soportado no deducible**
 
@@ -1890,27 +1890,27 @@ Etendo permite la configuración de impuestos de compra no deducibles, tal y com
 
 Las facturas de compra que incluyan ese tipo de impuestos, tendrán que darse de alta en SII, tal y como se describe a continuación:
 
-- en la etiqueta "Cuota Soportada", se refleja la cuota soportada
-- y en la etiqueta "Cuota Deducible'', se refleja un "0".
+- en la etiqueta **Cuota Soportada**, se refleja la cuota soportada
+- y en la etiqueta **Cuota Deducible**, se refleja un **0**.
 
 ![](../../../../../../assets/drive/gpb9xZr8kbpoaTim4gGCbBGzKjz393sov8TOW8yBBqIMYfJ-4-vO9ZjaIBP6PDtFc5YiYJd8sDYupg4PeWM0dHltwqIczfMO_XxzbsCPXD-IJLEYZPyN850pc7lbBaeFBGnfZgtGEtysZ28nPehDpt8.png)
 
 En el caso de impuestos que incluyan parte deducible y parte no deducible, la información a enviar será tal y como se muestra en la siguiente imagen:
 
-- en la etiqueta "Cuota Soportada", se refleja la cuota soportada
-- y en la etiqueta "Cuota Deducible'', se refleja el importe de esa cuota que sea deducible.
+- en la etiqueta **Cuota Soportada**, se refleja la cuota soportada
+- y en la etiqueta **Cuota Deducible**, se refleja el importe de esa cuota que sea deducible.
 
 ![](../../../../../../assets/drive/itUfZLKo8uBuD5Cv1_2yx5gKK7-0cSLb0MbxoEccSV_OAov_gQtTJL7Q69Inaw8SJm-moaZwoa-N2nqPwxe4SHtAQyEGu4rT5eQbemFSyUzWWYNEMzkDxRzD-nGiBFw0dhNQB1sSZKAPYyShYSA1a1k.png)
 
 ### **Informes de comprobación SII (Consultas)**
 
-Desde la ventana “**Consulta Facturas SII**” es posible establecer una comunicación inmediata con la AEAT. En esta comunicación, la AEAT proporciona un listado informativo de las facturas emitidas y recibidas en SII con estado “Correcto”.
+Desde la ventana **Consulta Facturas SII** es posible establecer una comunicación inmediata con la AEAT. En esta comunicación, la AEAT proporciona un listado informativo de las facturas emitidas y recibidas en SII con estado **Correcto**.
 
 Esta información es básica para poder conocer el proceso de contraste de los LFRE y LFRR.
 
 ![](../../../../../../assets/drive/7ntfirTf-NO6P8Tp-1jGiD2XKOkzSe-CanqYwZTIHgjMZ_d4oROIuvLTrf6suQ3pF50VOpJjyJoDs1Mpwxty4lBUkRL7F80m9ilSnh_Axoiv744HoOe-H2_4K7U9PenR41VVk0X-SdFZ5_a06wb7M70.png)
 
-Seleccionando la organización que va a ser objeto de consulta, accedemos a través de “Nueva Consulta Facturas a SII” a una ventana emergente en la que filtraremos por diferentes criterios para obtener la correspondiente relación de facturas.
+Seleccionando la organización que va a ser objeto de consulta, accedemos a través de **Nueva Consulta Facturas a SII** a una ventana emergente en la que filtraremos por diferentes criterios para obtener la correspondiente relación de facturas.
 
 Los diferentes criterios que se pueden aplicar para seleccionar la información a consultar a la AEAT, son los siguientes:
 
@@ -1923,7 +1923,7 @@ Los diferentes criterios que se pueden aplicar para seleccionar la información 
 - **Fecha presentación (desde)**
 - **Fecha presentación (hasta)**
 - **Estado de cuadre SII**: Una vez validado el envío de facturas presentado, de forma casi inmediata se procede a ejecutar el proceso de contraste, cuyo primer paso es tipificar la factura como contrastable o no:
-  - **No contrastable**: implica que nunca va a ser contrastada. Esta circunstancia se va a producir cuando el emisor o receptor no está en el sistema SII. En estos supuestos no se va a disponer en el sistema de posibilidad de contrastar esa información. Si la factura no resulta contrastable, la factura permanece en el estado “No contrastable” y no se intenta su cuadre. Ejemplos: las facturas simplificadas o las facturas cuya contraparte no aplica el SII.
+  - **No contrastable**: implica que nunca va a ser contrastada. Esta circunstancia se va a producir cuando el emisor o receptor no está en el sistema SII. En estos supuestos no se va a disponer en el sistema de posibilidad de contrastar esa información. Si la factura no resulta contrastable, la factura permanece en el estado **No contrastable** y no se intenta su cuadre. Ejemplos: las facturas simplificadas o las facturas cuya contraparte no aplica el SII.
   - **Contrastable**: comprobada la posibilidad de efectuar el contraste, se procede a determinar si esa información de registro remitida por una parte ha sido remitida por la contraparte. Los estados resultantes pueden ser:
   - **No contrastada**: No está la factura de la contraparte dada de alta en SII.
 
@@ -1936,13 +1936,11 @@ Si la factura se localiza en el sistema, se ejecuta un proceso adicional para co
 
 Para poder efectuar la consulta, será obligatorio completar los campos: _Libro de facturas, ejercicio y periodo_.
 
-Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana "Consultas Facturas SII"
+Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana **Consultas Facturas SII**
 
 ![](../../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
 
 
 ---
-
-This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 This work is a derivative of [Openbravo Localización Española](https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

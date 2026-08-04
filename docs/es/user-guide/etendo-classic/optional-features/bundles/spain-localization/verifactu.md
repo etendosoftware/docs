@@ -1,7 +1,7 @@
 ---
 title: Verifactu
 tags:
-    - Localización Española
+	- Localización Española
     - Veri*Factu
     - Verifactu
     - Facturación Electrónica
@@ -89,7 +89,7 @@ Además, existe una sección de **Monitoreo** donde los campos **Arranque del Si
 
 Por otra parte, el campo **Detalle Incidencia** se completará cuando un envío presente alguna incidencia causada por factores externos al contenido de la factura, como falta de conexión a internet, errores de servidores, timeouts u otros problemas de infraestructura o comunicación.
 
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/configuracion-verifactu.png)
 
 #### Marcar como Listo
 
@@ -102,7 +102,7 @@ Al pulsar **Marcar como Listo**, el sistema asigna automáticamente la **Fecha d
 !!!info
     Una organización cuya configuración no haya sido marcada como lista no envía facturas a *Verifactu*, aunque disponga de una configuración guardada.
 
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/marcar-como-listo.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/marcar-como-listo.png)
 
 
 ### Certificado Digital
@@ -139,7 +139,7 @@ Se recomienda consultar con su asesor fiscal cuál es el régimen que correspond
     | 19 | Operaciones de actividades incluidas en el Régimen Especial de Agricultura, Ganadería y Pesca (REAGYP) |
     | 20 | Régimen simplificado |
 
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-iva.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/regimen-iva.png)
 
 
 - Para impuesto de aplicación IGIC: **Régimen Especial IGIC**
@@ -180,7 +180,8 @@ Se recomienda consultar con su asesor fiscal cuál es el régimen que correspond
 
 
 - Si no aplica impuesto: **Causa no Sujeción**
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-no-sujecion.png)
+    
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/causa-no-sujecion.png)
 
 - Si está exento: **Causa de Exención**
 
@@ -212,13 +213,13 @@ Los siguientes campos son **obligatorios**:
 - **Tipo de Factura**
 - **Descripción de Operación**
 
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tipo-documento.png)
 
 Los valores informados en esta configuración se utilizarán para generar el registro de facturación que posteriormente se enviará a *Verifactu*.
 
 ### Ajustes Contables para Facturas F3
 
-Una **factura F3** (*factura emitida en sustitución de facturas simplificadas facturadas y declaradas*, clave de tipo de factura `F3`) reemplaza a las facturas simplificadas que consolida. Su emisión requiere determinados ajustes de configuración para garantizar que la información contable registrada sea correcta.
+Una **factura F3** (*factura emitida en sustitución de facturas simplificadas facturadas y declaradas*, campo **Tipo de Factura** con valor `F3`) reemplaza a las facturas simplificadas que consolida. Su emisión requiere determinados ajustes de configuración para garantizar que la información contable registrada sea correcta.
 
 ### Ajustes Contables
 
@@ -226,7 +227,7 @@ La emisión de una factura **F3** requiere ajustar los asientos contables, ya qu
 
 Para ello, se ha desarrollado una plantilla contable que:
 
-- Detecta la factura (o facturas) original relacionada.
+- Detecta las facturas originales relacionadas.
 - Copia sus apuntes contables.
 - Genera los apuntes inversos (intercambiando Debe y Haber), anulando el impacto contable original.
 
@@ -260,11 +261,13 @@ Cuando la **factura original** no ha sido cobrada, pero tiene un **plan de pagos
 Este cobro se registra en la **factura original** utilizando la **cuenta contable asociada al tercero**, con el objetivo de insertar el **concepto contable** necesario y dejar la factura original sin un plan de pagos activo. De este modo, el **único plan de pagos activo** queda vinculado a la **nueva factura F3**.
 
 Para configurar este **concepto contable**, se debe acceder a la ventana :material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Concepto Contable`, seleccionar la organización legal utilizada y, en la solapa **Contabilidad**, añadir un registro con el **esquema contable** y por último, completar el campo `Cuenta crédito` con la **cuenta asociada al tercero** utilizado.
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
+
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/concepto-contable.png)
 
 
 Esta cuenta es la que figura en la ventana :material-menu: `Aplicación` > `Datos Maestros` > `Terceros`, subsolapa **Contabilidad Cliente**, en el campo `Recibos de clientes` del esquema contable utilizado.
-    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
+    
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/tercero.png)
 
 ### Cobros Asociados
 
@@ -316,7 +319,7 @@ WHERE p.created >= v.created
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/alerta.png)
 
 !!! note
-    Puede consultar más información sobre cómo crear una [Alerta](../../../basic-features/general-setup/application/alert.md)
+    Puede consultar más información sobre cómo crear una [Alerta](../../../basic-features/general-setup/application/alert.md).
 
 ## Proceso de Envío a Verifactu
 
@@ -331,7 +334,7 @@ Para iniciar el proceso, cree una factura de venta utilizando una organización 
 
 Debe completar los siguientes campos obligatorios en la Factura:
 
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/sales-invoice-normal.png)
 
 - **Tipo de Factura**
 
@@ -387,12 +390,15 @@ Para aquellas facturas de venta en estado **Completado** que se generen desde pr
 !!! example
 
     1. Se crea un **Pedido de Venta**.
+
         ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/pedido.png)
       
     2. Mediante el proceso **Crear Facturas Desde Pedidos** (o cualquier otro proceso utilizado para la generación de facturas), se genera la **Factura**, la cual tomará los datos configurados en el **Tipo de Documento** utilizado.
+
         ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/crear-factura-desde-pedido.png)
 
     3. Al quedar la factura en estado **Completado**, se genera el **registro de facturación** y se envía a *Verifactu*.
+
         ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/factura-desde-pedido.png)
 
 !!! warning  
@@ -466,6 +472,7 @@ Debe utilizarse cuando el error afecta únicamente al `XML` (registro de factura
 3. El proceso automático genera un nuevo **Registro de Facturación** de **alta de subsanación** (`Subsanacion = "S"`) y lo enviará nuevamente.
 
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion.png)
+
     ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/subsanacion-aceptada.png)
 
     !!! warning
@@ -505,7 +512,7 @@ Se informa únicamente la **variación** respecto a la factura original.
 **Acción:**  
 Crear una nueva factura de venta utilizando un [tipo de documento para facturas rectificativas](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos), en una **serie distinta** a la original. Luego:
 
-1. Seleccionar el tipo de factura correspondiente (`R1` a `R5`).
+1. Seleccionar el **Tipo de Factura** correspondiente (`R1` a `R5`).
 2. Enlazar la factura original en la solapa **Factura Rectificativa**.
 3. Introducir las líneas con la diferencia y completar la factura para su envío a *Verifactu*.
 
@@ -524,7 +531,9 @@ Cuando el error obliga a **reemplazar la factura por completo** —por ejemplo, 
 2. Emitir una **nueva factura normal** con los datos correctos.
 
 !!! warning "Efecto económico, no anulación registral"
-    En el caso de un **destinatario equivocado**, este procedimiento logra el **efecto económico de un abono**, pero **no** el efecto registral de una anulación: la factura original sigue constando en *Verifactu* como un **registro de alta válido** (con su QR verificable). Consulte el detalle en [Reemplazar una factura por completo](./funcionalidades-generales-para-sifs.md#reemplazar-una-factura-por-completo-reversion-y-reemision).
+    Este procedimiento logra el efecto económico de un abono, pero no el efecto registral de una anulación ante la AEAT: la factura original sigue constando como registro válido. Consulte el detalle completo en [Reemplazar una factura por completo](./funcionalidades-generales-para-sifs.md#reemplazar-una-factura-por-completo-reversion-y-reemision).
+
+Si la factura reemplazada ya tiene cobros asociados, consulte [Cobros Asociados](#cobros-asociados) para regularizarlos.
 
 ### Rectificaciones desde Pedidos de Venta o Devolución de Cliente
 
@@ -542,12 +551,12 @@ Con esta configuración, al **generar la factura** desde el pedido o la devoluci
 
 ## Consulta del Estado de Envío de Facturas
 
-Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la **Agencia Tributaria.
+Existen dos ventanas desde las cuales es posible consultar el estado de envío de una factura. La principal diferencia entre ambas es que una **obtiene la información almacenada en el sistema**, mientras que la otra realiza la consulta **directamente contra los datos de la Agencia Tributaria**.
 
 ### Monitor Verifactu
 :material-menu: `Aplicación` > `Gestión Financiera` > `Sistemas de Facturación` > `Verifactu` > `Monitor Verifactu`
 
-Permite consultar facturas en estado Rechazada, Parcialmente Aceptada, Aceptada e Inválida. Los tres primeros estados provienen de la AEAT; el último indica errores previos.
+Permite consultar facturas en estado **Rechazada**, **Parcialmente Aceptada**, **Aceptada** o **Inválida**. Los tres primeros estados provienen de la AEAT; el último indica errores previos.
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/monitor-verifactu.png)
 
@@ -568,7 +577,7 @@ Cuando el resultado de la consulta **supera los 10.000 registros**, es posible a
 - **Número de Serie**: Número de serie y número de factura que identifican el **último registro de facturación consultado**.
 - **Fecha de Emisión**: Fecha de emisión del **último registro de facturación consultado**.
 
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/consulta-facturas.png)
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/consulta-facturas.png)
 
 
 ## QR Tributario
@@ -581,17 +590,17 @@ Al imprimir una factura, se incorpora un **código QR** diseñado para facilitar
 - **Transparencia fiscal:** incrementa la confianza del cliente y contribuye a la prevención del fraude.
 - **Integridad documental:** garantiza la inalterabilidad y trazabilidad de las facturas una vez emitidas.
 
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-factura.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-factura.png)
 
 ### Resultados Posibles al Escanear el QR
 
 - **Factura encontrada en AEAT:**
   
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-alta.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-alta.png)
 
 - **Factura no encontrada en AEAT:**
   
-  ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-baja.png)
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu/qr-baja.png)
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.

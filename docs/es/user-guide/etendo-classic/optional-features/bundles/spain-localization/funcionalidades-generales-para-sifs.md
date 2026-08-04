@@ -94,26 +94,33 @@ Para más detalle, consulte la [Guía de la AEAT](https://sede.agenciatributaria
 
 ## Tipos de Documento Rectificativos
 
-:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
-
-:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de Documento (numeración)`
-
 Las facturas rectificativas deben utilizar exclusivamente un tipo de documento y una secuencia marcados como rectificativos. Para configurarlos, siga estos pasos:
 
-1. **Secuencia de Documento (Numeración)**: Crear un nuevo registro y marcar la casilla **Es Rectificativo**. Esto permite que el sistema la reconozca como una secuencia rectificativa.
+1. **Secuencia de Documento (Numeración)**
 
-![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/secuencia-rectificativa.png)
+	:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Secuencia de Documento (numeración)`
 
-2. **Tipo de Documento**: Crear un nuevo registro y marcar la casilla **Es Rectificativo**. Asociar la secuencia creada en el paso anterior en el campo **Sec.doc.(numeración)** si es no transaccional. En el selector solo aparecerán secuencias marcadas como rectificativas cuando el tipo de documento se ha configurado como rectificativo.
+	Crear un nuevo registro y marcar la casilla **Es Rectificativo**. Esto permite que el sistema la reconozca como una secuencia rectificativa.
 
-![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/tipo-doc-rectificativo.png)
+	!!! info "Restricción de prefijo en TicketBAI"
+	    Si la organización está acogida a **TicketBAI**, la secuencia rectificativa debe llevar **prefijo**. Consulte el detalle en [TicketBAI y Batuz → Tipo de Documento para Facturas Rectificativas](./ticketbai-batuz.md#tipo-de-documento-para-facturas-rectificativas).
 
-!!! info "Solo aplica a organizaciones acogidas a un SIF"
-    La selección y validación del tipo de documento rectificativo **solo se aplica en organizaciones que tengan configurado algún SIF** (*Verifactu*, *TicketBAI* o *SII*). Es decir, las comprobaciones que exigen que una factura rectificativa utilice un tipo de documento (y una secuencia) marcados como rectificativos, y que impiden usar un tipo rectificativo en una factura que no rectifica a ninguna otra, se activan únicamente cuando la entidad legal de la factura está acogida a *Verifactu*, *TicketBAI* o *SII*.
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/secuencia-rectificativa.png)
+
+2. **Tipo de Documento**
+
+	:material-menu: `Aplicación` > `Gestión Financiera` > `Contabilidad` > `Configuración` > `Tipo de Documento`
+
+	Crear un nuevo registro y marcar la casilla **Es Rectificativo**. Asociar la secuencia creada en el paso anterior en el campo **Sec.doc.(numeración)** si es no transaccional. En el selector solo aparecerán secuencias marcadas como rectificativas cuando el tipo de documento se ha configurado como rectificativo.
+
+	![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/tipo-doc-rectificativo.png)
+
+	!!! info "Solo aplica a organizaciones acogidas a un SIF"
+   		La selección y validación del tipo de documento rectificativo **solo se aplica en organizaciones que tengan configurado algún SIF** (*Verifactu*, *TicketBAI* o *SII*). Es decir, las comprobaciones que exigen que una factura rectificativa utilice un tipo de documento (y una secuencia) marcados como rectificativos, y que impiden usar un tipo rectificativo en una factura que no rectifica a ninguna otra, se activan únicamente cuando la entidad legal de la factura está acogida a *Verifactu*, *TicketBAI* o *SII*.
 
 ## Facturas Rectificativas
 
-Cuando una factura ya emitida (completada y enviada al SIF correspondiente) contiene un error, la normativa **no permite reactivarla ni modificarla**: la corrección se realiza mediante una **factura rectificativa**. Esta sección explica, de forma común a **Verifactu**, **TicketBAI** y **SII**, **qué rectificación usar en cada caso** y **cómo realizarla de principio a fin en Etendo**.
+Cuando una factura ya emitida (completada y enviada al SIF correspondiente) contiene un error, la normativa **no permite reactivarla ni modificarla**: la corrección se realiza mediante una **factura rectificativa**, común a **Verifactu**, **TicketBAI** y **SII**.
 
 En una rectificativa se registra la variación respecto a la factura original, **sin detallar los importes originales corregidos**.
 
@@ -132,12 +139,33 @@ Toda factura rectificativa debe indicar el **motivo de la rectificación**, que 
 | **R5** — Facturas simplificadas | Rectificación de una **factura simplificada** (ticket). | Rectificar una factura simplificada emitida anteriormente. |
 
 !!! note "Correcciones de datos no monetarios (R4)"
-    Cuando solo se corrige un **dato no monetario** del **mismo** destinatario, la rectificativa se registra con **base 0 €, cuota 0 € y total 0 €**: no hay variación económica. Debe indicarse la causa y la modificación efectuada, e identificar la factura original; esta no se elimina, queda **complementada** por la rectificativa.
+    Cuando solo se corrige un **dato no monetario** del **mismo** destinatario, la rectificativa se registra con **base 0 €, cuota 0 € y total 0 €**: no hay variación económica. Debe indicarse la causa y la modificación efectuada, e identificar la factura original; esta no se elimina, queda **complementada** por la rectificativa. Si, en cambio, la factura **identifica a otro destinatario** (otra persona o un NIF distinto), no basta con una rectificativa de importe cero: consulte [Reemplazar una factura por completo](#reemplazar-una-factura-por-completo-reversion-y-reemision).
 
-    Si, en cambio, la factura **identifica a otro destinatario** (otra persona o un NIF distinto), no basta con una rectificativa de importe cero: consulte [Reemplazar una factura por completo](#reemplazar-una-factura-por-completo-reversion-y-reemision).
+    **Ejemplo:** factura original **F-2026-0105** a *Empresa Ejemplo, S.L.* (NIF `B12345678`) con el **domicilio mal consignado**. Se emite una rectificativa **R-2026-0012** con **motivo R4**, manteniendo el mismo destinatario y NIF, con el **domicilio correcto**, identificando la factura rectificada (F-2026-0105) y la causa (*«se corrige el domicilio del destinatario; no se modifican la base imponible, la cuota de IVA ni el importe total»*). Importes de la rectificación: **base 0 €, cuota 0 €, total 0 €**.
 
-!!! example "Ejemplo R4 — corrección del domicilio del destinatario"
-    Factura original **F-2026-0105** a *Empresa Ejemplo, S.L.* (NIF `B12345678`), base 1.000 €, cuota 210 €, con el **domicilio mal consignado**. Se emite una rectificativa **R-2026-0012** con **motivo R4**, manteniendo el mismo destinatario y NIF, con el **domicilio correcto**, identificando la factura rectificada (F-2026-0105) y la causa (*«se corrige el domicilio del destinatario; no se modifican la base imponible, la cuota de IVA ni el importe total»*). Importes de la rectificación: **base 0 €, cuota 0 €, total 0 €**.
+### Casos de uso y su registro
+
+Cada caso se registra informando en un único registro **solo la variación** respecto a la factura original (base 1.000 €, cuota 210 € del ejemplo anterior), siguiendo el criterio de la [AEAT](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html){target="_blank"}:
+
+| Caso | Registro |
+|---|---|
+| **Descuento posterior de 200 €** sobre la base (base correcta 800 €, cuota correcta 168 €) | base **−200 €**, cuota **−42 €**, total **−242 €** |
+| **Aumento de la base** (se facturó 200 € de menos) | base **+200 €**, cuota **+42 €** |
+| **Impago**: crédito incobrable (`R3`) o concurso (`R2`) del destinatario | base **0 €**, cuota **−210 €** (se rectifica solo la cuota repercutida que no se cobrará) |
+| **Tipo de IVA incorrecto, base correcta** (se aplicó 10 % en lugar de 21 %) | dos desgloses a tipos positivos: se revierte el erróneo (base **−1.000 €**, cuota **−100 €** al 10 %) y se añade el correcto (base **+1.000 €**, cuota **+210 €** al 21 %); neto: base 0 €, cuota **+110 €** |
+| **Reemplazo completo de la factura** (base incorrecta, error de cabecera, varios errores a la vez) | ver [reversión y reemisión](#reemplazar-una-factura-por-completo-reversion-y-reemision) |
+| **Rectificar una rectificativa anterior** | nueva rectificativa con base y cuota positivas o negativas según el ajuste necesario |
+
+### Cómo hacerlo en Etendo
+
+El procedimiento es común a los tres SIFs:
+
+1. **Configure un tipo de documento rectificativo** y su secuencia, tal como se describe en [Tipos de Documento Rectificativos](#tipos-de-documento-rectificativos). La factura rectificativa debe usar una **serie distinta** a la de la factura original.
+2. **Cree una factura de venta** usando ese tipo de documento rectificativo.
+3. **Introduzca las líneas con la diferencia** según el caso de la tabla anterior.
+4. **Indique el motivo de rectificación** que corresponda (según el SIF, ver más abajo).
+5. **Enlace la factura original** que se está rectificando en la solapa correspondiente (**Factura Rectificativa**).
+6. **Complete la factura y envíela al SIF** por el procedimiento habitual (envío automático o botón de registro manual, según el SIF).
 
 ### Reemplazar una factura por completo (reversión y reemisión)
 
@@ -154,41 +182,6 @@ Cuando el error obliga a reemplazar la factura entera —por ejemplo, la factura
     - La AEAT **no considera anulado** el registro original.
     - El destinatario incorrecto **podría seguir cotejando la factura original** mediante su código QR.
 
-### Casos de uso y su registro
-
-Todos los ejemplos siguientes parten de una **factura original con base 1.000 € y cuota 210 € (21 %)** y se registran informando en un único registro **solo la variación** respecto a la original. Siguen el criterio de la [explicación dada en la AEAT al respecto](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html){target="_blank"}.
-
-#### Ejemplo: descuento posterior de 200 € sobre la base
-
-Tras emitir la factura se concede un descuento que reduce la base en 200 € (base correcta **800 €**, cuota correcta **168 €**). Se registra únicamente el ajuste:
-
-| Campo | Valor |
-|---|---|
-| Base (desglose) | **−200 €** |
-| Cuota (desglose) | **−42 €** |
-| Importe total | **−242 €** |
-
-#### Otros casos frecuentes
-
-En todos los casos se informa únicamente la variación respecto a la factura original:
-
-- **Aumento de la base (se facturó de menos).** La operación era 200 € superior a lo facturado → base **+200 €**, cuota **+42 €**.
-- **Impago: crédito incobrable o concurso.** El cliente no paga y el crédito deviene incobrable (motivo `R3`, art. 80.Cuatro LIVA) o el destinatario entra en concurso (motivo `R2`, art. 80.Tres LIVA). Se rectifica solo la cuota repercutida que no se cobrará, manteniendo la base → base **0 €**, cuota **−210 €**.
-- **Tipo de IVA incorrecto (la base era correcta).** Se aplicó 10 % en lugar de 21 %. Se mantiene la base imponible y se corrige solo el impuesto con **dos desgloses a tipos positivos**: se revierte el erróneo (base **−1.000 €**, cuota **−100 €** al 10 %) y se añade el correcto (base **+1.000 €**, cuota **+210 €** al 21 %). Neto: base 0 €, cuota **+110 €**.
-- **Reemplazo completo de la factura** (base incorrecta, error en un dato de cabecera como la fecha o el tercero, varios errores a la vez). Se aplica la [reversión y reemisión](#reemplazar-una-factura-por-completo-reversion-y-reemision): anular la original (base **−1.000 €**, cuota **−210 €**) y emitir a continuación una **nueva factura normal** con los datos correctos.
-- **Rectificar una rectificativa anterior.** Se emite otra rectificativa con base y cuota positivas o negativas según el ajuste necesario.
-
-### Cómo hacerlo en Etendo
-
-El procedimiento es común a los tres SIFs:
-
-1. **Configure un tipo de documento rectificativo** y su secuencia, tal como se describe en [Tipos de Documento Rectificativos](#tipos-de-documento-rectificativos). La factura rectificativa debe usar una **serie distinta** a la de la factura original.
-2. **Cree una factura de venta** usando ese tipo de documento rectificativo.
-3. **Introduzca las líneas con la diferencia** según el caso de la tabla anterior.
-4. **Indique el motivo de rectificación** que corresponda (según el SIF, ver más abajo).
-5. **Enlace la factura original** que se está rectificando en la solapa correspondiente (**Factura Rectificativa**).
-6. **Complete la factura y envíela al SIF** por el procedimiento habitual (envío automático o botón de registro manual, según el SIF).
-
 ### Diferencias específicas por SIF
 
 Aunque el mecanismo es común (un tipo de documento marcado como rectificativo, mediante el campo `Es Rectificativo`), cada SIF identifica la rectificativa con sus propios campos:
@@ -196,6 +189,13 @@ Aunque el mecanismo es común (un tipo de documento marcado como rectificativo, 
 - **Verifactu**: se selecciona la **clave de tipo de factura** (motivo) `R1`–`R5`. Consulte [Verifactu → Rectificación](./verifactu.md#rectificacion).
 - **TicketBAI**: se debe marcar la casilla **Factura rectificativa** en la cabecera de la factura, y luego seleccionar el **Código de factura rectificativa** adecuado al caso. Se utiliza un tipo de documento rectificativo con una **secuencia con prefijo** (ver [restricciones del prefijo](./ticketbai-batuz.md#tipo-de-documento-para-facturas-rectificativas)).
 - **SII**: la rectificativa se identifica con **Clave tipo factura = Factura rectificativa** (`R`), más el **Motivo de la rectificación** (`R1`–`R5`). Consulte [SII → Facturas Rectificativas de Venta](./sii-para-iva.md#facturas-rectificativas-de-venta).
+
+*[AEAT]: Agencia Estatal de Administración Tributaria
+*[IVA]: Impuesto sobre el Valor Añadido
+*[LIVA]: Ley del Impuesto sobre el Valor Añadido
+*[NIF]: Número de Identificación Fiscal
+*[QR]: Código de Respuesta Rápida
+*[SIF]: Sistemas de Información Fiscal
 
 ---
 

@@ -832,9 +832,12 @@ plugins:
             End Year Close: Cierre de año
             Enterprise Model: Organización
             Enterprise Module Management: Gestión del módulo de Empresa
+            Essentials Extensions Bundle: Paquete de Extensiones Esenciales
+            Etendo BI Extensions Bundle: Paquete de Extensiones Etendo BI
             Etendo BI Inclusion/Exclusion Module Configuration: Configuración del Módulo de Inclusión/Exclusión de Etendo BI
             Etendo Release Cycle: Ciclo de Lanzamientos de Etendo
             Financial Account: Cuenta Financiera
+            Financial Extensions Bundle: Paquete de Extensiones Financieras
             Financial Management: Gestión Financiera
             Financial Type: Tipo Financiero
             Financial Type Configuration: Configuración de tipo de financiación
@@ -1042,6 +1045,7 @@ plugins:
             Payment Run: Ejecución de Pagos
             Period Control Log: Abrir/Cerrar Periodos
             Picking List: Lista de Preparación
+            Platform Extensions Bundle: Paquete de Extensiones de Plataforma
             Plugins: Plugins
             PostgreSQL Configuration: Configuración de PostgreSQL
             Preference: Preferencias
@@ -1053,9 +1057,11 @@ plugins:
             Process Request: Procesamiento de Peticiones
             Process Scheduling: Planificador de procesos
             Processes: Procesos
+            Procurement Extensions Bundle: Paquete de Extensiones de Compras
             Procurement Management: Gestión de Compras
             Product: Producto
             Product Setup: Configuración de productos
+            Production Extensions Bundle: Paquete de Extensiones de Producción
             Production Management: Gestión de Producción
             Project and Service Management: Gestión de Proyectos y Servicios
             Projections and Mappings: Proyecciones y Mapeos
@@ -1071,6 +1077,7 @@ plugins:
             Resolving Dependencies on GitHub: Resolver Dependencias en GitHub
             Role: Rol
             Role Access: Rol permisos
+            Sales Extensions Bundle: Paquete de Extensiones de Ventas
             Sales Invoice Payment Plan: Plan de pago de facturas de venta
             Sales Management: Gestión de Ventas
             Simple G/L Journal: Asientos manuales simplificados
@@ -1080,6 +1087,7 @@ plugins:
             Session Preferences: Preferencias Sesión
             Setup: Configuración
             Setup and Usage: Configuración y Uso
+            Spanish Localization Bundle: Paquete de Localización Española
             Standard Windows: Ventanas Estándar
             Stock Logistic Unit: Unidad Logística de Stock
             Stock Reservation: Reserva de existencias
@@ -1107,6 +1115,7 @@ plugins:
             User interface: Interfaz de Usuario
             User Interface Improvements: Mejoras de Interfaz de Usuario
             VAT Regularization: Regularización del IVA
+            Warehouse Extensions Bundle: Paquete de Extensiones de Almacén
             Warehouse Management: Gestión de Almacén
             "What's New": "Novedades"
             Window Personalization: Personalización de Ventana
