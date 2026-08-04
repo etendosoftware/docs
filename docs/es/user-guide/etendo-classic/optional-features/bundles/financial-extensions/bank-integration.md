@@ -14,6 +14,8 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration.template`
+
 !!!info "Antes de comenzar"
     Este módulo requiere que el **Financial Extensions Bundle** esté instalado en su entorno de Etendo. Si no está seguro de si está instalado, contacte con su administrador de sistemas antes de continuar. Para instrucciones de instalación, visite el marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. Para conocer las versiones disponibles y la compatibilidad con el core, visite [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
@@ -69,18 +71,18 @@ Como **Administrador**:
 1. Abra la ventana **Entidad** y seleccione su Entidad.
 2. En el grupo de campos **Integración bancaria**, introduzca la **Clave de API** proporcionada por el servicio de soporte.
 
-![Campo Clave de API](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
+    ![Campo Clave de API](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
 
-!!!info
-    La clave API se configura **una vez por Entidad** y la comparten todos los usuarios de esa Entidad, incluidos los procesos planificados.
+    !!!info
+        La clave API se configura **una vez por Entidad** y la comparten todos los usuarios de esa Entidad, incluidos los procesos planificados.
 
-!!!warning "Visibilidad de botones y campos"
-    Todos los botones y campos de Integración bancaria **solo son visibles** cuando la Entidad actual tiene configurada una clave API. Esto incluye:
+    !!!warning "Visibilidad de botones y campos"
+        Todos los botones y campos de Integración bancaria **solo son visibles** cuando la Entidad actual tiene configurada una clave API. Esto incluye:
 
-    - En la ventana **Cuenta Financiera**: el botón **Conectar cuenta**, el botón **Obtener extracto bancario**, el selector **Proveedor bancario** y los campos **Fecha de importación desde**, **Fecha de importación hasta** y **Agrupación de extractos**.
-    - En la ventana **Pago**: el botón **Generar pago bancario**.
+        - En la ventana **Cuenta Financiera**: el botón **Conectar cuenta**, el botón **Obtener extracto bancario**, el selector **Proveedor bancario** y los campos **Fecha de importación desde**, **Fecha de importación hasta** y **Agrupación de extractos**.
+        - En la ventana **Pago**: el botón **Generar pago bancario**.
 
-    Si no ve estos elementos, verifique que la Entidad tenga una clave API válida configurada en la ventana **Entidad**.
+        Si no ve estos elementos, verifique que la Entidad tenga una clave API válida configurada en la ventana **Entidad**.
 
 ### 2. Configurar cuentas financieras { #step-2-configure-financial-accounts }
 

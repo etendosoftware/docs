@@ -14,6 +14,8 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration`
 
+:octicons-package-16: Javapackage: `com.etendoerp.psd2.bank.integration.template`
+
 !!!info "Before you begin"
     This module requires the **Financial Extensions Bundle** to be installed in your Etendo environment. If you are unsure whether it is installed, contact your system administrator before proceeding. For installation instructions, visit the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For available versions and core compatibility, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
@@ -67,18 +69,18 @@ As an **Administrator**:
 1. Open the **Client** window and select your Client.
 2. In the **Bank Integration** field group, enter the **Api Key** provided by Support Service.
 
-![API Key field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
+    ![API Key field](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png)
 
-!!!info
-    The API Key is configured **once per Client** and shared by every user of that Client, including scheduled processes.
+    !!!info
+        The API Key is configured **once per Client** and shared by every user of that Client, including scheduled processes.
 
-!!!warning "Button and Field Visibility"
-    All Bank Integration buttons and fields are **only visible** when the current Client has an API Key configured. This includes:
-    
-    - In the **Financial Account** window: the **Connect Account** button, **Get Bank Statement** button, **Bank Provider** selector, **Import From Date**, **Import To Date**, and **Statement Grouping** fields.
-    - In the **Payment OUT** window: the **Generate Bank Payment** button.
-    
-    If you do not see these elements, verify that the Client has a valid API Key configured in the **Client** window.
+    !!!warning "Button and Field Visibility"
+        All Bank Integration buttons and fields are **only visible** when the current Client has an API Key configured. This includes:
+        
+        - In the **Financial Account** window: the **Connect Account** button, **Get Bank Statement** button, **Bank Provider** selector, **Import From Date**, **Import To Date**, and **Statement Grouping** fields.
+        - In the **Payment OUT** window: the **Generate Bank Payment** button.
+        
+        If you do not see these elements, verify that the Client has a valid API Key configured in the **Client** window.
 
 ### 2. Configure Financial Accounts { #step-2-configure-financial-accounts }
 
