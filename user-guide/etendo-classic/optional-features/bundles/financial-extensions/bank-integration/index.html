@@ -17811,6 +17811,7 @@
 
 <h1 id="bank-integration-with-salt-edge">Bank Integration with Salt Edge</h1>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.psd2.bank.integration</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path></svg></span> Javapackage: <code>com.etendoerp.psd2.bank.integration.template</code></p>
 <div class="admonition info">
 <p class="admonition-title">Before you begin</p>
 <p>This module requires the <strong>Financial Extensions Bundle</strong> to be installed in your Etendo environment. If you are unsure whether it is installed, contact your system administrator before proceeding. For installation instructions, visit the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For available versions and core compatibility, visit <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
@@ -17873,8 +17874,8 @@
 <p>As an <strong>Administrator</strong>:</p>
 <ol>
 <li>Open the <strong>Client</strong> window and select your Client.</li>
-<li>In the <strong>Bank Integration</strong> field group, enter the <strong>Api Key</strong> provided by Support Service.</li>
-</ol>
+<li>
+<p>In the <strong>Bank Integration</strong> field group, enter the <strong>Api Key</strong> provided by Support Service.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png" data-desc-position="bottom"><img alt="API Key field" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-1.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -17889,6 +17890,8 @@
 </ul>
 <p>If you do not see these elements, verify that the Client has a valid API Key configured in the <strong>Client</strong> window.</p>
 </div>
+</li>
+</ol>
 <h3 id="step-2-configure-financial-accounts">2. Configure Financial Accounts</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Financial Account</code></p>
 <p>The module supports financial accounts of type <strong>Bank</strong> and <strong>Card</strong>. The fields described below apply equally to both types.</p>
