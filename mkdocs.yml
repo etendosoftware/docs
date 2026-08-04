@@ -373,6 +373,7 @@ plugins:
                       - Funcionalidades Generales para SIFs: user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs.md
                       - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
                       - TicketBai y Batuz: user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai-batuz.md
+                      - Validación de NIF/VIES para Terceros: user-guide/etendo-classic/optional-features/bundles/spain-localization/validacion-nif-vies.md
                       - Veri*Factu: user-guide/etendo-classic/optional-features/bundles/spain-localization/verifactu.md
                     - Warehouse Extensions Bundle: 
                       - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
@@ -596,6 +597,9 @@ plugins:
                   - Financial Extensions Bundle: 
                     - Overview: developer-guide/etendo-classic/bundles/financial-extensions-bundle/overview.md
                   - Etendo BI Extensions Bundle: developer-guide/etendo-classic/bundles/etendo-bi-extensions.md
+                  - Spanish Localization Bundle:
+                    - Developer Changelog:
+                      - API Changes: developer-guide/etendo-classic/bundles/spain-localization/developer-changelog/apichanges.md
                 - Developer Changelog:
                   - API Changes: developer-guide/etendo-classic/developer-changelog/apichanges.md
               - Etendo RX:
