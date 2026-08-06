@@ -18,7 +18,8 @@ tags:
 
 | Versión | Fecha de publicación | Compatibilidad con Sales Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 17/07/2026 | [1.0.000, latest] | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | C | :white_check_mark: |
 
 ---
 Este trabajo está licenciado bajo :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} por [Futit Services S.L](https://etendo.software){target="_blank"}.
