@@ -26,7 +26,7 @@ A session that is never closed keeps its underlying JDBC connection checked out 
 Query PostgreSQL for connections stuck in this state:
 
 ```sql
-SELECT pid, now() - query_start AS duration, state, LEFT(query, 80) AS query_snippet
+SELECT pid, now() - xact_start AS duration, state, LEFT(query, 80) AS query_snippet
 FROM pg_stat_activity
 WHERE state = 'idle in transaction';
 ```

@@ -26,7 +26,7 @@ Una sesión que nunca se cierra mantiene su conexión JDBC subyacente retirada d
 Consulte PostgreSQL para buscar conexiones atascadas en este estado:
 
 ```sql
-SELECT pid, now() - query_start AS duration, state, LEFT(query, 80) AS query_snippet
+SELECT pid, now() - xact_start AS duration, state, LEFT(query, 80) AS query_snippet
 FROM pg_stat_activity
 WHERE state = 'idle in transaction';
 ```
