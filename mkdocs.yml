@@ -545,6 +545,7 @@ plugins:
                   - How to Define Display Logic for Tabs: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs.md
                   - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/how-to-define-the-timeout-of-a-query.md
                   - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process.md
+                  - How to Diagnose Idle in Transaction Connections: developer-guide/etendo-classic/how-to-guides/how-to-diagnose-idle-in-transaction-connections.md
                   - How to do a Complex Query Using DAL: developer-guide/etendo-classic/how-to-guides/how-to-do-a-complex-query-using-the-dal.md
                   - How to Document an Endpoint with OpenAPI: developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md
                   - How to Embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
@@ -934,6 +935,7 @@ plugins:
             How to Define Display Logic for Tabs: Cómo Definir Lógica de Visualización para Pestañas
             How to Define the Timeout of a Query: Cómo Definir el Timeout de una Consulta
             How to Develop a DAL Background Process: Cómo Desarrollar un Proceso en Segundo Plano con DAL
+            How to Diagnose Idle in Transaction Connections: Cómo Diagnosticar Conexiones en Estado Idle in Transaction
             How to do a Complex Query Using DAL: Cómo Hacer una Consulta Compleja Usando DAL
             How to Document an Endpoint with OpenAPI: Cómo Documentar un Endpoint con OpenAPI
             How to Embed a Widget into a Window Tab: Cómo Insertar un Widget en una Pestaña de Ventana
@@ -1587,6 +1589,7 @@ nav:
         - How to Define Display Logic for Tabs: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-for-tabs.md
         - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/how-to-define-the-timeout-of-a-query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/how-to-develop-a-dal-background-process.md
+        - How to Diagnose Idle in Transaction Connections: developer-guide/etendo-classic/how-to-guides/how-to-diagnose-idle-in-transaction-connections.md
         - How to do a Complex Query Using DAL: developer-guide/etendo-classic/how-to-guides/how-to-do-a-complex-query-using-the-dal.md
         - How to Document an Endpoint with OpenAPI: developer-guide/etendo-classic/how-to-guides/how-to-document-an-endpoint-with-openapi.md
         - How to Embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-embed-a-widget-into-a-window-tab.md
