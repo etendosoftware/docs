@@ -143900,5 +143900,11 @@
     "module": "com.etendoerp.psd2.bank.integration.es_es",
     "text_en": "Please close this window manually and return to Etendo to continue.",
     "text_es": "Por favor, cierre esta ventana manualmente y vuelva a Etendo para continuar."
+  },
+  {
+    "type": "terminology",
+    "term_en": "Bulk Completion",
+    "term_es": "Completado Masivo",
+    "note": "Official translation for the Bulk Completion action/module (com.etendoerp.bulk.completion). Do not translate as 'Finalización masiva'."
   }
 ]

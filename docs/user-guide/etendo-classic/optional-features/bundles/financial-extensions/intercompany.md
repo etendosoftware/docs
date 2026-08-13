@@ -5,6 +5,8 @@ tags:
     - Reverse
     - Order
     - Invoice
+    - Bulk Completion
+    - Troubleshooting
 ---
 # Intercompany
 
@@ -14,7 +16,7 @@ tags:
 
 This section describes the Intercompany module included in the Etendo **Financial Extensions bundle**.
 
-In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the **corresponding inverse document**. 
+In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the **corresponding inverse document**.
 
 For example, if Organization *A* makes a sales transaction to organization *B*, once the sales invoice is manually created by Organization *A*, this functionality will automatically create a purchase invoice for Organization *B*.
 
@@ -25,31 +27,35 @@ For example, if Organization *A* makes a sales transaction to organization *B*, 
 
 ### Organization Window
 
-It is required for each organization using this module to have one business partner assigned.
+It is required for each organization using this module to have one Business Partner assigned.
 
-![](../../../../../assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/organization-window.png)
 
 ### Business Partner Window
 
 !!! info
-    When configuring a new Business Partner, take into account that this business partner should be visible in the inverse organization. 
-
+    When configuring a new Business Partner, take into account that this Business Partner should be visible in the target organization.
 
 The Business Partner has to be configured as both **vendor** and **customer**, using the corresponding checkboxes.
 
-![](../../../../../assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/business-partner-customer.png)
 
-![](../../../../../assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/business-partner-vendor.png)
 
-In the Intercompany Documents tab, it is necessary to select the required document types for this business partner.
+In the **Intercompany Documents** tab, it is necessary to select the required document types for this Business Partner.
+
+!!! warning
+    The **Intercompany Documents** tab configuration must exist in both Business Partners involved in the transaction: the source Business Partner and the target Business Partner. Configuring only one of them is not enough to generate the inverse document.
 
 !!! info
     It is not mandatory to create new document types, but it is recommended.
 
-![](../../../../../assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/business-partner-intercompany-documents.png)
 
 !!! info
-    The information in both the source business partner and the target business partner should be the same.
+    The information in both the source Business Partner and the target Business Partner should be the same.
+
+Etendo uses the **Intercompany Documents** configuration of the Business Partner associated with the target organization to determine which inverse document type to create. If this configuration is missing or incomplete in the target Business Partner, Etendo does not generate the inverse document, or generates it with an incorrect document type.
 
 ## Invoices and Orders
 
@@ -60,34 +66,42 @@ In the Intercompany Documents tab, it is necessary to select the required docume
 
 The relevant fields are described below:
 
--   Organization: it is necessary to select an organization configured to work as an intercompany organization (In the following example, the organization *F&B US East Coast*).
--   Business Partner: it is necessary to select a business partner configured to work as an intercompany business partner (In the following example, *Be Soft Drinker, Inc.*).
--   Transaction document: it is necessary to select the document type defined in the intercompany document tab of the business partner (In the following example, the document type *AR Invoice Intercompany*).
+-   **Organization**: It is necessary to select an organization configured to work as an intercompany organization (In the following example, the organization *F&B US East Coast*).
+-   **Business Partner**: It is necessary to select a Business Partner configured to work as an intercompany Business Partner (In the following example, *Be Soft Drinker, Inc.*).
+-   **Transaction Document**: It is necessary to select the document type defined in the **Intercompany Documents** tab of the Business Partner (In the following example, the document type *AR Invoice Intercompany*).
 
-![](../../../../../assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/invoice-header.png)
 
 ### Lines
 
 The relevant fields are described below:
 
--   Product: The product must be visible for both organizations (In the following example, *Lemonade*). 
--   G/L items: The necessary G/L items must be visible for both organizations.
+-   **Product**: The product must be visible for both organizations (In the following example, *Lemonade*).
+-   **G/L Items**: The necessary G/L items must be visible for both organizations.
 
-![](../../../../../assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/invoice-lines.png)
 
-#### Product
+**Product**
 
 The relevant fields are described below:
 
--   Price: The price must be equivalent and available in every price list. 
--   Currency: The currency must be the same for both organizations.
--   Tax: The tax in each organization must be equivalent.
+-   **Price**: The price must be equivalent and available in every price list.
+-   **Currency**: The currency must be the same for both organizations.
+-   **Tax**: Etendo does not copy the tax from the source document. It recalculates the tax using the target organization's own configuration (product, warehouse, addresses, and tax setup), so the tax amount on the inverse document can differ from the source document.
+
+Etendo does not copy the price from the source document automatically. Before creating the inverse document, Etendo checks that the product exists in the price list configured in the target Business Partner, and that the price matches. If either check fails, Etendo does not create the inverse document.
+
+!!! warning
+    Active promotions, discounts, or price adjustments can change the final price of a line, but only at the moment the document is completed. Because of this, the inverse document can fail to generate even if the document looked correct before completion. If you get a totals error, check whether an active promotion, discount, or price adjustment changed the price when the document was completed.
 
 ### Complete or Book Documents
 
-When you **complete** invoices or **book** orders, these processes generate the corresponding inverse document and complete or book both the source and the target documents.
+Etendo only generates the inverse document when the source document is completed using the [**Bulk Completion**](../essentials-extensions/bulk-completion.md) action. This applies to both intercompany invoices and intercompany orders. The standard **Complete** action for invoices and the standard **Book** action for orders do not apply the intercompany logic: completing or booking a document through the standard action does not create the corresponding inverse document.
 
-![](../../../../../assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/complete-order.png)
+
+!!! warning
+    If the source invoice has discounts applied, configure the same discounts in the target organization. Otherwise, the creation of the inverse document fails due to a difference in totals.
 
 #### Reactivate Documents
 
@@ -95,6 +109,33 @@ To reactivate intercompany documents, both documents should not have an associat
 
 !!! info
     This process is only allowed for source documents.
+
+## Troubleshooting
+
+Use the following checklist to identify the cause when an intercompany document does not generate the inverse document, or fails validation.
+
+### Flow
+
+-   Was the document completed using the standard **Complete** or **Book** action, or through **Bulk Completion**? Both intercompany invoices and intercompany orders require **Bulk Completion**. The standard **Complete** or **Book** action never creates the inverse document.
+-   When reactivating a document, is the source document the one being reactivated? Etendo only allows reactivation on the source document. Does either document have an associated payment?
+
+### Configuration
+
+-   Do both Business Partners, source and target, have the **Intercompany Documents** tab configured with the required document types?
+-   Are both organizations configured as intercompany organizations, each with its assigned Business Partner?
+-   Is the product visible in both organizations, and does it exist in the price list of the target Business Partner?
+-   Does the currency match between both organizations?
+-   Are the G/L items visible in both organizations, if applicable?
+-   For invoices with discounts, does the target organization have the same discounts configured?
+
+### Validation
+
+-   Error: *"Inverse document cannot be created. The final amounts of the source document and the inverse document do not match."* Check these possible causes:
+    -   An active promotion, discount, or price adjustment changed the price when the document was completed (see the warning under [Lines](#lines)).
+    -   The product or its price does not match the target price list.
+    -   The invoice has discounts that are not configured in the target organization.
+    -   The document was completed with the standard **Complete** or **Book** action instead of **Bulk Completion**.
+-   The tax amount on the inverse document is different from what you expected. Etendo does not copy the tax from the source document; it always recalculates the tax using the target organization's configuration. Check the tax setup, product, warehouse, and addresses in the target organization.
 
 ---
 
