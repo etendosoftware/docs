@@ -11672,6 +11672,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-diagnose-idle-in-transaction-connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Diagnose Idle in Transaction Connections
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-do-a-complex-query-using-the-dal/" class="md-nav__link">
         
   
@@ -12353,11 +12383,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-using-the-apache-jdbc-connection-pool" class="md-nav__link">
+  <a href="#pool-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: Using the Apache JDBC Connection Pool
+      Pool Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pool Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-the-sweeper-thread-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the sweeper thread work?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -17049,11 +17094,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-using-the-apache-jdbc-connection-pool" class="md-nav__link">
+  <a href="#pool-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: Using the Apache JDBC Connection Pool
+      Pool Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pool Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-the-sweeper-thread-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the sweeper thread work?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -17116,21 +17176,187 @@
 <p>This page is under active development and may contain <strong>unstable or incomplete features</strong>. Use it <strong>at your own risk</strong>.</p>
 </div>
 <h2 id="overview">Overview</h2>
-<p>By default, Etendo uses two connection pools:</p>
-<ul>
-<li>Hibernate default connection pool for DAL-related queries </li>
-<li><a href="https://commons.apache.org/proper/commons-dbcp/" target="_blank">Apache DBCP</a> for the connections provided by the <code>ConnectionProviderImpl</code>. </li>
-</ul>
+<p>Etendo ships with the <a href="https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.apachejdbcconnectionpool" target="_blank">Apache JDBC Connection Pool</a> enabled by default, through the <code>org.openbravo.apachejdbcconnectionpool</code> core module. This module implements Etendo's <code>ExternalConnectionPool</code> abstraction on top of the <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html" target="_blank">Apache Tomcat JDBC Connection Pool</a>. No installation step is required: <code>Openbravo.properties</code> already sets</p>
+<div class="language-properties highlight"><span class="filename">Openbravo.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">db.externalPoolClassName</span><span class="o">=</span><span class="s">org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool</span>
+</span></code></pre></div>
+<p>Because the pool is already active on every installation, the work described on this page is tuning its properties — see <a href="#pool-configuration">Pool Configuration</a> below. Changing <code>db.externalPoolClassName</code> to a different class only becomes necessary to plug in a <strong>custom</strong> external connection pool implementation instead of the bundled one; see <a href="../how-to-create-an-external-connection-pool/">How to Create an External Connection Pool</a> for that scenario.</p>
+<p>Pool properties are set in <code>gradle.properties</code>. After adding or changing any of them, apply the change with:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>setup
+</span></code></pre></div>
+<p>This regenerates <code>Openbravo.properties</code>, which <code>JdbcExternalConnectionPool</code> reads at runtime to build the pool.</p>
+<h2 id="pool-configuration">Pool Configuration</h2>
+<p>A fresh Etendo installation ships with the following properties already set:</p>
+<div class="language-properties highlight"><span class="filename">Openbravo.properties (generated)</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">db.pool.initialSize</span><span class="o">=</span><span class="s">1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">db.pool.minIdle</span><span class="o">=</span><span class="s">5</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">db.pool.maxActive</span><span class="o">=</span><span class="s">10000</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">db.pool.timeBetweenEvictionRunsMillis</span><span class="o">=</span><span class="s">60000</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="na">db.pool.minEvictableIdleTimeMillis</span><span class="o">=</span><span class="s">120000</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="na">db.pool.removeAbandoned</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">db.pool.testOnBorrow</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="na">db.pool.testWhileIdle</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="na">db.pool.testOnReturn</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="na">db.pool.validationQuery</span><span class="o">=</span><span class="s">SELECT 1 FROM DUAL</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="na">db.pool.validationInterval</span><span class="o">=</span><span class="s">30000</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="na">db.pool.jmxEnabled</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<p>Override any of them by setting the corresponding property in <code>gradle.properties</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.pool.initialSize</code></td>
+<td>Connections established when the pool starts. Lowered automatically if it exceeds <code>db.pool.maxActive</code>.</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>db.pool.minIdle</code></td>
+<td>Minimum established connections kept in the pool at all times. The idle pool does not shrink below this value during an eviction run, but it can still drop lower if <code>db.pool.validationQuery</code> fails and connections are closed.</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>db.pool.maxActive</code></td>
+<td>Maximum active connections the pool can hand out at the same time. Kept high by default because capacity planning is delegated to the database; it should be at least as high as the database's own maximum connections. If lowered below that, <code>db.pool.maxWait</code> becomes relevant.</td>
+<td><code>10000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.timeBetweenEvictionRunsMillis</code></td>
+<td>How often (ms) the sweeper thread checks idle and abandoned connections. See <a href="#how-does-the-sweeper-thread-work">How does the sweeper thread work?</a>. Should not be set below <code>1000</code>.</td>
+<td><code>60000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.minEvictableIdleTimeMillis</code></td>
+<td>Minimum time (ms) a connection may sit idle before the sweeper evicts it.</td>
+<td><code>120000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.removeAbandoned</code></td>
+<td>If <code>true</code>, connections held longer than <code>db.pool.removeAbandonedTimeout</code> are forcibly reclaimed.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testOnBorrow</code></td>
+<td>Validates a connection before handing it out; drops and retries if invalid. Requires <code>db.pool.validationQuery</code> to be set.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testOnReturn</code></td>
+<td>Validates a connection when it is returned to the pool.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testWhileIdle</code></td>
+<td>Validates idle connections periodically.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.validationQuery</code></td>
+<td>SQL used to validate a connection. Must not throw an exception. Required for <code>testOnBorrow</code>, <code>testOnReturn</code>, and <code>testWhileIdle</code> to have any effect. Etendo's database creation scripts provision a <code>DUAL</code> compatibility table on PostgreSQL installations, so this query runs unmodified on both PostgreSQL and Oracle.</td>
+<td><code>SELECT 1 FROM DUAL</code></td>
+</tr>
+<tr>
+<td><code>db.pool.validationInterval</code></td>
+<td>Minimum milliseconds between validations of the same connection, to avoid redundant checks.</td>
+<td><code>30000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.jmxEnabled</code></td>
+<td>Exposes pool metrics through JMX.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The pool also supports the properties below. Etendo does not set a default for any of them — when a property is not set in <code>gradle.properties</code>, the underlying <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html#Common_Attributes" target="_blank">Apache Tomcat JDBC Connection Pool</a> default applies instead:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.pool.maxIdle</code></td>
+<td>Maximum idle connections kept in the pool when the sweeper is disabled.</td>
+</tr>
+<tr>
+<td><code>db.pool.maxWait</code></td>
+<td>Milliseconds the pool waits for a connection to be returned before throwing an exception, once <code>db.pool.maxActive</code> has been reached.</td>
+</tr>
+<tr>
+<td><code>db.pool.numTestsPerEvictionRun</code></td>
+<td>Number of connections examined in each sweeper run.</td>
+</tr>
+<tr>
+<td><code>db.pool.removeAbandonedTimeout</code></td>
+<td>Seconds a connection can be checked out before it is considered abandoned. Only relevant when <code>db.pool.removeAbandoned=true</code>.</td>
+</tr>
+<tr>
+<td><code>db.pool.testOnConnect</code></td>
+<td>Validates a connection right after it is physically created.</td>
+</tr>
+<tr>
+<td><code>db.pool.validatorClassName</code></td>
+<td>Custom validator class used instead of <code>db.pool.validationQuery</code>.</td>
+</tr>
+<tr>
+<td><code>db.pool.initSQL</code></td>
+<td>SQL executed once, right after a physical connection is created.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultAutoCommit</code></td>
+<td>Default auto-commit state of connections returned by the pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultReadOnly</code></td>
+<td>Default read-only state of connections returned by the pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultTransactionIsolation</code></td>
+<td>Default transaction isolation level of connections returned by the pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultCatalog</code></td>
+<td>Default catalog of connections returned by the pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.connectionProperties</code></td>
+<td>Extra driver-specific connection properties, as a semicolon-separated list of <code>name=value</code> pairs.</td>
+</tr>
+<tr>
+<td><code>db.pool.accessToUnderlyingConnectionAllowed</code></td>
+<td>Allows retrieving the underlying physical connection through the pooled connection wrapper.</td>
+</tr>
+<tr>
+<td><code>db.pool.logAbandoned</code></td>
+<td>Logs the stack trace of where a connection was borrowed once it has been checked out longer than <code>db.pool.suspectTimeout</code>. Adds overhead to every borrow, since a stack trace has to be generated.</td>
+</tr>
+<tr>
+<td><code>db.pool.suspectTimeout</code></td>
+<td>Seconds a connection can be checked out before it is logged as suspect. Only relevant when <code>db.pool.logAbandoned=true</code>. Independent from <code>db.pool.removeAbandoned</code> — a suspect connection is only logged, not reclaimed.</td>
+</tr>
+<tr>
+<td><code>db.pool.name</code></td>
+<td>Name assigned to the pool, useful to tell pools apart when several are configured.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>It is possible to specify an external connection provider that Etendo will use to obtain the <em>JDBC connections</em>. For that, a module containing a subclass of <code>ExternalConnectionPool</code> needs to be installed, and the <code>db.externalPoolClassName</code> property has to be set in <code>gradle.properties</code> file.</p>
+<p>Any of these properties can be scoped to a specific named pool — for example the read-only pool — by inserting the pool name after <code>db.</code>, e.g. <code>db.readonly.pool.maxActive</code>. A pool-specific value takes precedence over the default <code>db.pool.*</code> value for that pool; a pool that does not define its own value falls back to the default.</p>
 </div>
-<h2 id="example-using-the-apache-jdbc-connection-pool">Example: Using the Apache JDBC Connection Pool</h2>
-<p>The <a href="https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.apachejdbcconnectionpool" target="_blank">Apache JDBC Connection Pool</a> module core provides an implementation of the Apache JDBC Connection Pool.</p>
-<p>The <code>db.externalPoolClassName</code> property has to be set in <code>gradle.properties</code>. This module implements the external connection pool class in the <code>org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool</code> class, so this line should be added to <code>gralde.properties</code>:</p>
-<div class="language-text highlight"><span class="filename">Gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>db.externalPoolClassName=org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool
-</span></code></pre></div>
-<p>This module contains a configuration file template: <code>modules_core/org.openbravo.apachejdbcconnectionpool/config/connectionPool.properties.template</code>. In order to customize the JDBC connection pool properties this file has to be copied to <code>modules_core/org.openbravo.apachejdbcconnectionpool/config/connectionPool.properties</code>. The user can then configure the pool properties according to his needs. Hints about how to configure this properties can be found <a href="https://tomcat.apache.org/" target="_blank">here</a>.</p>
+<h3 id="how-does-the-sweeper-thread-work">How does the sweeper thread work?</h3>
+<p>The sweeper is the background thread that runs every <code>db.pool.timeBetweenEvictionRunsMillis</code> milliseconds to validate idle connections and check for abandoned ones. Whether it is enabled changes how the idle pool behaves:</p>
+<ul>
+<li><strong>Sweeper disabled</strong>: if the idle pool grows larger than <code>db.pool.maxIdle</code>, a connection is closed as soon as it is returned to the pool instead of being kept idle.</li>
+<li><strong>Sweeper enabled</strong>: the number of idle connections can grow beyond <code>db.pool.maxIdle</code>, but shrinks back down to <code>db.pool.minIdle</code> once a connection has been idle longer than <code>db.pool.minEvictableIdleTimeMillis</code>.</li>
+</ul>
+<p>The full list of configurable Tomcat JDBC Connection Pool attributes is available in the <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html#Common_Attributes" target="_blank">Apache Tomcat documentation</a>, along with <a href="https://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency" target="_blank">guidance on tuning the pool for high-concurrency environments</a>.</p>
 <hr>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_Use_an_External_Connection_Pool" target="_blank">How to Use an External Connection Pool</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 

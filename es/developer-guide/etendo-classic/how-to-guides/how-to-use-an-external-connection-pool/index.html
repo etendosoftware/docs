@@ -12059,6 +12059,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-diagnose-idle-in-transaction-connections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cómo Diagnosticar Conexiones en Estado Idle in Transaction
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--beta"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-do-a-complex-query-using-the-dal/" class="md-nav__link">
         
   
@@ -12740,11 +12770,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-using-the-apache-jdbc-connection-pool" class="md-nav__link">
+  <a href="#pool-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo: uso del pool de conexiones JDBC de Apache
+      Configuración del pool
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configuración del pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-the-sweeper-thread-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo funciona el hilo sweeper?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -17378,11 +17423,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-using-the-apache-jdbc-connection-pool" class="md-nav__link">
+  <a href="#pool-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo: uso del pool de conexiones JDBC de Apache
+      Configuración del pool
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configuración del pool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-the-sweeper-thread-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo funciona el hilo sweeper?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -17445,21 +17505,187 @@
 <p>Esta página está en desarrollo activo y puede contener <strong>funcionalidades inestables o incompletas</strong>. Úsela <strong>bajo su propia responsabilidad</strong>.</p>
 </div>
 <h2 id="overview">Visión general</h2>
-<p>De forma predeterminada, Etendo utiliza dos pools de conexiones:</p>
-<ul>
-<li>Pool de conexiones predeterminado de Hibernate para consultas relacionadas con DAL </li>
-<li><a href="https://commons.apache.org/proper/commons-dbcp/" target="_blank">Apache DBCP</a> para las conexiones proporcionadas por <code>ConnectionProviderImpl</code>. </li>
-</ul>
+<p>Etendo incluye el <a href="https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.apachejdbcconnectionpool" target="_blank">Apache JDBC Connection Pool</a> habilitado de forma predeterminada, a través del módulo core <code>org.openbravo.apachejdbcconnectionpool</code>. Este módulo implementa la abstracción <code>ExternalConnectionPool</code> de Etendo sobre el <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html" target="_blank">Apache Tomcat JDBC Connection Pool</a>. No se requiere ningún paso de instalación: <code>Openbravo.properties</code> ya establece</p>
+<div class="language-properties highlight"><span class="filename">Openbravo.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">db.externalPoolClassName</span><span class="o">=</span><span class="s">org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool</span>
+</span></code></pre></div>
+<p>Dado que el pool ya está activo en toda instalación, el trabajo descrito en esta página consiste en ajustar sus propiedades — consulte <a href="#pool-configuration">Configuración del pool</a> más abajo. Cambiar <code>db.externalPoolClassName</code> por otra clase solo es necesario para conectar una implementación de pool de conexiones externo <strong>personalizada</strong> en lugar de la incluida por defecto; consulte <a href="../how-to-create-an-external-connection-pool/">Cómo crear un pool de conexiones externo</a> para ese escenario.</p>
+<p>Las propiedades del pool se establecen en <code>gradle.properties</code>. Después de añadir o modificar cualquiera de ellas, aplique el cambio con:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>setup
+</span></code></pre></div>
+<p>Esto regenera <code>Openbravo.properties</code>, que es el archivo que <code>JdbcExternalConnectionPool</code> lee en tiempo de ejecución para construir el pool.</p>
+<h2 id="pool-configuration">Configuración del pool</h2>
+<p>Una instalación nueva de Etendo viene con las siguientes propiedades ya establecidas:</p>
+<div class="language-properties highlight"><span class="filename">Openbravo.properties (generado)</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">db.pool.initialSize</span><span class="o">=</span><span class="s">1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">db.pool.minIdle</span><span class="o">=</span><span class="s">5</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">db.pool.maxActive</span><span class="o">=</span><span class="s">10000</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">db.pool.timeBetweenEvictionRunsMillis</span><span class="o">=</span><span class="s">60000</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="na">db.pool.minEvictableIdleTimeMillis</span><span class="o">=</span><span class="s">120000</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="na">db.pool.removeAbandoned</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">db.pool.testOnBorrow</span><span class="o">=</span><span class="s">true</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="na">db.pool.testWhileIdle</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="na">db.pool.testOnReturn</span><span class="o">=</span><span class="s">false</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="na">db.pool.validationQuery</span><span class="o">=</span><span class="s">SELECT 1 FROM DUAL</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="na">db.pool.validationInterval</span><span class="o">=</span><span class="s">30000</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="na">db.pool.jmxEnabled</span><span class="o">=</span><span class="s">false</span>
+</span></code></pre></div>
+<p>Puede sobrescribir cualquiera de ellas estableciendo la propiedad correspondiente en <code>gradle.properties</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripción</th>
+<th>Valor predeterminado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.pool.initialSize</code></td>
+<td>Conexiones establecidas cuando arranca el pool. Se reduce automáticamente si supera <code>db.pool.maxActive</code>.</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>db.pool.minIdle</code></td>
+<td>Número mínimo de conexiones establecidas que se mantienen en el pool en todo momento. El pool de conexiones inactivas no se reduce por debajo de este valor durante una ejecución de desalojo, pero puede bajar más si <code>db.pool.validationQuery</code> falla y se cierran conexiones.</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>db.pool.maxActive</code></td>
+<td>Número máximo de conexiones activas que el pool puede entregar al mismo tiempo. Se mantiene alto de forma predeterminada porque la planificación de capacidad se delega a la base de datos; debería ser al menos tan alto como el número máximo de conexiones de la propia base de datos. Si se reduce por debajo de ese valor, <code>db.pool.maxWait</code> pasa a ser relevante.</td>
+<td><code>10000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.timeBetweenEvictionRunsMillis</code></td>
+<td>Cada cuánto (ms) el hilo sweeper revisa las conexiones inactivas y abandonadas. Consulte <a href="#how-does-the-sweeper-thread-work">¿Cómo funciona el hilo sweeper?</a>. No debería establecerse por debajo de <code>1000</code>.</td>
+<td><code>60000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.minEvictableIdleTimeMillis</code></td>
+<td>Tiempo mínimo (ms) que una conexión puede permanecer inactiva antes de que el sweeper la desaloje.</td>
+<td><code>120000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.removeAbandoned</code></td>
+<td>Si es <code>true</code>, las conexiones retenidas más tiempo que <code>db.pool.removeAbandonedTimeout</code> se recuperan por la fuerza.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testOnBorrow</code></td>
+<td>Valida una conexión antes de entregarla; si no es válida, la descarta y lo intenta de nuevo. Requiere que <code>db.pool.validationQuery</code> esté establecida.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testOnReturn</code></td>
+<td>Valida una conexión cuando se devuelve al pool.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.testWhileIdle</code></td>
+<td>Valida periódicamente las conexiones inactivas.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>db.pool.validationQuery</code></td>
+<td>SQL utilizada para validar una conexión. No debe lanzar una excepción. Es obligatoria para que <code>testOnBorrow</code>, <code>testOnReturn</code> y <code>testWhileIdle</code> tengan algún efecto. Los scripts de creación de base de datos de Etendo aprovisionan una tabla de compatibilidad <code>DUAL</code> en instalaciones PostgreSQL, por lo que esta consulta se ejecuta sin modificaciones tanto en PostgreSQL como en Oracle.</td>
+<td><code>SELECT 1 FROM DUAL</code></td>
+</tr>
+<tr>
+<td><code>db.pool.validationInterval</code></td>
+<td>Milisegundos mínimos entre validaciones de la misma conexión, para evitar comprobaciones redundantes.</td>
+<td><code>30000</code></td>
+</tr>
+<tr>
+<td><code>db.pool.jmxEnabled</code></td>
+<td>Expone las métricas del pool a través de JMX.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>El pool también admite las siguientes propiedades. Etendo no establece un valor predeterminado para ninguna de ellas — cuando una propiedad no está establecida en <code>gradle.properties</code>, se aplica el valor predeterminado del <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html#Common_Attributes" target="_blank">Apache Tomcat JDBC Connection Pool</a> subyacente:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.pool.maxIdle</code></td>
+<td>Número máximo de conexiones inactivas que se mantienen en el pool cuando el sweeper está deshabilitado.</td>
+</tr>
+<tr>
+<td><code>db.pool.maxWait</code></td>
+<td>Milisegundos que el pool espera a que se devuelva una conexión antes de lanzar una excepción, una vez alcanzado <code>db.pool.maxActive</code>.</td>
+</tr>
+<tr>
+<td><code>db.pool.numTestsPerEvictionRun</code></td>
+<td>Número de conexiones examinadas en cada ejecución del sweeper.</td>
+</tr>
+<tr>
+<td><code>db.pool.removeAbandonedTimeout</code></td>
+<td>Segundos que una conexión puede estar retirada antes de considerarse abandonada. Solo es relevante cuando <code>db.pool.removeAbandoned=true</code>.</td>
+</tr>
+<tr>
+<td><code>db.pool.testOnConnect</code></td>
+<td>Valida una conexión justo después de que se crea físicamente.</td>
+</tr>
+<tr>
+<td><code>db.pool.validatorClassName</code></td>
+<td>Clase validadora personalizada que se usa en lugar de <code>db.pool.validationQuery</code>.</td>
+</tr>
+<tr>
+<td><code>db.pool.initSQL</code></td>
+<td>SQL que se ejecuta una vez, justo después de crear una conexión física.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultAutoCommit</code></td>
+<td>Estado predeterminado de auto-commit de las conexiones que entrega el pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultReadOnly</code></td>
+<td>Estado de solo lectura predeterminado de las conexiones que entrega el pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultTransactionIsolation</code></td>
+<td>Nivel de aislamiento de transacción predeterminado de las conexiones que entrega el pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.defaultCatalog</code></td>
+<td>Catálogo predeterminado de las conexiones que entrega el pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.connectionProperties</code></td>
+<td>Propiedades de conexión adicionales específicas del driver, como una lista de pares <code>nombre=valor</code> separados por punto y coma.</td>
+</tr>
+<tr>
+<td><code>db.pool.accessToUnderlyingConnectionAllowed</code></td>
+<td>Permite obtener la conexión física subyacente a través del envoltorio de la conexión del pool.</td>
+</tr>
+<tr>
+<td><code>db.pool.logAbandoned</code></td>
+<td>Registra la traza de pila de dónde se tomó prestada una conexión una vez que ha estado retirada más tiempo que <code>db.pool.suspectTimeout</code>. Añade sobrecarga a cada solicitud de conexión, porque se debe generar una traza de pila.</td>
+</tr>
+<tr>
+<td><code>db.pool.suspectTimeout</code></td>
+<td>Segundos que una conexión puede estar retirada antes de registrarse como sospechosa. Solo es relevante cuando <code>db.pool.logAbandoned=true</code>. Es independiente de <code>db.pool.removeAbandoned</code> — una conexión sospechosa solo se registra, no se recupera.</td>
+</tr>
+<tr>
+<td><code>db.pool.name</code></td>
+<td>Nombre asignado al pool, útil para distinguir pools cuando hay varios configurados.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Es posible especificar un proveedor de conexiones externo que Etendo utilizará para obtener las <em>conexiones JDBC</em>. Para ello, es necesario instalar un módulo que contenga una subclase de <code>ExternalConnectionPool</code>, y se debe establecer la propiedad <code>db.externalPoolClassName</code> en el archivo <code>gradle.properties</code>.</p>
+<p>Cualquiera de estas propiedades puede limitarse a un pool con nombre específico —por ejemplo, el pool de solo lectura— insertando el nombre del pool después de <code>db.</code>, por ejemplo <code>db.readonly.pool.maxActive</code>. Un valor específico de un pool tiene prioridad sobre el valor predeterminado <code>db.pool.*</code> para ese pool; un pool que no define su propio valor recurre al predeterminado.</p>
 </div>
-<h2 id="example-using-the-apache-jdbc-connection-pool">Ejemplo: uso del pool de conexiones JDBC de Apache</h2>
-<p>El módulo core <a href="https://github.com/etendosoftware/etendo_core/tree/main/modules_core/org.openbravo.apachejdbcconnectionpool" target="_blank">Apache JDBC Connection Pool</a> proporciona una implementación del pool de conexiones JDBC de Apache.</p>
-<p>La propiedad <code>db.externalPoolClassName</code> debe establecerse en <code>gradle.properties</code>. Este módulo implementa la clase del pool de conexiones externo en la clase <code>org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool</code>, por lo que se debe añadir esta línea a <code>gralde.properties</code>:</p>
-<div class="language-text highlight"><span class="filename">Gradle.properties</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>db.externalPoolClassName=org.openbravo.apachejdbcconnectionpool.JdbcExternalConnectionPool
-</span></code></pre></div>
-<p>Este módulo contiene una plantilla de archivo de configuración: <code>modules_core/org.openbravo.apachejdbcconnectionpool/config/connectionPool.properties.template</code>. Para personalizar las propiedades del pool de conexiones JDBC, este archivo debe copiarse a <code>modules_core/org.openbravo.apachejdbcconnectionpool/config/connectionPool.properties</code>. El usuario puede entonces configurar las propiedades del pool según sus necesidades. Puede encontrar indicaciones sobre cómo configurar estas propiedades <a href="https://tomcat.apache.org/" target="_blank">aquí</a>.</p>
+<h3 id="how-does-the-sweeper-thread-work">¿Cómo funciona el hilo sweeper?</h3>
+<p>El sweeper es el hilo en segundo plano que se ejecuta cada <code>db.pool.timeBetweenEvictionRunsMillis</code> milisegundos para validar las conexiones inactivas y comprobar si hay conexiones abandonadas. Que esté habilitado o no cambia el comportamiento del pool de conexiones inactivas:</p>
+<ul>
+<li><strong>Sweeper deshabilitado</strong>: si el pool de conexiones inactivas crece por encima de <code>db.pool.maxIdle</code>, una conexión se cierra en cuanto se devuelve al pool en lugar de mantenerse inactiva.</li>
+<li><strong>Sweeper habilitado</strong>: el número de conexiones inactivas puede crecer por encima de <code>db.pool.maxIdle</code>, pero vuelve a bajar hasta <code>db.pool.minIdle</code> una vez que una conexión ha estado inactiva más tiempo que <code>db.pool.minEvictableIdleTimeMillis</code>.</li>
+</ul>
+<p>La lista completa de atributos configurables del Tomcat JDBC Connection Pool está disponible en la <a href="https://tomcat.apache.org/tomcat-9.0-doc/jdbc-pool.html#Common_Attributes" target="_blank">documentación de Apache Tomcat</a>, junto con <a href="https://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency" target="_blank">indicaciones para ajustar el pool en entornos de alta concurrencia</a>.</p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="http://wiki.openbravo.com/wiki/How_to_Use_an_External_Connection_Pool" target="_blank">Cómo usar un pool de conexiones externo</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
