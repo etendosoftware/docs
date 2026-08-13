@@ -52,9 +52,6 @@ db.pool.validationInterval=30000
 db.pool.jmxEnabled=false
 ```
 
-!!! info
-    The default `db.pool.validationQuery` value shown above is Oracle syntax. On a PostgreSQL installation, override it to `SELECT 1`, since PostgreSQL does not have a `DUAL` table.
-
 Override any of them by setting the corresponding property in `gradle.properties`:
 
 | Property | Description | Default |
@@ -68,7 +65,7 @@ Override any of them by setting the corresponding property in `gradle.properties
 | `db.pool.testOnBorrow` | Validates a connection before handing it out; drops and retries if invalid. Requires `db.pool.validationQuery` to be set. | `true` |
 | `db.pool.testOnReturn` | Validates a connection when it is returned to the pool. | `false` |
 | `db.pool.testWhileIdle` | Validates idle connections periodically. | `false` |
-| `db.pool.validationQuery` | SQL used to validate a connection. Must not throw an exception. Required for `testOnBorrow`, `testOnReturn`, and `testWhileIdle` to have any effect. | `SELECT 1 FROM DUAL` (Oracle) / `SELECT 1` (PostgreSQL) |
+| `db.pool.validationQuery` | SQL used to validate a connection. Must not throw an exception. Required for `testOnBorrow`, `testOnReturn`, and `testWhileIdle` to have any effect. Etendo's database creation scripts provision a `DUAL` compatibility table on PostgreSQL installations, so this query runs unmodified on both PostgreSQL and Oracle. | `SELECT 1 FROM DUAL` |
 | `db.pool.validationInterval` | Minimum milliseconds between validations of the same connection, to avoid redundant checks. | `30000` |
 | `db.pool.jmxEnabled` | Exposes pool metrics through JMX. | `false` |
 
