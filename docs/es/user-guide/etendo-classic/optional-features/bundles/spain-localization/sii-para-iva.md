@@ -498,6 +498,9 @@ Es posible rectificar una factura de venta dada de alta en SII de forma correcta
 
 La rectificación de facturas de venta se deben gestionar y dar de alta en SII bien sea "Por Diferencias" o "Por Sustitución", tal y como se explica a continuación:
 
+!!! tip
+    Como alternativa más rápida a crear manualmente la factura rectificativa, puede utilizar el proceso [Crear Rectificación](./funcionalidades-generales-para-sifs.md#crear-rectificacion). Este genera automáticamente, a partir de la factura original ya completada, una nueva factura ya vinculada a ella en la solapa **Factura Rectificativa**, con los mismos importes en signo contrario, lista para ajustar según el tipo de rectificación que corresponda.
+
 **Por Diferencias**, en este caso se registra una factura de tipo "Reverse" por el importe negativo correspondiente.
 
 Sería el caso en el que se realizó una venta por valor de 1527.77 € que se dio de alta en SII de forma correcta y, con posterioridad, se devuelve mercancía por parte del cliente por un valor de -27.77 € (15 unidades de producto).

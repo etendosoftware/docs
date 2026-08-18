@@ -25,6 +25,7 @@ El módulo de Funcionalidades Generales para SIFs (**Sistemas de Información Fi
 - [Carga de certificados digitales](#carga-de-certificados-digitales): permite configurar el certificado digital de cada organización legal.
 - [Rellenar Fechas de Operación](#rellenar-fechas-de-operacion): proceso para migrar las fechas de facturas existentes al nuevo campo unificado.
 - [Tipos de Documento Rectificativos](#tipos-de-documento-rectificativos): define las restricciones sobre los documentos utilizados en facturas rectificativas.
+- [Crear Rectificación](#crear-rectificacion): genera automáticamente una factura rectificativa, con los mismos importes que la original pero en signo contrario, a partir de una factura de venta ya completada.
 
 ## Rellenar Fechas de Operación
 
@@ -106,6 +107,40 @@ Las facturas rectificativas deben utilizar exclusivamente un tipo de documento y
 2. **Tipo de Documento**: Crear un nuevo registro y marcar la casilla **Es Rectificativo**. Asociar la secuencia creada en el paso anterior en el campo **Sec.doc.(numeración)** si es no transaccional. En el selector solo aparecerán secuencias marcadas como rectificativas cuando el tipo de documento se ha configurado como rectificativo.
 
 ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/tipo-doc-rectificativo.png)
+
+## Crear Rectificación
+
+:material-menu: `Aplicación` > `Gestión de Ventas` > `Transacciones` > `Factura (Cliente)`
+
+Una vez que una factura de venta ha sido **completada** y **enviada al sistema correspondiente** ya no puede reactivarse ni anularse en los sistemas SII, Verifactu o TicketBAI. Para corregirla es necesario emitir una **factura rectificativa** asociada a la original. El proceso **Crear Rectificación** automatiza la generación de esa factura: copia la factura original y crea una nueva, vinculada a ella, con los mismos importes pero en **signo contrario**.
+
+!!! info
+    Antes de utilizar este proceso debe existir al menos un [tipo de documento rectificativo](#tipos-de-documento-rectificativos) configurado.
+
+### Pasos para crear la rectificación
+
+1. Abrir la factura de venta original, en estado **Completado**.
+2. Pulsar el botón **Crear Rectificación**.
+
+    ![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/Crear-rectificacion.png)
+
+3. Indicar el **Tipo de documento**: seleccionar el [tipo de documento rectificativo](#tipos-de-documento-rectificativos) que se utilizará para la nueva factura.
+4. Pulsar **Hecho**.
+
+### Resultado
+
+El sistema genera una nueva factura, en estado **Borrador**, con las mismas líneas e importes que la factura original pero con **cantidades e importes en signo contrario**, ya vinculada a la original en la solapa **Factura Rectificativa**.
+
+![](../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/funcionalidades-generales-para-sifs/Rectificacion-negativo.png)
+
+Si la factura generada se completa sin modificarla, actúa como una **cancelación completa** de la factura original. Si en cambio se necesita registrar una corrección parcial, deben **editarse las líneas e importes** de la nueva factura antes de completarla, de modo que reflejen la rectificación real que se desea declarar.
+
+!!! warning
+    Antes de completar la factura rectificativa, deben completarse los campos correspondientes al sistema de facturación electrónica en uso, para que la rectificación se declare correctamente:
+
+    - [SII: Facturas Rectificativas de Venta](./sii-para-iva.md#facturas-rectificativas-de-venta)
+    - [Verifactu: Rectificación](./verifactu.md#rectificacion)
+    - [TicketBAI: Tipo de Documento para Facturas Rectificativas](./ticketbai-batuz.md#tipo-de-documento-para-facturas-rectificativas)
 
 ---
 
