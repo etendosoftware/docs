@@ -432,6 +432,9 @@ Se utiliza cuando:
 !!! info
     Puede consultar ejemplos sobre cómo proceder ante rectificaciones en el siguiente enlace: [Procedimientos de facturación](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/procedimientos-facturacion.html).
 
+!!! tip
+    Como alternativa más rápida a crear manualmente la nueva factura y enlazarla a la original, puede utilizar el proceso [Crear Rectificación](./funcionalidades-generales-para-sifs.md#crear-rectificacion). Este genera automáticamente, a partir de la factura original ya completada, una nueva factura ya vinculada a ella en la solapa **Factura Rectificativa**, con los mismos importes en signo contrario, lista para ajustar según el tipo de rectificación que corresponda.
+
 
 #### Claves Verifactu
 

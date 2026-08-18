@@ -186,6 +186,9 @@ Para realizar facturas rectificativas a enviar a TicketBai, es necesario primero
     
     La documentación de [Secuencias](../../../basic-features/financial-management/accounting/setup/document-sequence.md#enmascaramiento-de-secuencias) de Etendo muestra los distintos caracteres reservados y el valor por el que se reemplaza cada uno.
 
+!!! tip
+    Una vez configurado el tipo de documento rectificativo, en lugar de crear manualmente una nueva factura de venta desde cero para la rectificación, puede utilizar el proceso [Crear Rectificación](./funcionalidades-generales-para-sifs.md#crear-rectificacion) como alternativa más rápida. Este genera automáticamente, a partir de la factura original ya completada, una nueva factura ya vinculada a ella en la solapa **Factura Rectificativa**, con los mismos importes en signo contrario, lista para ajustar según la rectificación que se desee declarar.
+
 ## Proceso de Envío de Factura
 
 === "TicketBai"
