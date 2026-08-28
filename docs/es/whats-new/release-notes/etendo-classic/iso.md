@@ -13,6 +13,7 @@ tags:
 
 | Versión | Fecha de publicación | Imagen ISO |
 | --- | --- | --- |
+| [26.2.9](#2629) | 25/08/2026 | [26Q2.9.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q2.9.iso) |
 | [26.2.0](#2620) | 07/07/2026 | [26Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q2.0.iso) |
 | [26.1.1](#2611) | 09/04/2026 | [26Q1.1.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q1.1.iso) |
 | [25.4.3](#2543) | 22/01/2026 | [25Q4.3.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-25Q4.3.iso) |
@@ -32,6 +33,11 @@ tags:
 | [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
 | [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
 
+
+## 26.2.9
+
+- Nueva ISO con la versión de Etendo `26.2.9`
+- Actualización de los scripts de backup y restore: corrección de un bug que eliminaba los adjuntos existentes durante el restore aunque el backup no los incluyera, y mejora de la documentación de los scripts. Incidencia [#105](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/105)
 
 ## 26.2.0
 Nueva ISO con la versión de Etendo Classic 26.2.0
