@@ -35,7 +35,9 @@ tags:
 
 
 ## 26.2.9
-New ISO with Etendo Classsic version 26.2.9
+
+- New ISO with Etendo version `26.2.9`
+- Update the backup and restore scripts: fix a bug that deleted existing attachments during restore even when the backup did not include them, and improve the scripts documentation. Issue [#105](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/105)
 
 ## 26.2.0
 New ISO with Etendo Classsic version 26.2.0
