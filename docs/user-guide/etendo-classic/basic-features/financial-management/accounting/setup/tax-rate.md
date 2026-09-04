@@ -99,6 +99,9 @@ Fields to Note:
     - **Alternate Tax Base Amount**
     - **Alternate Tax Base Amount + Tax Amount**
 
+    !!!info
+        The **Alternate Tax Base Amount** is a manually entered amount and is not necessarily proportional to the line quantity. When a Sales Order or Purchase Order using this Base Amount option is invoiced partially, the **Alternate Tax Base Amount Prorating** preference controls how the amount is carried over to each partial invoice. By default, the amount entered on the order line is inherited as-is on each partial invoice; if the preference is enabled, the amount is prorated according to the quantity invoiced, shipped, or received instead. For more information, see the **Alternate Tax Base Amount Prorating** entry in the [Preference](../../../general-setup/application/preference.md#preference-definition) guide.
+
 - **Summary Level**: A tax rate can be defined as summary which means it will have **some tax rates underneath**.
     Summary tax rates are also set as **Parent Tax Rate** therefore its child tax rates can be linked to it. For instance, a sales invoice is issued to a business partner under a specific VAT regime which includes an additional tax rate besides the VAT rate.
     For this scenario, it is required to create three tax rates the parent one as summary and two more ones for the VAT rate and for the other rate, both of them linked to the parent.
@@ -226,6 +229,12 @@ The accounting entries below apply when negative amounts are not permitted in yo
     !!!note
         Withholding rates typically post to a different account — configure the child tax accounting accordingly.
 
+
+## Related Articles
+
+[:material-file-document-outline: Preference](../../../general-setup/application/preference.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Tax Category](tax-category.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Business Partner Tax Category](business-partner-tax-category.md){ .md-button .md-button--primary }
 
 ---
 

@@ -99,6 +99,9 @@ Campos a tener en cuenta:
     - **Alternate Tax Base Amount**
     - **Alternate Tax Base Amount + Tax Amount**
 
+    !!!info
+        La **Base imponible alternativa** es un importe introducido manualmente y no es necesariamente proporcional a la cantidad de la línea. Cuando un Pedido de Venta o Pedido de Compra que utiliza esta opción de Base Imponible se factura parcialmente, la preferencia **Prorrateo de la base imponible alternativa** controla cómo se traslada el importe a cada factura parcial. Por defecto, el importe introducido en la línea del pedido se hereda tal cual en cada factura parcial; si la preferencia está habilitada, el importe se prorratea según la cantidad facturada, enviada o recibida en su lugar. Para más información, consulte la entrada **Prorrateo de la base imponible alternativa** en la guía de [Preferencias](../../../general-setup/application/preference.md#preference-definition).
+
 - **Nivel agrupación**: Un rango de impuesto puede definirse como resumen, lo que significa que tendrá **some tax rates underneath**.
     Los rangos de impuesto de resumen también se establecen como **Impuesto padre**, por lo que sus rangos de impuesto hijo pueden vincularse a él. Por ejemplo, se emite una factura de venta a un tercero bajo un régimen de IVA específico que incluye un rango de impuesto adicional además del rango de IVA.
     Para este escenario, es necesario crear tres rangos de impuesto: el padre como resumen y otros dos para el rango de IVA y para el otro rango, ambos vinculados al padre.
@@ -226,6 +229,12 @@ Los asientos contables siguientes se aplican cuando no se permiten importes nega
     !!!note
         Withholding rates typically post to a different account — configure the child tax accounting accordingly.
 
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Preferencias](../../../general-setup/application/preference.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Categoría de Impuesto](tax-category.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Categoría de Impuestos de Terceros](business-partner-tax-category.md){ .md-button .md-button--primary }
 
 ---
 

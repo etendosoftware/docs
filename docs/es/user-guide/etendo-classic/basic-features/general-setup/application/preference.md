@@ -110,6 +110,9 @@ Como se muestra en la imagen anterior, existe un campo denominado *Lista de Prop
     - **Habilitar lector de pantalla**, si esta preferencia se establece en _Y_ se habilitará el lector de pantalla completo. Esto mejorará la accesibilidad para personas con discapacidad visual.
     - **Formato de exportación a Excel**, esta preferencia permite establecer el formato de exportación que se utilizará al generar informes de Excel. Se admiten dos valores: _XLS_ o _XLSX_. Cuando esta preferencia no está definida, _XLSX_ es el formato de exportación a Excel por defecto.
     - **Filtrar por documentos procesados desde hace N días** está relacionado con Crear líneas desde en Factura de Venta/Compra. Limita las transacciones desde la fecha actual hasta los días definidos hacia atrás. Si la preferencia no está definida, las consultas recuperan todos los registros creados desde hace un año (365 días); en caso contrario, se filtrará por el número de días definido como valor de la preferencia.
+    - **Prorrateo de la base imponible alternativa** (`AlternateTaxBaseAmountProrating`) se aplica cuando la Base Imponible de un rango de impuesto se establece en Base imponible alternativa y un Pedido de Venta o Pedido de Compra se factura parcialmente, ya sea utilizando **Crear Líneas Desde Pedido** o **Crear Líneas Desde Albarán** en Factura de Venta/Compra, o mediante un Calendario de Facturación.
+    - Si la preferencia no está definida, o su valor es _N_ (por defecto), la Base imponible alternativa introducida en la línea del pedido se hereda tal cual en cada factura parcial, independientemente de si el pedido está abierto o cerrado.
+    - Si el valor es _Y_, el importe se prorratea según la cantidad facturada, enviada o recibida, independientemente de si el pedido está abierto o cerrado.
     
 - Si la casilla de verificación *Lista de Propiedades* no está marcada, la preferencia se configura como un **atributo**. Un atributo es un atributo de texto libre que puede tomar cualquier valor.
 
@@ -192,6 +195,12 @@ Adicionalmente:
 
     - Una propiedad de preferencia no tenga un valor definido para el nivel de visibilidad requerido.
     - o exista un conflicto causado por la definición de más de un valor de propiedad para la misma propiedad de preferencia para un nivel de visibilidad determinado. Los conflictos pueden resolverse manualmente comprobando y modificando la preferencia.
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Preferencias Sesión](session-preferences.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Personalización de Ventana](window-personalization.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Rango impuesto](../../financial-management/accounting/setup/tax-rate.md){ .md-button .md-button--primary }
 
 ---
 

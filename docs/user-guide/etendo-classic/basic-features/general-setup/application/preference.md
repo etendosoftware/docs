@@ -110,7 +110,9 @@ As shown in the image above there is one field named *Property List* which is ke
     - **Enable Screen Reader**, If this preference is set to _Y_ the full screen reader will be enabled. This will improve the accessibility to visual impaired people.
     - **Excel Export Format**, this preference allows setting the export format to be used when generating Excel reports. Two values are supported: _XLS_ or _XLSX_. When this preference is not defined, _XLSX_ is the default Excel export format.
     - **Filter by documents processed since N days ago** is related to Create Lines From in Sales/Purchase Invoice. It limits transactions starting from the current date to the defined days ago. If the preference is not defined then queries retrieve all records created since one year ago (365 days), else it will be filtered by the count of days defined as the preference value.
-    
+    - **Alternate Tax Base Amount Prorating** (`AlternateTaxBaseAmountProrating`) applies when a tax rate's Base Amount is set to Alternate Tax Base Amount and a Sales Order or Purchase Order is invoiced partially — whether using **Create Lines From Order**, **Create Lines From Shipment** (Sales Invoice), **Create Lines From Receipt** (Purchase Invoice), or through an Invoice Schedule.
+    - If the preference is not defined, or its value is _N_ (default), the Alternate Tax Base Amount entered on the order line is inherited as-is on each partial invoice, regardless of whether the order is open or closed.
+    - If the value is _Y_, the amount is prorated according to the quantity invoiced, shipped, or received, regardless of whether the order is open or closed.
 - If the *Property List* checkbox is not checked, the preference is configured as an **attribute**. An attribute is a free text attribute which can get whatever value.
 
     ![](../../../../../assets/drive/t1vw7KGogAD0Tqp1UIoVESm6KBOrDcv9f2BuzzDGdaNP9yXkId4n_YODwWpbnzvGiSKEktpKJqAUtwwlUpKH3DR1Z6t51QShE5mUAWtuaksNDKhgeu-_YxYsnlwXySWaLwsyOfaU.png)
@@ -192,6 +194,12 @@ Additionally:
 
     - A preference property does not have a value defined for the required visibility level.
     - or there is a conflict caused by the definition of more than one property values for the same preference property for a given visibility level. Conflicts can be manually resolved by checking and modifying the preference.
+
+## Related Articles
+
+[:material-file-document-outline: Session Preferences](session-preferences.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Window Personalization](window-personalization.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Tax Rate](../../financial-management/accounting/setup/tax-rate.md){ .md-button .md-button--primary }
 
 ---
 
