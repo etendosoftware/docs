@@ -1194,6 +1194,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17180,6 +17189,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Articles
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17321,10 +17339,11 @@ If set to Value = 'N' or Undefined, it will not allow doing unsecured datasource
 <li><strong>Enable Screen Reader</strong>, If this preference is set to <em>Y</em> the full screen reader will be enabled. This will improve the accessibility to visual impaired people.</li>
 <li><strong>Excel Export Format</strong>, this preference allows setting the export format to be used when generating Excel reports. Two values are supported: <em>XLS</em> or <em>XLSX</em>. When this preference is not defined, <em>XLSX</em> is the default Excel export format.</li>
 <li><strong>Filter by documents processed since N days ago</strong> is related to Create Lines From in Sales/Purchase Invoice. It limits transactions starting from the current date to the defined days ago. If the preference is not defined then queries retrieve all records created since one year ago (365 days), else it will be filtered by the count of days defined as the preference value.</li>
+<li><strong>Alternate Tax Base Amount Prorating</strong> (<code>AlternateTaxBaseAmountProrating</code>) applies when a tax rate's Base Amount is set to Alternate Tax Base Amount and a Sales Order or Purchase Order is invoiced partially — whether using <strong>Create Lines From Order</strong>, <strong>Create Lines From Shipment</strong> (Sales Invoice), <strong>Create Lines From Receipt</strong> (Purchase Invoice), or through an Invoice Schedule.</li>
+<li>If the preference is not defined, or its value is <em>N</em> (default), the Alternate Tax Base Amount entered on the order line is inherited as-is on each partial invoice, regardless of whether the order is open or closed.</li>
+<li>If the value is <em>Y</em>, the amount is prorated according to the quantity invoiced, shipped, or received, regardless of whether the order is open or closed.</li>
+<li>If the <em>Property List</em> checkbox is not checked, the preference is configured as an <strong>attribute</strong>. An attribute is a free text attribute which can get whatever value.</li>
 </ul>
-</li>
-<li>
-<p>If the <em>Property List</em> checkbox is not checked, the preference is configured as an <strong>attribute</strong>. An attribute is a free text attribute which can get whatever value.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/drive/t1vw7KGogAD0Tqp1UIoVESm6KBOrDcv9f2BuzzDGdaNP9yXkId4n_YODwWpbnzvGiSKEktpKJqAUtwwlUpKH3DR1Z6t51QShE5mUAWtuaksNDKhgeu-_YxYsnlwXySWaLwsyOfaU.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/drive/t1vw7KGogAD0Tqp1UIoVESm6KBOrDcv9f2BuzzDGdaNP9yXkId4n_YODwWpbnzvGiSKEktpKJqAUtwwlUpKH3DR1Z6t51QShE5mUAWtuaksNDKhgeu-_YxYsnlwXySWaLwsyOfaU.png"></a></p>
 <ul>
 <li><strong>"ShowAuditDefault"</strong> attribute allows enabling the Audit Trail feature. Audit Trail feature allows tracking every change done to any Etendo table or entity.</li>
@@ -17415,6 +17434,10 @@ This attribute defines whether attachments should be saved using the old attachm
 </ul>
 </li>
 </ul>
+<h2 id="related-articles">Related Articles</h2>
+<p><a class="md-button md-button--primary" href="../session-preferences/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Session Preferences</a>
+<a class="md-button md-button--primary" href="../window-personalization/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Window Personalization</a>
+<a class="md-button md-button--primary" href="../../../financial-management/accounting/setup/tax-rate/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Tax Rate</a></p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/General_Setup" target="_blank">General Setup</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 

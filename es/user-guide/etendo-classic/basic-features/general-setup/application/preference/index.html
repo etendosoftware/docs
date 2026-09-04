@@ -1194,6 +1194,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17509,6 +17518,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17650,6 +17668,9 @@ Si se establece en Valor = 'N' o no está definido, no permitirá realizar una s
 <li><strong>Habilitar lector de pantalla</strong>, si esta preferencia se establece en <em>Y</em> se habilitará el lector de pantalla completo. Esto mejorará la accesibilidad para personas con discapacidad visual.</li>
 <li><strong>Formato de exportación a Excel</strong>, esta preferencia permite establecer el formato de exportación que se utilizará al generar informes de Excel. Se admiten dos valores: <em>XLS</em> o <em>XLSX</em>. Cuando esta preferencia no está definida, <em>XLSX</em> es el formato de exportación a Excel por defecto.</li>
 <li><strong>Filtrar por documentos procesados desde hace N días</strong> está relacionado con Crear líneas desde en Factura de Venta/Compra. Limita las transacciones desde la fecha actual hasta los días definidos hacia atrás. Si la preferencia no está definida, las consultas recuperan todos los registros creados desde hace un año (365 días); en caso contrario, se filtrará por el número de días definido como valor de la preferencia.</li>
+<li><strong>Prorrateo de la base imponible alternativa</strong> (<code>AlternateTaxBaseAmountProrating</code>) se aplica cuando la Base Imponible de un rango de impuesto se establece en Base imponible alternativa y un Pedido de Venta o Pedido de Compra se factura parcialmente, ya sea utilizando <strong>Crear Líneas Desde Pedido</strong> o <strong>Crear Líneas Desde Albarán</strong> en Factura de Venta/Compra, o mediante un Calendario de Facturación.</li>
+<li>Si la preferencia no está definida, o su valor es <em>N</em> (por defecto), la Base imponible alternativa introducida en la línea del pedido se hereda tal cual en cada factura parcial, independientemente de si el pedido está abierto o cerrado.</li>
+<li>Si el valor es <em>Y</em>, el importe se prorratea según la cantidad facturada, enviada o recibida, independientemente de si el pedido está abierto o cerrado.</li>
 </ul>
 </li>
 <li>
@@ -17744,6 +17765,10 @@ Este atributo define si los adjuntos deben guardarse utilizando el modelo antigu
 </ul>
 </li>
 </ul>
+<h2 id="related-articles">Artículos relacionados</h2>
+<p><a class="md-button md-button--primary" href="../session-preferences/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Preferencias Sesión</a>
+<a class="md-button md-button--primary" href="../window-personalization/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Personalización de Ventana</a>
+<a class="md-button md-button--primary" href="../../../financial-management/accounting/setup/tax-rate/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Rango impuesto</a></p>
 <hr>
 <p>Este trabajo es una obra derivada de <a href="https://wiki.openbravo.com/wiki/General_Setup" target="_blank">Configuración General</a> de <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, utilizada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> por <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
