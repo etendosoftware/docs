@@ -5,6 +5,8 @@ tags:
   - PostgreSQL
   - Table Partitioning
   - Table
+  - Semantic Search
+  - pgvector
 status: beta
 ---
 
@@ -19,9 +21,14 @@ status: beta
 
 ## Overview
 
-The **Extended Database Utilities** module adds advanced PostgreSQL tools to Etendo for managing **partitioned tables**. Partitioning divides large datasets into smaller segments, improving performance, scalability, and maintainability.
+The **Extended Database Utilities** module adds advanced PostgreSQL capabilities to Etendo. It covers two independent areas, and each one is optional:
 
-This guide covers requirements, configuration, and usage for partitioning and unpartitioning tables.
+- **Partitioned tables.** Partitioning divides large datasets into smaller segments, improving performance, scalability, and maintainability.
+- **Semantic search.** An optional pgvector capability indexes the columns of any table and answers nearest-neighbour queries over their meaning rather than their text.
+
+Neither area affects the other. A tenant that only partitions tables never installs pgvector, and a tenant that only searches never partitions anything.
+
+This guide covers requirements, configuration, and usage for both.
 
 ### Why Partition?
 
@@ -43,6 +50,14 @@ The following requirements must be met before using the module:
 - **[Python 3](https://docs.python.org/3.13/){target="_blank"}** – latest release of version 3.
 - **[PostgreSQL](https://www.postgresql.org/docs/16/index.html){target="_blank"}** – version 16 or higher.
 - **Etendo DBSM (Database Source Manager)** – version **1.2.0-beta**, configured in the `artifacts.list.COMPILATION.gradle` file into the Etendo environment. 
+
+Semantic search adds two requirements of its own:
+
+- **[pgvector](https://github.com/pgvector/pgvector){target="_blank"}** – version **0.5.0** or higher, available on the PostgreSQL server. Version 0.5.0 is where HNSW indexes arrived, and the module builds them.
+- A database role allowed to run `CREATE EXTENSION`, needed only by the activation action described below.
+
+!!!info
+    Semantic search also reaches an embeddings API over the network. Review [Semantic search](#semantic-search) before enabling it in an environment with restricted egress or with data residency requirements.
 
 ## Installing the module
 
@@ -85,14 +100,14 @@ To prepare the Python environment necessary for this module:
 
 Partitioning a table alters its physical structure to improve query performance for very large datasets. This process must be executed cautiously and requires appropriate permissions.
 
-### Partitioned Table Config Window
+### Partitioned Tables config window
 
-:material-menu: `Application`> `Partition`> `Partitioned Table Config`
+:material-menu: `Application Dictionary` > `Partitioning` > `Partitioned Tables config`
 
 ![Partitioned Tables Config](../../../assets/developer-guide/etendo-classic/developer-tools/partitioned_tables_config.png)
 
 1. Log in as **System Administrator**.
-2. Access the **Partitioned Table Config** Window.
+2. Access the **Partitioned Tables config** window.
 3. Define how tables should be partitioned:
 
     - Create a new configuration record.
@@ -165,6 +180,55 @@ The unpartitioning tool restores tables to their original, non-partitioned state
     ```
 
     This step restores the database to a consistent and functional state by reflecting the changes made during the unpartitioning process.
+
+## Semantic search
+
+Semantic search indexes the text of records so a query can find them by meaning. Searching for *late delivery complaint* reaches a record that says *the shipment arrived after the agreed date*, which no keyword search does.
+
+The capability is off until somebody turns it on. Installing the module, compiling Etendo, running `update.database`, or starting the application never installs the PostgreSQL extension and never creates a vector object.
+
+### How a record reaches the index
+
+1. A **search source** names a table and the columns to index.
+2. Activating that source installs database triggers on the table. From then on, every insert, update, or delete of an indexed column writes an event to a queue.
+3. A background process drains the queue, asks an embeddings provider to turn the text into a vector, and stores it.
+4. A search embeds the query text the same way and returns the nearest records.
+
+Records that already existed when the source was configured are not in the index: triggers only capture what changes from the moment they exist. A **reindex** walks the table and enqueues them.
+
+### Windows
+
+| Window | Menu | Purpose |
+| --- | --- | --- |
+| **Embedding Provider** | :material-menu: `Search Indexes` > `Embedding Provider` | The model that turns text into vectors, the endpoint it is reached at, and the reference to its API key. |
+| **Search Sources** | :material-menu: `Search Indexes` > `Search Sources` | The table to index, the columns, the search targets, the reindex request, and the events produced. Both actions live here. |
+| **Outbox Monitor** | :material-menu: `Search Indexes` > `Outbox Monitor` | Every indexing event of every source, for when a problem spans more than one. |
+
+### Actions
+
+Both actions are buttons in the **Search Sources** window and take several records at a time.
+
+- **Activate Vector Indexing** installs the extension and the runtime storage once per database, then prepares each selected source. A source that could not be delivered is reported rather than prepared, so a configuration mistake surfaces here instead of as a queue full of failures.
+- **Request Reindex** asks for the records a source already held to be indexed. The walk itself is performed by the background process in bounded chunks.
+
+### Background processes
+
+Schedule these at System level, once for the whole instance, through `Process Request`.
+
+| Process | Purpose |
+| --- | --- |
+| **Process Vector Outbox** | Drains the queue: recovers events left behind by an interrupted run, embeds and stores the pending ones, and purges events that finished more than thirty days ago. |
+| **Process Vector Reindex** | Walks the table of a requested reindex, in chunks, from where it last stopped. |
+| **Requeue Failed Vector Events** | Puts failed events back in the queue once the cause of the failure is fixed. |
+
+### What leaves the tenant
+
+The text of the indexed columns is sent to the configured embeddings endpoint on every indexing event. The endpoint is configurable, so the traffic can be directed to the Etendo LLM proxy, to an Azure OpenAI deployment, or to a gateway inside the network instead of to a public API.
+
+!!!warning
+    Review which columns a source indexes before activating it. Every value in an indexed column of every affected record reaches the endpoint.
+
+[:material-file-document-outline: How to Configure Semantic Search](../how-to-guides/how-to-configure-semantic-search-with-etendo-database-extended.md){ .md-button .md-button--primary }
 
 !!!warning  "This module is in `BETA` Phase"
     The module behavior may change without notice. Do not use it in production environments without thorough validation.
