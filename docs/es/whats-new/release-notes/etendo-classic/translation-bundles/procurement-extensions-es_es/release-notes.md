@@ -16,7 +16,8 @@ tags:
 
 | Versión | Fecha de publicación | Compatibilidad con Procurement Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.0.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.1){target="_blank"} | 31/05/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 09/09/2026 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.1){target="_blank"} | 31/05/2024 | [1.0.0, latest] | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | C | :white_check_mark: |
 
 ---
