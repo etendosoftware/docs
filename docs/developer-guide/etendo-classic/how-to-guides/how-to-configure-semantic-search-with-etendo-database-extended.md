@@ -14,7 +14,7 @@ status: beta
 
 This guide configures the semantic search capability of the [Extended Database Utilities](../developer-tools/etendo-database-extended-module.md) module. Semantic search indexes the text of records so a query finds them by meaning. A search for *late delivery complaint* reaches a record that says *the shipment arrived after the agreed date*, which no keyword search does.
 
-The capability is off until somebody turns it on. Installing the module, compiling Etendo, running `update.database`, or starting the application never installs the PostgreSQL extension and never creates a vector object.
+The capability is off until somebody configures a search source. Installing the module, compiling Etendo, or starting the application never installs the PostgreSQL extension and never creates a vector object, and neither does `update.database` on an instance where no source asks for one.
 
 !!!warning "This module is in `BETA` phase"
     The behavior described here may change without notice. Validate it thoroughly before using it in a production environment.
@@ -27,7 +27,7 @@ Index the Business Partner table so an integration can search business partners 
 
 - Etendo with the `com.etendoerp.db.extended` module installed.
 - PostgreSQL with the `vector` extension available to be created, version 0.5.0 or later. Version 0.5.0 is the first that supports HNSW indexes.
-- A database role allowed to run `CREATE EXTENSION`.
+- A database role allowed to run `CREATE EXTENSION` and to create a schema, used by `update.database`.
 - An OpenAI-compatible embeddings endpoint and its API key.
 
 !!!warning "The indexed text leaves the tenant"
@@ -143,15 +143,22 @@ In the **Search Target** tab, define what an API client can ask for.
 !!!warning "The target key is a contract"
     Changing **Search Target Key** breaks every caller already asking for the old one.
 
-### 6. Activate the source
+### 6. Check the source
 
 Select the sources in the **Search Sources** grid and press **Activate Vector Indexing**.
 
-The action installs the PostgreSQL extension and the runtime storage once per database, then prepares each selected source: it creates the vector collection if it is missing and installs the database triggers that capture changes.
+The action changes nothing. It reports, for each selected source, whether it is ready to be indexed or what is stopping it: a source with no content column, or one whose collection no longer matches the dimensions its provider returns. Reading that here is the point, because the alternative is finding out from a queue of events that fail one by one on delivery.
 
-A source that cannot be prepared is reported with the reason rather than prepared, so a configuration mistake surfaces here instead of as a queue full of failures. Activation does not enqueue any records.
+### 7. Apply the configuration
 
-### 7. Schedule the background processes
+Run `update.database`.
+
+This is where the PostgreSQL extension, the runtime storage, the vector collection of each source and the database triggers that capture changes are created. Nothing is created for an instance whose sources are all unusable.
+
+!!!info "Why an update, and not the button"
+    All of it is DDL. Creating database objects while the application is running makes the next `update.database` refuse to start, reporting local changes that nobody can export away. Getting past that would mean accepting the whole database structure on the administrator's behalf, including any other change made and not yet exported. Creating the objects during the update means the run that makes the change is the run that accepts it.
+
+### 8. Schedule the background processes
 
 Schedule these at System level, once for the whole instance, through :material-menu: `General Setup` > `Process Scheduling` > `Process Request`.
 
@@ -163,7 +170,7 @@ Schedule these at System level, once for the whole instance, through :material-m
 
 Nothing is indexed until **Process Vector Outbox** runs.
 
-### 8. Index the records that already existed
+### 9. Index the records that already existed
 
 Triggers only capture what changes from the moment they exist, so the records already in the table are not in the index.
 

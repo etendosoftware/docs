@@ -54,7 +54,7 @@ The following requirements must be met before using the module:
 Semantic search adds two requirements of its own:
 
 - **[pgvector](https://github.com/pgvector/pgvector){target="_blank"}** – version **0.5.0** or higher, available on the PostgreSQL server. Version 0.5.0 is where HNSW indexes arrived, and the module builds them.
-- A database role allowed to run `CREATE EXTENSION`, needed only by the activation action described below.
+- A database role allowed to run `CREATE EXTENSION` and to create a schema, needed only by `update.database` on an instance that configured a search source.
 
 !!!info
     Semantic search also reaches an embeddings API over the network. Review [Semantic search](#semantic-search) before enabling it in an environment with restricted egress or with data residency requirements.
@@ -185,12 +185,12 @@ The unpartitioning tool restores tables to their original, non-partitioned state
 
 Semantic search indexes the text of records so a query can find them by meaning. Searching for *late delivery complaint* reaches a record that says *the shipment arrived after the agreed date*, which no keyword search does.
 
-The capability is off until somebody turns it on. Installing the module, compiling Etendo, running `update.database`, or starting the application never installs the PostgreSQL extension and never creates a vector object.
+The capability is off until somebody configures a search source. Installing the module, compiling Etendo, or starting the application never installs the PostgreSQL extension and never creates a vector object, and neither does `update.database` on an instance where no source asks for one.
 
 ### How a record reaches the index
 
 1. A **search source** names a table and the columns to index.
-2. Activating that source installs database triggers on the table. From then on, every insert, update, or delete of an indexed column writes an event to a queue.
+2. The next `update.database` installs the extension, the storage and the database triggers on that table. From then on, every insert, update, or delete of an indexed column writes an event to a queue.
 3. A background process drains the queue, asks an embeddings provider to turn the text into a vector, and stores it.
 4. A search embeds the query text the same way and returns the nearest records.
 
@@ -208,8 +208,11 @@ Records that already existed when the source was configured are not in the index
 
 Both actions are buttons in the **Search Sources** window and take several records at a time.
 
-- **Activate Vector Indexing** installs the extension and the runtime storage once per database, then prepares each selected source. A source that could not be delivered is reported rather than prepared, so a configuration mistake surfaces here instead of as a queue full of failures.
+- **Activate Vector Indexing** reports whether each selected source is ready to be indexed, and what is stopping the ones that are not. It changes nothing: a configuration mistake surfaces here, before the update runs, instead of as a queue full of failures afterwards.
 - **Request Reindex** asks for the records a source already held to be indexed. The walk itself is performed by the background process in bounded chunks.
+
+!!!info "Configuring a source takes two steps"
+    Save the source, then run `update.database`. Everything a source needs is a database object, and creating database objects while the application runs makes the next `update.database` refuse to start, reporting local changes. Creating them during the update avoids that.
 
 ### Background processes
 
