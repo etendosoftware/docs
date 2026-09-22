@@ -145,7 +145,7 @@ In the **Search Target** tab, define what an API client can ask for.
 
 ### 6. Check the source
 
-Select the sources in the **Search Sources** grid and press **Activate Vector Indexing**.
+Select the sources in the **Search Sources** grid and press **Check Readiness**.
 
 The action changes nothing. It reports, for each selected source, whether it is ready to be indexed or what is stopping it: a source with no content column, or one whose collection no longer matches the dimensions its provider returns. Reading that here is the point, because the alternative is finding out from a queue of events that fail one by one on delivery.
 

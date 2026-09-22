@@ -208,7 +208,7 @@ Records that already existed when the source was configured are not in the index
 
 Both actions are buttons in the **Search Sources** window and take several records at a time.
 
-- **Activate Vector Indexing** reports whether each selected source is ready to be indexed, and what is stopping the ones that are not. It changes nothing: a configuration mistake surfaces here, before the update runs, instead of as a queue full of failures afterwards.
+- **Check Indexing Readiness** reports whether each selected source is ready to be indexed, and what is stopping the ones that are not. It changes nothing: a configuration mistake surfaces here, before the update runs, instead of as a queue full of failures afterwards.
 - **Request Reindex** asks for the records a source already held to be indexed. The walk itself is performed by the background process in bounded chunks.
 
 !!!info "Configuring a source takes two steps"
