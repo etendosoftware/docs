@@ -50,13 +50,13 @@ With our new module created, we will start working with *Projections*.
 
 ------------------------------------------------------------------
 
-## Projection
+## Projection and mappings
 
 When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we do not need all the properties of the returned objects.
 
 In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections come in handy.
 
-Start by opening *Projections* windows and creating a new projection with the following properties:
+Start by opening *Projections and mappings* window and creating a new projection with the following properties:
 
 | Field       | Value                                 |
 | ----------- | ------------------------------------- |
@@ -70,18 +70,20 @@ Start by opening *Projections* windows and creating a new projection with the fo
 ### Adding the projection to a table
 
 As we create the projection, now we need to assign it to a table where we want to extract data.
-For this, open the *Tables and Columns* window and look for the *Order* table (as mentioned in the introduction, we want to consume orders).
+For this, in the tab *Entity Field*, we need to create a new record selecting the table `C_Order`, which is the table that stores the sales orders in Etendo Classic.
 
-### Adding a Projection
+### Adding a projected entity
 
-Next, navigate to the *Projections* tab and add a new projection with the following value:
+Next, navigate to the tab *Projected Entities* under the *Projection and mappings* tab and create a new record with the following values:
 
 | Field      | Value                                          |
 | ---------- | ---------------------------------------------- |
-| Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
+| Table      |`C_Order`                                      |
+| Mapping Type | `Etendo to external system`                          |
 
+The fields *Name* and *External Name* will be auto filled with default values you can customize if needed.
 
-  ![assign-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+  ![new-projected-entities.png](../../../assets/developer-guide/etendo-rx/tutorial/new-projected-entities.png)
 
 ### Adding Entity Fields
 
@@ -102,7 +104,7 @@ Under the Projection tab navigate to the *Entity Field* tab and add the followin
     So, you can navigate the entities related from here. E.g. To get the Business Partner name, you can have it by accessing the entity *businessPartner* and then, adding the field that you want to filter, *name* in this case.
 
 
-  ![new-entity-fields.png](../../../assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
+  ![new-entity-field.png](../../../assets/developer-guide/etendo-rx/tutorial/new-entity-field.png)
 
 ------------------------------------------------------------------
 
@@ -137,7 +139,7 @@ To create this new filter/search method, under Repository tab of the `C_Order` t
 |  Query      |`select o from Order o where o.documentType.id = :documentType order by o.documentNo`   |
 
 
-  ![new-search.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search.png)
+  ![new-repository-search.png](../../../assets/developer-guide/etendo-rx/tutorial/new-repository-search.png)
 
 ### Creating a New Search Parameter
 
@@ -153,126 +155,139 @@ To define the parameter, we need to create a new row on the *Search Parameter* t
 
 In our case, we will filter depending on the Document Type of the orders.
 
-  ![new-search-parameter.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
+  ![new-repository-search-parameter.png](../../../assets/developer-guide/etendo-rx/tutorial/new-repository-search-parameter.png)
+
+------------------------------------------------------------------
+
+## Applying the RX Plugin
+
+Before creating the RX module structure, you need to apply the RX Gradle plugin to your project.
+
+Add the RX plugin to your root `build.gradle` file:
+
+```groovy title="build.gradle"
+plugins {
+    // ... other plugins
+    id 'com.etendorx.gradlepluginrx' version '<<latest-version>>'
+}
+```
+Replace `<<latest-version>>` with the latest version of the RX Gradle plugin available.
+
+After applying the plugin, verify it's available by running:
+
+```bash
+./gradlew tasks --all | grep rx
+```
+
+You should see the RX tasks listed:
+- `rx.init` - Initialize src-rx structure
+- `rx.new.module` - Create a new RX module
 
 ------------------------------------------------------------------
 
 
-## Creating a New Spring Boot Project
+## Creating the RX Module Structure
 
-Now that we have declared the projection, fields, repository, and searches on Etendo Classic, we will need to create a new spring project to make use of these JPA resources that we have created just before.
-Next, you will find the steps to create the Spring Boot project and add it as a module on Etendo RX.
+After configuring the module in Etendo Classic and applying the RX plugin, we will now create the RX module structure using Gradle tasks.
 
-### Project Creation
+### Step 1: Initialize src-rx Structure
 
-1. Visit [**Spring Initializr**](https://start.spring.io/){target="_blank"} to start your project setup.
-2. Fill in the following details:
+First, initialize the `src-rx` directory structure by running:
 
-    | Field        | Value                           |
-    | ------------ | ------------------------------- |
-    | Project      |Gradle Project                   |
-    | Language     |Java                             |
-    | Spring Boot  |2.7.15 (or latest 2.7.x version) |
+```bash title="Terminal"
+./gradlew rx.init
+```
 
+This task will:
 
-    Project Metadata
+- Create the `src-rx` directory with the necessary `build.gradle`, `settings.gradle`, and `gradle.properties.template`
+- Create the `rxconfig` directory
+- Copy `config/Openbravo.properties` to `src-rx/src/main/resources/openbravo.properties`
+- Create `src-rx/gradle.properties` from `Openbravo.properties` with RX configuration:
+    - `rx.generateCode=true` - Enable entity generation
+    - `rx.path=.` - RX project path
+    - `rx.computedColumns=true` - Include computed columns
+    - `rx.views=true` - Include database views
+- Create the base modules in `src-rx/modules_gen/`:
+    - `com.etendorx.entities` - JPA entities generated from database
+    - `com.etendorx.clientrest` - REST client models
+    - `com.etendorx.entitiesModel` - Entity model classes
+    - `com.etendorx.grpc.common` - gRPC common definitions
+- Update the root `settings.gradle` to include the `:rx` subproject and module directories
 
-    | Field        | Value                     |
-    | ------------ | ------------------------- |
-    | Group        |com.tutorial               |
-    | Artifact     |rxtutorial                 |
-    | Name         |rxtutorial                 |
-    | Description  |Etendo RX tutorial project |
-    | Package Name |com.tutorial.rxtutorial    |
-    | Packaging    |Jar                        |
-    | Java Version |11                         |
+### Step 2: Create the Tutorial Module
 
-3. Add the following dependencies: Spring Web, Lombok, Config Client
-4. Click on the *Generate* button to download your project. The page will generate a file named `rxtutorial.zip`.
+Now, create the tutorial module structure using the `rx.new.module` task with the simplified `-Pmodule` parameter:
 
-    ![spring-initializr.png](../../../assets/developer-guide/etendo-rx/tutorial/spring-initializr.png)
+```bash title="Terminal"
+./gradlew rx.new.module -Pmodule=com.tutorial.rxtutorial
+```
 
-5. Uncompress the zip file to the platform project created in the first step, as: `modules_rx/com.tutorial.rxtutorial`.
+This will automatically:
+
+- Create the directory `modules_rx/com.tutorial.rxtutorial/`
+- Generate the `build.gradle` with proper Spring Boot configuration
+- Create the `src/main/java/com/tutorial/rxtutorial/TutorialApplication.java` main class
+- Generate the `src/main/resources/application.properties` configuration file
 
 !!!info
-    Remember to create the `com.tutorial.rxtutorial` folder, inside of `modules_rx` before extract it.
+    The generated `build.gradle` includes:
+    
+    - Spring Boot and dependency management plugins
+    - Spring Cloud BOM version `2021.0.8` (compatible with Spring Boot 2.7.18)
+    - All necessary dependencies (spring-boot-starter-web, openfeign, hateoas, clientrest_core)
+    - Source sets configured to include `src-gen/main/java`
 
+### Step 3: Verify Generated Structure
 
-### Project Configuration
+After running both tasks, verify your project structure looks like this:
 
-After creating the project, we need to add some configuration in order to work with Etendo Classic.
-
-### Modify build.gradle File
-
-Remove version of spring plugins:
-
-```groovy
-plugins {
-    ...
-    id 'org.springframework.boot' version '2.7.14'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-}
+```
+etendo_base/
+├── src-rx/
+│   ├── build.gradle
+│   ├── settings.gradle
+│   ├── gradle.properties.template
+│   ├── gradle.properties          (copied from config/Openbravo.properties)
+│   ├── rxconfig/
+│   ├── modules_gen/               (created by rx.init)
+│   │   ├── com.etendorx.entities/
+│   │   │   └── build.gradle
+│   │   ├── com.etendorx.clientrest/
+│   │   │   └── build.gradle
+│   │   ├── com.etendorx.entitiesModel/
+│   │   │   └── build.gradle
+│   │   └── com.etendorx.grpc.common/
+│   │       ├── build.gradle
+│   │       └── grpc.gradle
+│   └── src/main/resources/
+│       └── openbravo.properties
+└── modules_rx/
+    └── com.tutorial.rxtutorial/     (created by rx.new.module)
+        ├── build.gradle
+        └── src/
+            ├── main/
+            │   ├── java/com/tutorial/rxtutorial/
+            │   │   └── TutorialApplication.java
+            │   └── resources/
+            │       └── application.properties
+            └── src-gen/main/java/ (will be created after entity generation)
 ```
 
-Change it to this:
+### Step 4: Generate Entities
 
-```groovy
-plugins {
-    ...
-    id 'org.springframework.boot'
-    id 'io.spring.dependency-management'
-}
+After running `rx.init`, the `:rx` subproject is ready to generate entities:
+
+```bash
+./gradlew :rx:generate.entities
 ```
 
-Gradle will get versions from the Etendo Platform project.
+!!!note
+    The `:rx:` prefix specifies that the task runs in the `:rx` subproject context.
 
-Add the following dependencies in the dependencies section:
+This will generate Java entity classes in `src-rx/modules_gen/` based on your Etendo Classic database tables and projections.
 
-```groovy
-implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-implementation 'org.springframework.boot:spring-boot-starter-hateoas'
-implementation 'com.etendorx:clientrest_core:latest.integration'
-```
 
-Add the Etendo repository:
-
-```groovy
-repositories {
-    mavenCentral()
-    maven {
-        url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
-        credentials {
-            username = "${githubUser}"
-            password = "${githubToken}"
-        }
-    }
-}
-```
-
-!!! note
-    `githubUser` and `githubToken` were configured in the first step.
-
-Add custom source set:
-
-```groovy
-sourceSets {
-    main {
-        java {
-            srcDirs = [
-                'src/main/java',
-                'src-gen/main/java',
-            ]
-        }
-    }
-}
-```
-After configuring the project, we will need to generate the proper files for RX.
-RX generate.entities task will generate java files in the `src-gen` directory.
-Execute `rx:generate.entities` task to do so.
-
-``` bash title="Terminal"
-./gradlew rx:generate.entities
-```
 
 ------------------------------------------------------------------
 
@@ -330,9 +345,7 @@ To generate the token value we need to follow these steps:
 
   7. Let's run RX so we can make the request to the Auth service:
 
-    ``` bash title="Terminal"
-    ./gradlew rx:rx
-    ```
+    > Follow the [**Getting Started**](https://docs.etendo.software/developer-guide/etendo-rx/getting-started/){target="_blank"} guide to start the environment.
 
   8. Open Postman and we will make an authenticate request.
     
@@ -355,49 +368,7 @@ To generate the token value we need to follow these steps:
   
   9. Take the token under the response and fill in the *token* property on the `application.properties` of the tutorial module.
 
-### Adding Component Scan Annotation to the Application Class
 
-To scan your application for annotated components, add the `@ComponentScan` annotation to your Application class with the necessary base packages:
-
-!!!info
-    The path to the application class, in this case, is: `modules_rx/com.tutorial.rxtutorial/src/main/java/com/tutorial/rxtutorial/RxtutorialApplication.java`
-
-```java
-@ComponentScan({
-    "com.tutorial.rxtutorial",
-    "com.etendorx.clientrest.base",
-})
-```
-!!! warning
-    Remember to add the import for ComponentScan annotation: 
-    ```java
-    ...
-    import org.springframework.context.annotation.ComponentScan;
-    ...
-    ```
-
-Hence, your Application class should look like:
-
-```java
-package com.tutorial.rxtutorial;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-
-@SpringBootApplication
-@ComponentScan({
-    "com.tutorial.rxtutorial",
-    "com.etendorx.clientrest.base",
-})
-public class RxtutorialApplication {
-
-  public static void main(String[] args) {
-    SpringApplication.run(RxtutorialApplication.class, args);
-  }
-
-}
-```
 
 ------------------------------------------------------------------
 
@@ -428,7 +399,7 @@ Follow the instructions below to create a new service:
 
     @RestController
     @RequestMapping(path = "/api")
-    public class RxtutorialService {
+    public class TutorialService {
       @Autowired
       RestUtils restUtils;
 
@@ -483,9 +454,7 @@ Follow the instructions below to create a new service:
 
 To simplify RX executions you have a simplified run task:
 
-``` bash title="Terminal"
-./gradlew rx:rx
-```
+> Follow the [**Getting Started**](https://docs.etendo.software/developer-guide/etendo-rx/getting-started/){target="_blank"} guide to start the environment.
 
 !!!warning
     Remember to configure the Auth service as described on the [Getting Started](../../../developer-guide/etendo-rx/getting-started.md#configure-auth-project) page.
@@ -505,3 +474,4 @@ Open your browser and you can view the generated page with the following URL: [*
 
 ---
 This work is licensed under :material-creative-commons: :fontawesome-brands-creative-commons-by: :fontawesome-brands-creative-commons-sa: [ CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"} by [Futit Services S.L](https://etendo.software){target="_blank"}.
+
