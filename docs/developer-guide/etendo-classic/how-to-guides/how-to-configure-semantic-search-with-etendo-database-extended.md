@@ -54,7 +54,7 @@ Create a record. The fields that decide where the traffic goes and what it costs
 | Field | Description |
 | --- | --- |
 | **Provider Type** | The API dialect the endpoint speaks. `OpenAI` is the only one implemented, and it is also what every OpenAI-compatible gateway serves, so it is the right choice for the Etendo LLM proxy and for an Azure OpenAI deployment as well. It is not the name of the company behind the model. |
-| **API Endpoint** | Base URL of the embeddings API, up to and including `/v1` and no further. The path of the call is added by the module and is never configured here. Leave it empty to call OpenAI itself. |
+| **API Endpoint** | Base URL of the embeddings API, up to and including `/v1` and no further. The path of the call is added by the module and is never configured here. Leave it empty to use the endpoint configured for the whole installation, and OpenAI itself when there is none. |
 | **Embedding Model** | The model as the endpoint names it, for example `text-embedding-3-small`. A provider-agnostic gateway serves more than one provider and has to be told which one to use: there the format is `provider/model`. |
 | **Vector Dimensions** | Length of the vector the model returns. It has to match the model. The ceiling is 2000, which is the limit for an indexable vector column. |
 | **API Key Reference** | The name of the property or environment variable holding the key, never the key itself. |
@@ -62,6 +62,14 @@ Create a record. The fields that decide where the traffic goes and what it costs
 | **Embedding Batch Size** | Texts sent per provider request. It bounds both the request and the transaction the scheduled process holds while delivering it. |
 | **Max Input Characters** | Longest text sent for a single record. A model rejects an input past its token limit and the whole batch fails with it, so this keeps one oversized record from stopping the records batched alongside it. Characters are not tokens: a token is roughly four characters for English text, and fewer for other languages. |
 | **Retry Limit** | Delivery attempts before an event stops being recovered automatically. It keeps a permanent failure, such as a revoked key, from being retried forever at the provider's expense. |
+
+An installation that reaches every model through one gateway names it once instead of repeating it on every provider. Add the endpoint to `gradle.properties`, run `./gradlew prepareConfig` to copy it into `Openbravo.properties`, and leave **API Endpoint** empty:
+
+```properties title="gradle.properties"
+vector.embeddings.endpoint=https://llm.etendo.software/v1
+```
+
+A provider that fills in **API Endpoint** addresses that instead, so one provider reaches somewhere else without changing the installation.
 
 === "OpenAI directly"
 
