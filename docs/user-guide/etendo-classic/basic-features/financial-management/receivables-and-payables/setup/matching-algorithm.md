@@ -30,7 +30,7 @@ As shown in the image above, the "**Standard**" matching algorithm has three che
 
 -   **Match BP Name:** This option gets a strong match if the business partner name of the bank statement line matches the business partner name of the financial account transaction.
 -   **Match Reference:** This option gets a strong match if the reference of the bank statement line matches the reference of the financial account transaction.
--   **Match Transaction Date:** This option gets a strong match if the business partner name of the bank statement line matches the business partner name of the financial account transaction.
+-   **Match Transaction Date:** This option gets a strong match if the transaction date of the bank statement line matches the transaction date of the financial account transaction.
 
 !!! info
     It is possible to select all the above checks at once or just some of them in order to configure how to get a strong match.

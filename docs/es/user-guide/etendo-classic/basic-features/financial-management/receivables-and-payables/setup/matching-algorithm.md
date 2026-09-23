@@ -30,7 +30,7 @@ Como se muestra en la imagen anterior, el algoritmo de reconciliación "**Están
 
 -   **Asociar nombre del tercero:** Esta opción obtiene una coincidencia sólida si el nombre del tercero de la línea del extracto bancario coincide con el nombre del tercero de la transacción de la cuenta financiera.
 -   **Asociar referencia:** Esta opción obtiene una coincidencia sólida si la referencia de la línea del extracto bancario coincide con la referencia de la transacción de la cuenta financiera.
--   **Asociar fecha de transacción:** Esta opción obtiene una coincidencia sólida si el nombre del tercero de la línea del extracto bancario coincide con el nombre del tercero de la transacción de la cuenta financiera.
+-   **Asociar fecha de transacción:** Esta opción obtiene una coincidencia sólida si la fecha de la línea del extracto bancario coincide con la fecha de la transacción de la cuenta financiera.
 
 !!! info
     Es posible seleccionar todas las verificaciones anteriores a la vez o solo algunas de ellas para configurar cómo obtener una coincidencia sólida.
