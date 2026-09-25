@@ -6522,6 +6522,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modify Payment Plan button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requires-bank-account-payment-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requires Bank Account (Payment Method)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -17233,6 +17248,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modify Payment Plan button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requires-bank-account-payment-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requires Bank Account (Payment Method)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -17366,6 +17396,29 @@ Additionally, invoices created from Purchase and Sales Orders inherit the bank a
 <p>This button is only available when the payment plan has no associated payments.</p>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png"></a></p>
+<h5 id="requires-bank-account-payment-method">Requires Bank Account (Payment Method)</h5>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Payables and Receivables</code> &gt; <code>Payment Method</code></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This feature is available from <strong>Financial Extensions 4.2.8</strong> (<a href="https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.8" target="_blank">Etendo 26</a>) and <strong>3.11.15</strong> (<a href="https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.15" target="_blank">Etendo 25</a>) onwards.</p>
+</div>
+<p>The <strong>Requires Bank Account</strong> checkbox is available in the <em>Defaults Payment OUT</em> section of the Payment Method window. It defines whether Bank Account is mandatory on the payment plan lines that use that payment method when they are created or modified through <strong>Modify Payment Plan</strong>.</p>
+<ul>
+<li>
+<p>If <strong>Requires Bank Account</strong> is checked (for example, for Direct Debit, needed to later generate the SEPA Remittance), the line cannot be saved without a Bank Account, and the following message is shown:</p>
+<blockquote>
+<p>The selected payment method requires a bank account. Fill in the Bank Account of the payment plan lines that use it.</p>
+</blockquote>
+</li>
+<li>
+<p>If it is unchecked (for example, for Confirming or Transfer), the line can be saved without a Bank Account, and any other field (such as Expected Date) can be edited freely even if Bank Account is empty.</p>
+</li>
+</ul>
+<p>This validation is applied only to the lines being created or modified in the popup; existing untouched lines are never blocked by it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The checkbox is unchecked by default on all payment methods, including Direct Debit. After upgrading, review the Payment Method configuration and check <strong>Requires Bank Account</strong> on every payment method that depends on it (e.g. Direct Debit) to keep the previous validation behavior.</p>
+</div>
 <h2 id="payment-in-payment-out-windows">Payment In /Payment Out windows</h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Payment In / Payment Out</code> </p>
 <h3 id="add-details-button">Add Details button</h3>

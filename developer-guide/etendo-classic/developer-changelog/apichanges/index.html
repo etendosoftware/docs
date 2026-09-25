@@ -17434,6 +17434,16 @@ It serves as a reference for developers and system administrators to understand 
 <li>
 <p><code>com.etendoerp:dbsm</code> <code>1.1.0</code> -&gt; <code>1.2.0</code> — see <a href="#dbsourcemanager-dbsm">DBSourceManager (DBSM)</a> above.</p>
 </li>
+<li>
+<p><code>net.sf.jasperreports:jasperreports</code> <code>6.17.0</code> -&gt; <code>6.20.0</code></p>
+</li>
+<li>
+<p><code>net.sf.jasperreports:jasperreports-fonts</code> <code>6.17.0</code> -&gt; <code>6.20.0</code> — <a href="https://github.com/Jaspersoft/jasperreports/releases" target="_blank">Releases Page – GitHub</a></p>
+<div class="admonition info">
+<p class="admonition-title">Legacy .xls Export Fix</p>
+<p>Starting with <strong>Etendo 26.2.12</strong>, these libraries were upgraded to fix the legacy <code>.xls</code> export path (Apache POI HSSF), which failed with <code>NoSuchMethodError: 'short org.apache.poi.hssf.usermodel.HSSFFont.getIndex()'</code> due to a binary incompatibility between JasperReports 6.17.0 and Apache POI 5.4.0.</p>
+</div>
+</li>
 </ul>
 <hr>
 <p><strong>Artifact Coordinates Migrated to Upstream</strong></p>
@@ -17486,6 +17496,13 @@ It serves as a reference for developers and system administrators to understand 
 <li><code>org.apache.poi:ooxml-schemas</code> <code>1.4</code> — <a href="https://poi.apache.org/components/oxml4j/" target="_blank">Documentation</a></li>
 <li><code>org.hamcrest:hamcrest-all</code> <code>1.3</code> — <a href="http://hamcrest.org/JavaHamcrest/" target="_blank">Documentation</a></li>
 <li><code>junit:junit</code> <code>4.12</code> — <a href="https://junit.org/junit4/" target="_blank">Documentation</a></li>
+<li>
+<p><code>com.zaxxer:SparseBitSet</code> <code>1.3</code></p>
+<div class="admonition info">
+<p class="admonition-title">Legacy .xls Export Fix</p>
+<p>Starting with <strong>Etendo 26.2.12</strong>, this dependency was added to fix a missing runtime class (<code>NoClassDefFoundError: com/zaxxer/sparsebits/SparseBitSet</code>) required by Apache POI while exporting reports to the legacy <code>.xls</code> format.</p>
+</div>
+</li>
 </ul>
 <hr>
 <p><strong>Removed</strong></p>

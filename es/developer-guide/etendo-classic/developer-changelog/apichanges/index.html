@@ -17763,6 +17763,16 @@ Sirve como referencia para desarrolladores y administradores de sistemas para en
 <li>
 <p><code>com.etendoerp:dbsm</code> <code>1.1.0</code> -&gt; <code>1.2.0</code> — ver arriba <a href="#dbsourcemanager-dbsm">DBSourceManager (DBSM)</a>.</p>
 </li>
+<li>
+<p><code>net.sf.jasperreports:jasperreports</code> <code>6.17.0</code> -&gt; <code>6.20.0</code></p>
+</li>
+<li>
+<p><code>net.sf.jasperreports:jasperreports-fonts</code> <code>6.17.0</code> -&gt; <code>6.20.0</code> — <a href="https://github.com/Jaspersoft/jasperreports/releases" target="_blank">Página de versiones – GitHub</a></p>
+<div class="admonition info">
+<p class="admonition-title">Corrección de la exportación legacy a .xls</p>
+<p>A partir de <strong>Etendo 26.2.12</strong>, estas bibliotecas se actualizaron para corregir la exportación legacy a <code>.xls</code> (Apache POI HSSF), que fallaba con <code>NoSuchMethodError: 'short org.apache.poi.hssf.usermodel.HSSFFont.getIndex()'</code> debido a una incompatibilidad binaria entre JasperReports 6.17.0 y Apache POI 5.4.0.</p>
+</div>
+</li>
 </ul>
 <hr>
 <p><strong>Coordenadas de artefactos migradas al upstream</strong></p>
@@ -17815,6 +17825,13 @@ Sirve como referencia para desarrolladores y administradores de sistemas para en
 <li><code>org.apache.poi:ooxml-schemas</code> <code>1.4</code> — <a href="https://poi.apache.org/components/oxml4j/" target="_blank">Documentación</a></li>
 <li><code>org.hamcrest:hamcrest-all</code> <code>1.3</code> — <a href="http://hamcrest.org/JavaHamcrest/" target="_blank">Documentación</a></li>
 <li><code>junit:junit</code> <code>4.12</code> — <a href="https://junit.org/junit4/" target="_blank">Documentación</a></li>
+<li>
+<p><code>com.zaxxer:SparseBitSet</code> <code>1.3</code></p>
+<div class="admonition info">
+<p class="admonition-title">Corrección de la exportación legacy a .xls</p>
+<p>A partir de <strong>Etendo 26.2.12</strong>, se agregó esta dependencia para corregir una clase faltante en tiempo de ejecución (<code>NoClassDefFoundError: com/zaxxer/sparsebits/SparseBitSet</code>) requerida por Apache POI al exportar reportes al formato legacy <code>.xls</code>.</p>
+</div>
+</li>
 </ul>
 <hr>
 <p><strong>Eliminadas</strong></p>
