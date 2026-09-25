@@ -95,6 +95,12 @@ PostgreSQL 17 is supported from this release. No action is required if you stay 
 
 - `com.etendoerp:dbsm` `1.1.0` -> `1.2.0` — see [DBSourceManager (DBSM)](#dbsourcemanager-dbsm) above.
 
+- `net.sf.jasperreports:jasperreports` `6.17.0` -> `6.20.0`
+- `net.sf.jasperreports:jasperreports-fonts` `6.17.0` -> `6.20.0` — [Releases Page – GitHub](https://github.com/Jaspersoft/jasperreports/releases){target="\_blank"}
+
+    !!! info "Legacy .xls Export Fix"
+        Starting with **Etendo 26.2.12**, these libraries were upgraded to fix the legacy `.xls` export path (Apache POI HSSF), which failed with `NoSuchMethodError: 'short org.apache.poi.hssf.usermodel.HSSFFont.getIndex()'` due to a binary incompatibility between JasperReports 6.17.0 and Apache POI 5.4.0.
+
 ---
 
 **Artifact Coordinates Migrated to Upstream**
@@ -119,6 +125,10 @@ The following libraries are new additions to the platform classpath. No action i
 - `org.apache.poi:ooxml-schemas` `1.4` — [Documentation](https://poi.apache.org/components/oxml4j/){target="\_blank"}
 - `org.hamcrest:hamcrest-all` `1.3` — [Documentation](http://hamcrest.org/JavaHamcrest/){target="\_blank"}
 - `junit:junit` `4.12` — [Documentation](https://junit.org/junit4/){target="\_blank"}
+- `com.zaxxer:SparseBitSet` `1.3`
+
+    !!! info "Legacy .xls Export Fix"
+        Starting with **Etendo 26.2.12**, this dependency was added to fix a missing runtime class (`NoClassDefFoundError: com/zaxxer/sparsebits/SparseBitSet`) required by Apache POI while exporting reports to the legacy `.xls` format.
 
 ---
 
