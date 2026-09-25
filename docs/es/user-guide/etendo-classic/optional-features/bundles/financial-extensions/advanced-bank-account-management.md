@@ -97,6 +97,26 @@ En la pestaña **Plan de pagos** de las ventanas **Factura (Proveedor)** y **Fac
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
+##### Requiere cuenta bancaria (Método de pago) { #requires-bank-account-payment-method }
+
+:material-menu: `Aplicación` > `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Método de pago`
+
+!!!info
+    Esta funcionalidad está disponible a partir de **Financial Extensions 4.2.8** ([Etendo 26](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.8){target="_blank"}) y **3.11.15** ([Etendo 25](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.15){target="_blank"}) en adelante.
+
+La casilla **Requiere cuenta bancaria** está disponible en la sección *Configuración de pago (Salida)* de la ventana **Método de pago**. Define si la Cuenta bancaria es obligatoria en las líneas del plan de pagos que usan ese método de pago cuando se crean o modifican mediante **Modificar plan de pagos**.
+
+- Si **Requiere cuenta bancaria** está marcada (por ejemplo, para Domiciliación bancaria, necesaria para generar luego la Remesa SEPA), la línea no puede guardarse sin una Cuenta bancaria, y se muestra el siguiente mensaje:
+
+    > El método de pago seleccionado requiere una cuenta bancaria. Complete la Cuenta bancaria de las líneas del plan de pagos que lo utilicen.
+
+- Si está desmarcada (por ejemplo, para Confirming o Transferencia), la línea puede guardarse sin Cuenta bancaria, y cualquier otro campo (como la Fecha prevista) puede editarse libremente aunque la Cuenta bancaria esté vacía.
+
+Esta validación se aplica únicamente a las líneas que se están creando o modificando en el popup; las líneas existentes que no se tocan nunca se bloquean por esto.
+
+!!!warning
+    La casilla está desmarcada por defecto en todos los métodos de pago, incluida Domiciliación bancaria. Tras actualizar, revise la configuración de Método de pago y marque **Requiere cuenta bancaria** en cada método de pago que dependa de ella (por ejemplo, Domiciliación bancaria) para mantener el comportamiento de validación anterior.
+
 ## Ventanas de Cobros/Pago { #payment-in-payment-out-windows }
 :material-menu: `Aplicación` > `Gestión Financiera` > `Gestión de Cobros y Pagos` > `Transacciones` > `Cobros / Pago` 
 ### Botón Añadir detalles { #add-details-button }

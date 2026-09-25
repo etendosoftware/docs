@@ -97,6 +97,26 @@ A Modify Payment Plan button is found at Payment Plan tab level in both the Purc
 
 ![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/advanced-bank-account-management/aba7.png)
 
+##### Requires Bank Account (Payment Method)
+
+:material-menu: `Application` > `Financial Management` > `Payables and Receivables` > `Payment Method`
+
+!!!info
+    This feature is available from **Financial Extensions 4.2.8** ([Etendo 26](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.8){target="_blank"}) and **3.11.15** ([Etendo 25](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.15){target="_blank"}) onwards.
+
+The **Requires Bank Account** checkbox is available in the *Defaults Payment OUT* section of the Payment Method window. It defines whether Bank Account is mandatory on the payment plan lines that use that payment method when they are created or modified through **Modify Payment Plan**.
+
+- If **Requires Bank Account** is checked (for example, for Direct Debit, needed to later generate the SEPA Remittance), the line cannot be saved without a Bank Account, and the following message is shown:
+
+    > The selected payment method requires a bank account. Fill in the Bank Account of the payment plan lines that use it.
+
+- If it is unchecked (for example, for Confirming or Transfer), the line can be saved without a Bank Account, and any other field (such as Expected Date) can be edited freely even if Bank Account is empty.
+
+This validation is applied only to the lines being created or modified in the popup; existing untouched lines are never blocked by it.
+
+!!!warning
+    The checkbox is unchecked by default on all payment methods, including Direct Debit. After upgrading, review the Payment Method configuration and check **Requires Bank Account** on every payment method that depends on it (e.g. Direct Debit) to keep the previous validation behavior.
+
 ## Payment In /Payment Out windows
 :material-menu: `Application` > `Financial Management` > `Receivables and Payables` > `Transactions` > `Payment In / Payment Out` 
 ### Add Details button
