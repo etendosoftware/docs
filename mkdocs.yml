@@ -494,6 +494,7 @@ plugins:
                   - How to Configure Color System Support: developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system.md
                   - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
                   - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
+                  - How to Configure Semantic Search: developer-guide/etendo-classic/how-to-guides/how-to-configure-semantic-search-with-etendo-database-extended.md
                   - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
                   - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
                   - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
@@ -1538,6 +1539,7 @@ nav:
         - How to Configure Color System Support: developer-guide/etendo-classic/how-to-guides/how-to-configure-color-system.md
         - How to Configure Etendo Main UI: developer-guide/etendo-classic/how-to-guides/how-to-configure-etendo-main-ui.md
         - How to Configure Log: developer-guide/etendo-classic/how-to-guides/how-to-configure-log.md
+        - How to Configure Semantic Search: developer-guide/etendo-classic/how-to-guides/how-to-configure-semantic-search-with-etendo-database-extended.md
         - How to Configure Session Timeout: developer-guide/etendo-classic/how-to-guides/how-to-configure-session-timeout.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-background-process.md
