@@ -18,7 +18,9 @@ tags:
 
 | Versión | Fecha de publicación | Compatibilidad con Sales Extensions | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 17/07/2026 | [1.0.000, latest] | CS | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.9.0){target="_blank"} | 04/10/2026 | [1.0.000, latest] | QAA | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.8.0){target="_blank"} | 02/10/2026 | [1.0.000, latest] | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.7.0){target="_blank"} | 17/07/2026 | [1.0.000, latest] | C | :white_check_mark: |
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | C | :white_check_mark: |
 
 ---
