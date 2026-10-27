@@ -6529,18 +6529,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-configure-financial-accounts" class="md-nav__link">
+  <a href="#2-synchronize-bank-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Configure Financial Accounts
+      2. Synchronize Bank Providers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-synchronize-bank-providers" class="md-nav__link">
+  <a href="#step-3-configure-financial-accounts" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Synchronize Bank Providers
+      3. Configure Financial Accounts
     </span>
   </a>
   
@@ -17446,18 +17446,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-configure-financial-accounts" class="md-nav__link">
+  <a href="#2-synchronize-bank-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Configure Financial Accounts
+      2. Synchronize Bank Providers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-synchronize-bank-providers" class="md-nav__link">
+  <a href="#step-3-configure-financial-accounts" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Synchronize Bank Providers
+      3. Configure Financial Accounts
     </span>
   </a>
   
@@ -17864,6 +17864,7 @@
     D --&gt; E([Payment executed ✅])</code></pre>
 </li>
 </ul>
+<p>Transaction import (<abbr title="Account Information Service">AIS</abbr>) works for <strong>Bank</strong> and <strong>Card</strong> accounts; bank payment initiation (<abbr title="Payment Initiation Service">PIS</abbr>) is available only for <strong>Bank</strong> accounts.</p>
 <table>
 <thead>
 <tr>
@@ -17893,14 +17894,13 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Confirm the following before using the Bank Integration functionality:</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>Server Configuration</strong>: Your system administrator has configured the application URL <code>context.url</code> in the Etendo server and run the setup process. Contact your IT team or implementation partner to confirm this is done.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4z"></path></svg></span> <strong>Salt Edge API Key</strong>: Your organization has a Salt Edge API Key. Contact <a href="../../../../../../help-and-support/support-service/">Etendo Support</a> to request it.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg></span> <strong>Client Configuration</strong>: The API Key is configured once at the Client level (detailed in the Setup section below).</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>Server Configuration</strong>: Your system administrator has configured the application URL <code>context.url</code> in the Etendo server and run the setup process. The <code>context.url</code> value must <strong>not</strong> include the context path: for example, <code>context.url=http://localhost:8080</code> in a local environment, or the production URL of the environment. Contact your IT team or implementation partner to confirm this is done.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4z"></path></svg></span> <strong>Salt Edge API Key</strong>: Your organization needs an API Key (request it from <a href="../../../../../../help-and-support/support-service/">Etendo Support</a>). An administrator enters it once, at Client level (see <a href="#1-configure-salt-edge-api-key">Setup, step 1</a>).</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10h-2v7h2zm6 0h-2v7h2zm8.5 9H2v2h19zm-2.5-9h-2v7h2zm-7-6.74L16.71 6H6.29zm0-2.26L2 6v2h19V6z"></path></svg></span> <strong>Financial Accounts</strong>: The Financial Accounts that will be linked to your bank accounts exist in Etendo.</li>
 </ul>
 <h2 id="setup">Setup</h2>
 <h3 id="1-configure-salt-edge-api-key">1. Configure Salt Edge API Key</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
 <p>As an <strong>Administrator</strong>:</p>
 <ol>
 <li>Open the <strong>Client</strong> window and select your Client.</li>
@@ -17913,47 +17913,57 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Button and Field Visibility</p>
-<p>All Bank Integration buttons and fields are <strong>only visible</strong> when the current Client has an API Key configured. This includes:</p>
-<ul>
-<li>In the <strong>Financial Account</strong> window: the <strong>Connect Account</strong> button, <strong>Get Bank Statement</strong> button, <strong>Bank Provider</strong> selector, <strong>Import From Date</strong>, <strong>Import To Date</strong>, and <strong>Statement Grouping</strong> fields.</li>
-<li>In the <strong>Payment OUT</strong> window: the <strong>Generate Bank Payment</strong> button.</li>
-</ul>
-<p>If you do not see these elements, verify that the Client has a valid API Key configured in the <strong>Client</strong> window.</p>
+<p>Bank Integration buttons and fields are hidden until the Client has an API Key. If you do not see <strong>Connect Account</strong> or <strong>Generate Bank Payment</strong>, check the <strong>Client</strong> window. <strong>Generate Bank Payment</strong> also requires a <strong>Bank</strong> type Financial Account (see <a href="#required-configuration">Required Configuration</a>).</p>
 </div>
 </li>
 </ol>
-<h3 id="step-2-configure-financial-accounts">2. Configure Financial Accounts</h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Financial Account</code></p>
-<p>The module supports financial accounts of type <strong>Bank</strong> and <strong>Card</strong>. The fields described below apply equally to both types.</p>
-<p>For each financial account you want to synchronize with a bank, open it and fill in the following fields in the <strong>Bank Integration</strong> tab:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png" data-desc-position="bottom"><img alt="Bank Integration tab fields in the Financial Account window" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png"></a></p>
-<ul>
-<li><strong>Bank Provider</strong>: The bank associated with this account. If set, the bank selection step is skipped when connecting (<abbr title="Account Information Service">AIS</abbr>) or initiating payments (<abbr title="Payment Initiation Service">PIS</abbr>). Leave empty to select the bank manually each time — once you successfully connect, the system automatically fills this field with the bank you connected to. The provider list must be synchronized first — see Step 3.</li>
-<li><strong>Import From Date</strong>: Start date for importing transactions. If left empty, the system uses the last imported bank statement date. Set this only for the initial import (e.g., beginning of fiscal year) — leave it empty afterward so imports continue automatically from where they left off.</li>
-<li><strong>Import To Date</strong>: End date for importing transactions. If left empty, the system uses today's date. Leave it empty in normal operation. Also leave it empty so the automatic <strong>Get Bank Statements</strong> process includes this account — if a date is set, the process skips that account on every scheduled run.</li>
-<li><strong>Statement Grouping</strong>: Controls how imported transactions are grouped into bank statements: <strong>Within 1 day</strong> (default) groups transactions from the same day into a single statement; <strong>New statement each run</strong> creates a new statement on every import; <strong>Within 7 days</strong> and <strong>Within 30 days</strong> group transactions into a single statement per week or per month respectively, reactivating it if already processed. Use a wider grouping when importing frequently to reduce the total number of statements.</li>
-</ul>
-<h3 id="3-synchronize-bank-providers">3. Synchronize Bank Providers</h3>
+<h3 id="2-synchronize-bank-providers">2. Synchronize Bank Providers</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Setup</code> &gt; <code>Bank Integration</code> &gt; <code>Synchronize Bank Providers</code></p>
-<p>Run this process once during initial setup. Re-run it on demand if a bank provider does not appear in the list or you want to verify whether a specific bank is supported by Salt Edge. Execute the process from the menu above — no specific user is required.</p>
+<p>Run this process once during initial setup, and again whenever a bank is missing from the list.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This step is required before assigning a <strong>Bank Provider</strong> to a financial account or initiating payments.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Show test banks (testing environments only)</p>
+<p>By default, sandbox (fake) providers are hidden from the bank list. To display them, open the <strong>Preference</strong> window (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Application</code> &gt; <code>Preference</code>) and set the <strong>Show Fake Providers</strong> property to <code>Y</code>. It is defined by default at <strong>System</strong> level (Organization *) with the value <code>N</code>. Use it only in testing environments.</p>
+</div>
+<h3 id="step-3-configure-financial-accounts">3. Configure Financial Accounts</h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Financial Account</code></p>
+<p>The module supports financial accounts of type <strong>Bank</strong> and <strong>Card</strong>. The fields described below apply equally to both types.</p>
+<p>For each financial account you want to synchronize with a bank, open it and fill in the following fields in the <strong>Bank Integration</strong> field group of the Financial Account header:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png" data-desc-position="bottom"><img alt="Bank Integration field group in the Financial Account window" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-2.png"></a></p>
+<ul>
+<li><strong>Bank Provider</strong>: The bank associated with this account. If set, the bank selection step is skipped when connecting (<abbr title="Account Information Service">AIS</abbr>) or initiating payments (<abbr title="Payment Initiation Service">PIS</abbr>). Leave empty to select the bank manually each time — once you successfully connect, the system automatically fills this field with the bank you connected to. The provider list must be synchronized first — see Step 2.</li>
+<li><strong>Import From Date</strong>: Start date for importing transactions. If left empty, the system uses the last imported bank statement date. Set this only for the initial import (e.g., beginning of fiscal year) — leave it empty afterward so imports continue automatically from where they left off.</li>
+<li><strong>Import To Date</strong>: End date for importing transactions. If left empty, the system uses today's date. Leave it empty in normal operation. Also leave it empty so the automatic <strong>Get Bank Statements</strong> process includes this account — if a date is set, the process skips that account on every scheduled run.</li>
+<li>
+<p><strong>Statement Grouping</strong>: Controls how imported transactions are grouped into bank statements:</p>
+<ul>
+<li><strong>Within 1 day</strong> (default): groups transactions from the same day into a single statement.</li>
+<li><strong>New statement each run</strong>: creates a new statement on every import.</li>
+<li><strong>Within 7 days</strong>: groups transactions into a single statement per week; reopens the statement if it was already processed.</li>
+<li><strong>Within 30 days</strong>: groups transactions into a single statement per month; reopens the statement if it was already processed.</li>
+</ul>
+<p>Use a wider grouping when importing frequently to reduce the total number of statements.
+- <strong>Salt Edge Account ID</strong>: Read-only. Etendo fills it automatically when the account is connected; you do not need to enter it.</p>
+</li>
+</ul>
 <h2 id="bank-connection-flow-ais">Bank Connection Flow (<abbr title="Account Information Service">AIS</abbr>)</h2>
 <h3 id="connect-a-bank-or-card-account">Connect a Bank or Card Account</h3>
-<p>Once the Client's API Key is configured and the financial account dates are set:</p>
+<p>Before you start, make sure the API Key is configured (<a href="#1-configure-salt-edge-api-key">Setup, step 1</a>) and the Financial Account exists.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Enter the <strong><abbr title="International Bank Account Number">IBAN</abbr></strong> field on your Financial Account before connecting, if you already know it. For <strong>Bank</strong> accounts, the system attempts to complete this field automatically from the data returned by the bank when it is empty — see step 4 below for details.</p>
+<p>If you already know the <strong><abbr title="International Bank Account Number">IBAN</abbr></strong>, enter it on the Financial Account before connecting. If it is empty, Etendo can fill it in for <strong>Bank</strong> accounts (see step 4).</p>
 </div>
 <ol>
 <li>
-<p>Open the <strong>Financial Account</strong> (<strong>Bank</strong> or <strong>Card</strong> type) you want to connect and click the <strong>Connect Account</strong> button. A <strong>Salt Edge connection widget</strong> opens in a popup window — search for your bank in the list of supported banks and select it to continue.</p>
+<p>Open the <strong>Financial Account</strong> (<strong>Bank</strong> or <strong>Card</strong> type) and click <strong>Connect Account</strong>. A connection widget opens in a popup. Search for your bank and select it.</p>
+<p>The list only shows banks for the <strong>Country</strong> set in the <strong>Bank Account</strong> section of the Financial Account. If your bank is missing, check that <strong>Country</strong> and, if needed, run <a href="#2-synchronize-bank-providers">Synchronize Bank Providers</a> again. Once connected, the bank is saved as the Financial Account's <strong>Bank Provider</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-3.png" data-desc-position="bottom"><img alt="Salt Edge bank selection widget" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-3.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you have assigned a <strong>Bank Provider</strong> to the Financial Account (see <a href="#step-2-configure-financial-accounts">Setup - Step 2</a>), the bank selection step is <strong>skipped automatically</strong> and you will be taken directly to your bank's authentication page.</p>
+<p>If you have assigned a <strong>Bank Provider</strong> to the Financial Account (see <a href="#step-3-configure-financial-accounts">Setup - Step 3</a>), the bank selection step is <strong>skipped automatically</strong> and you will be taken directly to your bank's authentication page.</p>
 </div>
 </li>
 <li>
@@ -17986,10 +17996,8 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>If the <strong><abbr title="International Bank Account Number">IBAN</abbr></strong> field is empty, the system completes it automatically with the <abbr title="International Bank Account Number">IBAN</abbr> returned by the bank.</li>
-<li>Before saving it, the system validates that the <abbr title="International Bank Account Number">IBAN</abbr> is valid (checksum) and that its country code matches the <strong>Country</strong> already configured on the Financial Account. If <strong>Country</strong> is empty, the system completes it automatically from the <abbr title="International Bank Account Number">IBAN</abbr>.</li>
-<li>If this validation fails, the connection still completes, but a warning message indicates that the <abbr title="International Bank Account Number">IBAN</abbr> could not be completed automatically. Enter it manually afterward.</li>
-<li>If the Financial Account already has a manually entered <strong><abbr title="International Bank Account Number">IBAN</abbr></strong> that does not match the account you selected, the system blocks the connection with a conflict error. Verify which <abbr title="International Bank Account Number">IBAN</abbr> is correct and resolve the discrepancy before continuing.</li>
+<li><strong><abbr title="International Bank Account Number">IBAN</abbr> empty</strong>: Etendo fills it with the <abbr title="International Bank Account Number">IBAN</abbr> returned by the bank (and fills <strong>Country</strong> from the <abbr title="International Bank Account Number">IBAN</abbr> if it is empty).</li>
+<li><strong>Returned <abbr title="International Bank Account Number">IBAN</abbr> invalid, different from the <abbr title="International Bank Account Number">IBAN</abbr> already entered, or from a different country than the Financial Account's Country</strong>: the connection is established and Etendo shows a warning. Set the <abbr title="International Bank Account Number">IBAN</abbr> manually.</li>
 </ul>
 </div>
 <div class="tabbed-block">
@@ -18001,7 +18009,7 @@
 </div>
 </li>
 <li>
-<p>A success page confirms the connection. The system automatically synchronizes your bank account — connection details appear in the <strong>Bank Connections</strong> tab.</p>
+<p>A success page confirms the connection. Close the popup. The <strong>Financial Account</strong> window refreshes by itself, so <strong>Get Bank Statement</strong> is available without reloading the page. The connection details appear in the <strong>Bank Connections</strong> tab.</p>
 </li>
 </ol>
 <h3 id="importing-transactions">Importing Transactions</h3>
@@ -18014,10 +18022,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-6.png" data-desc-position="bottom"><img alt="Get Bank Statement button in the Financial Account window" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-6.png"></a></p>
 </li>
 <li>
-<p>The system connects to the bank, retrieves transactions within the configured date range. It then creates or updates bank statements — naming each one after the actual date range (earliest to latest transaction date) of the imported batch and creates the corresponding bank statement lines.</p>
+<p>The system connects to the bank, retrieves the transactions in the configured date range, and creates or updates bank statements with their lines. Each statement is named after the date range (earliest to latest transaction date) of the imported transactions.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Etendo retrieves the full available transaction history from the connection and filters it locally using the <strong>Import From Date</strong> and <strong>Import To Date</strong> fields. This does not change the expected result — these fields continue to define what gets imported.</p>
+<p>Only transactions within <strong>Import From Date</strong> and <strong>Import To Date</strong> are imported.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Posted vs. pending transactions</p>
@@ -18035,12 +18043,16 @@
 </li>
 </ol>
 <h4 id="option-2-automatic-import-scheduled-process">Option 2: Automatic Import (Scheduled Process)</h4>
-<p>For regular, automated imports across all connected accounts:</p>
+<p>For regular, automated imports across the connected accounts you have access to:</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>General Setup</code> &gt; <code>Process Scheduling</code> &gt; <code>Process Request</code></p>
 <ol>
-<li>Click <strong>New</strong> to create a process request, select <strong>Get Bank Statements</strong> (plural — runs automatically for all connected accounts, unlike the manual <strong>Get Bank Statement</strong> button in Option 1) in the <strong>Process</strong> field, and set the <strong>Timing</strong> field to the frequency you need (for example, Daily).</li>
+<li>Click <strong>New</strong> to create a process request, select <strong>Get Bank Statements</strong> (plural — runs automatically for all the connected accounts the process request has access to, unlike the manual <strong>Get Bank Statement</strong> button in Option 1) in the <strong>Process</strong> field.</li>
 <li>
-<p>Save the record. The process runs automatically at the chosen interval and imports new transactions for all connected accounts.</p>
+<p>Set <strong>Timing</strong> to <strong>Schedule</strong>, choose the <strong>Frequency</strong> (for example, Daily), and click <strong>Schedule Process</strong>. The process runs automatically at the chosen interval.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The process imports only accounts that the user and role who created the process request are allowed to access. Other connected accounts are skipped, so create the request with a role that can see all the accounts you want to import. See <a href="#common-issues-and-solutions">Common Issues and Solutions</a> if an account is not imported.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-9.png" data-desc-position="bottom"><img alt="Scheduled process request for automatic bank statement import" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-9.png"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -18061,6 +18073,8 @@
 <p>To view all your bank connections, open the <strong>Financial Account</strong> window and go to the <strong>Bank Connections</strong> tab.</p>
 <h3 id="connection-status">Connection Status</h3>
 <p>Bank connections can be <strong>Active</strong>, <strong>Inactive</strong>, or <strong>Disabled</strong> (e.g., when authentication expires).</p>
+<p>The <strong>Bank Connections</strong> tab shows each connection's status and last error:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-19.png" data-desc-position="bottom"><img alt="Bank Connections tab with Connection Status and Last Fail Message columns" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-19.png"></a></p>
 <table>
 <thead>
 <tr>
@@ -18071,7 +18085,7 @@
 <tbody>
 <tr>
 <td><strong>Active</strong></td>
-<td>No action needed — the connection is working normally.</td>
+<td>No action needed, unless the connection is failing (see the note below).</td>
 </tr>
 <tr>
 <td><strong>Inactive</strong></td>
@@ -18083,6 +18097,10 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition info">
+<p class="admonition-title">Active with Last Fail Message</p>
+<p>A connection marked <strong>Active</strong> can still be failing, for example when your bank consent has expired. Check the <strong>Last Fail Message</strong> column. If it contains a message, use <strong>Reconnect Account</strong>.</p>
+</div>
 <h3 id="disconnecting-a-bank-connection">Disconnecting a Bank Connection</h3>
 <p>Etendo offers two ways to disconnect a bank connection: a simple disconnection that keeps the connection history, and a permanent deletion that removes it entirely.</p>
 <p>Open the <strong>Financial Account</strong> window, go to the <strong>Bank Connections</strong> tab, and select the connection you want to disconnect. Click the <strong>Disconnect Account</strong> button. A <strong>Disconnect Account</strong> dialog opens with a <strong>Permanent deletion</strong> checkbox.</p>
@@ -18106,14 +18124,14 @@
 </div>
 <p>After disconnection, verify the result in the <strong>Bank Connections</strong> tab: the connection shows as <strong>Inactive</strong> for a simple disconnection, or no longer appears in the list for a permanent deletion.</p>
 <h3 id="reconnecting-a-bank-connection">Reconnecting a Bank Connection</h3>
-<p>If a connection shows as <strong>Inactive</strong> or <strong>Disabled</strong>, open the <strong>Financial Account</strong> — the <strong>Reconnect Account</strong> button appears in the window's top toolbar. Click it to re-authenticate with your bank and restore the connection to <strong>Active</strong>. You'll go through the same bank authorization, login, and account selection steps described above (see steps 2–4 in <a href="#connect-a-bank-or-card-account">Connect a Bank or Card Account</a>).</p>
+<p>If a connection shows as <strong>Inactive</strong> or <strong>Disabled</strong>, or is <strong>Active</strong> but has a <strong>Last Fail Message</strong> (see <a href="#connection-status">Connection Status</a>), open the <strong>Financial Account</strong> — the <strong>Reconnect Account</strong> button appears in the window's top toolbar. Click it to re-authenticate with your bank and restore the connection to <strong>Active</strong>. You'll go through the same bank authorization, login, and account selection steps described above (see steps 2–4 in <a href="#connect-a-bank-or-card-account">Connect a Bank or Card Account</a>).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-10.png" data-desc-position="bottom"><img alt="Reconnect Account button in the Financial Account toolbar" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-10.png"></a></p>
 <h2 id="bank-payment-initiation-pis">Bank Payment Initiation (<abbr title="Payment Initiation Service">PIS</abbr>)</h2>
 <p>In addition to importing bank transactions (<abbr title="Account Information Service">AIS</abbr>), this module allows you to <strong>initiate bank payments directly from Etendo</strong>. When you create a Payment OUT record in Etendo, you can send it to your bank for authorization and execution — all without leaving Etendo.</p>
 <h3 id="how-bank-payments-work">How Bank Payments Work</h3>
 <p>The payment initiation flow works as follows:</p>
 <ol>
-<li>Create a <strong>Payment OUT</strong> record in Etendo as usual and click the <strong>Generate Bank Payment</strong> button. A form appears with pre-filled values (amount, creditor, template, etc.).</li>
+<li>Create a <strong>Payment OUT</strong> record in Etendo as usual (or pay a <strong>Purchase Invoice</strong>) and click the <strong>Generate Bank Payment</strong> button, available on the Payment OUT and, once the payment is processed, on the Purchase Invoice header. A form appears with pre-filled values (amount, creditor, template, etc.).</li>
 <li>Review and confirm — a <strong>bank authorization popup</strong> opens where you authorize the payment in your bank's secure environment.</li>
 <li>The payment status is tracked automatically in Etendo.</li>
 </ol>
@@ -18159,7 +18177,7 @@
 <ol>
 <li>Open the <strong>Financial Account</strong> linked to the bank connection, go to the <strong>Payment Method</strong> tab, and select the payment method used for bank transfers.</li>
 <li>
-<p>In the <strong>Payment OUT</strong> section, make sure <strong>Automatic Withdrawn</strong> is <strong>disabled</strong> (unchecked). This lets the payment be created without being executed automatically, so you can execute it later from the <strong>Generate Bank Payment</strong> button.</p>
+<p>In the <strong>Payment OUT</strong> section, make sure <strong>Automatic Withdrawn</strong> is <strong>disabled</strong> (unchecked). This lets the payment be created without being executed automatically, so you can execute it later from the <strong>Generate Bank Payment</strong> button (on the Payment OUT or, once processed, the Purchase Invoice).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png" data-desc-position="bottom"><img alt="Payment Method – Automatic Withdrawn disabled" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-11.png"></a></p>
 </li>
 <li>
@@ -18168,10 +18186,15 @@
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The <strong>Generate Bank Payment</strong> button only appears when <strong>Automatic Withdrawn</strong> is <strong>disabled</strong> and <strong>Wire Transfer</strong> is <strong>enabled</strong> (globally or as an override on this Financial Account). If either condition is not met, the button does not appear on the Payment OUT record.</p>
+<p>The <strong>Generate Bank Payment</strong> button appears on the <strong>Payment OUT</strong> record, and on the <strong>Purchase Invoice</strong> header once the payment has been processed, only when all of these conditions are met:</p>
+<ul>
+<li>The Financial Account is of type <strong>Bank</strong> (not <strong>Card</strong> or <strong>Cash</strong>).</li>
+<li><strong>Automatic Withdrawn</strong> is disabled.</li>
+<li><strong>Wire Transfer</strong> is enabled, globally or as an override on this Financial Account.</li>
+</ul>
 </div>
 <h3 id="generating-a-bank-payment">Generating a Bank Payment</h3>
-<p>You can create the payment from a <strong>Purchase Invoice</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Purchase Invoice</code>) or directly from a <strong>Payment OUT</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Payment OUT</code>). In both cases, when you add the payment you select the amount and, in <strong>Action Regarding Document</strong>, choose <strong>Process Made Payment(s)</strong>.</p>
+<p>You can create the payment from a <strong>Purchase Invoice</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>Procurement Management</code> &gt; <code>Transactions</code> &gt; <code>Purchase Invoice</code>) or directly from a <strong>Payment OUT</strong> (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Payment Out</code>). In both cases, when you add the payment you select the amount and, in <strong>Action Regarding Document</strong>, choose <strong>Process Made Payment(s)</strong>.</p>
 <ol>
 <li>
 <p>Add the payment and select the amount to pay. In <strong>Action Regarding Document</strong>, select <strong>Process Made Payment(s)</strong>.</p>
@@ -18182,7 +18205,7 @@
 </div>
 </li>
 <li>
-<p>Open the resulting <strong>Payment OUT</strong> record and click the <strong>Generate Bank Payment</strong> button.</p>
+<p>Click the <strong>Generate Bank Payment</strong> button, available on the resulting <strong>Payment OUT</strong> record and, once the payment has been processed, also on the <strong>Purchase Invoice</strong> header.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-12.png" data-desc-position="bottom"><img alt="Generate Bank Payment button in the Payment OUT window" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-12.png"></a></p>
 </li>
 <li>
@@ -18202,7 +18225,7 @@
 <td>Payment template (<abbr title="Single Euro Payments Area">SEPA</abbr>, <abbr title="Faster Payments Service (UK)">FPS</abbr>, or DOMESTIC)</td>
 </tr>
 <tr>
-<td><strong>End-to-End</strong></td>
+<td><strong>End To End</strong></td>
 <td>Document number</td>
 <td>Unique reference for the payment (max 35 characters)</td>
 </tr>
@@ -18223,18 +18246,18 @@
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Payment description</td>
+<td>Payment description; <code>Invoice No.: &lt;invoice number&gt;</code> when the payment comes from an invoice</td>
 <td>Description of the payment</td>
 </tr>
 <tr>
-<td><strong>Creditor <abbr title="International Bank Account Number">IBAN</abbr></strong></td>
+<td><strong>Creditor Iban</strong></td>
 <td>Business Partner's <abbr title="International Bank Account Number">IBAN</abbr></td>
-<td>Required for <abbr title="Single Euro Payments Area">SEPA</abbr> and optionally for DOMESTIC</td>
+<td>Required for <abbr title="Single Euro Payments Area">SEPA</abbr> and optionally for DOMESTIC. Stays empty if the Business Partner has no <abbr title="International Bank Account Number">IBAN</abbr></td>
 </tr>
 <tr>
 <td><strong>Creditor Account Number</strong></td>
 <td>Business Partner's account</td>
-<td>Required for <abbr title="Faster Payments Service (UK)">FPS</abbr>, optional for DOMESTIC</td>
+<td>Required for <abbr title="Faster Payments Service (UK)">FPS</abbr>, optional for DOMESTIC. Not shown for the <abbr title="Single Euro Payments Area">SEPA</abbr> template</td>
 </tr>
 </tbody>
 </table>
@@ -18257,12 +18280,12 @@
 </li>
 </ol>
 <h3 id="viewing-bank-payments">Viewing Bank Payments</h3>
-<p>All initiated bank payments are tracked in the <strong>Bank Payments</strong> tab of the Payment OUT record (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Payment OUT</code>). Each entry shows the <strong>Status</strong>, <strong>Amount</strong>, <strong>Currency</strong>, <strong>Creditor Name</strong> and <strong>Creditor <abbr title="International Bank Account Number">IBAN</abbr></strong>, plus the <strong>Debtor Name</strong> and <strong>Debtor <abbr title="International Bank Account Number">IBAN</abbr></strong> (your own Financial Account) and the linked <strong>Account</strong>. Use <strong>Refresh Payment</strong> to check the latest status on demand.</p>
+<p>All initiated bank payments are tracked in the <strong>Bank Payments</strong> tab of the Payment OUT record (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Financial Management</code> &gt; <code>Receivables and Payables</code> &gt; <code>Transactions</code> &gt; <code>Payment Out</code>). Each entry shows the <strong>Status</strong>, <strong>Amount</strong>, <strong>Currency</strong>, <strong>Creditor Name</strong> and <strong>Creditor <abbr title="International Bank Account Number">IBAN</abbr></strong>, plus the <strong>Debtor Name</strong> and <strong>Debtor <abbr title="International Bank Account Number">IBAN</abbr></strong> (your own Financial Account) and the linked <strong>Financial Account</strong>. Use <strong>Refresh Payment</strong> to check the latest status on demand.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-15.png" data-desc-position="bottom"><img alt="Bank Payments tab showing payment records and statuses" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bank-integration/bank-integration-15.png"></a></p>
 <h3 id="refreshing-payment-status">Refreshing Payment Status</h3>
-<p>Payment status is updated automatically through two mechanisms:</p>
+<p>Payment status is kept up to date in three ways: automatic updates, a manual refresh, and a scheduled refresh.</p>
 <h4 id="automatic-updates">Automatic Updates</h4>
-<p>Salt Edge sends automatic status notifications to Etendo whenever the payment status changes at the bank. These updates are processed immediately and the payment record is updated in real-time.</p>
+<p>The bank connection service sends automatic status notifications to Etendo whenever the payment status changes at the bank. These updates are processed immediately and the payment record is updated in real-time.</p>
 <h4 id="manual-refresh">Manual Refresh</h4>
 <p>If you want to check the latest status immediately:</p>
 <p>Go to the <strong>Bank Payments</strong> tab, select one or more payment records, and click the <strong>Refresh Payment</strong> button.</p>
@@ -18303,6 +18326,7 @@
 <ul>
 <li>Check your Import From/To Date configuration.</li>
 <li>Verify that there are new transactions in your bank account and that the date range covers the expected period.</li>
+<li>If the import comes from the scheduled <strong>Get Bank Statements</strong> process, check that the user and role of the process request have access to the Financial Account.</li>
 <li>Remember that transactions still pending at the bank are not imported yet — see <a href="#importing-transactions">Posted vs. pending transactions</a>. Wait for the bank to confirm them and run <strong>Get Bank Statement</strong> again.</li>
 </ul>
 </details>
@@ -18392,11 +18416,11 @@
 </tr>
 <tr>
 <td><strong>Status</strong></td>
-<td>The result of the operation (<em>Success</em>, <em>Error</em>, etc.).</td>
+<td>The result of the operation: <em>Initial</em>, <em>Processed</em>, <em>Success</em> or <em>Error</em>.</td>
 </tr>
 <tr>
 <td><strong>Source</strong></td>
-<td>The process that generated the log (e.g., <em>Transactions</em>, <em>Consents</em>, <em>Generate Payment</em>).</td>
+<td>The process that generated the log (e.g., <em>Accounts</em>, <em>Consents</em>, <em>Transactions</em>, <em><abbr title="Payment Initiation Service">PIS</abbr> Create Payment</em>, <em><abbr title="Payment Initiation Service">PIS</abbr> Refresh Payment</em>).</td>
 </tr>
 <tr>
 <td><strong>Log</strong></td>
