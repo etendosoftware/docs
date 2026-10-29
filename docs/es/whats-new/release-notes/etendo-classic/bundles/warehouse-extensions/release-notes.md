@@ -18,11 +18,13 @@ tags:
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [4.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.1.0){target="_blank"} | 07/07/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.1.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.1.1){target="_blank"} | 29/10/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
+| [4.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.1.0){target="_blank"} | 07/07/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.0.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.0.2){target="_blank"} | 08/04/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.0.1){target="_blank"} | 01/04/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
-| [3.8.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.8.2){target="_blank"} | 08/04/2026 | 25.4.0 | 25.4.x | CS | :white_check_mark: |
+| [3.8.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.8.3){target="_blank"} | 29/10/2026 | 25.4.0 | 25.4.x | CS | :white_check_mark: |
+| [3.8.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.8.2){target="_blank"} | 08/04/2026 | 25.4.0 | 25.4.x | C | :white_check_mark: |
 | [3.8.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.8.1){target="_blank"} | 01/04/2026 | 25.4.0 | 25.4.x | C | :white_check_mark: |
 | [3.8.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.8.0){target="_blank"} | 26/03/2026 | 25.4.0 | 25.4.x | C | :white_check_mark: |
 | [3.7.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/3.7.0){target="_blank"} | 21/03/2026 | 25.4.0 | 25.4.x | C | :white_check_mark: |
