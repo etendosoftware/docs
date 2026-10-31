@@ -14,6 +14,7 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
+| [4.4.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.4.0){target="_blank"} | 30/10/2026 | 26.3.0 | 26.3.x | QAA | :white_check_mark: |
 | [4.3.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.3.1){target="_blank"} | 23/10/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
 | [4.3.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.3.0){target="_blank"} | 07/07/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.2.2](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/4.2.2){target="_blank"} | 26/06/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |

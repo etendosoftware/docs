@@ -17,6 +17,7 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
+| [4.2.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/4.2.0){target="_blank"} | 30/10/2026 | 26.3.0 | 26.3.x | QAA | :white_check_mark: |
 | [4.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/4.1.0){target="_blank"} | 07/07/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
 | [4.0.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [3.4.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/3.4.0){target="_blank"} | 02/02/2026 | 25.1.0 | 25.4.x | CS | :white_check_mark: |

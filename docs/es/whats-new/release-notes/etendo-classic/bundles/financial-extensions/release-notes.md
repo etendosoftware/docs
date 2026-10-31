@@ -17,7 +17,8 @@ tags:
 
 | Versión | Fecha de publicación | Desde Core | Hasta Core | Estado | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [4.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.3.0){target="_blank"} | 26/10/2026 | 26.1.0 | 26.1.x | QAA | :white_check_mark: |
+| [4.4.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.4.0){target="_blank"} | 30/10/2026 | 26.3.0 | 26.3.x | QAA | :white_check_mark: |
+| [4.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.3.0){target="_blank"} | 26/10/2026 | 26.1.0 | 26.1.x | CS | :white_check_mark: |
 | [4.2.9](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.9){target="_blank"} | 16/10/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.2.8](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.8){target="_blank"} | 25/09/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.2.7](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.2.7){target="_blank"} | 11/09/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
@@ -36,7 +37,7 @@ tags:
 | [4.0.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.2){target="_blank"} | 28/04/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.0.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.1){target="_blank"} | 10/04/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
 | [4.0.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/4.0.0){target="_blank"} | 28/03/2026 | 26.1.0 | 26.1.x | C | :white_check_mark: |
-| [3.11.16](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.16){target="_blank"} | 16/10/2026 | 25.1.0 | 25.4.x | QAA | :white_check_mark: |
+| [3.11.16](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.16){target="_blank"} | 16/10/2026 | 25.1.0 | 25.4.x | CS | :white_check_mark: |
 | [3.11.15](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.15){target="_blank"} | 25/09/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.14](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.14){target="_blank"} | 11/09/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
 | [3.11.13](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/3.11.13){target="_blank"} | 28/08/2026 | 25.1.0 | 25.4.x | C | :white_check_mark: |
