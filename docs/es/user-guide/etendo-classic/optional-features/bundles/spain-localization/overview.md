@@ -127,6 +127,30 @@ Este módulo permite generar el resumen anual del IVA (Modelo 390).
 !!! info
     Para más información, visite la [Guía de usuario Modelo 390](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md).
 
+#### SEPA
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022`
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022.template`
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022.credittransfer.customertobank`
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022.coredirectdebit.customertobank`
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022.es_es`
+
+:octicons-package-16: Javapackage: `org.openbravo.sepa.iso20022.coredirectdebit.customertobank.es_es`
+
+Estos módulos permiten generar, desde la ventana [Remesa](../../../basic-features/financial-management/receivables-and-payables/transactions/remittance.md), el fichero que se envía al banco para realizar pagos o cobros en euros según el estándar europeo SEPA:
+
+- **Transferencias SEPA** (*SEPA Credit Transfer*): para pagar a proveedores, acreedores o empleados.
+- **Adeudos directos SEPA** (*SEPA Direct Debit*, esquemas CORE y B2B): para cobrar a clientes mediante recibos domiciliados.
+
+Las versiones más recientes del fichero (`pain.001.001.09` y `pain.008.001.08`) incluyen la dirección postal desglosada en calle, número y edificio, tal como exige el EPC (*European Payments Council*, Consejo Europeo de Pagos). Por eso, estos módulos añaden los campos **Nombre de calle**, **Número** y **Edificio** a las direcciones de la organización y de los terceros.
+
+!!! info
+    Para más información, visite la [Guía de usuario SEPA](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/sepa.md).
+
 #### SII España
 
 :octicons-package-16: Javapackage: `org.openbravo.module.sii`
