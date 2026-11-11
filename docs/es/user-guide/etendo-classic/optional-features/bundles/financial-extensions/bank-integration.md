@@ -55,9 +55,26 @@ La importación de transacciones (AIS) funciona para cuentas de tipo **Banco** y
 
 Confirme lo siguiente antes de utilizar la funcionalidad de Integración bancaria:
 
-- :material-server: **Configuración del servidor**: su administrador de sistemas ha configurado la URL de la aplicación `context.url` en el servidor de Etendo y ha ejecutado el proceso de configuración. El valor de `context.url` **no** debe incluir el context path: por ejemplo, `context.url=http://localhost:8080` en un entorno local, o directamente la URL productiva del entorno. Contacte con su equipo de IT o con el partner de implementación para confirmar que esto se ha realizado.
+- :material-server: **URL del servidor**: su administrador de sistemas ha configurado la propiedad `context.url` con la dirección que los usuarios escriben en el navegador para abrir Etendo, y ha aplicado el cambio. Consulte [Configuración de la URL del servidor](#server-url-configuration). Contacte con su equipo de IT o con el partner de implementación para confirmar que esto se ha realizado.
 - :material-key: **Clave de API de Salt Edge**: su organización necesita una Clave de API (solicítela al [Soporte de Etendo](../../../../../help-and-support/support-service.md)). Un administrador la introduce una única vez, a nivel de Entidad (consulte [Configuración, paso 1](#1-configure-salt-edge-api-key)).
 - :material-bank-outline: **Cuentas financieras**: las cuentas financieras que se vincularán a sus cuentas bancarias existen en Etendo.
+
+### Configuración de la URL del servidor { #server-url-configuration }
+
+Al final de la conexión bancaria o de la autorización de un pago, el banco redirige el navegador de vuelta a Etendo usando la propiedad `context.url`. Si el navegador no puede acceder a esa dirección, el banco muestra un mensaje de éxito, pero la conexión nunca se registra en Etendo.
+
+Configure `context.url` con la dirección que los usuarios escriben en el navegador para abrir Etendo. La ruta de contexto (`/etendo`) es opcional:
+
+| Valor de `context.url` | Válido |
+| --- | --- |
+| `https://suempresa.com/etendo` | :white_check_mark: |
+| `https://suempresa.com` | :white_check_mark: |
+| `http://localhost:8080/etendo` | :x: Solo funciona si el navegador se ejecuta en el mismo ordenador que Etendo |
+
+Para modificar este valor, consulte [Instalar Etendo - Instalación en servidor, paso 5](../../../../../developer-guide/etendo-classic/getting-started/installation/production-server.md#5-apply-the-server-template).
+
+!!!note
+    El comentario situado encima de `context.url` en `Openbravo.properties` indica que la propiedad solo se utiliza en pruebas unitarias. Este comentario está desactualizado: el módulo de Integración bancaria también la utiliza.
 
 ## Configuración { #setup }
 
@@ -408,6 +425,13 @@ El proceso **Actualizar pagos pendientes** se ejecuta cada **10 minutos** de for
     - Contacte con su administrador de Etendo o con el Soporte de Etendo para obtener una nueva clave de API.
     - Actualice la clave de API en la ventana **Entidad** (campo **Clave de API**, en el grupo de campos **Integración bancaria**).
 
+??? failure "El banco indica que está conectado, pero la conexión no aparece en Etendo"
+    **Síntomas**: usted termina el proceso en el banco y la ventana emergente muestra un mensaje de éxito. Un momento después, la ventana emergente muestra un error del navegador como *No se puede acceder a este sitio web* o `ERR_CONNECTION_REFUSED`. La pestaña **Conexiones bancarias** sigue vacía y el botón **Conectar cuenta** sigue visible.
+
+    **Causa**: Etendo construye la dirección de retorno a partir de la propiedad `context.url`, y su navegador no puede acceder a esa dirección. Revise la barra de direcciones de la ventana emergente. En la mayoría de los casos, la dirección contiene `localhost`, por ejemplo `http://localhost:8080/etendo/aisConnectionCallback?...`, en lugar de la dirección que los usuarios escriben para abrir Etendo.
+
+    **Solución**: copie la dirección de la ventana emergente y envíela a su administrador de sistemas. Pídale que corrija `context.url` como se describe en [Configuración de la URL del servidor](#server-url-configuration). Después del cambio, haga clic de nuevo en **Conectar cuenta** (o **Reconectar la cuenta**). Etendo no guarda los intentos anteriores, por lo que debe repetir la conexión.
+
 ??? warning "No se pudo obtener el enlace de redirección"
     - El servicio de conexión bancaria puede estar temporalmente no disponible.
     - Inténtelo de nuevo en unos minutos. Contacte con soporte si el problema persiste.
@@ -453,6 +477,7 @@ El proceso **Actualizar pagos pendientes** se ejecuta cada **10 minutos** de for
 
 ??? warning "El popup de autorización bancaria fue bloqueado / Pago no encontrado al volver del banco"
     - Es posible que su navegador haya bloqueado la ventana emergente; permita las ventanas emergentes para el sitio de Etendo e inténtelo de nuevo.
+    - Si, después de autorizar el pago, la ventana emergente muestra un error del navegador como *No se puede acceder a este sitio web*, pida a su administrador de sistemas que revise la configuración de `context.url` (consulte [Configuración de la URL del servidor](#server-url-configuration)).
     - Si la redirección falló, revise la pestaña **Pagos bancarios**. Es posible que el pago se haya procesado correctamente y el estado se haya actualizado automáticamente poco después.
 
 !!!tip "Obtener soporte"

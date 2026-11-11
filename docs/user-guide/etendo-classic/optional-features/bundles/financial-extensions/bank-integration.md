@@ -55,9 +55,26 @@ Transaction import (AIS) works for **Bank** and **Card** accounts; bank payment 
 
 Confirm the following before using the Bank Integration functionality:
 
-- :material-server: **Server Configuration**: Your system administrator has configured the application URL `context.url` in the Etendo server and run the setup process. The `context.url` value must **not** include the context path: for example, `context.url=http://localhost:8080` in a local environment, or the production URL of the environment. Contact your IT team or implementation partner to confirm this is done.
+- :material-server: **Server URL**: Your system administrator has set the `context.url` property to the address that users type in their browser to open Etendo, and has applied the change. See [Server URL Configuration](#server-url-configuration). Contact your IT team or implementation partner to confirm this is done.
 - :material-key: **Salt Edge API Key**: Your organization needs an API Key (request it from [Etendo Support](../../../../../help-and-support/support-service.md)). An administrator enters it once, at Client level (see [Setup, step 1](#1-configure-salt-edge-api-key)).
 - :material-bank-outline: **Financial Accounts**: The Financial Accounts that will be linked to your bank accounts exist in Etendo.
+
+### Server URL Configuration
+
+At the end of a bank connection or payment authorization, the bank redirects the browser back to Etendo using the `context.url` property. If the browser cannot reach that address, the bank shows a success message, but the connection is never registered in Etendo.
+
+Set `context.url` to the address that users type in their browser to open Etendo. The context path (`/etendo`) is optional:
+
+| `context.url` value | Valid |
+| --- | --- |
+| `https://yourcompany.com/etendo` | :white_check_mark: |
+| `https://yourcompany.com` | :white_check_mark: |
+| `http://localhost:8080/etendo` | :x: Only works when the browser runs on the same computer as Etendo |
+
+To change this value, see [Install Etendo - Server Installation, step 5](../../../../../developer-guide/etendo-classic/getting-started/installation/production-server.md#5-apply-the-server-template).
+
+!!!note
+    The comment above `context.url` in `Openbravo.properties` says that the property is only used by unit tests. This comment is outdated: the Bank Integration module also uses it.
 
 ## Setup
 
@@ -408,6 +425,13 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
     - Contact your Etendo administrator or Etendo Support to obtain a new API Key.
     - Update the API Key in the **Client** window (**Api Key** field, in the **Bank Integration** field group).
 
+??? failure "Bank shows connected, but the connection does not appear in Etendo"
+    **Symptoms**: You finish the process at the bank and the popup shows a success message. A moment later, the popup shows a browser error such as *This site can't be reached* or `ERR_CONNECTION_REFUSED`. The **Bank Connections** tab stays empty and the **Connect Account** button is still visible.
+
+    **Cause**: Etendo builds the return address from the `context.url` property, and your browser cannot reach that address. Check the address bar of the popup. In most cases, the address contains `localhost`, for example `http://localhost:8080/etendo/aisConnectionCallback?...`, instead of the address that users type to open Etendo.
+
+    **Solution**: Copy the address from the popup and send it to your system administrator. Ask them to correct `context.url` as described in [Server URL Configuration](#server-url-configuration). After the change, click **Connect Account** (or **Reconnect Account**) again. Etendo does not keep previous attempts, so you need to repeat the connection.
+
 ??? warning "Could not get redirect link"
     - The bank connection service may be temporarily unavailable.
     - Try again in a few minutes. Contact support if the issue persists.
@@ -453,6 +477,7 @@ The **Refresh Pending Payments** process runs every **10 minutes** by default an
 
 ??? warning "Bank authorization popup was blocked / Payment Not Found after returning from bank"
     - Your browser may have blocked the popup — allow popups for the Etendo site and try again.
+    - If the popup shows a browser error such as *This site can't be reached* after you authorize the payment, ask your system administrator to check the `context.url` configuration (see [Server URL Configuration](#server-url-configuration)).
     - If the redirect failed, check the **Bank Payments** tab. The payment may have been processed correctly and the status updated automatically shortly after.
 
 !!!tip "Getting support"
