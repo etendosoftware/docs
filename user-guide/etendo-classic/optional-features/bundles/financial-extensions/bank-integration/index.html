@@ -6507,6 +6507,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server URL Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -17424,6 +17439,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server URL Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -17894,10 +17924,40 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Confirm the following before using the Bank Integration functionality:</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>Server Configuration</strong>: Your system administrator has configured the application URL <code>context.url</code> in the Etendo server and run the setup process. The <code>context.url</code> value must <strong>not</strong> include the context path: for example, <code>context.url=http://localhost:8080</code> in a local environment, or the production URL of the environment. Contact your IT team or implementation partner to confirm this is done.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>Server URL</strong>: Your system administrator has set the <code>context.url</code> property to the address that users type in their browser to open Etendo, and has applied the change. See <a href="#server-url-configuration">Server URL Configuration</a>. Contact your IT team or implementation partner to confirm this is done.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4z"></path></svg></span> <strong>Salt Edge API Key</strong>: Your organization needs an API Key (request it from <a href="../../../../../../help-and-support/support-service/">Etendo Support</a>). An administrator enters it once, at Client level (see <a href="#1-configure-salt-edge-api-key">Setup, step 1</a>).</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10h-2v7h2zm6 0h-2v7h2zm8.5 9H2v2h19zm-2.5-9h-2v7h2zm-7-6.74L16.71 6H6.29zm0-2.26L2 6v2h19V6z"></path></svg></span> <strong>Financial Accounts</strong>: The Financial Accounts that will be linked to your bank accounts exist in Etendo.</li>
 </ul>
+<h3 id="server-url-configuration">Server URL Configuration</h3>
+<p>At the end of a bank connection or payment authorization, the bank redirects the browser back to Etendo using the <code>context.url</code> property. If the browser cannot reach that address, the bank shows a success message, but the connection is never registered in Etendo.</p>
+<p>Set <code>context.url</code> to the address that users type in their browser to open Etendo. The context path (<code>/etendo</code>) is optional:</p>
+<table>
+<thead>
+<tr>
+<th><code>context.url</code> value</th>
+<th>Valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://yourcompany.com/etendo</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"></td>
+</tr>
+<tr>
+<td><code>https://yourcompany.com</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"></td>
+</tr>
+<tr>
+<td><code>http://localhost:8080/etendo</code></td>
+<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"> Only works when the browser runs on the same computer as Etendo</td>
+</tr>
+</tbody>
+</table>
+<p>To change this value, see <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/production-server/#5-apply-the-server-template">Install Etendo - Server Installation, step 5</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The comment above <code>context.url</code> in <code>Openbravo.properties</code> says that the property is only used by unit tests. This comment is outdated: the Bank Integration module also uses it.</p>
+</div>
 <h2 id="setup">Setup</h2>
 <h3 id="1-configure-salt-edge-api-key">1. Configure Salt Edge API Key</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Application</code> &gt; <code>General Setup</code> &gt; <code>Client</code> &gt; <code>Client</code></p>
@@ -18314,6 +18374,12 @@
 <li>Update the API Key in the <strong>Client</strong> window (<strong>Api Key</strong> field, in the <strong>Bank Integration</strong> field group).</li>
 </ul>
 </details>
+<details class="failure">
+<summary>Bank shows connected, but the connection does not appear in Etendo</summary>
+<p><strong>Symptoms</strong>: You finish the process at the bank and the popup shows a success message. A moment later, the popup shows a browser error such as <em>This site can't be reached</em> or <code>ERR_CONNECTION_REFUSED</code>. The <strong>Bank Connections</strong> tab stays empty and the <strong>Connect Account</strong> button is still visible.</p>
+<p><strong>Cause</strong>: Etendo builds the return address from the <code>context.url</code> property, and your browser cannot reach that address. Check the address bar of the popup. In most cases, the address contains <code>localhost</code>, for example <code>http://localhost:8080/etendo/aisConnectionCallback?...</code>, instead of the address that users type to open Etendo.</p>
+<p><strong>Solution</strong>: Copy the address from the popup and send it to your system administrator. Ask them to correct <code>context.url</code> as described in <a href="#server-url-configuration">Server URL Configuration</a>. After the change, click <strong>Connect Account</strong> (or <strong>Reconnect Account</strong>) again. Etendo does not keep previous attempts, so you need to repeat the connection.</p>
+</details>
 <details class="warning">
 <summary>Could not get redirect link</summary>
 <ul>
@@ -18386,6 +18452,7 @@
 <summary>Bank authorization popup was blocked / Payment Not Found after returning from bank</summary>
 <ul>
 <li>Your browser may have blocked the popup — allow popups for the Etendo site and try again.</li>
+<li>If the popup shows a browser error such as <em>This site can't be reached</em> after you authorize the payment, ask your system administrator to check the <code>context.url</code> configuration (see <a href="#server-url-configuration">Server URL Configuration</a>).</li>
 <li>If the redirect failed, check the <strong>Bank Payments</strong> tab. The payment may have been processed correctly and the status updated automatically shortly after.</li>
 </ul>
 </details>

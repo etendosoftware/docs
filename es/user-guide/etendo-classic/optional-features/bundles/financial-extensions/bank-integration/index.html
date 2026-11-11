@@ -6484,6 +6484,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Requisitos previos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la URL del servidor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -17776,6 +17791,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Requisitos previos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-url-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de la URL del servidor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -18246,10 +18276,40 @@
 <h2 id="prerequisites">Requisitos previos</h2>
 <p>Confirme lo siguiente antes de utilizar la funcionalidad de Integración bancaria:</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>Configuración del servidor</strong>: su administrador de sistemas ha configurado la URL de la aplicación <code>context.url</code> en el servidor de Etendo y ha ejecutado el proceso de configuración. El valor de <code>context.url</code> <strong>no</strong> debe incluir el context path: por ejemplo, <code>context.url=http://localhost:8080</code> en un entorno local, o directamente la URL productiva del entorno. Contacte con su equipo de IT o con el partner de implementación para confirmar que esto se ha realizado.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <strong>URL del servidor</strong>: su administrador de sistemas ha configurado la propiedad <code>context.url</code> con la dirección que los usuarios escriben en el navegador para abrir Etendo, y ha aplicado el cambio. Consulte <a href="#server-url-configuration">Configuración de la URL del servidor</a>. Contacte con su equipo de IT o con el partner de implementación para confirmar que esto se ha realizado.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4z"></path></svg></span> <strong>Clave de API de Salt Edge</strong>: su organización necesita una Clave de API (solicítela al <a href="../../../../../../help-and-support/support-service/">Soporte de Etendo</a>). Un administrador la introduce una única vez, a nivel de Entidad (consulte <a href="#1-configure-salt-edge-api-key">Configuración, paso 1</a>).</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10h-2v7h2zm6 0h-2v7h2zm8.5 9H2v2h19zm-2.5-9h-2v7h2zm-7-6.74L16.71 6H6.29zm0-2.26L2 6v2h19V6z"></path></svg></span> <strong>Cuentas financieras</strong>: las cuentas financieras que se vincularán a sus cuentas bancarias existen en Etendo.</li>
 </ul>
+<h3 id="server-url-configuration">Configuración de la URL del servidor</h3>
+<p>Al final de la conexión bancaria o de la autorización de un pago, el banco redirige el navegador de vuelta a Etendo usando la propiedad <code>context.url</code>. Si el navegador no puede acceder a esa dirección, el banco muestra un mensaje de éxito, pero la conexión nunca se registra en Etendo.</p>
+<p>Configure <code>context.url</code> con la dirección que los usuarios escriben en el navegador para abrir Etendo. La ruta de contexto (<code>/etendo</code>) es opcional:</p>
+<table>
+<thead>
+<tr>
+<th>Valor de <code>context.url</code></th>
+<th>Válido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://suempresa.com/etendo</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"></td>
+</tr>
+<tr>
+<td><code>https://suempresa.com</code></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"></td>
+</tr>
+<tr>
+<td><code>http://localhost:8080/etendo</code></td>
+<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"> Solo funciona si el navegador se ejecuta en el mismo ordenador que Etendo</td>
+</tr>
+</tbody>
+</table>
+<p>Para modificar este valor, consulte <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/production-server/#5-apply-the-server-template">Instalar Etendo - Instalación en servidor, paso 5</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>El comentario situado encima de <code>context.url</code> en <code>Openbravo.properties</code> indica que la propiedad solo se utiliza en pruebas unitarias. Este comentario está desactualizado: el módulo de Integración bancaria también la utiliza.</p>
+</div>
 <h2 id="setup">Configuración</h2>
 <h3 id="1-configure-salt-edge-api-key">1. Configurar la clave de API de Salt Edge</h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg></span> <code>Aplicación</code> &gt; <code>Configuración General</code> &gt; <code>Entidad</code> &gt; <code>Entidad</code></p>
@@ -18666,6 +18726,12 @@
 <li>Actualice la clave de API en la ventana <strong>Entidad</strong> (campo <strong>Clave de API</strong>, en el grupo de campos <strong>Integración bancaria</strong>).</li>
 </ul>
 </details>
+<details class="failure">
+<summary>El banco indica que está conectado, pero la conexión no aparece en Etendo</summary>
+<p><strong>Síntomas</strong>: usted termina el proceso en el banco y la ventana emergente muestra un mensaje de éxito. Un momento después, la ventana emergente muestra un error del navegador como <em>No se puede acceder a este sitio web</em> o <code>ERR_CONNECTION_REFUSED</code>. La pestaña <strong>Conexiones bancarias</strong> sigue vacía y el botón <strong>Conectar cuenta</strong> sigue visible.</p>
+<p><strong>Causa</strong>: Etendo construye la dirección de retorno a partir de la propiedad <code>context.url</code>, y su navegador no puede acceder a esa dirección. Revise la barra de direcciones de la ventana emergente. En la mayoría de los casos, la dirección contiene <code>localhost</code>, por ejemplo <code>http://localhost:8080/etendo/aisConnectionCallback?...</code>, en lugar de la dirección que los usuarios escriben para abrir Etendo.</p>
+<p><strong>Solución</strong>: copie la dirección de la ventana emergente y envíela a su administrador de sistemas. Pídale que corrija <code>context.url</code> como se describe en <a href="#server-url-configuration">Configuración de la URL del servidor</a>. Después del cambio, haga clic de nuevo en <strong>Conectar cuenta</strong> (o <strong>Reconectar la cuenta</strong>). Etendo no guarda los intentos anteriores, por lo que debe repetir la conexión.</p>
+</details>
 <details class="warning">
 <summary>No se pudo obtener el enlace de redirección</summary>
 <ul>
@@ -18738,6 +18804,7 @@
 <summary>El popup de autorización bancaria fue bloqueado / Pago no encontrado al volver del banco</summary>
 <ul>
 <li>Es posible que su navegador haya bloqueado la ventana emergente; permita las ventanas emergentes para el sitio de Etendo e inténtelo de nuevo.</li>
+<li>Si, después de autorizar el pago, la ventana emergente muestra un error del navegador como <em>No se puede acceder a este sitio web</em>, pida a su administrador de sistemas que revise la configuración de <code>context.url</code> (consulte <a href="#server-url-configuration">Configuración de la URL del servidor</a>).</li>
 <li>Si la redirección falló, revise la pestaña <strong>Pagos bancarios</strong>. Es posible que el pago se haya procesado correctamente y el estado se haya actualizado automáticamente poco después.</li>
 </ul>
 </details>
