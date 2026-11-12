@@ -301,58 +301,75 @@ Una vez que todas las operaciones se han registrado en el sistema, el usuario pu
 
 En el modelo 349, el registro de tipo 2 de rectificaciones distingue dos casos:
 
--   Notas de abono que rectifican una factura ya incluida en una declaración 349 de un periodo anterior.
--   Notas de abono que no rectifican una declaración anterior y que, por tanto, se acumulan en el periodo actual.
+-   Notas de abono o facturas rectificativas que rectifican una factura ya incluida en una declaración 349 de un periodo anterior.
+-   Notas de abono o facturas rectificativas que no rectifican una declaración anterior y que, por tanto, se acumulan en el periodo actual.
 
 ### Cuándo una nota de abono es rectificativa
 
-Una nota de abono es rectificativa cuando corrige una factura incluida en una declaración 349 ya presentada.
+Una nota de abono o factura rectificativa es rectificativa del 349 cuando corrige una factura incluida en una declaración 349 ya presentada.
 
 Ejemplo mensual:
 
--   Una nota de abono del mes siguiente rectifica una factura del mes anterior ya incluida en la declaración de ese mes.
--   En este caso, la nota de abono se incluye en la declaración del mes en curso como rectificativa de la declaración del mes anterior.
+-   Una nota de abono o factura rectificativa del mes siguiente rectifica una factura del mes anterior ya incluida en la declaración de ese mes.
+-   En este caso, el documento de corrección se incluye en la declaración del mes en curso como rectificativa de la declaración del mes anterior.
 -   Además, se informa el importe total o base imponible de compra o venta que se declaró en ese mes anterior para ese proveedor o cliente.
 
 La misma lógica aplica a las declaraciones trimestrales y anuales. Solo cambia el periodo de referencia.
 
 ### Cuándo una nota de abono no es rectificativa
 
-Una nota de abono no es rectificativa cuando corrige una factura del mismo periodo que todavía no se ha incluido en una declaración 349 presentada.
+Una nota de abono o factura rectificativa no es rectificativa del 349 cuando corrige una factura del mismo periodo que todavía no se ha incluido en una declaración 349 presentada.
 
 Ejemplo mensual:
 
--   Una nota de abono rectifica una factura del mismo mes.
--   Como la factura todavía no se ha incluido en una declaración previa, la nota de abono se acumula en la declaración del mes en curso como un menor importe de compra o venta para ese proveedor o cliente.
+-   Una nota de abono o factura rectificativa corrige una factura del mismo mes.
+-   Como la factura original todavía no se ha incluido en una declaración previa, el documento de corrección se acumula en la declaración del mes en curso como un menor importe de compra o venta para ese proveedor o cliente.
 
 La misma lógica aplica a las declaraciones trimestrales y anuales.
 
 ### Cómo informar una operación rectificativa
 
-Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono o devolución es una `rectificativa del 349`.
+Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono, factura rectificativa o devolución es una `Correctiva del 349`.
 
 Para introducir esta información, el usuario debe navegar a `Gestión de Compras` o `Gestión de Ventas` > `Transacciones` > `Factura (Proveedor)` o `Factura (Cliente)`.
 
 Allí debe crear una nueva factura utilizando una de las siguientes opciones:
 
 -   **Abono de compra o venta** (en el sistema: `AP/AR Invoice` con importe negativo)
--   **Nota de crédito** (en el sistema: `AP/AR Credit Memo`) — **Nota:** este tipo de documento no se tiene en cuenta en el cálculo del modelo 349
+-   **Factura rectificativa** (en el sistema: `AP/AR Invoice` con importe negativo y un [tipo de documento configurado como rectificativo](./funcionalidades-generales-para-sifs.md#tipos-de-documento-rectificativos))
 -   **Factura revertida** (en el sistema: `Reversed Purchase/Sales Invoice`)
 -   **Anulación total** de una factura de compra o venta
+
+!!! info
+    El cálculo automático de la solapa `Factura Rectificativa` (año, periodo y bases imponibles) no depende del tipo de documento de la factura que corrige. Cualquier factura vinculada a una factura original desde esa solapa y marcada como `Correctiva del 349` dispara el mismo cálculo, ya sea un `AP/AR Invoice` estándar con importe negativo y un tipo de documento rectificativo, una `Reversed Purchase/Sales Invoice` o una anulación total.
+
+    Una **Nota de crédito** (en el sistema: `AP/AR Credit Memo`) no se incluye en la lista anterior porque, aunque también puede marcarse como `Correctiva del 349` sin que el sistema lo impida al guardar, en la práctica queda fuera del modelo 349: la generación de la declaración solo tiene en cuenta facturas de venta y de compra contabilizadas, y no incluye las notas de crédito. Por eso, una nota de crédito usada como factura rectificativa o como factura original no llegará a reflejarse en el 349, aunque el registro de la solapa `Factura Rectificativa` se guarde sin errores.
 
 Después, en la solapa `Factura Rectificativa`, debe crear un nuevo registro para:
 
 -   seleccionar la factura original que se abona o rectifica
--   marcar el campo `Rectificativa del 349`, cuando corresponda
--   completar estos datos:
-    -   Año de la factura original que se rectifica
-    -   Periodo de la factura original y periodo en el que se incluyó en un 349 anterior
-    -   Base imponible del 349 de productos, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en productos
-    -   Base imponible del 349 de servicios, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en servicios
+-   marcar el campo `Correctiva del 349`, cuando corresponda
 
-Si la nota de abono o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa `Factura Rectificativa`.
+Al guardar el registro, el sistema completa y valida automáticamente los siguientes datos, sin que el usuario deba introducirlos manualmente:
 
-En ese caso, no es necesario marcar el parámetro `Rectificativa del 349`.
+-   **Año**. Se autocompleta con el ejercicio fiscal de la factura original, según el calendario de la organización de dicha factura. El usuario puede revisarlo, pero debe coincidir con el año de la factura original.
+-   **Periodo**. Se autocompleta con el mes de la factura original. Si la declaración es trimestral, el usuario puede seleccionar en su lugar el trimestre al que pertenece ese mes.
+-   **Base Imponible del 349 Productos**. Importe total de compra o venta de productos ya declarado para ese proveedor o cliente en el año y periodo indicados. El sistema lo calcula a partir de las facturas contabilizadas de ese periodo y descuenta lo ya consumido por rectificativas anteriores del mismo proveedor o cliente, año y periodo.
+-   **Base Imponible del 349 Servicios**. Mismo cálculo que el campo anterior, pero para servicios.
+
+!!! warning
+    Los campos **Base Imponible del 349 Productos** y **Base Imponible del 349 Servicios** son de solo lectura: el usuario no puede modificarlos.
+
+    El sistema bloquea el guardado del registro cuando ocurre alguna de estas situaciones:
+
+    -   el importe de la rectificativa deja la base declarada en negativo
+    -   no queda base imponible disponible para imputar en ese año y periodo
+    -   el año o el periodo introducidos no corresponden a los de la factura original
+    -   la factura original todavía no está contabilizada
+
+Si la nota de abono, factura rectificativa o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa `Factura Rectificativa`.
+
+En ese caso, no es necesario marcar el parámetro `Correctiva del 349`.
 
 En este escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. Así genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.
 
@@ -368,7 +385,7 @@ Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostr
 -   Base Imponible del 349 Servicios
 
 !!! info
-    No todas las notas de abono o devoluciones de mercancía son rectificativas del 349, solo aquellas que así configure el usuario.
+    No todas las notas de abono, facturas rectificativas o devoluciones de mercancía son rectificativas del 349, solo aquellas que así configure el usuario.
 
 ## Presentación del modelo 349 en formato electrónico
 
@@ -403,6 +420,13 @@ Para incluir esas operaciones, acceda a la página web de la AEAT y añádalas m
 *[FNMT]: Fábrica Nacional de Moneda y Timbre
 *[IVA]: Impuesto sobre el Valor Añadido
 *[NIF]: Número de Identificación Fiscal
+
+## Artículos relacionados { #related-articles }
+
+[:material-file-document-outline: Descripción del Bundle de Localización Española](overview.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Libro de Facturas](libro-de-facturas.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Modelo 347](modelo-347.md){ .md-button .md-button--primary }
+[:material-file-document-outline: Tipo de Documento](../../../basic-features/financial-management/accounting/setup/document-type.md){ .md-button .md-button--primary }
 
 ---
 
