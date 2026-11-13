@@ -18,7 +18,8 @@ tags:
 
 | Versión | Fecha de publicación | Compatibilidad con las extensiones de Copilot | Estado | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.0.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.0.1){target="_blank"} | 09/01/2026 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 13/11/2026 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.0.1){target="_blank"} | 09/01/2026 | [1.0.0, latest] | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 08/05/2024 | [1.0.0, latest] | C | :white_check_mark: |
 
 ---
