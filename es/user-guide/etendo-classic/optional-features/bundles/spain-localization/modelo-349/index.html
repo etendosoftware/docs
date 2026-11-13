@@ -7449,6 +7449,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17838,6 +17847,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#related-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artículos relacionados
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -18315,50 +18333,66 @@
 <h2 id="operaciones-rectificativas-del-349">Operaciones rectificativas del 349</h2>
 <p>En el modelo 349, el registro de tipo 2 de rectificaciones distingue dos casos:</p>
 <ul>
-<li>Notas de abono que rectifican una factura ya incluida en una declaración 349 de un periodo anterior.</li>
-<li>Notas de abono que no rectifican una declaración anterior y que, por tanto, se acumulan en el periodo actual.</li>
+<li>Notas de abono o facturas rectificativas que rectifican una factura ya incluida en una declaración 349 de un periodo anterior.</li>
+<li>Notas de abono o facturas rectificativas que no rectifican una declaración anterior y que, por tanto, se acumulan en el periodo actual.</li>
 </ul>
 <h3 id="cuando-una-nota-de-abono-es-rectificativa">Cuándo una nota de abono es rectificativa</h3>
-<p>Una nota de abono es rectificativa cuando corrige una factura incluida en una declaración 349 ya presentada.</p>
+<p>Una nota de abono o factura rectificativa es rectificativa del 349 cuando corrige una factura incluida en una declaración 349 ya presentada.</p>
 <p>Ejemplo mensual:</p>
 <ul>
-<li>Una nota de abono del mes siguiente rectifica una factura del mes anterior ya incluida en la declaración de ese mes.</li>
-<li>En este caso, la nota de abono se incluye en la declaración del mes en curso como rectificativa de la declaración del mes anterior.</li>
+<li>Una nota de abono o factura rectificativa del mes siguiente rectifica una factura del mes anterior ya incluida en la declaración de ese mes.</li>
+<li>En este caso, el documento de corrección se incluye en la declaración del mes en curso como rectificativa de la declaración del mes anterior.</li>
 <li>Además, se informa el importe total o base imponible de compra o venta que se declaró en ese mes anterior para ese proveedor o cliente.</li>
 </ul>
 <p>La misma lógica aplica a las declaraciones trimestrales y anuales. Solo cambia el periodo de referencia.</p>
 <h3 id="cuando-una-nota-de-abono-no-es-rectificativa">Cuándo una nota de abono no es rectificativa</h3>
-<p>Una nota de abono no es rectificativa cuando corrige una factura del mismo periodo que todavía no se ha incluido en una declaración 349 presentada.</p>
+<p>Una nota de abono o factura rectificativa no es rectificativa del 349 cuando corrige una factura del mismo periodo que todavía no se ha incluido en una declaración 349 presentada.</p>
 <p>Ejemplo mensual:</p>
 <ul>
-<li>Una nota de abono rectifica una factura del mismo mes.</li>
-<li>Como la factura todavía no se ha incluido en una declaración previa, la nota de abono se acumula en la declaración del mes en curso como un menor importe de compra o venta para ese proveedor o cliente.</li>
+<li>Una nota de abono o factura rectificativa corrige una factura del mismo mes.</li>
+<li>Como la factura original todavía no se ha incluido en una declaración previa, el documento de corrección se acumula en la declaración del mes en curso como un menor importe de compra o venta para ese proveedor o cliente.</li>
 </ul>
 <p>La misma lógica aplica a las declaraciones trimestrales y anuales.</p>
 <h3 id="como-informar-una-operacion-rectificativa">Cómo informar una operación rectificativa</h3>
-<p>Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono o devolución es una <code>rectificativa del 349</code>.</p>
+<p>Para cubrir este caso, el sistema incorpora una funcionalidad que permite indicar si una nota de abono, factura rectificativa o devolución es una <code>Correctiva del 349</code>.</p>
 <p>Para introducir esta información, el usuario debe navegar a <code>Gestión de Compras</code> o <code>Gestión de Ventas</code> &gt; <code>Transacciones</code> &gt; <code>Factura (Proveedor)</code> o <code>Factura (Cliente)</code>.</p>
 <p>Allí debe crear una nueva factura utilizando una de las siguientes opciones:</p>
 <ul>
 <li><strong>Abono de compra o venta</strong> (en el sistema: <code>AP/AR Invoice</code> con importe negativo)</li>
-<li><strong>Nota de crédito</strong> (en el sistema: <code>AP/AR Credit Memo</code>) — <strong>Nota:</strong> este tipo de documento no se tiene en cuenta en el cálculo del modelo 349</li>
+<li><strong>Factura rectificativa</strong> (en el sistema: <code>AP/AR Invoice</code> con importe negativo y un <a href="../funcionalidades-generales-para-sifs/#tipos-de-documento-rectificativos">tipo de documento configurado como rectificativo</a>)</li>
 <li><strong>Factura revertida</strong> (en el sistema: <code>Reversed Purchase/Sales Invoice</code>)</li>
 <li><strong>Anulación total</strong> de una factura de compra o venta</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>El cálculo automático de la solapa <code>Factura Rectificativa</code> (año, periodo y bases imponibles) no depende del tipo de documento de la factura que corrige. Cualquier factura vinculada a una factura original desde esa solapa y marcada como <code>Correctiva del 349</code> dispara el mismo cálculo, ya sea un <code>AP/AR Invoice</code> estándar con importe negativo y un tipo de documento rectificativo, una <code>Reversed Purchase/Sales Invoice</code> o una anulación total.</p>
+<p>Una <strong>Nota de crédito</strong> (en el sistema: <code>AP/AR Credit Memo</code>) no se incluye en la lista anterior porque, aunque también puede marcarse como <code>Correctiva del 349</code> sin que el sistema lo impida al guardar, en la práctica queda fuera del modelo 349: la generación de la declaración solo tiene en cuenta facturas de venta y de compra contabilizadas, y no incluye las notas de crédito. Por eso, una nota de crédito usada como factura rectificativa o como factura original no llegará a reflejarse en el 349, aunque el registro de la solapa <code>Factura Rectificativa</code> se guarde sin errores.</p>
+</div>
 <p>Después, en la solapa <code>Factura Rectificativa</code>, debe crear un nuevo registro para:</p>
 <ul>
 <li>seleccionar la factura original que se abona o rectifica</li>
-<li>marcar el campo <code>Rectificativa del 349</code>, cuando corresponda</li>
-<li>completar estos datos:<ul>
-<li>Año de la factura original que se rectifica</li>
-<li>Periodo de la factura original y periodo en el que se incluyó en un 349 anterior</li>
-<li>Base imponible del 349 de productos, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en productos</li>
-<li>Base imponible del 349 de servicios, es decir, el importe total de compra o venta informado previamente para ese proveedor o cliente en servicios</li>
+<li>marcar el campo <code>Correctiva del 349</code>, cuando corresponda</li>
 </ul>
-</li>
+<p>Al guardar el registro, el sistema completa y valida automáticamente los siguientes datos, sin que el usuario deba introducirlos manualmente:</p>
+<ul>
+<li><strong>Año</strong>. Se autocompleta con el ejercicio fiscal de la factura original, según el calendario de la organización de dicha factura. El usuario puede revisarlo, pero debe coincidir con el año de la factura original.</li>
+<li><strong>Periodo</strong>. Se autocompleta con el mes de la factura original. Si la declaración es trimestral, el usuario puede seleccionar en su lugar el trimestre al que pertenece ese mes.</li>
+<li><strong>Base Imponible del 349 Productos</strong>. Importe total de compra o venta de productos ya declarado para ese proveedor o cliente en el año y periodo indicados. El sistema lo calcula a partir de las facturas contabilizadas de ese periodo y descuenta lo ya consumido por rectificativas anteriores del mismo proveedor o cliente, año y periodo.</li>
+<li><strong>Base Imponible del 349 Servicios</strong>. Mismo cálculo que el campo anterior, pero para servicios.</li>
 </ul>
-<p>Si la nota de abono o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa <code>Factura Rectificativa</code>.</p>
-<p>En ese caso, no es necesario marcar el parámetro <code>Rectificativa del 349</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Los campos <strong>Base Imponible del 349 Productos</strong> y <strong>Base Imponible del 349 Servicios</strong> son de solo lectura: el usuario no puede modificarlos.</p>
+<p>El sistema bloquea el guardado del registro cuando ocurre alguna de estas situaciones:</p>
+<ul>
+<li>el importe de la rectificativa deja la base declarada en negativo</li>
+<li>no queda base imponible disponible para imputar en ese año y periodo</li>
+<li>el año o el periodo introducidos no corresponden a los de la factura original</li>
+<li>la factura original todavía no está contabilizada</li>
+</ul>
+</div>
+<p>Si la nota de abono, factura rectificativa o devolución y la factura original pertenecen al mismo periodo, basta con relacionar ambos documentos en la solapa <code>Factura Rectificativa</code>.</p>
+<p>En ese caso, no es necesario marcar el parámetro <code>Correctiva del 349</code>.</p>
 <p>En este escenario, el sistema acumula las facturas positivas y los abonos del mismo proveedor o cliente para el mismo periodo. Así genera el cómputo global del importe de las transacciones de compra y venta que debe incluirse en la declaración del 349.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/factura-rectificativa-349.png" data-desc-position="bottom"><img alt="Solapa Factura Rectificativa del 349" src="../../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/factura-rectificativa-349.png"></a></p>
 <p>Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostrar en Etendo las columnas que se detallan a continuación:</p>
@@ -18372,7 +18406,7 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>No todas las notas de abono o devoluciones de mercancía son rectificativas del 349, solo aquellas que así configure el usuario.</p>
+<p>No todas las notas de abono, facturas rectificativas o devoluciones de mercancía son rectificativas del 349, solo aquellas que así configure el usuario.</p>
 </div>
 <h2 id="presentacion-del-modelo-349-en-formato-electronico">Presentación del modelo 349 en formato electrónico</h2>
 <p>La presentación telemática del modelo 349 en formato electrónico requiere que la empresa tenga un <abbr title="Número de Identificación Fiscal">NIF</abbr> español y un certificado electrónico (documento digital que acredita la identidad de su empresa ante Hacienda) emitido por la <strong>Fábrica Nacional de Moneda y Timbre (<abbr title="Fábrica Nacional de Moneda y Timbre">FNMT</abbr>)</strong> u otro certificado válido y reconocido por Hacienda. Si aún no dispone de uno, puede solicitarlo en la web de la <abbr title="Fábrica Nacional de Moneda y Timbre">FNMT</abbr>.</p>
@@ -18393,6 +18427,11 @@
 <p class="admonition-title">Warning</p>
 <p>No realice cambios en la declaración original ya presentada. La declaración complementaria se presenta como un trámite independiente desde la sede electrónica de la <abbr title="Agencia Estatal de Administración Tributaria">AEAT</abbr>.</p>
 </div>
+<h2 id="related-articles">Artículos relacionados</h2>
+<p><a class="md-button md-button--primary" href="../overview/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Descripción del Bundle de Localización Española</a>
+<a class="md-button md-button--primary" href="../libro-de-facturas/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Libro de Facturas</a>
+<a class="md-button md-button--primary" href="../modelo-347/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Modelo 347</a>
+<a class="md-button md-button--primary" href="../../../../basic-features/financial-management/accounting/setup/document-type/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"></path></svg></span> Tipo de Documento</a></p>
 <hr>
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/Openbravo_Localizaci%C3%B3n_Espa%C3%B1a" target="_blank">Openbravo Localización Española</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
