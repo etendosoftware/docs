@@ -82,6 +82,7 @@ In the grid where documents are displayed after the search, users can filter the
 - Type of document
 - Document Description
 - Accounting Date
+- Accounting Status
 
 ---
 
