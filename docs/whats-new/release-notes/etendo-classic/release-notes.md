@@ -23,7 +23,8 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [26Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/26.3.1){target="_blank"} | 06/11/2026 | 26.3.1 | QAA |  | :white_check_mark: |
+| [26Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/26.3.2){target="_blank"} | 16/11/2026 | 26.3.2 | QAA |  | :white_check_mark: |
+| [26Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/26.3.1){target="_blank"} | 06/11/2026 | 26.3.1 | C |  | :white_check_mark: |
 | [26Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/26.3.0){target="_blank"} | 30/10/2026 | 26.3.0 | C | [26Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-26Q3.0.iso){target="_blank"} | :white_check_mark: |
 | [26Q2.15](https://github.com/etendosoftware/etendo_core/releases/tag/26.2.15){target="_blank"} | 23/10/2026 | 26.2.15 | CS |  | :white_check_mark: |
 | [26Q2.14](https://github.com/etendosoftware/etendo_core/releases/tag/26.2.14){target="_blank"} | 19/10/2026 | 26.2.14 | C |  | :white_check_mark: |
