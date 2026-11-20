@@ -70,9 +70,17 @@ Using this button, the user processes the payments and groups lines according to
 
 **Select Invoices and Orders**
 
-In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
+In the Remittance window, the *select invoices and orders* button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, and payments in and out are shown at the same time.
 
-![filter.png](../../../../../../assets/legacy/filter.png)
+The **Document Type** field, above the grid, filters the pending payments by type of document:
+
+- **All**: shows invoices and orders together. This is the default value.
+- **Invoices**: shows only the payments of invoices, including invoices created from an order.
+- **Orders**: shows only the payments of orders that are not invoiced.
+
+The document type works together with the column filters. Changing it keeps the records already selected, even if they are not shown with the new document type.
+
+![Select Invoices and Orders](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance/remittance-select-invoices-and-orders.png)
 
 **Protest Remittance**
 
