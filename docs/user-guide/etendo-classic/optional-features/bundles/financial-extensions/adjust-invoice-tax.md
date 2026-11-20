@@ -32,7 +32,11 @@ This module enables controlled adjustments to invoice tax amounts to reconcile s
 
 In the **Tax** tab, Etendo groups one tax line for each tax type on the invoice. This feature allows adjusting each tax line by up to one cent (±0.01), modifying the rounding difference or the tax amount itself, but only when the purchase invoice is in Draft status.
 
-The system enforces strict validations: the tax amount cannot be modified if the calculated **Tax Amount** is zero, if the **Tax Base** is zero, or if the adjustment exceeds the allowed ±0.01 range. These controls ensure that adjustments remain minimal, controlled, and consistent with regulatory requirements.
+You can also add a tax line manually in the **Tax** tab. When you enter the **Tax Amount**, Etendo calculates the **Taxable Amount** automatically from the tax rate (Taxable Amount = Tax Amount / rate × 100).
+
+When the **Tax Amount** of a tax line is edited, Etendo applies a tolerance of ±0.01. If the new value differs by up to 0.01 from the original **Tax Amount**, it is treated as a cents adjustment and the **Taxable Amount** is not modified. If it differs by more, the **Taxable Amount** is recalculated from the new **Tax Amount**.
+
+The system enforces strict validations: the tax amount cannot be modified if the calculated **Tax Amount** is zero, if the **Taxable Amount** is zero, or if, when saving an existing line, the adjustment exceeds the allowed ±0.01 range from the original **Tax Amount**. These controls ensure that adjustments remain minimal, controlled, and consistent with regulatory requirements.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-purchase-invoice-tax.png)
 
@@ -41,7 +45,11 @@ The system enforces strict validations: the tax amount cannot be modified if the
 
 In the **Tax** tab, Etendo groups one tax line for each tax type on the invoice. This feature allows adjusting each tax line by up to one cent (±0.01), modifying the rounding difference or the tax amount itself, but only when the sales invoice is in Draft status.
 
-The system enforces strict validations: the tax amount cannot be modified if the calculated **Tax Amount** is zero, if the **Tax Base** is zero, or if the adjustment exceeds the allowed ±0.01 range. These controls ensure that adjustments remain minimal, controlled, and consistent with regulatory requirements.
+You can also add a tax line manually in the **Tax** tab. When you enter the **Tax Amount**, Etendo calculates the **Taxable Amount** automatically from the tax rate (Taxable Amount = Tax Amount / rate × 100).
+
+When the **Tax Amount** of a tax line is edited, Etendo applies a tolerance of ±0.01. If the new value differs by up to 0.01 from the original **Tax Amount**, it is treated as a cents adjustment and the **Taxable Amount** is not modified. If it differs by more, the **Taxable Amount** is recalculated from the new **Tax Amount**.
+
+The system enforces strict validations: the tax amount cannot be modified if the calculated **Tax Amount** is zero, if the **Taxable Amount** is zero, or if, when saving an existing line, the adjustment exceeds the allowed ±0.01 range from the original **Tax Amount**. These controls ensure that adjustments remain minimal, controlled, and consistent with regulatory requirements.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-sales-invoice-tax.png)
 
