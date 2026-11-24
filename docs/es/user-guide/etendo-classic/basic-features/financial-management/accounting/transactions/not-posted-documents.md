@@ -50,7 +50,7 @@ La ventana Documentos no contabilizados, parte del módulo Contabilización masi
     - Transacción
     - Parte de trabajo
 
-- **Estado de Contabilización**: (obligatorio) muestra los posibles estados de los documentos contables. Permite selecciones múltiples. Esto es útil en casos en que el documento ya intentó contabilizarse pero falló y su estado no es **No Contabilizado** sino otro, como **Deshabilitado Para Background**.
+- **Estado Contable**: (obligatorio) muestra los posibles estados de los documentos contables. Permite selecciones múltiples. Esto es útil en casos en que el documento ya intentó contabilizarse pero falló y su estado no es **No Contabilizado** sino otro, como **Deshabilitado Para Background**.
 
 - **Fecha Contable (Desde/Hasta)**: filtros para definir un período de búsqueda.
 
@@ -82,6 +82,7 @@ En la grilla donde se muestran los documentos tras la búsqueda, los usuarios pu
 - Tipo de documento
 - Descripción del documento
 - Fecha Contable
+- Estado Contable
 
 ---
 
