@@ -33,7 +33,11 @@ Este módulo permite realizar ajustes controlados en los importes de impuestos d
 
 En la solapa **Impuesto**, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de compra se encuentra en estado Borrador.
 
-El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el **Impuestos** calculado es cero, si la **Base Impuesto** es cero o si el ajuste supera el rango permitido de ±0.01. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.
+También puede añadir una línea de impuesto manualmente en la solapa **Impuesto**. Al introducir el importe en el campo **Impuestos**, Etendo calcula automáticamente la **Base Impuesto** a partir de la tasa del impuesto (Base Impuesto = Impuestos / tasa × 100).
+
+Cuando se edita el campo **Impuestos** de una línea de impuesto, Etendo aplica una tolerancia de ±0.01. Si el nuevo valor difiere hasta 0.01 del importe original de **Impuestos**, se considera un ajuste de céntimos y la **Base Impuesto** no se modifica. Si la diferencia es mayor, la **Base Impuesto** se recalcula a partir del nuevo importe de **Impuestos**.
+
+El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el **Impuestos** calculado es cero, si la **Base Impuesto** es cero o si, al guardar una línea existente, el ajuste supera el rango permitido de ±0.01 respecto al importe original de **Impuestos**. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-purchase-invoice-tax.png)
 
@@ -42,7 +46,11 @@ El sistema aplica validaciones estrictas: el importe del impuesto no puede modif
 
 En la solapa **Impuesto**, Etendo agrupa una línea de impuesto por cada tipo de impuesto en la factura. Esta funcionalidad permite ajustar cada línea de impuesto hasta un céntimo (±0.01), modificando la diferencia de redondeo o el propio importe del impuesto, pero únicamente cuando la factura de ventas se encuentra en estado Borrador.
 
-El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el **Impuestos** calculado es cero, si la **Base Impuesto** es cero o si el ajuste supera el rango permitido de ±0.01. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.
+También puede añadir una línea de impuesto manualmente en la solapa **Impuesto**. Al introducir el importe en el campo **Impuestos**, Etendo calcula automáticamente la **Base Impuesto** a partir de la tasa del impuesto (Base Impuesto = Impuestos / tasa × 100).
+
+Cuando se edita el campo **Impuestos** de una línea de impuesto, Etendo aplica una tolerancia de ±0.01. Si el nuevo valor difiere hasta 0.01 del importe original de **Impuestos**, se considera un ajuste de céntimos y la **Base Impuesto** no se modifica. Si la diferencia es mayor, la **Base Impuesto** se recalcula a partir del nuevo importe de **Impuestos**.
+
+El sistema aplica validaciones estrictas: el importe del impuesto no puede modificarse si el **Impuestos** calculado es cero, si la **Base Impuesto** es cero o si, al guardar una línea existente, el ajuste supera el rango permitido de ±0.01 respecto al importe original de **Impuestos**. Estos controles garantizan que los ajustes sean mínimos, controlados y coherentes con los requisitos regulatorios.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/adjust-invoice-tax/adjust-sales-invoice-tax.png)
 
