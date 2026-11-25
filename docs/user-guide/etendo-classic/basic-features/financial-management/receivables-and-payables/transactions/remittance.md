@@ -155,8 +155,9 @@ There are two types of remittances:
 
     Once the bank confirms the corresponding payments, access the "Settle/Protest Remittances" window and check the settled and protested remittances.
 
-    !!! info
-        The selected date is the posting date of the created document.
+    Select one or more lines, enter the **Accounting Date** and click **Settle** or **Protest**. The Accounting Date is the posting date of the created document.
+
+    The **Total Selected Amount** field shows the sum of the amounts of the selected lines. It updates when a line is selected or deselected and shows `0.00` when no line is selected. This field is read-only.
 
     ![](../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance/remittance-9.png)
 
