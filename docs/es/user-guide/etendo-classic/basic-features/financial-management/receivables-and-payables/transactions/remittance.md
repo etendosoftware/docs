@@ -155,8 +155,9 @@ Existen dos tipos de remesas:
 
     Una vez que el banco confirma los pagos correspondientes, acceda a la ventana "Liquidación / Devolución de Remesas" y verifique las remesas liquidadas y protestadas.
 
-    !!! info
-        La fecha seleccionada es la fecha de contabilización del documento creado.
+    Seleccione una o más líneas, ingrese la **Fecha Contable** y haga clic en **Liquidar** o **Devolver**. La Fecha Contable es la fecha de contabilización del documento creado.
+
+    El campo **Total Importe Seleccionado** muestra la suma de los importes de las líneas seleccionadas. Se actualiza al seleccionar o deseleccionar una línea y muestra `0.00` cuando no hay ninguna línea seleccionada. Este campo es de solo lectura.
 
     ![](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance/remittance-9.png)
 
