@@ -70,9 +70,17 @@ Con este botón, el usuario procesa los pagos y agrupa las líneas según las op
 
 **Seleccionar Facturas y Pedidos**
 
-En la ventana Remesa, se muestra el botón *seleccionar facturas y pedidos*. Con este botón, el usuario puede seleccionar no solo facturas, sino también pedidos para incluir en la remesa. En la ventana emergente que se muestra al hacer clic en este botón, el usuario puede ordenar y filtrar cada columna; los pagos de entrada y de salida se muestran al mismo tiempo y los pedidos y las facturas se muestran juntos.
+En la ventana Remesa, se muestra el botón *seleccionar facturas y pedidos*. Con este botón, el usuario puede seleccionar no solo facturas, sino también pedidos para incluir en la remesa. En la ventana emergente que se muestra al hacer clic en este botón, el usuario puede ordenar y filtrar cada columna y los pagos de entrada y de salida se muestran al mismo tiempo.
 
-![filter.png](../../../../../../../assets/legacy/filter.png)
+El campo **Tipo de Documento**, ubicado sobre la tabla, filtra los pagos pendientes según el tipo de documento:
+
+- **Todos**: muestra las facturas y los pedidos juntos. Es el valor por defecto.
+- **Facturas**: muestra solo los pagos de facturas, incluidas las facturas creadas a partir de un pedido.
+- **Pedidos**: muestra solo los pagos de pedidos que no están facturados.
+
+El tipo de documento funciona junto con los filtros de columna. Al cambiarlo, se mantienen los registros ya seleccionados, aunque no se muestren con el nuevo tipo de documento.
+
+![Seleccionar Facturas y Pedidos](../../../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/remittance/remittance-select-invoices-and-orders.png)
 
 **Protestar Remesa**
 
